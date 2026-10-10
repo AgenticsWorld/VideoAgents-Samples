@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh072",
+  "group_id": "grp028",
+  "scene_no": "S08",
+  "duration_s": 2.0,
+  "size": "close",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 50,
+  "camera_height_m": 0.35,
+  "angle": "level",
+  "rack_focus": "none",
+  "start_frame": "Back to the close across the hall: her wet face lifting at a pattering of feet and splashing somewhere off in the dark.",
+  "end_frame": "The same frame as she hastily dries her eyes with the backs of her hands and listens, absolutely still.",
+  "constraint_honoured": "'The first short shot in ninety seconds — this is what starts the scene's one fast passage.'",
+  "movement_note": "2.0 s cannot carry a move, and the acceleration here is meant to come from cutting rate alone.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

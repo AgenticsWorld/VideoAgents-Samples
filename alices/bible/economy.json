@@ -1,0 +1,442 @@
+{
+  "_meta": {
+    "file": "bible/economy.json",
+    "status": "locked_v1",
+    "owner": "02-worldbuilding/economy",
+    "write_via": "00-orchestration/memory-bible (on_bible_access)",
+    "scope": "Money, goods, prices, trades and household economy of the adapted world.",
+    "id_prefixes": {
+      "CUR-": "currency",
+      "ECO-G-": "goods (file-local)",
+      "ECO-P-": "price (file-local)",
+      "ECO-M-": "economic mechanism (file-local)"
+    },
+    "entry_schema": {
+      "currencies[]": {
+        "id": "CUR-001",
+        "name": "",
+        "denominations": [],
+        "visual": "",
+        "source": {
+          "chapter": "chNNN",
+          "quote": ""
+        },
+        "inferred": false,
+        "reason": null
+      },
+      "goods[]": {
+        "id": "ECO-G-001",
+        "name": "",
+        "prop_ref": "<PROP-*|null>",
+        "source": {},
+        "inferred": false,
+        "reason": null
+      },
+      "prices[]": {
+        "id": "ECO-P-001",
+        "goods_ref": "<ECO-G-*>",
+        "amount": "",
+        "currency_ref": "<CUR-*>",
+        "context": "retail|private_sale|reward|verse|song",
+        "source": {},
+        "inferred": false,
+        "reason": null
+      },
+      "mechanisms[]": {
+        "id": "ECO-M-001",
+        "name": "",
+        "summary": "",
+        "source": {},
+        "inferred": false,
+        "reason": null
+      }
+    },
+    "task_id": "p2-economy",
+    "note": "Realistic-drama adaptation of Lewis Carroll's Alice's Adventures in Wonderland. Every entry traces to the source's own price/goods/labour mentions; the world does not invent a separate fantasy currency -- everything the text prices (shilling, penny, sixpence, pound) is standard mid-Victorian British coinage, so this file grounds the adaptation in that single real-world system. See cross_domain_assumptions[] for the one load-bearing assumption this file depends on from the parallel magic-cultivation/world decision.",
+    "version": "v1",
+    "merged_by": "p2-merge (00-orchestration/memory-bible)",
+    "merged_on": "2026-09-22",
+    "h1_status": "signed",
+    "rechecked_by": "p2-merge-recheck (00-orchestration/memory-bible)",
+    "rechecked_on": "2026-09-22",
+    "locked_at": "2026-09-22T17:59:52+08:00",
+    "locked_by": "H1 user signature (G2 PASS), recorded by 00-orchestration/memory-bible task p2-lock",
+    "lock_record": "runs/g2/gate.json",
+    "lock_changelog": "BIB-0023",
+    "controlled": "Writes only via memory-bible controlled change (WRITE_RULES.md section 5)."
+  },
+  "cross_domain_assumptions": [
+    {
+      "id": "XA-ECO-001",
+      "assumption": "The single currency in play, in both Alice's 'waking' frame and the Wonderland-analog frame, is real mid-Victorian British sterling (pounds/shillings/pence, pre-decimal, pre-1971) -- not a separate invented Wonderland currency. This is currency-neutral to however magic-cultivation/world resolve the dream frame or the setting's realism (a real Victorian estate, a hallucination, a costumed garden party, etc.): whichever reading is chosen, the coinage the characters already name (shilling, penny, sixpence, pound) stays literally itself.",
+      "depends_on": "p2-magic (bible/cultivation.json, SUP-* dream-frame / setting reinterpretation) and p2-world",
+      "source_refs": [
+        "ch002",
+        "ch005",
+        "ch010",
+        "ch011",
+        "ch012"
+      ],
+      "risk_if_wrong": "low -- no source passage implies a second, fantastical currency; only the frame around the coinage is contested, not the coinage itself",
+      "reconciliation": "CONSISTENT with SUP-001 and world.json WR-008. CUR-001 wording aligned to the dream reading; the 1865 date aligned to the 1862 anchor (BIB-0007)."
+    },
+    {
+      "id": "XA-ECO-002",
+      "assumption": "Economy entries below describe Mary Ann, Pat, Bill (the Lizard), the numbered gardeners (Two/Five/Seven), the Hatter, the Mock Turtle and the jurors only in their economic/functional roles (housemaid, gardener, odd-job man, tradesman, pupil, juror) using the source's own names. Whether each is cast as human household staff or kept as an animal/creature in the realistic adaptation is a casting decision owned by magic-cultivation (SUP-*) and character-manager, not by this file. No CHAR-*/CRE-* ID is asserted here for any of them; downstream may attach the resolved ID once cast.",
+      "depends_on": "p2-magic (bible/cultivation.json, SUP-* non-human speaking character casting) and 03-characters/character-manager",
+      "source_refs": [
+        "ch004",
+        "ch008",
+        "ch009",
+        "ch011",
+        "ch012"
+      ],
+      "risk_if_wrong": "low -- the economic facts (who pays whom, who is owed what, who does which job) hold regardless of the final casting",
+      "reconciliation": "CONSISTENT: SUP-002 answers the casting question (as amended at BIB-0027, 2026-09-22: talking animals are photoreal CGI animals, card figures and human dream-figures are human performers). The economic facts are unaffected by rendering. Character IDs are attached by 03-characters, not here."
+    }
+  ],
+  "currencies": [
+    {
+      "id": "CUR-001",
+      "name": "pound sterling (£ s. d.)",
+      "original_name": "pound / shilling / pence / sixpence",
+      "denominations": [
+        {
+          "unit": "penny",
+          "symbol": "d.",
+          "value_in_pence": 1,
+          "also_seen": [
+            "pennyworth (ch010)"
+          ]
+        },
+        {
+          "unit": "sixpence",
+          "symbol": "6d.",
+          "value_in_pence": 6,
+          "also_seen": [
+            "ch012: Alice's on-the-spot reward offer"
+          ]
+        },
+        {
+          "unit": "shilling",
+          "symbol": "s.",
+          "value_in_pence": 12,
+          "also_seen": [
+            "ch005: ointment price",
+            "ch011: jury's mock arithmetic"
+          ]
+        },
+        {
+          "unit": "pound",
+          "symbol": "£",
+          "value_in_pence": 240,
+          "also_seen": [
+            "ch002: farmer's valuation of his terrier"
+          ]
+        }
+      ],
+      "circulation": "The whole adapted world -- both Alice's ordinary waking England and her Wonderland dream (SUP-001) -- uses this one real system; nothing in the source implies a second currency inside the rabbit-hole.",
+      "visual": "Bronze/copper penny; small silver sixpence and shilling coins; the pound exists as a note or (if a coin is shown on screen) a gold sovereign -- standard 1860s British coinage design, no fantasy ornament.",
+      "source": {
+        "chapters": [
+          "ch002",
+          "ch005",
+          "ch010",
+          "ch011",
+          "ch012"
+        ],
+        "quotes": [
+          "it's so useful, it's worth a hundred pounds! (ch002)",
+          "By the use of this ointment—one shilling the box— (ch005)",
+          "two pennyworth only of beautiful Soup (ch010)",
+          "reduced the answer to shillings and pence (ch011)",
+          "I'll give him sixpence. (ch012)"
+        ]
+      },
+      "inferred": true,
+      "reason": "The text names penny/sixpence/shilling/pound directly but never states the 12d.=1s., 20s.=£1 conversion or describes coin appearance. Both are standard historical fact for the story's own 1862 mid-Victorian (timeline.json calendar.anchor_year) British setting (pre-decimal £sd, in force until 1971), used here for internal consistency across scripts and props rather than invented from nothing."
+    }
+  ],
+  "goods": [
+    {
+      "id": "ECO-G-001",
+      "name": "the Queen's tarts",
+      "prop_ref": null,
+      "description": "A large dish of tarts laid out on the courtroom table, baked by the Queen of Hearts herself; the alleged theft of these tarts by the Knave of Hearts is the entire subject of the trial.",
+      "source": {
+        "chapter": "ch011",
+        "event_ref": "ev0045",
+        "quote": "In the very middle of the court was a table, with a large dish of tarts upon it: they looked so good, that it made Alice quite hungry to look at them"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "ECO-G-002",
+      "name": "hats (the Hatter's stock)",
+      "prop_ref": null,
+      "description": "Finished hats the Hatter keeps on hand for sale; the one he is wearing in court is stock, not his own property -- his trade, not a personal effect.",
+      "source": {
+        "chapter": "ch011",
+        "event_ref": "ev0046",
+        "quote": "“I keep them to sell,” the Hatter added as an explanation; “I’ve none of my own. I’m a hatter.”"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "ECO-G-003",
+      "name": "joint ointment (Father William's)",
+      "prop_ref": null,
+      "description": "A limb/joint ointment Father William hawks in the verse recited to the Caterpillar, sold by the box; a small patent-medicine good typical of itinerant or market-stall trade.",
+      "source": {
+        "chapter": "ch005",
+        "quote": "By the use of this ointment—one shilling the box— Allow me to sell you a couple?"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "ECO-G-004",
+      "name": "Turtle Soup / \"beautiful Soup\"",
+      "prop_ref": null,
+      "description": "A rich, coveted soup dish, the subject of the Mock Turtle's song; prized above fish or game despite (or because of) its low price.",
+      "source": {
+        "chapter": "ch010",
+        "event_ref": "ev0043",
+        "quote": "Who would not give all else for two p ennyworth only of beautiful Soup?"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "ECO-G-005",
+      "name": "orange marmalade (pantry preserve)",
+      "prop_ref": null,
+      "description": "A labelled jar of preserve on a shelf lining the rabbit-hole/well; a standard Victorian store-cupboard good, notable here for being empty.",
+      "source": {
+        "chapter": "ch001",
+        "event_ref": "ev0002",
+        "quote": "it was labelled “ORANGE MARMALADE”, but to her great disappointment it was empty"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "ECO-G-006",
+      "name": "comfits (sugared sweets)",
+      "prop_ref": null,
+      "description": "A box of small sugared sweets Alice happens to be carrying, salt-water-proof by luck; the only thing on hand at the Caucus-race to serve as prizes.",
+      "source": {
+        "chapter": "ch003",
+        "event_ref": "ev0010",
+        "quote": "pulled out a box of comfits, (luckily the salt water had not got into it), and handed them round as prizes"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "ECO-G-007",
+      "name": "tea things (bread-and-butter and tea)",
+      "prop_ref": null,
+      "description": "The Hatter's and March Hare's ordinary tea-party provisions -- tea, bread-and-butter -- unpriced daily household food, carried into the courtroom still in the Hatter's hands when he is called as a witness.",
+      "source": {
+        "chapter": "ch011",
+        "event_ref": "ev0046",
+        "quote": "He came in with a teacup in one hand and a piece of bread-and-butter in the other."
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "ECO-G-008",
+      "name": "day-school tuition (regular course + extras)",
+      "prop_ref": null,
+      "description": "The Mock Turtle's undersea schooling: a base 'regular course' plus separately billed extras (French, music, and washing). A purchased service rather than a physical good, itemised on a school bill.",
+      "source": {
+        "chapter": "ch009",
+        "event_ref": "ev0042",
+        "quote": "Now at ours they had at the end of the bill, ‘French, music, _and washing_—extra.’ ... “I couldn’t afford to learn it.” said the Mock Turtle with a sigh."
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "ECO-G-009",
+      "name": "working terrier (ratting dog)",
+      "prop_ref": null,
+      "description": "A farmer's terrier from Alice's own remembered 'real' world, praised as so useful at killing rats that its owner values it at a hundred pounds -- a benchmark of ordinary real-world value against which Wonderland's absurd non-economy is implicitly measured.",
+      "source": {
+        "chapter": "ch002",
+        "quote": "it belongs to a farmer, you know, and he says it’s so useful, it’s worth a hundred pounds! He says it kills all the rats"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "ECO-G-010",
+      "name": "royal garden & kitchen produce (roses, onions/tulip-roots)",
+      "prop_ref": null,
+      "description": "Ornamental roses and kitchen vegetables supplied by the royal gardeners; the plot crisis (a white rose-tree planted where a red one was ordered) and the cook's mis-delivered tulip-roots instead of onions are both garden-staff provisioning errors for the crown's household.",
+      "source": {
+        "chapter": "ch008",
+        "event_ref": "ev0033",
+        "quote": "this here ought to have been a red rose-tree, and we put a white one in by mistake ... it was for bringing the cook tulip-roots instead of onions"
+      },
+      "inferred": false,
+      "reason": null
+    }
+  ],
+  "prices": [
+    {
+      "id": "ECO-P-001",
+      "goods_ref": "ECO-G-003",
+      "amount": 1,
+      "unit": "shilling",
+      "currency_ref": "CUR-001",
+      "context": "verse / itinerant peddling (Father William hawks the ointment by the box, unclear whether a completed sale)",
+      "source": {
+        "chapter": "ch005",
+        "quote": "By the use of this ointment—one shilling the box— Allow me to sell you a couple?"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "ECO-P-002",
+      "goods_ref": "ECO-G-004",
+      "amount": 2,
+      "unit": "pennyworth",
+      "currency_ref": "CUR-001",
+      "context": "song / retail praise of a cheap eating-house dish -- 'two pennyworth' is the sung price of the soup, not a scene of an actual purchase",
+      "source": {
+        "chapter": "ch010",
+        "event_ref": "ev0043",
+        "quote": "Who would not give all else for two p ennyworth only of beautiful Soup?"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "ECO-P-003",
+      "goods_ref": "ECO-G-009",
+      "amount": 100,
+      "unit": "pound",
+      "currency_ref": "CUR-001",
+      "context": "private valuation -- the farmer-owner's own asking valuation of his dog, recalled by Alice; not a completed sale",
+      "source": {
+        "chapter": "ch002",
+        "quote": "he says it’s so useful, it’s worth a hundred pounds!"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "ECO-P-004",
+      "goods_ref": null,
+      "amount": 6,
+      "unit": "pence (sixpence)",
+      "currency_ref": "CUR-001",
+      "context": "reward -- an impromptu private bounty Alice offers in open court for anyone who can explain the nonsense verses; no goods change hands, and no one collects it",
+      "source": {
+        "chapter": "ch012",
+        "event_ref": "ev0051",
+        "quote": "“I’ll give him sixpence. I don’t believe there’s an atom of meaning in it.”"
+      },
+      "inferred": false,
+      "reason": "goods_ref left null because the sixpence prices a reward for an intellectual feat, not a physical good; the field is deliberately omitted rather than forced onto an unrelated ECO-G entry."
+    }
+  ],
+  "mechanisms": [
+    {
+      "id": "ECO-M-001",
+      "name": "Caucus-race prize customs",
+      "summary": "An impromptu, cashless reward economy: when the Dodo cannot judge a winner of the pointless race, it rules 'everybody has won' and all must have prizes. Alice, the only one carrying anything of value, supplies the prizes herself (comfits, one apiece) from her own pocket, and is in turn given back her own thimble as her prize, gravely presented as a gift ('We beg your acceptance of this elegant thimble'). No money changes hands; value is entirely improvised from whatever is on hand and validated by the group's solemn ceremony.",
+      "source": {
+        "chapter": "ch003",
+        "event_ref": "ev0010",
+        "quote": "‘Everybody’ has won, and all must have prizes. ... Hand it over here ... We beg your acceptance of this elegant thimble"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "ECO-M-002",
+      "name": "Royal garden & kitchen provisioning",
+      "summary": "The crown's household runs on a small staff of numbered gardeners (Two, Five, Seven) with two duties: ornamental (the rose-tree, which must show the correct colour to the Queen) and provisioning (the cook is meant to receive onions but was brought tulip-roots by mistake). Accountability for a supply error is severe and immediate -- the threatened penalty is discussed as 'off with their heads' rather than dismissal or a fine. This entry records only the labour/goods relationship (who supplies what, to whom, under what stakes); whether the threatened penalty is played as literal, mock, or commuted in the realistic adaptation is a politics/magic-cultivation casting call, not an economic one.",
+      "source": {
+        "chapter": "ch008",
+        "event_ref": "ev0033",
+        "quote": "we put a white one in by mistake; and if the Queen was to find it out, we should all have our heads cut off ... it was for bringing the cook tulip-roots instead of onions"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "ECO-M-003",
+      "name": "The White Rabbit's household staff",
+      "summary": "A small gentleman's-house domestic establishment, named directly in the source: Mary Ann, the housemaid (the Rabbit mistakes Alice for her and sends her running for gloves and a fan); Pat, an outdoor gardener ('Digging for apples, yer honour!') who is called on for household emergencies as well as garden work; and Bill, apparently a lizard kept for odd, undesirable jobs -- he is the one sent down the narrow chimney to evict the intruder ('they seem to put everything upon Bill'), i.e. the lowest-status task within the household hierarchy. This is a modest single-servant-plus-day-labour household, not a great estate with a large staff.",
+      "source": {
+        "chapter": "ch004",
+        "event_ref": "ev0016",
+        "quote": "Why, Mary Ann, what are you doing out here? Run home this moment, and fetch me a pair of gloves and a fan! ... Sure then I’m here! Digging for apples, yer honour! ... Shy, they seem to put everything upon Bill!"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "ECO-M-007",
+      "name": "Domestic-service wage benchmark (production note)",
+      "summary": "The source gives no wage figures for Mary Ann, Pat or Bill. For script/production consistency, if any scene requires a concrete wage or payday reference for this household, use a modest live-in general-servant benchmark consistent with a small one-or-two-servant gentleman's household of the period (Mary Ann as the sole indoor maid-of-all-work; Pat as day/outdoor labour, likely paid separately and not living in; Bill's odd jobs treated as casual, unpaid-by-wage favours rather than regular employment). No specific number is asserted here; this note exists only to flag that the household is small and modest, not grand, so any wage figure introduced downstream should stay commensurately low.",
+      "source": {
+        "chapter": "ch004",
+        "event_ref": "ev0016",
+        "quote": "Shy, they seem to put everything upon Bill!"
+      },
+      "inferred": true,
+      "reason": "Production-required grounding for a field the source never states (servant wages). No numeric wage is invented; only the relative scale (modest, one-maid household) is fixed, derived from the household's own small size and the casual, unpaid framing of Pat's and Bill's call-outs in the text."
+    },
+    {
+      "id": "ECO-M-004",
+      "name": "Day-school billing: base course + itemised 'extras'",
+      "summary": "The Mock Turtle's school issues a bill listing a standard curriculum plus separately charged 'extras' (French, music, and washing) -- a real Victorian tuition-billing convention (day and boarding schools of the period commonly itemised such 'extras' beyond the base fee). The Mock Turtle himself, from a poorer household, 'only took the regular course' and could not afford the extras. No digits are given in the source for either the base fee or the extras, and none are invented here; the mechanism itself (itemised billing, and afford/can't-afford as a real class marker) is the recorded fact.",
+      "source": {
+        "chapter": "ch009",
+        "event_ref": "ev0042",
+        "quote": "Now at ours they had at the end of the bill, ‘French, music, and washing—extra.’ ... I couldn’t afford to learn it."
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "ECO-M-005",
+      "name": "Courtroom mock-accounting and impromptu reward",
+      "summary": "Two related comic beats treat money as a unit of nonsense-bureaucratic measure rather than real payment: the jury, told to write down three conflicting dates the Hatter names, adds them together and 'reduces the answer to shillings and pence' as if currency were the natural unit for any tally; and Alice, growing bored with the King's strained reading of the verse-evidence, offers a sixpence reward to anyone who can find meaning in it (ECO-P-004) -- an ad hoc bounty with no expectation of being collected. Both establish that the court treats money/arithmetic as available comic texture rather than tracking any real transaction.",
+      "source": {
+        "chapter": "ch011",
+        "event_ref": "ev0046",
+        "quote": "the jury eagerly wrote down all three dates on their slates, and then added them up, and reduced the answer to shillings and pence."
+      },
+      "also_seen": [
+        {
+          "chapter": "ch012",
+          "event_ref": "ev0051"
+        }
+      ],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "ECO-M-006",
+      "name": "The Hatter as a self-employed tradesman",
+      "summary": "The Hatter identifies himself under oath as a working hat-seller ('I keep them to sell ... I'm a hatter') and repeatedly describes himself as poor ('I'm a poor man, your Majesty') when pressed by the King. Despite hosting an elaborate (if chaotic) tea service, his trade is modest, retail, and self-employed -- a small-tradesman economic class, not a gentleman of independent means. This grounds the character's material circumstances for costume/prop/dialogue consistency: his hats are stock-in-trade (ECO-G-002), not personal wealth.",
+      "source": {
+        "chapter": "ch011",
+        "event_ref": "ev0046",
+        "quote": "“I keep them to sell,” the Hatter added as an explanation; “I’ve none of my own. I’m a hatter.” ... “I’m a poor man, your Majesty,”"
+      },
+      "inferred": false,
+      "reason": null
+    }
+  ]
+}

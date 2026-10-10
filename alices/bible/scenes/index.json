@@ -1,0 +1,1058 @@
+{
+  "_meta": {
+    "file": "bible/scenes/index.json",
+    "status": "registered_v1",
+    "owner": "05-scenes/scene",
+    "write_via": "00-orchestration/memory-bible (on_bible_access); written by the owner under task p3-scene-index, awaiting memory-bible changelog entry (WRITE_RULES P-011)",
+    "task_id": "p3-scene-index",
+    "attempt": 1,
+    "generated": "2026-09-22",
+    "basis": [
+      "bible/h1_summary.md (Bible v1, H1 lock 2026-09-22)",
+      "runs/h1-ruling/ruling.json 5.2 A (dream-only Wonderland places, each growing from a waking detail)",
+      "bible/cultivation.json SUP-001..SUP-014",
+      "bible/geography.json (locations, two layers)",
+      "story/structured_story.json (46 scene splits), story/events.json (ev0001-ev0054)"
+    ],
+    "scope": "Registry of production scenes (SCN-*). One shootable SCN = one physical space that can be drawn as one top-down plan with one set of landmarks. Per-scene packs under scenes/<SCN-id>/ (layout.json + layout_top.png; whitebox.json while the whitebox chain is on). Entries with container:true are hierarchy nodes only (no layout pack, never attached to a screenplay scene heading).",
+    "id_prefixes": { "SCN-": "scene (readable ASCII slug)" },
+    "field_notes": {
+      "level": "region > building > room. 'building' is the middle tier: a building or a self-contained outdoor site (bank, clearing, croquet-ground). 'room' is an interior (or sub-space) under a building-tier parent.",
+      "location_ref": "the LOC-* in bible/geography.json; geo_ref carries the same value for SOUL-schema consumers.",
+      "layer": "waking | dream, inherited from the LOC-* (WRITE_RULES P-008). Dream scenes use space_class non_diegetic_mental and carry grows_from (H1 ruling 5.2 A).",
+      "int_ext": "INT | EXT | INT/EXT. INT and EXT are split into two IDs only where the source stages action both inside and outside the same place (White Rabbit's house, Duchess's house).",
+      "story_spans": "structured_story scene ids and paragraph spans that play in this space; story_scene_map at file end maps every structured_story scene to its SCN ids.",
+      "priority": "high | medium | low, for 06-art/environment-concept scheduling (paragraph_count = source paragraphs staged in this space).",
+      "not_written_here": "weather, season, time of day (05-scenes/environment); architecture, form and materials (05-scenes/architecture); lighting (05-scenes/lighting)."
+    }
+  },
+  "scenes": [
+    {
+      "id": "SCN-thames-riverside",
+      "name": "The Thames Valley Near Oxford (waking frame)",
+      "level": "region",
+      "parent": null,
+      "container": true,
+      "layout_pack": false,
+      "location_ref": "LOC-riverside-region",
+      "geo_ref": "LOC-riverside-region",
+      "layer": "waking",
+      "space_class": "exterior",
+      "int_ext": "EXT",
+      "mobile": false,
+      "chapters": ["ch001", "ch012"],
+      "event_refs": ["ev0001", "ev0053", "ev0054"],
+      "first_appearance": { "chapter": "ch001", "paragraph": "ch001-p01" },
+      "purpose": "Hierarchy node for the waking bracket that opens and closes the film; holds SCN-riverbank and SCN-field-hedge-burrow.",
+      "source": { "chapter": "ch001", "quote": "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do" },
+      "inferred": true,
+      "reason": "Container node; Oxford/Thames valley is the designed frame confirmed at H1 5.6 A (geography.json LOC-riverside-region)."
+    },
+    {
+      "id": "SCN-riverbank",
+      "name": "The Bank",
+      "level": "building",
+      "parent": "SCN-thames-riverside",
+      "container": false,
+      "layout_pack": true,
+      "location_ref": "LOC-riverbank",
+      "geo_ref": "LOC-riverbank",
+      "adjacent_geo_refs": ["LOC-river-backwater", "LOC-meadow-field"],
+      "layer": "waking",
+      "space_class": "exterior",
+      "int_ext": "EXT",
+      "mobile": false,
+      "aliases": [
+        { "name": "the bank", "source_chapter": "ch001" },
+        { "name": "the neighbouring pool (the reed-edged backwater beside the bank)", "source_chapter": "ch012" }
+      ],
+      "chapters": ["ch001", "ch012"],
+      "story_spans": [
+        { "story_scene": "ch001-sc01", "paragraphs": "ch001-p01..ch001-p03" },
+        { "story_scene": "ch012-sc02", "paragraphs": "ch012-p64..ch012-p66" },
+        { "story_scene": "ch012-sc03", "paragraphs": "ch012-p67..ch012-p72" }
+      ],
+      "event_refs": ["ev0001", "ev0053", "ev0054"],
+      "first_appearance": { "chapter": "ch001", "paragraph": "ch001-p01" },
+      "paragraph_count": 12,
+      "priority": "high",
+      "key_scene": true,
+      "purpose": "Opening and closing bracket: Alice idle beside her sister's picture-less book, the silent white rabbit running close by; later Alice wakes with her head in her sister's lap as dead leaves fall, runs off to tea, and the sister sits on alone at sunset in her reverie. The reed-edged backwater beside the bank is a landmark of this same plan (the 'neighbouring pool' of ch012-p69/p70).",
+      "source": { "chapter": "ch001", "quote": "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do" },
+      "also_seen": [
+        { "chapter": "ch012", "paragraph": "ch012-p64", "quote": "found herself lying on the bank, with her head in the lap of her sister, who was gently brushing away some dead leaves that had fluttered down from the trees upon her face" },
+        { "chapter": "ch012", "paragraph": "ch012-p70", "quote": "the pool rippling to the waving of the reeds" }
+      ],
+      "inferred": true,
+      "reason": "The bank and the pool are in the source; placing the reed backwater within the same plan as the bank follows 'the neighbouring pool' (ch012-p69) and geography.json adjacency LOC-riverbank -> LOC-river-backwater, so the reverie needs no separate space."
+    },
+    {
+      "id": "SCN-field-hedge-burrow",
+      "name": "The Field Edge at the Hedge Burrow",
+      "level": "building",
+      "parent": "SCN-thames-riverside",
+      "container": false,
+      "layout_pack": true,
+      "location_ref": "LOC-rabbit-hole-entrance",
+      "geo_ref": "LOC-rabbit-hole-entrance",
+      "adjacent_geo_refs": ["LOC-meadow-field"],
+      "layer": "waking",
+      "space_class": "exterior",
+      "int_ext": "EXT",
+      "mobile": false,
+      "term_ref": "TERM-0055",
+      "aliases": [
+        { "name": "the field", "source_chapter": "ch001" },
+        { "name": "a large rabbit-hole under the hedge", "source_chapter": "ch001" }
+      ],
+      "chapters": ["ch001"],
+      "story_spans": [
+        { "story_scene": "ch001-sc01", "paragraphs": "ch001-p03..ch001-p04" }
+      ],
+      "event_refs": ["ev0001"],
+      "first_appearance": { "chapter": "ch001", "paragraph": "ch001-p03" },
+      "paragraph_count": 2,
+      "priority": "medium",
+      "key_scene": true,
+      "purpose": "The chase: Alice runs across the meadow after the real white rabbit and reaches the hawthorn hedge just in time to see it vanish into an ordinary burrow at its foot; she crouches after it. One plan covers the last stretch of field and the hedge line.",
+      "source": { "chapter": "ch001", "quote": "she ran across the field after it, and fortunately was just in time to see it pop down a large rabbit-hole under the hedge" },
+      "inferred": true,
+      "reason": "The field crossing is transit ending at the hedge, so it is staged in the hedge plan rather than as its own space (no separate action in the open field). Real burrow, not a shaft (geography.json LOC-rabbit-hole-entrance; SUP-001, SUP-008)."
+    },
+    {
+      "id": "SCN-falling-dream",
+      "name": "The Falling Dream",
+      "level": "building",
+      "parent": null,
+      "container": false,
+      "layout_pack": true,
+      "location_ref": "LOC-descent-shaft",
+      "geo_ref": "LOC-descent-shaft",
+      "layer": "dream",
+      "space_class": "non_diegetic_mental",
+      "int_ext": "INT",
+      "mobile": false,
+      "grows_from": {
+        "counterpart_key": "cp-rabbit-hole",
+        "loc": "LOC-rabbit-hole-entrance",
+        "waking_detail": "the hedge burrow the white rabbit vanished into, and Alice's drowsy last thoughts of Dinah and tea-time"
+      },
+      "term_ref": "TERM-0055",
+      "aliases": [
+        { "name": "a very deep well", "source_chapter": "ch001" }
+      ],
+      "chapters": ["ch001"],
+      "story_spans": [
+        { "story_scene": "ch001-sc02", "paragraphs": "ch001-p05..ch001-p10" }
+      ],
+      "event_refs": ["ev0002"],
+      "first_appearance": { "chapter": "ch001", "paragraph": "ch001-p05" },
+      "paragraph_count": 6,
+      "priority": "medium",
+      "key_scene": true,
+      "purpose": "The slow anxiety-dream fall past cupboards, book-shelves, maps and pictures on pegs; Alice takes down the empty ORANGE MARMALADE jar, talks to herself about Dinah and dozes off mid-fall (the visible onset of the dream).",
+      "source": { "chapter": "ch001", "quote": "she looked at the sides of the well, and noticed that they were filled with cupboards and book-shelves; here and there she saw maps and pictures hung upon pegs" },
+      "inferred": true,
+      "reason": "Dream-only rig set per SUP-008 and SUP-001; not a real shaft."
+    },
+    {
+      "id": "SCN-shaft-landing-passage",
+      "name": "The Landing Heap and the Long Passage",
+      "level": "room",
+      "parent": "SCN-falling-dream",
+      "container": false,
+      "layout_pack": true,
+      "location_ref": "LOC-descent-shaft",
+      "geo_ref": "LOC-descent-shaft",
+      "layer": "dream",
+      "space_class": "non_diegetic_mental",
+      "int_ext": "INT",
+      "mobile": false,
+      "grows_from": {
+        "counterpart_key": "cp-rabbit-hole",
+        "loc": "LOC-rabbit-hole-entrance",
+        "waking_detail": "the burrow under the hedge, read as an earthy tunnel floor of sticks and dry leaves"
+      },
+      "aliases": [
+        { "name": "another long passage", "source_chapter": "ch001" }
+      ],
+      "chapters": ["ch001"],
+      "story_spans": [
+        { "story_scene": "ch001-sc02", "paragraphs": "ch001-p10..ch001-p10" },
+        { "story_scene": "ch001-sc03", "paragraphs": "ch001-p11..ch001-p11" }
+      ],
+      "event_refs": ["ev0002", "ev0003"],
+      "first_appearance": { "chapter": "ch001", "paragraph": "ch001-p10" },
+      "paragraph_count": 2,
+      "priority": "low",
+      "key_scene": false,
+      "purpose": "Alice lands unhurt on a heap of sticks and dry leaves, jumps up, sees the White Rabbit hurrying down a long passage, runs after it and hears 'Oh my ears and whiskers' as it turns the corner that opens into the long hall.",
+      "source": { "chapter": "ch001", "quote": "she looked up, but it was all dark overhead; before her was another long passage, and the White Rabbit was still in sight, hurrying down it" },
+      "inferred": true,
+      "reason": "A horizontal passage cannot share a plan with the vertical fall; registered as its own room under the falling dream. No separate LOC exists, so it anchors to LOC-descent-shaft (the bottom of the same dream image)."
+    },
+    {
+      "id": "SCN-long-hall",
+      "name": "The Long Hall",
+      "level": "building",
+      "parent": null,
+      "container": false,
+      "layout_pack": true,
+      "location_ref": "LOC-hall-of-doors",
+      "geo_ref": "LOC-hall-of-doors",
+      "layer": "dream",
+      "space_class": "non_diegetic_mental",
+      "int_ext": "INT",
+      "mobile": false,
+      "grows_from": {
+        "counterpart_key": "cp-garden",
+        "waking_detail": "the small locked door in a wall through which a Victorian child glimpses a grand private garden she may not enter unescorted"
+      },
+      "term_ref": "TERM-0056",
+      "aliases": [
+        { "name": "a long, low hall", "source_chapter": "ch001" },
+        { "name": "the great hall", "source_chapter": "ch004" }
+      ],
+      "chapters": ["ch001", "ch002", "ch007"],
+      "story_spans": [
+        { "story_scene": "ch001-sc03", "paragraphs": "ch001-p11..ch001-p30" },
+        { "story_scene": "ch002-sc01", "paragraphs": "ch002-p01..ch002-p15" },
+        { "story_scene": "ch007-sc03", "paragraphs": "ch007-p105..ch007-p105" }
+      ],
+      "event_refs": ["ev0003", "ev0004", "ev0005", "ev0006", "ev0007", "ev0008", "ev0032"],
+      "first_appearance": { "chapter": "ch001", "paragraph": "ch001-p11" },
+      "paragraph_count": 36,
+      "priority": "high",
+      "key_scene": true,
+      "purpose": "Locked doors all round, the three-legged glass table with the golden key, the curtained fifteen-inch door; DRINK ME and EAT ME, shrinking and growing to nine feet, weeping, the White Rabbit dropping fan and gloves; later Alice returns at the right size and unlocks the little door.",
+      "source": { "chapter": "ch001", "quote": "she found herself in a long, low hall, which was lit up by a row of lamps hanging from the roof" },
+      "also_seen": [
+        { "chapter": "ch007", "paragraph": "ch007-p105", "quote": "Once more she found herself in the long hall, and close to the little glass table." }
+      ],
+      "inferred": true,
+      "reason": "Dream-only self-contained set per SUP-013; the flooded state is registered separately as SCN-pool-of-tears because its playable plan (open water at Alice's small scale) has different landmarks."
+    },
+    {
+      "id": "SCN-little-door-passage",
+      "name": "The Little Door's Passage",
+      "level": "room",
+      "parent": "SCN-long-hall",
+      "container": false,
+      "layout_pack": true,
+      "location_ref": "LOC-tiny-passage",
+      "geo_ref": "LOC-tiny-passage",
+      "layer": "dream",
+      "space_class": "non_diegetic_mental",
+      "int_ext": "INT",
+      "mobile": false,
+      "grows_from": {
+        "counterpart_key": "cp-garden",
+        "waking_detail": "the small door in a garden wall a child peers through"
+      },
+      "aliases": [
+        { "name": "a small passage, not much larger than a rat-hole", "source_chapter": "ch001" },
+        { "name": "the little passage", "source_chapter": "ch007" }
+      ],
+      "chapters": ["ch001", "ch007"],
+      "story_spans": [
+        { "story_scene": "ch001-sc03", "paragraphs": "ch001-p13..ch001-p13" },
+        { "story_scene": "ch007-sc03", "paragraphs": "ch007-p105..ch007-p105" }
+      ],
+      "event_refs": ["ev0003", "ev0032"],
+      "first_appearance": { "chapter": "ch001", "paragraph": "ch001-p13" },
+      "paragraph_count": 2,
+      "priority": "low",
+      "key_scene": false,
+      "purpose": "Kneeling Alice looks along the rat-hole passage to the garden light (ch001); a foot high, she finally walks down it into the garden (ch007).",
+      "source": { "chapter": "ch001", "quote": "Alice opened the door and found that it led into a small passage, not much larger than a rat-hole: she knelt down and looked along the passage into the loveliest garden you ever saw." },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "SCN-pool-of-tears",
+      "name": "The Pool of Tears (the Hall, Flooded)",
+      "level": "room",
+      "parent": "SCN-long-hall",
+      "container": false,
+      "layout_pack": true,
+      "location_ref": "LOC-ornamental-pool",
+      "geo_ref": "LOC-ornamental-pool",
+      "layer": "dream",
+      "space_class": "non_diegetic_mental",
+      "int_ext": "INT",
+      "mobile": false,
+      "grows_from": {
+        "counterpart_key": "cp-pool",
+        "loc": "LOC-river-backwater",
+        "waking_detail": "the reedy river backwater beside the bank"
+      },
+      "term_ref": "TERM-0057",
+      "aliases": [
+        { "name": "the pool", "source_chapter": "ch002" },
+        { "name": "the pool of tears", "source_chapter": "ch002" }
+      ],
+      "chapters": ["ch002"],
+      "story_spans": [
+        { "story_scene": "ch002-sc02", "paragraphs": "ch002-p16..ch002-p26" }
+      ],
+      "event_refs": ["ev0008", "ev0009"],
+      "first_appearance": { "chapter": "ch002", "paragraph": "ch002-p16" },
+      "paragraph_count": 11,
+      "priority": "medium",
+      "key_scene": true,
+      "purpose": "Shrunken Alice slips into her own tears, swims, meets the Mouse and offends it with talk of Dinah; the water fills with the Duck, Dodo, Lory, Eaglet and others, and Alice leads the party swimming to the shore.",
+      "source": { "chapter": "ch002", "quote": "she was in the pool of tears which she had wept when she was nine feet high" },
+      "also_seen": [
+        { "chapter": "ch002", "paragraph": "ch002-p26", "quote": "Alice led the way, and the whole party swam to the shore." }
+      ],
+      "inferred": true,
+      "reason": "Same dream hall flooded per SUP-007 and geography.json LOC-ornamental-pool; the pool forming at giant scale (ch002-p07) stays in SCN-long-hall, the swim at small scale is this space."
+    },
+    {
+      "id": "SCN-pool-bank",
+      "name": "The Bank of the Pool",
+      "level": "building",
+      "parent": null,
+      "container": false,
+      "layout_pack": true,
+      "location_ref": "LOC-pool-bank",
+      "geo_ref": "LOC-pool-bank",
+      "layer": "dream",
+      "space_class": "non_diegetic_mental",
+      "int_ext": "EXT",
+      "mobile": false,
+      "grows_from": {
+        "counterpart_key": "cp-pool",
+        "loc": "LOC-river-backwater",
+        "waking_detail": "the muddy, reed-fringed edge of the river backwater beside the bank"
+      },
+      "aliases": [
+        { "name": "the bank", "source_chapter": "ch003" },
+        { "name": "a race-course, in a sort of circle", "source_chapter": "ch003" }
+      ],
+      "chapters": ["ch003", "ch004"],
+      "story_spans": [
+        { "story_scene": "ch003-sc01", "paragraphs": "ch003-p01..ch003-p30" },
+        { "story_scene": "ch003-sc02", "paragraphs": "ch003-p31..ch003-p47" },
+        { "story_scene": "ch003-sc03", "paragraphs": "ch003-p48..ch003-p48" },
+        { "story_scene": "ch004-sc01", "paragraphs": "ch004-p01..ch004-p02" }
+      ],
+      "event_refs": ["ev0010", "ev0011", "ev0012", "ev0013", "ev0014"],
+      "first_appearance": { "chapter": "ch003", "paragraph": "ch003-p01" },
+      "paragraph_count": 50,
+      "priority": "high",
+      "key_scene": true,
+      "purpose": "The dripping party assembles ashore; the Mouse's 'dry' history lecture, the Caucus-race round a rough circle, comfits and the thimble as prizes, the Mouse's long and sad tale; the party leaves, Alice cries alone, and the White Rabbit returns hunting for fan and gloves, takes her for Mary Ann and sends her running. The hall is no longer there.",
+      "source": { "chapter": "ch003", "quote": "They were indeed a queer-looking party that assembled on the bank—the birds with draggled feathers, the animals with their fur clinging close to them, and all dripping wet, cross, and uncomfortable." },
+      "also_seen": [
+        { "chapter": "ch004", "paragraph": "ch004-p01", "quote": "everything seemed to have changed since her swim in the pool, and the great hall, with the glass table and the little door, had vanished completely" }
+      ],
+      "inferred": true,
+      "reason": "Outdoor-feeling dream shore per geography.json LOC-pool-bank; the ch004 opening plays on the same ground after the hall has gone (SUP-013), so it shares this plan."
+    },
+    {
+      "id": "SCN-wonderland-wood",
+      "name": "The Wood",
+      "level": "region",
+      "parent": null,
+      "container": true,
+      "layout_pack": false,
+      "location_ref": "LOC-thick-wood",
+      "geo_ref": "LOC-thick-wood",
+      "layer": "dream",
+      "space_class": "non_diegetic_mental",
+      "int_ext": "EXT",
+      "mobile": false,
+      "grows_from": {
+        "counterpart_key": "cp-rabbit-hole",
+        "loc": "LOC-riverside-region",
+        "waking_detail": "the hedgerows and copses around the meadow Alice knows from walks near home"
+      },
+      "term_ref": "TERM-0058",
+      "chapters": ["ch004", "ch005", "ch006", "ch007"],
+      "event_refs": ["ev0014", "ev0015", "ev0016", "ev0017", "ev0018", "ev0019", "ev0020", "ev0021", "ev0022", "ev0023", "ev0024", "ev0025", "ev0026", "ev0027", "ev0028", "ev0029", "ev0030", "ev0031", "ev0032"],
+      "first_appearance": { "chapter": "ch004", "paragraph": "ch004-p03" },
+      "purpose": "Hierarchy node for the wood and the houses in it (White Rabbit's, Duchess's, March Hare's) plus the clearing, the Pigeon's treetop, the thistle glade, the Cheshire Cat's path and the tree-door.",
+      "source": { "chapter": "ch004", "quote": "she ran off as hard as she could, and soon found herself safe in a thick wood." },
+      "inferred": true,
+      "reason": "Container node. geography.json gives the wood no specific counterpart; the hedgerow-copse grounding follows its designed grows_from (LOC-riverside-region)."
+    },
+    {
+      "id": "SCN-rabbit-house-exterior",
+      "name": "The White Rabbit's House, Front and Yard",
+      "level": "building",
+      "parent": "SCN-wonderland-wood",
+      "container": false,
+      "layout_pack": true,
+      "location_ref": "LOC-rabbits-house",
+      "geo_ref": "LOC-rabbits-house",
+      "layer": "dream",
+      "space_class": "non_diegetic_mental",
+      "int_ext": "EXT",
+      "mobile": false,
+      "grows_from": {
+        "counterpart_key": "cp-housemaid",
+        "loc": "LOC-family-house",
+        "waking_detail": "the family's own house and housemaid, whom Alice knows well enough to be mistaken for"
+      },
+      "term_ref": "TERM-0059",
+      "aliases": [
+        { "name": "a neat little house", "source_chapter": "ch004" },
+        { "name": "W. RABBIT (brass door plate)", "source_chapter": "ch004" }
+      ],
+      "chapters": ["ch004"],
+      "story_spans": [
+        { "story_scene": "ch004-sc01", "paragraphs": "ch004-p03..ch004-p03" },
+        { "story_scene": "ch004-sc03", "paragraphs": "ch004-p14..ch004-p33" },
+        { "story_scene": "ch004-sc04", "paragraphs": "ch004-p34..ch004-p34" }
+      ],
+      "event_refs": ["ev0014", "ev0016", "ev0017"],
+      "first_appearance": { "chapter": "ch004", "paragraph": "ch004-p03" },
+      "paragraph_count": 22,
+      "priority": "medium",
+      "key_scene": true,
+      "purpose": "Outside only: Alice arrives at the brass-plated front door and goes in; later the White Rabbit tries the window, Pat is 'digging for apples', a giant arm snatches at the cucumber-frames, ladders go up at the corner, Bill is sent down the chimney and kicked out, the crowd throws pebbles at the window; small again, Alice bolts out of the door past the crowd holding up Bill.",
+      "source": { "chapter": "ch004", "quote": "she came upon a neat little house, on the door of which was a bright brass plate with the name “W. RABBIT,” engraved upon it" },
+      "also_seen": [
+        { "chapter": "ch004", "paragraph": "ch004-p34", "quote": "she ran out of the house, and found quite a crowd of little animals and birds waiting outside" }
+      ],
+      "inferred": true,
+      "reason": "Split from the interior because the source stages the siege outside (window, cucumber-frames, ladders, roof, chimney) while Alice is stuck inside; the facade, yard and roof line form one exterior plan."
+    },
+    {
+      "id": "SCN-rabbit-house-upstairs-room",
+      "name": "The White Rabbit's House, Upstairs Room",
+      "level": "room",
+      "parent": "SCN-rabbit-house-exterior",
+      "container": false,
+      "layout_pack": true,
+      "location_ref": "LOC-rabbits-house-room",
+      "geo_ref": "LOC-rabbits-house-room",
+      "layer": "dream",
+      "space_class": "non_diegetic_mental",
+      "int_ext": "INT",
+      "mobile": false,
+      "grows_from": {
+        "counterpart_key": "cp-housemaid",
+        "loc": "LOC-family-house",
+        "waking_detail": "an upstairs room of the family house as the housemaid keeps it"
+      },
+      "aliases": [
+        { "name": "a tidy little room with a table in the window", "source_chapter": "ch004" }
+      ],
+      "chapters": ["ch004"],
+      "story_spans": [
+        { "story_scene": "ch004-sc02", "paragraphs": "ch004-p04..ch004-p12" },
+        { "story_scene": "ch004-sc03", "paragraphs": "ch004-p13..ch004-p33" },
+        { "story_scene": "ch004-sc04", "paragraphs": "ch004-p34..ch004-p34" }
+      ],
+      "event_refs": ["ev0015", "ev0016", "ev0017"],
+      "first_appearance": { "chapter": "ch004", "paragraph": "ch004-p04" },
+      "paragraph_count": 31,
+      "priority": "high",
+      "key_scene": true,
+      "purpose": "Inside only: Alice finds fan and gloves on the window table, drinks from the unlabelled bottle by the looking-glass and grows until she fills the room, arm out of the window and foot up the chimney; she holds the inward-opening door shut with her elbow, kicks Bill up the chimney, and shrinks by swallowing the pebbles-turned-cakes.",
+      "source": { "chapter": "ch004", "quote": "By this time she had found her way into a tidy little room with a table in the window" },
+      "also_seen": [
+        { "chapter": "ch004", "paragraph": "ch004-p14", "quote": "as the door opened inwards, and Alice’s elbow was pressed hard against it, that attempt proved a failure" }
+      ],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "SCN-wood-thistle-glade",
+      "name": "The Thistle Glade in the Wood",
+      "level": "building",
+      "parent": "SCN-wonderland-wood",
+      "container": false,
+      "layout_pack": true,
+      "location_ref": "LOC-thick-wood",
+      "geo_ref": "LOC-thick-wood",
+      "layer": "dream",
+      "space_class": "non_diegetic_mental",
+      "int_ext": "EXT",
+      "mobile": false,
+      "grows_from": {
+        "counterpart_key": "cp-rabbit-hole",
+        "loc": "LOC-riverside-region",
+        "waking_detail": "a thistle patch among the trees of a hedgerow copse near home"
+      },
+      "aliases": [
+        { "name": "a thick wood", "source_chapter": "ch004" },
+        { "name": "a great thistle", "source_chapter": "ch004" }
+      ],
+      "chapters": ["ch004"],
+      "story_spans": [
+        { "story_scene": "ch004-sc04", "paragraphs": "ch004-p34..ch004-p39" }
+      ],
+      "event_refs": ["ev0017"],
+      "first_appearance": { "chapter": "ch004", "paragraph": "ch004-p34" },
+      "paragraph_count": 6,
+      "priority": "low",
+      "key_scene": false,
+      "purpose": "Tiny Alice, safe in the wood, plans to grow and find the garden; an enormous puppy bounds at her and she dodges round a great thistle, teasing it with a stick until it tires, then runs until out of breath.",
+      "source": { "chapter": "ch004", "quote": "while she was peering about anxiously among the trees, a little sharp bark just over her head made her look up in a great hurry" },
+      "inferred": true,
+      "reason": "The puppy encounter is a distinct spot in the wood (thistle as the central landmark); no separate LOC exists, so it anchors to LOC-thick-wood."
+    },
+    {
+      "id": "SCN-caterpillar-clearing",
+      "name": "The Caterpillar's Clearing",
+      "level": "building",
+      "parent": "SCN-wonderland-wood",
+      "container": false,
+      "layout_pack": true,
+      "location_ref": "LOC-mushroom-clearing",
+      "geo_ref": "LOC-mushroom-clearing",
+      "layer": "dream",
+      "space_class": "non_diegetic_mental",
+      "int_ext": "EXT",
+      "mobile": false,
+      "grows_from": {
+        "counterpart_key": "cp-lessons",
+        "loc": "LOC-riverside-region",
+        "waking_detail": "a patch of flowers, grass and field mushrooms in a copse near home, where a child's schoolroom recitations come back to her"
+      },
+      "term_ref": "TERM-0079",
+      "aliases": [
+        { "name": "a large mushroom growing near her, about the same height as herself", "source_chapter": "ch004" }
+      ],
+      "chapters": ["ch004", "ch005"],
+      "story_spans": [
+        { "story_scene": "ch004-sc05", "paragraphs": "ch004-p40..ch004-p42" },
+        { "story_scene": "ch005-sc01", "paragraphs": "ch005-p01..ch005-p50" },
+        { "story_scene": "ch005-sc02", "paragraphs": "ch005-p51..ch005-p56" }
+      ],
+      "event_refs": ["ev0018", "ev0019", "ev0020", "ev0021"],
+      "first_appearance": { "chapter": "ch004", "paragraph": "ch004-p40" },
+      "paragraph_count": 59,
+      "priority": "high",
+      "key_scene": true,
+      "purpose": "Alice rests against a buttercup, peeps over the mushroom at the Caterpillar with the hookah; 'Who are you?', 'You are old, Father William', 'one side will make you grow taller'; alone, she breaks off two pieces and tests them, shrinking until her chin strikes her foot.",
+      "source": { "chapter": "ch004", "quote": "her eyes immediately met those of a large blue caterpillar, that was sitting on the top with its arms folded, quietly smoking a long hookah" },
+      "inferred": true,
+      "reason": "geography.json gives no specific waking counterpart; the cp-lessons grounding follows the recitation scene played here (world.json cp-lessons)."
+    },
+    {
+      "id": "SCN-pigeon-treetop",
+      "name": "Above the Treetops at the Pigeon's Nest",
+      "level": "building",
+      "parent": "SCN-wonderland-wood",
+      "container": false,
+      "layout_pack": true,
+      "location_ref": "LOC-pigeon-nest-treetop",
+      "geo_ref": "LOC-pigeon-nest-treetop",
+      "layer": "dream",
+      "space_class": "non_diegetic_mental",
+      "int_ext": "EXT",
+      "mobile": false,
+      "grows_from": {
+        "counterpart_key": "cp-rabbit-hole",
+        "loc": "LOC-riverside-region",
+        "waking_detail": "the tallest tree of the copse near home, with a wood-pigeon's nest in its crown"
+      },
+      "aliases": [
+        { "name": "the highest tree in the wood", "source_chapter": "ch005" },
+        { "name": "a sea of green leaves", "source_chapter": "ch005" }
+      ],
+      "chapters": ["ch005"],
+      "story_spans": [
+        { "story_scene": "ch005-sc03", "paragraphs": "ch005-p57..ch005-p77" }
+      ],
+      "event_refs": ["ev0022"],
+      "first_appearance": { "chapter": "ch005", "paragraph": "ch005-p57" },
+      "paragraph_count": 21,
+      "priority": "medium",
+      "key_scene": true,
+      "purpose": "Alice's head rises on an immense neck above a sea of green leaves; the Pigeon beats at her from its nest crying 'Serpent!'; Alice nibbles the two pieces back down to her usual height.",
+      "source": { "chapter": "ch005", "quote": "all she could see, when she looked down, was an immense length of neck, which seemed to rise like a stalk out of a sea of green leaves that lay far below her" },
+      "inferred": true,
+      "reason": "geography.json grows_from points to the wood itself (a dream place); the waking grounding here follows the wood's own counterpart (LOC-riverside-region)."
+    },
+    {
+      "id": "SCN-duchess-house-front",
+      "name": "The Duchess's House, Front Door and Open Place",
+      "level": "building",
+      "parent": "SCN-wonderland-wood",
+      "container": false,
+      "layout_pack": true,
+      "location_ref": "LOC-duchess-house",
+      "geo_ref": "LOC-duchess-house",
+      "layer": "dream",
+      "space_class": "non_diegetic_mental",
+      "int_ext": "EXT",
+      "mobile": false,
+      "grows_from": {
+        "counterpart_key": "cp-cat",
+        "loc": "LOC-family-house",
+        "waking_detail": "the family house's service door, where below-stairs life a child knows only at second hand spills out"
+      },
+      "term_ref": "TERM-0060",
+      "aliases": [
+        { "name": "an open place, with a little house in it about four feet high", "source_chapter": "ch005" },
+        { "name": "the open air", "source_chapter": "ch006" }
+      ],
+      "chapters": ["ch005", "ch006"],
+      "story_spans": [
+        { "story_scene": "ch005-sc04", "paragraphs": "ch005-p78..ch005-p78" },
+        { "story_scene": "ch006-sc01", "paragraphs": "ch006-p01..ch006-p04" },
+        { "story_scene": "ch006-sc02", "paragraphs": "ch006-p05..ch006-p18" },
+        { "story_scene": "ch006-sc04", "paragraphs": "ch006-p45..ch006-p49" }
+      ],
+      "event_refs": ["ev0023", "ev0024", "ev0025", "ev0027"],
+      "first_appearance": { "chapter": "ch005", "paragraph": "ch005-p78" },
+      "paragraph_count": 24,
+      "priority": "medium",
+      "key_scene": true,
+      "purpose": "Outside only: Alice shrinks to nine inches at the wood's edge and watches the Fish-Footman hand the Queen's croquet invitation to the Frog-Footman; she knocks and argues with the Frog-Footman on the step, then goes in; later she carries the baby out into the open air, it becomes a pig and trots off into the wood.",
+      "source": { "chapter": "ch005", "quote": "she came suddenly upon an open place, with a little house in it about four feet high" },
+      "also_seen": [
+        { "chapter": "ch006", "paragraph": "ch006-p01", "quote": "a footman in livery came running out of the wood" },
+        { "chapter": "ch006", "paragraph": "ch006-p49", "quote": "So she set the little creature down, and felt quite relieved to see it trot away quietly into the wood." }
+      ],
+      "inferred": true,
+      "reason": "Split from the kitchen because the source stages drama both at the door (Footmen) and inside (kitchen); the baby-to-pig beat plays in the same open place in front of the house."
+    },
+    {
+      "id": "SCN-duchess-kitchen",
+      "name": "The Duchess's Kitchen",
+      "level": "room",
+      "parent": "SCN-duchess-house-front",
+      "container": false,
+      "layout_pack": true,
+      "location_ref": "LOC-duchess-kitchen",
+      "geo_ref": "LOC-duchess-kitchen",
+      "layer": "dream",
+      "space_class": "non_diegetic_mental",
+      "int_ext": "INT",
+      "mobile": false,
+      "grows_from": {
+        "counterpart_key": "cp-cat",
+        "loc": "LOC-family-house",
+        "waking_detail": "Dinah on the hearth and the family kitchen below stairs"
+      },
+      "aliases": [
+        { "name": "a large kitchen, which was full of smoke from one end to the other", "source_chapter": "ch006" }
+      ],
+      "chapters": ["ch006"],
+      "story_spans": [
+        { "story_scene": "ch006-sc03", "paragraphs": "ch006-p19..ch006-p43" },
+        { "story_scene": "ch006-sc04", "paragraphs": "ch006-p44..ch006-p45" }
+      ],
+      "event_refs": ["ev0026", "ev0027"],
+      "first_appearance": { "chapter": "ch006", "paragraph": "ch006-p19" },
+      "paragraph_count": 27,
+      "priority": "high",
+      "key_scene": true,
+      "purpose": "Inside only: the Duchess on a three-legged stool nursing the sneezing baby, the cook at the soup cauldron over-peppering and throwing pans, the Cheshire Cat grinning on the hearth; 'Speak roughly to your little boy'; the Duchess flings the baby to Alice and leaves for croquet.",
+      "source": { "chapter": "ch006", "quote": "The door led right into a large kitchen, which was full of smoke from one end to the other" },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "SCN-cheshire-cat-path",
+      "name": "The Woodland Path of the Cheshire Cat",
+      "level": "building",
+      "parent": "SCN-wonderland-wood",
+      "container": false,
+      "layout_pack": true,
+      "location_ref": "LOC-thick-wood",
+      "geo_ref": "LOC-thick-wood",
+      "layer": "dream",
+      "space_class": "non_diegetic_mental",
+      "int_ext": "EXT",
+      "mobile": false,
+      "grows_from": {
+        "counterpart_key": "cp-cat",
+        "loc": "LOC-family-house",
+        "waking_detail": "Dinah watching from a garden bough near the family house"
+      },
+      "term_ref": "TERM-0040",
+      "aliases": [
+        { "name": "a bough of a tree a few yards off", "source_chapter": "ch006" },
+        { "name": "a branch of a tree", "source_chapter": "ch006" }
+      ],
+      "chapters": ["ch006"],
+      "story_spans": [
+        { "story_scene": "ch006-sc04", "paragraphs": "ch006-p49..ch006-p49" },
+        { "story_scene": "ch006-sc05", "paragraphs": "ch006-p50..ch006-p79" }
+      ],
+      "event_refs": ["ev0028"],
+      "first_appearance": { "chapter": "ch006", "paragraph": "ch006-p49" },
+      "paragraph_count": 31,
+      "priority": "medium",
+      "key_scene": true,
+      "purpose": "A woodland path leading on from the Duchess's open place: the Cheshire Cat grinning on a low bough ('we're all mad here'), vanishing, then reappearing on a branch further along toward the March Hare's; its body fades until only the grin remains.",
+      "source": { "chapter": "ch006", "quote": "she was a little startled by seeing the Cheshire Cat sitting on a bough of a tree a few yards off" },
+      "inferred": true,
+      "reason": "Both trees stand on one stretch of path (first bough and the branch further on), so one plan holds both appearances; anchored to LOC-thick-wood, whose visual_identifiers include the Cat's bough."
+    },
+    {
+      "id": "SCN-mad-tea-party",
+      "name": "The Tea-Table Under the Tree at the March Hare's House",
+      "level": "building",
+      "parent": "SCN-wonderland-wood",
+      "container": false,
+      "layout_pack": true,
+      "location_ref": "LOC-tea-table-yard",
+      "geo_ref": "LOC-tea-table-yard",
+      "adjacent_geo_refs": ["LOC-hare-cottage"],
+      "layer": "dream",
+      "space_class": "non_diegetic_mental",
+      "int_ext": "EXT",
+      "mobile": false,
+      "grows_from": {
+        "counterpart_key": "cp-tea",
+        "loc": "LOC-family-house",
+        "waking_detail": "the household's fixed tea-time Alice is late for when she wakes"
+      },
+      "term_ref": "TERM-0089",
+      "aliases": [
+        { "name": "the house of the March Hare", "source_chapter": "ch006" },
+        { "name": "a table set out under a tree in front of the house", "source_chapter": "ch007" }
+      ],
+      "chapters": ["ch006", "ch007"],
+      "story_spans": [
+        { "story_scene": "ch006-sc06", "paragraphs": "ch006-p80..ch006-p80" },
+        { "story_scene": "ch007-sc01", "paragraphs": "ch007-p01..ch007-p102" }
+      ],
+      "event_refs": ["ev0029", "ev0030", "ev0031"],
+      "first_appearance": { "chapter": "ch006", "paragraph": "ch006-p80" },
+      "paragraph_count": 103,
+      "priority": "high",
+      "key_scene": true,
+      "purpose": "Alice approaches the ear-chimneyed, fur-thatched house and joins the long table under the tree: 'No room!', the riddle with no answer, the stopped watch and quarrel with Time, the Dormouse's treacle-well story, moving round the table; Alice walks off in disgust. The house facade is a landmark only; no interior is staged.",
+      "source": { "chapter": "ch007", "quote": "There was a table set out under a tree in front of the house, and the March Hare and the Hatter were having tea at it" },
+      "also_seen": [
+        { "chapter": "ch006", "paragraph": "ch006-p80", "quote": "the chimneys were shaped like ears and the roof was thatched with fur" }
+      ],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "SCN-wood-tree-door",
+      "name": "The Tree With a Door in the Wood",
+      "level": "building",
+      "parent": "SCN-wonderland-wood",
+      "container": false,
+      "layout_pack": true,
+      "location_ref": "LOC-thick-wood",
+      "geo_ref": "LOC-thick-wood",
+      "layer": "dream",
+      "space_class": "non_diegetic_mental",
+      "int_ext": "EXT",
+      "mobile": false,
+      "grows_from": {
+        "counterpart_key": "cp-garden",
+        "waking_detail": "the small door in a garden wall the child longs to go through, recurring as a dream doorway in a tree trunk"
+      },
+      "aliases": [
+        { "name": "one of the trees had a door leading right into it", "source_chapter": "ch007" }
+      ],
+      "chapters": ["ch007"],
+      "story_spans": [
+        { "story_scene": "ch007-sc02", "paragraphs": "ch007-p103..ch007-p104" }
+      ],
+      "event_refs": ["ev0032"],
+      "first_appearance": { "chapter": "ch007", "paragraph": "ch007-p103" },
+      "paragraph_count": 2,
+      "priority": "low",
+      "key_scene": false,
+      "purpose": "Alice picks her way through the wood, vowing never to go back to the tea-party, notices a door in a tree trunk and steps in; the cut lands her back in the long hall.",
+      "source": { "chapter": "ch007", "quote": "Just as she said this, she noticed that one of the trees had a door leading right into it." },
+      "inferred": true,
+      "reason": "Anchored to LOC-thick-wood, not the deprecated LOC-tree-hatch (WRITE_RULES P-009): per geography.json the tree-door is a dream doorway with no tunnel behind it; the entry is a cut to SCN-long-hall (SUP-013)."
+    },
+    {
+      "id": "SCN-queens-garden",
+      "name": "The Beautiful Garden",
+      "level": "region",
+      "parent": null,
+      "container": true,
+      "layout_pack": false,
+      "location_ref": "LOC-walled-garden",
+      "geo_ref": "LOC-walled-garden",
+      "layer": "dream",
+      "space_class": "non_diegetic_mental",
+      "int_ext": "EXT",
+      "mobile": false,
+      "grows_from": {
+        "counterpart_key": "cp-garden",
+        "waking_detail": "a grand enclosed college or great-house garden with roses, fountains and a croquet lawn, seen through a door in a wall"
+      },
+      "term_ref": "TERM-0062",
+      "chapters": ["ch007", "ch008", "ch009"],
+      "event_refs": ["ev0032", "ev0033", "ev0034", "ev0035", "ev0036", "ev0037", "ev0038", "ev0039", "ev0040", "ev0041"],
+      "first_appearance": { "chapter": "ch007", "paragraph": "ch007-p105" },
+      "purpose": "Hierarchy node for the Queen's garden: the rose-tree at the entrance, the croquet-ground, and the Gryphon's sunny spot.",
+      "source": { "chapter": "ch007", "quote": "she found herself at last in the beautiful garden, among the bright flower-beds and the cool fountains" },
+      "inferred": true,
+      "reason": "Container node; grounding per world.json cp-garden."
+    },
+    {
+      "id": "SCN-rose-tree-yard",
+      "name": "The Rose-Tree by the Garden Entrance",
+      "level": "building",
+      "parent": "SCN-queens-garden",
+      "container": false,
+      "layout_pack": true,
+      "location_ref": "LOC-rose-tree-yard",
+      "geo_ref": "LOC-rose-tree-yard",
+      "layer": "dream",
+      "space_class": "non_diegetic_mental",
+      "int_ext": "EXT",
+      "mobile": false,
+      "grows_from": {
+        "counterpart_key": "cp-garden",
+        "waking_detail": "the rose beds and fountains of a grand private garden"
+      },
+      "term_ref": "TERM-0082",
+      "aliases": [
+        { "name": "the beautiful garden, among the bright flower-beds and the cool fountains", "source_chapter": "ch007" },
+        { "name": "a large rose-tree near the entrance of the garden", "source_chapter": "ch008" }
+      ],
+      "chapters": ["ch007", "ch008"],
+      "story_spans": [
+        { "story_scene": "ch007-sc03", "paragraphs": "ch007-p105..ch007-p105" },
+        { "story_scene": "ch008-sc01", "paragraphs": "ch008-p01..ch008-p10" },
+        { "story_scene": "ch008-sc02", "paragraphs": "ch008-p11..ch008-p33" }
+      ],
+      "event_refs": ["ev0032", "ev0033", "ev0034"],
+      "first_appearance": { "chapter": "ch007", "paragraph": "ch007-p105" },
+      "paragraph_count": 34,
+      "priority": "medium",
+      "key_scene": true,
+      "purpose": "Alice emerges into the garden among flower-beds and fountains; at the rose-tree Two, Five and Seven paint white roses red; the royal procession arrives and halts opposite her; 'Off with her head!' is first shouted; the gardeners are hidden in a flower-pot.",
+      "source": { "chapter": "ch008", "quote": "A large rose-tree stood near the entrance of the garden: the roses growing on it were white, but there were three gardeners at it, busily painting them red." },
+      "inferred": true,
+      "reason": "The garden arrival (ch007-p105) is placed at the entrance where ch008 opens, so both share this plan."
+    },
+    {
+      "id": "SCN-croquet-ground",
+      "name": "The Queen's Croquet-Ground",
+      "level": "building",
+      "parent": "SCN-queens-garden",
+      "container": false,
+      "layout_pack": true,
+      "location_ref": "LOC-croquet-lawn",
+      "geo_ref": "LOC-croquet-lawn",
+      "layer": "dream",
+      "space_class": "non_diegetic_mental",
+      "int_ext": "EXT",
+      "mobile": false,
+      "grows_from": {
+        "counterpart_key": "cp-court",
+        "waking_detail": "the fashionable 1860s croquet party of the grown-up world"
+      },
+      "term_ref": "TERM-0063",
+      "aliases": [
+        { "name": "the croquet-ground", "source_chapter": "ch008" },
+        { "name": "the shade (where the guests rest)", "source_chapter": "ch009" }
+      ],
+      "chapters": ["ch008", "ch009"],
+      "story_spans": [
+        { "story_scene": "ch008-sc03", "paragraphs": "ch008-p34..ch008-p40" },
+        { "story_scene": "ch008-sc04", "paragraphs": "ch008-p41..ch008-p44" },
+        { "story_scene": "ch008-sc05", "paragraphs": "ch008-p45..ch008-p60" },
+        { "story_scene": "ch008-sc06", "paragraphs": "ch008-p61..ch008-p63" },
+        { "story_scene": "ch008-sc07", "paragraphs": "ch008-p64..ch008-p71" },
+        { "story_scene": "ch009-sc01", "paragraphs": "ch009-p01..ch009-p29" },
+        { "story_scene": "ch009-sc02", "paragraphs": "ch009-p30..ch009-p34" },
+        { "story_scene": "ch009-sc03", "paragraphs": "ch009-p35..ch009-p42" }
+      ],
+      "event_refs": ["ev0035", "ev0036", "ev0037", "ev0038", "ev0039", "ev0040"],
+      "first_appearance": { "chapter": "ch008", "paragraph": "ch008-p34" },
+      "paragraph_count": 80,
+      "priority": "high",
+      "key_scene": true,
+      "purpose": "The procession files in beside the White Rabbit; the ridged and furrowed ground, flamingo mallets, hedgehog balls, soldier arches; the Cheshire Cat's head appears and the executioner-King-Queen dispute over beheading it; the Duchess walks Alice about moralising until the Queen confronts her; the game ends with every player but King, Queen and Alice in custody.",
+      "source": { "chapter": "ch008", "quote": "Alice thought she had never seen such a curious croquet-ground in her life; it was all ridges and furrows" },
+      "inferred": true,
+      "reason": "The procession's arrival (ch008-sc03) and the walk with the Duchess (ch009-sc01/sc02) play at the edges of the same ground, so they share this plan. No animal is shown struck (SUP-011)."
+    },
+    {
+      "id": "SCN-gryphon-sunning-spot",
+      "name": "Where the Gryphon Lies Asleep in the Sun",
+      "level": "building",
+      "parent": "SCN-queens-garden",
+      "container": false,
+      "layout_pack": true,
+      "location_ref": "LOC-gryphon-sunning-spot",
+      "geo_ref": "LOC-gryphon-sunning-spot",
+      "layer": "dream",
+      "space_class": "non_diegetic_mental",
+      "int_ext": "EXT",
+      "mobile": false,
+      "grows_from": {
+        "counterpart_key": "cp-court",
+        "waking_detail": "a sunlit corner of a great-house garden beyond the croquet lawn"
+      },
+      "term_ref": "TERM-0045",
+      "aliases": [
+        { "name": "lying fast asleep in the sun", "source_chapter": "ch009" }
+      ],
+      "chapters": ["ch009"],
+      "story_spans": [
+        { "story_scene": "ch009-sc04", "paragraphs": "ch009-p43..ch009-p47" }
+      ],
+      "event_refs": ["ev0041"],
+      "first_appearance": { "chapter": "ch009", "paragraph": "ch009-p43" },
+      "paragraph_count": 5,
+      "priority": "low",
+      "key_scene": false,
+      "purpose": "The Queen rouses the sleeping Gryphon, orders it to take Alice to the Mock Turtle and stalks off; the Gryphon chuckles that 'they never executes nobody'.",
+      "source": { "chapter": "ch009", "quote": "They very soon came upon a Gryphon, lying fast asleep in the sun." },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "SCN-mock-turtle-ledge",
+      "name": "The Mock Turtle's Ledge on the Seashore",
+      "level": "building",
+      "parent": null,
+      "container": false,
+      "layout_pack": true,
+      "location_ref": "LOC-rock-ledge",
+      "geo_ref": "LOC-rock-ledge",
+      "adjacent_geo_refs": ["LOC-estuary-shore"],
+      "layer": "dream",
+      "space_class": "non_diegetic_mental",
+      "int_ext": "EXT",
+      "mobile": false,
+      "grows_from": {
+        "counterpart_key": "cp-lessons",
+        "loc": "LOC-seaside-town",
+        "waking_detail": "Alice's one seaside trip (bathing machines, children digging, lodging houses) mixed with her schoolroom lessons"
+      },
+      "term_ref": "TERM-0046",
+      "aliases": [
+        { "name": "a little ledge of rock", "source_chapter": "ch009" },
+        { "name": "the sea-shore", "source_chapter": "ch010" }
+      ],
+      "chapters": ["ch009", "ch010"],
+      "story_spans": [
+        { "story_scene": "ch009-sc05", "paragraphs": "ch009-p48..ch009-p92" },
+        { "story_scene": "ch010-sc01", "paragraphs": "ch010-p01..ch010-p77" },
+        { "story_scene": "ch010-sc02", "paragraphs": "ch010-p78..ch010-p81" }
+      ],
+      "event_refs": ["ev0042", "ev0043", "ev0044"],
+      "first_appearance": { "chapter": "ch009", "paragraph": "ch009-p48" },
+      "paragraph_count": 126,
+      "priority": "high",
+      "key_scene": true,
+      "purpose": "The sobbing Mock Turtle on his rock ledge above the shingle tells of the school in the sea; he and the Gryphon dance the Lobster Quadrille round Alice on the shore; 'Beautiful Soup' is cut off by the cry 'The trial's beginning!' and the Gryphon runs Alice away along the shore, the song fading behind.",
+      "source": { "chapter": "ch009", "quote": "They had not gone far before they saw the Mock Turtle in the distance, sitting sad and lonely on a little ledge of rock" },
+      "also_seen": [
+        { "chapter": "ch010", "paragraph": "ch010-p79", "quote": "“Come on!” cried the Gryphon, and, taking Alice by the hand, it hurried off, without waiting for the end of the song." }
+      ],
+      "inferred": true,
+      "reason": "The Quadrille is danced round Alice where she sits, so the ledge and its stretch of shore are one plan (LOC-estuary-shore as adjacent landmark). The run toward the trial starts here and is not a separate space. Dream set-piece per SUP-010."
+    },
+    {
+      "id": "SCN-courtroom",
+      "name": "The Court of Justice",
+      "level": "building",
+      "parent": null,
+      "container": false,
+      "layout_pack": true,
+      "location_ref": "LOC-courtroom",
+      "geo_ref": "LOC-courtroom",
+      "adjacent_geo_refs": ["LOC-courthouse"],
+      "layer": "dream",
+      "space_class": "non_diegetic_mental",
+      "int_ext": "INT",
+      "mobile": false,
+      "grows_from": {
+        "counterpart_key": "cp-court",
+        "waking_detail": "a court of justice Alice has only read about in books: judge's wig, jury-box, herald"
+      },
+      "term_ref": "TERM-0064",
+      "aliases": [
+        { "name": "a court of justice", "source_chapter": "ch011" },
+        { "name": "the court", "source_chapter": "ch011" }
+      ],
+      "chapters": ["ch011", "ch012"],
+      "story_spans": [
+        { "story_scene": "ch011-sc01", "paragraphs": "ch011-p01..ch011-p15" },
+        { "story_scene": "ch011-sc02", "paragraphs": "ch011-p16..ch011-p63" },
+        { "story_scene": "ch011-sc03", "paragraphs": "ch011-p64..ch011-p74" },
+        { "story_scene": "ch012-sc01", "paragraphs": "ch012-p01..ch012-p63" },
+        { "story_scene": "ch012-sc02", "paragraphs": "ch012-p64..ch012-p64" }
+      ],
+      "event_refs": ["ev0045", "ev0046", "ev0047", "ev0048", "ev0049", "ev0050", "ev0051", "ev0052"],
+      "first_appearance": { "chapter": "ch011", "paragraph": "ch011-p01" },
+      "paragraph_count": 138,
+      "priority": "high",
+      "key_scene": true,
+      "purpose": "The King as judge in wig and crown, the jury-box with slates, the Knave in chains, the tarts on the centre table; the Hatter, the cook and Alice called as witnesses; the guinea-pig juror bagged and hustled out; Alice grows, upsets the jury-box, defies 'Sentence first—verdict afterwards'; the whole pack rises and flies at her.",
+      "source": { "chapter": "ch011", "quote": "In the very middle of the court was a table, with a large dish of tarts upon it" },
+      "also_seen": [
+        { "chapter": "ch012", "paragraph": "ch012-p64", "quote": "At this the whole pack rose up into the air, and came flying down upon her" }
+      ],
+      "inferred": true,
+      "reason": "Only the courtroom interior is staged; the courthouse exterior has no action, so no EXT entry is registered. Guinea-pig handling per H1 5.4 B; the flying pack match-cuts to leaves on SCN-riverbank (SUP-004)."
+    }
+  ],
+  "story_scene_map": {
+    "ch001-sc01": ["SCN-riverbank", "SCN-field-hedge-burrow"],
+    "ch001-sc02": ["SCN-falling-dream", "SCN-shaft-landing-passage"],
+    "ch001-sc03": ["SCN-shaft-landing-passage", "SCN-long-hall", "SCN-little-door-passage"],
+    "ch002-sc01": ["SCN-long-hall"],
+    "ch002-sc02": ["SCN-pool-of-tears"],
+    "ch003-sc01": ["SCN-pool-bank"],
+    "ch003-sc02": ["SCN-pool-bank"],
+    "ch003-sc03": ["SCN-pool-bank"],
+    "ch004-sc01": ["SCN-pool-bank", "SCN-rabbit-house-exterior"],
+    "ch004-sc02": ["SCN-rabbit-house-upstairs-room"],
+    "ch004-sc03": ["SCN-rabbit-house-upstairs-room", "SCN-rabbit-house-exterior"],
+    "ch004-sc04": ["SCN-rabbit-house-upstairs-room", "SCN-rabbit-house-exterior", "SCN-wood-thistle-glade"],
+    "ch004-sc05": ["SCN-caterpillar-clearing"],
+    "ch005-sc01": ["SCN-caterpillar-clearing"],
+    "ch005-sc02": ["SCN-caterpillar-clearing"],
+    "ch005-sc03": ["SCN-pigeon-treetop"],
+    "ch005-sc04": ["SCN-duchess-house-front"],
+    "ch006-sc01": ["SCN-duchess-house-front"],
+    "ch006-sc02": ["SCN-duchess-house-front"],
+    "ch006-sc03": ["SCN-duchess-kitchen"],
+    "ch006-sc04": ["SCN-duchess-kitchen", "SCN-duchess-house-front", "SCN-cheshire-cat-path"],
+    "ch006-sc05": ["SCN-cheshire-cat-path"],
+    "ch006-sc06": ["SCN-mad-tea-party"],
+    "ch007-sc01": ["SCN-mad-tea-party"],
+    "ch007-sc02": ["SCN-wood-tree-door"],
+    "ch007-sc03": ["SCN-long-hall", "SCN-little-door-passage", "SCN-rose-tree-yard"],
+    "ch008-sc01": ["SCN-rose-tree-yard"],
+    "ch008-sc02": ["SCN-rose-tree-yard"],
+    "ch008-sc03": ["SCN-croquet-ground"],
+    "ch008-sc04": ["SCN-croquet-ground"],
+    "ch008-sc05": ["SCN-croquet-ground"],
+    "ch008-sc06": ["SCN-croquet-ground"],
+    "ch008-sc07": ["SCN-croquet-ground"],
+    "ch009-sc01": ["SCN-croquet-ground"],
+    "ch009-sc02": ["SCN-croquet-ground"],
+    "ch009-sc03": ["SCN-croquet-ground"],
+    "ch009-sc04": ["SCN-gryphon-sunning-spot"],
+    "ch009-sc05": ["SCN-mock-turtle-ledge"],
+    "ch010-sc01": ["SCN-mock-turtle-ledge"],
+    "ch010-sc02": ["SCN-mock-turtle-ledge"],
+    "ch011-sc01": ["SCN-courtroom"],
+    "ch011-sc02": ["SCN-courtroom"],
+    "ch011-sc03": ["SCN-courtroom"],
+    "ch012-sc01": ["SCN-courtroom"],
+    "ch012-sc02": ["SCN-courtroom", "SCN-riverbank"],
+    "ch012-sc03": ["SCN-riverbank"]
+  },
+  "geography_not_registered_as_scene": [
+    { "loc": "LOC-meadow-field", "reason": "Crossed on the run in ch001-p03; staged as the approach within SCN-field-hedge-burrow." },
+    { "loc": "LOC-river-backwater", "reason": "The 'neighbouring pool' of ch012-p69/p70 is a landmark inside the SCN-riverbank plan; grows_from target of SCN-pool-of-tears and SCN-pool-bank." },
+    { "loc": "LOC-family-house", "reason": "Off screen: Alice runs off toward tea (ch012-p66) without the house being staged; grows_from target only." },
+    { "loc": "LOC-neighbouring-farm", "reason": "Sound only ('the confused clamour of the busy farm-yard', ch012-p70); handled by 09-audio/ambience." },
+    { "loc": "LOC-farmyard", "reason": "Sound only, as above." },
+    { "loc": "LOC-seaside-town", "reason": "Recalled in Alice's thought (ch002-p16) only; grows_from target of SCN-mock-turtle-ledge." },
+    { "loc": "LOC-church-spire", "reason": "Background element of wide shots on SCN-riverbank, no action." },
+    { "loc": "LOC-wonderland-dream", "reason": "Umbrella of the dream layer; dream scenes anchor to its specific child locations." },
+    { "loc": "LOC-hare-cottage", "reason": "Facade landmark of SCN-mad-tea-party; no interior action." },
+    { "loc": "LOC-courthouse", "reason": "No exterior action; only SCN-courtroom is staged." },
+    { "loc": "LOC-estuary-shore", "reason": "Shore stretch is part of the SCN-mock-turtle-ledge plan." },
+    { "loc": "LOC-walled-garden", "reason": "Registered as the container SCN-queens-garden only; its playable spaces are the rose-tree, croquet-ground and Gryphon's spot." }
+  ]
+}

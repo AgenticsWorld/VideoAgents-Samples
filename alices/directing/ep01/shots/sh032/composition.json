@@ -1,0 +1,28 @@
+{
+  "shot_id": "sh032",
+  "scene_id": "SCN-shaft-landing-passage",
+  "size": "close",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "mid_left",
+    "anchor_xy": [0.38, 0.54],
+    "size_in_frame": "head and shoulders, silhouetted, about 0.55 of frame height — she arrives into the frame and stops inside it"
+  },
+  "headroom": "about 0.12 of frame height at the stop, with the low vault of the corner closing above her; the shot ends on that compressed headroom, not on a movement.",
+  "horizon_eyeline": "Lens low at 1.2 m from the hall threshold: the corner floor runs across at 0.72 of frame height. Her eyeline lifts from the floor to the hall behind camera and comes to rest at 0.44, level, wide.",
+  "layers": {
+    "fg": "the edge of the hall threshold stone at the bottom of frame, warm-lit",
+    "mg": "Alice rounding the corner at a run and pulling up short, mostly silhouette against the dark passage",
+    "bg": "the dark passage she has come out of, and the pale glimmer of the hall's first lamp pool spilling in from behind camera onto the right of frame"
+  },
+  "gaze": {
+    "direction": "to_camera",
+    "lead_room": "right",
+    "note": "she looks past the lens into the opening hall; about 0.24 of frame width is left open to screen right, toward the hall lamplight, so her look has somewhere to be going when the cut takes us there."
+  },
+  "balance": "She arrives into the left half and the right half is held empty and faintly lit — the picture is pre-weighted toward the space the next shot will reveal.",
+  "leading_lines": "The corner's angle makes a hard vertical edge behind her shoulder, and the threshold stone a horizontal under her; the frame is a right angle, and she has stopped inside it.",
+  "eye_first": "Her stopped face, then the light on the right of frame that stopped it.",
+  "safe_area_ok": true,
+  "constraint_binding": "Ends hard on the stop, not on a movement: the composition is designed to settle — the run occupies the first half of the shot and the last frames are a still, balanced, held picture, which is what the cut into the hall reveal needs to land against."
+}

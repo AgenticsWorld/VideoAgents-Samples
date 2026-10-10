@@ -1,0 +1,844 @@
+{
+  "schema_version": "whitebox_scene.v1",
+  "scene_id": "SCN-shaft-landing-passage",
+  "name": "SCN-shaft-landing-passage",
+  "units": "meters",
+  "dimensions_m": [
+    30.0,
+    2.8,
+    16.875
+  ],
+  "objects": [
+    {
+      "id": "hall_wall_e",
+      "shape": "box",
+      "size_m": [
+        0.9,
+        2.8,
+        5.17
+      ],
+      "xy": [
+        0.4525,
+        0.1535
+      ],
+      "collision_role": "wall",
+      "position": [
+        -1.4249999999999996,
+        1.4,
+        -5.8471875
+      ]
+    },
+    {
+      "id": "hall_wall_s_w",
+      "shape": "box",
+      "size_m": [
+        5.1,
+        2.8,
+        0.675
+      ],
+      "xy": [
+        0.085,
+        0.2867
+      ],
+      "collision_role": "wall",
+      "position": [
+        -12.45,
+        1.4,
+        -3.5994374999999996
+      ]
+    },
+    {
+      "id": "hall_wall_s_e",
+      "shape": "box",
+      "size_m": [
+        5.925,
+        2.8,
+        0.675
+      ],
+      "xy": [
+        0.36875,
+        0.2867
+      ],
+      "collision_role": "wall",
+      "position": [
+        -3.937499999999999,
+        1.4,
+        -3.5994374999999996
+      ]
+    },
+    {
+      "id": "hall_opening_lintel",
+      "shape": "box",
+      "size_m": [
+        3.0,
+        0.7,
+        0.675
+      ],
+      "xy": [
+        0.22,
+        0.2867
+      ],
+      "elevation_m": 2.45,
+      "collision_role": "wall",
+      "position": [
+        -8.4,
+        2.45,
+        -3.5994374999999996
+      ]
+    },
+    {
+      "id": "leg_wall_w",
+      "shape": "box",
+      "size_m": [
+        0.675,
+        2.1,
+        7.4
+      ],
+      "xy": [
+        0.15875,
+        0.5282
+      ],
+      "collision_role": "wall",
+      "position": [
+        -10.2375,
+        1.05,
+        0.47587500000000005
+      ]
+    },
+    {
+      "id": "leg_wall_e",
+      "shape": "box",
+      "size_m": [
+        0.6,
+        2.1,
+        3.825
+      ],
+      "xy": [
+        0.28,
+        0.42
+      ],
+      "collision_role": "wall",
+      "position": [
+        -6.6,
+        1.05,
+        -1.3500000000000003
+      ]
+    },
+    {
+      "id": "passage_wall_n",
+      "shape": "box",
+      "size_m": [
+        7.725,
+        2.1,
+        0.6
+      ],
+      "xy": [
+        0.39875,
+        0.5333
+      ],
+      "collision_role": "wall",
+      "position": [
+        -3.0375,
+        1.05,
+        0.5619375
+      ]
+    },
+    {
+      "id": "passage_wall_s",
+      "shape": "box",
+      "size_m": [
+        11.4,
+        2.1,
+        0.525
+      ],
+      "xy": [
+        0.3375,
+        0.7356
+      ],
+      "collision_role": "wall",
+      "position": [
+        -4.874999999999999,
+        1.05,
+        3.9757500000000006
+      ]
+    },
+    {
+      "id": "earth_wall_n",
+      "shape": "box",
+      "size_m": [
+        4.575,
+        2.1,
+        0.3
+      ],
+      "xy": [
+        0.60375,
+        0.5467
+      ],
+      "collision_role": "wall",
+      "position": [
+        3.1125000000000003,
+        1.05,
+        0.7880624999999994
+      ]
+    },
+    {
+      "id": "earth_wall_s",
+      "shape": "box",
+      "size_m": [
+        4.575,
+        2.1,
+        0.3
+      ],
+      "xy": [
+        0.60375,
+        0.7244
+      ],
+      "collision_role": "wall",
+      "position": [
+        3.1125000000000003,
+        1.05,
+        3.786750000000001
+      ]
+    },
+    {
+      "id": "chamber_wall_000",
+      "shape": "box",
+      "size_m": [
+        0.45,
+        3.0,
+        0.96
+      ],
+      "xy": [
+        0.91,
+        0.6222
+      ],
+      "elevation_m": 1.5,
+      "collision_role": "wall",
+      "position": [
+        12.3,
+        1.5,
+        2.0621249999999995
+      ]
+    },
+    {
+      "id": "chamber_wall_015",
+      "shape": "box",
+      "size_m": [
+        0.96,
+        3.0,
+        0.45
+      ],
+      "xy": [
+        0.9059,
+        0.6774
+      ],
+      "elevation_m": 1.5,
+      "yaw": 1.309,
+      "collision_role": "wall",
+      "position": [
+        12.177000000000001,
+        1.5,
+        2.993625
+      ]
+    },
+    {
+      "id": "chamber_wall_030",
+      "shape": "box",
+      "size_m": [
+        0.96,
+        3.0,
+        0.45
+      ],
+      "xy": [
+        0.8939,
+        0.7289
+      ],
+      "elevation_m": 1.5,
+      "yaw": 1.047,
+      "collision_role": "wall",
+      "position": [
+        11.817,
+        1.5,
+        3.8626875
+      ]
+    },
+    {
+      "id": "chamber_wall_045",
+      "shape": "box",
+      "size_m": [
+        0.96,
+        3.0,
+        0.45
+      ],
+      "xy": [
+        0.8749,
+        0.7731
+      ],
+      "elevation_m": 1.5,
+      "yaw": 0.785,
+      "collision_role": "wall",
+      "position": [
+        11.247,
+        1.5,
+        4.608562500000001
+      ]
+    },
+    {
+      "id": "chamber_wall_060",
+      "shape": "box",
+      "size_m": [
+        0.96,
+        3.0,
+        0.45
+      ],
+      "xy": [
+        0.85,
+        0.807
+      ],
+      "elevation_m": 1.5,
+      "yaw": 0.524,
+      "collision_role": "wall",
+      "position": [
+        10.5,
+        1.5,
+        5.180625000000001
+      ]
+    },
+    {
+      "id": "chamber_wall_075",
+      "shape": "box",
+      "size_m": [
+        0.96,
+        3.0,
+        0.45
+      ],
+      "xy": [
+        0.8211,
+        0.8283
+      ],
+      "elevation_m": 1.5,
+      "yaw": 0.262,
+      "collision_role": "wall",
+      "position": [
+        9.633000000000001,
+        1.5,
+        5.5400625
+      ]
+    },
+    {
+      "id": "chamber_wall_090",
+      "shape": "box",
+      "size_m": [
+        0.96,
+        3.0,
+        0.45
+      ],
+      "xy": [
+        0.79,
+        0.8356
+      ],
+      "elevation_m": 1.5,
+      "collision_role": "wall",
+      "position": [
+        8.700000000000001,
+        1.5,
+        5.663250000000001
+      ]
+    },
+    {
+      "id": "chamber_wall_105",
+      "shape": "box",
+      "size_m": [
+        0.96,
+        3.0,
+        0.45
+      ],
+      "xy": [
+        0.7589,
+        0.8283
+      ],
+      "elevation_m": 1.5,
+      "yaw": -0.262,
+      "collision_role": "wall",
+      "position": [
+        7.767,
+        1.5,
+        5.5400625
+      ]
+    },
+    {
+      "id": "chamber_wall_120",
+      "shape": "box",
+      "size_m": [
+        0.96,
+        3.0,
+        0.45
+      ],
+      "xy": [
+        0.73,
+        0.807
+      ],
+      "elevation_m": 1.5,
+      "yaw": -0.524,
+      "collision_role": "wall",
+      "position": [
+        6.8999999999999995,
+        1.5,
+        5.180625000000001
+      ]
+    },
+    {
+      "id": "chamber_wall_135",
+      "shape": "box",
+      "size_m": [
+        0.96,
+        3.0,
+        0.45
+      ],
+      "xy": [
+        0.7051,
+        0.7731
+      ],
+      "elevation_m": 1.5,
+      "yaw": -0.785,
+      "collision_role": "wall",
+      "position": [
+        6.152999999999999,
+        1.5,
+        4.608562500000001
+      ]
+    },
+    {
+      "id": "chamber_wall_150",
+      "shape": "box",
+      "size_m": [
+        0.96,
+        3.0,
+        0.45
+      ],
+      "xy": [
+        0.6861,
+        0.7289
+      ],
+      "elevation_m": 1.5,
+      "yaw": -1.047,
+      "collision_role": "wall",
+      "position": [
+        5.583000000000001,
+        1.5,
+        3.8626875
+      ]
+    },
+    {
+      "id": "chamber_wall_210",
+      "shape": "box",
+      "size_m": [
+        0.96,
+        3.0,
+        0.45
+      ],
+      "xy": [
+        0.6861,
+        0.5156
+      ],
+      "elevation_m": 1.5,
+      "yaw": -2.094,
+      "collision_role": "wall",
+      "position": [
+        5.583000000000001,
+        1.5,
+        0.2632499999999991
+      ]
+    },
+    {
+      "id": "chamber_wall_225",
+      "shape": "box",
+      "size_m": [
+        0.96,
+        3.0,
+        0.45
+      ],
+      "xy": [
+        0.7051,
+        0.4714
+      ],
+      "elevation_m": 1.5,
+      "yaw": -2.356,
+      "collision_role": "wall",
+      "position": [
+        6.152999999999999,
+        1.5,
+        -0.48262500000000025
+      ]
+    },
+    {
+      "id": "chamber_wall_240",
+      "shape": "box",
+      "size_m": [
+        0.96,
+        3.0,
+        0.45
+      ],
+      "xy": [
+        0.73,
+        0.4375
+      ],
+      "elevation_m": 1.5,
+      "yaw": -2.618,
+      "collision_role": "wall",
+      "position": [
+        6.8999999999999995,
+        1.5,
+        -1.0546875
+      ]
+    },
+    {
+      "id": "chamber_wall_255",
+      "shape": "box",
+      "size_m": [
+        0.96,
+        3.0,
+        0.45
+      ],
+      "xy": [
+        0.7589,
+        0.4162
+      ],
+      "elevation_m": 1.5,
+      "yaw": -2.88,
+      "collision_role": "wall",
+      "position": [
+        7.767,
+        1.5,
+        -1.4141249999999999
+      ]
+    },
+    {
+      "id": "chamber_wall_270",
+      "shape": "box",
+      "size_m": [
+        0.96,
+        3.0,
+        0.45
+      ],
+      "xy": [
+        0.79,
+        0.4089
+      ],
+      "elevation_m": 1.5,
+      "collision_role": "wall",
+      "position": [
+        8.700000000000001,
+        1.5,
+        -1.5373125000000003
+      ]
+    },
+    {
+      "id": "chamber_wall_285",
+      "shape": "box",
+      "size_m": [
+        0.96,
+        3.0,
+        0.45
+      ],
+      "xy": [
+        0.8211,
+        0.4162
+      ],
+      "elevation_m": 1.5,
+      "yaw": 2.88,
+      "collision_role": "wall",
+      "position": [
+        9.633000000000001,
+        1.5,
+        -1.4141249999999999
+      ]
+    },
+    {
+      "id": "chamber_wall_300",
+      "shape": "box",
+      "size_m": [
+        0.96,
+        3.0,
+        0.45
+      ],
+      "xy": [
+        0.85,
+        0.4375
+      ],
+      "elevation_m": 1.5,
+      "yaw": 2.618,
+      "collision_role": "wall",
+      "position": [
+        10.5,
+        1.5,
+        -1.0546875
+      ]
+    },
+    {
+      "id": "chamber_wall_315",
+      "shape": "box",
+      "size_m": [
+        0.96,
+        3.0,
+        0.45
+      ],
+      "xy": [
+        0.8749,
+        0.4714
+      ],
+      "elevation_m": 1.5,
+      "yaw": 2.356,
+      "collision_role": "wall",
+      "position": [
+        11.247,
+        1.5,
+        -0.48262500000000025
+      ]
+    },
+    {
+      "id": "chamber_wall_330",
+      "shape": "box",
+      "size_m": [
+        0.96,
+        3.0,
+        0.45
+      ],
+      "xy": [
+        0.8939,
+        0.5156
+      ],
+      "elevation_m": 1.5,
+      "yaw": 2.094,
+      "collision_role": "wall",
+      "position": [
+        11.817,
+        1.5,
+        0.2632499999999991
+      ]
+    },
+    {
+      "id": "chamber_wall_345",
+      "shape": "box",
+      "size_m": [
+        0.96,
+        3.0,
+        0.45
+      ],
+      "xy": [
+        0.9059,
+        0.567
+      ],
+      "elevation_m": 1.5,
+      "yaw": 1.833,
+      "collision_role": "wall",
+      "position": [
+        12.177000000000001,
+        1.5,
+        1.130624999999999
+      ]
+    },
+    {
+      "id": "leaf_heap",
+      "shape": "cylinder",
+      "size_m": [
+        1.6,
+        0.5,
+        1.6
+      ],
+      "xy": [
+        0.7725,
+        0.622
+      ],
+      "color": "#8c6a3f",
+      "position": [
+        8.174999999999999,
+        0.25,
+        2.05875
+      ]
+    }
+  ],
+  "render": {
+    "aspect_ratio": "16:9",
+    "width": 960,
+    "height": 540
+  },
+  "landmarks": [
+    {
+      "id": "hall_opening",
+      "name": "the opening into the long hall",
+      "name_en": "the opening into the long hall",
+      "kind": "entrance",
+      "xy": [
+        0.225,
+        0.27
+      ],
+      "xy_m": [
+        6.75,
+        4.56
+      ]
+    },
+    {
+      "id": "corner",
+      "name": "the right-angle corner",
+      "name_en": "the right-angle corner",
+      "kind": "feature",
+      "xy": [
+        0.225,
+        0.64
+      ],
+      "xy_m": [
+        6.75,
+        10.82
+      ]
+    },
+    {
+      "id": "mosaic_dado",
+      "name": "the mosaic dado near the corner",
+      "name_en": "the mosaic dado near the corner",
+      "kind": "feature",
+      "xy": [
+        0.225,
+        0.45
+      ],
+      "xy_m": [
+        6.75,
+        7.6
+      ]
+    },
+    {
+      "id": "brick_mid",
+      "name": "the middle of the brick-vaulted passage",
+      "name_en": "the middle of the brick-vaulted passage",
+      "kind": "zone",
+      "xy": [
+        0.41,
+        0.64
+      ],
+      "xy_m": [
+        12.3,
+        10.82
+      ]
+    },
+    {
+      "id": "root_tunnel",
+      "name": "the root-laced earth stretch",
+      "name_en": "the root-laced earth stretch",
+      "kind": "zone",
+      "xy": [
+        0.6,
+        0.64
+      ],
+      "xy_m": [
+        18.0,
+        10.82
+      ]
+    },
+    {
+      "id": "chamber_roots",
+      "name": "the root curtain on the chamber's north side",
+      "name_en": "the root curtain on the chamber's north side",
+      "kind": "feature",
+      "xy": [
+        0.79,
+        0.47
+      ],
+      "xy_m": [
+        23.7,
+        7.94
+      ]
+    },
+    {
+      "id": "leaf_heap",
+      "name": "the heap of sticks and dry leaves",
+      "name_en": "the heap of sticks and dry leaves",
+      "kind": "feature",
+      "xy": [
+        0.79,
+        0.62
+      ],
+      "xy_m": [
+        23.7,
+        10.48
+      ]
+    }
+  ],
+  "views": [
+    {
+      "tile": 1,
+      "camera_from": "leaf_heap",
+      "looking_at": "corner",
+      "size": "wide",
+      "angle": "eye",
+      "desc_en": "eye-level wide shot from the heap of sticks and dry leaves down the whole long low passage to the warm lamp-glow at the far corner, the White Rabbit hurrying away small in the distance"
+    },
+    {
+      "tile": 2,
+      "camera_from": "brick_mid",
+      "looking_at": "leaf_heap",
+      "size": "wide",
+      "angle": "eye",
+      "desc_en": "eye-level wide shot from the brick-vaulted middle of the passage back toward the dark landing chamber and the leaf heap, earth walls and hanging roots beyond the last brick rib"
+    },
+    {
+      "tile": 3,
+      "camera_from": "root_tunnel",
+      "looking_at": "leaf_heap",
+      "size": "medium",
+      "angle": "low",
+      "desc_en": "low medium shot from the root-laced earth stretch back at the leaf heap as the girl lands on it in a puff of dust, pitch black above"
+    },
+    {
+      "tile": 4,
+      "camera_from": "mosaic_dado",
+      "looking_at": "corner",
+      "size": "medium",
+      "angle": "eye",
+      "desc_en": "eye-level medium shot past the pastel-and-gold mosaic dado to the right-angle corner glowing with warm lamplight"
+    },
+    {
+      "tile": 5,
+      "camera_from": "corner",
+      "looking_at": "hall_opening",
+      "size": "medium",
+      "angle": "eye",
+      "desc_en": "eye-level medium shot round the corner into the short final leg of the passage, the long hall's lamplight and stone floor opening ahead"
+    },
+    {
+      "tile": 6,
+      "camera_from": "hall_opening",
+      "looking_at": "corner",
+      "size": "close",
+      "angle": "low",
+      "desc_en": "low close shot from the hall threshold back at the corner as the girl rounds it at a run, silhouetted against the dark passage"
+    },
+    {
+      "tile": 7,
+      "camera_from": "leaf_heap",
+      "looking_at": "chamber_roots",
+      "size": "close",
+      "angle": "eye",
+      "desc_en": "eye-level close shot from the leaf heap to the curtain of pale hawthorn roots hanging down the chamber's earth wall"
+    },
+    {
+      "tile": 8,
+      "camera_from": "hall_opening",
+      "looking_at": "mosaic_dado",
+      "size": "wide",
+      "angle": "high_oblique",
+      "desc_en": "high oblique wide shot from above the hall threshold angled down the corner and along the brick vault toward the mosaic dado, the passage vanishing into dark"
+    },
+    {
+      "tile": 9,
+      "camera_from": "leaf_heap",
+      "looking_at": "root_tunnel",
+      "size": "detail",
+      "angle": "high_oblique",
+      "desc_en": "high oblique detail shot from above the heap across its brittle summer-dry sticks and curled brown leaves toward the root-laced tunnel mouth, a drift of leaf dust"
+    }
+  ],
+  "layout_top": "assets/concepts/scenes/SCN-shaft-landing-passage/layout_top.png",
+  "inferred": true,
+  "scale_basis": "The image width is set to 30.0 m, kept from layout.json map_extent_m (env-concept calibration). Z = 30 x 9/16 = 16.875 m. No drawn element matches a Bible dimension: the passage is drawn about 2.8 m wide (Bible 1.4 m), the straight run about 12 m (Bible 25 m) and the chamber about 6.75 m across (Bible 3 m). The walls follow the drawing, and the scale is the layout.json scale. Y = 2.8 m, the hall height. The passage walls are 2.1 m (Bible clear height).",
+  "warnings": []
+}

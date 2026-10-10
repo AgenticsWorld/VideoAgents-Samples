@@ -1,0 +1,5 @@
+{"task_id":"p0-init","agent":"00-orchestration/workflow-orchestrator","status":"done",
+ "outputs":["runs/dag.json"],
+ "self_check":{"dag_acyclic":"PASS","paths_valid":"PASS","dagcheck_strict":"PASS (112 nodes)"},
+ "summary":"补齐 WORKFLOW §2 目录;按 workflow.yaml 生成模板级 DAG;条件关闭节点置 skipped,p0-bible-init/p0-scan 置 blocked 等待小说原文与参考图确认",
+ "blockers":["novel/ 为空:待用户导入小说原文","等待用户确认 refs/ 参考图就绪或明确跳过"]}

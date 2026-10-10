@@ -1,0 +1,38 @@
+{
+  "shot_id": "sh056",
+  "group_id": "grp022",
+  "scene_no": "S07",
+  "scene_id": "SCN-long-hall",
+  "duration_s": 4.0,
+  "is_dialogue": false,
+  "group_position": "first shot of grp022 — Alice on her map start (glass_table, ten inches high at the foot of the table).",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "stand",
+      "start_pos": "ten inches high at the foot of the glass table, on her feet again after crying",
+      "space_fragment_en": "standing ten inches high at the foot of the glass table on screen-left, facing screen-right at the little glass box",
+      "facing": "screen-right, across empty flagstone, to the glass box out under the table in the lamp shadow",
+      "path": [],
+      "beats": [
+        { "t": 0.6, "action": "sniffs and wipes her face", "sync": "the last of the crying" },
+        { "t": 1.8, "action": "looks about her", "sync": "the search" },
+        { "t": 3.0, "action": "her look lands on the little glass box", "sync": "the find" }
+      ],
+      "performance_beat": {
+        "objective": "find the next thing to try, having told herself off for crying",
+        "goal": "find the next thing to try",
+        "emotional_arc": "from damp, deflated recovery to renewed practical interest",
+        "arc_from": "damp, deflated recovery",
+        "arc_to": "renewed practical interest",
+        "trigger": { "beat": "her look crosses the floor and lands on the glass box", "t": 3.0 },
+        "no_early_reaction": ["a step toward it", "the head coming up", "the eyes brightening"],
+        "forbidden_early": ["a step toward it", "the head coming up", "the eyes brightening"],
+        "end_state": "standing square, face still wet, eyes fixed screen-right on the box, weight coming forward"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0005 (dream) — the little glass box with the cake", "note": "Alice alone." }
+}

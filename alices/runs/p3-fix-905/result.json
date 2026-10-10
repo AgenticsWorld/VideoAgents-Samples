@@ -1,0 +1,31 @@
+{
+  "task_id": "p3-fix-905",
+  "agent": "04-creatures/creature",
+  "status": "completed",
+  "type": "defect_fix",
+  "target_defect": "qa/defects/DEF-p3-char-index-905.json",
+  "completed_at": "2026-09-22",
+  "decision": "no_creature_entry",
+  "summary": "Resolved DEF-p3-char-index-905 (whether the ch006-p49 pig trot-off needs a CRE-* entry linked to CHAR-duchess-baby). Decision: no. bible/creatures/creature.json and bible/creatures/index.json are unchanged — no CRE-005 was added.",
+  "reasoning": [
+    "CHAR-duchess-baby.performer_concept (already registered by 03-characters/character-manager in bible/characters/index.json, out of this task's edit scope) is explicit and unqualified: 'Human infant performer per SUP-006 ... not a practical creature swap.' That statement is not scoped to only the carrying portion of the scene.",
+    "story/structured_story/ch006.json confirms ch006-p48 (pig realisation) and ch006-p49 (trot-off) sit in the same continuous scene ch006-sc04 with no cast/location cut recorded at p49.",
+    "bible/cultivation.json SUP-006.visual_signature calls for 'continuous handheld/held-in-arms coverage across the change with no visible cut or effects transition' — a hidden-cut swap to a real piglet at the trot-off would introduce exactly the cut SUP-006 was written to avoid.",
+    "Per WRITE_RULES.md section 1 arbitration order, the already-registered peer (CHAR) decision outranks introducing a new, contradicting inferred design choice here; no conflict was opened because the existing CHAR record already resolves the question in the negative once read in full."
+  ],
+  "production_note": "The trot-off (ch006-p49) is directed as the tail of the same continuous SUP-006 shot: framing/sound/motion illusion (small/soft-focus/silhouetted departing shape, trotting sound design, camera favouring Alice's reaction) rather than a clear full-body reveal of a real animal walking away. No new asset needed from 06-art/prop or 08-video-gen for this beat.",
+  "files_touched": [
+    "qa/defects/DEF-p3-char-index-905.json (status -> closed, fix_note added)"
+  ],
+  "files_not_touched": [
+    "bible/creatures/creature.json (no change — decision was 'no')",
+    "bible/creatures/index.json (no change — decision was 'no')",
+    "bible/characters/index.json (CHAR-duchess-baby.disambiguation left as-is; owned by 03-characters/character-manager, out of this task's scope — fix_note in the defect supplies the confirmation for them to fold in if they revisit the field)"
+  ],
+  "checks": {
+    "json_validity": "PASS — qa/defects/DEF-p3-char-index-905.json, bible/creatures/creature.json, bible/creatures/index.json all parse",
+    "no_unauthorized_edits": "PASS — only the named defect file was modified; creature.json/index.json confirmed byte-identical CRE id lists (CRE-001..004) before and after"
+  },
+  "evaluation_and_qa": "Quality judge and all QA dimensions disabled for this project; no evaluation/QA scoring performed.",
+  "run_record_dir": "runs/p3-fix-905/"
+}

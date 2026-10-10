@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh089",
+  "group_id": "grp033",
+  "scene_no": "S09",
+  "duration_s": 5.0,
+  "size": "medium",
+  "movement": "track_lateral",
+  "direction": "abeam, travelling with her run along the south-east door line toward the low curtain — the sh034 set-up repeated, only lower",
+  "speed": "about 0.9 m/s, a two-foot girl's flat-out run; because the lens is at 0.55 m and much nearer the wall, the same doors pass at roughly a third of the rate they did in S05",
+  "speed_curve": "linear",
+  "rig": "dolly",
+  "lens_mm": 40,
+  "camera_height_m": 0.55,
+  "angle": "level",
+  "rack_focus": "none",
+  "start_frame": "Travelling medium abeam of two-foot Alice as she splashes out of the shallow water, one white kid glove on her hand, the door bases and their horseshoe arches rising away past her.",
+  "end_frame": "The same abeam framing some four and a half metres on: she is still centre frame and still running, the same door line passing at the same unhurried rate, the low curtain entering ahead of her.",
+  "constraint_honoured": "'Deliberate repetition — the same wall now takes three times as long to pass, because she is a third of the size. Water breaking off her boots.'",
+  "movement_note": "Licensed move (a) and the second half of the S05/S09 match pair: the 40 mm is reused exactly as the cinematography handoff demands, and only the lens height changes (1.30 → 0.55). LN-ep01-028 (1.7 s) sits inside the constant-speed travel.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh073",
+  "group_id": "grp028",
+  "scene_no": "S08",
+  "duration_s": 3.0,
+  "size": "medium",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame; he comes to camera)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 40,
+  "camera_height_m": 0.1,
+  "angle": "level, lens right on the water surface",
+  "rack_focus": "none",
+  "start_frame": "Water-level from the curtain up the hall toward the glass table, the waterline cutting across the frame as an eye-line: the White Rabbit appearing out of the dark between the lamp pools, small and coming on.",
+  "end_frame": "The same frame with him much nearer, bounding on all four legs through four inches of water — every foot displacing water, ripples starting under his own feet, wet fur to the elbow, the gloves and fan carried in his mouth.",
+  "constraint_honoured": "'Contact evidence is mandatory: every foot displaces water and the ripples begin where he touches' — a still lens on the surface is what makes that evidence photographic rather than asserted.",
+  "movement_note": "The shot where the animal either works or does not; a camera move would add a second uncertainty on top of the water contact. His approach supplies all the motion.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

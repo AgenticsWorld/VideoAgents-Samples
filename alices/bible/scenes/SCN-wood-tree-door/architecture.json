@@ -1,0 +1,48 @@
+{
+  "scene_id": "SCN-wood-tree-door",
+  "inherits": null,
+  "layer": "dream",
+  "int_ext": "EXT",
+  "form": "An enormous ancient hollow oak on a woodland path with a small, old, horseshoe-arched Art Nouveau garden door fitted flush into its trunk. No tunnel behind it: the door opens on darkness and the cut lands in the long hall",
+  "stories": 0,
+  "source_chapter": "ch007",
+  "culture_ref": "geography.json#LOC-thick-wood; world.json#wonderland_real_counterparts cp-garden; cultivation.json SUP-013",
+  "amendment": "BIB-0027 (user ruling 2026-09-22), applied p4-cr-architecture 2026-09-23",
+  "period": "Dream-space; the door grows from a real 1860s Oxford college garden-wall door, redrawn in the Art Nouveau of the long hall it leads back to (WR-010)",
+  "grows_from": {
+    "loc": null,
+    "waking_detail": "the small door in a garden wall the child longs to go through, recurring as a dream doorway in a tree trunk",
+    "design_growth": "The locked door in an Oxford college garden wall, the one a child is taken past on walks and never through, turns up inside the wood set into a living tree, dressed like the long hall's doors: horseshoe-arched head, studded oak boards, iron ring handle. The tree has grown round the old stone door-frame as trees swallow a boundary wall"
+  },
+  "dream_design_language": "Architecture swallowed by nature: a dressed limestone door-frame half enclosed by bark that has grown over it; the door is too neat and too ornate for the tree, which is the whole signal",
+  "mucha_design_language": {"item": "Mucha / Art Nouveau: the limestone door-frame carved in flowing lily-and-vine relief with a round stained-glass halo roundel set in the stone above the door head (matching the long hall's door roundels); verdigris wrought-iron whiplash strap hinges with worn gilding; ivy and honeysuckle curling over the bark and frame in garland loops; the tree's flutes read as flowing organic lines", "inferred": true, "culture_ref": "world.json#WR-010; SCN-long-hall mucha_design_language (door family)", "why": "Rhymes the tree door with the hall's doors it leads into"},
+  "structure": [
+    {"item": "a veteran English oak with a trunk about 3 m across, deeply fluted and burred, standing at the path edge", "src": "ch007-p104", "note": "'one of the trees had a door leading right into it'; species and girth inferred, culture_ref geography.json#LOC-thick-wood.physical.flora"},
+    {"item": "a door about 1.5 m high and 0.8 m wide set into the trunk at ground level under a horseshoe arch", "src": "ch007-p104", "note": "dimensions inferred from cp-garden garden-wall door; arch matches SCN-long-hall doors (WR-010)"},
+    {"item": "a door-frame of weathered honey-coloured limestone, the bark folded over its edges on both sides", "inferred": true, "culture_ref": "world.json#wonderland_real_counterparts cp-garden", "why": "Makes the grows_from link (college garden wall) legible and the door impossible yet solid"},
+    {"item": "the path passes directly in front of the tree; wood on all sides as in SCN-cheshire-cat-path", "src": "ch007-p103"}
+  ],
+  "materials": [
+    {"item": "grey furrowed oak bark, moss on the north side, ferns in the root crevices", "inferred": true, "culture_ref": "geography.json#LOC-thick-wood.physical.flora", "why": "Ordinary old-oak texture"},
+    {"item": "honey-coloured oolitic limestone, lichened and worn (the Oxford building stone)", "inferred": true, "culture_ref": "world.json#frame.place (Oxford)", "why": "The college wall material of cp-garden"},
+    {"item": "silver-grey weathered oak boards, iron studs in a grid, verdigris wrought-iron whiplash strap hinges and a ring handle", "inferred": true, "culture_ref": "world.json#wonderland_real_counterparts cp-garden; world.json#WR-010", "why": "Garden-door construction with the hall's Art Nouveau ironwork"}
+  ],
+  "details": [
+    {"item": "an iron keyhole plate under the ring handle", "inferred": true, "culture_ref": "SUP-013 (little golden key motif)", "why": "Rhymes with the long hall's little door and golden key without adding a key here"},
+    {"item": "the door stands a hand's width ajar on pure darkness; nothing visible behind it", "src": "ch007-p104", "note": "no tunnel behind it per scenes/index.json reason and SUP-013"},
+    {"item": "a worn threshold stone half buried in leaf litter", "inferred": true, "culture_ref": "world.json#wonderland_real_counterparts cp-garden", "why": "Gives Alice a physical step up into the tree"}
+  ],
+  "scale_notes": {
+    "rule": "True 1:1. Alice is at her usual height (135 cm) and must stoop slightly to pass the 1.5 m door. No size change here; the next size change happens in SCN-long-hall (ch007-p105)",
+    "sources": ["cultivation.json#SUP-003", "ch007-p104", "ch007-p105"]
+  },
+  "negative": [
+    "no fairy door, no round hobbit door, no painted or brightly coloured door",
+    "no glowing light from inside the door, no visible tunnel, stairs or room behind it",
+    "no carved faces in the tree, no twisted fantasy trunk",
+    "no giant mushrooms, no magic sparkles",
+    "no modern hardware (no lever handle, no Yale lock)",
+    "no Gothic pointed arch; no flat poster illustration or matte-painting finish"
+  ],
+  "prompt_ready_en": "a huge ancient English oak beside a woodland path, its fluted mossy trunk grown round a weathered honey-coloured limestone doorframe carved with flowing Art Nouveau lilies and vines in the style of Mucha, a small round stained-glass roundel above, a small horseshoe-arched door of silver-grey studded oak boards with verdigris whiplash iron strap hinges and a ring handle set flush into the trunk at ground level, standing slightly ajar on darkness, ivy and honeysuckle curling over the frame, ferns at the roots, dappled midsummer woodland, photographed live-action set"
+}

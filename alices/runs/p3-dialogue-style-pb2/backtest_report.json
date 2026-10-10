@@ -1,0 +1,393 @@
+{
+ "metric": "Metric (shared with 01-story/dialogue-rewrite, style_hit_rate_gte_80):\n  a line HITS its speaker's card when it matches >=1 backtest_markers[].regex\n  AND matches none of forbidden_words[].regex (case-insensitive, after normalising\n  curly quotes, stripping '_' emphasis and '[...]' elisions).\n  type=='verse' lines are recited texts (poems/accusation/letter) and are excluded\n  from the denominator; they are reported separately.\nGuards against over-wide cards: cross_claim_rate (share of the other carded\ncharacters' lines the card would also claim) and 'lift' = hit_rate/cross_claim_rate;\nplus a top-1 attribution test (weighted marker score, forbidden = veto).\nUsage: python3 code/p3-dialogue-style-pb1_backtest.py [--project-dir DIR] [--lines FILE.json]\n  --lines: optional [{\"speaker_id\":..,\"text\":..}] list (e.g. rewritten screenplay lines)",
+ "characters": {
+  "CHAR-alice-sister": {
+   "sample_size": 2,
+   "hits": 2,
+   "hit_rate": 1.0,
+   "forbidden_violations_in_source": [],
+   "cross_claim_rate": 0.019,
+   "lift": 51.64,
+   "attribution_top1_rate": 0.5,
+   "verse_excluded": [],
+   "misses": []
+  },
+  "CHAR-alice": {
+   "sample_size": 331,
+   "hits": 297,
+   "hit_rate": 0.897,
+   "forbidden_violations_in_source": [],
+   "cross_claim_rate": 0.317,
+   "lift": 2.83,
+   "attribution_top1_rate": 0.55,
+   "verse_excluded": [
+    "ch002-d0017",
+    "ch002-d0018",
+    "ch005-d0023",
+    "ch005-d0024",
+    "ch005-d0025",
+    "ch005-d0026",
+    "ch005-d0027",
+    "ch005-d0028",
+    "ch005-d0029",
+    "ch005-d0030",
+    "ch010-d0059",
+    "ch010-d0065",
+    "ch010-d0066",
+    "ch010-d0074",
+    "ch010-d0075"
+   ],
+   "misses": [
+    {
+     "id": "ch001-d0004",
+     "text": "Well!"
+    },
+    {
+     "id": "ch002-d0005",
+     "text": "They must go by the carrier,"
+    },
+    {
+     "id": "ch002-d0036",
+     "text": "Où est ma chatte?"
+    },
+    {
+     "id": "ch002-d0044",
+     "text": "We won't talk about her any more if you'd rather not."
+    },
+    {
+     "id": "ch003-d0018",
+     "text": "it doesn't seem to dry me at all."
+    },
+    {
+     "id": "ch003-d0041",
+     "text": "You promised to tell me your history, you know,"
+    },
+    {
+     "id": "ch003-d0053",
+     "text": "Oh, do let me help to undo it!"
+    },
+    {
+     "id": "ch003-d0065",
+     "text": "She'd soon fetch it back!"
+    },
+    {
+     "id": "ch004-d0003",
+     "text": "He took me for his housemaid, How surprised he'll be when he finds out who I am! But I'd better take him his fan and gloves—that is, if I can find them."
+    },
+    {
+     "id": "ch004-d0008",
+     "text": "Now I can do no more, whatever happens. What will become of me?"
+    },
+    {
+     "id": "ch004-d0029",
+     "text": "This is Bill,"
+    },
+    {
+     "id": "ch004-d0033",
+     "text": "That's Bill,"
+    },
+    {
+     "id": "ch006-d0035",
+     "text": "If I don't take this child away with me, they're sure to kill it in a day or two: wouldn't it be murder to leave it behind?"
+    },
+    {
+     "id": "ch006-d0042",
+     "text": "Cheshire Puss,"
+    },
+    {
+     "id": "ch006-d0062",
+     "text": "I should like it very much, but I haven't been invited yet."
+    },
+    {
+     "id": "ch006-d0065",
+     "text": "It turned into a pig,"
+    },
+    {
+     "id": "ch006-d0072",
+     "text": "Suppose it should be raving mad after all! I almost wish I'd gone to see the Hatter instead!"
+    },
+    {
+     "id": "ch007-d0016",
+     "text": "Exactly so,"
+    },
+    {
+     "id": "ch007-d0053",
+     "text": "I've heard something like it,"
+    },
+    {
+     "id": "ch007-d0075",
+     "text": "They couldn't have done that, you know, they'd have been ill."
+    },
+    {
+     "id": "ch007-d0105",
+     "text": "Now, I'll manage better this time,"
+    },
+    {
+     "id": "ch009-d0006",
+     "text": "The game's going on rather better now,"
+    },
+    {
+     "id": "ch009-d0008",
+     "text": "Somebody said, that it's done by everybody minding their own business!"
+    },
+    {
+     "id": "ch009-d0010",
+     "text": "How fond she is of finding morals in things!"
+    },
+    {
+     "id": "ch009-d0012",
+     "text": "He might bite,"
+    },
+    {
+     "id": "ch009-d0068",
+     "text": "You couldn't have wanted it much, living at the bottom of the sea."
+    },
+    {
+     "id": "ch009-d0087",
+     "text": "Then the eleventh day must have been a holiday?"
+    },
+    {
+     "id": "ch010-d0005",
+     "text": "I once tasted—"
+    },
+    {
+     "id": "ch010-d0043",
+     "text": "Does the boots and shoes!"
+    },
+    {
+     "id": "ch010-d0051",
+     "text": "Wouldn't it really?"
+    },
+    {
+     "id": "ch010-d0072",
+     "text": "It's the first position in dancing."
+    },
+    {
+     "id": "ch011-d0002",
+     "text": "That's the judge, because of his great wig."
+    },
+    {
+     "id": "ch011-d0004",
+     "text": "What are they doing? They can't have anything to put down yet, before the trial's begun."
+    },
+    {
+     "id": "ch011-d0006",
+     "text": "Stupid things!"
+    }
+   ]
+  },
+  "CHAR-bill-the-lizard": {
+   "sample_size": 1,
+   "hits": 1,
+   "hit_rate": 1.0,
+   "forbidden_violations_in_source": [],
+   "cross_claim_rate": 0.012,
+   "lift": 80.44,
+   "attribution_top1_rate": 1.0,
+   "verse_excluded": [],
+   "misses": []
+  },
+  "CHAR-caterpillar": {
+   "sample_size": 22,
+   "hits": 22,
+   "hit_rate": 1.0,
+   "forbidden_violations_in_source": [],
+   "cross_claim_rate": 0.013,
+   "lift": 78.11,
+   "attribution_top1_rate": 0.909,
+   "verse_excluded": [],
+   "misses": []
+  },
+  "CHAR-cheshire-cat": {
+   "sample_size": 17,
+   "hits": 17,
+   "hit_rate": 1.0,
+   "forbidden_violations_in_source": [],
+   "cross_claim_rate": 0.016,
+   "lift": 64.36,
+   "attribution_top1_rate": 0.824,
+   "verse_excluded": [],
+   "misses": []
+  },
+  "CHAR-cook": {
+   "sample_size": 2,
+   "hits": 2,
+   "hit_rate": 1.0,
+   "forbidden_violations_in_source": [],
+   "cross_claim_rate": 0.003,
+   "lift": 361.5,
+   "attribution_top1_rate": 1.0,
+   "verse_excluded": [],
+   "misses": []
+  },
+  "CHAR-dodo": {
+   "sample_size": 14,
+   "hits": 14,
+   "hit_rate": 1.0,
+   "forbidden_violations_in_source": [],
+   "cross_claim_rate": 0.032,
+   "lift": 30.91,
+   "attribution_top1_rate": 0.929,
+   "verse_excluded": [],
+   "misses": []
+  },
+  "CHAR-dormouse": {
+   "sample_size": 18,
+   "hits": 18,
+   "hit_rate": 1.0,
+   "forbidden_violations_in_source": [],
+   "cross_claim_rate": 0.068,
+   "lift": 14.73,
+   "attribution_top1_rate": 0.722,
+   "verse_excluded": [
+    "ch007-d0056"
+   ],
+   "misses": []
+  },
+  "CHAR-duchess": {
+   "sample_size": 22,
+   "hits": 22,
+   "hit_rate": 1.0,
+   "forbidden_violations_in_source": [],
+   "cross_claim_rate": 0.036,
+   "lift": 28.12,
+   "attribution_top1_rate": 0.818,
+   "verse_excluded": [
+    "ch006-d0029",
+    "ch006-d0031"
+   ],
+   "misses": []
+  },
+  "CHAR-gryphon": {
+   "sample_size": 43,
+   "hits": 43,
+   "hit_rate": 1.0,
+   "forbidden_violations_in_source": [],
+   "cross_claim_rate": 0.019,
+   "lift": 52.46,
+   "attribution_top1_rate": 0.884,
+   "verse_excluded": [],
+   "misses": []
+  },
+  "CHAR-hatter": {
+   "sample_size": 43,
+   "hits": 43,
+   "hit_rate": 1.0,
+   "forbidden_violations_in_source": [],
+   "cross_claim_rate": 0.081,
+   "lift": 12.4,
+   "attribution_top1_rate": 0.698,
+   "verse_excluded": [
+    "ch007-d0051",
+    "ch007-d0055"
+   ],
+   "misses": []
+  },
+  "CHAR-king-of-hearts": {
+   "sample_size": 52,
+   "hits": 52,
+   "hit_rate": 1.0,
+   "forbidden_violations_in_source": [],
+   "cross_claim_rate": 0.144,
+   "lift": 6.94,
+   "attribution_top1_rate": 0.827,
+   "verse_excluded": [],
+   "misses": []
+  },
+  "CHAR-knave-of-hearts": {
+   "sample_size": 2,
+   "hits": 2,
+   "hit_rate": 1.0,
+   "forbidden_violations_in_source": [],
+   "cross_claim_rate": 0.022,
+   "lift": 45.19,
+   "attribution_top1_rate": 1.0,
+   "verse_excluded": [],
+   "misses": []
+  },
+  "CHAR-march-hare": {
+   "sample_size": 17,
+   "hits": 17,
+   "hit_rate": 1.0,
+   "forbidden_violations_in_source": [],
+   "cross_claim_rate": 0.017,
+   "lift": 59.0,
+   "attribution_top1_rate": 0.588,
+   "verse_excluded": [],
+   "misses": []
+  },
+  "CHAR-mock-turtle": {
+   "sample_size": 43,
+   "hits": 43,
+   "hit_rate": 1.0,
+   "forbidden_violations_in_source": [],
+   "cross_claim_rate": 0.041,
+   "lift": 24.36,
+   "attribution_top1_rate": 0.814,
+   "verse_excluded": [
+    "ch010-d0028",
+    "ch010-d0029",
+    "ch010-d0030",
+    "ch010-d0081",
+    "ch010-d0082",
+    "ch010-d0088"
+   ],
+   "misses": []
+  },
+  "CHAR-mouse": {
+   "sample_size": 22,
+   "hits": 22,
+   "hit_rate": 1.0,
+   "forbidden_violations_in_source": [],
+   "cross_claim_rate": 0.048,
+   "lift": 20.68,
+   "attribution_top1_rate": 0.727,
+   "verse_excluded": [
+    "ch003-d0046"
+   ],
+   "misses": []
+  },
+  "CHAR-pigeon": {
+   "sample_size": 10,
+   "hits": 10,
+   "hit_rate": 1.0,
+   "forbidden_violations_in_source": [],
+   "cross_claim_rate": 0.01,
+   "lift": 102.14,
+   "attribution_top1_rate": 1.0,
+   "verse_excluded": [],
+   "misses": []
+  },
+  "CHAR-queen-of-hearts": {
+   "sample_size": 32,
+   "hits": 32,
+   "hit_rate": 1.0,
+   "forbidden_violations_in_source": [],
+   "cross_claim_rate": 0.053,
+   "lift": 18.73,
+   "attribution_top1_rate": 0.719,
+   "verse_excluded": [],
+   "misses": []
+  },
+  "CHAR-white-rabbit": {
+   "sample_size": 32,
+   "hits": 32,
+   "hit_rate": 1.0,
+   "forbidden_violations_in_source": [],
+   "cross_claim_rate": 0.079,
+   "lift": 12.6,
+   "attribution_top1_rate": 0.75,
+   "verse_excluded": [
+    "ch011-d0010",
+    "ch012-d0040",
+    "ch012-d0041",
+    "ch012-d0042",
+    "ch012-d0043",
+    "ch012-d0044",
+    "ch012-d0045"
+   ],
+   "misses": []
+  }
+ },
+ "all_pass_gte_0.80": true
+}

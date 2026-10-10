@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh012",
+  "group_id": "grp006",
+  "scene_no": "S02",
+  "duration_s": 4.0,
+  "size": "medium",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (no camera travel; mild handheld breathing in the frame only)",
+  "speed_curve": "none",
+  "rig": "handheld",
+  "lens_mm": 40,
+  "camera_height_m": 0.9,
+  "angle": "level",
+  "rack_focus": "none",
+  "start_frame": "Over her shoulder from the middle of the long grass: her shoulder and loose hair soft in the near right third, the laid hawthorn hedge, the bank and the fan of pale spoil across the frame beyond her, the rabbit still running at the hedge foot.",
+  "end_frame": "The same over-shoulder frame as he reaches the hedge and drops head-first into the burrow without a pause; her shoulder has barely moved as she slows to a run-walk.",
+  "constraint_honoured": "'Past her shoulder — we learn it exactly when she does': the frame is anchored to her shoulder and never goes ahead of her to the hole.",
+  "movement_note": "The S02 handheld licence is used here as breathing in a held frame, not as travel — a single static set-up, no pan onto the burrow.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

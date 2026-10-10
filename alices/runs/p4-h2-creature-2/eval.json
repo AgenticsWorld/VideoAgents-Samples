@@ -1,0 +1,9 @@
+{
+ "task_id": "p4-h2-creature-2",
+ "skipped": true,
+ "reason": "quality judge=0 (user setting); QA dimensions all 0",
+ "auto": {
+  "DEF-p4-char-concept-202_closed": "PASS (CRE-005/006 aligned to the appearance cards)",
+  "new_defect": "DEF-p4-creature-404 opened (BIB-0029 numbering collision) -> routed to memory-bible in p6-bible-light-ep01"
+ }
+}

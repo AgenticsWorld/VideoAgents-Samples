@@ -1,0 +1,13 @@
+{
+  "task_id": "p3-scene-index",
+  "run_id": "d581a37b87e6",
+  "attempt": 1,
+  "model": "agent default",
+  "tokens": null,
+  "started_at": null,
+  "finished_at": "2026-09-22T18:12:44+08:00",
+  "inputs_sha256": {},
+  "artifact_versions": {
+    "bible/scenes/index.json": "v1"
+  }
+}

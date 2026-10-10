@@ -1,0 +1,105 @@
+{
+  "task_id": "p4-env-concept-sb2",
+  "agent": "06-art/environment-concept",
+  "attempt": 1,
+  "date": "2026-09-23",
+  "status": "completed",
+  "status_note": "All 8 layout packs were produced and pass the scene_layout_pack_ok machine check. The auto-retry budget is 0, so nothing was regenerated. 5 of the 8 plan images have visual self-check defects. They are kept as delivered and listed per item for the user's decision at H2.",
+  "mode": "spatial_blocking ON: layout pack (layout_top.png + layout.json). grid_9views.png retired and not generated.",
+  "shared": {
+    "generator": "modules/genmedia.py image; volcengine doubao-seedream-5-0-pro-260628; --size 2560x1440 --n 1; no --ref (see user_refs)",
+    "prompt_structure": "orthographic plan-view camera sentence (SOUL duty 3 rule 1) + scene body in English with openings written as wall-line gaps and wall-face elements explicitly excluded (rules 2-3) + clean-base sentence (no people/animals/text/arrows) + style.json style_fragment_ui verbatim. Negative = negative_prompt_en verbatim + SOUL plan-view negatives + people/animal/text terms. All 8 scenes are dream-layer, so negative_prompt_waking_addon_en was not applied. Exact strings are in each scene's prompts.json.",
+    "mucha_layer": "Dream scenes carry the full Mucha / Art Nouveau layer through the verbatim style segment. The plan bodies mention only ornament visible from above (eaves mosaic, gutter brackets, hearth tile band, whiplash flora lines).",
+    "coordinates": "layout.json xy were recalibrated against each delivered image. Bearings were then rechecked, and two views were re-aimed after recalibration (pigeon tile 9, duchess-front tile 7). extent_m gives metres for the full image (x right, y down), so metric position = xy * extent_m.",
+    "user_refs": [
+      {"path": "refs/style/alice.jpeg", "read": true, "used_as": "look reference for palette, materials and Art Nouveau vocabulary, carried by style_fragment_ui", "injected_via_ref": false, "why": "The image is an oblique interior perspective with a large creature. As a --ref on straight-down plans it would pull in perspective and elevations, and it could put a creature into a clean base map. refs/scenes/ is empty; refs/NOTES.md does not exist."}
+    ],
+    "genmedia_info": "runs/p4-env-concept-sb2/genmedia_info.txt",
+    "generation_logs": "runs/p4-env-concept-sb2/gen_SCN-*.log (all 8 exit=0; no provider rejection or TLS error)"
+  },
+  "acceptance": {
+    "scene_layout_pack_ok": "PASS 8/8. Host CLI code/blocking_map_check.py --project alices --scene <id>, 0 violations and 0 warnings under the app python runtime (PIL present, so the size check ran: all 2560x1440). System python3 lacks PIL and reports only the 'cannot read image' WARN. Log: runs/p4-env-concept-sb2/blocking_map_check.txt",
+    "scene_single_space": "PASS 8/8 (no landmarks_*/views_*/orientation_* keys)",
+    "views_camera_rules_selfcheck": "PASS 8/8 after recalibration. Rules checked: angles in {eye, low, high_oblique}; no overhead wording; unique camera pairs; the same looking_at ≤3; wide ≤4; close/detail ≥2; low ≥1; ≤3 views per ±30° bearing window, aspect-corrected. Script code/views_selfcheck_p4-env-concept-sb2.py; log runs/p4-env-concept-sb2/views_selfcheck.txt",
+    "prompt_record": "PASS 8/8 (prompts.json with the verbatim prompt, negative, model and user_refs)",
+    "clean_base_no_people_no_text": "PASS 8/8 (no people, animals, text, arrows or labels found on review)",
+    "evaluation": "skipped (quality judge = 0)",
+    "qa": "none ordered (all review dimensions = 0)"
+  },
+  "items": [
+    {
+      "scene_id": "SCN-rabbit-house-exterior",
+      "products": ["assets/concepts/scenes/SCN-rabbit-house-exterior/layout_top.png", "assets/concepts/scenes/SCN-rabbit-house-exterior/layout.json", "assets/concepts/scenes/SCN-rabbit-house-exterior/prompts.json"],
+      "machine_check": "PASS",
+      "design_check": "Matches the cards. The lane is at the top (north) with the stone path to the front door. The slate roof runs east-west with loose slates near the chimney. A broad chimney with two clay pots stands at the east end. The eaves carry the pastel-and-gold mosaic band and gilded brackets. Roses line the south wall. The cucumber-frame is under the south wall, bare level ground is at the south-east ladder corner, and the apple tree and dug patch are lower left. A paling fence with flowing tops separates the yard from the wood. The west gable is sunlit and shadows fall east.",
+      "image_defects": ["minor: the chimney stack stands attached just outside the east gable end instead of rising from the gable. Accepted, the position still reads as 'at the east gable'."],
+      "pending_H2": []
+    },
+    {
+      "scene_id": "SCN-rabbit-house-upstairs-room",
+      "products": ["assets/concepts/scenes/SCN-rabbit-house-upstairs-room/layout_top.png", "assets/concepts/scenes/SCN-rabbit-house-upstairs-room/layout.json", "assets/concepts/scenes/SCN-rabbit-house-upstairs-room/prompts.json"],
+      "machine_check": "PASS",
+      "design_check": "Door gap at the west end of the north wall with the leaf swung inward. Chest of drawers on the north wall, washstand with bottle on the west wall, narrow fireplace with a vine-carved mantel on the east wall, rag rug in the centre. Table with fan and gloves plus a rush chair at the single south window gap. The sunbeam slants across the floor toward the fireplace.",
+      "image_defects": ["minor: the inner wall faces are visible, so the room reads as a deep box (slight perspective) rather than a pure plan", "minor: the room is drawn wider than its 3.0 x 2.7 m proportion (floor about 1.35:1)"],
+      "pending_H2": []
+    },
+    {
+      "scene_id": "SCN-wood-tree-door",
+      "products": ["assets/concepts/scenes/SCN-wood-tree-door/layout_top.png", "assets/concepts/scenes/SCN-wood-tree-door/layout.json", "assets/concepts/scenes/SCN-wood-tree-door/prompts.json"],
+      "machine_check": "PASS",
+      "design_check": "Correct: the path runs west-east, the great oak with spreading roots stands north of the path, the limestone door-frame and threshold stone are on its south face, and a warm pool of western sun lights the threshold. Deviations are listed under image_defects.",
+      "image_defects": ["major: my prompt said 'canopy and upper trunks cut away at head height', and every tree, including the veteran oak, was drawn as a sawn-off felled stump with visible growth rings. The card describes a living ancient oak.", "minor: a dark pipe-like man-made object lies on the path east of the door (about x 0.81, y 0.73). It is anachronistic.", "minor: a stained-glass mosaic disc lies on the forest floor at the top left. The card has no built ornament on the ground."],
+      "pending_H2": []
+    },
+    {
+      "scene_id": "SCN-wood-thistle-glade",
+      "products": ["assets/concepts/scenes/SCN-wood-thistle-glade/layout_top.png", "assets/concepts/scenes/SCN-wood-thistle-glade/layout.json", "assets/concepts/scenes/SCN-wood-thistle-glade/prompts.json"],
+      "machine_check": "PASS",
+      "design_check": "Correct: the great thistle with whiplash-curled leaves and purple heads sits in a pool of light at the centre. The root bank is along the north, fallen sticks lie south-east, bracken and foxgloves are lower left, a hazel coppice is upper right, and a trodden gap opens at the bottom.",
+      "image_defects": ["major: Art Nouveau mosaic and stained-glass paving is laid on the woodland floor around the glade edges. The architecture card says there is no built ornament and the Mucha language is carried by living flora.", "minor: the west oak is drawn as a sawn stump", "minor: the hazel stems and upper-left foliage show a slight oblique angle"],
+      "pending_H2": ["H2-non-speaking-animals: the giant puppy is proposed as photoreal CGI. The plan is a clean base map with no puppy drawn, so it only carries the root bank where the puppy is staged. pending_H2 — for user decision at H2."]
+    },
+    {
+      "scene_id": "SCN-caterpillar-clearing",
+      "products": ["assets/concepts/scenes/SCN-caterpillar-clearing/layout_top.png", "assets/concepts/scenes/SCN-caterpillar-clearing/layout.json", "assets/concepts/scenes/SCN-caterpillar-clearing/prompts.json"],
+      "machine_check": "PASS",
+      "design_check": "Correct: a perfectly round pale cream mushroom cap at the centre, the buttercup lower left, ox-eye daisies lower right, clover upper left, harebells and cranesbill in the grass, grass swirling in curves around the mushroom, and a trodden gap at the bottom. Sun from the west.",
+      "image_defects": ["major: the ring of trees is drawn as sawn-off stumps, so the clearing reads as a felled grove rather than a living wood edge"],
+      "pending_H2": ["H2-caterpillar-face: the Caterpillar is not drawn (clean base map), so nothing here needs to be decided. Listed only because the scene hosts it. pending_H2 — for user decision at H2."]
+    },
+    {
+      "scene_id": "SCN-pigeon-treetop",
+      "products": ["assets/concepts/scenes/SCN-pigeon-treetop/layout_top.png", "assets/concepts/scenes/SCN-pigeon-treetop/layout.json", "assets/concepts/scenes/SCN-pigeon-treetop/prompts.json"],
+      "machine_check": "PASS",
+      "design_check": "Correct: an unbroken sea of rounded green crowns to every edge. At the centre an empty twig nest sits in the fork with two upper limbs splaying NW and NE, and a torn gap with snapped twigs lies just south of the nest. Nothing man-made is visible.",
+      "image_defects": ["minor: the two upper limbs are bare and leafless (card negative: no bare branches)", "minor: faint lens-flare and bokeh rings are scattered over the canopy"],
+      "pending_H2": []
+    },
+    {
+      "scene_id": "SCN-duchess-house-front",
+      "products": ["assets/concepts/scenes/SCN-duchess-house-front/layout_top.png", "assets/concepts/scenes/SCN-duchess-house-front/layout.json", "assets/concepts/scenes/SCN-duchess-house-front/prompts.json"],
+      "machine_check": "PASS",
+      "design_check": "Correct: a narrow steep-roofed house at the top with its long axis north-south and a chimney pouring grey smoke at the north end. The south gable faces the clearing with one stone step. Plate shards and a tin lid trail from the step toward a trunk. The clearing is bare earth with no flower beds (see DEF-p4-envconcept-702), the wood closes on three sides, and the path leaves at the south-east.",
+      "image_defects": ["major: the camera is slightly oblique, so the south gable facade (brick bands, sooted mosaic gable) shows as an elevation. This breaks the SOUL plan-view rule.", "minor: the tree chipped by the plate is drawn as a sawn stump", "minor: the chimney is on the west side of the north end, not centred on the ridge"],
+      "pending_H2": ["H2-footmen-anatomy (CGI frog- and fish-bodied Footmen) and the baby-to-piglet end-state (H2-non-speaking-animals) play in this space. Neither is drawn (clean base map). pending_H2 — for user decision at H2."]
+    },
+    {
+      "scene_id": "SCN-duchess-kitchen",
+      "products": ["assets/concepts/scenes/SCN-duchess-kitchen/layout_top.png", "assets/concepts/scenes/SCN-duchess-kitchen/layout.json", "assets/concepts/scenes/SCN-duchess-kitchen/prompts.json"],
+      "machine_check": "PASS",
+      "design_check": "Matches the kitchen card's interior layout. The west hearth has a cauldron on a crane and a sooted whiplash-vine tile band, with the hearth slab and rag rug in front. The three-legged stool is dead centre. The deal table with pepper sacks sits under the north high window, and the dresser has blue-and-white plates with shattered crockery below. Copper pans hang on the east wall. The south door gap has its leaf swung inward between two window gaps, with geraniums on a sill. Pepper haze is thickest at the hearth, with firelight against pale daylight at the door.",
+      "image_defects": ["minor: inner wall faces are slightly visible (shallow box look)"],
+      "pending_H2": []
+    }
+  ],
+  "pending_H2_global": ["H2-mucha-scope-and-finish: all 8 scenes are dream-layer and carry the full Mucha layer through the verbatim style segment, in a photographed live-action finish. pending_H2 — for user decision at H2."],
+  "defects_opened": [
+    {"id": "DEF-p4-envconcept-701", "severity": "minor", "summary": "Duchess house: the exterior card has the door in the gable and the chimney at the rear gable, while the kitchen card has the door in the south long wall and the hearth on the west end. Routed to 05-scenes/architecture."},
+    {"id": "DEF-p4-envconcept-702", "severity": "minor", "summary": "Duchess house front: environment flora (hollyhocks and roses on the walls) vs the architecture negative 'no flowers, bare clearing'."},
+    {"id": "DEF-p4-envconcept-703", "severity": "minor", "summary": "Rabbit house: environment (arched window with a stained-glass rose top light, round fanlight) vs architecture (two-over-two sash under horseshoe heads, roundel only in the gable)."}
+  ],
+  "for_user_at_H2": "Regeneration candidates if the user grants retries: SCN-wood-tree-door, SCN-caterpillar-clearing and SCN-wood-thistle-glade (stump trees; for thistle, mosaic on the ground), and SCN-duchess-house-front (oblique facade). If these are redone, drop the 'cut away at head height' wording, which is what produced the stumps. Instead describe tree crowns at the image edges, or trunk bases seen through gaps. For thistle, add 'no paving, no mosaic on the ground' to the negative. After any redo, the layout.json coordinates must be re-measured.",
+  "skills": "none enabled for this station",
+  "helper_scripts": ["code/views_selfcheck_p4-env-concept-sb2.py (camera-rule self-check and bearing computation only)"],
+  "background_processes": "none (all 8 genmedia calls completed in the foreground with exit 0)"
+}

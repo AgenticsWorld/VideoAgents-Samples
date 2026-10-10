@@ -1,0 +1,47 @@
+{
+  "task_id": "p4-char-concept-cb1",
+  "agent": "06-art/character-concept",
+  "attempt": 1,
+  "status": "completed",
+  "finished_at": "2026-09-23",
+  "summary": "15 four-panel sheets generated in one pass each (n=1, 0 rerolls, 0 provider errors): 14 default-costume sheets plus Alice's age02 sheet (SOUL duty 4: age_versions.json has two versions). All machine checks pass. Visual self-check found defects on several sheets; with the retry budget at 0 they are kept and listed for user decision at H2. Three are major: Bill (stands upright like a person), White Rabbit (human-like upright stance), Cheshire Cat (grin reads as a snarl).",
+  "genmedia": "image → volcengine model=doubao-seedream-5-0-pro-260628 (recorded per sheet in prompts.json)",
+  "method": {
+    "refs": "Layout template only: agents/06-art/character-concept/templates/character_sheet_template.png, re-encoded to JPEG with pixels unchanged (runs/p4-char-concept-cb1/work/character_sheet_template.jpg), because true-PNG refs cause TLS resets on this channel.",
+    "user_refs": "refs/style/alice.jpeg was read (no NOTES.md/annotations). It is applied the way style.json user_refs describes: through style_fragment_ui (sampled from it), the CR-003/CR-015 creature treatment, and Alice's blue dress, white pinafore and brown hair. It was not injected as --ref, because its full cathedral scene and tiny figure would pull scenery and a second figure into a plain-backdrop identity sheet. refs/characters/ is empty.",
+    "prompt": "Layout sentence (per SOUL) + photo-strip reinforcement + identity lock + character block (covers every appearance field, with an explicit gender word) + 'Costume: ' + costumes.json visual_en verbatim + 'Style: ' + style_fragment_ui verbatim + layout recap. Shared blocks are in runs/p4-char-concept-cb1/work/shared_prompt_blocks.json; the exact submitted prompt and negative are in each prompts.json (prompt_final/negative_final).",
+    "negative": "negative_prompt_en verbatim, + negative_prompt_waking_addon_en for the three waking-world humans (Alice, the sister, the housemaid), + layout addon 'single full-bleed illustration, one single panel, scenery background, crowd, text labels'.",
+    "tools": ["code/run_sheets_p4-char-concept-cb1.py (assemble + call genmedia, no retries)", "code/check_sheets_p4-char-concept-cb1.py (machine checks → runs/p4-char-concept-cb1/checks.json)"]
+  },
+  "machine_checks": {
+    "file": "runs/p4-char-concept-cb1/checks.json",
+    "result": "PASS 15/15",
+    "checked": ["size ≥2560x1440 (all 2560x1440; the container is JPEG under a .png name, a genmedia/volcengine behaviour)", "default_costume_in_prompt (visual_en substring, verbatim)", "gender word in prompt", "style_fragment_ui verbatim", "negative_prompt_en verbatim (+ waking addon where applicable)", "four-panel layout sentence present", "n=1", "main-dir hygiene: only sheet*.png, prompts.json, selection.json, usage_ledger.jsonl (genmedia billing ledger); no single-view crops", "ASCII filenames"]
+  },
+  "items": [
+    {"id": "CHAR-alice", "tier": "S", "products": ["assets/concepts/characters/CHAR-alice/sheet.png", "assets/concepts/characters/CHAR-alice/sheet_age02.png", "assets/concepts/characters/CHAR-alice/prompts.json", "assets/concepts/characters/CHAR-alice/selection.json"], "costume": "COS-001 (default); age02 sheet in COS-002", "layout_check": "PASS", "appearance_check": "PASS with minor defects", "defects": ["sheet.png: two pinafore pockets (spec: one)", "sheet.png: faint freckles (spec: none)", "sheet_age02.png: dress is a saturated royal blue rather than deeper cornflower; rounded collar instead of a high stand collar; light freckles"]},
+    {"id": "CHAR-alice-sister", "tier": "A", "products": ["assets/concepts/characters/CHAR-alice-sister/sheet.png"], "costume": "COS-003", "layout_check": "PASS", "appearance_check": "PASS", "defects": ["three-quarter pagoda sleeves over undersleeves rather than long coat sleeves (minor)"]},
+    {"id": "CHAR-family-housemaid", "tier": "extra", "products": ["assets/concepts/characters/CHAR-family-housemaid/sheet.png"], "costume": "COS-005", "layout_check": "PASS", "appearance_check": "PASS", "defects": ["hairline shows under the cap (minor)"]},
+    {"id": "CHAR-white-rabbit", "tier": "A", "products": ["assets/concepts/characters/CHAR-white-rabbit/sheet.png"], "costume": "COS-006", "layout_check": "PASS", "appearance_check": "PARTIAL", "pending_H2": ["COS-006 garment set beyond the waistcoat (collar + bow): pending_H2, for user decision at H2"], "defects": ["MAJOR: full-body views stand bipedal with a human-like torso and arm-like forelegs instead of a rabbit sitting up or rearing (CR-003/CR-015)"]},
+    {"id": "CHAR-queen-of-hearts", "tier": "A", "products": ["assets/concepts/characters/CHAR-queen-of-hearts/sheet.png"], "costume": "COS-008", "layout_check": "PASS", "appearance_check": "PASS", "defects": ["reads stout rather than distinctly tall (minor)"]},
+    {"id": "CHAR-king-of-hearts", "tier": "A", "products": ["assets/concepts/characters/CHAR-king-of-hearts/sheet.png"], "costume": "COS-009", "layout_check": "PASS", "appearance_check": "PASS", "defects": ["robe is calf length rather than long (minor)"], "defect_ids": ["DEF-p4-char-concept-101-a"]},
+    {"id": "CHAR-duchess", "tier": "A", "products": ["assets/concepts/characters/CHAR-duchess/sheet.png"], "costume": "COS-013", "layout_check": "PASS", "appearance_check": "PARTIAL", "defects": ["MAJOR: key feature 'sharp small jutting chin' not readable", "crinoline is not 'very wide'", "large head / top-heavy build weak"]},
+    {"id": "CHAR-hatter", "tier": "A", "products": ["assets/concepts/characters/CHAR-hatter/sheet.png"], "costume": "COS-015", "layout_check": "PASS", "appearance_check": "PASS", "defects": ["watch in different hands between views (minor)"], "notes": ["the '10/6' ticket lettering is not on the CR-012 whitelist (existing DEF-p4-costume-001-b)"]},
+    {"id": "CHAR-cheshire-cat", "tier": "A", "products": ["assets/concepts/characters/CHAR-cheshire-cat/sheet.png"], "costume": "COS-016 (unclothed)", "layout_check": "PASS", "appearance_check": "PARTIAL", "pending_H2": ["grin proposal (appearance face.grin): pending_H2, for user decision at H2"], "defects": ["MAJOR: grin reads as a snarl or hiss (bared canines), not a contented cheek-to-cheek grin; the mouth is closed in the side and back views", "honey-gold ground colour weak (minor)"]},
+    {"id": "CHAR-march-hare", "tier": "B", "products": ["assets/concepts/characters/CHAR-march-hare/sheet.png"], "costume": "COS-017 (unclothed)", "layout_check": "PASS", "appearance_check": "PASS", "defects": ["ears symmetrical (minor)"]},
+    {"id": "CHAR-dormouse", "tier": "B", "products": ["assets/concepts/characters/CHAR-dormouse/sheet.png"], "costume": "COS-018 (unclothed)", "layout_check": "PASS", "appearance_check": "PASS", "defects": ["close-up eyes fully open, not drowsy", "slightly hamster-like face (minor)"]},
+    {"id": "CHAR-mouse", "tier": "B", "products": ["assets/concepts/characters/CHAR-mouse/sheet.png"], "costume": "COS-021 (unclothed, dry)", "layout_check": "PASS", "appearance_check": "PARTIAL", "defects": ["body reads heavy and rat-like rather than a small wiry house mouse", "grizzled muzzle missing"], "defect_ids": ["DEF-p4-char-concept-101-b"]},
+    {"id": "CHAR-cook", "tier": "B", "products": ["assets/concepts/characters/CHAR-cook/sheet.png"], "costume": "COS-038", "layout_check": "PASS", "appearance_check": "PARTIAL", "defects": ["MAJOR: the pepper-box is rendered as a tin pail of peppercorns, not a hand-held pepper-box"]},
+    {"id": "CHAR-bill-the-lizard", "tier": "B", "products": ["assets/concepts/characters/CHAR-bill-the-lizard/sheet.png"], "costume": "COS-031 (unclothed, clean)", "layout_check": "PASS", "appearance_check": "FAIL (anatomy)", "defects": ["MAJOR / anatomy: panels 1-3 stand fully bipedal and upright like a person (breaks CR-003/CR-015 naturalistic anatomy); only the close-up is usable", "whiskers on the close-up"], "defect_ids": ["DEF-p4-char-concept-101-b"], "recommendation": "user decision at H2: re-generate in a four-legged low pose"}
+  ],
+  "for_user_at_H2": {
+    "pending_H2_rendered_per_current_proposal": ["CHAR-white-rabbit COS-006 garment set", "CHAR-cheshire-cat grin"],
+    "regenerate_candidates_major": ["CHAR-bill-the-lizard", "CHAR-white-rabbit", "CHAR-cheshire-cat", "CHAR-duchess", "CHAR-cook (prop shape)"],
+    "note": "Retry budget = 0: no sheet was regenerated. If you approve a re-generation, each is one directed re-shoot; the old image moves to <id>/candidates/ first."
+  },
+  "scope_note": "SOUL scope is S/A tier. This order also names CHAR-family-housemaid (extra) and five B-tier characters (march-hare, dormouse, mouse, cook, bill-the-lizard). They were produced because the orchestrator's work order lists them explicitly.",
+  "defects_opened": ["qa/defects/DEF-p4-char-concept-101.json"],
+  "cost": "15 images at 2560x1440 (14400 tokens each per usage_ledger.jsonl); 0 probes, 0 failed or billed resubmissions",
+  "skills": "none selected for this station",
+  "background_processes": "none"
+}

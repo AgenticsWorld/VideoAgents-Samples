@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh043",
+  "group_id": "grp016",
+  "scene_no": "S05",
+  "duration_s": 8.0,
+  "size": "medium",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 40,
+  "camera_height_m": 0.4,
+  "angle": "level",
+  "rack_focus": "none",
+  "start_frame": "Low from the hall floor at kneeling height: her whole body against the 0.38 m opening as she leans in until her forehead is pressed to the door frame, shoulders plainly too wide for it.",
+  "end_frame": "The same frame after she has pulled back and sat down on her heels, looking from the little door to her own shoulders — the two sizes still both in frame, longing all over her, and not one tear.",
+  "constraint_honoured": "'Longing is played with her body, not with tears… The episode cries twice later; nothing is pre-spent here' — the camera stays out of it entirely.",
+  "movement_note": "Holding the whole 8.0 s in one frame keeps her body and the doorway measurable against each other from first frame to last.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

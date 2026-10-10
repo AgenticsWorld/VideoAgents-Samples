@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh083",
+  "group_id": "grp031",
+  "scene_no": "S08",
+  "duration_s": 9.5,
+  "size": "medium",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (a fixed tilted-up frame, not a tilting move)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 28,
+  "camera_height_m": 0.4,
+  "angle": "tilted up past her wet face into the black above the lamp line",
+  "rack_focus": "none",
+  "start_frame": "Camera low on the wet flagstones, tilted up past her face: her eyes filling again as she tips her head back, an enormous unlit vault of darkness filling the top of the frame above her and no light fitting anywhere in shot.",
+  "end_frame": "The same frame through the whole appeal: a giant looking up at nothing at all, the black above her unchanged and unanswering.",
+  "constraint_honoured": "'The second and last break in the set-up, and the ONLY up-angle in the whole episode' — the up-angle is a fixed frame, not a move, so the episode's single tilt (sh076) stays single.",
+  "movement_note": "Wide, not long, so the dark reads as a volume she is asking into; the wider lens brings in more darkness rather than more lamp, which is what keeps act 5's no-lamp rule intact. LN-ep01-026 (7.0 s) lands whole in 9.5 s.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

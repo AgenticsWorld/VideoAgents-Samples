@@ -1,0 +1,38 @@
+{
+  "shot_id": "sh084",
+  "group_id": "grp031",
+  "scene_no": "S08",
+  "scene_id": "SCN-long-hall",
+  "duration_s": 4.5,
+  "is_dialogue": false,
+  "group_position": "last shot of grp031 — Alice on the map start/end ground (curtain), eyes down on her own hands as the map's facing_end requires.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "sit",
+      "start_pos": "sitting in the water at the low curtain, eyes coming down out of the vault onto her own hand",
+      "space_fragment_en": "sitting in the water at the low curtain, centred in frame, facing down at the white glove on her own hand",
+      "facing": "down at her hands — the end of one continuous eye movement that began in sh083 looking up at the vault",
+      "path": [],
+      "beats": [
+        { "t": 0.4, "action": "her eyes come down out of the dark and land on her hands", "sync": "the two shots are one look" },
+        { "t": 1.8, "action": "she stares: one of the little white kid gloves is on her hand", "sync": "the discovery" },
+        { "t": 3.4, "action": "it fits — buttoned at the wrist, exactly her size", "sync": "the cause of the scene's last movement" }
+      ],
+      "performance_beat": {
+        "objective": "understand why a doll's glove is now simply a glove",
+        "goal": "understand why a doll's glove is now simply a glove",
+        "emotional_arc": "from wet self-pity to a cold arrival of fact",
+        "arc_from": "wet self-pity",
+        "arc_to": "cold arrival of fact",
+        "trigger": { "beat": "the glove reads as her own size", "t": 1.8 },
+        "no_early_reaction": ["the hand turning over", "the eyes widening", "the crying stopping"],
+        "forbidden_early": ["the hand turning over", "the eyes widening", "the crying stopping"],
+        "end_state": "hand held out flat in front of her with the buttoned glove on it, eyes on it, crying stopped mid-breath"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0007 result -> ev0008 (dream) — she has shrunk again", "note": "Alice alone." }
+}

@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh042",
+  "group_id": "grp016",
+  "scene_no": "S05",
+  "duration_s": 5.0,
+  "size": "close",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame, held to the last frame)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 50,
+  "camera_height_m": 0.3,
+  "angle": "slightly up, from the little door's threshold to her face",
+  "rack_focus": "none",
+  "start_frame": "The reverse from the threshold of the little door: her face whole in frame on the flagstones in front of it, a hard green-gold bar of garden light across one cheek and one eye, the rest of her in lamp amber.",
+  "end_frame": "The same frame unchanged at the cut — the wonder still on her face and the green edge still exactly where it was; nothing has been added to it and nothing taken away.",
+  "constraint_honoured": "'The wonder peak of the first half — static and HELD to the end of the shot.'",
+  "movement_note": "The colour and emotion peak of the episode's first half is left entirely to the light and the performance; a move would make the camera the author of the feeling.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

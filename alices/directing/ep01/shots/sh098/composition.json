@@ -1,0 +1,28 @@
+{
+  "shot_id": "sh098",
+  "scene_id": "SCN-pool-of-tears",
+  "size": "medium",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "centre",
+    "anchor_xy": [0.50, 0.48],
+    "size_in_frame": "the sh097 medium held — her face and shoulders about 0.40 of frame height, the fan now drifted out of frame"
+  },
+  "headroom": "about 0.26 of frame height, unchanged from sh097; the frame does not tighten for the two lines, so the air between them has somewhere to sit.",
+  "horizon_eyeline": "The same water-level medium held, lens on the surface, waterline at 0.60 of frame height. Her eyeline is at 0.46 and travels — round at the flooded hall on the first line, back to nothing on the second.",
+  "layers": {
+    "fg": "the rocking surface at the bottom edge",
+    "mg": "Alice treading water, looking round at the hall",
+    "bg": "warm broken lamplight behind her on the water, and dark"
+  },
+  "gaze": {
+    "direction": "frame_right",
+    "lead_room": "right",
+    "note": "she turns her look right, round the flooded hall, and the lead room opens on that side — the only shot in S10 where her attention goes right rather than left. It is the survey before the resignation."
+  },
+  "balance": "Centred and even, with her cornflower blue the only colour left in the frame and the broken amber behind her held under about five percent of frame area. A frame with almost nothing in it but one person and one colour.",
+  "leading_lines": "The waterline, and the scattered amber flecks behind her as a loose diagonal drift. Nothing structural — the hall has stopped being architecture and become surface.",
+  "eye_first": "Her blue, which at act 5 and 6 luma is the brightest chroma in the frame — then her eyes.",
+  "safe_area_ok": true,
+  "constraint_binding": "Both lines whole in one shot with air between them, so the composition is held unchanged for 9.5 seconds with no reframe, no incoming element and no business between the two lines. Her cornflower is the only colour left in the frame; amber survives as reflections only."
+}

@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh074",
+  "group_id": "grp028",
+  "scene_no": "S08",
+  "duration_s": 6.0,
+  "size": "medium",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 40,
+  "camera_height_m": 0.1,
+  "angle": "level, lens right on the water surface",
+  "rack_focus": "none",
+  "start_frame": "Same water-level axis, clean single on him: he pulls up short of her and sits back on his haunches in the shallow water, his reflection doubling him on the flooded stone.",
+  "end_frame": "The same frame as the gloves and fan transfer to his forepaws and he frets aloud about the Duchess — speech carried by muzzle, ears and the set of his shoulders, the ripples he made still spreading round him.",
+  "constraint_honoured": "'One speaker in frame for the native dialogue take' and no human gesture or bipedal stance — a fixed clean single supports both.",
+  "movement_note": "LN-ep01-019 (4.8 s) lands whole in 6.0 s. Same lens, height and axis as sh073 so his approach and his speech read as one continuous arrival.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

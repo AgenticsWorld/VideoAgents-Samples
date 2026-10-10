@@ -1,0 +1,29 @@
+{
+  "character_id": "CHAR-gardener-seven",
+  "task_id": "p4-char-concept-cb3",
+  "sheet": "sheet.png",
+  "variants": [],
+  "status": "delivered_for_H2_review",
+  "layout_check": { "four_panels": true, "one_view_per_panel": true, "same_individual_all_panels": true, "size": "2560x1440 (JPEG payload)" },
+  "appearance_field_hits": {
+    "gender_male": true,
+    "age_33_40": true,
+    "hair_auburn_short_wiry_with_mutton_chops": "partial (bright ginger rather than red-brown auburn)",
+    "eyes_hazel": true,
+    "face_angular_sharp_nose_ruddy": true,
+    "expression_indignant": true,
+    "build_tall_rangy": true,
+    "card_front_seven_club_pips_7_indices": true,
+    "card_back_crimson_cream_lattice_heart_rosette": true,
+    "crimson_sleeves_breeches_cream_stockings_brown_boots": true,
+    "few_red_paint_spots_right_cuff": true
+  },
+  "style_check": { "photoreal_live_action": true, "palette_within_style": true },
+  "self_check_defects": [
+    "Hair and whiskers read bright ginger; the card says red-brown auburn. Trio contrast (sandy / black / auburn) still holds.",
+    "Tabard ends at mid-thigh, not at the knee as COS-042 states.",
+    "Close-up panel has the top edge of the card tabard crossing the bottom of the frame (no identity impact)."
+  ],
+  "rerolls": [],
+  "reroll_budget_note": "User rerun setting = 0: no self-regeneration; the defects above are for user decision."
+}

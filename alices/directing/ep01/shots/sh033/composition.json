@@ -1,0 +1,28 @@
+{
+  "shot_id": "sh033",
+  "scene_id": "SCN-long-hall",
+  "size": "wide",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "bottom_centre",
+    "anchor_xy": [0.44, 0.62],
+    "size_in_frame": "whole figure, about 0.38 of frame height at the lintel, falling to about 0.26 as she walks into the hall — never smaller, because the vault height has to stay measurable against her"
+  },
+  "headroom": "the 2.80 m vault runs across the top of frame with the lamp row hanging below it; above her head there is about 0.30 of frame height of hall, and the top edge sits just above the vault crown so the ceiling is a fact and not an implication.",
+  "horizon_eyeline": "Child-height lens at 1.3 m: the flagstone floor and the mosaic dado run away to a vanishing point at [0.52, 0.47], low in frame. Her eyeline is at 0.47, on that vanishing point — she and the hall are looking down the same line.",
+  "layers": {
+    "fg": "the corner entrance's 2.45 m lintel and jamb framing the left and top edges as a dark proscenium she steps through",
+    "mg": "Alice walking slowly in, and the first two hanging lamps in their gilt halos with tulip shades glowing amber",
+    "bg": "31.7 m of hall running away: the receding lamp row, the horseshoe-arched oak doors on both walls with a small blind stained-glass roundel over each, the iron lily-stems up the honey limestone, and the far end losing itself in darkness and haze"
+  },
+  "gaze": {
+    "direction": "into_depth",
+    "lead_room": "centre",
+    "note": "she looks along the hall on the perspective axis; the lead room is the length of the room itself. No Rabbit anywhere in the frame — the composition offers a clear, uninterrupted view down every part of the hall so his absence is a stated fact, not an off-screen possibility."
+  },
+  "balance": "A near-symmetrical one-point perspective with the figure held low and slightly left of the axis. Her offset is what stops it being a postcard: the room is bilateral, she is not on its centre line.",
+  "leading_lines": "The lamp row is the strongest line in the episode — a chain of amber pools running from the top of frame away to a point; under it the mosaic dado and the two door lines converge on the same point. Three parallel runs, all arriving at the same dark far end.",
+  "eye_first": "The nearest lamp, then down the chain of lamps into the dark, and only then back to the small figure who has just walked in under them.",
+  "safe_area_ok": true,
+  "constraint_binding": "The episode's one hall reveal: 31.7 m of length and the 2.80 m vault must register in the SAME frame, so the composition holds both the vault crown and the far end inside one picture and never trades one for the other. Roundels catch only faint jewel glints of lamplight and are never backlit; there is no daylight anywhere in frame, and no window, shaft or bright source is placed at the far end."
+}

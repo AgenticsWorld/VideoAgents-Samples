@@ -1,0 +1,30 @@
+{
+  "id": "DEF-p4-envconcept-601",
+  "opened_by": "06-art/environment-concept",
+  "opened_on": "2026-09-23",
+  "task_id": "p4-env-concept-sb1",
+  "assigned_to": "00-orchestration/memory-bible",
+  "route_to_owner": "05-scenes/architecture",
+  "domain": "architecture",
+  "status": "open",
+  "severity": "minor",
+  "summary": "SCN-pool-of-tears architecture.json is inconsistent about where the water is. interior.layout says the north half of the hall is under water, but the same card puts the pool round the glass table and the shore steps at the south end, and SCN-long-hall places the table about 21 m from the north entrance (south half).",
+  "findings": [
+    {
+      "id": "DEF-p4-envconcept-601-a",
+      "bible_file": "bible/scenes/SCN-pool-of-tears/architecture.json",
+      "fields": ["interior.layout", "structure[0]", "structure[1]", "details[2]"],
+      "values": {
+        "interior.layout": "north half of the hall under water; swimmers move south toward the shore steps at the far end",
+        "structure[0]": "water ... reaching half down the hall from the table end",
+        "structure[1]": "at the south end the stone flags rise as three shallow broken steps out of the water",
+        "details[2]": "the glass table legs rising from the water like clear columns ... the pool forms round the table end"
+      },
+      "cross_ref": "bible/scenes/SCN-long-hall/architecture.json: glass table on the centre line about 21 m from the entrance in a 32 m hall (south half)",
+      "conflict": "If only the north half is flooded, the table (south half) stands dry and the south-end shore steps have no water to rise out of.",
+      "layout_choice": "The layout pack draws water over the whole hall floor from the north end to the shore steps, with the table standing in it. This satisfies the table legs in water, the south-end steps and the swim toward the south. It drops 'north half only'. Recorded in SCN-pool-of-tears/layout.json orientation.flood_extent.",
+      "proposed_fix": "Architecture to confirm one extent. Suggested: 'the flooded hall: water over the whole floor from the north end to the shore steps at the south end, round the glass table' (ch002-p07 'half down the hall' then describes the forming pool at giant scale in SCN-long-hall S02, not the swim)."
+    }
+  ],
+  "not_self_fixed": "Per SOUL: setting-card conflicts are reported, not edited by environment-concept."
+}

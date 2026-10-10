@@ -1,0 +1,214 @@
+{
+  "schema_version": "scene_layout.v1",
+  "scene_id": "SCN-pool-of-tears",
+  "task_id": "p4-env-concept-sb1",
+  "layout_top": "layout_top.png",
+  "orientation": {
+    "top_of_map": "west wall of the long hall; the hall's north end runs off the left edge, the shore steps at the south end on the right",
+    "map_extent_m": [
+      33.0,
+      18.6
+    ],
+    "scale_note": "plan in true hall units. Swim beats are shot at x12 on the tank build (Alice effective height about 11 cm); positions scale with the build, xy stays the same.",
+    "flood_extent": "water covers the hall floor from the north end to the shore steps at the south end; the glass table stands in the water. See DEF-p4-envconcept-601 for the open conflict with 'north half flooded'.",
+    "note_en": "camera positions in views[] are described relative to these landmarks; xy_m = xy x map_extent_m (origin top-left). Own frame, not the SCN-long-hall frame: as drawn the water band spans y 0.31-0.69 and the hall runs off the left edge. Floating props are drift start positions. The low curtain is not drawn in this image and is not registered as a landmark here."
+  },
+  "landmarks": [
+    {
+      "id": "ne_entrance",
+      "name": "the flooded corner entrance",
+      "name_en": "the flooded corner entrance",
+      "kind": "entrance",
+      "xy": [
+        0.34,
+        0.74
+      ],
+      "xy_m": [
+        11.22,
+        13.76
+      ]
+    },
+    {
+      "id": "west_doors",
+      "name": "the door bases of the west wall",
+      "name_en": "the door bases of the west wall",
+      "kind": "door",
+      "xy": [
+        0.22,
+        0.28
+      ],
+      "xy_m": [
+        7.26,
+        5.21
+      ]
+    },
+    {
+      "id": "floating_fan",
+      "name": "the floating fan",
+      "name_en": "the floating fan",
+      "kind": "prop",
+      "xy": [
+        0.375,
+        0.45
+      ],
+      "xy_m": [
+        12.38,
+        8.37
+      ]
+    },
+    {
+      "id": "east_doors",
+      "name": "the door bases of the east wall",
+      "name_en": "the door bases of the east wall",
+      "kind": "door",
+      "xy": [
+        0.55,
+        0.72
+      ],
+      "xy_m": [
+        18.15,
+        13.39
+      ]
+    },
+    {
+      "id": "floating_gloves",
+      "name": "the floating gloves",
+      "name_en": "the floating gloves",
+      "kind": "prop",
+      "xy": [
+        0.38,
+        0.555
+      ],
+      "xy_m": [
+        12.54,
+        10.32
+      ]
+    },
+    {
+      "id": "glass_table_legs",
+      "name": "the glass table legs",
+      "name_en": "the glass table legs",
+      "kind": "furniture",
+      "xy": [
+        0.5,
+        0.5
+      ],
+      "xy_m": [
+        16.5,
+        9.3
+      ]
+    },
+    {
+      "id": "reeds",
+      "name": "the reeds by the shore steps",
+      "name_en": "the reeds by the shore steps",
+      "kind": "flora",
+      "xy": [
+        0.805,
+        0.35
+      ],
+      "xy_m": [
+        26.57,
+        6.51
+      ]
+    },
+    {
+      "id": "shore_steps",
+      "name": "the shore steps",
+      "name_en": "the shore steps",
+      "kind": "exit",
+      "xy": [
+        0.92,
+        0.5
+      ],
+      "xy_m": [
+        30.36,
+        9.3
+      ]
+    }
+  ],
+  "views": [
+    {
+      "tile": 1,
+      "camera_from": "glass_table_legs",
+      "looking_at": "shore_steps",
+      "size": "wide",
+      "angle": "low",
+      "desc_en": "water-level wide shot from among the glass table legs down the flooded hall to the broken stone steps climbing out of the water into reeds and grass"
+    },
+    {
+      "tile": 2,
+      "camera_from": "floating_fan",
+      "looking_at": "glass_table_legs",
+      "size": "medium",
+      "angle": "low",
+      "desc_en": "water-level medium shot from beside the floating fan toward the clear glass table legs rising out of the water like columns, gold lamp reflections trembling around them"
+    },
+    {
+      "tile": 3,
+      "camera_from": "shore_steps",
+      "looking_at": "ne_entrance",
+      "size": "wide",
+      "angle": "high_oblique",
+      "desc_en": "high oblique wide shot from above the shore steps back over the whole sheet of water to the flooded corner entrance, the swimmers' wakes spreading in rings"
+    },
+    {
+      "tile": 4,
+      "camera_from": "ne_entrance",
+      "looking_at": "floating_gloves",
+      "size": "close",
+      "angle": "low",
+      "desc_en": "water-level close shot from the flooded entrance gap to the floating white kid gloves, the wet door bases and whiplash iron frames rising like cliffs beyond"
+    },
+    {
+      "tile": 5,
+      "camera_from": "glass_table_legs",
+      "looking_at": "floating_fan",
+      "size": "medium",
+      "angle": "eye",
+      "desc_en": "eye-level medium shot at swimmer height from the glass table legs back toward the floating fan drifting on the still water"
+    },
+    {
+      "tile": 6,
+      "camera_from": "east_doors",
+      "looking_at": "west_doors",
+      "size": "medium",
+      "angle": "eye",
+      "desc_en": "eye-level medium shot at swimmer height straight across the flooded hall to the door bases of the west wall, mosaic reflections rippling between"
+    },
+    {
+      "tile": 7,
+      "camera_from": "reeds",
+      "looking_at": "shore_steps",
+      "size": "close",
+      "angle": "eye",
+      "desc_en": "eye-level close shot through the reeds to the first broken stone step, grass growing through its joints, water lapping at its edge"
+    },
+    {
+      "tile": 8,
+      "camera_from": "ne_entrance",
+      "looking_at": "west_doors",
+      "size": "wide",
+      "angle": "eye",
+      "desc_en": "eye-level wide shot at swimmer height from the flooded corner entrance diagonally across the water to the door bases of the west wall, lamp reflections trailing away down the hall"
+    },
+    {
+      "tile": 9,
+      "camera_from": "floating_fan",
+      "looking_at": "floating_gloves",
+      "size": "detail",
+      "angle": "high_oblique",
+      "desc_en": "high oblique detail shot down from the drifting fan onto the white kid gloves floating on the clear salt water, gold lamp reflections around them"
+    }
+  ],
+  "checklist": {
+    "architecture_match": true,
+    "lighting_match": true,
+    "style_match": true
+  },
+  "calibration": {
+    "status": "calibrated_to_image",
+    "date": "2026-09-23",
+    "method": "landmark xy re-measured on the delivered layout_top.png (door/opening landmarks read at the gap in the wall line)"
+  }
+}

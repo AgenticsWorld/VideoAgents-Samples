@@ -1,0 +1,31 @@
+{
+  "character_id": "CHAR-dormouse",
+  "name": "Dormouse",
+  "tier": "B",
+  "card_type": "individual",
+  "gender": "male",
+  "age_sense": "middle-aged man (appearance base_age_range 40-48)",
+  "timbre": "soft, husky, sleep-thickened man's voice, mumbling and woolly, with a small squeak when startled awake",
+  "pitch": "mid tenor, flat and drowsy, trailing downward at the end of phrases",
+  "pitch_range_hz": [110, 190],
+  "speed_wpm": [95, 120],
+  "speed_cpm": [361, 456],
+  "accent": "mild educated southern English, soft slurred consonants",
+  "reference_style": "Half-asleep bedtime storyteller: slow agreeable murmurs, sentences that drift off, a brief hurried spurt at the opening of his treacle-well story, then prickly dignity when interrupted. Slowest speaker at the tea-table.",
+  "emotion_range": {
+    "drowsy": { "speed_delta": "-10%", "pitch_delta": "-1semi", "volume": "soft", "note": "ch007-p66 'in a hoarse, feeble voice'; ch011-p70 'a sleepy voice'" },
+    "story_spurt": { "speed_delta": "+20%", "pitch_delta": "+1semi", "note": "'Once upon a time there were three little sisters...' said in a great hurry" },
+    "startled_squeak": { "speed_delta": "+10%", "pitch_delta": "+4semi", "note": "ch007-p99 'woke up again with a little shriek'" },
+    "touchy": { "speed_delta": "0%", "pitch_delta": "+1semi", "volume": "medium", "note": "'If you can't be civil...'" }
+  },
+  "age_variants": [],
+  "source_chapter": "ch007",
+  "sources": ["ch007", "ch011", "ch007-p66", "ch007-p95", "ch007-p99", "ch011-p70"],
+  "voice_evidence": [
+    { "para": "ch007-p66", "quote": "he said in a hoarse, feeble voice" },
+    { "para": "ch011-p70", "quote": "said a sleepy voice behind her" }
+  ],
+  "inferred": true,
+  "inferred_fields": ["pitch", "pitch_range_hz", "speed_wpm", "speed_cpm", "accent"],
+  "reason": "Hoarse, feeble, sleepy voice is sourced; pitch band, rate and accent designed."
+}

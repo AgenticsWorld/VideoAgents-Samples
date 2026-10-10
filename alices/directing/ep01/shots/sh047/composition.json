@@ -1,0 +1,34 @@
+{
+  "shot_id": "sh047",
+  "scene_id": "SCN-long-hall",
+  "size": "close",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "centre",
+    "anchor_xy": [0.46, 0.44],
+    "size_in_frame": "face held whole, about 0.56 of frame height"
+  },
+  "second_subject": {
+    "id": "PROP-drink-me-bottle",
+    "grid": "bottom_centre",
+    "anchor_xy": [0.52, 0.86],
+    "note": "rises into the bottom of frame between the reactions and drops out again — three times. It is never given the frame; it visits it."
+  },
+  "headroom": "about 0.14 of frame height above her crown, held constant; the frame does not adjust across the three tastings, so each reaction happens in the identical picture.",
+  "horizon_eyeline": "Close from the curtain side, lens at her own height: no architecture in frame except a soft band of mosaic dado at 0.80. Her eyeline is at 0.42 and level, going slightly off-axis to frame left when she tastes and back to centre when she laughs.",
+  "layers": {
+    "fg": "the rim of the bottle entering the lower frame",
+    "mg": "her face",
+    "bg": "the dark hall, one lamp pool far behind her shoulder reading as a soft amber smudge"
+  },
+  "gaze": {
+    "direction": "frame_left",
+    "lead_room": "left",
+    "note": "her look drifts slightly frame left between mouthfuls — the direction of an inward inventory, not of anything in the room. About 0.20 of frame width sits open on that side and stays empty for the whole shot."
+  },
+  "balance": "A single face just left of centre with a soft dark surround, and the bottle rim breaking the bottom edge as punctuation. Three distinct beats, one unchanging frame.",
+  "leading_lines": "None by design: the composition is deliberately featureless so that the only readable events in it are three changes of expression.",
+  "eye_first": "Her mouth, which is where the three tastings happen, then her eyes.",
+  "safe_area_ok": true,
+  "constraint_binding": "THREE distinct tastings in one shot without a cut — sweet, then savoury and wrong and stopping her dead, then the laugh at herself. The composition provides no second element, no alternative size and no reframe, so each beat has to be legible on the face alone; the flavour list is never spoken and never shown, so nothing is placed in frame that could stand for it."
+}

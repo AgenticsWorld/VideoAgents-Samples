@@ -1,0 +1,47 @@
+{
+  "_meta": {
+    "file": "bible/scenes/SCN-wood-thistle-glade/lighting.json",
+    "owner": "05-scenes/lighting",
+    "task_id": "p3-lighting-sb1",
+    "attempt": 1,
+    "generated": "2026-09-22",
+    "status": "draft_v1",
+    "enum_set": "LGT-ENUM-v1 (defined once in runs/p3-lighting-sb1/result.json)",
+    "inputs": ["bible/scenes/SCN-wood-thistle-glade/environment.json", "bible/scenes/SCN-wood-thistle-glade/architecture.json"]
+  },
+  "scene_id": "SCN-wood-thistle-glade",
+  "layer": "dream",
+  "int_ext": "EXT",
+  "daylight_access": "canopy_dappled",
+  "dream_growth": {
+    "grows_from": "the waking sun at about 15:56-16:00 GMT, the same leaf-broken light as the elm shade on the bank (LGT-riverbank-01)",
+    "how": "The high afternoon sun broken into dapples by a closed canopy, as it falls on the sleeping girl under the elms. Cool green shade reads as safety after the house.",
+    "ruling": "runs/h1-ruling/ruling.json 5.2 A"
+  },
+  "schemes": [
+    {
+      "lighting_scheme_id": "LGT-wood-thistle-glade-01",
+      "condition": {"time_of_day": "afternoon", "weather": "fair_hot"},
+      "state_refs": ["SCN-wood-thistle-glade-S01"],
+      "waking_clock": "15:56-16:00 GMT (Alice asleep on the bank)",
+      "sun": {"elevation_deg_approx": 38, "azimuth_deg_approx": 259},
+      "key_source": "canopy_dappled_sun",
+      "key": "WSW sun filtered through a closed oak canopy into scattered hard-edged sun-flecks",
+      "direction": "high_side",
+      "direction_note": "flecks fall slanting from the WSW side; backlit leaves and bracken glow when the camera looks toward the sun",
+      "fill": {"source": "canopy_green_bounce", "note": "soft, cool, green-tinted shade light from the canopy and undergrowth"},
+      "practicals": [],
+      "color_temp": "neutral (~4500K)",
+      "kelvin_approx": 5000,
+      "contrast": "medium",
+      "quality": "mixed",
+      "atmosphere": "warm, still shade; dust and bits of dry leaf thrown up by the bounding puppy hang in the sun-shafts",
+      "prompt_fragment_en": "Dappled woodland afternoon light: a high sun from the west-south-west breaks through a closed green oak canopy into scattered hard-edged sun-flecks on the leaf litter, the towering grass and the great purple-flowered thistle, backlit leaves and bracken glowing translucent green, the shade itself soft, cool and green-tinted, dust hanging in thin sun-shafts; bright pockets against cool shade, sheltered, breathless-relief mood.",
+      "source_chapter": "ch004",
+      "sources": ["ch004-p34", "ch004-p36", "ch004-p38"],
+      "inferred": true,
+      "reason": "The wood and thistle are explicit (ch004-p34..p38) but no light is described. The dapple follows environment daylight_access canopy_dappled and the waking-clock sun (environment S01)."
+    }
+  ],
+  "special": []
+}

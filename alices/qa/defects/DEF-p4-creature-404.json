@@ -1,0 +1,30 @@
+{
+  "id": "DEF-p4-creature-404",
+  "opened_by": "04-creatures/creature",
+  "opened_on": "2026-09-23",
+  "task_id": "p4-h2-creature-2",
+  "domain": "creature",
+  "severity": "minor",
+  "status": "closed",
+  "closed_on": "2026-09-23",
+  "closed_by": "00-orchestration/memory-bible (task p6-bible-light-ep01, changes bible/changelog.md BIB-0032 / BIB-0033)",
+  "ruling": "OPTION (a). It IS a collision: change_id is ONE GLOBAL namespace, not a per-file one, because WRITE_RULES.md section 5 step 2 requires a duplicate check before writing and because every citation in bible/ and qa/ is written as a bare 'BIB-NNNN' with no file qualifier - a per-file scope would make those citations unresolvable. The tie is broken by the register: bible/changelog.md is where an id is actually allocated, so the entry already logged there (task p4-h2-bible) KEEPS BIB-0029, and the creature.json amendment (task p4-h2-creature), which never reached the changelog, moves to the next free number BIB-0032 and receives the changelog entry it was missing (WRITE_RULES.md P-011, retroactive record of a domain agent's own fix-write). Verified unique across bible/ and qa/ before writing: BIB-0001..BIB-0031 were in use, so BIB-0032 (this renumber) and BIB-0033 (the SCN-long-hall daylight arbitration in the same task) were free.",
+  "renumber_map": { "BIB-0029 (task p4-h2-creature, bible/creatures/creature.json)": "BIB-0032", "BIB-0029 (task p4-h2-bible, bible/changelog.md)": "unchanged" },
+  "gate_file_check": "Neither signed gate file cites BIB-0029. runs/g4/gate.json cites only BIB-0027 (three mentions) and runs/g5-ep01/gate.json cites no BIB id at all, so nothing recorded in a signed gate was renumbered.",
+  "citations_updated": [
+    "bible/creatures/creature.json _meta.amendments[1].change_id -> BIB-0032, plus a renumbered_from note explaining the collision and the ruling",
+    "qa/defects/DEF-p4-creature-401.json resolution: 'CRE-007 amended (change_id BIB-0029)' -> BIB-0032",
+    "qa/defects/DEF-p4-creature-402.json resolution: 'CRE-001 amended (change_id BIB-0029)' -> BIB-0032"
+  ],
+  "citations_deliberately_not_updated": "runs/p4-h2-creature/result.json, runs/p4-h2-creature/meta.json and runs/dag.json still say BIB-0029. Run receipts are immutable records of what a task wrote at the time and are not rewritten; the redirect is the supersedes field on the BIB-0032 changelog entry - a BIB-0029 citation dated to task p4-h2-creature means BIB-0032.",
+  "rule_for_next_parallel_batch": "Recorded as precedent P-013 in bible/WRITE_RULES.md: BIB numbers are one global namespace and the changelog is the register, so agents DO NOT self-assign a literal number. Since every write goes through memory-bible anyway (WRITE_RULES.md section 1), the writing agent proposes 'BIB-PENDING' with its task_id and memory-bible stamps the real number at the moment it appends the changelog entry - one writer, one register, no race. An agent writing its own file under a defect (P-011) does the same. Writing a literal number without checking bible/changelog.md first is a section 5 step 2 failure.",
+  "assigned_to": ["00-orchestration/memory-bible"],
+  "summary": "Duplicate BIB change_id: two unrelated controlled changes both self-assigned 'BIB-0029', apparently written in parallel without checking bible/changelog.md first (WRITE_RULES.md section 5 step 2 requires a duplicate check before writing).",
+  "evidence": [
+    { "file": "bible/creatures/creature.json", "path": "_meta.amendments[]", "change_id": "BIB-0029", "task_id": "p4-h2-creature", "content": "CRE-001..CRE-004 screen_treatment/rendering_status wording and CRE-007 pig-reveal rewrite (DEF-p4-creature-401/402 closed)." },
+    { "file": "bible/changelog.md", "path": "entry (line ~132)", "change_id": "BIB-0029", "task_id": "p4-h2-bible", "content": "Magpie/Footmen/gardener appearance cards, costumes.json club/spade suit ruling, dictionary Art Nouveau terms (DEF-p4-char-concept-201-a/b, DEF-p4-char-302, DEF-p4-char-301, DEF-p4-costume-001-b/c, DEF-p4-cr-costume-001-b/c, DEF-p4-cr-cgi-mucha-dict-001 closed)." }
+  ],
+  "impact": "bible/changelog.md never received a separate entry for the creature.json BIB-0029 amendment (only the p4-h2-bible one is present), so change_id 'BIB-0029' now means two different things depending on which file is read. This was discovered incidentally while opening the next free number for this task: BIB-0030 turned out to be already fully used (bible/style.json CR-012 + bible/changelog.md, task p4-h2-style-2, logged correctly with no collision), so this task used BIB-0031, verified unique across bible/ and qa/ at the time of writing.",
+  "decision_needed": "memory-bible should either (a) log the creature.json p4-h2-creature amendment as its own bible/changelog.md entry under a fresh, currently-unused number and have creature.json's _meta.amendments[] cite that corrected id instead of BIB-0029, or (b) rule that the change_id is scoped per-file (amendments arrays are file-local logs, changelog.md is the global log) and this is not actually a collision — and record that ruling as a WRITE_RULES.md precedent so future parallel-batch agents don't reopen this question. Not blocking: does not affect any content produced by this task (p4-h2-creature-2), which uses BIB-0031 throughout.",
+  "due_gate": "next merge/lock check, no hard deadline"
+}

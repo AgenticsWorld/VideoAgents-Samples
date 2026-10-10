@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh049",
+  "group_id": "grp019",
+  "scene_no": "S06",
+  "duration_s": 4.0,
+  "size": "wide",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 28,
+  "camera_height_m": 0.2,
+  "angle": "slightly up",
+  "rack_focus": "none",
+  "start_frame": "Camera down on the limestone flags at the curtain, back toward the glass table: ten-inch Alice and the empty DRINK ME bottle side by side in the near foreground at identical height, the mosaic dado border beside them, one flagstone joint running away to give the floor its new size.",
+  "end_frame": "The same frame as she tips her head back: the three clear table legs going up out of frame behind her and the glass tabletop reading as a lit ceiling far above, with the bottle still at her exact height in the near frame.",
+  "constraint_honoured": "'The free scale anchor for everything downstream — at 0.254 m she is exactly as tall as the bottle she drank from' — both gauges deep-focus in one still frame, no move to disturb the comparison.",
+  "movement_note": "Deep focus and a fixed frame are also what keep this off the miniature look: the set does the shrinking, not the optics.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

@@ -1,0 +1,28 @@
+{
+  "character_id": "CHAR-knave-of-hearts",
+  "name": "Knave of Hearts",
+  "tier": "B",
+  "card_type": "individual",
+  "gender": "male",
+  "age_sense": "young man (appearance base_age_range 25-30)",
+  "timbre": "smooth, even, quietly polished young man's voice, soft and careful, a touch melancholy",
+  "pitch": "light baritone, level and controlled, little inflection",
+  "pitch_range_hz": [100, 170],
+  "speed_wpm": [125, 145],
+  "speed_cpm": [475, 551],
+  "accent": "court-polished Received Pronunciation of a deferential servant, careful and exact",
+  "reference_style": "Says as little as possible: an exact court formula ('Please your Majesty'), a lawyerly denial, then a sad rhetorical 'Do I look like it?'. Never outrage, only mournful resignation.",
+  "emotion_range": {
+    "deferential": { "speed_delta": "0%", "pitch_delta": "0semi", "note": "careful plea" },
+    "resigned": { "speed_delta": "-15%", "pitch_delta": "-2semi", "volume": "soft", "note": "ch012-p51 shook his head sadly" }
+  },
+  "age_variants": [],
+  "source_chapter": "ch012",
+  "sources": ["ch008", "ch011", "ch012", "ch012-d0033", "ch012-d0049", "ch012-p51"],
+  "voice_evidence": [
+    { "para": "ch012-p51", "quote": "The Knave shook his head sadly. “Do I look like it?” he said." }
+  ],
+  "inferred": true,
+  "inferred_fields": ["timbre", "pitch", "pitch_range_hz", "speed_wpm", "speed_cpm", "accent"],
+  "reason": "No voice description in source; designed from personality ('Smooth, deferential and quiet') and dialogue_style."
+}

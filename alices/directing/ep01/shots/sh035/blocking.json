@@ -1,0 +1,38 @@
+{
+  "shot_id": "sh035",
+  "group_id": "grp013",
+  "scene_no": "S05",
+  "scene_id": "SCN-long-hall",
+  "duration_s": 4.0,
+  "is_dialogue": false,
+  "group_position": "last shot of grp013 — Alice at her map end (east_doors_mid), the return pass already failing.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "stand",
+      "start_pos": "at the locked doors of the east wall, both hands on a large black iron handle",
+      "space_fragment_en": "standing at the locked doors of the east wall on screen-right, facing the wall, one hand hauling at an iron door handle",
+      "facing": "square into the door; deliberately faceless, no expression offered",
+      "path": [],
+      "beats": [
+        { "t": 0.5, "action": "hauls at the handle", "sync": "we join the pass already defeated" },
+        { "t": 2.2, "action": "hauls again, harder", "sync": "the handle does not move" },
+        { "t": 3.4, "action": "her grip slackens", "sync": "all locked" }
+      ],
+      "performance_beat": {
+        "objective": "force one door, since asking politely has failed",
+        "goal": "force one door",
+        "emotional_arc": "from effort to the moment effort is abandoned, carried entirely in the hand",
+        "arc_from": "effort",
+        "arc_to": "abandonment",
+        "trigger": { "beat": "the handle refuses a second haul and does not move at all", "t": 2.2 },
+        "no_early_reaction": ["the grip loosening", "the arm dropping", "the shoulder coming off the door"],
+        "forbidden_early": ["the grip loosening", "the arm dropping", "the shoulder coming off the door"],
+        "end_state": "fingers still curled on the iron but slack, arm straight, no face given to the frame"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0003 (dream)", "note": "Alice alone." }
+}

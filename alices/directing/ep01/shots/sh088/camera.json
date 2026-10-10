@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh088",
+  "group_id": "grp032",
+  "scene_no": "S08",
+  "duration_s": 5.0,
+  "size": "medium",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 28,
+  "camera_height_m": 0.25,
+  "angle": "slightly up",
+  "rack_focus": "none",
+  "start_frame": "The same S06 floor axis from the curtain: she gets to her feet about two feet high in the shallow water, the hall enormous behind her, four inches of water now up to her knees.",
+  "end_frame": "The same frame as she stands breathing hard with one white kid glove still on her hand — small again, still here, and the escape spoken into a room that has not changed at all.",
+  "constraint_honoured": "'The glove stays on — it and the drifting fan are the only two white objects left in the water by S10.'",
+  "movement_note": "Held on the match axis so her new two-foot height is measured against a frame the audience has owned since S06. LN-ep01-027 (1.9 s) lands whole in 5.0 s.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

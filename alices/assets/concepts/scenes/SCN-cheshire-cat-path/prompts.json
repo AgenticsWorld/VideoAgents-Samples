@@ -1,0 +1,45 @@
+{
+  "scene_id": "SCN-cheshire-cat-path",
+  "task_id": "p4-env-concept-sb3",
+  "generated": "2026-09-23",
+  "tool": "python3 modules/genmedia.py image",
+  "provider": {
+    "image": "volcengine",
+    "model": "doubao-seedream-5-0-pro-260628"
+  },
+  "items": [
+    {
+      "output": "layout_top.png",
+      "size": "2560x1440",
+      "n": 1,
+      "seed": null,
+      "refs": [],
+      "prompt": "Orthographic top-down architectural plan photograph of a real built film set, taken straight down from high above: camera axis exactly perpendicular to the ground; no wall face, no elevation, no side of any building, wall, hedge or tree trunk is visible; only the ground plane, the top edges of walls and hedges and the tops of trees, furniture and objects are seen. The top of the image is north. Plan of a 48 by 27 metre stretch of shaded midsummer English woodland in an Art Nouveau dream designed after Alphonse Mucha. A single-file beaten-earth path about 1.2 metres wide enters at the middle of the left edge slightly below centre, curves in one flowing S-bend across the middle of the image, and reaches a fork about four fifths of the way across; from the fork one branch runs up to the upper right corner and one runs down to the lower right corner. About a quarter of the way from the left, just above the path, stands an old crab-apple tree: its rounded crown is seen from above and one thick, almost level limb with a pale worn upper surface reaches out from it and crosses over the path, clearly visible, hung with honeysuckle. At the fork stands an ivy-clad oak, its crown just above the fork, with one long branch reaching out over the fork. Just below and right of the fork a small leaning wooden fingerpost is seen from above as a post top with two short carved arms. Above the crab-apple, toward the upper left, a clear strip of bare leaf litter leads off the path into the wood. Foxgloves and dog-roses line both path edges in a flowing border; bracken and bramble cover the rest of the ground; the round crowns of grey beech and ash trees stand in loose ranks around all four edges of the image. The canopy directly over the path, the crab-apple limb and the oak branch is open, forming round gaps of light, so the whole path, both limbs, the fork and the fingerpost are fully visible from above. Late-afternoon sun from the west (left) throws dappled coins of light on the path and soft shadows toward the east. The set is empty: no people, no animals, no creatures, no text, no labels, no arrows, no symbols, no map legend. A clean, sharp, evenly exposed photographic plan in which every feature named above is clearly readable in its stated position. Photorealistic live-action fantasy film rooted in England in 1862, shot on 35mm film with anamorphic lenses, 16:9 widescreen. Real sets, real locations and real costumed actors in 1862 dress. Wonderland spaces are real built sets and set extensions in an Alphonse Mucha-inspired Art Nouveau design: flowing organic lines, floral and vine ornament, circular halo roundels, mosaic and stained glass, aged pastel-and-gold surfaces with patina and moss; the waking 1862 meadow stays plain period realism. Talking animals and fantastical creatures are photoreal CGI animals with naturalistic anatomy, real fur, feathers, skin and scales, lit by the same light and grounded with real contact shadows. Natural and practical light: sunlight, candlelight and oil lamps, soft haze with volumetric light shafts and soft colour through stained glass. Restrained palette of verdigris teal, slate grey, dusty rose, soft sage and lilac pastels and tarnished-gold accents, warmed by amber sun and candle glow. Fine film grain, gentle halation, soft depth of field, grounded and quietly melancholy.",
+      "negative": "cartoon, anime, animation, illustration, flat poster illustration, outline graphics, concept-art painting, digital painting, digital matte painting look, stylised 3D animation render, video game graphics, Pixar style, Disney animation style, cartoon animal face, big cartoon eyes, plush toy, human in animal costume, full-head animal mask, mascot costume, full-body fur suit, plastic skin, airbrushed, oversaturated, HDR, neon colors, candy pastel colors, horror monster, glowing magic, magic sparkles, fairy dust, energy beams, electric light, light bulb, neon sign, modern clothing, zipper, plastic, sunglasses, wristwatch, eyeglasses with modern frames, car, bicycle, power lines, tarmac road, Art Deco, steampunk gears, poster lettering, decorative text, gore, blood, wound, severed head, decapitation, executioner's axe, chopping block, guillotine, noose, gallows, blade at neck, execution, corpse, skeleton, horror, animal being struck, sexualized, watermark, logo, subtitles, caption, UI overlay, deformed hands, extra fingers, distorted face, people, person, human figure, crowd, animal, bird, cat, creature, letters, text labels, arrows, map legend, compass rose, grid lines, perspective view, horizon, door lying on the floor, window lying on the floor, door bar on the floor, wall elements projected onto the floor, elevation view of a door or window, missing wall, open side, dollhouse cutaway, tilted camera, oblique aerial view",
+      "prompt_parts": {
+        "camera": "runs/p4-env-concept-sb3/prompts/cam.txt",
+        "body": "runs/p4-env-concept-sb3/prompts/body_SCN-cheshire-cat-path.txt",
+        "closing": "runs/p4-env-concept-sb3/prompts/end.txt",
+        "style": "bible/style.json#style_fragment_ui (verbatim)"
+      },
+      "negative_source": "bible/style.json#negative_prompt_en (verbatim) + plan-view negatives (SOUL duty 3 rule 4 + no people/animals/labels); dream scene, so the waking addon is not used",
+      "result": "generated first attempt; no provider error"
+    }
+  ],
+  "user_refs": [
+    {
+      "path": "refs/style/alice.jpeg",
+      "mode": "read as look reference, not injected via --ref",
+      "why": "It is an oblique interior perspective with a creature. Injecting it into a nadir plan view risks importing its camera angle, its interior and its creature (known seedream plan-view elevation prior). Its look reaches the image through style_fragment_ui, which was written from it (style.json user_refs)."
+    }
+  ],
+  "bible_inputs": [
+    "bible/scenes/index.json#SCN-cheshire-cat-path",
+    "bible/scenes/SCN-cheshire-cat-path/architecture.json",
+    "bible/scenes/SCN-cheshire-cat-path/lighting.json",
+    "bible/scenes/SCN-cheshire-cat-path/environment.json",
+    "bible/style.json"
+  ],
+  "bible_comparison_en": "architecture: path, fork, crab-apple and oak, fingerpost, foxglove/dog-rose border all present; the crab-apple limb does not overhang the path; flush Art Nouveau mosaic roundels appear on the woodland floor, which the card does not have (the card realises Mucha only through living flora and carved wood). lighting LGT-cheshire-cat-path-01: dappled late sun, OK. style: dream register, photographed plate.",
+  "auto_retries_used": 0
+}

@@ -1,0 +1,30 @@
+{
+  "id": "DEF-p5-pacing-ep01-001",
+  "opened_by": "01-story/pacing",
+  "opened_on": "2026-09-22",
+  "task_id": "p5-pacing-ep01",
+  "assigned_to": "06-art/color-script",
+  "domain": "color_script_vs_screenplay",
+  "status": "closed",
+  "severity": "minor",
+  "due": "G6 (before ep01 shot-planning / lighting_scheme_id binding)",
+  "summary": "ep01 S08 (SCN-long-hall, ev0007) screenplay has 'lamplight trembles on [the tear water]' but bible/color_script.json ep01 act 5 says 'The candles are out of frame; the hall drops to its lowest luma' and its palette has no candle_amber.",
+  "findings": [
+    {
+      "id": "DEF-p5-pacing-ep01-001-a",
+      "issue": "Screenplay S08 action line (tears flood the hall): 'lamplight trembles on it'. The oh-3 hook visual in hooks.json also names 'lamplight on the tear water'.",
+      "color_script": "episodes[ep01].acts[5]: palette #2B2A2E/#3F5E5A/#5C6670/#6F8FC0 (no #E0A95A), rationale 'candles are out of frame … lowest luma … Alice's blue is the only colour left'.",
+      "possible_resolution": "Either (a) color-script confirms that dim reflected lamp glints on the water are allowed while the lamps stay out of frame (no hard conflict), or (b) screenplay drops 'lamplight' from that S08 line at the next revision."
+    }
+  ],
+  "impact_on_pacing": "none (timing unaffected)",
+  "bible_changed": false,
+  "due_gate": "G6",
+  "routing_note": "orchestrator: color-script decides (a) glints allowed vs (b) screenplay change; if (b), color-script files a follow-up for screenplay",
+  "closed_by": "06-art/color-script",
+  "closed_on": "2026-09-22",
+  "closed_in_task": "p5-colorscript-fix-ep01",
+  "resolution": "(a) No hard conflict. Dim reflected glints of the off-frame lamps on the tear water are allowed in ep01 act 5 (ev0007, SCN-long-hall) while the lamps themselves stay out of frame. Added episodes[ep01].acts[act=5].reflection_allowance (#E0A95A candle_amber, water surface only, broken specular flecks <~5% frame, never on Alice/walls/vault, act luma stays lowest of episode). Act 5 palette/mood/brightness unchanged; this seeds the reflected candle_amber already in act 6. Screenplay S08 line and hooks oh-3 visual stand as written; no screenplay change needed.",
+  "verification": "python3 code/check_color_script.py --project alices --strict -> OK color_script_ok: 9 episodes, 0 violations, 0 warnings",
+  "downstream_note": "lighting / cinematography: when binding lighting_scheme_id for ep01 S08, treat the glints as reflected specular only; no in-frame practical."
+}

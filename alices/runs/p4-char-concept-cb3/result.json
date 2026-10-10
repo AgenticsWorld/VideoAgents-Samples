@@ -1,0 +1,92 @@
+{
+  "task_id": "p4-char-concept-cb3",
+  "agent": "06-art/character-concept",
+  "attempt": 1,
+  "status": "completed",
+  "date": "2026-09-23",
+  "channel": { "image": "volcengine", "model": "doubao-seedream-5-0-pro-260628" },
+  "summary": "16 four-panel sheets for 14 characters, all at 2560x1440. Every generation finished inside the run and none were rejected by the provider. Machine checks all pass. Visual self-check found defects on 10 sheets. These are listed per item and kept for user decision at H2, since the auto-retry budget is 0. Two Bible conflicts were filed as defects.",
+  "scope_note": "All 14 entries are tier 'extra' in index.json. My SOUL normally covers S/A tier only, but this order explicitly assigns them for the H2 gate, so they were produced to the same standard. Ensemble entries got representative-member sheets, not crowd scenes.",
+  "shared_decisions": {
+    "layout_anchor": "code/character_sheet_template_p4-char-concept-cb3.jpg: a JPEG copy of agents/06-art/character-concept/templates/character_sheet_template.png, pixels unchanged. On this channel a true-PNG --ref triggers TLS resets. Used as the first --ref on every sheet.",
+    "style_segment": "bible/style.json style_fragment_ui verbatim in every prompt.",
+    "negatives": "bible/style.json negative_prompt_en verbatim in every --negative. Small per-sheet layout or identity additions are recorded in each prompts.json negative_note. negative_prompt_waking_addon_en is not applied because all 14 subjects are dream-world.",
+    "default_costume": "bible/costumes.json default outfit visual_en verbatim in every prompt. For ensembles it is quoted as the group rule, followed by what it means for the one member shown.",
+    "user_refs": [
+      {
+        "path": "refs/style/alice.jpeg",
+        "used_as": "look reference, read before prompting (tone, texture, light, palette). This is carried into the sheets through style_fragment_ui, which art-director derived from it.",
+        "injected_as_ref": false,
+        "reason": "The image contains other characters (Alice and the Caterpillar) that would leak into single-character sheets. Its digital matte-painting finish is also listed under style.json user_refs.not_adopted. refs/NOTES.md is absent, so there is no user annotation asking for injection. refs/characters/ is empty."
+      }
+    ],
+    "probes": "3 pre-flight probes at 1280x720, each 1/4 price, stored in runs/p4-char-concept-cb3/probe/ (frog, jury guinea-pig, executioner). They verified layout and audit clearance and are not rerolls. After the frog probe, its body sentence was tightened, and pip-placement wording was added for Five and Seven after the Gardener Two result. All of this happened before those sheets' first and only full-size run.",
+    "billing": "16 full-size 2560x1440 generations + 3 probes at 1280x720. 0 provider rejections, 0 resubmits, 0 rerolls. Raw genmedia output is in runs/p4-char-concept-cb3/genmedia_log.txt (the frog probe was run directly, before the log existed)."
+  },
+  "acceptance_checks": {
+    "script": "code/check_sheets_p4-char-concept-cb3.py",
+    "report": "runs/p4-char-concept-cb3/machine_check.json",
+    "all_pass": true,
+    "checked": ["size >= 2560x1440 (all JPEG payload, 2560x1440)", "style_fragment_ui verbatim", "negative_prompt_en verbatim", "default_costume_in_prompt (costumes.json visual_en verbatim)", "gender word in prompt", "four-panel layout sentence", "main dir = sheet(s) + prompts.json + selection.json + usage_ledger.jsonl only; no front/side/back single-view files", "ASCII filenames"],
+    "appearance_fields_match": "visual, field by field, in each selection.json appearance_field_hits; misses listed under self_check_defects"
+  },
+  "items": [
+    { "character_id": "CHAR-frog-footman", "products": ["assets/concepts/characters/CHAR-frog-footman/sheet.png"], "self_check": "layout pass; appearance mostly pass",
+      "defects_for_user": ["Anatomy drifts toward Option B: fully upright on long thin legs, not Option A's squat semi-crouch", "forelimbs read as long-fingered hands"],
+      "pending_H2": "H2-footmen-anatomy: pending_H2, for user decision at H2 (rendered per the Option A proposal text; the result sits between A and B; the choice also binds CHAR-fish-footman)",
+      "defect_ids": ["DEF-p4-char-302"] },
+    { "character_id": "CHAR-gardener-two", "products": ["assets/concepts/characters/CHAR-gardener-two/sheet.png"], "self_check": "layout pass; must-show mark MISS",
+      "defects_for_user": ["card face shows 3 large club pips instead of 2 (Two of Clubs)", "tabard mid-thigh not knee", "looks younger than 40-50"], "pending_H2": null, "defect_ids": [] },
+    { "character_id": "CHAR-gardener-five", "products": ["assets/concepts/characters/CHAR-gardener-five/sheet.png"], "self_check": "pass with minor notes",
+      "defects_for_user": ["tabard mid-thigh not knee", "faint panel gutters"], "pending_H2": null, "defect_ids": [] },
+    { "character_id": "CHAR-gardener-seven", "products": ["assets/concepts/characters/CHAR-gardener-seven/sheet.png"], "self_check": "pass with minor notes",
+      "defects_for_user": ["hair bright ginger rather than red-brown auburn", "tabard mid-thigh not knee"], "pending_H2": null, "defect_ids": [] },
+    { "character_id": "CHAR-pat", "products": ["assets/concepts/characters/CHAR-pat/sheet.png"], "self_check": "pass", "defects_for_user": [], "pending_H2": null, "defect_ids": [] },
+    { "character_id": "CHAR-executioner", "products": ["assets/concepts/characters/CHAR-executioner/sheet.png"], "self_check": "pass (SUP-014: no device, face visible, empty hands)",
+      "defects_for_user": ["hood stands up slightly behind the head in the side view (still off the face)"], "pending_H2": null, "defect_ids": [] },
+    { "character_id": "CHAR-jury-ensemble", "products": ["assets/concepts/characters/CHAR-jury-ensemble/sheet.png"], "representative": "J01 guinea-pig (= crowd X01 asset)", "self_check": "pass",
+      "defects_for_user": ["J02-J11 have no sheet in this order"], "pending_H2": null, "defect_ids": [] },
+    { "character_id": "CHAR-card-soldiers-ensemble", "products": ["assets/concepts/characters/CHAR-card-soldiers-ensemble/sheet.png"], "representative": "Ace of Clubs soldier", "self_check": "pass with minor notes",
+      "defects_for_user": ["tabard mid-thigh not knee"], "pending_H2": null, "defect_ids": ["DEF-p4-char-301"] },
+    { "character_id": "CHAR-royal-gardeners-ensemble", "products": ["assets/concepts/characters/CHAR-royal-gardeners-ensemble/sheet.png"], "representative": "Four of Clubs gardener", "self_check": "pass with minor notes",
+      "defects_for_user": ["tabard mid-thigh not knee", "little visible earth or paint wear"], "pending_H2": null, "defect_ids": ["DEF-p4-char-301"] },
+    { "character_id": "CHAR-caucus-race-party-ensemble", "products": ["assets/concepts/characters/CHAR-caucus-race-party-ensemble/sheet.png"], "representative": "C01 moorhen, wet state", "self_check": "pass with minor notes",
+      "defects_for_user": ["frontal shield oversized in close-up", "faint panel gutters"], "pending_H2": null, "defect_ids": [] },
+    { "character_id": "CHAR-visiting-monarchs-ensemble", "products": ["assets/concepts/characters/CHAR-visiting-monarchs-ensemble/sheet.png", "assets/concepts/characters/CHAR-visiting-monarchs-ensemble/sheet_queen-of-diamonds.png"], "representative": "M01 King of Clubs; M04 Queen of Diamonds", "self_check": "king pass; queen partial",
+      "defects_for_user": ["Queen: robe back is a harlequin check with a bow, not the pack's lattice card back with a heart rosette", "Queen: robe reads as an open cape, not a flat card panel; full crown not small coronet"], "pending_H2": null, "defect_ids": [] },
+    { "character_id": "CHAR-royal-procession-ensemble", "products": ["assets/concepts/characters/CHAR-royal-procession-ensemble/sheet.png", "assets/concepts/characters/CHAR-royal-procession-ensemble/sheet_royal-child.png"], "representative": "courtier lady Three of Diamonds; royal child boy Three of Hearts", "self_check": "child pass; courtier partial",
+      "defects_for_user": ["Courtier: two front card panels (bodice and skirt) instead of one", "Courtier: back is a harlequin check with hearts, not the lattice card back"], "pending_H2": null, "defect_ids": [] },
+    { "character_id": "CHAR-court-officers-ensemble", "products": ["assets/concepts/characters/CHAR-court-officers-ensemble/sheet.png"], "representative": "Eight of Hearts officer, moustached", "self_check": "pass with notes",
+      "defects_for_user": ["card is chest-sized rather than a hanging tabard", "wand reads as a thick white rod, held horizontally in the side view", "no heart rosette on the card back"], "pending_H2": null, "defect_ids": [] },
+    { "character_id": "CHAR-crowd-ensemble", "products": ["assets/concepts/characters/CHAR-crowd-ensemble/sheet.png"], "representative": "X05 wild brown rabbit", "self_check": "pass",
+      "defects_for_user": ["close-up eyes slightly large and glossy"], "pending_H2": null, "defect_ids": [] }
+  ],
+  "pending_H2_flags": [
+    "H2-footmen-anatomy (CHAR-frog-footman): pending_H2, for user decision at H2",
+    "H2-non-speaking-animals: not in scope (no puppy, hedgehog, flamingo or piglet in this batch). The CGI jury, caucus and crowd animals are talking or background CGI animals under the BIB-0027 ruling, not the pending set."
+  ],
+  "defects_opened": [
+    { "id": "DEF-p4-char-301", "path": "qa/defects/DEF-p4-char-301.json", "summary": "club ranks 2-10 claimed by both card soldiers (Ace-Ten) and gardeners (2/5/7 + 3/4/6/8/9/10)" },
+    { "id": "DEF-p4-char-302", "path": "qa/defects/DEF-p4-char-302.json", "summary": "Frog-Footman waistcoat: appearance.json green satin vs costumes.json COS-036 buff wool (sheet follows costumes.json)" }
+  ],
+  "user_decisions_requested_at_H2": [
+    "Frog-Footman anatomy (Option A vs B), which also binds CHAR-fish-footman",
+    "Whether to rerun Gardener Two (wrong pip count), the Queen of Diamonds and the diamond courtier (wrong card-back pattern); auto-retry is 0, so nothing was rerun",
+    "Whether knee-length tabards matter (every card figure came out mid-thigh)"
+  ],
+  "files_created": [
+    "assets/concepts/characters/<14 ids>/sheet.png (+ CHAR-visiting-monarchs-ensemble/sheet_queen-of-diamonds.png, CHAR-royal-procession-ensemble/sheet_royal-child.png)",
+    "assets/concepts/characters/<14 ids>/prompts.json",
+    "assets/concepts/characters/<14 ids>/selection.json",
+    "assets/concepts/characters/<14 ids>/usage_ledger.jsonl (written by genmedia)",
+    "qa/defects/DEF-p4-char-301.json",
+    "qa/defects/DEF-p4-char-302.json",
+    "code/character_sheet_template_p4-char-concept-cb3.jpg",
+    "code/run_sheet_p4-char-concept-cb3.py",
+    "code/check_sheets_p4-char-concept-cb3.py",
+    "runs/p4-char-concept-cb3/probe/ (3 probe images)",
+    "runs/p4-char-concept-cb3/genmedia_log.txt",
+    "runs/p4-char-concept-cb3/machine_check.json",
+    "runs/p4-char-concept-cb3/result.json"
+  ]
+}

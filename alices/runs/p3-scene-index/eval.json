@@ -1,0 +1,6 @@
+{
+  "task_id": "p3-scene-index",
+  "skipped": true,
+  "reason": "quality judge=0; QA levels 0",
+  "auto": "PASS per agent check scripts"
+}

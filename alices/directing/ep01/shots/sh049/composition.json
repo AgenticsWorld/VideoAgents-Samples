@@ -1,0 +1,34 @@
+{
+  "shot_id": "sh049",
+  "scene_id": "SCN-long-hall",
+  "size": "wide",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "bottom_centre",
+    "anchor_xy": [0.44, 0.66],
+    "size_in_frame": "ten inches high, about 0.34 of frame height in the near foreground — big enough to read her face, small enough that the room above her is most of the picture"
+  },
+  "second_subject": {
+    "id": "PROP-drink-me-bottle",
+    "grid": "bottom_centre",
+    "anchor_xy": [0.56, 0.66],
+    "note": "standing on the flags immediately beside her, its stopper level with her crown and its base level with her feet — identical height, same depth, both sharp. This is the episode's free scale anchor."
+  },
+  "headroom": "about 0.50 of frame height of hall above her head, occupied by the underside of the glass tabletop reading as a lit ceiling. Her own headroom and the bottle's are identical to within a few pixels, and that equality is the shot.",
+  "horizon_eyeline": "Lens on the flagstones at 0.20 m: one flagstone joint runs away from the bottom of frame into depth and gives the floor its new size. Her eyeline is at 0.62 of frame height, raised steeply to the tabletop above.",
+  "layers": {
+    "fg": "Alice and the empty bottle side by side on the limestone flags, and the mosaic dado border running behind them at its true tiny scale",
+    "mg": "the three clear glass table legs going up out of frame like columns",
+    "bg": "the glass tabletop far above as a lit ceiling plane, and beyond it the dark of the hall"
+  },
+  "gaze": {
+    "direction": "up_frame",
+    "lead_room": "above",
+    "note": "she looks straight up at the tabletop; the lead room is the fifty percent of frame height above her, which is now all architecture."
+  },
+  "balance": "Bottom-loaded with two small equal objects, the rest of the frame given to a ceiling that used to be a table. Deep focus throughout: both gauges — the bottle at her height and the tabletop far above — are sharp in the same frame, or the comparison is not made.",
+  "leading_lines": "The flagstone joint runs from the bottom edge into depth; the three glass legs are strong verticals rising out of the top of frame. Floor lines going away, column lines going up — the two directions that say 'this room is bigger than you'.",
+  "eye_first": "The pair of them — girl and bottle, same height — because the equality is instantly legible, and only then up the legs to the ceiling of glass.",
+  "safe_area_ok": true,
+  "constraint_binding": "The free scale anchor for everything downstream: at 0.254 m she is exactly as tall as the bottle she drank from, so the two are composed side by side, at the same distance from the lens, on the same flagstone, with no perspective advantage to either. One flagstone joint runs away to give the floor its new size. Deep focus (size beat): no gauge may be defocused."
+}

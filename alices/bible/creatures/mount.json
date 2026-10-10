@@ -1,0 +1,35 @@
+{
+  "_meta": {
+    "file": "bible/creatures/mount.json",
+    "status": "authored_v1",
+    "owner": "04-creatures/mount",
+    "write_via": "04-creatures/mount (direct, per WRITE_RULES.md section 9 ownership table); memory-bible collects this file into the Bible view per bible/creatures/mount.json SOUL.md output table",
+    "task_id": "p3-mount",
+    "generated": "2026-09-22",
+    "content_language": "English (project setting)",
+    "scope": "Registry of on-screen ridden/driven creatures (mount + owner/ownership + tack + performance layer, per SOUL.md). Depends on bible/creatures/creature.json (p3-creature) for creature_ref and bible/characters/index.json (p3-char-index) for owner_ref.",
+    "id_prefixes": { "MNT-": "mount (numeric, MNT-001), per bible/WRITE_RULES.md section 4 pattern for new domains" },
+    "amendments": [
+      {
+        "change_id": "BIB-0027",
+        "date": "2026-09-22",
+        "task_id": "p4-cr-mount",
+        "authority": "User ruling in chat, 2026-09-22 (answer to qa/defects/DEF-p4-style-001): talking characters may be CGI animals (realistic-fantasy genre); dream environments take an Art Nouveau/Mucha design language. Supersedes the H1 5.1 A human-performer reading of SUP-002/SUP-010 (bible/cultivation.json), amended there.",
+        "entries_changed": ["zero_entries_justification.reasoning[2] (the SUP-002 boundary-check paragraph)"],
+        "entries_unchanged_by_design": "The zero mounts verdict itself, the source-text audit, the creature.json audit, the waking-frame check and if_this_changes are all unaffected by BIB-0027 — no scene in the source or in the amended Bible stages a rider on any animal, CGI or otherwise, so the conclusion (mounts: []) does not change; only the wording describing what a talking animal now is (CGI animal, not human performer) was stale."
+      }
+    ],
+    "mounts": [],
+    "zero_entries_justification": {
+      "verdict": "No mount entries in this realistic adaptation. The mounts list is intentionally empty.",
+      "reasoning": [
+        "Source text audit: grepped story/structured_story.json + all chNNN shards, bible/dictionary.json, bible/geography.json, bible/culture.json and bible/world.json for horse/ride/rode/riding/cart/carriage/mount/pony/steed/saddle — zero hits. Alice's Adventures in Wonderland contains no scene in which any character rides, drives, or is carried by an animal; every mode of on-screen locomotion (walking, falling, swimming through the pool of tears, the Gryphon 'trotting' Alice to the Mock Turtle) is on the character's own legs.",
+        "creature.json audit (bible/creatures/creature.json, p3-creature, read before writing this file): the on-screen real-animal registry has exactly 4 entries — CRE-001 White Rabbit (waking-world, runs on its own past Alice, never carries anyone), CRE-002 Puppy (plays with tiny Alice, never carries her), CRE-003 Flamingo (used as a hand-held croquet mallet, not ridden), CRE-004 Hedgehog (used as a croquet ball, not ridden). None is described, in the source or in creature.json's screen_treatment, as bearing a rider or pulling a load. Per my SOUL.md boundary I do not invent a mount candidate the creature registry does not already carry, and per the 'if the bestiary lacks an entry, request it from creature — never author a creature card myself' rule, no such request was raised here because the source itself supplies no riding/draught scene to justify one.",
+        "SUP-002/SUP-010 boundary check (bible/cultivation.json, amended BIB-0027; bible/characters/index.json _meta): every talking dream animal (White Rabbit-as-herald, Mouse, Dodo, Duck, Lory, Eaglet, Magpie, Canary, Caterpillar, Cheshire Cat, Pigeon, jurors) plus the Gryphon and Mock Turtle (SUP-010) is now a photoreal CGI animal or fantastical creature composited into live-action plates, registered as CHAR-* by 03-characters (not by 04-creatures/creature, per SUP-002/SUP-010 scope), while the card figures and the human dream-figures (King/Queen/Knave and retinue, footmen, Cook, Hatter, Duchess, executioner, Pat, crowds) stay human performers (SUP-004, unchanged by BIB-0027). Even under the amended CGI-animal reading, none of these figures carries another character on screen at any point in the source: the Gryphon walks Alice to the shore beside it, not on its back, and the Mock Turtle never moves anywhere with a passenger. If a future staging beat had one CHAR-* dream-figure carry another, that would still be a blocking/staging note for 07-directing to raise as a new candidate through 04-creatures/creature and 03-characters/appearance, not something this file invents on its own.",
+        "Waking-frame check: the 1862 Thames-valley/Oxford waking bracket (ch001, ch012; bible/geography.json waking places; bible/h1_summary.md section 1) never stages a horse, pony, cart or carriage on screen — the family house, the neighbouring farm and the bank are all reached on foot or already the scene's starting point; the sister's closing reverie (ch012-p70) only imagines farmyard sounds with her eyes still shut (already excluded from the creature registry itself, per creature.json _meta.zero_entries_considered_and_excluded, as sound-only and never a witnessed sight), so it cannot ground a mount entry either.",
+        "Conclusion: this is a straightforward, source-driven zero-entry result, not an oversight — the DoD's 'own zero-entries schema is not required by SOUL.md but I record my search here directly rather than leaving mounts: [] unexplained, per §1 principle 10 (no bare/unjustified empty production-required output)."
+      ],
+      "if_this_changes": "If 07-directing/blocking or a later staging pass wants to introduce a ridden/draught animal beat not in the source (e.g. a farm cart glimpsed at the neighbouring farm), that request must go back through 00-orchestration to 04-creatures/creature first for a creature_ref, then here for the ownership/tack/performance layer — this file must not be edited to add a mount ahead of that creature entry existing."
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "shot_id": "sh007",
+  "group_id": "grp004",
+  "scene_no": "S01",
+  "scene_id": "SCN-riverbank",
+  "duration_s": 8.0,
+  "is_dialogue": false,
+  "group_position": "first shot of grp004 — Alice on the blocking_map start (sitting_shelf). CRE-001 is on his own map start (meadow) but has not broken cover and is not in frame.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "lie",
+      "start_pos": "flat on her back on the grass at sitting_shelf where she fell asleep",
+      "space_fragment_en": "lying on her back on the grass at the sister's sitting place, low on screen-left, face up with her eyes shut",
+      "facing": "face up; at the end of the shot her eyes open and track down the meadow to screen-right",
+      "path": [],
+      "beats": [
+        { "t": 0.0, "action": "completely still, eyes shut", "sync": "the church clock begins to strike two" },
+        { "t": 6.8, "action": "a rustle close by; nothing else moves", "sync": "the decay of the second strike" },
+        { "t": 7.3, "action": "her eyes open", "sync": "last half-second of the shot" }
+      ],
+      "performance_beat": {
+        "objective": "nothing — she is asleep, and the shot must not let her act",
+        "goal": "stay asleep until something in the grass will not let her",
+        "emotional_arc": "from complete sleep to the first half-second of waking, before any thought arrives",
+        "arc_from": "complete sleep",
+        "arc_to": "bare waking, not yet curiosity",
+        "trigger": { "beat": "the rustle in the long grass close by", "t": 6.8 },
+        "no_early_reaction": ["eyelids flickering", "fingers moving", "the head turning"],
+        "forbidden_early": ["eyelids flickering", "fingers moving", "the head turning"],
+        "end_state": "eyes newly open and unfocused on the sky, head still flat on the grass, mouth softly apart"
+      }
+    }
+  ],
+  "creatures": [],
+  "offscreen_presence": [
+    { "id": "CHAR-alice-sister", "where": "at the sister's sitting place under the northern elm, still reading", "note": "In the space, out of frame; unchanged since sh002." },
+    { "id": "CRE-001", "where": "in the long grass of the open meadow, about to break cover", "note": "grp004 blocking_map start for CRE-001. He makes the rustle at t=6.8 but is not yet in frame, so he carries no entry here." }
+  ],
+  "presence_check": {
+    "timeline_ok": true,
+    "violations": [],
+    "story_event": "ev0001 (real_frame, T0) — the White Rabbit runs close by",
+    "note": "The animal that breaks cover here is CRE-001, the real mute unclothed rabbit. CHAR-white-rabbit is dream-layer only and is illegal in S01/S02."
+  }
+}

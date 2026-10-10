@@ -1,0 +1,1014 @@
+{
+  "_meta": {
+    "file": "bible/characters/relationship.json",
+    "status": "authored_v1",
+    "owner": "03-characters/relationship",
+    "task_id": "p3-relationship",
+    "produced_on": "2026-09-22",
+    "content_language": "en",
+    "scope": "Whole-cast relationship graph for Alice's Adventures in Wonderland as a realistic 1862 dream drama. Nodes are CHAR-* ids from bible/characters/index.json; CRE-* appears only for CRE-001, the real silent white rabbit of the waking frame (bible/creatures/index.json). Every edge carries a controlled type, strength 1-5, direction, and a state sequence anchored to story/events.json event ids and chapters.",
+    "inputs": [
+      "story/events.json",
+      "story/structured_story/ch001.json-ch012.json",
+      "bible/characters/index.json",
+      "bible/creatures/index.json + creature.json",
+      "bible/politics.json (FAC/OFF/FREL)",
+      "bible/cultivation.json SUP-001, SUP-002, SUP-005, SUP-012, SUP-014",
+      "bible/dictionary.json TERM-0010, TERM-0025, TERM-0039",
+      "runs/h1-ruling/ruling.json (5.3 B, 5.4 B)"
+    ],
+    "frame_rule": "Every dream-layer edge (ev0002-ev0052) exists only inside Alice's dream (SUP-001) and ends when she wakes at ev0053 (ch012#p64). Only CHAR-alice, CHAR-alice-sister, CHAR-family-housemaid and CRE-001 have waking-layer relationships.",
+    "type_enum": {
+      "kinship": "blood family",
+      "marriage": "spouses",
+      "household": "belongs to / is kept by the same household without a service contract (e.g. the Duchess's cat)",
+      "master_servant": "employer or sovereign over a servant, page, herald, footman, soldier or officer (directed: master -> servant)",
+      "authority_subject": "an adult or office-holder exercising power over someone not in their service: judge/defendant, monarch/guest, examiner/child, gatekeeper/visitor (directed: authority -> subject)",
+      "mentor_pupil": "teacher or examiner who instructs (directed: mentor -> pupil)",
+      "guide": "leads, lures or escorts the other through the story (directed: guide -> guided)",
+      "companionship": "peers sharing a group, table or journey",
+      "alliance": "one side protects or sides with the other",
+      "affection": "warmth or friendship offered across the pair",
+      "rivalry": "peer squabbling or blame without real threat",
+      "antagonism": "hostility, attack or open conflict",
+      "dream_echo": "H1 ruling 5.3 B / SUP-002 doubling: a waking-world person or animal reappears transformed in Alice's dream (directed: waking source -> dream side)"
+    },
+    "strength_scale": {
+      "1": "passing: one exchange, no consequence",
+      "2": "minor: one scene with some consequence",
+      "3": "notable: recurring or shapes a sequence",
+      "4": "major: shapes an act of the film",
+      "5": "defining: drives the main line and the climax"
+    },
+    "key_rule": "key: true marks edges that drive the main line (Alice's identity and her stand against nonsensical adult authority, closing in the trial and the waking return). QA samples these against the source.",
+    "state_rule": "states[] is chronological; from_chapter is the source chapter number of event_id (events.json). A state holds until the next one. inferred: true on a state marks a designed staging beat with its reason.",
+    "secret_rule": "secret.hidden_from lists characters who never know; audience knowledge and the reveal point are given in reveal_chapter/reveal_event, or never_revealed: true. Screenplay must not state a never_revealed fact in dialogue.",
+    "edge_key": "An edge is identified by (from, to, type); no pair carries the same type twice. No edge-ID prefix is registered in WRITE_RULES.md section 4, so none is minted."
+  },
+  "edges": [
+    {
+      "from": "CHAR-alice-sister", "to": "CHAR-alice",
+      "type": "kinship", "directed": false, "strength": 4, "key": true,
+      "summary": "The film's only waking bond: an elder sister absorbed in a book without pictures and a bored younger sister who drifts off; on waking the distance closes into tenderness.",
+      "states": [
+        { "state": "side by side but apart: the sister reads, Alice is bored and drowsy", "from_chapter": 1, "event_id": "ev0001", "source": "ch001#p01" },
+        { "state": "tender reunion: the sister brushes leaves from her face and wakes her; Alice tells her the dream", "from_chapter": 12, "event_id": "ev0053", "source": "ch012#p64-p66" },
+        { "state": "protective foresight: the sister pictures grown-up Alice telling these stories to her own children", "from_chapter": 12, "event_id": "ev0054", "source": "ch012#p67-p72" }
+      ],
+      "sources": ["ch001#p01", "ch012#p64-p72", "FAC-alice-family"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-alice-sister", "to": "CHAR-alice",
+      "type": "dream_echo", "directed": false, "strength": 2, "key": true,
+      "summary": "Ruling 5.3 B: the sister plays herself, glimpsed as a silent spectator in the trial gallery of Alice's dream; in return the sister half-dreams Alice's dream over the farm sounds at sunset. A two-way echo that stitches the dream to the bank.",
+      "doubling": { "ruling": "H1 5.3 B", "waking_side": "CHAR-alice-sister on the bank (ch001, ch012)", "dream_side": "the same actor, lightly re-dressed as a court spectator (bible/characters/index.json CHAR-alice-sister.doubling)", "direction_note": "undirected: the sister enters Alice's dream (ev0048), then Alice's dream enters the sister's reverie (ev0054)" },
+      "states": [
+        { "state": "glimpsed in the trial gallery: no line, no exchange, Alice does not register her", "from_chapter": 12, "event_id": "ev0048", "source": "ch012#p01-p05", "inferred": true, "reason": "Designed staging beat for ruling 5.3 B; the source puts no sister in court. Placed at ev0048, where Alice's jump spills the jurors 'upon the heads of the crowd below', the first moment the gallery is in frame in ch012, per index.json (sister appears ch012 in dream mode)." },
+        { "state": "reverse echo: the sister re-imagines the Rabbit, Mouse, tea-party and trial over grass, pool, sheep-bells and farmyard", "from_chapter": 12, "event_id": "ev0054", "source": "ch012#p67-p70" }
+      ],
+      "secret": { "hidden_from": ["CHAR-alice"], "audience": "sees the face in the gallery; recognises it when the same face bends over Alice on the bank", "reveal_chapter": 12, "reveal_event": "ev0053" },
+      "sources": ["runs/h1-ruling/ruling.json#5.3", "ch012#p64-p70"],
+      "inferred": true,
+      "reason": "The trial glimpse is a designed beat realizing ruling 5.3 B; the reverie half is stated in the source (ch012#p67-p70)."
+    },
+    {
+      "from": "CHAR-alice", "to": "CHAR-family-housemaid",
+      "type": "master_servant", "directed": true, "strength": 1, "key": false,
+      "summary": "The family's housemaid serves Alice's household in the waking world; she is never seen, only implied by the dream's 'Mary Ann'.",
+      "states": [
+        { "state": "off-screen family servant, implied through the dream's Mary Ann", "from_chapter": 4, "event_id": "ev0014", "source": "ch004#p02-p04", "inferred": true, "reason": "Existence inferred from world.json frame.social_class and TERM-0147 (FAC-alice-family); the only source hook is the dream-name Mary Ann at ev0014." }
+      ],
+      "sources": ["FAC-alice-family", "TERM-0147", "TERM-0010"],
+      "inferred": true,
+      "reason": "Waking household relation designed at H1 (ruling 5.6 A, clergyman-scholar household with at least one housemaid); master_servant here is household-to-servant, with Alice standing for the family."
+    },
+    {
+      "from": "CHAR-family-housemaid", "to": "CHAR-alice",
+      "type": "dream_echo", "directed": true, "strength": 2, "key": false,
+      "summary": "Ruling 5.3 B: in the dream the White Rabbit mistakes Alice for his housemaid 'Mary Ann' (TERM-0010), so the child is put in her own maid's shoes and ordered about. The family maid is the waking source; Mary Ann stays a name, never cast.",
+      "doubling": { "ruling": "H1 5.3 B", "waking_side": "CHAR-family-housemaid", "dream_side": "the name 'Mary Ann' (TERM-0010), a role imposed on CHAR-alice by CHAR-white-rabbit", "no_separate_character": "Mary Ann is never seen; no CHAR id exists or is needed" },
+      "states": [
+        { "state": "Alice is called Mary Ann and sent to fetch gloves and a fan; she obeys, fearing to meet 'the real Mary Ann'", "from_chapter": 4, "event_id": "ev0014", "source": "ch004#p02-p04" },
+        { "state": "the borrowed servant role collapses: Alice grows and wedges in the house", "from_chapter": 4, "event_id": "ev0015", "source": "ch004#p04-p12" }
+      ],
+      "secret": { "hidden_from": ["CHAR-alice", "CHAR-white-rabbit"], "audience": "may connect it through casting and wardrobe echo only", "never_revealed": true },
+      "sources": ["ch004#p02-p04", "TERM-0010", "runs/h1-ruling/ruling.json#5.3"],
+      "inferred": false
+    },
+    {
+      "from": "CRE-001", "to": "CHAR-white-rabbit",
+      "type": "dream_echo", "directed": true, "strength": 3, "key": true,
+      "summary": "SUP-002 (amended BIB-0027): the silent real white rabbit that crosses the bank becomes, in the dream, the dressed, watch-carrying photoreal CGI rabbit. The film's founding doubling.",
+      "doubling": { "ruling": "SUP-002 (H1 5.1 A; rendering amended BIB-0027 2026-09-22); cf. creature.json CRE-001.distinct_from", "waking_side": "CRE-001, mute, unclothed, real animal", "dream_side": "CHAR-white-rabbit, photoreal CGI rabbit in 1862-pattern waistcoat and gloves" },
+      "states": [
+        { "state": "real rabbit runs past the bank and down the hole under the hedge", "from_chapter": 1, "event_id": "ev0001", "source": "ch001#p02-p04" },
+        { "state": "transformed: the dream's White Rabbit hurries ahead of her into the long hall", "from_chapter": 1, "event_id": "ev0003", "source": "ch001#p11" }
+      ],
+      "secret": { "hidden_from": ["CHAR-alice"], "audience": "sees both halves; the link is made by the cut, not dialogue", "reveal_chapter": 12, "reveal_event": "ev0054" },
+      "sources": ["ch001#p02-p04", "ch001#p11", "SUP-002", "SUP-001"],
+      "inferred": false
+    },
+    {
+      "from": "CRE-001", "to": "CHAR-alice",
+      "type": "guide", "directed": true, "strength": 3, "key": true,
+      "summary": "Curiosity: the real rabbit draws Alice off the bank, across the field and to the hedge where the dream begins.",
+      "states": [
+        { "state": "lure: Alice runs after it across the field and follows it to the rabbit-hole", "from_chapter": 1, "event_id": "ev0001", "source": "ch001#p02-p04" }
+      ],
+      "sources": ["ch001#p02-p04"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-alice", "to": "CHAR-cheshire-cat",
+      "type": "dream_echo", "directed": true, "strength": 3, "key": false,
+      "summary": "Ruling 5.3 B: Alice's homesick talk of her cat Dinah (TERM-0025) during the fall is answered by the dream's one friendly cat-figure, the Cheshire Cat. Dinah is never on screen and has no CRE id (creature.json excludes her), so the waking end is anchored on Alice, Dinah's owner.",
+      "doubling": { "ruling": "H1 5.3 B", "waking_side": "Dinah, Alice's cat (TERM-0025); spoken of only, no registry id", "dream_side": "CHAR-cheshire-cat" },
+      "states": [
+        { "state": "Alice misses Dinah aloud as she falls", "from_chapter": 1, "event_id": "ev0002", "source": "ch001#p10" },
+        { "state": "the Dinah threat drives off the Mouse and the birds", "from_chapter": 3, "event_id": "ev0012", "source": "ch003#p44-p48" },
+        { "state": "the dream supplies a grinning cat in the Duchess's kitchen", "from_chapter": 6, "event_id": "ev0026", "source": "ch006#p19-p43" },
+        { "state": "Alice claims the Cat as 'a friend of mine'", "from_chapter": 8, "event_id": "ev0037", "source": "ch008#p53" }
+      ],
+      "secret": { "hidden_from": ["CHAR-alice", "CHAR-cheshire-cat"], "audience": "left to infer; no line names the echo", "never_revealed": true },
+      "sources": ["ch001#p10", "ch003#p44-p48", "ch008#p53", "TERM-0025", "runs/h1-ruling/ruling.json#5.3"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-white-rabbit", "to": "CHAR-alice",
+      "type": "guide", "directed": true, "strength": 4, "key": true,
+      "summary": "The dream's thread: the Rabbit leads Alice in, flees her, bosses her, besieges her, confides in her, and finally calls her to the witness box.",
+      "states": [
+        { "state": "lure: she follows him into the long hall and loses him", "from_chapter": 1, "event_id": "ev0003", "source": "ch001#p11" },
+        { "state": "startled stranger: flees at her voice, dropping gloves and fan", "from_chapter": 2, "event_id": "ev0007", "source": "ch002#p08-p09" },
+        { "state": "besieger: rallies his household against the 'monster' in his house", "from_chapter": 4, "event_id": "ev0016", "source": "ch004#p13-p33" },
+        { "state": "nervous confidant: whispers that the Duchess is under sentence", "from_chapter": 8, "event_id": "ev0035", "source": "ch008#p34-p40" },
+        { "state": "court herald: calls 'Alice!' as a witness", "from_chapter": 11, "event_id": "ev0047", "source": "ch011#p64-p74" }
+      ],
+      "sources": ["ch001#p11", "ch002#p08-p09", "ch004#p13-p33", "ch008#p34-p40", "ch011#p64-p74", "OFF-004"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-white-rabbit", "to": "CHAR-alice",
+      "type": "master_servant", "directed": true, "strength": 2, "key": false,
+      "summary": "Mistaken service: the Rabbit takes Alice for his maid Mary Ann and she obeys without correcting him. Alice's first time being ordered about in the dream.",
+      "states": [
+        { "state": "commanded as 'Mary Ann' to fetch gloves and a fan; she obeys", "from_chapter": 4, "event_id": "ev0014", "source": "ch004#p02-p04" },
+        { "state": "service breaks: grown huge, she knocks him into a cucumber-frame and threatens him with Dinah", "from_chapter": 4, "event_id": "ev0016", "source": "ch004#p13-p30" }
+      ],
+      "secret": { "hidden_from": ["CHAR-white-rabbit"], "audience": "knows she is not Mary Ann", "never_revealed": true },
+      "sources": ["ch004#p02-p04", "ch004#p13-p30", "TERM-0010"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-queen-of-hearts", "to": "CHAR-alice",
+      "type": "authority_subject", "directed": true, "strength": 5, "key": true,
+      "summary": "The spine of the film's argument with adult authority: from 'Off with her head!' / 'Nonsense!' through fearful flattery and capricious favour to Alice's full-size 'You're nothing but a pack of cards!'",
+      "states": [
+        { "state": "first confrontation: 'Off with her head!' answered by 'Nonsense!'; then invited to croquet", "from_chapter": 8, "event_id": "ev0034", "source": "ch008#p11-p33" },
+        { "state": "fearful subject: Alice expects to be sentenced at any minute", "from_chapter": 8, "event_id": "ev0036", "source": "ch008#p41-p44" },
+        { "state": "wary flattery: Alice praises the Queen once she notices her listening", "from_chapter": 8, "event_id": "ev0037", "source": "ch008#p45-p60" },
+        { "state": "capricious patron: takes Alice to hear the Mock Turtle's history", "from_chapter": 9, "event_id": "ev0040", "source": "ch009#p35-p42" },
+        { "state": "courtroom adversary: claims Alice is 'nearly two miles high'", "from_chapter": 12, "event_id": "ev0050", "source": "ch012#p14-p22" },
+        { "state": "open defiance: 'Stuff and nonsense!', then the whole court dismissed as cards", "from_chapter": 12, "event_id": "ev0052", "source": "ch012#p58-p63" }
+      ],
+      "secret": { "fact": "the Queen's sentences are never carried out (SUP-014)", "hidden_from": ["CHAR-alice"], "audience": "learns with Alice", "reveal_chapter": 9, "reveal_event": "ev0041" },
+      "sources": ["ch008#p11-p33", "ch008#p19", "ch009#p46", "ch012#p59", "ch012#p63", "OFF-002", "LAW-001", "LAW-003", "SUP-014"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-king-of-hearts", "to": "CHAR-alice",
+      "type": "authority_subject", "directed": true, "strength": 4, "key": true,
+      "summary": "The softer, sillier face of the court: he shields her at first ('she is only a child'), bristles when she backs the Cat, quietly pardons, then as judge is out-argued by her over Rule Forty-two.",
+      "states": [
+        { "state": "timid protector: 'Consider, my dear: she is only a child!'", "from_chapter": 8, "event_id": "ev0034", "source": "ch008#p20" },
+        { "state": "piqued: 'Don't be impertinent' when she introduces the Cat, yet hides behind her", "from_chapter": 8, "event_id": "ev0037", "source": "ch008#p53-p56" },
+        { "state": "secret mercy: his low 'You are all pardoned' relieves her", "from_chapter": 9, "event_id": "ev0040", "source": "ch009#p42" },
+        { "state": "judge and witness: 'What do you know about this business?'", "from_chapter": 12, "event_id": "ev0049", "source": "ch012#p06-p13" },
+        { "state": "defeated: Alice exposes Rule Forty-two as invented; he turns pale", "from_chapter": 12, "event_id": "ev0050", "source": "ch012#p14-p22" },
+        { "state": "overruled by her objection to his reading of the verses; the court collapses", "from_chapter": 12, "event_id": "ev0052", "source": "ch012#p58-p63" }
+      ],
+      "sources": ["ch008#p20", "ch008#p56", "ch009#p42", "ch012#p06-p22", "OFF-001", "LAW-002"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-duchess", "to": "CHAR-alice",
+      "type": "authority_subject", "directed": true, "strength": 3, "key": true,
+      "summary": "Aristocratic adult power in two moods: rude neglect in the kitchen (the baby flung at Alice), then smothering familiarity and morals on the croquet-ground, ended by the Queen's ultimatum.",
+      "states": [
+        { "state": "rude rebuff, then the baby flung at Alice to nurse", "from_chapter": 6, "event_id": "ev0026", "source": "ch006#p19-p43" },
+        { "state": "cloying intimacy: chin dug into Alice's shoulder, a moral for everything", "from_chapter": 9, "event_id": "ev0039", "source": "ch009#p01-p34" }
+      ],
+      "sources": ["ch006#p43", "ch009#p06", "ch009#p11", "FAC-duchess-household"],
+      "inferred": false,
+      "notes": "Between ev0035 (Duchess under sentence) and ev0039 (Duchess free and affectionate) the source gives no cause (events.json broken_chains ev0039); the edge does not invent one."
+    },
+    {
+      "from": "CHAR-caterpillar", "to": "CHAR-alice",
+      "type": "mentor_pupil", "directed": true, "strength": 3, "key": true,
+      "summary": "The identity examiner: 'Who are you?' Testy, circular, he fails her recitation, then gives her the one tool of the dream, the two sides of the mushroom.",
+      "states": [
+        { "state": "stranger on the mushroom", "from_chapter": 4, "event_id": "ev0018", "source": "ch004#p40-p42" },
+        { "state": "examiner: her identity questioned, 'Father William' judged 'wrong from beginning to end'", "from_chapter": 5, "event_id": "ev0019", "source": "ch005#p01-p37" },
+        { "state": "grudging instruction: one side makes you taller, the other shorter; he leaves", "from_chapter": 5, "event_id": "ev0020", "source": "ch005#p38-p50" }
+      ],
+      "sources": ["ch005#p25", "ch005#p01-p50", "ch010#p53"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-hatter", "to": "CHAR-alice",
+      "type": "antagonism", "directed": false, "strength": 3, "key": false,
+      "summary": "Rude hosting: no room, remarks on her hair, unanswerable riddle; she walks out. At the trial she only watches him tremble.",
+      "states": [
+        { "state": "unwelcoming host: 'No room!', 'Your hair wants cutting', the raven riddle", "from_chapter": 7, "event_id": "ev0029", "source": "ch007#p01-p20" },
+        { "state": "rupture: Alice leaves in disgust, vowing never to return", "from_chapter": 7, "event_id": "ev0031", "source": "ch007#p63-p102" },
+        { "state": "distance: she watches him cower as a witness, no exchange", "from_chapter": 11, "event_id": "ev0046", "source": "ch011#p16-p63" }
+      ],
+      "sources": ["ch007#p01-p102", "ch011#p16-p63", "FAC-mad-tea-party"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-march-hare", "to": "CHAR-alice",
+      "type": "antagonism", "directed": false, "strength": 2, "key": false,
+      "summary": "Co-host of the rude tea-table; offers wine there isn't and argues her into circles.",
+      "states": [
+        { "state": "'No room!', non-existent wine, 'say what you mean'", "from_chapter": 7, "event_id": "ev0029", "source": "ch007#p01-p20" },
+        { "state": "Alice walks out on the table", "from_chapter": 7, "event_id": "ev0031", "source": "ch007#p63-p102" }
+      ],
+      "sources": ["ch007#p01-p102"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-dormouse", "to": "CHAR-alice",
+      "type": "companionship", "directed": false, "strength": 2, "key": false,
+      "summary": "Sleepy storyteller she keeps heckling; later her cramped neighbour on the court bench as she starts to grow.",
+      "states": [
+        { "state": "storyteller and heckler: the treacle-well tale", "from_chapter": 7, "event_id": "ev0031", "source": "ch007#p63-p102" },
+        { "state": "court neighbour: 'I wish you wouldn't squeeze so'", "from_chapter": 11, "event_id": "ev0046", "source": "ch011#p30" }
+      ],
+      "sources": ["ch007#p70", "ch011#p30"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-cheshire-cat", "to": "CHAR-alice",
+      "type": "affection", "directed": false, "strength": 3, "key": true,
+      "summary": "The one dream-figure that treats Alice as an equal: an uncanny guide who says they are both mad, then her declared friend at the croquet-ground.",
+      "states": [
+        { "state": "uncanny guide: directions and 'we're all mad here'", "from_chapter": 6, "event_id": "ev0028", "source": "ch006#p50-p80" },
+        { "state": "friend and confidant at croquet: 'a friend of mine'", "from_chapter": 8, "event_id": "ev0037", "source": "ch008#p45-p60" },
+        { "state": "vanishes to nothing while the court argues its execution (SUP-005)", "from_chapter": 8, "event_id": "ev0038", "source": "ch008#p61-p71" }
+      ],
+      "sources": ["ch006#p67", "ch008#p53", "SUP-005"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-pigeon", "to": "CHAR-alice",
+      "type": "antagonism", "directed": true, "strength": 2, "key": false,
+      "summary": "A frightened mother attacks her stretched neck as a 'Serpent!', denying she can be a little girl. An identity challenge from outside.",
+      "states": [
+        { "state": "attack and accusation: 'Serpent!'", "from_chapter": 5, "event_id": "ev0022", "source": "ch005#p54-p77" }
+      ],
+      "sources": ["ch005#p60", "ch005#p68"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-frog-footman", "to": "CHAR-alice",
+      "type": "authority_subject", "directed": true, "strength": 1, "key": false,
+      "summary": "Obtuse gatekeeper: argues that knocking is useless and will not say whether she may come in.",
+      "states": [
+        { "state": "stonewalling gatekeeper; she lets herself in", "from_chapter": 6, "event_id": "ev0025", "source": "ch006#p05-p18" }
+      ],
+      "sources": ["ch006#p09", "ch006#p15"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-gryphon", "to": "CHAR-alice",
+      "type": "guide", "directed": true, "strength": 3, "key": true,
+      "summary": "Escort sent by the Queen who lets Alice in on the secret that nobody is ever executed; dances her through the Quadrille and hurries her to the trial.",
+      "states": [
+        { "state": "escort under orders; confides 'they never executes nobody'", "from_chapter": 9, "event_id": "ev0041", "source": "ch009#p43-p47" },
+        { "state": "dance partner and audience: asks for her own adventures", "from_chapter": 10, "event_id": "ev0043", "source": "ch010#p01-p77" },
+        { "state": "hurries her by the hand to the trial", "from_chapter": 10, "event_id": "ev0044", "source": "ch010#p78-p81" }
+      ],
+      "sources": ["ch009#p46", "ch010#p01-p81"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-mock-turtle", "to": "CHAR-alice",
+      "type": "companionship", "directed": false, "strength": 2, "key": false,
+      "summary": "Melancholy host who finds her 'very dull', teaches her the Lobster Quadrille and hears her story; left behind singing.",
+      "states": [
+        { "state": "sorrowful host: school memories, 'really you are very dull!'", "from_chapter": 9, "event_id": "ev0042", "source": "ch009#p48-p92" },
+        { "state": "Quadrille and song; listens to her adventures", "from_chapter": 10, "event_id": "ev0043", "source": "ch010#p01-p77" },
+        { "state": "left behind as she is rushed away", "from_chapter": 10, "event_id": "ev0044", "source": "ch010#p78-p81" }
+      ],
+      "sources": ["ch009#p57", "ch010#p01-p81"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-mouse", "to": "CHAR-alice",
+      "type": "companionship", "directed": false, "strength": 3, "key": false,
+      "summary": "Her first companion in the dream, repeatedly wounded by her talk of Dinah; a truce, a shared race, then a rupture over his tale.",
+      "states": [
+        { "state": "offended by Dinah and the terrier; truce on her promise", "from_chapter": 2, "event_id": "ev0009", "source": "ch002#p19-p26" },
+        { "state": "fellow castaways: history lecture and Caucus-race", "from_chapter": 3, "event_id": "ev0010", "source": "ch003#p01-p30" },
+        { "state": "rupture: offended by her interruptions, walks away", "from_chapter": 3, "event_id": "ev0011", "source": "ch003#p31-p42" }
+      ],
+      "sources": ["ch002#p20", "ch002#p22", "ch003#p06", "ch003#p36"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-dodo", "to": "CHAR-alice",
+      "type": "authority_subject", "directed": true, "strength": 2, "key": false,
+      "summary": "Benign presiding adult: runs the Caucus-race, rules that everybody has won, and solemnly presents Alice with her own thimble.",
+      "states": [
+        { "state": "presiding judge of the race; ceremony of the thimble", "from_chapter": 3, "event_id": "ev0010", "source": "ch003#p01-p30" }
+      ],
+      "sources": ["ch003#p28-p29", "FAC-caucus-race-company"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-lory", "to": "CHAR-alice",
+      "type": "rivalry", "directed": false, "strength": 1, "key": false,
+      "summary": "Sulky argument over age ('I am older than you, and must know better'); later asks who Dinah is.",
+      "states": [
+        { "state": "age quarrel, the Lory sulks", "from_chapter": 3, "event_id": "ev0010", "source": "ch003#p02" },
+        { "state": "asks 'who is Dinah?', setting off the flight of the birds", "from_chapter": 3, "event_id": "ev0012", "source": "ch003#p45" }
+      ],
+      "sources": ["ch003#p02", "ch003#p45"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-caucus-race-party-ensemble", "to": "CHAR-alice",
+      "type": "companionship", "directed": false, "strength": 2, "key": false,
+      "summary": "The soaked company from the pool: swim ashore together, race together, then desert her one by one at the mention of Dinah.",
+      "states": [
+        { "state": "fellow survivors swimming ashore", "from_chapter": 2, "event_id": "ev0009", "source": "ch002#p19-p26" },
+        { "state": "prizes all round: Alice hands out her comfits", "from_chapter": 3, "event_id": "ev0010", "source": "ch003#p01-p30" },
+        { "state": "desertion: all leave on pretexts; Alice alone on the bank", "from_chapter": 3, "event_id": "ev0012", "source": "ch003#p43-p47" }
+      ],
+      "sources": ["ch002#p19-p26", "ch003#p43-p48"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-magpie", "to": "CHAR-alice",
+      "type": "companionship", "directed": false, "strength": 1, "key": false,
+      "summary": "Wraps up against 'the night air' and leaves after Alice praises Dinah's bird-catching.",
+      "states": [
+        { "state": "departs on a pretext", "from_chapter": 3, "event_id": "ev0012", "source": "ch003#p47" }
+      ],
+      "sources": ["ch003#p47"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-canary", "to": "CHAR-alice",
+      "type": "companionship", "directed": false, "strength": 1, "key": false,
+      "summary": "Calls its children to bed and leaves after the Dinah remark.",
+      "states": [
+        { "state": "departs on a pretext", "from_chapter": 3, "event_id": "ev0012", "source": "ch003#p47" }
+      ],
+      "sources": ["ch003#p47"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-old-crab", "to": "CHAR-young-crab",
+      "type": "kinship", "directed": false, "strength": 3, "key": false,
+      "summary": "Mother and daughter: 'Let this be a lesson to you never to lose your temper!' / 'Hold your tongue, Ma!' A small mirror of scolding adult and pert child.",
+      "states": [
+        { "state": "moralising mother, cheeky daughter", "from_chapter": 3, "event_id": "ev0012", "source": "ch003#p43" }
+      ],
+      "sources": ["ch003#p43"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-mouse", "to": "CHAR-dodo",
+      "type": "companionship", "directed": false, "strength": 2, "key": false,
+      "summary": "The Mouse's dry lecture fails, so the Dodo proposes the Caucus-race; co-leaders of the soaked company.",
+      "states": [
+        { "state": "lecturer and race-master of the same party", "from_chapter": 3, "event_id": "ev0010", "source": "ch003#p01-p30" }
+      ],
+      "sources": ["ch003#p01-p30", "FAC-caucus-race-company"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-duck", "to": "CHAR-mouse",
+      "type": "rivalry", "directed": true, "strength": 1, "key": false,
+      "summary": "Pedantic interruption of the Mouse's history ('Found what?').",
+      "states": [
+        { "state": "heckles the lecture", "from_chapter": 3, "event_id": "ev0010", "source": "ch003#p01-p30" }
+      ],
+      "sources": ["ch003#p01-p30"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-eaglet", "to": "CHAR-dodo",
+      "type": "rivalry", "directed": true, "strength": 1, "key": false,
+      "summary": "Mocks the Dodo's long words: 'Speak English!'",
+      "states": [
+        { "state": "heckles the Dodo's proposal", "from_chapter": 3, "event_id": "ev0010", "source": "ch003#p15" }
+      ],
+      "sources": ["ch003#p15"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-bill-the-lizard", "to": "CHAR-alice",
+      "type": "antagonism", "directed": false, "strength": 2, "key": false,
+      "summary": "Her unlucky recurring victim: kicked out of the chimney, robbed of his squeaky pencil in the jury-box, then tipped out and replaced head-down.",
+      "states": [
+        { "state": "sent down the chimney, kicked out by Alice", "from_chapter": 4, "event_id": "ev0016", "source": "ch004#p24-p28" },
+        { "state": "juror robbed of his pencil by Alice", "from_chapter": 11, "event_id": "ev0045", "source": "ch011#p09" },
+        { "state": "spilled from the jury-box, put back head-down then righted", "from_chapter": 12, "event_id": "ev0048", "source": "ch012#p01-p05" }
+      ],
+      "sources": ["ch004#p26", "ch011#p09", "ch012#p01-p05"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-alice", "to": "CHAR-gardener-two",
+      "type": "alliance", "directed": true, "strength": 2, "key": false,
+      "summary": "Alice's first act of defiance for others: 'You shan't be beheaded!', hiding the gardeners in a flower-pot.",
+      "states": [
+        { "state": "overhears their panic over the white rose-tree", "from_chapter": 8, "event_id": "ev0033", "source": "ch008#p01-p10" },
+        { "state": "protector: hides them from the soldiers", "from_chapter": 8, "event_id": "ev0034", "source": "ch008#p27" }
+      ],
+      "secret": { "fact": "the gardeners survive; the soldiers report their heads 'gone'", "hidden_from": ["CHAR-queen-of-hearts"], "audience": "sees the hiding", "never_revealed": true },
+      "sources": ["ch008#p01-p10", "ch008#p27"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-alice", "to": "CHAR-gardener-five",
+      "type": "alliance", "directed": true, "strength": 2, "key": false,
+      "summary": "Hidden with the others in the flower-pot.",
+      "states": [
+        { "state": "protector: hides them from the soldiers", "from_chapter": 8, "event_id": "ev0034", "source": "ch008#p27" }
+      ],
+      "secret": { "fact": "the gardeners survive; the soldiers report their heads 'gone'", "hidden_from": ["CHAR-queen-of-hearts"], "audience": "sees the hiding", "never_revealed": true },
+      "sources": ["ch008#p27"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-alice", "to": "CHAR-gardener-seven",
+      "type": "alliance", "directed": true, "strength": 2, "key": false,
+      "summary": "Hidden with the others in the flower-pot.",
+      "states": [
+        { "state": "protector: hides them from the soldiers", "from_chapter": 8, "event_id": "ev0034", "source": "ch008#p27" }
+      ],
+      "secret": { "fact": "the gardeners survive; the soldiers report their heads 'gone'", "hidden_from": ["CHAR-queen-of-hearts"], "audience": "sees the hiding", "never_revealed": true },
+      "sources": ["ch008#p27"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-gardener-two", "to": "CHAR-gardener-five",
+      "type": "rivalry", "directed": false, "strength": 2, "key": false,
+      "summary": "Splashed paint and mutual blame over the wrong rose-tree.",
+      "states": [
+        { "state": "bickering co-workers", "from_chapter": 8, "event_id": "ev0033", "source": "ch008#p01-p10" }
+      ],
+      "sources": ["ch008#p01-p10"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-gardener-five", "to": "CHAR-gardener-seven",
+      "type": "rivalry", "directed": false, "strength": 2, "key": false,
+      "summary": "'That's right, Five! Always lay the blame on others!'",
+      "states": [
+        { "state": "bickering co-workers", "from_chapter": 8, "event_id": "ev0033", "source": "ch008#p03" }
+      ],
+      "sources": ["ch008#p03"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-alice", "to": "CHAR-knave-of-hearts",
+      "type": "alliance", "directed": true, "strength": 1, "key": false,
+      "summary": "Not friendship but due process: Alice objects that unsigned verses prove nothing against the accused Knave.",
+      "states": [
+        { "state": "objects to the King's reading of the verses", "from_chapter": 12, "event_id": "ev0051", "source": "ch012#p23-p57" },
+        { "state": "'Stuff and nonsense! The idea of having the sentence first!'", "from_chapter": 12, "event_id": "ev0052", "source": "ch012#p59" }
+      ],
+      "sources": ["ch012#p23-p59", "LAW-003", "LAW-004"],
+      "inferred": true,
+      "reason": "The source never has Alice speak to or about the Knave personally; the alliance is the side-effect of her objections to the proof and to sentence-before-verdict."
+    },
+    {
+      "from": "CHAR-jury-ensemble", "to": "CHAR-alice",
+      "type": "antagonism", "directed": false, "strength": 1, "key": false,
+      "summary": "The scribbling jurors she calls 'Stupid things!', then spills from their box with her skirt.",
+      "states": [
+        { "state": "contempt: 'Stupid things!'", "from_chapter": 11, "event_id": "ev0045", "source": "ch011#p07" },
+        { "state": "spilled and restored after her jump", "from_chapter": 12, "event_id": "ev0048", "source": "ch012#p01-p05" }
+      ],
+      "sources": ["ch011#p07", "ch012#p01-p05"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-card-soldiers-ensemble", "to": "CHAR-alice",
+      "type": "antagonism", "directed": true, "strength": 2, "key": true,
+      "summary": "The Queen's enforcers: they search for the hidden gardeners, and at the climax the whole pack rises and flies at Alice, the image that wakes her (SUP-004).",
+      "states": [
+        { "state": "searchers she outwits over the gardeners", "from_chapter": 8, "event_id": "ev0034", "source": "ch008#p27" },
+        { "state": "the pack flies down at her; match-cut to falling leaves", "from_chapter": 12, "event_id": "ev0052", "source": "ch012#p63" }
+      ],
+      "sources": ["ch008#p27", "ch012#p63", "SUP-004"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-king-of-hearts", "to": "CHAR-queen-of-hearts",
+      "type": "marriage", "directed": false, "strength": 4, "key": true,
+      "summary": "A blustering Queen and a timid, evasive King: he defers in public and undoes her sentences in private; in court they drive the verdict-first farce together.",
+      "states": [
+        { "state": "restraining husband: 'Consider, my dear: she is only a child!'", "from_chapter": 8, "event_id": "ev0034", "source": "ch008#p20" },
+        { "state": "deferring husband: asks her to have the Cat removed", "from_chapter": 8, "event_id": "ev0037", "source": "ch008#p45-p60" },
+        { "state": "quiet undoing: pardons everyone she sentenced", "from_chapter": 9, "event_id": "ev0040", "source": "ch009#p42" },
+        { "state": "hands her the cross-examination in relief", "from_chapter": 11, "event_id": "ev0047", "source": "ch011#p64-p74" },
+        { "state": "joint farce: his reading of the verses, her 'sentence first'", "from_chapter": 12, "event_id": "ev0051", "source": "ch012#p23-p57" }
+      ],
+      "secret": { "fact": "the King's 'You are all pardoned'", "hidden_from": ["CHAR-queen-of-hearts"], "audience": "overhears with Alice", "never_revealed": true },
+      "sources": ["ch008#p20", "ch009#p42", "OFF-001", "OFF-002", "FAC-house-of-hearts"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-queen-of-hearts", "to": "CHAR-knave-of-hearts",
+      "type": "master_servant", "directed": true, "strength": 3, "key": true,
+      "summary": "Royal page turned defendant in the tart theft; the Queen declares his guilt before any verdict. The accusation is never resolved.",
+      "states": [
+        { "state": "royal page carrying the crown in procession", "from_chapter": 8, "event_id": "ev0034", "source": "ch008#p11-p33" },
+        { "state": "accused of stealing the Queen's tarts", "from_chapter": 11, "event_id": "ev0045", "source": "ch011#p01-p15" },
+        { "state": "guilt declared from unsigned verses: 'That proves his guilt'", "from_chapter": 12, "event_id": "ev0051", "source": "ch012#p23-p57" },
+        { "state": "unresolved: the trial dissolves in the flying pack", "from_chapter": 12, "event_id": "ev0052", "source": "ch012#p58-p63" }
+      ],
+      "sources": ["ch011#p01-p15", "ch012#p23-p63", "OFF-008", "LAW-004"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-king-of-hearts", "to": "CHAR-knave-of-hearts",
+      "type": "authority_subject", "directed": true, "strength": 3, "key": true,
+      "summary": "Judge and defendant: the King presides and argues that unsigned verses make the Knave guilty.",
+      "states": [
+        { "state": "presiding judge over the accused", "from_chapter": 11, "event_id": "ev0045", "source": "ch011#p01-p15" },
+        { "state": "reasons guilt from the lack of a signature", "from_chapter": 12, "event_id": "ev0051", "source": "ch012#p23-p57" }
+      ],
+      "sources": ["OFF-001", "LAW-005", "ch012#p23-p57"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-king-of-hearts", "to": "CHAR-white-rabbit",
+      "type": "master_servant", "directed": true, "strength": 3, "key": false,
+      "summary": "Judge and herald: the Rabbit reads the accusation, calls witnesses and whispers corrections to the King's blunders.",
+      "states": [
+        { "state": "herald reads the accusation", "from_chapter": 11, "event_id": "ev0045", "source": "ch011#p10-p12" },
+        { "state": "whispers 'unimportant' to correct the King", "from_chapter": 12, "event_id": "ev0049", "source": "ch012#p06-p13" },
+        { "state": "produces the unsigned verses", "from_chapter": 12, "event_id": "ev0051", "source": "ch012#p23-p57" }
+      ],
+      "sources": ["OFF-004", "ch011#p10-p12", "ch012#p06-p57"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-queen-of-hearts", "to": "CHAR-white-rabbit",
+      "type": "authority_subject", "directed": true, "strength": 3, "key": false,
+      "summary": "The Rabbit lives in fear of the court: 'Oh, hush! The Queen will hear you!'",
+      "states": [
+        { "state": "in the procession", "from_chapter": 8, "event_id": "ev0034", "source": "ch008#p11-p33" },
+        { "state": "terrified whisperer: 'The Queen will hear you!'", "from_chapter": 8, "event_id": "ev0035", "source": "ch008#p40" }
+      ],
+      "sources": ["ch008#p40"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-duchess", "to": "CHAR-white-rabbit",
+      "type": "authority_subject", "directed": true, "strength": 3, "key": false,
+      "summary": "The Rabbit dreads keeping the Duchess waiting ('She'll get me executed'), and later passes on her own sentence.",
+      "states": [
+        { "state": "dread of lateness: 'won't she be savage if I've kept her waiting!'", "from_chapter": 2, "event_id": "ev0007", "source": "ch002#p08" },
+        { "state": "'She'll get me executed, as sure as ferrets are ferrets!'", "from_chapter": 4, "event_id": "ev0014", "source": "ch004#p01" },
+        { "state": "the tables turn: he reports she is under sentence", "from_chapter": 8, "event_id": "ev0035", "source": "ch008#p34-p40" }
+      ],
+      "sources": ["ch002#p08", "ch004#p01", "ch008#p40"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-queen-of-hearts", "to": "CHAR-duchess",
+      "type": "authority_subject", "directed": true, "strength": 4, "key": true,
+      "summary": "Crown over a subordinate household (mirrors FREL-001): invited, sentenced for boxing the Queen's ears, inexplicably free again, then routed by an ultimatum.",
+      "states": [
+        { "state": "summoned: the croquet invitation", "from_chapter": 6, "event_id": "ev0024", "source": "ch006#p01-p04" },
+        { "state": "under sentence: she boxed the Queen's ears", "from_chapter": 8, "event_id": "ev0035", "source": "ch008#p34-p40" },
+        { "state": "free again without explanation, then 'either you or your head must be off'; she vanishes", "from_chapter": 9, "event_id": "ev0039", "source": "ch009#p01-p34" }
+      ],
+      "sources": ["FREL-001", "ch006#p02", "ch008#p40", "ch009#p01-p34"],
+      "inferred": false,
+      "notes": "The reprieve between ev0035 and ev0039 is a source gap (events.json broken_chains); play it as dream discontinuity, do not add a pardon scene."
+    },
+    {
+      "from": "CHAR-duchess", "to": "CHAR-cook",
+      "type": "master_servant", "directed": true, "strength": 3, "key": false,
+      "summary": "A mutinous cook who hurls pans at her mistress; later a defiant witness at the trial with her pepper-box.",
+      "states": [
+        { "state": "violent household: pans and fire-irons thrown at the Duchess and baby", "from_chapter": 6, "event_id": "ev0026", "source": "ch006#p19-p43" },
+        { "state": "witness at court: 'Shan't'", "from_chapter": 11, "event_id": "ev0047", "source": "ch011#p64-p74" }
+      ],
+      "sources": ["FAC-duchess-household", "ch006#p19-p43", "ch011#p64-p74"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-duchess", "to": "CHAR-frog-footman",
+      "type": "master_servant", "directed": true, "strength": 2, "key": false,
+      "summary": "The footman who receives the Queen's invitation for the Duchess and sits at her door.",
+      "states": [
+        { "state": "receives the invitation on the Duchess's behalf", "from_chapter": 6, "event_id": "ev0024", "source": "ch006#p02" },
+        { "state": "sits useless at her door", "from_chapter": 6, "event_id": "ev0025", "source": "ch006#p05-p18" }
+      ],
+      "sources": ["ch006#p02", "ch006#p09"],
+      "inferred": true,
+      "reason": "The source puts him at the Duchess's door, receiving mail for her. bible/characters/index.json lists him under FAC-house-of-hearts in crown livery; reported as DEF-p3-relationship-001-a and not changed here."
+    },
+    {
+      "from": "CHAR-duchess", "to": "CHAR-cheshire-cat",
+      "type": "household", "directed": true, "strength": 2, "key": false,
+      "summary": "The Duchess's own grinning cat on the kitchen hearth; at croquet Alice refers the court to her about it.",
+      "states": [
+        { "state": "the house cat: 'It's a Cheshire cat, and that's why'", "from_chapter": 6, "event_id": "ev0026", "source": "ch006#p19-p43" },
+        { "state": "'It belongs to the Duchess': she is fetched to settle its fate", "from_chapter": 8, "event_id": "ev0038", "source": "ch008#p69" }
+      ],
+      "sources": ["ch006#p19-p43", "ch008#p69"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-duchess", "to": "CHAR-duchess-baby",
+      "type": "kinship", "directed": false, "strength": 2, "key": false,
+      "summary": "The Duchess nurses her howling baby ('my boy' in her lullaby) with rough neglect, shaking it as she sings, then flings it to Alice and leaves for croquet.",
+      "states": [
+        { "state": "rough nursing: the Duchess shakes the sneezing baby through her lullaby, then flings it to Alice as she leaves for croquet", "from_chapter": 6, "event_id": "ev0026", "source": "ch006#p19-p43" }
+      ],
+      "sources": ["ch006#p19", "ch006#p38-p43", "FAC-duchess-household", "TERM-0039"],
+      "inferred": true,
+      "reason": "The source never says outright the baby is the Duchess's own child; kinship is read from her nursing it (ch006#p19) and singing of 'my boy' (ch006#p38-p42). Added per DEF-p3-char-index-904-a now that CHAR-duchess-baby is registered (supersedes the provisional 'household' label in the DEF-p3-relationship-001-c note)."
+    },
+    {
+      "from": "CHAR-alice", "to": "CHAR-duchess-baby",
+      "type": "alliance", "directed": true, "strength": 2, "key": false,
+      "summary": "Alice takes the flung baby and carries it out of the violent kitchen to save it ('wouldn't it be murder to leave it behind?'), until it turns into a pig and she lets it go into the wood.",
+      "states": [
+        { "state": "catches the flung baby and holds it awkwardly", "from_chapter": 6, "event_id": "ev0026", "source": "ch006#p43" },
+        { "state": "rescuer: carries it outside ('wouldn't it be murder to leave it behind?'), then sets it down as it becomes a pig and trots into the wood", "from_chapter": 6, "event_id": "ev0027", "source": "ch006#p44-p49" }
+      ],
+      "sources": ["ch006#p43", "ch006#p45", "ch006#p49", "TERM-0039"],
+      "inferred": false,
+      "notes": "Per SUP-006 (unamended by BIB-0027) the pig change is perceptual only (a human infant performer throughout); do not play a practical creature swap. pending_H2: BIB-0027/SUP-002 extends the photoreal-CGI register to non-speaking dream animals including 'the baby's pig end-state'; whether the ch006-p49 trot-off should instead be realised as (or dissolve into) a photoreal CGI piglet, rather than staying within SUP-006's perceptual-only human-infant treatment, is an open scope interpretation flagged for user sign-off at H2, not yet decided — see bible/characters/index.json CHAR-duchess-baby.performer_concept."
+    },
+    {
+      "from": "CHAR-fish-footman", "to": "CHAR-frog-footman",
+      "type": "companionship", "directed": false, "strength": 1, "key": false,
+      "summary": "Ceremonial counterparts: they bow so low their curls tangle.",
+      "states": [
+        { "state": "solemn hand-off of the invitation", "from_chapter": 6, "event_id": "ev0024", "source": "ch006#p01-p04" }
+      ],
+      "sources": ["ch006#p02"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-queen-of-hearts", "to": "CHAR-fish-footman",
+      "type": "master_servant", "directed": true, "strength": 1, "key": false,
+      "summary": "Carries the Queen's croquet invitation.",
+      "states": [
+        { "state": "royal messenger", "from_chapter": 6, "event_id": "ev0024", "source": "ch006#p01-p04" }
+      ],
+      "sources": ["ch006#p02", "FAC-house-of-hearts"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-queen-of-hearts", "to": "CHAR-cheshire-cat",
+      "type": "authority_subject", "directed": true, "strength": 2, "key": false,
+      "summary": "Her stock answer to the disembodied head: 'Off with his head!'",
+      "states": [
+        { "state": "sentenced without a glance", "from_chapter": 8, "event_id": "ev0037", "source": "ch008#p59" },
+        { "state": "threatens to execute everybody if the matter is not settled; the Cat fades out", "from_chapter": 8, "event_id": "ev0038", "source": "ch008#p61-p71" }
+      ],
+      "sources": ["ch008#p59", "ch008#p61-p71", "SUP-005", "SUP-014"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-king-of-hearts", "to": "CHAR-cheshire-cat",
+      "type": "antagonism", "directed": true, "strength": 3, "key": false,
+      "summary": "The King dislikes the grinning head and wants it removed, then argues anything with a head can be beheaded.",
+      "states": [
+        { "state": "'I don't like the look of it at all'; demands removal", "from_chapter": 8, "event_id": "ev0037", "source": "ch008#p45-p60" },
+        { "state": "disputes with the executioner; the head vanishes", "from_chapter": 8, "event_id": "ev0038", "source": "ch008#p61-p71" }
+      ],
+      "sources": ["ch008#p45-p71"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-king-of-hearts", "to": "CHAR-executioner",
+      "type": "master_servant", "directed": true, "strength": 2, "key": false,
+      "summary": "The King fetches him himself, then argues with him about beheading a head with no body.",
+      "states": [
+        { "state": "summoned by the King", "from_chapter": 8, "event_id": "ev0037", "source": "ch008#p45-p60" },
+        { "state": "procedural dispute, never resolved", "from_chapter": 8, "event_id": "ev0038", "source": "ch008#p61-p71" }
+      ],
+      "sources": ["OFF-003", "ch008#p61-p71"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-queen-of-hearts", "to": "CHAR-executioner",
+      "type": "master_servant", "directed": true, "strength": 2, "key": false,
+      "summary": "Nominal instrument of her sentences who never actually executes anyone (SUP-014).",
+      "states": [
+        { "state": "caught in the three-way head dispute", "from_chapter": 8, "event_id": "ev0038", "source": "ch008#p61-p71" }
+      ],
+      "sources": ["OFF-003", "SUP-014"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-queen-of-hearts", "to": "CHAR-gryphon",
+      "type": "master_servant", "directed": true, "strength": 3, "key": true,
+      "summary": "Ordered to escort Alice, the Gryphon mocks the Queen once she is out of earshot. The source of Alice's knowledge that the terror is bluster.",
+      "states": [
+        { "state": "obeys the order to take Alice to the Mock Turtle", "from_chapter": 9, "event_id": "ev0041", "source": "ch009#p43-p45" },
+        { "state": "private contempt: 'It's all her fancy, that'", "from_chapter": 9, "event_id": "ev0041", "source": "ch009#p46" }
+      ],
+      "secret": { "fact": "the Gryphon's open contempt for the Queen's sentences", "hidden_from": ["CHAR-queen-of-hearts"], "audience": "hears it with Alice", "never_revealed": true },
+      "sources": ["ch009#p43-p47", "SUP-014"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-gryphon", "to": "CHAR-mock-turtle",
+      "type": "companionship", "directed": false, "strength": 3, "key": false,
+      "summary": "Old friends from the school in the sea: they reminisce, dance the Quadrille together, and the Gryphon abandons him mid-song.",
+      "states": [
+        { "state": "old schoolfellows reminiscing", "from_chapter": 9, "event_id": "ev0042", "source": "ch009#p48-p92" },
+        { "state": "dance partners in the Lobster Quadrille", "from_chapter": 10, "event_id": "ev0043", "source": "ch010#p01-p77" },
+        { "state": "left behind as the Gryphon runs off with Alice", "from_chapter": 10, "event_id": "ev0044", "source": "ch010#p78-p81" }
+      ],
+      "sources": ["ch009#p48-p92", "ch010#p01-p81", "FAC-school-in-the-sea"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-tortoise", "to": "CHAR-mock-turtle",
+      "type": "mentor_pupil", "directed": true, "strength": 2, "key": false,
+      "summary": "Told only: the old master of the sea-school, 'called Tortoise because he taught us'.",
+      "states": [
+        { "state": "remembered schoolmaster (told, never shown)", "from_chapter": 9, "event_id": "ev0042", "source": "ch009#p57" }
+      ],
+      "sources": ["ch009#p57", "FAC-school-in-the-sea"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-queen-of-hearts", "to": "CHAR-hatter",
+      "type": "authority_subject", "directed": true, "strength": 4, "key": false,
+      "summary": "A sentence that stopped time: at her concert she cried 'He's murdering the time! Off with his head!'; at the trial her stare turns him pale and he bolts.",
+      "states": [
+        { "state": "back-story sentence at the Queen's concert (told)", "from_chapter": 7, "event_id": "ev0030", "source": "ch007#p48-p55" },
+        { "state": "terrified witness; she orders his head off outside, he escapes", "from_chapter": 11, "event_id": "ev0046", "source": "ch011#p16-p63" }
+      ],
+      "sources": ["ch007#p48", "ch007#p55", "ch011#p16-p63", "SUP-012"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-king-of-hearts", "to": "CHAR-hatter",
+      "type": "authority_subject", "directed": true, "strength": 3, "key": false,
+      "summary": "Judge bullying a witness: threatens execution for unclear evidence, then dismisses him.",
+      "states": [
+        { "state": "'I'm a poor man, your Majesty': threatened, then dismissed", "from_chapter": 11, "event_id": "ev0046", "source": "ch011#p16-p63" }
+      ],
+      "sources": ["ch011#p37", "ch011#p51"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-hatter", "to": "CHAR-march-hare",
+      "type": "companionship", "directed": false, "strength": 4, "key": false,
+      "summary": "Co-hosts of the endless tea-party, bound by the stopped six o'clock; at the trial they contradict each other's dates.",
+      "states": [
+        { "state": "co-hosts: 'No room!'", "from_chapter": 7, "event_id": "ev0029", "source": "ch007#p01-p20" },
+        { "state": "stuck in perpetual tea-time since the Hatter's quarrel with Time", "from_chapter": 7, "event_id": "ev0030", "source": "ch007#p21-p62" },
+        { "state": "contradictory witnesses: 'Fourteenth of March', 'Fifteenth'", "from_chapter": 11, "event_id": "ev0046", "source": "ch011#p18" }
+      ],
+      "sources": ["FAC-mad-tea-party", "ch007#p48", "ch011#p18"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-hatter", "to": "CHAR-dormouse",
+      "type": "companionship", "directed": false, "strength": 3, "key": false,
+      "summary": "The Hatter uses the sleeping Dormouse as an armrest and pinches him awake; they follow each other into court.",
+      "states": [
+        { "state": "sleeping cushion at the tea-table", "from_chapter": 7, "event_id": "ev0029", "source": "ch007#p01-p20" },
+        { "state": "prodded storyteller; stuffed toward the teapot", "from_chapter": 7, "event_id": "ev0031", "source": "ch007#p63-p102" },
+        { "state": "fellow witnesses at the trial", "from_chapter": 11, "event_id": "ev0046", "source": "ch011#p16-p63" }
+      ],
+      "sources": ["ch007#p01-p102", "ch011#p16-p63"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-march-hare", "to": "CHAR-dormouse",
+      "type": "companionship", "directed": false, "strength": 3, "key": false,
+      "summary": "Rests elbows on him, tries to put him in the teapot, and walks into court arm-in-arm with him.",
+      "states": [
+        { "state": "armrest at the tea-table", "from_chapter": 7, "event_id": "ev0029", "source": "ch007#p01-p20" },
+        { "state": "teapot prank", "from_chapter": 7, "event_id": "ev0031", "source": "ch007#p63-p102" },
+        { "state": "arm-in-arm into court", "from_chapter": 11, "event_id": "ev0046", "source": "ch011#p18" }
+      ],
+      "sources": ["ch007#p63-p102", "ch011#p18"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-queen-of-hearts", "to": "CHAR-dormouse",
+      "type": "authority_subject", "directed": true, "strength": 2, "key": false,
+      "summary": "'Collar that Dormouse! Behead that Dormouse! ... Off with his whiskers!'",
+      "states": [
+        { "state": "shrieked orders after his 'Treacle'", "from_chapter": 11, "event_id": "ev0047", "source": "ch011#p71" }
+      ],
+      "sources": ["ch011#p71"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-king-of-hearts", "to": "CHAR-cook",
+      "type": "authority_subject", "directed": true, "strength": 2, "key": false,
+      "summary": "A witness who flatly refuses to testify ('Shan't'), leaving the King relieved to pass the next witness to the Queen.",
+      "states": [
+        { "state": "refused testimony", "from_chapter": 11, "event_id": "ev0047", "source": "ch011#p64-p74" }
+      ],
+      "sources": ["ch011#p64-p74"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-king-of-hearts", "to": "CHAR-jury-ensemble",
+      "type": "authority_subject", "directed": true, "strength": 3, "key": false,
+      "summary": "The presiding judge and the writing jury: 'Consider your verdict' is asked of them again and again, and never answered.",
+      "states": [
+        { "state": "premature call for a verdict", "from_chapter": 11, "event_id": "ev0045", "source": "ch011#p13" },
+        { "state": "jurors write 'important' / 'unimportant' at his word", "from_chapter": 12, "event_id": "ev0049", "source": "ch012#p06-p13" },
+        { "state": "'Consider your verdict' in a trembling voice", "from_chapter": 12, "event_id": "ev0050", "source": "ch012#p22" }
+      ],
+      "sources": ["ch011#p13", "ch012#p06-p22", "OFF-007", "LAW-005"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-court-officers-ensemble", "to": "CHAR-jury-ensemble",
+      "type": "authority_subject", "directed": true, "strength": 2, "key": false,
+      "summary": "Ruling 5.4 B: the cheering guinea-pig is suppressed with a sack over head and shoulders and hustled out; nobody sits on him.",
+      "states": [
+        { "state": "suppression of the cheering guinea-pigs (sack, hustled out)", "from_chapter": 11, "event_id": "ev0046", "source": "ch011#p16-p63" }
+      ],
+      "sources": ["runs/h1-ruling/ruling.json#5.4", "CUL-007"],
+      "inferred": false,
+      "notes": "Staging per ruling 5.4 B replaces the source's 'sat upon'; no other handling is allowed."
+    },
+    {
+      "from": "CHAR-queen-of-hearts", "to": "CHAR-court-officers-ensemble",
+      "type": "master_servant", "directed": true, "strength": 2, "key": false,
+      "summary": "Officers who receive her shrieked orders to collar and turn out witnesses.",
+      "states": [
+        { "state": "ordered to collar the Dormouse; the cook is gone before they act", "from_chapter": 11, "event_id": "ev0047", "source": "ch011#p64-p74" }
+      ],
+      "sources": ["ch011#p71"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-queen-of-hearts", "to": "CHAR-card-soldiers-ensemble",
+      "type": "master_servant", "directed": true, "strength": 3, "key": false,
+      "summary": "Her card-soldiers serve as escort, croquet arches and jailers, and at her last order rise as the flying pack.",
+      "states": [
+        { "state": "procession escort sent to behead the gardeners", "from_chapter": 8, "event_id": "ev0034", "source": "ch008#p11-p33" },
+        { "state": "bent double as croquet arches", "from_chapter": 8, "event_id": "ev0036", "source": "ch008#p41-p44" },
+        { "state": "leave off being arches to guard the sentenced", "from_chapter": 9, "event_id": "ev0040", "source": "ch009#p36" },
+        { "state": "the whole pack rises at Alice", "from_chapter": 12, "event_id": "ev0052", "source": "ch012#p63" }
+      ],
+      "sources": ["OFF-006", "ch008#p41-p44", "ch009#p36", "SUP-004"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-queen-of-hearts", "to": "CHAR-gardener-two",
+      "type": "authority_subject", "directed": true, "strength": 2, "key": false,
+      "summary": "Sentenced for planting the wrong rose-tree; saved by Alice.",
+      "states": [
+        { "state": "'Off with their heads!'", "from_chapter": 8, "event_id": "ev0034", "source": "ch008#p11-p33" }
+      ],
+      "sources": ["OFF-005", "ch008#p01-p33"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-queen-of-hearts", "to": "CHAR-gardener-five",
+      "type": "authority_subject", "directed": true, "strength": 2, "key": false,
+      "summary": "Sentenced with Two and Seven; saved by Alice.",
+      "states": [
+        { "state": "'Off with their heads!'", "from_chapter": 8, "event_id": "ev0034", "source": "ch008#p11-p33" }
+      ],
+      "sources": ["OFF-005"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-queen-of-hearts", "to": "CHAR-gardener-seven",
+      "type": "authority_subject", "directed": true, "strength": 2, "key": false,
+      "summary": "Sentenced with Two and Five; saved by Alice.",
+      "states": [
+        { "state": "'Off with their heads!'", "from_chapter": 8, "event_id": "ev0034", "source": "ch008#p11-p33" }
+      ],
+      "sources": ["OFF-005"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-queen-of-hearts", "to": "CHAR-royal-gardeners-ensemble",
+      "type": "master_servant", "directed": true, "strength": 2, "key": false,
+      "summary": "The royal garden staff, flat on their faces as the procession passes.",
+      "states": [
+        { "state": "prostrate staff before the Queen", "from_chapter": 8, "event_id": "ev0034", "source": "ch008#p11-p33" }
+      ],
+      "sources": ["OFF-005", "FAC-house-of-hearts"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-queen-of-hearts", "to": "CHAR-royal-procession-ensemble",
+      "type": "master_servant", "directed": true, "strength": 1, "key": false,
+      "summary": "Courtiers and royal children in her train.",
+      "states": [
+        { "state": "procession retinue", "from_chapter": 8, "event_id": "ev0034", "source": "ch008#p11-p33" }
+      ],
+      "sources": ["ch008#p11-p33"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-queen-of-hearts", "to": "CHAR-visiting-monarchs-ensemble",
+      "type": "authority_subject", "directed": true, "strength": 1, "key": false,
+      "summary": "Guests of the crown who end up among the sentenced croquet players.",
+      "states": [
+        { "state": "honoured guests in the procession", "from_chapter": 8, "event_id": "ev0034", "source": "ch008#p11-p33" },
+        { "state": "sentenced players; pardoned by the King", "from_chapter": 9, "event_id": "ev0040", "source": "ch009#p35-p42" }
+      ],
+      "sources": ["FAC-visiting-monarchs", "ch009#p42"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-white-rabbit", "to": "CHAR-pat",
+      "type": "master_servant", "directed": true, "strength": 2, "key": false,
+      "summary": "'Pat! Pat! Where are you?': the Rabbit's gardener, digging for apples.",
+      "states": [
+        { "state": "servant called to deal with the arm in the window", "from_chapter": 4, "event_id": "ev0016", "source": "ch004#p16" }
+      ],
+      "sources": ["ch004#p16", "FAC-white-rabbit-household"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-white-rabbit", "to": "CHAR-bill-the-lizard",
+      "type": "master_servant", "directed": true, "strength": 2, "key": false,
+      "summary": "The Rabbit's household sends Bill down the chimney.",
+      "states": [
+        { "state": "ordered down the chimney", "from_chapter": 4, "event_id": "ev0016", "source": "ch004#p24-p27" }
+      ],
+      "sources": ["ch004#p24-p27", "FAC-white-rabbit-household"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-pat", "to": "CHAR-bill-the-lizard",
+      "type": "companionship", "directed": false, "strength": 1, "key": false,
+      "summary": "Fellow members of the Rabbit's rescue party.",
+      "states": [
+        { "state": "ladder crew outside the house", "from_chapter": 4, "event_id": "ev0016", "source": "ch004#p13-p33" }
+      ],
+      "sources": ["ch004#p13-p33"],
+      "inferred": false
+    },
+    {
+      "from": "CHAR-white-rabbit", "to": "CHAR-crowd-ensemble",
+      "type": "master_servant", "directed": true, "strength": 1, "key": false,
+      "summary": "The crowd with ladders that the Rabbit rallies against the giant in his house.",
+      "states": [
+        { "state": "rallied besiegers, pelting pebbles", "from_chapter": 4, "event_id": "ev0016", "source": "ch004#p13-p33" }
+      ],
+      "sources": ["ch004#p13-p33"],
+      "inferred": false
+    }
+  ],
+  "alice_authority_map": {
+    "note": "Alice's standing with every authority figure, in film order. Arc = the dream's argument with adult power: obedience, then fear, then flattery, then full-size defiance (ev0052), then the one benign authority, her sister, at waking (ev0053).",
+    "figures": [
+      { "char": "CHAR-white-rabbit", "authority": "self-appointed master, then court herald (OFF-004)", "edges": ["guide", "master_servant"], "arc": "she obeys him as 'Mary Ann' (ev0014) -> he besieges her (ev0016) -> he calls her as witness (ev0047)" },
+      { "char": "CHAR-caterpillar", "authority": "examiner of identity", "edges": ["mentor_pupil"], "arc": "'Who are you?' -> recitation failed (ev0019) -> grudging instruction (ev0020)" },
+      { "char": "CHAR-pigeon", "authority": "accusing mother", "edges": ["antagonism"], "arc": "denies she is a little girl (ev0022)" },
+      { "char": "CHAR-frog-footman", "authority": "gatekeeper", "edges": ["authority_subject"], "arc": "stonewalls; she lets herself in (ev0025)" },
+      { "char": "CHAR-duchess", "authority": "aristocratic adult", "edges": ["authority_subject"], "arc": "rude neglect (ev0026) -> smothering morals (ev0039)" },
+      { "char": "CHAR-hatter", "authority": "host and etiquette-setter", "edges": ["antagonism"], "arc": "rude remarks (ev0029) -> she walks out (ev0031)" },
+      { "char": "CHAR-dodo", "authority": "benign presiding elder", "edges": ["authority_subject"], "arc": "everybody has won; thimble ceremony (ev0010)" },
+      { "char": "CHAR-queen-of-hearts", "authority": "sovereign (OFF-002)", "edges": ["authority_subject"], "arc": "'Nonsense!' (ev0034) -> fear and flattery (ev0036-ev0037) -> patronage (ev0040) -> learns it is bluster (ev0041) -> 'Who cares for you?' (ev0052)" },
+      { "char": "CHAR-king-of-hearts", "authority": "sovereign and presiding judge (OFF-001)", "edges": ["authority_subject"], "arc": "'only a child' (ev0034) -> quiet pardon (ev0040) -> out-argued on Rule Forty-two (ev0050)" },
+      { "char": "CHAR-gryphon", "authority": "the Queen's appointed escort", "edges": ["guide"], "arc": "reveals the bluster (ev0041) -> rushes her to trial (ev0044)" },
+      { "char": "CHAR-alice-sister", "authority": "the elder sister, the only benign waking authority", "edges": ["kinship", "dream_echo"], "arc": "distant reader (ev0001) -> glimpsed at the trial (ev0048) -> gentle waker (ev0053)" }
+    ]
+  },
+  "doublings_summary": {
+    "ruling": "H1 5.3 B (light doubling only) plus the SUP-002 rabbit bridge",
+    "items": [
+      { "waking": "CHAR-family-housemaid", "dream": "'Mary Ann' role imposed on CHAR-alice (TERM-0010)", "edge": "CHAR-family-housemaid -> CHAR-alice dream_echo" },
+      { "waking": "Dinah (TERM-0025, no registry id, never on screen)", "dream": "CHAR-cheshire-cat", "edge": "CHAR-alice -> CHAR-cheshire-cat dream_echo (anchored on Dinah's owner)" },
+      { "waking": "CHAR-alice-sister", "dream": "the same actor glimpsed at the trial", "edge": "CHAR-alice-sister <-> CHAR-alice dream_echo" },
+      { "waking": "CRE-001 (real white rabbit)", "dream": "CHAR-white-rabbit", "edge": "CRE-001 -> CHAR-white-rabbit dream_echo (SUP-002, not a 5.3 B item)" }
+    ],
+    "no_other_doubling": "Per ruling 5.3 B no other dream-figure doubles a waking person; downstream must not add echoes such as the sister as the Queen."
+  },
+  "isolation_review": {
+    "S_A_isolated": [],
+    "all_registered_ids_connected": true,
+    "note": "All 44 CHAR ids in index.json (incl. CHAR-duchess-baby) have at least one edge; checked by code/p3-relationship_check.py."
+  },
+  "unregistered_participants": [
+    { "term": "TERM-0039", "name": "the Duchess's baby (the pig-baby)", "events": ["ev0026", "ev0027"], "status": "resolved 2026-09-22: registered as CHAR-duchess-baby (DEF-p3-relationship-001-c); edges CHAR-duchess <-> CHAR-duchess-baby (kinship) and CHAR-alice -> CHAR-duchess-baby (alliance) added per DEF-p3-char-index-904" },
+    { "term": "TERM-0025", "name": "Dinah", "events": ["ev0002", "ev0009", "ev0012", "ev0016"], "status": "never on screen; deliberately unregistered (creature.json exclusion). Her echo is carried by CHAR-alice -> CHAR-cheshire-cat dream_echo" }
+  ]
+}

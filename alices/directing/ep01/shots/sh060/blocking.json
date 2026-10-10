@@ -1,0 +1,39 @@
+{
+  "shot_id": "sh060",
+  "group_id": "grp023",
+  "scene_no": "S07",
+  "scene_id": "SCN-long-hall",
+  "duration_s": 3.0,
+  "is_dialogue": true,
+  "group_position": "first shot of grp023 — Alice on her map start (glass_table, at the open glass box); no path in this group.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "stand",
+      "start_pos": "ten inches high at the little glass box under the glass table, the cake in both hands",
+      "space_fragment_en": "standing ten inches high at the little glass box under the glass table, centred in frame, facing up under her own hand",
+      "facing": "up under her own palm — the sh050 gesture repeated in miniature and at speed",
+      "path": [],
+      "beats": [
+        { "t": 0.4, "action": "takes a little bite from a corner of the cake", "sync": "the bite" },
+        { "t": 1.0, "action": "claps a hand flat on top of her head", "sync": "before the line" },
+        { "t": 1.3, "action": "asks which way", "sync": "LN-ep01-015 begins" },
+        { "t": 2.0, "action": "her eyes flick up under the hand", "sync": "LN-ep01-015 on 'Which way'" }
+      ],
+      "performance": {
+        "objective": "catch the change the instant it starts, in whichever direction it goes",
+        "goal": "catch the change the instant it starts",
+        "emotional_arc": "from decisive action to fast, held anxiety in the space of three seconds",
+        "arc_from": "decisive action",
+        "arc_to": "fast held anxiety",
+        "trigger": { "line_ref": "LN-ep01-015", "word": "Which way" },
+        "no_early_reaction": ["the eyes going up", "the shoulders rising", "the breath catching"],
+        "forbidden_early": ["the eyes going up", "the shoulders rising", "the breath catching"],
+        "end_state": "palm flat on her crown, eyes turned up under it, cake still in the other hand, breath held"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0005 (dream) — she eats the cake", "note": "Alice alone." }
+}

@@ -1,0 +1,10 @@
+{
+ "auto": {
+  "open_points_resolved": "PASS (4/4 carry approval_id ba96732d)",
+  "prompt_fragments_unchanged": "PASS (self-diffed)",
+  "DEF-p4-style-001_closed": "PASS"
+ },
+ "task_id": "p4-h2-style",
+ "skipped": true,
+ "reason": "quality judge=0 (user setting); QA dimensions all 0"
+}

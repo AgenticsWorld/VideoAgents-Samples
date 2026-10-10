@@ -1,0 +1,71 @@
+{
+  "character_id": "CHAR-white-rabbit",
+  "task_id": "p4-char-concept-cb1",
+  "sheet": "sheet.png",
+  "variants": [],
+  "pending_H2": [
+    "COS-006 garment set beyond the waistcoat (collar + bow proposed) - rendered as currently written, for user decision at H2"
+  ],
+  "self_check": {
+    "sheet.png": {
+      "layout": "PASS: four framed panels, one animal each, plain backdrop.",
+      "appearance_field_hits": {
+        "gender_male_elderly_buck": "not visually determinable",
+        "albino_pure_white_fur_no_markings": true,
+        "pink_red_eyes": true,
+        "pink_nose_inner_ears": true,
+        "long_white_whiskers": true,
+        "split_lip_incisors_visible": true,
+        "long_upright_ears": true,
+        "small_compact_build": "partial",
+        "gold_pocket_watch_in_forepaws_mark": true,
+        "waistcoat_mark": true
+      },
+      "costume_COS-006_hits": {
+        "buff_brown_checked_waistcoat": true,
+        "small_brass_buttons": true,
+        "waistcoat_pocket": true,
+        "gold_watch_chain": true,
+        "white_stand_collar_black_bow": true,
+        "limbs_ears_tail_natural_fur": true
+      },
+      "style": "PARTIAL: photoreal fur and lighting, but see defects",
+      "defects": [
+        "MAJOR (CR-003/CR-015): in the three full-body views he stands fully bipedal and upright with a tall, human-like torso and arm-like forelegs, rather than a rabbit rearing/sitting up on its haunches; reads more anthropomorphic than 'real rabbit anatomy'.",
+        "Waistcoat has lapels (not specified; acceptable 1862 cut)."
+      ]
+    }
+  },
+  "not_rendered_by_design": [
+    "white kid gloves and fan (hall props, dropped in ch002)",
+    "reading spectacles (reading beats only, COS-007 variant)",
+    "herald trumpet/scroll/tabard (trial, COS-007)"
+  ],
+  "rerolls": [],
+  "costume_sheets": {
+    "sheet_COS-007.png": {
+      "task_id": "p4-costume-sheet",
+      "agent": "06-art/costume-concept",
+      "costume_ref": "COS-007",
+      "status": "final (kept; reroll budget 0)",
+      "self_check": {
+        "layout": "PASS",
+        "identity": "PASS (same albino rabbit as sheet.png)",
+        "costume_hits": {
+          "crimson_wool_herald_tabard": "partial (crimson with white piping, but cut as an open-front sleeveless over-vest with lapels, not a tabard hanging over chest and back and open at the sides)",
+          "heart_badge_edged_white_at_breast": true,
+          "buff_brown_checked_silk_waistcoat_brass_buttons": true,
+          "gold_watch_chain": true,
+          "white_linen_stand_collar_black_bow": true,
+          "limbs_ears_tail_natural_fur": true
+        },
+        "style": "PASS"
+      },
+      "defects": [
+        "MAJOR (inherited from base sheet.png, not fixed here): full-body views stand bipedal with a human-like torso instead of sitting on the haunches (CR-003/CR-015); the pose wording did not override the anchor",
+        "major: the herald tabard reads as a sleeveless crimson over-vest with lapels, open at the front, rather than a tabard hanging front and back and open at the sides"
+      ]
+    }
+  },
+  "costume_rerolls": []
+}

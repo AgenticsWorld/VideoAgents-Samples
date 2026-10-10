@@ -1,0 +1,343 @@
+{
+ "all_pass": true,
+ "per_character": {
+  "CHAR-frog-footman": {
+   "sheets": [
+    {
+     "file": "sheet.png",
+     "container": "jpeg",
+     "size": [
+      2560,
+      1440
+     ],
+     "size_ge_2560x1440": true,
+     "style_fragment_ui_verbatim": true,
+     "negative_prompt_en_verbatim": true,
+     "default_costume_in_prompt": true,
+     "gender_word_in_prompt": true,
+     "member_gender": "male",
+     "four_panel_layout_sentence": true
+    }
+   ],
+   "main_dir_extra_files": [],
+   "no_single_view_files": true,
+   "ascii_filenames": true
+  },
+  "CHAR-gardener-two": {
+   "sheets": [
+    {
+     "file": "sheet.png",
+     "container": "jpeg",
+     "size": [
+      2560,
+      1440
+     ],
+     "size_ge_2560x1440": true,
+     "style_fragment_ui_verbatim": true,
+     "negative_prompt_en_verbatim": true,
+     "default_costume_in_prompt": true,
+     "gender_word_in_prompt": true,
+     "member_gender": "male",
+     "four_panel_layout_sentence": true
+    }
+   ],
+   "main_dir_extra_files": [],
+   "no_single_view_files": true,
+   "ascii_filenames": true
+  },
+  "CHAR-gardener-five": {
+   "sheets": [
+    {
+     "file": "sheet.png",
+     "container": "jpeg",
+     "size": [
+      2560,
+      1440
+     ],
+     "size_ge_2560x1440": true,
+     "style_fragment_ui_verbatim": true,
+     "negative_prompt_en_verbatim": true,
+     "default_costume_in_prompt": true,
+     "gender_word_in_prompt": true,
+     "member_gender": "male",
+     "four_panel_layout_sentence": true
+    }
+   ],
+   "main_dir_extra_files": [],
+   "no_single_view_files": true,
+   "ascii_filenames": true
+  },
+  "CHAR-gardener-seven": {
+   "sheets": [
+    {
+     "file": "sheet.png",
+     "container": "jpeg",
+     "size": [
+      2560,
+      1440
+     ],
+     "size_ge_2560x1440": true,
+     "style_fragment_ui_verbatim": true,
+     "negative_prompt_en_verbatim": true,
+     "default_costume_in_prompt": true,
+     "gender_word_in_prompt": true,
+     "member_gender": "male",
+     "four_panel_layout_sentence": true
+    }
+   ],
+   "main_dir_extra_files": [],
+   "no_single_view_files": true,
+   "ascii_filenames": true
+  },
+  "CHAR-pat": {
+   "sheets": [
+    {
+     "file": "sheet.png",
+     "container": "jpeg",
+     "size": [
+      2560,
+      1440
+     ],
+     "size_ge_2560x1440": true,
+     "style_fragment_ui_verbatim": true,
+     "negative_prompt_en_verbatim": true,
+     "default_costume_in_prompt": true,
+     "gender_word_in_prompt": true,
+     "member_gender": "male",
+     "four_panel_layout_sentence": true
+    }
+   ],
+   "main_dir_extra_files": [],
+   "no_single_view_files": true,
+   "ascii_filenames": true
+  },
+  "CHAR-executioner": {
+   "sheets": [
+    {
+     "file": "sheet.png",
+     "container": "jpeg",
+     "size": [
+      2560,
+      1440
+     ],
+     "size_ge_2560x1440": true,
+     "style_fragment_ui_verbatim": true,
+     "negative_prompt_en_verbatim": true,
+     "default_costume_in_prompt": true,
+     "gender_word_in_prompt": true,
+     "member_gender": "male",
+     "four_panel_layout_sentence": true
+    }
+   ],
+   "main_dir_extra_files": [],
+   "no_single_view_files": true,
+   "ascii_filenames": true
+  },
+  "CHAR-jury-ensemble": {
+   "sheets": [
+    {
+     "file": "sheet.png",
+     "container": "jpeg",
+     "size": [
+      2560,
+      1440
+     ],
+     "size_ge_2560x1440": true,
+     "style_fragment_ui_verbatim": true,
+     "negative_prompt_en_verbatim": true,
+     "default_costume_in_prompt": true,
+     "gender_word_in_prompt": true,
+     "member_gender": "male",
+     "four_panel_layout_sentence": true
+    }
+   ],
+   "main_dir_extra_files": [],
+   "no_single_view_files": true,
+   "ascii_filenames": true
+  },
+  "CHAR-card-soldiers-ensemble": {
+   "sheets": [
+    {
+     "file": "sheet.png",
+     "container": "jpeg",
+     "size": [
+      2560,
+      1440
+     ],
+     "size_ge_2560x1440": true,
+     "style_fragment_ui_verbatim": true,
+     "negative_prompt_en_verbatim": true,
+     "default_costume_in_prompt": true,
+     "gender_word_in_prompt": true,
+     "member_gender": "male",
+     "four_panel_layout_sentence": true
+    }
+   ],
+   "main_dir_extra_files": [],
+   "no_single_view_files": true,
+   "ascii_filenames": true
+  },
+  "CHAR-royal-gardeners-ensemble": {
+   "sheets": [
+    {
+     "file": "sheet.png",
+     "container": "jpeg",
+     "size": [
+      2560,
+      1440
+     ],
+     "size_ge_2560x1440": true,
+     "style_fragment_ui_verbatim": true,
+     "negative_prompt_en_verbatim": true,
+     "default_costume_in_prompt": true,
+     "gender_word_in_prompt": true,
+     "member_gender": "male",
+     "four_panel_layout_sentence": true
+    }
+   ],
+   "main_dir_extra_files": [],
+   "no_single_view_files": true,
+   "ascii_filenames": true
+  },
+  "CHAR-caucus-race-party-ensemble": {
+   "sheets": [
+    {
+     "file": "sheet.png",
+     "container": "jpeg",
+     "size": [
+      2560,
+      1440
+     ],
+     "size_ge_2560x1440": true,
+     "style_fragment_ui_verbatim": true,
+     "negative_prompt_en_verbatim": true,
+     "default_costume_in_prompt": true,
+     "gender_word_in_prompt": true,
+     "member_gender": "female",
+     "four_panel_layout_sentence": true
+    }
+   ],
+   "main_dir_extra_files": [],
+   "no_single_view_files": true,
+   "ascii_filenames": true
+  },
+  "CHAR-visiting-monarchs-ensemble": {
+   "sheets": [
+    {
+     "file": "sheet.png",
+     "container": "jpeg",
+     "size": [
+      2560,
+      1440
+     ],
+     "size_ge_2560x1440": true,
+     "style_fragment_ui_verbatim": true,
+     "negative_prompt_en_verbatim": true,
+     "default_costume_in_prompt": true,
+     "gender_word_in_prompt": true,
+     "member_gender": "male",
+     "four_panel_layout_sentence": true
+    },
+    {
+     "file": "sheet_queen-of-diamonds.png",
+     "container": "jpeg",
+     "size": [
+      2560,
+      1440
+     ],
+     "size_ge_2560x1440": true,
+     "style_fragment_ui_verbatim": true,
+     "negative_prompt_en_verbatim": true,
+     "default_costume_in_prompt": true,
+     "gender_word_in_prompt": true,
+     "member_gender": "female",
+     "four_panel_layout_sentence": true
+    }
+   ],
+   "main_dir_extra_files": [],
+   "no_single_view_files": true,
+   "ascii_filenames": true
+  },
+  "CHAR-royal-procession-ensemble": {
+   "sheets": [
+    {
+     "file": "sheet.png",
+     "container": "jpeg",
+     "size": [
+      2560,
+      1440
+     ],
+     "size_ge_2560x1440": true,
+     "style_fragment_ui_verbatim": true,
+     "negative_prompt_en_verbatim": true,
+     "default_costume_in_prompt": true,
+     "gender_word_in_prompt": true,
+     "member_gender": "female",
+     "four_panel_layout_sentence": true
+    },
+    {
+     "file": "sheet_royal-child.png",
+     "container": "jpeg",
+     "size": [
+      2560,
+      1440
+     ],
+     "size_ge_2560x1440": true,
+     "style_fragment_ui_verbatim": true,
+     "negative_prompt_en_verbatim": true,
+     "default_costume_in_prompt": true,
+     "gender_word_in_prompt": true,
+     "member_gender": "male",
+     "four_panel_layout_sentence": true
+    }
+   ],
+   "main_dir_extra_files": [],
+   "no_single_view_files": true,
+   "ascii_filenames": true
+  },
+  "CHAR-court-officers-ensemble": {
+   "sheets": [
+    {
+     "file": "sheet.png",
+     "container": "jpeg",
+     "size": [
+      2560,
+      1440
+     ],
+     "size_ge_2560x1440": true,
+     "style_fragment_ui_verbatim": true,
+     "negative_prompt_en_verbatim": true,
+     "default_costume_in_prompt": true,
+     "gender_word_in_prompt": true,
+     "member_gender": "male",
+     "four_panel_layout_sentence": true
+    }
+   ],
+   "main_dir_extra_files": [],
+   "no_single_view_files": true,
+   "ascii_filenames": true
+  },
+  "CHAR-crowd-ensemble": {
+   "sheets": [
+    {
+     "file": "sheet.png",
+     "container": "jpeg",
+     "size": [
+      2560,
+      1440
+     ],
+     "size_ge_2560x1440": true,
+     "style_fragment_ui_verbatim": true,
+     "negative_prompt_en_verbatim": true,
+     "default_costume_in_prompt": true,
+     "gender_word_in_prompt": true,
+     "member_gender": "female",
+     "four_panel_layout_sentence": true
+    }
+   ],
+   "main_dir_extra_files": [],
+   "no_single_view_files": true,
+   "ascii_filenames": true
+  }
+ }
+}

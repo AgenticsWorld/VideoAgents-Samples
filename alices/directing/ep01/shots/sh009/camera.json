@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh009",
+  "group_id": "grp005",
+  "scene_no": "S01",
+  "duration_s": 8.0,
+  "size": "medium",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame; the camera does not follow her out)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 50,
+  "camera_height_m": 0.35,
+  "angle": "level",
+  "rack_focus": "none",
+  "start_frame": "The sh005 axis from the water side: Alice sitting bolt upright in the near foreground staring off after the animal, the sister upright behind her with the book.",
+  "end_frame": "The same frame emptied of her — the sister still reading and never looking up, the flattened grass and the one dropped daisy where Alice was; a composition the audience already knows, now with a hole in it.",
+  "constraint_honoured": "'No pan, no reframe: the camera does not follow her out' — she exits the bottom of a frame that refuses to go with her.",
+  "movement_note": "Matching sh005's set-up and lens is what makes the empty tail frame land; any move would break the match.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "DEF-p4-costume-sheet-901",
+  "opened_by": "06-art/costume-concept",
+  "opened_on": "2026-09-23",
+  "task_id": "p4-costume-sheet",
+  "domain": "costume-sheet",
+  "status": "open",
+  "severity": "major",
+  "assigned_to": ["user (H2 decision at G4)"],
+  "summary": "Self-check defects on the p4-costume-sheet images. Nothing was regenerated because the user reroll budget is 0; each sheet is kept as final pending the user's decision at H2 (accept, or a targeted regeneration of one image each).",
+  "findings": [
+    {"id": "DEF-p4-costume-sheet-901-a", "file": "assets/concepts/characters/CHAR-white-rabbit/sheet_COS-007.png", "issue": "The herald tabard is drawn as an open-front sleeveless crimson over-vest with lapels, not a tabard hanging front and back and open at the sides. The bipedal human-like stance is inherited from the base sheet.png (character-concept MAJOR defect).", "route": "tabard shape: costume-concept targeted regeneration if the user asks; stance: character-concept base sheet first, since a derived sheet cannot out-pose its anchor"},
+    {"id": "DEF-p4-costume-sheet-901-b", "file": "assets/concepts/characters/CHAR-cook/sheet_COS-039.png", "issue": "The apron is heavily stained, not the clean apron called for. The black straw bonnet is a flat-brimmed hat with no ties under the chin.", "route": "costume-concept targeted regeneration if the user asks"},
+    {"id": "DEF-p4-costume-sheet-901-c", "file": "assets/concepts/characters/CHAR-duchess/sheet_COS-014.png", "issue": "Two black lace flounces instead of three. The coal-scuttle bonnet reads as a flat-topped hat in the side and back views. The crinoline is not very wide.", "route": "costume-concept targeted regeneration if the user asks"},
+    {"id": "DEF-p4-costume-sheet-901-d", "file": "assets/concepts/characters/CHAR-knave-of-hearts/sheet_COS-012.png", "issue": "The front card tabard is still a short chest bib (inherited from base sheet.png). The wrist chain hangs long to the knees rather than short and thin.", "route": "tabard length: character-concept base sheet; chain: costume-concept if the user asks"},
+    {"id": "DEF-p4-costume-sheet-901-e", "file": "assets/concepts/characters/CHAR-alice/sheet_age02.png (reused for COS-002)", "issue": "COS-002 reuses the age02 version base, which carries character-concept's own defects: royal blue instead of deeper cornflower, rounded collar instead of a narrow high stand collar.", "route": "character-concept (re-issue the age02 base); the ledger entry follows automatically"}
+  ],
+  "due_gate": "G4"
+}

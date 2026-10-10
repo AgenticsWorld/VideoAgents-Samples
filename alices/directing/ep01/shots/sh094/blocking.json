@@ -1,0 +1,43 @@
+{
+  "shot_id": "sh094",
+  "group_id": "grp035",
+  "scene_no": "S10",
+  "scene_id": "SCN-pool-of-tears",
+  "duration_s": 5.0,
+  "is_dialogue": false,
+  "group_position": "first shot of grp035 — Alice on her map start (glass_table_legs, surfacing in open water beside the legs); no path in this group.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "stand",
+      "start_pos": "surfacing in the open water beside the glass table legs, up to her chin, treading water",
+      "space_fragment_en": "standing upright treading water beside the glass table legs, held screen-left, facing the door bases of the east wall on screen-left",
+      "facing": "screen-left at the door bases rising like cliffs out of the water; her chin is at the waterline",
+      "path": [],
+      "beats": [
+        { "t": 0.3, "action": "comes up spluttering", "sync": "shot opens on the surface break" },
+        { "t": 2.0, "action": "licks her lips — salt", "sync": "the sea idea, given clean and unhurried" },
+        { "t": 3.6, "action": "treads water, eyes wide", "sync": "held to the cut" }
+      ],
+      "performance_beat": {
+        "objective": "get her head above water and work out what she has fallen into",
+        "goal": "get her head above water and work out what this is",
+        "emotional_arc": "from the shock of going under to an alert, tasting curiosity",
+        "arc_from": "the shock of going under",
+        "arc_to": "alert tasting curiosity",
+        "trigger": { "beat": "the salt registers on her tongue", "t": 2.0 },
+        "no_early_reaction": ["the tongue going to her lip", "the eyes widening", "the head turning"],
+        "forbidden_early": ["the tongue going to her lip", "the eyes widening", "the head turning"],
+        "end_state": "chin at the waterline, eyes wide screen-left, lips wet and just parted, arms working steadily under the surface"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": {
+    "timeline_ok": true,
+    "violations": [],
+    "story_event": "ev0008 result (dream) — she is swimming in the pool of tears she wept while nine feet high",
+    "note": "Alice alone. The Mouse of ev0009 has not entered yet; nothing else is in the pool until the wake at sh101, and its maker is never seen."
+  }
+}

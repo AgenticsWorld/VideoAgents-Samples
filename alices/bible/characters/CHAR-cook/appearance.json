@@ -1,0 +1,51 @@
+{
+  "character_id": "CHAR-cook",
+  "name": "The Cook",
+  "tier": "B",
+  "layer": "dream",
+  "gender": "female",
+  "gender_note": { "source_chapter": "ch011", "source_para": "ch011-p64", "quote": "The next witness was the Duchess’s cook. She carried the pepper-box in her hand" },
+  "base_age_range": "40-48",
+  "base_age_note": { "inferred": true, "reason": "Not stated; a seasoned, hard-handed kitchen cook." },
+  "hair": { "color": "coarse dark red-brown, grey at the temples", "style": "frizzing out from under a crumpled white mob cap pushed askew", "length": "long (worn up)", "inferred": true, "reason": "Not described; heat and steam of the kitchen." },
+  "eyes": { "color": "dark brown", "shape": "narrow, squinting against smoke, sullen", "inferred": true, "reason": "Not described; smoky kitchen (ch006)." },
+  "skin": { "tone": "red and shiny from the fire; brawny forearms with pepper dust and soot smudges", "source_chapter": "ch006", "source_para": "ch006-p19", "quote": "the cook was leaning over the fire, stirring a large cauldron", "tone_inferred": true, "reason": "Fire-side work sourced; complexion designed." },
+  "face": {
+    "shape": "broad and square",
+    "features": ["heavy cheeks", "thick brows", "set, sullen mouth", "never sneezes"],
+    "default_expression": "sullen and aggressive; flat refusal ('Pepper, mostly' / 'Shan’t')",
+    "source_chapter": "ch006",
+    "source_para": "ch006-p21",
+    "quote": "The only things in the kitchen that did not sneeze, were the cook, and a large cat",
+    "features_inferred": true,
+    "reason": "Not sneezing sourced; face designed."
+  },
+  "build": {
+    "height_range_cm": [165, 170],
+    "body_type": "big, broad-shouldered and brawny; strong throwing arm",
+    "scale_reference": "about 1.25x Alice's true size (135 cm); physically bigger than the short Duchess she serves",
+    "source_chapter": "ch006",
+    "source_para": "ch006-p29",
+    "quote": "at once set to work throwing everything within her reach at the Duchess and the baby",
+    "height_inferred": true,
+    "reason": "Strength implied by the throwing; height designed."
+  },
+  "marks": [
+    { "type": "signature_item", "position": "hand", "description": "a large battered pepper-box, carried even into the courtroom (everyone near her sneezes)", "source_chapter": "ch011", "source_para": "ch011-p64" },
+    { "type": "signature_item", "position": "kitchen", "description": "a long ladle over a big black soup cauldron", "source_chapter": "ch006", "source_para": "ch006-p19" }
+  ],
+  "default_outfit_tone": {
+    "summary": "a faded brown cotton working dress with sleeves rolled above the elbow, a large stained coarse-linen apron dusted with pepper, crumpled white mob cap",
+    "silhouette_1862": "a kitchen servant's plain full skirt without crinoline, sturdy boots",
+    "inferred": true,
+    "reason": "Not described; 'plain kitchen dress' per index performer_concept and FAC-duchess-household's poorer register. Costume detail by 06-art/costume."
+  },
+  "performer_coding": {
+    "code": "none (textually human)",
+    "touches": ["no animal coding; character-coded by pepper, the cauldron and her throwing arm"],
+    "limits": "no one is ever shown struck by what she throws (plates and pans crash around, per SUP-011/SUP-014 spirit)"
+  },
+  "doubling": null,
+  "events": ["ev0026", "ev0047"],
+  "prompt_base_en": "a big, broad-shouldered, brawny English kitchen cook of about forty-five in 1862, frizzy dark red-brown hair greying at the temples under a crumpled askew white mob cap, narrow sullen dark eyes, broad red shiny face, rolled sleeves on strong forearms, faded brown working dress with a large pepper-dusted stained apron, holding a battered pepper-box"
+}

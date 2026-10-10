@@ -1,0 +1,51 @@
+{
+  "schema_version": "whitebox_plan.v1",
+  "group_id": "grp019",
+  "scene_id": "SCN-long-hall",
+  "basis": "Alice is 0.254 m high for this whole group - the authority is continuity_plan.json size_chain step 2 ('ten inches high, end of sh048 - start of sh062'), NOT the disputed 'identical height to the bottle' wording in composition sh049/sh050 that DEF-p6-continuity-ep01-002 already owns. The empty 0.10 m DRINK ME bottle keeps its true size at her feet, so it stands at about 0.39 of her height; the whitebox stages that ratio and lets the defect fix land in the composition text without changing a single number here. She holds the spot where she shrank (6.14, -0.38) at the foot of the glass table and does not move in either shot: she steadies herself, her look climbs the table leg in sh049, and in sh050 she puts a hand flat on her head and her eyes go up under it.",
+  "actors": [
+    {
+      "id": "CHAR-alice",
+      "kind": "person",
+      "size_m": [0.0711, 0.254, 0.0559],
+      "keyframes": [
+        {"t": 0.0, "position": [6.14, 0.0, -0.38], "pose": "stand", "yaw": 2.2554, "head_pitch": -0.9},
+        {"t": 0.6, "position": [6.14, 0.0, -0.38], "pose": "stand", "yaw": 2.2554, "head_pitch": -0.6},
+        {"t": 2.4, "position": [6.14, 0.0, -0.38], "pose": "stand", "yaw": -0.6202, "head_pitch": -1.1},
+        {"t": 4.0, "position": [6.14, 0.0, -0.38], "pose": "stand", "yaw": -0.6202, "head_pitch": -1.1},
+        {"t": 4.6, "position": [6.14, 0.0, -0.38], "pose": "stand", "yaw": -0.6202, "head_pitch": -0.5},
+        {"t": 6.0, "position": [6.14, 0.0, -0.38], "pose": "stand", "yaw": -0.6202, "head_pitch": -0.3},
+        {"t": 6.8, "position": [6.14, 0.0, -0.38], "pose": "stand", "yaw": -0.6202, "head_pitch": -0.7},
+        {"t": 9.6, "position": [6.14, 0.0, -0.38], "pose": "stand", "yaw": -0.6202, "head_pitch": -1.0},
+        {"t": 11.0, "position": [6.14, 0.0, -0.38], "pose": "stand", "yaw": -0.6202, "head_pitch": -1.0}
+      ]
+    }
+  ],
+  "cameras": [
+    {
+      "shot_id": "sh049",
+      "start": 0,
+      "duration_s": 4.0,
+      "movement": "static",
+      "keyframes": [
+        {"t": 0.0, "position": [6.816, 0.2, -0.931], "target": [6.089, 0.247, -0.442], "fov": 46.3972},
+        {"t": 4.0, "position": [6.816, 0.2, -0.931], "target": [6.089, 0.247, -0.442], "fov": 46.3972}
+      ]
+    },
+    {
+      "shot_id": "sh050",
+      "start": 4.0,
+      "duration_s": 7.0,
+      "movement": "static",
+      "keyframes": [
+        {"t": 0.0, "position": [6.872, 0.2, -0.977], "target": [6.14, 0.145, -0.38], "fov": 26.9915},
+        {"t": 7.0, "position": [6.872, 0.2, -0.977], "target": [6.14, 0.145, -0.38], "fov": 26.9915}
+      ]
+    }
+  ],
+  "continuity": {"actors": "inherit", "camera": "cut"},
+  "warnings": [
+    "Alice's height here comes from continuity_plan.json size_chain (0.254 m), per the work order; composition sh049/sh050's 'the bottle is exactly her own height' is the open DEF-p6-continuity-ep01-002 finding-a and is not staged. No numbers in this plan change either way when that text is corrected.",
+    "Both lenses sit at 0.20 m - her own eye height is 0.23 m - so the frames are genuinely from her level and the 0.715 m tabletop is a ceiling of glass far above her."
+  ]
+}

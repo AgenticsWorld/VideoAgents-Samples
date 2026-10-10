@@ -1,0 +1,33 @@
+{
+  "id": "CRE-006",
+  "name": "The Mock Turtle",
+  "linked_char": "CHAR-mock-turtle",
+  "detail_source": "bible/creatures/creature.json#CRE-006 forms[0] (stage adult)",
+  "register": "dream world",
+  "sheet": "sheet.png",
+  "sheet_stage": "adult",
+  "variants": [],
+  "variants_waiver": "creature.json lists a single form (adult, ch009-ch010). Its sobbing and dancing are performance, not a change of form. mount.json has no entry.",
+  "scale": { "prompt_token": "a Mock Turtle whose tear-filled calf's head sits at a seated child's eye level, its shell about 70-90 cm long" },
+  "selection": {
+    "layout_check": "pass: four framed panels, one creature per panel, same individual",
+    "identifier_hits": {
+      "size: 70-90 cm shell, head at seated Alice's eye level": "partial - the figure stands tall on its hind legs, so the head sits far above a seated child",
+      "surface: weathered ridged brown-green carapace, paler plastron at front, calf hide on head/neck/flippers": true,
+      "head: calf's head and muzzle, small rounded calf ears, no beak": true,
+      "eyes: large heavy-lidded eyes brimming with tears": true,
+      "marks: front limbs are turtle flippers": true,
+      "marks: hind legs end in small cloven calf hooves": true,
+      "marks: shell scuffed smooth in patches": "partial - wear is subtle"
+    },
+    "no_rider_check": true,
+    "no_person_check": true,
+    "style_check": "pass: photoreal CGI creature, naturalistic hide/shell/hoof texture",
+    "self_check_defects": [
+      { "severity": "major", "issue": "Anatomy/posture: the creature stands upright on its two hind calf legs, with the flippers hanging like arms and the shell worn on its back like a pack. The card describes a turtle-shell body with the head rising from the front of the shell, resting low. The neck is also elongated, almost deer-like." }
+    ],
+    "self_check_result": "fail (kept: auto-retry budget is 0; for user decision at H2)",
+    "rerolls": []
+  },
+  "pending_H2": "Self-check defect above is for user decision at H2 (keep or regenerate one image)."
+}

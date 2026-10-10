@@ -1,0 +1,99 @@
+{
+  "task_id": "p6-cinematography-ep01",
+  "agent": "07-directing/cinematography",
+  "project": "alices",
+  "ep": "ep01",
+  "attempt": 1,
+  "status": "completed",
+  "completed_on": "2026-09-23",
+  "product": "directing/ep01/cinematography.json",
+  "products": [
+    { "path": "directing/ep01/cinematography.json", "kind": "episode cinematography spec", "status": "draft_for_art_director_countersign" },
+    { "path": "qa/defects/DEF-p6-cinematography-ep01-001.json", "kind": "defect (minor, non-blocking)", "status": "open" }
+  ],
+  "inputs_read": [
+    "directing/ep01/directing_plan.md",
+    "directing/ep01/storyboard.json (draft - situations only; shot list and group split not treated as final)",
+    "bible/style.json v1.2.1 (H2-locked)",
+    "bible/color_script.json v1.1.1 (as amended by BIB-0033)",
+    "bible/scenes/SCN-long-hall/{architecture.json,lighting.json}",
+    "bible/scenes/SCN-pool-of-tears/lighting.json",
+    "bible/scenes/SCN-riverbank/lighting.json",
+    "bible/scenes/SCN-field-hedge-burrow/lighting.json",
+    "bible/scenes/SCN-falling-dream/lighting.json",
+    "bible/scenes/SCN-shaft-landing-passage/lighting.json",
+    "bible/scenes/SCN-little-door-passage/lighting.json",
+    "bible/aspect_ratio.json",
+    "runs/p3-lighting-sb1/result.json (LGT-ENUM-v1 controlled vocabularies)",
+    "qa/defects/DEF-p6-directing-ep01-001.json (closed by BIB-0033)"
+  ],
+  "key_decisions": [
+    "CLOSED LENS SET. Three working primes carry 95 % of ep01: 28 mm (space and bulk), 40 mm (the human-eye lens: travel, POV, two-plane inserts), 50 mm (faces, hands, hero objects). Two focal lengths are rationed - 24 mm twice, on the episode's two purely vertical scale axes (up the table leg in S06, down her own body in S07), and 100 mm once, on the garden POV in S05. The waking frame is shot on 28/40/50 only, so the lens itself separates the registers the way ornament does in CR-014.",
+    "FOCAL LENGTHS ARE 35 mm FULL-FRAME EQUIVALENTS, written into prompts verbatim. style.json's 'anamorphic' is ruled to be a FINISH word (oval highlights, faint horizontal flare, halation), never a field-of-view conversion - otherwise every downstream station guesses differently.",
+    "SCALE IS CARRIED BY HEIGHT + GAUGE + FOCAL, and the mapping is stated per scale state: 1.35 m normal (lens 1.20-1.35 in the dream, 40 mm default); 0.254 m ten inches (lens 0.15-0.25, 28 mm default with a known-size gauge inside 0.3 m of the lens); 2.74 m giant (lens 0.30-1.00 and never above, 28 mm fragments that overflow the frame while the far end of the hall stays small in the same image); 0.61 m two feet (lens 0.50-0.60 dry / 0.05-0.15 at the waterline, 40 mm to repeat the S05 set-up).",
+    "HARD RULE: never a wide lens on a face at tiny scale. 50 mm at close focus for every face at every scale - a stretched child's face is exactly the 'distorted face' / cartoon failure mode style.json bans.",
+    "MINIATURE-LOOK BAN. Shallow depth of field at close range on a small subject is the signature of photographing a miniature, which would destroy the oversized-practical-set grammar (CR-005) and the photographed finish (CR-001). Every size beat is DEEP FOCUS and no gauge may be defocused; a tilt-shift / diorama / macro-blur negative addon is supplied, marked additive and subordinate to style.json's locked negative list.",
+    "MATCH-FOCAL PAIRS are named so the episode's repetitions survive parallel shot design: S05 door round / S09 run (40 mm, height 1.30 -> 0.55); S06 floor axis / S08 movement 4 (28 mm); the two S03 shaft POVs; the hook wide / the S03 recognised wide.",
+    "POV LENS RULE. Six of the seven POVs are 40 mm, the human-eye lens; the seventh, the garden, is 100 mm - the one place the camera lies about distance, which is the feeling of the scene. Keeping the other six honest is what makes that lie legible.",
+    "ACT-5 GEOMETRY MADE EXPLICIT. Her head is reachable by a water-level 50 mm in the aria only because the POSE brings it down; no long lens may reach up at her, because that puts the 2.30 m lamp line in frame and breaks color_script act 5. The last set-up allowed a lamp fixture is the S07 vault-knock.",
+    "RACK-FOCUS BUDGET ZERO for ep01. Not a revocation of CR-006 - every candidate rack here is a scale or cause-and-effect comparison needing both planes sharp, or would hero the rabbit's pass, which the plan forbids.",
+    "SUPER-RESOLUTION DISCIPLINE. Texture is specified at the scale of the frame (halation bloom, haze volume, falloff, contrast) and never at the pixel. Grain is handled by leaving it alone: style_fragment_ui already carries 'fine film grain' and is quoted verbatim in every prompt, so no shot-level grain word is permitted; a forbidden list (heavy grain, scratches, gate weave, chromatic aberration, 8K/ultra-sharp, blue streak flare) is supplied."
+  ],
+  "acceptance_self_check": [
+    { "criterion": "Every rule is keyed to something that actually occurs in ep01, with the scene cited", "result": "PASS", "evidence": "27 focal rules, 4 scale states, 6 colour entries and 11 depth-of-field rules all carry scene_refs / applies_to naming S00-S10; each was matched against storyboard.json shots_draft before it was written." },
+    { "criterion": "Colour temperatures agree with each scene's lighting.json", "result": "PASS", "evidence": "5400 K riverbank and hedge, 3000 K fall shaft, 2400 K landing passage, 2300 K long hall, 5400 K little-door garden, 2400 K pool - all are the cards' own kelvin_approx values, unchanged. Recorded that a card's color_temp string is an enum BUCKET and its kelvin_approx is the number, which resolves the apparent 'neutral (~4500K)' vs 5400 gap on the riverbank card and the directing plan's 4500-5000 K paraphrase." },
+    { "criterion": "Colour temperatures agree with the amended color_script - no daylight in S04-S10", "result": "PASS", "evidence": "No hall or pool entry carries a daylight Kelvin, a window, a shaft, a beam, a coloured floor pool or a backlit roundel; CT-04 and CT-06 forbid all of them by name per BIB-0033. The one daylight entry (CT-05) is the 0.38 m little door - the Bible's own only-daylight ruling SPC-long-hall-01 and color_script act 3's thesis - and it is contained to the arch, the patch of floor and the face at it, spent at the S07 eye-at-the-door, and absent from S08-S10." },
+    { "criterion": "time_of_day from the controlled vocabulary and matching the storyboard", "result": "PASS", "evidence": "ENV-ENUM-v1 / LGT-ENUM-v1 used. present_in_ep01 = [early_afternoon], identical to storyboard time_of_day_vocabulary.value_used and to all 11 per-scene values. afternoon / late_afternoon / golden_hour / sunset declared N/A; night is recorded as absent from the vocabulary entirely, so the dark hall is a lamplit early-afternoon interior and never a night scene." },
+    { "criterion": "Self-consistency red line - no lighting word from a declared-absent time_of_day", "result": "PASS", "evidence": "Grep over the delivered file for golden hour / late afternoon / sunset / night / moonlight / dusk / nightfall: every hit sits in a forbidden_terms list, the absent_in_ep01 block, the vocabulary enum or the self-check - none in a prompt_terms string or a scene description. Two traps caught and closed by name: LGT-long-hall-02 and LGT-little-door-passage-02 (both late_afternoon, the ch007 return) are ruled out of bounds for ep01, and the storyboard's 'green-gold garden light' in S07 is re-defined as 5400 K white sun through green foliage, not a low sun." },
+    { "criterion": "Nothing contradicts style.json's negative list", "result": "PASS", "evidence": "One addition only - the miniature-look negative addon - explicitly marked additive and subordinate; its terms appear nowhere in the H2 list and serve CR-001 / CR-005. Dutch angle, fisheye, speed ramp, zoom, morph/glow size changes, electric-light flare and poster lettering are re-banned by name." },
+    { "criterion": "No per-shot camera moves or compositions (scope)", "result": "PASS", "evidence": "Moves appear only where a lens choice depends on one (S08 failed tilt, S05 reveal, S09 travelling repeat) and are handed back to camera-movement; framing appears only as a depth-of-field consequence (a gauge must be in frame to be sharp) and is handed to composition. A handoff block states both boundaries." },
+    { "criterion": "ASCII filenames", "result": "PASS", "evidence": "directing/ep01/cinematography.json, qa/defects/DEF-p6-cinematography-ep01-001.json, runs/p6-cinematography-ep01/result.json" }
+  ],
+  "conflicts_found": [
+    {
+      "id": "DEF-p6-cinematography-ep01-001-a",
+      "severity": "minor",
+      "between": "bible/color_script.json ep01 act 4 stained_glass vs bible/scenes/SCN-long-hall/lighting.json roundel_glow",
+      "summary": "After BIB-0033 the act 4 dose still says 'one or two LIT roundels'; lighting.json rules the roundels blind and 'never backlit'. Read alone it invites a glowing roundel into S06/S07 - the reading BIB-0033 just closed. Requested fix: one word, 'front-lit', at color-script's next open (its countersign on that file is pending anyway).",
+      "interim": "CT-04 act 4 defines 'lit' as front-lit by the nearest hanging lamp and forbids backlit/evenly glowing roundels by name. Nothing blocked.",
+      "bible_edited": false
+    },
+    {
+      "id": "DEF-p6-cinematography-ep01-001-b",
+      "severity": "minor",
+      "between": "directing/ep01/directing_plan.md S06 colour note vs the amended color_script act 4",
+      "summary": "The plan quotes the PRE-BIB-0033 text - 'one or two glass floor pools stay at a fixed position ... and work as scale markers'. The amended act 4 says the markers are roundels on the WALL and there are no glass pools on the floor. The plan was written the same day the arbitration landed. Requested fix: citation only, at the plan's next open; no shot design changes either way.",
+      "interim": "cinematography.json follows the Bible: the fixed scale marker in S06/S07 is a front-lit roundel at a fixed position on the wall, which preserves the director's intent exactly.",
+      "bible_edited": false
+    },
+    {
+      "id": "note-1 (not filed as a finding)",
+      "severity": "note",
+      "summary": "SCN-falling-dream/lighting.json prompt_fragment_en carries 'like afternoon sun seen through closed eyelids'. Safe quoted whole (it opens with 'no daylight and no lamps'); unsafe quoted in part, which is what happens under a prompt length limit. Handled in CT-02 with daylight-free wording plus explicit forbidden terms. No Bible change requested.",
+      "bible_edited": false
+    }
+  ],
+  "bible_edited": false,
+  "screenplay_edited": false,
+  "skills": [
+    { "note": "This station has no auto-activating project skills selected; none applicable, none invoked." }
+  ],
+  "review": {
+    "evaluation": "skipped - user review setting '质量评委' = 0; no evaluation scoring requested or performed this run",
+    "qa": "skipped - all QA dimension strengths are 0",
+    "countersign_pending": "06-art/art-director (style boundary). Nothing in this file steps outside style.json; the one addition to the negative vocabulary is marked additive and is the item to look at."
+  },
+  "handoff": {
+    "camera-movement": "Lens set and camera-height law fixed. Two bites: the S08 failed tilt starts under 1.00 m and must run out of room before any lamp fixture enters frame; the S09 travelling medium must reuse the S05 focal (40 mm) exactly.",
+    "composition": "At every size beat both gauges must be sharp, therefore both must be in frame. The 24 mm and 100 mm shots are single-use and named.",
+    "blocking": "Camera heights per scale state; in the aria the pose, not the lens, must bring her face down to a water-level camera.",
+    "08-video-gen/prompt": "Quote prompt_terms verbatim; write focal lengths exactly as given and never convert them; Kelvin only for a real source, never a grade shift; the forbidden_terms lists under color_temp are the daylight red line.",
+    "continuity-planning": "Lamps leave frame at S08 shot 1 and never return; garden daylight is spent at the S07 eye-at-the-door and does not reappear (the little door is found shut in S09); the match-focal pairs must hold across the episode.",
+    "orchestrator": "One defect open, minor, non-blocking, due G6: DEF-p6-cinematography-ep01-001 (-a to color-script, -b to director). No arbitration needed - both are consequences of BIB-0033 missed in the same-day batch, not re-openings of it."
+  },
+  "notes": [
+    "The spec is written against the storyboard DRAFT and does not depend on the H3S signature: every rule is keyed to a situation (a scale state, a POV, a lettering insert, a water-level single), not to a shot number, so a re-cut or a re-grouped storyboard does not invalidate it. Shot references are cited as evidence that the situation occurs, not as shot design.",
+    "The provisional hook S00 is covered (it shares the S03 locked-wide lens exactly, which is what the anti-repeat rule needs). If the user selects oh-2 at H3S the entry simply goes unused; nothing else in this file changes.",
+    "Written directly as the final artefact - no generator script."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "character_id": "CHAR-gardener-five",
+  "task_id": "p4-char-concept-cb3",
+  "sheet": "sheet.png",
+  "variants": [],
+  "status": "delivered_for_H2_review",
+  "layout_check": { "four_panels": true, "one_view_per_panel": true, "same_individual_all_panels": true, "size": "2560x1440 (JPEG payload)" },
+  "appearance_field_hits": {
+    "gender_male": true,
+    "age_25_32": true,
+    "hair_black_thick_untidy_over_forehead": true,
+    "eyes_dark_brown": true,
+    "face_round_cheeked_heavy_brows_pout_stubble": true,
+    "expression_sulky": true,
+    "build_stocky": "partial (reads average build)",
+    "card_front_five_club_pips_5_indices": true,
+    "card_back_crimson_cream_lattice_heart_rosette": true,
+    "sleeves_rolled_to_elbow": true,
+    "crimson_breeches_cream_stockings_brown_boots": true,
+    "heavy_red_paint_forearms_tabard_cheek": true,
+    "dripping_red_paintbrush": true
+  },
+  "style_check": { "photoreal_live_action": true, "palette_within_style": true },
+  "self_check_defects": [
+    "Tabard ends at mid-thigh, not at the knee as COS-041 states.",
+    "Panel gutters between panels 1-3 are faint (panels read as separate but without clear gaps)."
+  ],
+  "rerolls": [],
+  "reroll_budget_note": "User rerun setting = 0: no self-regeneration; the defects above are for user decision."
+}

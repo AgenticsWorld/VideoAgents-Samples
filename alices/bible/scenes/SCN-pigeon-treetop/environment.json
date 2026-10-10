@@ -1,0 +1,99 @@
+{
+  "_meta": {
+    "file": "bible/scenes/SCN-pigeon-treetop/environment.json",
+    "owner": "05-scenes/environment",
+    "task_id": "p3-environment-sb2",
+    "attempt": 1,
+    "generated": "2026-09-22",
+    "amended": {"change_id": "BIB-0027", "task_id": "p4-cr-environment", "date": "2026-09-23", "fields": ["fixed.dream_design (new)"]},
+    "enum_set": "ENV-ENUM-v1 (runs/p3-environment-sb1/result.json) + sb2 extensions (runs/p3-environment-sb2/result.json)"
+  },
+  "scene_id": "SCN-pigeon-treetop",
+  "layer": "dream",
+  "fixed": {
+    "climate": "dream-midsummer, grown from the Thames-valley afternoon (geography.json LOC-pigeon-nest-treetop: 'open and breezy, higher and cooler than the wood floor')",
+    "indoor": false,
+    "daylight_access": "open_sky",
+    "dream_design": {
+      "rule": "WR-010 / XA-magic-08 (dream, full)",
+      "flora": "the canopy below is a rolling sea of leaf whose edges form long, wave-like whiplash curves; the top fork's branches twist in sinuous organic lines round the Pigeon's twig nest. Foliage only: the no-blossom guard stays",
+      "ornament_cues": "the open sky behind Alice's head and the Pigeon is framed as a pale halo roundel by the surrounding tree crowns; the nest's woven twigs make a natural spiral pattern",
+      "palette": "deep and pale greens with gold-lit leaf edges, a soft powder-blue sky fading to warm ivory at the horizon; the Pigeon's grey-violet as the pastel accent",
+      "seasonal_guard": "July foliage only; no blossom, fruit or yellowing (unchanged)",
+      "inferred": true,
+      "reason": "The 'sea of green leaves' is explicit (ch005-p57). Line treatment and palette are designed to WR-010 without adding flowers, so the existing seasonal guard holds."
+    },
+    "ground_and_flora": "a crown of the tallest tree above an unbroken canopy in full, deep-green July leaf; the Pigeon's twig nest wedged in the top fork; no blossom, no fruit, no yellowing",
+    "dream_growth": "Grows from the tall trees shading the bank where Alice sleeps. The sun of her real afternoon is still high over the Thames valley, so the dream puts her head up into that same bright sky above the leaves; the breeze she meets is the one that moves the real treetops over her while the air on the ground stays still.",
+    "source": {
+      "chapter": "ch005",
+      "quote": "an immense length of neck, which seemed to rise like a stalk out of a sea of green leaves that lay far below her"
+    },
+    "inferred": true,
+    "reason": "Green summer canopy is explicit (ch005-p57). The breeze and cooler air follow geography.json. How the space grows from the waking afternoon is designed per ruling 5.2 A."
+  },
+  "variable_dims": {
+    "season": [
+      "summer"
+    ],
+    "time_of_day": [
+      "afternoon"
+    ],
+    "weather": [
+      "fair_hot"
+    ],
+    "wind": [
+      "breeze"
+    ],
+    "temperature": [
+      "warm"
+    ]
+  },
+  "states": [
+    {
+      "state_id": "SCN-pigeon-treetop-S01",
+      "chapter": 5,
+      "chapter_id": "ch005",
+      "story_scene": "ch005-sc03",
+      "paragraphs": "ch005-p57..ch005-p77",
+      "timeline_ref": "ev0022",
+      "timeline_node": "TL-003",
+      "season": "summer",
+      "weather": "fair_hot",
+      "wind": "breeze",
+      "temperature": "warm",
+      "time_of_day": "afternoon",
+      "waking_clock": "16:25-16:30 GMT (Alice asleep on the bank)",
+      "sun": {
+        "elevation_deg_approx": 34,
+        "azimuth_deg_approx": 265,
+        "note": "sun still well up in the west over the canopy; no shade up here"
+      },
+      "sky": "wide clear midsummer sky, deep blue overhead, paler and slightly hazy toward the horizon",
+      "conditions": "a steady warm breeze sways the top branches and ripples the leaf canopy below like a green sea; it is fresher up here than in the still, hot wood",
+      "source_chapter": "ch005",
+      "source": {
+        "chapter": "ch005",
+        "quote": "a sea of green leaves that lay far below her"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch005",
+          "refs": [
+            "ch005-p68"
+          ],
+          "quote": "they must needs come wriggling down from the sky!"
+        }
+      ],
+      "inferred": true,
+      "designed_fields": [
+        "waking_clock",
+        "sun",
+        "sky",
+        "wind",
+        "temperature"
+      ],
+      "reason": "Leaf canopy and open sky are explicit (ch005-p57, ch005-p68). The waking clock maps the dream's event order onto the real nap, which runs from about 14:15 to the 19:35 waking (SCN-riverbank S02). The sun is computed for Oxford on 4 July 1862. The breeze follows geography.json."
+    }
+  ]
+}

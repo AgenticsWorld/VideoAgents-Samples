@@ -1,0 +1,207 @@
+{
+  "schema_version": "scene_layout.v1",
+  "scene_id": "SCN-cheshire-cat-path",
+  "layout_top": "layout_top.png",
+  "status": "calibrated_to_render",
+  "orientation": {
+    "top_of_map": "north; the path runs west (left, from the Duchess's clearing) to east (right, the fork); the sun is to the west (left)",
+    "extent_m": [
+      48,
+      27
+    ],
+    "note_en": "camera positions in views[] are described relative to these landmarks"
+  },
+  "landmarks": [
+    {
+      "id": "clearing_entry",
+      "name": "path entrance from the Duchess's clearing",
+      "name_en": "the path entrance from the Duchess's clearing",
+      "kind": "entrance",
+      "xy": [
+        0.02,
+        0.53
+      ]
+    },
+    {
+      "id": "pig_exit_gap",
+      "name": "leaf-litter gap into the wood",
+      "name_en": "the leaf-litter gap into the wood",
+      "kind": "terrain",
+      "xy": [
+        0.3,
+        0.18
+      ]
+    },
+    {
+      "id": "crab_apple",
+      "name": "old crab-apple tree",
+      "name_en": "the old crab-apple tree",
+      "kind": "tree",
+      "xy": [
+        0.26,
+        0.39
+      ]
+    },
+    {
+      "id": "crab_apple_bough",
+      "name": "low crab-apple bough",
+      "name_en": "the low crab-apple bough",
+      "kind": "feature",
+      "xy": [
+        0.37,
+        0.45
+      ]
+    },
+    {
+      "id": "path_bend",
+      "name": "S-bend of the path",
+      "name_en": "the S-bend of the path",
+      "kind": "terrain",
+      "xy": [
+        0.4,
+        0.64
+      ]
+    },
+    {
+      "id": "oak_tree",
+      "name": "ivy-clad oak",
+      "name_en": "the ivy-clad oak",
+      "kind": "tree",
+      "xy": [
+        0.65,
+        0.3
+      ]
+    },
+    {
+      "id": "oak_branch",
+      "name": "oak branch over the fork",
+      "name_en": "the oak branch over the fork",
+      "kind": "feature",
+      "xy": [
+        0.7,
+        0.44
+      ]
+    },
+    {
+      "id": "fork",
+      "name": "fork in the path",
+      "name_en": "the fork in the path",
+      "kind": "terrain",
+      "xy": [
+        0.75,
+        0.5
+      ]
+    },
+    {
+      "id": "fingerpost",
+      "name": "leaning fingerpost",
+      "name_en": "the leaning fingerpost",
+      "kind": "feature",
+      "xy": [
+        0.7,
+        0.58
+      ]
+    },
+    {
+      "id": "hare_branch",
+      "name": "path toward the March Hare",
+      "name_en": "the path toward the March Hare",
+      "kind": "exit",
+      "xy": [
+        0.92,
+        0.11
+      ]
+    },
+    {
+      "id": "hatter_branch",
+      "name": "path toward the Hatter",
+      "name_en": "the path toward the Hatter",
+      "kind": "exit",
+      "xy": [
+        0.92,
+        0.87
+      ]
+    }
+  ],
+  "views": [
+    {
+      "tile": 1,
+      "camera_from": "clearing_entry",
+      "looking_at": "crab_apple_bough",
+      "size": "wide",
+      "angle": "eye",
+      "desc_en": "eye-level wide shot from the path entrance at the Duchess's clearing, looking along the path to the low crab-apple bough a few yards off, framed by the round gap of sky in the canopy"
+    },
+    {
+      "tile": 2,
+      "camera_from": "path_bend",
+      "looking_at": "crab_apple_bough",
+      "size": "medium",
+      "angle": "low",
+      "desc_en": "low-angle medium shot from the S-bend of the path looking back up at the low crab-apple bough against the halo of sky"
+    },
+    {
+      "tile": 3,
+      "camera_from": "fork",
+      "looking_at": "clearing_entry",
+      "size": "wide",
+      "angle": "eye",
+      "desc_en": "eye-level wide shot from the fork in the path looking back west down the whole path toward the Duchess's clearing, sun slanting in through the trunks"
+    },
+    {
+      "tile": 4,
+      "camera_from": "path_bend",
+      "looking_at": "oak_branch",
+      "size": "medium",
+      "angle": "eye",
+      "desc_en": "eye-level medium shot from the S-bend of the path looking on toward the oak branch over the fork"
+    },
+    {
+      "tile": 5,
+      "camera_from": "fork",
+      "looking_at": "fingerpost",
+      "size": "close",
+      "angle": "eye",
+      "desc_en": "eye-level close shot at the fork on the leaning fingerpost with its blank vine-scroll arms"
+    },
+    {
+      "tile": 6,
+      "camera_from": "crab_apple_bough",
+      "looking_at": "pig_exit_gap",
+      "size": "medium",
+      "angle": "low",
+      "desc_en": "low medium shot near the ground from under the crab-apple bough looking along the leaf-litter gap into the wood where the piglet trots off"
+    },
+    {
+      "tile": 7,
+      "camera_from": "fork",
+      "looking_at": "oak_branch",
+      "size": "close",
+      "angle": "low",
+      "desc_en": "low-angle close shot from the fork looking straight up at the oak branch where the Cat reappears and fades"
+    },
+    {
+      "tile": 8,
+      "camera_from": "hare_branch",
+      "looking_at": "fork",
+      "size": "wide",
+      "angle": "high_oblique",
+      "desc_en": "high oblique wide shot from the path toward the March Hare looking back down at the fork, the fingerpost and the oak"
+    },
+    {
+      "tile": 9,
+      "camera_from": "crab_apple",
+      "looking_at": "crab_apple_bough",
+      "size": "detail",
+      "angle": "eye",
+      "desc_en": "eye-level detail along the smooth worn upper surface of the crab-apple limb, honeysuckle hanging from it"
+    }
+  ],
+  "calibration_note_en": "Coordinates re-read from the rendered image 2026-09-23. The crab-apple limb reaches north-east across the leaf litter beside the path, not across the path, so crab_apple_bough is the limb's middle, just north of the path. A second, wider leaf-litter track runs off to the north from the bough; it is recorded as pig_exit_gap. The fingerpost stands south-west of the fork.",
+  "checklist": {
+    "architecture_match": false,
+    "lighting_match": true,
+    "style_match": false,
+    "camera_orthographic": "near-nadir; tree trunks lean slightly outward at the frame edges (wide-lens perspective)"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": "DEF-p3-dictionary-001",
+  "opened_by": "03-characters/character-manager",
+  "opened_on": "2026-09-22",
+  "task_id": "p3-char-index",
+  "assigned_to": "00-orchestration/memory-bible",
+  "domain": "dictionary",
+  "status": "closed",
+  "severity": "minor",
+  "summary": "Two small internal inconsistencies found in the locked bible/dictionary.json while registering bible/characters/index.json.",
+  "findings": [
+    {
+      "id": "DEF-p3-dictionary-001-a",
+      "file": "bible/dictionary.json",
+      "term_id": "TERM-0001",
+      "issue": "TERM-0001 ('Alice') definition still reads 'The seven-year-old protagonist', a pre-H1 draft characterization. bible/h1_summary.md section 1 (ruling 5.6 A) and bible/world.json frame.social_class confirm Alice's age as 'about ten' at H1, and world.json explicitly assigns the final age decision to 03-characters. bible/characters/index.json CHAR-alice now records age 'about ten' per that ruling; TERM-0001's 'seven-year-old' wording was not updated to match.",
+      "suggested_fix": "memory-bible updates TERM-0001's definition to 'about ten' (or removes the specific-age clause and points to CHAR-alice for the confirmed age) to keep the dictionary consistent with the locked H1 age."
+    },
+    {
+      "id": "DEF-p3-dictionary-001-b",
+      "file": "bible/dictionary.json",
+      "term_id": "TERM-0025",
+      "issue": "TERM-0025 ('Dinah') definition cross-references 'the Cheshire Cat (TERM-0041)', but TERM-0041 is actually the dictionary entry for 'March Hare', not the Cheshire Cat (whose real entry is TERM-0040). This is a broken/mismatched cross-reference within the dictionary itself.",
+      "suggested_fix": "memory-bible corrects the TERM-0025 definition to cite TERM-0040 instead of TERM-0041."
+    }
+  ],
+  "impact": "No impact on bible/characters/index.json's own correctness: CHAR-alice and CHAR-cheshire-cat / CHAR-family-housemaid were written using the correct H1-ruling values and the correct term (TERM-0040), not the dictionary's stale/mismatched text. Impact is confined to dictionary.json's internal consistency.",
+  "requested_action": "memory-bible to review and patch bible/dictionary.json under WRITE_RULES.md section 5 controlled change; not fixed here because dictionary.json is outside 03-characters/character-manager's write scope.",
+  "closed_by": "00-orchestration/memory-bible",
+  "closed_on": "2026-09-22",
+  "closed_task_id": "p3-dict-fix",
+  "changelog": "BIB-0024",
+  "resolution": {
+    "DEF-p3-dictionary-001-a": "fixed: TERM-0001 now reads 'a girl of about ten (H1 ruling 5.6 A; the confirmed age is recorded on CHAR-alice)'",
+    "DEF-p3-dictionary-001-b": "fixed: TERM-0025 now cites the Cheshire Cat as TERM-0040",
+    "verification": "code/p2-merge_check.py: cross_refs_valid_all_namespaces PASS, no_unknown_placeholder PASS, dictionary_hit_100pct PASS, quote_verification_warn WARN 0/560"
+  }
+}

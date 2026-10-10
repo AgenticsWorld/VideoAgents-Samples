@@ -1,0 +1,37 @@
+{
+  "shot_id": "sh052",
+  "group_id": "grp020",
+  "scene_no": "S06",
+  "scene_id": "SCN-long-hall",
+  "duration_s": 4.0,
+  "is_dialogue": false,
+  "group_position": "middle shot of grp020 — Alice has crossed back from the curtain and is at her map end (glass_table), at the foot of a leg.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "stand",
+      "start_pos": "ten inches high at the foot of one glass leg, looking straight up the axis",
+      "space_fragment_en": "standing ten inches high at the foot of the glass table, centred low in frame, facing straight up through the glass at the key",
+      "facing": "vertically up the leg and through the glass tabletop",
+      "path": [],
+      "beats": [
+        { "t": 0.5, "action": "she turns from the door back to the table", "sync": "the second idea" },
+        { "t": 2.0, "action": "the golden key glints through the glass high above her", "sync": "the whole picture is the lead room" }
+      ],
+      "performance_beat": {
+        "objective": "work out how to get up to a key she can see through the floor of the sky",
+        "goal": "work out how to get up to the key",
+        "emotional_arc": "from defeat at the door to a new, practical calculation",
+        "arc_from": "defeat at the door",
+        "arc_to": "practical calculation",
+        "trigger": { "beat": "the key glints through the glass above her", "t": 2.0 },
+        "no_early_reaction": ["the chin lifting", "a hand going to the leg", "the weight shifting forward"],
+        "forbidden_early": ["the chin lifting", "a hand going to the leg", "the weight shifting forward"],
+        "end_state": "tiny at the bottom of frame, head right back, eyes fixed on the key, one hand starting toward the leg"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0004 (dream)", "note": "Alice alone." }
+}

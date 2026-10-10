@@ -1,0 +1,53 @@
+{
+  "schema_version": "whitebox_plan.v1",
+  "group_id": "grp021",
+  "scene_id": "SCN-long-hall",
+  "basis": "Alice holds the glass_table anchor at the foot of table leg 1 for the whole group. She lets go of the leg at t=1.2, sinks down onto the flagstones at t=2.6 and sits with her back against it, turned out into the hall (yaw 2.5214, the reverse of the leg-facing yaw she held through sh053), and cries from t=4.4. In sh055 she sits up off the floor at t=8.8 and scolds herself slightly screen-left at a second person who is not there; she never leaves the spot. At 0.254 m her seated head is 0.18 m off the flags, so both lenses sit on the flagstones at 0.20 m.",
+  "actors": [
+    {
+      "id": "CHAR-alice",
+      "kind": "person",
+      "size_m": [0.0711, 0.254, 0.0559],
+      "keyframes": [
+        {"t": 0.0, "position": [5.72, 0.0, -0.27], "pose": "stand", "yaw": -0.6202, "head_pitch": -1.0},
+        {"t": 1.2, "position": [5.72, 0.0, -0.27], "pose": "stand", "yaw": -0.6202, "head_pitch": 0.4},
+        {"t": 2.6, "position": [5.72, 0.0, -0.27], "pose": "sit", "yaw": 2.5214, "head_pitch": 0.6},
+        {"t": 4.4, "position": [5.72, 0.0, -0.27], "pose": "sit", "yaw": 2.5214, "head_pitch": 0.7},
+        {"t": 8.0, "position": [5.72, 0.0, -0.27], "pose": "sit", "yaw": 2.5214, "head_pitch": 0.7},
+        {"t": 8.8, "position": [5.72, 0.0, -0.27], "pose": "sit", "yaw": 2.5214, "head_pitch": 0.2},
+        {"t": 9.6, "position": [5.72, 0.0, -0.27], "pose": "sit", "yaw": 2.5214, "head_pitch": 0.3},
+        {"t": 11.0, "position": [5.72, 0.0, -0.27], "pose": "sit", "yaw": 2.5214, "head_yaw": 0.35, "head_pitch": 0.05},
+        {"t": 14.0, "position": [5.72, 0.0, -0.27], "pose": "sit", "yaw": 2.5214, "head_yaw": 0.35, "head_pitch": 0.0},
+        {"t": 16.0, "position": [5.72, 0.0, -0.27], "pose": "sit", "yaw": 2.5214, "head_yaw": 0.2, "head_pitch": 0.0},
+        {"t": 17.0, "position": [5.72, 0.0, -0.27], "pose": "sit", "yaw": 2.5214, "head_yaw": 0.2, "head_pitch": 0.0}
+      ]
+    }
+  ],
+  "cameras": [
+    {
+      "shot_id": "sh054",
+      "start": 0,
+      "duration_s": 8.0,
+      "movement": "static",
+      "keyframes": [
+        {"t": 0.0, "position": [3.923, 0.2, 0.179], "target": [5.857, 0.54, 0.278], "fov": 46.3972},
+        {"t": 8.0, "position": [3.923, 0.2, 0.179], "target": [5.857, 0.54, 0.278], "fov": 46.3972}
+      ]
+    },
+    {
+      "shot_id": "sh055",
+      "start": 8.0,
+      "duration_s": 9.0,
+      "movement": "static",
+      "keyframes": [
+        {"t": 0.0, "position": [5.789, 0.2, -0.367], "target": [5.72, 0.184, -0.27], "fov": 26.9915},
+        {"t": 9.0, "position": [5.789, 0.2, -0.367], "target": [5.72, 0.184, -0.27], "fov": 26.9915}
+      ]
+    }
+  ],
+  "continuity": {"actors": "inherit", "camera": "cut"},
+  "warnings": [
+    "sh054 puts her at about 0.30 of frame width and low in the frame, leaving the whole open right side and upper two thirds empty, as composition asks; the lens tilts about 10 degrees up from 0.20 m so the glass leg runs out of the top of frame.",
+    "sh055's 50 mm close on a 0.033 m face needs a 0.12 m standoff. That is geometrically correct for a ten-inch subject and leaves the lens sitting on the flagstones in front of her."
+  ]
+}

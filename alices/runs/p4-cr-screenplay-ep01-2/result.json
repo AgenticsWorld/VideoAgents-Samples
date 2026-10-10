@@ -1,0 +1,27 @@
+{
+  "task_id": "p4-cr-screenplay-ep01-2",
+  "agent": "01-story/screenplay",
+  "project": "alices",
+  "attempt": 1,
+  "status": "done",
+  "date": "2026-09-23",
+  "change_request": "BIB-0027",
+  "resolves": "qa/defects/DEF-p4-cr-screenplay-001.json (findings a, b) -> fixed_pending_verify",
+  "authority_read": ["bible/scenes/SCN-long-hall/architecture.json (amended p4-cr-architecture)", "bible/scenes/SCN-long-hall/environment.json (fixed.dream_design)", "bible/scenes/SCN-pool-of-tears/architecture.json", "bible/scenes/SCN-little-door-passage/architecture.json"],
+  "changed_files": [
+    {
+      "file": "story/episodes/ep01/screenplay.md",
+      "backup": "runs/p4-cr-screenplay-ep01-2/screenplay_before.md",
+      "change_note": "Action lines only, plus notes and front matter. S04: the Rabbit line now reads 'a white rabbit in a smart waistcoat, a pair of white kid gloves in one paw', and the supersession note is replaced by a done note. S05: the opening set line is rewritten to the Art Nouveau hall (halo-framed amber tulip lamps, verdigris whiplash iron ribs, gilded vine vault panels, lily-stem columns, pastel-and-gold mosaic dado, horseshoe-arched oak doors with stained-glass roundels), and the note records BIB-0027. S06: the shrink line gains the iron arches and limestone flags beside the mosaic border. S07: her head strikes 'an iron rib of the vault' and gilding flakes fall, replacing 'stone vault; grit'. S10: the door bases sit in curling iron frames and the vine mosaic shimmers under the water. Front-matter bible_cr line extended. Dialogue, scene order, headings, [事件]/[出场]/[时长] lines and all blocking beats are unchanged; diff contains 0 dialogue, heading or event lines."
+    },
+    {
+      "file": "qa/defects/DEF-p4-cr-screenplay-001.json",
+      "change_note": "status open -> fixed_pending_verify; resolution block added (per-finding summary, checks, unchanged scope)."
+    }
+  ],
+  "machine_checks": {
+    "check_screenplay_events": "PASS (exit 0)",
+    "check_scene_int_ext": "PASS (exit 0, 0 errors, 0 warnings)"
+  },
+  "pending_H2": "None from ep01. The Footmen and the non-speaking animals do not appear."
+}

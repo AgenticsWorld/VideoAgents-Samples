@@ -1,0 +1,39 @@
+{
+  "shot_id": "sh061",
+  "group_id": "grp023",
+  "scene_no": "S07",
+  "scene_id": "SCN-long-hall",
+  "duration_s": 7.0,
+  "is_dialogue": false,
+  "group_position": "last shot of grp023 — Alice on the map start/end ground (glass_table, at the box), and does not move from the spot.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "stand",
+      "start_pos": "ten inches high at the little glass box, hand still on her head, then eating in earnest",
+      "space_fragment_en": "standing ten inches high at the little glass box under the glass table, centred in frame, facing level out of frame",
+      "facing": "level and very nearly to the lens on the two-second hold — a look at nothing, which happens to be where the camera is",
+      "path": [],
+      "beats": [
+        { "t": 0.5, "action": "nothing happens; she stays exactly the same size", "sync": "the anticlimax" },
+        { "t": 1.0, "action": "two full seconds of flat disappointment", "sync": "the joke, played deadpan" },
+        { "t": 3.4, "action": "sets to work and finishes the whole cake", "sync": "the practical solution" },
+        { "t": 6.2, "action": "brushes the crumbs off her pinafore", "sync": "the manners beat that ends the shot" }
+      ],
+      "performance_beat": {
+        "objective": "get a result out of a cake that is refusing to do anything",
+        "goal": "get a result out of the cake",
+        "emotional_arc": "from held anxiety to flat cheated disappointment to brisk, unbothered greed",
+        "arc_from": "held anxiety",
+        "arc_to": "brisk unbothered greed",
+        "trigger": { "beat": "the two-second hold ends with nothing having happened", "t": 3.0 },
+        "no_early_reaction": ["the hand coming off her head", "a shrug", "the mouth twisting"],
+        "forbidden_early": ["the hand coming off her head", "a shrug", "the mouth twisting"],
+        "end_state": "hands brushing down her pinafore, mouth still working on the last of it, eyes level and unremarkable"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0005 result (dream) — no change at first", "note": "Alice alone." }
+}

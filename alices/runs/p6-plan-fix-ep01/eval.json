@@ -1,0 +1,9 @@
+{
+ "task_id": "p6-plan-fix-ep01",
+ "skipped": true,
+ "reason": "quality judge=0; QA dimensions all 0",
+ "auto": {
+  "DEF-...-001-b": "fixed",
+  "transition_list_byte_identical": "PASS (5044 bytes, sha256 verified)"
+ }
+}

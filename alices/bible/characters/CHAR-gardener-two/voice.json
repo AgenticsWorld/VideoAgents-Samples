@@ -1,0 +1,30 @@
+{
+  "character_id": "CHAR-gardener-two",
+  "name": "Two",
+  "tier": "extra",
+  "card_type": "individual",
+  "gender": "male",
+  "age_sense": "middle-aged man (appearance base_age_range 40-50)",
+  "timbre": "soft, careful, low man's voice, earnest and humble, slightly hushed",
+  "pitch": "mid-low baritone, steady",
+  "pitch_range_hz": [90, 150],
+  "speed_wpm": [135, 155],
+  "speed_cpm": [513, 589],
+  "accent": "rural Oxfordshire working-class English, gentle burr, 'this here'",
+  "reference_style": "Eldest and steadiest of the three gardeners: explains the white rose-tree to Alice 'in a low voice', grovels to the Queen 'in a very humble tone'. The calm one of the trio.",
+  "emotion_range": {
+    "low_confiding": { "speed_delta": "-5%", "pitch_delta": "-1semi", "volume": "soft", "note": "ch008-p10 'Two began in a low voice'" },
+    "humble_plea": { "speed_delta": "+5%", "pitch_delta": "+2semi", "note": "ch008-p25 'in a very humble tone'" },
+    "sharp": { "speed_delta": "+10%", "pitch_delta": "+2semi", "volume": "loud", "note": "'Look out now, Five!'" }
+  },
+  "age_variants": [],
+  "source_chapter": "ch008",
+  "sources": ["ch008", "ch008-p10", "ch008-p25"],
+  "voice_evidence": [
+    { "para": "ch008-p10", "quote": "Two began in a low voice" },
+    { "para": "ch008-p25", "quote": "said Two, in a very humble tone" }
+  ],
+  "inferred": true,
+  "inferred_fields": ["timbre", "pitch_range_hz", "speed_wpm", "speed_cpm", "accent"],
+  "reason": "Low/humble tones sourced; country accent designed for an 1862 estate gardener (FAC-house-of-hearts gardeners, appearance.json)."
+}

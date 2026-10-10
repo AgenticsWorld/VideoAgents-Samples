@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh077",
+  "group_id": "grp029",
+  "scene_no": "S08",
+  "duration_s": 2.0,
+  "size": "detail",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 50,
+  "camera_height_m": 0.08,
+  "angle": "level, lens on the water surface",
+  "rack_focus": "none",
+  "start_frame": "One insert at water level: the white kid gloves and the large fan hitting the surface, the first ripple rings starting to cross.",
+  "end_frame": "The same frame two seconds later: the gloves and fan settling and beginning to drift, a white shape already going away small up the flooded hall behind them.",
+  "constraint_honoured": "'He is gone from the episode in two seconds — do not extend.'",
+  "movement_note": "No move, no pan after him: the objects stay and he leaves, which is what makes the fan and the glove available as the scene's last two white things.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

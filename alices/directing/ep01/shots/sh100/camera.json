@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh100",
+  "group_id": "grp037",
+  "scene_no": "S10",
+  "duration_s": 2.0,
+  "size": "medium",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame; she turns into it)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 40,
+  "camera_height_m": 0.05,
+  "angle": "level, lens on the water surface",
+  "rack_focus": "none",
+  "start_frame": "Water-level straight across the flooded hall to the door bases: Alice turning into the frame toward a splashing somewhere off in the lamplit dark.",
+  "end_frame": "The same frame as she comes upright and treads water, very still, eyes fixed on the dark — and the ripples that reach her arrive from outside the frame.",
+  "constraint_honoured": "'Static, two seconds, nothing given away.'",
+  "movement_note": "The camera must not look for the sound; the source stays outside the frame, which is the whole method of the cliffhanger.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

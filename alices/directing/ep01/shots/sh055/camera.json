@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh055",
+  "group_id": "grp021",
+  "scene_no": "S06",
+  "duration_s": 9.0,
+  "size": "close",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 50,
+  "camera_height_m": 0.2,
+  "angle": "level, camera on the flagstones",
+  "rack_focus": "none",
+  "start_frame": "Low from the floor at the curtain side, tight on her wet face: fists still at her eyes, the flagstones and the hall soft and dark behind her.",
+  "end_frame": "The same frame with her fists coming away and her chin up, scolding herself sharply — the face held whole and undistorted for the line where she becomes two people.",
+  "constraint_honoured": "'The FIRST and ONLY close-up of the scene, earned by withholding every other close-up in S06' — the cut earns it, not a move into it.",
+  "movement_note": "LN-ep01-012 (5.9 s) lands whole in 9.0 s with no camera event and no focus change across it, as the dialogue depth rule requires.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

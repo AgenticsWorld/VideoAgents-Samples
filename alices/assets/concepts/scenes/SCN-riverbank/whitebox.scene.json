@@ -1,0 +1,394 @@
+{
+  "schema_version": "whitebox_scene.v1",
+  "scene_id": "SCN-riverbank",
+  "name": "SCN-riverbank",
+  "units": "meters",
+  "dimensions_m": [
+    40.0,
+    20.0,
+    22.5
+  ],
+  "objects": [
+    {
+      "id": "backwater_surface",
+      "shape": "box",
+      "size_m": [
+        10.6,
+        0.02,
+        22.5
+      ],
+      "xy": [
+        0.1325,
+        0.5
+      ],
+      "color": "#5d6b4a",
+      "collision": "none (water surface marker; the real waterline is 1.2 m below the bank top)",
+      "position": [
+        -14.7,
+        0.01,
+        0.0
+      ]
+    },
+    {
+      "id": "willow_trunk",
+      "shape": "cylinder",
+      "size_m": [
+        0.8,
+        3.5,
+        0.8
+      ],
+      "xy": [
+        0.235,
+        0.3
+      ],
+      "color": "#6b5a45",
+      "position": [
+        -10.600000000000001,
+        1.75,
+        -4.5
+      ]
+    },
+    {
+      "id": "willow_canopy",
+      "shape": "sphere",
+      "size_m": [
+        7.1,
+        6.0,
+        7.3
+      ],
+      "xy": [
+        0.17,
+        0.22
+      ],
+      "elevation_m": 5.0,
+      "color": "#7f9a5a",
+      "position": [
+        -13.2,
+        5.0,
+        -6.300000000000001
+      ]
+    },
+    {
+      "id": "elm_north_trunk",
+      "shape": "cylinder",
+      "size_m": [
+        0.9,
+        8.0,
+        0.9
+      ],
+      "xy": [
+        0.455,
+        0.1644
+      ],
+      "color": "#6b5a45",
+      "position": [
+        -1.7999999999999994,
+        4.0,
+        -7.551
+      ]
+    },
+    {
+      "id": "elm_north_canopy",
+      "shape": "sphere",
+      "size_m": [
+        9.2,
+        12.0,
+        7.3
+      ],
+      "xy": [
+        0.455,
+        0.1644
+      ],
+      "elevation_m": 12.0,
+      "color": "#5e8a3e",
+      "position": [
+        -1.7999999999999994,
+        12.0,
+        -7.551
+      ]
+    },
+    {
+      "id": "elm_south_trunk",
+      "shape": "cylinder",
+      "size_m": [
+        0.9,
+        8.0,
+        0.9
+      ],
+      "xy": [
+        0.4475,
+        0.831
+      ],
+      "color": "#6b5a45",
+      "position": [
+        -2.0999999999999996,
+        4.0,
+        7.447499999999999
+      ]
+    },
+    {
+      "id": "elm_south_canopy",
+      "shape": "sphere",
+      "size_m": [
+        9.8,
+        12.0,
+        7.5
+      ],
+      "xy": [
+        0.4475,
+        0.831
+      ],
+      "elevation_m": 12.0,
+      "color": "#5e8a3e",
+      "position": [
+        -2.0999999999999996,
+        12.0,
+        7.447499999999999
+      ]
+    },
+    {
+      "id": "reed_bed",
+      "shape": "box",
+      "size_m": [
+        8.6,
+        2.0,
+        8.505
+      ],
+      "xy": [
+        0.1525,
+        0.811
+      ],
+      "color": "#6f8a4e",
+      "position": [
+        -13.900000000000002,
+        1.0,
+        6.997500000000001
+      ]
+    }
+  ],
+  "render": {
+    "aspect_ratio": "16:9",
+    "width": 960,
+    "height": 540
+  },
+  "landmarks": [
+    {
+      "id": "backwater",
+      "name": "the still backwater",
+      "name_en": "the still backwater",
+      "kind": "water",
+      "xy": [
+        0.115,
+        0.53
+      ],
+      "xy_m": [
+        4.6,
+        11.93
+      ]
+    },
+    {
+      "id": "lily_pads",
+      "name": "the water-lily pads",
+      "name_en": "the water-lily pads",
+      "kind": "flora",
+      "xy": [
+        0.09,
+        0.37
+      ],
+      "xy_m": [
+        3.6,
+        8.32
+      ]
+    },
+    {
+      "id": "willow",
+      "name": "the pollarded willow",
+      "name_en": "the pollarded willow",
+      "kind": "tree",
+      "xy": [
+        0.17,
+        0.22
+      ],
+      "xy_m": [
+        6.8,
+        4.95
+      ]
+    },
+    {
+      "id": "reed_bed",
+      "name": "the reed bed",
+      "name_en": "the reed bed",
+      "kind": "flora",
+      "xy": [
+        0.16,
+        0.8
+      ],
+      "xy_m": [
+        6.4,
+        18.0
+      ]
+    },
+    {
+      "id": "bank_lip",
+      "name": "the lip of the bank",
+      "name_en": "the lip of the bank",
+      "kind": "ground",
+      "xy": [
+        0.285,
+        0.5
+      ],
+      "xy_m": [
+        11.4,
+        11.25
+      ]
+    },
+    {
+      "id": "sitting_shelf",
+      "name": "the sister's sitting place",
+      "name_en": "the sister's sitting place",
+      "kind": "zone",
+      "xy": [
+        0.42,
+        0.5
+      ],
+      "xy_m": [
+        16.8,
+        11.25
+      ]
+    },
+    {
+      "id": "elm_north",
+      "name": "the northern elm",
+      "name_en": "the northern elm",
+      "kind": "tree",
+      "xy": [
+        0.45,
+        0.16
+      ],
+      "xy_m": [
+        18.0,
+        3.6
+      ]
+    },
+    {
+      "id": "elm_south",
+      "name": "the southern elm",
+      "name_en": "the southern elm",
+      "kind": "tree",
+      "xy": [
+        0.445,
+        0.835
+      ],
+      "xy_m": [
+        17.8,
+        18.79
+      ]
+    },
+    {
+      "id": "meadow",
+      "name": "the open meadow",
+      "name_en": "the open meadow",
+      "kind": "ground",
+      "xy": [
+        0.75,
+        0.5
+      ],
+      "xy_m": [
+        30.0,
+        11.25
+      ]
+    },
+    {
+      "id": "field_way",
+      "name": "the way across the field to the hedge",
+      "name_en": "the way across the field to the hedge",
+      "kind": "exit",
+      "xy": [
+        0.9,
+        0.22
+      ],
+      "xy_m": [
+        36.0,
+        4.95
+      ]
+    }
+  ],
+  "views": [
+    {
+      "tile": 1,
+      "camera_from": "meadow",
+      "looking_at": "sitting_shelf",
+      "size": "wide",
+      "angle": "eye",
+      "desc_en": "eye-level wide shot from the sunlit meadow toward the sister's sitting place in the elm shade on the bank, the backwater glinting beyond"
+    },
+    {
+      "tile": 2,
+      "camera_from": "sitting_shelf",
+      "looking_at": "backwater",
+      "size": "wide",
+      "angle": "eye",
+      "desc_en": "eye-level wide shot from the sister's sitting place down the grassy slope to the still reed-edged backwater, the pollarded willow on the right"
+    },
+    {
+      "tile": 3,
+      "camera_from": "backwater",
+      "looking_at": "sitting_shelf",
+      "size": "medium",
+      "angle": "low",
+      "desc_en": "low medium shot from the water's edge up the sloping bank to the sisters sitting under the elms"
+    },
+    {
+      "tile": 4,
+      "camera_from": "sitting_shelf",
+      "looking_at": "field_way",
+      "size": "wide",
+      "angle": "eye",
+      "desc_en": "eye-level wide shot from the bank across the open meadow toward the far hedge, the way the white rabbit and Alice run"
+    },
+    {
+      "tile": 5,
+      "camera_from": "bank_lip",
+      "looking_at": "reed_bed",
+      "size": "close",
+      "angle": "low",
+      "desc_en": "low close shot from the root-edged lip of the bank to the tall reeds and reedmace at the water's edge"
+    },
+    {
+      "tile": 6,
+      "camera_from": "reed_bed",
+      "looking_at": "willow",
+      "size": "medium",
+      "angle": "eye",
+      "desc_en": "eye-level medium shot along the waterline from the reeds to the pollarded willow leaning over the backwater"
+    },
+    {
+      "tile": 7,
+      "camera_from": "elm_south",
+      "looking_at": "sitting_shelf",
+      "size": "medium",
+      "angle": "high_oblique",
+      "desc_en": "high oblique medium shot from under the southern elm's branches down onto the sitting place, daisies in the turf and a few dead leaves on the grass"
+    },
+    {
+      "tile": 8,
+      "camera_from": "willow",
+      "looking_at": "elm_north",
+      "size": "medium",
+      "angle": "high_oblique",
+      "desc_en": "high oblique medium shot from the pollarded willow's crown along the top of the bank to the northern elm, the meadow bright beyond"
+    },
+    {
+      "tile": 9,
+      "camera_from": "sitting_shelf",
+      "looking_at": "elm_north",
+      "size": "detail",
+      "angle": "eye",
+      "desc_en": "eye-level detail shot from the sitting place up into the northern elm's leaves, a single dead leaf falling"
+    }
+  ],
+  "layout_top": "assets/concepts/scenes/SCN-riverbank/layout_top.png",
+  "inferred": true,
+  "scale_basis": "The image width is set to 40.0 m, kept from layout.json map_extent_m. Z = 40 x 9/16 = 22.5 m. Cross-check against the scale anchors: the elm crowns are drawn about 9-10 m across, which suits mature hedgerow/riverside elms, and the willow crown about 7 m. The Bible gives no plan dimension. Y = 20 m, covering the elm crowns.",
+  "warnings": []
+}

@@ -1,0 +1,15 @@
+{
+  "shot_id": "sh023",
+  "group_id": "grp009",
+  "scene_no": "S03",
+  "scene_id": "SCN-falling-dream",
+  "duration_s": 2.0,
+  "is_dialogue": false,
+  "group_position": "middle shot of grp009 — her second POV straight down. Nobody in frame; she holds the map start (shaft_centre) behind the lens.",
+  "characters": [],
+  "creatures": [],
+  "offscreen_presence": [
+    { "id": "CHAR-alice", "where": "settled back in mid-air at the open centre of the shaft, directly behind the lens, looking down", "note": "Present in the space, not in frame." }
+  ],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0002 (dream)", "note": "POV insert; nothing and nobody below her." }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "DEF-p4-envconcept-602",
+  "opened_by": "06-art/environment-concept",
+  "opened_on": "2026-09-23",
+  "task_id": "p4-env-concept-sb1",
+  "assigned_to": "00-orchestration/memory-bible",
+  "route_to_owner": "05-scenes/architecture with 05-scenes/environment",
+  "domain": "architecture/environment",
+  "status": "open",
+  "severity": "minor",
+  "summary": "SCN-pool-bank: architecture's Mucha dressing is built on massed yellow flag irises, but the environment card's seasonal guard bans flag-iris as a spring flower. SCN-riverbank architecture also lists yellow flag irises in the backwater shallows.",
+  "findings": [
+    {
+      "id": "DEF-p4-envconcept-602-a",
+      "bible_file": "bible/scenes/SCN-pool-bank/architecture.json",
+      "field": "mucha_design_language.item; prompt_ready_en",
+      "value": "yellow flag irises and white water-lilies ... massed along the waterline in flowing drifts",
+      "conflicts_with": {
+        "bible_file": "bible/scenes/SCN-pool-bank/environment.json",
+        "field": "fixed.dream_design.seasonal_guard",
+        "value": "water-lilies, loosestrife and meadowsweet flower in July; no spring flag-iris or marsh-marigold"
+      }
+    },
+    {
+      "id": "DEF-p4-envconcept-602-b",
+      "bible_file": "bible/scenes/SCN-riverbank/architecture.json",
+      "field": "details[2]",
+      "value": "yellow flag irises and water-lily pads in the shallows of the backwater",
+      "note": "SCN-riverbank environment.json has no iris guard, but the waking backwater is the root of the pool bank (cp-pool), so both should agree."
+    }
+  ],
+  "layout_choice": "The layout images follow the environment card: water-lilies, purple loosestrife and cream meadowsweet, no flag irises. Irises can be added in shot plates if the ruling goes the other way; no landmark depends on them.",
+  "proposed_fix": "Decide whether flag irises are allowed for 4 July (Iris pseudacorus flowers roughly May-July, so a late bloom is plausible). Then align either the architecture Mucha dressing or the environment seasonal guard, for both scenes.",
+  "not_self_fixed": "Per SOUL: setting-card conflicts are reported, not edited by environment-concept."
+}

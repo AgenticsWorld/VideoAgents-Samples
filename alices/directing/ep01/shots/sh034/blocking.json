@@ -1,0 +1,40 @@
+{
+  "shot_id": "sh034",
+  "group_id": "grp013",
+  "scene_no": "S05",
+  "scene_id": "SCN-long-hall",
+  "duration_s": 6.0,
+  "is_dialogue": false,
+  "group_position": "middle shot of grp013 — Alice is on the map path point (west_doors_north), working the west wall.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "stand",
+      "start_pos": "at the north end of the locked doors of the west wall, working south along them",
+      "space_fragment_en": "standing at the locked doors of the west wall on screen-left, working south along them and facing screen-right",
+      "facing": "the way she walks, screen-left to screen-right, with unopened wall always ahead of her",
+      "path": [
+        { "t": 5.4, "to": "further south along the locked doors of the west wall" }
+      ],
+      "beats": [
+        { "t": 0.8, "action": "hand hits the first handle — locked", "sync": "first failure" },
+        { "t": 2.6, "action": "second handle without breaking stride — locked", "sync": "second failure" },
+        { "t": 4.4, "action": "third handle — locked", "sync": "the pattern is established inside one frame" }
+      ],
+      "performance_beat": {
+        "objective": "get one of these doors open before she has to admit they are all the same",
+        "goal": "get one of these doors open",
+        "emotional_arc": "from businesslike method to a mechanical, hardening persistence",
+        "arc_from": "businesslike method",
+        "arc_to": "mechanical persistence",
+        "trigger": { "beat": "the third handle refuses and her hand is already moving to the fourth", "t": 4.4 },
+        "no_early_reaction": ["the pace quickening", "the jaw setting", "a hand slapping the wood"],
+        "forbidden_early": ["the pace quickening", "the jaw setting", "a hand slapping the wood"],
+        "end_state": "still walking screen-right, hand extended for the next handle, eyes on the wall not the floor"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0003 (dream)", "note": "Alice alone in the hall." }
+}

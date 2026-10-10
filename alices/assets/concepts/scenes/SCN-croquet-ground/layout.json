@@ -1,0 +1,207 @@
+{
+  "schema_version": "scene_layout.v1",
+  "scene_id": "SCN-croquet-ground",
+  "layout_top": "layout_top.png",
+  "status": "calibrated_to_render",
+  "orientation": {
+    "top_of_map": "north: the raised stone terrace with the royal awning; yew hedges close the west (left), south (bottom) and east (right) sides, with one arched opening at the middle of the west hedge and one at the middle of the east hedge; ridges run west-east; the sun is to the west",
+    "extent_m": [
+      70,
+      39
+    ],
+    "note_en": "camera positions in views[] are described relative to these landmarks"
+  },
+  "landmarks": [
+    {
+      "id": "royal_chairs",
+      "name": "royal chairs under the crimson awning",
+      "name_en": "the royal chairs under the crimson awning",
+      "kind": "furniture",
+      "xy": [
+        0.5,
+        0.07
+      ]
+    },
+    {
+      "id": "terrace_steps",
+      "name": "terrace steps",
+      "name_en": "the terrace steps",
+      "kind": "feature",
+      "xy": [
+        0.5,
+        0.15
+      ]
+    },
+    {
+      "id": "terrace_west_end",
+      "name": "west end of the terrace",
+      "name_en": "the west end of the terrace",
+      "kind": "entrance",
+      "xy": [
+        0.1,
+        0.08
+      ]
+    },
+    {
+      "id": "west_stake",
+      "name": "west croquet stake",
+      "name_en": "the west croquet stake",
+      "kind": "feature",
+      "xy": [
+        0.16,
+        0.49
+      ]
+    },
+    {
+      "id": "east_stake",
+      "name": "east croquet stake",
+      "name_en": "the east croquet stake",
+      "kind": "feature",
+      "xy": [
+        0.84,
+        0.49
+      ]
+    },
+    {
+      "id": "lawn_centre",
+      "name": "ridged middle of the lawn",
+      "name_en": "the ridged middle of the lawn",
+      "kind": "terrain",
+      "xy": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "cat_head_spot",
+      "name": "open ground at the far edge",
+      "name_en": "the open ground at the lawn's far edge",
+      "kind": "terrain",
+      "xy": [
+        0.55,
+        0.82
+      ]
+    },
+    {
+      "id": "cedar",
+      "name": "great cedar",
+      "name_en": "the great cedar",
+      "kind": "tree",
+      "xy": [
+        0.14,
+        0.76
+      ]
+    },
+    {
+      "id": "cedar_bench",
+      "name": "iron bench under the cedar",
+      "name_en": "the iron bench under the cedar",
+      "kind": "furniture",
+      "xy": [
+        0.265,
+        0.66
+      ]
+    },
+    {
+      "id": "west_arch",
+      "name": "west hedge arch",
+      "name_en": "the west hedge arch",
+      "kind": "exit",
+      "xy": [
+        0.035,
+        0.47
+      ]
+    },
+    {
+      "id": "east_arch",
+      "name": "east hedge arch",
+      "name_en": "the east hedge arch",
+      "kind": "exit",
+      "xy": [
+        0.965,
+        0.47
+      ]
+    }
+  ],
+  "views": [
+    {
+      "tile": 1,
+      "camera_from": "terrace_steps",
+      "looking_at": "lawn_centre",
+      "size": "wide",
+      "angle": "high_oblique",
+      "desc_en": "high oblique wide shot from the terrace steps out over the whole ridged and furrowed lawn to the yew hedges"
+    },
+    {
+      "tile": 2,
+      "camera_from": "west_stake",
+      "looking_at": "east_stake",
+      "size": "wide",
+      "angle": "low",
+      "desc_en": "low wide shot near the turf from the west croquet stake down a furrow, the ridges rolling away in long parallel waves to the east stake"
+    },
+    {
+      "tile": 3,
+      "camera_from": "cat_head_spot",
+      "looking_at": "royal_chairs",
+      "size": "medium",
+      "angle": "eye",
+      "desc_en": "eye-level medium shot from the open ground at the far edge back across the lawn to the royal chairs under the crimson awning and the stone halo roundel"
+    },
+    {
+      "tile": 4,
+      "camera_from": "lawn_centre",
+      "looking_at": "cat_head_spot",
+      "size": "medium",
+      "angle": "low",
+      "desc_en": "low-angle medium shot from the middle of the lawn toward the open ground at the far edge, looking up into the air where the Cat's head hangs"
+    },
+    {
+      "tile": 5,
+      "camera_from": "terrace_west_end",
+      "looking_at": "royal_chairs",
+      "size": "medium",
+      "angle": "eye",
+      "desc_en": "eye-level medium shot from the west end of the terrace along the lily-stem balustrade to the royal chairs, the route the procession files in"
+    },
+    {
+      "tile": 6,
+      "camera_from": "lawn_centre",
+      "looking_at": "cedar_bench",
+      "size": "close",
+      "angle": "eye",
+      "desc_en": "eye-level close shot from the sunlit ridges on the green-and-gold iron bench in the deep shade under the cedar, where the guests rest"
+    },
+    {
+      "tile": 7,
+      "camera_from": "terrace_steps",
+      "looking_at": "royal_chairs",
+      "size": "detail",
+      "angle": "eye",
+      "desc_en": "eye-level detail from the terrace steps on the two gilt royal chairs and the carved rose-and-vine frieze behind them"
+    },
+    {
+      "tile": 8,
+      "camera_from": "east_arch",
+      "looking_at": "cedar",
+      "size": "wide",
+      "angle": "eye",
+      "desc_en": "eye-level wide shot from the east hedge arch across the whole ridged lawn to the great cedar in the far corner, into the low sun"
+    },
+    {
+      "tile": 9,
+      "camera_from": "cedar",
+      "looking_at": "east_stake",
+      "size": "medium",
+      "angle": "eye",
+      "desc_en": "eye-level medium shot from the shade of the great cedar out across the sunlit ridges of the lawn to the east croquet stake"
+    }
+  ],
+  "calibration_note_en": "Coordinates re-read from the rendered image 2026-09-23. The hedge arches came out at the middle of the west and east hedges rather than at the south corners (ids west_arch / east_arch); the south-east corner is a closed hedge alcove. The royal chairs are under the crimson awning and not visible from above. The halo roundel in the terrace wall is not visible in a nadir view.",
+  "checklist": {
+    "architecture_match": true,
+    "lighting_match": true,
+    "style_match": true,
+    "camera_orthographic": "yes, near-nadir"
+  }
+}

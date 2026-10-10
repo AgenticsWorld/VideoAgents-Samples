@@ -1,0 +1,30 @@
+{
+  "character_id": "CHAR-march-hare",
+  "name": "March Hare",
+  "tier": "B",
+  "card_type": "individual",
+  "gender": "male",
+  "age_sense": "adult man (appearance base_age_range 30-38)",
+  "timbre": "falsely warm, rounded, slightly breathy man's voice with a lugubrious droop at phrase ends",
+  "pitch": "mid baritone, noticeably lower and flatter than the Hatter",
+  "pitch_range_hz": [95, 170],
+  "speed_wpm": [130, 150],
+  "speed_cpm": [494, 570],
+  "accent": "mock-genteel Received Pronunciation laid over a country base, over-polite vowels",
+  "reference_style": "Mock-courteous host whose manners are a weapon: clipped offers of things that aren't there, flat repetitions when cornered ('It was the best butter'), sudden yawns, whispered asides. A beat slower and gloomier than the Hatter so the pair never blur.",
+  "emotion_range": {
+    "mock_host": { "speed_delta": "0%", "pitch_delta": "+1semi", "note": "ch007-p03 'in an encouraging tone'" },
+    "whisper_aside": { "speed_delta": "-10%", "pitch_delta": "-1semi", "volume": "whisper", "note": "ch007-p44 'said to itself in a whisper'" },
+    "flat_denial": { "speed_delta": "+10%", "pitch_delta": "-1semi", "volume": "medium", "note": "court 'I deny it!' — curt and final" }
+  },
+  "age_variants": [],
+  "source_chapter": "ch007",
+  "sources": ["ch007", "ch011", "ch007-p02", "ch007-p03", "ch007-p44"],
+  "voice_evidence": [
+    { "para": "ch007-p03", "quote": "the March Hare said in an encouraging tone" },
+    { "para": "ch007-p44", "quote": "the March Hare said to itself in a whisper" }
+  ],
+  "inferred": true,
+  "inferred_fields": ["timbre", "pitch", "pitch_range_hz", "speed_wpm", "speed_cpm", "accent"],
+  "reason": "Tones sourced; timbre follows personality ('A falsely warm voice ... A beat slower than the Hatter')."
+}

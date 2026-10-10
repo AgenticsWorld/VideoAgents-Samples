@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh075",
+  "group_id": "grp029",
+  "scene_no": "S08",
+  "duration_s": 2.5,
+  "size": "close",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame; she comes down into it)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 40,
+  "camera_height_m": 0.3,
+  "angle": "level, water level",
+  "rack_focus": "none",
+  "start_frame": "Water-level close from the south-east doors: the empty top of the frame over the flooded stone, the waterline low across it.",
+  "end_frame": "The same frame with an enormous hand and the lower half of a face come down into the top of it, far too big for it — only her mouth in shot as she speaks as gently as she can.",
+  "constraint_honoured": "'Only her mouth is in shot, which keeps the line on its speaker while the scale does the joke.'",
+  "movement_note": "40 mm rather than the giant-fragment 28 mm: this is the reverse of sh073/sh074 on the same water-level eyeline, and a wide lens this close to a mouth risks the facial distortion style.json bans. Recorded as a lens deviation from the giant_fragment default, not a movement one.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

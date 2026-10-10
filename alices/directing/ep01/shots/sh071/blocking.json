@@ -1,0 +1,38 @@
+{
+  "shot_id": "sh071",
+  "group_id": "grp027",
+  "scene_no": "S08",
+  "scene_id": "SCN-long-hall",
+  "duration_s": 6.0,
+  "is_dialogue": false,
+  "group_position": "last shot of grp027 — Alice on the map start/end ground (curtain); only her hem and one knee are in frame while the water takes the hall.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "sit",
+      "start_pos": "sitting in the spreading water at the low curtain; hem and one knee in the near corner of frame",
+      "space_fragment_en": "sitting in the spreading water at the low curtain on screen-left, hem and one knee in frame, facing out into the hall",
+      "facing": "out into the hall to screen-right, the direction the water runs; no face in frame",
+      "path": [],
+      "beats": [
+        { "t": 0.8, "action": "her tears strike the flagstones like splashes from a jug", "sync": "the scale of the crying becomes a fact about the room" },
+        { "t": 3.0, "action": "the water spreads round her and creeps down the hall", "sync": "four inches deep" },
+        { "t": 5.4, "action": "the sheet reaches halfway to the far end", "sync": "held to the cut" }
+      ],
+      "performance_beat": {
+        "objective": "cry, without any awareness of what it is doing to the room",
+        "goal": "cry, without noticing what it is doing to the room",
+        "emotional_arc": "from crying to crying — the change in the shot belongs to the water, not to her",
+        "arc_from": "crying",
+        "arc_to": "crying, unchanged",
+        "trigger": { "beat": "the water reaches the far edge of frame and keeps going", "t": 3.0 },
+        "no_early_reaction": ["the knee shifting", "a hand entering frame", "the hem lifting"],
+        "forbidden_early": ["the knee shifting", "a hand entering frame", "the hem lifting"],
+        "end_state": "knee and hem unmoved in four inches of water, the only movement in frame belonging to the spreading sheet"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0007 (dream) — the pool of tears, four inches deep", "note": "Alice alone." }
+}

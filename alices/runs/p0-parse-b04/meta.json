@@ -1,0 +1,17 @@
+{
+  "task_id": "p0-parse-b04",
+  "run_id": "8861009a613f",
+  "attempt": 1,
+  "model": "agent default",
+  "tokens": null,
+  "started_at": null,
+  "finished_at": "2026-09-22T16:14:17+08:00",
+  "inputs_sha256": {
+    "novel/Alices_Adventures_in_Wonderland_English.md": "b12b03c2f9f0e8ba50c7bbcd6b3e57ce3b59c40b8f77c107cc4e68b635583593"
+  },
+  "artifact_versions": {
+    "story/structured_story/ch010.json": "v1",
+    "story/structured_story/ch011.json": "v1",
+    "story/structured_story/ch012.json": "v1"
+  }
+}

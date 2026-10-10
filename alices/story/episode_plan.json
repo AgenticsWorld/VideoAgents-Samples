@@ -1,0 +1,239 @@
+{
+  "_meta": {
+    "project": "alices",
+    "task_id": "p5-episode-plan",
+    "agent": "01-story/episode-planner",
+    "version": 1,
+    "generated": "2026-09-22",
+    "inputs": [
+      "story/events.json (ev0001-ev0054, 54 events)",
+      "story/story_graph.json (acts, structure_points, foreshadowing fs-001..fs-038, episode_planner_hints)",
+      "story/story_timeline.json (dream_frame)",
+      "bible/h1_summary.md + bible/cultivation.json SUP-001..SUP-014",
+      "runs/h1-ruling/ruling.json"
+    ],
+    "content_language": "English",
+    "amendments": [
+      { "change_id": "BIB-0027", "task_id": "p4-cr-epplan", "date": "2026-09-23", "note": "Only the SUP-002/SUP-010 constraint lines changed: talking dream animals, and the Gryphon and Mock Turtle, are now photoreal CGI, replacing the old 'human performer' / 'partial costume' wording. Episode split, events, treatments, hook points and budgets are unchanged." }
+    ],
+    "treatment_contract": "WORKFLOW.md §5A. Narration is OFF project-wide: 'mention' = one line spoken in on-screen dialogue by a character present, never voice-over or a title card. 'merge' = folded into the scene of merge_into. No event is cut: events.json is a single linear caused_by chain, so every event except ev0054 is the cause of a kept event."
+  },
+  "target_platform": "YouTube (16:9 horizontal master)",
+  "duration_policy": "auto — per-episode budgets decided from story structure (user setting 'decided by the script'); each episode's duration_budget_s below is the binding basis for pacing and edit (±10%)",
+  "default_duration_budget_s": 450,
+  "total_duration_budget_s": 3990,
+  "sec_per_dramatized_event": 90,
+  "dream_frame": {
+    "ruling": "SUP-001 explicit dream frame; Friday 4 July 1862, Thames bank near Oxford, ~2 pm to sunset",
+    "waking_open": {
+      "ep": "ep01",
+      "event": "ev0001",
+      "plan": "Real bank, sister reading a book without pictures, Alice (~10) drowsy in the heat. The only live animal of the film, a real, mute, unclothed white rabbit (unchanged by BIB-0027), crosses the field; Alice follows it to the hedge burrow. The dream begins as she crawls into the burrow and the fall (ev0002, merged) is the moment she falls asleep — no hard 'dream' title, the light and sound shift."
+    },
+    "dream_span": "ev0002-ev0052 (ep01 scene 2 through ep09 climax); all dream places are dream-only space and never connect to the waking geography (SUP-013)",
+    "waking_close": {
+      "ep": "ep09",
+      "events": ["ev0052", "ev0053", "ev0054"],
+      "plan": "The flying pack (ev0052) match-cuts to real dead leaves falling on Alice's face (SUP-004); she wakes with her head in her sister's lap on the same bank, same sister, late light (ev0053), tells the dream, and runs home to tea. The sister alone at sunset (ev0054) hears the farm and river sounds that fed the dream (rustling grass, rippling backwater, sheep-bells, shepherd, farmyard) — played through picture and diegetic sound only, no voice-over; her forward-looking thought is carried by a single spoken line to herself or by the image of the closed book."
+    },
+    "doubling_to_seed_in_ep01": "Per ruling 5.3 B: housemaid glimpsed at the family house (→ Mary Ann, ep03), Dinah the cat on the bank or in Alice's talk (→ Cheshire Cat, ep04/ep06); sister glimpsed at the trial (ep08/ep09). Screenplay decides exact placement."
+  },
+  "episodes": [
+    {
+      "ep": "ep01",
+      "title": "Down the Rabbit-Hole",
+      "act": "act1",
+      "chapters": ["ch001", "ch002"],
+      "events": ["ev0001", "ev0002", "ev0003", "ev0004", "ev0005", "ev0006", "ev0007", "ev0008"],
+      "duration_budget_s": 540,
+      "treatments": [
+        { "event": "ev0001", "treatment": "dramatize", "note": "Waking open of the dream frame (see dream_frame.waking_open); inciting incident." },
+        { "event": "ev0002", "treatment": "merge", "merge_into": "ev0001", "reason": "The fall is the tail of the chase and the moment Alice falls asleep (SUP-001/008); a short rigged fall with her Dinah musing as one spoken line, not a stand-alone scene." },
+        { "event": "ev0003", "treatment": "dramatize", "note": "First plot point: hall of doors, golden key, the garden glimpsed — the film's goal." },
+        { "event": "ev0004", "treatment": "dramatize", "note": "DRINK ME: shrinks to ten inches, key left out of reach, she cries (forced perspective, SUP-003)." },
+        { "event": "ev0005", "treatment": "merge", "merge_into": "ev0006", "reason": "Eating the EAT ME cake is the trigger of the growth beat; same table, same hall, continuous action." },
+        { "event": "ev0006", "treatment": "dramatize", "note": "Telescopes to nine feet; key in reach, door impossible." },
+        { "event": "ev0007", "treatment": "dramatize", "note": "Giant weeping, the Rabbit flees dropping fan and gloves, 'Who in the world am I?', the fan shrinks her (pinch 1)." },
+        { "event": "ev0008", "treatment": "dramatize", "note": "Cliffhanger: she slips and plunges into the salt water of her own tears flooding the hall (SUP-007)." }
+      ],
+      "hook_point": { "opening": "ev0001", "cliffhanger": "ev0008" },
+      "climax_event": "ev0007",
+      "carry_over": ["fs-001", "fs-002", "fs-005", "fs-008", "fs-030", "fs-032", "fs-038"],
+      "recap_needed": [],
+      "constraints": ["Real, mute, unclothed rabbit in the waking frame only; the dream White Rabbit is a photoreal CGI rabbit with only its text props (waistcoat, watch, gloves, fan) composited into live-action plates (SUP-002, amended BIB-0027)."]
+    },
+    {
+      "ep": "ep02",
+      "title": "The Pool of Tears",
+      "act": "act1-act2a",
+      "chapters": ["ch002", "ch003"],
+      "events": ["ev0009", "ev0010", "ev0011", "ev0012", "ev0013"],
+      "duration_budget_s": 360,
+      "treatments": [
+        { "event": "ev0009", "treatment": "dramatize", "note": "Opening hook mid-swim: Alice keeps offending the Mouse with Dinah; the pool crowds with creatures and they swim ashore." },
+        { "event": "ev0010", "treatment": "dramatize", "note": "Dry history lecture fails; Caucus-race, 'everybody has won', Alice gives her comfits." },
+        { "event": "ev0011", "treatment": "dramatize", "note": "Episode climax: the Mouse's tale, Alice's literal-minded interruptions, the Mouse walks out." },
+        { "event": "ev0012", "treatment": "merge", "merge_into": "ev0011", "reason": "The party drifting off after Alice's Dinah boast is the direct aftermath of the Mouse's exit; played as the same scene's quick dispersal of excuses." },
+        { "event": "ev0013", "treatment": "dramatize", "note": "Cliffhanger: alone and tearful on the bank, pattering footsteps approach — she looks up hoping it is the Mouse; the reveal (the Rabbit) is withheld to ep03." }
+      ],
+      "hook_point": { "opening": "ev0009", "cliffhanger": "ev0013" },
+      "climax_event": "ev0011",
+      "carry_over": ["fs-001", "fs-002", "fs-005", "fs-008", "fs-009", "fs-030"],
+      "recap_needed": ["ev0003", "ev0007", "ev0008"],
+      "constraints": ["Pool shore grows from the reedy river backwater (SUP-007); the Mouse, Dodo and Caucus-race birds and beasts are photoreal CGI animals with naturalistic anatomy composited into live-action plates, no cartoon faces and no animal costume (SUP-002, amended BIB-0027)."]
+    },
+    {
+      "ep": "ep03",
+      "title": "The Rabbit Sends in a Little Bill",
+      "act": "act2a",
+      "chapters": ["ch004"],
+      "events": ["ev0014", "ev0015", "ev0016", "ev0017", "ev0018"],
+      "duration_budget_s": 450,
+      "treatments": [
+        { "event": "ev0014", "treatment": "dramatize", "note": "Opening hook: the Rabbit mistakes her for Mary Ann and sends her to fetch fan and gloves; the house marked W. RABBIT." },
+        { "event": "ev0015", "treatment": "dramatize", "note": "She grows until wedged in the room, arm out of the window, foot up the chimney ('when I grow up I'll write one')." },
+        { "event": "ev0016", "treatment": "dramatize", "note": "Episode climax: the siege — ladders, Bill down the chimney and kicked out, pebbles that become cakes (SUP-009)." },
+        { "event": "ev0017", "treatment": "dramatize", "note": "Shrinks and escapes past the crowd into the wood, dodges the enormous puppy; states her plan: right size, then the garden (sp-plan-stated)." },
+        { "event": "ev0018", "treatment": "dramatize", "note": "Cliffhanger: she peers over the mushroom's edge and meets the eyes of the blue Caterpillar." }
+      ],
+      "hook_point": { "opening": "ev0014", "cliffhanger": "ev0018" },
+      "climax_event": "ev0016",
+      "carry_over": ["fs-002", "fs-003", "fs-006", "fs-007", "fs-027", "fs-028", "fs-029", "fs-030"],
+      "recap_needed": ["ev0007", "ev0013"],
+      "constraints": ["Bill, Pat's fellow animals and the crowd's animals are photoreal CGI animals (SUP-002, amended BIB-0027); the non-speaking enormous puppy is proposed as a photoreal CGI puppy at giant scale against tiny Alice — pending_H2. Bill is never shown hurt beyond comic fright."]
+    },
+    {
+      "ep": "ep04",
+      "title": "We're All Mad Here",
+      "act": "act2a",
+      "chapters": ["ch005", "ch006"],
+      "events": ["ev0019", "ev0020", "ev0021", "ev0022", "ev0023", "ev0024", "ev0025", "ev0026", "ev0027", "ev0028"],
+      "duration_budget_s": 540,
+      "treatments": [
+        { "event": "ev0019", "treatment": "dramatize", "note": "Opening hook: 'Who are YOU?' — identity cross-examination; 'Father William' comes out wrong." },
+        { "event": "ev0020", "treatment": "dramatize", "note": "The tool is given: one side taller, the other shorter (sp-tool-acquired)." },
+        { "event": "ev0021", "treatment": "merge", "merge_into": "ev0022", "reason": "Breaking and testing the two pieces is the trigger of the neck-shoot; one continuous mushroom beat." },
+        { "event": "ev0022", "treatment": "dramatize", "note": "Neck above the treetops; the Pigeon's 'Serpent!' — girls eat eggs too; she nibbles back to her own height." },
+        { "event": "ev0023", "treatment": "merge", "merge_into": "ev0022", "reason": "Deliberately shrinking to nine inches is the resolution of the Pigeon beat and reveals the little house in the same clearing." },
+        { "event": "ev0024", "treatment": "merge", "merge_into": "ev0026", "reason": "The Fish-Footman's croquet invitation becomes the doorstep entry to the Duchess scene; keeps the fs-010 plant on screen without its own scene." },
+        { "event": "ev0025", "treatment": "merge", "merge_into": "ev0026", "reason": "The Frog-Footman's circular door logic is a short doorstep exchange before she walks into the kitchen." },
+        { "event": "ev0026", "treatment": "dramatize", "note": "Smoky kitchen: pepper, the howling baby, the cook hurling pans, the lullaby; Duchess thrusts the baby on Alice. DEF-p3-char-index-903: lullaby CHORUS = Duchess with cook and baby, no crowd performers." },
+        { "event": "ev0027", "treatment": "dramatize", "note": "Baby to pig in one continuous shot (SUP-006); it trots away into the wood." },
+        { "event": "ev0028", "treatment": "dramatize", "note": "Episode climax and cliffhanger: the Cheshire Cat — 'we're all mad here', 'you'll see me' at the Queen's croquet, the grin without a cat (SUP-005); Alice sets off toward the mad March Hare." }
+      ],
+      "hook_point": { "opening": "ev0019", "cliffhanger": "ev0028" },
+      "climax_event": "ev0028",
+      "carry_over": ["fs-003", "fs-004", "fs-010", "fs-011", "fs-012", "fs-013", "fs-019", "fs-030", "fs-033", "fs-034"],
+      "recap_needed": ["ev0017", "ev0018"],
+      "constraints": ["DEF-p3-char-index-903 (lullaby chorus attribution; 2 UNKNOWN speaker tags to be attributed by screenplay/voice before G5).", "Caterpillar, Pigeon and Cheshire Cat are photoreal CGI animals (SUP-002, amended BIB-0027); the Cheshire Cat keeps the light echo of Dinah (ruling 5.3 B) and its vanish is a photographic dissolve to the grin. Frog- and Fish-Footman anatomy and the pig-baby end state are pending_H2 (proposal: photoreal CGI frog/fish heads and hands on 1862 livery bodies; the baby ends as a photoreal CGI piglet)."]
+    },
+    {
+      "ep": "ep05",
+      "title": "A Mad Tea-Party",
+      "act": "act2b",
+      "chapters": ["ch007", "ch008"],
+      "events": ["ev0029", "ev0030", "ev0031", "ev0032", "ev0033"],
+      "duration_budget_s": 450,
+      "treatments": [
+        { "event": "ev0029", "treatment": "dramatize", "note": "Opening hook: 'No room! No room!' — the raven and writing-desk riddle." },
+        { "event": "ev0030", "treatment": "dramatize", "note": "Butter in the watch; the quarrel with Time; always six o'clock (SUP-012 stopped watch). Plants fs-014/015 for the trial." },
+        { "event": "ev0031", "treatment": "dramatize", "note": "Episode climax: treacle-well story, clean-cup shuffle, Alice walks out in disgust; Dormouse into the teapot." },
+        { "event": "ev0032", "treatment": "dramatize", "note": "Midpoint: back in the hall, key first, mushroom to a foot high, and at last into the garden (fs-002/003/004 payoff)." },
+        { "event": "ev0033", "treatment": "dramatize", "note": "Cliffhanger: gardeners Two, Five and Seven painting white roses red for fear of beheading — the Queen's procession appears and they fling themselves flat." }
+      ],
+      "hook_point": { "opening": "ev0029", "cliffhanger": "ev0033" },
+      "climax_event": "ev0032",
+      "carry_over": ["fs-010", "fs-011", "fs-014", "fs-015", "fs-016", "fs-017", "fs-018", "fs-022", "fs-023", "fs-024"],
+      "recap_needed": ["ev0003", "ev0020", "ev0028"],
+      "constraints": ["Garden entry resolves the ep01 goal; the garden must immediately turn sour (false victory)."]
+    },
+    {
+      "ep": "ep06",
+      "title": "The Queen's Croquet-Ground",
+      "act": "act2b",
+      "chapters": ["ch008"],
+      "events": ["ev0034", "ev0035", "ev0036", "ev0037", "ev0038"],
+      "duration_budget_s": 420,
+      "treatments": [
+        { "event": "ev0034", "treatment": "dramatize", "note": "Opening hook: the Queen interrogates Alice; 'Off with her head!' — 'Nonsense!' (sp-first-defiance); gardeners hidden, not harmed; croquet invitation." },
+        { "event": "ev0035", "treatment": "mention", "reason": "The Duchess's death sentence is an information beat; the White Rabbit whispers it to Alice in one line of dialogue while walking in the procession (no scene, no voice-over)." },
+        { "event": "ev0036", "treatment": "dramatize", "note": "Episode climax: the chaotic croquet — flamingo mallets, hedgehog balls, soldier arches; 'Off with his head!' once a minute. No animal is ever shown struck (SUP-011)." },
+        { "event": "ev0037", "treatment": "dramatize", "note": "The Cat's head appears to Alice; the King demands its removal and fetches the executioner." },
+        { "event": "ev0038", "treatment": "dramatize", "note": "Cliffhanger: the farcical head-without-a-body dispute; the Cat's head fades while they argue. DEF-p3-char-index-902: executioner has no axe, block or any execution device — livery and pushed-back hood only; SUP-014 no execution ever carried out." }
+      ],
+      "hook_point": { "opening": "ev0034", "cliffhanger": "ev0038" },
+      "climax_event": "ev0036",
+      "carry_over": ["fs-001", "fs-012", "fs-020", "fs-021", "fs-022", "fs-023", "fs-024"],
+      "recap_needed": ["ev0028", "ev0033"],
+      "constraints": ["DEF-p3-char-index-902 (no execution device for CHAR-executioner).", "SUP-004 card court as costumed flat-suited performers; SUP-011; SUP-014."]
+    },
+    {
+      "ep": "ep07",
+      "title": "The Mock Turtle's Story",
+      "act": "act2b",
+      "chapters": ["ch009", "ch010"],
+      "events": ["ev0039", "ev0040", "ev0041", "ev0042", "ev0043", "ev0044"],
+      "duration_budget_s": 450,
+      "treatments": [
+        { "event": "ev0039", "treatment": "dramatize", "note": "Opening hook: the Duchess's sharp chin and morals; the Queen's ultimatum and the Duchess vanishes. (events.json broken_chains: her sentence is never lifted — played as dream logic.)" },
+        { "event": "ev0040", "treatment": "dramatize", "note": "Low point: croquet collapses, only King, Queen and Alice unsentenced; the King quietly pardons everyone; Queen sends Alice to the Mock Turtle." },
+        { "event": "ev0041", "treatment": "dramatize", "note": "The Gryphon: 'they never executes nobody' — retroactively empties every threat (fs-022 payoff, load-bearing)." },
+        { "event": "ev0042", "treatment": "merge", "merge_into": "ev0043", "reason": "The Mock Turtle's lament and sea-school curriculum are told, not shown (SUP-010); folded as the dialogue lead-in to the seaside Quadrille scene on the same ledge." },
+        { "event": "ev0043", "treatment": "dramatize", "note": "Episode climax: the Lobster Quadrille around Alice; she retells her adventures — 'I was a different person then' (reflection interlude)." },
+        { "event": "ev0044", "treatment": "dramatize", "note": "Cliffhanger: 'The trial's beginning!' — the Gryphon drags her off, 'Beautiful Soup' fading behind." }
+      ],
+      "hook_point": { "opening": "ev0039", "cliffhanger": "ev0044" },
+      "climax_event": "ev0043",
+      "carry_over": ["fs-019", "fs-025", "fs-030", "fs-036", "fs-037"],
+      "recap_needed": ["ev0034", "ev0036", "ev0038"],
+      "constraints": ["Seashore grows from Alice's one seaside trip (SUP-010); Gryphon and Mock Turtle are photoreal CGI fantastical creatures composited into live-action plates (SUP-010, amended BIB-0027)."]
+    },
+    {
+      "ep": "ep08",
+      "title": "Who Stole the Tarts?",
+      "act": "act3",
+      "chapters": ["ch011"],
+      "events": ["ev0045", "ev0046", "ev0047"],
+      "duration_budget_s": 330,
+      "treatments": [
+        { "event": "ev0045", "treatment": "dramatize", "note": "Opening hook: the court assembles — King judge in crown over wig, jurors writing their names, Bill's squeaky pencil, the accusation read." },
+        { "event": "ev0046", "treatment": "dramatize", "note": "Episode climax: the Hatter's testimony (teacup, Time, tea-time payoffs fs-014/015); Alice starts growing with no food or drink (sp-climax-setup); guinea-pig juror sacked and hustled out (ruling 5.4 B)." },
+        { "event": "ev0047", "treatment": "dramatize", "note": "Cliffhanger: the cook's 'Shan't' and pepper, Dormouse's 'Treacle' — then the White Rabbit calls the next witness: 'Alice!'" }
+      ],
+      "hook_point": { "opening": "ev0045", "cliffhanger": "ev0047" },
+      "climax_event": "ev0046",
+      "carry_over": ["fs-018", "fs-019", "fs-025", "fs-027", "fs-028", "fs-031"],
+      "recap_needed": ["ev0030", "ev0044"],
+      "constraints": ["Ruling 5.4 B: guinea-pig juror gets a sack over head and shoulders and is hustled out; nobody sits on them.", "SUP-014: 'Off with his head' shouted at the Hatter is never carried out."]
+    },
+    {
+      "ep": "ep09",
+      "title": "Alice's Evidence",
+      "act": "act3",
+      "chapters": ["ch012"],
+      "events": ["ev0048", "ev0049", "ev0050", "ev0051", "ev0052", "ev0053", "ev0054"],
+      "duration_budget_s": 450,
+      "treatments": [
+        { "event": "ev0048", "treatment": "dramatize", "note": "Opening hook: Alice, grown large, tips over the jury-box and restores the jurors (Bill upside down)." },
+        { "event": "ev0049", "treatment": "merge", "merge_into": "ev0048", "reason": "'Nothing whatever' / important-unimportant is a quick exchange in the same witness-box beat right after the jurors are restored." },
+        { "event": "ev0050", "treatment": "dramatize", "note": "Rule Forty-two — 'more than a mile high'; Alice calls the rule invented; the King pales." },
+        { "event": "ev0051", "treatment": "merge", "merge_into": "ev0052", "reason": "The unsigned verses and the King's strained reading are the direct run-up to 'sentence first'; played as the opening of the climax scene, not a separate scene." },
+        { "event": "ev0052", "treatment": "dramatize", "note": "Climax of the film: 'Sentence first — verdict afterwards' / 'Stuff and nonsense!' / 'Off with her head!' — nobody moves; 'You're nothing but a pack of cards!'; the pack flies at her and match-cuts to falling leaves (SUP-004)." },
+        { "event": "ev0053", "treatment": "dramatize", "note": "Waking close of the dream frame (see dream_frame.waking_close): head in sister's lap, leaves brushed away, 'what a long sleep', Alice tells her dream and runs to tea." },
+        { "event": "ev0054", "treatment": "dramatize", "note": "Final image / cliffhanger slot: the sister alone at sunset, farm and river sounds re-becoming the dream's figures, then the real world again; no voice-over. Series ending, not a to-be-continued." }
+      ],
+      "hook_point": { "opening": "ev0048", "cliffhanger": "ev0054" },
+      "climax_event": "ev0052",
+      "carry_over": ["fs-023", "fs-025", "fs-026", "fs-029", "fs-030", "fs-031", "fs-032", "fs-038"],
+      "recap_needed": ["ev0046", "ev0047"],
+      "constraints": ["SUP-014: no execution, no weapon contact, no aftermath.", "Narration OFF: ev0054 reverie must work through picture and diegetic sound; any words are the sister's own spoken line on screen.", "Sister glimpsed at the trial (ruling 5.3 B) — screenplay places it in ep08 or ep09."]
+    }
+  ],
+  "summary": {
+    "episodes": 9,
+    "total_duration_budget_s": 3990,
+    "events_classified": 54,
+    "treatments": { "dramatize": 43, "mention": 1, "merge": 10, "cut": 0 },
+    "cut_policy": "No cuts: every event is on the single linear caused_by chain (story_graph load_bearing_chain + events.json caused_by), so compression is done by merge/mention only."
+  }
+}

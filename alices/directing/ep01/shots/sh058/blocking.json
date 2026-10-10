@@ -1,0 +1,41 @@
+{
+  "shot_id": "sh058",
+  "group_id": "grp022",
+  "scene_no": "S07",
+  "scene_id": "SCN-long-hall",
+  "duration_s": 11.5,
+  "is_dialogue": true,
+  "group_position": "middle shot of grp022 — Alice walks out toward the map path point (lamp_row_mid), the furthest she goes from the table in this group.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "stand",
+      "start_pos": "ten inches high stepping back from the glass box and out across the flagstones",
+      "space_fragment_en": "standing ten inches high out on the flagstones toward the middle of the hall under the lamps, held screen-left, facing screen-right",
+      "facing": "the way she walks, screen-right, with open floor ahead of her the whole shot",
+      "path": [
+        { "t": 9.5, "to": "well out toward the middle of the hall under the lamps, the mosaic dado running past high above her" }
+      ],
+      "beats": [
+        { "t": 0.8, "action": "steps back from the box and starts walking", "sync": "the reasoning needs somewhere to go" },
+        { "t": 2.2, "action": "first outcome counted off on one finger", "sync": "LN-ep01-013 begins" },
+        { "t": 7.0, "action": "second outcome counted off on the next finger", "sync": "LN-ep01-013b begins" },
+        { "t": 9.6, "action": "her walk slows as the second answer lands", "sync": "LN-ep01-013b on 'smaller'" }
+      ],
+      "performance": {
+        "objective": "reason her way to a decision she can defend, out loud, to nobody",
+        "goal": "reason her way to a defensible decision",
+        "emotional_arc": "from schoolroom method to genuine excitement at finding both answers acceptable",
+        "arc_from": "schoolroom method",
+        "arc_to": "excitement at an argument that cannot lose",
+        "trigger": { "line_ref": "LN-ep01-013b", "word": "smaller" },
+        "no_early_reaction": ["the pace quickening", "a smile", "the hands opening out"],
+        "forbidden_early": ["the pace quickening", "a smile", "the hands opening out"],
+        "end_state": "stopped at the end of her walk, two fingers still held up, eyes screen-right on nothing, mouth open on the last word"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0005 (dream) — she reasons out the cake", "note": "Alice alone." }
+}

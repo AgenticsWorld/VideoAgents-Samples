@@ -1,0 +1,44 @@
+{
+  "task_id": "p2-dictionary",
+  "agent": "02-worldbuilding/dictionary",
+  "project": "alices",
+  "phase": "Phase 2 (world bible)",
+  "attempt": 1,
+  "status": "completed",
+  "output": "bible/dictionary.json",
+  "summary": "Read the full 12-chapter source novel (novel/Alices_Adventures_in_Wonderland_English.md) directly plus story/chapter_manifest.json for chapter IDs. Extracted 119 TERM-* entries covering every named/notable person, creature, place, object, institution, invented word/game, verse/song, and idiom in the source, using the source's own spelling throughout (no renames invented). Wrote bible/dictionary.json directly (no generator script) per the project's existing skeleton entry_schema; _meta.status advanced skeleton_empty -> merged_v1.",
+  "term_count": 119,
+  "category_breakdown": {
+    "person": 25,
+    "creature": 27,
+    "place": 18,
+    "object": 16,
+    "institution": 2,
+    "other": 15,
+    "verse_song": 10,
+    "idiom": 6
+  },
+  "inferred_entries_count": 0,
+  "inferred_note": "No entry required inferred:true. Dictionary definitions are pure literal extraction from the source text (who/what a term is), not production design values, so no self-designed content was needed for this file.",
+  "cross_domain_assumptions": [
+    "Talking-animal and living-playing-card characters are categorized here strictly by their literal in-source depiction (creature/person); this file does not decide how the realistic adaptation renders them on screen. That reinterpretation decision belongs to bible/cultivation.json SUP-* entries (owned by 02-worldbuilding/magic-cultivation + world), which was still skeleton_empty / decision_status: pending_phase2 when this file was written.",
+    "Alice's size changes and the two object transformations (pebbles->cakes TERM-0016-era event, baby->pig TERM-0039) are recorded as the literal source events with no staging assumption; deferred to SUP-*.",
+    "The dream frame (TERM-0054 Wonderland) is noted factually without asserting whether the adaptation keeps it explicit, ambiguous, or removed; deferred to world/magic-cultivation, to be confirmed at H1.",
+    "adapted_name left null on every entry; no realistic-register renames invented. Future renames go through memory-bible controlled change (WRITE_RULES.md section 5) once SUP-* and character/creature designs land.",
+    "entity_ref left null on every entry: CHAR-*/CRE-*/LOC-*/FAC-*/PROP-* registries are not yet populated (Phase 3/4/parallel Phase 2 agents), so no ID was guessed. To be linked by memory-bible/character-manager at merge/alignment time (forward-reference whitelist per WRITE_RULES.md section 4)."
+  ],
+  "quality_checks_run": [
+    { "check": "valid_json", "result": "pass" },
+    { "check": "terms_unique (main term IDs unique, no term/alias collision across entries)", "result": "pass", "note": "Found and fixed one collision: TERM-0053 originally listed 'the pack of cards' as an alias, colliding with TERM-0090's main term of the same name; removed the alias and cross-referenced TERM-0090 in TERM-0053's definition text instead." },
+    { "check": "no_unknown_placeholder", "result": "pass", "note": "No UNKNOWN/TBD/N/A/empty-string in any required field (id, term, category, original_name, definition, first_seen.chapter, first_seen.quote). Nullable optional fields (adapted_name, entity_ref, reason) intentionally left null per schema example." },
+    { "check": "category enum conformance (person|creature|place|object|institution|verse_song|idiom|other)", "result": "pass" },
+    { "check": "chapter id format (ch001-ch012, verified against story/chapter_manifest.json)", "result": "pass" },
+    { "check": "source_refs_required (first_seen.chapter + first_seen.quote on every entry)", "result": "pass" },
+    { "check": "ascii_filename", "result": "pass" }
+  ],
+  "notes": [
+    "One deliberately-unrevealed-in-source item recorded as such: TERM-0119 'Why is a raven like a writing-desk?' -- the Hatter's riddle is never answered in the source text; the definition states this explicitly rather than inventing an answer.",
+    "Two homonym pairs required disambiguation text (folded into 'definition' since the project's dictionary.json skeleton schema has no separate disambiguation field): Dinah (TERM-0025, Alice's pet cat) vs. Cheshire Cat (TERM-0040, the Wonderland cat), and Mock Turtle (TERM-0046) vs. Mock Turtle Soup (TERM-0104, the dish) vs. Turtle Soup (TERM-0112, the song, alias 'Beautiful Soup'). Also Alice (TERM-0001) vs. Mary Ann (TERM-0010, the housemaid Alice is mistaken for -- NOT an alias of Alice).",
+    "No conflicts found with other bible files at this pass (cultivation.json still skeleton_empty at read time; no other domain file content was read or altered, per SOUL boundary -- reads-only)."
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh094",
+  "group_id": "grp035",
+  "scene_no": "S10",
+  "duration_s": 5.0,
+  "size": "medium",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame, lens in the water with her)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 40,
+  "camera_height_m": 0.05,
+  "angle": "level, lens just above the surface so the waterline cuts the frame",
+  "rack_focus": "none",
+  "start_frame": "Water-level at swimmer height from among the glass table legs: Alice surfacing spluttering bottom of frame screen left, exactly where she went in, up to her chin in water.",
+  "end_frame": "The same frame as she trebles upright and treads water, licking the salt off her lip, eyes wide — the waterline still cutting low across the frame and the table legs standing round her.",
+  "constraint_honoured": "'The camera is IN the water with her at her 0.61 m scale for the whole scene — no high or crane view anywhere. Her surfacing position is matched to her exit at the end of sh093.'",
+  "movement_note": "The taste comes before the idea, so the shot is unhurried and unmoving; the low lens is also what bans any rescuing god's-eye from the scene.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

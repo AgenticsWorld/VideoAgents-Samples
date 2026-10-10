@@ -1,0 +1,27 @@
+{
+  "gate": "G2",
+  "checkpoint": "H1-世界圣经确认",
+  "decision": "PASS",
+  "signed_by": "user",
+  "signed_at": "2026-09-22T17:59:52+08:00",
+  "sign_method": "dispatch.py --confirm --sign",
+  "checks": {
+    "auto": {
+      "cross_refs_valid_all_namespaces": "PASS",
+      "dictionary_hit_100pct": "PASS",
+      "no_unknown_placeholder": "PASS"
+    },
+    "defects_open_blocker_major": 0,
+    "defects_closed": [
+      "DEF-p2-bible-001",
+      "DEF-p2-bible-002",
+      "DEF-p2-bible-003",
+      "DEF-p2-bible-004",
+      "DEF-p2-bible-005",
+      "DEF-p2-bible-006"
+    ],
+    "qa": "world-consistency/timeline QA level 0 — not dispatched"
+  },
+  "pre_ruling": "runs/h1-ruling/ruling.json",
+  "waivers": []
+}

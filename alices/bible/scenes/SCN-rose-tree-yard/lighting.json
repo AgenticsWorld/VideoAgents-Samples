@@ -1,0 +1,31 @@
+{
+  "_meta": {"file": "bible/scenes/SCN-rose-tree-yard/lighting.json", "owner": "05-scenes/lighting", "task_id": "p3-lighting-sb2", "attempt": 1, "generated": "2026-09-22", "enum_set": "LGT-ENUM-v1 (runs/p3-lighting-sb2/result.json)"},
+  "scene_id": "SCN-rose-tree-yard",
+  "layer": "dream",
+  "int_ext": "EXT",
+  "daylight_access": "open_sky",
+  "dream_light_growth": "After the dark hall and passage, the garden is the real late-afternoon sun at its warmest and kindest: long golden-white light and sparkling fountains, the goal-image of the dream (cp-garden; environment fixed.dream_growth).",
+  "schemes": [
+    {
+      "scheme_id": "LGT-rose-tree-yard-01",
+      "condition": {"time_of_day": "late_afternoon", "weather": "fair_hot"},
+      "applies_to_states": ["SCN-rose-tree-yard-S01", "SCN-rose-tree-yard-S02", "SCN-rose-tree-yard-S03"],
+      "key_source": "direct_sun",
+      "direction": "side",
+      "key_bearing": "sun due west at about 21-22 deg; the rose-tree side-lit; in S03 the procession comes with the sun behind it and long shadows ahead",
+      "fill": "bright open sky plus bounce off pale gravel walks; sparkle off the fountains",
+      "practicals": [],
+      "color_temp": "neutral (~4500K)",
+      "color_temp_k_approx": 4200,
+      "contrast": "medium",
+      "quality": "long clean golden-white sunlight, luminous flower colour, soft-edged but defined shadows, glittering fountain spray; wet red paint on white roses picks up specular highlights",
+      "prompt_fragment_en": "warm golden-white late-afternoon sunlight slanting from the west across a formal rose garden, the flower-beds and white roses side-lit and glowing, bright open sky and pale gravel bouncing soft fill, fountains sparkling in the sun, long defined shadows, kind luminous summer light",
+      "source_chapter": "ch007",
+      "source_refs": ["ch007-p105", "ch008-p01", "ch008-p11", "environment.json SCN-rose-tree-yard-S01..S03"],
+      "inferred": true,
+      "reason": "'Bright flower-beds and the cool fountains' (ch007-p105) sets a bright open garden; the plan itself is designed. One scheme: the S03 light breeze changes wind, not light (condition keys are time_of_day and weather)."
+    }
+  ],
+  "special": [],
+  "special_note": "The source writes no plot light for this scene."
+}

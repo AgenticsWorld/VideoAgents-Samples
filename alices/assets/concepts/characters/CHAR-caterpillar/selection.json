@@ -1,0 +1,5 @@
+{"character_id":"CHAR-caterpillar","sheet":"sheet.png","gender":"male","gender_word_in_prompt":true,"rendering":"photoreal CGI caterpillar (SUP-002)","pending_H2":"H2-caterpillar-face",
+"appearance_field_hits":{"blue_slate_body_moss_patina":true,"smooth_segments":true,"thoracic_eyespots":false,"small_head_capsule_mandibles_antennae":"partial","true_legs_folded":true,"prolegs_claspers":true,"tail_horn":true,"hookah_coiled_hose_smoke":true,"mushroom_seat":true,"unclothed":true},
+"self_check":{"layout":"pass","appearance":"FAIL on face","style":"pass (matches the user reference's colour and patina)"},
+"defects":["The head has two large glossy camera-facing eyes and a snouted, pug-like face. This goes against the H2-caterpillar-face proposal (naturalistic larval head, 'eyes' read from thoracic eyespots) and against the no-cartoon-eyes rule.","The thoracic eyespots are missing.","The folded true legs read as stubby arms. Minor."],
+"user_refs":["refs/style/alice.jpeg"],"rerolls":[]}

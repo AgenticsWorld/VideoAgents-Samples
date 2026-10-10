@@ -1,0 +1,13 @@
+{
+  "task_id": "p1-structure-eventrefs",
+  "run_id": "0611d67297c2",
+  "attempt": 1,
+  "model": "agent default",
+  "tokens": null,
+  "started_at": null,
+  "finished_at": "2026-09-22T16:52:40+08:00",
+  "inputs_sha256": {},
+  "artifact_versions": {
+    "story/story_graph.json": "v2"
+  }
+}

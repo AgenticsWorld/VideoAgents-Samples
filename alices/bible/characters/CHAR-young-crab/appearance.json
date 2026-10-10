@@ -1,0 +1,48 @@
+{
+  "character_id": "CHAR-young-crab",
+  "name": "Young Crab",
+  "tier": "extra",
+  "layer": "dream",
+  "revision": { "change_id": "BIB-0027", "task_id": "p4-cr-appearance", "date": "2026-09-23", "note": "Rewritten from the human-performer reading to a photoreal CGI animal." },
+  "rendering": {
+    "mode": "photoreal_cgi_animal",
+    "rule": "bible/cultivation.json SUP-002 (amended BIB-0027); member of FAC-caucus-race-company (no uniform)",
+    "species": "edible (brown) crab (Cancer pagurus), young female",
+    "limits": "Crab anatomy throughout; speech by mouthpart movement with eyestalk and claw gestures. No clothing, no face added to the carapace."
+  },
+  "gender": "female",
+  "gender_note": { "source_chapter": "ch003", "paragraph": "ch003-p43", "quote": "an old Crab took the opportunity of saying to her daughter", "note": "Sourced (not inferred). characters/index.json lists gender 'unspecified' — reported in qa/defects/DEF-p3-appearance-201.json." },
+  "base_age_range": "19-23",
+  "base_age_note": { "source_chapter": "ch003", "paragraph": "ch003-p43", "quote": "the young Crab", "inferred": true, "reason": "'Young' and a daughter are sourced; persona band kept for voice casting (a grown young woman's voice). As an animal: a young adult crab, clean and bright-shelled." },
+  "hair": {
+    "coat": "shell (carapace)",
+    "color": "bright coral-orange to salmon-brown pie-crust carapace, cream underside",
+    "style": "clean, smooth, glossy and wet; no barnacles",
+    "inferred": true,
+    "reason": "Species; a lighter, younger version of her mother's shell."
+  },
+  "eyes": { "color": "black", "expression": "eyestalks swivelled away from her mother, impatient", "source_chapter": "ch003", "paragraph": "ch003-p43", "quote": "“Hold your tongue, Ma!” said the young Crab, a little snappishly.", "colour_inferred": true, "reason": "Colour species-true; exasperation sourced." },
+  "skin": { "tone": "see hair; legs coral-brown", "inferred": true, "reason": "Species." },
+  "face": { "shape": "front of the carapace with mouthparts below the eyestalks", "features": ["sharp snapping claw gesture as she answers back"], "inferred": true, "reason": "Species; gesture designed." },
+  "build": {
+    "height_range_cm": [4, 6],
+    "height_note": "Standing height; carapace width 10-13 cm.",
+    "body_type": "smaller, lighter, quick",
+    "posture": "turns side-on away from her mother, claws tucked; sidles off",
+    "scale_reference": "On the bank with the shrunken Alice (SUP-003); smaller than her mother.",
+    "inferred": true,
+    "reason": "Species-true size."
+  },
+  "entry_state": { "state": "on the bank with the party, wet from the pool", "source_chapter": "ch003", "paragraph": "ch003-p01", "quote": "all dripping wet, cross, and uncomfortable" },
+  "marks": [
+    { "type": "anatomy", "description": "black-tipped claws, snapped once as she says 'Hold your tongue, Ma!'", "position": "claws", "inferred": true, "reason": "Species; gesture designed from the sourced snappishness." }
+  ],
+  "default_outfit_tone": {
+    "summary": "none: she wears nothing; her look is the bright coral shell",
+    "inferred": true,
+    "reason": "The text gives her no clothing; per SUP-002 (BIB-0027) the old dress, snood and mitts are dropped."
+  },
+  "pair_rule": "See CHAR-old-crab pair_rule: same species; daughter smaller, brighter and clean-shelled.",
+  "doubling": null,
+  "prompt_base_en": "photoreal young edible crab on a muddy pool bank, bright coral-orange pie-crust carapace clean and glossy wet, black-tipped claws tucked, small black eyes on stalks turned away impatiently, standing side-on, natural crustacean anatomy, macro live-action film plate"
+}

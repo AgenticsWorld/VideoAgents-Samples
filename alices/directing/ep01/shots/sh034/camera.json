@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh034",
+  "group_id": "grp013",
+  "scene_no": "S05",
+  "duration_s": 6.0,
+  "size": "medium",
+  "movement": "track_lateral",
+  "direction": "abeam, travelling with her southward along the locked doors of the west wall; doors pass right to left through frame",
+  "speed": "about 0.55 m/s, locked to her walking pace — three to four door bays inside one continuous frame",
+  "speed_curve": "linear",
+  "rig": "dolly",
+  "lens_mm": 40,
+  "camera_height_m": 1.3,
+  "angle": "level",
+  "rack_focus": "none",
+  "start_frame": "Travelling medium abeam of Alice from the centre of the hall: her hand already closing on the first large black iron handle, one horseshoe-arched oak door and its blind stained-glass roundel filling the background.",
+  "end_frame": "The identical abeam framing three or four bays further down the west wall: her hand hitting the last handle of the pass, the same arches, handles and dado still passing at the same rate — the wall visibly unchanged and still locked.",
+  "constraint_honoured": "'The door round is two shots, not twenty: the repetition is compressed into the move instead of into cuts.'",
+  "movement_note": "Licensed move (a), following her walk. This is the reference half of the S05/S09 match pair: same 40 mm, same axis, lens height 1.30 here and 0.55 at sh089, so the same wall will take three times as long to pass when she is a third the size.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

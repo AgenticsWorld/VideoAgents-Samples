@@ -1,0 +1,34 @@
+{
+  "shot_id": "sh079",
+  "scene_id": "SCN-long-hall",
+  "size": "close",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "centre",
+    "anchor_xy": [0.46, 0.44],
+    "size_in_frame": "the sustained set-up, a little closer — her face about 0.60 of frame height"
+  },
+  "second_subject": {
+    "id": "PROP-white-kid-gloves-and-fan",
+    "grid": "mid_right",
+    "anchor_xy": [0.74, 0.66],
+    "note": "the fan stops inside the frame on the question and does not start again in this shot. It is the only clock in the composition and it stops."
+  },
+  "headroom": "about 0.14 of frame height, fractionally tighter than sh078 — close enough to be the same picture, tight enough that the question has less air round it.",
+  "horizon_eyeline": "Same axis, lens 0.60 m; waterline at 0.88 of frame height. Her eyeline is at 0.42, out to frame left for the first half, and turns inward and unfocused on the question.",
+  "layers": {
+    "fg": "the fan, moving and then still, lower right",
+    "mg": "her face",
+    "bg": "near black"
+  },
+  "gaze": {
+    "direction": "frame_left",
+    "lead_room": "left",
+    "note": "the same open, unoccupied left lead room as sh078 — and on 'who in the world am I?' her focus collapses into it and stops travelling. The question is composed to land in empty space."
+  },
+  "balance": "sh078's balance, tightened, and then destabilised by the fan stopping: the only counterweight on the right goes inert, leaving the face alone in frame for the last beat.",
+  "leading_lines": "The waterline; the fan's arc until it ceases. When the fan stops the composition has no lines left at all, which is what the silence after the line sits in.",
+  "eye_first": "Her eyes, then the fan — and the eye should notice the fan has stopped.",
+  "safe_area_ok": true,
+  "constraint_binding": "MUST NOT BE CUT INSIDE OR ACROSS: the line must LAND AND END inside this shot with a clean line-end and clear silence after it, so the composition provides nothing that would tempt a cut — no second element, no reframe, no incoming movement — and the fan stopping inside the frame gives the edit a visible, unmistakable in-shot punctuation to hold on."
+}

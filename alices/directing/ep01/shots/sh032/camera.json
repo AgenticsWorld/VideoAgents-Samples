@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh032",
+  "group_id": "grp012",
+  "scene_no": "S04",
+  "duration_s": 3.0,
+  "size": "close",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 50,
+  "camera_height_m": 1.2,
+  "angle": "level",
+  "rack_focus": "none",
+  "start_frame": "Low from the hall threshold back at the right-angle corner: Alice rounding it at a run, close behind him, the corner's lamplight on her face.",
+  "end_frame": "The same frame with her pulled up short and absolutely still, the long hall opening beyond her past the edge of frame — the shot ends on the stop.",
+  "constraint_honoured": "'Ends hard on the stop, not on a movement' — a fixed frame lets her stop dead in it, which is precisely what the cut into the hall reveal needs to push against.",
+  "movement_note": "3.0 s containing a run-in and a hard stop leaves no room for a developing move, and the following shot carries the scene's one licensed reveal.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

@@ -1,0 +1,936 @@
+{
+ "schema": "animatic/1.0",
+ "ep": "ep01",
+ "file": "assets/storyboard/ep01/animatic.mp4",
+ "created_at": "2026-09-23 10:37:08",
+ "duration_s": 537.0,
+ "shots": 101,
+ "missing_sketches": 0,
+ "duration_source": "draft",
+ "audio_tracks": 0,
+ "fps": 24,
+ "size": [
+  1280,
+  720
+ ],
+ "inputs_mtime": 1790130433,
+ "frames": 101,
+ "dialogue_tts": {
+  "enabled": true,
+  "fingerprint": "",
+  "lines": 0,
+  "overflow": [],
+  "unbound": 0
+ },
+ "timeline": [
+  {
+   "key": "S00-01",
+   "scene_no": "S00",
+   "order": 1,
+   "start_s": 0.0,
+   "duration_s": 3.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S01-01",
+   "scene_no": "S01",
+   "order": 1,
+   "start_s": 3.0,
+   "duration_s": 8.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S01-02",
+   "scene_no": "S01",
+   "order": 2,
+   "start_s": 11.0,
+   "duration_s": 6.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S01-03",
+   "scene_no": "S01",
+   "order": 3,
+   "start_s": 17.0,
+   "duration_s": 3.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S01-04",
+   "scene_no": "S01",
+   "order": 4,
+   "start_s": 20.0,
+   "duration_s": 11.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S01-05",
+   "scene_no": "S01",
+   "order": 5,
+   "start_s": 31.0,
+   "duration_s": 6.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S01-06",
+   "scene_no": "S01",
+   "order": 6,
+   "start_s": 37.0,
+   "duration_s": 8.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S01-07",
+   "scene_no": "S01",
+   "order": 7,
+   "start_s": 45.0,
+   "duration_s": 7.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S01-08",
+   "scene_no": "S01",
+   "order": 8,
+   "start_s": 52.0,
+   "duration_s": 8.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S02-01",
+   "scene_no": "S02",
+   "order": 1,
+   "start_s": 60.0,
+   "duration_s": 5.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S02-02",
+   "scene_no": "S02",
+   "order": 2,
+   "start_s": 65.0,
+   "duration_s": 3.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S02-03",
+   "scene_no": "S02",
+   "order": 3,
+   "start_s": 68.0,
+   "duration_s": 4.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S02-04",
+   "scene_no": "S02",
+   "order": 4,
+   "start_s": 72.0,
+   "duration_s": 3.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S02-05",
+   "scene_no": "S02",
+   "order": 5,
+   "start_s": 75.0,
+   "duration_s": 4.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S02-06",
+   "scene_no": "S02",
+   "order": 6,
+   "start_s": 79.0,
+   "duration_s": 4.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S02-07",
+   "scene_no": "S02",
+   "order": 7,
+   "start_s": 83.0,
+   "duration_s": 3.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S03-01",
+   "scene_no": "S03",
+   "order": 1,
+   "start_s": 86.0,
+   "duration_s": 5.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S03-02",
+   "scene_no": "S03",
+   "order": 2,
+   "start_s": 91.0,
+   "duration_s": 7.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S03-03",
+   "scene_no": "S03",
+   "order": 3,
+   "start_s": 98.0,
+   "duration_s": 6.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S03-04",
+   "scene_no": "S03",
+   "order": 4,
+   "start_s": 104.0,
+   "duration_s": 2.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S03-05",
+   "scene_no": "S03",
+   "order": 5,
+   "start_s": 106.0,
+   "duration_s": 5.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S03-06",
+   "scene_no": "S03",
+   "order": 6,
+   "start_s": 111.0,
+   "duration_s": 6.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S03-07",
+   "scene_no": "S03",
+   "order": 7,
+   "start_s": 117.0,
+   "duration_s": 2.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S03-08",
+   "scene_no": "S03",
+   "order": 8,
+   "start_s": 119.0,
+   "duration_s": 6.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S03-09",
+   "scene_no": "S03",
+   "order": 9,
+   "start_s": 125.0,
+   "duration_s": 9.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S04-01",
+   "scene_no": "S04",
+   "order": 1,
+   "start_s": 134.0,
+   "duration_s": 5.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S04-02",
+   "scene_no": "S04",
+   "order": 2,
+   "start_s": 139.0,
+   "duration_s": 4.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S04-03",
+   "scene_no": "S04",
+   "order": 3,
+   "start_s": 143.0,
+   "duration_s": 4.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S04-04",
+   "scene_no": "S04",
+   "order": 4,
+   "start_s": 147.0,
+   "duration_s": 2.5,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S04-05",
+   "scene_no": "S04",
+   "order": 5,
+   "start_s": 149.5,
+   "duration_s": 4.5,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S04-06",
+   "scene_no": "S04",
+   "order": 6,
+   "start_s": 154.0,
+   "duration_s": 4.5,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S04-07",
+   "scene_no": "S04",
+   "order": 7,
+   "start_s": 158.5,
+   "duration_s": 3.5,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S05-01",
+   "scene_no": "S05",
+   "order": 1,
+   "start_s": 162.0,
+   "duration_s": 8.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S05-02",
+   "scene_no": "S05",
+   "order": 2,
+   "start_s": 170.0,
+   "duration_s": 6.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S05-03",
+   "scene_no": "S05",
+   "order": 3,
+   "start_s": 176.0,
+   "duration_s": 4.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S05-04",
+   "scene_no": "S05",
+   "order": 4,
+   "start_s": 180.0,
+   "duration_s": 5.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S05-05",
+   "scene_no": "S05",
+   "order": 5,
+   "start_s": 185.0,
+   "duration_s": 4.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S05-06",
+   "scene_no": "S05",
+   "order": 6,
+   "start_s": 189.0,
+   "duration_s": 6.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S05-07",
+   "scene_no": "S05",
+   "order": 7,
+   "start_s": 195.0,
+   "duration_s": 7.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S05-08",
+   "scene_no": "S05",
+   "order": 8,
+   "start_s": 202.0,
+   "duration_s": 4.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S05-09",
+   "scene_no": "S05",
+   "order": 9,
+   "start_s": 206.0,
+   "duration_s": 5.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S05-10",
+   "scene_no": "S05",
+   "order": 10,
+   "start_s": 211.0,
+   "duration_s": 5.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S05-11",
+   "scene_no": "S05",
+   "order": 11,
+   "start_s": 216.0,
+   "duration_s": 8.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S06-01",
+   "scene_no": "S06",
+   "order": 1,
+   "start_s": 224.0,
+   "duration_s": 6.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S06-02",
+   "scene_no": "S06",
+   "order": 2,
+   "start_s": 230.0,
+   "duration_s": 2.5,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S06-03",
+   "scene_no": "S06",
+   "order": 3,
+   "start_s": 232.5,
+   "duration_s": 6.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S06-04",
+   "scene_no": "S06",
+   "order": 4,
+   "start_s": 238.5,
+   "duration_s": 3.5,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S06-05",
+   "scene_no": "S06",
+   "order": 5,
+   "start_s": 242.0,
+   "duration_s": 12.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S06-06",
+   "scene_no": "S06",
+   "order": 6,
+   "start_s": 254.0,
+   "duration_s": 4.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S06-07",
+   "scene_no": "S06",
+   "order": 7,
+   "start_s": 258.0,
+   "duration_s": 7.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S06-08",
+   "scene_no": "S06",
+   "order": 8,
+   "start_s": 265.0,
+   "duration_s": 4.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S06-09",
+   "scene_no": "S06",
+   "order": 9,
+   "start_s": 269.0,
+   "duration_s": 4.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S06-10",
+   "scene_no": "S06",
+   "order": 10,
+   "start_s": 273.0,
+   "duration_s": 9.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S06-11",
+   "scene_no": "S06",
+   "order": 11,
+   "start_s": 282.0,
+   "duration_s": 8.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S06-12",
+   "scene_no": "S06",
+   "order": 12,
+   "start_s": 290.0,
+   "duration_s": 9.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S07-01",
+   "scene_no": "S07",
+   "order": 1,
+   "start_s": 299.0,
+   "duration_s": 4.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S07-02",
+   "scene_no": "S07",
+   "order": 2,
+   "start_s": 303.0,
+   "duration_s": 3.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S07-03",
+   "scene_no": "S07",
+   "order": 3,
+   "start_s": 306.0,
+   "duration_s": 11.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S07-04",
+   "scene_no": "S07",
+   "order": 4,
+   "start_s": 317.0,
+   "duration_s": 6.5,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S07-05",
+   "scene_no": "S07",
+   "order": 5,
+   "start_s": 323.5,
+   "duration_s": 3.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S07-06",
+   "scene_no": "S07",
+   "order": 6,
+   "start_s": 326.5,
+   "duration_s": 7.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S07-07",
+   "scene_no": "S07",
+   "order": 7,
+   "start_s": 333.5,
+   "duration_s": 6.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S07-08",
+   "scene_no": "S07",
+   "order": 8,
+   "start_s": 339.5,
+   "duration_s": 4.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S07-09",
+   "scene_no": "S07",
+   "order": 9,
+   "start_s": 343.5,
+   "duration_s": 7.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S07-10",
+   "scene_no": "S07",
+   "order": 10,
+   "start_s": 350.5,
+   "duration_s": 5.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S07-11",
+   "scene_no": "S07",
+   "order": 11,
+   "start_s": 355.5,
+   "duration_s": 5.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S07-12",
+   "scene_no": "S07",
+   "order": 12,
+   "start_s": 360.5,
+   "duration_s": 6.5,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S08-01",
+   "scene_no": "S08",
+   "order": 1,
+   "start_s": 367.0,
+   "duration_s": 4.5,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S08-02",
+   "scene_no": "S08",
+   "order": 2,
+   "start_s": 371.5,
+   "duration_s": 8.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S08-03",
+   "scene_no": "S08",
+   "order": 3,
+   "start_s": 379.5,
+   "duration_s": 3.5,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S08-04",
+   "scene_no": "S08",
+   "order": 4,
+   "start_s": 383.0,
+   "duration_s": 6.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S08-05",
+   "scene_no": "S08",
+   "order": 5,
+   "start_s": 389.0,
+   "duration_s": 2.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S08-06",
+   "scene_no": "S08",
+   "order": 6,
+   "start_s": 391.0,
+   "duration_s": 2.5,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S08-07",
+   "scene_no": "S08",
+   "order": 7,
+   "start_s": 393.5,
+   "duration_s": 6.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S08-08",
+   "scene_no": "S08",
+   "order": 8,
+   "start_s": 399.5,
+   "duration_s": 2.5,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S08-09",
+   "scene_no": "S08",
+   "order": 9,
+   "start_s": 402.0,
+   "duration_s": 3.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S08-10",
+   "scene_no": "S08",
+   "order": 10,
+   "start_s": 405.0,
+   "duration_s": 2.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S08-11",
+   "scene_no": "S08",
+   "order": 11,
+   "start_s": 407.0,
+   "duration_s": 8.5,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S08-12",
+   "scene_no": "S08",
+   "order": 12,
+   "start_s": 415.5,
+   "duration_s": 8.5,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S08-13",
+   "scene_no": "S08",
+   "order": 13,
+   "start_s": 424.0,
+   "duration_s": 5.5,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S08-14",
+   "scene_no": "S08",
+   "order": 14,
+   "start_s": 429.5,
+   "duration_s": 9.5,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S08-15",
+   "scene_no": "S08",
+   "order": 15,
+   "start_s": 439.0,
+   "duration_s": 6.5,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S08-16",
+   "scene_no": "S08",
+   "order": 16,
+   "start_s": 445.5,
+   "duration_s": 9.5,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S08-17",
+   "scene_no": "S08",
+   "order": 17,
+   "start_s": 455.0,
+   "duration_s": 4.5,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S08-18",
+   "scene_no": "S08",
+   "order": 18,
+   "start_s": 459.5,
+   "duration_s": 2.5,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S08-19",
+   "scene_no": "S08",
+   "order": 19,
+   "start_s": 462.0,
+   "duration_s": 5.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S08-20",
+   "scene_no": "S08",
+   "order": 20,
+   "start_s": 467.0,
+   "duration_s": 5.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S08-21",
+   "scene_no": "S08",
+   "order": 21,
+   "start_s": 472.0,
+   "duration_s": 5.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S09-01",
+   "scene_no": "S09",
+   "order": 1,
+   "start_s": 477.0,
+   "duration_s": 5.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S09-02",
+   "scene_no": "S09",
+   "order": 2,
+   "start_s": 482.0,
+   "duration_s": 4.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S09-03",
+   "scene_no": "S09",
+   "order": 3,
+   "start_s": 486.0,
+   "duration_s": 4.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S09-04",
+   "scene_no": "S09",
+   "order": 4,
+   "start_s": 490.0,
+   "duration_s": 4.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S09-05",
+   "scene_no": "S09",
+   "order": 5,
+   "start_s": 494.0,
+   "duration_s": 5.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S10-01",
+   "scene_no": "S10",
+   "order": 1,
+   "start_s": 499.0,
+   "duration_s": 5.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S10-02",
+   "scene_no": "S10",
+   "order": 2,
+   "start_s": 504.0,
+   "duration_s": 6.5,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S10-03",
+   "scene_no": "S10",
+   "order": 3,
+   "start_s": 510.5,
+   "duration_s": 3.5,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S10-04",
+   "scene_no": "S10",
+   "order": 4,
+   "start_s": 514.0,
+   "duration_s": 3.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S10-05",
+   "scene_no": "S10",
+   "order": 5,
+   "start_s": 517.0,
+   "duration_s": 9.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S10-06",
+   "scene_no": "S10",
+   "order": 6,
+   "start_s": 526.0,
+   "duration_s": 7.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S10-07",
+   "scene_no": "S10",
+   "order": 7,
+   "start_s": 533.0,
+   "duration_s": 2.0,
+   "has_sketch": true,
+   "src": "draft"
+  },
+  {
+   "key": "S10-08",
+   "scene_no": "S10",
+   "order": 8,
+   "start_s": 535.0,
+   "duration_s": 2.0,
+   "has_sketch": true,
+   "src": "draft"
+  }
+ ]
+}

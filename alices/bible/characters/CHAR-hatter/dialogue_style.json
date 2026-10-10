@@ -1,0 +1,108 @@
+{
+  "character_id": "CHAR-hatter",
+  "name": "The Hatter",
+  "source_language": "en",
+  "source_speaker_labels": ["Hatter"],
+  "produced_by_task": "p3-dialogue-style-pb1",
+  "register": {
+    "level": "tradesman's speech (a hat-seller) that is rude and needling at his own table and grovelling in court",
+    "summary": "At the tea-table he makes personal remarks, asks riddles with no answers, and turns Alice's words into pedantic word-games. Everything he says circles back to time and tea (per SUP-012, Time exists only in his talk and a stopped watch, and he speaks of Time as 'him'). In the witness box the needling collapses into a whining refrain, 'I'm a poor man, your Majesty', and his grammar slips ('I can't go no lower').",
+    "examples": [
+      { "ref": "ch007-d0010", "chapter": 7, "text": "Your hair wants cutting," },
+      { "ref": "ch007-d0041", "chapter": 7, "text": "If you knew Time as well as I do, you wouldn't talk about wasting it. It's him." },
+      { "ref": "ch011-d0033", "chapter": 11, "text": "I'm a poor man, your Majesty, —and I hadn't begun my tea—not above a week or so—and what with the bread-and-butter getting so thin—and the twinkling of the tea—" }
+    ]
+  },
+  "catchphrases": [
+    { "text": "Why is a raven like a writing-desk?", "freq": "low", "count_in_source": 1, "example_refs": ["ch007-d0012"], "example_chapters": [7] },
+    { "text": "I'm a poor man, your Majesty", "freq": "medium", "count_in_source": 3, "example_refs": ["ch011-d0033", "ch011-d0037", "ch011-d0047"], "example_chapters": [11] },
+    { "text": "tea / tea-time / It's always six o'clock now", "freq": "high", "count_in_source": 5, "example_refs": ["ch007-d0059", "ch007-d0061", "ch011-d0054"], "example_chapters": [7, 11] },
+    { "text": "Time … him", "freq": "medium", "count_in_source": 4, "example_refs": ["ch007-d0041", "ch007-d0045", "ch007-d0059"], "example_chapters": [7] }
+  ],
+  "sentence_style": {
+    "length": "short jabs (median 9 words) at the table; one long fanciful explanation (Time and the clock); breathless dash-chained babble in court (mean 12.9)",
+    "mean_words": 12.9,
+    "patterns": [
+      {
+        "rule": "Personal remarks and put-downs aimed at Alice, often as a short conditional rebuke.",
+        "examples": [
+          { "ref": "ch007-d0010", "chapter": 7, "text": "Your hair wants cutting," },
+          { "ref": "ch007-d0102", "chapter": 7, "text": "Then you shouldn't talk," },
+          { "ref": "ch007-d0094", "chapter": 7, "text": "… so I should think you could draw treacle out of a treacle-well—eh, stupid?" }
+        ]
+      },
+      {
+        "rule": "Pedantic inversion and hair-splitting on word meanings ('Not the same thing a bit!', 'it's very easy to take more than nothing').",
+        "examples": [
+          { "ref": "ch007-d0019", "chapter": 7, "text": "Not the same thing a bit! You might just as well say that 'I see what I eat' is the same thing as 'I eat what I see'!" },
+          { "ref": "ch007-d0080", "chapter": 7, "text": "You mean you can't take less, it's very easy to take more than nothing." },
+          { "ref": "ch007-d0030", "chapter": 7, "text": "Why should it? Does your watch tell you what year it is?" }
+        ]
+      },
+      {
+        "rule": "Time, tea and the watch as his fixed topic; Time personified as 'him'.",
+        "examples": [
+          { "ref": "ch007-d0025", "chapter": 7, "text": "Two days wrong! I told you butter wouldn't suit the works!" },
+          { "ref": "ch007-d0059", "chapter": 7, "text": "And ever since that, he won't do a thing I ask! It's always six o'clock now." },
+          { "ref": "ch007-d0092", "chapter": 7, "text": "I want a clean cup, let's all move one place on." }
+        ]
+      },
+      {
+        "rule": "Riddles and questions he has no intention of answering.",
+        "examples": [
+          { "ref": "ch007-d0036", "chapter": 7, "text": "Have you guessed the riddle yet?" },
+          { "ref": "ch007-d0038", "chapter": 7, "text": "I haven't the slightest idea," }
+        ]
+      },
+      {
+        "rule": "In court: whining self-pity, blame-shifting to the March Hare and Dormouse, and slipping grammar.",
+        "examples": [
+          { "ref": "ch011-d0042", "chapter": 11, "text": "Well, at any rate, the Dormouse said—" },
+          { "ref": "ch011-d0051", "chapter": 11, "text": "I can't go no lower, I'm on the floor, as it is." },
+          { "ref": "ch011-d0024", "chapter": 11, "text": "I keep them to sell, I've none of my own. I'm a hatter." }
+        ]
+      }
+    ]
+  },
+  "vocabulary": {
+    "signature_words": ["tea", "Time", "him", "clock", "watch", "butter", "bread-and-butter", "riddle", "personal remarks", "twinkle", "poor man", "stupid"],
+    "preferred_fields": ["time-telling and the calendar (day of the month, March, six o'clock, half-past one)", "tea-table things (cups, butter, bread-knife, treacle)", "his trade (hats, to sell)"],
+    "examples": [
+      { "ref": "ch007-d0023", "chapter": 7, "text": "What day of the month is it?" },
+      { "ref": "ch007-d0027", "chapter": 7, "text": "Yes, but some crumbs must have got in as well, you shouldn't have put it in with the bread-knife." }
+    ]
+  },
+  "address": {
+    "self": "I; 'we' for the tea-party ('we've no time to wash the things')",
+    "to_alice": "you (bare), 'stupid'; never a courtesy title",
+    "to_the_king": "your Majesty / I beg pardon, your Majesty",
+    "to_time": "Time is 'him' / 'he'",
+    "examples": [
+      { "ref": "ch011-d0015", "chapter": 11, "text": "I beg pardon, your Majesty, for bringing these in: but I hadn't quite finished my tea when I was sent for." },
+      { "ref": "ch007-d0045", "chapter": 7, "text": "He won't stand beating. Now, if you only kept on good terms with him, he'd do almost anything you liked with the clock." }
+    ]
+  },
+  "interjections": ["Ah!", "Well,", "Exactly so,", "eh, stupid?"],
+  "forbidden_words": [
+    { "domain": "post-1862 slang / modern chat register", "regex": "\\b(okay|ok|cool|guys?|awesome|yeah|yep|nope|gonna|wanna|gotta|kinda|sorta|totally|literally|dude)\\b", "reason": "period drama, 1862" },
+    { "domain": "courtesy toward Alice", "regex": "\\b(please|thank you|thanks|sorry|miss|madam|ma'am|my dear|if you wouldn't mind)\\b", "reason": "he is never polite at his own table: no please/thank-you in 43 spoken lines; his only courtesy ('I beg pardon, your Majesty') is fear-driven and aimed at the King" },
+    { "domain": "the Queen's death formula as his own order", "regex": "^off with|\\bbehead", "reason": "he quotes the Queen's 'Off with his head!' only inside reported speech (ch007-d0057); he never commands it" }
+  ],
+  "drift": [
+    { "from_chapter": 7, "to_chapter": 7, "change": "Tea-party host: rude, needling, pedantic, in control of the conversation.", "examples": ["ch007-d0010", "ch007-d0019", "ch007-d0094"] },
+    { "from_chapter": 11, "to_chapter": 11, "change": "Witness box: the swagger collapses; self-pity refrain, stammering dash-chains, blame-shifting and ungrammatical double negatives.", "examples": ["ch011-d0033", "ch011-d0042", "ch011-d0051"] }
+  ],
+  "recitation_repertoire": {
+    "note": "'Twinkle, twinkle, little bat!' (ch007-d0051, ch007-d0055) is sung text, excluded from the hit-rate denominator.",
+    "refs": ["ch007-d0051", "ch007-d0055"]
+  },
+  "backtest_markers": [
+    { "id": "H1", "rule_ref": "sentence_style.patterns[2] time and tea", "weight": 3, "regex": "\\b(tea|tea-time|time|clock|watch|o'clock|butter|bread|bread-and-butter|march|half-past|day of the month|year|twinkl\\w*|cup|things|lessons|dinner)\\b" },
+    { "id": "H2", "rule_ref": "sentence_style.patterns[0] personal remarks", "weight": 3, "regex": "\\b(your hair|personal remarks|stupid|you shouldn't|then you shouldn't|of course you don't|it is the same thing with you|be quick about it)\\b" },
+    { "id": "H3", "rule_ref": "sentence_style.patterns[3] riddles", "weight": 3, "regex": "\\b(riddle|raven|writing-desk|slightest idea)\\b" },
+    { "id": "H4", "rule_ref": "sentence_style.patterns[4] court self-pity", "weight": 3, "regex": "\\b(poor man|hatter|none of my own|isn't mine|can't remember|go no lower|beg pardon)\\b|^you did!" },
+    { "id": "H5", "rule_ref": "sentence_style.patterns[1] pedantic inversion", "weight": 2, "regex": "^(not the same|not I|not at first|why should it|exactly so|yes, but|which is just|yes, that's it|you mean)\\b|\\b(take (less|more)|same thing)\\b" },
+    { "id": "H6", "rule_ref": "vocabulary: fellow tea-party members as reference points", "weight": 1, "regex": "\\b(dormouse|march hare|the song|it goes on)\\b" }
+  ],
+  "backtest": {"method": "marker-claim back-test: a spoken source line hits when it matches >=1 backtest_markers regex and no forbidden_words regex; verse (recited text) excluded; full definition runs/p3-dialogue-style-pb1/result.json#backtest_method", "script": "code/p3-dialogue-style-pb1_backtest.py", "run_on": "2026-09-22", "threshold": 0.8, "hit_rate": 1.0, "sample_size": 43, "source_lines_total": 45, "coverage_of_spoken_lines": 1.0, "verse_excluded": 2, "forbidden_violations_in_source": 0, "cross_claim_rate": 0.088, "lift": 11.37, "attribution_top1_rate": 0.814, "misses": [], "pass": true}
+}

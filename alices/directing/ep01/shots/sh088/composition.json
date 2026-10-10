@@ -1,0 +1,34 @@
+{
+  "shot_id": "sh088",
+  "scene_id": "SCN-long-hall",
+  "size": "medium",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "mid_left",
+    "anchor_xy": [0.36, 0.56],
+    "size_in_frame": "two feet high, standing, about 0.42 of frame height — whole in frame for the first time since sh062"
+  },
+  "second_subject": {
+    "id": "glass_table",
+    "grid": "mid_right",
+    "anchor_xy": [0.66, 0.50],
+    "note": "the 0.715 m tabletop with its top edge now just above her head. The gauge that was at her knee in sh062 is over her head here, and both are in frame together."
+  },
+  "headroom": "about 0.30 of frame height of dark hall above her, and the table edge crossing it just over her crown — the headroom is measured, not decorative.",
+  "horizon_eyeline": "Low from the floor at the curtain, lens 0.25 m. The water surface runs across at 0.72 of frame height and is up to her knees. Her eyeline is at 0.50, level, breathing hard.",
+  "layers": {
+    "fg": "the shallow water round her knees, one white kid glove still on her hand — one of only two white objects left in the water",
+    "mg": "Alice standing, two feet high",
+    "bg": "the enormous hall running away behind her into the dark, the glass legs rising out of the flood"
+  },
+  "gaze": {
+    "direction": "frame_right",
+    "lead_room": "right",
+    "note": "she looks back across the frame at the table and the hall she has just been bigger than; about 0.28 of frame width of flooded hall is open on that side, and it is much too large for her."
+  },
+  "balance": "A small standing figure left of centre against a wide dark flooded room — a deliberate rhyme with sh054, but standing and breathing instead of sitting and crying.",
+  "leading_lines": "The waterline runs level across the frame behind her and the glass legs rise through it; her own upright body is the one vertical that does not belong to the architecture.",
+  "eye_first": "Alice, then the table edge above her head.",
+  "safe_area_ok": true,
+  "constraint_binding": "The glove stays on — it and the drifting fan are the only two white objects left in the water by S10, so the glove is kept clearly in frame and no other white is permitted in the picture. The 0.61 m scale is stated against the 0.715 m tabletop inside this frame; deep focus keeps both sharp."
+}

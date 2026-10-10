@@ -1,0 +1,28 @@
+{
+  "shot_id": "sh083",
+  "scene_id": "SCN-long-hall",
+  "size": "medium",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "bottom_centre",
+    "anchor_xy": [0.46, 0.72],
+    "size_in_frame": "her wet face tipped back, about 0.36 of frame height, low in frame with the whole upper half of the picture given to what she is looking at"
+  },
+  "headroom": "about 0.56 of frame height — the largest headroom given to any face in the episode, and it is completely empty. The air above her is the subject.",
+  "horizon_eyeline": "The ONLY up-angle in the episode: lens low on the flagstones at 0.40 m, tilted up past her face into the black above the lamp line. The waterline is pushed down to the bottom 0.08 of frame. Her eyeline goes up out of the top of frame at about seventy degrees and finds nothing.",
+  "layers": {
+    "fg": "the water and her shoulder at the bottom edge",
+    "mg": "her wet face, tipped back, the underside of her jaw catching what little light there is",
+    "bg": "the dark vault above the lamp line — no rib, no gilding, no fitting, no detail at all: a black with nothing in it"
+  },
+  "gaze": {
+    "direction": "up_frame",
+    "lead_room": "above",
+    "note": "her look goes straight up into the empty upper half of frame, asking her family to put their heads down. Nothing comes. This is the episode's one up-angle and it is spent on a giant looking up at nothing."
+  },
+  "balance": "Bottom-anchored and top-empty, the exact inversion of sh054 where she was small in a big room; here she is enormous and the emptiness is above her instead of around her.",
+  "leading_lines": "Her tipped jaw and throat make one long line pointing up out of frame; there is no second line anywhere to answer it. The composition raises a question and provides no geometry for a reply.",
+  "eye_first": "Her face, then up with the line of her throat into the black — and the eye finds nothing there, which is the shot.",
+  "safe_area_ok": true,
+  "constraint_binding": "The second and last break in the sustained set-up, and the ONLY up-angle in the whole episode. The tilt is staged between two lamp positions so that no lamp fitting, halo, shade or chain enters the frame even at the top of the up-angle — the act-5 rule holds through the one shot that could break it. Music enters here for the first time in the episode, and the composition gives it the empty upper half to enter into."
+}

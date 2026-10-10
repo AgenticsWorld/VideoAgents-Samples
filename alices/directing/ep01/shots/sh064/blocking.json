@@ -1,0 +1,39 @@
+{
+  "shot_id": "sh064",
+  "group_id": "grp025",
+  "scene_no": "S07",
+  "scene_id": "SCN-long-hall",
+  "duration_s": 7.0,
+  "is_dialogue": true,
+  "group_position": "first shot of grp025 — Alice on her map start (glass_table, still on the spot where she grew); no path in this group.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "stand",
+      "start_pos": "standing where she grew beside the glass table, looking straight down the length of herself",
+      "space_fragment_en": "standing beside the glass table, centred in frame, facing down the length of herself at her own boots far below",
+      "facing": "straight down her own body; the lead room is the length of herself and her feet are at the end of it",
+      "path": [],
+      "beats": [
+        { "t": 0.8, "action": "looks down", "sync": "the shot is her look" },
+        { "t": 1.8, "action": "finds her feet almost out of sight on the flagstones", "sync": "the same boots that kicked once under the hedge" },
+        { "t": 2.6, "action": "speaks", "sync": "LN-ep01-017 begins" },
+        { "t": 6.0, "action": "she waves her far-off feet goodbye", "sync": "LN-ep01-017 on 'Good-bye'" }
+      ],
+      "performance": {
+        "objective": "stay on good terms with parts of herself she can no longer reach",
+        "goal": "stay on good terms with the parts of herself she cannot reach",
+        "emotional_arc": "from astonishment at the distance to a brave, comical courtesy that is covering something",
+        "arc_from": "astonishment at the distance",
+        "arc_to": "brave comical courtesy",
+        "trigger": { "line_ref": "LN-ep01-017", "word": "Good-bye" },
+        "no_early_reaction": ["the hand lifting to wave", "a laugh", "the voice going bright"],
+        "forbidden_early": ["the hand lifting to wave", "a laugh", "the voice going bright"],
+        "end_state": "one hand still half raised in a wave, chin down on her chest, eyes on her own boots, smile not quite holding"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0006 (dream) — 'opening out like the largest telescope'", "note": "Alice alone." }
+}

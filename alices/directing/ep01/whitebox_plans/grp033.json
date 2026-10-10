@@ -1,0 +1,277 @@
+{
+  "schema_version": "whitebox_plan.v1",
+  "group_id": "grp033",
+  "scene_id": "SCN-long-hall",
+  "basis": "Alice is 0.61 m for the rest of the episode. She splashes out of the shallow water at t=0.4 and runs the last stretch to the little door at exactly camera.json's 0.90 m/s - 3.7 m of flooded flagstone in 4.1 s, which is the point of the shot: at two feet high the stretch takes three times as long as it used to. She arrives at the door at (9.90, -3.05), pulls at it with both hands in sh090 and finds it shut again, then turns back up the hall in sh091 on the long diagonal to the golden key lying on the 0.715 m tabletop, now far above her head.",
+  "actors": [
+    {
+      "id": "CHAR-alice",
+      "kind": "person",
+      "size_m": [
+        0.1708,
+        0.61,
+        0.1342
+      ],
+      "keyframes": [
+        {
+          "t": 0.0,
+          "position": [
+            6.3,
+            0.0,
+            -2.85
+          ],
+          "pose": "stand",
+          "yaw": 1.6263,
+          "head_pitch": 0.1
+        },
+        {
+          "t": 0.4,
+          "position": [
+            6.35,
+            0.0,
+            -2.85
+          ],
+          "pose": "stand",
+          "yaw": 1.6263
+        },
+        {
+          "t": 2.0,
+          "position": [
+            7.05,
+            0.0,
+            -2.88
+          ],
+          "pose": "stand",
+          "yaw": 1.6263
+        },
+        {
+          "t": 4.4,
+          "position": [
+            9.2,
+            0.0,
+            -3.02
+          ],
+          "pose": "stand",
+          "yaw": 1.6263
+        },
+        {
+          "t": 5.0,
+          "position": [
+            9.9,
+            0.0,
+            -3.05
+          ],
+          "pose": "stand",
+          "yaw": 3.1416
+        },
+        {
+          "t": 5.6,
+          "position": [
+            9.9,
+            0.0,
+            -3.05
+          ],
+          "pose": "stand",
+          "yaw": 3.1416,
+          "bend": 0.3
+        },
+        {
+          "t": 7.0,
+          "position": [
+            9.9,
+            0.0,
+            -3.05
+          ],
+          "pose": "stand",
+          "yaw": 3.1416,
+          "bend": 0.45
+        },
+        {
+          "t": 8.2,
+          "position": [
+            9.9,
+            0.0,
+            -3.05
+          ],
+          "pose": "stand",
+          "yaw": 3.1416,
+          "bend": 0.1
+        },
+        {
+          "t": 9.0,
+          "position": [
+            9.9,
+            0.0,
+            -3.05
+          ],
+          "pose": "stand",
+          "yaw": 3.1416,
+          "bend": 0.0
+        },
+        {
+          "t": 9.6,
+          "position": [
+            9.9,
+            0.0,
+            -3.05
+          ],
+          "pose": "stand",
+          "yaw": -0.9463,
+          "head_pitch": -0.9
+        },
+        {
+          "t": 11.2,
+          "position": [
+            9.9,
+            0.0,
+            -3.05
+          ],
+          "pose": "stand",
+          "yaw": -0.9463,
+          "head_pitch": -0.95
+        },
+        {
+          "t": 12.4,
+          "position": [
+            9.9,
+            0.0,
+            -3.05
+          ],
+          "pose": "stand",
+          "yaw": -0.9463,
+          "head_pitch": -0.6
+        },
+        {
+          "t": 13.0,
+          "position": [
+            9.9,
+            0.0,
+            -3.05
+          ],
+          "pose": "stand",
+          "yaw": -0.9463,
+          "head_pitch": -0.6
+        }
+      ]
+    }
+  ],
+  "cameras": [
+    {
+      "shot_id": "sh089",
+      "start": 0,
+      "duration_s": 5.0,
+      "movement": "track_lateral",
+      "keyframes": [
+        {
+          "t": 0.0,
+          "position": [
+            6.3,
+            0.55,
+            -1.21
+          ],
+          "target": [
+            6.58,
+            0.3,
+            -2.85
+          ],
+          "fov": 33.3985
+        },
+        {
+          "t": 5.0,
+          "position": [
+            9.9,
+            0.55,
+            -1.41
+          ],
+          "target": [
+            10.18,
+            0.3,
+            -3.05
+          ],
+          "fov": 33.3985
+        }
+      ]
+    },
+    {
+      "shot_id": "sh090",
+      "start": 5.0,
+      "duration_s": 4.0,
+      "movement": "static",
+      "keyframes": [
+        {
+          "t": 0.0,
+          "position": [
+            9.9,
+            0.5,
+            -1.356
+          ],
+          "target": [
+            9.98,
+            0.3,
+            -3.05
+          ],
+          "fov": 33.3985
+        },
+        {
+          "t": 4.0,
+          "position": [
+            9.9,
+            0.5,
+            -1.356
+          ],
+          "target": [
+            9.98,
+            0.3,
+            -3.05
+          ],
+          "fov": 33.3985
+        }
+      ]
+    },
+    {
+      "shot_id": "sh091",
+      "start": 9.0,
+      "duration_s": 4.0,
+      "movement": "static",
+      "keyframes": [
+        {
+          "t": 0.0,
+          "position": [
+            10.6,
+            0.55,
+            -3.1
+          ],
+          "target": [
+            6.299,
+            0.75,
+            0.8
+          ],
+          "fov": 46.3972
+        },
+        {
+          "t": 4.0,
+          "position": [
+            10.6,
+            0.55,
+            -3.1
+          ],
+          "target": [
+            6.299,
+            0.75,
+            0.8
+          ],
+          "fov": 46.3972
+        }
+      ]
+    }
+  ],
+  "continuity": {
+    "actors": "cut",
+    "camera": "cut"
+  },
+  "warnings": [
+    "grp032 -> grp033 crosses the S08/S09 scene-number boundary and is a cut, so she is re-set 3.7 m out into the hall at the water's edge to give sh089 the run the shot and camera.json specify (0.9 m/s for 4.4 s); at the curtain anchor she would already be standing at the door with nothing to run.",
+    "sh089's rig runs abeam 1.64 m off her line at her own 0.9 m/s, screen-right opening toward +X, her travel direction; she holds a constant screen-left position - translation only, no pan or reframe.",
+    "sh091: the key reads about 0.01 of frame height instead of composition's 0.03 - a 28 mm at 5.7 m in a 2.8 m hall cannot put a 0.05 m key higher or larger in frame. She holds the near screen-right edge as a foreground presence, with the whole diagonal of the hall between her and the key."
+  ]
+}

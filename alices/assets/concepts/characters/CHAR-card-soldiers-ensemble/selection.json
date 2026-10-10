@@ -1,0 +1,31 @@
+{
+  "character_id": "CHAR-card-soldiers-ensemble",
+  "task_id": "p4-char-concept-cb3",
+  "sheet": "sheet.png",
+  "representative_member": "Ace of Clubs soldier (defines the uniform for all ten)",
+  "variants": [],
+  "status": "delivered_for_H2_review",
+  "layout_check": { "four_panels": true, "one_view_per_panel": true, "same_individual_all_panels": true, "size": "2560x1440 (JPEG payload)" },
+  "appearance_field_hits": {
+    "gender_male": true,
+    "age_20_35": true,
+    "hair_short_military_crop_neat_moustache": true,
+    "face_stolid_drilled": true,
+    "build_lean_matched": true,
+    "card_front_club_pip_with_rank_index (Ace)": true,
+    "card_back_crimson_cream_lattice_heart_rosette": true,
+    "crimson_shell_jacket_sleeves_brass_cuff_buttons": true,
+    "crimson_trousers_black_side_stripe": true,
+    "black_ankle_boots": true,
+    "black_pillbox_cap_brass_club_badge": true,
+    "ceremonial_club_topped_baton_at_shoulder": true
+  },
+  "style_check": { "photoreal_live_action": true, "no_weapon": true },
+  "self_check_defects": [
+    "Tabard ends at mid-thigh, not at the knee as COS-044 states.",
+    "Close-up panel has the top of the card tabard across the bottom third (no identity impact)."
+  ],
+  "bible_conflicts": ["DEF-p4-char-301 (club ranks 2-10 claimed by both soldiers and gardeners; Ace used here to avoid the collision)"],
+  "rerolls": [],
+  "reroll_budget_note": "User rerun setting = 0."
+}

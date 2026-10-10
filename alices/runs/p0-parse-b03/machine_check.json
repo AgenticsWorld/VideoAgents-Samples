@@ -1,0 +1,42 @@
+{
+ "batch": "b03",
+ "chapters": [
+  {
+   "id": "ch007",
+   "paragraphs_source": 105,
+   "paragraphs_covered": 105,
+   "body_words": 2282,
+   "manifest_body_words": 2282,
+   "dialogues": 105,
+   "unknown": 1,
+   "entity_mentions": 182,
+   "errors": []
+  },
+  {
+   "id": "ch008",
+   "paragraphs_source": 71,
+   "paragraphs_covered": 71,
+   "body_words": 2482,
+   "manifest_body_words": 2482,
+   "dialogues": 60,
+   "unknown": 0,
+   "entity_mentions": 178,
+   "errors": []
+  },
+  {
+   "id": "ch009",
+   "paragraphs_source": 92,
+   "paragraphs_covered": 92,
+   "body_words": 2266,
+   "manifest_body_words": 2266,
+   "dialogues": 90,
+   "unknown": 0,
+   "entity_mentions": 172,
+   "errors": []
+  }
+ ],
+ "ok": true,
+ "dialogues": 255,
+ "unknown": 1,
+ "unknown_pct": 0.39
+}

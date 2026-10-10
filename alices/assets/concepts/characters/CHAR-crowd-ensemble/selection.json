@@ -1,0 +1,23 @@
+{
+  "character_id": "CHAR-crowd-ensemble",
+  "task_id": "p4-char-concept-cb3",
+  "sheet": "sheet.png",
+  "representative_member": "X05 wild brown rabbit (female); X01/X02 are anchored by CHAR-jury-ensemble/sheet.png",
+  "variants": [],
+  "status": "delivered_for_H2_review",
+  "layout_check": { "four_panels": true, "one_view_per_panel": true, "same_individual_all_panels": true, "size": "2560x1440 (JPEG payload)" },
+  "appearance_field_hits": {
+    "species_wild_rabbit": true,
+    "coat_grey_brown_agouti_not_white": true,
+    "rusty_nape": true,
+    "dust_and_brick_grime": true,
+    "unclothed (COS-034)": true,
+    "never_reads_as_White_Rabbit": true
+  },
+  "style_check": { "photoreal_cgi_animal": true, "no_cartoon_face": true },
+  "self_check_defects": [
+    "Close-up eyes are slightly large and glossy with visible lashes; still naturalistic but close to the 'big eyes' edge."
+  ],
+  "rerolls": [],
+  "reroll_budget_note": "User rerun setting = 0."
+}

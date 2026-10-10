@@ -1,0 +1,38 @@
+{
+  "shot_id": "sh020",
+  "scene_id": "SCN-falling-dream",
+  "size": "wide",
+  "subject": {
+    "id": null,
+    "id_note": "POV — no character in frame. shot_list registers CHAR-alice with a poses_note; she is behind the lens.",
+    "pov_of": "CHAR-alice",
+    "kind": "environment",
+    "what": "the open centre of the shaft, straight down",
+    "grid": "centre",
+    "anchor_xy": [0.50, 0.52],
+    "size_in_frame": "the black occupies the middle 0.55 of frame height and 0.60 of frame width; the walls are only a border"
+  },
+  "second_subject": {
+    "id": "PROP-orange-marmalade-jar",
+    "grid": "top_centre",
+    "anchor_xy": [0.52, 0.12],
+    "note": "hanging in the top of frame in her hand, cropped by the top edge — the only object in the picture and the only evidence of a person."
+  },
+  "headroom": "not applicable; the jar is deliberately clipped by the top edge, which is what makes the rest of the frame read as a drop and not as a view.",
+  "horizon_eyeline": "No horizon. The wall bands run away radially to a vanishing point slightly below frame centre at [0.50, 0.55] — the shaft is not quite plumb under her, which keeps the perspective from reading as a target.",
+  "layers": {
+    "fg": "her hand and the bottom of the hanging jar at the top edge",
+    "mg": "the nearest wall bands — cupboard tops and the pantry shelf — running away to a point at the edges of frame",
+    "bg": "black, with one last lamp-coloured glint dying out a long way below just left of the vanishing point"
+  },
+  "gaze": {
+    "direction": "down_frame",
+    "lead_room": "below",
+    "note": "this is her look; the lead room is the whole drop. Nothing looks back."
+  },
+  "balance": "A dark centre held by a bright irregular border — the reverse of every other frame in the sequence, where she is the bright thing in a dark surround. Here the surround is the only content.",
+  "leading_lines": "Every shelf edge and cupboard rail rakes in from the frame edges toward the vanishing point, so the entire picture is one converging funnel. The only thing that does not obey it is the jar.",
+  "eye_first": "Straight to the centre, which is empty, and then to the dying glint below it — the eye looks for a floor and is given a small light instead.",
+  "safe_area_ok": true,
+  "constraint_binding": "Set-up 2 of the licensed three; flat, still, no move. The vanishing point is held off dead centre so the frame can be repeated exactly at sh023 and read as a measurement rather than as a stock POV."
+}

@@ -1,0 +1,38 @@
+{
+  "schema_version": "whitebox_scene.v1",
+  "scene_id": "SCN-riverbank",
+  "task_id": "p4-scene-model-sb1",
+  "dimensions_m": [40.0, 20.0, 22.5],
+  "inferred": true,
+  "scale_basis": "The image width is set to 40.0 m, kept from layout.json map_extent_m. Z = 40 x 9/16 = 22.5 m. Cross-check against the scale anchors: the elm crowns are drawn about 9-10 m across, which suits mature hedgerow/riverside elms, and the willow crown about 7 m. The Bible gives no plan dimension. Y = 20 m, covering the elm crowns.",
+  "orientation_note": "North at top; the backwater is at the west (left), the meadow and the way to the hedge at the east (right).",
+  "objects": [
+    {"id": "backwater_surface", "shape": "box", "size_m": [10.6, 0.02, 22.5], "xy": [0.1325, 0.5], "color": "#5d6b4a", "collision": "none (water surface marker; the real waterline is 1.2 m below the bank top)"},
+    {"id": "willow_trunk", "shape": "cylinder", "size_m": [0.8, 3.5, 0.8], "xy": [0.235, 0.3], "color": "#6b5a45"},
+    {"id": "willow_canopy", "shape": "sphere", "size_m": [7.1, 6.0, 7.3], "xy": [0.17, 0.22], "elevation_m": 5.0, "color": "#7f9a5a"},
+    {"id": "elm_north_trunk", "shape": "cylinder", "size_m": [0.9, 8.0, 0.9], "xy": [0.455, 0.1644], "color": "#6b5a45"},
+    {"id": "elm_north_canopy", "shape": "sphere", "size_m": [9.2, 12.0, 7.3], "xy": [0.455, 0.1644], "elevation_m": 12.0, "color": "#5e8a3e"},
+    {"id": "elm_south_trunk", "shape": "cylinder", "size_m": [0.9, 8.0, 0.9], "xy": [0.4475, 0.831], "color": "#6b5a45"},
+    {"id": "elm_south_canopy", "shape": "sphere", "size_m": [9.8, 12.0, 7.5], "xy": [0.4475, 0.831], "elevation_m": 12.0, "color": "#5e8a3e"},
+    {"id": "reed_bed", "shape": "box", "size_m": [8.6, 2.0, 8.505], "xy": [0.1525, 0.811], "color": "#6f8a4e"}
+  ],
+  "walkable": {
+    "bank_lip": "x about 0.265-0.31: the bare-earth lip where the 1.2 m bank drops at about 25 degrees to the water. Sitting on or stepping down it is possible; walking west of x 0.265 means being in the water.",
+    "sitting_shelf": "x 0.31-0.55, between the two elms: flat grass shaded by the elm crowns (undersides at 6 m). This is where the sister sits with Alice. Clear except the two elm trunks (0.9 m).",
+    "meadow": "x 0.55-1.0: open long grass, fully walkable. The field_way exit is at the NE [0.9, 0.22]."
+  },
+  "inferred_items": [
+    "The willow trunk stands at the bank edge [0.235, 0.30] under the drawn crown (the trunk is hidden by the crown in the image).",
+    "Tree heights: willow 8 m, elms 18 m (crown 6-18 m); trunk diameters 0.8-0.9 m.",
+    "Reed height 2.0 m.",
+    "The bank's 1.2 m height and 25-degree slope (Bible) are not modelled as terrain; the whitebox ground is the bank-top level."
+  ],
+  "landmarks_covered": ["backwater", "lily_pads", "willow", "reed_bed", "bank_lip", "sitting_shelf", "elm_north", "elm_south", "meadow", "field_way"],
+  "workflow_notes": [
+    "No image deviations were found (env-concept self-check). The waking frame is always true scale (1:1). This set is the reference for every dream scale build.",
+    "The elm crown depths are trimmed to 7.3 / 7.5 m so the footprints stay inside the frame (both crowns run off the top/bottom edges in the image).",
+    "The villa roofline and church spire are skyline-only, off the map; not modelled.",
+    "Anti-clip handover: the sister's and Alice's seated positions go on the sitting_shelf. Keep them at least 0.6 m (body radius + 0.15 m) off the elm trunks, and keep any walk to the water's edge above the bank lip."
+  ],
+  "downstream": "No storyboard yet. Hand over to whitebox-staging. No reference video was rendered."
+}

@@ -1,0 +1,20 @@
+{
+  "shot_id": "sh041",
+  "group_id": "grp016",
+  "scene_no": "S05",
+  "scene_id": "SCN-little-door-passage",
+  "duration_s": 5.0,
+  "is_dialogue": false,
+  "group_position": "first shot of grp016 — her POV down the passage. Nobody is registered in frame, so this file carries no space fragment; Alice holds the map start (hall_floor) behind the lens.",
+  "characters": [],
+  "creatures": [],
+  "offscreen_presence": [
+    { "id": "CHAR-alice", "where": "kneeling on the flagstones in front of the little door, eye to the open doorway, directly behind the lens", "note": "grp016 blocking_map start. Present in the space, not in frame." }
+  ],
+  "presence_check": {
+    "timeline_ok": true,
+    "violations": [],
+    "story_event": "ev0003 (dream) — the loveliest garden at the far end of the passage",
+    "note": "POV insert. Nobody is in the passage or in the garden; the garden is empty of people in ep01 and must stay that way."
+  }
+}

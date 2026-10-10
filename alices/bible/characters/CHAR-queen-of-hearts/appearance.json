@@ -1,0 +1,57 @@
+{
+  "character_id": "CHAR-queen-of-hearts",
+  "name": "Queen of Hearts",
+  "tier": "A",
+  "layer": "dream",
+  "gender": "female",
+  "gender_note": { "source_chapter": "ch008", "source_para": "ch008-p14", "quote": "“Idiot!” said the Queen, tossing her head impatiently" },
+  "base_age_range": "45-52",
+  "base_age_note": { "inferred": true, "reason": "Not stated; a matronly reigning queen and mother of the royal children (ch008-p11)." },
+  "hair": { "color": "jet black with a streak of grey at one temple", "style": "scraped back severely from a centre parting into a tight, heavy coiled bun beneath the crown", "length": "long (worn up)", "inferred": true, "reason": "Not described; a hard black frame for a face that turns crimson and purple, and a strong silhouette against the red livery." },
+  "eyes": { "color": "dark brown, almost black", "shape": "small, hard, glaring under heavy dark brows", "source_chapter": "ch008", "source_para": "ch008-p18", "quote": "after glaring at her for a moment like a wild beast", "colour_inferred": true, "reason": "Glare sourced; colour designed." },
+  "skin": {
+    "tone": "florid, high natural colour that floods crimson and then purple when she rages",
+    "source_chapter": "ch008",
+    "source_para": ["ch008-p18", "ch012-p60"],
+    "quote": "The Queen turned crimson with fury / said the Queen, turning purple"
+  },
+  "face": {
+    "shape": "broad, heavy-jawed, square",
+    "features": ["heavy dark straight brows that knit into a scowl", "small tight mouth", "double chin", "strong nose"],
+    "default_expression": "scowling, arms folded; a thunderstorm frown",
+    "source_chapter": "ch009",
+    "source_para": "ch009-p30",
+    "quote": "with her arms folded, frowning like a thunderstorm",
+    "features_inferred": true,
+    "reason": "Frown and folded arms sourced; facial structure designed."
+  },
+  "build": {
+    "height_range_cm": [172, 178],
+    "body_type": "tall, broad, heavy and imposing; stamps when she walks",
+    "scale_reference": "about 1.3x Alice's true size (135 cm); the tallest figure in the Hearts court and a head taller than the King",
+    "source_chapter": "ch009",
+    "source_para": "ch009-p32",
+    "quote": "shouted the Queen, stamping on the ground as she spoke",
+    "height_inferred": true,
+    "reason": "Height not stated; designed to physically dominate the court and the King."
+  },
+  "marks": [
+    { "type": "signature_item", "position": "head", "description": "a stylised gold crown with a red heart at its front", "inferred": true, "reason": "FAC-house-of-hearts emblem_visual ('crown devices for the King and Queen')." },
+    { "type": "signature_item", "position": "face (trial only)", "description": "spectacles, put on to stare at witnesses", "source_chapter": "ch011", "source_para": "ch011-p26" },
+    { "type": "voice_marker", "position": "voice", "description": "shrill, loud 'voice of thunder' — no weapon ever; she rules by voice alone", "source_chapter": "ch008", "source_para": ["ch008-p23", "ch008-p41"] }
+  ],
+  "default_outfit_tone": {
+    "summary": "crimson and white card-suited court gown: a stiff, flat, rectangular crimson front panel piped in white with a large red heart device on white at the chest, a full crimson skirt over a wide crinoline, gold crown",
+    "silhouette_1862": "1862 court crinoline gown with a rigid flat front (a playing card worn as a tabard), squared shoulders; she moves and stands flat-on to camera like a court card",
+    "inferred": true,
+    "reason": "Hearts suit sourced (ch008-p11 'THE KING AND QUEEN OF HEARTS'); flat card styling per SUP-004 and FAC-house-of-hearts emblem_visual. Costume detail by 06-art/costume."
+  },
+  "performer_coding": {
+    "code": "card (Queen of Hearts)",
+    "touches": ["flat rigid rectangular card-front tabard with heart pip", "red/white/gold/black card palette", "square-on, frontal blocking and stiff posture"],
+    "limits": "human performer, no painted-card body suit, no CGI flattening (SUP-002/SUP-004); no weapon, and no beheading is ever carried out (SUP-014)"
+  },
+  "doubling": null,
+  "events": ["ev0034", "ev0035", "ev0036", "ev0039", "ev0046", "ev0051", "ev0052"],
+  "prompt_base_en": "a tall, broad, imposing English queen of about fifty in 1862 court dress styled as the Queen of Hearts playing card, jet-black hair scraped into a tight bun under a gold crown with a red heart, small hard dark eyes under heavy scowling brows, florid red complexion, square heavy jaw, stiff flat crimson-and-white card-front tabard with a large red heart over a full crimson crinoline skirt, arms folded"
+}

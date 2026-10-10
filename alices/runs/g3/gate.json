@@ -1,0 +1,21 @@
+{
+  "gate": "G3",
+  "checkpoint": "H1A-角色与资产确认",
+  "decision": "PASS",
+  "checks": {
+    "all_refs_resolve": "PASS (75 CHAR/SCN/CRE ids; age-version sub-ids CHAR-alice-age01/02 are intra-file)",
+    "no_unknown_placeholder": "PASS",
+    "cross_refs_valid_all_namespaces": "PASS",
+    "scene_int_ext_match": "PASS",
+    "defects_open_blocker_major": 0,
+    "defects_open_minor_due_later": [
+      "DEF-p3-char-index-902 (due G4)",
+      "DEF-p3-char-index-903 (due G5)"
+    ],
+    "qa": "character-consistency QA level 0 — not dispatched"
+  },
+  "waivers": [],
+  "signed_by": "user",
+  "signed_at": "2026-09-22T21:47:45+08:00",
+  "sign_method": "dispatch.py --confirm --sign"
+}

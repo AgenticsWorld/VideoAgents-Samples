@@ -1,0 +1,82 @@
+{
+  "schema_version": "whitebox_plan.v1",
+  "group_id": "grp031",
+  "scene_id": "SCN-long-hall",
+  "basis": "Thirty seconds on the same curtain anchor. She sits up straight like a pupil saying lessons at t=0.6 and counts the arithmetic off on her fingers, so sh081 looks down onto her two open hands from just above the water; sh082 returns to the sh079/sh080 frame exactly and she stares into the screen-left space that has been empty for three shots; sh083 tips her head back into the episode's single upward look, so the lens sits at 0.40 m and looks about 66 degrees up past her wet face into the black above the 2.30 m lamp line; sh084 comes back down onto her hand as the end of one continuous eye movement. Nothing translates anywhere in the group.",
+  "actors": [
+    {
+      "id": "CHAR-alice",
+      "kind": "person",
+      "size_m": [0.7672, 2.74, 0.6028],
+      "keyframes": [
+        {"t": 0.0, "position": [9.0, 0.0, -2.55], "pose": "sit", "yaw": -1.4, "head_pitch": 0.6},
+        {"t": 0.6, "position": [9.0, 0.0, -2.55], "pose": "sit", "yaw": -1.4, "head_pitch": 0.7},
+        {"t": 1.4, "position": [9.0, 0.0, -2.55], "pose": "sit", "yaw": -1.4, "head_pitch": 0.8},
+        {"t": 5.0, "position": [9.0, 0.0, -2.55], "pose": "sit", "yaw": -1.4, "head_pitch": 0.8},
+        {"t": 8.4, "position": [9.0, 0.0, -2.55], "pose": "sit", "yaw": -1.4, "head_pitch": 0.75},
+        {"t": 9.5, "position": [9.0, 0.0, -2.55], "pose": "sit", "yaw": -1.4, "head_pitch": 0.4},
+        {"t": 9.9, "position": [9.0, 0.0, -2.55], "pose": "sit", "yaw": -1.4, "head_pitch": 0.1},
+        {"t": 10.7, "position": [9.0, 0.0, -2.55], "pose": "sit", "yaw": -1.4, "head_pitch": 0.1},
+        {"t": 14.1, "position": [9.0, 0.0, -2.55], "pose": "sit", "yaw": -1.4, "head_pitch": 0.05},
+        {"t": 15.3, "position": [9.0, 0.0, -2.55], "pose": "sit", "yaw": -1.4, "head_pitch": 0.0},
+        {"t": 16.0, "position": [9.0, 0.0, -2.55], "pose": "sit", "yaw": -1.4, "head_pitch": -0.2},
+        {"t": 16.8, "position": [9.0, 0.0, -2.55], "pose": "sit", "yaw": -1.4, "head_pitch": -1.0},
+        {"t": 22.8, "position": [9.0, 0.0, -2.55], "pose": "sit", "yaw": -1.4, "head_pitch": -1.1},
+        {"t": 24.6, "position": [9.0, 0.0, -2.55], "pose": "sit", "yaw": -1.4, "head_pitch": -1.1},
+        {"t": 25.5, "position": [9.0, 0.0, -2.55], "pose": "sit", "yaw": -1.4, "head_pitch": -0.3},
+        {"t": 25.9, "position": [9.0, 0.0, -2.55], "pose": "sit", "yaw": -1.4, "head_pitch": 0.9},
+        {"t": 27.3, "position": [9.0, 0.0, -2.55], "pose": "sit", "yaw": -1.4, "head_pitch": 0.95},
+        {"t": 28.9, "position": [9.0, 0.0, -2.55], "pose": "sit", "yaw": -1.4, "head_pitch": 0.95},
+        {"t": 30.0, "position": [9.0, 0.0, -2.55], "pose": "sit", "yaw": -1.4, "head_pitch": 0.95}
+      ]
+    }
+  ],
+  "cameras": [
+    {
+      "shot_id": "sh081",
+      "start": 0,
+      "duration_s": 9.5,
+      "movement": "static",
+      "keyframes": [
+        {"t": 0.0, "position": [9.3, 0.55, -1.4], "target": [9.05, 1.0, -2.3], "fov": 26.9915},
+        {"t": 9.5, "position": [9.3, 0.55, -1.4], "target": [9.05, 1.0, -2.3], "fov": 26.9915}
+      ]
+    },
+    {
+      "shot_id": "sh082",
+      "start": 9.5,
+      "duration_s": 6.5,
+      "movement": "static",
+      "keyframes": [
+        {"t": 0.0, "position": [9.283, 0.6, -1.297], "target": [9.05, 1.95, -2.42], "fov": 26.9915},
+        {"t": 6.5, "position": [9.283, 0.6, -1.297], "target": [9.05, 1.95, -2.42], "fov": 26.9915}
+      ]
+    },
+    {
+      "shot_id": "sh083",
+      "start": 16.0,
+      "duration_s": 9.5,
+      "movement": "static",
+      "keyframes": [
+        {"t": 0.0, "position": [9.4, 0.4, -1.6], "target": [9.05, 2.6, -2.45], "fov": 46.3972},
+        {"t": 9.5, "position": [9.4, 0.4, -1.6], "target": [9.05, 2.6, -2.45], "fov": 46.3972}
+      ]
+    },
+    {
+      "shot_id": "sh084",
+      "start": 25.5,
+      "duration_s": 4.5,
+      "movement": "static",
+      "keyframes": [
+        {"t": 0.0, "position": [9.3, 0.3, -1.55], "target": [9.05, 0.85, -2.35], "fov": 26.9915},
+        {"t": 4.5, "position": [9.3, 0.3, -1.55], "target": [9.05, 0.85, -2.35], "fov": 26.9915}
+      ]
+    }
+  ],
+  "continuity": {"actors": "inherit", "camera": "cut"},
+  "warnings": [
+    "sh082 returns to the sh079/sh080 set-up exactly (identical position, target and lens), which is what composition means by 'the sh078-sh080 frame returned to exactly'.",
+    "sh083 is a fixed tilted-up frame, not a tilting move: one position, one target, held 9.5 s, with the empty upper half of frame running past the 2.30 m lamp line into the 2.80 m vault.",
+    "Her head_pitch runs one continuous arc from sh083's look up (-1.1 rad) to sh084's look down onto her own hand (+0.9 rad) across the cut at t=25.5, as the shots require."
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "_meta": {
+    "file": "bible/scenes/SCN-shaft-landing-passage/lighting.json",
+    "owner": "05-scenes/lighting",
+    "task_id": "p3-lighting-sb1",
+    "attempt": 1,
+    "generated": "2026-09-22",
+    "status": "draft_v1",
+    "enum_set": "LGT-ENUM-v1 (defined once in runs/p3-lighting-sb1/result.json)",
+    "inputs": ["bible/scenes/SCN-shaft-landing-passage/environment.json", "bible/scenes/SCN-shaft-landing-passage/architecture.json"]
+  },
+  "scene_id": "SCN-shaft-landing-passage",
+  "layer": "dream",
+  "int_ext": "INT",
+  "daylight_access": "dark_no_sky",
+  "dream_growth": {
+    "grows_from": "the dark of the hedge burrow (LGT-field-hedge-burrow-01)",
+    "how": "The eyelid glow of the fall is gone: overhead is the black of the burrow. The only light is lamp-glow from the long hall round the corner, the dream's amber stand-in for the afternoon sun, which gets warmer and brighter as she runs toward it.",
+    "ruling": "runs/h1-ruling/ruling.json 5.2 A"
+  },
+  "schemes": [
+    {
+      "lighting_scheme_id": "LGT-shaft-landing-passage-01",
+      "condition": {"time_of_day": "early_afternoon", "weather": "none_enclosed"},
+      "state_refs": ["SCN-shaft-landing-passage-S01", "SCN-shaft-landing-passage-S02"],
+      "waking_clock": "14:20-14:22 GMT (Alice asleep on the bank)",
+      "sun": null,
+      "key_source": "lamp_spill_indirect",
+      "key": "warm lamp-glow spilling round the right-angle corner at the west end of the passage, from the long hall's oil lamps",
+      "direction": "far_end_backlight",
+      "direction_note": "from the landing (east end) the light is ahead, at the far west end; figures running toward it are silhouetted with warm rims; overhead is always black",
+      "fill": {"source": "none", "note": "the landing chamber and heap of sticks get only a faint, cool, near-black ambient; no light comes from the shaft opening"},
+      "practicals": ["(off-frame) the long hall's oil lamps, seen only as glow on the corner reveal"],
+      "color_temp": "warm (~2700K)",
+      "kelvin_approx": 2400,
+      "contrast": "hard",
+      "quality": "soft",
+      "atmosphere": "cool still air; leaf-dust hanging after the landing, lit where it drifts into the glow",
+      "prompt_fragment_en": "Near-darkness at the foot of the well: pitch black overhead, cool dim shadow over the heap of dry sticks and leaves, and the only light a warm amber lamp-glow spilling round the right-angle corner at the far end of the long, low passage, rim-lighting drifting dust and turning a running figure into a silhouette against it; hard contrast, hushed, expectant mood.",
+      "source_chapter": "ch001",
+      "sources": ["ch001-p10", "ch001-p11"],
+      "inferred": true,
+      "reason": "'All dark overhead' and the passage are explicit (ch001-p11), and the Rabbit must stay visible. The hall's lamps (ch001-p11) are the only named light, so their spill round the corner is used; architecture already marks the lit corner. S01 and S02 share one condition, so one scheme."
+    }
+  ],
+  "special": []
+}

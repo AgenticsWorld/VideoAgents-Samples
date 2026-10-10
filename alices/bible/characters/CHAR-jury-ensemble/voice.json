@@ -1,0 +1,40 @@
+{
+  "character_id": "CHAR-jury-ensemble",
+  "name": "The jury (ensemble)",
+  "tier": "extra",
+  "card_type": "ensemble_group_voice",
+  "gender": "male",
+  "age_sense": "mixed 20-70; sample voice = slot J03, man 55-65",
+  "timbre": "muddled, earnest middle-aged man's voice, slightly pompous and slow-witted",
+  "pitch": "mid baritone, puzzled questioning rises",
+  "pitch_range_hz": [90, 180],
+  "speed_wpm": [130, 155],
+  "speed_cpm": [494, 589],
+  "accent": "mixed provincial English, lower-middle and trades class",
+  "reference_style": "Eleven muddled jurymen who write everything down: individual jurors pipe up with a puzzled question each; the two guinea-pig jurors cheer and are 'suppressed' (sack over head and shoulders, hustled out — ruling 5.4 B), their choked protests muffled through the sack. Bill the Lizard is carded separately.",
+  "group_voice": {
+    "mode": "individual single lines plus a muffled cheer",
+    "headcount": "11 (appearance composition J01-J11), all male",
+    "speaking_slots": [
+      { "slot": "J03", "gender": "male", "age": "55-65", "timbre": "stout, slow, squinting bass-baritone", "lines_hint": "'But what did the Dormouse say?' ch011-d0044" },
+      { "slot": "J07", "gender": "male", "age": "60-70", "timbre": "hooting, measured elderly baritone", "lines_hint": "'Who is it directed to?' ch012-d0027" },
+      { "slot": "J05", "gender": "male", "age": "35-45", "timbre": "thin sharp nasal tenor", "lines_hint": "'Are they in the prisoner's handwriting?' ch012-d0030" },
+      { "slot": "J01", "gender": "male", "age": "45-55", "timbre": "round squeaky tenor, cheering then muffled", "lines_hint": "cheer, ch011-p53" },
+      { "slot": "J02", "gender": "male", "age": "40-50", "timbre": "round squeaky tenor, a little lower than J01", "lines_hint": "second cheer, ch011-p53" }
+    ]
+  },
+  "emotion_range": {
+    "puzzled": { "speed_delta": "-5%", "pitch_delta": "+1semi", "note": "questions from the box" },
+    "cheer_muffled": { "speed_delta": "+10%", "pitch_delta": "+4semi", "volume": "loud", "note": "guinea-pig cheer, then choked under the sack (ch012-p69 'the choking of the suppressed guinea-pigs')" }
+  },
+  "age_variants": [],
+  "source_chapter": "ch011",
+  "sources": ["ch011", "ch012", "ch011-p53", "ch011-d0044", "ch012-d0027", "ch012-d0030", "ch012-p69"],
+  "voice_evidence": [
+    { "para": "ch011-p53", "quote": "Here one of the guinea-pigs cheered, and was immediately suppressed by the officers of the court." },
+    { "para": "ch012-p69", "quote": "the choking of the suppressed guinea-pigs" }
+  ],
+  "inferred": true,
+  "inferred_fields": ["timbre", "pitch", "pitch_range_hz", "speed_wpm", "speed_cpm", "accent", "group_voice.speaking_slots"],
+  "reason": "Juror lines sourced but unattributed ('one of the jury', 'one of the jurymen', 'another of the jurymen'); line-to-slot mapping designed, reassignable by dialogue-rewrite."
+}

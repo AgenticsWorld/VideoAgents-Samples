@@ -1,0 +1,28 @@
+{
+  "shot_id": "sh072",
+  "scene_id": "SCN-long-hall",
+  "size": "close",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "top_right",
+    "anchor_xy": [0.64, 0.30],
+    "size_in_frame": "back to the sh068 close across the hall — her face high and partly cropped, about 0.30 of frame height"
+  },
+  "headroom": "none, as before; the return to this frame after the wide of sh071 is what makes two seconds feel like a jolt.",
+  "horizon_eyeline": "Water-level axis, lens on the flagstones at 0.35 m — but the flagstone line of sh068 is now a water line at 0.84 of frame height. Her eyeline comes up for the first time since sh068, from down in her knees to level at 0.34, listening.",
+  "layers": {
+    "fg": "her knee and the water round it",
+    "mg": "her face and her hands coming away from her eyes",
+    "bg": "the dark hall, a distant pattering and splashing that is not yet in frame"
+  },
+  "gaze": {
+    "direction": "frame_left",
+    "lead_room": "left",
+    "note": "the first outward look in four shots: her eyes go left, up the hall, toward a sound. The lead room opens on that side and is empty, which is what makes the next cut arrive somewhere."
+  },
+  "balance": "The sh068/sh069 crowded frame, but with the weight beginning to shift left as her attention does. Nothing else has changed, so the change of look is the whole event.",
+  "leading_lines": "Her sightline is the only line in frame with a direction; everything else is the same closed wedge of knee and vault.",
+  "eye_first": "Her hands leaving her eyes, then her eyes going left.",
+  "safe_area_ok": true,
+  "constraint_binding": "The first short shot in ninety seconds — the composition returns to a frame the audience already knows so that the two seconds do not have to establish anything and can be spent entirely on the change of attention."
+}

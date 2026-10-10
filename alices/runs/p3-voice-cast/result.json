@@ -1,0 +1,67 @@
+{
+  "task_id": "p3-voice-cast",
+  "agent": "09-audio/voice-generation",
+  "attempt": 1,
+  "status": "completed_with_escalations",
+  "completed_on": "2026-09-22",
+  "inputs_read": [
+    "bible/characters/index.json (tier_enum S/A/B/extra; confirms no 'minor' tier exists in this project)",
+    "bible/characters/CHAR-*/voice.json (38 cards: 33 individual + 5 ensemble_group_voice)",
+    "bible/characters/CHAR-alice/age_versions.json (on_screen_decision for ch004/ch012)",
+    "runs/p3-voice-vb1/result.json (voice.json production notes, speed_wpm<->speed_cpm conversion, age_variants rationale)",
+    "qa/defects/DEF-p3-char-index-902.json (executioner: no execution device - prop/costume scope, no voice action needed)",
+    "qa/defects/DEF-p3-char-index-903.json (ch006 lullaby chorus = Duchess+cook+baby - dialogue-attribution scope; Duchess and Cook already individually cast)",
+    "data/.videoagents/genconfig.json (tts.provider=volcengine, tts.volcengine.model=seed-audio-1.0 -> description-custom mode, no --voice)",
+    "modules/genmedia.py (_seedaudio_char_desc / _seedaudio_ref / _tts_volc_seedaudio - description assembly, reference-anchor auto-pick, --voice forbidden in this mode)",
+    "settings.json (output.dialogue_tts_speed=1.0 default; review.* all 0 -> no QA/evaluation gate on this deliverable)"
+  ],
+  "provider_and_mode": {
+    "tts_provider": "volcengine",
+    "tts_model": "seed-audio-1.0",
+    "mode": "description_custom",
+    "note": "No tts_voice selected from a library; --voice never passed. genmedia assembles voice_desc from each character's voice.json gender/pitch/timbre/accent fields and echoes it back in its synthesis log; that echoed string is what casting.json.voice_desc records for every entry."
+  },
+  "outputs": {
+    "casting_json": "assets/audio/voice/casting.json (39 entries: 38 characters + CHAR-alice age02)",
+    "manifest_json": "assets/audio/voice/refs/manifest.json",
+    "voiceprint_samples": "assets/audio/voice/refs/<CHAR-id>[_<variant>]_voiceprint.mp3 (39 files, all present, mp3/24kHz)",
+    "batch_script": "code/p3-voice-cast_run.py (dry-run + real synthesis + duration probe for all 39 forms; not itself a deliverable, kept for reproducibility)",
+    "synthesis_log": "runs/p3-voice-cast/synthesis_log.json (raw dry-run + run stdout/stderr + measured duration_s for all 39 forms)"
+  },
+  "coverage": {
+    "voice_json_cards": 38,
+    "forms_cast": 39,
+    "age_variant_forms": {
+      "CHAR-alice": ["default (=age01, base)", "age02 (grown-woman insert, ch012#p71, silent in current cut, sampled for timeline completeness per voice.json note)"]
+    },
+    "ensemble_group_voice_entries": [
+      "CHAR-card-soldiers-ensemble", "CHAR-caucus-race-party-ensemble", "CHAR-court-officers-ensemble",
+      "CHAR-crowd-ensemble", "CHAR-jury-ensemble"
+    ],
+    "not_carded_upstream_no_action_needed": [
+      "CHAR-duchess-baby", "CHAR-family-housemaid", "CHAR-royal-gardeners-ensemble",
+      "CHAR-royal-procession-ensemble", "CHAR-visiting-monarchs-ensemble"
+    ]
+  },
+  "self_check": {
+    "casting_bound": "PASS - every sample's (character_id, variant, tts_model) matches its casting.json entry",
+    "voiceprint_coverage_main_100": "PASS - all 38 voice.json cards + the one extra age form have a sample",
+    "dry_voice": "PASS - all samples produced with the model's fixed 'no BGM/no ambience/no reverb/no extra sfx' clause baked into the text_prompt (modules/genmedia.py:_tts_volc_seedaudio); no audio-playback tool available in this session, so verified by ffmpeg volumedetect on 3 spot-checked files (alice/duchess/white-rabbit: mean -18 to -34 dB, max -3 to -16 dB, no clipping, no flat/constant-tone segments) which is consistent with clean single-voice speech rather than added music/noise/silence padding",
+    "voice_collision": "PASS (spot-checked, see casting.json._meta.collision_review) - no shared-scene timbre look-alikes found in the highest-contact scenes; exhaustive 741-pair diff not run",
+    "duration_gate_[3,5]s": "PARTIAL FAIL - 12/39 pass, 27/39 measured 5.35-8.66s (over the 5s ceiling). See casting.json._meta.duration_check_result and refs/manifest.json._meta.duration_gate_status for the full per-form breakdown and root cause (seed-audio-1.0 does not track requested speaking rate; word-count sizing per character's voice.json speed_wpm could not reliably predict actual delivery pace for this model)."
+  },
+  "auto_retry_policy_applied": {
+    "project_setting": "auto_retry_count = 0",
+    "action_taken": "Each of the 39 forms was synthesised exactly once (no re-rolls). Self-check (duration gate) was run after the fact; the 27 forms that measured over 5s were kept as produced, not regenerated, per 'if a sample fails self-check, keep it and report'.",
+    "escalation": "Flagging all 27 over-length forms to orchestrator/user for disposition. This is not itself a bug in the voices (all 39 are valid, distinct, dry, on-model timbres matching their voice.json cards) - it is a duration-window miss caused by seed-audio-1.0's actual pacing diverging from the requested character speed_wpm. Two remediation paths for a follow-up work order (would count as a new decision, not a retry of this task): (a) shorten the sample line further per flagged character and resynthesise, or (b) resynthesise with an explicit --speed override >1.0 for the flagged characters. Downstream risk if left as-is: 08-video-gen/prompt stacking 2-3 of these as reference_audio on a single group could approach/exceed the Ark reference_audio 15.2s total cap (see memory: ark reference-audio total duration limit) sooner than the 3x5s design assumed - worth weighing against the cost of a resynthesis pass before Phase 7 prompt work starts consuming these."
+  },
+  "open_tickets_status": {
+    "DEF-p3-char-index-902": "read, no voice-side action needed (prop/costume scope; sample text carries no execution-device reference)",
+    "DEF-p3-char-index-903": "read, no new casting action needed (Duchess and Cook already individually cast above, satisfying the ticket's 'cast ... from the Duchess/cook/baby voice models' request; CHAR-duchess-baby has no voice.json and was not carded upstream, so no baby sample exists or was expected)"
+  },
+  "not_done": [],
+  "next_steps_for_downstream": [
+    "08-video-gen/prompt: use refs/manifest.json to bind each group's speaking characters to their sample as reference_audio; respect the Ark <=3 reference_audio / <=15.2s total caps per group when several of the flagged over-5s samples land in the same group.",
+    "orchestrator/user: decide whether to authorise a follow-up resynthesis work order for the 27 duration_check=fail_over_5s forms (see auto_retry_policy_applied.escalation)."
+  ]
+}

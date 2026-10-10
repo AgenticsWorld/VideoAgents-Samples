@@ -1,0 +1,107 @@
+{
+  "_meta": {
+    "file": "bible/characters/CHAR-cheshire-cat/personality.json",
+    "owner": "03-characters/personality",
+    "produced_by_task": "p3-personality-pb1",
+    "produced_on": "2026-09-22",
+    "content_language": "en",
+    "status": "draft_v1"
+  },
+  "character_id": "CHAR-cheshire-cat",
+  "name": "Cheshire Cat",
+  "tier": "A",
+  "layer": "dream",
+  "temperament": "Serene, amused and self-possessed. The one dream figure who is never hurried, never afraid and never commanded. Good-natured on the surface, with claws understood beneath. It treats Alice as an equal and answers her questions, in its own teasing way.",
+  "traits": [
+    {
+      "trait": "Unflappable and amused",
+      "description": "Grins through the chaos of the Duchess's kitchen and the Queen's rage alike.",
+      "evidence": [
+        { "chapter": "ch006", "chapter_no": 6, "ref": "ch006-p21", "event": "ev0026", "quote": "a large cat which was sitting on the hearth and grinning from ear to ear", "note": "Calm amid flying pans and pepper." },
+        { "chapter": "ch006", "chapter_no": 6, "ref": "ch006-p50", "event": "ev0028", "quote": "The Cat only grinned when it saw Alice.", "note": "Its default state." }
+      ]
+    },
+    {
+      "trait": "Good-natured but not tame",
+      "description": "Friendly, yet with 'very long claws and a great many teeth'. It is owed respect, not obedience.",
+      "evidence": [
+        { "chapter": "ch006", "chapter_no": 6, "ref": "ch006-p50", "event": "ev0028", "quote": "It looked good-natured, she thought: still it had _very_ long claws and a great many teeth", "note": "Alice's reading of it." }
+      ]
+    },
+    {
+      "trait": "Paradoxical philosopher",
+      "description": "Answers a question with its own logic, which is simple and unsettling. It argues that everyone here, itself and Alice included, is mad.",
+      "evidence": [
+        { "chapter": "ch006", "chapter_no": 6, "ref": "ch006-p52", "event": "ev0028", "quote": "That depends a good deal on where you want to get to", "note": "Direction requires a destination." },
+        { "chapter": "ch006", "chapter_no": 6, "ref": "ch006-p60", "event": "ev0028", "quote": "we’re all mad here. I’m mad. You’re mad.", "note": "Its thesis." },
+        { "chapter": "ch006", "chapter_no": 6, "ref": "ch006-p66", "event": "ev0028", "quote": "Now _I_ growl when I’m pleased, and wag my tail when I’m angry. Therefore I’m mad.", "note": "Its proof." }
+      ]
+    },
+    {
+      "trait": "Cannot be governed",
+      "description": "Declines the King's hand, and appears only as far as it chooses to.",
+      "evidence": [
+        { "chapter": "ch008", "chapter_no": 8, "ref": "ch008-p55", "event": "ev0037", "quote": "“I’d rather not,” the Cat remarked.", "note": "Declines to kiss the King's hand." },
+        { "chapter": "ch008", "chapter_no": 8, "ref": "ch008-p47", "event": "ev0037", "quote": "The Cat seemed to think that there was enough of it now in sight, and no more of it appeared.", "note": "Decides how much of itself to show." }
+      ]
+    },
+    {
+      "trait": "Attentive companion",
+      "description": "Checks in on Alice at the croquet, asks after the baby, and listens to her complaints.",
+      "evidence": [
+        { "chapter": "ch008", "chapter_no": 8, "ref": "ch008-p46", "event": "ev0037", "quote": "“How are you getting on?” said the Cat", "note": "The only figure who asks how she is." },
+        { "chapter": "ch006", "chapter_no": 6, "ref": "ch006-p72", "event": "ev0028", "quote": "By-the-bye, what became of the baby?", "note": "Takes an interest in her story." },
+        { "chapter": "ch008", "chapter_no": 8, "ref": "ch008-p49", "event": "ev0037", "quote": "“How do you like the Queen?” said the Cat in a low voice.", "note": "Confidential, on her side." }
+      ]
+    }
+  ],
+  "motivation": {
+    "core": "Its own amusement and freedom: to watch, to tease, and to belong to no one, while keeping a friendly eye on Alice.",
+    "want": "To be left free; to see how things turn out ('You'll see me there').",
+    "fear": "Nothing that is shown. It is the only dream figure that fears neither the Queen nor execution.",
+    "evidence": [
+      { "chapter": "ch006", "chapter_no": 6, "ref": "ch006-p70", "event": "ev0028", "quote": "“You’ll see me there,” said the Cat, and vanished.", "note": "Comes and goes at will." },
+      { "chapter": "ch008", "chapter_no": 8, "ref": "ch008-p71", "event": "ev0038", "quote": "it had entirely disappeared", "note": "Leaves the execution debate unresolved simply by fading." }
+    ],
+    "inferred": true,
+    "reason": "The source never states the Cat's motive. Freedom and amusement are drawn from its consistent behaviour (arc-cheshire-cat: 'guide who cannot be governed').",
+    "shifts": [
+      { "chapter": "ch008", "chapter_no": 8, "event": "ev0037", "from": "a riddling stranger on a bough", "to": "Alice's ally at court ('a friend of mine')", "evidence_ref": "ch008-p53" }
+    ]
+  },
+  "habits": [
+    { "habit": "Grins constantly; the grin is the last of it to go", "evidence_ref": "ch006-p78", "event": "ev0028" },
+    { "habit": "Vanishes and reappears without warning, once slowly from the tail to the grin (staged as a photographic dissolve, SUP-005)", "evidence_ref": "ch006-p78", "event": "ev0028" },
+    { "habit": "Answers questions with questions, or with a precise counter-question ('Did you say pig, or fig?')", "evidence_ref": "ch006-p76", "event": "ev0028" },
+    { "habit": "Sits still on a high perch (a bough) and watches from above", "evidence_ref": "ch006-p50", "event": "ev0028" },
+    { "habit": "Gestures directions with a lazy wave of its paw", "evidence_ref": "ch006-p58", "event": "ev0028" }
+  ],
+  "decision_pattern": "Observes, comments and withdraws. It never takes an order and never takes over. It gives Alice information and perspective, then leaves the choice to her.",
+  "taboos": [
+    { "taboo": "Never obeys any authority", "rationale": "It turns down the King's hand, and the Queen's sentence cannot touch it.", "evidence_ref": "ch008-p55", "event": "ev0037", "qa_check": "No scene of the Cat bowing, obeying or being cowed." },
+    { "taboo": "Never tells Alice which way to go or chooses for her", "rationale": "'Then it doesn't matter which way you go.' The choice stays hers, which matters for arc-alice-identity.", "evidence_ref": "ch006-p54", "event": "ev0028", "qa_check": "The Cat must not give her a direct instruction." },
+    { "taboo": "Never shows fear or hurry", "rationale": "The only unhurried figure in a world run by the clock and by fear.", "evidence_ref": "ch008-p47", "event": "ev0037", "qa_check": "No hurried movement or flinch in blocking." },
+    { "taboo": "Never uses its claws on anyone", "rationale": "The claws are implied, never used: it is respected, not violent.", "evidence_ref": "ch006-p50", "event": "ev0028", "inferred": true, "reason": "Designed limit consistent with its sourced good nature and the film's non-violent tone.", "qa_check": "No scratch or attack beat." }
+  ],
+  "facade": {
+    "applies": false,
+    "note": "Its surface (a grinning, good-natured cat) is also its true self. Its mystery is how it appears, not a hidden character."
+  },
+  "waking_life_embodiment": {
+    "applies": true,
+    "doubling": "Dinah, the family's real cat (H1 ruling 5.3 B; Dinah itself is registered by 04-creatures, not here)",
+    "adult_trait": "Not an authority figure. It is the one grown-up voice in the dream that treats Alice as an equal and puts the question back to her ('where you want to get to'). It stands for the independent self-possession she is growing towards: the cat that 'may look at a king'.",
+    "waking_source": "Dinah, whom Alice keeps talking about (ch001-p10), the independence of a household cat, and the proverb Alice quotes, 'A cat may look at a king'.",
+    "evidence": [
+      { "chapter": "ch001", "chapter_no": 1, "ref": "ch001-p10", "event": "ev0002", "quote": "(Dinah was the cat.)", "note": "The waking source." },
+      { "chapter": "ch008", "chapter_no": 8, "ref": "ch008-p57", "event": "ev0037", "quote": "A cat may look at a king", "note": "Alice's proverb defines the Cat's standing." }
+    ],
+    "inferred": true,
+    "reason": "The Dinah echo is H1-locked (ruling 5.3 B). The 'model of self-possession' reading is a design interpretation for the coming-of-age frame. The Cat is a photoreal CGI cat (SUP-002 as amended by BIB-0027), and Dinah's traits (calm, independent) should read in real feline stillness: the unhurried sit, slow blink and indifferent tail."
+  },
+  "performance_keynote": "Photoreal CGI cat (SUP-002, BIB-0027): near-total stillness, a sphinx-like loaf or upright sit on the bough, slow blinks, a lazy tail-tip curl, movement kept to the head and one paw. The broad grin is the one sanctioned departure from naturalistic anatomy and must still sit on real cat facial structure. A soft, amused voice. It appears and disappears only by dissolve (SUP-005), never by walking off.",
+  "consistency_flags": [],
+  "inferred_fields": ["motivation", "taboos[3]", "waking_life_embodiment"],
+  "inferred": true,
+  "reason": "The Cat's inner life is never narrated. Its motive and the claws taboo are designed from its consistent behaviour, and the embodiment follows ruling 5.3 B."
+}

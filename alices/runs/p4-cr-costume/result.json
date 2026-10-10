@@ -1,0 +1,33 @@
+{
+  "task_id": "p4-cr-costume",
+  "agent": "06-art/costume",
+  "attempt": 1,
+  "status": "done",
+  "date": "2026-09-23",
+  "change_request": "BIB-0027",
+  "changed_files": [
+    {
+      "path": "bible/costumes.json",
+      "version": "1.0.0 -> 1.1.0",
+      "note": "Animal-coded human costumes were removed for every CGI animal or creature character. 22 characters are now unclothed: Cheshire Cat, March Hare, Dormouse, Caterpillar, Pigeon, Mouse, Dodo, Duck, Lory, Eaglet, Canary, Magpie, both Crabs, the Caucus-race party, Bill the Lizard (COS-031 and COS-032), the crowd, Gryphon, Mock Turtle, Tortoise and the jury. Each keeps a positive visual_en ('unclothed and unadorned: the bare natural <animal>, wearing nothing'), has costume_sheet none, and has its bans in prohibited_in_prompt. Wet, soot, tea and upset states are kept as fur, feather or scale variants. The White Rabbit keeps a checked silk waistcoat with watch chain plus collar and bow (COS-006) and the crimson herald tabard over it (COS-007), both re-cut for rabbit anatomy. The Fish-Footman keeps crimson Hearts livery (COS-035) and the Frog-Footman keeps faded snuff-brown livery (COS-036), both with the sourced powdered wig, re-cut for fish- and frog-bodied figures. Fish-scale jacquard, the moss waistcoat, spectacles, stockings and shoes were removed; these are pending_H2. The Duchess's baby (COS-037) gains a pig end-state variant with a CGI piglet (pending_H2). The Gryphon and Tortoise occasion changed from work to daily. Each character now has a 'rendering' field. In _meta: amendments[] and pending_H2[] added; the SUP-002/CR-003 rule was rewritten to the CGI reading; a WR-010 rule was added (Art Nouveau stays out of costumes, which remain 1862); an unclothed negation-discipline rule was added; the Lory and crabs were dropped from the palette rule; inputs_read and user_refs were updated (the reference caterpillar now matches). Human and card-figure outfits, all 52 COS IDs, all 10 change points (CP-009 kept as the point where Bill's soot is gone) and the counts are unchanged."
+    },
+    {
+      "path": "qa/defects/DEF-p4-cr-costume-001.json",
+      "note": "New defect ticket covering three points: (a) DEF-p4-costume-001 findings a and d are superseded; (b) appearance cards and style.json accent_rules are stale against the new costumes; (c) the list of pending_H2 costume proposals."
+    }
+  ],
+  "backup": "runs/p4-cr-costume/costumes_before.json",
+  "machine_checks": {
+    "characters_covered": "44/44 (same set as before)",
+    "outfit_ids_unique": "52/52",
+    "one_default_per_character": "pass",
+    "change_points_valid": "10/10 (from/to exist; events are present in story_timeline)",
+    "variant_points_valid": "pass",
+    "no_unknown_placeholder": "pass",
+    "ascii_filenames": "pass"
+  },
+  "pending_H2": ["COS-006/007 White Rabbit garment set", "COS-035/036 Footmen livery cut vs anatomy", "COS-037 pig end-state gown", "COS-050 Tortoise register", "non-speaking animals (puppy, hedgehogs, flamingoes) have no costume entries"],
+  "not_done_by_scope": "bible/changelog.md was not edited (memory-bible owns it). Appearance cards, creature files and style.json were not edited (see DEF-p4-cr-costume-001).",
+  "skills": "none selected for this station",
+  "evaluation": "skipped (quality judge = 0)"
+}

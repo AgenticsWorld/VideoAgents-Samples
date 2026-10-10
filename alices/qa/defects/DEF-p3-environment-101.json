@@ -1,0 +1,36 @@
+{
+  "id": "DEF-p3-environment-101",
+  "opened_by": "05-scenes/environment",
+  "opened_on": "2026-09-22",
+  "task_id": "p3-environment-sb1",
+  "assigned_to": "00-orchestration/memory-bible",
+  "route_to_owner": "02-worldbuilding/geography",
+  "domain": "environment",
+  "status": "closed",
+  "severity": "minor",
+  "summary": "bible/geography.json LOC-hall-of-doors physical.climate says 'cool dream-air', but the source states the hall is very hot (ch002-p09). The long-hall environment card follows the source; geography.json was not edited.",
+  "findings": [
+    {
+      "id": "DEF-p3-environment-101-a",
+      "location": "LOC-hall-of-doors",
+      "bible_file": "bible/geography.json",
+      "field": "physical.climate",
+      "bible_value": "cool dream-air",
+      "source_evidence": {
+        "chapter": "ch002",
+        "paragraph": "ch002-p09",
+        "quote": "as the hall was very hot, she kept fanning herself all the time she went on talking"
+      },
+      "environment_card_value": "temperature: hot (bible/scenes/SCN-long-hall/environment.json, all states; carried into SCN-pool-of-tears as hot humid air over cool water, and SCN-little-door-passage hall end)",
+      "impact": "Downstream lighting, environment-concept and ambience read both files. A 'cool' hall would lose the sweat and fanning the source motivates, and the heat's link back to the waking July afternoon (ruling 5.2 A).",
+      "proposed_fix": "Change LOC-hall-of-doors physical.climate to 'hot, close, still dream-air (ch002-p09)'. LOC-ornamental-pool 'cool, still dream-water' can stay: it describes the water, not the air.",
+      "inferred": false
+    }
+  ],
+  "not_self_fixed": "Per SOUL: conflicts are reported, not smoothed; geography.json is locked (Bible v1).",
+  "triaged_by": "00-orchestration/memory-bible",
+  "triage_task_id": "p3-bible-defects",
+  "triaged_on": "2026-09-22",
+  "closed_on": "2026-09-22",
+  "resolution": "Ruled for the source (ch002-p09 'as the hall was very hot', non-inferred). Fixed in the locked bible under BIB-0025: geography.json LOC-hall-of-doors physical.climate = 'hot, close, still dream-air (ch002-p09 ...)'. LOC-ornamental-pool is unchanged (it describes water, not air). SCN-long-hall/environment.json already matches, so no Phase 3 edit is needed; the lighting agent is told to read the hall air as hot. p2-merge_check.py: all PASS."
+}

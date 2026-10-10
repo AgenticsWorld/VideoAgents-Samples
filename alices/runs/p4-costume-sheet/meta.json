@@ -1,0 +1,10 @@
+{
+ "task_id": "p4-costume-sheet",
+ "run_id": "bd767b64419e",
+ "attempt": 1,
+ "started_at": "2026-09-23T00:57:16+08:00",
+ "finished_at": "2026-09-23T01:07:38+08:00",
+ "result_status": "completed",
+ "eval": "skipped (review.evaluation=0)",
+ "artifact_versions": "v1"
+}

@@ -1,0 +1,28 @@
+{
+  "character_id": "CHAR-pat",
+  "task_id": "p4-char-concept-cb3",
+  "sheet": "sheet.png",
+  "variants": [],
+  "status": "delivered_for_H2_review",
+  "layout_check": { "four_panels": true, "one_view_per_panel": true, "same_individual_all_panels": true, "size": "2560x1440 (JPEG payload)" },
+  "appearance_field_hits": {
+    "gender_male": true,
+    "age_30_40": true,
+    "hair_dark_brown_shaggy_collar_length_side_whiskers": true,
+    "no_red_hair_no_caricature": true,
+    "eyes_blue_grey": true,
+    "face_weather_reddened_lined_stubble": true,
+    "build_wiry_slightly_stooped": true,
+    "collarless_linen_shirt_rolled_sleeves": true,
+    "brown_frieze_waistcoat": true,
+    "patched_corduroy_trousers_tied_below_knee": true,
+    "hobnailed_boots": true,
+    "battered_brown_felt_hat": true,
+    "soil_on_knees_hands_boots": true,
+    "spade_wooden_d_handle": true
+  },
+  "style_check": { "photoreal_live_action": true, "palette_within_style": true },
+  "self_check_defects": [],
+  "rerolls": [],
+  "reroll_budget_note": "User rerun setting = 0."
+}

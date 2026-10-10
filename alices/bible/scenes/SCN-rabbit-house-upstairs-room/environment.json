@@ -1,0 +1,88 @@
+{
+  "_meta": {
+    "file": "bible/scenes/SCN-rabbit-house-upstairs-room/environment.json",
+    "owner": "05-scenes/environment",
+    "task_id": "p3-environment-sb1",
+    "attempt": 1,
+    "generated": "2026-09-22",
+    "amended": {"change_id": "BIB-0027", "task_id": "p4-cr-environment", "date": "2026-09-23", "fields": ["fixed.dream_design (new)"]},
+    "enum_set": "ENV-ENUM-v1 (defined once in runs/p3-environment-sb1/result.json)"
+  },
+  "scene_id": "SCN-rabbit-house-upstairs-room",
+  "layer": "dream",
+  "fixed": {
+    "climate": "a small upstairs room on a hot summer afternoon: warm and stuffy, becoming close and airless once Alice fills it (geography.json LOC-rabbits-house-room)",
+    "indoor": true,
+    "daylight_access": "window_daylight",
+    "dream_design": {
+      "rule": "WR-010 / XA-magic-08 (dream, full)",
+      "flora": "the climbing roses and honeysuckle of the exterior show at the window; a small vase of sweet peas on the table in the window",
+      "ornament_cues": "walls and ceiling papered in a flowing poppy-and-vine pattern; the window is a rounded arch with a stained-glass rose roundel in its top light, so the sun lays soft coloured tints on the table; the fireplace has a tiled floral surround (form and material belong to architecture; the fan, gloves and the little bottle stay 1862 props, WR-009)",
+      "palette": "ivory and dusty-rose wallpaper, sage and pale gold, the window's rose-and-amber tint; once Alice's arm blocks the window the room drops to muted rose-brown",
+      "seasonal_guard": "summer flowers at the window and on the table",
+      "inferred": true,
+      "reason": "The room, table in the window, fan, gloves and bottle are explicit (ch004-p05..p07). Pattern, glass tint and palette are designed to WR-010; the window_light states (open_window_sun / window_blocked) are unchanged."
+    },
+    "window": "a single window with the table set in it; the sunny afternoon yard outside. Once Alice's arm fills the frame, most of the daylight is blocked.",
+    "dream_growth": "Grows from an upstairs room of the family house as the housemaid keeps it, on a July afternoon: sun through the window and warm, still indoor air. When she is wedged in, the heat and stuffiness become her panic.",
+    "source": {"chapter": "ch004", "quote": "By this time she had found her way into a tidy little room with a table in the window"},
+    "inferred": true,
+    "reason": "The room, window and chimney are explicit (ch004-p05, ch004-p07). The source gives no air or light, so the afternoon values are carried from the continuous clock and ruling 5.2 A."
+  },
+  "variable_dims": {
+    "season": ["summer"],
+    "time_of_day": ["afternoon"],
+    "weather": ["fair_hot"],
+    "wind": ["still"],
+    "temperature": ["hot"],
+    "window_light": ["open_window_sun", "window_blocked"]
+  },
+  "states": [
+    {
+      "state_id": "SCN-rabbit-house-upstairs-room-S01",
+      "chapter": 4,
+      "chapter_id": "ch004",
+      "story_scene": "ch004-sc02",
+      "paragraphs": "ch004-p04..ch004-p12",
+      "timeline_ref": "ev0015",
+      "timeline_node": "TL-003",
+      "season": "summer",
+      "weather": "fair_hot",
+      "wind": "still",
+      "temperature": "hot",
+      "time_of_day": "afternoon",
+      "waking_clock": "15:40-15:46 GMT (Alice asleep on the bank)",
+      "window_light": "open_window_sun",
+      "diegetic_daylight": "afternoon sun through the window onto the table, fan and gloves, with a band of warm light on the floor; after ch004-p07 her arm out of the window blocks most of it",
+      "conditions": "warm, dusty, still indoor air; floating dust in the window light",
+      "source_chapter": "ch004",
+      "source": {"chapter": "ch004", "quote": "she put one arm out of the window, and one foot up the chimney"},
+      "inferred": true,
+      "reason": "The window and chimney are explicit (ch004-p05, ch004-p07). Sun, air and clock are designed from the continuous dream clock."
+    },
+    {
+      "state_id": "SCN-rabbit-house-upstairs-room-S02",
+      "chapter": 4,
+      "chapter_id": "ch004",
+      "story_scene": "ch004-sc03..ch004-sc04",
+      "paragraphs": "ch004-p13..ch004-p34",
+      "timeline_ref": "ev0016",
+      "timeline_span": ["ev0016", "ev0017"],
+      "timeline_node": "TL-003",
+      "season": "summer",
+      "weather": "fair_hot",
+      "wind": "still",
+      "temperature": "hot",
+      "time_of_day": "afternoon",
+      "waking_clock": "15:47-15:56 GMT (Alice asleep on the bank)",
+      "window_light": "window_blocked",
+      "diegetic_daylight": "the window is filled by Alice's arm, so only slivers of afternoon light get in round it; the pebbles come in through that gap. Full light returns once she has shrunk and before she runs out.",
+      "conditions": "close, airless, hot; soot drifting from the chimney after Bill is kicked up it",
+      "source_chapter": "ch004",
+      "source": {"chapter": "ch004", "quote": "as the door opened inwards, and Alice’s elbow was pressed hard against it, that attempt proved a failure"},
+      "also_seen": [{"chapter": "ch004", "refs": ["ch004-p32"], "quote": "a shower of little pebbles came rattling in at the window"}],
+      "inferred": true,
+      "reason": "The blocked window and the pebbles through it are explicit (ch004-p15, ch004-p20, ch004-p32). The source gives no heat or soot; both are designed. The clock is continuous."
+    }
+  ]
+}

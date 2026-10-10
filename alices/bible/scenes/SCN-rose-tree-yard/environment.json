@@ -1,0 +1,176 @@
+{
+  "_meta": {
+    "file": "bible/scenes/SCN-rose-tree-yard/environment.json",
+    "owner": "05-scenes/environment",
+    "task_id": "p3-environment-sb2",
+    "attempt": 1,
+    "generated": "2026-09-22",
+    "amended": {"change_id": "BIB-0027", "task_id": "p4-cr-environment", "date": "2026-09-23", "fields": ["fixed.dream_design (new)"]},
+    "enum_set": "ENV-ENUM-v1 (runs/p3-environment-sb1/result.json) + sb2 extensions (runs/p3-environment-sb2/result.json)"
+  },
+  "scene_id": "SCN-rose-tree-yard",
+  "layer": "dream",
+  "fixed": {
+    "climate": "dream-midsummer formal garden: warm and sunlit, cooled by fountains (geography.json LOC-rose-tree-yard 'warm and sunlit')",
+    "indoor": false,
+    "daylight_access": "open_sky",
+    "dream_design": {
+      "rule": "WR-010 / XA-magic-08 (dream, full; the dream's goal-image, the purest Mucha space in the film)",
+      "flora": "the white rose-tree is trained into a great rounded crown on a single trunk, its sprays arching in whiplash curves; Madonna lilies stand in the beds with the existing lavender, delphiniums, hollyhocks and sweet peas; roses and clematis climb over curving iron arches along the gravel walks",
+      "ornament_cues": "the rose-tree crown is the halo roundel of the garden and frames the gardeners; the fountains are basins of mosaic and scrolled bronze with water falling in ribbon-curls; the box edging runs in flowing, rounded parterre curves, not straight lines (form and material belong to architecture; the paint-pots and brushes stay 1862 props)",
+      "palette": "white and blush roses, lily white, lavender and powder blue, cream gravel, sage box, fountain aqua, with pale gold light over everything; the wet red paint and the card red are the only saturated notes",
+      "seasonal_guard": "July: roses, Madonna lilies, clematis, lavender and hollyhocks all in flower; no spring bulbs or blossom, no autumn colour (unchanged guard)",
+      "inferred": true,
+      "reason": "Beds, fountains and the white rose-tree are explicit (ch007-p105, ch008-p01). WR-010 quotes 'the loveliest garden you ever saw' as the goal-image, so this space carries the language most fully."
+    },
+    "ground_and_flora": "bright flower-beds in high-July bloom (designed: lavender, delphiniums, hollyhocks, sweet peas); gravel walks; a large rose-tree in full bloom with white roses, some wet with red paint; the cool fountains beyond; clipped box edging",
+    "dream_growth": "Grows from the rose beds and fountains of a grand private garden seen through a small door (cp-garden). After the dark hall, the garden is the late-afternoon sun of the real day at its warmest and kindest: long, golden-white light, the fountains cooling the air. It is the goal-image of the dream.",
+    "seasonal_guard": "July is peak rose season, so a full rose-tree in bloom is correct. No spring blossom (no tulips, daffodils or fruit-tree blossom) and no autumn colour.",
+    "source": {
+      "chapter": "ch007",
+      "quote": "she found herself at last in the beautiful garden, among the bright flower-beds and the cool fountains"
+    },
+    "also_seen": [
+      {
+        "chapter": "ch008",
+        "refs": [
+          "ch008-p01"
+        ],
+        "quote": "A large rose-tree stood near the entrance of the garden: the roses growing on it were white"
+      }
+    ],
+    "inferred": true,
+    "reason": "Flower-beds, fountains and the white rose-tree are explicit (ch007-p105, ch008-p01). Flower species, gravel and box are designed for a July formal garden; the dream link follows cp-garden per ruling 5.2 A."
+  },
+  "variable_dims": {
+    "season": [
+      "summer"
+    ],
+    "time_of_day": [
+      "late_afternoon"
+    ],
+    "weather": [
+      "fair_hot"
+    ],
+    "wind": [
+      "still",
+      "light_breeze"
+    ],
+    "temperature": [
+      "warm"
+    ]
+  },
+  "states": [
+    {
+      "state_id": "SCN-rose-tree-yard-S01",
+      "chapter": 7,
+      "chapter_id": "ch007",
+      "story_scene": "ch007-sc03",
+      "paragraphs": "ch007-p105..ch007-p105",
+      "timeline_ref": "ev0032",
+      "timeline_node": "TL-003",
+      "season": "summer",
+      "weather": "fair_hot",
+      "wind": "still",
+      "temperature": "warm",
+      "time_of_day": "late_afternoon",
+      "waking_clock": "17:38-17:40 GMT (after SCN-little-door-passage 17:36-17:38)",
+      "sun": {
+        "elevation_deg_approx": 22,
+        "azimuth_deg_approx": 279,
+        "note": "sun due west; bright garden after the dim passage"
+      },
+      "sky": "clear, warm-blue",
+      "conditions": "sun-warm still air; fountains plashing and sparkling; the arrival reveal",
+      "source_chapter": "ch007",
+      "source": {
+        "chapter": "ch007",
+        "quote": "among the bright flower-beds and the cool fountains"
+      },
+      "inferred": true,
+      "designed_fields": [
+        "waking_clock",
+        "sun",
+        "sky",
+        "wind",
+        "temperature",
+        "weather"
+      ],
+      "reason": "Bright beds and cool fountains are explicit (ch007-p105). ev0032's result lands here (story_timeline). Time follows the waking afternoon in event order."
+    },
+    {
+      "state_id": "SCN-rose-tree-yard-S02",
+      "chapter": 8,
+      "chapter_id": "ch008",
+      "story_scene": "ch008-sc01",
+      "paragraphs": "ch008-p01..ch008-p10",
+      "timeline_ref": "ev0033",
+      "timeline_node": "TL-003",
+      "season": "summer",
+      "weather": "fair_hot",
+      "wind": "still",
+      "temperature": "warm",
+      "time_of_day": "late_afternoon",
+      "waking_clock": "17:40-17:45 GMT",
+      "sun": {
+        "elevation_deg_approx": 22,
+        "azimuth_deg_approx": 279,
+        "note": "sun due west; the rose-tree side-lit"
+      },
+      "sky": "clear",
+      "conditions": "still, warm; the red paint stays wet and glossy on the white roses in the warm air",
+      "source_chapter": "ch008",
+      "source": {
+        "chapter": "ch008",
+        "quote": "there were three gardeners at it, busily painting them red"
+      },
+      "inferred": true,
+      "designed_fields": [
+        "waking_clock",
+        "sun",
+        "sky",
+        "wind",
+        "temperature",
+        "weather"
+      ],
+      "reason": "Rose-tree and painting are explicit (ch008-p01). Weather and time follow the waking afternoon in event order."
+    },
+    {
+      "state_id": "SCN-rose-tree-yard-S03",
+      "chapter": 8,
+      "chapter_id": "ch008",
+      "story_scene": "ch008-sc02",
+      "paragraphs": "ch008-p11..ch008-p33",
+      "timeline_ref": "ev0034",
+      "timeline_node": "TL-003",
+      "season": "summer",
+      "weather": "fair_hot",
+      "wind": "light_breeze",
+      "temperature": "warm",
+      "time_of_day": "late_afternoon",
+      "waking_clock": "17:45-17:52 GMT",
+      "sun": {
+        "elevation_deg_approx": 21,
+        "azimuth_deg_approx": 280,
+        "note": "sun due west behind the approaching procession, giving long shadows ahead of it"
+      },
+      "sky": "clear",
+      "conditions": "a light breeze lifts the procession's banners and card tabards; the fountains' spray drifts; the first 'Off with her head!'",
+      "source_chapter": "ch008",
+      "source": {
+        "chapter": "ch008",
+        "quote": "the procession came opposite to Alice, they all stopped and looked at her"
+      },
+      "inferred": true,
+      "designed_fields": [
+        "waking_clock",
+        "sun",
+        "sky",
+        "wind",
+        "temperature",
+        "weather"
+      ],
+      "reason": "The procession is explicit (ch008-p11..p16). The light breeze is designed to give the flat card costumes movement (SUP-004). Time follows the waking afternoon in event order."
+    }
+  ]
+}

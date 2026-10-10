@@ -1,0 +1,26 @@
+{
+  "id": "DEF-p4-envconcept-703",
+  "opened_by": "06-art/environment-concept",
+  "opened_on": "2026-09-23",
+  "task_id": "p4-env-concept-sb2",
+  "domain": "environment-concept",
+  "route_to_owner": "05-scenes/environment + 05-scenes/architecture (BIB-0027 follow-up)",
+  "status": "open",
+  "severity": "minor",
+  "summary": "The White Rabbit's house window and door ornament read differently in the environment and architecture cards. Environment: the upstairs window is a rounded arch with a stained-glass rose roundel in its top light, and the door has a round fanlight with the brass plate in a floral cartouche. Architecture: white two-over-two sash windows under horseshoe-curved brick heads, a four-panel door with the brass plate in a whiplash border, and the stained-glass roundel in the gable plaque only.",
+  "findings": [
+    {
+      "id": "DEF-p4-envconcept-703-a",
+      "files": [
+        "bible/scenes/SCN-rabbit-house-exterior/environment.json (fixed.dream_design.ornament_cues)",
+        "bible/scenes/SCN-rabbit-house-upstairs-room/environment.json (fixed.dream_design.ornament_cues: 'the window is a rounded arch with a stained-glass rose roundel in its top light')",
+        "bible/scenes/SCN-rabbit-house-exterior/architecture.json (materials: white timber two-over-two sash windows; details: roundel in the gable plaque)",
+        "bible/scenes/SCN-rabbit-house-upstairs-room/architecture.json (structure: 'one white two-over-two sash')"
+      ],
+      "impact": "Low for the layout packs, because neither element is visible in a straight-down plan. It matters for shot-plates, because the giant arm fills this window. The window's shape and whether it has tinted glass change both the silhouette and the light.",
+      "proposed_fix": "The environment cards defer form and material to architecture ('form and material belong to architecture'). Confirm the architecture reading (sash with horseshoe head, no stained glass in the window) and remove the stained-glass window light from environment and lighting cues. Alternatively, add the rose roundel top light to the architecture card.",
+      "inferred": false
+    }
+  ],
+  "not_self_fixed": "Per SOUL: Bible cards belong to their owners."
+}

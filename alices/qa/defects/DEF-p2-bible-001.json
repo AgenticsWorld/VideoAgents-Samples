@@ -1,0 +1,95 @@
+{
+  "id": "DEF-p2-bible-001",
+  "task_id": "p2-merge",
+  "raised_by": "00-orchestration/memory-bible",
+  "raised_on": "2026-09-22",
+  "type": "setting_conflict (creative)",
+  "severity": "major",
+  "status": "closed",
+  "fix_note": "Applied H1 ruling 5.2 A (option A, dream-space) in task p2-fix-geography, attempt 1 (2026-09-22). Every Wonderland LOC-* now carries layer:\"dream\" plus a grows_from pointer to the waking-world detail it echoes (per world.json wonderland_real_counterparts), and parents to a new organizational root LOC-wonderland-dream instead of a real estate. LOC-descent-shaft no longer claims to be a real cellar shaft (SUP-008 compliance). LOC-hall-of-doors now has exactly one adjacency (LOC-tiny-passage, its own set) and appears in zero spatial_relations, satisfying 'never connected to other geography' (SUP-013); the ch007-p104 tree-door beat is filed as also_seen on LOC-hall-of-doors, not a second hatch. LOC-ornamental-pool is reparented under LOC-hall-of-doors and rewritten as the same hall, flooded at giant-Alice scale, matching ch002-p07 and SUP-007 (its grows_from is the new waking LOC-river-backwater). LOC-manor-grounds and LOC-cellar-passage are deprecated (deprecated:true, IDs retained). Real waking-world places (LOC-family-house, LOC-neighbouring-farm, LOC-farmyard, LOC-river-backwater) were added so the small, real waking world world.json describes now has LOC-* anchors. Not closed; memory-bible to re-verify at p2-merge.",
+  "escalation": "user ruling at H1 (memory-bible does not pick a side on a creative choice)",
+  "owner_after_ruling": "02-worldbuilding/geography",
+  "files": [
+    "bible/geography.json",
+    "bible/cultivation.json",
+    "bible/world.json"
+  ],
+  "summary": "geography.json places every Wonderland location on a real, walkable family estate and village in the waking world. The SUP registry (the single record for impossible elements) treats those places as dream-only space.",
+  "evidence": [
+    {
+      "geography": "LOC-descent-shaft: 'a real, modestly-sized disused cellar shaft with genuine built-in shelving' (geo-xda-02)",
+      "conflicts_with": "SUP-008: 'explicitly not a real well or shaft that exists in the film's waking geography'"
+    },
+    {
+      "geography": "LOC-tree-hatch plus spatial_relations: the hall 'never disappeared'; Alice re-enters through a second hatch in a hollow tree (geo-xda-03)",
+      "conflicts_with": "SUP-013: the hall's disappearance is dream discontinuity; the hall/door/garden set is 'never re-established' and not part of a mappable waking location"
+    },
+    {
+      "geography": "LOC-ornamental-pool: the pool sits at ground level outside the hedge hatch, 'not inside the underground hall' (geo-xda-04)",
+      "conflicts_with": "SUP-007 (the flood fills the hall at Alice's giant scale) and the source itself, ch002-p07: 'a large pool all round her, about four inches deep and reaching half down the hall'. world.json cp-pool grounds the pool in the waking world as the river backwater, not a manor pool."
+    },
+    {
+      "geography": "LOC-manor-grounds 'The Family's Riverside Grounds': the hole, pool, garden, wood, Rabbit's house (a 'gamekeeper's cottage') and Duchess's house (a 'dower house') are all on the family's own estate",
+      "conflicts_with": "world.json frame.social_class (upper-middle-class clergyman-scholar household in a university town; the house is 'a short run' from a meadow at the edge of a field next to a working farm), not a landed estate with lodges"
+    },
+    {
+      "geography": "geo-xda-01: 'this map is designed to hold under either fork of the dream-frame ruling'",
+      "conflicts_with": "XA-magic-04: dream-only spaces must not be filed as ordinary persistent LOC-* places; scenes set there use space_class non_diegetic_mental (WRITE_RULES section 4)"
+    }
+  ],
+  "affected_ids": [
+    "LOC-riverside-region",
+    "LOC-manor-grounds",
+    "LOC-cellar-passage",
+    "LOC-descent-shaft",
+    "LOC-hall-of-doors",
+    "LOC-tiny-passage",
+    "LOC-tree-hatch",
+    "LOC-walled-garden",
+    "LOC-rose-tree-yard",
+    "LOC-croquet-lawn",
+    "LOC-ornamental-pool",
+    "LOC-pool-bank",
+    "LOC-thick-wood",
+    "LOC-mushroom-clearing",
+    "LOC-pigeon-nest-treetop",
+    "LOC-gryphon-sunning-spot",
+    "LOC-rabbits-house",
+    "LOC-rabbits-house-room",
+    "LOC-duchess-house",
+    "LOC-duchess-kitchen",
+    "LOC-hare-cottage",
+    "LOC-tea-table-yard",
+    "LOC-estuary-shore",
+    "LOC-rock-ledge",
+    "LOC-village",
+    "LOC-courthouse",
+    "LOC-courtroom"
+  ],
+  "options": [
+    {
+      "key": "A",
+      "label": "Dream-space (follows the SUP registry)",
+      "effect": "Keep the waking-world places real (bank, field, hedge and burrow, river backwater, farm, family house). Wonderland places stay as LOC-* entries but are re-filed under a dream layer with no real-world parent, estate ownership or plumbing. Drop the cellar shaft, second hatch and ground-level pool; the pool is back in the hall. Scenes there use space_class non_diegetic_mental. Each dream place may keep a 'built_from' pointer to its waking counterpart (world.json wonderland_real_counterparts)."
+    },
+    {
+      "key": "B",
+      "label": "Layered map (keep geography's estate as what the dream is built from)",
+      "effect": "Keep the physical estate map as the real places the dream reuses. SUP-008 and SUP-013 must be amended, and world.json's family class and setting must grow to a landed estate. The source conflict on the pool (ch002-p07) remains."
+    },
+    {
+      "key": "C",
+      "label": "Literal real afternoon",
+      "effect": "Contradicts SUP-001 and world.json as a whole; would reopen every SUP entry. Not recommended."
+    }
+  ],
+  "recommendation": "A (matches SUP-001/007/008/013, world.json and the source text). 02-worldbuilding/geography reworks after the ruling.",
+  "blocks": "05-scenes scene registry and every scene location_ref (Phase 3/4) until ruled",
+  "assigned_to": "02-worldbuilding/geography",
+  "due_gate": "G2",
+  "routing_note": "routed by workflow-orchestrator 2026-09-22T17:20:54+08:00; fix dispatched only after user H1 ruling (decision 5.x in bible/h1_summary.md)",
+  "closed_by": "00-orchestration/memory-bible (p2-merge-recheck)",
+  "closed_on": "2026-09-22",
+  "verification": "Ruling 5.2 A verified in bible/geography.json: every Wonderland LOC-* is layer 'dream' under LOC-wonderland-dream with a grows_from link and no real-world parent. The cellar shaft, second hatch, estate and village readings are gone (LOC-manor-grounds, LOC-cellar-passage, LOC-tree-hatch, LOC-village are deprecated, not recycled, and no structural field points to them). LOC-ornamental-pool is the flooded hall (parent LOC-hall-of-doors), matching ch002-p07 and SUP-007. LOC-hall-of-doors connects only to its own set (SUP-013). Consistent with SUP-008 and XA-magic-04.",
+  "ruling_ref": "runs/h1-ruling/ruling.json"
+}

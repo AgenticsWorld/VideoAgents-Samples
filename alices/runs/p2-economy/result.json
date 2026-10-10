@@ -1,0 +1,49 @@
+{
+  "task_id": "p2-economy",
+  "agent": "02-worldbuilding/economy",
+  "project": "alices",
+  "phase": "Phase 2 (world bible)",
+  "attempt": 1,
+  "status": "completed",
+  "output_file": "bible/economy.json",
+  "inputs_used": [
+    "novel/Alices_Adventures_in_Wonderland_English.md (primary source text, grepped directly for currency/price/goods/labour terms)",
+    "story/chapter_manifest.json",
+    "story/events.json (event IDs cited: ev0002, ev0010, ev0016, ev0033, ev0042, ev0043, ev0045, ev0046, ev0051)",
+    "bible/economy.json (skeleton, kept _meta shape and entry_schema)",
+    "bible/WRITE_RULES.md",
+    "brief.md"
+  ],
+  "summary": "Extracted the full economy of the source (Alice's Adventures in Wonderland) as a single real-world mid-Victorian British £sd currency system (no invented fantasy currency), 10 goods entries (tarts, hats, ointment, turtle soup, marmalade, comfits, tea things, school tuition, a working dog, royal garden/kitchen produce), 4 concrete price samples with numeric amounts and transaction context (ointment 1 shilling, soup 2 pennyworth, dog valued at 100 pounds, sixpence reward), and 7 mechanisms covering household/labour economy: the caucus-race cashless prize custom, royal garden & kitchen provisioning and its harsh accountability, the White Rabbit's household staff (Mary Ann/Pat/Bill), a wage-benchmark production note for that household, the Mock Turtle's school billing (base course + itemised 'extras'), courtroom mock-accounting/reward culture, and the Hatter's status as a self-employed small tradesman.",
+  "entry_counts": { "currencies": 1, "goods": 10, "prices": 4, "mechanisms": 7 },
+  "inferred_entries": [
+    { "id": "CUR-001", "reason": "12d.=1s./20s.=£1 conversion and coin appearance not stated verbatim in source; standard historical fact of the story's own 1865 pre-decimal British setting." },
+    { "id": "ECO-M-003a", "reason": "Production note only: no wage figures for Mary Ann/Pat/Bill exist in source; fixes relative scale (small, modest household) without inventing a number, so downstream scripts don't accidentally imply a grand estate." }
+  ],
+  "inferred_count": 2,
+  "deliberately_unrevealed": [
+    "Numeric price of day-school tuition and its 'extras' (French, music, washing) -- the source explicitly withholds a figure as part of the joke; recorded as mechanism ECO-M-004 with no invented amount.",
+    "Numeric wage for the ointment 'box' beyond the stated 1 shilling (i.e. whether a sale in the verse actually completes) -- recorded as-is; the verse only offers a price, not a completed transaction."
+  ],
+  "cross_domain_assumptions": [
+    {
+      "id": "XA-ECO-001",
+      "assumption": "Single real British £sd currency used throughout, independent of how the dream/estate frame is resolved.",
+      "depends_on": "p2-magic (cultivation.json SUP-*), p2-world"
+    },
+    {
+      "id": "XA-ECO-002",
+      "assumption": "Mary Ann/Pat/Bill/gardeners/Hatter/Mock Turtle/jurors described only by economic function, no CHAR-*/CRE-* ID asserted; human-vs-animal casting left to magic-cultivation + character-manager.",
+      "depends_on": "p2-magic (cultivation.json SUP-*), 03-characters/character-manager"
+    }
+  ],
+  "conflicts": [],
+  "checks_self_run": {
+    "json_valid": true,
+    "no_unknown_placeholder": true,
+    "ids_unique": true,
+    "price_currency_ref_resolves": true,
+    "price_goods_ref_resolves_or_null": true
+  },
+  "notes_for_memory_bible": "This file only registers file-local ECO-G-*/ECO-P-*/ECO-M-* IDs and one CUR-001 currency per WRITE_RULES.md §4. No forward references to CHAR-*/CRE-* were asserted (see XA-ECO-002) -- downstream (character-manager, magic-cultivation) should feel free to attach their resolved IDs to the named individuals (Mary Ann, Pat, Bill, the Hatter, the Mock Turtle, the numbered gardeners) without needing to touch this file."
+}

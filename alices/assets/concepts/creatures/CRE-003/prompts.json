@@ -1,0 +1,25 @@
+{
+  "id": "CRE-003",
+  "task_id": "p4-creature-concept",
+  "generated": "2026-09-23",
+  "channel": { "provider": "volcengine", "model": "doubao-seedream-5-0-pro-260628", "source": "python3 modules/genmedia.py info" },
+  "images": [
+    {
+      "file": "sheet.png",
+      "command": "code/creature_sheet_gen_p4-creature-concept.sh CRE-003 2560x1440 assets/concepts/creatures/CRE-003/sheet.png",
+      "size": "2560x1440", "n": 1, "seed": null,
+      "actual_container": "JPEG payload in .png filename (genmedia volcengine behaviour)",
+      "prompt_assembly": ["runs/p4-creature-concept/prompts/layout.txt", "runs/p4-creature-concept/prompts/lookref_dream.txt", "runs/p4-creature-concept/prompts/CRE-003.txt", "'Overall visual style: ' + runs/p4-creature-concept/prompts/style_fragment_ui.txt (verbatim style.json style_fragment_ui)", "runs/p4-creature-concept/prompts/tail.txt"],
+      "full_prompt_file": "runs/p4-creature-concept/prompts/CRE-003.full_prompt.txt",
+      "negative_file": "runs/p4-creature-concept/prompts/neg_dream.txt",
+      "negative_source": "style.json negative_prompt_en + no-person/layout guard terms",
+      "refs": [
+        { "order": 1, "path": "runs/p4-creature-concept/inputs/character_sheet_template.jpg", "role": "layout anchor: agents/06-art/character-concept/templates/character_sheet_template.png converted to JPEG (q95, pixels unchanged) because the volcengine image channel resets TLS on true-PNG refs" },
+        { "order": 2, "path": "refs/style/alice.jpeg", "role": "user style reference: photoreal creature rendering/texture/palette/grain only; prompt forbids copying its hall, mushrooms, caterpillar or the small figure" }
+      ],
+      "user_refs": ["refs/style/alice.jpeg"],
+      "probe": { "path": "runs/p4-creature-concept/probe/CRE-003_probe.png", "size": "1280x720", "note": "quarter-price layout/audit probe before the full-size render; not a reroll, not a candidate. Prompt text of the probe: runs/p4-creature-concept/prompts/CRE-003.probe_v1.txt + runs/p4-creature-concept/prompts/tail_probe_v1.txt" },
+      "provider_errors": []
+    }
+  ]
+}

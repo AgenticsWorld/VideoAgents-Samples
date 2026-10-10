@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh062",
+  "group_id": "grp024",
+  "scene_no": "S07",
+  "duration_s": 6.0,
+  "size": "wide",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a — no move at all; the gauge change is read off the set",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 28,
+  "camera_height_m": 0.8,
+  "angle": "level",
+  "rack_focus": "none",
+  "start_frame": "One held wide of the hall from the corner entrance, camera low on the stone floor: Alice standing at the glass table just after the cake, the west door line and the lamp row both inside the frame as the two gauges waiting their turn.",
+  "end_frame": "The same frame, unmoved: her feet exactly where they were and the rest of her gone up and up — GAUGE ONE, the 0.715 m glass tabletop, has dropped past her shoulder, past her hip and come to rest at her knee.",
+  "constraint_honoured": "'MUST NOT BE CUT INSIDE, and sh062-sh063 must stay in sequence. GAUGE ONE read off the set, not the lens. No morph, no glow.'",
+  "movement_note": "Lens at 0.80 m — under the 1.00 m ceiling the giant state imposes — and absolutely still, so the growth can only be measured against the furniture.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

@@ -1,0 +1,89 @@
+{
+  "_meta": {
+    "file": "bible/scenes/SCN-gryphon-sunning-spot/environment.json",
+    "owner": "05-scenes/environment",
+    "task_id": "p3-environment-sb2",
+    "attempt": 1,
+    "generated": "2026-09-22",
+    "amended": {"change_id": "BIB-0027", "task_id": "p4-cr-environment", "date": "2026-09-23", "fields": ["fixed.dream_design (new)"]},
+    "enum_set": "ENV-ENUM-v1 (runs/p3-environment-sb1/result.json) + sb2 extensions (runs/p3-environment-sb2/result.json)"
+  },
+  "scene_id": "SCN-gryphon-sunning-spot",
+  "layer": "dream",
+  "fixed": {
+    "climate": "dream-midsummer: an open, sun-trapped patch between the croquet-lawn and the shore (geography.json LOC-gryphon-sunning-spot 'warm and sunny')",
+    "indoor": false,
+    "daylight_access": "open_sky",
+    "dream_design": {
+      "rule": "WR-010 / XA-magic-08 (dream, full)",
+      "flora": "long seeding grasses bow in flowing, combed curves round the sleeping Gryphon; field poppies, cornflowers and wild marjoram scattered through them; a vine of hop or honeysuckle trails over the sun-facing wall",
+      "ornament_cues": "the sun-facing wall is dressed with a weathered carved frieze of lion-and-eagle roundels and vine scrolls, echoing the Gryphon's own body (form and material belong to architecture); the curled grass makes a natural nest-shaped roundel round the sleeper",
+      "palette": "straw gold and pale honey grass, poppy coral and cornflower blue as soft pastel notes, warm sandstone; the low west sun gilds the grass heads",
+      "seasonal_guard": "poppies, cornflowers and seeding grass are July-true; no spring blossom",
+      "inferred": true,
+      "reason": "The Gryphon asleep in the sun is explicit (ch009-p43). Flora, frieze and palette are designed to WR-010; the warm, still state is unchanged."
+    },
+    "ground_and_flora": "a sun-warmed, sheltered corner of long dry summer grass beyond the garden, against a low sun-facing wall or bank; seed-heads on the grass; open toward the west",
+    "dream_growth": "Grows from a sunlit corner of a great-house garden beyond the croquet lawn (cp-court). The Gryphon asleep in the sun mirrors Alice herself, asleep in the same real evening sun on the bank. The patch catches the lowering western sun head-on, which is why it is still warm when the lawn has cooled.",
+    "source": {
+      "chapter": "ch009",
+      "quote": "They very soon came upon a Gryphon, lying fast asleep in the sun."
+    },
+    "inferred": false,
+    "reason": "Sun is explicit (ch009-p43). The sheltered west-facing corner and the grass state are designed to keep it plausibly sunlit at the lowering waking-clock sun; the dream link follows ruling 5.2 A."
+  },
+  "variable_dims": {
+    "season": [
+      "summer"
+    ],
+    "time_of_day": [
+      "late_afternoon"
+    ],
+    "weather": [
+      "fair_hot"
+    ],
+    "wind": [
+      "still"
+    ],
+    "temperature": [
+      "warm"
+    ]
+  },
+  "states": [
+    {
+      "state_id": "SCN-gryphon-sunning-spot-S01",
+      "chapter": 9,
+      "chapter_id": "ch009",
+      "story_scene": "ch009-sc04",
+      "paragraphs": "ch009-p43..ch009-p47",
+      "timeline_ref": "ev0041",
+      "timeline_node": "TL-003",
+      "season": "summer",
+      "weather": "fair_hot",
+      "wind": "still",
+      "temperature": "warm",
+      "time_of_day": "late_afternoon",
+      "waking_clock": "18:28-18:32 GMT",
+      "sun": {
+        "elevation_deg_approx": 15,
+        "azimuth_deg_approx": 288,
+        "note": "sun west-north-west, falling full on the sleeping Gryphon; warm, slightly golden, not yet golden hour"
+      },
+      "sky": "clear, beginning to warm in tone low in the west",
+      "conditions": "still, warm, drowsy sun-trap; the Gryphon sprawled asleep in it",
+      "source_chapter": "ch009",
+      "source": {
+        "chapter": "ch009",
+        "quote": "lying fast asleep in the sun"
+      },
+      "inferred": false,
+      "designed_fields": [
+        "waking_clock",
+        "sun",
+        "sky",
+        "wind"
+      ],
+      "reason": "Sun and sleep are explicit (ch009-p43). Time follows the waking afternoon in event order (ev0041 follows ev0040 'continuous', story_timeline); the sun is computed for Oxford on 4 July 1862."
+    }
+  ]
+}

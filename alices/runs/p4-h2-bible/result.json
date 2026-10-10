@@ -1,0 +1,159 @@
+{
+  "task_id": "p4-h2-bible",
+  "agent": "00-orchestration/memory-bible",
+  "project": "alices",
+  "date": "2026-09-23",
+  "status": "completed",
+  "status_note": "All six listed defects have an explicit disposition and one hand-off defect was opened. One ruling (the club-rank one) could not use the mechanism the work order prescribed; it is flagged below under decisions_needing_orchestrator_attention and is fully reversible if the user prefers the alternative.",
+  "change_id": "BIB-0029",
+  "authority": "H2 art-style lock signed by the user at gate G4 on 2026-09-23 (approval ba96732d, decision PASS_WITH_WAIVER, record runs/g4/gate.json)",
+  "scope_discipline": {
+    "images": "none generated, re-rolled or edited (user auto-reroll budget = 0). Text only.",
+    "files_not_touched_by_design": [
+      "bible/style.json (06-art/art-director, frozen at H2 v1.2.0) - read only; the required CR-012 amendment was handed off",
+      "bible/creatures/creature.json (04-creatures/creature, editing in parallel) - not read for write, not edited",
+      "bible/props.json - read only; the costume-vs-prop ruling deliberately adds nothing to it"
+    ]
+  },
+
+  "changed_files": [
+    { "path": "bible/characters/CHAR-magpie/appearance.json", "note": "Exit muffler dropped from the default look (marks[0] retyped to exit_business, rendering.limits, default_outfit_tone, prompt_base_en); the sourced ch003-p47 wrapping-up beat kept as fluffed-throat business. DEF-p4-char-concept-201-a." },
+    { "path": "bible/characters/CHAR-fish-footman/appearance.json", "note": "White stockings and buckled pumps removed (bare scaled lower legs and webbed feet, per COS-035 and the locked sheet); anatomy_proposal pending_H2 -> approved_H2 Option A; prompt_base_en and period_silhouette_1862 updated. DEF-p4-char-concept-201-b." },
+    { "path": "bible/characters/CHAR-frog-footman/appearance.json", "note": "Waistcoat aligned to COS-036 and the locked sheet: mottled olive-and-moss-green satin -> plain buff wool (default_outfit_tone, prompt_summary_en, signature_items[0]); anatomy_proposal pending_H2 -> approved_H2 Option A. DEF-p4-char-302." },
+    { "path": "bible/characters/CHAR-gardener-two/appearance.json", "note": "Suit clubs -> spades (signature_items, default_outfit_tone, sup002_coding, prompt_summary_en). Numeral '2' untouched. DEF-p4-char-301." },
+    { "path": "bible/characters/CHAR-gardener-five/appearance.json", "note": "Suit clubs -> spades. Numeral '5' untouched. DEF-p4-char-301." },
+    { "path": "bible/characters/CHAR-gardener-seven/appearance.json", "note": "Suit clubs -> spades. Numeral '7' untouched. DEF-p4-char-301." },
+    { "path": "bible/characters/CHAR-royal-gardeners-ensemble/appearance.json", "note": "Suit clubs -> spades for ranks 3/4/6/8/9/10; variation_rules[0] now also bars every club rank, not just 2/5/7. DEF-p4-char-301." },
+    { "path": "bible/characters/CHAR-card-soldiers-ensemble/appearance.json", "note": "Ranks CONFIRMED unchanged (Ace-Ten of Clubs); the explicit S01-S10 rank table, the reserve Jack of Clubs, the never-wear-Queen-or-King rule and the arch-double rule written into variation_rules. DEF-p4-char-301." },
+    { "path": "bible/characters/index.json", "note": "performer_concept for CHAR-gardener-two/-five/-seven and CHAR-royal-gardeners-ensemble now names the spade suit; CHAR-card-soldiers-ensemble left on clubs. Kept in step so the index does not contradict the cards it governs." },
+    { "path": "bible/costumes.json", "note": "COS-040/041/042/043 gardener tabards -> spade pips (numerals untouched); COS-044 records the soldier confirmation; COS-027 gains canon_action_kept + rejected_design for the muffler; COS-035/036/037 pending_H2 -> resolved_H2; COS-012 gains the costume-vs-prop ownership ruling; COS-001/COS-006 glove variants gain prop_ref; COS-015 gains lettering_ruling; _meta.pending_H2 rewritten, _meta.amendments gains the BIB-0029 entry, version 1.1.0 -> 1.2.0. All 44 characters and all 52 outfit ids preserved." },
+    { "path": "bible/changelog.md", "note": "New BIB-0029 entry with the full arbitration, the impacted list and the disclosed deviation from the work order's club-rank mechanism." },
+    { "path": "code/p2-merge_check.py", "note": "LEXICON gains 'Art Nouveau' -> TERM-0152 and 'Alphonse Mucha' -> TERM-0153 - the one action the dictionary defect left to memory-bible. Only those two lines added." },
+    { "path": "qa/defects/DEF-p4-char-concept-201.json", "note": "closed, both findings ruled" },
+    { "path": "qa/defects/DEF-p4-char-301.json", "note": "closed, final rank table + disclosed deviation + sheet deviation" },
+    { "path": "qa/defects/DEF-p4-char-302.json", "note": "closed" },
+    { "path": "qa/defects/DEF-p4-costume-001.json", "note": "closed: b ruled and handed off, c ruled, a/d already superseded" },
+    { "path": "qa/defects/DEF-p4-cr-costume-001.json", "note": "closed: b verified clean on both the appearance and the style side, c resolved by H2" },
+    { "path": "qa/defects/DEF-p4-cr-cgi-mucha-dict-001.json", "note": "closed, verification recorded" },
+    { "path": "qa/defects/DEF-p4-style-003.json", "note": "NEW hand-off to 06-art/art-director: CR-012 must gain the Hatter 10/6 ticket exception" }
+  ],
+
+  "defect_dispositions": [
+    {
+      "defect": "DEF-p4-char-concept-201",
+      "disposition": "closed",
+      "a_magpie_muffler": "DROPPED from the default look, RECORDED not deleted. The wrapping-up and the throat are source-written (ch003-p47) but the muffler itself was inferred:true; SUP-002 as amended by BIB-0027 (user ruling: talking animals are photoreal CGI and wear only text-NAMED garments) and the H2-locked sheet (bare fluffed throat) both exclude it. The canon beat survives in full as exit business on the appearance card, and the rejected muffler is preserved with its source anchor and restore conditions in costumes.json COS-027.rejected_design. Not left in both places.",
+      "b_fish_footman_legs": "appearance.json aligned to the sheet and COS-035: no white stockings, no buckled pumps; crimson knee breeches stay, lower legs and feet bare wet-sheened scaled skin. The Option A / Option B conditional is gone because H2 approved Option A."
+    },
+    {
+      "defect": "DEF-p4-char-302",
+      "disposition": "closed",
+      "ruling": "appearance.json default_outfit_tone and prompt_summary_en aligned to COS-036 and the sheet: plain buff wool waistcoat. The olive-green satin reading was an inferred colour with no source anchor, so it is superseded rather than kept as a variant."
+    },
+    {
+      "defect": "DEF-p4-char-301",
+      "disposition": "closed",
+      "ruling": "Soldiers keep clubs Ace-Ten; the gardeners keep their numerals and move to spades.",
+      "see": "decisions_needing_orchestrator_attention[0] for why the work order's mechanism could not be used"
+    },
+    {
+      "defect": "DEF-p4-costume-001",
+      "disposition": "closed",
+      "a_and_d": "already superseded by BIB-0027, unchanged",
+      "b_hatter_ticket": "Ruled in the costume's favour: KEEP the ticket as a named CR-012 exception (canon detail). Costume side is final (COS-015.lettering_ruling). style.json NOT edited - handed off as qa/defects/DEF-p4-style-003 to 06-art/art-director.",
+      "c_chain_glove_spectacles": "Ruled with an explicit ownership rule written into COS-012: an item that stays on one wearer for its whole screen life is COSTUME even when put on or taken off as business; an item that changes hands, is consumed or drives a plot beat is a PROP. Knave's wrist cuffs and chain = costume, deliberately not in props.json (and SUP-014 compliant: light, slack, no restraint hold). King's / Queen's / White Rabbit's spectacles = costume outfit variants. White Rabbit's white kid gloves and fan = prop PROP-white-kid-gloves-and-fan, now cross-referenced from the two costume variants that show them (COS-001, COS-006). Nothing moved file, so no downstream artefact is stale."
+    },
+    {
+      "defect": "DEF-p4-cr-costume-001",
+      "disposition": "closed",
+      "b_appearance_sweep": "VERIFIED CLEAN, no edit needed. Swept every animal-bodied CHAR-*/appearance.json: the p4-cr-appearance BIB-0027 redo had already removed the human-performer / costume-cue wording (the White Rabbit's plum frock coat is gone, leaving only the sourced waistcoat, collar-and-bow and herald tabard; the jurors read 'none: no clothing on any juror'; caucus, crowd, Cheshire Cat, March Hare, Dormouse, Mouse, Dodo, Lory, Duck, Eaglet, Gryphon and Mock Turtle all read 'no clothing', with the old garment named only in the historical reason field). The only two residues were the Magpie muffler and the Fish-Footman legwear, fixed here under DEF-p4-char-concept-201.",
+      "b_style_side": "NO HAND-OFF NEEDED. style.json v1.2.0 palette_logic.accent_rules no longer names the Lory or the crabs as scarlet/coral costume wearers - the four rules now cover Alice's cornflower, Hearts crimson, the fall bridge and the waking match-cut, and the Lory appears only in CR-003 as a photoreal CGI animal. Verified read-only; style.json not edited.",
+      "c_pending_H2": "Resolved by the signature and folded into costumes.json: COS-035/036 (upright livery figures with real fish/frog heads, gate proposal #1) and COS-037 (piglet keeps the same swaddling gown in one continuous held shot, gate proposal #3) become resolved_H2. COS-006/COS-007 (White Rabbit garment set) is re-flagged STILL OPEN because the signature card never itemised it; COS-050 (Tortoise) stays open and costless."
+    },
+    {
+      "defect": "DEF-p4-cr-cgi-mucha-dict-001",
+      "disposition": "closed (verified, not re-opened)",
+      "verification": "TERM-0152 'Art Nouveau' (category other) and TERM-0153 'Alphonse Mucha' (category person) are both present in bible/dictionary.json with the definitions the fix_note describes. 153 terms; all ids unique, all term strings unique, no duplicated alias and no alias colliding with a term string (scripted set check). The one outstanding action belonged to memory-bible: code/p2-merge_check.py LEXICON is now wired to both ids, and the checker re-run gives dictionary_hit_100pct PASS on a real hit - 'Art Nouveau' occurs 7 times in canon fields and resolves - instead of passing by omission."
+    }
+  ],
+
+  "final_club_rank_table": {
+    "constraint_met": "No club rank is claimed by two figures who share a scene. Verified by re-reading every character card: the only club claims left are the ten soldiers and the two visiting Clubs monarchs, all distinct.",
+    "CLUBS": {
+      "CHAR-card-soldiers-ensemble": {
+        "S01": "Ace of Clubs", "S02": "Two of Clubs", "S03": "Three of Clubs", "S04": "Four of Clubs", "S05": "Five of Clubs",
+        "S06": "Six of Clubs", "S07": "Seven of Clubs", "S08": "Eight of Clubs", "S09": "Nine of Clubs", "S10": "Ten of Clubs"
+      },
+      "CHAR-visiting-monarchs-ensemble": { "M01": "King of Clubs", "M02": "Queen of Clubs" },
+      "reserve_worn_by_nobody": "Jack of Clubs",
+      "note": "The two optional arch-coverage doubles (headcount 11-12) repeat a soldier already in frame and carry that soldier's own rank; they are never framed with their original."
+    },
+    "SPADES": {
+      "CHAR-gardener-two": "Two of Spades",
+      "CHAR-gardener-five": "Five of Spades",
+      "CHAR-gardener-seven": "Seven of Spades",
+      "CHAR-royal-gardeners-ensemble": ["Three of Spades", "Four of Spades", "Six of Spades", "Eight of Spades", "Nine of Spades", "Ten of Spades"],
+      "CHAR-visiting-monarchs-ensemble": { "M05": "King of Spades", "M06": "Queen of Spades", "M07": "Jack of Spades (optional)" },
+      "reserve_worn_by_nobody": "Ace of Spades"
+    },
+    "DIAMONDS_unchanged": "CHAR-royal-procession-ensemble courtiers Ace-Ten of Diamonds; M03 King, M04 Queen, M08 Jack of Diamonds (optional). Out of this defect's scope, untouched.",
+    "HEARTS_unchanged": "King / Queen / Knave of Hearts; CHAR-royal-procession-ensemble royal children Ace-Ten of Hearts; CHAR-court-officers-ensemble Eight and Nine of Hearts (extras Six and Four). Out of this defect's scope, untouched - see observations_not_acted_on."
+  },
+
+  "decisions_needing_orchestrator_attention": [
+    {
+      "id": "deviation-1",
+      "topic": "DEF-p4-char-301: the work order's prescribed mechanism could not be used",
+      "the_order_said": "Keep the named gardeners' numerals and re-rank the soldiers.",
+      "what_was_done": "The named gardeners' numerals were kept exactly as instructed, but the soldiers were NOT re-ranked - the gardeners moved suit instead.",
+      "why": "Re-ranking the soldiers is arithmetically impossible. A suit has 13 cards. In the shared ch008 scene the claimants are 10 soldiers + 3 named gardeners (2/5/7, locked by the source) + 6 background gardeners + the King and Queen of Clubs on CHAR-visiting-monarchs-ensemble M01/M02 (whose own sheet was drawn as the King of Clubs) = 19 claims on 13 cards. Even dropping the background gardeners entirely it is 15 > 13, so no assignment of soldier ranks can clear the collision; some group has to leave the club suit.",
+      "why_the_gardeners_and_not_the_soldiers": "SOUL arbitration rule - source text first, inferred yields to what is written. ch008-p11 'First came ten soldiers carrying clubs', read in parallel with 'the ten courtiers; these were ornamented all over with diamonds' and the heart-ornamented royal children, anchors the club suit to the soldiers, and ten soldiers need the suit's ten pip cards. The gardeners' suit appears nowhere in the source (only their numbers Two, Five and Seven do), so it is the free variable. Spades also fit garden staff and match the illustrated tradition. Bonus: the result is an exactly consistent single pack - clubs = 10 soldiers + 2 monarchs + 1 reserve, spades = 9 gardeners + 3 monarchs + 1 reserve, diamonds and hearts unchanged at 13 each.",
+      "cost_disclosed": "The four H2-locked gardener sheets draw club trefoils, not spade pips. Nothing was regenerated (auto-reroll budget 0). The numerals - the only identifying feature and the only thing the source fixes - are unaffected, and costumes.json visual_en is already the wardrobe/pip authority for prompts under the runs/g4/gate.json DEF-p4-costume-sheet-901 waiver. CHAR-gardener-two's sheet is in any case already non-conforming (3 pips drawn instead of 2, logged in runs/p4-char-concept-cb3/result.json).",
+      "if_the_user_disagrees": "The only other assignment that fits 13 cards is to move the SOLDIERS to spades (1 sheet glyph affected instead of 4) at the cost of the source's club-suit reading for the soldiers. Everything needed to flip it is one controlled change on the same ten files. Please surface this to the user at the next checkpoint rather than treating it as settled.",
+      "user_can_overturn_at_any_time": true
+    },
+    {
+      "id": "route-back-1",
+      "topic": "DEF-p4-char-concept-202 (04-creatures/creature is aligning creature.json to the appearance cards)",
+      "answer": "No appearance-side change is needed from this run. The appearance cards for the animal-bodied characters were verified clean in the DEF-p4-cr-costume-001-b sweep, and the only appearance edits this task made (Magpie muffler, Fish-Footman legwear, Frog-Footman waistcoat, gardener suits) do not touch any creature.json subject. creature.json can be aligned to the cards as planned. If the parallel run finds a card that actually needs to move, route it back here as a new defect - do not let creature.json and the cards be edited in opposite directions."
+    }
+  ],
+
+  "handoffs_opened": [
+    {
+      "defect_id": "DEF-p4-style-003",
+      "path": "qa/defects/DEF-p4-style-003.json",
+      "assigned_to": "06-art/art-director",
+      "ask": "Add \"the Hatter's hat price ticket, marked 10/6\" to bible/style.json CR-012's allowed in-world lettering list. Everything else in CR-012 unchanged.",
+      "why_not_done_here": "style.json is art-director's file and is frozen at H2 (v1.2.0, BIB-0028); the work order explicitly forbade editing it.",
+      "blocking": "nothing - COS-015 already carries the ticket as its working value",
+      "if_rejected": "the ticket would have to be dropped from COS-015 instead, which removes a canon detail and must come back to memory-bible as a controlled change with a user ruling"
+    }
+  ],
+
+  "acceptance_self_check": [
+    { "check": "every file written is valid JSON", "result": "PASS - all 10 bible JSON files, both index files, 7 defect files and this receipt parse; bible/changelog.md is Markdown by design" },
+    { "check": "all pre-existing ids kept", "result": "PASS - costumes.json still has 44 character entries and 52 unique COS ids with none added or deleted; dictionary.json still 153 TERM ids; no CHAR-*, COS-*, PROP-* or TERM-* id was renamed, recycled or removed. The only id-shaped additions are the record-only COS-027-rejected-muffler and the new defect id DEF-p4-style-003." },
+    { "check": "no club rank claimed by two figures who share a scene", "result": "PASS - see final_club_rank_table; a regex audit of every bible/characters/*/appearance.json confirms the only club claims left are the ten soldiers (Ace-Ten) and the visiting King and Queen of Clubs" },
+    { "check": "every listed defect has an explicit disposition", "result": "PASS - 6 closed, 1 new hand-off defect opened (DEF-p4-style-003)" },
+    { "check": "ASCII filenames only", "result": "PASS" },
+    { "check": "code/p2-merge_check.py re-run after the edits", "result": "dictionary_hit_100pct PASS (real hit), no_unknown_placeholder PASS, cross_refs_valid_all_namespaces FAIL on 5 PRE-EXISTING unrelated items - costumes _meta.schema_note 'COS-id' placeholder text, three CHAR-alice-age01/02 age-version refs, color_script 'sp-pinch' - plus the props.json duplicate-id listing. None of them was introduced or touched by this change; the newly added PROP-white-kid-gloves-and-fan cross-references resolve cleanly. quote_verification_warn 0/563." },
+    { "check": "no image generated or re-rolled", "result": "PASS - zero media calls" },
+    { "check": "no evaluation scoring, no QA co-sign", "result": "N/A by user review settings (all 0)" }
+  ],
+
+  "observations_not_acted_on": [
+    {
+      "id": "obs-hearts-rank-overlap",
+      "found_while": "building the pack-wide rank ledger for DEF-p4-char-301",
+      "observation": "CHAR-court-officers-ensemble signature_items claims the Eight and Nine of Hearts (extras Six and Four of Hearts), while CHAR-royal-procession-ensemble's royal children claim Ace to Ten of Hearts. Both groups are present at the ch011 trial ('the whole pack of cards', ch011-p01), so the same hearts rank can be on two figures in one frame - the same class of problem as DEF-p4-char-301, one suit over.",
+      "why_not_fixed_here": "Outside this work order's scope (it is a hearts collision, not a club one) and neither card was listed. Not silently changed.",
+      "recommendation": "workflow-orchestrator: open a minor defect against 03-characters/appearance, or route it back here as a follow-on arbitration. Cheapest likely fix is to move the two court officers onto court cards or high hearts the children do not use; no sheet is affected (the court-officers sheet was not drawn with a rank that collides).",
+      "urgency": "low - ep08 / courtroom scope, no gate impact"
+    }
+  ],
+
+  "skills": [
+    { "note": "This工位 has no auto-activation skills selected for the project; none applicable, none invoked." }
+  ]
+}

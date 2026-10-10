@@ -1,0 +1,748 @@
+{
+  "_meta": {
+    "file": "bible/politics.json",
+    "status": "locked_v1",
+    "owner": "02-worldbuilding/political",
+    "write_via": "00-orchestration/memory-bible (on_bible_access)",
+    "task_id": "p2-political",
+    "generated": "2026-09-22",
+    "content_language": "English (project output-language setting, 2026-09-22)",
+    "scope": "Power structures in the adapted world: households, institutions, courts, authorities; offices and holders; laws, rules and trial procedure; relations between factions.",
+    "id_prefixes": {
+      "FAC-": "faction/institution/household (readable ASCII slug)",
+      "OFF-": "office/position",
+      "LAW-": "law/rule/procedure",
+      "FREL-": "faction relationship"
+    },
+    "entry_schema": {
+      "factions[]": {
+        "id": "FAC-example-slug",
+        "name": "",
+        "type": "household|court|institution|authority|group|other",
+        "layer": "waking|dream|dream (told only) - added p2-fix-political (DEF-p2-bible-004, ruling 5.5 A): waking = exists in the frame story; dream = exists only inside Alice's dream; 'dream (told only)' = narrated in-dream but never depicted",
+        "status": "free-text lifecycle note (e.g. 'existing throughout', 'fallen at chNNN') - added p2-fix-political, optional",
+        "seat": "<LOC-*> or null if the source/ruling states the place is never shown",
+        "leader_refs": [
+          "<CHAR-*>"
+        ],
+        "emblem_visual": "",
+        "summary": "",
+        "source": {
+          "chapter": "chNNN",
+          "quote": ""
+        },
+        "inferred": false,
+        "reason": null
+      },
+      "offices[]": {
+        "id": "OFF-001",
+        "title": "",
+        "faction_ref": "<FAC-*>",
+        "holders": [
+          "<CHAR-*>"
+        ],
+        "powers": "",
+        "source": {},
+        "inferred": false,
+        "reason": null
+      },
+      "laws[]": {
+        "id": "LAW-001",
+        "name": "",
+        "issued_by": "<FAC-*/OFF-*>",
+        "content": "",
+        "source": {},
+        "inferred": false,
+        "reason": null
+      },
+      "relationships[]": {
+        "id": "FREL-001",
+        "from": "<FAC-*>",
+        "to": "<FAC-*>",
+        "kind": "",
+        "period": [
+          "<TL-*/ERA-*>"
+        ],
+        "phases": [
+          {
+            "phase_kind": "",
+            "chapters": [
+              "chNNN"
+            ],
+            "source": {}
+          }
+        ],
+        "source": {},
+        "inferred": false,
+        "reason": null
+      }
+    },
+    "notes": [
+      "Premise (brief.md): realistic drama adapted from a fairy tale. The source's literal 'living playing-card' court (soldiers/courtiers/gardeners described as flat, two-dimensional, suit-marked figures; the Knave 'made entirely of cardboard', ch012) is a supernatural/impossible element whose final visual/physical treatment belongs to 02-worldbuilding/magic-cultivation (bible/cultivation.json SUP-*), per bible/WRITE_RULES.md section 7.1. This file's political content assumes the reading stated in cross_domain_assumptions[0] (a human household staffed and ranked under Hearts-suit livery) so that offices, laws and relationships can be written concretely; that assumption is provisional pending the SUP-* ruling and H1 sign-off.",
+      "relationships[].period references bible/timeline.json TL-*/ERA-* nodes, which do not exist yet (02-worldbuilding/timeline runs in parallel and its file is still skeleton_empty at the time this file was written). period is left as an empty array; the phase-by-phase chapter record lives in relationships[].phases (chapter-cited, resolvable now) so no political fact depends on an unresolved cross-file ID. memory-bible should backfill relationships[].period once bible/timeline.json lands.",
+      "FAC-*.seat values reference bible/geography.json LOC-* IDs, which also do not exist yet (02-worldbuilding/geography runs in parallel). The seat values given are this agent's best-guess, source-grounded slugs, marked inferred:true with reason; memory-bible's cross_refs_valid_all_namespaces check must reconcile them against geography's actual LOC-* registry at merge and return a conflict to this agent if they do not match.",
+      "p2-merge: seat slug 'hearts-estate' (not registered in geography.json) re-keyed to LOC-walled-garden; FREL-001.period backfilled to TL-003 (BIB-0003, BIB-0006).",
+      "p2-fix-political (task p2-fix-political, DEF-p2-bible-004, user H1 pre-ruling 5.5 A, runs/h1-ruling/ruling.json): registered 7 new FAC-* entries for world.json faction_register proposal keys that had fac_ref: null (alice-family-household, neighbouring-farm, visiting-monarchs, white-rabbit-household, mad-tea-party, caucus-race-company, school-in-the-sea), plus mapped 'pack-of-cards' to the existing FAC-house-of-hearts as a sub-unit (no new ID) per DEF-p2-bible-004 option A's own wording. Added layer:'dream' to the two pre-existing factions (FAC-house-of-hearts, FAC-duchess-household). New FAC-alice-family.seat (LOC-family-house) and FAC-neighbouring-farm.seat (LOC-farmyard) are this agent's best-guess slugs pending geography's DEF-p2-bible-003 fix (family house / farmyard / river backwater not yet registered in geography.json as of this write) — same known-risk pattern as the original p2-political seat guesses, flagged for memory-bible reconciliation. See runs/p2-fix-political/result.json for the full proposal_key -> FAC-* mapping table memory-bible needs to re-point world.json's fac_ref fields."
+    ],
+    "version": "v1",
+    "merged_by": "p2-merge (00-orchestration/memory-bible)",
+    "merged_on": "2026-09-22",
+    "h1_status": "signed",
+    "last_fix": {
+      "task_id": "p2-fix-political",
+      "date": "2026-09-22",
+      "defect_id": "DEF-p2-bible-004"
+    },
+    "rechecked_by": "p2-merge-recheck (00-orchestration/memory-bible)",
+    "rechecked_on": "2026-09-22",
+    "locked_at": "2026-09-22T17:59:52+08:00",
+    "locked_by": "H1 user signature (G2 PASS), recorded by 00-orchestration/memory-bible task p2-lock",
+    "lock_record": "runs/g2/gate.json",
+    "lock_changelog": "BIB-0023",
+    "controlled": "Writes only via memory-bible controlled change (WRITE_RULES.md section 5)."
+  },
+  "cross_domain_assumptions": [
+    {
+      "id": "assume-01-card-court-as-human-livery",
+      "source_element": "living, two-dimensional playing-card figures (soldiers, courtiers, gardeners, jury, the Knave) — realistic_adaptation_flags aspect 'talking, anthropomorphic animals and living-card figures' in story/events.json",
+      "source": {
+        "chapter": "ch008",
+        "quote": "First came ten soldiers carrying clubs; these were all shaped like the three gardeners, oblong and flat, with their hands and feet at the corners: next the ten courtiers; these were ornamented all over with diamonds... the royal children... were all ornamented with hearts."
+      },
+      "also_seen": [
+        {
+          "chapter": "ch012",
+          "quote": "(Which he certainly did not, being made entirely of cardboard.)"
+        }
+      ],
+      "assumption": "For this domain's purposes only, the crown's household (soldiers, courtiers, gardeners, jurors, the Knave) is modelled as a human household staffed and ranked under a Hearts-suit livery and heraldry system: numbered ranks (Two through Ten) mark household grades (gardeners, footmen, soldiers), the Jack/Knave is the Queen's senior page and heir-presumptive attendant, and the King and Queen wear formal court dress with crown and heart insignia. This governs faction/office/emblem content below only. Whether the final production rendering keeps the card-beings literal (stagecraft/costume design implying flatness), plays them as ordinary humans, or treats them as a dream distortion is p2-magic's SUP-* decision, to be confirmed at H1; if that ruling differs from this assumption, only the emblem_visual/summary description fields here need updating, not the office/law/relationship structure.",
+      "affects": [
+        "FAC-house-of-hearts"
+      ],
+      "reconciliation": "ALIGNED to SUP-002/SUP-004 (pre-authorised by this assumption's own clause): emblem_visual now reads as human performers costumed and blocked as flat, card-suited figures. Office/law structure unchanged."
+    },
+    {
+      "id": "assume-02-dream-frame-neutral",
+      "source_element": "dream frame — realistic_adaptation_flags aspect 'dream frame' in story/events.json (ev0001, ev0053, ev0054)",
+      "source": {
+        "chapter": "ch012",
+        "quote": "she gave a little scream, half of fright and half of anger, and tried to beat them off, and found herself lying on the bank, with her head in the lap of her sister"
+      },
+      "assumption": "This file describes the House of Hearts' institutions (offices, laws, trial procedure) as an internally consistent polity operating within the story world, without taking a position on whether that world is ultimately kept as literal dream, played ambiguously, or reinterpreted as waking reality. That framing decision belongs to 02-worldbuilding/world and magic-cultivation; no entry below depends on it.",
+      "affects": [
+        "FAC-house-of-hearts",
+        "FAC-duchess-household"
+      ],
+      "reconciliation": "CONSISTENT with SUP-001 (approved at H1 5.1 A). New factions carry layer 'waking' (FAC-alice-family, FAC-neighbouring-farm) or 'dream' (the rest), matching geography.json's layers."
+    },
+    {
+      "id": "assume-03-theatrical-terror-not-literal-executions",
+      "source_element": "the Gryphon's reveal that the Queen's death sentences are never carried out",
+      "source": {
+        "chapter": "ch009",
+        "quote": "“Why, _she_,” said the Gryphon. “It’s all her fancy, that: they never executes nobody, you know.”"
+      },
+      "assumption": "This is the interpretive key used throughout laws[] and offices[] below: the Queen's rule is read as a despotism of performative/theatrical terror (constant capital threats, essentially never enforced on-page) rather than a fantastical 'bloodless beheading' convention. This is a direct, faithful reading of the source's own text (the Gryphon's line), not an invention, and is flagged here only because it is load-bearing for how several entries are written.",
+      "affects": [
+        "FAC-house-of-hearts",
+        "LAW-001"
+      ],
+      "reconciliation": "CONSISTENT with SUP-014 and XA-magic-06 (LAW-001 is the never-enforced threat). No change."
+    },
+    {
+      "id": "assume-04-cat-head-dispute-procedural-only",
+      "source_element": "the disembodied, fading Cheshire Cat head disputed by the executioner, King and Queen",
+      "source": {
+        "chapter": "ch008",
+        "quote": "The executioner’s argument was, that you couldn’t cut off a head unless there was a body to cut it off from... The King’s argument was, that anything that had a head could be beheaded"
+      },
+      "assumption": "This file records only the political/procedural fact of the dispute (a three-way jurisdictional deadlock between executioner, King and Queen over whether an execution order is enforceable, left unresolved when the target vanishes) without taking a position on how the Cat's disembodied, fading head is itself physically or visually rendered. That is p2-magic's SUP-* call (the Cheshire Cat entity belongs to 04-creatures, not this file).",
+      "affects": [
+        "OFF-003"
+      ],
+      "reconciliation": "CONSISTENT with SUP-005. No change."
+    },
+    {
+      "id": "assume-05-single-isolated-polity",
+      "source_element": "scale of the political world (not a supernatural element, a scope observation)",
+      "source": {
+        "chapter": "ch008",
+        "quote": "First came ten soldiers... next the ten courtiers... After these came the royal children; there were ten of them... Next came the guests, mostly Kings and Queens"
+      },
+      "assumption": "The source never mentions a neighbouring nation, a rival court, or any foreign power; the King and Queen of Hearts appear to be the sole sovereign authority within the garden/estate, and even their 'guests, mostly Kings and Queens' are never named or given territory. This file therefore treats Wonderland's court as a single, isolated micro-polity (a walled estate), and 'diplomatic relations' as internal (crown vs. subordinate households) rather than international. No external nation is invented to fill this gap.",
+      "affects": [
+        "relationships"
+      ],
+      "reconciliation": "CONSISTENT with world.json realms. The seat was re-keyed from the unregistered slug 'hearts-estate' to LOC-walled-garden (BIB-0003). After H1 5.5 A the dream polity still has one sovereign court; the added factions are households and groups, not rival states."
+    }
+  ],
+  "factions": [
+    {
+      "id": "FAC-house-of-hearts",
+      "name": "House of Hearts",
+      "type": "authority",
+      "layer": "dream",
+      "seat": "LOC-walled-garden",
+      "leader_refs": [
+        "CHAR-king-of-hearts",
+        "CHAR-queen-of-hearts"
+      ],
+      "emblem_visual": "Household liveries in Hearts colours: a crimson coat or tabard piped in white/cream, a stitched or enamelled red heart badge at the breast, and a small numeral or rank device (Two through Ten for gardeners/footmen/soldiers, a stylised Jack device for the Knave, crown devices for the King and Queen) marking household rank — a heraldic echo of the source's literal card-suit ornamentation ('ornamented all over with diamonds', 'ornamented with hearts', ch008) worn by human performers whose costume and blocking read as flat, card-suited figures inside the dream (SUP-002, SUP-004; see cross_domain_assumptions #1). The King wears a crown set awkwardly over a judge's wig when sitting as judge (ch011); the Queen carries no weapon, ruling entirely by voice and decree.",
+      "summary": "The ruling household of a walled garden estate, comprising the crown couple, their court of justice, their household guard (doubling as croquet-ground arches), gardening staff, and a twelve-member jury empanelled for trials. The King is the nominal head of state and presiding judge, wearing his crown over his wig (ch011); in practice he is conflict-averse and frequently softens or quietly overturns the Queen's sentences (e.g. pardoning the entire croquet party the moment she is out of earshot, ch009). The Queen of Hearts is the de facto ruling authority: she is the sole source of capital sentences, issued almost continuously over trivialities (a missed croquet turn, a wrong-coloured rose, a disagreement), and per the Gryphon's own account these sentences are essentially never carried out (ch009) — see cross_domain_assumptions #3 for how this reading is used below. The household also fields the plaintiff (the Queen, whose tarts were stolen) and the defendant (the Knave of Hearts) for the same trial, i.e. crown and prosecution are not institutionally separated from the bench. This faction is also the fac_ref target for world.json's 'the pack of cards (the Queen's retinue)' proposal (proposal_key: pack-of-cards, DEF-p2-bible-004 ruling 5.5 A): the ten club-marked soldiers, ten diamond-marked courtiers, ten heart-marked royal children and the gardeners Two/Five/Seven are the same household ranks already covered by OFF-005 (Royal Gardener), OFF-006 (Card-Suit Soldier) and OFF-008 (Knave of Hearts) above, not a separate faction.",
+      "source": {
+        "chapter": "ch008",
+        "quote": "“Idiot!” said the Queen, tossing her head impatiently; and, turning to Alice, she went on, “What’s your name, child?”"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch011",
+          "quote": "The judge, by the way, was the King; and as he wore his crown over the wig... he did not look at all comfortable"
+        },
+        {
+          "chapter": "ch009",
+          "quote": "Alice heard the King say in a low voice, to the company generally, “You are all pardoned.”"
+        }
+      ],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "FAC-duchess-household",
+      "name": "The Duchess's Household",
+      "type": "household",
+      "layer": "dream",
+      "seat": "LOC-duchess-house",
+      "leader_refs": [
+        "CHAR-duchess"
+      ],
+      "emblem_visual": "No heraldic marking given in the source; a smaller, lower gentry household (one house, one cook, one infant, one cat) by contrast with the crown's large retinue — costume/production should read as visibly poorer and less formal than the House of Hearts' liveried court (inferred; reason: source gives no crest or livery for the Duchess, only a chaotic, smoke-filled single kitchen, ch006).",
+      "summary": "A lesser noble household holding land or residence within the crown's domain, headed by the Duchess and staffed by a cook; formally subordinate to the House of Hearts and directly exposed to its arbitrary justice. Invited to the Queen's croquet game by written summons (ch006), the Duchess arrives late and boxes the Queen's ears, for which she is placed under a standing sentence of execution (ch008); she is later seen free and affectionate toward Alice with no explanation of a pardon given in the source (see story/events.json broken_chains on ev0039), then given a fresh ultimatum by the Queen in person and vanishes rather than answer it (ch009). Her cook is compelled to testify at the crown's tart-theft trial and is treated with open hostility by the King and Queen (ch011).",
+      "source": {
+        "chapter": "ch008",
+        "quote": "“She’s under sentence of execution.”"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch006",
+          "quote": "“For the Duchess. An invitation from the Queen to play croquet.”"
+        },
+        {
+          "chapter": "ch009",
+          "quote": "“Now, I give you fair warning,” shouted the Queen... “either you or your head must be off, and that in about half no time! Take your choice!”"
+        }
+      ],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "FAC-alice-family",
+      "name": "Alice's Family Household",
+      "type": "household",
+      "layer": "waking",
+      "status": "existing throughout",
+      "seat": "LOC-family-house",
+      "leader_refs": [],
+      "emblem_visual": "No heraldic emblem — an ordinary 1862 upper-middle-class clergyman-scholar household (per bible/h1_summary.md 5.6). Visual identity is costume and setting only: the sister's afternoon reading dress on the bank, Alice's day dress, and a housemaid's uniform glimpsed only in family-house scenes; no device, crest or livery of any kind.",
+      "summary": "The waking-world household Alice and her sister belong to: implied by references to 'Dinah', tea-time and 'our house' rather than shown as a building within Wonderland itself. Members: Alice, her older sister, Dinah the cat, and at least one housemaid; the parents are implied (the household clearly has means and routine) but never appear or are named in the source. This household is the real-world anchor that several dream figures echo under the light-doubling ruling (5.3 B): the housemaid doubles as the White Rabbit's 'Mary Ann', and Dinah doubles as the Cheshire Cat (see bible/cultivation.json SUP-002; the sister is also glimpsed at the trial, ch012).",
+      "source": {
+        "chapter": "ch001",
+        "quote": "Dinah’ll miss me very much to-night, I should think!"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch012",
+          "quote": "now run in to your tea; it’s getting late"
+        },
+        {
+          "chapter": "ch003",
+          "quote": "Dinah"
+        }
+      ],
+      "inferred": true,
+      "reason": "The household is implied by Dinah, tea-time and 'our house' (ch002-p24) rather than depicted directly; the housemaid's existence and the parents' off-screen status are design choices confirmed at H1 (bible/h1_summary.md section 1, frame.social_class). Registered per user ruling 5.5 A (DEF-p2-bible-004), matching world.json's faction_register proposal 'alice-family-household'."
+    },
+    {
+      "id": "FAC-neighbouring-farm",
+      "name": "The Neighbouring Farm",
+      "type": "household",
+      "layer": "waking",
+      "status": "existing throughout",
+      "seat": "LOC-farmyard",
+      "leader_refs": [],
+      "emblem_visual": "No heraldic emblem — a working 1862 riverside farm. Visual identity is practical: work smocks and a straw hat, a prized pet terrier, and farmyard elements (sheep with bells, cattle) audible from the bank rather than seen up close in the waking frame.",
+      "summary": "A working farm within earshot of the bank where Alice and her sister sit; supplies two of the sounds the sister's closing reverie remaps onto the dream (sheep-bells become rattling teacups, the shepherd's voice becomes the Queen's shrill cries, ch012). Members named by role only: a farmer who owns a valuable terrier ('worth a hundred pounds', ch002) and a shepherd boy. No character is given a proper name.",
+      "source": {
+        "chapter": "ch012",
+        "quote": "the Queen’s shrill cries to the voice of the shepherd boy"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch002",
+          "quote": "it belongs to a farmer, you know, and he says it’s so useful, it’s worth a hundred pounds!"
+        }
+      ],
+      "inferred": true,
+      "reason": "The farmer, farmyard and shepherd boy are each in the source individually; merging them into one neighbouring farm adjacent to the bank is a design choice (confirmed at H1, bible/h1_summary.md section 1) that gives the frame's closing sound-mapping one coherent source. Registered per user ruling 5.5 A (DEF-p2-bible-004), matching world.json's faction_register proposal 'neighbouring-farm'."
+    },
+    {
+      "id": "FAC-visiting-monarchs",
+      "name": "The Guest Kings and Queens",
+      "type": "group",
+      "layer": "dream",
+      "status": "appear only at ch008; end with the dream",
+      "seat": "LOC-walled-garden",
+      "leader_refs": [],
+      "emblem_visual": "No individual emblem: staged as a generic procession of background monarchs in the other three suits' colours (clubs, diamonds, spades) rather than the Hearts household's crimson/heart livery (see FAC-house-of-hearts emblem_visual and cross_domain_assumptions #1), so they read on screen as visiting dignitaries rather than Hearts household members.",
+      "summary": "Unnamed guests in the royal procession at the croquet-ground, described only as 'mostly Kings and Queens'. Read here as the monarchs of the other three card suits, attending the House of Hearts as visiting dignitaries rather than as its own household or subjects. None is named or given dialogue in the source; they appear once, in the procession, and are not seen again.",
+      "source": {
+        "chapter": "ch008",
+        "quote": "Next came the guests, mostly Kings and Queens"
+      },
+      "also_seen": [],
+      "inferred": true,
+      "reason": "The guests themselves are stated in the source; reading them specifically as the other three suits' monarchs (rather than an unspecified miscellany) is a design choice, since the text never names their suits. Registered per user ruling 5.5 A (DEF-p2-bible-004), matching world.json's faction_register proposal 'visiting-monarchs'; reviewed and included even though not one of the four groups the ruling named explicitly, because the group has its own on-page members (however unnamed) distinct from the House of Hearts household."
+    },
+    {
+      "id": "FAC-white-rabbit-household",
+      "name": "The White Rabbit's Household",
+      "type": "household",
+      "layer": "dream",
+      "status": "existing, ends with the dream",
+      "seat": "LOC-rabbits-house",
+      "leader_refs": [
+        "CHAR-white-rabbit"
+      ],
+      "emblem_visual": "A small, tidy bourgeois household, not a liveried one: a bright brass door-plate reading 'W. RABBIT', the Rabbit's own waistcoat and pocket-watch, and a pair of white kid gloves and a fan kept just inside the door. No crest, livery or heraldry, in deliberate visual contrast to the House of Hearts' card-suit livery.",
+      "summary": "The White Rabbit's own home and staff, separate from (though in service to) the House of Hearts: the Rabbit as master of the house and the crown's court herald (OFF-004); Mary Ann, a housemaid mentioned but never seen on-page, for whom the Rabbit mistakes Alice; Pat, a gardener found 'digging for apples'; and Bill the Lizard, sent down the chimney here and later a juror at the trial (OFF-007). Under the light-doubling ruling (5.3 B), the never-seen Mary Ann doubles the Alice-family household's own housemaid.",
+      "source": {
+        "chapter": "ch004",
+        "quote": "a bright brass plate with the name “W. RABBIT,” engraved upon it"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch004",
+          "quote": "Why, Mary Ann, what are you doing out here?"
+        },
+        {
+          "chapter": "ch004",
+          "quote": "Digging for apples, yer honour!"
+        }
+      ],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "FAC-mad-tea-party",
+      "name": "The Mad Tea-Party",
+      "type": "group",
+      "layer": "dream",
+      "status": "existing, ends with the dream",
+      "seat": "LOC-tea-table-yard",
+      "leader_refs": [],
+      "emblem_visual": "No emblem; visual identity is the tea-table itself — mismatched china laid for far more guests than are present, a table permanently set for six o'clock, and the Hatter's oversized hat with its price-tag ('In this style 10/6') left in place.",
+      "summary": "The Hatter, the March Hare and the Dormouse, an egalitarian trio with no stated leader, perpetually stuck at six o'clock since the Hatter's falling-out with Time at the Queen's concert (ch007). Counted under the Kingdom of Hearts because the Queen's own concert caused their situation and because the Hatter is later summoned as the trial's first witness (ch011), even though the source gives them no formal allegiance or duty to the crown otherwise.",
+      "source": {
+        "chapter": "ch007",
+        "quote": "it was at the great concert given by the Queen of Hearts"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch007",
+          "quote": "It’s always six o’clock now."
+        },
+        {
+          "chapter": "ch006",
+          "quote": "we’re all mad here"
+        }
+      ],
+      "inferred": true,
+      "reason": "The trio and their tie to the Queen (the concert, the Hatter's later testimony) are in the source; counting them as a group formally under the Kingdom of Hearts, rather than an independent household, is a design choice, since the source states no formal allegiance. Registered per user ruling 5.5 A (DEF-p2-bible-004), one of the four groups the ruling named explicitly ('the tea-party'), matching world.json's faction_register proposal 'mad-tea-party'."
+    },
+    {
+      "id": "FAC-caucus-race-company",
+      "name": "The Caucus-Race Company",
+      "type": "group",
+      "layer": "dream",
+      "status": "breaks up at ch003 (ev0013), when Alice's talk of Dinah drives them off",
+      "seat": "LOC-pool-bank",
+      "leader_refs": [
+        "CHAR-dodo"
+      ],
+      "emblem_visual": "No emblem; a loose, temporary company of ordinary wet birds and small animals fresh out of the pool of tears, identified only by species (Mouse, Dodo, Duck, Lory, Eaglet and others), not by any uniform, marking or allegiance.",
+      "summary": "The company of creatures who swam ashore with Alice from the pool of tears: the Mouse, the Dodo, the Duck, the Lory, the Eaglet and other 'curious creatures'. They have no ruler; the Dodo leads their mock Caucus-race (declaring 'everybody has won' so all get prizes) and Alice hands out the prizes. Not allied to the House of Hearts — the source gives them no tie to the crown at all; they belong to 'Wonderland at large'. The company breaks up when Alice's talk of her cat Dinah frightens the Mouse and, in turn, everyone else away.",
+      "source": {
+        "chapter": "ch003",
+        "quote": "Silence all round, if you please!"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch003",
+          "quote": "Dinah"
+        }
+      ],
+      "inferred": true,
+      "reason": "The group and its members are in the source; it is registered because several of its members (Mouse, Dodo, Duck, Lory, Eaglet) are individually named characters who need a faction of belonging distinct from the House of Hearts, per the intent of ruling 5.5 A even though this exact group was not one of the four the ruling named by name. Its 'realm-wonderland' allegiance (rather than Hearts) is a design choice, since the source gives it no tie to the crown."
+    },
+    {
+      "id": "FAC-school-in-the-sea",
+      "name": "The School in the Sea",
+      "type": "institution",
+      "layer": "dream (told only)",
+      "status": "past, told only (ch009 to ch010); never depicted on screen",
+      "seat": null,
+      "leader_refs": [
+        "CHAR-tortoise"
+      ],
+      "emblem_visual": "No emblem and no depicted setting at all: this institution exists only inside the Mock Turtle's spoken recollection and is never shown on screen, consistent with the realistic-drama premise (no literal undersea school is staged).",
+      "summary": "An undersea school attended by the young Mock Turtle and Gryphon, taught by 'an old Turtle' the pupils called Tortoise (master) and an old conger-eel (drawling-master); its curriculum parodies Alice's own schoolroom subjects (Reeling and Writhing; Ambition, Distraction, Uglification and Derision; Mystery, Seaography, Drawling, Stretching, and Fainting in Coils). Narrated entirely in retrospect by the Mock Turtle (ch009-ch010); no scene is ever set there.",
+      "source": {
+        "chapter": "ch009",
+        "quote": "we went to school in the sea. The master was an old Turtle—we used to call him Tortoise"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch009",
+          "quote": "With extras?"
+        }
+      ],
+      "inferred": false,
+      "reason": "seat left null (not the forbidden placeholder pattern): the source and world.json both state this location is 'never shown' — a deliberately unshown/untold-visually institution, recorded as such per WORKFLOW.md §1 principle 10's allowance for source-withheld content, not an unresolved production gap. Registered as a faction (not merely a description) per user ruling 5.5 A because it has two named member-characters (Mock Turtle, Gryphon) who attended it and a named leader (Tortoise); reviewed and included even though not one of the four groups the ruling named explicitly."
+    }
+  ],
+  "offices": [
+    {
+      "id": "OFF-001",
+      "title": "King of Hearts (Presiding Judge)",
+      "faction_ref": "FAC-house-of-hearts",
+      "holders": [
+        "CHAR-king-of-hearts"
+      ],
+      "powers": "Nominal head of state; presides as judge over the court of justice, wearing his crown over his judicial wig, which the text notes he finds uncomfortable and unbecoming (ch011). Calls witnesses, dictates what the jury should write, and invents procedural rules on the spot when they suit him, most notably 'Rule Forty-two: all persons more than a mile high to leave the court', which he claims is 'the oldest rule in the book' until Alice points out it should then be numbered One (ch012). Functions as an informal check on the Queen: he lays a hand on her arm to stop a beheading ('Consider, my dear: she is only a child!', ch008) and privately pardons the entire croquet party the moment she is out of earshot ('You are all pardoned', ch009).",
+      "source": {
+        "chapter": "ch011",
+        "quote": "The judge, by the way, was the King; and as he wore his crown over the wig... he did not look at all comfortable, and it was certainly not becoming."
+      },
+      "also_seen": [
+        {
+          "chapter": "ch012",
+          "quote": "Forty-two. All persons more than a mile high to leave the court."
+        },
+        {
+          "chapter": "ch009",
+          "quote": "You are all pardoned."
+        }
+      ],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "OFF-002",
+      "title": "Queen of Hearts",
+      "faction_ref": "FAC-house-of-hearts",
+      "holders": [
+        "CHAR-queen-of-hearts"
+      ],
+      "powers": "De facto ruling authority of the household and its guests. Has only one instrument for settling any dispute, 'great or small': an immediate death sentence ('Off with his/her head!'), pronounced without trial and repeated roughly once a minute during the croquet game (ch008); orders the beheading of the three gardeners, the Cheshire Cat, and every croquet player who displeases her within a single afternoon. Per cross_domain_assumptions #3 (the Gryphon's own account, ch009), these sentences are essentially never carried out — her authority runs on the threat, not the act. She is also the plaintiff at the tart-theft trial (her own tarts were stolen) and, mid-trial, overrides ordinary procedure by demanding 'Sentence first — verdict afterwards' (ch012), which Alice is the first character in the story to openly refuse.",
+      "source": {
+        "chapter": "ch008",
+        "quote": "The Queen had only one way of settling all difficulties, great or small. “Off with his head!” she said, without even looking round."
+      },
+      "also_seen": [
+        {
+          "chapter": "ch012",
+          "quote": "“No, no!” said the Queen. “Sentence first—verdict afterwards.”"
+        },
+        {
+          "chapter": "ch009",
+          "quote": "“It’s all her fancy, that: they never executes nobody, you know.”"
+        }
+      ],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "OFF-003",
+      "title": "Royal Executioner",
+      "faction_ref": "FAC-house-of-hearts",
+      "holders": [],
+      "powers": "Charged with carrying out the Queen's beheading sentences; never actually completes one on-page. His single dramatised task — executing the disembodied, fading Cheshire Cat's head — stalls in a three-way procedural deadlock with the King and Queen (his argument: 'you couldn't cut off a head unless there was a body to cut it off from'; the King's: 'anything that had a head could be beheaded') and is dropped, unresolved, the moment the head disappears entirely (ch008). See cross_domain_assumptions #4 on the scope of this entry.",
+      "source": {
+        "chapter": "ch008",
+        "quote": "The executioner’s argument was, that you couldn’t cut off a head unless there was a body to cut it off from: that he had never had to do such a thing before, and he wasn’t going to begin at his time of life."
+      },
+      "also_seen": [
+        {
+          "chapter": "ch008",
+          "quote": "so the King and the executioner ran wildly up and down looking for it"
+        }
+      ],
+      "inferred": false,
+      "reason": "holders left empty: the source deliberately never names this character (referred to throughout only as 'the executioner'); this is recorded as deliberately unrevealed in source, not a placeholder gap. 03-characters may register a minor/extra CHAR for this role and link back via offices[]."
+    },
+    {
+      "id": "OFF-004",
+      "title": "Herald of the Court",
+      "faction_ref": "FAC-house-of-hearts",
+      "holders": [
+        "CHAR-white-rabbit"
+      ],
+      "powers": "Announces court proceedings with three blasts of a trumpet, unrolls and reads the formal verse indictment against the accused ('The Queen of Hearts, she made some tarts... The Knave of Hearts, he stole those tarts', ch011), calls each witness by name, and produces documentary evidence (the unsigned verses used against the Knave, ch012); corrects the King's dictation to the jury in open court ('Unimportant, your Majesty means', implied by the King's self-correction, ch012). Outside the courtroom he also serves as a household messenger for the Duchess's circle, anxious enough about her temper that he mistakes a stranger for his housemaid rather than risk being late himself (ch001, ch004).",
+      "source": {
+        "chapter": "ch011",
+        "quote": "On this the White Rabbit blew three blasts on the trumpet, and then unrolled the parchment scroll, and read as follows:— “The Queen of Hearts, she made some tarts...”"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch011",
+          "quote": "near the King was the White Rabbit, with a trumpet in one hand, and a scroll of parchment in the other."
+        },
+        {
+          "chapter": "ch012",
+          "quote": "Some of the jury wrote it down “important,” and some “unimportant.”"
+        }
+      ],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "OFF-005",
+      "title": "Royal Gardener",
+      "faction_ref": "FAC-house-of-hearts",
+      "holders": [],
+      "powers": "Maintains the crown's rose garden; low-ranking household staff (numbered Two, Five and Seven in the source). Caught having planted a white rose-tree where a red one was ordered, they spend the scene repainting the roses red rather than risk the Queen discovering the crown's own error, on the reasoning that they 'should all have our heads cut off' if she notices (ch008) — illustrating that the household absorbs and conceals the crown's mistakes rather than correcting them. When the Queen orders them beheaded anyway for the (now-hidden) error, Alice hides all three in a flower-pot and the soldiers report their heads 'gone' to satisfy the Queen without the sentence being carried out (ch008), a concrete on-page instance of cross_domain_assumptions #3.",
+      "source": {
+        "chapter": "ch008",
+        "quote": "this here ought to have been a red rose-tree, and we put a white one in by mistake; and if the Queen was to find it out, we should all have our heads cut off, you know."
+      },
+      "also_seen": [
+        {
+          "chapter": "ch008",
+          "quote": "“Their heads are gone, if it please your Majesty!” the soldiers shouted in reply."
+        }
+      ],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "OFF-006",
+      "title": "Card-Suit Soldier",
+      "faction_ref": "FAC-house-of-hearts",
+      "holders": [],
+      "powers": "Rank-and-file household guard, described in the procession as ten soldiers 'shaped like the three gardeners, oblong and flat' (ch008; see cross_domain_assumptions #1). Doubles as the living arches of the Queen's croquet ground, bent double on hands and feet, and takes sentenced players into custody during the game; once enough soldiers are diverted to guard duty there are no arches left, and the game itself collapses under the weight of the Queen's own sentencing (ch009) — the clearest on-page example of the court's terror undermining its own function.",
+      "source": {
+        "chapter": "ch009",
+        "quote": "Those whom she sentenced were taken into custody by the soldiers, who of course had to leave off being arches to do this, so that by the end of half an hour or so there were no arches left"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch008",
+          "quote": "the soldiers had to double themselves up and to stand on their hands and feet, to make the arches."
+        }
+      ],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "OFF-007",
+      "title": "Juror of the Court of Justice",
+      "faction_ref": "FAC-house-of-hearts",
+      "holders": [
+        "CHAR-bill-the-lizard"
+      ],
+      "powers": "Twelve jurors sit in the jury-box through the tart-theft trial. Their first recorded act is writing down their own names 'for fear they should forget them before the end of the trial' rather than any evidence (ch011); they subsequently record contradictory or nonsensical dictation at the King's prompting (writing both 'important' and 'unimportant' for the same fact, ch012). The King instructs them on procedure ('Consider your verdict') no fewer than twenty times before a verdict is ever reached, and the trial ends (interrupted by the flying pack of cards) with no verdict recorded (see story/events.json broken_chains on ev0052).",
+      "source": {
+        "chapter": "ch011",
+        "quote": "“They’re putting down their names,” the Gryphon whispered in reply, “for fear they should forget them before the end of the trial.”"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch012",
+          "quote": "Some of the jury wrote it down “important,” and some “unimportant.”"
+        }
+      ],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "OFF-008",
+      "title": "Knave of Hearts (Royal Page / Defendant)",
+      "faction_ref": "FAC-house-of-hearts",
+      "holders": [
+        "CHAR-knave-of-hearts"
+      ],
+      "powers": "Senior page of the royal household: carries the King's crown on a crimson velvet cushion in the royal procession, immediately preceding the King and Queen themselves (ch008). Stands as the sole formally accused defendant in the entire story: brought before the court in chains under armed guard and charged with stealing the Queen's tarts (ch011); denies writing the verses used as evidence against him ('I didn't write it, and they can't prove that I did', ch012). The trial is interrupted before any verdict is reached (see story/events.json broken_chains on ev0052), leaving the charge formally unresolved.",
+      "source": {
+        "chapter": "ch008",
+        "quote": "Then followed the Knave of Hearts, carrying the King’s crown on a crimson velvet cushion"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch011",
+          "quote": "the Knave was standing before them, in chains, with a soldier on each side to guard him"
+        }
+      ],
+      "inferred": false,
+      "reason": null
+    }
+  ],
+  "laws": [
+    {
+      "id": "LAW-001",
+      "name": "Capital Sentence by Royal Decree (\"Off with her/his head!\")",
+      "issued_by": "OFF-002",
+      "content": "The Queen may pronounce an immediate death sentence on any subject for any offence — a missed croquet turn, a wrongly-coloured rose, mere disagreement, or lateness — with no trial, evidence, or defence required; this is described as her 'only way of settling all difficulties, great or small' (ch008). In practice, per the Gryphon's direct account (ch009), such sentences are essentially never carried out. Read in the realistic register, this functions less as an operative penal statute than as the household's standing instrument of intimidation: a despotism that governs through the threat of violence rather than its exercise (see cross_domain_assumptions #3).",
+      "source": {
+        "chapter": "ch008",
+        "quote": "The Queen had only one way of settling all difficulties, great or small. “Off with his head!” she said, without even looking round."
+      },
+      "also_seen": [
+        {
+          "chapter": "ch009",
+          "quote": "It’s all her fancy, that: they never executes nobody, you know."
+        }
+      ],
+      "inferred": true,
+      "reason": "The source states the sentences repeatedly and shows their effect (soldiers, gardeners, croquet players all under threat), but only confirms via the Gryphon (ch009) that they are not carried out. Characterising this as the court's institutionalised mode of rule, rather than treating each threat as a one-off joke, is this domain's deliberate reading for the realistic-drama premise, so beheading threats read as theatrical terror rather than a fantastical bloodless-beheading convention."
+    },
+    {
+      "id": "LAW-002",
+      "name": "Rule Forty-Two",
+      "issued_by": "OFF-001",
+      "content": "'All persons more than a mile high to leave the court' — a rule the King reads aloud from his notebook mid-trial, specifically and only once Alice, who has grown enormously, is present to be targeted by it. Alice publicly identifies it as freshly invented on the spot (pointing out that a genuine 'oldest rule in the book' would logically be numbered One), and the King, humiliated, turns pale and drops the matter. Establishes on-page that the court's law can be fabricated in real time to suit the crown's immediate convenience, with no separate legislative process.",
+      "source": {
+        "chapter": "ch012",
+        "quote": "“Rule Forty-two. All persons more than a mile high to leave the court.”"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch012",
+          "quote": "“It’s the oldest rule in the book,” said the King. “Then it ought to be Number One,” said Alice."
+        }
+      ],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "LAW-003",
+      "name": "\"Sentence First — Verdict Afterwards\"",
+      "issued_by": "OFF-002",
+      "content": "The Queen's standing instruction, given mid-trial, that punishment should be applied before the jury has even considered its verdict — an explicit inversion of the court's own stated procedure ('Let the jury consider their verdict,' the King had just said). Alice's refusal ('Stuff and nonsense! The idea of having the sentence first!') is the story's climactic act of open defiance against the court's authority, and the Queen's response ('Off with her head!') is the one sentence in the whole book that nobody moves to enforce.",
+      "source": {
+        "chapter": "ch012",
+        "quote": "“No, no!” said the Queen. “Sentence first—verdict afterwards.” “Stuff and nonsense!” said Alice loudly."
+      },
+      "also_seen": [
+        {
+          "chapter": "ch012",
+          "quote": "“Off with her head!” the Queen shouted at the top of her voice. Nobody moved."
+        }
+      ],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "LAW-004",
+      "name": "Indictment: Theft of the Queen's Tarts",
+      "issued_by": "OFF-004",
+      "content": "The formal verse accusation read aloud by the herald at the opening of the trial: the Queen made tarts; the Knave of Hearts stole them and took them away. This is the sole charge underlying the entire court of justice sequence (ch011-ch012). No verdict is ever reached: the King and Queen treat the charge as effectively proven throughout (interpreting unrelated evidence, such as unsigned verses, as confirming it), but the trial is interrupted by the flying pack of cards and Alice's waking before the jury renders judgment, leaving the Knave's guilt or innocence permanently unresolved within the source (see story/events.json broken_chains on ev0052).",
+      "source": {
+        "chapter": "ch011",
+        "quote": "“The Queen of Hearts, she made some tarts, All on a summer day: The Knave of Hearts, he stole those tarts, And took them quite away!”"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch012",
+          "quote": "“That’s the most important piece of evidence we’ve heard yet,” said the King"
+        }
+      ],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "LAW-005",
+      "name": "Baseline Procedure of the Court of Justice",
+      "issued_by": "FAC-house-of-hearts",
+      "content": "Observed procedural sequence of a trial: the King (as judge, crown worn over wig) opens the session; the jury of twelve is seated in the jury-box; the herald blows the trumpet and reads the formal accusation; witnesses are called one at a time by the King and questioned, with the Queen entitled to cross-examine ('you must cross-examine the next witness', ch011); the jury is instructed to write down evidence; finally the King calls for the jury's verdict. This particular trial subverts nearly every step of its own procedure: the jurors write their own names instead of evidence, the King fabricates a new rule mid-session to remove an inconvenient party (Rule Forty-two, LAW-002), the Queen demands sentence before verdict (LAW-003), and the session ends without any verdict being reached at all.",
+      "source": {
+        "chapter": "ch011",
+        "quote": "“Consider your verdict,” the King said to the jury. “Not yet, not yet!” the Rabbit hastily interrupted. “There’s a great deal to come before that!”"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch011",
+          "quote": "Really, my dear, _you_ must cross-examine the next witness."
+        },
+        {
+          "chapter": "ch012",
+          "quote": "“Let the jury consider their verdict,” the King said, for about the twentieth time that day."
+        }
+      ],
+      "inferred": true,
+      "reason": "The individual procedural steps are all explicit in the source; stating them together as a reconstructed 'baseline' sequence (so that the trial's departures from it can be read as deliberate subversions rather than incoherence) is this domain's synthesis, needed for production use (e.g. blocking/staging a courtroom scene that reads as a recognisable, if corrupted, trial)."
+    }
+  ],
+  "relationships": [
+    {
+      "id": "FREL-001",
+      "from": "FAC-house-of-hearts",
+      "to": "FAC-duchess-household",
+      "kind": "vassal_household_under_arbitrary_justice",
+      "period": [
+        "TL-003"
+      ],
+      "phases": [
+        {
+          "phase_kind": "in_favor_summoned",
+          "chapters": [
+            "ch006"
+          ],
+          "source": {
+            "chapter": "ch006",
+            "quote": "“For the Duchess. An invitation from the Queen to play croquet.”"
+          },
+          "note": "The Duchess's household is formally summoned to the crown's croquet game by written invitation, delivered footman-to-footman with ceremony — an ordinary courtesy between the crown and a subordinate household."
+        },
+        {
+          "phase_kind": "under_capital_sentence",
+          "chapters": [
+            "ch008"
+          ],
+          "source": {
+            "chapter": "ch008",
+            "quote": "“She boxed the Queen’s ears—” the Rabbit began... “She’s under sentence of execution.”"
+          },
+          "note": "Having arrived late, the Duchess strikes the Queen and is placed under a standing death sentence — the relationship inverts from courtesy to open crown-vs-vassal hostility within the same scene."
+        },
+        {
+          "phase_kind": "unexplained_reprieve_then_fresh_ultimatum",
+          "chapters": [
+            "ch009"
+          ],
+          "source": {
+            "chapter": "ch009",
+            "quote": "“either you or your head must be off, and that in about half no time! Take your choice!” The Duchess took her choice, and was gone in a moment."
+          },
+          "note": "The Duchess reappears free and affectionate with no on-page pardon shown (see story/events.json broken_chains on ev0039); the Queen then confronts her in person with a fresh ultimatum, and the Duchess vanishes rather than answer it. The relationship remains precarious and personally adversarial (Queen-to-Duchess) even though the household as a whole is not shown formally re-sentenced."
+        },
+        {
+          "phase_kind": "compelled_witness",
+          "chapters": [
+            "ch011"
+          ],
+          "source": {
+            "chapter": "ch011",
+            "quote": "“Shan’t,” said the cook."
+          },
+          "note": "The Duchess's cook is summoned and forced to testify at the crown's tart-theft trial, and is treated with open hostility (the Queen orders her collared, beheaded and pinched by proxy when a sleepy Dormouse interjects nearby, per story/events.json ev0047); the household's subordination to the crown's justice system continues even in the Duchess's own absence."
+        }
+      ],
+      "source": {
+        "chapter": "ch008",
+        "quote": "“She’s under sentence of execution.”"
+      },
+      "inferred": false,
+      "reason": null,
+      "period_note": "Within Alice's dream (SUP-001) during her nap on the story's single afternoon, TL-003; backfilled at p2-merge (BIB-0006)."
+    }
+  ]
+}

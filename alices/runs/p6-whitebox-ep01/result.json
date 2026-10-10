@@ -1,0 +1,161 @@
+{
+  "task_id": "p6-whitebox-ep01",
+  "agent": "07-directing/whitebox-staging",
+  "project": "alices",
+  "ep": "ep01",
+  "attempt": 1,
+  "status": "completed",
+  "summary": "All 37 generation groups of ep01 staged in 3D whitebox and compiled. 101 per-shot camera tracks and every character/creature track are authored in metres and group-internal seconds; the compiled timeline totals 542.0 s, identical to shot_list.json total_duration_s. No video exported: --compile-only only, awaiting H3W (g6w-ep01).",
+  "shared_conventions": {
+    "units": "metres, seconds",
+    "axis": "Y up, right-handed; map top = -Z; yaw 0 faces +Z, yaw +pi/2 faces +X",
+    "actor_anchor": "keyframe position is the ground/foot anchor; a lying or prone body extends its full height along the head direction from that anchor",
+    "lying_yaw": "for lie/prone the head points (-sin yaw, 0, -cos yaw); for stand/sit/kneel/crouch the face points (sin yaw, 0, cos yaw)",
+    "time_base": "group-internal seconds throughout; camera start/duration_s match shot_list durations exactly",
+    "fov": "vertical FOV from the 24 mm gate, fov = 2*atan(24/(2*f)): 24mm 53.1301, 28mm 46.3972, 40mm 33.3985, 50mm 26.9915, 100mm 13.6855",
+    "aspect": "16:9 from project output settings (render 960x540)",
+    "scene_scale": "bible/scenes/<sid>/whitebox.json dimensions and objects used as delivered; nothing rescaled",
+    "size_chain": "Alice size_m from continuity_plan.json size_chain: 1.35 m [0.378,1.35,0.297]; 0.254 m [0.0711,0.254,0.0559]; 2.74 m [0.7672,2.74,0.6028]; 0.61 m [0.1708,0.61,0.1342]. The three changes are morph_target scale ramps on a fixed foot anchor with her identity colour unchanged (CR-005).",
+    "identity_colours": "episode-fixed, assigned by the host: CHAR-alice #e63946, CHAR-alice-sister #1d78d8, CRE-001 #2ea043, CHAR-white-rabbit #f59e0b; no collisions.",
+    "creature_kinds": "CRE-001 (0.13 x 0.22 x 0.38 m) and CHAR-white-rabbit (0.15 x 0.30 x 0.36 m) are both staged kind=creature - quadruped body, head carried forward, no arms - per the H3S ruling that the White Rabbit is a real small animal on four legs carrying things in his mouth."
+  },
+  "groups_staged": 37,
+  "shots_staged": 101,
+  "total_duration_s": 542.0,
+  "scenes_compiled": 7,
+  "outputs": [
+    "directing/ep01/whitebox_plans/grp001.json .. grp037.json (37 files)",
+    "directing/ep01/whitebox/episode.json",
+    "assets/concepts/scenes/<sid>/whitebox.scene.json (7 scenes)",
+    "directing/ep01/whitebox/stills/grp001.jpg .. grp037.jpg (self-check contact sheets)"
+  ],
+  "source_files_written": [
+    "directing/ep01/shot_list.json - scene_cast/scene_cast_refs added by code/sync_scene_cast.py --write, plus scene_presence declarations for grp002/grp004/grp005/grp007/grp027/grp028/grp030 (departures and re-entries). No shot, duration, group boundary or blocking_map touched."
+  ],
+  "commands": [
+    "python3 code/sync_scene_cast.py --project alices --ep ep01 --write",
+    "python3 code/render_whitebox.py --project alices --ep ep01 --check-only",
+    "python3 code/render_whitebox.py --compile-only --project alices --ep ep01",
+    "python3 code/render_whitebox.py --project alices --ep ep01 --stills <groups>"
+  ],
+  "verbatim_compile_output": {
+    "command": "python3 code/render_whitebox.py --compile-only --project alices --ep ep01",
+    "exit_code": 0,
+    "stdout": [
+      "{\"groups\": 37, \"scenes\": 7, \"errors\": []}",
+      "{\"issues\": {\"total\": 9, \"open\": 9, \"blocking_open\": 1, \"decided\": 0, \"applied\": 0, \"stale\": 0, \"waived\": 0, \"groups_open\": [\"grp001\", \"grp006\", \"grp008\", \"grp009\", \"grp010\", \"grp015\", \"grp016\", \"grp020\", \"grp035\"], \"blocking_ids\": [\"WBI-ep01-grp001-001\"]}, \"issues_text\": \"白模待决项:待处理 9(阻断 1)、已裁决待套用 0、已套用 0;涉及 grp001, grp006, grp008, grp009, grp010, grp015, grp016, grp020…\"}",
+      "{\"compiled\": [\"grp001\", \"grp002\", \"grp003\", \"grp004\", \"grp005\", \"grp006\", \"grp007\", \"grp008\", \"grp009\", \"grp010\", \"grp011\", \"grp012\", \"grp013\", \"grp014\", \"grp015\", \"grp016\", \"grp017\", \"grp018\", \"grp019\", \"grp020\", \"grp021\", \"grp022\", \"grp023\", \"grp024\", \"grp025\", \"grp026\", \"grp027\", \"grp028\", \"grp029\", \"grp030\", \"grp031\", \"grp032\", \"grp033\", \"grp034\", \"grp035\", \"grp036\", \"grp037\"], \"videos\": \"skipped(--compile-only:待用户签字 H3W-白模确认后再导出)\"}"
+    ]
+  },
+  "verbatim_check_only_output": {
+    "command": "python3 code/render_whitebox.py --project alices --ep ep01 --check-only",
+    "exit_code": 0,
+    "stdout": [
+      "{\"groups\": 37, \"scenes\": 7, \"errors\": []}",
+      "{\"issues\": {\"total\": 9, \"open\": 9, \"blocking_open\": 1, \"decided\": 0, \"applied\": 0, \"stale\": 0, \"waived\": 0, \"groups_open\": [\"grp001\", \"grp006\", \"grp008\", \"grp009\", \"grp010\", \"grp015\", \"grp016\", \"grp020\", \"grp035\"], \"blocking_ids\": [\"WBI-ep01-grp001-001\"]}, \"issues_text\": \"白模待决项:待处理 9(阻断 1)、已裁决待套用 0、已套用 0;涉及 grp001, grp006, grp008, grp009, grp010, grp015, grp016, grp020…\"}"
+    ]
+  },
+  "issues_summary": {
+    "total": 9,
+    "open": 9,
+    "blocking_open": 1,
+    "decided": 0,
+    "applied": 0,
+    "stale": 0,
+    "waived": 0,
+    "groups_open": ["grp001", "grp006", "grp008", "grp009", "grp010", "grp015", "grp016", "grp020", "grp035"],
+    "blocking_ids": ["WBI-ep01-grp001-001"]
+  },
+  "issues": [
+    {"issue_id": "WBI-ep01-grp001-001", "severity": "blocking", "kind": "model_gap", "shots": ["sh001"], "headline": "SCN-falling-dream is modelled as a 2.4 m brick shaft; the S00/S03 lateral wides need 3.1-7.9 m of standoff and only about 1.5 m exists, so the whitebox frame is far tighter than the shot. Recommended: re-model the shaft."},
+    {"issue_id": "WBI-ep01-grp008-001", "severity": "advisory", "kind": "model_gap", "shots": ["sh019", "sh021"], "headline": "Same root cause; also the single 6 m rig section cannot put the named dressing level with her during the 48 s fall."},
+    {"issue_id": "WBI-ep01-grp009-001", "severity": "advisory", "kind": "model_gap", "shots": ["sh022"], "headline": "Same root cause for the sh022 wide that must match sh001."},
+    {"issue_id": "WBI-ep01-grp010-001", "severity": "advisory", "kind": "model_gap", "shots": ["sh025"], "headline": "Same root cause; she drifts out of the bottom of the single modelled section."},
+    {"issue_id": "WBI-ep01-grp006-001", "severity": "advisory", "kind": "source_conflict", "shots": ["sh010"], "headline": "sh010's abeam rig and the blocking_map's 8.94 m Alice/rabbit gap are incompatible; the rabbit cannot be in the abeam frame. Recommended: bring him to a few bounds ahead."},
+    {"issue_id": "WBI-ep01-grp015-001", "severity": "advisory", "kind": "model_gap", "shots": ["sh039", "sh040"], "headline": "SCN-little-door-passage gives only 1.26 m of hall-side floor; sh039/sh040 need 1.9-2.5 m so the lens stands outside the tile. Recommended: re-point these shots at SCN-long-hall."},
+    {"issue_id": "WBI-ep01-grp016-001", "severity": "advisory", "kind": "model_gap", "shots": ["sh041", "sh043"], "headline": "Same tile; also a 100 mm cannot compress a 2.81 m passage to composition's 0.20-of-frame arch."},
+    {"issue_id": "WBI-ep01-grp020-001", "severity": "advisory", "kind": "timing", "shots": ["sh051"], "headline": "A 0.254 m Alice is given 1.1 s to cross 4.50 m (4.1 m/s, about 16 body heights per second). Default keeps the authored beats."},
+    {"issue_id": "WBI-ep01-grp035-001", "severity": "advisory", "kind": "model_gap", "shots": ["sh094", "sh095"], "headline": "The pool is modelled at its true 0.10 m depth and cannot hold a swimmer; her anchor is sunk to -0.42 m so her chin sits on the surface."}
+  ],
+  "routes_that_did_not_fit_the_metric_set": [
+    "grp006 sh010: the blocking_map's 8.94 m gap between Alice's run_start and CRE-001's mid_field cannot coexist with an abeam frame 3.2 m wide. Kept the abeam rig; raised WBI-ep01-grp006-001.",
+    "grp013 sh033->sh034 and sh034->sh035, grp014 sh037->sh038, grp020 sh051->sh052: each cut carries an off-screen crossing of the hall that the shot list gives no on-screen time for. Staged as a 0.001 s step exactly at the cut instant so the camera view is clean and only the spatial view shows the jump.",
+    "grp020 sh051: a ten-inch Alice cannot plausibly run 4.50 m in 1.1 s. Kept the authored beats; raised WBI-ep01-grp020-001.",
+    "grp029 sh077: the White Rabbit cannot cover the 17 m to ne_entrance in 2 s. He sprints at a real rabbit's 7 m/s and is marked not visible from t=7.8 (the 'gone into the darkness' beat); he is declared absent from grp030 onward.",
+    "grp033 sh089: at the curtain anchor she is already at the little door and has nothing to run. Because grp032->grp033 is an S08/S09 scene-number cut, she is re-set 3.7 m out into the hall so the shot gets the 0.9 m/s run camera.json specifies.",
+    "grp037 sh099/sh100: at camera.json's 0.35 m/s the 7 s of sh099 buys 2.9 m, so she ends 2.6 m short of the reeds map end - which is what the map offset and blocking both call for ('still well short of the reeds')."
+  ],
+  "camera_height_and_angle_deviations": [
+    "sh011, sh027, sh028, sh068-sh070, sh063, sh065, sh076, sh078-sh084: camera.json declares 'level' but a floor-height lens on a 0.30 m animal or a seated 2.74 m subject forces a 20-66 degree tilt. Lens height, lens length and axis unchanged; only the declared angle gives way to geometry.",
+    "sh041: lens lowered 0.55 -> 0.30 m; the door head is 0.38 m and the vault head 0.36 m, so a 0.55 m lens looks into masonry and sees no passage.",
+    "sh045: lens raised 0.50 -> 0.78 m, the mid height of a 0.10 m bottle on a 0.715 m tabletop, so 'level, square-on to the label' is true.",
+    "sh057: lens lowered 0.15 -> 0.08 m for a 0.04 m cake in a 0.05 m box on the flagstones.",
+    "sh016: lens raised 0.25 -> 0.55 m; the burrow is modelled as a flat disc and a level lens sees it edge-on, which would break the TR-03 match on 'a black oval 0.30 of frame height'.",
+    "sh094-sh101: lenses raised 0.05 -> 0.13 m; at 0.05 m the lens sits inside the 0.10 m modelled water slab and the waterline does not read.",
+    "sh067: moved onto the wall side; her eye is at the doorway facing the wall, so the tile-9 sight line out in the hall sees only the back of her head."
+  ],
+  "continuity": {
+    "policy": "actors inherit inside a scene instance where the action is real-time continuous; cut at every scene_id or scene_no boundary (grp001/002, 005/006, 007/008, 010/011, 012/013, 014/015, 016/017, 021/022, 026/027, 032/033, 034/035) and at grp033's S08/S09 re-set. Camera cuts everywhere except grp009->grp010 (sh025 is sh024 continued unbroken).",
+    "waived_axis_jumps": "continuity_plan's 5 waived items are staged as waived, not corrected - AX-01 (sh002->sh003) crosses the Alice/Sister line on purpose and the whitebox reproduces it.",
+    "match_cut": "TR-03 (sh016->sh017) staged: sh016 holds the empty black mouth centred with its long axis horizontal and nothing reframes between sh015 and sh016.",
+    "declared_repeats": "sh022 reproduces sh001's set-up, sh023 sh020's, sh061 sh060's, sh072 sh069's, sh080/sh082 sh079's, sh087 sh086's - identical position, target and lens in each case."
+  },
+  "defects_not_re_raised": [
+    "DEF-p6-continuity-ep01-001 (sh009, sh085 screen direction): sh009's look is staged toward the point CRE-001 actually left for (field_way), i.e. the spatial truth, so the whitebox is unaffected by the composition/blocking text fix.",
+    "DEF-p6-continuity-ep01-002 (sh049/sh050, sh067 scale statements): Alice's height in grp019 and grp026 comes from continuity_plan size_chain (0.254 m and 2.74 m), not from the disputed wording. No number in these plans changes when the text is corrected."
+  ],
+  "new_conflicts_recorded_in_plan_warnings_not_defects": [
+    "sh012: on the tile-3 axis screen-right is -X and the modelled geometry puts Alice at larger X than the burrow, so her near-foreground shoulder falls screen-LEFT of the rabbit, not the screen-right third composition states.",
+    "sh031: staged in the brick passage looking -X rather than on the tile-4 sight line, because only that axis makes the Rabbit recede and exit frame right as composition requires.",
+    "sh010, sh027, sh073, sh041, sh091, sh033, sh011: subject-size-in-frame differs from composition because the modelled distances cannot deliver the stated fraction at the locked lens. Each is recorded in the group's warnings with the numbers."
+  ],
+  "whitebox_contract": {
+    "written": false,
+    "reason": "No whitebox_contract / source_fingerprint / placement_fingerprint was written this pass. Two composition defects (DEF-p6-continuity-ep01-001, -002) are open against sh009, sh049, sh050 and sh067; _source_payload hashes composition.json and blocking.json in full, so freezing fingerprints now would hard-fail the whole-episode compile the moment those text fixes land. Additionally every SCN-falling-dream rig translates downward with the free-falling subject while camera.json declares the framing locked on her, and the host's contract test rejects any translation on a static movement, so those ten shots cannot carry a contract at all.",
+    "follow_up": "Re-dispatch p6-whitebox once DEF-p6-continuity-ep01-001/-002 close, to author the contracts and take the fingerprints against final source text."
+  },
+  "stills_checked": [
+    {"group_id": "grp001", "sheet": "directing/ep01/whitebox/stills/grp001.jpg", "result": "issue", "notes": "Alice fills the frame where the shot is a wide - the SCN-falling-dream standoff conflict, raised as blocking WBI-ep01-grp001-001. Rig descends with her and she holds frame position correctly."},
+    {"group_id": "grp002", "sheet": "directing/ep01/whitebox/stills/grp002.jpg", "result": "fixed", "notes": "sh003 opened on her head against the lens and sh004 on a featureless torso. Turn moved to the cut at t=8.0, sh003 lens re-aimed to her post-turn head, PROP-sister-book added and sh004 re-aimed. Sister screen-right in sh002, Alice screen-right in sh003 - AX-01 staged as waived."},
+    {"group_id": "grp003", "sheet": "directing/ep01/whitebox/stills/grp003.jpg", "result": "ok", "notes": "Roll onto her back at t=3.5 reads; sh006 profile close beside her head at eye level."},
+    {"group_id": "grp004", "sheet": "directing/ep01/whitebox/stills/grp004.jpg", "result": "ok", "notes": "sh008: only her hem and shoes in the near screen-left third, the rabbit crossing centre at true scale and bounding away. Closest pass 1.05 m."},
+    {"group_id": "grp005", "sheet": "directing/ep01/whitebox/stills/grp005.jpg", "result": "ok", "notes": "Alice screen-right, Sister screen-left on the water-side axis; CRE-001 absent and invisible."},
+    {"group_id": "grp006", "sheet": "directing/ep01/whitebox/stills/grp006.jpg", "result": "issue", "notes": "sh010's abeam frame cannot contain the rabbit 8.94 m ahead - raised as WBI-ep01-grp006-001. sh011 and sh012 read correctly; sh012's screen side recorded in warnings."},
+    {"group_id": "grp007", "sheet": "directing/ep01/whitebox/stills/grp007.jpg", "result": "fixed", "notes": "sh014 opened on empty spoil and sh016's oval was an edge-on sliver. Prone moved to t=3.05, sh015 lens brought to 0.9 m, sh016 lens raised to 0.55 m so the match-cut oval reads at its declared size."},
+    {"group_id": "grp008", "sheet": "directing/ep01/whitebox/stills/grp008.jpg", "result": "fixed", "notes": "sh019 had no object to insert on and sh020's POV was blocked by her own body. PROP-marmalade-jar added on its modelled shelf and the sh020 lens offset 0.45 m off her axis. sh021 remains tighter than its size code (WBI-ep01-grp008-001)."},
+    {"group_id": "grp009", "sheet": "directing/ep01/whitebox/stills/grp009.jpg", "result": "issue", "notes": "sh022 matches sh001's set-up exactly and is tighter than its size code for the same reason (WBI-ep01-grp009-001)."},
+    {"group_id": "grp010", "sheet": "directing/ep01/whitebox/stills/grp010.jpg", "result": "issue", "notes": "sh024 set-up continued; drift and pose correct, dressing alignment is the documented model gap (WBI-ep01-grp010-001)."},
+    {"group_id": "grp011", "sheet": "directing/ep01/whitebox/stills/grp011.jpg", "result": "fixed", "notes": "sh027's lens filled the frame with her back and sh029 had no dial. Lens moved back to 2.9 m (still inside the chamber), PROP-pocket-watch added and sh029 backed off to 0.50 m. sh026's pedestal and the landing read correctly."},
+    {"group_id": "grp012", "sheet": "directing/ep01/whitebox/stills/grp012.jpg", "result": "ok", "notes": "Both run the passage on its centre lines; the Rabbit turns the corner ahead of her and she pulls up on it. Minimum separation 4.96 m."},
+    {"group_id": "grp013", "sheet": "directing/ep01/whitebox/stills/grp013.jpg", "result": "fixed", "notes": "sh034 held her screen-RIGHT instead of screen-left (target offset sign) and the ellipsis step was wide enough to be sampled mid-jump. Target sign flipped and the steps narrowed to 0.001 s; sh033's dolly and the hall read well."},
+    {"group_id": "grp014", "sheet": "directing/ep01/whitebox/stills/grp014.jpg", "result": "fixed", "notes": "Same target-sign fix on sh038 (now screen-right, the sh034 reversal) and the 0.001 s ellipsis step."},
+    {"group_id": "grp015", "sheet": "directing/ep01/whitebox/stills/grp015.jpg", "result": "issue", "notes": "Both lenses stand outside the modelled tile - WBI-ep01-grp015-001. Framing, pedestal and screen sides otherwise correct."},
+    {"group_id": "grp016", "sheet": "directing/ep01/whitebox/stills/grp016.jpg", "result": "issue", "notes": "sh041's POV clears the 0.38 m door at the lowered lens but the arch reads larger than composition says - WBI-ep01-grp016-001."},
+    {"group_id": "grp017", "sheet": "directing/ep01/whitebox/stills/grp017.jpg", "result": "ok", "notes": "Walk back to the table, bottle insert at tabletop height, arm's-length medium all read."},
+    {"group_id": "grp018", "sheet": "directing/ep01/whitebox/stills/grp018.jpg", "result": "ok", "notes": "sh048 is the gauge shot and works: feet fixed, the table and doors unchanged, her crown travelling 0.25 -> 0.75 of frame height."},
+    {"group_id": "grp019", "sheet": "directing/ep01/whitebox/stills/grp019.jpg", "result": "ok", "notes": "Ten-inch scale against the table leg and the mosaic dado reads from the 0.20 m lens."},
+    {"group_id": "grp020", "sheet": "directing/ep01/whitebox/stills/grp020.jpg", "result": "issue", "notes": "Run speed is the documented WBI-ep01-grp020-001; sh052's look up the leg and sh053's three shortening attempts read correctly."},
+    {"group_id": "grp021", "sheet": "directing/ep01/whitebox/stills/grp021.jpg", "result": "ok", "notes": "She sinks down the leg and sits against it; sh054 leaves the open right side and upper two thirds empty as composition asks."},
+    {"group_id": "grp022", "sheet": "directing/ep01/whitebox/stills/grp022.jpg", "result": "fixed", "notes": "sh058/sh059 held her on the wrong screen sides (target offset sign). Flipped: she now holds the left third travelling screen-right in sh058 and the right third travelling screen-left in sh059."},
+    {"group_id": "grp023", "sheet": "directing/ep01/whitebox/stills/grp023.jpg", "result": "ok", "notes": "sh061 reproduces sh060 exactly; her size does not change anywhere in the group."},
+    {"group_id": "grp024", "sheet": "directing/ep01/whitebox/stills/grp024.jpg", "result": "ok", "notes": "The growth gauges land in order: tabletop to her knee by the end of sh062, lamp shade level with her face then at her shoulder in sh063."},
+    {"group_id": "grp025", "sheet": "directing/ep01/whitebox/stills/grp025.jpg", "result": "ok", "notes": "sh064 looks down her own body; sh065's head knock against the 2.80 m vault is real geometry at 2.74 m."},
+    {"group_id": "grp026", "sheet": "directing/ep01/whitebox/stills/grp026.jpg", "result": "fixed", "notes": "sh066 never had her crossing the frame and sh067 was a featureless red field showing the back of her head. sh066's lens re-set perpendicular to her crossing; sh067 moved onto the wall side at 2.36 m, and her eye and nose now read at the doorway."},
+    {"group_id": "grp027", "sheet": "directing/ep01/whitebox/stills/grp027.jpg", "result": "ok", "notes": "Seated giant against the west wall; sh071's flood wide reads with her hem in the near screen-left corner. Rabbit absent and invisible."},
+    {"group_id": "grp028", "sheet": "directing/ep01/whitebox/stills/grp028.jpg", "result": "ok", "notes": "He trots the length of the hall on four legs and pulls up 1.59 m short of her; he never looks at her or at the lens."},
+    {"group_id": "grp029", "sheet": "directing/ep01/whitebox/stills/grp029.jpg", "result": "ok", "notes": "sh076's two-step tilt stops short of her face and the lead room it opens stays empty."},
+    {"group_id": "grp030", "sheet": "directing/ep01/whitebox/stills/grp030.jpg", "result": "ok", "notes": "Sustained set-up; sh080 is sh079 held exactly."},
+    {"group_id": "grp031", "sheet": "directing/ep01/whitebox/stills/grp031.jpg", "result": "ok", "notes": "sh082 returns to the sustained frame exactly; sh083's fixed tilted-up frame and sh084's return to her hand form one continuous eye movement."},
+    {"group_id": "grp032", "sheet": "directing/ep01/whitebox/stills/grp032.jpg", "result": "ok", "notes": "sh086 and sh087 are one unbroken frame through the throw; the shrink halts at t=9.6 and she stands 0.61 m on the same spot."},
+    {"group_id": "grp033", "sheet": "directing/ep01/whitebox/stills/grp033.jpg", "result": "fixed", "notes": "sh089 held her on the wrong screen side; target offset sign flipped so she holds screen-left travelling screen-right."},
+    {"group_id": "grp034", "sheet": "directing/ep01/whitebox/stills/grp034.jpg", "result": "ok", "notes": "Stamp, run back along the water's edge, slip and drop out of the bottom of a locked frame."},
+    {"group_id": "grp035", "sheet": "directing/ep01/whitebox/stills/grp035.jpg", "result": "fixed", "notes": "Lenses were inside the modelled water slab so no waterline read. Raised to 0.13 m; her chin now sits on the surface with the door bases screen-left. Swimmer depth is WBI-ep01-grp035-001."},
+    {"group_id": "grp036", "sheet": "directing/ep01/whitebox/stills/grp036.jpg", "result": "fixed", "notes": "Same lens-height fix; the drifting fan crosses her lead room and sh098 is sh097 held exactly."},
+    {"group_id": "grp037", "sheet": "directing/ep01/whitebox/stills/grp037.jpg", "result": "fixed", "notes": "Same lens-height fix plus the sh099 target-offset sign; she now holds screen-left swimming toward the bright water, comes upright in sh100 and sh101 is the water-level wake insert."}
+  ],
+  "not_done": [
+    "No camera.mp4 or manifest.json exported and no prompt refs wired - --compile-only only, as the work order and the H3W gate require.",
+    "No whitebox_contract / fingerprints written this pass (see whitebox_contract above for the reason and the follow-up trigger)."
+  ],
+  "next": "User reviews the 3D panels on the storyboard preview page and rules on the 9 pending items (1 blocking). The host will refuse the H3W (g6w-ep01) signature while WBI-ep01-grp001-001 is open. After signature, orchestrator dispatches p6-whitebox-export to this station."
+}

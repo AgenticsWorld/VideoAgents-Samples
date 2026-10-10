@@ -1,0 +1,22 @@
+{
+  "task_id": "p3-personality-pb1",
+  "run_id": "d0d3ff5fc6dd",
+  "attempt": 1,
+  "model": "agent default",
+  "tokens": null,
+  "started_at": null,
+  "finished_at": "2026-09-22T18:32:59+08:00",
+  "inputs_sha256": {},
+  "artifact_versions": {
+    "bible/characters/CHAR-alice/personality.json": "v1",
+    "bible/characters/CHAR-alice-sister/personality.json": "v1",
+    "bible/characters/CHAR-white-rabbit/personality.json": "v1",
+    "bible/characters/CHAR-queen-of-hearts/personality.json": "v1",
+    "bible/characters/CHAR-king-of-hearts/personality.json": "v1",
+    "bible/characters/CHAR-duchess/personality.json": "v1",
+    "bible/characters/CHAR-hatter/personality.json": "v1",
+    "bible/characters/CHAR-cheshire-cat/personality.json": "v1",
+    "bible/characters/CHAR-march-hare/personality.json": "v1",
+    "bible/characters/CHAR-dormouse/personality.json": "v1"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "_meta": {
+    "file": "bible/scenes/SCN-courtroom/lighting.json",
+    "owner": "05-scenes/lighting",
+    "task_id": "p3-lighting-sb2",
+    "attempt": 1,
+    "generated": "2026-09-22",
+    "enum_set": "LGT-ENUM-v1 (runs/p3-lighting-sb2/result.json)",
+    "amended": [
+      {
+        "date": "2026-09-23",
+        "task_id": "p4-cr-lighting-2",
+        "change_request": "BIB-0027",
+        "fixes": "DEF-p4-cr-architecture-001-a",
+        "note": "Openings re-read from the reissued architecture.json: pastel round-headed stained-glass windows and a north halo roundel replace the clear and stained lancets. Sun logic, bearings, enums and colour temperature are unchanged."
+      }
+    ]
+  },
+  "scene_id": "SCN-courtroom",
+  "layer": "dream",
+  "int_ext": "INT",
+  "daylight_access": "high_windows",
+  "dream_light_growth": "The courtroom holds the last of the real evening: low golden sun raking through high windows as it now rakes under the trees onto the sleeping Alice; the draught at the climax is the evening breeze on the bank that brings the leaves down (cp-court, cp-cards-leaves, SUP-004; environment fixed.dream_growth).",
+  "natural_light_logic": "Per architecture interior.openings (reissued under BIB-0027): three tall round-headed stained-glass windows high in the west wall (sills 4 m, over the dock) take the low sun from the west-north-west (outside elevation about 10 deg falling to 6 deg). Their glass is pale pastel floral work, mostly clear-toned, so the shafts stay golden daylight; where they cross the tinted petals and borders they throw soft pastel dapples (rose, lilac, sage, pale gold) down and across the room onto the crowd, the tarts table, the mosaic floor and the raised jury-box on the east side. The dock under the west windows stays in shadow. The three matching east windows face away from the sun and give only cool sky light, faintly tinted by the pastel glass. The circular stained-glass halo roundel (about 3.5 m) in the north wall above the throne gets no direct sun; it glows from bright western sky light at a grazing angle, its red heart centre strongest and its pastel rose, lilac and gold petals dim, so it reads as a luminous halo behind the King and Queen but does not light the room. No sky is seen through any window, since the glass is translucent (geography LOC-courtroom 'sky: none').",
+  "schemes": [
+    {
+      "scheme_id": "LGT-courtroom-01",
+      "condition": {
+        "time_of_day": "golden_hour",
+        "weather": "none_enclosed"
+      },
+      "applies_to_states": [
+        "SCN-courtroom-S01",
+        "SCN-courtroom-S02",
+        "SCN-courtroom-S03",
+        "SCN-courtroom-S04",
+        "SCN-courtroom-S05",
+        "SCN-courtroom-S06",
+        "SCN-courtroom-S07",
+        "SCN-courtroom-S08"
+      ],
+      "key_source": "window_sun",
+      "direction": "high_side",
+      "key_bearing": "from the high west stained-glass windows, angled steeply down and across the room toward the east wall and jury-box",
+      "fill": "cool dim sky light through the pale pastel glass of the east windows; a soft glow from the halo roundel behind the throne (luminous but too dim to light the dais); warm low bounce off dark oak and the mosaic floor; the rest of the hall falls into warm shadow",
+      "practicals": [],
+      "practicals_note": "Daylight only: no lamps or candles lit (architecture negative: no electric lights). The stained-glass halo roundel above the throne, with its red heart centre, glows with sky light behind it. It is a coloured window, not a lamp, and gives only a spill, not a key.",
+      "color_temp": "warm (~2700K)",
+      "color_temp_k_approx": 3000,
+      "secondary_color_temp": "east-window sky light reads cool (~6500K) against the golden shafts",
+      "contrast": "hard",
+      "quality": "long visible golden shafts full of dust motes in the stuffy air, broken into soft pastel dapples by the stained glass, bright pools on faces and the jury-box, deep warm shadow under the gallery and along the dock; the halo roundel glowing behind the throne; warm key against cool window fill",
+      "prompt_fragment_en": "tall dim oak-panelled courtroom lit by low golden evening sun streaming through high round-headed pale pastel stained-glass windows on one side, long visible shafts of warm light full of floating dust angling down across the crowd and the raised jury-box and breaking into soft rose, lilac and pale gold dapples, cool pale light through the pastel glass of the windows opposite, a great circular stained-glass halo window glowing softly behind the throne with a luminous red heart at its centre, deep warm shadows under the gallery and beside the windows, stuffy hazy air",
+      "source_chapter": "ch011",
+      "source_refs": [
+        "ch011-p01",
+        "ch012-p58",
+        "ch012-p63",
+        "architecture.json interior.openings (BIB-0027 reissue)",
+        "environment.json SCN-courtroom-S01..S08"
+      ],
+      "inferred": true,
+      "reason": "The source describes the crowd and the court (ch011-p01) but no light. The window-sun plan follows the architecture openings and the environment golden-hour clock. The shafts deepen and lower across S01-S08 inside the same scheme. The stained-glass tint is kept pale so the key still reads as sunlight (XA-magic-08: photographed live-action finish).",
+      "state_notes": {
+        "SCN-courtroom-S07": "Shafts at their lowest and deepest gold before the climax; same fragment.",
+        "SCN-courtroom-S08": "A draught through the windows lifts the pack of cards (environment wind light_breeze); the light stays this scheme and hands straight on to the golden-hour waking on the bank (SCN-riverbank S02, 19:35), where the flying cards match-cut to falling leaves."
+      },
+      "coloured_spill": "Soft pastel patches (rose, lilac, sage, pale gold) where the west shafts land, drifting across the crowd, the tarts table and the jury-box; a faint rose-red cast on the canopy top from the halo roundel. Tints stay pale and secondary; the key reads as golden daylight."
+    }
+  ],
+  "special": [],
+  "special_note": "The source writes no plot light for the trial; the flying pack (ch012-p63) is a wind and match-cut effect (SUP-004), not a light override."
+}

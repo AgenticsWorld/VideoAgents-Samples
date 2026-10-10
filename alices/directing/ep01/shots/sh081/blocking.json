@@ -1,0 +1,39 @@
+{
+  "shot_id": "sh081",
+  "group_id": "grp031",
+  "scene_no": "S08",
+  "scene_id": "SCN-long-hall",
+  "duration_s": 9.5,
+  "is_dialogue": true,
+  "group_position": "first shot of grp031 — Alice on her map start (curtain, sitting in the water at the little door); no path in this group.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "sit",
+      "start_pos": "sitting up straight in the water at the low curtain, the doll-sized fan and one white glove in her palm",
+      "space_fragment_en": "sitting up straight in the water at the low curtain, centred in frame, facing down at the fan and glove in her palm",
+      "facing": "down at her own hands, the look implied from above the top edge of frame",
+      "path": [],
+      "beats": [
+        { "t": 0.6, "action": "sits up straight like a pupil saying lessons", "sync": "the first break in the set-up" },
+        { "t": 1.4, "action": "counts the arithmetic off on her fingers", "sync": "LN-ep01-024 begins" },
+        { "t": 5.0, "action": "the sum comes out wrong and her finger stops", "sync": "LN-ep01-024 on 'thirteen'" },
+        { "t": 8.4, "action": "the geography comes out wrong too", "sync": "end of the line" }
+      ],
+      "performance": {
+        "objective": "prove she is still herself by getting her lessons right",
+        "goal": "prove she is still herself by getting her lessons right",
+        "emotional_arc": "from schoolroom confidence to a cold slippage as the answers refuse to be right",
+        "arc_from": "schoolroom confidence",
+        "arc_to": "cold slippage",
+        "trigger": { "line_ref": "LN-ep01-024", "word": "thirteen" },
+        "no_early_reaction": ["a finger faltering", "the voice slowing", "the brows drawing in"],
+        "forbidden_early": ["a finger faltering", "the voice slowing", "the brows drawing in"],
+        "end_state": "fingers stopped mid-count, palm still open with the fan and glove on it, eyes fixed on her own hand"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0007 result (dream) — the multiplication table", "note": "Alice alone." }
+}

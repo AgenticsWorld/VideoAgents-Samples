@@ -1,0 +1,16 @@
+{
+  "character_id": "CHAR-knave-of-hearts",
+  "task_id": "p4-costume-sheet",
+  "agent": "06-art/costume-concept",
+  "identity_anchor": "sheet.png",
+  "sheets": [
+    {"costume_ref": "COS-011", "file": "sheet.png", "default": true, "reuse": true,
+     "label": "Jack of Hearts card livery", "occasion": "livery", "period": "PER-dream",
+     "scenes": ["SCN-rose-tree-yard", "SCN-croquet-ground"], "chapters": ["ch008"], "episodes": ["ep06"],
+     "identity_refs": ["sheet.png"]},
+    {"costume_ref": "COS-012", "file": "sheet_COS-012.png", "default": false,
+     "label": "Knave as defendant, in chains", "occasion": "livery", "period": "PER-dream-court",
+     "scenes": ["SCN-courtroom"], "chapters": ["ch011", "ch012"], "episodes": ["ep08", "ep09"],
+     "cross_ref": "COS-011", "identity_refs": ["sheet.png"], "visual_en_hit": true}
+  ]
+}

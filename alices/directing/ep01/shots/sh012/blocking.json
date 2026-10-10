@@ -1,0 +1,59 @@
+{
+  "shot_id": "sh012",
+  "group_id": "grp006",
+  "scene_no": "S02",
+  "scene_id": "SCN-field-hedge-burrow",
+  "duration_s": 4.0,
+  "is_dialogue": false,
+  "group_position": "last shot of grp006 — Alice arrives at her map end (spoil_fan); CRE-001 completes his map line at its end (burrow).",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "stand",
+      "start_pos": "slowing to a run-walk at the near edge of the fan of pale spoil, her shoulder and hair filling the near screen-right third",
+      "space_fragment_en": "standing at the near edge of the fan of pale spoil on screen-right, head turned down to the rabbit burrow past her shoulder",
+      "facing": "turned screen-left and down at the hedge foot; her face is not given to the frame",
+      "path": [],
+      "beats": [
+        { "t": 0.6, "action": "slows from a run to a walk", "sync": "she arrives after him" },
+        { "t": 2.4, "action": "her look drops with him into the hole", "sync": "the rabbit goes down" }
+      ],
+      "performance_beat": {
+        "objective": "see exactly where it goes",
+        "goal": "see exactly where it goes",
+        "emotional_arc": "from chase-effort to a fixed, greedy attention on one spot of ground",
+        "arc_from": "chase-effort",
+        "arc_to": "fixed attention on the hole",
+        "trigger": { "beat": "the rabbit drops head-first into the burrow", "t": 2.4 },
+        "no_early_reaction": ["stopping dead", "a hand coming up", "the shoulders dropping"],
+        "forbidden_early": ["stopping dead", "a hand coming up", "the shoulders dropping"],
+        "end_state": "shoulder still to the lens, head held down toward the hole, breath heaving, no change of direction"
+      }
+    }
+  ],
+  "creatures": [
+    {
+      "id": "CRE-001",
+      "label": "Wild White Rabbit",
+      "pose": "stand",
+      "start_pos": "reaching the laid hawthorn hedge across the fan of pale spoil, just screen-left of centre",
+      "space_fragment_en": "standing on all fours crossing the fan of pale spoil just screen-left of centre, dropping head-first into the rabbit burrow",
+      "facing": "head down into the burrow mouth; no pause and no look back",
+      "path": [
+        { "t": 2.4, "to": "head-first into the rabbit burrow, gone" }
+      ],
+      "beats": [
+        { "t": 1.2, "action": "crosses the pale spoil at speed", "sync": "the hedge stems rake him into the hole" },
+        { "t": 2.4, "action": "pops down into the burrow without a pause", "sync": "exit; he leaves the episode here" }
+      ],
+      "animal_discipline": "True scale, true gait, no hesitation at the lip, no look to camera and none at Alice. This is his last appearance — CRE-001 is not in any later ep01 shot."
+    }
+  ],
+  "presence_check": {
+    "timeline_ok": true,
+    "violations": [],
+    "story_event": "ev0001 (real_frame, T0) — the rabbit-hole under the hedge",
+    "note": "CRE-001 exits the episode into the burrow here. Everything under the hedge from sh017 belongs to the dream layer."
+  }
+}

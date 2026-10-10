@@ -1,0 +1,39 @@
+{
+  "shot_id": "sh040",
+  "group_id": "grp015",
+  "scene_no": "S05",
+  "scene_id": "SCN-little-door-passage",
+  "duration_s": 4.0,
+  "is_dialogue": false,
+  "group_position": "last shot of grp015 — Alice on the same map start/end ground (hall_floor), now kneeling at the lock.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "kneel",
+      "start_pos": "kneeling on the flagstones at the little door, both hands at the tiny lock",
+      "space_fragment_en": "kneeling on the flagstones in front of the little door, held screen-right, facing the little door and turning the golden key in its lock",
+      "facing": "down-left at the lock, the open leaf swinging into the screen-left part of frame",
+      "path": [],
+      "beats": [
+        { "t": 0.8, "action": "the key goes into the tiny lock", "sync": "it fits" },
+        { "t": 1.8, "action": "it turns", "sync": "the mechanism gives" },
+        { "t": 2.6, "action": "her face breaks into delight", "sync": "after the turn, not before" },
+        { "t": 3.2, "action": "she pushes the fifteen-inch door open", "sync": "the green arrives in the lead room" }
+      ],
+      "performance_beat": {
+        "objective": "open the one door in the hall that her key is the right size for",
+        "goal": "open the one door the key fits",
+        "emotional_arc": "from held-breath care to unguarded delight",
+        "arc_from": "held-breath care",
+        "arc_to": "unguarded delight",
+        "trigger": { "beat": "the key turns in the tiny lock", "t": 1.8 },
+        "no_early_reaction": ["a smile", "the shoulders lifting", "the hand pushing at the leaf"],
+        "forbidden_early": ["a smile", "the shoulders lifting", "the hand pushing at the leaf"],
+        "end_state": "kneeling with one hand flat on the open leaf, mouth open in a soundless laugh, eyes on the light coming through"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0003 (dream)", "note": "Alice alone." }
+}

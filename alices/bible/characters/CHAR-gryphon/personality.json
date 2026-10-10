@@ -1,0 +1,114 @@
+{
+  "character_id": "CHAR-gryphon",
+  "name": "The Gryphon",
+  "tier": "B",
+  "layer": "dream",
+  "temperament": {
+    "summary": "Bluff, lazy, irreverent and impatient; a hearty old hand who laughs at his betters behind their backs and bosses the child in front of her. Quick to boredom, quick to excitement.",
+    "baseline": "Sprawled, drowsy, amused.",
+    "under_pressure": "Bored impatience: cuts people off and hustles them along. At a spectacle: leaps and shouts.",
+    "inferred": false
+  },
+  "traits": [
+    {
+      "trait": "Irreverent about authority",
+      "description": "He obeys the Queen to her face, then chuckles once she is out of sight and tells Alice the executions are all her fancy.",
+      "evidence": [
+        { "chapter": "ch009", "ref": "ch009-p44", "event": "ev0041", "note": "Watches the Queen out of sight, then chuckles: 'What fun!'" },
+        { "chapter": "ch009", "ref": "ch009-p46", "event": "ev0041", "quote": "It’s all her fancy, that: they never executes nobody, you know. Come on!" }
+      ],
+      "inferred": false
+    },
+    {
+      "trait": "Impatient and brusque",
+      "description": "He has no time for explanations. He cuts people off, gives orders and drags Alice away mid-song.",
+      "evidence": [
+        { "chapter": "ch009", "ref": "ch009-p92", "note": "Interrupts 'in a very decided tone' to move on from lessons." },
+        { "chapter": "ch010", "ref": "ch010-p52", "note": "'explanations take such a dreadful time.'" },
+        { "chapter": "ch010", "ref": "ch010-p79", "event": "ev0044", "note": "Takes Alice by the hand and hurries off without waiting for the end of the song." }
+      ],
+      "inferred": false
+    },
+    {
+      "trait": "Condescending to the child",
+      "description": "Joins the Mock Turtle in shaming her simple questions and calls her a simpleton. He takes on the role of the one with authority over Alice.",
+      "evidence": [
+        { "chapter": "ch009", "ref": "ch009-p58", "event": "ev0042", "note": "'You ought to be ashamed of yourself for asking such a simple question'." },
+        { "chapter": "ch009", "ref": "ch009-p77", "note": "'you are a simpleton.'" },
+        { "chapter": "ch010", "ref": "ch010-p55", "note": "The Mock Turtle looks to him as if he has authority over Alice." },
+        { "chapter": "ch010", "ref": "ch010-p56", "note": "Orders her to stand up and recite." }
+      ],
+      "inferred": false
+    },
+    {
+      "trait": "Rough-hearted comrade",
+      "description": "Crude but loyal to his sad friend: he thumps him on the back to get his voice back and calls him 'old fellow'.",
+      "evidence": [
+        { "chapter": "ch010", "ref": "ch010-p01", "event": "ev0043", "note": "Shakes him and punches him in the back when sobs choke him." },
+        { "chapter": "ch009", "ref": "ch009-p84", "note": "Sighs in his turn and hides his face with the Mock Turtle over the old master." }
+      ],
+      "inferred": false
+    },
+    {
+      "trait": "Excitable showman",
+      "description": "Lazy until there is a spectacle; then he bounds into the air and yells the Quadrille figures at the top of his voice, and he is first off to the trial.",
+      "evidence": [
+        { "chapter": "ch010", "ref": "ch010-p12", "event": "ev0043", "note": "Shouts 'The lobsters!' with a bound into the air." },
+        { "chapter": "ch010", "ref": "ch010-p16", "note": "Yells at the top of his voice." },
+        { "chapter": "ch010", "ref": "ch010-p79", "event": "ev0044", "note": "'Come on!' at the first cry of the trial." }
+      ],
+      "inferred": false
+    },
+    {
+      "trait": "Lazy",
+      "description": "Found asleep in the sun, and the Queen calls him 'lazy thing'. He never learned the Drawling-master's 'Fainting in Coils' because he 'hadn't time', and he has forgotten the song words.",
+      "evidence": [
+        { "chapter": "ch009", "ref": "ch009-p43", "event": "ev0041", "note": "Lying fast asleep in the sun; 'Up, lazy thing!'" },
+        { "chapter": "ch009", "ref": "ch009-p81", "note": "The Mock Turtle: 'the Gryphon never learnt it.'" },
+        { "chapter": "ch009", "ref": "ch009-p82", "note": "'Hadn’t time.'" },
+        { "chapter": "ch010", "ref": "ch010-p22", "note": "'I’ve forgotten the words.'" }
+      ],
+      "inferred": false
+    }
+  ],
+  "motivation": {
+    "core": "Entertainment with the least effort: fun, spectacle and a good story, and no tedious explanations.",
+    "fear": "Boredom, and having to exert himself for nothing.",
+    "wants_from_alice": "An audience for the Quadrille and a good story from her, in that order.",
+    "shifts": [
+      { "chapter": "ch009", "ref": "ch009-p44", "event": "ev0041", "from": "asleep in the sun", "to": "amused escort, showing the child the Mock Turtle for fun", "trigger": "the Queen's order, and the joke of her empty threats" },
+      { "chapter": "ch010", "ref": "ch010-p79", "event": "ev0044", "from": "master of ceremonies at the shore", "to": "hurrying to the trial, the bigger show", "trigger": "the distant cry 'The trial’s beginning!'" }
+    ]
+  },
+  "habits": [
+    { "habit": "Waits until authority has left before showing what he thinks", "evidence": [ { "chapter": "ch009", "ref": "ch009-p44" } ], "inferred": false },
+    { "habit": "Grabs the child by the hand and hurries off without explanation", "evidence": [ { "chapter": "ch010", "ref": "ch010-p79" }, { "chapter": "ch010", "ref": "ch010-p80" } ], "inferred": false },
+    { "habit": "Throws both paws (hands) up in exaggerated surprise", "evidence": [ { "chapter": "ch009", "ref": "ch009-p75" } ], "inferred": false },
+    { "habit": "Whispers a knowing aside to Alice at public occasions", "evidence": [ { "chapter": "ch011", "ref": "ch011-p06" } ], "inferred": false },
+    { "habit": "Sprawls and lounges wherever he stops, like a big cat in the sun", "evidence": [ { "chapter": "ch009", "ref": "ch009-p43" } ], "inferred": true, "reason": "Extends the source's sleeping-in-the-sun image into the lion hindquarters' natural sprawl for the photoreal CGI griffin (SUP-010 as amended by BIB-0027)." }
+  ],
+  "decision_pattern": "Chooses whatever is more fun right now and cuts off anything slow. He treats orders from above lightly but carries them out.",
+  "taboos": [
+    { "taboo": "Never takes the Queen's threats seriously, and never sides with her against anyone", "basis": [ { "chapter": "ch009", "ref": "ch009-p46" } ], "inferred": false },
+    { "taboo": "Never sits through a long explanation", "basis": [ { "chapter": "ch010", "ref": "ch010-p52" }, { "chapter": "ch010", "ref": "ch010-p64" } ], "inferred": false },
+    { "taboo": "Never mocks the Queen to her face; his irreverence only comes out when she is gone", "basis": [ { "chapter": "ch009", "ref": "ch009-p44" } ], "inferred": false }
+  ],
+  "facade": {
+    "applies": true,
+    "surface": "The Queen's obedient servant, roused from sleep to do her bidding",
+    "true_self": "A cheerful cynic who knows the Queen's death sentences are never carried out",
+    "reveal_chapter": "ch009",
+    "reveal_note": "The reveal is the chuckle at ch009-p44 to ch009-p46, the key line behind SUP-014. Blocking: he must be deadpan and obedient until the Queen is fully out of frame.",
+    "inferred": false
+  },
+  "waking_life_embodiment": {
+    "embodies": "The bluff senior servant, groom or old gardener told to 'take the young lady' somewhere: rough-spoken, bossy with the child, and privately scornful of the mistress's tantrums.",
+    "waking_source": "The servants of the family and the neighbouring farm. The sister's reverie links his shriek to the farmyard clamour (ch012-p70, cp-sounds). His ungrammatical speech marks him as working-class in a scholar's household.",
+    "authority_trait": "Delegated authority: the adult charged with minding a child, who treats her as a simpleton, yet tells her the truth the gentry will not, that the threats are empty.",
+    "coming_of_age_reading": "He gives Alice the most useful fact in the dream: 'they never executes nobody'. Adult threats are bluster. She carries that knowledge into the trial, where it lets her stand up at full size. He also shows her that grown-ups who boss her about are just as bored and silly as she is.",
+    "grounding": [ "ch009-p44", "ch009-p46", "ch012-p70", "bible/world.json wonderland_real_counterparts cp-sounds", "bible/cultivation.json SUP-010, SUP-014" ],
+    "inferred": true,
+    "reason": "The empty-threats line and the farmyard sound link are sourced. Casting him as a senior servant or groom is a design reading for the realistic frame."
+  },
+  "performance_baseline": "Photoreal CGI griffin (SUP-010, BIB-0027): big, loose-limbed, heavy-lidded, then suddenly explosive. Eagle head cocks and snaps, neck feathers rouse when amused, the lion tail lashes, wings half-mantle when he bosses Alice about. The voice is a rough burr; the shriek is a sound-design cue linked to the farmyard."
+}

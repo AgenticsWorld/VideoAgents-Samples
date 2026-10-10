@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh061",
+  "group_id": "grp023",
+  "scene_no": "S07",
+  "duration_s": 7.0,
+  "size": "close",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame, held)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 50,
+  "camera_height_m": 0.18,
+  "angle": "level, camera on the flagstones",
+  "rack_focus": "none",
+  "start_frame": "The sh060 close continued: her hand still flat on her head, waiting — and nothing happening at all.",
+  "end_frame": "The same frame after the two full seconds of flat disappointment: she has set to work and finished the whole cake, briskly and without ceremony, brushing the crumbs off her pinafore.",
+  "constraint_honoured": "'The two-second hold on the flat, cheated face is the joke and is NOT cut into.'",
+  "movement_note": "The joke is that nothing happens, so nothing may happen in the camera either; the same set-up as sh060 keeps the two shots reading as one continuous beat.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

@@ -1,0 +1,295 @@
+{
+  "_meta": {
+    "file": "bible/scenes/SCN-croquet-ground/environment.json",
+    "owner": "05-scenes/environment",
+    "task_id": "p3-environment-sb2",
+    "attempt": 1,
+    "generated": "2026-09-22",
+    "amended": {"change_id": "BIB-0027", "task_id": "p4-cr-environment", "date": "2026-09-23", "fields": ["fixed.dream_design (new)"]},
+    "enum_set": "ENV-ENUM-v1 (runs/p3-environment-sb1/result.json) + sb2 extensions (runs/p3-environment-sb2/result.json)"
+  },
+  "scene_id": "SCN-croquet-ground",
+  "layer": "dream",
+  "fixed": {
+    "climate": "dream-midsummer lawn: open, hot sun with shade trees at the edges (geography.json LOC-croquet-lawn 'warm and sunlit')",
+    "indoor": false,
+    "daylight_access": "open_sky",
+    "dream_design": {
+      "rule": "WR-010 / XA-magic-08 (dream, full)",
+      "flora": "herbaceous borders round the lawn in high-July bloom (hollyhocks, delphiniums, sweet peas, roses) drawn in tall curving drifts; the edge shade trees (limes, in July flower) have sweeping, whiplash-curved boughs; the rose garden behind",
+      "ornament_cues": "the ridges and furrows of the lawn curve in flowing organic bands, not straight rows; clipped hedges and topiary edge the ground in rounded roundel forms; the royal pavilion and pennants carry heart-and-vine motifs (architecture and props own the objects)",
+      "palette": "pale sun-bleached gold lawn, pastel border colours (rose, lavender, powder blue, cream), deep green shade; card red and gold of the court as accents; the gold warms from S01 to S06 as the sun lowers",
+      "animals_in_plate": "the live hedgehogs (balls) and flamingoes (mallets) are photoreal CGI animals composited into the plate (BIB-0027 extension, pending_H2). Environment consequence only: grass height and furrow depth are dressed so the hedgehogs can be seen crossing the ridges",
+      "seasonal_guard": "July borders and lime flower; no tulips, daffodils or fruit blossom; no autumn colour",
+      "inferred": true,
+      "reason": "Ridges, furrows and the shade are explicit (ch008-p41, ch009-p35). Borders, the curving furrows and palette are designed to WR-010. The animal treatment is the orchestrator's interpretation flagged for H2."
+    },
+    "ground_and_flora": "an uneven lawn of ridges and furrows, close-cropped and dried pale in places by the July heat; shade trees at the edges where the guests rest; the rose garden visible beyond",
+    "dream_growth": "Grows from the fashionable 1860s croquet party of the grown-up world (cp-court). The shade the guests escape to is the same tree shade the sister reads in on the real bank. The hot sun here is the real late afternoon, and it cools slightly across the game's half hour as the waking sun drops.",
+    "source": {
+      "chapter": "ch008",
+      "quote": "Alice thought she had never seen such a curious croquet-ground in her life; it was all ridges and furrows"
+    },
+    "also_seen": [
+      {
+        "chapter": "ch009",
+        "refs": [
+          "ch009-p35"
+        ],
+        "quote": "had taken advantage of the Queen’s absence, and were resting in the shade"
+      }
+    ],
+    "inferred": true,
+    "reason": "The ridged ground and the guests' shade are explicit (ch008-p41, ch009-p35); the shade implies a sunny day. The grass state and dream link are designed per ruling 5.2 A."
+  },
+  "variable_dims": {
+    "season": [
+      "summer"
+    ],
+    "time_of_day": [
+      "late_afternoon"
+    ],
+    "weather": [
+      "fair_hot"
+    ],
+    "wind": [
+      "still",
+      "light_breeze"
+    ],
+    "temperature": [
+      "hot",
+      "warm"
+    ]
+  },
+  "states": [
+    {
+      "state_id": "SCN-croquet-ground-S01",
+      "chapter": 8,
+      "chapter_id": "ch008",
+      "story_scene": "ch008-sc03",
+      "paragraphs": "ch008-p34..ch008-p40",
+      "timeline_ref": "ev0035",
+      "timeline_node": "TL-003",
+      "season": "summer",
+      "weather": "fair_hot",
+      "wind": "light_breeze",
+      "temperature": "hot",
+      "time_of_day": "late_afternoon",
+      "waking_clock": "17:52-17:56 GMT",
+      "sun": {
+        "elevation_deg_approx": 20,
+        "azimuth_deg_approx": 282,
+        "note": "sun due west; the procession files in with long shadows"
+      },
+      "sky": "clear",
+      "conditions": "hot open lawn; the same light breeze as the rose-tree scene moving banners",
+      "source_chapter": "ch008",
+      "source": {
+        "chapter": "ch008",
+        "quote": "She was walking by the White Rabbit, who was peeping anxiously into her face"
+      },
+      "inferred": true,
+      "designed_fields": [
+        "waking_clock",
+        "sun",
+        "sky",
+        "wind",
+        "temperature",
+        "weather"
+      ],
+      "reason": "Continues from SCN-rose-tree-yard S03 with the same procession. Time follows the waking afternoon in event order; the sun is computed for Oxford on 4 July 1862."
+    },
+    {
+      "state_id": "SCN-croquet-ground-S02",
+      "chapter": 8,
+      "chapter_id": "ch008",
+      "story_scene": "ch008-sc04",
+      "paragraphs": "ch008-p41..ch008-p44",
+      "timeline_ref": "ev0036",
+      "timeline_node": "TL-003",
+      "season": "summer",
+      "weather": "fair_hot",
+      "wind": "still",
+      "temperature": "hot",
+      "time_of_day": "late_afternoon",
+      "waking_clock": "17:56-18:03 GMT (start of the 'half an hour or so' game; that duration is dream time)",
+      "sun": {
+        "elevation_deg_approx": 20,
+        "azimuth_deg_approx": 282,
+        "note": "sun due west; the ridges and furrows throw sharp raking shadows"
+      },
+      "sky": "clear",
+      "conditions": "hot, still air over the lawn; players scramble in the glare",
+      "source_chapter": "ch008",
+      "source": {
+        "chapter": "ch008",
+        "quote": "it was all ridges and furrows"
+      },
+      "inferred": true,
+      "designed_fields": [
+        "waking_clock",
+        "sun",
+        "sky",
+        "wind",
+        "temperature",
+        "weather"
+      ],
+      "reason": "The ground is explicit (ch008-p41). The low western sun is designed to make the ridges readable in raking light. No animal is ever shown struck (SUP-011)."
+    },
+    {
+      "state_id": "SCN-croquet-ground-S03",
+      "chapter": 8,
+      "chapter_id": "ch008",
+      "story_scene": "ch008-sc05",
+      "paragraphs": "ch008-p45..ch008-p60",
+      "timeline_ref": "ev0037",
+      "timeline_node": "TL-003",
+      "season": "summer",
+      "weather": "fair_hot",
+      "wind": "still",
+      "temperature": "hot",
+      "time_of_day": "late_afternoon",
+      "waking_clock": "18:03-18:09 GMT",
+      "sun": {
+        "elevation_deg_approx": 19,
+        "azimuth_deg_approx": 284,
+        "note": "sun due west"
+      },
+      "sky": "clear",
+      "conditions": "still air; the Cheshire Cat's head appears above the lawn with the sun behind it (dissolve, SUP-005)",
+      "source_chapter": "ch008",
+      "source": {
+        "chapter": "ch008",
+        "quote": "she noticed a curious appearance in the air"
+      },
+      "inferred": true,
+      "designed_fields": [
+        "waking_clock",
+        "sun",
+        "sky",
+        "wind",
+        "temperature",
+        "weather"
+      ],
+      "reason": "'A curious appearance in the air' is the Cat, not weather (ch008-p45). Still air keeps the dissolve clean. Time follows the waking afternoon in event order."
+    },
+    {
+      "state_id": "SCN-croquet-ground-S04",
+      "chapter": 8,
+      "chapter_id": "ch008",
+      "story_scene": "ch008-sc06",
+      "paragraphs": "ch008-p61..ch008-p71",
+      "timeline_ref": "ev0038",
+      "timeline_node": "TL-003",
+      "season": "summer",
+      "weather": "fair_hot",
+      "wind": "still",
+      "temperature": "hot",
+      "time_of_day": "late_afternoon",
+      "waking_clock": "18:09-18:15 GMT",
+      "sun": {
+        "elevation_deg_approx": 18,
+        "azimuth_deg_approx": 285,
+        "note": "sun due west"
+      },
+      "sky": "clear",
+      "conditions": "still, hot; the executioner-King-Queen argument over the floating head (farce, SUP-014); the Cat fades",
+      "source_chapter": "ch008",
+      "source": {
+        "chapter": "ch008",
+        "quote": "The executioner’s argument was, that you couldn’t cut off a head unless there was a body to cut it off from"
+      },
+      "inferred": true,
+      "designed_fields": [
+        "waking_clock",
+        "sun",
+        "sky",
+        "wind",
+        "temperature",
+        "weather"
+      ],
+      "reason": "Weather is not described; it follows the waking afternoon in event order. Covers story scenes ch008-sc06 and ch008-sc07 (ev0038 lands in ch008-p64..p71)."
+    },
+    {
+      "state_id": "SCN-croquet-ground-S05",
+      "chapter": 9,
+      "chapter_id": "ch009",
+      "story_scene": "ch009-sc01",
+      "paragraphs": "ch009-p01..ch009-p34",
+      "timeline_ref": "ev0039",
+      "timeline_node": "TL-003",
+      "season": "summer",
+      "weather": "fair_hot",
+      "wind": "still",
+      "temperature": "warm",
+      "time_of_day": "late_afternoon",
+      "waking_clock": "18:15-18:22 GMT",
+      "sun": {
+        "elevation_deg_approx": 17,
+        "azimuth_deg_approx": 286,
+        "note": "sun west-north-west; long shadows along the lawn edges where the Duchess walks Alice"
+      },
+      "sky": "clear",
+      "conditions": "the heat easing to warm; the Duchess's moralising walk along the shady edge; the Queen appears 'with folded arms, frowning like a thunderstorm' (a simile only: the sky stays clear)",
+      "source_chapter": "ch009",
+      "source": {
+        "chapter": "ch009",
+        "quote": "there stood the Queen in front of them, with her arms folded, frowning like a thunderstorm"
+      },
+      "inferred": true,
+      "designed_fields": [
+        "waking_clock",
+        "sun",
+        "sky",
+        "wind",
+        "temperature",
+        "weather"
+      ],
+      "reason": "'Like a thunderstorm' (ch009-p30) is a simile for the Queen's face and must not be staged as weather. ev0039 is only loosely sequenced after ev0038 (story_timeline confidence 0.6); it is kept in the same late-afternoon phase. Covers ch009-sc01 and ch009-sc02."
+    },
+    {
+      "state_id": "SCN-croquet-ground-S06",
+      "chapter": 9,
+      "chapter_id": "ch009",
+      "story_scene": "ch009-sc03",
+      "paragraphs": "ch009-p35..ch009-p42",
+      "timeline_ref": "ev0040",
+      "timeline_node": "TL-003",
+      "season": "summer",
+      "weather": "fair_hot",
+      "wind": "still",
+      "temperature": "warm",
+      "time_of_day": "late_afternoon",
+      "waking_clock": "18:22-18:28 GMT (end of the game; 'half an hour or so' is dream time)",
+      "sun": {
+        "elevation_deg_approx": 16,
+        "azimuth_deg_approx": 287,
+        "note": "sun west-north-west and lowering; the shade under the edge trees is long and deep"
+      },
+      "sky": "clear",
+      "conditions": "guests resting in the shade scramble back to play; by the end, no arches left and all players in custody except the King, Queen and Alice",
+      "source_chapter": "ch009",
+      "source": {
+        "chapter": "ch009",
+        "quote": "had taken advantage of the Queen’s absence, and were resting in the shade"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch009",
+          "refs": [
+            "ch009-p36"
+          ],
+          "quote": "by the end of half an hour or so there were no arches left"
+        }
+      ],
+      "inferred": false,
+      "designed_fields": [
+        "waking_clock",
+        "sun",
+        "sky",
+        "temperature"
+      ],
+      "reason": "Sun and shade are explicit (ch009-p35), and the half-hour length is explicit (ch009-p36). The waking-clock mapping and sun position are designed for Oxford on 4 July 1862."
+    }
+  ]
+}

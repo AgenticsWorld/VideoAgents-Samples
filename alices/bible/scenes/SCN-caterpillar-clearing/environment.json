@@ -1,0 +1,87 @@
+{
+  "_meta": {
+    "file": "bible/scenes/SCN-caterpillar-clearing/environment.json",
+    "owner": "05-scenes/environment",
+    "task_id": "p3-environment-sb1",
+    "attempt": 1,
+    "generated": "2026-09-22",
+    "amended": {"change_id": "BIB-0027", "task_id": "p4-cr-environment", "date": "2026-09-23", "fields": ["fixed.dream_design (new)"]},
+    "enum_set": "ENV-ENUM-v1 (defined once in runs/p3-environment-sb1/result.json)"
+  },
+  "scene_id": "SCN-caterpillar-clearing",
+  "layer": "dream",
+  "fixed": {
+    "climate": "a small sunny clearing in the dream wood, warm and still (geography.json LOC-mushroom-clearing)",
+    "indoor": false,
+    "daylight_access": "open_sky",
+    "dream_design": {
+      "rule": "WR-010 / XA-magic-08 (dream, full)",
+      "flora": "buttercups, meadow cranesbill, ox-eye daisies and harebells grown to towering height at Alice's three-inch scale, their stems drawn in long, curving whiplash lines; grass blades arch over her like a vaulted nave, so the clearing reads as a green cathedral of stems around the mushroom",
+      "ornament_cues": "the mushroom cap is the scene's halo roundel, a circular disc framing the Caterpillar from below; hookah smoke rises in slow ribbon-curls, Mucha hair-line arabesques that hang in the still air; the gills under the cap give a natural radial fan pattern",
+      "palette": "pastel-and-gold: buttercup gold and warm cream in the flowers, soft lilac-blue smoke, sage and pale jade leaf-light; gold rim-light on petal edges (lighting takes these as colour targets only)",
+      "seasonal_guard": "July meadow flowers only; no spring bluebells, primroses or blossom",
+      "inferred": true,
+      "reason": "Buttercups, flowers and the mushroom are explicit (ch004-p40..p41). Species, line treatment and palette are designed to WR-010 and the user style reference (refs/style/alice.jpeg: giant caterpillar in an Art Nouveau nave), translated into a living, photographed clearing."
+    },
+    "ground_and_flora": "summer grass and buttercups, other July meadow flowers, and the one large mushroom; wood edge in full green leaf around",
+    "dream_growth": "Grows from a sunny patch of grass, flowers and field mushrooms in a copse near home, where schoolroom recitations come back to a drowsy child. It is the same warm, windless July afternoon as the waking bank. The stillness is why the hookah smoke hangs in the air.",
+    "source": {"chapter": "ch004", "quote": "as she leant against a buttercup to rest herself, and fanned herself with one of the leaves"},
+    "inferred": true,
+    "reason": "Heat is signalled in the source (Alice fans herself, ch004-p40); flowers, grass and mushroom are explicit (ch004-p41). Stillness and the waking link are designed per ruling 5.2 A and index.json grows_from (cp-lessons)."
+  },
+  "variable_dims": {
+    "season": ["summer"],
+    "time_of_day": ["afternoon"],
+    "weather": ["fair_hot"],
+    "wind": ["still"],
+    "temperature": ["warm"]
+  },
+  "states": [
+    {
+      "state_id": "SCN-caterpillar-clearing-S01",
+      "chapter": 4,
+      "chapter_id": "ch004",
+      "story_scene": "ch004-sc05",
+      "paragraphs": "ch004-p40..ch004-p42",
+      "timeline_ref": "ev0018",
+      "timeline_node": "TL-003",
+      "season": "summer",
+      "weather": "fair_hot",
+      "wind": "still",
+      "temperature": "warm",
+      "time_of_day": "afternoon",
+      "waking_clock": "16:00-16:05 GMT (Alice asleep on the bank)",
+      "sun": {"elevation_deg_approx": 37, "azimuth_deg_approx": 260, "note": "west-south-west over the clearing's open patch"},
+      "sky": "clear summer sky over the clearing",
+      "conditions": "warm, windless; out of breath, Alice fans herself with a leaf",
+      "source_chapter": "ch004",
+      "source": {"chapter": "ch004", "quote": "as she leant against a buttercup to rest herself, and fanned herself with one of the leaves"},
+      "inferred": false,
+      "designed_fields": ["waking_clock", "sun", "sky", "wind"],
+      "reason": "The warmth is explicit (she fans herself, ch004-p40), though it partly comes from running. Clock and sun follow the proportional dream clock."
+    },
+    {
+      "state_id": "SCN-caterpillar-clearing-S02",
+      "chapter": 5,
+      "chapter_id": "ch005",
+      "story_scene": "ch005-sc01..ch005-sc02",
+      "paragraphs": "ch005-p01..ch005-p56",
+      "timeline_ref": "ev0019",
+      "timeline_span": ["ev0019", "ev0020", "ev0021"],
+      "timeline_node": "TL-003",
+      "season": "summer",
+      "weather": "fair_hot",
+      "wind": "still",
+      "temperature": "warm",
+      "time_of_day": "afternoon",
+      "waking_clock": "16:05-16:25 GMT (Alice asleep on the bank)",
+      "sun": {"elevation_deg_approx": 35, "azimuth_deg_approx": 263, "note": "slightly lower and warmer than S01; still full afternoon"},
+      "sky": "clear summer sky",
+      "conditions": "warm, dead-still air: hookah smoke rises and hangs in slow layers over the mushroom; drowsy insect hum",
+      "source_chapter": "ch005",
+      "source": {"chapter": "ch005", "quote": "Then it got down off the mushroom, and crawled away in the grass"},
+      "inferred": true,
+      "reason": "The source gives no weather in ch005. Values carry on continuously from S01; the hanging smoke is designed to show the windless air."
+    }
+  ]
+}

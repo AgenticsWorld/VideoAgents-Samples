@@ -1,0 +1,29 @@
+{
+  "id": "DEF-p3-char-index-904",
+  "opened_by": "03-characters/character-manager",
+  "opened_on": "2026-09-22",
+  "task_id": "p3-char-defects",
+  "assigned_to": "03-characters/relationship",
+  "domain": "characters",
+  "status": "closed",
+  "severity": "minor",
+  "summary": "CHAR-duchess-baby is now a registered id; add the two edges relationship.json could not add without it.",
+  "findings": [
+    {
+      "id": "DEF-p3-char-index-904-a",
+      "issue": "DEF-p3-relationship-001-c: bible/characters/index.json now has CHAR-duchess-baby (the Duchess's baby, TERM-0039). The edges CHAR-duchess -> CHAR-duchess-baby and CHAR-alice -> CHAR-duchess-baby could not be written before this id existed.",
+      "requested_action": "Add CHAR-duchess -> CHAR-duchess-baby (parent/nursing, ch006-p19) and CHAR-alice -> CHAR-duchess-baby (carries the baby off, 'wouldn't it be murder to leave it behind?', ch006-p45) to bible/characters/relationship.json."
+    },
+    {
+      "id": "DEF-p3-char-index-904-b",
+      "issue": "DEF-p3-relationship-001-a confirmed: CHAR-frog-footman is now registered under FAC-duchess-household (index.json), matching relationship.json's existing CHAR-duchess -> CHAR-frog-footman master_servant edge.",
+      "requested_action": "No change needed to relationship.json for this point — the existing master_servant edge already matches the confirmed faction; noted here for closure of DEF-p3-relationship-001-a only."
+    }
+  ],
+  "impact": "Closes out the two relationship.json gaps DEF-p3-relationship-001 reported as blocked on a missing/unconfirmed registry entry.",
+  "opened_via": "Fix-out of DEF-p3-relationship-001, routed through 00-orchestration/memory-bible task p3-bible-defects.",
+  "closed_by": "03-characters/relationship",
+  "closed_on": "2026-09-22",
+  "closed_via_task": "p3-fix-904",
+  "fix_note": "-a: added CHAR-duchess <-> CHAR-duchess-baby (kinship, undirected, strength 2, ev0026 ch006#p19-p43; inferred, reason cites nursing + 'my boy' lullaby) and CHAR-alice -> CHAR-duchess-baby (alliance, directed, strength 2, ev0026 ch006#p43 -> ev0027 ch006#p44-p49, 'wouldn't it be murder to leave it behind?') to bible/characters/relationship.json; TERM-0039 unregistered_participants entry marked resolved; isolation note updated to 44 CHAR ids. code/p3-relationship_check.py overall PASS (edge_ids_valid PASS, 82 edges). -b: no change needed; existing CHAR-duchess -> CHAR-frog-footman master_servant edge matches the confirmed FAC-duchess-household registration."
+}

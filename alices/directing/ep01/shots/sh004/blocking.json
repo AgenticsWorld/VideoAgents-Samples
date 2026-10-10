@@ -1,0 +1,44 @@
+{
+  "shot_id": "sh004",
+  "group_id": "grp002",
+  "scene_no": "S01",
+  "scene_id": "SCN-riverbank",
+  "duration_s": 3.0,
+  "is_dialogue": false,
+  "group_position": "last shot of grp002 — the sister holds the blocking_map start (sitting_shelf), which is also her end because the map gives her no path. Alice holds the same ground off-frame.",
+  "characters": [
+    {
+      "id": "CHAR-alice-sister",
+      "label": "Alice's Sister",
+      "pose": "sit",
+      "start_pos": "upright at sitting_shelf, the book open across her knee; only her hand is in frame",
+      "space_fragment_en": "sitting at the sister's sitting place with the book open on her knee, centred in frame, one thumb holding the page flat",
+      "facing": "unchanged — bowed over the page, eyes on the print",
+      "path": [],
+      "beats": [
+        { "t": 1.6, "action": "the thumb shifts a little along the margin", "sync": "the only event in the insert" }
+      ],
+      "performance_beat": {
+        "objective": "keep her place in a page she is nearly through",
+        "goal": "keep her place in the page",
+        "emotional_arc": "from settled to settled — no change is permitted here",
+        "arc_from": "settled",
+        "arc_to": "settled",
+        "trigger": { "beat": "the thumb shifts along the margin", "t": 1.6 },
+        "no_early_reaction": ["the hand lifting", "the page turning"],
+        "forbidden_early": ["the hand lifting", "the page turning"],
+        "end_state": "thumb flat at the margin, hand steady, no tremor"
+      }
+    }
+  ],
+  "creatures": [],
+  "offscreen_presence": [
+    { "id": "CHAR-alice", "where": "on the grass at the sister's sitting place, up on her elbows, directly behind the lens", "note": "This is her eye-line; she is present in the space but not in frame, so she carries no space fragment (blocking_bound applies to in-frame characters only)." }
+  ],
+  "presence_check": {
+    "timeline_ok": true,
+    "violations": [],
+    "story_event": "ev0001 (real_frame, T0)",
+    "note": "POV insert. Alice remains legally present at the sitting place off-frame; nobody has entered or left the bank."
+  }
+}

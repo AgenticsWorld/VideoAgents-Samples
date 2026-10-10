@@ -1,0 +1,30 @@
+{
+  "character_id": "CHAR-mouse",
+  "name": "Mouse",
+  "tier": "B",
+  "card_type": "individual",
+  "gender": "male",
+  "age_sense": "older man (appearance base_age_range 58-66)",
+  "timbre": "thin, dry, prim older man's voice with a tremor, sharpening to a shrill squeak when offended",
+  "pitch": "high tenor for an older man, pinched, spikes high when passionate",
+  "pitch_range_hz": [130, 260],
+  "speed_wpm": [140, 165],
+  "speed_cpm": [532, 627],
+  "accent": "prim, bookish Received Pronunciation of a lecturing schoolmaster, precise consonants",
+  "reference_style": "Two gears: lecturing usher ('Ahem!', 'Silence all round, if you please!') reading dry history, and shrill, passionate outrage at any mention of cats or dogs, then a low trembling retreat.",
+  "emotion_range": {
+    "lecturing": { "speed_delta": "-10%", "pitch_delta": "0semi", "volume": "medium", "note": "dry textbook history, ch003" },
+    "shrill_outrage": { "speed_delta": "+15%", "pitch_delta": "+5semi", "volume": "loud", "note": "ch002-p21 'in a shrill, passionate voice'" },
+    "trembling_low": { "speed_delta": "-10%", "pitch_delta": "-1semi", "volume": "soft", "note": "ch002-p25 'in a low trembling voice'" }
+  },
+  "age_variants": [],
+  "source_chapter": "ch002",
+  "sources": ["ch002", "ch003", "ch002-p21", "ch002-p25", "ch003-p32"],
+  "voice_evidence": [
+    { "para": "ch002-p21", "quote": "cried the Mouse, in a shrill, passionate voice" },
+    { "para": "ch002-p25", "quote": "it said in a low trembling voice" }
+  ],
+  "inferred": true,
+  "inferred_fields": ["pitch_range_hz", "speed_wpm", "speed_cpm", "accent"],
+  "reason": "Shrill and trembling voices sourced; accent from dialogue_style ('prim and bookish')."
+}

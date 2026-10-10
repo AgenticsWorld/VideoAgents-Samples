@@ -1,0 +1,84 @@
+{
+  "character_id": "CHAR-bill-the-lizard",
+  "name": "Bill",
+  "tier": "B",
+  "layer": "dream",
+  "temperament": {
+    "summary": "Meek, willing, slow on the uptake and easily flustered; the good-natured underling who gets every job and every knock. Never resentful.",
+    "baseline": "Diligent and dutiful; waits to be told.",
+    "under_pressure": "Goes limp and dazed, mouth open, unable to act; then keeps at the job with whatever is to hand.",
+    "inferred": false
+  },
+  "traits": [
+    {
+      "trait": "Put-upon, obedient",
+      "description": "Everyone hands everything to Bill: the other ladder, the chimney. He goes without protest.",
+      "evidence": [
+        { "chapter": "ch004", "ref": "ch004-p24", "event": "ev0016", "note": "'Bill’s got the other—Bill! fetch it here, lad!' Then he is picked to go down the chimney." },
+        { "chapter": "ch004", "ref": "ch004-p25", "note": "Alice: 'they seem to put everything upon Bill!'" }
+      ],
+      "inferred": false
+    },
+    {
+      "trait": "Easily flustered, bewildered",
+      "description": "He cannot make out what happened to him, whether it is being kicked out of the chimney, losing his pencil or being set in the jury-box upside down.",
+      "evidence": [
+        { "chapter": "ch004", "ref": "ch004-p28", "event": "ev0016", "note": "'a deal too flustered to tell you'; 'up I goes like a sky-rocket!'" },
+        { "chapter": "ch011", "ref": "ch011-p09", "event": "ev0045", "note": "Could not make out at all what had become of his pencil." },
+        { "chapter": "ch012", "ref": "ch012-p05", "event": "ev0048", "note": "Too overcome to do anything but sit with his mouth open, gazing at the roof." }
+      ],
+      "inferred": false
+    },
+    {
+      "trait": "Dogged, conscientious",
+      "description": "Keeps trying to do his duty with whatever he has left: writes with a finger, then with the ink running down his face.",
+      "evidence": [
+        { "chapter": "ch011", "ref": "ch011-p09", "event": "ev0045", "note": "Writes with one finger for the rest of the day though it leaves no mark." },
+        { "chapter": "ch012", "ref": "ch012-p55", "note": "Hastily starts again using the ink trickling down his face." }
+      ],
+      "inferred": false
+    },
+    {
+      "trait": "Polite and uncomplaining",
+      "description": "Even just after the blow he thanks his carers and says he is better, with no anger at whoever kicked him.",
+      "evidence": [
+        { "chapter": "ch004", "ref": "ch004-p28", "note": "'No more, thank ye; I’m better now'." }
+      ],
+      "inferred": false
+    }
+  ],
+  "motivation": {
+    "core": "To do what he is told and do it properly, whether the job is ladder, chimney or juror's slate.",
+    "fear": "Failing at a task he has been given, and confusion he cannot account for.",
+    "wants_from_alice": "Nothing. He hardly knows she is the cause of his troubles.",
+    "shifts": [
+      { "chapter": "ch011", "ref": "ch011-p09", "event": "ev0045", "from": "odd-job hand of the White Rabbit's household (ch004)", "to": "sworn juror at the trial, anxious to record everything", "trigger": "empanelled on the jury (OFF-007)" }
+    ]
+  },
+  "habits": [
+    { "habit": "Answers to his name at once and goes where he is sent", "evidence": [ { "chapter": "ch004", "ref": "ch004-p24" } ], "inferred": false },
+    { "habit": "When something goes wrong, freezes with his mouth open, staring upward", "evidence": [ { "chapter": "ch012", "ref": "ch012-p05" } ], "inferred": false },
+    { "habit": "Hunts all about for a lost thing before settling for a poor substitute", "evidence": [ { "chapter": "ch011", "ref": "ch011-p09" } ], "inferred": false },
+    { "habit": "A lean, sinuous way of moving: slides along walls and benches, flattens to squeeze through tight places", "evidence": [ { "chapter": "ch004", "ref": "ch004-p26" } ], "inferred": true, "reason": "The source gives no gait. Natural lizard locomotion for the photoreal CGI lizard (SUP-002 as amended by BIB-0027), which also suits his chimney job." }
+  ],
+  "decision_pattern": "Does not decide; he complies. When the means fail, he improvises the humblest workaround rather than complain or ask.",
+  "taboos": [
+    { "taboo": "Never refuses an order or talks back to those above him", "basis": [ { "chapter": "ch004", "ref": "ch004-p24" }, { "chapter": "ch012", "ref": "ch012-p55" } ], "inferred": false },
+    { "taboo": "Never blames anyone for his mishaps", "basis": [ { "chapter": "ch004", "ref": "ch004-p28" } ], "inferred": false },
+    { "taboo": "Never abandons a task; he carries on however useless the means", "basis": [ { "chapter": "ch011", "ref": "ch011-p09" }, { "chapter": "ch012", "ref": "ch012-p55" } ], "inferred": false }
+  ],
+  "facade": {
+    "applies": false,
+    "reason": "Transparent, simple character; no hidden self in the source."
+  },
+  "waking_life_embodiment": {
+    "embodies": "Not an authority but its object: the lowest servant of a household (the boot-boy or garden lad called 'lad' and sent up ladders and down chimneys), the one who carries every order down the chain.",
+    "waking_source": "The servants and farm hands around the family house and the neighbouring farm, whom Alice sees taking orders all day.",
+    "authority_trait": "The underside of authority: the obedient underling who absorbs everyone's commands and knocks.",
+    "coming_of_age_reading": "Bill is where Alice first uses power herself, without much thought. She kicks him out of the chimney (ch004-p26), takes his squeaking pencil (ch011-p09) and puts him back head-down (ch012-p04). Her flicker of care ('the poor little thing') is the start of noticing the people beneath her, the reverse of the adult authority she is learning to resist.",
+    "grounding": [ "ch004-p24", "ch004-p25", "ch004-p26", "ch011-p09", "ch012-p04", "bible/politics.json FAC-white-rabbit-household, OFF-007" ],
+    "inferred": true,
+    "reason": "His servant role and Alice's treatment of him are sourced. Mapping him to the waking household's lowest servant is a design reading consistent with ruling 5.3 B (housemaid doubling) and the farm setting."
+  },
+  "performance_baseline": "Photoreal CGI lizard (SUP-002, BIB-0027): small, willing, eager-eyed; comic through total earnestness. Quick head-cocks when given an order, throat pulsing while he waits, a dazed sprawl with splayed toes after the chimney. Always the one clinging to the ladder. Pathos, never slapstick cruelty."
+}

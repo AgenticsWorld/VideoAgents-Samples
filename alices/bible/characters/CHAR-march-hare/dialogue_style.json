@@ -1,0 +1,90 @@
+{
+  "character_id": "CHAR-march-hare",
+  "name": "March Hare",
+  "source_language": "en",
+  "source_speaker_labels": ["March Hare"],
+  "produced_by_task": "p3-dialogue-style-pb1",
+  "register": {
+    "level": "mock-genteel host's manners used as a weapon; clipped and contrary",
+    "summary": "The Hatter's echo and foil, speaking the shortest lines in the cast (median 4 words). He offers what isn't there ('Have some wine' / 'There isn't any'), lectures on etiquette he himself breaks, repeats himself when cornered ('It was the best butter'), and in court denies everything flatly.",
+    "examples": [
+      { "ref": "ch007-d0004", "chapter": 7, "text": "Have some wine," },
+      { "ref": "ch007-d0008", "chapter": 7, "text": "It wasn't very civil of you to sit down without being invited," },
+      { "ref": "ch011-d0040", "chapter": 11, "text": "I deny it!" }
+    ]
+  },
+  "catchphrases": [
+    { "text": "It was the best butter", "freq": "medium", "count_in_source": 2, "example_refs": ["ch007-d0026", "ch007-d0028"], "example_chapters": [7] },
+    { "text": "Have some wine / Take some more tea", "freq": "medium", "count_in_source": 2, "example_refs": ["ch007-d0004", "ch007-d0078"], "example_chapters": [7] },
+    { "text": "Tell us a story!", "freq": "low", "count_in_source": 2, "example_refs": ["ch007-d0065", "ch007-d0069"], "example_chapters": [7] }
+  ],
+  "sentence_style": {
+    "length": "very short (mean 6.8 words, median 4); fragments, one-word dates, flat denials",
+    "mean_words": 6.8,
+    "patterns": [
+      {
+        "rule": "Hollow hospitality: offers of food and drink that are empty or absurd.",
+        "examples": [
+          { "ref": "ch007-d0006", "chapter": 7, "text": "There isn't any," },
+          { "ref": "ch007-d0078", "chapter": 7, "text": "Take some more tea," }
+        ]
+      },
+      {
+        "rule": "Etiquette rebukes and pedantic corrections of Alice's wording (civil, invited, say what you mean, you might just as well say).",
+        "examples": [
+          { "ref": "ch007-d0017", "chapter": 7, "text": "Then you should say what you mean," },
+          { "ref": "ch007-d0020", "chapter": 7, "text": "You might just as well say, that 'I like what I get' is the same thing as 'I get what I like'!" },
+          { "ref": "ch007-d0015", "chapter": 7, "text": "Do you mean that you think you can find out the answer to it?" }
+        ]
+      },
+      {
+        "rule": "Stubborn repetition and flat contradiction, escalating to outright denial in court.",
+        "examples": [
+          { "ref": "ch007-d0028", "chapter": 7, "text": "It was the best butter, you know." },
+          { "ref": "ch011-d0038", "chapter": 11, "text": "I didn't!" },
+          { "ref": "ch007-d0099", "chapter": 7, "text": "Why not?" }
+        ]
+      },
+      {
+        "rule": "Refers to Alice in the third person as 'the young lady' and pushes the group's whims ('I vote…', 'Suppose we change the subject').",
+        "examples": [
+          { "ref": "ch007-d0065", "chapter": 7, "text": "Suppose we change the subject, I'm getting tired of this. I vote the young lady tells us a story." },
+          { "ref": "ch007-d0069", "chapter": 7, "text": "Tell us a story!" }
+        ]
+      }
+    ]
+  },
+  "vocabulary": {
+    "signature_words": ["civil", "invited", "best butter", "wine", "tea", "I vote", "the young lady", "I deny it"],
+    "preferred_fields": ["table etiquette", "the tea-table", "contradiction and denial"],
+    "examples": [
+      { "ref": "ch007-d0046", "chapter": 7, "text": "I only wish it was," },
+      { "ref": "ch011-d0018", "chapter": 11, "text": "Fifteenth," }
+    ]
+  },
+  "address": {
+    "self": "I; 'us' for the tea-party ('Tell us a story!')",
+    "to_alice": "you, or 'the young lady' in the third person",
+    "to_court": "bare denials, no title",
+    "examples": [
+      { "ref": "ch007-d0065", "chapter": 7, "text": "I vote the young lady tells us a story." }
+    ]
+  },
+  "interjections": ["Why not?", "Nor I,"],
+  "forbidden_words": [
+    { "domain": "post-1862 slang / modern chat register", "regex": "\\b(okay|ok|cool|guys?|awesome|yeah|yep|nope|gonna|wanna|gotta|kinda|sorta|totally|literally|dude)\\b", "reason": "period drama, 1862" },
+    { "domain": "genuine courtesy and admission", "regex": "\\b(please|thank you|thanks|sorry|beg (your )?pardon|I admit|I'm afraid|you're right)\\b", "reason": "his manners are always a rebuke, never real; he never concedes a point (ends every exchange in 'Why not?' or a denial)" },
+    { "domain": "long explanations and fanciful exposition", "regex": "\\b(for instance|once upon a time|suppose it were)\\b", "reason": "extended explanation belongs to the Hatter (Time and the clock) and storytelling to the Dormouse; the Hare stays clipped" }
+  ],
+  "drift": [
+    { "from_chapter": 7, "to_chapter": 7, "change": "Tea-party: contrary host, hollow offers, etiquette rebukes.", "examples": ["ch007-d0004", "ch007-d0008", "ch007-d0065"] },
+    { "from_chapter": 11, "to_chapter": 11, "change": "Court witness: reduced to one-word dates and flat denials ('Fifteenth,', 'I didn't!', 'I deny it!').", "examples": ["ch011-d0018", "ch011-d0038", "ch011-d0040"] }
+  ],
+  "backtest_markers": [
+    { "id": "E1", "rule_ref": "sentence_style.patterns[0] hollow hospitality", "weight": 3, "regex": "^(have some|take some|there isn't any)\\b|\\b(wine|best butter)\\b" },
+    { "id": "E2", "rule_ref": "sentence_style.patterns[1] etiquette rebukes", "weight": 3, "regex": "\\b(civil|invited|say what you mean|you might just as well say|do you mean)\\b" },
+    { "id": "E3", "rule_ref": "sentence_style.patterns[2] repetition and denial", "weight": 3, "regex": "^(I didn't|I deny it|why not|nor I|I only wish it was|fifteenth)\\b" },
+    { "id": "E4", "rule_ref": "sentence_style.patterns[3] group whims", "weight": 3, "regex": "\\b(tell us a story|change the subject|I vote|young lady)\\b" }
+  ],
+  "backtest": {"method": "marker-claim back-test: a spoken source line hits when it matches >=1 backtest_markers regex and no forbidden_words regex; verse (recited text) excluded; full definition runs/p3-dialogue-style-pb1/result.json#backtest_method", "script": "code/p3-dialogue-style-pb1_backtest.py", "run_on": "2026-09-22", "threshold": 0.8, "hit_rate": 1.0, "sample_size": 17, "source_lines_total": 17, "coverage_of_spoken_lines": 1.0, "verse_excluded": 0, "forbidden_violations_in_source": 0, "cross_claim_rate": 0.018, "lift": 54.9, "attribution_top1_rate": 0.647, "misses": [], "pass": true}
+}

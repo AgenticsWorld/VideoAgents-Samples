@@ -1,0 +1,43 @@
+{
+  "shot_id": "sh073",
+  "group_id": "grp028",
+  "scene_no": "S08",
+  "scene_id": "SCN-long-hall",
+  "duration_s": 3.0,
+  "is_dialogue": false,
+  "group_position": "middle shot of grp028 — the White Rabbit is at the lamp_row_mid / glass_table stretch of his ne_entrance -> lamp_row_mid -> glass_table -> curtain line. Alice holds the curtain, out of frame.",
+  "characters": [
+    {
+      "id": "CHAR-white-rabbit",
+      "label": "White Rabbit",
+      "pose": "stand",
+      "start_pos": "coming down the flooded hall on four legs from the corner entrance, level with the middle of the hall",
+      "space_fragment_en": "standing on all four legs at the middle of the hall under the lamps, centred in frame, heading for the low curtain",
+      "facing": "straight down the hall on the lens axis, eyes forward; no look to camera and none toward Alice, who is behind the lens",
+      "path": [
+        { "t": 2.6, "to": "past the glass table, still coming on toward the low curtain" }
+      ],
+      "beats": [
+        { "t": 0.0, "action": "trotting in a great hurry through four inches of water, the white kid gloves and the large fan carried in his mouth", "sync": "staging locked at H3S" },
+        { "t": 1.4, "action": "displaced water, wet fur to the elbow, ripples starting under his own feet", "sync": "the animal is really in the water" }
+      ],
+      "staging_lock": "Quadruped gait and mouth-carry are locked (CR-003 / CR-015 plus the G4 char-sheet waiver, ratified by the user at H3S). The gloves and the fan are in his mouth while he trots; he is not given hands here.",
+      "performance_beat": {
+        "objective": "get to the Duchess before the lateness becomes unforgivable",
+        "goal": "get to the Duchess before it is unforgivable",
+        "emotional_arc": "from hurry to panic-adjacent hurry; he notices nothing about the water or the room",
+        "arc_from": "hurry",
+        "arc_to": "panic-adjacent hurry",
+        "trigger": { "beat": "he crosses his own spreading ripples without breaking stride", "t": 1.4 },
+        "no_early_reaction": ["checking his stride", "the ears turning", "a glance aside"],
+        "forbidden_early": ["checking his stride", "the ears turning", "a glance aside"],
+        "end_state": "still coming on at a trot, gloves and fan gripped in his mouth, ears back, eyes forward"
+      }
+    }
+  ],
+  "creatures": [],
+  "offscreen_presence": [
+    { "id": "CHAR-alice", "where": "sitting hunched at the low curtain, behind the lens, watching him come", "note": "grp028 map start for Alice; in the space, out of frame." }
+  ],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0007 (dream)", "note": "Two legal presences in the flooded hall." }
+}

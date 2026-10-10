@@ -1,0 +1,53 @@
+{
+  "task_id": "p4-creature-concept",
+  "agent": "06-art/creature-concept",
+  "attempt": 1,
+  "status": "escalated",
+  "status_reason": "All 7 sheets were delivered at 2560x1440. Five pass self-check (minor notes only). CRE-005 (Gryphon) and CRE-006 (Mock Turtle) fail the anatomy/posture self-check. Because the auto-retry budget is 0, both are kept unchanged and escalated to the user at H2 (DEF-p4-creature-403).",
+  "completed_at": "2026-09-23",
+  "channel": { "image": "volcengine / doubao-seedream-5-0-pro-260628 (genmedia info)" },
+  "inputs_read": [
+    "bible/creatures/index.json", "bible/creatures/creature.json", "bible/creatures/mount.json (mounts: [] - no mount entries)",
+    "bible/style.json (style_fragment_ui, negative_prompt_en, negative_prompt_waking_addon_en, open_points_pending_H2, user_refs)",
+    "bible/dictionary.json (TERM-0026/0039/0045/0046/0050/0051/0052 - none carries media_cues)",
+    "bible/changelog.md BIB-0027", "qa/defects/DEF-p4-style-001.json", "refs/style/alice.jpeg", "brief.md"
+  ],
+  "user_refs": ["refs/style/alice.jpeg (look reference ref #2 on every sheet; the prompt limits it to rendering/texture/palette and forbids copying its setting, caterpillar or the human figure)"],
+  "method": {
+    "layout_anchor": "agents/06-art/character-concept/templates/character_sheet_template.png, converted to JPEG at runs/p4-creature-concept/inputs/character_sheet_template.jpg (the volcengine channel resets on true-PNG refs)",
+    "prompt": "layout sentence (four photo panels side by side) + look-reference sentence + creature card body + 'Overall visual style: ' + style_fragment_ui verbatim + layout restatement; English",
+    "negatives": "negative_prompt_en (+ negative_prompt_waking_addon_en for waking-world CRE-001) + no-person / layout guard terms",
+    "probes": "7 quarter-price 1280x720 probes in runs/p4-creature-concept/probe/ to check layout and audit before the full-size run (not rerolls). Probe results tightened the CRE-005/CRE-006/CRE-003 wording and the letterbox rule.",
+    "full_renders": "7 x 2560x1440, --n 1, one image per creature, 0 rerolls",
+    "provider_errors": []
+  },
+  "items": [
+    { "id": "CRE-001", "sheet": "assets/concepts/creatures/CRE-001/sheet.png", "variants": [], "self_check": "pass (minor: side view slightly cropped at the rump)", "pending_H2": null },
+    { "id": "CRE-002", "sheet": "assets/concepts/creatures/CRE-002/sheet.png", "variants": [], "self_check": "pass with minor notes (panel 2 is three-quarter rear, not a clean profile; oversized paws only moderate)", "pending_H2": "H2-non-speaking-animals - rendered as photoreal CGI per the proposal; for user decision at H2" },
+    { "id": "CRE-003", "sheet": "assets/concepts/creatures/CRE-003/sheet.png", "variants": [], "self_check": "pass with minor note (neck-twist-to-look-back only partly shown)", "pending_H2": "H2-non-speaking-animals - rendered as photoreal CGI per the proposal; for user decision at H2" },
+    { "id": "CRE-004", "sheet": "assets/concepts/creatures/CRE-004/sheet.png", "variants": [], "self_check": "pass (minor: side view cropped at the rear)", "pending_H2": "H2-non-speaking-animals - rendered as photoreal CGI per the proposal; for user decision at H2" },
+    { "id": "CRE-005", "sheet": "assets/concepts/creatures/CRE-005/sheet.png", "variants": [], "self_check": "FAIL - upright eagle-like posture; side panel cropped, so the lion hindquarters are missing in profile (DEF-p4-creature-403-a). Kept, not regenerated (retry budget 0).", "pending_H2": "self-check defect for user decision at H2" },
+    { "id": "CRE-006", "sheet": "assets/concepts/creatures/CRE-006/sheet.png", "variants": [], "self_check": "FAIL - stands upright on its two hind hooves with the shell worn like a pack; card implies a low, shell-bodied creature (DEF-p4-creature-403-b). Head, tears, flippers and hooves are correct. Kept, not regenerated (retry budget 0).", "pending_H2": "self-check defect for user decision at H2" },
+    { "id": "CRE-007", "sheet": "assets/concepts/creatures/CRE-007/sheet.png", "variants": [], "self_check": "pass (minor: panel 2 three-quarter rear view)", "pending_H2": "H2-non-speaking-animals (baby to piglet end-state) - rendered as photoreal CGI piglet; for user decision at H2. Drawn unclothed per creature.json, which conflicts with style.json's 'same swaddling' (DEF-p4-creature-401)" }
+  ],
+  "per_item_files": "Each assets/concepts/creatures/<CRE-id>/ holds sheet.png, prompts.json, selection.json and usage_ledger.jsonl (genmedia billing ledger). There are no single-view loose images and no candidates/ folders (no rerolls).",
+  "acceptance": {
+    "creature_identifiers_match": { "result": "partial", "detail": "CRE-001/002/003/004/007: every forms[].appearance field and mark was hit (CRE-002 paws and CRE-003 neck-twist only partially). CRE-005: all identifiers present, but size/proportion reads wrong (upright). CRE-006: all identifiers present, but body plan/posture is wrong. Per-field tables are in each selection.json." },
+    "creature_image_no_person": { "result": "pass", "detail": "Visual check of all 7 sheets and 7 probes: no person, hands, silhouette or rider. No character concept art passed as a ref. The style ref's small figure did not leak." },
+    "creature_stage_variants_ok": { "result": "pass", "detail": "Every creature.json entry has exactly one forms[] stage, and mount.json has no entries (no endurance_state_log). So no sheet_<stage>.png is required, and each selection.json records a waiver reason. The CRE-004 curled ball was judged a posture, not a stage." },
+    "sheet_layout_and_size": { "result": "pass", "detail": "7/7 four-panel (front / side / back / head close-up), 2560x1440 (JPEG payload in .png name, genmedia behaviour)" },
+    "scale_prompt_token_non_empty": { "result": "pass" }
+  },
+  "defects_opened": [
+    "qa/defects/DEF-p4-creature-401.json - CRE-007 swaddling conflict between style.json H2 proposal and creature.json",
+    "qa/defects/DEF-p4-creature-402.json - creature.json CRE-001 wording predates BIB-0027 (CHAR-white-rabbit 'human performer')",
+    "qa/defects/DEF-p4-creature-403.json - CRE-005 / CRE-006 self-check failures, kept for H2 decision"
+  ],
+  "notes": [
+    "No bible/dictionary.json media_cues exist for any of the 7 terms, so none were injected (recorded here; not opened as a defect).",
+    "Bible files were not edited."
+  ],
+  "helper_scripts": ["code/creature_sheet_gen_p4-creature-concept.sh (prompt assembly + genmedia call)"],
+  "run_records": ["runs/p4-creature-concept/prompts/ (prompt components, full prompts, negatives, probe_v1 texts)", "runs/p4-creature-concept/probe/", "runs/p4-creature-concept/inputs/character_sheet_template.jpg", "runs/p4-creature-concept/*_full.log"],
+  "background_processes": "none - all 14 generations finished inside the run"
+}

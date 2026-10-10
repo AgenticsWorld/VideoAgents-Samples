@@ -1,0 +1,48 @@
+{
+  "schema_version": "whitebox_scene.v1",
+  "scene_id": "SCN-cheshire-cat-path",
+  "units": "meters",
+  "_meta": {"owner": "05-scenes/scene-modeling", "task_id": "p4-scene-model-sb3", "attempt": 1, "date": "2026-09-23",
+            "inputs": ["assets/concepts/scenes/SCN-cheshire-cat-path/layout_top.png", "assets/concepts/scenes/SCN-cheshire-cat-path/layout.json", "bible/scenes/SCN-cheshire-cat-path/architecture.json", "bible/scenes/SCN-cheshire-cat-path/environment.json"]},
+  "dimensions_m": [48, 16, 27],
+  "inferred": true,
+  "scale_basis": {
+    "anchor": "layout.json orientation.extent_m X = 48 m across the full image; Z = 48 x 1440/2560 = 27 m (image aspect, not estimated separately)",
+    "cross_checks": ["architecture: path about 40 m from the clearing to the fork, Tree A a few yards off the entrance; the drawn path runs ~45 m edge to fork-branch ends at this scale", "Y = 16 m covers the 14 m background trunks and the oak crown"],
+    "inferred": true,
+    "deviation": "The drawn path reads about 1.9 m wide at this scale against the Bible's 1.2 m single-file path; kept the image scale so the ground plate is not distorted"
+  },
+  "walkable": "The beaten-earth path from clearing_entry (west edge) through path_bend to the fork, then the north-east branch (hare_branch) and south-east branch (hatter_branch); the leaf-litter track north from the crab-apple bough (pig_exit_gap). Leaf litter and knee-high bracken between the trunks is not blocked with solids.",
+  "objects": [
+    {"id": "crab_apple_trunk", "shape": "cylinder", "size_m": [0.8, 4.5, 0.8], "xy": [0.292, 0.5], "landmark": "crab_apple", "collision_role": "obstacle", "color": "#6b6258", "note": "trunk base at the limb root on the north edge of the path (image); layout crab_apple point is the crown centre"},
+    {"id": "crab_apple_crown", "shape": "sphere", "size_m": [7, 4, 7], "xy": [0.25, 0.38], "elevation_m": 5.5, "landmark": "crab_apple", "collision_role": "overhead", "color": "#7f9a6e", "note": "crown underside 3.5 m, clear of the bough and of head height"},
+    {"id": "crab_apple_bough", "shape": "box", "size_m": [7, 0.4, 0.45], "xy": [0.3575, 0.443], "elevation_m": 1.8, "yaw": 0.473, "landmark": "crab_apple_bough", "collision_role": "overhead", "color": "#b8ab98", "note": "near-level limb at 1.8 m running north-east from the trunk over the leaf litter beside the path (as drawn); the Cat lies along it; overlay draws it unrotated"},
+    {"id": "oak_trunk", "shape": "cylinder", "size_m": [1.1, 6, 1.1], "xy": [0.645, 0.373], "landmark": "oak_tree", "collision_role": "obstacle", "color": "#5f5a4c"},
+    {"id": "oak_crown", "shape": "sphere", "size_m": [9, 6, 9], "xy": [0.65, 0.3], "elevation_m": 8, "landmark": "oak_tree", "collision_role": "overhead", "color": "#6f8a5e"},
+    {"id": "oak_branch", "shape": "box", "size_m": [5, 0.4, 0.4], "xy": [0.693, 0.434], "elevation_m": 2.4, "yaw": -0.588, "landmark": "oak_branch", "collision_role": "overhead", "color": "#8a8070", "note": "horizontal branch at 2.4 m reaching south-east from the oak over the fork; overlay draws it unrotated"},
+    {"id": "fingerpost_post", "shape": "cylinder", "size_m": [0.15, 2.2, 0.15], "xy": [0.7, 0.58], "landmark": "fingerpost", "collision_role": "obstacle", "color": "#8c7a5c", "note": "slim obstacle on the south-west side of the fork; keep routes clear of it"},
+    {"id": "fingerpost_arms", "shape": "box", "size_m": [1.2, 0.12, 0.1], "xy": [0.7, 0.58], "elevation_m": 1.95, "yaw": 0.6, "landmark": "fingerpost", "collision_role": "overhead", "color": "#8c7a5c"},
+    {"id": "trunk_bg_01", "shape": "cylinder", "size_m": [0.5, 14, 0.5], "xy": [0.165, 0.222], "collision_role": "obstacle", "color": "#9a968c"},
+    {"id": "trunk_bg_02", "shape": "cylinder", "size_m": [0.5, 14, 0.5], "xy": [0.415, 0.196], "collision_role": "obstacle", "color": "#9a968c"},
+    {"id": "trunk_bg_03", "shape": "cylinder", "size_m": [0.5, 14, 0.5], "xy": [0.54, 0.151], "collision_role": "obstacle", "color": "#9a968c"},
+    {"id": "trunk_bg_04", "shape": "cylinder", "size_m": [0.5, 14, 0.5], "xy": [0.765, 0.178], "collision_role": "obstacle", "color": "#9a968c"},
+    {"id": "trunk_bg_05", "shape": "cylinder", "size_m": [0.5, 14, 0.5], "xy": [0.03, 0.427], "collision_role": "obstacle", "color": "#9a968c"},
+    {"id": "trunk_bg_06", "shape": "cylinder", "size_m": [0.5, 14, 0.5], "xy": [0.975, 0.338], "collision_role": "obstacle", "color": "#9a968c"},
+    {"id": "trunk_bg_07", "shape": "cylinder", "size_m": [0.5, 14, 0.5], "xy": [0.115, 0.853], "collision_role": "obstacle", "color": "#9a968c"},
+    {"id": "trunk_bg_08", "shape": "cylinder", "size_m": [0.5, 14, 0.5], "xy": [0.29, 0.942], "collision_role": "obstacle", "color": "#9a968c"},
+    {"id": "trunk_bg_09", "shape": "cylinder", "size_m": [0.5, 14, 0.5], "xy": [0.575, 0.951], "collision_role": "obstacle", "color": "#9a968c"},
+    {"id": "trunk_bg_10", "shape": "cylinder", "size_m": [0.5, 14, 0.5], "xy": [0.78, 0.933], "collision_role": "obstacle", "color": "#9a968c"},
+    {"id": "trunk_bg_11", "shape": "cylinder", "size_m": [0.5, 14, 0.5], "xy": [0.975, 0.622], "collision_role": "obstacle", "color": "#9a968c"}
+  ],
+  "landmarks_covered": {
+    "modelled": ["crab_apple", "crab_apple_bough", "oak_tree", "oak_branch", "fingerpost"],
+    "open_ground_kept_clear": ["clearing_entry", "path_bend", "fork", "pig_exit_gap", "hare_branch", "hatter_branch"]
+  },
+  "workflow_notes": [
+    "Image vs Bible: the crab-apple limb reaches north-east beside the path, not across it (architecture: bough over the path at 1.8 m). Modelled per layout.json/image; inferred:true. If the director needs the Cat directly over the path, environment-concept must redraw (p4-env-concept-sb3 defect list); not changed here.",
+    "Path width reads ~1.9 m at the 48 m image scale vs 1.2 m in architecture; two people can pass side by side on the drawn path.",
+    "Background beech/ash ranks simplified to 11 cylinders placed under the drawn crowns, all off the path; canopy masses of background trees and knee-high bracken/foxglove borders are not modelled as solids (not in the walkable path).",
+    "Anti-clipping: the crab-apple bough underside is at 1.6 m, so a 1.35 m Alice walks under it; adult-height figures (Duchess/card performers ~1.75 m) must duck or route round its north-east end. The oak branch underside is 2.2 m, clear for all human figures. The fingerpost post sits about 1.2 m south-west of the fork centre; routes through the fork keep 0.4 m clearance from it.",
+    "No storyboard yet — hand over to whitebox-staging (no shot_list.json exists for any episode; no video rendered)."
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "p3-appearance-cb2",
+  "run_id": "5d685b6a0754",
+  "attempt": 1,
+  "model": "agent default",
+  "tokens": null,
+  "started_at": null,
+  "finished_at": "2026-09-22T18:32:59+08:00",
+  "inputs_sha256": {},
+  "artifact_versions": {
+    "bible/characters/CHAR-knave-of-hearts/appearance.json": "v1",
+    "bible/characters/CHAR-gryphon/appearance.json": "v1",
+    "bible/characters/CHAR-mock-turtle/appearance.json": "v1",
+    "bible/characters/CHAR-caterpillar/appearance.json": "v1",
+    "bible/characters/CHAR-pigeon/appearance.json": "v1",
+    "bible/characters/CHAR-duck/appearance.json": "v1",
+    "bible/characters/CHAR-lory/appearance.json": "v1",
+    "bible/characters/CHAR-eaglet/appearance.json": "v1",
+    "bible/characters/CHAR-dodo/appearance.json": "v1",
+    "bible/characters/CHAR-canary/appearance.json": "v1",
+    "bible/characters/CHAR-magpie/appearance.json": "v1",
+    "bible/characters/CHAR-old-crab/appearance.json": "v1",
+    "bible/characters/CHAR-young-crab/appearance.json": "v1",
+    "bible/characters/CHAR-fish-footman/appearance.json": "v1"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "task_id": "p0-merge",
+  "skipped": true,
+  "reason": "quality judge=0",
+  "auto": {
+    "schema": "PASS",
+    "chapter_coverage_100": "PASS (12/12; 26453 incl. headings = 26371 body + 82 heading words)",
+    "ids_unique_across_shards": "PASS (7176)",
+    "speaker_missing_lt_2pct": "PASS (2/817 = 0.24%)"
+  }
+}

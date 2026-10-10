@@ -1,0 +1,46 @@
+{
+  "shot_id": "sh006",
+  "group_id": "grp003",
+  "scene_no": "S01",
+  "scene_id": "SCN-riverbank",
+  "duration_s": 6.0,
+  "is_dialogue": false,
+  "group_position": "last shot of grp003 — Alice on the blocking_map start (sitting_shelf), which is also her end; the map gives her no path in this group.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "lie",
+      "start_pos": "on her back on the grass at sitting_shelf, head downhill",
+      "space_fragment_en": "lying on her back on the grass at the sister's sitting place, centred in frame, face up and turned slightly to screen-right",
+      "facing": "face up to the elm canopy, eyes out along the grass to screen-right until they close",
+      "path": [],
+      "beats": [
+        { "t": 1.2, "action": "tosses her head to clear a strand of hair from her eyes", "sync": "the last deliberate movement of the real world" },
+        { "t": 3.4, "action": "eyelids droop", "sync": "the heat beat" },
+        { "t": 4.0, "action": "eyes close and stay closed", "sync": "held for the last two seconds" }
+      ],
+      "performance_beat": {
+        "objective": "stay awake in a heat that has already won",
+        "goal": "stay awake in a heat that has already won",
+        "emotional_arc": "from drowsy irritation with her own hair to unresisted sleep",
+        "arc_from": "drowsy irritation",
+        "arc_to": "unresisted sleep",
+        "trigger": { "beat": "she tosses her head to clear the hair from her eyes", "t": 1.2 },
+        "no_early_reaction": ["eyes closing", "the head going slack", "a yawn"],
+        "forbidden_early": ["eyes closing", "the head going slack", "a yawn"],
+        "end_state": "eyes shut and staying shut, lips softly apart, head fallen a little to screen-right, no blink"
+      }
+    }
+  ],
+  "creatures": [],
+  "offscreen_presence": [
+    { "id": "CHAR-alice-sister", "where": "still sitting upright at the sister's sitting place under the northern elm, reading", "note": "In the space, out of frame. She does not move for the whole scene and must not be removed from the set-up — grp003's map keeps her on this ground." }
+  ],
+  "presence_check": {
+    "timeline_ok": true,
+    "violations": [],
+    "story_event": "ev0001 (real_frame, T0) — the last real-world state before the Rabbit; ch001#p01-p02",
+    "note": "The sister is present in the scene but outside the frame; the shot list registers only Alice, so only Alice carries a space fragment."
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "_meta": {
+    "file": "bible/scenes/SCN-field-hedge-burrow/lighting.json",
+    "owner": "05-scenes/lighting",
+    "task_id": "p3-lighting-sb1",
+    "attempt": 1,
+    "generated": "2026-09-22",
+    "status": "draft_v1",
+    "enum_set": "LGT-ENUM-v1 (defined once in runs/p3-lighting-sb1/result.json)",
+    "inputs": ["bible/scenes/SCN-field-hedge-burrow/environment.json", "bible/scenes/SCN-field-hedge-burrow/architecture.json"]
+  },
+  "scene_id": "SCN-field-hedge-burrow",
+  "layer": "waking",
+  "int_ext": "EXT",
+  "daylight_access": "open_sky",
+  "schemes": [
+    {
+      "lighting_scheme_id": "LGT-field-hedge-burrow-01",
+      "condition": {"time_of_day": "early_afternoon", "weather": "fair_hot"},
+      "state_refs": ["SCN-field-hedge-burrow-S01"],
+      "waking_clock": "14:08-14:12 GMT",
+      "sun": {"elevation_deg_approx": 53, "azimuth_deg_approx": 230},
+      "key_source": "sun_direct",
+      "key": "high, unshaded south-west sun over the open field",
+      "direction": "high_side",
+      "direction_note": "sun high in the south-west; the hedge throws only a narrow band of shade at its foot, where the burrow is; the burrow mouth is black after about 30 cm",
+      "fill": {"source": "sky_and_ground_bounce", "note": "bright sky fill and pale bounce off dry grass keep faces open while running"},
+      "practicals": [],
+      "color_temp": "neutral (~4500K)",
+      "kelvin_approx": 5400,
+      "contrast": "hard",
+      "quality": "hard",
+      "atmosphere": "heat haze over the field; pollen, seed-fluff and insects lifting from the grass catch the sun",
+      "prompt_fragment_en": "Hot early-afternoon glare: high, hard sunlight from the south-west floods the long meadow grass in neutral white light with short, crisp shadows, heat haze and drifting pollen glittering in the sun; only a narrow band of shade lies at the foot of the dark-green hawthorn hedge, where the rabbit burrow is a pitch-black hole; bright, breathless, curious mood.",
+      "source_chapter": "ch001",
+      "sources": ["ch001-p03", "ch001-p04"],
+      "inferred": true,
+      "reason": "The source gives the chase across the field to the hedge (ch001-p03) but no light. It takes the bank's heat and environment S01's sun; the black burrow mouth follows architecture (dark inside after 30 cm)."
+    }
+  ],
+  "special": []
+}

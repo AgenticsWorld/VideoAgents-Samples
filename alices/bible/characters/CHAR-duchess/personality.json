@@ -1,0 +1,116 @@
+{
+  "_meta": {
+    "file": "bible/characters/CHAR-duchess/personality.json",
+    "owner": "03-characters/personality",
+    "produced_by_task": "p3-personality-pb1",
+    "produced_on": "2026-09-22",
+    "content_language": "en",
+    "status": "draft_v1"
+  },
+  "character_id": "CHAR-duchess",
+  "name": "The Duchess",
+  "tier": "A",
+  "layer": "dream",
+  "temperament": "Swings between extremes. At home she is savage, careless and rough with her child. In society she is cloying, clinging and agreeable, and crushes every exchange into a moral. Underneath both she is a survivor who bends to whoever holds power.",
+  "traits": [
+    {
+      "trait": "Rough and neglectful at home",
+      "description": "Rude to a polite child, harsh to the baby, and quick to hand him off to a stranger.",
+      "evidence": [
+        { "chapter": "ch006", "chapter_no": 6, "ref": "ch006-p28", "event": "ev0026", "quote": "“You don’t know much,” said the Duchess; “and that’s a fact.”", "note": "Snubs Alice." },
+        { "chapter": "ch006", "chapter_no": 6, "ref": "ch006-p36", "event": "ev0026", "quote": "Speak roughly to your little boy", "note": "Her lullaby is a recipe for harshness." },
+        { "chapter": "ch006", "chapter_no": 6, "ref": "ch006-p43", "event": "ev0026", "quote": "flinging the baby at her as she spoke", "note": "Hands off her child to go and play croquet." }
+      ]
+    },
+    {
+      "trait": "Cloying and clinging in society",
+      "description": "At court she is suddenly affectionate and agreeable, presses close to Alice, and agrees with everything.",
+      "evidence": [
+        { "chapter": "ch009", "chapter_no": 9, "ref": "ch009-p01", "event": "ev0039", "quote": "You can’t think how glad I am to see you again, you dear old thing!", "note": "A complete change from the kitchen." },
+        { "chapter": "ch009", "chapter_no": 9, "ref": "ch009-p19", "event": "ev0039", "quote": "who seemed ready to agree to everything that Alice said", "note": "Agreeable to the point of emptiness." }
+      ]
+    },
+    {
+      "trait": "Compulsive moraliser",
+      "description": "Turns every remark into a moral, however irrelevant.",
+      "evidence": [
+        { "chapter": "ch009", "chapter_no": 9, "ref": "ch009-p06", "event": "ev0039", "quote": "Everything’s got a moral, if only you can find it.", "note": "Her creed." },
+        { "chapter": "ch009", "chapter_no": 9, "ref": "ch009-p21", "event": "ev0039", "quote": "Be what you would seem to be", "note": "A moral she herself does not live by." }
+      ]
+    },
+    {
+      "trait": "Dismissive of a child's right to think",
+      "description": "Belittles Alice's inner life even while fawning over her.",
+      "evidence": [
+        { "chapter": "ch009", "chapter_no": 9, "ref": "ch009-p29", "event": "ev0039", "quote": "Just about as much right,” said the Duchess, “as pigs have to fly", "note": "Her answer to 'I've a right to think'." }
+      ]
+    },
+    {
+      "trait": "Brave behind the scenes, cowardly face to face",
+      "description": "Has reportedly boxed the Queen's ears, yet collapses and flees the moment she meets the Queen's frown.",
+      "evidence": [
+        { "chapter": "ch008", "chapter_no": 8, "ref": "ch008-p40", "event": "ev0035", "quote": "She boxed the Queen’s ears", "note": "Reported off-screen." },
+        { "chapter": "ch009", "chapter_no": 9, "ref": "ch009-p31", "event": "ev0039", "quote": "the Duchess began in a low, weak voice", "note": "Face to face with the Queen." },
+        { "chapter": "ch009", "chapter_no": 9, "ref": "ch009-p33", "event": "ev0039", "quote": "The Duchess took her choice, and was gone in a moment.", "note": "Flees." }
+      ]
+    }
+  ],
+  "motivation": {
+    "core": "Standing: to hold her rank and her head. She is gracious when it costs nothing, savage when unobserved, and off like a shot when the Queen turns on her.",
+    "want": "To be seen as a lady of good sense and good morals; to be on good terms with the court and play croquet with the Queen.",
+    "fear": "The Queen's sentence and the loss of her position.",
+    "evidence": [
+      { "chapter": "ch006", "chapter_no": 6, "ref": "ch006-p43", "event": "ev0026", "quote": "I must go and get ready to play croquet with the Queen", "note": "The royal invitation comes before her baby." },
+      { "chapter": "ch008", "chapter_no": 8, "ref": "ch008-p36", "event": "ev0035", "quote": "She’s under sentence of execution.", "note": "What hangs over her at the croquet." }
+    ],
+    "shifts": [
+      { "chapter": "ch009", "chapter_no": 9, "event": "ev0039", "from": "savage housewife (kitchen, ch006)", "to": "fawning society guest, freshly let out of 'prison' (ch008-p70) and eager to please", "evidence_ref": "ch009-p01" },
+      { "chapter": "ch009", "chapter_no": 9, "event": "ev0039", "from": "clinging to Alice", "to": "abandoning her instantly to save herself from the Queen", "evidence_ref": "ch009-p33" }
+    ]
+  },
+  "habits": [
+    { "habit": "Answers with a moral: 'and the moral of that is—'", "evidence_ref": "ch009-p09", "event": "ev0039" },
+    { "habit": "Digs her sharp chin into Alice's shoulder while talking", "evidence_ref": "ch009-p11", "event": "ev0039" },
+    { "habit": "Tucks her arm into Alice's and squeezes up close", "evidence_ref": "ch009-p06", "event": "ev0039" },
+    { "habit": "Tosses and jerks the baby about while singing to it", "evidence_ref": "ch006-p36", "event": "ev0026" },
+    { "habit": "Sits on a three-legged stool in the middle of the smoke, heedless of the chaos", "evidence_ref": "ch006-p19", "event": "ev0026" }
+  ],
+  "decision_pattern": "Reads the power in the room and matches it: rude to people beneath her, sweet to useful company, gone when the stronger party arrives. She rationalises everything afterwards with a moral.",
+  "taboos": [
+    { "taboo": "Never defies the Queen face to face", "rationale": "The reported ear-boxing is never staged. In person she speaks in 'a low, weak voice' and flees.", "evidence_ref": "ch009-p31", "event": "ev0039", "qa_check": "No on-screen confrontation where the Duchess stands up to the Queen." },
+    { "taboo": "Never shows real tenderness to the baby", "rationale": "Her care is rough and performative, which is what makes the pig-baby beat land (SUP-006).", "evidence_ref": "ch006-p36", "event": "ev0026", "qa_check": "No sincere cradling beat." },
+    { "taboo": "Never admits a child has a mind of her own", "rationale": "'As much right as pigs have to fly'.", "evidence_ref": "ch009-p29", "event": "ev0039", "qa_check": "She must not concede a point to Alice on its merits. She only agrees emptily." },
+    { "taboo": "Never actually harms the baby or Alice", "rationale": "Realistic staging: the baby-tossing and baby-throwing are shown as careless handling (a fling into Alice's arms), never as injury, in line with the SUP-006 continuous-shot transformation and the non-violent tone (SUP-014 spirit).", "evidence_ref": "ch006-p43", "event": "ev0026", "inferred": true, "reason": "A designed staging limit on a sourced rough behaviour.", "qa_check": "No blow to the baby on screen. 'Beat him when he sneezes' stays in the song." }
+  ],
+  "facade": {
+    "applies": true,
+    "surface": "A gracious, affectionate, morally improving lady (ch009)",
+    "true_self": "A harsh, self-serving survivor, as seen in the kitchen (ch006)",
+    "reveal_chapter": "ch006",
+    "reveal_event": "ev0026",
+    "note": "The audience sees the true self first. The ch009 charm should read as suspicious, a mask Alice half-sees through (ch009-p02: she hopes it was 'only the pepper'). Her flight from the Queen (ch009-p33) confirms it."
+  },
+  "waking_life_embodiment": {
+    "applies": true,
+    "adult_trait": "The adult of moral lessons and rough nursery care: the aunt, nurse or visiting lady who preaches pat morals at a child, crushes her 'right to think', neglects or roughly handles small children, and turns sweet in company.",
+    "waking_source": "Victorian nursery practice and the moral recitation-pieces of Alice's schoolroom (world.json cp-lessons; culture.json moral-verse customs). The Duchess's household is a dream invention (FAC-duchess-household), not a recast real person (ruling 5.3 B light doubling).",
+    "evidence": [
+      { "chapter": "ch006", "chapter_no": 6, "ref": "ch006-p36", "event": "ev0026", "quote": "Speak roughly to your little boy", "note": "A parody of nursery moral verse." },
+      { "chapter": "ch009", "chapter_no": 9, "ref": "ch009-p06", "event": "ev0039", "quote": "Everything’s got a moral", "note": "Moral-tag education." }
+    ],
+    "inferred": true,
+    "reason": "A design reading grounded in world.json cp-lessons and the source's parody of moral verse. She is explicitly not a doubling of any waking person."
+  },
+  "performance_keynote": "Plain, poorer gentry dress (index performer_concept). Heavy, sneezing and slapdash in the kitchen. At court, over-close, with a dig of the chin and a syrupy voice that fades to a whisper the moment the Queen appears.",
+  "consistency_flags": [
+    {
+      "flag": "She boxed the Queen's ears (ch008-p40, reported) yet cannot even speak up to her (ch009-p31-p33)",
+      "note": "This is in the source and not resolved by it. Recommended reading: the ear-boxing was a flash of temper (the pepper-kitchen Duchess) that now has her under sentence, and her fawning in ch009 comes from fear after that mistake. Flagged for logic-qa. Not patched in the bible.",
+      "refs": ["ch008-p40", "ch009-p31", "ch009-p33"],
+      "reported_to": "11-qa/logic-qa (via result.json)"
+    }
+  ],
+  "inferred_fields": ["waking_life_embodiment", "taboos[3]"],
+  "inferred": true,
+  "reason": "Behaviours are sourced. The embodiment and the non-injury staging limit are design choices."
+}

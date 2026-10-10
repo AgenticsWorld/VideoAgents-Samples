@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh067",
+  "group_id": "grp026",
+  "scene_no": "S07",
+  "duration_s": 7.0,
+  "size": "close",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame, held to the end of the group)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 50,
+  "camera_height_m": 0.35,
+  "angle": "level, flat across the hall",
+  "rack_focus": "none",
+  "start_frame": "Straight across the hall from the south-east doors to the low curtain, lens flat on the floor: she lies down on her side and one enormous human eye comes to the fifteen-inch horseshoe-arched opening, the dark mass of her body running out of frame both ways.",
+  "end_frame": "The same frame held: summer green-gold light laid in a hard bar across that one eye, the eye undistorted and anatomically real, the 0.38 m arch keeping its true size beside it — the last garden daylight in the episode.",
+  "constraint_honoured": "'Held to the end of the group — this is the image the climax then breaks.'",
+  "movement_note": "50 mm and a locked frame so neither the eye nor the arch bends; a wider lens or a move would turn the best image in the episode into an effect.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

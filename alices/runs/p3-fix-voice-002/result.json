@@ -1,0 +1,31 @@
+{
+  "task_id": "p3-fix-voice-002",
+  "agent": "03-characters/character-manager",
+  "status": "closed",
+  "run_on": "2026-09-22",
+  "project": "alices",
+  "type": "defect_fix",
+  "defect": "DEF-p3-voice-002",
+  "summary": "Fixed part (a) of DEF-p3-voice-002 in bible/characters/index.json (CHAR-crowd-ensemble scope); left part (b) to 01-story/screenplay at gate G5 per this task's routing.",
+  "findings": {
+    "part_a": "CHAR-crowd-ensemble's disambiguation and notes fields already matched the required fix (same underlying correction as DEF-p3-appearance-302): the entry covers only the ch004 'CROWD' speaker tag, and the ch006 'CHORUS' lines are attributed to the Duchess (CHAR-duchess) with CHAR-cook and CHAR-duchess-baby joining (ch006-p37). The one residual inconsistency was the original_name field, still reading 'CROWD / CHORUS'; corrected to 'CROWD' to match the now-narrowed scope.",
+    "part_b": "Not actioned here. Two 'UNKNOWN' structured_story speaker tags remain (ch007-d0002, ch010-d0084). Per this task's instruction, no story files were edited. Noted in the defect ticket that 01-story/screenplay is responsible for resolving/confirming these speaker attributions when it writes those lines, due at gate G5 (screenplay lock)."
+  },
+  "changes": [
+    {
+      "file": "bible/characters/index.json",
+      "entry": "CHAR-crowd-ensemble",
+      "field": "original_name",
+      "before": "CROWD / CHORUS",
+      "after": "CROWD",
+      "reason": "Field still implied CHORUS coverage after the CHORUS reattribution to the Duchess/cook/baby was already applied elsewhere in the same entry (disambiguation, notes); no other field in index.json was touched."
+    },
+    {
+      "file": "qa/defects/DEF-p3-voice-002.json",
+      "change": "status: open -> closed; added fix_note, fixed_by, fixed_on, fix_task_id"
+    }
+  ],
+  "scope_note": "Bible v1 is locked; only bible/characters/index.json was edited, and only the one field on the CHAR-crowd-ensemble entry named above. No other characters, entries, or files were modified.",
+  "evaluation_qa": "Quality-committee evaluation and all QA review dimensions are set to 0 (disabled) for this project; no evaluation/QA pass was requested or performed for this task.",
+  "output_language": "English (per current project output-language setting)"
+}

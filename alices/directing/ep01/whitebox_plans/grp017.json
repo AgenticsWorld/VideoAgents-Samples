@@ -1,0 +1,64 @@
+{
+  "schema_version": "whitebox_plan.v1",
+  "group_id": "grp017",
+  "scene_id": "SCN-long-hall",
+  "basis": "Alice runs curtain -> glass_table: she gets up off the little door at (9.60, -2.90), walks the 4.28 m back up the hall at about 1.34 m/s and stops at the table edge (6.14, -0.38) at t=3.2 - 0.60 m from the table centre, so she is clear of the 0.25 m tabletop radius and the 0.715 m top is at her hip. She holds that spot for the rest of the group: both hands on the bottle in sh045, then the bottle out at the end of a straight arm in sh046.",
+  "actors": [
+    {
+      "id": "CHAR-alice",
+      "kind": "person",
+      "size_m": [0.378, 1.35, 0.297],
+      "keyframes": [
+        {"t": 0.0, "position": [9.6, 0.0, -2.9], "pose": "stand", "yaw": -0.9414, "bend": 0.35},
+        {"t": 0.4, "position": [9.45, 0.0, -2.79], "pose": "stand", "yaw": -0.9414, "bend": 0.0},
+        {"t": 3.2, "position": [6.14, 0.0, -0.38], "pose": "stand", "yaw": -0.9414, "head_pitch": 0.3},
+        {"t": 3.8, "position": [6.14, 0.0, -0.38], "pose": "stand", "yaw": -0.9414, "head_pitch": 0.4},
+        {"t": 5.2, "position": [6.14, 0.0, -0.38], "pose": "stand", "yaw": -0.9414, "head_pitch": 0.45},
+        {"t": 6.0, "position": [6.14, 0.0, -0.38], "pose": "stand", "yaw": -0.9414, "head_pitch": 0.45},
+        {"t": 7.2, "position": [6.14, 0.0, -0.38], "pose": "stand", "yaw": -0.9414, "bend": 0.35, "head_pitch": 0.5},
+        {"t": 9.0, "position": [6.14, 0.0, -0.38], "pose": "stand", "yaw": -0.9414, "bend": 0.1, "head_pitch": 0.3},
+        {"t": 9.6, "position": [6.14, 0.0, -0.38], "pose": "stand", "yaw": -0.9414, "head_pitch": 0.2},
+        {"t": 11.0, "position": [6.14, 0.0, -0.38], "pose": "stand", "yaw": -0.9414, "head_pitch": 0.2},
+        {"t": 13.4, "position": [6.14, 0.0, -0.38], "pose": "stand", "yaw": -0.9414, "head_pitch": 0.2},
+        {"t": 15.0, "position": [6.14, 0.0, -0.38], "pose": "stand", "yaw": -0.9414, "head_pitch": 0.2}
+      ]
+    }
+  ],
+  "cameras": [
+    {
+      "shot_id": "sh044",
+      "start": 0,
+      "duration_s": 6.0,
+      "movement": "static",
+      "keyframes": [
+        {"t": 0.0, "position": [3.792, 1.3, 1.535], "target": [7.667, 1.15, -1.625], "fov": 33.3985},
+        {"t": 6.0, "position": [3.792, 1.3, 1.535], "target": [7.667, 1.15, -1.625], "fov": 33.3985}
+      ]
+    },
+    {
+      "shot_id": "sh045",
+      "start": 6.0,
+      "duration_s": 3.0,
+      "movement": "static",
+      "keyframes": [
+        {"t": 0.0, "position": [5.93, 0.78, -0.212], "target": [5.67, 0.78, 0.0], "fov": 26.9915},
+        {"t": 3.0, "position": [5.93, 0.78, -0.212], "target": [5.67, 0.78, 0.0], "fov": 26.9915}
+      ]
+    },
+    {
+      "shot_id": "sh046",
+      "start": 9.0,
+      "duration_s": 6.0,
+      "movement": "static",
+      "keyframes": [
+        {"t": 0.0, "position": [3.83, 1.3, 1.503], "target": [6.365, 1.15, -0.104], "fov": 26.9915},
+        {"t": 6.0, "position": [3.83, 1.3, 1.503], "target": [6.365, 1.15, -0.104], "fov": 26.9915}
+      ]
+    }
+  ],
+  "continuity": {"actors": "cut", "camera": "cut"},
+  "warnings": [
+    "sh045's lens is set at 0.78 m, the mid height of a 0.10 m bottle standing on the 0.715 m tabletop, instead of camera.json's 0.50 m: a 0.50 m lens is below the tabletop and cannot be 'level, square-on to the label'. Axis, lens and framing are otherwise as authored.",
+    "grp016 -> grp017 crosses from SCN-little-door-passage to SCN-long-hall (same S05/S06 action, different scene asset), so actors and camera cut rather than inherit."
+  ]
+}

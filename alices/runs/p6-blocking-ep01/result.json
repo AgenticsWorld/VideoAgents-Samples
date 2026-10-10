@@ -1,0 +1,124 @@
+{
+  "task_id": "p6-blocking-ep01",
+  "agent": "07-directing/blocking",
+  "project": "alices",
+  "ep": "ep01",
+  "attempt": 1,
+  "status": "done",
+  "produced_on": "2026-09-23",
+  "content_language": "English (project output-language setting)",
+  "deliverable": {
+    "files": 101,
+    "path_pattern": "directing/ep01/shots/sh001..sh101/blocking.json",
+    "character_entries": 100,
+    "creature_entries": 3,
+    "performance_blocks_dialogue_anchored": 33,
+    "performance_beat_blocks_action_anchored": 67,
+    "entries_with_no_intent_layer": 3
+  },
+  "shared_conventions": {
+    "screen_side": "screen-left / screen-right / centred in frame, always as the audience sees it, taken from the anchor_xy and gaze fields of the shot's own composition.json. Screen side is a projection of the frame, never a world direction; world position is carried by the landmark clause.",
+    "fragment_grammar": "space_fragment_en = <pose word> + <relation to a scene landmark> + <screen side> + <facing>, in that order, one sentence, English, no numeric coordinates, no camera-move terms, no colour codes, 25 words maximum. The pose word opens the fragment so the whitebox compiler and the video prompt both lock the body attitude.",
+    "landmark_vocabulary": "Landmark words are copied letter for letter from the shot's scene layout.json name_en. No translation, paraphrase, pluralisation or shortening. Scale phrases (\"ten inches high\", \"two feet high\") are scale, not coordinates, and follow the blocking_map offset_en wording.",
+    "pose_source": "pose is copied from shot_list.json shots[].poses[<id>].pose and is never overridden here; where a shot changes attitude inside its own duration the change is carried in path[]/beats[] and the fragment names both states.",
+    "offscreen_presence": "Characters who are in the scene but not in the frame are recorded in offscreen_presence[] with their map position and carry no space fragment, because blocking_bound binds in-frame characters only. Presence and visibility are judged separately.",
+    "intent_layer": "performance (dialogue-anchored) carries goal/objective, arc_from + arc_to + emotional_arc, trigger {line_ref, word}, forbidden_early + no_early_reaction, end_state. Both the host-canonical field names and the work order's aliases are written so nothing downstream has to guess. No FACS codes, no camera language, no prompt phrasing."
+  },
+  "machine_check": {
+    "command": "python3 code/blocking_map_check.py --project alices --ep ep01 --strict",
+    "run_from": "/Applications/VideoAgents.app/Contents/Resources/backend",
+    "runtime": "/Users/dolores/Library/Application Support/@videoagents/desktop/python-runtimes/versions/1.0.33/py/bin/python3 (app runtime, PIL present)",
+    "verbatim_output": "[blocking_map] alices/ep01: 违规 0 条, WARN 0 条 -> PASS",
+    "exit_code": 0
+  },
+  "supporting_checks": [
+    {
+      "command": "python3 code/storyboard_pose_check.py --project alices --ep ep01 --source shot_list --blocking --strict",
+      "verbatim_output": "OK pose_present shot_list ep01:101 镜,0 违规,0 提醒",
+      "exit_code": 0,
+      "note": "This is the check that actually reads the 101 blocking.json files: every pose is in the enum, equals the shot_list pose, and is recognisable in the fragment."
+    },
+    {
+      "check": "blocking_on_map (self-verified)",
+      "result": "0 deviations. For every group, the first shot's characters sit on the blocking_map start and the last shot's characters sit on the map end (start where the map gives no end); intermediate shots fall along the route in time order. Where a character is off-frame in a group's first or last shot, the map position is recorded in offscreen_presence[] instead."
+    },
+    {
+      "check": "presence_consistent_with_timeline (self-verified against story/story_timeline.json)",
+      "result": "0 violations across 101 shots. Every shot carries presence_check.timeline_ok=true, an empty violations[], and the ev-id it is anchored to."
+    },
+    {
+      "check": "cast identity (self-verified)",
+      "result": "characters[] equals shot_list characters exactly and creatures[] equals shot_list creatures exactly in all 101 files; no extra and no missing entity. All path[] and beats[] timestamps fall inside the shot duration."
+    },
+    {
+      "check": "performance intent layer (self-verified)",
+      "result": "All 32 dialogue shots carry a performance block for every character who speaks in that shot; every trigger.word is a verbatim substring of the referenced line as frozen in shot_list dialogue_lines; no end_state contains an AU code, a camera term or an abstract emotion word."
+    }
+  ],
+  "presence_ledger": {
+    "CHAR-alice": "in frame in 87 shots; present in the space but off-frame in 14 (sh004, sh016, sh020, sh023, sh028, sh029, sh031, sh041, sh073, sh074, sh076, sh077, sh096, sh101).",
+    "CHAR-alice-sister": "in frame sh002, sh003, sh004, sh005, sh009; present off-frame on the riverbank sh006, sh007, sh008. She leaves the episode when Alice runs out of frame at sh009 and appears nowhere else.",
+    "CRE-001": "in frame sh008, sh010, sh012 only (grp004 and grp006), always as the real mute unclothed animal; present off-frame sh007 and sh011. He exits into the burrow at sh012 and does not return.",
+    "CHAR-white-rabbit": "in frame sh027, sh028, sh029, sh031 (grp011/grp012) and sh073, sh074, sh076, sh077 (grp028/grp029); present off-frame sh026, sh030, sh032, sh072, sh075. Never in the real frame S01/S02; never the same entity as CRE-001."
+  },
+  "rulings_honoured": [
+    "H3S user ruling, S08 White Rabbit: he carries the white kid gloves and the large fan in his mouth while trotting on four legs (sh073). The props leave his mouth only in sh074, where he has stopped and sat back on his haunches, and are dropped into the water in sh077. Each affected file carries a staging_lock field naming CR-003 / CR-015 and the G4 waiver. He is given no hands while moving.",
+    "H3S user ruling, hook pair oh-1 + ec-2: sh001 is blocked as the flash-forward lift of the S03 fall with narrative_block FF-ep01-open recorded in its presence_check; sh100/sh101 are blocked as the V-wake cliffhanger with nothing staged as the wake's maker.",
+    "directing_plan POV rule: no cutaway to the animal alone in S01/S02 — in sh011 CRE-001 is kept off-frame rather than given a shot of his own.",
+    "directing_plan S10 rule: the episode does not cut back to Alice after the wake; sh101 carries her as offscreen_presence only."
+  ],
+  "map_vs_composition": {
+    "conflicts_found": 0,
+    "notes_raised": [
+      {
+        "shots": [
+          "sh085",
+          "sh086",
+          "sh087"
+        ],
+        "observation": "composition.json places the glass table screen-left of Alice in sh085 and screen-right of her in sh086/sh087.",
+        "resolution": "Not a blocking_map conflict. The map keeps Alice on one spot at the low curtain for the whole of grp032 and she does not move; the difference is a deliberate change of camera position (cause in the near plane, effect in the far plane). Each fragment follows the frame its own composition describes, and sh086 carries an axis_note recording the crossing for continuity-planning to confirm.",
+        "action": "Flagged, not patched. No route was redrawn."
+      },
+      {
+        "shots": [
+          "sh051",
+          "sh052"
+        ],
+        "observation": "grp020's map runs glass_table -> curtain -> glass_table, and sh051 shows Alice already at the little door.",
+        "resolution": "No conflict: the run from the table foot to the curtain happens inside sh051, so the shot opens on the map start and closes at the path point. sh052 and sh053 hold the map end. Recorded in each file's path[] and group_position."
+      }
+    ]
+  },
+  "deviations_and_open_items": [
+    {
+      "item": "Intent layer on non-dialogue shots",
+      "detail": "The work order requires the intent layer on every shot where a character acts, and requires trigger to be anchored to a finalised dialogue line. On a silent shot those two requirements cannot both hold, and writing a dialogue-anchored trigger into a silent shot would make the downstream performance_bound check (code/performance_bound_check.py) report the trigger word as absent from that shot's segment.",
+      "resolution": "Dialogue shots carry performance with a dialogue-anchored trigger (33 blocks, exactly the host-checked shape). Silent acting shots carry the same intent fields under performance_beat, whose trigger is an action beat with a timestamp inside the shot (67 blocks). performance_bound reads only performance, so the silent shots add no false violations while still handing the prompt station a full intent layer.",
+      "needs_user_decision": false
+    },
+    {
+      "item": "CRE-001 carries no intent layer",
+      "detail": "The three CRE-001 entries (sh008, sh010, sh012) carry an animal_discipline field instead of an intent layer: true gait, true scale, no clothing, no pause, no look to camera and no look at Alice.",
+      "rationale": "CRE-001 is the real mute quadruped and is explicitly directed as an animal rather than a performer; giving it an objective and an emotional arc would contradict that discipline. CHAR-white-rabbit, who is a character, does carry the full intent layer in all eight of his in-frame shots.",
+      "needs_user_decision": false
+    },
+    {
+      "item": "Auto-rerun budget",
+      "detail": "The project's automatic rerun budget is 0. Nothing in this batch needed a rerun: no blocker was found, no route was redrawn, and nothing was patched around. Had a route conflict been real it would have been routed to orchestrator as a user decision rather than fixed here."
+    }
+  ],
+  "skills": [
+    {
+      "id": "08-video-gen/prompt/performance-direction",
+      "status": "not_applicable_to_this_station",
+      "reason": "Project skills list no auto-activated skill for 07-directing/blocking. Performance control is on, so this station produced the intent layer (goal / arc / dialogue-anchored trigger / forbidden_early / end_state) that the skill consumes; the visible-evidence layer, AU calibration and breath prose belong to 08-video-gen/prompt and were not written here. No skill_report registration was due for this station."
+    }
+  ],
+  "downstream_notes": [
+    "08-video-gen/prompt: splice each space_fragment_en into its Shot segment verbatim — do not translate or rephrase (blocking_bound, code/blocking_bound_check.py).",
+    "08-video-gen/prompt: for each performance block, bind trigger.word outside the {} dialogue as well as inside it, and splice end_state verbatim (performance_bound, code/performance_bound_check.py). forbidden_early entries must not appear as positive description before the trigger binding.",
+    "continuity-planning: confirm the sh085 -> sh086 axis change recorded in sh086.axis_note, and the screen-side handovers at sh034/sh038 and sh058/sh059, which are deliberate reversals designed by composition.",
+    "Phase 8 sound-effect: beats[] timestamps are the spotting points for footsteps, splashes, the two thumps over sh025, the stamp in the puddle at sh092 and the slip at sh093."
+  ]
+}

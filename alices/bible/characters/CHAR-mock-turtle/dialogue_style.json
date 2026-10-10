@@ -1,0 +1,118 @@
+{
+  "character_id": "CHAR-mock-turtle",
+  "name": "The Mock Turtle",
+  "source_language": "en",
+  "source_speaker_labels": ["Mock Turtle"],
+  "produced_by_task": "p3-dialogue-style-pb2",
+  "register": {
+    "level": "melancholy, pedantic old boy of a genteel school: sobbing nostalgia for his schooldays, touchy pride in them, and a hunger to have everything explained",
+    "summary": "He speaks 'in a deep, hollow tone' (ch009-d0047) with sighs and sobs breaking the line (dashes everywhere). His world is his old school in the sea — its masters, extras and punning subjects (Reeling and Writhing, Uglification) — and the Lobster Quadrille, which briefly lifts him into wild excitement before he drops back into gloom. He corrects Alice sharply (You did. / You're wrong about the crumbs), takes offence at a correction (I mean what I say), and presses for explanation (Explain all that / I should like to have it explained). Per SUP-010 (amended BIB-0027) a photoreal CGI calf-headed, hooved turtle; the sobbing is vocal, the 'flappers' are his own flippers.",
+    "examples": [
+      { "ref": "ch009-d0049", "chapter": 9, "text": "Once, I was a real Turtle." },
+      { "ref": "ch009-d0071", "chapter": 9, "text": "Reeling and Writhing, of course, to begin with, and then the different branches of Arithmetic—Ambition, Distraction, Uglification, and Derision." },
+      { "ref": "ch010-d0076", "chapter": 10, "text": "What is the use of repeating all that stuff, if you don't explain it as you go on? It's by far the most confusing thing I ever heard!" }
+    ]
+  },
+  "catchphrases": [
+    { "text": "we went to school in the sea", "freq": "high", "count_in_source": 3, "example_refs": ["ch009-d0052", "ch009-d0057", "ch009-d0061"], "example_chapters": [9] },
+    { "text": "of course / you know (pedantic tags)", "freq": "high", "count_in_source": 9, "example_refs": ["ch009-d0071", "ch010-d0016", "ch010-d0052"], "example_chapters": [9, 10] },
+    { "text": "explain / explained", "freq": "medium", "count_in_source": 3, "example_refs": ["ch010-d0057", "ch010-d0069", "ch010-d0076"], "example_chapters": [10] },
+    { "text": "Beautiful Soup (his song)", "freq": "medium", "count_in_source": 3, "example_refs": ["ch010-d0081", "ch010-d0082", "ch010-d0088"], "example_chapters": [10] }
+  ],
+  "sentence_style": {
+    "length": "medium, broken: mean 12.7 words (median 11) over 43 spoken lines; many lines begin or end on a dash where a sob or an interruption cuts in",
+    "mean_words": 12.7,
+    "patterns": [
+      {
+        "rule": "Mournful nostalgia and self-pity: the lost past and his own limits (Once, I was a real Turtle / I couldn't afford to learn it / I only took the regular course / I'm too stiff / I never went to him).",
+        "examples": [
+          { "ref": "ch009-d0049", "chapter": 9, "text": "Once, I was a real Turtle." },
+          { "ref": "ch009-d0069", "chapter": 9, "text": "I couldn't afford to learn it. I only took the regular course." },
+          { "ref": "ch009-d0079", "chapter": 9, "text": "Well, I can't show it you myself, I'm too stiff. And the Gryphon never learnt it." }
+        ]
+      },
+      {
+        "rule": "School-in-the-sea vocabulary and punning curriculum: master, Tortoise, educations, extras, washing, regular course, Reeling and Writhing, Arithmetic, Mystery, Seaography, Drawling, Laughing and Grief, hours of lessons.",
+        "examples": [
+          { "ref": "ch009-d0052", "chapter": 9, "text": "When we were little, we went to school in the sea. The master was an old Turtle—we used to call him Tortoise—" },
+          { "ref": "ch009-d0077", "chapter": 9, "text": "Well, there was Mystery, —Mystery, ancient and modern, with Seaography: then Drawling—" },
+          { "ref": "ch009-d0084", "chapter": 9, "text": "Ten hours the first day, nine the next, and so on." }
+        ]
+      },
+      {
+        "rule": "Snobbish, touchy correction of Alice: blunt contradiction and rebuke (You did. / really you are very dull! / You're wrong about the crumbs / Ah! then yours wasn't a really good school / I mean what I say).",
+        "examples": [
+          { "ref": "ch009-d0059", "chapter": 9, "text": "You did," },
+          { "ref": "ch009-d0054", "chapter": 9, "text": "We called him Tortoise because he taught us, really you are very dull!" },
+          { "ref": "ch010-d0054", "chapter": 10, "text": "I mean what I say," }
+        ]
+      },
+      {
+        "rule": "Demands explanation and fusses over detail (Explain all that / I should like to have it explained / But about his toes? / That's very curious / It all came different! … Tell her to begin).",
+        "examples": [
+          { "ref": "ch010-d0057", "chapter": 10, "text": "Explain all that," },
+          { "ref": "ch010-d0071", "chapter": 10, "text": "But about his toes? How could he turn them out with his nose, you know?" },
+          { "ref": "ch010-d0062", "chapter": 10, "text": "It all came different! I should like to hear her try and repeat something now. Tell her to begin." }
+        ]
+      },
+      {
+        "rule": "The sea and the Lobster Quadrille: sea creatures and dance figures, spoken in dash-broken fragments that lurch from gloom to wild excitement and back (Two lines! / Turn a somersault in the sea! / Back to land again, and that's all the first figure).",
+        "examples": [
+          { "ref": "ch010-d0010", "chapter": 10, "text": "Two lines! Seals, turtles, salmon, and so on; then, when you've cleared all the jelly-fish out of the way—" },
+          { "ref": "ch010-d0020", "chapter": 10, "text": "Turn a somersault in the sea!" },
+          { "ref": "ch010-d0022", "chapter": 10, "text": "Back to land again, and that's all the first figure," }
+        ]
+      },
+      {
+        "rule": "Pedantic tags 'of course' and 'you know' to mark what any educated person should know; puns taken literally (With what porpoise?).",
+        "examples": [
+          { "ref": "ch010-d0052", "chapter": 10, "text": "Of course not, why, if a fish came to me, and told me he was going a journey, I should say 'With what porpoise?'" },
+          { "ref": "ch010-d0034", "chapter": 10, "text": "I don't know where Dinn may be, but if you've seen them so often, of course you know what they're like." },
+          { "ref": "ch009-d0088", "chapter": 9, "text": "Of course it was," }
+        ]
+      }
+    ]
+  },
+  "vocabulary": {
+    "signature_words": ["Once", "real Turtle", "school in the sea", "master", "extras", "regular course", "Reeling and Writhing", "Uglification", "Seaography", "Lobster Quadrille", "figure", "porpoise", "whiting", "explain", "curious", "of course", "you know", "Beautiful Soup"],
+    "preferred_fields": ["genteel schooling and its fees", "sea creatures", "dance figures", "grief and sighing"],
+    "examples": [
+      { "ref": "ch009-d0081", "chapter": 9, "text": "I never went to him, he taught Laughing and Grief, they used to say." },
+      { "ref": "ch010-d0050", "chapter": 10, "text": "They were obliged to have him with them, no wise fish would go anywhere without a porpoise." }
+    ]
+  },
+  "address": {
+    "self": "I; 'we' / 'ours' for his school-fellows (at ours they had … washing—extra)",
+    "to_alice": "you (often in correction); refers to her as 'her' when speaking to the Gryphon (I'll tell it her / Tell her to begin)",
+    "to_gryphon": "addresses him directly without an epithet; refers to him as 'the Gryphon' to Alice",
+    "examples": [
+      { "ref": "ch009-d0047", "chapter": 9, "text": "I'll tell it her, sit down, both of you, and don't speak a word till I've finished." },
+      { "ref": "ch010-d0037", "chapter": 10, "text": "Tell her about the reason and all that," }
+    ]
+  },
+  "interjections": ["Ah!", "Well,", "Oh,", "Once,"],
+  "recitation_repertoire": [
+    { "ref": "ch010-d0028", "chapter": 10, "title": "the whiting and the snail (Lobster Quadrille song), 3 stanzas d0028-d0030", "note": "type verse: sung slowly and sadly while dancing; excluded from the back-test denominator" },
+    { "ref": "ch010-d0081", "chapter": 10, "title": "Beautiful Soup (Turtle Soup), d0081-d0082 + fading chorus d0088", "note": "type verse: sung 'in a voice sometimes choked with sobs' with drawn-out syllables (Beau—ootiful Soo—oop); excluded from the denominator" }
+  ],
+  "forbidden_words": [
+    { "domain": "post-1862 slang / modern chat register", "regex": "\\b(okay|ok|cool|guys?|awesome|yeah|yep|nope|gonna|wanna|gotta|kinda|sorta|totally|literally|dude)\\b", "reason": "period drama, 1862" },
+    { "domain": "the Gryphon's dialect grammar and hurry-ups", "regex": "\\b(never \\w+s nobody|hasn't got no|this here|for to know|come on|drive on|old fellow)\\b", "reason": "keeps the pair distinct: the Mock Turtle's English is genteel and grammatical; hurrying and 'old fellow' belong to the Gryphon" },
+    { "domain": "brisk cheer", "regex": "\\b(what fun|hurrah|jolly|splendid|capital)\\b", "reason": "his excitement only ever comes through the Quadrille beats; he never voices cheerfulness" }
+  ],
+  "drift": [
+    { "from_chapter": 9, "to_chapter": 9, "change": "At the ledge: sobbing, hollow, slow; long silences; the schooldays told in grief with flashes of snobbish pride and irritation at Alice's questions.", "examples": ["ch009-d0049", "ch009-d0054", "ch009-d0067"] },
+    { "from_chapter": 10, "to_chapter": 10, "change": "Lobster Quadrille (ch010-d0002 to d0022): excitement in short shouted fragments, 'capering wildly', then 'suddenly dropping his voice' back to gloom.", "examples": ["ch010-d0010", "ch010-d0020", "ch010-d0022"] },
+    { "from_chapter": 10, "to_chapter": 10, "change": "After the dance (ch010-d0032 on): pedantic questioner — corrects, takes offence, demands explanations; ends in the sobbing song left behind as Alice is hurried to the trial.", "examples": ["ch010-d0036", "ch010-d0054", "ch010-d0076"] }
+  ],
+  "backtest_markers": [
+    { "id": "T1", "rule_ref": "sentence_style.patterns[0] nostalgia and self-pity", "weight": 4, "regex": "^once\\b|\\b(real turtle|couldn't afford|regular course|too stiff|I never went|sit down, both)\\b" },
+    { "id": "T2", "rule_ref": "sentence_style.patterns[1] school in the sea", "weight": 4, "regex": "\\b(school|educations?|extras?|washing|master|taught|tortoise|reeling|writhing|arithmetic|ambition|distraction|uglification|derision|mystery|seaography|drawling|laughing and grief|first day)\\b" },
+    { "id": "T3", "rule_ref": "sentence_style.patterns[2] touchy correction", "weight": 4, "regex": "^you did\\b|\\b(very dull|you're wrong|I mean what I say|wasn't a really good|I don't know where)\\b" },
+    { "id": "T4", "rule_ref": "sentence_style.patterns[3] demands explanation", "weight": 4, "regex": "\\b(explain all that|have it explained|explain it as you go|very curious|came different|tell her (to|about)|but about|how could he|confusing|uncommon nonsense|never heard it)\\b" },
+    { "id": "T5", "rule_ref": "sentence_style.patterns[4] sea and Quadrille", "weight": 3, "regex": "\\b(sea|quadrille|figure|two lines|advance twice|set to partners|somersault|you throw the|back to land|introduced to a lobster|see a little of it|which shall sing|whiting|porpoise|fish|crumbs)\\b" },
+    { "id": "T6", "rule_ref": "sentence_style.patterns[5] pedantic tags (narrowed: bare 'of course'/'you know' are shared by half the cast and are not markers)", "weight": 2, "regex": "^of course (it was|not)\\b|with what porpoise" },
+    { "id": "T7", "rule_ref": "recitation_repertoire soup", "weight": 3, "regex": "\\b(soup|tureen|beau—?o+tiful)\\b" }
+  ],
+  "backtest": {"method": "marker-claim back-test (shared yardstick with pb1 and 01-story/dialogue-rewrite): a spoken source line hits when it matches >=1 backtest_markers regex and no forbidden_words regex; verse excluded; full definition runs/p3-dialogue-style-pb2/result.json#backtest_method", "script": "code/p3-dialogue-style-pb1_backtest.py", "run_on": "2026-09-22", "threshold": 0.8, "hit_rate": 1.0, "sample_size": 43, "source_lines_total": 49, "coverage_of_spoken_lines": 1.0, "verse_excluded": 6, "forbidden_violations_in_source": 0, "cross_claim_rate": 0.041, "lift": 24.36, "attribution_top1_rate": 0.814, "misses": [], "pass": true}
+}

@@ -1,0 +1,54 @@
+{
+  "task_id": "p4-h2-creature-2",
+  "agent": "04-creatures/creature",
+  "status": "done",
+  "date": "2026-09-23",
+  "summary": "Closed DEF-p4-char-concept-202 by realigning bible/creatures/creature.json CRE-005 (Gryphon) and CRE-006 (Mock Turtle) to the CHAR-gryphon / CHAR-mock-turtle appearance cards, since the H2-locked sheets were drawn from those cards. bible/characters/** was not touched (memory-bible owns it). Recorded as bible/changelog.md BIB-0031. No images generated or re-rolled (budget 0).",
+  "defects_closed": ["DEF-p4-char-concept-202"],
+  "defects_left_untouched": ["DEF-p4-creature-403 (waived major, per instruction)"],
+  "defects_opened": [
+    {
+      "id": "DEF-p4-creature-404",
+      "severity": "minor",
+      "summary": "Found while picking the next free BIB number: creature.json's own _meta.amendments[] uses change_id BIB-0029 for the p4-h2-creature amendment, and bible/changelog.md separately uses BIB-0029 for the unrelated p4-h2-bible amendment (characters/costumes). Two different changes sharing one id, likely a parallel-write collision. Not fixed here (not in scope, doesn't affect this task's content); assigned to memory-bible."
+    }
+  ],
+  "arbitration_applied": "H2-locked sheet is the reference: creature.json realigned to the appearance cards for every field visible on the sheet (colour, hide-vs-scale, eye colour). For measurements not verifiable from a plain-backdrop sheet, adopted the appearance-card figures rather than creature.json's own designed ones, because 03-characters/appearance's numbers are what the character-consistency check reads and the whitebox/staging chain needs one number per creature. No field was found where the appearance-card number looked wrong instead; nothing routed back for a bible/characters/** change.",
+  "final_figures": {
+    "CRE-005_gryphon": {
+      "eyes": "amber-hazel (was pale amber-gold)",
+      "shoulder_height_cm": "110-120 (was 90-110)",
+      "head_sitting_height_cm": "~150-165 (new field, not previously carried in creature.json)",
+      "wingspan_m": "~4 (was 2.5-3)",
+      "source_of_truth": "bible/characters/CHAR-gryphon/appearance.json eyes.color and build.height_range_cm/height_note",
+      "surface_unchanged": "golden-brown feather-to-tawny-fur blend — not flagged by the defect, left as-is (roughly consistent with the appearance card's feather/fur description, no direct contradiction)"
+    },
+    "CRE-006_mock_turtle": {
+      "front_flippers": "grey-olive SCALED turtle skin (was dun-brown calf hide)",
+      "neck": "grey-olive scaled turtle skin blending into calf hide only at the head (was calf hide from the neck up)",
+      "carapace_colour": "olive-brown with faded amber-and-dark hexagonal scutes + a few barnacles (was 'weathered ridged brown-green')",
+      "carapace_length_cm": "110-120 (was 70-90)",
+      "head_sitting_height_cm": "~110-125 (clarified, matches appearance card)",
+      "head": "brown-and-white patched, white blaze, floppy ears added (was unspecified colour, 'small rounded' ears)",
+      "eyes": "dark brown added (was uncoloured)",
+      "source_of_truth": "bible/characters/CHAR-mock-turtle/appearance.json hair.color, rendering.limits, build.height_range_cm/height_note, face.features"
+    }
+  },
+  "rendering_spec_layer_unchanged": "photoreal CGI, feather-to-fur / turtle-skin-to-calf-hide blend, no costume, no cartoon styling — confirmed correct by the work order, not touched.",
+  "changed_files": [
+    "bible/creatures/creature.json",
+    "bible/changelog.md",
+    "qa/defects/DEF-p4-char-concept-202.json",
+    "qa/defects/DEF-p4-creature-404.json"
+  ],
+  "not_changed_by_design": [
+    "bible/characters/CHAR-gryphon/appearance.json",
+    "bible/characters/CHAR-mock-turtle/appearance.json",
+    "assets/concepts/creatures/CRE-005/*, assets/concepts/creatures/CRE-006/* (no re-roll, budget 0)"
+  ],
+  "acceptance": {
+    "evaluation_scoring": "skipped (quality-committee weight = 0, per project settings)",
+    "qa_co_sign": "not requested by the work order",
+    "machine_check": "python3 -c json.load passed on bible/creatures/creature.json after edits"
+  }
+}

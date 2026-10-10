@@ -1,0 +1,104 @@
+{
+  "_meta": {
+    "file": "bible/characters/CHAR-alice/age_versions.json",
+    "owner": "03-characters/character-growth",
+    "produced_by_task": "p3-growth-all",
+    "produced_on": "2026-09-22",
+    "content_language": "en",
+    "base_card": "bible/characters/CHAR-alice/appearance.json",
+    "timeline_source": "story/story_timeline.json (story_time[].event anchors ev0001-ev0054; anachrony an-06)",
+    "range_resolution": "event ID, refined by paragraph (chNNN#pMM) where two versions share one event. ev0054 (ch012#p67-p72) holds both the remembered little Alice (ch012#p68) and the imagined grown Alice (ch012#p71), so the split point is ch012#p70/ch012#p71. Ranges are compared at (event, paragraph) resolution: contiguous, no overlap, no gap."
+  },
+  "character_id": "CHAR-alice",
+  "anchors": [
+    "Eye colour: grey-blue, large, wide-set, bright and alert (all versions; appearance.json eyes)",
+    "Hair colour: warm mid-brown with a centre parting (all versions; appearance.json hair)",
+    "Signature gesture: the toss of the head to clear a wandering strand of hair from her eyes (all versions; ch012#p68). In the grown version one strand still escapes her pinned hair so the gesture survives.",
+    "Face: straight brows a shade darker than the hair, small straight nose, full lower lip, no freckles (all versions; appearance.json face)",
+    "Skin: fair (all versions)",
+    "Colour identity: cornflower blue as her dress colour (child: pale cornflower-blue dress with white pinafore; grown: deeper cornflower-blue day dress). Carries the refs/style/alice.jpeg colour into the grown look."
+  ],
+  "on_screen_decision": {
+    "ch004": {
+      "decision": "no age version",
+      "source": ["ch004#p09", "ch004#p10"],
+      "reason": "'I'm grown up now... there's no room to grow up any more here' is a pun on her giant size inside the White Rabbit's house (SUP-003 forced perspective, ev0016). 'Never to be an old woman' is a passing thought, not a picture. Nothing in the source shows an older Alice, and cutting to an imagined old Alice inside the dream would add an image the source never gives. On screen she stays the base ten-year-old at enlarged scale."
+    },
+    "ch012": {
+      "decision": "grown-woman version CHAR-alice-age02, used only in the sister's reverie insert at ch012#p71",
+      "source": ["ch012#p67", "ch012#p71"],
+      "reason": "ch012#p71 is the book's closing image and carries the film's 'passing of childhood' theme (bible/world.json themes; 'The after-time' period). The film has no narration and the sister has no line here, so the only way to keep this beat is to show it: a short, silent, closed-eyed imagining by the sister at sunset. It is subjective imagination, not magic, so it fits the realistic frame (SUP-001). If the script later cuts this beat, the version is simply unused; no other version depends on it.",
+      "inferred": true
+    }
+  },
+  "versions": [
+    {
+      "version_id": "CHAR-alice-age01",
+      "label": "Girl (about ten), 4 July 1862: waking frame, the whole dream, and the sister's memory of 'little Alice'",
+      "age_range": "9-10",
+      "is_base": true,
+      "timeline_range": { "from": "ev0001", "to": "ev0054", "from_paragraph": "ch001#p01", "to_paragraph": "ch012#p70" },
+      "story_time": "T0 (Friday 4 July 1862, about 2 pm) to sunset the same day",
+      "diff_from_base": {},
+      "diff_note": "Identical to appearance.json. Size changes in the dream (ev0005-ev0051: ten inches, nine feet, 'a mile high', full size at ch012#p01) are SUP-003 staging on this same look, not age versions. At ch012#p68 the sister remembers 'little Alice': same look (tiny hands, bright eager eyes, head toss).",
+      "flashback_only": false,
+      "source_chapter": 1,
+      "source": ["ch001#p01-p02", "ch012#p64-p66", "ch012#p68"],
+      "inferred": false
+    },
+    {
+      "version_id": "CHAR-alice-age02",
+      "label": "Grown woman (about thirty), imagined 'after-time': only in the sister's reverie",
+      "age_range": "28-32",
+      "is_base": false,
+      "timeline_range": { "from": "ev0054", "to": "ev0054", "from_paragraph": "ch012#p71", "to_paragraph": "ch012#p71" },
+      "story_time": "Narrated at T0 sunset inside ev0054. The picture shows 'the after-time', about twenty years later, as imagined by the sister in 1862.",
+      "anachrony_ref": "an-06",
+      "inset_type": "imagined_flashforward (the sister's reverie; not a real future event)",
+      "lookup_rule": "Use this version only for shots staging ch012#p71 (the sister's imagined image of Alice grown up). Every other Alice shot, including the ch012#p68 memory of little Alice in the same reverie, uses CHAR-alice-age01.",
+      "diff_from_base": {
+        "base_age_range": "28-32",
+        "hair": {
+          "style": "centre parting kept, smoothed over the ears and pinned into a soft low knot at the nape (the grown-up style her sister wears in 1862); one wavy strand still slips loose across her brow",
+          "length": "long, worn up",
+          "source_para": ["ch012-p68", "ch012-p71"],
+          "inferred": true,
+          "reason": "The source gives no look for grown Alice. A pinned-up style is what a grown woman wears in the sister's world; the escaping strand keeps her 'simple and loving heart of her childhood' (ch012#p71) visible."
+        },
+        "face": {
+          "shape": "the same oval, now a woman's face: longer, cheekbones showing, the child's softness gone",
+          "default_expression": "warm, lively, amused; eyes bright and eager as she tells a story",
+          "inferred": true,
+          "reason": "ch012#p71 'keep, through all her riper years, the simple and loving heart of her childhood' and 'make their eyes bright and eager': she keeps the child's frank brightness in an adult face. Fixed features (brows, nose, lip) are anchors and do not change."
+        },
+        "skin": {
+          "tone": "fair, with a light warmth; no sunburn",
+          "inferred": true,
+          "reason": "Indoor or garden storytelling scene; a grown lady of her class, not a child playing out in the July sun."
+        },
+        "build": {
+          "height_range_cm": [160, 165],
+          "body_type": "slim, straight-backed woman; the small hands of the child are now slender adult hands",
+          "inferred": true,
+          "reason": "Typical height for a well-fed English woman of her class; straight back continues her base posture."
+        },
+        "marks": [
+          { "type": "habit", "position": "head", "description": "the head toss to clear the loose strand from her eyes, same gesture as the child", "source_chapter": "ch012", "source_para": "ch012-p68" }
+        ],
+        "default_outfit_tone": {
+          "summary": "a deeper cornflower-blue cotton or light wool day dress for a young married lady, long sleeves, high white collar, full floor-length skirt; no pinafore",
+          "silhouette_1862": "a woman's crinoline-era day dress of the early 1860s, not the fashion of the 1880s: the scene is the 1862 sister's picture of the future, so she can only imagine it in the clothes she knows. This also keeps the rule that nothing on screen dates from after 1862.",
+          "inferred": true,
+          "reason": "Blue carries her colour identity from the child costume (refs/style/alice.jpeg). Full costume design belongs to 06-art/costume."
+        },
+        "prompt_base_en": "an English woman of about thirty, imagined in the style of 1862, warm-brown hair with a centre parting pinned into a soft low knot at the nape with one wavy strand loose across her brow, bright grey-blue eyes, straight brows, small straight nose, full lower lip, fair skin, slim straight-backed figure, deeper cornflower-blue long-sleeved day dress with a high white collar and a full floor-length crinoline-era skirt, warm lively storyteller's expression"
+      },
+      "flashback_only": true,
+      "source_chapter": 12,
+      "source": ["ch012#p71"],
+      "quote": "this same little sister of hers would, in the after-time, be herself a grown woman; and how she would keep, through all her riper years, the simple and loving heart of her childhood",
+      "inferred": true,
+      "reason": "Age: the source says only 'a grown woman' and 'riper years' surrounded by 'other little children', so about thirty (about twenty years after 1862) is the designed value. All age-dependent changes are listed in diff_from_base with reasons; anchors do not change."
+    }
+  ]
+}

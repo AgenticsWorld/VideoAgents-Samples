@@ -1,0 +1,37 @@
+{
+  "shot_id": "sh014",
+  "group_id": "grp007",
+  "scene_no": "S02",
+  "scene_id": "SCN-field-hedge-burrow",
+  "duration_s": 4.0,
+  "is_dialogue": false,
+  "group_position": "middle shot of grp007 — Alice down on the fan of pale spoil, a third of the way along the short spoil_fan -> burrow line.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "prone",
+      "start_pos": "flat in the loose spoil with her face at the burrow mouth",
+      "space_fragment_en": "lying face down on the fan of pale spoil on screen-left, cheek and one eye at the rabbit burrow on screen-right",
+      "facing": "body flat along the ground pointing screen-right into the hole; one eye straight across the frame into the black",
+      "path": [],
+      "beats": [
+        { "t": 0.8, "action": "puts her cheek to the cool air coming out of the hole", "sync": "the shade on her hot face" },
+        { "t": 2.6, "action": "her breathing slows", "sync": "the meadow sound begins to thin" }
+      ],
+      "performance_beat": {
+        "objective": "get close enough to the dark to find out what is in it",
+        "goal": "get close enough to the dark to hear what is in it",
+        "emotional_arc": "from hot, hurried curiosity to a cool, quieted fascination",
+        "arc_from": "hot, hurried curiosity",
+        "arc_to": "cool, quieted fascination",
+        "trigger": { "beat": "the cool air from the burrow reaches her cheek", "t": 0.8 },
+        "no_early_reaction": ["the eyes widening", "the breath slowing", "the shoulders settling"],
+        "forbidden_early": ["the eyes widening", "the breath slowing", "the shoulders settling"],
+        "end_state": "cheek on the spoil, one eye open on the black, lips closed, breath gone quiet"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0001 (real_frame, T0)", "note": "Alice alone." }
+}

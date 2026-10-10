@@ -1,0 +1,31 @@
+{
+  "task_id": "p4-cr-epplan",
+  "agent": "01-story/episode-planner",
+  "attempt": 1,
+  "status": "done",
+  "finished": "2026-09-23",
+  "change_request": "BIB-0027",
+  "changed_files": [
+    {
+      "file": "story/episode_plan.json",
+      "change_note": "Updated only the SUP-002/SUP-010 constraint and note lines. dream_frame.waking_open.plan now describes the waking rabbit as the only live animal: real, mute and unclothed. ep01 constraint: the dream White Rabbit is a photoreal CGI rabbit with its text props only. ep02: the Mouse, Dodo and Caucus-race animals are photoreal CGI. ep03: Bill and the crowd animals are CGI; the puppy is proposed as a giant-scale CGI puppy, pending_H2. ep04: the Caterpillar, Pigeon and Cheshire Cat are CGI, and the Cat keeps its Dinah echo and dissolve vanish; a Frog/Fish-Footman design and a pig-baby end state are proposed, pending_H2. ep07: the Gryphon and Mock Turtle are photoreal CGI fantastical creatures. Added _meta.amendments[BIB-0027]. The episode split, events, treatments, hook points and budgets are unchanged."
+    }
+  ],
+  "unchanged_by_design": [
+    "ep06 constraint 'SUP-004 card court as costumed flat-suited performers' (the card figures stay human performers)",
+    "ev0036 'No animal is ever shown struck (SUP-011)' (still binding)",
+    "The episode plan has no environment or Mucha wording, so no Art Nouveau update is needed"
+  ],
+  "pending_H2": [
+    "Frog-/Fish-Footman anatomy (proposal: photoreal CGI frog/fish heads and hands on bodies in 1862 livery)",
+    "Non-speaking animals: puppy (proposal: giant-scale CGI puppy), pig-baby end state (proposal: photoreal CGI piglet); the croquet hedgehogs and flamingoes are left to the creature and H2 decision (the plan keeps only SUP-011)"
+  ],
+  "machine_check": {
+    "command": "python3 code/verify_episode_plan.py --project alices",
+    "exit_code": 0,
+    "result": "ALL PASS",
+    "log": "runs/p4-cr-epplan/verify_episode_plan.log"
+  },
+  "defects_opened": [],
+  "skills": "none selected for this station"
+}

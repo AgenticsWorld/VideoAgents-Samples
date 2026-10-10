@@ -1,0 +1,145 @@
+{
+ "task_id": "p2-merge-recheck",
+ "agent": "00-orchestration/memory-bible",
+ "attempt": 1,
+ "status": "completed",
+ "finished": "2026-09-22",
+ "summary": "Bible v1 re-verified after the H1 pre-ruling (5.1A 5.2A 5.3B 5.4B 5.5A 5.6A) and the four fix tasks. All three acceptance checks PASS; DEF-p2-bible-001..006 closed; not locked (H1 g2 signature follows).",
+ "inputs": [
+  "runs/h1-ruling/ruling.json",
+  "runs/p2-fix-geography/result.json",
+  "runs/p2-fix-political/result.json",
+  "runs/p2-fix-culture/result.json",
+  "runs/p2-fix-dictionary/result.json",
+  "bible/*.json",
+  "qa/defects/DEF-p2-bible-001..006.json"
+ ],
+ "acceptance": {
+  "cross_refs_valid_all_namespaces": {
+   "result": "PASS",
+   "tokens_checked_by_namespace": {
+    "ch": 799,
+    "para": 156,
+    "ev": 190,
+    "slug": 450,
+    "num": 611,
+    "sg": 14
+   },
+   "failures": [],
+   "deprecated_ids": [
+    "LOC-cellar-passage",
+    "LOC-manor-grounds",
+    "LOC-tree-hatch",
+    "LOC-village"
+   ],
+   "structural_refs_to_deprecated": [],
+   "forward_refs": "25 CHAR-* ids pass via the _index.json forward_refs_pending ledger (CHAR-tortoise added this run); characters/index.json is still empty. 03-characters must register them in Phase 3, after which they are hard refs."
+  },
+  "dictionary_hit_100pct": {
+   "result": "PASS",
+   "surfaces_hit": 84,
+   "source_terms_unresolved": [],
+   "designed_terms_not_in_dictionary": {}
+  },
+  "no_unknown_placeholder": {
+   "result": "PASS",
+   "required_fields_checked": 91,
+   "failures": []
+  },
+  "quote_verification": {
+   "quotes_checked": 560,
+   "not_verbatim": 0
+  },
+  "negative_test": "Temp copy with 10 injected faults: bad ev/ch/para/LOC/FAC/TERM/SUP/OFF/CHAR refs, a structural seat pointing to deprecated LOC-village, 'TBD' in a geography terrain field, and Teddington/Christ Church in a canon field. All caught (3/3 checks FAIL as expected)."
+ },
+ "checker_changes": {
+  "file": "code/p2-merge_check.py",
+  "lexicon": "Surface-to-TERM mapping copied from runs/p2-fix-dictionary/result.json: 15 previously-None surfaces mapped, plus 13 new designed surfaces (TERM-0124..0151). Christ Church, Liddell, Isaac Watts, Lewis Carroll and Teddington stay None, so they still FAIL if they appear in a canon field. The lexicon was not loosened.",
+  "deprecated_handling": "Deprecated entries are exempt from production-required fields (they are not production-consumable; WRITE_RULES P-009). NEW stricter rule: any structural field pointing at a deprecated id is a cross-ref FAIL. Net effect: the dictionary agent's reported placeholder FAIL on 3 deprecated LOCs is resolved by rule, not by filling retired entries with content.",
+  "before_after": "pre-recheck: cross_refs FAIL (CHAR-tortoise not ledgered), placeholder FAIL (6 fields on 3 deprecated LOCs), dictionary FAIL (17 surfaces unmapped), quotes 2 not verbatim; post: PASS / PASS / PASS, quotes 560/560"
+ },
+ "mechanical_alignments": [
+  "BIB-0012 world.json: 10 faction_register fac_ref re-pointed (7 new FAC-*; pack-of-cards -> FAC-house-of-hearts sub-unit); OQ-001 resolved; OQ-002 ages confirmed; XA verdicts",
+  "BIB-0013 cultivation/timeline: SUP-001..014 approved (5.1A) bookkeeping; XA-magic-03/04 resolved; TL-004/UTQ-003 notes",
+  "BIB-0014 geography: 2 regressed paraphrased quotes restored to verbatim (ch007-p105)",
+  "BIB-0015 geography: rationale clause mentioning Teddington moved verbatim from visual_identifiers to reason (prompt-feeding field hygiene; no fact changed)",
+  "BIB-0016 religion REL-001: 'riverside village' (deprecated LOC-village) re-pointed to LOC-church-spire",
+  "BIB-0017 _index.json: CHAR-tortoise ledgered (TERM-0047); rulings recorded; version v1; h1_status pre_ruling_applied_pending_lock",
+  "BIB-0018 checker LEXICON + deprecated rule; code/p2-merge_apply.py disabled (superseded)",
+  "BIB-0019..0022 retroactive changelog records of the four fix tasks' writes (they wrote without BIB entries; WRITE_RULES P-011)"
+ ],
+ "defects": [
+  {
+   "id": "DEF-p2-bible-001",
+   "status": "closed",
+   "ruling": "5.2 A",
+   "verified": "dream layer + grows_from on all Wonderland LOCs; pool = flooded hall; hall isolated; 4 retired LOCs have no structural referrers"
+  },
+  {
+   "id": "DEF-p2-bible-002",
+   "status": "closed",
+   "ruling": "5.2 A",
+   "verified": "shore/ledge grow from LOC-seaside-town; no tidal Thames"
+  },
+  {
+   "id": "DEF-p2-bible-003",
+   "status": "closed",
+   "ruling": "5.2 A / 5.6 A",
+   "verified": "family house, farm, farmyard, backwater, spire registered; REL-001 re-pointed"
+  },
+  {
+   "id": "DEF-p2-bible-004",
+   "status": "closed",
+   "ruling": "5.5 A",
+   "verified": "7 new FAC-*; all 10 world entries linked; CHAR-tortoise ledgered"
+  },
+  {
+   "id": "DEF-p2-bible-005",
+   "status": "closed",
+   "ruling": "5.6 A",
+   "verified": "TERM-0124..0151; Kingdom of Hearts alias of TERM-0139; dictionary_hit PASS"
+  },
+  {
+   "id": "DEF-p2-bible-006",
+   "status": "closed",
+   "ruling": "5.3 B / 5.4 B",
+   "verified": "CUL-ASM-01 light doubling; CUL-007 softened staging, source quote kept verbatim"
+  }
+ ],
+ "sup_reconciliation": "All 28 cross_domain_assumptions entries (world 8, geography 2 [geo-xda-06/07 supersede 01..05], religion 2, culture 2, politics 5, economy 2, cultivation 7) plus dictionary _meta carry a reconciliation verdict: 0 CONFLICT remaining; RESOLVED: XA-04, XA-05, XA-08, XA-magic-03, XA-magic-04, CUL-ASM-01; the rest CONSISTENT/ALIGNED/SATISFIED. timeline's run-record assumptions are resolved via TL-004/UTQ-003.",
+ "creative_changes_returned_as_defects": "none needed; every edit this run was mechanical (re-pointing, bookkeeping, verbatim citation, verbatim field relocation)",
+ "fails_remaining": [],
+ "residual_non_blocking": [
+  "25 CHAR-* ids await registration by 03-characters/character-manager in Phase 3 (ledger in bible/_index.json)"
+ ],
+ "not_done_by_design": [
+  "H1 lock not applied (awaiting user g2 signature)",
+  "QA co-sign skipped (QA levels 0); evaluation skipped (quality judge 0)"
+ ],
+ "outputs": [
+  "bible/world.json",
+  "bible/timeline.json",
+  "bible/geography.json",
+  "bible/religion.json",
+  "bible/culture.json",
+  "bible/politics.json",
+  "bible/economy.json",
+  "bible/cultivation.json",
+  "bible/dictionary.json",
+  "bible/_index.json",
+  "bible/changelog.md",
+  "bible/WRITE_RULES.md",
+  "bible/h1_summary.md",
+  "qa/defects/DEF-p2-bible-001.json",
+  "qa/defects/DEF-p2-bible-002.json",
+  "qa/defects/DEF-p2-bible-003.json",
+  "qa/defects/DEF-p2-bible-004.json",
+  "qa/defects/DEF-p2-bible-005.json",
+  "qa/defects/DEF-p2-bible-006.json",
+  "code/p2-merge_check.py",
+  "code/p2-merge-recheck_apply.py",
+  "code/p2-merge_apply.py (disabled)"
+ ],
+ "skills": "none enabled for this station",
+ "notes": "No subprocesses left running. Pre-recheck snapshot kept only in /tmp."
+}

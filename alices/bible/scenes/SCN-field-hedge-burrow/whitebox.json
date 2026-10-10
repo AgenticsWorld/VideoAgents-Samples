@@ -1,0 +1,43 @@
+{
+  "schema_version": "whitebox_scene.v1",
+  "scene_id": "SCN-field-hedge-burrow",
+  "task_id": "p4-scene-model-sb1",
+  "dimensions_m": [53.0, 12.0, 29.8125],
+  "inferred": true,
+  "scale_basis": "The image width is set to 53.0 m (layout.json map_extent_m). Z = 53 x 9/16 = 29.8125 m; layout.json says 30.0, but it is corrected here to the image aspect (0.6%). Cross-check: the hedge is 1.8 m tall on a 0.4 m bank (Bible), and the gate gap is drawn 5.3 m. Y = 12 m, covering the oak.",
+  "orientation_note": "North at top (the open field). The hedge runs east-west across the lower part; farmland beyond it at the bottom edge.",
+  "objects": [
+    {"id": "hedge_bank_w", "shape": "box", "size_m": [15.9, 0.4, 4.382], "xy": [0.15, 0.7575], "collision_role": "wall", "color": "#8a7456"},
+    {"id": "hedge_w", "shape": "box", "size_m": [15.9, 1.4, 4.382], "xy": [0.15, 0.7575], "elevation_m": 1.1, "collision_role": "wall", "color": "#4f6b3a"},
+    {"id": "hedge_bank_e", "shape": "box", "size_m": [31.8, 0.4, 4.382], "xy": [0.7, 0.7575], "collision_role": "wall", "color": "#8a7456"},
+    {"id": "hedge_e", "shape": "box", "size_m": [31.8, 1.4, 4.382], "xy": [0.7, 0.7575], "elevation_m": 1.1, "collision_role": "wall", "color": "#4f6b3a"},
+    {"id": "gate_leaf", "shape": "box", "size_m": [5.3, 1.2, 0.1], "xy": [0.35, 0.7644], "color": "#9b8a6c"},
+    {"id": "gate_post_hanging", "shape": "cylinder", "size_m": [0.25, 1.4, 0.25], "xy": [0.3, 0.7644], "color": "#6b5a45"},
+    {"id": "gate_post_clapping", "shape": "cylinder", "size_m": [0.25, 1.4, 0.25], "xy": [0.4, 0.7644], "color": "#6b5a45"},
+    {"id": "oak_trunk", "shape": "cylinder", "size_m": [1.0, 7.0, 1.0], "xy": [0.8, 0.71], "color": "#6b5a45"},
+    {"id": "oak_canopy", "shape": "sphere", "size_m": [7.7, 9.0, 8.7], "xy": [0.7975, 0.7156], "elevation_m": 11.5, "color": "#4f7a36"},
+    {"id": "burrow_mouth", "shape": "cylinder", "size_m": [0.35, 0.02, 0.35], "xy": [0.5, 0.59], "color": "#1c1510", "collision": "none (hole mouth marker)"},
+    {"id": "spoil_fan", "shape": "cylinder", "size_m": [2.2, 0.06, 1.6], "xy": [0.52, 0.62], "color": "#cbb58c", "collision": "none (loose earth)"},
+    {"id": "ditch_strip", "shape": "box", "size_m": [53.0, 0.02, 1.163], "xy": [0.5, 0.6645], "color": "#5b6b3a", "collision": "none (marker for a 0.3 m-deep dry ditch)"}
+  ],
+  "walkable": {
+    "field": "y 0-0.645: open long-grass field, fully walkable. The chase runs from run_start [0.55, 0.05] to the burrow (about 16 m in frame; the field continues north off the map).",
+    "burrow": "The mouth is 0.35 m across. Alice (135 cm) can only crouch or kneel and peer in, never enter (SUP-001).",
+    "ditch": "y 0.645-0.684: shallow dry ditch along the field side of the hedge; can be stepped across.",
+    "hedge": "y 0.684-0.831: solid. The only gap is the gate at x 0.3-0.4, closed by gate_leaf, so there is no through-route to the farmland."
+  },
+  "inferred_items": [
+    "The hedge depth is as drawn (4.4 m, a laid hedge is usually 1.2-2 m); height 1.4 m on a 0.4 m bank = 1.8 m total (Bible 1.6-1.8 m).",
+    "The gate leaf spans the drawn 5.3 m gap (a period five-bar gate is about 3 m), 1.2 m high.",
+    "Oak: trunk 1.0 m x 7 m, crown 7-16 m.",
+    "Ditch depth 0.3 m (not modelled; marker only); spoil fan 2.2 x 1.6 m."
+  ],
+  "landmarks_covered": ["run_start", "mid_field", "spoil_fan", "ditch", "burrow", "hedge_west", "gate", "oak", "farmland"],
+  "workflow_notes": [
+    "Image vs Bible (DEF-p4-envconcept-603-a): the burrow is drawn in open grass about 2.8 m north of the hedge. The Bible puts it at the hedge foot under the roots. The model follows layout.json (burrow at [0.5, 0.59]). inferred:true, for the user at H2 (see DEF-p4-scenemodel-960). If the burrow is moved to the hedge foot, only burrow_mouth/spoil_fan move; the hedge geometry stays.",
+    "The Bible dates the gate at 12 m from the burrow; the drawn gate centre is 8 m away (x 0.35 vs 0.5). The model follows the drawing.",
+    "The hazel binders that read as wire (603-h) are hedge dressing, not geometry.",
+    "Anti-clip handover: the White Rabbit (CGI) and Alice run south across the open field. Alice stops at the burrow mouth in a crouch or kneel. No path may pass through the hedge or the closed gate."
+  ],
+  "downstream": "No storyboard yet. Hand over to whitebox-staging. No reference video was rendered."
+}

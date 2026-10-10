@@ -1,0 +1,287 @@
+{
+  "schema_version": "whitebox_plan.v1",
+  "group_id": "grp037",
+  "scene_id": "SCN-pool-of-tears",
+  "basis": "Alice runs glass_table_legs -> floating_fan -> reeds. She starts swimming at t=0.6 and swims flat out toward the brightest water at the south end at camera.json's 0.35 m/s, so in the 7 s of sh099 she covers about 2.9 m and passes the drifting fan at t=5.6; at t=7.9 she stops, at t=8.2 she comes upright and treads water, still well short of the reeds by the shore steps - the blocking_map end is the direction, not a position she reaches inside the group. Swimming she is prone with her foot anchor at y 0.0, which puts her body axis on the 0.10 m surface; coming upright she drops to the -0.42 m treading anchor and her chin returns to the waterline. sh101 is the water-level wake insert from her eye-line, looking back screen-left into the dark the ripples come from; nothing is framed.",
+  "actors": [
+    {
+      "id": "CHAR-alice",
+      "kind": "person",
+      "size_m": [
+        0.1708,
+        0.61,
+        0.1342
+      ],
+      "keyframes": [
+        {
+          "t": 0.0,
+          "position": [
+            0.6,
+            -0.42,
+            -0.3
+          ],
+          "pose": "stand",
+          "yaw": 1.5708,
+          "head_pitch": 0.0
+        },
+        {
+          "t": 0.6,
+          "position": [
+            0.6,
+            0.0,
+            -0.3
+          ],
+          "pose": "prone",
+          "yaw": -1.5708
+        },
+        {
+          "t": 1.6,
+          "position": [
+            0.95,
+            0.0,
+            -0.38
+          ],
+          "pose": "prone",
+          "yaw": -1.5708
+        },
+        {
+          "t": 4.8,
+          "position": [
+            2.25,
+            0.0,
+            -0.67
+          ],
+          "pose": "prone",
+          "yaw": -1.5708
+        },
+        {
+          "t": 5.6,
+          "position": [
+            2.6,
+            0.0,
+            -0.75
+          ],
+          "pose": "prone",
+          "yaw": -1.5708
+        },
+        {
+          "t": 7.0,
+          "position": [
+            3.5,
+            0.0,
+            -0.95
+          ],
+          "pose": "prone",
+          "yaw": -1.5708
+        },
+        {
+          "t": 7.4,
+          "position": [
+            3.62,
+            0.0,
+            -0.98
+          ],
+          "pose": "prone",
+          "yaw": -1.5708
+        },
+        {
+          "t": 7.9,
+          "position": [
+            3.7,
+            0.0,
+            -1.0
+          ],
+          "pose": "prone",
+          "yaw": -1.5708
+        },
+        {
+          "t": 8.2,
+          "position": [
+            3.7,
+            -0.42,
+            -1.0
+          ],
+          "pose": "stand",
+          "yaw": -2.5
+        },
+        {
+          "t": 9.0,
+          "position": [
+            3.7,
+            -0.42,
+            -1.0
+          ],
+          "pose": "stand",
+          "yaw": -2.5
+        },
+        {
+          "t": 11.0,
+          "position": [
+            3.7,
+            -0.42,
+            -1.0
+          ],
+          "pose": "stand",
+          "yaw": -2.5
+        }
+      ]
+    }
+  ],
+  "props": [
+    {
+      "id": "PROP-floating-fan",
+      "shape": "box",
+      "size_m": [
+        0.1,
+        0.01,
+        0.06
+      ],
+      "position": [
+        -0.35,
+        0.1,
+        -1.0
+      ],
+      "yaw": 0.35,
+      "keyframes": [
+        {
+          "t": 0.0,
+          "position": [
+            -0.35,
+            0.1,
+            -1.0
+          ],
+          "yaw": 0.35
+        },
+        {
+          "t": 11.0,
+          "position": [
+            0.35,
+            0.1,
+            -0.78
+          ],
+          "yaw": 0.35
+        }
+      ]
+    }
+  ],
+  "cameras": [
+    {
+      "shot_id": "sh099",
+      "start": 0,
+      "duration_s": 7.0,
+      "movement": "track_follow",
+      "keyframes": [
+        {
+          "t": 0.0,
+          "position": [
+            0.6,
+            0.13,
+            0.575
+          ],
+          "target": [
+            0.84,
+            0.13,
+            -0.3
+          ],
+          "fov": 46.3972
+        },
+        {
+          "t": 7.0,
+          "position": [
+            3.5,
+            0.13,
+            -0.075
+          ],
+          "target": [
+            3.74,
+            0.13,
+            -0.95
+          ],
+          "fov": 46.3972
+        }
+      ]
+    },
+    {
+      "shot_id": "sh100",
+      "start": 7.0,
+      "duration_s": 2.0,
+      "movement": "static",
+      "keyframes": [
+        {
+          "t": 0.0,
+          "position": [
+            4.544,
+            0.13,
+            -0.367
+          ],
+          "target": [
+            3.619,
+            0.15,
+            -0.892
+          ],
+          "fov": 33.3985
+        },
+        {
+          "t": 2.0,
+          "position": [
+            4.544,
+            0.13,
+            -0.367
+          ],
+          "target": [
+            3.619,
+            0.15,
+            -0.892
+          ],
+          "fov": 33.3985
+        }
+      ]
+    },
+    {
+      "shot_id": "sh101",
+      "start": 9.0,
+      "duration_s": 2.0,
+      "movement": "static",
+      "keyframes": [
+        {
+          "t": 0.0,
+          "position": [
+            3.7,
+            0.14,
+            -1.0
+          ],
+          "target": [
+            -3.0,
+            0.12,
+            0.6
+          ],
+          "fov": 33.3985
+        },
+        {
+          "t": 2.0,
+          "position": [
+            3.7,
+            0.14,
+            -1.0
+          ],
+          "target": [
+            -3.0,
+            0.12,
+            0.6
+          ],
+          "fov": 33.3985
+        }
+      ]
+    }
+  ],
+  "continuity": {
+    "actors": "inherit",
+    "camera": "cut"
+  },
+  "warnings": [
+    "sh099's rig travels abeam 0.875 m off her swim line at her own 0.35 m/s, screen-right opening toward +X - the brightest water she is heading for - with her held at a constant screen-left position; translation only, no pan.",
+    "She ends 2.6 m short of the reeds landmark at the blocking_map end. At 0.35 m/s the 7 s of sh099 only buys 2.9 m, and both the map offset ('in open water, still well short of the reeds') and blocking sh100 ('still well short of the reeds by the shore steps') say she is meant to fall short.",
+    "Swimmer depth as WBI-ep01-grp035-001; the three glass table legs are 0.7 m behind her start and she never passes within 0.6 m of them.",
+    "S10 lenses are set at 0.13 m, just above the 0.10 m modelled water slab, rather than camera.json's 0.05 m: at 0.05 m the lens is inside the water volume and the waterline does not read at all."
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "shot_id": "sh051",
+  "scene_id": "SCN-long-hall",
+  "size": "medium",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "centre",
+    "anchor_xy": [0.48, 0.62],
+    "size_in_frame": "ten inches high at the door, about 0.44 of frame height — for the first time in the episode she and a door are the same order of size"
+  },
+  "second_subject": {
+    "id": "little_door",
+    "grid": "centre",
+    "anchor_xy": [0.52, 0.56],
+    "note": "the fifteen-inch door, about 0.52 of frame height: a head taller than she is. A proper door, at last, and shut."
+  },
+  "headroom": "about 0.14 of frame height between her crown and the door head, and then the low curtain hanging above the whole thing like a stage cloth to the top edge. The curtain is what keeps the frame from feeling like a victory.",
+  "horizon_eyeline": "Lens at 0.20 m straight across the hall: flagstone line at 0.90 of frame height. Her eyeline is at 0.56, level with the door's lock — she is looking straight at a keyhole for the first time instead of up at one.",
+  "layers": {
+    "fg": "the flagstones and the base of the arch at her own scale",
+    "mg": "Alice hauling at the little door with both hands",
+    "bg": "the low curtain hanging above, its folds enormous at this scale, and the honey limestone wall"
+  },
+  "gaze": {
+    "direction": "frame_right",
+    "lead_room": "none",
+    "note": "she looks at the door, which is immediately in front of her; there is no lead room and nothing beyond it in frame, because at this size there is nothing beyond it at all."
+  },
+  "balance": "Almost balanced for the first time in the hall — girl and door nearly the same size, side by side, filling the lower two thirds. The curtain overhead is the only thing left that is out of scale, and it is enormous.",
+  "leading_lines": "The curtain folds hang as long verticals from the top edge down to the arch, and the arch curve answers them. Everything in the frame points down at the door, and the door does not open.",
+  "eye_first": "Her two hands on the door, then up the curtain folds, which is where the shot puts the scale back.",
+  "safe_area_ok": true,
+  "constraint_binding": "At ten inches the fifteen-inch door is her own scale — the first door in the hall she could actually walk through, and it will not open. The composition therefore holds her and the whole door leaf in one frame at comparable size, with no crop that would hide the match, and gives the failure no close-up."
+}

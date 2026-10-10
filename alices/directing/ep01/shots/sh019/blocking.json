@@ -1,0 +1,38 @@
+{
+  "shot_id": "sh019",
+  "group_id": "grp008",
+  "scene_no": "S03",
+  "scene_id": "SCN-falling-dream",
+  "duration_s": 6.0,
+  "is_dialogue": false,
+  "group_position": "middle shot of grp008 — Alice drifting down the entry_tunnel -> shaft_centre line, level with the pantry shelf.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "stand",
+      "start_pos": "upright in mid-air level with the pantry shelf, within reach of it",
+      "space_fragment_en": "standing upright in mid-air level with the pantry shelf with the marmalade jar, centred high in frame, facing the shelf on screen-left",
+      "facing": "turned to the cupboard-and-jar wall on screen-left; eyes down into the jar in her hands",
+      "path": [],
+      "beats": [
+        { "t": 0.8, "action": "takes down the jar labelled ORANGE MARMALADE", "sync": "the shelf slides past" },
+        { "t": 2.6, "action": "looks inside — empty", "sync": "the disappointment" },
+        { "t": 4.4, "action": "holds it out at arm's length toward screen-right, ready to drop it", "sync": "sets up sh020" }
+      ],
+      "performance_beat": {
+        "objective": "find something worth having on the way down",
+        "goal": "find something worth having on the way down",
+        "emotional_arc": "from small acquisitive interest to plain domestic disappointment — no wonder at any point",
+        "arc_from": "acquisitive interest",
+        "arc_to": "domestic disappointment",
+        "trigger": { "beat": "she looks into the jar and finds it empty", "t": 2.6 },
+        "no_early_reaction": ["the mouth turning down", "the arm straightening", "a sigh"],
+        "forbidden_early": ["the mouth turning down", "the arm straightening", "a sigh"],
+        "end_state": "jar held out at arm's length, mouth closed and slightly pulled down, eyes on the empty glass"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0002 (dream) — the empty marmalade jar", "note": "Alice alone." }
+}

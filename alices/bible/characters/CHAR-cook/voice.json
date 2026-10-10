@@ -1,0 +1,28 @@
+{
+  "character_id": "CHAR-cook",
+  "name": "the Duchess's cook",
+  "tier": "B",
+  "card_type": "individual",
+  "gender": "female",
+  "age_sense": "middle-aged woman (appearance base_age_range 40-48)",
+  "timbre": "gruff, flat, heavy working woman's voice, blunt and unmusical, a peppery rasp",
+  "pitch": "low alto, monotone, clipped downward endings",
+  "pitch_range_hz": [150, 220],
+  "speed_wpm": [110, 130],
+  "speed_cpm": [418, 494],
+  "accent": "rural Oxfordshire working-class English, broad burr, dropped h's",
+  "reference_style": "A volcano that seldom speaks: fewest possible words, no title, no please ('Shan't', 'Pepper, mostly'). Joins the kitchen lullaby chorus with a rough bark. Must be clearly flatter and more monotone than the Duchess's growl.",
+  "emotion_range": {
+    "surly": { "speed_delta": "0%", "pitch_delta": "0semi", "note": "flat refusal" },
+    "chorus_bark": { "speed_delta": "+10%", "pitch_delta": "+1semi", "volume": "loud", "note": "ch006-p37 'CHORUS (In which the cook and the baby joined)'" }
+  },
+  "age_variants": [],
+  "source_chapter": "ch011",
+  "sources": ["ch006", "ch011", "ch006-p37", "ch011-p64", "ch011-d0059", "ch011-d0062"],
+  "voice_evidence": [
+    { "para": "ch011-p64", "quote": "The next witness was the Duchess’s cook. She carried the pepper-box in her hand" }
+  ],
+  "inferred": true,
+  "inferred_fields": ["timbre", "pitch", "pitch_range_hz", "speed_wpm", "speed_cpm", "accent"],
+  "reason": "No voice description in the source; designed from dialogue_style ('blunt, surly kitchen servant; monosyllabic') and 1862 servant class near Oxford (h1_summary §1)."
+}

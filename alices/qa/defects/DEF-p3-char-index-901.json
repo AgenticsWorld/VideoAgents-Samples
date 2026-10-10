@@ -1,0 +1,30 @@
+{
+  "id": "DEF-p3-char-index-901",
+  "opened_by": "03-characters/character-manager",
+  "opened_on": "2026-09-22",
+  "task_id": "p3-char-defects",
+  "assigned_to": "03-characters/appearance",
+  "domain": "characters",
+  "status": "closed",
+  "severity": "minor",
+  "summary": "Two index.json changes need matching appearance cards: a new character id (CHAR-duchess-baby) with no card yet, and CHAR-frog-footman's livery colour/badge changing households.",
+  "findings": [
+    {
+      "id": "DEF-p3-char-index-901-a",
+      "character": "CHAR-duchess-baby",
+      "issue": "New id registered in bible/characters/index.json per DEF-p3-relationship-001-c (the Duchess's baby, on screen ch006-p19..p49, per SUP-006). detail_dir bible/characters/CHAR-duchess-baby/ is created but has no appearance.json yet.",
+      "requested_action": "Write a full appearance card: human infant performer, no costume/prosthetic pig transformation (per SUP-006 realistic_rendering — the pig perception is built through coverage/sound/framing drift, not a practical swap). Set a concrete gender (male/female, not 'unspecified') per the gender anchor rule; index.json currently carries 'unspecified' pending this card and will mirror whatever value you set, per the pattern used for the other characters in DEF-p3-appearance-001/-201/-303."
+    },
+    {
+      "id": "DEF-p3-char-index-901-b",
+      "character": "CHAR-frog-footman",
+      "issue": "index.json CHAR-frog-footman.factions moved from FAC-house-of-hearts to FAC-duchess-household (DEF-p3-appearance-303-a / DEF-p3-relationship-001-a ruling: he serves the Duchess's household, not the crown).",
+      "requested_action": "Update only the coat colour and badge in your appearance card to the Duchess household's plainer, faded livery (bible/politics.json FAC-duchess-household.emblem_visual), matching the interim handling your own card already anticipated in DEF-p3-appearance-303. No other fields need to change."
+    }
+  ],
+  "impact": "06-art/costume and image generation read appearance.json for the actual visual spec; without this update they would design against a stale crown-livery concept for the footman and have no card at all for the baby.",
+  "opened_via": "Fix-out of DEF-p3-appearance-001/-201/-301/-302/-303 and DEF-p3-relationship-001, routed through 00-orchestration/memory-bible task p3-bible-defects.",
+  "closed_on": "2026-09-22",
+  "closed_by": "03-characters/appearance (task p3-fix-901)",
+  "fix_note": "a) Wrote bible/characters/CHAR-duchess-baby/appearance.json: a human infant performer (8-12 months) with no costume, prosthetic or CGI pig change. Per SUP-006 the pig reading comes from framing drift and sound in one continuous shot. The upturned nose and small eyes come from the source (ch006-p46). gender = male (inferred from the lullaby's 'my boy'/'little boy', ch006-p36/p40); index.json should mirror it in place of 'unspecified'. The ch006-p49 piglet question stays with 04-creatures. b) CHAR-frog-footman/appearance.json: changed only the livery coat colour and badge (default_outfit_tone, its source note with a new badge sub-field, and the matching words in prompt_summary_en): crimson crown livery became a faded snuff-brown coat with plain tarnished brass buttons and no crest, following FAC-duchess-household.emblem_visual. No other fields changed."
+}

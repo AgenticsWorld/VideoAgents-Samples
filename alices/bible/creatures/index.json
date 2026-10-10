@@ -1,0 +1,108 @@
+{
+  "_meta": {
+    "file": "bible/creatures/index.json",
+    "status": "authored_v1",
+    "owner": "04-creatures/creature",
+    "write_via": "04-creatures/creature (direct, per WRITE_RULES.md section 9 ownership table); memory-bible collects this file into the Bible view",
+    "task_id": "p3-creature",
+    "generated": "2026-09-22",
+    "scope": "Registry of (a) non-human creatures/animals that appear on screen as real, silent (non-speaking) animals, and (b) — added by BIB-0027 (user ruling 2026-09-22) — CGI rendering-spec entries for two fantastical creatures with no human-performer alternative left standing (the Gryphon, the Mock Turtle) plus one pending_H2 proposal (the Duchess's baby's pig end-state). WRITE_RULES.md P-007 still governs OWNERSHIP, not render technique: every talking animal/card figure registers as CHAR-* in bible/characters/, not here; entries added under (b) use 'owner_refs' to point back at their CHAR-* owner and never duplicate personality/dialogue/voice. Full appearance/behaviour/rendering cards are in bible/creatures/creature.json. See creature.json _meta.zero_entries_considered_and_excluded for candidates deliberately left out (Dinah, farm animals, etc.) and creature.json _meta.amendments for the BIB-0027 change record.",
+    "id_prefixes": { "CRE-": "creature (numeric, CRE-001)" },
+    "entry_schema": {
+      "creatures[]": { "id": "CRE-001", "name": "", "species": "", "term_ref": "<TERM-*>", "realistic": true, "owner_refs": ["<CHAR-*>"], "scenes": ["<SCN-*>"], "first_appearance": { "chapter": "chNNN", "quote": "" }, "detail_dir": "bible/creatures/<CRE-id>/", "inferred": false, "reason": null }
+    }
+  },
+  "creatures": [
+    {
+      "id": "CRE-001",
+      "name": "The White Rabbit (waking-world, real animal)",
+      "species": "domestic-or-wild white rabbit (Oryctolagus cuniculus)",
+      "term_ref": "TERM-0026",
+      "realistic": true,
+      "owner_refs": [],
+      "scenes": [],
+      "first_appearance": { "chapter": "ch001", "quote": "suddenly a White Rabbit with pink eyes ran close by her" },
+      "detail_dir": "bible/creatures/CRE-001/",
+      "inferred": true,
+      "reason": "Same underlying source figure as CHAR-white-rabbit's dictionary term (TERM-0026), but this entry is scoped strictly to the mute, unclothed real rabbit seen only in the waking-world bracket of ch001, before the dream begins; see creature.json CRE-001.distinct_from."
+    },
+    {
+      "id": "CRE-002",
+      "name": "The Puppy",
+      "species": "large-breed domestic puppy",
+      "term_ref": "TERM-0050",
+      "realistic": true,
+      "owner_refs": [],
+      "scenes": [],
+      "first_appearance": { "chapter": "ch004", "quote": "An enormous puppy was looking down at her with large round eyes" },
+      "detail_dir": "bible/creatures/CRE-002/",
+      "inferred": true,
+      "reason": "Never speaks or reasons in the source (unlike the surrounding dream-figures), so it stays a real animal rather than a CHAR-* human performer; breed/coat/size are designed for image-generation precision, see creature.json CRE-002."
+    },
+    {
+      "id": "CRE-003",
+      "name": "The Flamingo",
+      "species": "flamingo",
+      "term_ref": "TERM-0051",
+      "realistic": true,
+      "owner_refs": [],
+      "scenes": [],
+      "first_appearance": { "chapter": "ch008", "quote": "the mallets live flamingoes" },
+      "detail_dir": "bible/creatures/CRE-003/",
+      "inferred": true,
+      "reason": "Explicitly 'live' and mute in the source (a croquet mallet, not a speaking dream-figure); per SUP-011 never shown being struck. See creature.json CRE-003."
+    },
+    {
+      "id": "CRE-004",
+      "name": "The Hedgehog",
+      "species": "European hedgehog (Erinaceus europaeus)",
+      "term_ref": "TERM-0052",
+      "realistic": true,
+      "owner_refs": [],
+      "scenes": [],
+      "first_appearance": { "chapter": "ch008", "quote": "the balls were live hedgehogs" },
+      "detail_dir": "bible/creatures/CRE-004/",
+      "inferred": true,
+      "reason": "Explicitly 'live' and mute in the source (a croquet ball, not a speaking dream-figure); per SUP-011 never shown being struck. See creature.json CRE-004."
+    },
+    {
+      "id": "CRE-005",
+      "name": "The Gryphon",
+      "species": "classical griffin (eagle head/wings/forelegs, lion hindquarters/tail)",
+      "term_ref": "TERM-0045",
+      "realistic": false,
+      "owner_refs": ["CHAR-gryphon"],
+      "scenes": ["SCN-gryphon-sunning-spot", "SCN-mock-turtle-ledge", "SCN-courtroom"],
+      "first_appearance": { "chapter": "ch009", "quote": "They very soon came upon a Gryphon, lying fast asleep in the sun." },
+      "detail_dir": "bible/creatures/CRE-005/",
+      "inferred": true,
+      "reason": "New (BIB-0027, user ruling 2026-09-22): a speaking, fantastical dream-figure with no real-world referent, now rendered as a photoreal CGI creature (SUP-010 amended). Registered here only as a CGI rendering-spec entry, owner_refs back to CHAR-gryphon which retains full character ownership. See creature.json CRE-005."
+    },
+    {
+      "id": "CRE-006",
+      "name": "The Mock Turtle",
+      "species": "turtle-bodied creature with a calf's head, hind hooves and tail",
+      "term_ref": "TERM-0046",
+      "realistic": false,
+      "owner_refs": ["CHAR-mock-turtle"],
+      "scenes": ["SCN-mock-turtle-ledge"],
+      "first_appearance": { "chapter": "ch009", "quote": "“It’s the thing Mock Turtle Soup is made from,” said the Queen." },
+      "detail_dir": "bible/creatures/CRE-006/",
+      "inferred": true,
+      "reason": "New (BIB-0027, user ruling 2026-09-22): a speaking, fantastical dream-figure with no real-world referent, now rendered as a photoreal CGI creature (SUP-010 amended). Registered here only as a CGI rendering-spec entry, owner_refs back to CHAR-mock-turtle which retains full character ownership. See creature.json CRE-006."
+    },
+    {
+      "id": "CRE-007",
+      "name": "The Pig (the Duchess's baby, pig end-state) — pending_H2",
+      "species": "domestic pig (transformation end-state)",
+      "term_ref": "TERM-0039",
+      "realistic": true,
+      "owner_refs": ["CHAR-duchess-baby"],
+      "scenes": ["SCN-cheshire-cat-path"],
+      "first_appearance": { "chapter": "ch006", "quote": "So she set the little creature down, and felt quite relieved to see it trot away quietly into the wood." },
+      "detail_dir": "bible/creatures/CRE-007/",
+      "inferred": true,
+      "reason": "New (BIB-0027, user ruling 2026-09-22), pending_H2: a proposed CGI rendering spec for SUP-006's pig end-state, one of the non-speaking dream animals BIB-0027 flags for H2 confirmation. Supersedes the 'no creature entry' closure of qa/defects/DEF-p3-char-index-905, which was decided under the pre-BIB-0027 SUP-002 reading. owner_refs back to CHAR-duchess-baby, which retains character ownership. See creature.json CRE-007."
+    }
+  ]
+}

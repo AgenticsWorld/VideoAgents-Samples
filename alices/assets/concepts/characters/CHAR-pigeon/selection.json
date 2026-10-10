@@ -1,0 +1,4 @@
+{"character_id":"CHAR-pigeon","sheet":"sheet.png","gender":"female","gender_word_in_prompt":true,"rendering":"photoreal CGI wood pigeon (SUP-002)",
+"appearance_field_hits":{"blue_grey_ruffled_plumage":true,"twig_in_wing_coverts":true,"pinkish_mauve_breast":true,"white_neck_patch_iridescence":true,"white_wing_bars":true,"pale_yellow_eye":true,"yellow_tipped_bill":true,"puffed_chest":true,"unclothed":true},
+"self_check":{"layout":"pass","appearance":"pass","style":"pass (photoreal)"},"defects":[],
+"not_drawn_scoped":["twig nest with two white eggs (set dressing in SCN-pigeon-treetop)"],"rerolls":[]}

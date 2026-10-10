@@ -1,0 +1,50 @@
+{
+  "task_id": "p4-cr-architecture",
+  "agent": "05-scenes/architecture",
+  "attempt": 1,
+  "status": "done",
+  "date": "2026-09-23",
+  "change_request": "BIB-0027",
+  "common_changes": "Each card gets an 'amendment' field and a 'mucha_design_language' element (inferred, with culture_ref world.json#WR-010 and cultivation.json#XA-magic-08). Human-performer wording for the animal characters is replaced with photoreal CGI animals or creatures (SUP-002/SUP-010 as amended). Negatives that banned CGI or Art Nouveau are removed. A 'no flat poster illustration / matte-painting finish' negative is added. prompt_ready_en is rewritten to carry the Mucha language plus 'photographed live-action set'. IDs, inherits, dimensions, counts, landmark positions and opening positions are unchanged. Costume, hand props and furniture stay 1862 per WR-009/WR-010.",
+  "changed_files": {
+    "bible/scenes/SCN-caterpillar-clearing/architecture.json": "Mucha language carried by flora, with a sky halo behind the mushroom cap. The Caterpillar is now a CGI caterpillar; the 2.2 m cap is kept. Negatives rewritten. The scene stays an EXT clearing (reference-interior question in DEF-001-c).",
+    "bible/scenes/SCN-cheshire-cat-path/architecture.json": "The Gothic nave-pier simile is replaced with an Art Nouveau arcade of trunks, halo gaps in the canopy, whiplash tendrils and vine-carved fingerpost arms. The Cat is now a photoreal CGI cat; the dissolve plates need a CGI stand-in. Added a pending_H2 CGI piglet exit under Tree A. Negatives updated.",
+    "bible/scenes/SCN-courtroom/architecture.json": "Gothic Revival is replaced with a Mucha courtroom: whiplash-carved oak, a gilded curved roof, mosaic floor, round-headed stained-glass windows, a halo roundel behind the throne and a verdigris whiplash gallery. The jurors and crowd animals are now CGI, with perch-blocks in the jury-box. The 2/3 build rationale is moved to SUP-004. Negatives and prompt rewritten.",
+    "bible/scenes/SCN-croquet-ground/architecture.json": "Lily-stem balustrade, a halo roundel behind the royal chairs, whiplash gates and a gilded awning frame. The Gothic bench is replaced with a whiplash bench. Flamingoes and hedgehogs are CGI (pending_H2), with SUP-011 kept. Negatives updated.",
+    "bible/scenes/SCN-duchess-house-front/architecture.json": "The villa shape is kept and redrawn in sooted Art Nouveau: a horseshoe door arch with lily carving, a gable halo roundel and a mosaic frieze. The Footmen are CGI frog- and fish-bodied figures, with the pending_H2 proposal of about 1.6 m upright servant height. Negatives updated.",
+    "bible/scenes/SCN-duchess-kitchen/architecture.json": "Art Nouveau appears only in the fixed fabric (horseshoe hearth arch, carved bressumer, sooted whiplash tile band, round copper hood, scroll bell-board). The Cheshire Cat is now CGI. inherits_note is synced with the parent. Negatives updated.",
+    "bible/scenes/SCN-falling-dream/architecture.json": "The shaft lining gets pastel-and-gold mosaic bands, whiplash iron brackets and stained-glass roundels. The furniture stays 1862. The 'no Art Nouveau' negative is narrowed to furniture and props.",
+    "bible/scenes/SCN-gryphon-sunning-spot/architecture.json": "Lily-relief gate-pier with a halo disc behind the stone griffin, and a mosaic band on the ha-ha coping. The Gryphon is now a photoreal CGI griffin (the grass strip holds its wingspan). Negatives updated.",
+    "bible/scenes/SCN-little-door-passage/architecture.json": "Follows the parent: horseshoe arch, iron Art Nouveau frame, a tiny halo roundel, whiplash ribs and a mosaic border. Sizes unchanged.",
+    "bible/scenes/SCN-long-hall/architecture.json": "The Gothic Revival translation is replaced; the refs/style/alice.jpeg ironwork is followed literally: verdigris whiplash cast-iron ribs, lily-stem columns, horseshoe-arched doors, 25 blind stained-glass roundels, mosaic dado and border, and faded gilded fresco panels. The 32 x 5.5 m plan, 2.1/2.8 m vault, 25 doors, lamps, table, curtain and all builds are unchanged. It stays windowless with no staircases.",
+    "bible/scenes/SCN-mad-tea-party/architecture.json": "Whiplash-framed door and casements, a gable halo window, a painted vine band under the eaves, flowing thatch and a halo tree canopy. The tea-things stay 1862. The March Hare and Dormouse are now CGI; the Hatter stays human. Negatives updated.",
+    "bible/scenes/SCN-mock-turtle-ledge/architecture.json": "Art Nouveau-inflected dream shore: flowing rock strata, wave-scroll groyne finials, pastel bathing machines with gilt roundels, and mosaic friezes on the lodging houses. The Gryphon and Mock Turtle are now CGI creatures. Negatives updated.",
+    "bible/scenes/SCN-pigeon-treetop/architecture.json": "Mucha language in the canopy line and a sky halo behind the nest; still no man-made object. The Pigeon is now a CGI wood-pigeon; the 60 cm nest is kept. Negatives updated.",
+    "bible/scenes/SCN-pool-bank/architecture.json": "Flag irises and water-lilies in flowing drifts, whiplash reeds, and the race-circle as a halo. The Caucus party is now CGI animals. Negatives updated.",
+    "bible/scenes/SCN-pool-of-tears/architecture.json": "Follows the parent at water level (mosaic dado and iron door-frame bases). The swimming animals are now CGI; the scale rule is re-stated for Alice only. Negatives and prompt updated.",
+    "bible/scenes/SCN-rabbit-house-exterior/architecture.json": "Gothic trim is replaced with horseshoe window heads, lily hood moulds, a gable halo roundel, a mosaic frieze and a whiplash door-plate border. The White Rabbit and Bill are now CGI; Pat stays human. The 1862 negative is narrowed to fittings and props.",
+    "bible/scenes/SCN-rabbit-house-upstairs-room/architecture.json": "Mucha wallpaper, vine cornice and ceiling rose, whiplash grate and carved mantel. Furniture and props stay 1862.",
+    "bible/scenes/SCN-rose-tree-yard/architecture.json": "The Gothic fountain is replaced with a lily-stem bronze fountain. Added a rose frieze on the wall, a halo roundel with mosaic sunburst over the little door, whiplash hoops, a gilded arbour arch and gravel mosaic roundels. The 'no Art Nouveau' negative is removed.",
+    "bible/scenes/SCN-shaft-landing-passage/architecture.json": "Art Nouveau grows along the passage (whiplash iron vault ribs, then a mosaic dado handing over to the hall). The White Rabbit is now CGI; the 2.1 m height is kept.",
+    "bible/scenes/SCN-wood-thistle-glade/architecture.json": "Flora-borne Mucha language to match the caterpillar clearing. The puppy is proposed as photoreal CGI (pending_H2), with the real-puppy forced-perspective build kept as fallback. The 'no CGI puppy' negative is removed.",
+    "bible/scenes/SCN-wood-tree-door/architecture.json": "The pointed Gothic door is replaced with a horseshoe-arched door matching the hall doors: lily-carved limestone frame, halo roundel, whiplash hinges, ivy and honeysuckle. Negatives updated.",
+    "qa/defects/DEF-p4-cr-architecture-001.json": "New ticket: (a) the courtroom lighting still describes clear lancets; (b) how the long-hall blind roundels are lit; (c) H2 question on whether the Caterpillar scene should be an interior like the reference; (d) pending_H2 animal treatments and CGI creature sizes the sets depend on."
+  },
+  "pending_H2": [
+    "Frog- and Fish-Footman anatomy (proposal: upright, about 1.6 m, fitting the existing 2.1 m door)",
+    "Non-speaking animals: CGI puppy (real-puppy fallback kept), CGI flamingoes and hedgehogs, CGI piglet end-state",
+    "Caterpillar clearing as an EXT clearing vs the reference's Art Nouveau interior (DEF-p4-cr-architecture-001-c)"
+  ],
+  "checks": {
+    "json_valid": "PASS (21/21)",
+    "required_fields_form_materials_negative": "PASS (21/21)",
+    "scene_ids_and_inherits_unchanged": "PASS",
+    "every_new_element_sourced_or_inferred_with_culture_ref": "PASS",
+    "no_unknown_placeholder": "PASS",
+    "ascii_filenames": "PASS",
+    "stale_wording_sweep": "PASS: no 'human performer' remains for any animal character, no 'no CGI' and no 'Art Nouveau excluded'. The remaining 'Gothic' hits are waking-source references (riverbank villa, the 1841 Oxford courts) or negatives such as 'no Gothic pointed arch'."
+  },
+  "not_changed": "No layout.json exists yet. environment.json and lighting.json belong to other stations and were not touched. The waking scene SCN-riverbank and SCN-field-hedge-burrow are not in this task.",
+  "skills": "none enabled for this station",
+  "evaluation": "skipped (quality judge off)"
+}

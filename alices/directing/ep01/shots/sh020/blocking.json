@@ -1,0 +1,20 @@
+{
+  "shot_id": "sh020",
+  "group_id": "grp008",
+  "scene_no": "S03",
+  "scene_id": "SCN-falling-dream",
+  "duration_s": 2.0,
+  "is_dialogue": false,
+  "group_position": "middle shot of grp008 — her POV straight down the shaft. Nobody is registered in frame, so no space fragment is written; she holds her place on the entry_tunnel -> shaft_centre line behind the lens.",
+  "characters": [],
+  "creatures": [],
+  "offscreen_presence": [
+    { "id": "CHAR-alice", "where": "upright in mid-air just above the open centre of the shaft, directly behind the lens, the jar still held out", "note": "Present in the space, not in frame. Only her hand and the jar cross the top of the picture." }
+  ],
+  "presence_check": {
+    "timeline_ok": true,
+    "violations": [],
+    "story_event": "ev0002 (dream)",
+    "note": "POV insert. No floor, nothing below, nobody else in the shaft."
+  }
+}

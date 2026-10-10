@@ -1,0 +1,29 @@
+{
+  "shot_id": "sh057",
+  "scene_id": "SCN-long-hall",
+  "size": "detail",
+  "subject": {
+    "id": "PROP-eat-me-cake",
+    "in_frame_characters": ["CHAR-alice"],
+    "grid": "centre",
+    "anchor_xy": [0.50, 0.56],
+    "size_in_frame": "the cake fills the middle band of frame, about 0.34 of frame height; at her size it is a tabletop, and it is composed as one"
+  },
+  "headroom": "the raised glass lid takes the top 0.20 of frame as a bright horizontal slab; below it about 0.10 of clear air, then the cake. The lid pressing down is what keeps the insert inside the box.",
+  "horizon_eyeline": "Lens at 0.15 m, square-on to the cake so the currant lettering reads flat and level; the cake's surface is a plane running edge to edge across the frame. Her eyeline comes down into the box from above the top edge.",
+  "layers": {
+    "fg": "her hands and forearms at the left and right edges, heaving the lid up — the frame is bracketed by her own arms",
+    "mg": "the cake and the words EAT ME marked in currants, square-on and sharp across their whole width",
+    "bg": "the inside of the glass box, dark and falling away soft"
+  },
+  "gaze": {
+    "direction": "none",
+    "lead_room": "none",
+    "note": "no face in frame; her presence is carried by the two forearms."
+  },
+  "balance": "Frontal, centred and symmetrically bracketed by her arms — a small altar composition, which is funny because it is a cake.",
+  "leading_lines": "The two forearms converge inward from left and right; the lid is a level horizontal above. All three point at the currants.",
+  "eye_first": "The currants, which is the one legible read they get.",
+  "safe_area_ok": true,
+  "constraint_binding": "EAT ME gets exactly one clean legible read here: square-on, sharp across its whole width, held wholly inside title-safe (x 0.36-0.64, y 0.48-0.64). The currants are the only lettering in the shot — no other mark, stamp or inscription appears anywhere in frame. At her size the cake is a tabletop, so it is framed as a horizontal surface she is looking down onto, not as a hand prop."
+}

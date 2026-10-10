@@ -1,0 +1,34 @@
+{
+  "shot_id": "sh044",
+  "scene_id": "SCN-long-hall",
+  "size": "medium",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "centre",
+    "anchor_xy": [0.52, 0.44],
+    "size_in_frame": "three-quarter figure walking toward camera, about 0.55 of frame height, stopping at about 0.68"
+  },
+  "second_subject": {
+    "id": "PROP-drink-me-bottle",
+    "grid": "bottom_left",
+    "anchor_xy": [0.24, 0.76],
+    "note": "standing on the bare tabletop in the near foreground, small, sharp and unannounced — about 0.16 of frame height."
+  },
+  "headroom": "about 0.16 of frame height of hall above her, the vault reading as a dark lid; the lamp row hangs just above the top edge at this lens height and is felt rather than seen.",
+  "horizon_eyeline": "Eye-level lens at 1.3 m from beside the glass table: the tabletop plane crosses the near foreground at 0.72 of frame height and the mosaic dado runs level behind her at 0.60. Her eyeline is at 0.40, level, dropping to the bottle at the end of the shot.",
+  "layers": {
+    "fg": "the bare glass tabletop crossing the lower left, with the little bottle standing on it",
+    "mg": "Alice walking back toward camera out of the direction she came from",
+    "bg": "the low curtain on the west wall behind her, and the locked doors either side of it"
+  },
+  "gaze": {
+    "direction": "to_camera",
+    "lead_room": "none",
+    "note": "she comes down the axis toward the lens and her look drops onto the bottle at the end of the walk — from the middle of the frame to its lower left corner. The composition gives her no lead room: she has come back to the same table with nothing."
+  },
+  "balance": "Figure centred and upright, object low left and tiny. Weighted correctly for a person until she stops, at which point the small bright thing in the corner takes the frame away from her.",
+  "leading_lines": "The tabletop edge runs from the left edge into depth toward her, and the dado behind repeats the line; the two make a shallow wedge that puts the bottle at its open end.",
+  "eye_first": "Alice, because she is moving — then down to the bottle, which has been in frame the whole time and was not noticed. That order is the shot.",
+  "safe_area_ok": true,
+  "constraint_binding": "She walks toward camera out of the direction she has just come from, and she is still 1.35 m: the lens is held at child height and the tabletop crosses the frame at her waist, establishing the 0.715 m datum that every later shot in this hall measures against."
+}

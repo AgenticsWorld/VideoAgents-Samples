@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh036",
+  "group_id": "grp014",
+  "scene_no": "S05",
+  "duration_s": 5.0,
+  "size": "wide",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 28,
+  "camera_height_m": 1.3,
+  "angle": "level",
+  "rack_focus": "none",
+  "start_frame": "Down the hall from the corner entrance: Alice small in the middle distance walking toward camera under the lamp row, looking about her, the hanging lamps running away overhead as the top layer of the deep stage.",
+  "end_frame": "The same frame with her much nearer and stopped at the little three-legged glass table, which has been catching the lamplight in the frame since the first second — it announced itself before she reached it.",
+  "constraint_honoured": "'The table announces itself before she reaches it. Deep staging, lamp row running away overhead' — a held wide is what lets the object sit in frame waiting for her.",
+  "movement_note": "Static also holds the lens at 1.30 m child height so her normal size is still being stated right up to the drink.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

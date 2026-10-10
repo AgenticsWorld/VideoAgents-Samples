@@ -1,0 +1,4 @@
+image → volcengine model=doubao-seedream-5-0-pro-260628
+video → volcengine model=doubao-seedance-2-0-260128
+music → elevenlabs model=music_v2
+tts   → volcengine model=seed-audio-1.0

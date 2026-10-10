@@ -1,0 +1,71 @@
+{
+  "id": "DEF-p6-continuity-ep01-002",
+  "opened_by": "07-directing/continuity-planning",
+  "opened_on": "2026-09-23",
+  "task_id": "p6-continuity-ep01",
+  "assigned_to": "07-directing/composition",
+  "cc": [
+    "07-directing/director",
+    "00-orchestration/orchestrator",
+    "08-video-gen/prompt"
+  ],
+  "domain": "scale_continuity_vs_prop_bible",
+  "status": "open_accepted_by_user",
+  "severity": "major",
+  "blocking": false,
+  "blocks_prompting_of": [
+    "grp019",
+    "grp026"
+  ],
+  "due_gate": "before p7 prompt for grp019 and grp026",
+  "summary": "Two scale statements in final composition files contradict bible/props.json and the ep01 size chain. Both frames are scale ANCHORS - the shots the audience uses to measure Alice - so a wrong ratio propagates to their neighbours. Recorded in directing/ep01/continuity_plan.json size_chain.defects_found.",
+  "findings": [
+    {
+      "id": "DEF-p6-continuity-ep01-002-a",
+      "shots": [
+        "sh049",
+        "sh050"
+      ],
+      "group": "grp019",
+      "scene": "S06 SCN-long-hall",
+      "issue": "composition/sh049 makes the empty DRINK ME bottle the same height as ten-inch Alice: 'standing on the flags immediately beside her, its stopper level with her crown and its base level with her feet - identical height, same depth, both sharp. This is the episode's free scale anchor.' composition/sh050 repeats 'still level with her crown'. bible/props.json PROP-drink-me-bottle gives canonical_size 'about 10 cm tall, 4 cm across'; ten inches is 25.4 cm. The bottle is about 40 percent of her height, not 100 percent - she is about two and a half bottles tall.",
+      "evidence": [
+        "bible/props.json PROP-drink-me-bottle.scale.canonical_size and relative_anchor ('a small medicine phial: stands a little taller than a child's hand is wide')",
+        "directing/ep01/shots/sh049/composition.json second_subject.note, directing/ep01/shots/sh050/composition.json second_subject.note",
+        "story/episodes/ep01/screenplay.md S06: 'Alice stands ten inches high on the limestone flags beside the mosaic border, the empty bottle at her feet.'",
+        "cross-check: the same bottle stands on the tabletop beside a 1.35 m Alice in sh044-sh048 and is composed at true scale there"
+      ],
+      "requested_fix": "Re-state the ratio, keep the anchor. The bottle should read at about 0.40 of her height - roughly stopper-level with her hip or waist, base at her feet, same depth, both sharp. That is a stronger anchor than 'identical height' because it can be read off the frame without being believed. The composition's intent ('the episode's free scale anchor') is preserved exactly.",
+      "not_self_resolved_because": "continuity-planning does not edit shot design files, and the prop size is H2-locked Bible, not mine to move."
+    },
+    {
+      "id": "DEF-p6-continuity-ep01-002-b",
+      "shots": [
+        "sh067"
+      ],
+      "group": "grp026",
+      "scene": "S07 SCN-long-hall",
+      "issue": "composition/sh067 states that the little door opening is 'now narrower than her eye is wide - the single most extreme scale comparison in the episode'. Alice at this point is about 2.74 m, i.e. about 2.03 times her normal 1.35 m, so her eye is roughly 5-6 cm across. The opening is 26 cm wide (SCN-little-door-passage layout.json scale_note: 'little door 38 x 26 cm'). The doorway is about five times wider than her eye, not narrower than it.",
+      "evidence": [
+        "directing/ep01/shots/sh067/composition.json second_subject.note and subject.size_in_frame",
+        "assets/concepts/scenes/SCN-little-door-passage/layout.json orientation.scale_note",
+        "directing/ep01/directing_plan.md S07: 'The one image - one eye filling a fifteen-inch doorway, lit green-gold from the garden' (the eye FILLS it in frame; the plan does not claim the eye is bigger than the door)",
+        "directing/ep01/shots/sh065/composition.json ('a person of 2.74 m') and the S07 gauge chain 0.715 m knee / 2.30 m lamps / 2.80 m rib"
+      ],
+      "requested_fix": "Keep the image, correct the claim: her eye FILLS the fifteen-inch opening in frame because the 50 mm lens is 0.35 m away and her head is against it, not because the eye is physically larger than the door. Something like 'her open eye spans most of the fifteen-inch opening in this frame' preserves the shot and the 2.74 m figure together.",
+      "not_self_resolved_because": "Same as finding a."
+    }
+  ],
+  "impact_if_not_fixed": "08-video-gen/prompt builds scale literally from composition's ratios. Taken as written, sh049/sh050 either draw the bottle two and a half times oversize - contradicting sh044-sh048, where the same bottle sits beside a 1.35 m girl - or draw Alice at four inches instead of ten, which then breaks sh051 (the 0.38 m door 'a head taller than she is') and sh052. sh067 taken literally makes Alice roughly ten times too big and discards the 2.74 m figure that sh062-sh065 spent three separate gauges establishing. With long-take off and anchor 'none' on every boundary, there is no tail-frame mechanism that would pull a wrong scale back to its neighbours.",
+  "alternative_ruling": "If the director intends both statements as deliberate hyperbole rather than as build figures, say so explicitly and this station will record the exaggeration in size_chain as licensed. Silence will be read by the prompt station as a literal specification.",
+  "user_decision": {
+    "decided_on": "2026-09-23",
+    "decided_by": "user",
+    "via": "dispatch.py --confirm --default 跳过 (auto-rerun budget is 0, so this was an escalation, not an auto-retry)",
+    "ruling": "跳过 / SKIP — do not dispatch the composition repair. The four shots ship as written.",
+    "disclosed_to_user": "The confirm text named all four shots, quoted the wrong values against bible/props.json, and stated the consequence: with long-take OFF and anchor none on every boundary there is no tail-frame mechanism to correct a mis-pointed eyeline or a wrong scale downstream, and the prompt station reads composition ratios literally.",
+    "effect": "Defect stays OPEN. It is NOT waived and NOT closed. It carries onto the H3A signature card so the user sees it again before the shot design is frozen for prompting.",
+    "reopen_path": "If the user changes their mind, a text-only repair order to 07-directing/composition for these shots is still cheap — no image or video cost has been incurred on them yet."
+  },
+  "orchestrator_note": "Routing was correct and the finding is sound; this is a user decision to accept the defect, not a QA pass. blocks_prompting_of is left as recorded so the prompt station sees the contested groups."
+}

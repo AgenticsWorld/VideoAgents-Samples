@@ -1,0 +1,1393 @@
+{
+  "_meta": {
+    "file": "bible/world.json",
+    "status": "locked_v1",
+    "owner": "02-worldbuilding/world",
+    "write_via": "00-orchestration/memory-bible (on_bible_access)",
+    "produced_by_task": "p2-world",
+    "produced_on": "2026-09-22",
+    "content_language": "en",
+    "scope": "World overview: era and scale, setting summary, world rules (social/physical constraints of the realistic adaptation), tone and themes, open questions. Faction details belong to politics.json (reference FAC-* only).",
+    "genre_note": "Premise (brief.md): 'Realistic fantasy film adapted from a fairy tale' (Lewis Carroll, Alice's Adventures in Wonderland); the fantasy is confined to Alice's dream and rendered photoreal, the waking frame is plain period realism (quote corrected at BIB-0027; the earlier wording 'realistic drama' misquoted brief.md). World rules describe real-world physical and social law; how the source's fantastical elements are reinterpreted is decided in Phase 2 and recorded in cultivation.json.",
+    "id_prefixes": {
+      "WR-": "world rule",
+      "OQ-": "open question"
+    },
+    "entry_schema": {
+      "setting": {
+        "era": "",
+        "place_summary": "",
+        "scale": "",
+        "source": {
+          "chapter": "chNNN",
+          "quote": ""
+        },
+        "inferred": false,
+        "reason": null
+      },
+      "world_rules[]": {
+        "id": "WR-001",
+        "statement": "",
+        "category": "physics|society|family|education|law|other",
+        "applies_to": [
+          "<FAC-*/LOC-*/CHAR-*>"
+        ],
+        "visual_implication": "",
+        "source": {
+          "chapter": "chNNN",
+          "quote": ""
+        },
+        "also_seen": [],
+        "inferred": false,
+        "reason": null
+      },
+      "tone": {
+        "genre": "",
+        "themes": [],
+        "source": {},
+        "inferred": false,
+        "reason": null
+      },
+      "open_questions[]": {
+        "id": "OQ-001",
+        "question": "",
+        "status": "open|resolved|story_withheld",
+        "resolution": null,
+        "source": {}
+      }
+    },
+    "p2_world_extensions": {
+      "note": "Sections added by p2-world beyond the p0 skeleton, required by the world agent's SOUL (realms / nations, faction presence-and-allegiance register, history overview) and by the work order (real-world frame, realistic counterpart of Wonderland, cross-domain assumptions). They carry no new registered ID prefix: realms and counterparts use plain slug 'key' fields (file-local, never cross-referenced); factions carry 'proposal_key' plus 'fac_ref' (the registered FAC-* in politics.json, or null while unregistered) after p2-merge re-keying. CHAR-* values are forward references (whitelisted) proposed for 03-characters.",
+      "sections": [
+        "frame",
+        "realms",
+        "faction_register",
+        "wonderland_real_counterparts",
+        "history_overview",
+        "cross_domain_assumptions"
+      ]
+    },
+    "id_policy": "No FAC-*/LOC-*/TL-*/SUP-* IDs are referenced as live cross-references in this draft, because politics/geography/timeline/cultivation are being written in parallel and are empty at write time; proposed IDs appear only in 'proposed_*' fields and in cross_domain_assumptions for memory-bible to reconcile at p2-merge.",
+    "version": "v1",
+    "merged_by": "p2-merge (00-orchestration/memory-bible)",
+    "merged_on": "2026-09-22",
+    "h1_status": "signed",
+    "rechecked_by": "p2-merge-recheck (00-orchestration/memory-bible)",
+    "rechecked_on": "2026-09-22",
+    "locked_at": "2026-09-22T17:59:52+08:00",
+    "locked_by": "H1 user signature (G2 PASS), recorded by 00-orchestration/memory-bible task p2-lock",
+    "lock_record": "runs/g2/gate.json",
+    "lock_changelog": "BIB-0023",
+    "controlled": "Writes only via memory-bible controlled change (WRITE_RULES.md section 5).",
+    "amendments": [
+      {
+        "change_id": "BIB-0027",
+        "date": "2026-09-22",
+        "task_id": "p4-cr-cgi-mucha-bible",
+        "authority": "User ruling in chat, 2026-09-22 (answer to qa/defects/DEF-p4-style-001): \"会说话的角色可以用CGI动物，因为影片应该是写实奇幻风格；另外环境加入穆夏绘画的风格\". Scope interpretation by workflow-orchestrator, to be re-surfaced at H2 sign-off.",
+        "entries_changed": ["_meta.genre_note", "wonderland_real_counterparts.rendering_note (new)", "wonderland_real_counterparts.items cp-rabbit-hole.dream_rendering (new)", "wonderland_real_counterparts.items cp-cat.dream_rendering (new)", "WR-001.visual_implication", "WR-002.statement", "WR-002.visual_implication", "WR-009.reason", "WR-010 (new)", "tone.genre", "tone.reason", "OQ-001.resolution", "XA-02.assumption", "XA-02.if_contradicted", "XA-02.reconciliation"]
+      }
+    ]
+  },
+  "setting": {
+    "era": "Mid-Victorian England, a single hot summer afternoon in 1862 (the 4th day of the month; production date July 4, 1862), running from early afternoon on the bank to sunset and tea-time.",
+    "place_summary": "A grassy bank under trees at the edge of a field in the Thames valley near Oxford, beside a slow river backwater with reeds, with a hedge-line, a working farmyard with sheep and cattle within earshot, and Alice's family house a short run away for tea. Alice, a well-off girl of about ten, dozes there beside her older sister, who is reading. Everything from the White Rabbit to the trial is Alice's dream during that nap; it ends when she wakes with her head in her sister's lap.",
+    "scale": "Two layers. (1) Waking frame: one riverside meadow, the adjoining farmyard, and the family home, with the wider England Alice knows from lessons and one seaside trip. (2) Dream layer, Wonderland: a small, closed, dream-sized world under the hedge (a hall of doors, a wood, a few houses, the Queen's garden and court, a shore), with one kingdom (Hearts) and a few households. No other nations, no travel between the layers except falling asleep and waking.",
+    "source": {
+      "chapter": "ch001",
+      "quote": "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do"
+    },
+    "also_seen": [
+      {
+        "chapter": "ch001",
+        "refs": [
+          "ch001-p02",
+          "ev0001"
+        ],
+        "quote": "the hot day made her feel very sleepy and stupid"
+      },
+      {
+        "chapter": "ch002",
+        "refs": [
+          "ch002-p16"
+        ],
+        "quote": "wherever you go to on the English coast you find a number of bathing machines in the sea"
+      },
+      {
+        "chapter": "ch007",
+        "refs": [
+          "ch007-p22"
+        ],
+        "quote": "The fourth."
+      },
+      {
+        "chapter": "ch012",
+        "refs": [
+          "ch012-p64",
+          "ev0053"
+        ],
+        "quote": "found herself lying on the bank, with her head in the lap of her sister"
+      },
+      {
+        "chapter": "ch012",
+        "refs": [
+          "ch012-p66",
+          "ev0053"
+        ],
+        "quote": "now run in to your tea; it’s getting late"
+      },
+      {
+        "chapter": "ch012",
+        "refs": [
+          "ch012-p70",
+          "ev0054"
+        ],
+        "quote": "the pool rippling to the waving of the reeds"
+      }
+    ],
+    "inferred": true,
+    "reason": "The source establishes England (English coast, ch002-p16), summer, a hot afternoon, a bank with trees, a field and a hedge, reeds and a pool, a nearby farmyard (ch012-p70), and a house close enough to run to for tea (ch012-p66). It gives no year, county, river, or age. Designed values: 1862 and Oxford/Thames follow the book's own history (it was first told on a Thames boating trip near Oxford on 4 July 1862, published 1865), which fits every period detail in the text: railway to the seaside, bathing machines, croquet, the schoolroom. The source says 'the fourth' at ch007-p22. 'Riverbank' is a design choice from the reeds and pool, as the work order asks. Age about ten is a world-level working value only; the final age is owned by 03-characters."
+  },
+  "frame": {
+    "period": {
+      "value": "Summer 1862, mid-Victorian England (production date: Friday 4 July 1862). The afternoon runs from about 2 pm to sunset, about 8 pm. Period cues: crinoline-era dress, railway travel to the seaside, the 1860s croquet craze, schoolroom education for girls, and a household run to fixed tea-time.",
+      "source": {
+        "chapter": "ch002",
+        "quote": "and behind them a railway station"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch006",
+          "refs": [
+            "ch006-p02"
+          ],
+          "quote": "An invitation from the Queen to play croquet."
+        },
+        {
+          "chapter": "ch012",
+          "refs": [
+            "ch012-p67"
+          ],
+          "quote": "watching the setting sun"
+        }
+      ],
+      "inferred": true,
+      "reason": "No year in the source. 1862 fits the railway seaside, the croquet craze (1860s), the book's July 1862 origin and its 1865 publication. Exact dating and hours belong to 02-worldbuilding/timeline; this is the world-level frame they should align to."
+    },
+    "place": {
+      "value": "Oxfordshire, Thames valley. A riverside meadow bank under shade trees, with a hawthorn hedge, a rabbit burrow beneath it, a field sloping to a reedy backwater pool, a farm with sheep and cattle beyond, and Alice's family house within a few minutes' run.",
+      "source": {
+        "chapter": "ch001",
+        "quote": "she ran across the field after it, and fortunately was just in time to see it pop down a large rabbit-hole under the hedge"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch012",
+          "refs": [
+            "ch012-p64"
+          ],
+          "quote": "some dead leaves that had fluttered down from the trees upon her face"
+        },
+        {
+          "chapter": "ch012",
+          "refs": [
+            "ch012-p70"
+          ],
+          "quote": "the confused clamour of the busy farm-yard"
+        }
+      ],
+      "inferred": true,
+      "reason": "The bank, field, hedge, trees, reeds, pool, farmyard, sheep, cattle and shepherd boy are in the source. The county, the river and the hedge species are designed. Place hierarchy, layout and LOC-* IDs belong to 02-worldbuilding/geography; this entry stays at region level."
+    },
+    "social_class": {
+      "value": "Comfortable upper-middle-class professional family, the household of a senior clergyman-scholar in a university town. Signs: schoolroom lessons with paid 'extras' (French, music), at least one housemaid, a pet cat fed at tea-time, an older sister free to read on a weekday afternoon, and Alice's pity for a poorer girl's 'poky little house'. Alice was raised to curtsey, recite, and defer to adults. The parents never appear in the source and stay off-screen.",
+      "source": {
+        "chapter": "ch002",
+        "quote": "I shall have to go and live in that poky little house, and have next to no toys to play with"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch001",
+          "refs": [
+            "ch001-p08"
+          ],
+          "quote": "Alice had learnt several things of this sort in her lessons in the schoolroom"
+        },
+        {
+          "chapter": "ch001",
+          "refs": [
+            "ch001-p09"
+          ],
+          "quote": "she tried to curtsey as she spoke"
+        },
+        {
+          "chapter": "ch001",
+          "refs": [
+            "ch001-p10"
+          ],
+          "quote": "I hope they’ll remember her saucer of milk at tea-time."
+        },
+        {
+          "chapter": "ch004",
+          "refs": [
+            "ch004-p03"
+          ],
+          "quote": "He took me for his housemaid"
+        },
+        {
+          "chapter": "ch009",
+          "refs": [
+            "ch009-p66"
+          ],
+          "quote": "we learned French and music."
+        },
+        {
+          "chapter": "ch002",
+          "refs": [
+            "ch002-p20"
+          ],
+          "quote": "the first sentence in her French lesson-book"
+        }
+      ],
+      "inferred": true,
+      "reason": "The class markers are all in the source: schoolroom, French and music, curtsey, tea-time routine, pity for Mabel's poorer home, and knowing what a housemaid is. The father's profession is designed from the book's own history, the Liddell household at Christ Church, Oxford, and is kept generic ('clergyman-scholar'). Individual family members and their names are owned by 03-characters."
+    },
+    "riverbank_setting": {
+      "value": "The bank is the story's only waking place: the girl gets bored and drowsy, a real white rabbit dashes past and dives under the hedge, and she falls asleep in the heat. At the end she wakes as leaves fall from the trees, while sheep-bells, a shepherd boy's voice, farmyard clamour, lowing cattle and reeds stirring on the pool carry on around the sister. Light runs from harsh early-afternoon sun to golden sunset.",
+      "source": {
+        "chapter": "ch012",
+        "quote": "the grass would be only rustling in the wind, and the pool rippling to the waving of the reeds"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch001",
+          "refs": [
+            "ch001-p02",
+            "ev0001"
+          ],
+          "quote": "whether the pleasure of making a daisy-chain would be worth the trouble of getting up and picking the daisies"
+        },
+        {
+          "chapter": "ch012",
+          "refs": [
+            "ch012-p67",
+            "ev0054"
+          ],
+          "quote": "leaning her head on her hand, watching the setting sun"
+        }
+      ],
+      "inferred": true,
+      "reason": "Everything except 'river' comes from the source. The river reading comes from the reeds and pool and from the work order's 'riverbank setting'. The real white rabbit follows the realistic reading of ev0001 assumed in cross_domain_assumptions (XA-01, XA-02)."
+    }
+  },
+  "realms": [
+    {
+      "key": "realm-england-waking",
+      "name": "England (waking world)",
+      "kind": "real country, frame layer",
+      "capital": "London",
+      "territory_note": "Victorian England as a well-off child knows it: her home and the bank in the Thames valley, the English seaside she visited once by railway, and the history and geography from her lesson-books.",
+      "ruler_title": "Queen Victoria, Sovereign of the United Kingdom (never named in the source and never on screen)",
+      "status": "existing (frames ch001 and ch012)",
+      "source": {
+        "chapter": "ch002",
+        "quote": "wherever you go to on the English coast"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch010",
+          "refs": [
+            "ch010-p26"
+          ],
+          "quote": "The further off from England the nearer is to France"
+        },
+        {
+          "chapter": "ch002",
+          "refs": [
+            "ch002-p10"
+          ],
+          "quote": "London is the capital of Paris"
+        }
+      ],
+      "inferred": true,
+      "reason": "England is stated in the source. The capital and ruler are real-world facts for 1862, filled in because production needs them. Alice's garbled 'London is the capital of Paris' is a lesson that goes wrong in the dream, not a fact about the world."
+    },
+    {
+      "key": "realm-wonderland",
+      "name": "Wonderland",
+      "kind": "dream layer (Alice's dream during her nap on the bank)",
+      "capital": "the Queen's garden and court of the King and Queen of Hearts",
+      "territory_note": "Reached by going down the rabbit-hole under the hedge. In order: the fall, the long hall with the little door, the pool of tears and its shore, the White Rabbit's house, a wood with a mushroom, the Duchess's house, the March Hare's house, the Queen's garden and croquet-ground, the sea-shore of the Gryphon and Mock Turtle, and the court of justice. Its places do not join up consistently (the hall vanishes, ch004), which suits a dream. Geography owns every place-level detail.",
+      "ruler_title": "the King and Queen of Hearts (over the garden and court); the rest is under no single ruler",
+      "status": "dissolved (ch012, ev0053): ends when Alice wakes on the bank; it lives on only as the sister's reverie and memory (ch012-p67 to p71, ev0054)",
+      "source": {
+        "chapter": "ch012",
+        "quote": "Oh, I’ve had such a curious dream!"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch012",
+          "refs": [
+            "ch012-p70",
+            "ev0054"
+          ],
+          "quote": "half believed herself in Wonderland, though she knew she had but to open them again, and all would change to dull reality"
+        },
+        {
+          "chapter": "ch012",
+          "refs": [
+            "ch012-p71"
+          ],
+          "quote": "perhaps even with the dream of Wonderland of long ago"
+        },
+        {
+          "chapter": "ch001",
+          "refs": [
+            "ch001-p04",
+            "ev0001"
+          ],
+          "quote": "In another moment down went Alice after it"
+        }
+      ],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "key": "realm-kingdom-of-hearts",
+      "name": "the Kingdom of Hearts",
+      "kind": "dream monarchy inside Wonderland (the one polity with a ruler)",
+      "capital": "the Queen's garden with its croquet-ground, which also holds the court of justice",
+      "territory_note": "The walled garden with fountains and flower-beds first seen through the little door (ch001), the croquet-ground and the court. Its subjects are 'the whole pack of cards', and it also rules the Duchess, the White Rabbit, the Gryphon and the executioner. Other Kings and Queens attend as guests, so the dream suggests other card monarchies but never shows them.",
+      "ruler_title": "the King and Queen of Hearts; the Queen holds real power",
+      "status": "fallen (ch012, ev0052 then ev0053): its authority breaks when 'Nobody moved' at the Queen's last 'Off with her head!' (ch012-p62) and Alice's 'You're nothing but a pack of cards!' (ch012-p63); it ends with the dream (ch012-p64)",
+      "source": {
+        "chapter": "ch011",
+        "quote": "The King and Queen of Hearts were seated on their throne when they arrived"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch008",
+          "refs": [
+            "ch008-p11",
+            "ev0033"
+          ],
+          "quote": "Next came the guests, mostly Kings and Queens"
+        },
+        {
+          "chapter": "ch012",
+          "refs": [
+            "ch012-p62",
+            "ev0052"
+          ],
+          "quote": "“Off with her head!” the Queen shouted at the top of her voice. Nobody moved."
+        },
+        {
+          "chapter": "ch012",
+          "refs": [
+            "ch012-p63"
+          ],
+          "quote": "You’re nothing but a pack of cards!"
+        }
+      ],
+      "inferred": false,
+      "reason": null,
+      "name_note": "The source never says 'Kingdom of Hearts'. The name is a working label for the realm the King and Queen of Hearts rule; the dictionary term is owned by 02-worldbuilding/dictionary."
+    },
+    {
+      "key": "realm-sea-of-the-mock-turtle",
+      "name": "the sea (of the Mock Turtle's schooldays and the Lobster Quadrille)",
+      "kind": "remembered and sung-about region inside the dream (told about, never visited)",
+      "capital": "none; the only institution is the school in the sea kept by 'an old Turtle'",
+      "territory_note": "Exists only in the Mock Turtle's and Gryphon's stories and songs. On screen the only place is the shore where they sit. The song gives it 'another shore' toward France.",
+      "ruler_title": "none stated; it falls under the Queen's reach, since she sends Alice there with the Gryphon",
+      "status": "told only (ch009 to ch010); ends with the dream",
+      "source": {
+        "chapter": "ch009",
+        "quote": "we went to school in the sea. The master was an old Turtle"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch010",
+          "refs": [
+            "ch010-p26",
+            "ev0044"
+          ],
+          "quote": "There is another shore, you know, upon the other side."
+        }
+      ],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "key": "realm-mentioned-foreign",
+      "name": "Foreign countries mentioned only (France; New Zealand or Australia; Paris and Rome)",
+      "kind": "real countries named in lessons, songs and jokes; never visited",
+      "capital": "Paris (France); New Zealand and Australia were British colonies in 1862 under the Crown in London",
+      "territory_note": "They appear only in Alice's schoolroom knowledge: the French lesson-book, the 'Antipathies' at the far side of the earth, and her jumbled capitals. They are not places in the drama.",
+      "ruler_title": "France: Emperor Napoleon III in 1862 (never mentioned; background fact only)",
+      "status": "existing, off-screen",
+      "source": {
+        "chapter": "ch001",
+        "quote": "Please, Ma’am, is this New Zealand or Australia?"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch002",
+          "refs": [
+            "ch002-p20"
+          ],
+          "quote": "I daresay it’s a French mouse, come over with William the Conqueror."
+        },
+        {
+          "chapter": "ch002",
+          "refs": [
+            "ch002-p10"
+          ],
+          "quote": "Paris is the capital of Rome"
+        }
+      ],
+      "inferred": true,
+      "reason": "The names come from the source. Rulers and colonial status are real 1862 facts, filled in to prevent anachronistic props or dialogue."
+    }
+  ],
+  "faction_register": [
+    {
+      "name": "Alice's family household",
+      "layer": "waking",
+      "type": "household",
+      "allegiance": "realm-england-waking",
+      "seat": "the family house near the bank, close enough to run to for tea",
+      "members_note": "Alice, her older sister, Dinah the cat, and at least one housemaid. The parents are implied and never appear.",
+      "status": "existing throughout",
+      "source": {
+        "chapter": "ch001",
+        "quote": "Dinah’ll miss me very much to-night, I should think!"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch012",
+          "refs": [
+            "ch012-p66",
+            "ev0053"
+          ],
+          "quote": "now run in to your tea; it’s getting late"
+        },
+        {
+          "chapter": "ch003",
+          "refs": [
+            "ch003-p46"
+          ],
+          "quote": "Dinah"
+        }
+      ],
+      "inferred": true,
+      "reason": "The household is implied by Dinah, tea-time and 'our house' (ch002-p24). The housemaid and the parents' off-screen status are designed (see frame.social_class). Internal structure is owned by 02-worldbuilding/political.",
+      "proposal_key": "alice-family-household",
+      "fac_ref": "FAC-alice-family",
+      "registration": "registered in bible/politics.json by p2-fix-political per H1 ruling 5.5 A; re-pointed at p2-merge-recheck (BIB-0012)"
+    },
+    {
+      "name": "the neighbouring farm",
+      "layer": "waking",
+      "type": "household",
+      "allegiance": "realm-england-waking",
+      "seat": "the farmyard within earshot of the bank",
+      "members_note": "A farmer who owns a prized terrier, and a shepherd boy who tends sheep with bells and cattle.",
+      "status": "existing throughout",
+      "source": {
+        "chapter": "ch012",
+        "quote": "the Queen’s shrill cries to the voice of the shepherd boy"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch002",
+          "refs": [
+            "ch002-p24"
+          ],
+          "quote": "it belongs to a farmer, you know, and he says it’s so useful, it’s worth a hundred pounds!"
+        }
+      ],
+      "inferred": true,
+      "reason": "The farmer, the farmyard and the shepherd boy are in the source. Merging them into one neighbouring farm next to the bank is a design choice that gives the frame one coherent place for its sounds.",
+      "proposal_key": "neighbouring-farm",
+      "fac_ref": "FAC-neighbouring-farm",
+      "registration": "registered in bible/politics.json by p2-fix-political per H1 ruling 5.5 A; re-pointed at p2-merge-recheck (BIB-0012)"
+    },
+    {
+      "name": "the Court of the King and Queen of Hearts",
+      "layer": "dream",
+      "type": "court",
+      "allegiance": "realm-kingdom-of-hearts",
+      "seat": "the Queen's garden, its croquet-ground and the court of justice",
+      "members_note": "The King and Queen of Hearts, the Knave of Hearts (accused), the White Rabbit (herald), the executioner, and the jury of twelve birds and beasts at the trial.",
+      "status": "fallen at ch012 (ev0052): its orders stop being obeyed and it dissolves when Alice wakes (ev0053)",
+      "source": {
+        "chapter": "ch011",
+        "quote": "near the King was the White Rabbit, with a trumpet in one hand, and a scroll of parchment in the other"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch011",
+          "refs": [
+            "ch011-p10"
+          ],
+          "quote": "Herald, read the accusation!"
+        },
+        {
+          "chapter": "ch008",
+          "refs": [
+            "ch008-p60"
+          ],
+          "quote": "I’ll fetch the executioner myself"
+        },
+        {
+          "chapter": "ch009",
+          "refs": [
+            "ch009-p46"
+          ],
+          "quote": "they never executes nobody, you know"
+        },
+        {
+          "chapter": "ch012",
+          "refs": [
+            "ch012-p14"
+          ],
+          "quote": "Rule Forty-two."
+        }
+      ],
+      "inferred": false,
+      "reason": null,
+      "proposal_key": "court-of-hearts",
+      "fac_ref": "FAC-house-of-hearts",
+      "registration": "registered in bible/politics.json (p2-merge re-key, BIB-0004)"
+    },
+    {
+      "name": "the pack of cards (the Queen's retinue)",
+      "layer": "dream",
+      "type": "group",
+      "allegiance": "realm-kingdom-of-hearts",
+      "seat": "the Queen's garden",
+      "members_note": "Four ranks marked by suit: ten soldiers with clubs, ten courtiers covered in diamonds, ten royal children with hearts, and the gardeners Two, Five and Seven. The gardeners' suit is not stated; by tradition they are spades.",
+      "status": "fallen at ch012 (ev0052 to ev0053): the pack flies up and turns into dead leaves on waking (ch012-p64)",
+      "source": {
+        "chapter": "ch008",
+        "quote": "First came ten soldiers carrying clubs"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch008",
+          "refs": [
+            "ch008-p16"
+          ],
+          "quote": "she could not tell whether they were gardeners, or soldiers, or courtiers, or three of her own children"
+        },
+        {
+          "chapter": "ch011",
+          "refs": [
+            "ch011-p01"
+          ],
+          "quote": "as well as the whole pack of cards"
+        }
+      ],
+      "inferred": false,
+      "reason": null,
+      "proposal_key": "pack-of-cards",
+      "fac_ref": "FAC-house-of-hearts",
+      "registration": "registered as a sub-unit of FAC-house-of-hearts (offices OFF-005, OFF-006, OFF-008), per H1 ruling 5.5 A and p2-fix-political; re-pointed at p2-merge-recheck (BIB-0012)"
+    },
+    {
+      "name": "the guest Kings and Queens",
+      "layer": "dream",
+      "type": "group",
+      "allegiance": "realm-kingdom-of-hearts",
+      "seat": "guests at the Queen's garden procession and croquet",
+      "members_note": "Unnamed guests, 'mostly Kings and Queens'. The adaptation treats them as the monarchs of the other suits.",
+      "status": "appear only at ch008; end with the dream",
+      "source": {
+        "chapter": "ch008",
+        "quote": "Next came the guests, mostly Kings and Queens"
+      },
+      "inferred": true,
+      "reason": "The guests are in the source. Reading them as the other suits' monarchs is a design choice (not stated).",
+      "proposal_key": "visiting-monarchs",
+      "fac_ref": "FAC-visiting-monarchs",
+      "registration": "registered in bible/politics.json by p2-fix-political per H1 ruling 5.5 A; re-pointed at p2-merge-recheck (BIB-0012)"
+    },
+    {
+      "name": "the Duchess's household",
+      "layer": "dream",
+      "type": "household",
+      "allegiance": "realm-kingdom-of-hearts",
+      "seat": "the Duchess's house in the wood (smoke-filled kitchen)",
+      "members_note": "The Duchess, her cook, the baby, the Cheshire Cat and the Frog-Footman. The Duchess is a guest of the Queen's croquet and falls under the Queen's sentence of execution.",
+      "status": "existing until ch008 and ch009, then broken up: the Duchess is imprisoned under sentence (ch008-p36, ch008-p70), and the cook appears later as a witness at the trial (ch011). Whether the sentence was lifted is never stated (see OQ-004).",
+      "source": {
+        "chapter": "ch006",
+        "quote": "For the Duchess. An invitation from the Queen to play croquet."
+      },
+      "also_seen": [
+        {
+          "chapter": "ch006",
+          "refs": [
+            "ch006-p19",
+            "ev0026"
+          ],
+          "quote": "the Duchess was sitting on a three-legged stool in the middle, nursing a baby"
+        },
+        {
+          "chapter": "ch008",
+          "refs": [
+            "ch008-p36",
+            "ev0035"
+          ],
+          "quote": "She’s under sentence of execution."
+        },
+        {
+          "chapter": "ch008",
+          "refs": [
+            "ch008-p40"
+          ],
+          "quote": "She boxed the Queen’s ears"
+        }
+      ],
+      "inferred": false,
+      "reason": null,
+      "proposal_key": "duchess-household",
+      "fac_ref": "FAC-duchess-household",
+      "registration": "registered in bible/politics.json (p2-merge re-key, BIB-0004)"
+    },
+    {
+      "name": "the White Rabbit's household",
+      "layer": "dream",
+      "type": "household",
+      "allegiance": "realm-kingdom-of-hearts",
+      "seat": "the neat little house with the brass plate 'W. RABBIT'",
+      "members_note": "The White Rabbit (master and court herald), Mary Ann (the housemaid Alice is mistaken for, never seen), Pat (the gardener, 'digging for apples') and Bill (the lizard sent down the chimney, later a juror).",
+      "status": "existing, ends with the dream",
+      "source": {
+        "chapter": "ch004",
+        "quote": "a bright brass plate with the name “W. RABBIT,” engraved upon it"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch004",
+          "refs": [
+            "ch004-p02",
+            "ev0014"
+          ],
+          "quote": "Why, Mary Ann, what _are_ you doing out here?"
+        },
+        {
+          "chapter": "ch004",
+          "refs": [
+            "ch004-p16"
+          ],
+          "quote": "Digging for apples, yer honour!"
+        }
+      ],
+      "inferred": false,
+      "reason": null,
+      "proposal_key": "white-rabbit-household",
+      "fac_ref": "FAC-white-rabbit-household",
+      "registration": "registered in bible/politics.json by p2-fix-political per H1 ruling 5.5 A; re-pointed at p2-merge-recheck (BIB-0012)"
+    },
+    {
+      "name": "the Mad Tea-Party (the Hatter, the March Hare and the Dormouse)",
+      "layer": "dream",
+      "type": "group",
+      "allegiance": "realm-kingdom-of-hearts",
+      "seat": "the table under the tree in front of the March Hare's house",
+      "members_note": "They are stuck at six o'clock since the Hatter's falling-out with Time at the Queen's concert. The Hatter later appears as the first witness at the trial.",
+      "status": "existing, ends with the dream",
+      "source": {
+        "chapter": "ch007",
+        "quote": "it was at the great concert given by the Queen of Hearts"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch007",
+          "refs": [
+            "ch007-p57",
+            "ev0030"
+          ],
+          "quote": "It’s always six o’clock now."
+        },
+        {
+          "chapter": "ch006",
+          "refs": [
+            "ch006-p60"
+          ],
+          "quote": "we’re all mad here"
+        }
+      ],
+      "inferred": true,
+      "reason": "The trio and their tie to the Queen (her concert, the Hatter as a trial witness) are in the source. Counting them as a group under the Kingdom of Hearts is a design choice: the source gives no formal allegiance, but the Queen's summons and the trial reach them.",
+      "proposal_key": "mad-tea-party",
+      "fac_ref": "FAC-mad-tea-party",
+      "registration": "registered in bible/politics.json by p2-fix-political per H1 ruling 5.5 A; re-pointed at p2-merge-recheck (BIB-0012)"
+    },
+    {
+      "name": "the company from the pool (the Caucus-race party)",
+      "layer": "dream",
+      "type": "group",
+      "allegiance": "realm-wonderland",
+      "seat": "the shore of the pool of tears",
+      "members_note": "The Mouse, the Dodo, the Duck, the Lory, the Eaglet and 'other curious creatures'. They have no ruler; the Dodo leads their mock race and Alice hands out the prizes.",
+      "status": "breaks up at ch003 (ev0013), when Alice's talk of Dinah drives them off",
+      "source": {
+        "chapter": "ch003",
+        "quote": "Silence all round, if you please!"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch003",
+          "refs": [
+            "ch003-p46",
+            "ev0013"
+          ],
+          "quote": "Dinah"
+        }
+      ],
+      "inferred": true,
+      "reason": "The group is in the source. It is listed only because it is the first organised company Alice meets. Its allegiance to 'Wonderland at large' rather than to Hearts is a design choice, since the source gives no tie to the Queen.",
+      "proposal_key": "caucus-race-company",
+      "fac_ref": "FAC-caucus-race-company",
+      "registration": "registered in bible/politics.json by p2-fix-political per H1 ruling 5.5 A; re-pointed at p2-merge-recheck (BIB-0012)"
+    },
+    {
+      "name": "the school in the sea",
+      "layer": "dream (told only)",
+      "type": "institution",
+      "allegiance": "realm-sea-of-the-mock-turtle",
+      "seat": "the sea bottom (never shown)",
+      "members_note": "The master, 'an old Turtle' they called Tortoise; the Drawling-master, an old conger-eel; and the young Mock Turtle and Gryphon as pupils. Its curriculum parodies Alice's own schoolroom.",
+      "status": "past, told only (ch009 to ch010)",
+      "source": {
+        "chapter": "ch009",
+        "quote": "we went to school in the sea. The master was an old Turtle—we used to call him Tortoise"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch009",
+          "refs": [
+            "ch009-p65"
+          ],
+          "quote": "With extras?"
+        }
+      ],
+      "inferred": false,
+      "reason": null,
+      "proposal_key": "school-in-the-sea",
+      "fac_ref": "FAC-school-in-the-sea",
+      "registration": "registered in bible/politics.json by p2-fix-political per H1 ruling 5.5 A; re-pointed at p2-merge-recheck (BIB-0012)"
+    }
+  ],
+  "wonderland_real_counterparts": {
+    "principle": "Wonderland is not a second geography. It is Alice's dream, and its people, places, rules and sounds reshape things from her real day and upbringing: the bank, the rabbit, the hedge, Dinah, the schoolroom, the housemaid, tea-time, croquet, lawcourts read about in books, and the farmyard noises around her sleeping body. The source makes this mapping itself for sounds (ch012-p70) and for the cards (ch012-p64). Everything else below is a design mapping to keep the dream world grounded.",
+    "rendering_note": "(Added BIB-0027, user ruling 2026-09-22.) The counterparts below ground what the dream is made of, not how it looks on screen. In the dream the talking animals that grow from these real things (the White Rabbit from the real rabbit, the Cheshire Cat from Dinah, and the rest) are photoreal CGI animals in live-action plates (cultivation.json SUP-002, SUP-010, XA-magic-02), and the dream's places that grow from real ones (the garden, the hall, the pool, the court) are dressed in the Art Nouveau painterly design language of WR-010. The waking side of every pair stays plain 1862 realism with ordinary, silent animals.",
+    "source": {
+      "chapter": "ch012",
+      "quote": "the rattling teacups would change to tinkling sheep-bells"
+    },
+    "items": [
+      {
+        "key": "cp-rabbit-hole",
+        "wonderland": "the White Rabbit and the rabbit-hole",
+        "real": "A real white rabbit (an escaped pet or a white-coated wild rabbit) running across the field into a burrow under the hedge, just as Alice drifts off.",
+        "source": {
+          "chapter": "ch001",
+          "quote": "just in time to see it pop down a large rabbit-hole under the hedge"
+        },
+        "inferred": true,
+        "dream_rendering": "(Added BIB-0027.) The dream's White Rabbit is a photoreal CGI white rabbit wearing the waistcoat and carrying the pocket watch, white kid gloves and fan the text gives it, recognisably the same kind of animal as the silent waking rabbit, so the link between the two layers reads on sight.",
+        "reason": "The rabbit, the field and the hedge are in the source; a real rabbit as the trigger for the dream is a design choice (XA-02)."
+      },
+      {
+        "key": "cp-cards-leaves",
+        "wonderland": "the pack of cards flying at Alice",
+        "real": "Dead leaves fluttering down from the trees onto her face as she sleeps.",
+        "source": {
+          "chapter": "ch012",
+          "quote": "gently brushing away some dead leaves that had fluttered down from the trees upon her face"
+        },
+        "inferred": false,
+        "reason": null
+      },
+      {
+        "key": "cp-sounds",
+        "wonderland": "rattling teacups, the Queen's shrill cries, the baby's sneeze, the Gryphon's shriek, the Mock Turtle's sobs",
+        "real": "Sheep-bells, the shepherd boy's voice, the clamour of the farmyard, and cattle lowing in the distance.",
+        "source": {
+          "chapter": "ch012",
+          "quote": "the Queen’s shrill cries to the voice of the shepherd boy"
+        },
+        "inferred": false,
+        "reason": null
+      },
+      {
+        "key": "cp-pool",
+        "wonderland": "the pool of tears",
+        "real": "The reedy pool of the river backwater beside the bank.",
+        "source": {
+          "chapter": "ch012",
+          "quote": "the pool rippling to the waving of the reeds"
+        },
+        "inferred": false,
+        "reason": null
+      },
+      {
+        "key": "cp-garden",
+        "wonderland": "the loveliest garden behind the little door, and the Queen's rose garden",
+        "real": "A grand enclosed private garden of the kind a Victorian child sees through a small door in a wall but may not enter without the grown-ups: a college or great-house garden with roses, fountains and a croquet lawn.",
+        "source": {
+          "chapter": "ch001",
+          "quote": "the loveliest garden you ever saw"
+        },
+        "inferred": true,
+        "reason": "A designed grounding for the dream's goal-object. It fits the Victorian upper-middle-class frame and the source's walled garden with fountains."
+      },
+      {
+        "key": "cp-court",
+        "wonderland": "the King and Queen of Hearts, the croquet, and the trial",
+        "real": "The adult world of authority as a well-bred child meets it: the fashionable croquet party, and a court of justice she has only read about in books, with judge, wig, jury and herald.",
+        "source": {
+          "chapter": "ch011",
+          "quote": "Alice had never been in a court of justice before, but she had read about them in books"
+        },
+        "inferred": true,
+        "reason": "The court comes from what Alice has read, as the source says. The link to the grown-up social world, and the card-game identity from ordinary card play, are design readings."
+      },
+      {
+        "key": "cp-lessons",
+        "wonderland": "the failed recitations, the Mouse's 'dry' history, and the Mock Turtle's curriculum",
+        "real": "Alice's schoolroom: history (William the Conqueror), geography, multiplication tables, recitation pieces, and French and music as extras.",
+        "source": {
+          "chapter": "ch003",
+          "quote": "William the Conqueror, whose cause was favoured by the pope"
+        },
+        "inferred": false,
+        "reason": null
+      },
+      {
+        "key": "cp-housemaid",
+        "wonderland": "Mary Ann, the White Rabbit's housemaid",
+        "real": "The family's own housemaid, a servant role Alice knows well enough to be mistaken for.",
+        "source": {
+          "chapter": "ch004",
+          "quote": "He took me for his housemaid"
+        },
+        "inferred": true,
+        "reason": "Mary Ann is in the source. Taking her from the family's own servants is a design choice."
+      },
+      {
+        "key": "cp-tea",
+        "wonderland": "the Mad Tea-Party stuck at six o'clock",
+        "real": "The household's fixed tea-time, which Alice is late for when she wakes.",
+        "source": {
+          "chapter": "ch012",
+          "quote": "now run in to your tea; it’s getting late"
+        },
+        "inferred": true,
+        "reason": "The source links tea and time (story_graph motif mo-time-lateness). Taking the tea-party from the real tea-time is a design reading."
+      },
+      {
+        "key": "cp-cat",
+        "wonderland": "the Cheshire Cat, and the creatures' fear of cats",
+        "real": "Dinah, the family cat, whom Alice keeps talking about.",
+        "source": {
+          "chapter": "ch001",
+          "quote": "(Dinah was the cat.)"
+        },
+        "inferred": true,
+        "dream_rendering": "(Added BIB-0027.) The dream's Cheshire Cat is a photoreal CGI cat (light doubling of Dinah, H1 5.3 B, unchanged); its vanishing stays a dream dissolve (SUP-005).",
+        "reason": "Dinah is in the source. Linking her to the Cheshire Cat is a design reading."
+      }
+    ]
+  },
+  "world_rules": [
+    {
+      "id": "WR-001",
+      "statement": "The waking world follows ordinary physics and history: no magic, no talking animals, no size change. Everything impossible happens only inside Alice's dream, and the dream ends when she wakes on the bank.",
+      "category": "physics",
+      "applies_to": [
+        "CHAR-alice",
+        "CHAR-alice-sister"
+      ],
+      "visual_implication": "Frame scenes (bank, sister, farm) are shot in plain naturalistic period realism, with ordinary, silent animals only. The dream may bend space and logic with a real camera, real sets and real actors, plus photoreal CGI animal characters and set extensions integrated into the live-action plates (amended BIB-0027, user ruling 2026-09-22; previously 'only in ways a real camera, real sets and real actors can do'). Size changes stay practical and in-camera (XA-03).",
+      "source": {
+        "chapter": "ch012",
+        "quote": "though she knew she had but to open them again, and all would change to dull reality"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch012",
+          "refs": [
+            "ch012-p66",
+            "ev0053"
+          ],
+          "quote": "Oh, I’ve had such a curious dream!"
+        }
+      ],
+      "inferred": true,
+      "reason": "The source itself frames Wonderland as a dream. 'No literal magic even inside the dream' follows the premise, and the exact per-element treatment is owned by p2-magic (XA-01)."
+    },
+    {
+      "id": "WR-002",
+      "statement": "Inside the dream, cause and effect run on dream-logic taken from Alice's waking concerns (lessons, manners, food, time, adult authority). Places may connect impossibly or disappear, but every element must be something a real Victorian child could have seen, heard, read or been taught. One licensed exception (BIB-0027): the look of the dream's environments follows the Art Nouveau design language of WR-010.",
+      "category": "physics",
+      "applies_to": [
+        "CHAR-alice"
+      ],
+      "visual_implication": "No fantasy iconography foreign to 1862 England in content: dream sets are built from period things (brick, hedges, pantry shelves, kitchens, lawns, courtrooms), and transitions are dream-cuts, not glowing visual effects. Their surface design (line, ornament, palette, glass) carries the Art Nouveau painterly language of WR-010, realised as photographed physical space (amended BIB-0027; previously 'No fantasy iconography that is foreign to 1862 England').",
+      "source": {
+        "chapter": "ch001",
+        "quote": "(when she thought it over afterwards, it occurred to her that she ought to have wondered at this, but at the time it all seemed quite natural)"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch004",
+          "refs": [
+            "ch004-p01",
+            "ev0014"
+          ],
+          "quote": "the great hall, with the glass table and the little door, had vanished completely"
+        }
+      ],
+      "inferred": true,
+      "reason": "The source's own statement that 'it all seemed quite natural' supports dream-logic. The 'drawn from waking life' limit is a design rule for grounding (see wonderland_real_counterparts)."
+    },
+    {
+      "id": "WR-003",
+      "statement": "Victorian class and age hierarchy: children defer to adults, girls curtsey and recite, servants are summoned and scolded, and a well-off child looks down on poorer homes. The whole story tests how far Alice will stand up to adult authority.",
+      "category": "society",
+      "applies_to": [
+        "CHAR-alice"
+      ],
+      "visual_implication": "Blocking and eye-lines put adults above the child (standing over, seated on thrones or high stools). Alice's growing 'full size' at the trial shows through posture and framing, and the finale reverses the hierarchy.",
+      "source": {
+        "chapter": "ch001",
+        "quote": "she tried to curtsey as she spoke"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch002",
+          "refs": [
+            "ch002-p13"
+          ],
+          "quote": "that poky little house"
+        },
+        {
+          "chapter": "ch012",
+          "refs": [
+            "ch012-p63"
+          ],
+          "quote": "she had grown to her full size by this time."
+        }
+      ],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "WR-004",
+      "statement": "Girls of Alice's class are taught at home in a schoolroom: history, geography, arithmetic, recitation, and French and music as extras. Alice's sense of who she is rests on getting these lessons right.",
+      "category": "education",
+      "applies_to": [
+        "CHAR-alice"
+      ],
+      "visual_implication": "Lesson-books, slates and recitation posture (hands folded, standing) are visual shorthand for who Alice is.",
+      "source": {
+        "chapter": "ch001",
+        "quote": "Alice had learnt several things of this sort in her lessons in the schoolroom"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch009",
+          "refs": [
+            "ch009-p66"
+          ],
+          "quote": "we learned French and music."
+        },
+        {
+          "chapter": "ch002",
+          "refs": [
+            "ch002-p10"
+          ],
+          "quote": "let’s try Geography"
+        }
+      ],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "WR-005",
+      "statement": "The household runs on the clock: tea-time is fixed, lateness is a real fault, and the afternoon ends when the sister sends Alice in to tea.",
+      "category": "family",
+      "applies_to": [
+        "CHAR-alice",
+        "CHAR-alice-sister"
+      ],
+      "visual_implication": "Watches, clocks and the light moving from noon to sunset tell the real time. The dream's stopped six o'clock is set against it.",
+      "source": {
+        "chapter": "ch012",
+        "quote": "now run in to your tea; it’s getting late"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch001",
+          "refs": [
+            "ch001-p03",
+            "ev0001"
+          ],
+          "quote": "Oh dear! Oh dear! I shall be late!"
+        },
+        {
+          "chapter": "ch001",
+          "refs": [
+            "ch001-p10"
+          ],
+          "quote": "her saucer of milk at tea-time"
+        }
+      ],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "WR-006",
+      "statement": "The court of justice follows the form of an English trial as a child has read about it: King as judge in a great wig, a jury of twelve, a herald reading the accusation, witnesses, and evidence. In the dream, its procedure is bent by arbitrary royal power ('Sentence first—verdict afterwards').",
+      "category": "law",
+      "applies_to": [
+        "CHAR-alice"
+      ],
+      "visual_implication": "A real 1860s English courtroom (jury-box, raised bench, dock, clerks with slates) staged with period accuracy. The absurdity is in the behaviour, not the set.",
+      "source": {
+        "chapter": "ch011",
+        "quote": "“That’s the judge,” she said to herself, “because of his great wig.”"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch011",
+          "refs": [
+            "ch011-p04"
+          ],
+          "quote": "and those twelve creatures"
+        },
+        {
+          "chapter": "ch012",
+          "refs": [
+            "ch012-p62",
+            "ev0052"
+          ],
+          "quote": "Nobody moved."
+        }
+      ],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "WR-007",
+      "statement": "In the Kingdom of Hearts, the Queen's death sentences are threats that are never carried out. The adaptation keeps them frightening in the moment but shows no execution, blood or real harm.",
+      "category": "law",
+      "applies_to": [
+        "CHAR-alice"
+      ],
+      "visual_implication": "No on-screen execution, severed heads or blood. The executioner and the soldiers take people into custody only. The fear lives in reaction shots.",
+      "source": {
+        "chapter": "ch009",
+        "quote": "they never executes nobody, you know"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch009",
+          "refs": [
+            "ch009-p36",
+            "ev0040"
+          ],
+          "quote": "all the players, except the King, the Queen, and Alice, were in custody and under sentence of execution"
+        }
+      ],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "WR-008",
+      "statement": "Money is British sterling (pounds, shillings, pence, guineas), and the jury does sums in shillings and pence.",
+      "category": "society",
+      "applies_to": [
+        "CHAR-alice"
+      ],
+      "visual_implication": "Only pre-decimal British coins and notes appear. Prices, amounts and ledgers are in £ s d.",
+      "source": {
+        "chapter": "ch011",
+        "quote": "reduced the answer to shillings and pence"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch002",
+          "refs": [
+            "ch002-p24"
+          ],
+          "quote": "it’s worth a hundred pounds!"
+        }
+      ],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "WR-009",
+      "statement": "1862 technology and leisure: railway to the seaside, bathing machines, pocket watches, printed lesson-books, croquet as the fashionable lawn game, and kitchen fires and cauldrons. No later technology.",
+      "category": "other",
+      "applies_to": [
+        "CHAR-alice"
+      ],
+      "visual_implication": "Props, costume and set dressing are limited to 1862 or earlier: no electric light, telephones or motor vehicles. Croquet sets use 1860s mallets and hoops.",
+      "source": {
+        "chapter": "ch002",
+        "quote": "a row of lodging houses, and behind them a railway station"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch001",
+          "refs": [
+            "ch001-p03"
+          ],
+          "quote": "took a watch out of its waistcoat-pocket"
+        },
+        {
+          "chapter": "ch008",
+          "refs": [
+            "ch008-p30"
+          ],
+          "quote": "Can you play croquet?"
+        }
+      ],
+      "inferred": true,
+      "reason": "The items are in the source. The 1862 cut-off follows from setting.era. BIB-0027 note: the H1 1862 lock still holds for props, costume and the whole waking world; only the surface design of dream environments is exempted, by WR-010."
+    },
+    {
+      "id": "WR-010",
+      "statement": "The dream's environments are designed in an Art Nouveau painterly language: flowing organic lines, floral and vine ornament, circular halo and roundel motifs, mosaic and stained-glass accents, and a soft pastel-and-gold palette. It is a licensed dream-world anachronism. The waking 1862 frame keeps period plausibility and shows at most a subtle influence of the same language in composition, palette and flora.",
+      "category": "other",
+      "applies_to": [
+        "CHAR-alice"
+      ],
+      "visual_implication": "Dream scenes (the fall, the hall and little door, the pool, the White Rabbit's house, the wood, the Duchess's house, the tea-party, the Queen's garden and croquet-ground, the shore, the court) carry the language fully, realised as photographed physical sets and set extensions in the same live-action plate as the actors and CGI animals: built ironwork, carved wood, glass, mosaic, living and sculpted flora, real light. Never flat poster illustration, outline graphics or a digital matte-painting finish. Costume and hand props stay 1862-based (WR-009) even inside these spaces. Waking scenes (bank, meadow, hedge, farm, family house) use no Art Nouveau ornament; the influence is limited to framing, palette and the wildflowers of the meadow.",
+      "source": {
+        "chapter": "ch001",
+        "quote": "the loveliest garden you ever saw"
+      },
+      "also_seen": [],
+      "inferred": true,
+      "reason": "User ruling in chat, 2026-09-22 (BIB-0027, answer to DEF-p4-style-001 b, extended): add the painting style of Alphonse Mucha to the environments. Scope (dream full, waking subtle, photographed not illustrated) is the workflow-orchestrator's interpretation, to be re-surfaced at H2. The source gives no period-bound look for the dream; the goal-garden quoted above is the image the dream's design grows toward."
+    }
+  ],
+  "tone": {
+    "genre": "Realistic fantasy film adapted from a fairy tale, set in the Victorian period: a coming-of-age story told as a photoreal dream, a child's afternoon nightmare-comedy about identity and adult authority, framed by a sunlit, nostalgic riverbank (amended BIB-0027; previously 'Realistic Victorian period drama and coming-of-age story, told as a grounded dream: ...').",
+    "themes": [
+      "Identity: 'Who in the world am I?' Being told who you are versus deciding it yourself.",
+      "Arbitrary adult authority and its nonsense rules, which lose their power once the child stops deferring.",
+      "Borrowed schoolroom knowledge breaking down, and the child's own judgment taking over.",
+      "Growing up, and the passing of childhood, seen through the older sister's tender reverie."
+    ],
+    "source": {
+      "chapter": "ch002",
+      "quote": "Who in the world am I? Ah, _that’s_ the great puzzle!"
+    },
+    "also_seen": [
+      {
+        "chapter": "ch012",
+        "refs": [
+          "ch012-p63"
+        ],
+        "quote": "Who cares for you?"
+      },
+      {
+        "chapter": "ch012",
+        "refs": [
+          "ch012-p71"
+        ],
+        "quote": "remembering her own child-life, and the happy summer days"
+      }
+    ],
+    "inferred": true,
+    "reason": "The themes are in the source (story_graph summary: 'who am I / whose authority counts'). The genre label is set by brief.md, 'Realistic fantasy film adapted from a fairy tale' (quote corrected at BIB-0027), and by the user's 2026-09-22 ruling that the film is realistic fantasy."
+  },
+  "history_overview": [
+    {
+      "period": "Deep past (from Alice's lessons)",
+      "summary": "The Norman Conquest: William the Conqueror takes England; the earls Edwin and Morcar of Mercia and Northumbria submit. This is the only real history the source quotes, and it appears as dry schoolroom text that the Mouse recites.",
+      "source": {
+        "chapter": "ch003",
+        "quote": "Edwin and Morcar, the earls of Mercia and Northumbria"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "period": "Recent waking past (before the afternoon)",
+      "summary": "Alice has been raised and taught in the schoolroom, has been to the English seaside once by railway, knows other girls of her age (Ada, Mabel) and a neighbour farmer's terrier, and has a cat, Dinah.",
+      "source": {
+        "chapter": "ch002",
+        "quote": "Alice had been to the seaside once in her life"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "period": "Dream past (backstory told within Wonderland)",
+      "summary": "Last March, at the Queen of Hearts' great concert, the Hatter quarrelled with Time, and it has been six o'clock ever since. Earlier still, the Mock Turtle and the Gryphon went to school in the sea. The Queen made the tarts 'all on a summer day', and the Knave is accused of stealing them.",
+      "source": {
+        "chapter": "ch007",
+        "quote": "We quarrelled last March—just before _he_ went mad, you know—"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch011",
+          "refs": [
+            "ch011-p12"
+          ],
+          "quote": "The Queen of Hearts, she made some tarts, All on a summer day"
+        }
+      ],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "period": "The afternoon (the story)",
+      "summary": "On the bank, Alice falls asleep and dreams Wonderland. The dream's power structure runs from scattered hosts (the pool, the Rabbit's house, the wood, the Duchess, the tea-party) to the centralised terror of the Hearts court (croquet, then the trial). Its authority collapses when Alice defies it at full size, and she wakes.",
+      "source": {
+        "chapter": "ch012",
+        "quote": "and found herself lying on the bank"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "period": "The after-time (the sister's vision of the future)",
+      "summary": "The sister imagines Alice grown into a woman who keeps her childlike heart and tells children the dream of Wonderland.",
+      "source": {
+        "chapter": "ch012",
+        "quote": "be herself a grown woman"
+      },
+      "inferred": false,
+      "reason": null
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "OQ-001",
+      "question": "How is each impossible element of the dream rendered on screen (talking animals and cards, size changes, transformations, the fall)? The world layer assumes a grounded dream played by human actors; see XA-01 to XA-04.",
+      "status": "resolved",
+      "resolution": "Resolved: the user approved SUP-001 to SUP-014 as written at the H1 pre-ruling (5.1 A, runs/h1-ruling/ruling.json (user, 2026-09-22T17:33:21+08:00)). The dream frame is explicit; dream-figures are human performers; size and space effects are practical and in-camera; Time is a metaphor; threats are never enacted. AMENDED by user ruling 2026-09-22 (BIB-0027): talking animals, the Gryphon and the Mock Turtle are photoreal CGI animals/creatures in live-action plates (SUP-002, SUP-010); card figures and human dream-figures stay human performers (SUP-004); dream environments carry the Art Nouveau design language of WR-010. Everything else in this resolution stands.",
+      "source": {
+        "chapter": "ch012",
+        "quote": "Oh, I’ve had such a curious dream!"
+      }
+    },
+    {
+      "id": "OQ-002",
+      "question": "Alice's age, family surname and the names of her sister and parents.",
+      "status": "story_withheld",
+      "resolution": "The source never reveals them. Working values confirmed at the H1 pre-ruling (5.6 A): Alice about ten, her sister in her mid-teens, parents off-screen. Names and final ages are owned by 03-characters.",
+      "source": {
+        "chapter": "ch011",
+        "quote": "very few little girls of her age knew the meaning of it at all"
+      }
+    },
+    {
+      "id": "OQ-003",
+      "question": "The trial's verdict and the Knave's guilt.",
+      "status": "story_withheld",
+      "resolution": "The source never reveals them: Alice wakes before any verdict (ev0052 to ev0053). Production value: no verdict, the scene cuts on the cards flying up.",
+      "source": {
+        "chapter": "ch012",
+        "quote": "Sentence first—verdict afterwards."
+      }
+    },
+    {
+      "id": "OQ-004",
+      "question": "Whether the Cheshire Cat's 'execution' and the Duchess's sentence were ever settled.",
+      "status": "story_withheld",
+      "resolution": "The source never reveals it (events.json broken_chains ev0038 and ev0039; story_graph fs-021). Production value: no one is executed (WR-007), and the Duchess simply does not appear after ch009.",
+      "source": {
+        "chapter": "ch008",
+        "quote": "She’s under sentence of execution."
+      }
+    },
+    {
+      "id": "OQ-005",
+      "question": "Where exactly the bank is, and which river.",
+      "status": "resolved",
+      "resolution": "The source gives only the bank, field, hedge, trees, pool and reeds. Resolved by design as a Thames backwater meadow near Oxford (setting, frame.place). Fine layout is owned by 02-worldbuilding/geography.",
+      "source": {
+        "chapter": "ch012",
+        "quote": "the pool rippling to the waving of the reeds"
+      }
+    }
+  ],
+  "cross_domain_assumptions": [
+    {
+      "id": "XA-01",
+      "owner_domain": "02-worldbuilding/magic-cultivation (SUP-*, cultivation.json)",
+      "source_element": "the dream frame (events.json realistic_adaptation_flags 'dream frame'; story_graph rn-01; ev0001, ev0053, ev0054)",
+      "assumption": "The source's own dream frame is kept: Wonderland (ch001-p04 to ch012-p64) is Alice's dream during her nap on the bank. The waking frame has no supernatural element at all. world.json treats Wonderland as a dream layer that ends at ch012.",
+      "if_contradicted": "If p2-magic picks a waking-imagination or reframed reading, realms.realm-wonderland.kind and status, WR-001 and WR-002 need rewording. The faction and counterpart content still holds.",
+      "reconciliation": "CONSISTENT with SUP-001, approved by the user at H1 pre-ruling 5.1 A. No change."
+    },
+    {
+      "id": "XA-02",
+      "owner_domain": "02-worldbuilding/magic-cultivation + 04-creatures/creature",
+      "source_element": "talking animals and living cards (rn-02, rn-04, rn-05, rn-09)",
+      "assumption": "(Amended BIB-0027 by user ruling 2026-09-22; previously 'the speaking animals and the cards are played by human actors in period dress ... They are not CGI animals'.) In the dream, the speaking animals are photoreal CGI animals integrated into live-action plates, with naturalistic anatomy and texture and only the minimal period props the text gives them (the Rabbit's waistcoat and watch); the Gryphon and the Mock Turtle are photoreal CGI fantastical creatures; the Frog- and Fish-Footmen are CGI frog- and fish-bodied figures in livery. The cards stay human actors in period-based dress with card-suit tabards, and so do the human dream-figures. The only real animal in the waking frame is a white rabbit crossing the field (and Dinah off-screen). world.json's faction register still describes all of them as people and households, because membership does not depend on rendering.",
+      "if_contradicted": "If creatures are rendered as human performers or puppets again, faction membership stays the same, but SUP-002/SUP-010, wonderland_real_counterparts.rendering_note and cp-rabbit-hole/cp-cat dream_rendering need updating.",
+      "reconciliation": "AMENDED together with SUP-002, SUP-010 and XA-magic-02 (BIB-0027). SUP-004 unchanged. faction_register.members_note needs no change (it names members, not how they are rendered); cp-rabbit-hole and cp-cat received a dream_rendering note."
+    },
+    {
+      "id": "XA-03",
+      "owner_domain": "02-worldbuilding/magic-cultivation",
+      "source_element": "size changes, transformations, the fall, the pool of tears, and personified Time (rn-03, rn-06, rn-07, rn-08, rn-11)",
+      "assumption": "These are rendered only with practical, camera-possible means (forced perspective, scaled sets, framing, performance) or as metaphor, consistent with WR-001 and WR-002. 'Full size' at ch012-p63 is shown as Alice standing up to the court, not only as a physical change.",
+      "if_contradicted": "WR-002 and WR-003 visual_implication need revision.",
+      "reconciliation": "CONSISTENT with SUP-003, SUP-005 to SUP-009 and SUP-012 (practical/camera means or metaphor). No change."
+    },
+    {
+      "id": "XA-04",
+      "owner_domain": "02-worldbuilding/political (FAC-*/OFF-*/LAW-*, politics.json)",
+      "source_element": "the factions in faction_register",
+      "assumption": "The proposed FAC IDs are: alice-family-household, neighbouring-farm, court-of-hearts, pack-of-cards, visiting-monarchs, duchess-household, white-rabbit-household, mad-tea-party, caucus-race-company, school-in-the-sea. Political owns the final IDs, their internal structure and alliances. Memory-bible should align the slugs at p2-merge.",
+      "if_contradicted": "If political uses different slugs, political's IDs win and this register is re-keyed. A mismatch in existence, allegiance or status is a real conflict to raise at H1.",
+      "reconciliation": "RESOLVED (H1 5.5 A): all 10 proposal keys now point to registered factions in politics.json (7 new FAC-* from p2-fix-political; pack-of-cards is a sub-unit of FAC-house-of-hearts). DEF-p2-bible-004 closed."
+    },
+    {
+      "id": "XA-05",
+      "owner_domain": "02-worldbuilding/geography (LOC-*, geography.json)",
+      "source_element": "the waking place and the dream places",
+      "assumption": "Region: Oxfordshire, Thames valley. The waking site is a riverside meadow bank with a hedge, trees, a reedy backwater pool, a nearby farm and the family house. Dream places are dream-space; places that cannot exist, such as the vanishing hall, are either filed under a non-diegetic dream space class or given LOC entries marked as dream. No LOC IDs are referenced here.",
+      "if_contradicted": "If geography chooses another county or river, setting.place_summary, frame.place and OQ-005 are re-worded to match. The period is unaffected.",
+      "reconciliation": "RESOLVED (H1 5.2 A, 5.6 A): geography.json now splits a small real waking layer (Oxford/Thames valley; bank, field, hedge burrow, river backwater, farm, family house) from dream-only Wonderland places, each carrying grows_from. DEF-p2-bible-001/002/003 closed."
+    },
+    {
+      "id": "XA-06",
+      "owner_domain": "02-worldbuilding/timeline (TL-*/ERA-*, timeline.json)",
+      "source_element": "the date and length of the afternoon (ch007-p22 'The fourth'; ch012-p66 tea-time; ch012-p67 sunset)",
+      "assumption": "Friday 4 July 1862. The story runs in real time from early afternoon (about 2 pm) to sunset (about 8 pm), and the dream takes up the nap in between.",
+      "if_contradicted": "The timeline's date and hours win; setting.era and frame.period are re-worded.",
+      "reconciliation": "CONSISTENT with timeline.json TL-003 (Friday 4 July 1862), confirmed by the user at H1 pre-ruling 5.6 A. No change."
+    },
+    {
+      "id": "XA-07",
+      "owner_domain": "03-characters (CHAR-*)",
+      "source_element": "Alice and her sister",
+      "assumption": "Proposed forward-reference slugs are CHAR-alice and CHAR-alice-sister. Working ages: Alice about ten, her sister in her mid-teens.",
+      "if_contradicted": "Re-key applies_to in world_rules to the final CHAR IDs.",
+      "reconciliation": "CHAR-alice and CHAR-alice-sister stay in the forward-reference ledger (bible/_index.json) for 03-characters. Working ages (about ten; mid-teens) confirmed at H1 5.6 A."
+    },
+    {
+      "id": "XA-08",
+      "owner_domain": "02-worldbuilding/dictionary (TERM-*)",
+      "source_element": "the working labels 'Kingdom of Hearts', 'the school in the sea', 'the Mad Tea-Party'",
+      "assumption": "These are descriptive labels, not source proper nouns (the source uses 'A Mad Tea-Party' as a chapter title only). The dictionary decides the canonical terms, and the source spellings are kept in quotes.",
+      "if_contradicted": "Replace the labels with the dictionary terms at merge.",
+      "reconciliation": "RESOLVED: 'Mad Tea-Party' = TERM-0089; 'Kingdom of Hearts' is an alias of TERM-0139 'House of Hearts' (canonical, matches FAC-house-of-hearts); 'the School in the Sea' = TERM-0151. DEF-p2-bible-005 closed."
+    }
+  ]
+}

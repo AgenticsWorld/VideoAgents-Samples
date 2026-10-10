@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh016",
+  "group_id": "grp007",
+  "scene_no": "S02",
+  "duration_s": 3.0,
+  "size": "close",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame, no one in shot)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 40,
+  "camera_height_m": 0.25,
+  "angle": "level",
+  "rack_focus": "none",
+  "start_frame": "The sh015 frame exactly, now empty: the black oval dead centre, the fan of pale spoil below it, hot grass at the edges, nothing moving.",
+  "end_frame": "Unchanged to the last frame — the same oval in the same place at the same size, the meadow sound drained away to nothing behind it.",
+  "constraint_honoured": "'Matched in size and position to the earth-tunnel frame that opens S03 so the coming cut is invisible as a cut' — the frame is nailed down at exactly the sh015 set-up and the register change is left entirely to the silence.",
+  "movement_note": "Absolutely static: any drift would break the match with sh017 and turn an invisible cut into a visible one.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

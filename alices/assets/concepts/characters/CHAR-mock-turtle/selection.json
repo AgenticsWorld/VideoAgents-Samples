@@ -1,0 +1,5 @@
+{"character_id":"CHAR-mock-turtle","sheet":"sheet.png","gender":"male","gender_word_in_prompt":true,"rendering":"photoreal CGI creature (SUP-010, CRE-006)",
+"appearance_field_hits":{"domed_shell_hexagonal_scutes_barnacles":true,"shell_olive_brown":"reads green-olive","scaled_front_flippers":"reads as scaled clawed forelimbs","calf_head_brown_white_blaze":true,"floppy_drooping_ears":true,"tearful_dark_eyes_tear_tracks":true,"cloven_hooves":true,"tufted_calf_tail":true,"melancholy":true,"unclothed":true},
+"self_check":{"layout":"pass","appearance":"pass with defects","style":"pass (photoreal)"},
+"defects":["He stands upright on his hind legs instead of sitting slumped.","The shell reads green-olive rather than olive-brown.","Small horn buds on the calf head are not in the card.","The front flippers read as scaled, clawed arms more than flippers."],
+"bible_conflict":"DEF-p4-char-concept-202-a (flipper skin and shell size vs creature.json CRE-006)","rerolls":[]}

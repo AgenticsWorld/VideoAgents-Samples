@@ -1,0 +1,38 @@
+{
+  "shot_id": "sh024",
+  "group_id": "grp009",
+  "scene_no": "S03",
+  "scene_id": "SCN-falling-dream",
+  "duration_s": 6.0,
+  "is_dialogue": true,
+  "group_position": "last shot of grp009 — Alice still on the map start (shaft_centre), which is also the group end; the third pass runs behind her.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "sit",
+      "start_pos": "settled back in mid-air at the open centre of the shaft, ankles crossed, drifting down past the pictures on pegs",
+      "space_fragment_en": "sitting back in mid-air at the open centre of the shaft, held on screen-left, facing the pictures on pegs on screen-right",
+      "facing": "profile to the lens, body turned to the pegged wall on screen-right; her eyes are unfocused rather than aimed",
+      "path": [],
+      "beats": [
+        { "t": 1.0, "action": "her voice drops to a whisper", "sync": "LN-ep01-005 begins" },
+        { "t": 3.2, "action": "she gets the question the wrong way round", "sync": "LN-ep01-005 on 'Do bats eat cats'" },
+        { "t": 4.6, "action": "her eyes stop travelling with the wall", "sync": "held to the cut" }
+      ],
+      "performance": {
+        "objective": "hold on to a question long enough to stay awake inside it",
+        "goal": "hold on to a question long enough to stay awake",
+        "emotional_arc": "from sleepy repetition to a drifting vagueness in which the words have come loose from their meaning",
+        "arc_from": "sleepy repetition",
+        "arc_to": "drifting vagueness, the sense gone out of the words",
+        "trigger": { "line_ref": "LN-ep01-005", "word": "Do bats eat cats" },
+        "no_early_reaction": ["the eyes unfocusing", "the head tipping to one side", "the voice trailing"],
+        "forbidden_early": ["the eyes unfocusing", "the head tipping to one side", "the voice trailing"],
+        "end_state": "lips still shaping the last word, eyes unfocused on the passing pegs, head beginning to tip to screen-right"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0002 (dream) — 'Do cats eat bats?'", "note": "Alice alone." }
+}

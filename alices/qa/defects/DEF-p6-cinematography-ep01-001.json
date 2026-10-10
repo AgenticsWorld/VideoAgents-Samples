@@ -1,0 +1,64 @@
+{
+  "id": "DEF-p6-cinematography-ep01-001",
+  "opened_by": "07-directing/cinematography",
+  "opened_on": "2026-09-23",
+  "task_id": "p6-cinematography-ep01",
+  "assigned_to": "06-art/color-script (finding -a); 07-directing/director via 00-orchestration/orchestrator (finding -b)",
+  "domain": "color_script_wording_vs_scene_bible",
+  "status": "closed",
+  "closed_by": "06-art/color-script (p6-cs-fix-ep01) - second and last of the two owners to land its fix",
+  "closed_on": "2026-09-23",
+  "severity": "minor",
+  "due_gate": "G6 (before p7-prompt binds the S06/S07 lighting scheme; nothing is blocked in the meantime)",
+  "blocking": false,
+  "summary": "Two residual wordings left over from the BIB-0033 arbitration still point at the reading BIB-0033 closed (daylight / backlit roundels / coloured pools in the windowless Long Hall). Neither changes any decision; both are the kind of sentence a downstream prompt writer copies verbatim. Requested as wording fixes at the owners' next open, not as re-rulings.",
+  "findings": [
+    {
+      "id": "DEF-p6-cinematography-ep01-001-a",
+      "issue": "bible/color_script.json episodes[ep01].acts[4].stained_glass still reads 'Low: one or two LIT roundels held at a fixed position on the wall across the size changes, so the roundels themselves work as scale markers'.",
+      "scene_bible": "bible/scenes/SCN-long-hall/lighting.json roundel_glow.decision = 'reflected_lamplight_only', rule: the 25 roundels 'have no light source behind them ... They never glow evenly or look backlit' - upheld by BIB-0033 against this very file.",
+      "impact": "ep01 S06 and S07 (and ep05 act 3, which inherits through scene_curves). Read on its own, 'lit roundels' invites a prompt writer to write a glowing or backlit stained-glass roundel into a hall that architecture.json says is windowless with blind glass.",
+      "requested_fix": "One word at the next open of color_script.json: 'one or two FRONT-LIT roundels ...'. No dose, hex, act or numeric change.",
+      "interim_direction": "directing/ep01/cinematography.json CT-04 act 4 already states that 'lit' means front-lit by the nearest hanging lamp, and CT-04 forbids backlit or evenly glowing roundels by name. Nothing downstream is blocked.",
+      "status": "fixed",
+      "verified_on": "2026-09-23 (p6-plan-fix-ep01)",
+      "verification": "Still unfixed at this check: bible/color_script.json episodes[ep01].acts[4].stained_glass reads 'Low: one or two lit roundels held at a fixed position on the wall across the size changes ...' — the requested word 'front-lit' is not yet in the file. Owner is 06-art/color-script; the director does not edit bible/. (Historical record of the 10:15 check; fixed later the same day - see fix below.)",
+      "fixed_by": "06-art/color-script",
+      "fixed_on": "2026-09-23",
+      "fixed_in_task": "p6-cs-fix-ep01",
+      "fix": "bible/color_script.json v1.1.2, changelog BIB-0034. episodes[ep01].acts[4].stained_glass now reads 'Low: one or two FRONT-LIT roundels - 'lit' here means front-lit by the nearest hanging lamp only, never backlit and never evenly glowing (the 25 halo roundels are blind: no opening and no lamp behind them, roundel_glow = reflected_lamplight_only, BIB-0033) - held at a fixed position on the wall across the size changes, so the roundels themselves work as scale markers; always below the glass table in brightness, and no glass pools on the floor (scene_curves.SCN-long-hall; directing/ep01/cinematography.json CT-04 act 4).' Wording only, exactly as requested: no dose, hex, palette, act number, event_ref, scene_id, mood, saturation, brightness, variant or peak changed, and the two closing clauses are kept verbatim. The rest of the file was swept for surviving daylight / backlit-roundel / coloured-pool-on-the-floor wording in SCN-long-hall and SCN-pool-of-tears - scene_curves._note and both scene entries, ep01 acts 3/5/6, ep02 act 1 and ep05 act 3 (the inheriting act named in this finding) - and every one of them was already BIB-0033-conformant, so nothing else was touched. Machine check color_script_ok --strict: OK, 9 episodes, 0 violations, 0 warnings."
+    },
+    {
+      "id": "DEF-p6-cinematography-ep01-001-b",
+      "issue": "directing/ep01/directing_plan.md (S06, 'Colour') reads 'one or two glass floor POOLS stay at a fixed position through the shrink and the later growth and work as scale markers (color_script act 4 stained_glass)'. That is a quotation of the PRE-BIB-0033 act 4 text; it was written the same day the arbitration landed.",
+      "scene_bible": "The amended act 4 says the fixed markers are roundels on the WALL and 'no glass pools on the floor'; scene_curves.SCN-long-hall limits: 'No daylight, no shaft and no pool of coloured light anywhere in the hall.'",
+      "impact": "ep01 S06/S07. The plan is the brief every per-shot station reads; left as it stands, the stale sentence licenses a coloured pool on the hall floor.",
+      "requested_fix": "Citation fix in the plan at its next open (before H3S if convenient): the fixed scale marker is a front-lit roundel at a fixed position on the wall. No shot design changes - the director's intent (a fixed, unmoving colour marker to measure the size changes against) is preserved exactly.",
+      "interim_direction": "cinematography.json follows the amended Bible, not the plan's quotation, per its own authority_order. conflicts[1] in that file records the decision.",
+      "status": "fixed",
+      "fixed_by": "07-directing/director",
+      "fixed_on": "2026-09-23",
+      "fixed_in_task": "p6-plan-fix-ep01",
+      "fix": "directing/ep01/directing_plan.md v2, S06 'Colour' bullet re-cited to the BIB-0033 text: the fixed scale marker is now 'one or two roundels on the wall, front-lit by the nearest hanging lamp', with 'the marker is on the wall, not on the floor: the hall is windowless, its 25 halo roundels are blind, and there is no pool of coloured light anywhere in it', citing color_script act 4 stained_glass + scene_curves.SCN-long-hall as amended and SCN-long-hall/lighting.json roundel_glow = reflected_lamplight_only ('must never read as backlit or evenly glowing'). Three further stale citations in the same family were corrected in the same pass: the S10 swim-heading bullet (no shaft, no beam, no coloured pool; the way-out light is the lamp-reflection field at the south end), the front-matter defect_raised line, and the closing conflict paragraph (now records BIB-0033 as decided rather than open). No shot design, camera rule, scene treatment or transition changed; the 转场清单 section is byte-identical to v1 (sha256 4a572ff5aea44055348ef2ba9a9200280348efea641f14623b6bdbed26fb8bea), because directing/ep01/storyboard.json is built on it and is with the user for H3S."
+    }
+  ],
+  "note_not_a_finding": "bible/scenes/SCN-falling-dream/lighting.json prompt_fragment_en contains 'like afternoon sun seen through closed eyelids'. The fragment is correct quoted whole (it opens with 'no daylight and no lamps'), but the simile alone, lifted under a prompt length limit, could put a sun or a sky into a shaft whose card says daylight_access: dark_no_sky. Handled in cinematography.json CT-02 with daylight-free wording plus explicit forbidden terms; no Bible change requested.",
+  "bible_changed": false,
+  "screenplay_changed": false,
+  "routing_note": "orchestrator: no arbitration needed. Finding -a is a one-word fix by the file owner (color-script's countersign on color_script.json is pending anyway); finding -b is a citation fix by the director. Neither reverses BIB-0033 - both are consequences of it that were missed in the same-day batch.",
+  "status_note": "CLOSED 2026-09-23: both findings fixed by their own owners, neither one a re-ruling. Finding -b fixed by 07-directing/director (p6-plan-fix-ep01) in directing/ep01/directing_plan.md v1 -> v2, citation fix only. Finding -a fixed by 06-art/color-script (p6-cs-fix-ep01) in bible/color_script.json v1.1.2 (changelog BIB-0034): act 4 stained_glass now says FRONT-LIT and spells out that the roundels are front-lit by the nearest hanging lamp, never backlit and never evenly glowing, matching cinematography.json CT-04 act 4 word for word. BIB-0033 stands exactly as written and is now countersigned by the file owner. Nothing downstream needs a re-pass: directing_plan.md v2, cinematography.json CT-04 and the amended colour plan all state the same front-lit reading, and p7-prompt can bind the S06/S07 scheme from any of the three.",
+  "history": [
+    {
+      "date": "2026-09-23",
+      "task_id": "p6-plan-fix-ep01",
+      "by": "07-directing/director",
+      "action": "finding -b fixed in directing/ep01/directing_plan.md (v1 -> v2, citation fix only); finding -a re-verified as still open against the live bible/color_script.json; ticket left open"
+    },
+    {
+      "date": "2026-09-23",
+      "task_id": "p6-cs-fix-ep01",
+      "by": "06-art/color-script",
+      "action": "finding -a fixed in bible/color_script.json (v1.1.1 -> v1.1.2, changelog BIB-0034): act 4 stained_glass 'lit roundels' -> 'FRONT-LIT roundels' with the front-lit / never-backlit / never-evenly-glowing clause; whole file swept for other daylight, backlit-roundel and coloured-pool wording in SCN-long-hall and SCN-pool-of-tears (incl. scene_curves and ep05 act 3) and found already conformant; BIB-0033 countersigned by the file owner; color_script_ok --strict OK; ticket CLOSED, both findings done"
+    }
+  ]
+}

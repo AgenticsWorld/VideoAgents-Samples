@@ -1,0 +1,56 @@
+### SCN-rabbit-house-exterior (python3)
+WARN SCN-rabbit-house-exterior: 无法读取 layout_top.png(No module named 'PIL')
+[scene_layout_pack] alices/SCN-rabbit-house-exterior: 违规 0 条, WARN 1 条 -> PASS
+exit=0
+### SCN-rabbit-house-exterior (app runtime, PIL)
+[scene_layout_pack] alices/SCN-rabbit-house-exterior: 违规 0 条, WARN 0 条 -> PASS
+exit=0
+### SCN-rabbit-house-upstairs-room (python3)
+WARN SCN-rabbit-house-upstairs-room: 无法读取 layout_top.png(No module named 'PIL')
+[scene_layout_pack] alices/SCN-rabbit-house-upstairs-room: 违规 0 条, WARN 1 条 -> PASS
+exit=0
+### SCN-rabbit-house-upstairs-room (app runtime, PIL)
+[scene_layout_pack] alices/SCN-rabbit-house-upstairs-room: 违规 0 条, WARN 0 条 -> PASS
+exit=0
+### SCN-wood-tree-door (python3)
+WARN SCN-wood-tree-door: 无法读取 layout_top.png(No module named 'PIL')
+[scene_layout_pack] alices/SCN-wood-tree-door: 违规 0 条, WARN 1 条 -> PASS
+exit=0
+### SCN-wood-tree-door (app runtime, PIL)
+[scene_layout_pack] alices/SCN-wood-tree-door: 违规 0 条, WARN 0 条 -> PASS
+exit=0
+### SCN-wood-thistle-glade (python3)
+WARN SCN-wood-thistle-glade: 无法读取 layout_top.png(No module named 'PIL')
+[scene_layout_pack] alices/SCN-wood-thistle-glade: 违规 0 条, WARN 1 条 -> PASS
+exit=0
+### SCN-wood-thistle-glade (app runtime, PIL)
+[scene_layout_pack] alices/SCN-wood-thistle-glade: 违规 0 条, WARN 0 条 -> PASS
+exit=0
+### SCN-caterpillar-clearing (python3)
+WARN SCN-caterpillar-clearing: 无法读取 layout_top.png(No module named 'PIL')
+[scene_layout_pack] alices/SCN-caterpillar-clearing: 违规 0 条, WARN 1 条 -> PASS
+exit=0
+### SCN-caterpillar-clearing (app runtime, PIL)
+[scene_layout_pack] alices/SCN-caterpillar-clearing: 违规 0 条, WARN 0 条 -> PASS
+exit=0
+### SCN-pigeon-treetop (python3)
+WARN SCN-pigeon-treetop: 无法读取 layout_top.png(No module named 'PIL')
+[scene_layout_pack] alices/SCN-pigeon-treetop: 违规 0 条, WARN 1 条 -> PASS
+exit=0
+### SCN-pigeon-treetop (app runtime, PIL)
+[scene_layout_pack] alices/SCN-pigeon-treetop: 违规 0 条, WARN 0 条 -> PASS
+exit=0
+### SCN-duchess-house-front (python3)
+WARN SCN-duchess-house-front: 无法读取 layout_top.png(No module named 'PIL')
+[scene_layout_pack] alices/SCN-duchess-house-front: 违规 0 条, WARN 1 条 -> PASS
+exit=0
+### SCN-duchess-house-front (app runtime, PIL)
+[scene_layout_pack] alices/SCN-duchess-house-front: 违规 0 条, WARN 0 条 -> PASS
+exit=0
+### SCN-duchess-kitchen (python3)
+WARN SCN-duchess-kitchen: 无法读取 layout_top.png(No module named 'PIL')
+[scene_layout_pack] alices/SCN-duchess-kitchen: 违规 0 条, WARN 1 条 -> PASS
+exit=0
+### SCN-duchess-kitchen (app runtime, PIL)
+[scene_layout_pack] alices/SCN-duchess-kitchen: 违规 0 条, WARN 0 条 -> PASS
+exit=0

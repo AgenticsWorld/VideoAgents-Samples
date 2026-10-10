@@ -1,0 +1,137 @@
+{
+  "_meta": {
+    "file": "bible/scenes/SCN-cheshire-cat-path/environment.json",
+    "owner": "05-scenes/environment",
+    "task_id": "p3-environment-sb2",
+    "attempt": 1,
+    "generated": "2026-09-22",
+    "amended": {"change_id": "BIB-0027", "task_id": "p4-cr-environment", "date": "2026-09-23", "fields": ["fixed.dream_design (new)"]},
+    "enum_set": "ENV-ENUM-v1 (runs/p3-environment-sb1/result.json) + sb2 extensions (runs/p3-environment-sb2/result.json)"
+  },
+  "scene_id": "SCN-cheshire-cat-path",
+  "layer": "dream",
+  "fixed": {
+    "climate": "dream-midsummer woodland: warm, still air under a full canopy (grown from LOC-riverside-region via LOC-thick-wood)",
+    "indoor": false,
+    "daylight_access": "canopy_dappled",
+    "dream_design": {
+      "rule": "WR-010 / XA-magic-08 (dream, full)",
+      "flora": "foxglove spires and arching bracken fronds line the path; honeysuckle twines along the Cat's low bough and hangs in pale trumpets; ivy spirals up the trunks. The Cat's bough and the higher branch are sinuous, whiplash-curved limbs, the two strongest lines in the frame",
+      "ornament_cues": "gaps in the canopy form round halo roundels of sky behind the boughs, so the Cat sits framed in a disc of light; the ivy and honeysuckle make a living floral border around the path",
+      "palette": "deep moss and bottle green set against pastel foxglove mauve, honeysuckle cream and pale gold coins of sunlight; soft gold on backlit leaf edges",
+      "seasonal_guard": "foxglove and honeysuckle flower in July; no spring bluebells, no autumn colour",
+      "inferred": true,
+      "reason": "Trees and boughs are explicit (ch006-p49, p70, p79). Climbers, the roundel framing and the palette are designed to WR-010. The leaves stay still in every state, so the dissolve stays clean (SUP-005)."
+    },
+    "ground_and_flora": "a dry, beaten woodland path through English copse country; oak, ash and beech in full dark-green July leaf; bracken and foxgloves along the path; the Cat's low bough and, further on, a higher branch",
+    "dream_growth": "Grows from Dinah watching from a garden bough near the family house (cp-cat). The dappled shade is the real afternoon sun broken by the trees over the sleeping Alice; the Cat's grin comes and goes the way a patch of sunlight comes and goes on a bough. That is the in-world source of the photographic dissolve (SUP-005).",
+    "source": {
+      "chapter": "ch006",
+      "quote": "she was a little startled by seeing the Cheshire Cat sitting on a bough of a tree a few yards off"
+    },
+    "inferred": true,
+    "reason": "Trees and boughs are explicit (ch006-p49, ch006-p70). Species, undergrowth, the dappled light and the dream link are designed for July in lowland England, per ruling 5.2 A."
+  },
+  "variable_dims": {
+    "season": [
+      "summer"
+    ],
+    "time_of_day": [
+      "late_afternoon"
+    ],
+    "weather": [
+      "fair_hot"
+    ],
+    "wind": [
+      "still"
+    ],
+    "temperature": [
+      "warm"
+    ]
+  },
+  "states": [
+    {
+      "state_id": "SCN-cheshire-cat-path-S01",
+      "chapter": 6,
+      "chapter_id": "ch006",
+      "story_scene": "ch006-sc04",
+      "paragraphs": "ch006-p49..ch006-p49",
+      "timeline_ref": "ev0027",
+      "timeline_node": "TL-003",
+      "season": "summer",
+      "weather": "fair_hot",
+      "wind": "still",
+      "temperature": "warm",
+      "time_of_day": "late_afternoon",
+      "waking_clock": "17:02-17:03 GMT",
+      "sun": {
+        "elevation_deg_approx": 28,
+        "azimuth_deg_approx": 272,
+        "note": "sun in the west; shafts and coins of light through the canopy"
+      },
+      "sky": "glimpsed only in gaps in the canopy: clear blue",
+      "conditions": "still, warm shade after the hot open place; the pig vanishes into green shadow",
+      "source_chapter": "ch006",
+      "source": {
+        "chapter": "ch006",
+        "quote": "felt quite relieved to see it trot away quietly into the wood"
+      },
+      "inferred": true,
+      "designed_fields": [
+        "waking_clock",
+        "sun",
+        "sky",
+        "wind",
+        "temperature",
+        "weather"
+      ],
+      "reason": "The wood is explicit (ch006-p49). Other fields follow the waking afternoon in event order; the sun is computed for Oxford on 4 July 1862."
+    },
+    {
+      "state_id": "SCN-cheshire-cat-path-S02",
+      "chapter": 6,
+      "chapter_id": "ch006",
+      "story_scene": "ch006-sc05",
+      "paragraphs": "ch006-p50..ch006-p79",
+      "timeline_ref": "ev0028",
+      "timeline_node": "TL-003",
+      "season": "summer",
+      "weather": "fair_hot",
+      "wind": "still",
+      "temperature": "warm",
+      "time_of_day": "late_afternoon",
+      "waking_clock": "17:03-17:14 GMT",
+      "sun": {
+        "elevation_deg_approx": 28,
+        "azimuth_deg_approx": 272,
+        "note": "sun in the west, low enough to backlight leaves along the path"
+      },
+      "sky": "clear, seen in canopy gaps",
+      "conditions": "still air; leaves do not move while the Cat appears and fades, so the vanishing reads as the Cat and not the wind",
+      "source_chapter": "ch006",
+      "source": {
+        "chapter": "ch006",
+        "quote": "there was the Cat again, sitting on a branch of a tree"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch006",
+          "refs": [
+            "ch006-p79"
+          ],
+          "quote": "it vanished quite slowly, beginning with the end of the tail, and ending with the grin"
+        }
+      ],
+      "inferred": true,
+      "designed_fields": [
+        "waking_clock",
+        "sun",
+        "sky",
+        "wind",
+        "temperature",
+        "weather"
+      ],
+      "reason": "Trees and branches are explicit (ch006-p70, ch006-p79). Still air is designed on purpose so the dissolve stays clean (SUP-005). Time follows the waking afternoon in event order."
+    }
+  ]
+}

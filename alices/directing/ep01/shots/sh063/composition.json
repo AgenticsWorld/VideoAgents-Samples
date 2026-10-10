@@ -1,0 +1,34 @@
+{
+  "shot_id": "sh063",
+  "scene_id": "SCN-long-hall",
+  "size": "medium",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "centre",
+    "anchor_xy": [0.48, 0.52],
+    "size_in_frame": "her head and upper body fill the middle of frame as she rises through the lamp line; she is cropped at the chest by the bottom edge by the end"
+  },
+  "second_subject": {
+    "id": "lamp_row",
+    "grid": "centre",
+    "anchor_xy": [0.50, 0.34],
+    "note": "GAUGE TWO. The pastel tulip shades in their gilt halos hang at a fixed height across the frame and she rises through them — level with her face, then level with her shoulder."
+  },
+  "headroom": "starts at about 0.30 of frame height and is eaten to about 0.06 as her head passes the shades; the vault is close above the lamps and the frame does not retreat from it.",
+  "horizon_eyeline": "Lens 0.9 m from the centre of the hall, looking slightly up: the lamp line runs level across at 0.34 of frame height and the vault springs above it. Her eyeline crosses that line inside the shot, from below it to above it.",
+  "layers": {
+    "fg": "the nearest hanging lamp, its gilt halo and pastel tulip shade, large and close at the left of frame",
+    "mg": "Alice rising through the lamp row, the shades passing her face",
+    "bg": "the west doors and the receding lamp row, smaller and smaller into the dark"
+  },
+  "gaze": {
+    "direction": "frame_left",
+    "lead_room": "left",
+    "note": "she looks sideways at the shade arriving level with her face — a look across the frame rather than up it, because for the first time the thing she is measuring against has come down to her."
+  },
+  "balance": "Crowded and rising: a face pushing up through a row of hanging objects. The composition is the only one in the episode where Alice and the lamps share a horizontal line.",
+  "leading_lines": "The lamp chain runs from the near left edge away into depth, and she crosses it at right angles. Two lines meeting: one architectural and fixed, one human and growing.",
+  "eye_first": "The nearest tulip shade, then her face arriving level with it.",
+  "safe_area_ok": true,
+  "constraint_binding": "GAUGE TWO, second of the three in sequence. The lamps are in frame here and in sh065 and then NEVER AGAIN in the film — this shot and sh065 are the last two set-ups permitted to contain a lamp fitting, and the composition uses that licence fully, putting a fixture large and close in the near foreground. Deep focus, all gauges sharp."
+}

@@ -1,0 +1,12 @@
+{
+ "task_id": "p6-plan-fix-ep01",
+ "run_id": "c34ddb33204a",
+ "agent": "07-directing/director",
+ "attempt": 1,
+ "finished_at": "2026-09-23T09:35:00+08:00",
+ "model": "per-agent console config",
+ "engine": "unchanged",
+ "artifact_versions": {
+  "directing/ep01/directing_plan.md": "v2"
+ }
+}

@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh033",
+  "group_id": "grp013",
+  "scene_no": "S05",
+  "duration_s": 8.0,
+  "size": "wide",
+  "movement": "dolly_forward",
+  "direction": "forward along the hall's long axis, from just inside the corner entrance toward the glass table, the camera leading her and keeping her in frame the whole way",
+  "speed": "about 0.8 m/s — roughly six metres of the hall's 31.7 m covered in the eight seconds, slow enough to read the vault and the lamp row",
+  "speed_curve": "ease_in_out",
+  "rig": "dolly",
+  "lens_mm": 28,
+  "camera_height_m": 1.3,
+  "angle": "level",
+  "rack_focus": "none",
+  "start_frame": "Just inside the corner entrance: Alice stepping in under its 2.45 m lintel, framed against the near end of the shallow vault, the hall beyond her still only a dark length under a receding row of gilt-haloed lamps with amber tulip shades.",
+  "end_frame": "Further down the hall on the same axis: the full 2.80 m height of the faded gilded vault and its verdigris whiplash ribs, the iron lily-stems and mosaic dado, the horseshoe-arched oak doors with their unlit roundels running away both sides, the glass table catching light far ahead and the far end lost in darkness — Alice small against all of it, and no Rabbit anywhere.",
+  "constraint_honoured": "'The episode's one hall reveal: 31.7 m of length and the 2.80 m vault registered in the SAME shot, not in a cut' — one continuous forward move does that; the roundels are passed as faint jewel glints only and never backlit.",
+  "movement_note": "Licensed move (b), the single hall reveal, spent here. One move type only — forward travel, no tilt, no height change, no lateral drift — and eight seconds is exactly enough for it at a walking pace.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

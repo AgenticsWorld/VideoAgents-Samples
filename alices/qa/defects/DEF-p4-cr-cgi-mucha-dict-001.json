@@ -1,0 +1,28 @@
+{
+  "id": "DEF-p4-cr-cgi-mucha-dict-001",
+  "opened_by": "00-orchestration/memory-bible",
+  "opened_on": "2026-09-22",
+  "task_id": "p4-cr-cgi-mucha-bible",
+  "assigned_to": [
+    "02-worldbuilding/dictionary"
+  ],
+  "domain": "dictionary",
+  "status": "closed",
+  "fix_note": "Fixed by 02-worldbuilding/dictionary (task p4-cr-dictionary, 2026-09-23). Registered TERM-0152 'Art Nouveau' (category: other; real-world decorative-arts movement, licensed for Wonderland's dream environments only per bible/world.json WR-010 and bible/cultivation.json XA-magic-08; definition states the waking-frame limit and the WR-009 costume/prop exception) and TERM-0153 'Alphonse Mucha' (category: person; real-world artist named as the style reference in the user's 2026-09-22 ruling and in WR-010/XA-magic-08's reason fields; definition states he is never depicted or named on screen and today appears only in non-canon reason/cross_domain_assumptions fields, so his registration does not itself gate dictionary_hit_100pct). Both entries are inferred:true with a reason citing BIB-0027 and this defect ticket; source citation reuses WR-010's own textual anchor (ch001, 'the loveliest garden you ever saw') since neither term has any source-text mention of its own. terms_unique verified (153/153 unique ids and term strings, zero alias collisions, scripted check). Ran code/p2-merge_check.py read-only (not modified): dictionary_hit_100pct now PASSes (was already PASSing before this fix per the same quirk noted in the parent defect -- neither surface is in the checker's hardcoded LEXICON, so it was never scanned either way); no_unknown_placeholder PASS; cross_refs_valid_all_namespaces FAIL is pre-existing and unrelated (costumes.json duplicate CP-* ids and forward-ref gaps, color_script.json 'sp-pinch' -- Phase 4 costume/color files this agent does not own or touch). Status set to fixed_pending_verify per the work order's instruction; memory-bible still needs to add 'Art Nouveau' and 'Alphonse Mucha' to code/p2-merge_check.py's LEXICON dict (this agent's scope excludes that script) for the PASS to be verified rather than accidental-by-omission.",
+  "severity": "minor",
+  "summary": "BIB-0027 adds the style term 'Art Nouveau' to canon fields: world.json WR-002 and WR-010, cultivation.json XA-magic-08, and the new rendering notes. It also cites 'Alphonse Mucha' as a real-world style reference, but only in reason fields and in cross_domain_assumptions, which are non-canon. Neither is registered in dictionary.json. The p2-merge checker LEXICON does not list them, so dictionary_hit_100pct still reports PASS, but that PASS is only as good as the lexicon.",
+  "requested_fix": "Register TERM entries for 'Art Nouveau' (real-world decorative style, licensed for dream environments only, WR-010) and 'Alphonse Mucha' (real-world artist, style reference only, never on screen). memory-bible will then add both to code/p2-merge_check.py LEXICON.",
+  "due_gate": "G4",
+  "verification": {
+    "by": "00-orchestration/memory-bible (BIB-0029, p4-h2-bible)",
+    "date": "2026-09-23",
+    "result": "PASS - closed, not re-opened",
+    "checks": [
+      "bible/dictionary.json holds 153 terms; TERM-0152 'Art Nouveau' (category other) and TERM-0153 'Alphonse Mucha' (category person) are both present with the definitions described in fix_note",
+      "all 153 term ids unique, all 153 term strings unique, no alias duplicated and no alias colliding with a term string (scripted set check)",
+      "code/p2-merge_check.py LEXICON now maps 'Art Nouveau' -> TERM-0152 and 'Alphonse Mucha' -> TERM-0153 (this was the one outstanding action, and it belonged to memory-bible)",
+      "checker re-run after wiring: dictionary_hit_100pct PASS with 'Art Nouveau' hit 7 times in canon fields and resolved against the dictionary - the PASS is now real, not accidental-by-omission; no_unknown_placeholder PASS",
+      "cross_refs_valid_all_namespaces still FAIL on 5 pre-existing unrelated items (costumes _meta.schema_note 'COS-id' placeholder, three CHAR-alice-age01/02 age-version refs, color_script 'sp-pinch') plus the props.json duplicate-id listing; none introduced or touched by this change"
+    ]
+  }
+}

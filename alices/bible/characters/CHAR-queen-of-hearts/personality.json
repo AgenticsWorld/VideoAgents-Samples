@@ -1,0 +1,126 @@
+{
+  "_meta": {
+    "file": "bible/characters/CHAR-queen-of-hearts/personality.json",
+    "owner": "03-characters/personality",
+    "produced_by_task": "p3-personality-pb1",
+    "produced_on": "2026-09-22",
+    "content_language": "en",
+    "status": "draft_v1"
+  },
+  "character_id": "CHAR-queen-of-hearts",
+  "name": "Queen of Hearts",
+  "tier": "A",
+  "layer": "dream",
+  "temperament": "Explosive, impatient and absolute. She has one answer to every difficulty and cannot bear delay, contradiction or ambiguity. Her rage is loud but empty (SUP-014): it depends on everyone else being afraid of it.",
+  "traits": [
+    {
+      "trait": "Rage as her only tool",
+      "description": "Meets every problem, large or small, with 'Off with his head!'",
+      "evidence": [
+        { "chapter": "ch008", "chapter_no": 8, "ref": "ch008-p59", "event": "ev0037", "quote": "The Queen had only one way of settling all difficulties, great or small.", "note": "The narrator's summary of her." },
+        { "chapter": "ch008", "chapter_no": 8, "ref": "ch008-p43", "event": "ev0036", "quote": "the Queen was in a furious passion", "note": "Orders a beheading about once a minute during croquet." },
+        { "chapter": "ch011", "chapter_no": 11, "ref": "ch011-p71", "event": "ev0047", "quote": "Suppress him! Pinch him! Off with his whiskers!", "note": "Piles up punishments in a single breath." }
+      ]
+    },
+    {
+      "trait": "Impatient, wants to skip process",
+      "description": "Wants the outcome before the reasoning: sentence first, verdict afterwards.",
+      "evidence": [
+        { "chapter": "ch012", "chapter_no": 12, "ref": "ch012-p58", "event": "ev0052", "quote": "Sentence first—verdict afterwards.", "note": "Her theory of justice (LAW-003)." },
+        { "chapter": "ch008", "chapter_no": 8, "ref": "ch008-p14", "event": "ev0034", "quote": "said the Queen, tossing her head impatiently", "note": "Impatient with the Knave's silence." }
+      ]
+    },
+    {
+      "trait": "Easily soothed by deference and flattery",
+      "description": "Her fury passes as soon as she believes she has been obeyed or praised.",
+      "evidence": [
+        { "chapter": "ch008", "chapter_no": 8, "ref": "ch008-p30", "event": "ev0034", "quote": "“That’s right!” shouted the Queen. “Can you play croquet?”", "note": "Satisfied the moment the soldiers say the heads are gone." },
+        { "chapter": "ch008", "chapter_no": 8, "ref": "ch008-p51", "event": "ev0037", "quote": "The Queen smiled and passed on.", "note": "Overhears Alice's hasty flattery." }
+      ]
+    },
+    {
+      "trait": "Silenced by a firm, fearless 'no'",
+      "description": "Her authority runs on fear. When a child refuses to be afraid, she has no second move.",
+      "evidence": [
+        { "chapter": "ch008", "chapter_no": 8, "ref": "ch008-p19", "event": "ev0034", "quote": "“Nonsense!” said Alice, very loudly and decidedly, and the Queen was silent.", "note": "The first crack in her power." },
+        { "chapter": "ch012", "chapter_no": 12, "ref": "ch012-p62", "event": "ev0052", "quote": "Nobody moved.", "note": "Her final 'Off with her head!' produces nothing." }
+      ]
+    },
+    {
+      "trait": "Holds grudges and keeps lists",
+      "description": "Nurses slights: she remembers the Hatter's performance at her concert and sends for the list of singers.",
+      "evidence": [
+        { "chapter": "ch007", "chapter_no": 7, "ref": "ch007-p55", "event": "ev0030", "quote": "He’s murdering the time! Off with his head!", "note": "Her verdict on the Hatter at the concert." },
+        { "chapter": "ch011", "chapter_no": 11, "ref": "ch011-p35", "event": "ev0046", "quote": "Bring me the list of the singers in the last concert!", "note": "Still pursuing him at the trial." }
+      ]
+    },
+    {
+      "trait": "Never admits a flaw",
+      "description": "Denies any weakness with fury, and lashes out physically with small objects when contradicted.",
+      "evidence": [
+        { "chapter": "ch012", "chapter_no": 12, "ref": "ch012-p55", "event": "ev0051", "quote": "“Never!” said the Queen furiously, throwing an inkstand at the Lizard as she spoke.", "note": "Asked whether she ever had fits." },
+        { "chapter": "ch012", "chapter_no": 12, "ref": "ch012-p60", "event": "ev0052", "quote": "“Hold your tongue!” said the Queen, turning purple.", "note": "Contradicted by Alice." }
+      ]
+    }
+  ],
+  "motivation": {
+    "core": "To be obeyed instantly and completely, and to feel in control of a world that keeps slipping out of order.",
+    "want": "Order on her terms: red roses, a proper game she wins, a guilty verdict on the tart thief, everyone flat on their faces when she passes.",
+    "fear": "Disorder, delay and being defied or laughed at. Her power is only as real as other people's fear of it.",
+    "evidence": [
+      { "chapter": "ch008", "chapter_no": 8, "ref": "ch008-p26", "event": "ev0034", "quote": "Off with their heads!", "note": "The white roses (an error) are met with instant sentence." },
+      { "chapter": "ch008", "chapter_no": 8, "ref": "ch008-p68", "event": "ev0038", "quote": "she’d have everybody executed, all round", "note": "When a problem can't be solved, she threatens everyone." }
+    ],
+    "shifts": [
+      { "chapter": "ch008", "chapter_no": 8, "event": "ev0034", "from": "a feared name, known by report (ch006-ch007)", "to": "a threat in person, already dented by Alice's 'Nonsense!'", "evidence_ref": "ch008-p19" },
+      { "chapter": "ch009", "chapter_no": 9, "event": "ev0041", "from": "all-powerful executioner", "to": "exposed: 'they never executes nobody'", "evidence_ref": "ch009-p46" },
+      { "chapter": "ch012", "chapter_no": 12, "event": "ev0052", "from": "commanding the court", "to": "ignored ('Nobody moved') and dissolved with the dream", "evidence_ref": "ch012-p62" }
+    ]
+  },
+  "habits": [
+    { "habit": "Screams 'Off with his/her head!' without even looking round", "evidence_ref": "ch008-p59", "event": "ev0037" },
+    { "habit": "Stamps on the ground while she shouts", "evidence_ref": "ch009-p32", "event": "ev0039" },
+    { "habit": "Stands with arms folded, 'frowning like a thunderstorm'", "evidence_ref": "ch009-p30", "event": "ev0039" },
+    { "habit": "Puts on spectacles to stare down a witness", "evidence_ref": "ch011-p26", "event": "ev0046" },
+    { "habit": "Answers other people's questions for them and overstates them ('Nearly two miles high')", "evidence_ref": "ch012-p18", "event": "ev0050" },
+    { "habit": "Turns crimson, then purple, as she escalates", "evidence_ref": "ch008-p18", "event": "ev0034" }
+  ],
+  "decision_pattern": "Decides instantly and emotionally, then leaves the carrying-out to others and forgets about it. She never checks whether an order was obeyed beyond asking 'Are their heads off?'. Flattery or a show of obedience closes the matter.",
+  "taboos": [
+    { "taboo": "Never carries out a sentence with her own hands, and none of her sentences is ever actually executed", "rationale": "SUP-014 (binding): her orders are bluster. The Gryphon confirms 'they never executes nobody'. The King quietly pardons everyone.", "evidence_ref": "ch009-p46", "event": "ev0041", "qa_check": "No execution, no weapon contact, no aftermath on screen. A shown beheading = defect." },
+    { "taboo": "Never admits she is wrong or weak", "rationale": "She answers 'Never!' to the suggestion of fits and throws the inkstand rather than concede.", "evidence_ref": "ch012-p55", "event": "ev0051", "qa_check": "No apology or concession line for the Queen." },
+    { "taboo": "Never waits for due process", "rationale": "Sentence first, verdict afterwards (LAW-003).", "evidence_ref": "ch012-p58", "event": "ev0052", "qa_check": "She must not be shown patiently hearing evidence through." },
+    { "taboo": "Never argues a point; she only commands", "rationale": "Beaten by argument, she falls silent or escalates. She never reasons back.", "evidence_ref": "ch008-p19", "event": "ev0034", "qa_check": "No reasoned rebuttal from the Queen to Alice's objections." }
+  ],
+  "facade": {
+    "applies": true,
+    "surface": "An all-powerful sovereign whose word is death",
+    "true_self": "A tantrum without teeth: powerless the moment she is not feared",
+    "reveal_chapter": "ch009",
+    "reveal_event": "ev0041",
+    "note": "The audience should feel the threat as real through ch008. The Gryphon's aside (ch009-p46) and the King's whispered pardon (ch009-p42) are the reveal, and ch012 'Nobody moved' is the proof. Screenplay must not undercut her menace before ch009."
+  },
+  "waking_life_embodiment": {
+    "applies": true,
+    "adult_trait": "The capricious grown-up temper: the adult whose rage and threatened punishments are loud, arbitrary and in the end powerless. It is also Alice's own self-punishing inner voice turned outward.",
+    "waking_source": "The authority of a Victorian upper-middle-class household (a nursery regime of scolding and boxed ears, the fashionable croquet party), and the ear-boxing Alice does to herself for cheating at croquet (ch001-p24). The Queen's own feud started when the Duchess 'boxed the Queen's ears' (ch008-p40). The farm's shepherd boy, whose voice becomes 'the Queen's shrill cries' (ch012-p70), is her sound source.",
+    "evidence": [
+      { "chapter": "ch001", "chapter_no": 1, "ref": "ch001-p24", "event": "ev0004", "quote": "trying to box her own ears for having cheated herself in a game of croquet", "note": "Alice's own self-punishment at croquet." },
+      { "chapter": "ch012", "chapter_no": 12, "ref": "ch012-p70", "event": "ev0054", "quote": "the Queen’s shrill cries to the voice of the shepherd boy", "note": "The waking sound behind her voice." }
+    ],
+    "inferred": true,
+    "reason": "The sound source is in the source text (world.json cp-sounds). The croquet/ear-boxing link and the 'grown-up temper' reading are design interpretations for the coming-of-age frame (world.json cp-court)."
+  },
+  "performance_keynote": "Flat, upright and card-like (SUP-004). Sudden bursts from stillness into full-volume fury, then instant calm once she is satisfied. The comedy is in how fast she moves on, the threat is in her volume. No physical violence to bodies beyond thrown small objects landing away from anyone.",
+  "consistency_flags": [
+    {
+      "flag": "The inkstand throw at Bill (ch012-p55) is physical aggression that sits uneasily with the SUP-014 'no contact' staging",
+      "note": "Not a character contradiction: her temper is fully consistent. It is a staging question for logic-qa and screenplay. Recommendation: the inkstand lands on the slate and desk, and the ink runs down Bill's face as a splash, with no impact on his body.",
+      "refs": ["ch012-p55", "SUP-014"],
+      "reported_to": "11-qa/logic-qa (via result.json)"
+    }
+  ],
+  "inferred_fields": ["waking_life_embodiment", "motivation.core (control-of-disorder layer)"],
+  "inferred": true,
+  "reason": "Traits and taboos are sourced. The motive depth and the waking embodiment are interpretive, and grounded in world.json wonderland_real_counterparts."
+}

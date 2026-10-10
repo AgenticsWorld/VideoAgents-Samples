@@ -1,0 +1,61 @@
+{
+  "character_id": "CHAR-cook",
+  "task_id": "p4-char-concept-cb1",
+  "sheet": "sheet.png",
+  "variants": [],
+  "tier_note": "index.json tier = B; produced because the work order names it explicitly.",
+  "self_check": {
+    "sheet.png": {
+      "layout": "PASS",
+      "appearance_field_hits": {
+        "gender_female_about_45": true,
+        "frizzy_dark_red_brown_hair_greying": true,
+        "narrow_squinting_sullen_eyes": true,
+        "broad_square_red_shiny_face_thick_brows": true,
+        "brawny_forearms_pepper_soot": true,
+        "big_broad_shouldered": true,
+        "pepper_box_mark": false
+      },
+      "costume_COS-038_hits": {
+        "faded_brown_cotton_dress_no_crinoline": true,
+        "sleeves_rolled_above_elbow": "partial (at the elbow)",
+        "large_stained_coarse_linen_apron_pepper": true,
+        "crumpled_white_mob_cap_askew": true,
+        "sturdy_black_boots": true
+      },
+      "style": "PASS",
+      "defects": [
+        "MAJOR (signature prop): the 'large battered pepper-box' is rendered as a tin pail/bucket full of peppercorns, not a hand-held pepper-box shaker. Prop design belongs to 06-art/prop; downstream prompts should not take the prop shape from this sheet."
+      ]
+    }
+  },
+  "rerolls": [],
+  "costume_sheets": {
+    "sheet_COS-039.png": {
+      "task_id": "p4-costume-sheet",
+      "agent": "06-art/costume-concept",
+      "costume_ref": "COS-039",
+      "status": "final (kept; reroll budget 0)",
+      "self_check": {
+        "layout": "PASS",
+        "identity": "PASS (same face, hair, build as sheet.png)",
+        "costume_hits": {
+          "faded_brown_cotton_dress_no_crinoline": true,
+          "sleeves_pulled_down": true,
+          "clean_coarse_linen_apron": false,
+          "coarse_brown_wool_shawl_crossed_over_chest": true,
+          "plain_black_straw_bonnet_tied_over_mob_cap": "partial (black straw with the mob cap frill beneath, but shaped as a flat-brimmed hat with no ties under the chin)",
+          "sturdy_black_boots": true,
+          "faint_pepper_dust": true,
+          "hands_empty": true
+        },
+        "style": "PASS"
+      },
+      "defects": [
+        "major: the apron is heavily stained and soot-smudged, not the clean apron the witness costume calls for (the base sheet's stained apron pulled through)",
+        "major: the black straw bonnet is a flat-brimmed hat with no ties under the chin, not a bonnet"
+      ]
+    }
+  },
+  "costume_rerolls": []
+}

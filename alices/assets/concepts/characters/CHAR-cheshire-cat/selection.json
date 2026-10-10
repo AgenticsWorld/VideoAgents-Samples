@@ -1,0 +1,12 @@
+{
+  "character_id": "CHAR-cheshire-cat", "task_id": "p4-char-concept-cb1", "sheet": "sheet.png", "variants": [],
+  "pending_H2": ["appearance.face.grin (pending_H2): ear-to-ear grin rendered per current proposal text - for user decision at H2"],
+  "self_check": {"sheet.png": {
+    "layout": "PASS: four framed panels, one cat each.",
+    "appearance_field_hits": {"gender_female": "not visually determinable", "large_heavy_boned_shorthair": true, "brown_classic_tabby_bullseye_flank_whorls": true, "honey_gold_ground": "partial (reads grey-brown)", "ringed_tail": true, "cream_gold_chin_chest": true, "green_gold_eyes": true, "M_forehead_mark": true, "long_white_whiskers": true, "long_unsheathed_claws_mark": true, "cheek_to_cheek_grin_full_teeth": "partial", "unclothed": true},
+    "costume_COS-016_hits": {"unclothed_unadorned": true},
+    "style": "PASS: photoreal cat.",
+    "defects": ["MAJOR (pending_H2 grin): grin reads as a snarl/hiss (canines bared, mouth open) rather than a contented cheek-to-cheek grin with softened half-closed eyes; side and back views show a closed mouth, so the grin is not consistent across panels.", "Front and chest show mackerel-style stripes; honey-gold ground colour is weak."]
+  }},
+  "rerolls": []
+}

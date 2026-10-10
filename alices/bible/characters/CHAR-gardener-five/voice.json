@@ -1,0 +1,28 @@
+{
+  "character_id": "CHAR-gardener-five",
+  "name": "Five",
+  "tier": "extra",
+  "card_type": "individual",
+  "gender": "male",
+  "age_sense": "young man (appearance base_age_range 25-32)",
+  "timbre": "thick, sulky, slightly muffled young man's voice, whiny when blamed",
+  "pitch": "mid baritone, sagging sulky intonation",
+  "pitch_range_hz": [100, 170],
+  "speed_wpm": [140, 160],
+  "speed_cpm": [532, 608],
+  "accent": "rural Oxfordshire working-class English, broader burr than Two",
+  "reference_style": "The sulky, tattling one of the trio: grumbles excuses, repeats palace gossip, and cries the alarm 'The Queen! The Queen!'.",
+  "emotion_range": {
+    "sulky": { "speed_delta": "-5%", "pitch_delta": "-1semi", "note": "ch008-p02 'in a sulky tone'" },
+    "alarm": { "speed_delta": "+15%", "pitch_delta": "+4semi", "volume": "shout", "note": "'The Queen! The Queen!'" }
+  },
+  "age_variants": [],
+  "source_chapter": "ch008",
+  "sources": ["ch008", "ch008-p02", "ch008-d0002", "ch008-d0011"],
+  "voice_evidence": [
+    { "para": "ch008-p02", "quote": "said Five, in a sulky tone" }
+  ],
+  "inferred": true,
+  "inferred_fields": ["timbre", "pitch", "pitch_range_hz", "speed_wpm", "speed_cpm", "accent"],
+  "reason": "Sulky tone sourced; rest designed to separate the three gardeners by pitch/texture."
+}

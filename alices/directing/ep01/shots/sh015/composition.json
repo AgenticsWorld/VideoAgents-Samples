@@ -1,0 +1,34 @@
+{
+  "shot_id": "sh015",
+  "scene_id": "SCN-field-hedge-burrow",
+  "size": "medium",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "centre",
+    "anchor_xy": [0.40, 0.56],
+    "size_in_frame": "from the waist up, about 0.60 of frame height, shrinking to her boots alone before she is gone"
+  },
+  "second_subject": {
+    "id": "burrow",
+    "grid": "centre",
+    "anchor_xy": [0.50, 0.50],
+    "note": "the widening from sh014 recentres the black oval on the exact frame centre at about 0.30 of frame height, and it stays there for the rest of the sequence."
+  },
+  "headroom": "about 0.14 of frame height of root and hedge shade above her shoulders; once she is in, the whole upper third is hawthorn root and nothing else.",
+  "horizon_eyeline": "Lens still at 0.25 m; spoil line across at 0.74. Her eyeline is gone from the frame within the first second — she is face-into-the-dark for almost the whole shot.",
+  "layers": {
+    "fg": "pale spoil crumbs along the bottom edge and, at the very end, her black ankle-strap boots kicking once, clean and unmarked",
+    "mg": "Alice going away from camera, arm then head then shoulders entering the oval",
+    "bg": "the flat black of the burrow, which swallows her without a change of shape"
+  },
+  "gaze": {
+    "direction": "into_depth",
+    "lead_room": "none",
+    "note": "she is travelling away on the lens axis, so there is no lead room to give; the composition deliberately withholds a last look back at camera."
+  },
+  "balance": "Starts asymmetric (her mass left of the oval) and empties out to a centred, symmetrical frame — the picture resolves into the shape that sh016 then holds.",
+  "leading_lines": "The hawthorn root arch and the spoil fan converge on the oval at centre; her own body becomes the last leading line, pointing into it.",
+  "eye_first": "Her shoulders entering the dark, then the boots, then the black where both were.",
+  "safe_area_ok": true,
+  "constraint_binding": "No cutaway and no reaction shot — the first impossible thing is played flat, so nothing in the composition marks the moment the hole proves too big: the framing, scale and lighting of the opening are identical before and after she fits through it. The black ankle-strap boots are kept clean, sharp and unambiguous in frame as they go, for the sh064 pay-off."
+}

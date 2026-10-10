@@ -1,0 +1,18 @@
+{
+ "task_id": "p6-storyboard-ep01",
+ "skipped": true,
+ "reason": "quality judge=0 (user setting); QA dimensions all 0",
+ "auto": {
+  "scene_coverage_100": "PASS (S01-S10 + provisional hook head S00)",
+  "every_shot_in_group": "PASS (101 shots / 37 groups)",
+  "blocking_map_present": "PASS (orchestrator re-ran code/blocking_map_check.py with the app runtime: 0 violations, 0 WARN)",
+  "pose_present": "PASS (orchestrator re-ran code/storyboard_pose_check.py --strict: 101 shots, 0 violations)",
+  "creature_refs_valid": "PASS",
+  "costume_refs_valid": "PASS",
+  "transition_ok": "PASS (6 transitions, renderable 1.4s <= 5.4s)",
+  "duration_range": "PASS (2.0-12.0s inside 0.5-15s)",
+  "group_caps": "PASS (max 30.0s, max cast 2 <= 4)",
+  "dialogue_fit_x0.7": "PASS (self-reported per dialogue group)",
+  "no_narration": "PASS"
+ }
+}

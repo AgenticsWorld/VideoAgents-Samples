@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh017",
+  "group_id": "grp008",
+  "scene_no": "S03",
+  "duration_s": 5.0,
+  "size": "wide",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 28,
+  "camera_height_m": "at the lip of the entry tunnel, about 0.30 above its floor",
+  "angle": "high oblique, tilted down into the shaft",
+  "rack_focus": "none",
+  "start_frame": "Darkness with hawthorn roots across the top of frame: Alice crawling forward on her front along the low earth tunnel, lit only from the opening behind her; the dark mouth of the tunnel matched in size and screen position to sh016.",
+  "end_frame": "The same frame as the floor tips away under her hands and she drops clean out of the bottom of it, leaving the empty tunnel lip and the black below.",
+  "constraint_honoured": "'Set-up 1 of the licensed three; the recognised wide is held back to sh022' — one fixed set-up, and the sh016 oval match is preserved by not moving.",
+  "movement_note": "S03 is built from three reusable set-ups and no move in any of them; the fall's energy comes from her dropping out of frame, not from the camera chasing her.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

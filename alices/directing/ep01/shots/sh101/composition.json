@@ -1,0 +1,32 @@
+{
+  "shot_id": "sh101",
+  "scene_id": "SCN-pool-of-tears",
+  "size": "medium",
+  "subject": {
+    "id": null,
+    "id_note": "no character in frame — this is her water-level eye-line and she is behind the lens. shot_list registers CHAR-alice with a poses_note.",
+    "pov_of": "CHAR-alice",
+    "kind": "environment",
+    "what": "a single V-shaped wake crossing the broken lamplight on the black water",
+    "grid": "centre",
+    "anchor_xy": [0.52, 0.52],
+    "size_in_frame": "the V starts about 0.10 of frame width across at the far side of frame and opens to about 0.55 of frame width as it reaches the near edge"
+  },
+  "headroom": "not applicable. The dark hall occupies the top 0.42 of frame and holds nothing at all — no fitting, no detail, no shape.",
+  "horizon_eyeline": "Water-level on the same axis as sh100, lens right on the surface: the waterline runs level across at 0.58 of frame height. No figure and no eyeline in frame — the lens is her eye-line.",
+  "layers": {
+    "fg": "the black water immediately in front of the lens, where the wake is going to arrive",
+    "mg": "the V-shaped wake crossing the broken lamplight, coming steadily at camera",
+    "bg": "the wet door bases and the lamplit dark, unchanged from sh100"
+  },
+  "gaze": {
+    "direction": "none",
+    "lead_room": "none",
+    "note": "nothing in frame looks, and the thing making the wake never surfaces to be looked at. The composition's only subject is a disturbance."
+  },
+  "balance": "A wide level frame, empty above the waterline and empty below it except for one opening V — the most reduced composition in the episode and the last one in it.",
+  "leading_lines": "The two arms of the wake are the only lines in frame, and they open toward the lens; the broken lamplight they cross is a scatter of flecks, not a line. Everything points at the viewer.",
+  "eye_first": "The point of the V, and then the eye is carried forward along it as it grows — arriving at the bottom edge of frame at the moment the picture cuts to black.",
+  "safe_area_ok": true,
+  "constraint_binding": "The LAST picture of the episode. Practical water only, no creature asset, nothing under the water lit: nothing is shown beneath the surface, nothing breaks it, and no shape is silhouetted in the dark. The wake reaches the edge of frame and the cut goes to black ON IT — there is no reaction frame after it, so this composition has no partner shot and is not built to hand off to one. The single splash over black that follows is the edit's tail and is not a group."
+}

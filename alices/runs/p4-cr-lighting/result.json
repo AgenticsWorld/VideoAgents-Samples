@@ -1,0 +1,23 @@
+{
+  "task_id": "p4-cr-lighting",
+  "agent": "05-scenes/lighting",
+  "attempt": 1,
+  "date": "2026-09-23",
+  "change_request": "BIB-0027",
+  "status": "done",
+  "changed_files": [
+    {
+      "file": "bible/scenes/SCN-caterpillar-clearing/lighting.json",
+      "note": "In LGT-caterpillar-clearing-01.direction_note, 'the Caterpillar (a human performer, SUP-002)' is now a photoreal CGI caterpillar composited into the live-action plate (SUP-002 as amended by BIB-0027). Sun light now shows through the edges of its translucent body. _meta.status/amended record the CR. Sun, key, fill, colour temperature, contrast and prompt_fragment_en are unchanged: the fragment had no stale wording."
+    },
+    {
+      "file": "bible/scenes/SCN-mock-turtle-ledge/lighting.json",
+      "note": "LGT-mock-turtle-ledge-01 'quality' and 'prompt_fragment_en' no longer assume costumed human performers ('hair and costumes' / 'hair and clothes'). The rim light now falls on Alice's hair and dress and on the photoreal CGI Gryphon's feathers and the Mock Turtle's hide and shell (SUP-010). _meta.amended records the CR. Sun bearing, elevation, colour temperature, contrast and enums are unchanged."
+    }
+  ],
+  "unchanged_by_design": "No lighting scheme changed. Mucha/Art Nouveau (XA-magic-08, WR-010) is set design owned by environment/architecture/art-director, and colour mood is owned by color-script. The physical light sources stay as they were, so no Mucha wording was added to the prompt fragments.",
+  "downstream_notice": "The prompt_fragment_en of LGT-mock-turtle-ledge-01 changed wording. No video prompts exist yet, so nothing needs re-sync.",
+  "pending_H2": "none raised by this station",
+  "defects_opened": [],
+  "skills": "none selected for this station"
+}

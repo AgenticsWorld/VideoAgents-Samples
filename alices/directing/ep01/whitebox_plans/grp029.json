@@ -1,0 +1,79 @@
+{
+  "schema_version": "whitebox_plan.v1",
+  "group_id": "grp029",
+  "scene_id": "SCN-long-hall",
+  "basis": "Alice bends right down over the water toward him at t=0.3 - she turns to face him (yaw -1.0790, computed from her seat at (9.00, -2.55) to his at (7.60, -1.80)) and her head comes down through the top of the frame. The White Rabbit holds his curtain anchor while his look climbs her in two steps and never finds her face (sh076's two-step tilt), starts violently backward in the water at t=5.3, drops the gloves and fan at t=6.3 and sprints away up the hall at about 7 m/s, out of the light by t=7.8. He does not reach the corner entrance inside the 8 s - 17 m at a rabbit's real sprint needs longer - but he is gone into the dark well before the group ends and is declared absent from grp030 onward.",
+  "actors": [
+    {
+      "id": "CHAR-alice",
+      "kind": "person",
+      "size_m": [0.7672, 2.74, 0.6028],
+      "keyframes": [
+        {"t": 0.0, "position": [9.0, 0.0, -2.55], "pose": "sit", "yaw": -1.35, "head_pitch": 0.3},
+        {"t": 0.3, "position": [9.0, 0.0, -2.55], "pose": "sit", "yaw": -1.079, "head_pitch": 1.2},
+        {"t": 0.9, "position": [9.0, 0.0, -2.55], "pose": "sit", "yaw": -1.079, "head_pitch": 1.25},
+        {"t": 1.8, "position": [9.0, 0.0, -2.55], "pose": "sit", "yaw": -1.079, "head_pitch": 1.25},
+        {"t": 2.5, "position": [9.0, 0.0, -2.55], "pose": "sit", "yaw": -1.079, "head_pitch": 1.2},
+        {"t": 6.0, "position": [9.0, 0.0, -2.55], "pose": "sit", "yaw": -1.079, "head_pitch": 1.1},
+        {"t": 8.0, "position": [9.0, 0.0, -2.55], "pose": "sit", "yaw": -1.079, "head_pitch": 1.0}
+      ]
+    },
+    {
+      "id": "CHAR-white-rabbit",
+      "kind": "creature",
+      "size_m": [0.15, 0.3, 0.36],
+      "keyframes": [
+        {"t": 0.0, "position": [7.6, 0.0, -1.8], "pose": "sit", "yaw": -1.5708, "head_pitch": 0.15},
+        {"t": 2.5, "position": [7.6, 0.0, -1.8], "pose": "sit", "yaw": -1.5708, "head_pitch": 0.0},
+        {"t": 3.1, "position": [7.6, 0.0, -1.8], "pose": "sit", "yaw": -1.3, "head_pitch": -0.5},
+        {"t": 4.1, "position": [7.6, 0.0, -1.8], "pose": "sit", "yaw": -1.3, "head_pitch": -1.1},
+        {"t": 5.3, "position": [7.3, 0.0, -1.7], "pose": "sit", "yaw": -1.3, "head_pitch": -1.1},
+        {"t": 6.3, "position": [7.15, 0.0, -1.62], "pose": "sit", "yaw": -1.5708, "head_pitch": -0.3},
+        {"t": 6.8, "position": [4.0, 0.0, -0.6], "pose": "stand", "yaw": -1.2568},
+        {"t": 7.8, "position": [-3.0, 0.0, 1.2], "pose": "stand", "yaw": -1.3169, "visible": false},
+        {"t": 8.0, "position": [-4.5, 0.0, 1.6], "pose": "stand", "yaw": -1.3169, "visible": false}
+      ]
+    }
+  ],
+  "cameras": [
+    {
+      "shot_id": "sh075",
+      "start": 0,
+      "duration_s": 2.5,
+      "movement": "static",
+      "keyframes": [
+        {"t": 0.0, "position": [8.3, 0.3, -1.7], "target": [8.85, 1.3, -2.35], "fov": 33.3985},
+        {"t": 2.5, "position": [8.3, 0.3, -1.7], "target": [8.85, 1.3, -2.35], "fov": 33.3985}
+      ]
+    },
+    {
+      "shot_id": "sh076",
+      "start": 2.5,
+      "duration_s": 3.5,
+      "movement": "tilt_up",
+      "keyframes": [
+        {"t": 0.0, "position": [7.6, 0.1, -0.55], "target": [7.6, 0.181, -1.8], "fov": 33.3985},
+        {"t": 0.5, "position": [7.6, 0.1, -0.55], "target": [7.6, 0.598, -1.8], "fov": 33.3985},
+        {"t": 1.2, "position": [7.6, 0.1, -0.55], "target": [7.6, 0.598, -1.8], "fov": 33.3985},
+        {"t": 1.7, "position": [7.6, 0.1, -0.55], "target": [7.6, 1.215, -1.8], "fov": 33.3985},
+        {"t": 3.5, "position": [7.6, 0.1, -0.55], "target": [7.6, 1.215, -1.8], "fov": 33.3985}
+      ]
+    },
+    {
+      "shot_id": "sh077",
+      "start": 6.0,
+      "duration_s": 2.0,
+      "movement": "static",
+      "keyframes": [
+        {"t": 0.0, "position": [7.7, 0.08, -1.35], "target": [7.3, 0.02, -1.7], "fov": 26.9915},
+        {"t": 2.0, "position": [7.7, 0.08, -1.35], "target": [7.3, 0.02, -1.7], "fov": 26.9915}
+      ]
+    }
+  ],
+  "continuity": {"actors": "inherit", "camera": "cut"},
+  "warnings": [
+    "sh076 is a pure tilt from a locked position: the lens never translates, the target rises in the two steps camera.json specifies (+18 degrees in 0.5 s, hold 0.7 s, +20 degrees in 0.5 s, hold 1.3 s) and stops at about 42 degrees, which is still short of a 2.74 m face bent down toward him at 1.25 m - the lead room it opens stays empty, as composition requires.",
+    "His flight does not reach the ne_entrance map end inside sh077's 2 s (17 m would need 17 m/s); he sprints at a real rabbit's 7 m/s and is marked not visible from t=7.8, which is the 'gone into the darkness' beat. grp030 onward declares him absent.",
+    "Her 0.38 m seated half-depth never comes within 0.20 m of him: closest approach is 1.59 m."
+  ]
+}

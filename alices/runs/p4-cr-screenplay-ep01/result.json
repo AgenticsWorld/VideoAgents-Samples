@@ -1,0 +1,27 @@
+{
+  "task_id": "p4-cr-screenplay-ep01",
+  "agent": "01-story/screenplay",
+  "project": "alices",
+  "attempt": 1,
+  "status": "done",
+  "date": "2026-09-23",
+  "change_request": "BIB-0027",
+  "authority_read": ["bible/changelog.md BIB-0027", "bible/cultivation.json SUP-002 (amended)"],
+  "changed_files": [
+    {
+      "file": "story/episodes/ep01/screenplay.md",
+      "backup": "runs/p4-cr-screenplay-ep01/screenplay_v3_before.md",
+      "change_note": "Four constraint/note edits only (diff: 3 lines replaced, 1 line added). (1) Front matter series tag 'realistic period drama' → 'realistic fantasy film (brief.md; BIB-0027)'. (2) Added bible_cr front-matter line recording this pass. (3) Conventions block: 'dream White Rabbit is a human performer (SUP-002)' → photoreal CGI white rabbit with only iconic period props, no cartoon face / no costume; waking CRE-001 unchanged; dream environments full Mucha/Art Nouveau (WR-010, XA-magic-08), waking at most subtle; 1862 lock and photographed live-action finish kept. (4) S04 adaptation_note: appended BIB-0027 supersession of the action line's 'small, fussy man' / 'pink-tinted spectacles' descriptors. Dialogue text, scene order, scene headings, [事件] lines, action lines and all other notes unchanged."
+    },
+    {
+      "file": "qa/defects/DEF-p4-cr-screenplay-001.json",
+      "change_note": "New ticket: frozen action lines still stale under BIB-0027 (S04 Rabbit described as a man; S05 hall described in Gothic stone/oak terms). Proposed fixes given; due at H3."
+    }
+  ],
+  "machine_checks": {
+    "check_screenplay_events": "PASS (exit 0)",
+    "check_scene_int_ext": "PASS (exit 0, 0 errors, 0 warnings)"
+  },
+  "pending_H2": "Nothing new raised from ep01: Frog/Fish-Footman anatomy and the non-speaking animals do not appear in this episode.",
+  "not_changed_by_design": ["S01/S02 real mute rabbit (CRE-001) lines and notes", "all dialogue lines LN-ep01-001..", "scene headings and order"]
+}

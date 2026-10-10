@@ -1,0 +1,45 @@
+{
+  "scene_id": "SCN-mock-turtle-ledge",
+  "task_id": "p4-env-concept-sb3",
+  "generated": "2026-09-23",
+  "tool": "python3 modules/genmedia.py image",
+  "provider": {
+    "image": "volcengine",
+    "model": "doubao-seedream-5-0-pro-260628"
+  },
+  "items": [
+    {
+      "output": "layout_top.png",
+      "size": "2560x1440",
+      "n": 1,
+      "seed": null,
+      "refs": [],
+      "prompt": "Orthographic top-down architectural plan photograph of a real built film set, taken straight down from high above: camera axis exactly perpendicular to the ground; no wall face, no elevation, no side of any building, wall, hedge or tree trunk is visible; only the ground plane, the top edges of walls and hedges and the tops of trees, furniture and objects are seen. The top of the image is north. Plan of a 48 by 27 metre stretch of an 1860s English shingle beach in an Art Nouveau dream after Alphonse Mucha, built as a real location set. The left quarter of the image is calm pale jade-grey sea with small curling wavelets. The waterline runs from top to bottom about 30 percent from the left, in a gentle flowing curve. From the waterline to about 62 percent across lies a broad strip of firm, flat, wet sand, smooth and reflective; along its right edge a curving line of white dried foam and shell grit marks the tide-line. From there to the right edge rises a bank of rounded grey and fawn flint shingle, with sea-kale tufts near the right edge. On the upper beach, about 70 percent across and exactly at mid-height, a low flat-topped grey rock ledge about 3 metres long and 1.5 metres deep sits alone on the shingle, its top seen from above with curving flowing strata, draped bladderwrack and sea-pinks in its cracks, a small rock pool beside it. Near the top of the image a dark weathered timber groyne runs from the shingle across the sand into the sea, its posts capped with verdigris iron wave-scroll finials. On the wet sand below-left of centre two small wooden spades stand upright, nobody near them. On the shingle below-right of the ledge a few stranded lobster pots and a coil of old rope. Low golden evening sun from the west (over the sea, left) with long shadows toward the east, sparkle on the water. The set is empty: no people, no animals, no creatures, no text, no labels, no arrows, no symbols, no map legend. A clean, sharp, evenly exposed photographic plan in which every feature named above is clearly readable in its stated position. Photorealistic live-action fantasy film rooted in England in 1862, shot on 35mm film with anamorphic lenses, 16:9 widescreen. Real sets, real locations and real costumed actors in 1862 dress. Wonderland spaces are real built sets and set extensions in an Alphonse Mucha-inspired Art Nouveau design: flowing organic lines, floral and vine ornament, circular halo roundels, mosaic and stained glass, aged pastel-and-gold surfaces with patina and moss; the waking 1862 meadow stays plain period realism. Talking animals and fantastical creatures are photoreal CGI animals with naturalistic anatomy, real fur, feathers, skin and scales, lit by the same light and grounded with real contact shadows. Natural and practical light: sunlight, candlelight and oil lamps, soft haze with volumetric light shafts and soft colour through stained glass. Restrained palette of verdigris teal, slate grey, dusty rose, soft sage and lilac pastels and tarnished-gold accents, warmed by amber sun and candle glow. Fine film grain, gentle halation, soft depth of field, grounded and quietly melancholy.",
+      "negative": "cartoon, anime, animation, illustration, flat poster illustration, outline graphics, concept-art painting, digital painting, digital matte painting look, stylised 3D animation render, video game graphics, Pixar style, Disney animation style, cartoon animal face, big cartoon eyes, plush toy, human in animal costume, full-head animal mask, mascot costume, full-body fur suit, plastic skin, airbrushed, oversaturated, HDR, neon colors, candy pastel colors, horror monster, glowing magic, magic sparkles, fairy dust, energy beams, electric light, light bulb, neon sign, modern clothing, zipper, plastic, sunglasses, wristwatch, eyeglasses with modern frames, car, bicycle, power lines, tarmac road, Art Deco, steampunk gears, poster lettering, decorative text, gore, blood, wound, severed head, decapitation, executioner's axe, chopping block, guillotine, noose, gallows, blade at neck, execution, corpse, skeleton, horror, animal being struck, sexualized, watermark, logo, subtitles, caption, UI overlay, deformed hands, extra fingers, distorted face, people, person, human figure, crowd, animal, bird, cat, creature, letters, text labels, arrows, map legend, compass rose, grid lines, perspective view, horizon, door lying on the floor, window lying on the floor, door bar on the floor, wall elements projected onto the floor, elevation view of a door or window, missing wall, open side, dollhouse cutaway, tilted camera, oblique aerial view",
+      "prompt_parts": {
+        "camera": "runs/p4-env-concept-sb3/prompts/cam.txt",
+        "body": "runs/p4-env-concept-sb3/prompts/body_SCN-mock-turtle-ledge.txt",
+        "closing": "runs/p4-env-concept-sb3/prompts/end.txt",
+        "style": "bible/style.json#style_fragment_ui (verbatim)"
+      },
+      "negative_source": "bible/style.json#negative_prompt_en (verbatim) + plan-view negatives (SOUL duty 3 rule 4 + no people/animals/labels); dream scene, so the waking addon is not used",
+      "result": "generated first attempt; no provider error"
+    }
+  ],
+  "user_refs": [
+    {
+      "path": "refs/style/alice.jpeg",
+      "mode": "read as look reference, not injected via --ref",
+      "why": "It is an oblique interior perspective with a creature. Injecting it into a nadir plan view risks importing its camera angle, its interior and its creature (known seedream plan-view elevation prior). Its look reaches the image through style_fragment_ui, which was written from it (style.json user_refs)."
+    }
+  ],
+  "bible_inputs": [
+    "bible/scenes/index.json#SCN-mock-turtle-ledge",
+    "bible/scenes/SCN-mock-turtle-ledge/architecture.json",
+    "bible/scenes/SCN-mock-turtle-ledge/lighting.json",
+    "bible/scenes/SCN-mock-turtle-ledge/environment.json",
+    "bible/style.json"
+  ],
+  "bible_comparison_en": "architecture: sea, waterline, wet sand, foam tide-line, flint shingle, groyne with verdigris wave-scroll finials, two spades, lobster pots and rope, sea-kale all present; the ledge is about 3x the specified size. Moderate camera tilt. lighting LGT-mock-turtle-ledge-01 low sun from the sea OK. style OK.",
+  "auto_retries_used": 0
+}

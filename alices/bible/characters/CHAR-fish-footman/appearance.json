@@ -1,0 +1,74 @@
+{
+  "character_id": "CHAR-fish-footman",
+  "name": "Fish-Footman",
+  "tier": "extra",
+  "layer": "dream",
+  "revision": { "change_id": "BIB-0027", "task_id": "p4-cr-appearance", "date": "2026-09-23", "note": "Rewritten from the human-performer reading to a CGI fish-bodied figure in livery; anatomy pending_H2." , "amended_by": { "change_id": "BIB-0029", "task_id": "p4-h2-bible", "date": "2026-09-23", "note": "H2 lock folded in (approval ba96732d): anatomy Option A approved; lower legs and feet aligned to costumes.json COS-035 and the locked sheet (DEF-p4-char-concept-201-b)." } },
+  "rendering": {
+    "mode": "photoreal_cgi_animal_in_livery",
+    "rule": "bible/cultivation.json SUP-002 and XA-magic-02 (amended BIB-0027): CGI fish-bodied figure in FAC-house-of-hearts livery (the Queen's messenger); degree of humanisation owned by 04-creatures/creature with 03-characters/appearance",
+    "species": "Atlantic cod (Gadus morhua) head, skin and fins",
+    "anatomy_proposal": {
+      "status": "approved_H2",
+      "approved": { "option": "A", "gate": "G4", "approval_id": "ba96732d", "approved_on": "2026-09-23", "ruling_source": "runs/g4/gate.json approved_design_proposals #1 (style.json H2-footmen-anatomy): 'Frog-Footman and Fish-Footman are upright livery figures with real frog / fish heads, photoreal CGI.'" },
+      "proposal": "Option A (proposed): a photoreal cod-headed, scale-skinned figure standing upright on two short legs hidden in breeches and stockings. The arms end in fin-edged hands with webbed rays. Gill covers work as he breathes, and his tail fin shows under the coat tails. A fish cannot run out of a wood on its own anatomy, so the text forces more humanisation here than on the Frog-Footman. Everything visible except the silhouette stays fish: head, eyes, mouth, skin, fins.",
+      "alternatives": [
+        "Option B: a fish body that glides upright on its tail fin like a swimmer, with pectoral fins as hands and no legs; this is less humanised but harder to match to the Frog-Footman's bow.",
+        "Option C: another species (carp, perch) with the same body plan as A."
+      ],
+      "pairing_constraint": "Same height and stance as CHAR-frog-footman so their curls tangle when both bow (ch006-p03). The H2 option applies to both Footmen."
+    },
+    "limits": "Fish head, eyes, mouth, gills and skin are photoreal; speech by the fish mouth opening and closing, with gill flutter. No cartoon face, no human face, no human in a fish mask."
+  },
+  "gender": "male",
+  "gender_note": { "source_chapter": "ch006", "paragraph": "ch006-p01", "quote": "she considered him to be a footman because he was in livery" },
+  "base_age_range": "40-50",
+  "base_age_note": { "inferred": true, "reason": "Persona age (a senior, practised royal footman), kept for voice casting. As an animal: a large mature cod." },
+  "hair": {
+    "coat": "fine scaled fish skin on the body; a powdered wig on the head",
+    "color": "wig: powdered white, tight curls; skin: greenish-grey back freckled with brown-olive spots, a pale lateral line, silvery-white belly, faint wet sheen",
+    "style": "small tight curls all over the crown of the fish head; the wig sits on top and does not replace the head",
+    "source_chapter": "ch006",
+    "paragraph": "ch006-p01",
+    "quote": "both footmen, Alice noticed, had powdered hair that curled all over their heads",
+    "skin_inferred": true,
+    "reason": "Powdered curls are sourced; skin colouring follows the cod."
+  },
+  "eyes": { "color": "pale silvery-gold iris, black pupil", "expression": "round, wide-set on the sides of the head, unblinking, glassy", "inferred": true, "reason": "Fish eye; the source says only 'fish' face." },
+  "skin": { "tone": "see hair; the lips and chin barbel are paler", "inferred": true, "reason": "Species." },
+  "face": {
+    "shape": "a real fish head: heavy, jutting upper jaw and a single chin barbel",
+    "features": ["wide down-turned fish mouth that opens and closes", "chin barbel", "working gill covers", "eyes on the sides of the head"],
+    "default_expression": "solemn, formal; the mouth gapes slowly when he speaks",
+    "source_chapter": "ch006",
+    "paragraph": "ch006-p01",
+    "quote": "otherwise, judging by his face only, she would have called him a fish",
+    "inferred": true,
+    "reason": "The fish face is sourced; the species is designed."
+  },
+  "build": {
+    "height_range_cm": [80, 90],
+    "height_note": "Standing height; dream scale matched to the Frog-Footman and the four-foot house.",
+    "body_type": "long-bodied, deep-chested fish torso, narrow shoulders",
+    "posture": "stiff, formal footman's bearing; solemn delivery; comes out of the wood with a smooth gliding run",
+    "source_chapter": "ch006",
+    "paragraph": "ch006-p02",
+    "quote": "saying, in a solemn tone, “For the Duchess. An invitation from the Queen to play croquet.”",
+    "inferred": true,
+    "reason": "Old human height (176-182 cm) dropped; dream size designed."
+  },
+  "scale_reference": { "in_scene": "Alice watches from the wood at nine inches high (SUP-003), so he looms over her hiding place. His letter is itself outsized, 'nearly as large as himself': a scaled prop.", "source_chapter": "ch006", "paragraph": "ch006-p02", "quote": "a great letter, nearly as large as himself" },
+  "marks": [
+    { "type": "insignia", "description": "red heart badge with a small numeral device", "position": "breast of the livery coat", "inferred": true, "reason": "FAC-house-of-hearts emblem_visual (numeral devices for footmen)." }
+  ],
+  "signature_items": [
+    { "item": "a great sealed letter nearly as large as himself, carried under his arm", "source_chapter": "ch006", "paragraph": "ch006-p02" },
+    { "item": "powdered curled wig", "source_chapter": "ch006", "paragraph": "ch006-p01" }
+  ],
+  "default_outfit_tone": "Hearts livery: crimson tail coat piped in cream with a red heart badge and small numeral device, cream waistcoat, crimson knee breeches. No legwear or footwear below the knee: the lower legs stay in natural wet-sheened scaled skin and the feet are bare and webbed (no white stockings, no buckled pumps). The coat is cut to leave the dorsal fin and tail fin free. The old silver scale-pattern facings are dropped: his own skin now carries the fish look.",
+  "default_outfit_tone_source": { "source_chapter": "ch006", "paragraph": "ch006-p01", "quote": "a footman in livery came running out of the wood", "inferred": true, "reason": "Livery is sourced; colours follow FAC-house-of-hearts emblem_visual (he carries the Queen's invitation). Garment cut belongs to 06-art/costume. BIB-0029 (DEF-p4-char-concept-201-b): the stockings-and-pumps reading is removed and this card now matches costumes.json COS-035 visual_en and the H2-locked sheet, which both leave the fins, hands and lower legs in bare scaled skin; costumes.json stays the wardrobe authority for prompts." },
+  "period_silhouette_1862": { "silhouette": "1860s state livery (cut-away tail coat with deep cuffs, waistcoat, knee breeches), re-cut to a fish body and stopping at the knee: nothing on the lower legs or feet", "headwear": "powdered curled wig, no hat", "inferred": true, "reason": "Standard grand-house livery of the period." },
+  "pair_rule": "Hands the letter to CHAR-frog-footman (same scene, same powdered curled wig per ch006-p01). They must read as a matched pair of footmen of equal height, told apart by animal (cod: long, grey-green, barbelled; frog: round, mottled, bulging-eyed) and by livery colour.",
+  "doubling": null,
+  "prompt_base_en": "photoreal cod-headed footman figure standing upright at the edge of a wood, real Atlantic cod head with greenish-grey spotted skin, jutting jaw, chin barbel, round glassy silvery-gold eyes on the sides of its head, gill covers, wearing a powdered white wig of tight curls and an 1862 crimson livery tail coat piped in cream with a red heart badge, cream waistcoat, crimson knee breeches, bare wet-sheened scaled lower legs and bare webbed feet, fin-edged webbed hands, tail fin showing below the coat tails, carrying a huge sealed letter under its arm, naturalistic fish anatomy, live-action film plate"
+}

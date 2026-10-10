@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh098",
+  "group_id": "grp036",
+  "scene_no": "S10",
+  "duration_s": 9.5,
+  "size": "medium",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame, held)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 50,
+  "camera_height_m": 0.05,
+  "angle": "level, lens on the water surface",
+  "rack_focus": "none",
+  "start_frame": "The same water-level medium held: Alice treading water, warm broken lamplight on the surface behind her, her cornflower blue the only colour left in the frame.",
+  "end_frame": "The same frame at the end of both lines, with air between them: she has looked round at the flooded hall and said what she supposes will happen to her, and nothing in the shot has moved but the water.",
+  "constraint_honoured": "'Both lines whole in one shot with air between them.'",
+  "movement_note": "LN-ep01-030 (2.1 s) and LN-030b (5.6 s) both land whole inside 9.5 s of unmoving frame; a move would compete with the silence the pair needs between them.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

@@ -1,0 +1,14 @@
+{
+ "run_id": "b6c901c605ad",
+ "agent": "07-directing/director",
+ "artifact_versions": {
+  "directing/ep01/directing_plan.md": "v1"
+ },
+ "inputs_sha256": {},
+ "duration_s": 775,
+ "task_id": "p6-plan-ep01",
+ "attempt": 1,
+ "finished_at": "2026-09-23T07:50:00+08:00",
+ "model": "per-agent console config",
+ "engine": "unchanged (no --engine override)"
+}

@@ -1,0 +1,4 @@
+{"character_id":"CHAR-duchess-baby","sheet":"sheet.png","gender":"male","gender_word_in_prompt":true,"rendering":"real human infant (base sheet only)","pending_H2":"H2-non-speaking-animals: the piglet end-state belongs to creature-concept and is not drawn here",
+"appearance_field_hits":{"plump_ten_month_boy":true,"sparse_pale_fair_hair":true,"round_chubby_face":true,"very_turned_up_nose":"weak","puffy_blue_grey_eyes":true,"flushed_blotchy_skin_red_nose":true,"long_grubby_greyish_gown_past_feet":true,"loosely_tied_neck":true,"frayed_plain_hem":true,"pepper_dusted":true,"no_bonnet":true},
+"self_check":{"layout":"pass with defect","appearance":"pass with defects","style":"pass (photographed live-action)"},
+"defects":["The baby stands in all three full-body panels instead of sitting as prompted.","Hands leave the panel edge in the front and back panels (crop).","The nose is not markedly 'very turned-up'."],"rerolls":[]}

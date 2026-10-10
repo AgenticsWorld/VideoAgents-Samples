@@ -1,0 +1,59 @@
+{
+  "task_id": "p2-fix-geography",
+  "agent": "02-worldbuilding/geography",
+  "attempt": 1,
+  "status": "completed",
+  "generated": "2026-09-22",
+  "output": "bible/geography.json",
+  "ruling_applied": "data/projects/alices/runs/h1-ruling/ruling.json: 5.2 A (dream-only Wonderland, waking world stays small and real) and 5.6 A (Oxford/Thames valley, Friday 4 July 1862, clergyman-scholar family, Alice ~10, sister mid-teens)",
+  "defects_fixed": [
+    { "id": "DEF-p2-bible-001", "status_set": "fixed" },
+    { "id": "DEF-p2-bible-002", "status_set": "fixed" },
+    { "id": "DEF-p2-bible-003", "status_set": "fixed" }
+  ],
+  "summary": "Rebuilt geography.json around a strict waking/dream split. Every Wonderland location is now layer:\"dream\", parented under a new organizational root (LOC-wonderland-dream) instead of a fabricated family estate, and carries a grows_from pointer to the waking-world detail it echoes (world.json wonderland_real_counterparts). LOC-hall-of-doors now has exactly one adjacency and zero spatial_relations entries, per SUP-013. The pool of tears is now the flooded hall itself (SUP-007; ch002-p07), not a separate ground-level pond. The seashore now grows from Alice's one remembered seaside trip, not a tidal Thames estuary (the Thames is not tidal at Oxford). Four new real waking-world places were registered (family house, neighbouring farm + farmyard, river backwater) plus one optional designed background landmark (distant church spire), and the hedge/burrow entry was corrected to a plain physical field-edge feature with no implied underground structure.",
+  "ids_changed_content_only": [
+    "LOC-riverside-region", "LOC-riverbank", "LOC-rabbit-hole-entrance",
+    "LOC-descent-shaft", "LOC-hall-of-doors", "LOC-tiny-passage",
+    "LOC-walled-garden", "LOC-rose-tree-yard", "LOC-croquet-lawn",
+    "LOC-ornamental-pool", "LOC-pool-bank", "LOC-thick-wood", "LOC-mushroom-clearing",
+    "LOC-pigeon-nest-treetop", "LOC-gryphon-sunning-spot",
+    "LOC-rabbits-house", "LOC-rabbits-house-room", "LOC-duchess-house", "LOC-duchess-kitchen",
+    "LOC-hare-cottage", "LOC-tea-table-yard", "LOC-estuary-shore", "LOC-rock-ledge",
+    "LOC-courthouse", "LOC-courtroom"
+  ],
+  "ids_added": [
+    "LOC-wonderland-dream",
+    "LOC-family-house",
+    "LOC-neighbouring-farm",
+    "LOC-farmyard",
+    "LOC-river-backwater",
+    "LOC-seaside-town",
+    "LOC-church-spire"
+  ],
+  "ids_deprecated": [
+    { "id": "LOC-manor-grounds", "reason": "real landed-estate grounding rejected by H1 5.2 A; superseded by LOC-riverside-region (waking) and LOC-wonderland-dream (dream)" },
+    { "id": "LOC-cellar-passage", "reason": "unified real underground structure (well/hall/passage) rejected; children now parent directly to LOC-wonderland-dream / LOC-hall-of-doors" },
+    { "id": "LOC-tree-hatch", "reason": "'second hatch' into the same real passage rejected per SUP-013; ch007-p104 quote moved to LOC-hall-of-doors.also_seen" },
+    { "id": "LOC-village", "reason": "real coastal village + courthouse grounding rejected (also depended on the now-rejected tidal-estuary reading); LOC-courthouse re-parented to LOC-wonderland-dream as dream-only" }
+  ],
+  "ids_unchanged": ["none of the 4 deprecated IDs, 25 reclassified IDs, or 7 added IDs were recycled or removed from the file; all IDs from the previous version remain present and resolvable"],
+  "counts": {
+    "total_location_entries": 37,
+    "live_waking": 10,
+    "live_dream": 23,
+    "deprecated": 4,
+    "spatial_relations_waking_only": 8,
+    "cross_domain_assumptions": 2
+  },
+  "dictionary_note": "For 02-worldbuilding/dictionary: 7 new proper-noun-bearing names need TERM-* entries (The Thames Valley Near Oxford / LOC-riverside-region content update, The Family House, The Neighbouring Farm, The Farmyard, The Reedy River Backwater, The Seaside Town (Remembered), A Distant Parish Church Spire, Wonderland (Alice's Dream)); 4 deprecated names should NOT receive new terms.",
+  "notes": [
+    "Edited only bible/geography.json and the three defect tickets, per work order scope. bible/cultivation.json (SUP registry) and bible/world.json were read-only cross-references, not modified.",
+    "All existing LOC-* IDs were kept; none recycled. Deprecated entries keep deprecated:true, a deprecated_on date, a deprecated_reason, and their original source citation for audit; their physical/adjacent/parent fields are cleared of any content that could be mistaken for a live geography claim.",
+    "Every dream-layer entry carries a non-null grows_from (counterpart_key and/or loc) per the ruling's explicit 'grows_from' requirement; every waking-layer entry carries grows_from: null (a real value, not a placeholder -- a real place does not grow from anything).",
+    "LOC-hall-of-doors deliberately has exactly one adjacency (LOC-tiny-passage, its own self-contained set) and appears in zero spatial_relations entries, directly satisfying 'hall of doors per SUP-013 never connected to other geography'.",
+    "spatial_relations[] now contains only waking-layer, real-world pairs; dream-layer connectivity is expressed only via light 'adjacent' arrays framed as one-way dream narrative sequence (no travel/distance claims), consistent with cultivation.json cross_domain_assumptions XA-magic-04 (read-only).",
+    "No UNKNOWN/TBD/N/A/empty placeholders in any live or deprecated data entry (verified by script); the only empty-string values left are in the exempt _meta.entry_schema documentation template, per WRITE_RULES.md section 3.",
+    "Did not touch bible/world.json's open item about registering the 8 unregistered faction_register groups as FAC-* (DEF-p2-bible-004) or the dictionary gaps (DEF-p2-bible-005/006) -- those are outside this file and this work order."
+  ]
+}

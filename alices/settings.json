@@ -1,0 +1,68 @@
+{
+  "output": {
+    "aspect_preset": "youtube",
+    "aspect_custom": "",
+    "language": "English",
+    "draft_resolution": "480p",
+    "final_resolution": "1080p",
+    "subtitle_burn_in": false,
+    "caption_enabled": false,
+    "narration_enabled": false,
+    "dialogue_voice": "native",
+    "dialogue_tts": true,
+    "dialogue_tts_speed": 1.0,
+    "dialogue_tts_max_pause": 0,
+    "spatial_blocking": true,
+    "scene_plates": "auto",
+    "platforms": [
+      "youtube"
+    ]
+  },
+  "duration": {
+    "episode_minutes": "auto",
+    "shot_min_s": 0.5,
+    "shot_max_s": 15,
+    "long_take": false
+  },
+  "shot_group": {
+    "max_group_s": 30,
+    "max_ref_images": 30,
+    "max_ref_videos": 10,
+    "max_ref_audios": 10,
+    "preset": "sd25"
+  },
+  "review": {
+    "evaluation": 0,
+    "audio_quality": 0,
+    "character_consistency": 0,
+    "content_safety": 0,
+    "copyright": 0,
+    "logic": 0,
+    "timeline": 0,
+    "visual_quality": 0,
+    "worldview": 0
+  },
+  "packaging": {
+    "intro_enabled": false,
+    "intro_notes": "",
+    "outro_enabled": false,
+    "outro_notes": "",
+    "teaser_enabled": false
+  },
+  "prompt_skill": {
+    "mode": "auto",
+    "skill_id": "",
+    "effective": {
+      "skill_id": "08-video-gen/prompt/sd20-pe",
+      "mode": "auto",
+      "resolved_from": "doubao-seedance-2-0-260128",
+      "reason": "",
+      "decided_at": "2026-09-22T15:47:36"
+    }
+  },
+  "project_skills": {
+    "overrides": {
+      "08-video-gen/prompt/performance-direction": true
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "character_id": "CHAR-alice",
+  "name": "Alice",
+  "tier": "S",
+  "card_type": "individual",
+  "gender": "female",
+  "age_sense": "about ten (appearance base_age_range 9-10)",
+  "timbre": "clear, bright ten-year-old girl's voice with a firm, slightly breathy core; natural and unaffected, not cute, not squeaky",
+  "pitch": "high child's register, mid of a girl's range, lively intonation with wide rises on questions",
+  "pitch_range_hz": [240, 380],
+  "speed_wpm": [150, 175],
+  "speed_cpm": [570, 665],
+  "accent": "Received Pronunciation of an educated upper-middle-class English child: crisp consonants, clean open vowels, no regional features",
+  "reference_style": "A real, thinking-aloud schoolroom child: polite with visible effort, earnest, quick; politeness thins to flat contradiction under pressure and to full-voiced defiance at the trial. Same voice in both layers (waking bank and dream). Size changes (SUP-003) never alter the voice: no pitch shifting or processing for 'tiny' or 'giant' Alice; only natural room acoustics change.",
+  "emotion_range": {
+    "calm": { "speed_delta": "0%", "pitch_delta": "0semi", "note": "thinking aloud, lesson-proud" },
+    "timid": { "speed_delta": "-10%", "pitch_delta": "-1semi", "volume": "soft", "note": "ch002-p08 'in a low, timid voice' — addressing adults early in the dream" },
+    "agitated": { "speed_delta": "+15%", "pitch_delta": "+3semi", "note": "fright, tears cut off by self-scolding; short and real" },
+    "indignant": { "speed_delta": "+10%", "pitch_delta": "+1semi", "volume": "loud", "note": "ch011-p07 'a loud, indignant voice'; ch012 'Stuff and nonsense!' — chest-voice, not shrill" },
+    "recitation_strange": { "speed_delta": "-5%", "pitch_delta": "-2semi", "note": "ch002-p10 'her voice sounded hoarse and strange' — slightly husky, sing-song lesson cadence when poems come out wrong" },
+    "whisper": { "speed_delta": "-15%", "pitch_delta": "-1semi", "volume": "whisper", "note": "asides to herself, ch003-p31" }
+  },
+  "age_variants": [
+    {
+      "version_id": "CHAR-alice-age01",
+      "variant": "age01",
+      "label": "Girl (about ten), base form: waking frame, the whole dream, the sister's memory of little Alice",
+      "is_base": true,
+      "timeline_range": { "from": "ev0001", "to": "ev0054", "from_paragraph": "ch001#p01", "to_paragraph": "ch012#p70" },
+      "age_range": "9-10",
+      "gender": "female",
+      "timbre": "clear, bright ten-year-old girl's voice with a firm, slightly breathy core; natural and unaffected, not cute, not squeaky",
+      "pitch": "high child's register, mid of a girl's range, lively intonation with wide rises on questions",
+      "pitch_range_hz": [240, 380],
+      "speed_wpm": [150, 175],
+      "speed_cpm": [570, 665],
+      "accent": "Received Pronunciation of an educated upper-middle-class English child: crisp consonants, clean open vowels, no regional features",
+      "note": "Identical to the top-level card; every Alice line in the source falls in this range."
+    },
+    {
+      "version_id": "CHAR-alice-age02",
+      "variant": "age02",
+      "label": "Grown woman (about thirty), imagined 'after-time' insert in the sister's reverie only",
+      "is_base": false,
+      "timeline_range": { "from": "ev0054", "to": "ev0054", "from_paragraph": "ch012#p71", "to_paragraph": "ch012#p71" },
+      "anachrony_ref": "an-06",
+      "age_range": "28-32",
+      "gender": "female",
+      "timbre": "warm, clear, gentle grown woman's voice with the same bright, frank core as the child, fuller and more settled, storytelling warmth",
+      "pitch": "mezzo-soprano, relaxed and even, lively rises kept but softer",
+      "pitch_range_hz": [175, 300],
+      "speed_wpm": [140, 160],
+      "speed_cpm": [532, 608],
+      "accent": "Received Pronunciation of an educated upper-middle-class English woman: crisp consonants, clean open vowels, no regional features",
+      "note": "The same person twenty years on, as imagined in 1862: recognisably Alice's voice matured (sample should be anchored on the age01 sample). The source gives her no lines (ch012#p71 is reported: she tells the children her dream) and growth staged the insert as silent; this variant exists only for timeline alignment and in case the script voices a murmured line to the children. Must stay clearly distinct from CHAR-alice-sister (softer, slower, lower-energy)."
+    }
+  ],
+  "source_chapter": "ch002",
+  "sources": ["ch001", "ch002", "ch003", "ch005", "ch011", "ch012", "ch002-p08", "ch002-p10", "ch011-p07", "ch012-p68", "ch012-p71", "ev0001", "ev0053", "ev0054", "bible/characters/CHAR-alice/age_versions.json"],
+  "voice_evidence": [
+    { "para": "ch002-p08", "quote": "she began, in a low, timid voice" },
+    { "para": "ch002-p10", "quote": "her voice sounded hoarse and strange" },
+    { "para": "ch011-p07", "quote": "Alice began in a loud, indignant voice" },
+    { "para": "ch012-p68", "quote": "she could hear the very tones of her voice" }
+  ],
+  "inferred": true,
+  "inferred_fields": ["timbre", "pitch", "pitch_range_hz", "speed_wpm", "speed_cpm", "accent", "age_variants[1] (grown voice designed)"],
+  "reason": "The source gives moods of her voice, not its colour; timbre/pitch designed for a ~10-year-old girl (appearance.json), accent follows the clergyman-scholar household (h1_summary §1, dialogue_style register)."
+}

@@ -1,0 +1,83 @@
+{
+  "_meta": {
+    "file": "bible/scenes/SCN-shaft-landing-passage/environment.json",
+    "owner": "05-scenes/environment",
+    "task_id": "p3-environment-sb1",
+    "attempt": 1,
+    "generated": "2026-09-22",
+    "amended": {"change_id": "BIB-0027", "task_id": "p4-cr-environment", "date": "2026-09-23", "fields": ["fixed.dream_design (new)"]},
+    "enum_set": "ENV-ENUM-v1 (defined once in runs/p3-environment-sb1/result.json)"
+  },
+  "scene_id": "SCN-shaft-landing-passage",
+  "layer": "dream",
+  "fixed": {
+    "climate": "none of its own: an enclosed earthy dream tunnel at the bottom of the falling dream",
+    "indoor": true,
+    "daylight_access": "dark_no_sky",
+    "dream_design": {
+      "rule": "WR-010 / XA-magic-08 (dream, restrained: an earthen transition space)",
+      "flora": "tree roots thread through the tunnel walls and roof in long, twisting whiplash lines; the dry sticks and leaves of the heap keep their curled summer-dry forms",
+      "ornament_cues": "no built ornament; the roots naturally form an arching, arabesque lattice that leads toward the round glow of the hall lamps round the corner, the first hint of the hall's gilt roundels",
+      "palette": "earth umber, dry-leaf tan and ochre, with a faint amber-gold glow ahead",
+      "seasonal_guard": "summer-dry leaves, not wet autumn litter (unchanged)",
+      "inferred": true,
+      "reason": "The passage, the dark and the heap of sticks and dry leaves are explicit (ch001-p10..p11). Root lines and the glow cue are designed to WR-010, kept restrained so the hall reads as the reveal."
+    },
+    "ground": "a heap of dry sticks and dry leaves (summer-dry, brown and brittle, not wet autumn litter) on an earthen floor",
+    "dream_growth": "Grows from the dry burrow under the hedge on a hot July day: dust-dry sticks and leaves, cool earth air, and the dark of a hole. A faint warm glow further down the passage comes from the hall's lamps round the corner. Heat and daylight only return as lamp-heat once she reaches the hall.",
+    "source": {"chapter": "ch001", "quote": "she looked up, but it was all dark overhead; before her was another long passage"},
+    "inferred": true,
+    "reason": "Darkness overhead, the passage and the heap of sticks and dry leaves are explicit (ch001-p10, ch001-p11). The dry-summer reading of the leaves and the lamp-glow lead-in to the hall are designed per ruling 5.2 A."
+  },
+  "variable_dims": {
+    "season": ["summer"],
+    "time_of_day": ["early_afternoon"],
+    "weather": ["none_enclosed"],
+    "wind": ["still"],
+    "temperature": ["cool"]
+  },
+  "states": [
+    {
+      "state_id": "SCN-shaft-landing-passage-S01",
+      "chapter": 1,
+      "chapter_id": "ch001",
+      "story_scene": "ch001-sc02",
+      "paragraphs": "ch001-p10",
+      "timeline_ref": "ev0002",
+      "timeline_node": "TL-003",
+      "season": "summer",
+      "weather": "none_enclosed",
+      "wind": "still",
+      "temperature": "cool",
+      "time_of_day": "early_afternoon",
+      "waking_clock": "14:20 GMT (Alice asleep on the bank)",
+      "diegetic_daylight": "none; pitch dark above, dim warm glow ahead down the passage",
+      "conditions": "thump onto the heap; a small puff of dry leaf-dust hangs in the still, cool air",
+      "source_chapter": "ch001",
+      "source": {"chapter": "ch001", "quote": "thump! thump! down she came upon a heap of sticks and dry leaves, and the fall was over"},
+      "inferred": true,
+      "reason": "The heap of sticks and dry leaves is explicit (ch001-p10). The leaf-dust, the glow and the clock are designed; the clock is continuous with the fall (story_timeline ev0002)."
+    },
+    {
+      "state_id": "SCN-shaft-landing-passage-S02",
+      "chapter": 1,
+      "chapter_id": "ch001",
+      "story_scene": "ch001-sc03",
+      "paragraphs": "ch001-p11",
+      "timeline_ref": "ev0003",
+      "timeline_node": "TL-003",
+      "season": "summer",
+      "weather": "none_enclosed",
+      "wind": "still",
+      "temperature": "cool",
+      "time_of_day": "early_afternoon",
+      "waking_clock": "14:21-14:22 GMT (Alice asleep on the bank)",
+      "diegetic_daylight": "none; all dark overhead, the passage lit only by lamp-glow spilling round the far corner from the hall",
+      "conditions": "Alice's run stirs the still, cool air; the air warms toward the corner as the hall's lamp-heat reaches it",
+      "source_chapter": "ch001",
+      "source": {"chapter": "ch001", "quote": "she looked up, but it was all dark overhead; before her was another long passage, and the White Rabbit was still in sight, hurrying down it"},
+      "inferred": true,
+      "reason": "Darkness and the passage are explicit (ch001-p11). The Rabbit must stay visible, which needs a light source; the hall's lamps (ch001-p11) are used. The warming air is designed to hand over to the hot hall (ch002-p09)."
+    }
+  ]
+}

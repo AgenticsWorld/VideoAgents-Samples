@@ -1,0 +1,39 @@
+{
+  "shot_id": "sh025",
+  "group_id": "grp010",
+  "scene_no": "S03",
+  "scene_id": "SCN-falling-dream",
+  "duration_s": 9.0,
+  "is_dialogue": false,
+  "group_position": "the only shot of grp010 — Alice on the map start (shaft_centre), which is also her end; no path.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "sit",
+      "start_pos": "settled back asleep in mid-air at the open centre of the shaft, drifting straight down",
+      "space_fragment_en": "sitting back asleep in mid-air at the open centre of the shaft, held on screen-left, head tipped toward the bookshelves on screen-right",
+      "facing": "profile to the lens, head tipped to one side toward the pegged wall; eyes closed",
+      "path": [],
+      "beats": [
+        { "t": 1.2, "action": "her eyes close", "sync": "the dream inside the dream begins" },
+        { "t": 2.4, "action": "her head tips to one side", "sync": "held" },
+        { "t": 6.5, "action": "the last empty pegs clear the top of frame and the dark takes her", "sync": "the lighting goes" },
+        { "t": 8.4, "action": "two heavy thumps land over the black", "sync": "the landing, unseen" }
+      ],
+      "performance_beat": {
+        "objective": "stop holding on — there is nothing left to do but sleep",
+        "goal": "stop holding on",
+        "emotional_arc": "from drifting vagueness to sleep, and then nothing at all for four seconds",
+        "arc_from": "drifting vagueness",
+        "arc_to": "sleep held in front of the audience without relief",
+        "trigger": { "beat": "her eyes close and do not open", "t": 1.2 },
+        "no_early_reaction": ["the head tipping", "the hands going slack", "the mouth opening"],
+        "forbidden_early": ["the head tipping", "the hands going slack", "the mouth opening"],
+        "end_state": "head fallen to one side, eyes shut, lips softly apart, hands loose in her lap, nothing moving"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0002 (dream) — 'she fell asleep as she fell'", "note": "Alice alone." }
+}

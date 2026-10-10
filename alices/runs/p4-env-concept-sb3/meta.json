@@ -1,0 +1,10 @@
+{
+ "task_id": "p4-env-concept-sb3",
+ "run_id": "ea5321e8a1d1",
+ "attempt": 1,
+ "started_at": "2026-09-23T00:24:21+08:00",
+ "finished_at": "2026-09-23T00:39:43+08:00",
+ "result_status": "completed",
+ "eval": "skipped (review.evaluation=0)",
+ "artifact_versions": "v1 (initial render; H2 pending)"
+}

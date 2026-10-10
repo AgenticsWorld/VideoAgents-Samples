@@ -1,0 +1,44 @@
+{
+  "id": "DEF-p3-voice-001",
+  "opened_by": "03-characters/voiceprint",
+  "opened_on": "2026-09-22",
+  "task_id": "p3-voice-vb1",
+  "assigned_to": "03-characters/dialogue-style",
+  "route_to_owner": "03-characters/dialogue-style",
+  "domain": "characters",
+  "status": "closed",
+  "severity": "minor",
+  "summary": "CHAR-cheshire-cat: appearance.json sets gender 'female' (Dinah echo, ruling 5.3 B), but dialogue_style.json refers to the Cat as 'he'/'his' throughout (register.summary, forbidden_words reasons, drift).",
+  "evidence": [
+    {
+      "file": "bible/characters/CHAR-cheshire-cat/appearance.json",
+      "field": "gender",
+      "value": "female"
+    },
+    {
+      "file": "bible/characters/CHAR-cheshire-cat/dialogue_style.json",
+      "field": "register.summary",
+      "value": "Never raises his voice: not one of his 17 lines ends in an exclamation mark ... his ease should feel like a cat's."
+    },
+    {
+      "file": "bible/characters/index.json",
+      "field": "gender",
+      "value": "unspecified (already tracked in DEF-p3-appearance-001-c)"
+    }
+  ],
+  "impact": "voice.json gender drives the TTS gender hard-filter and the voiceprint sample; a writer reading dialogue_style may stage the Cat as male.",
+  "decision_taken_here": "voice.json follows appearance.json (female, low velvety mezzo/contralto) per SOUL gender rule (copy appearance.json). Not edited: dialogue_style.json is outside voiceprint's write scope.",
+  "requested_action": "dialogue-style updates pronouns to she/her through memory-bible (controlled change), or the user rules otherwise; if the gender is changed, voiceprint re-issues CHAR-cheshire-cat/voice.json.",
+  "triaged_by": "00-orchestration/memory-bible",
+  "triage_task_id": "p3-bible-defects-2",
+  "triaged_on": "2026-09-22",
+  "routed_from": "00-orchestration/memory-bible",
+  "route_fix_to": "03-characters/dialogue-style",
+  "disposition": "routed_open",
+  "ruling": "Already decided in p3-bible-defects (DEF-p3-appearance-001): CHAR-cheshire-cat is female (inferred, from H1 5.3 B Dinah echo; Dinah is 'she', ch002-p22). The source uses only 'it' for the Cat, so dialogue_style's 'he' has no source backing. appearance.json and voice.json are correct. No user ruling is needed.",
+  "fix_instruction": "bible/characters/CHAR-cheshire-cat/dialogue_style.json: replace every male pronoun about the Cat with a female one (he->she, his->her, him->her, himself->herself). There are 12 occurrences: register.summary, forbidden_words[1].reason, forbidden_words[2].reason and drift[0].change. Change nothing else. Quoted source lines keep their original wording. voiceprint does not need to re-issue voice.json (it is already female). The index.json gender fix stays with character-manager under DEF-p3-appearance-001; do not edit index.json.",
+  "fixed_by": "03-characters/dialogue-style",
+  "fix_task_id": "p3-fix-voice-001",
+  "closed_on": "2026-09-22",
+  "fix_note": "bible/characters/CHAR-cheshire-cat/dialogue_style.json: replaced all 12 male pronouns about the Cat with female ones (register.summary x7, forbidden_words[1].reason x1, forbidden_words[2].reason x2, drift[0].change x2). No other text changed; quoted source lines untouched. Rule regexes, examples and backtest are unaffected, so the hit rate stays the same. voice.json is already female, so it is not re-issued. index.json gender stays with character-manager (DEF-p3-appearance-001)."
+}

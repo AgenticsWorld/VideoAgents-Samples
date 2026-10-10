@@ -1,0 +1,197 @@
+{
+  "schema_version": "scene_layout.v1",
+  "scene_id": "SCN-mad-tea-party",
+  "layout_top": "layout_top.png",
+  "status": "calibrated_to_render",
+  "orientation": {
+    "top_of_map": "north: the March Hare's house, its front facing south onto the table; the wood's edge is to the west (left); the sun is to the west",
+    "extent_m": [
+      32,
+      18
+    ],
+    "note_en": "camera positions in views[] are described relative to these landmarks"
+  },
+  "landmarks": [
+    {
+      "id": "hare_house",
+      "name": "March Hare's house",
+      "name_en": "the March Hare's house",
+      "kind": "building",
+      "xy": [
+        0.53,
+        0.17
+      ]
+    },
+    {
+      "id": "ear_chimneys",
+      "name": "ear-shaped chimneys",
+      "name_en": "the ear-shaped chimneys",
+      "kind": "feature",
+      "xy": [
+        0.485,
+        0.045
+      ]
+    },
+    {
+      "id": "house_door",
+      "name": "house doorstep",
+      "name_en": "the house doorstep",
+      "kind": "entrance",
+      "xy": [
+        0.505,
+        0.4
+      ]
+    },
+    {
+      "id": "tall_clock",
+      "name": "stopped tall-case clock",
+      "name_en": "the stopped tall-case clock",
+      "kind": "feature",
+      "xy": [
+        0.56,
+        0.41
+      ]
+    },
+    {
+      "id": "horse_chestnut",
+      "name": "horse-chestnut tree",
+      "name_en": "the horse-chestnut tree",
+      "kind": "tree",
+      "xy": [
+        0.36,
+        0.47
+      ]
+    },
+    {
+      "id": "table",
+      "name": "long tea-table",
+      "name_en": "the long tea-table",
+      "kind": "furniture",
+      "xy": [
+        0.52,
+        0.58
+      ]
+    },
+    {
+      "id": "armchair",
+      "name": "big arm-chair",
+      "name_en": "the big arm-chair",
+      "kind": "furniture",
+      "xy": [
+        0.33,
+        0.58
+      ]
+    },
+    {
+      "id": "party_corner",
+      "name": "sitters' corner at the far end",
+      "name_en": "the sitters' corner at the far end of the table",
+      "kind": "furniture",
+      "xy": [
+        0.7,
+        0.58
+      ]
+    },
+    {
+      "id": "treacle_well",
+      "name": "stone well-head",
+      "name_en": "the stone well-head",
+      "kind": "feature",
+      "xy": [
+        0.73,
+        0.79
+      ]
+    },
+    {
+      "id": "wood_edge",
+      "name": "path in from the wood",
+      "name_en": "the path in from the wood",
+      "kind": "entrance",
+      "xy": [
+        0.3,
+        0.97
+      ]
+    }
+  ],
+  "views": [
+    {
+      "tile": 1,
+      "camera_from": "wood_edge",
+      "looking_at": "house_door",
+      "size": "wide",
+      "angle": "low",
+      "desc_en": "low wide shot near the grass from the path in from the wood, the March Hare's house towering over the lens with its ear-shaped chimneys and fur-like thatch, the long table in front"
+    },
+    {
+      "tile": 2,
+      "camera_from": "armchair",
+      "looking_at": "party_corner",
+      "size": "medium",
+      "angle": "eye",
+      "desc_en": "eye-level medium shot from the big arm-chair straight down the length of the crowded table to the sitters' corner at the far end"
+    },
+    {
+      "tile": 3,
+      "camera_from": "party_corner",
+      "looking_at": "armchair",
+      "size": "medium",
+      "angle": "eye",
+      "desc_en": "eye-level medium reverse from the sitters' corner back along the table to the big arm-chair at the other end"
+    },
+    {
+      "tile": 4,
+      "camera_from": "treacle_well",
+      "looking_at": "table",
+      "size": "wide",
+      "angle": "eye",
+      "desc_en": "eye-level wide shot from the stone well-head across the sunlit grass to the long tea-table in the shade of the horse-chestnut, the wood's edge behind"
+    },
+    {
+      "tile": 5,
+      "camera_from": "house_door",
+      "looking_at": "table",
+      "size": "wide",
+      "angle": "high_oblique",
+      "desc_en": "high oblique wide shot from the house doorstep looking down over the whole long table and its chairs toward the open grass"
+    },
+    {
+      "tile": 6,
+      "camera_from": "table",
+      "looking_at": "tall_clock",
+      "size": "close",
+      "angle": "eye",
+      "desc_en": "eye-level close shot from the table on the face of the tall-case clock by the door, its hands stopped at six o'clock"
+    },
+    {
+      "tile": 7,
+      "camera_from": "horse_chestnut",
+      "looking_at": "table",
+      "size": "detail",
+      "angle": "eye",
+      "desc_en": "eye-level detail from beside the horse-chestnut trunk across the used teacups, teapots and bread-and-butter on the stained cloth"
+    },
+    {
+      "tile": 8,
+      "camera_from": "table",
+      "looking_at": "ear_chimneys",
+      "size": "medium",
+      "angle": "low",
+      "desc_en": "low-angle medium shot from the table looking up past the thatch eaves to the two ear-shaped chimneys and the round gable window"
+    },
+    {
+      "tile": 9,
+      "camera_from": "tall_clock",
+      "looking_at": "treacle_well",
+      "size": "medium",
+      "angle": "eye",
+      "desc_en": "eye-level medium shot from beside the tall-case clock across the grass to the stone well-head at the yard's edge"
+    }
+  ],
+  "calibration_note_en": "Coordinates re-read from the rendered image 2026-09-23. The horse-chestnut came out as a small young tree at the table's west end, not a great spreading crown, so the table sits in open sun and not in shade. The chimney reads as one stack with two round pots (the ear shape is not readable from above). The table measures about 10.7 m, not 7 m.",
+  "checklist": {
+    "architecture_match": false,
+    "lighting_match": false,
+    "style_match": true,
+    "camera_orthographic": "near-nadir; the house front shows a thin strip of its facade below the eave"
+  }
+}

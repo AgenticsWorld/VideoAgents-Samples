@@ -1,0 +1,34 @@
+{
+  "task_id": "p1-timeline",
+  "agent": "01-story/timeline-story",
+  "project": "alices",
+  "attempt": 1,
+  "status": "done",
+  "generated": "2026-09-22",
+  "inputs_read": [
+    "story/events.json (p1-events, 54 events ev0001-ev0054)",
+    "story/story_graph.json (p1-structure, read-only, used for cross-check of scene ids, foreshadowing, and the open_questions_for_g1 embedded-narration list)",
+    "story/structured_story.json (_meta only)",
+    "story/structured_story/ch001.json .. ch012.json (full scene paragraph_range + paragraph text, used to place every event on the narrative axis and to pull verbatim citations for the anachrony entries)",
+    "bible/WRITE_RULES.md section 2 (citation format)"
+  ],
+  "outputs": [
+    "story/story_timeline.json"
+  ],
+  "helper_scripts": [],
+  "summary": "Built the dual narrative-order / story-time axis for all 12 chapters (54 events, ev0001-ev0054). Key finding: the book has zero scene-level reordering -- narrative order equals story-time order for the entire main sequence, since Carroll narrates strictly chronologically. The only narrative-order/story-time mismatches are 6 embedded narrations (anachrony[]): the Mouse's tale (inserted, ambiguous reality), the Hatter's 'last March' concert story (flashback), the Dormouse's treacle-well story (inserted, fictional), the Mock Turtle's schooldays (flashback), Alice's own recap of her adventures (inserted, recap of ev0001-ev0042), and the sister's closing reverie (dream, a second smaller dream nested in the real-world coda, with per-image maps_to references back to ev0001/ev0009/ev0029/ev0034/ev0045). Also produced a dedicated dream_frame object marking the single retrospective dream frame's boundaries (real_world_open ev0001 -> dream_span ev0002-ev0052 -> waking ev0053 -> coda ev0054), and tagged every event with a reality_layer (real_frame vs. dream) so downstream agents (character-growth, environment, blocking, continuity-planning) can tell which moments are literally real vs. dreamed per the source's own retroactive frame.",
+  "narrative_axis_method": "Grouped by the 46 structured_story scenes across ch001-ch012, in book order. Each event placed in the scene containing its 'result' paragraph. 6 of 54 events start in one scene but land (and are filed) in the next scene, because the source's scene boundary falls mid-event (ev0008, ev0022, ev0028, ev0032, ev0038, ev0039); each is annotated with spans_from. 4 scenes have no event of their own (ch006-sc05, ch007-sc02, ch008-sc06, ch009-sc01) because the event they dramatize lands in the following scene; each still has an entry with events: [] and a note.",
+  "story_time_axis_method": "Single relative clock, T0 = ev0001. Carried forward each event's own time_hint from events.json (almost all 'continuous, immediately after'), added the book's two explicit elapsed-time markers verified directly against the source (ch003#p19 and ch009#p36, both 'half an hour or so', confidence 0.95), and lowered confidence at the two points the source itself is vague or flags a gap (ev0014's unexplained setting change, confidence 0.6; ev0039's 'shortly after' phrasing plus the unexplained Duchess pardon, confidence 0.6).",
+  "acceptance_auto": {
+    "no_temporal_conflicts": "PASS -- conflicts: [] (0 entries). Checked for dead-then-alive, recognized-before-met, and age-inversion patterns across all 54 events and every recurring character (Bill the Lizard, the Duchess's baby/pig, the Cheshire Cat, the Duchess); none found. The 4 broken_chains already flagged by p1-events (ev0039 missing cause, ev0038 missing leads_to, ev0014 missing cause, ev0052 missing leads_to) are causal/explanatory gaps in the source, not chronological-ordering contradictions, so they are documented in notes_for_downstream instead of conflicts[]; the two affected events (ev0014, ev0039) carry reduced confidence (0.6) on their story_time anchor as a result.",
+    "events_mapped_to_graph_and_timeline": "PASS -- verified by inline Python check: all 54 ev0001-ev0054 appear exactly once in narrative[].events (across 46 scenes) and exactly once in story_time[] (54 of 54, no duplicates, no invalid ids); all 6 anachrony[].refers_to ids and all refers_to_range/maps_to sub-references resolve to real event ids in events.json."
+  },
+  "notes": [
+    "Per task scope, no realistic-adaptation decision was made (dream frame, talking animals, size changes) -- flagged only, cross-referenced to events.json's existing realistic_adaptation_flags (rn-01/rn-02/rn-03) rather than duplicated in full, per instruction to flag but not decide.",
+    "story_graph.json's open_questions_for_g1 already proposed the same 6 embedded-narration list (Mouse's tale, Hatter's concert story, Dormouse's tale, Mock Turtle's schooldays, Alice's retelling, sister's reverie) and asked timeline-story to confirm the scene assignment; this file confirms and formalizes that assignment with citations and refers_to links.",
+    "Citations use chNNN#pMM / chNNN#pMM-pNN per bible/WRITE_RULES.md section 2, verified directly against story/structured_story/chNNN.json paragraph text (not just against events.json's own source field) for every anachrony entry and every explicit duration marker.",
+    "No helper/check script was needed for the deliverable itself; a one-off inline Python check (not saved to code/) was run against the finished story/story_timeline.json purely to verify axis coverage and reference integrity before delivery."
+  ],
+  "evaluation": "skipped (quality judge = 0 per project settings)",
+  "qa_pre_review": "skipped (all QA dimensions = 0 per project settings)"
+}

@@ -1,0 +1,288 @@
+{
+  "_meta": {
+    "file": "bible/style.json",
+    "status": "locked_h2",
+    "owner": "06-art/art-director",
+    "task_id": "p4-h2-style",
+    "generated": "2026-09-23",
+    "version": "1.2.0",
+    "write_via": "00-orchestration/memory-bible (on_bible_access)",
+    "content_language": "English (project UI language = English, so style_fragment_ui is identical to style_fragment_en)",
+    "scope": "Film-wide style bible (locked by user at H2 / gate G4): look, rendering, reference films, negatives, user_refs mapping. Follows brief.md ('Realistic fantasy film adapted from a fairy tale'), the H1-locked SUP-001..014 readings as amended by BIB-0027 (SUP-002, SUP-010, XA-magic-02, XA-magic-08) and world.json WR-001, WR-002, WR-010. Output aspect 16:9.",
+    "amendments": [
+      {
+        "version": "1.2.0",
+        "date": "2026-09-23",
+        "task_id": "p4-h2-style",
+        "change_id": "BIB-0028",
+        "note": "H2 lock fold-in, text only. The user signed the H2 art-style checkpoint at gate G4 on 2026-09-23 (approval ba96732d, decision PASS_WITH_WAIVER, record runs/g4/gate.json). All four entries of open_points_pending_H2 are now resolved: H2-footmen-anatomy, H2-non-speaking-animals (including the baby -> photoreal CGI piglet end-state in the same swaddling) and H2-mucha-scope-and-finish are approved_H2 exactly as proposed; H2-caterpillar-face is approved_H2_by_extension because it was not individually itemised in the signature card. Proposal texts are unchanged. _meta.locked_by and the top-level locked_by are set to 'H2'. No prompt-consumed field was touched: style_fragment_ui, style_fragment_en, style_string_en, negative_prompt_en, negative_prompt_waking_addon_en and palette_logic are byte-identical to v1.1.0 (verified by diff). runs/g4/gate.json holds the full waiver list for the seven majors and five minors that were signed off at this gate."
+      },
+      {
+        "version": "1.1.0",
+        "date": "2026-09-23",
+        "task_id": "p4-cr-style",
+        "change_id": "BIB-0027",
+        "note": "Re-issued for the user ruling of 2026-09-22. Talking animals, and (pending_H2) the non-speaking dream animals, are photoreal CGI animals in live-action plates. The Gryphon and the Mock Turtle are photoreal CGI creatures. Dream environments use the Alphonse Mucha / Art Nouveau design language, built as photographed sets and set extensions. Card figures and humans stay human performers. The 1862 lock still holds for costume, props and the waking world, and the finish stays photographed live action. Changed: art_style, render_school_detail, style fragments, negative_prompt_en, style_anchors, style_anchors_by_register, references, palette_logic (new dream_mucha_accents), CR-001..CR-005, CR-007..CR-009, new CR-014/CR-015, negative_list, negative_list_bible_check, user_refs, downstream_notes, new open_points_pending_H2. IDs CR-001..CR-013 are kept."
+      }
+    ],
+    "inputs_read": [
+      "brief.md",
+      "refs/style/alice.jpeg (refs/NOTES.md and refs/annotations.json absent: no user annotation)",
+      "bible/changelog.md BIB-0027",
+      "bible/h1_summary.md (incl. §6 amendment)",
+      "bible/cultivation.json (SUP-001..014, XA-magic-02, XA-magic-08)",
+      "bible/world.json (WR-001, WR-002, WR-010, wonderland_real_counterparts.rendering_note)",
+      "runs/p4-cr-cgi-mucha-bible/result.json (stale_files, stale_notes)",
+      "qa/defects/DEF-p4-style-001.json (user_response)",
+      "bible/color_script.json (palette_legend, out_of_base)",
+      "qa/defects/DEF-p3-char-index-902.json, DEF-p3-char-index-903.json"
+    ],
+    "id_prefixes": { "CR-": "style rule (file-local)" },
+    "locked_by": "H2",
+    "lock": {
+      "locked_by": "H2",
+      "gate": "G4",
+      "checkpoint": "H2 art-style lock",
+      "signed_by": "user",
+      "approval_id": "ba96732d",
+      "signed_at": "2026-09-23",
+      "decision": "PASS_WITH_WAIVER",
+      "record": "runs/g4/gate.json",
+      "waivers_note": "The gate passed with waivers: seven open majors and five minors (creature-sheet, env-plate, prop-image, costume-sheet, whitebox-scale and char-sheet self-check flaws) were disclosed by name in the signature card and waived by the user because the auto-reroll budget is 0. runs/g4/gate.json is the authoritative waiver list and carries each follow-up. None of them changes the style of record in this file.",
+      "frozen_version": "1.2.0"
+    },
+    "lock_note": "Locked. Any change to this file from here on = change request + redo-cost assessment by 06-art/art-director, then a new user ruling. Individual images may still be repaired via the preview page's Modify button without re-opening the style lock; auto-reroll budget stays 0."
+  },
+
+  "art_style": "Photographed realistic fantasy: a mid-Victorian dream shot on 35mm film. The waking frame is a plain, sunlit 1862 Thames meadow. The dream is a hazy, candle-and-shaft-lit Wonderland whose spaces are real built sets and set extensions in an Alphonse Mucha-inspired Art Nouveau design language (flowing organic lines, floral and vine ornament, halo roundels, mosaic and stained glass, pastel-and-gold surfaces, aged and patinated). Its talking animals and fantastical creatures are photoreal CGI animals that share the light and the ground with the live-action actors. Card figures and human dream-figures are costumed actors.",
+  "render_school": "3d",
+  "render_school_detail": "photoreal_live_action_35mm_with_photoreal_cgi_integration. Photographed three-dimensional space with physical actors and built sets. Photoreal CGI animals, creatures and set extensions are composited so they are indistinguishable from the photographed plate. 2d_cel, flat illustration, poster graphics and any stylised, animated or visibly rendered CG look are excluded (see CR-001).",
+
+  "style_fragment_ui": "Photorealistic live-action fantasy film rooted in England in 1862, shot on 35mm film with anamorphic lenses, 16:9 widescreen. Real sets, real locations and real costumed actors in 1862 dress. Wonderland spaces are real built sets and set extensions in an Alphonse Mucha-inspired Art Nouveau design: flowing organic lines, floral and vine ornament, circular halo roundels, mosaic and stained glass, aged pastel-and-gold surfaces with patina and moss; the waking 1862 meadow stays plain period realism. Talking animals and fantastical creatures are photoreal CGI animals with naturalistic anatomy, real fur, feathers, skin and scales, lit by the same light and grounded with real contact shadows. Natural and practical light: sunlight, candlelight and oil lamps, soft haze with volumetric light shafts and soft colour through stained glass. Restrained palette of verdigris teal, slate grey, dusty rose, soft sage and lilac pastels and tarnished-gold accents, warmed by amber sun and candle glow. Fine film grain, gentle halation, soft depth of field, grounded and quietly melancholy.",
+  "style_fragment_en": "Photorealistic live-action fantasy film rooted in England in 1862, shot on 35mm film with anamorphic lenses, 16:9 widescreen. Real sets, real locations and real costumed actors in 1862 dress. Wonderland spaces are real built sets and set extensions in an Alphonse Mucha-inspired Art Nouveau design: flowing organic lines, floral and vine ornament, circular halo roundels, mosaic and stained glass, aged pastel-and-gold surfaces with patina and moss; the waking 1862 meadow stays plain period realism. Talking animals and fantastical creatures are photoreal CGI animals with naturalistic anatomy, real fur, feathers, skin and scales, lit by the same light and grounded with real contact shadows. Natural and practical light: sunlight, candlelight and oil lamps, soft haze with volumetric light shafts and soft colour through stained glass. Restrained palette of verdigris teal, slate grey, dusty rose, soft sage and lilac pastels and tarnished-gold accents, warmed by amber sun and candle glow. Fine film grain, gentle halation, soft depth of field, grounded and quietly melancholy.",
+  "style_string_en": "photorealistic 1862 English fantasy film, 35mm anamorphic, built sets in Mucha-inspired Art Nouveau (dream only), photoreal CGI animals integrated in the plate, natural and candle light, volumetric haze, aged pastel-and-gold and verdigris textures, restrained teal-rose-gold palette, fine film grain",
+  "negative_prompt_en": "cartoon, anime, animation, illustration, flat poster illustration, outline graphics, concept-art painting, digital painting, digital matte painting look, stylised 3D animation render, video game graphics, Pixar style, Disney animation style, cartoon animal face, big cartoon eyes, plush toy, human in animal costume, full-head animal mask, mascot costume, full-body fur suit, plastic skin, airbrushed, oversaturated, HDR, neon colors, candy pastel colors, horror monster, glowing magic, magic sparkles, fairy dust, energy beams, electric light, light bulb, neon sign, modern clothing, zipper, plastic, sunglasses, wristwatch, eyeglasses with modern frames, car, bicycle, power lines, tarmac road, Art Deco, steampunk gears, poster lettering, decorative text, gore, blood, wound, severed head, decapitation, executioner's axe, chopping block, guillotine, noose, gallows, blade at neck, execution, corpse, skeleton, horror, animal being struck, sexualized, watermark, logo, subtitles, caption, UI overlay, deformed hands, extra fingers, distorted face",
+  "negative_prompt_waking_addon_en": "Art Nouveau ornament, stained glass, mosaic, gilded arches, talking animal, clothed animal, CGI creature, fantasy architecture",
+
+  "style_anchors": [
+    "photorealistic live-action fantasy film, England 1862",
+    "shot on 35mm film, anamorphic lens, fine film grain, gentle halation",
+    "real built sets and real costumed actors, photoreal CGI invisibly integrated into the plate",
+    "natural sunlight and candlelight, soft haze with volumetric light shafts",
+    "dream spaces built in Alphonse Mucha-inspired Art Nouveau design: flowing organic lines, vine and floral ornament, circular halo roundels, mosaic and stained glass",
+    "aged pastel-and-gold surfaces: tarnished gold leaf, faded sage and lilac, verdigris patina, moss",
+    "restrained palette of verdigris teal, slate grey, dusty rose, soft pastels and tarnished gold",
+    "mid-Victorian 1862 costume: crinoline-era silhouettes, wool, linen, silk, no synthetic fabric",
+    "photoreal CGI animal with naturalistic anatomy and real fur or feathers, sharing the light and ground with the actors, wearing only its period prop",
+    "card-court figures played by actors in flat, boldly suited tabard costumes, moving with stiff, flat choreography",
+    "forced-perspective staging with an oversized practical set, one continuous camera angle",
+    "small figure against a vast hazy space, deep layered depth",
+    "classic photographic dissolve"
+  ],
+  "style_anchors_by_register": {
+    "waking_frame": [
+      "hot, drowsy July afternoon on a Thames meadow bank near Oxford, 1862",
+      "high warm sun, soft diffused haze, honey-gold light through willow leaves",
+      "lush natural greens, meadow wildflowers, cream muslin and white cotton, gentle river glints",
+      "plain, still, observational camera, nothing stylised, no ornament"
+    ],
+    "dream": [
+      "dim hazy dream space lit by shafts of pale daylight, soft stained-glass colour and pools of amber candlelight",
+      "cool verdigris-teal and slate-grey ambience with aged pastel sage, lilac, dusty-rose and tarnished-gold accents",
+      "grand weathered Art Nouveau set after Alphonse Mucha: whiplash ironwork, vine-carved arches, halo roundel windows, mosaic and stained glass, damp, mossy and gilded",
+      "slightly theatrical, stage-like depth, as if built on a soundstage"
+    ],
+    "usage": "Pick ONE register per prompt, after style_fragment_ui. The waking register is only for SCN-thames-riverside, SCN-riverbank and SCN-field-hedge-burrow (ch001 before the doze and ch012 after waking); for these, append negative_prompt_waking_addon_en to the negatives. The dream register is for every other SCN. Scene-level light is still owned by lighting (prompt_fragment_en), and per-episode colour curves by color-script."
+  },
+
+  "references": [
+    {
+      "title": "User style reference refs/style/alice.jpeg (highest priority)",
+      "take": "Low-key, hazy dream atmosphere. Volumetric daylight shafts from high oculi and stained-glass windows, and warm candle pools against cool verdigris-slate ambience. The Art Nouveau architecture itself: whiplash ironwork balustrades, vine-curved arches, halo oculi, floral stained glass, flaking gilt and patinated metal (now the model for the dream sets, WR-010). A large creature-bodied Caterpillar that is solid, heavy and textured (slate-blue, moss patina, segmented skin) and shares the light with a tiny Alice. Tactile decay: moss, cracked wet stone floors. Tiny Alice against a vast space (SUP-003 scale grammar). Wide 16:9 composition with deep layered foreground, midground and background. Hookah smoke and the mushroom seat. Alice's cornflower-blue dress with a white pinafore.",
+      "avoid": "The digital matte-painting finish: we render the same scene as a photographed 35mm plate with built sets and photoreal CGI (DEF-p4-style-001-c, re-confirm at H2). The Caterpillar's pug-like mammal face: the body mass, colour and texture are taken, the head stays naturalistic insect anatomy (pending_H2). Moving the Caterpillar's open-air clearing (SCN-caterpillar-clearing) into a cathedral interior: the clearing keeps its outdoor Art Nouveau treatment."
+    },
+    {
+      "title": "Barry Lyndon (Stanley Kubrick, 1975)",
+      "take": "Period interiors lit by real candlelight and window light, with shallow, soft falloff and painterly composition. Proof that period accuracy and natural light can look luminous rather than dull.",
+      "avoid": "Its 18th-century costume and powdered wigs, its detached slow reverse-zooms, and the chill emotional distance. Our camera stays with a ten-year-old's feelings."
+    },
+    {
+      "title": "Picnic at Hanging Rock (Peter Weir, 1975)",
+      "take": "The waking frame's drowsy heat. A summer afternoon softened by diffusion, white cotton and muslin girls' dresses in sun, and time that feels suspended. Insects and birds carry the mood.",
+      "avoid": "The 1900 Australian bush setting and its menace or mystery-horror undertone. Our bank is a safe, idle English meadow."
+    },
+    {
+      "title": "Pan's Labyrinth (Guillermo del Toro, 2006)",
+      "take": "A child's fairy tale made physically real: fantasy creatures that feel heavy, wet and present in real sets. Two worlds told apart by colour temperature (warm amber and green versus cold teal). Mossy, organic textures in the fantasy spaces.",
+      "avoid": "All gore, torture and war violence. Humanoid prosthetic-suit creatures and the horror register: our animals are naturalistic photoreal animals, not monsters."
+    },
+    {
+      "title": "The Fall (Tarsem Singh, 2006)",
+      "take": "A child's imagined story built from real locations and bold costume silhouettes. The costume-as-character approach for the card court and the human dream-figures.",
+      "avoid": "Its hyper-saturated primaries, globe-trotting exotic locations and 1915 setting."
+    },
+    {
+      "title": "The Jungle Book (Jon Favreau, 2016)",
+      "take": "Photoreal talking animals beside a single live-action child: naturalistic anatomy, real fur and weight, speech carried by restrained muzzle and eye movement, exact eyelines and contact with the child actor.",
+      "avoid": "Its fully CG environments and saturated jungle greens (our spaces are built sets with set extensions), and any musical-number mugging of the animal faces."
+    }
+  ],
+  "design_references": [
+    {
+      "title": "Alphonse Mucha: decorative panels (The Seasons, The Flowers), Documents décoratifs (1902) and the Fouquet jewellery shop interior (1901)",
+      "take": "The dream's design language: flowing organic line, vine and floral ornament, circular halo roundels behind a figure or a doorway, mosaic and stained-glass accents, soft pastel-and-gold palette. The Fouquet interior shows it as a built, three-dimensional room, which is how we use it.",
+      "avoid": "Flat poster graphics, outlined drawing, poster lettering and decorative text, 1900 fashions (costume stays 1862, WR-009), idealised pin-up female figures, candy-bright pastels (ours are aged and hazed)."
+    }
+  ],
+
+  "palette_logic": {
+    "principle": "Colour temperature and saturation tell the audience which register they are in, with no narrator (XA-magic-07). The waking frame is warm and green, high-key and clear. The dream is cool verdigris and slate, low-key and hazy, with warm light only from candles and shafts of daylight; its built Art Nouveau surfaces add aged pastel-and-gold accents (WR-010) that stay inside the haze. The two registers bridge through the fall and through the leaves at waking. Hexes are film-level anchors. color-script (bible/color_script.json palette_legend) owns the per-episode and per-scene curves and must stay inside these families.",
+    "waking_frame": {
+      "scenes": ["SCN-thames-riverside", "SCN-riverbank", "SCN-field-hedge-burrow"],
+      "key": "high-key, warm 4500-5000K sun through haze, gentle contrast",
+      "hex": ["#D9B96A", "#7A8F3C", "#4E6B2E", "#F2EBDD", "#A9C3CF"],
+      "names": ["honey-gold sun", "meadow green", "willow shade", "cream muslin", "hazy river sky"],
+      "mucha_influence": "At most subtle (WR-010): the composition may frame Alice in a natural roundel (willow canopy, a hat brim of light), and the meadow's wildflowers may echo the dream's floral palette. No ornament, no gold leaf, no stained glass."
+    },
+    "dream_base": {
+      "scenes": "every SCN with layer 'dream'",
+      "key": "low-key, cool ambient haze (slate and verdigris) punctuated by warm amber candle pools, pale daylight shafts and soft stained-glass colour",
+      "hex": ["#3F5E5A", "#5C6670", "#B08A5B", "#A8747A", "#E0A95A", "#2B2A2E"],
+      "names": ["verdigris teal", "slate grey", "tarnished gold", "dusty rose / mushroom mauve", "candle amber", "soot shadow"]
+    },
+    "dream_mucha_accents": {
+      "scenes": "every SCN with layer 'dream' (surfaces of sets, glass, mosaic, flora); never on costume except where the costume file already carries these hues",
+      "key": "aged, hazed pastels and worn gold leaf; accents on set surfaces, not ambient light; never candy-bright",
+      "hex": ["#C9A55A", "#B7C4A4", "#B9A9C6", "#D9B3AE", "#E8DEC6"],
+      "names": ["Mucha gold leaf", "faded sage", "faded lilac", "pastel rose", "aged ivory"]
+    },
+    "accent_rules": [
+      "Alice's cornflower blue (#6F8FC0) is the one saturated cool colour she carries through every register. No other character wears it; stained glass and mosaic avoid that exact hue near her.",
+      "Hearts crimson (#8E1F2A) belongs only to the House of Hearts (the Queen's croquet-ground, the rose-trees, the court). It grows from absent to dominant between the rose-tree scene and the trial (SCN-rose-tree-yard, then SCN-croquet-ground, then SCN-courtroom). In those sets the Mucha pastels recede and the gold stays.",
+      "The fall (SCN-falling-dream) is the bridge: honey-gold drains into slate and verdigris as she dozes off mid-fall (SUP-001); the first Mucha gold and pastel appear on the shaft's shelves and roundels as she falls.",
+      "Waking (ch012): the flying cards match-cut to amber and brown falling leaves (SUP-004), so the dream's crimson and gold resolve into the waking gold."
+    ]
+  },
+
+  "rules": [
+    { "id": "CR-001", "rule": "Every frame must read as photographed live action on 35mm film: real skin with pores, real fabric weave, real light falloff and film grain. Photoreal CGI animals, creatures and set extensions are allowed and must be indistinguishable from the photographed plate (see CR-015). No illustrated, animated, painterly-digital, poster-graphic or visibly CG-rendered look anywhere, including concept art (concept sheets are 'production stills', not paintings). The Mucha language is a set-design language, not a rendering finish.", "applies_to": "all", "reason": "brief.md 'Realistic fantasy film adapted from a fairy tale'; BIB-0027 (WR-001 amended, WR-010 'never flat poster illustration ... or a digital matte-painting finish'); DEF-p4-style-001-c (finish unchanged, re-confirm at H2)." },
+    { "id": "CR-002", "rule": "Period lock is 1862 England for costume, hand props, technology and the whole waking world. Costume is crinoline-era day dress, frock coats, waistcoats, top hats and bonnets, in natural fabrics. Technology is limited to oil and candle light, pocket watches, gas lighting only in town, and wet-plate photography. Waking architecture is Georgian or early Victorian vernacular and 1850s-60s Oxford Gothic Revival. One licensed exception: the surface design of dream environments uses Art Nouveau after Mucha (CR-014). Even in the dream nothing else post-1862 appears: no Art Deco, steampunk, electric light, zips, plastics, bicycles, cars or wristwatches, and costume and props inside the Art Nouveau sets stay 1862-based.", "applies_to": "all", "reason": "H1 ruling 5.6 A (Friday 4 July 1862, Oxford) as amended by BIB-0027: world.json WR-009, WR-010; cultivation XA-magic-08 (the 1862 lock still holds for costume, props and the waking world)." },
+    { "id": "CR-003", "rule": "Inside the dream every talking animal is a photoreal CGI animal (SUP-002): the White Rabbit, the Mouse, the Dodo, the Duck, the Lory, the Eaglet, the Magpie, the Canary and the other Caucus-race birds and beasts, the Caterpillar, Bill the lizard, the Pigeon, the Cheshire Cat, the March Hare, the Dormouse, the old and young Crab and the animal jurors. Each has naturalistic anatomy, real fur, feather, skin or scale, real weight, and speaks with naturalistic mouth, beak or muzzle movement. It wears or carries only the iconic period props the text gives it (the Rabbit's waistcoat, pocket watch, white kid gloves and fan; the Caterpillar's hookah), made to 1862 patterns. The Gryphon (classical griffin) and the Mock Turtle (turtle body with calf's head, hind hooves and tail) are photoreal CGI fantastical creatures (SUP-010). The Frog- and Fish-Footmen follow the proposal in open_points_pending_H2. Never a cartoon face, a plush-toy look or a human in an animal costume or mask. Card figures (King, Queen, Knave, soldiers, gardeners, courtiers; SUP-004) and human dream-figures (Hatter, Duchess, Cook, executioner, Pat, crowds) are human performers in 1862-based costume with their faces readable.", "applies_to": "characters", "reason": "BIB-0027: cultivation SUP-002, SUP-004 (unchanged), SUP-010, XA-magic-02; h1_summary §6. Anatomy execution owned by 04-creatures/creature with 03-characters/appearance." },
+    { "id": "CR-004", "rule": "The waking frame has only ordinary, silent, unclothed animals, filmed as real animals: CRE-001, the real white rabbit that triggers the dream, is unchanged. Inside the dream the non-speaking animals (the puppy, the croquet hedgehogs and flamingoes, the pig end-state of the Duchess's baby) follow the photoreal CGI animal register, silent, unclothed and non-anthropomorphic (pending_H2, see open_points_pending_H2). The puppy's giant scale is still a relative-scale consequence of Alice's size (SUP-003) and is staged as such. No animal is ever shown being struck.", "applies_to": "characters", "reason": "world.json WR-001 and cp-rabbit-hole; cultivation SUP-002 (non-speaking extension flagged for H2), SUP-003, SUP-006, SUP-011. bible/creatures/creature.json is stale under BIB-0027 and is redone by 04-creatures." },
+    { "id": "CR-005", "rule": "Alice's size changes and giant or tiny scale are staged as forced perspective, oversized or miniature practical set builds and props, and doubles. CGI set extensions may enlarge a space but never show her transforming. Prompts describe the relative scale of the set and props ('an oversized practical door set towers over her'), not a transformation. Never glowing, morphing or magical-effect imagery; Art Nouveau is set design, not an effect.", "applies_to": "all", "reason": "SUP-003, SUP-007; cultivation XA-magic-05 and XA-magic-08 (size-change technique unchanged). The user reference's tiny-figure-in-vast-space composition is the visual model." },
+    { "id": "CR-006", "rule": "The film uses a vintage in-camera optical vocabulary: photographic cross-dissolves (Cheshire Cat vanishing from the extremities to the grin, SUP-005), rack focus, match cuts (cards to falling leaves, SUP-004), hidden-cut substitutions (pebbles to cakes, SUP-009), rig and tracking shots past sliding shelf dressing (the fall, SUP-008), and one continuous held shot for the baby-to-pig change (SUP-006). There are no particle effects, morphs or digital energy, including on the CGI animals.", "applies_to": "all", "reason": "SUP-004/005/006/008/009 visual_signature (binding)." },
+    { "id": "CR-007", "rule": "Light is motivated and practical: sun, sky, candles, oil lamps and firelight, plus atmospheric haze or smoke that makes shafts visible (dream). In the dream, daylight through stained glass may cast soft pastel colour onto floors, walls and figures; that is the only coloured light. The waking frame stays clear, soft and warm. The dream is low-key with warm pools against cool ambience, as in the user reference. No gel fantasy light, neon or glow.", "applies_to": "lighting", "reason": "User reference refs/style/alice.jpeg (stained-glass windows); WR-010; Barry Lyndon and Pan's Labyrinth references; period technology (CR-002)." },
+    { "id": "CR-008", "rule": "Surfaces in the dream carry age and damp: verdigris-patinated Art Nouveau ironwork, flaking gold leaf, faded pastel paint and mosaic with missing tesserae, moss in joints, cracked and wet stone floors, smoke-darkened plaster. The waking frame is clean, alive and summery. These texture levels must not leak across registers.", "applies_to": "scenes", "reason": "User reference texture language; WR-010; SUP-001 register separation." },
+    { "id": "CR-009", "rule": "The dream is a dream of Alice's own world. Its spaces are built from the waking vocabulary she knows (Oxford college stone, the river, the farm, the seaside), enlarged and aged, dressed in the Art Nouveau language of CR-014, and each dream set grows from its registered grows_from link. The user reference's Art Nouveau hall is the model for grand dream interiors (SCN-long-hall, SCN-pool-of-tears, SCN-courtroom). Exterior dream scenes (the wood, the clearing, the garden, the shore) stay outdoors, keep the same haze, shafts and palette, and carry the language through ironwork, arbours, sculpted and living flora.", "applies_to": "scenes", "reason": "H1 ruling 5.2 A (dream places linked to waking details); geography grows_from; world.json WR-002, WR-010; user reference." },
+    { "id": "CR-010", "rule": "Execution imagery is banned. The Queen's threats are shown only through her volume and gesture and the court's weary compliance. CHAR-executioner reads from crown livery and a pushed-back black hood with his face visible. There is no axe, block, sword, noose, gallows, blade near a neck, blood or aftermath in any concept, prop, costume or video frame.", "applies_to": "all", "reason": "SUP-014 (binding); DEF-p3-char-index-902 (due G4, honoured here and injected into negative_prompt_en)." },
+    { "id": "CR-011", "rule": "Composition is 16:9 anamorphic widescreen. Use deep staging with layered foreground framing (arches, mushroom caps, reeds, table edges), centre or third placement of Alice, and eye-level or low child-height cameras in the dream. A halo roundel (window, arch, mirror, circular mosaic) may frame a figure in the Mucha manner, sparingly. Wide shots that dwarf her are saved for the moments when she feels small (SUP-003). There are no Dutch angles for their own sake and no fisheye.", "applies_to": "all", "reason": "Project output 16:9; user reference composition; SUP-003 scale-follows-feeling; WR-010 halo motif." },
+    { "id": "CR-012", "rule": "In-world lettering is allowed only where the Bible requires it (the 'DRINK ME' label, the 'EAT ME' currants, the 'W. RABBIT' brass plate, the jar label 'ORANGE MARMALADE'), in period hand-lettering or engraved type. Art Nouveau sets carry no poster lettering or decorative text panels. There is no other on-screen text, and no subtitles, captions, logos or watermarks in any generated image.", "applies_to": "props", "reason": "Source-required props; project has burned-in subtitles and captions OFF; Mucha posters carry lettering that must not be imported. The negative list bans watermark, logo, subtitles, caption and poster lettering, not the Bible lettering." },
+    { "id": "CR-013", "rule": "Tone guardrails: grounded realistic fantasy with dry comedy. Uncanny is allowed; horror is not. No gore or wounds, nothing sexualised, and the child performer is always dressed and framed age-appropriately.", "applies_to": "all", "reason": "brief.md; world.json tone (amended BIB-0027); SUP-011, SUP-014." },
+    { "id": "CR-014", "rule": "Dream environments (every SCN with layer 'dream', including the fall, the hall and little door, the pool, the Rabbit's house, the wood, the Duchess's house, the tea-party, the Queen's garden and croquet-ground, the shore and the court) use the Art Nouveau design language after Alphonse Mucha fully: flowing organic whiplash lines in ironwork, woodwork and plaster; vine, lily, rose and leaf ornament; circular halo roundels (oculi, windows, arches, floor mosaics); mosaic and stained-glass accents; aged pastel-and-gold surfaces (dream_mucha_accents). It is built as photographed physical sets and set extensions in the same plate as the actors and CGI animals. Each set keeps its source identity (a kitchen stays a kitchen, a court stays a court) and grows from its waking counterpart; the language dresses it, it does not replace it. Waking scenes (SCN-thames-riverside, SCN-riverbank, SCN-field-hedge-burrow) use no Art Nouveau ornament; the influence is limited to framing, palette and wildflowers.", "applies_to": "scenes", "reason": "User ruling 2026-09-22 (BIB-0027); world.json WR-010; cultivation XA-magic-08; user reference architecture; DEF-p4-style-001-b = B extended. Dream-full / waking-subtle scope re-surfaced at H2." },
+    { "id": "CR-015", "rule": "CGI animals and creatures are integrated as if photographed on the day: matched lens, grain and depth of field; the set's light and haze wrap them (candle warmth, shaft rim light, stained-glass colour); real contact shadows, footprints, displaced water, ruffled fur and feathers; exact eyelines with Alice at her current scale. Speech is carried by small naturalistic mouth, beak or muzzle movement plus eyes, ears and posture, never by human facial expressions pasted on an animal. Period props sit on the anatomy the way a real garment would on that body (a waistcoat fitted to a rabbit's torso, not a human torso).", "applies_to": "characters", "reason": "cultivation SUP-002/SUP-010 visual_signature (naturalistic anatomy, real weight and light, no cartoon styling); The Jungle Book reference; brief.md realistic fantasy." }
+  ],
+
+  "negative_list": [
+    "Any cartoon, anime, illustrated, flat-poster, painted or visibly CG-rendered look (CR-001)",
+    "Cartoon animal faces, big cartoon eyes, plush-toy animals, or human facial expressions on an animal (CR-003, CR-015)",
+    "Humans in animal costume: full animal-head masks, fur suits or mascot costumes (CR-003)",
+    "Horror monsters; the Gryphon and the Mock Turtle are naturalistic creatures, not monsters (CR-003, CR-013)",
+    "Glowing, morphing or sparkling magic effects of any kind (CR-005, CR-006)",
+    "Anachronisms after 1862 in costume, props, technology and anywhere in the waking frame: electric light, Art Deco ornament, steampunk, zips, plastics, bicycles, cars, wristwatches, modern eyewear, power lines, tarmac. Art Nouveau is allowed only as dream set design (CR-002, CR-014)",
+    "Art Nouveau ornament, stained glass, mosaic, clothed or talking animals in the waking frame (CR-014, CR-004; negative_prompt_waking_addon_en)",
+    "Execution devices and imagery: axe, chopping block, guillotine, noose, gallows, blade at a neck, severed heads, corpses, blood (CR-010, DEF-p3-char-index-902)",
+    "Any animal shown being struck or harmed (CR-004, SUP-011)",
+    "Gore, horror register or sexualisation (CR-013)",
+    "Watermarks, logos, subtitles, captions, UI overlays, Mucha-style poster lettering; free-floating text other than the Bible-required prop lettering (CR-012)",
+    "Neon or saturated gel colours, candy-bright pastels, HDR or oversaturated grading (CR-007)",
+    "Deformed hands, extra fingers, distorted faces (generation failure modes)"
+  ],
+  "negative_list_bible_check": "Checked against the Bible as amended by BIB-0027 so that no required element is banned. Removed: 'CGI creature', 'monster', 'giant insect', 'literal animal-bodied character', 'anthropomorphic animal', 'animal head on human body' (would block the pending_H2 Footmen proposal), 'CGI look' / '3D render' (replaced by stylised-render terms so photoreal CGI stays allowed), 'Art Nouveau' (dream sets require it) and 'extra limbs' (the Gryphon's wings and four legs and the Mock Turtle's hooves are required anatomy). Kept: cartoon faces, mascot suits, fur suits, full-head masks and humans in animal costume (SUP-002/SUP-010 forbid them). The words rabbit, caterpillar, cat, gryphon and turtle are not banned. Hookah, mushrooms, pocket watch, waistcoat, gloves, fan, playing-card tabards, crowns and roses are allowed. Bible prop lettering is allowed; only poster lettering and decorative text are banned. 'wristwatch' is banned but the pocket watch is not. Hookah smoke and stained-glass colour light are allowed. The waking-only addon is applied only to the three waking SCN, so it does not ban dream animals or dream Art Nouveau.",
+
+  "open_points_pending_H2": [
+    {
+      "id": "H2-footmen-anatomy",
+      "status": "approved_H2",
+      "approved_by": "user",
+      "approval_id": "ba96732d",
+      "approved_on": "2026-09-23",
+      "gate": "G4",
+      "ruling_source": "runs/g4/gate.json approved_design_proposals[0] ('Frog-Footman and Fish-Footman are upright livery figures with real frog / fish heads, photoreal CGI'). Itemised in the signature card; approved exactly as proposed, no rewording.",
+      "proposal": "CHAR-frog-footman and CHAR-fish-footman: an upright, footman-height figure in full 1862 livery, white gloves and powdered curled wig (the text: 'powdered hair that curled all over their heads'). Head, neck and any exposed skin are photoreal frog or fish anatomy (wide frog mouth and round eyes with moist speckled skin; fish head with scales, gill line and round lidless eyes) with the skin running continuously into the collar, so it never reads as a mask. Posture and hands stay upright and footman-like because the text says Alice judges them fish or frog 'by his face only'. Rendered as photoreal CGI; no prosthetic-suit look.",
+      "owner_of_execution": "04-creatures/creature with 03-characters/appearance"
+    },
+    {
+      "id": "H2-non-speaking-animals",
+      "status": "approved_H2",
+      "approved_by": "user",
+      "approval_id": "ba96732d",
+      "approved_on": "2026-09-23",
+      "gate": "G4",
+      "ruling_source": "runs/g4/gate.json approved_design_proposals[1] and [2]. [1] rules the non-speaking animals (puppy, hedgehogs, flamingos) photoreal CGI; [2] rules the baby end-state: 'a human infant performer; in the pig end-state it becomes a photoreal CGI piglet IN THE SAME SWADDLING, revealed inside one continuous held shot (hidden cut / cloth-and-framing change, no morph), then trots off.' Both itemised in the signature card; approved exactly as proposed, no rewording.",
+      "resolves_defect": "DEF-p4-creature-401 (CRE-007 disagreed with this proposal on the piglet end-state). The signature settles it in favour of this text: the swaddling is retained. 04-creatures/creature aligns the CRE-007 wording in its own H2 fold-in change order; art-director does not edit bible/creatures/creature.json.",
+      "proposal": "The puppy, the croquet hedgehogs and flamingoes are photoreal CGI animals: unclothed, silent, naturalistic behaviour, no expressions beyond what the real species does. The flamingo keeps its real pink and plumage; the hedgehogs uncurl and wander like real hedgehogs. CGI also guarantees that no real animal is ever used as a mallet or ball, and no animal is shown being struck (SUP-011). The Duchess's baby is a human infant performer; in its pig end-state it becomes a photoreal CGI piglet in the same swaddling, revealed within the one continuous held shot of SUP-006 (hidden-cut or cloth-and-framing change, no morph), then trots off naturally into the wood.",
+      "owner_of_execution": "04-creatures/creature; 03-characters/appearance (CHAR-duchess-baby)"
+    },
+    {
+      "id": "H2-caterpillar-face",
+      "status": "approved_H2_by_extension",
+      "approved_by": "user",
+      "approval_id": "ba96732d",
+      "approved_on": "2026-09-23",
+      "gate": "G4",
+      "note": "not individually itemised in the signature card; adopted as the design of record because it follows the approved photoreal-CGI anatomy line; user may revise via the preview page's Modify button",
+      "ruling_source": "runs/g4/gate.json approved_design_proposals[4], which records the same caveat. The card reported only that the Caterpillar sheet's face failed self-check, not this proposal.",
+      "proposal": "Take the reference Caterpillar's scale, heavy segmented body, slate-blue colour and moss patina, but give it a naturalistic caterpillar head with articulating mouthparts rather than the reference's pug-like mammal face.",
+      "owner_of_execution": "04-creatures/creature with 03-characters/appearance (CHAR-caterpillar)"
+    },
+    {
+      "id": "H2-mucha-scope-and-finish",
+      "status": "approved_H2",
+      "approved_by": "user",
+      "approval_id": "ba96732d",
+      "approved_on": "2026-09-23",
+      "gate": "G4",
+      "ruling_source": "runs/g4/gate.json approved_design_proposals[3] ('Art Nouveau / Mucha styling is full in the dream world and light in the waking world; the film still reads as photoreal live action'). Itemised in the signature card; approved exactly as proposed, no rewording. This also closes finding DEF-p4-style-001-c in favour of the photographed live-action finish.",
+      "proposal": "Mucha / Art Nouveau fully in the dream and at most subtly in the waking frame (CR-014); the finish stays photographed live action, not a painterly or matte-painting look (DEF-p4-style-001-c).",
+      "owner_of_execution": "06-art/art-director (this file)"
+    }
+  ],
+
+  "user_refs": [
+    {
+      "path": "refs/style/alice.jpeg",
+      "annotation": "none (refs/NOTES.md and refs/annotations.json absent)",
+      "role": "whole-film visual style reference (highest priority); after BIB-0027 it also governs creature treatment and dream architecture",
+      "influenced": [
+        "art_style: 'realistic fantasy' tone. Grounded and weathered rather than whimsical.",
+        "style_fragment_ui/en: volumetric shafts, stained-glass colour, candle and oil light, Art Nouveau ironwork, halo roundels, verdigris, tarnished gilt, moss and aged-stone textures, and the teal/slate/rose/pastel/gold palette words.",
+        "Creatures (CR-003, CR-015): a large, heavy, textured photoreal creature sharing the light with a tiny Alice is now the model for every CGI animal. Caterpillar body: slate-blue, segmented, moss patina, hookah and mushroom seat, passed to creature, character-concept and prop.",
+        "Architecture (CR-014, CR-009): whiplash ironwork balustrades, vine-curved arches, halo oculi, floral stained glass and flaking gilt are adopted as-is for dream sets; the hall is the model for SCN-long-hall, SCN-pool-of-tears and SCN-courtroom.",
+        "palette_logic.dream_base: all six hexes are sampled from its tonal families (verdigris teal, slate, tarnished gold, mushroom mauve, candle amber, soot). dream_mucha_accents: its stained-glass lilac and sage and its gold leaf.",
+        "accent_rules: Alice's cornflower blue and white pinafore (already carried into CHAR-alice age_versions).",
+        "CR-005 / CR-011: tiny Alice against a vast space as the forced-perspective scale grammar, with deep layered 16:9 staging.",
+        "CR-007: low-key dream lighting, warm pools against cool ambience, stained-glass colour.",
+        "CR-008: dream texture level (peeling gilt, patina, moss, cracked wet floors)."
+      ],
+      "not_adopted_and_why": [
+        "Digital matte-painting finish. The user ruling did not change the finish, so it is rendered as a photographed 35mm plate with built sets and photoreal CGI (DEF-p4-style-001-c, re-confirmed at H2).",
+        "The Caterpillar's pug-like mammal face. SUP-002 requires naturalistic anatomy; proposal H2-caterpillar-face (pending_H2).",
+        "Setting the Caterpillar scene indoors. SCN-caterpillar-clearing is an open-air wood clearing in the Bible, so it takes the reference's atmosphere and an outdoor Art Nouveau treatment only."
+      ]
+    }
+  ],
+
+  "downstream_notes": {
+    "prompt_assembly": "Video: 'Overall visual style: ' + style_fragment_ui verbatim, then optionally ONE register phrase set from style_anchors_by_register. Image (concepts and anchors): style_fragment_ui verbatim as the style paragraph. Negatives: negative_prompt_en verbatim to --negative and to the Global constraints negative list; for the three waking SCN also append negative_prompt_waking_addon_en verbatim. Do not translate or paraphrase.",
+    "character-concept / costume": "CR-002, CR-003, CR-010, CR-015. Human and card performers keep faces visible. Talking animals are photoreal animals with only their text-given period props, fitted to animal anatomy. The Caterpillar palette is from user_refs. Footmen per open_points_pending_H2.",
+    "creature": "CR-003, CR-004, CR-015 and open_points_pending_H2. Only CRE-001 stays a real filmed animal (waking frame).",
+    "environment-concept": "CR-002, CR-008, CR-009, CR-014. Dream sets are Art Nouveau after Mucha, built and photographed, dressing the source identity of each set. Waking sets carry no ornament. Texture levels stay separate.",
+    "prop": "CR-002 (props stay 1862 even in Art Nouveau sets), CR-010 (no execution devices, DEF-p3-char-index-902), CR-012 lettering whitelist.",
+    "color-script": "Stay inside the palette_logic families, now including dream_mucha_accents. Hearts-crimson ramp and bridge rules.",
+    "director / cinematography": "CR-005, CR-006, CR-011, CR-015. The in-camera optical vocabulary is binding; plan eyelines and contact for CGI animals."
+  },
+
+  "locked_by": "H2",
+  "locked_at": "2026-09-23",
+  "lock_record": "runs/g4/gate.json (gate G4, decision PASS_WITH_WAIVER, user approval ba96732d)"
+}

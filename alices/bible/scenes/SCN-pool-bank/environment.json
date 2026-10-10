@@ -1,0 +1,88 @@
+{
+  "_meta": {
+    "file": "bible/scenes/SCN-pool-bank/environment.json",
+    "owner": "05-scenes/environment",
+    "task_id": "p3-environment-sb1",
+    "attempt": 1,
+    "generated": "2026-09-22",
+    "amended": {"change_id": "BIB-0027", "task_id": "p4-cr-environment", "date": "2026-09-23", "fields": ["fixed.dream_design (new)"]},
+    "enum_set": "ENV-ENUM-v1 (defined once in runs/p3-environment-sb1/result.json)"
+  },
+  "scene_id": "SCN-pool-bank",
+  "layer": "dream",
+  "fixed": {
+    "climate": "an outdoor-feeling dream shore under open sky; warm to hot, dry summer air (geography.json LOC-pool-bank 'warm air drying wet fur and feathers')",
+    "indoor": false,
+    "daylight_access": "open_sky",
+    "dream_design": {
+      "rule": "WR-010 / XA-magic-08 (dream, full)",
+      "flora": "tall reeds and bulrushes in curving drifts at the water's edge; white water-lilies with flat round pads on the still pool; purple loosestrife and cream meadowsweet along the bank",
+      "ornament_cues": "the lily pads are the scene's natural roundels floating on the water; reed stems cross in flowing whiplash lines; the Caucus-race is marked out as a rounded, organic 'sort of circle' in the grass",
+      "palette": "sage and reed green, loosestrife mauve, meadowsweet cream, water-lily white, pale gold sun on the drying grass and the party's wet fur and feathers",
+      "seasonal_guard": "water-lilies, loosestrife and meadowsweet flower in July; no spring flag-iris or marsh-marigold",
+      "inferred": true,
+      "reason": "The reed-edged shore and the party are explicit (ch003-p01); the race-course 'in a sort of circle' is explicit (ch003-p19). Flora and palette are designed to WR-010."
+    },
+    "ground_and_flora": "muddy, reed-fringed shore trampled flat by the dripping party, turning to short dry summer grass higher up; the pool water lies still beyond the reeds",
+    "dream_growth": "Grows from the muddy, reed-edged rim of the backwater beside the bank. The dream moves from the enclosed hall out into the same hot July afternoon Alice is sleeping through. Warm sun and dry air are what get the party dry again during the half-hour Caucus-race.",
+    "source": {"chapter": "ch003", "quote": "They were indeed a queer-looking party that assembled on the bank—the birds with draggled feathers, the animals with their fur clinging close to them, and all dripping wet, cross, and uncomfortable."},
+    "inferred": true,
+    "reason": "The shore and the drying are explicit (ch003-p01, ch003-p19). The open sky and warm air follow geography.json LOC-pool-bank. The link to the waking afternoon follows ruling 5.2 A."
+  },
+  "variable_dims": {
+    "season": ["summer"],
+    "time_of_day": ["afternoon"],
+    "weather": ["fair_hot"],
+    "wind": ["still"],
+    "temperature": ["warm", "hot"]
+  },
+  "states": [
+    {
+      "state_id": "SCN-pool-bank-S01",
+      "chapter": 3,
+      "chapter_id": "ch003",
+      "story_scene": "ch003-sc01..ch003-sc03",
+      "paragraphs": "ch003-p01..ch003-p48",
+      "timeline_ref": "ev0010",
+      "timeline_span": ["ev0010", "ev0011", "ev0012", "ev0013"],
+      "timeline_node": "TL-003",
+      "season": "summer",
+      "weather": "fair_hot",
+      "wind": "still",
+      "temperature": "warm",
+      "time_of_day": "afternoon",
+      "waking_clock": "15:08-15:30 GMT (Alice asleep on the bank)",
+      "sun": {"elevation_deg_approx": 44, "azimuth_deg_approx": 250, "note": "dream sun matched to the waking sun: high afternoon, south-west to west"},
+      "sky": "clear summer sky, a few fair-weather clouds",
+      "conditions": "the party starts out dripping on warm, still ground; after about half an hour of running they are dry. Clothes and hair show wet-to-dry continuity across the scene. The light stays full afternoon throughout.",
+      "dream_logic_note": "The Magpie's 'night-air' and the Canary's 'high time you were all in bed' (ch003-p47) are excuses to leave, not a change of light: no dusk, no darkening.",
+      "source_chapter": "ch003",
+      "source": {"chapter": "ch003", "quote": "when they had been running half an hour or so, and were quite dry again, the Dodo suddenly called out “The race is over!”"},
+      "also_seen": [{"chapter": "ch003", "refs": ["ch003-p47"], "quote": "I really must be getting home; the night-air doesn’t suit my throat!"}],
+      "inferred": true,
+      "reason": "The wet-to-dry change and the half-hour race are explicit (ch003-p01, ch003-p19). Sky, sun and clock are designed from the proportional dream clock. The half-hour is dream time; the waking clock moves about 20 minutes across ev0010-ev0013."
+    },
+    {
+      "state_id": "SCN-pool-bank-S02",
+      "chapter": 4,
+      "chapter_id": "ch004",
+      "story_scene": "ch004-sc01",
+      "paragraphs": "ch004-p01..ch004-p02",
+      "timeline_ref": "ev0014",
+      "timeline_node": "TL-003",
+      "season": "summer",
+      "weather": "fair_hot",
+      "wind": "still",
+      "temperature": "hot",
+      "time_of_day": "afternoon",
+      "waking_clock": "15:30-15:35 GMT (Alice asleep on the bank)",
+      "sun": {"elevation_deg_approx": 42, "azimuth_deg_approx": 253, "note": "as S01, a little lower"},
+      "sky": "clear summer sky",
+      "conditions": "Alice alone on the dry, empty shore; hot, still air. The hall behind her has gone and the ground looks subtly different ('everything seemed to have changed'), but the weather and light carry on unchanged.",
+      "source_chapter": "ch004",
+      "source": {"chapter": "ch004", "quote": "everything seemed to have changed since her swim in the pool, and the great hall, with the glass table and the little door, had vanished completely"},
+      "inferred": true,
+      "reason": "The vanished hall is explicit (ch004-p01, SUP-013). The source gives no weather. Light and temperature continue unbroken from S01, since the timeline is continuous (story_timeline ev0014: continuity of place is uncertain, continuity of time is not)."
+    }
+  ]
+}

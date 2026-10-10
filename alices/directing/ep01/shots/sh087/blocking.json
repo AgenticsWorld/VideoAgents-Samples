@@ -1,0 +1,39 @@
+{
+  "shot_id": "sh087",
+  "group_id": "grp032",
+  "scene_no": "S08",
+  "scene_id": "SCN-long-hall",
+  "duration_s": 5.0,
+  "is_dialogue": false,
+  "group_position": "middle shot of grp032 — Alice on the map start ground (curtain); the map has her fling the fan away into the water without leaving the spot.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "sit",
+      "start_pos": "sitting in the water at the low curtain, fan still in her hand",
+      "space_fragment_en": "sitting in the water at the low curtain on screen-left, facing the glass table on screen-right, flinging the fan away",
+      "facing": "her arm throws out to the lower screen-right of frame; her look goes after it and then straight back to the table edge",
+      "path": [],
+      "beats": [
+        { "t": 1.2, "action": "she understands", "sync": "the fan is the cause" },
+        { "t": 2.0, "action": "flings the fan away from her", "sync": "the throw" },
+        { "t": 2.6, "action": "the fan hits the water off to one side and the table edge halts", "sync": "the shrinking stops in the same frame" },
+        { "t": 4.2, "action": "she stays exactly where she is", "sync": "held to the cut" }
+      ],
+      "performance_beat": {
+        "objective": "get rid of the thing that is doing this to her before it finishes",
+        "goal": "get rid of the thing that is doing this to her",
+        "emotional_arc": "from dawning horror to violent relief in under three seconds",
+        "arc_from": "dawning horror",
+        "arc_to": "violent relief",
+        "trigger": { "beat": "she understands that the fan is what is doing it", "t": 1.2 },
+        "no_early_reaction": ["the arm cocking", "the hand opening", "the body recoiling"],
+        "forbidden_early": ["the arm cocking", "the hand opening", "the body recoiling"],
+        "end_state": "throwing arm still extended to screen-right and empty, eyes back on the halted table edge, chest heaving"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0008 (dream) — she drops the fan just in time", "note": "Alice alone; the fan stays in the water and drifts back into shot in S10." }
+}

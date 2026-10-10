@@ -1,0 +1,87 @@
+{
+  "character_id": "CHAR-pigeon",
+  "name": "The Pigeon",
+  "tier": "B",
+  "layer": "dream",
+  "temperament": {
+    "summary": "Frantic, exhausted and suspicious; a protective parent at the end of her tether. Aggression and self-pity alternate from line to line.",
+    "baseline": "Wound tight and sleepless, on permanent watch.",
+    "under_pressure": "Shrieks and flaps, then collapses into sobbing complaint, then sulks.",
+    "inferred": false
+  },
+  "traits": [
+    {
+      "trait": "Fiercely protective",
+      "description": "Everything is about guarding her eggs. She attacks the moment a strange shape appears near the nest.",
+      "evidence": [
+        { "chapter": "ch005", "ref": "ch005-p59", "event": "ev0022", "note": "Flies into Alice's face and beats her with its wings as her neck dives among the treetops." },
+        { "chapter": "ch005", "ref": "ch005-p60", "event": "ev0022", "note": "Screams 'Serpent!'." },
+        { "chapter": "ch005", "ref": "ch005-p66", "event": "ev0022", "note": "Must watch for serpents 'night and day' on top of hatching the eggs." }
+      ],
+      "inferred": false
+    },
+    {
+      "trait": "Exhausted, aggrieved",
+      "description": "Three weeks without sleep; she has tried every nesting place and nothing works. Her grievance pours out whether anyone listens or not.",
+      "evidence": [
+        { "chapter": "ch005", "ref": "ch005-p62", "note": "Adds 'with a kind of sob' that she has tried every way." },
+        { "chapter": "ch005", "ref": "ch005-p64", "note": "Lists roots, banks and hedges 'without attending to her'." },
+        { "chapter": "ch005", "ref": "ch005-p66", "note": "'I haven’t had a wink of sleep these three weeks!'" }
+      ],
+      "inferred": false
+    },
+    {
+      "trait": "Suspicious and certain",
+      "description": "She has made up her mind and bends every fact to fit it: if little girls eat eggs, they must be a kind of serpent.",
+      "evidence": [
+        { "chapter": "ch005", "ref": "ch005-p70", "note": "Assumes Alice is 'trying to invent something'." },
+        { "chapter": "ch005", "ref": "ch005-p72", "event": "ev0022", "note": "Dismisses her with 'deepest contempt'." },
+        { "chapter": "ch005", "ref": "ch005-p74", "event": "ev0022", "note": "Reclassifies little girls as a kind of serpent." }
+      ],
+      "inferred": false
+    },
+    {
+      "trait": "Self-absorbed",
+      "description": "Only the nest matters. Whether Alice is a girl or a serpent 'does not matter' to her so long as the eggs are safe.",
+      "evidence": [
+        { "chapter": "ch005", "ref": "ch005-p75", "note": "'what does it matter to me whether you’re a little girl or a serpent?'" }
+      ],
+      "inferred": false
+    }
+  ],
+  "motivation": {
+    "core": "To keep her eggs safe and finally rest.",
+    "fear": "Anything long, strange or out of place near the nest: the 'serpent' coming down from the sky.",
+    "wants_from_alice": "For her to go away.",
+    "shifts": [
+      { "chapter": "ch005", "ref": "ch005-p62", "event": "ev0022", "from": "attack the intruder", "to": "pour out her grievance", "trigger": "Alice's denial gives her an audience" },
+      { "chapter": "ch005", "ref": "ch005-p77", "event": "ev0022", "from": "argue Alice is a serpent", "to": "sulkily dismiss her and settle back on the nest", "trigger": "Alice says she does not want her eggs" }
+    ]
+  },
+  "habits": [
+    { "habit": "Beats her wings in a fierce flurry when alarmed, driving at the intruder's face", "evidence": [ { "chapter": "ch005", "ref": "ch005-p59" } ], "inferred": true, "reason": "The source says she flew into Alice's face and beat her violently with her wings (ch005-p59, ev0022). Rendered literally as wing-beating by the photoreal CGI wood-pigeon (SUP-002 as amended by BIB-0027)." },
+    { "habit": "Talks over the other person, reciting her own troubles without attending to replies", "evidence": [ { "chapter": "ch005", "ref": "ch005-p64" }, { "chapter": "ch005", "ref": "ch005-p65" } ], "inferred": false },
+    { "habit": "Goes from shriek to sob to sulk within a single exchange", "evidence": [ { "chapter": "ch005", "ref": "ch005-p62" }, { "chapter": "ch005", "ref": "ch005-p68" }, { "chapter": "ch005", "ref": "ch005-p77" } ], "inferred": false },
+    { "habit": "Settles back onto the nest the instant the threat is gone, turning away from the visitor", "evidence": [ { "chapter": "ch005", "ref": "ch005-p77" } ], "inferred": false }
+  ],
+  "decision_pattern": "Threat first, proof never: she classifies by what a thing might do to the nest, not what it is. She stands down only when told her eggs are not wanted.",
+  "taboos": [
+    { "taboo": "Never leaves the nest unguarded or goes after the intruder once it has retreated", "basis": [ { "chapter": "ch005", "ref": "ch005-p77" } ], "inferred": false },
+    { "taboo": "Never accepts the stranger's own account of herself", "basis": [ { "chapter": "ch005", "ref": "ch005-p72" }, { "chapter": "ch005", "ref": "ch005-p74" } ], "inferred": false },
+    { "taboo": "Never causes Alice real injury: the attack is wing-beating and shrieking, a flurry at her face with no wounds or aftermath", "basis": [ { "chapter": "ch005", "ref": "ch005-p59" }, { "chapter": "ch005", "ref": "ch005-p77" } ], "inferred": true, "reason": "The source records no hurt to Alice. The film keeps the assault as frightening noise and flurry, consistent with the no-harm tone of SUP-014." }
+  ],
+  "facade": {
+    "applies": false,
+    "reason": "She shows exactly what she feels; no hidden self or reveal in the source."
+  },
+  "waking_life_embodiment": {
+    "embodies": "The overwrought mother or nursery nurse who sees a growing girl as a danger to her small charges, and will not believe the girl's own account of herself.",
+    "waking_source": "The anxious maternal adults of a Victorian household (mothers and nurses guarding babies and eggs-and-nursery routines), met at the moment Alice's body shoots up out of all proportion.",
+    "authority_trait": "Protective suspicion: the adult who decides what a child is from the child's changed body, not from her word.",
+    "coming_of_age_reading": "Alice's neck shoots up above the trees and a grown-up immediately calls her something dangerous. It is the adolescent's shock of being seen as a threat because her body has changed, and of having her honest 'I'm a little girl' dismissed. She resolves it herself by nibbling back to her usual height.",
+    "grounding": [ "ch005-p59", "ch005-p72", "ch005-p75", "ch005-p77", "bible/cultivation.json SUP-003 (size tracks felt power)" ],
+    "inferred": true,
+    "reason": "Nest, eggs and accusation are sourced. The maternal-adult and adolescent-body reading is a design interpretation for the coming-of-age frame (SUP-003)."
+  },
+  "performance_baseline": "Photoreal CGI wood-pigeon (SUP-002, BIB-0027): high, jittery energy and sleeplessness shown through ruffled, unkempt feathers, rapid head-bobbing and darting eyes, wings half-raised on guard over the nest. Aggression reads as fear, never malice."
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": "whitebox_decisions.v1",
+  "ep": "ep01",
+  "decisions": {
+    "WBI-ep01-grp001-001": {
+      "choice": "remodel",
+      "note": "",
+      "by": "user:page",
+      "at": "2026-09-23T14:07:09+08:00",
+      "issue_hash": "74537f94cbe6"
+    }
+  }
+}

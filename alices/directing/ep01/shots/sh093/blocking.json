@@ -1,0 +1,46 @@
+{
+  "shot_id": "sh093",
+  "group_id": "grp034",
+  "scene_no": "S09",
+  "scene_id": "SCN-long-hall",
+  "duration_s": 5.0,
+  "is_dialogue": false,
+  "group_position": "last shot of grp034 — Alice reaches her map end (glass_table, at the water's edge short of the table legs) and goes in.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "stand",
+      "start_pos": "two feet high running back along the water's edge toward the glass table",
+      "space_fragment_en": "standing two feet high on the water's edge toward the glass table, held screen-right, facing screen-left, slipping in",
+      "facing": "screen-left the way she runs; the open water is where she ends up going in",
+      "path": [
+        { "t": 3.0, "to": "at the water's edge short of the glass table legs" },
+        { "t": 3.8, "to": "in the water, going down screen-left at the bottom of frame" }
+      ],
+      "beats": [
+        { "t": 0.4, "action": "runs back toward the table along the water's edge", "sync": "the last attempt of S09" },
+        { "t": 3.2, "action": "her foot slips on the wet stone", "sync": "the slip" },
+        { "t": 3.8, "action": "she goes in — splash", "sync": "the cut point into S10" }
+      ],
+      "performance_beat": {
+        "objective": "get back to the table and start again",
+        "goal": "get back to the table and start again",
+        "emotional_arc": "from furious determination to a completely involuntary fall",
+        "arc_from": "furious determination",
+        "arc_to": "involuntary fall, with no time to be frightened",
+        "trigger": { "beat": "her foot slips on the wet stone", "t": 3.2 },
+        "no_early_reaction": ["the arms coming out", "the stride shortening", "a glance at the water"],
+        "forbidden_early": ["the arms coming out", "the stride shortening", "a glance at the water"],
+        "end_state": "going down out of the bottom of frame screen-left, both arms flung out, mouth open"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": {
+    "timeline_ok": true,
+    "violations": [],
+    "story_event": "ev0008 (dream) — 'her foot slips and she falls, splash, into salt water up to her chin'",
+    "note": "Alice alone. The camera does not follow her down; S10 picks her up in the water."
+  }
+}

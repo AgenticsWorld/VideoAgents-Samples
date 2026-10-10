@@ -1,0 +1,40 @@
+{
+  "shot_id": "sh018",
+  "group_id": "grp008",
+  "scene_no": "S03",
+  "scene_id": "SCN-falling-dream",
+  "duration_s": 7.0,
+  "is_dialogue": false,
+  "group_position": "middle shot of grp008 — Alice has left the entry tunnel and is on the first part of the entry_tunnel -> shaft_centre line, still high in the shaft.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "stand",
+      "start_pos": "dropping clear of the tunnel mouth into the shaft, coming upright as the fall slows",
+      "space_fragment_en": "standing upright in mid-air just below the entry tunnel mouth, centred in frame, face turned up to the shrinking opening",
+      "facing": "body upright and square, head tipped back to the closing circle of light above her",
+      "path": [
+        { "t": 5.0, "to": "out into the open centre of the shaft as the round walls open into the first pass" }
+      ],
+      "beats": [
+        { "t": 0.0, "action": "drops, seen from behind", "sync": "shot opens on the drop" },
+        { "t": 1.8, "action": "the fall slows to nothing like a fall; her skirts and pinafore billow, her hair pulls up", "sync": "the rule of the scene is established" },
+        { "t": 5.0, "action": "the glazed cupboards and rows of stoneware jars begin to slide up past her", "sync": "the first pass opens out" }
+      ],
+      "performance_beat": {
+        "objective": "work out what is happening to her before deciding whether to be frightened",
+        "goal": "work out what is happening before deciding to be frightened",
+        "emotional_arc": "from the shock of a drop to an almost administrative acceptance that this fall is going to take a while",
+        "arc_from": "the shock of a drop",
+        "arc_to": "administrative acceptance",
+        "trigger": { "beat": "the fall slows and stops feeling like falling", "t": 1.8 },
+        "no_early_reaction": ["the arms settling", "the head coming level", "the hands smoothing her skirts"],
+        "forbidden_early": ["the arms settling", "the head coming level", "the hands smoothing her skirts"],
+        "end_state": "upright in the air, chin still raised to the opening above, arms loose, hair standing straight up"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0002 (dream)", "note": "Alice alone in the shaft." }
+}

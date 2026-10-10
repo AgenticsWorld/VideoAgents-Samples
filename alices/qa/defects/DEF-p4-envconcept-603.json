@@ -1,0 +1,22 @@
+{
+  "id": "DEF-p4-envconcept-603",
+  "opened_by": "06-art/environment-concept",
+  "opened_on": "2026-09-23",
+  "task_id": "p4-env-concept-sb1",
+  "assigned_to": "user (H2 gate g4)",
+  "domain": "environment-concept (layout_top.png self-check)",
+  "status": "open",
+  "severity": "major",
+  "summary": "Self-check deviations in the delivered layout_top.png images. The auto-retry budget is 0, so the images are kept as generated. layout.json was calibrated to what is actually drawn, except where noted. For user decision at H2: accept as is, or authorise a re-generation.",
+  "findings": [
+    { "id": "603-a", "scene": "SCN-field-hedge-burrow", "severity": "major", "issue": "The rabbit burrow is drawn in open grass about 3 m north of the hedge, with its spoil fan. It should be at the hedge foot under the hawthorn roots ('a large rabbit-hole under the hedge').", "layout_json": "burrow xy = drawn position [0.50, 0.59]" },
+    { "id": "603-b", "scene": "SCN-long-hall", "severity": "major", "issue": "The entrance is drawn as a side passage in the east (bottom) wall about 8 m in from the north end (x 0.28). It should be an open corner at the north-east end. Each long wall has 10 door notches (the east wall has 9 plus the entrance gap), not 12. The glass table is drawn as a disc about 2.5 m across under lamp 8; the spec is 0.5 m.", "layout_json": "ne_entrance xy = drawn gap [0.28, 0.66]" },
+    { "id": "603-c", "scene": "SCN-shaft-landing-passage", "severity": "major", "issue": "The proportions are off. The straight run is about 13 m (spec 25 m), and the final north leg is about 6 m. The mosaic dado sits on the north leg instead of the last 8 m of the straight run. The earth-to-brick-to-stone order is correct.", "layout_json": "mosaic_dado xy = drawn position on the north leg [0.225, 0.45]" },
+    { "id": "603-d", "scene": "SCN-little-door-passage", "severity": "major", "issue": "The two neighbouring full-size hall doors are drawn as oak slabs lying inside the masonry mass west of the hall wall, not as notches in the hall wall line. The crimson curtain is drawn inside the passage along both edges, not on the hall side of the little door.", "layout_json": "hall_door_9 / hall_door_10 xy follow the architecture (on the hall wall line at x 0.755, y 0.05 / 0.95); they are NOT drawn there" },
+    { "id": "603-e", "scene": "SCN-falling-dream", "severity": "minor", "issue": "Looking down the shaft, the inner wall reads in converging depth: bookshelf and cupboard fronts are partly visible, which is inherent to a plan of a vertical shaft. Pink blossom is drawn on the hawthorn roots at the tunnel mouth, but July hawthorn has no blossom.", "layout_json": "calibrated to drawn positions" },
+    { "id": "603-f", "scene": "SCN-pool-of-tears", "severity": "minor", "issue": "The low curtain is not drawn, and the north end runs off the left edge. The entrance gap position matches the long-hall image, not the architecture's NE corner (same as 603-b).", "layout_json": "curtain landmark omitted; own frame, not the SCN-long-hall frame" },
+    { "id": "603-g", "scene": "SCN-pool-bank", "severity": "minor", "issue": "The race circle is about 8 m across (spec about 10 m). The willow trunk lies diagonally, not north-south. There are no flag irises (by design, see DEF-p4-envconcept-602).", "layout_json": "calibrated to drawn positions" },
+    { "id": "603-h", "scene": "SCN-field-hedge-burrow", "severity": "minor", "issue": "The hazel binders along the hedge top show as thin dark lines that could read as wire. The dry ditch shows only as a shade band.", "layout_json": "ditch xy on the shade band" }
+  ],
+  "not_self_fixed": "User setting: auto-retry = 0. No re-generation was made."
+}

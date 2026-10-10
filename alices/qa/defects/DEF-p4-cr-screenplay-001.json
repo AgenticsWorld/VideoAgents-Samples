@@ -1,0 +1,41 @@
+{
+  "id": "DEF-p4-cr-screenplay-001",
+  "opened_by": "01-story/screenplay",
+  "opened_on": "2026-09-23",
+  "task_id": "p4-cr-screenplay-ep01",
+  "assigned_to": [
+    "00-orchestration/orchestrator",
+    "01-story/screenplay"
+  ],
+  "domain": "screenplay",
+  "status": "closed",
+  "severity": "minor",
+  "due": "H3 (ep01 screenplay sign-off)",
+  "summary": "ep01 screenplay action lines still carry pre-BIB-0027 wording that the change request forbade touching (ep01 frozen for H3: only constraint/note lines may change).",
+  "findings": [
+    {
+      "id": "DEF-p4-cr-screenplay-001-a",
+      "where": "story/episodes/ep01/screenplay.md S04, 动作 line 2",
+      "issue": "Describes the dream White Rabbit as \"a small, fussy man in a smart waistcoat, pink-tinted spectacles, gloves in hand\" (the SUP-002 human-performer reading). Under BIB-0027 he is a photoreal CGI white rabbit with naturalistic anatomy and only the iconic period props.",
+      "proposed_fix": "the White Rabbit is hurrying away: a white rabbit in a smart waistcoat, a pair of white kid gloves in one paw. He takes a large watch out of his waistcoat-pocket and looks at it.",
+      "interim": "S04 adaptation_note already states the supersession, so downstream reads the CGI rendering."
+    },
+    {
+      "id": "DEF-p4-cr-screenplay-001-b",
+      "where": "story/episodes/ep01/screenplay.md S05 (and S06-S10 by reference), first 动作 line",
+      "issue": "\"A long, low stone hall … Pointed oak doors\" follows the pre-BIB-0027 Gothic Revival translation of SCN-long-hall. Under WR-010 / XA-magic-08 the dream hall takes Mucha / Art Nouveau design language.",
+      "proposed_fix": "Rewrite set description once 05-scenes/architecture reissues SCN-long-hall (listed stale in BIB-0027); screenplay should describe only playable geometry (long, low, doors all round, hanging lamps, vault low enough for nine-foot Alice) and leave style to the Bible.",
+      "interim": "The episode-level constraint note now binds dream environments to WR-010; no dialogue or event is affected."
+    }
+  ],
+  "resolution": {
+    "task_id": "p4-cr-screenplay-ep01-2",
+    "date": "2026-09-23",
+    "by": "01-story/screenplay",
+    "a": "S04 action line rewritten to the proposed wording (a white rabbit in a smart waistcoat, white kid gloves in one paw, watch from the waistcoat-pocket); S04 note updated.",
+    "b": "S05 opening set line rewritten from the reissued SCN-long-hall architecture.json/environment.json (Mucha / Art Nouveau built set). Stone-vault and Gothic references in S06 (shrink line), S07 (head strikes an iron rib; gilding flakes) and S10 (door bases in iron frames, vine mosaic under the water, per SCN-pool-of-tears) aligned. S08/S09 wording ('vault', 'flagstones', 'wet stone') is still valid under the new design and was left as is.",
+    "checks": "check_screenplay_events PASS; check_scene_int_ext PASS (0/0)",
+    "unchanged": "dialogue lines, scene order, scene headings, [事件]/[出场]/[时长] lines"
+  },
+  "closed_by": "workflow-orchestrator (verified: old S04/S05 text absent in screenplay and breakdown; checks PASS)"
+}

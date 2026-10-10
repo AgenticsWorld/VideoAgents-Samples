@@ -1,0 +1,30 @@
+{
+  "character_id": "CHAR-hatter",
+  "name": "Hatter",
+  "tier": "A",
+  "card_type": "individual",
+  "gender": "male",
+  "age_sense": "adult man (appearance base_age_range 32-40)",
+  "timbre": "quick, bright, slightly nasal and reedy man's voice with a needling edge; goes thin and quavering under fear",
+  "pitch": "high baritone to tenor, jumpy and sing-song, sudden spikes on a scored point",
+  "pitch_range_hz": [115, 220],
+  "speed_wpm": [165, 195],
+  "speed_cpm": [627, 741],
+  "accent": "London tradesman's English, light Cockney vowels straining upward toward genteel speech",
+  "reference_style": "King of the stopped afternoon: rapid personal remarks, riddles without answers, triumphant word-play; always a beat quicker than the March Hare. In the witness box the same voice collapses into a trembling, whining tradesman ('I'm a poor man, your Majesty').",
+  "emotion_range": {
+    "table_needling": { "speed_delta": "+10%", "pitch_delta": "+2semi", "note": "abrupt questions, delighted crowing" },
+    "mournful": { "speed_delta": "-15%", "pitch_delta": "-2semi", "volume": "soft", "note": "ch007-p57 'in a mournful tone' — quarrel with Time" },
+    "court_trembling": { "speed_delta": "-10%", "pitch_delta": "+2semi", "volume": "soft", "note": "ch011-p37 'in a trembling voice' — stammer, quaver" }
+  },
+  "age_variants": [],
+  "source_chapter": "ch011",
+  "sources": ["ch007", "ch011", "ch007-p02", "ch007-p57", "ch011-p37"],
+  "voice_evidence": [
+    { "para": "ch007-p57", "quote": "the Hatter went on in a mournful tone" },
+    { "para": "ch011-p37", "quote": "the Hatter began, in a trembling voice" }
+  ],
+  "inferred": true,
+  "inferred_fields": ["timbre", "pitch_range_hz", "speed_wpm", "speed_cpm", "accent"],
+  "reason": "Tones are sourced; timbre and London tradesman accent designed from dialogue_style ('tradesman's speech (a hat-seller)') and personality ('twitchy, quick-tongued')."
+}

@@ -1,0 +1,67 @@
+{
+  "character_id": "CHAR-knave-of-hearts",
+  "sheet": "sheet.png",
+  "gender": "male",
+  "gender_word_in_prompt": true,
+  "appearance_field_hits": {
+    "gender_male": true,
+    "hair_chestnut_rolled_under_centre_parted": true,
+    "flat_black_cap": true,
+    "thin_moustache_clean_chin": true,
+    "hazel_eyes": true,
+    "fair_flushed_skin": true,
+    "close_lipped_smile": true,
+    "slim_straight_backed": true,
+    "card_tabard_red_heart_jack_device": true,
+    "card_back_lattice": true,
+    "crimson_coat_cream_waistcoat_breeches_white_stockings_buckled_shoes": true,
+    "rigid_card_like_stance": "partial"
+  },
+  "self_check": {
+    "layout": "pass (4 panels, same man, same outfit)",
+    "appearance": "pass with defects",
+    "style": "pass (photographed live-action, period costume)"
+  },
+  "defects": [
+    "Front tabard is a short bib ending at the upper chest, not a flat panel from shoulders to mid-thigh (COS-011). The back card panel has the right length.",
+    "The Jack device is drawn as a crowned king-style face-card figure. Minor.",
+    "Stance is natural rather than rigidly flat and card-like. Minor."
+  ],
+  "not_drawn_scoped": [
+    "iron chains at the wrists (trial only, COS-012)",
+    "crown on crimson velvet cushion (procession prop, 06-art/prop)"
+  ],
+  "rerolls": [],
+  "costume_sheets": {
+    "sheet_COS-012.png": {
+      "task_id": "p4-costume-sheet",
+      "agent": "06-art/costume-concept",
+      "costume_ref": "COS-012",
+      "status": "final (kept; reroll budget 0)",
+      "self_check": {
+        "layout": "PASS",
+        "identity": "PASS (same face, moustache, hair as sheet.png)",
+        "costume_hits": {
+          "card_tabard_shoulders_to_mid_thigh": "partial (back tabard is long; the front is still a short chest bib as in the base sheet)",
+          "ivory_front_red_heart_jack_device": true,
+          "crimson_cream_lattice_card_back_heart_rosette": true,
+          "crimson_cutaway_coat_cream_facings_brass_buttons": true,
+          "cream_waistcoat": true,
+          "crimson_knee_breeches": true,
+          "white_stockings": true,
+          "black_buckled_shoes": true,
+          "bareheaded": true,
+          "light_iron_wrist_cuffs_short_thin_chain": "partial (cuffs correct; the chain is long and hangs to the knees)",
+          "slightly_rumpled": "weak"
+        },
+        "style": "PASS"
+      },
+      "defects": [
+        "major (inherited from base sheet.png): the front card tabard is a short chest bib, not shoulders-to-mid-thigh",
+        "minor: the wrist chain is long, hanging to the knees, rather than short and thin",
+        "minor: rumpling of tabard and stockings is barely visible"
+      ]
+    }
+  },
+  "costume_rerolls": []
+}

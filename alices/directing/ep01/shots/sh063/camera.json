@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh063",
+  "group_id": "grp024",
+  "scene_no": "S07",
+  "duration_s": 4.0,
+  "size": "medium",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 28,
+  "camera_height_m": 0.9,
+  "angle": "slightly up",
+  "rack_focus": "none",
+  "start_frame": "From the centre of the hall toward the west doors, camera low and looking slightly up: the row of gilt-halo lamps with their pastel tulip shades crossing the frame at 2.30 m, Alice rising into them.",
+  "end_frame": "The same frame as GAUGE TWO lands: the tulip shades arrive level with her face and then with her shoulder, the lamps she walked under a minute ago now at her collarbone.",
+  "constraint_honoured": "'GAUGE TWO, second of the three in sequence. The lamps are in frame here and in sh065 and then never again in the film.'",
+  "movement_note": "A fixed frame is what lets the lamp line be the moving thing; the camera stays under 1.00 m so the next act's lamps-out-of-frame rule is already physically true.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

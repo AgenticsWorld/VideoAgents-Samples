@@ -1,0 +1,20 @@
+{
+  "shot_id": "sh101",
+  "group_id": "grp037",
+  "scene_no": "S10",
+  "scene_id": "SCN-pool-of-tears",
+  "duration_s": 2.0,
+  "is_dialogue": false,
+  "group_position": "last shot of grp037 — the water-level insert from her eye-line. Nobody is registered in frame, so no space fragment is written; Alice holds her map end (open water short of the reeds by the shore steps) behind the lens.",
+  "characters": [],
+  "creatures": [],
+  "offscreen_presence": [
+    { "id": "CHAR-alice", "where": "treading water very still in open water short of the reeds by the shore steps, directly behind the lens, facing the wake", "note": "grp037 blocking_map end. Present in the space, not in frame — the episode must not cut back to her reaction after the wake." }
+  ],
+  "presence_check": {
+    "timeline_ok": true,
+    "violations": [],
+    "story_event": "ev0009 approach (dream) — the Mouse enters the pool in ep02",
+    "note": "No character or creature is staged in this frame. Whatever makes the wake never breaks the surface and is never lit from beneath; it carries no blocking entry because it has no visible body in ep01."
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh041",
+  "group_id": "grp016",
+  "scene_no": "S05",
+  "duration_s": 5.0,
+  "size": "wide",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 100,
+  "camera_height_m": "0.55, at her kneeling eye-line at the little door's threshold",
+  "angle": "level, straight down the passage",
+  "rack_focus": "none",
+  "start_frame": "Her POV through the open 0.38 m door: a narrow stone crawl passage not much larger than a rat-hole with iron ribs along it, and at its far end the small sunlit garden arch — beds of bright flowers and cool fountains — sitting flat and small in the frame.",
+  "end_frame": "The identical frame held for the full five seconds: the passage walls and the far arch all sharp together, the garden no nearer and no larger than when the shot began.",
+  "constraint_honoured": "'The dream's one long lens, spent here and deliberately flat… must not read as somewhere we could walk into' — and the dof_policy bars any rack or defocus, so the flatness comes from the lens alone.",
+  "movement_note": "POV 5 of 7 and the episode's only 100 mm. A push in on the garden would promise reachability, which is exactly the lie the scene cannot tell.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

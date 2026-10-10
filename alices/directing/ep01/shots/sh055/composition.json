@@ -1,0 +1,28 @@
+{
+  "shot_id": "sh055",
+  "scene_id": "SCN-long-hall",
+  "size": "close",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "centre",
+    "anchor_xy": [0.46, 0.46],
+    "size_in_frame": "her wet face held whole, about 0.58 of frame height — the largest she has been in the frame since the meadow"
+  },
+  "headroom": "about 0.14 of frame height. After sh054's 0.66, this reduction is the shot's first statement, before she says a word.",
+  "horizon_eyeline": "Lens at 0.20 m from the curtain side, so the angle is slightly up at her even at her own scale. No architecture in frame beyond a dark blur of glass leg at the right edge. Her eyeline is at 0.44, level, and comes up out of her fists to hold steady.",
+  "layers": {
+    "fg": "her two fists coming away from her eyes, knuckles wet",
+    "mg": "her face",
+    "bg": "the dark hall, one distant lamp pool as a soft amber smudge behind her shoulder"
+  },
+  "gaze": {
+    "direction": "frame_left",
+    "lead_room": "left",
+    "note": "she scolds herself, so the look goes slightly frame left to a person who is not there. About 0.22 of frame width of empty dark sits on that side and is never filled — the second person in this conversation is composed as an absence."
+  },
+  "balance": "A single face just left of centre in a dark frame, with the fists low. The empty left third is where she is addressing, and the fact that it is empty is the whole idea of the line.",
+  "leading_lines": "Her forearms come up into the bottom of frame as two short diagonals converging on her face; nothing else in the picture has a direction.",
+  "eye_first": "Her eyes, red and hard, as the fists clear them.",
+  "safe_area_ok": true,
+  "constraint_binding": "The FIRST and ONLY close-up of the scene, earned by withholding every other close-up in S06: no close size is used anywhere else in this scene, so this frame arrives without precedent. This is the line where she becomes two people, and the composition states it by leaving the space she is speaking to visibly empty."
+}

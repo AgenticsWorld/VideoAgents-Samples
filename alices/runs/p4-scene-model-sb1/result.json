@@ -1,0 +1,52 @@
+{
+  "task_id": "p4-scene-model-sb1",
+  "attempt": 1,
+  "agent": "05-scenes/scene-modeling",
+  "status": "completed",
+  "finished": "2026-09-23",
+  "summary": "8 scene whiteboxes written (bible/scenes/<SCN>/whitebox.json, whitebox_scene.v1, primitives only). All 8 have X:Z = the 16:9 image aspect (deviation 0.0%). Host check whitebox_layout_ok PASS x8, and every overlay was read and checked visually. No shot list exists for any episode: no storyboard yet, handed over to whitebox-staging; no reference video was rendered.",
+  "meta": {
+    "docs_whitebox_md": "Not shipped in this build. The schema was followed from the SOUL rules and the host module modules/whitebox.py (load_scene) / code/whitebox_layout_check.py.",
+    "style_authority": "Not applicable to this deliverable. No images were generated; the whitebox is untextured geometry. style.json and BIB-0027 affect textures only, not the spatial layout.",
+    "user_refs": [{"path": "refs/style/alice.jpeg", "used": false, "why": "Style/look reference for image generation. This task makes no images and has no look-dependent geometry."}],
+    "pending_H2": "None of the style.json open_points_pending_H2 items (Footmen, non-speaking CGI animals, baby->piglet) are scene geometry; dynamic characters are excluded from scene assets. The H2 decision this task depends on is DEF-p4-envconcept-603 / DEF-p4-scenemodel-960 (drawn proportions vs Bible), flagged 'pending_H2 — for user decision at H2'.",
+    "skills": "No project skills are enabled for this station; none applied.",
+    "generation": "No generation calls, no provider calls, no helper scripts in code/ (one inline calculator run for the ring-segment coordinates, nothing written to disk). No background processes."
+  },
+  "acceptance": {
+    "whitebox_layout_ok": "PASS x8. Command: python3.12 (app runtime, with PIL) code/whitebox_layout_check.py --project alices --scene <8 ids>. Exit 0. Log: runs/p4-scene-model-sb1/whitebox_layout_check.log. The first run failed 3 scenes on edge overshoots of 0.0001 (rounding); sizes were trimmed and the rerun passed.",
+    "overlay_visual": "All 8 whitebox_overlay.png files were read. The red wall boxes sit on the drawn wall bands, the openings line up with the drawn gaps, and the blue objects sit on the drawn features. Known and intended differences: the SCN-falling-dream north/south ring sits outside the squashed drawn ellipse; Bible-size tables sit inside the drawn oversized discs; and the overlay shows yawed ring/trunk segments unrotated (overlay limitation; the 3D geometry is rotated).",
+    "host_load_scene": "modules.whitebox.load_scene parses all 8 files with 0 warnings.",
+    "render_whitebox": "Skipped: no directing/*/shot_list.json exists (directing/ep01 has no shot list). Nothing was rendered, and no storyboard or empty video was faked."
+  },
+  "items": [
+    {"scene": "SCN-falling-dream", "file": "bible/scenes/SCN-falling-dream/whitebox.json", "dimensions_m": [5.0, 6.0, 2.8125], "scale_anchor": "Bible 2.4 m shaft diameter = drawn inner brick width", "inferred": ["0.18 m rim (the frame is too shallow for the drawn 0.35 m rim)", "furniture band heights within the 6 m rig section", "tunnel 0.75 x 1.2 m"], "landmarks_covered": 8, "check": "PASS", "overlay": "assets/concepts/scenes/SCN-falling-dream/whitebox_overlay.png", "video": "none (no storyboard)"},
+    {"scene": "SCN-long-hall", "file": "bible/scenes/SCN-long-hall/whitebox.json", "dimensions_m": [40.5, 2.8, 22.781], "scale_anchor": "Bible 32 m hall length = drawn floor length (31.7 m)", "inferred": ["Bible 0.85 m door leaves at the 19 drawn notches + south door", "Bible 0.5 m glass table", "lamp hang 2.3 m", "curtain 0.6 m high", "entrance lintel 2.1 m"], "landmarks_covered": 9, "check": "PASS", "overlay": "assets/concepts/scenes/SCN-long-hall/whitebox_overlay.png", "video": "none (no storyboard)"},
+    {"scene": "SCN-little-door-passage", "file": "bible/scenes/SCN-little-door-passage/whitebox.json", "dimensions_m": [5.0, 2.8, 2.8125], "scale_anchor": "Bible 3 m passage length = drawn masonry depth (2.94 m)", "inferred": ["0.26 m door width via jambs", "curtain on the hall side (per Bible, not the image)", "hall doors 9/10 per layout.json, clipped to the frame", "garden bed heights"], "landmarks_covered": 9, "check": "PASS", "overlay": "assets/concepts/scenes/SCN-little-door-passage/whitebox_overlay.png", "video": "none (no storyboard)"},
+    {"scene": "SCN-shaft-landing-passage", "file": "bible/scenes/SCN-shaft-landing-passage/whitebox.json", "dimensions_m": [30.0, 2.8, 16.875], "scale_anchor": "layout.json map_extent_m (no drawn element matches a Bible size)", "inferred": ["all passage/chamber sizes as drawn, 2x the Bible widths", "wall heights 2.1/2.8/3.0 m", "leaf heap 1.6 m"], "landmarks_covered": 7, "check": "PASS", "overlay": "assets/concepts/scenes/SCN-shaft-landing-passage/whitebox_overlay.png", "video": "none (no storyboard)"},
+    {"scene": "SCN-pool-of-tears", "file": "bible/scenes/SCN-pool-of-tears/whitebox.json", "dimensions_m": [33.0, 2.8, 18.5625], "scale_anchor": "layout.json map_extent_m; Bible 0.5 m table / 0.85 m doors / 0.1 m water as metric anchors", "inferred": ["water 0.1 m over the whole drawn floor (DEF-p4-envconcept-601 still open)", "step rises 0.1/0.2/0.3 m", "floating props excluded as dynamic"], "landmarks_covered": 8, "check": "PASS", "overlay": "assets/concepts/scenes/SCN-pool-of-tears/whitebox_overlay.png", "video": "none (no storyboard)"},
+    {"scene": "SCN-pool-bank", "file": "bible/scenes/SCN-pool-bank/whitebox.json", "dimensions_m": [40.0, 12.0, 22.5], "scale_anchor": "layout.json map_extent_m, cross-checked with the race circle (8 m drawn vs 10 m Bible)", "inferred": ["reed/herb heights", "fallen willow 0.6 m trunk", "6 race sticks", "wood canopy 3-12 m"], "landmarks_covered": 9, "check": "PASS", "overlay": "assets/concepts/scenes/SCN-pool-bank/whitebox_overlay.png", "video": "none (no storyboard)"},
+    {"scene": "SCN-riverbank", "file": "bible/scenes/SCN-riverbank/whitebox.json", "dimensions_m": [40.0, 20.0, 22.5], "scale_anchor": "layout.json map_extent_m, cross-checked with elm crowns about 9-10 m", "inferred": ["willow trunk position", "tree heights", "bank drop 1.2 m not modelled as terrain"], "landmarks_covered": 10, "check": "PASS", "overlay": "assets/concepts/scenes/SCN-riverbank/whitebox_overlay.png", "video": "none (no storyboard)"},
+    {"scene": "SCN-field-hedge-burrow", "file": "bible/scenes/SCN-field-hedge-burrow/whitebox.json", "dimensions_m": [53.0, 12.0, 29.8125], "scale_anchor": "layout.json map_extent_m width; Z corrected from 30.0 to 29.8125 to match the image aspect; hedge height 1.8 m per Bible", "inferred": ["hedge depth as drawn 4.4 m", "gate spans the drawn 5.3 m gap", "burrow at the drawn position (not the hedge foot)", "ditch as a marker only"], "landmarks_covered": 9, "check": "PASS", "overlay": "assets/concepts/scenes/SCN-field-hedge-burrow/whitebox_overlay.png", "video": "none (no storyboard)"}
+  ],
+  "defects": [
+    {"id": "DEF-p4-scenemodel-960", "summary": "Drawn plan proportions vs Bible sizes across 7 scenes (walls follow the image). pending_H2 — for user decision at H2.", "path": "qa/defects/DEF-p4-scenemodel-960.json"}
+  ],
+  "handover": {
+    "whitebox-staging": "No storyboard yet. Once the shot lists and blocking exist, run code/render_whitebox.py per episode. Each whitebox.json carries walkable zones, clear widths and anti-clip notes. Scaled builds (x4.5 little door, x5.4 / 1:2 hall, x12 pool tank) keep xy and multiply metres; record the factor in whitebox_plans."
+  },
+  "files_created": [
+    "bible/scenes/SCN-falling-dream/whitebox.json",
+    "bible/scenes/SCN-long-hall/whitebox.json",
+    "bible/scenes/SCN-little-door-passage/whitebox.json",
+    "bible/scenes/SCN-shaft-landing-passage/whitebox.json",
+    "bible/scenes/SCN-pool-of-tears/whitebox.json",
+    "bible/scenes/SCN-pool-bank/whitebox.json",
+    "bible/scenes/SCN-riverbank/whitebox.json",
+    "bible/scenes/SCN-field-hedge-burrow/whitebox.json",
+    "assets/concepts/scenes/<8 scenes>/whitebox_overlay.png (host check output)",
+    "qa/defects/DEF-p4-scenemodel-960.json",
+    "runs/p4-scene-model-sb1/result.json",
+    "runs/p4-scene-model-sb1/whitebox_layout_check.log"
+  ]
+}

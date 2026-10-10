@@ -1,0 +1,37 @@
+{
+  "shot_id": "sh057",
+  "group_id": "grp022",
+  "scene_no": "S07",
+  "scene_id": "SCN-long-hall",
+  "duration_s": 3.0,
+  "is_dialogue": false,
+  "group_position": "middle shot of grp022 — Alice at the glass box under the table, on the same map start ground (glass_table).",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "stand",
+      "start_pos": "ten inches high at the little glass box under the glass table, both arms under the lid",
+      "space_fragment_en": "standing ten inches high at the little glass box under the glass table, centred in frame, facing down at the cake",
+      "facing": "down into the open box; only her forearms are in frame",
+      "path": [],
+      "beats": [
+        { "t": 1.0, "action": "heaves the glass lid up with both arms", "sync": "the box is as tall as her chest" },
+        { "t": 2.2, "action": "the cake and its currant lettering come clear", "sync": "EAT ME reads" }
+      ],
+      "performance_beat": {
+        "objective": "get the box open and see what is in it",
+        "goal": "get the box open",
+        "emotional_arc": "from effort against a heavy lid to arrested attention on what is underneath",
+        "arc_from": "effort against a heavy lid",
+        "arc_to": "arrested attention",
+        "trigger": { "beat": "the lid clears and the lettering is readable", "t": 2.2 },
+        "no_early_reaction": ["the arms going still", "a hand reaching to the cake", "the lid dropping"],
+        "forbidden_early": ["the arms going still", "a hand reaching to the cake", "the lid dropping"],
+        "end_state": "both forearms holding the lid up, hands empty, nothing moving above the open box"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0005 (dream)", "note": "Alice alone; no face in frame." }
+}

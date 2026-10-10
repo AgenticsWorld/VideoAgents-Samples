@@ -1,0 +1,23 @@
+{
+  "id": "DEF-p5-dialogue-ep01-001",
+  "raised_by": "00-orchestration/workflow-orchestrator (from p5-pacing-ep01 flags)",
+  "raised_on": "2026-09-22",
+  "task_id": "p5-dialogue-ep01",
+  "severity": "minor",
+  "status": "closed",
+  "assigned_to": "01-story/dialogue-rewrite",
+  "due_gate": "G5",
+  "summary": "ep01 S10 LN-ep01-029 'And in that case I can go back by railway.' answers a thought the adaptation dropped (source: she thought she had fallen into the sea); with narration off it reads as a non sequitur.",
+  "fix": "Either add a source-derived spoken lead-in line for Alice (+~2 s) or cut LN-029 (-~4 s); keep the episode within budget; update est_duration_s and re-run check_dialogue_fit.",
+  "resolution": {
+    "fixed_by_task": "p5-dialogue-ep01-fix",
+    "closed_on": "2026-09-22",
+    "option": "lead-in added (not cut)",
+    "change": "LN-ep01-029 'And in that case I can go back by railway.' (3.1 s) -> 'I must have fallen into the sea! And in that case I can go back by railway.' (5.5 s, +2.4 s); emotion calm -> agitated. Same LN id and row, so the pacing beat keys still match.",
+    "source_basis": "ch002-p16: 'her first idea was that she had somehow fallen into the sea, \"and in that case I can go back by railway,\" she said to herself.' The lead-in is Carroll's reported thought put into Alice's mouth, with his wording kept closely.",
+    "why_not_cut": "S10 is the ep01 cliffhanger. With no narration, the salt-to-sea-to-own-tears turn is the only thing that makes the flood read as her tears. Cutting LN-029 leaves 'she licks her lips — salt' with no spoken follow-through, and the sea mistake is the story beat that the realisation in the next action line corrects.",
+    "budget": "S10 dialogue 16.4 s -> 18.8 s, against a 0.7 x 38 s = 26.6 s ceiling in pacing.json. The episode total is 537 s in pacing.json; +2.4 s gives about 539.4 s, still inside the 486-594 s tolerance. The pacing beat 'LN-029: 4 s' needs about 5.5 s; the extra 1.5 s can come from the silent 'surfaces, salt' 5 s beat. That rebalance is pacing's call, and no pacing file was edited here.",
+    "verification": "python3 code/check_dialogue_fit.py --project alices --ep ep01 -> exit 0 (source_only mode; line_le_cap and line_est_consistent PASS; 34 lines). Alice style hit rate is still 0.967 (the line still hits A5 railway); no forbidden words.",
+    "run_record": "runs/p5-dialogue-ep01-fix/result.json"
+  }
+}

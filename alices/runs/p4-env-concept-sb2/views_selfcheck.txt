@@ -1,0 +1,88 @@
+SCN-rabbit-house-exterior: PASS
+  tile 1: lane->front_door wide/eye bearing 180
+  tile 2: front_door->lane medium/eye bearing 0
+  tile 3: apple_tree->upstairs_window wide/eye bearing 70
+  tile 4: cucumber_frame->upstairs_window close/low bearing 346
+  tile 5: ladder_corner->chimney_stack medium/high_oblique bearing 351
+  tile 6: wood_edge->apple_tree wide/eye bearing 278
+  tile 7: upstairs_window->cucumber_frame detail/high_oblique bearing 166
+  tile 8: west_gable->ladder_corner wide/eye bearing 112
+  tile 9: ladder_corner->cucumber_frame close/low bearing 267
+  metric (m): lane=(12.5,1.1), front_door=(12.5,2.7), west_gable=(7.8,5.3), chimney_stack=(17.2,4.6), upstairs_window=(12.5,7.9), cucumber_frame=(13.0,9.8), ladder_corner=(18.0,9.6), apple_tree=(5.2,10.5), wood_edge=(12.5,11.5)
+SCN-rabbit-house-upstairs-room: PASS
+  tile 1: door->window wide/eye bearing 163
+  tile 2: window->door wide/eye bearing 343
+  tile 3: looking_glass->fireplace wide/eye bearing 90
+  tile 4: fireplace->looking_glass medium/eye bearing 270
+  tile 5: rag_rug->window_table close/low bearing 188
+  tile 6: window_table->looking_glass close/eye bearing 309
+  tile 7: chest_of_drawers->fireplace medium/high_oblique bearing 123
+  tile 8: rag_rug->door medium/low bearing 330
+  tile 9: looking_glass->window_table detail/eye bearing 129
+  metric (m): door=(3.0,0.9), chest_of_drawers=(4.0,1.3), looking_glass=(2.1,2.1), fireplace=(5.2,2.1), rag_rug=(3.8,2.2), window_table=(3.6,3.3), window=(3.8,3.5)
+SCN-wood-tree-door: PASS
+  tile 1: path_west->tree_door wide/eye bearing 82
+  tile 2: path_east->door_oak wide/eye bearing 285
+  tile 3: south_trunk->tree_door medium/eye bearing 19
+  tile 4: threshold_stone->tree_door close/low bearing 0
+  tile 5: tree_door->south_trunk wide/eye bearing 199
+  tile 6: west_trunks->door_oak medium/high_oblique bearing 81
+  tile 7: tree_door->path_east medium/eye bearing 95
+  tile 8: east_trunks->threshold_stone close/high_oblique bearing 238
+  tile 9: south_trunk->threshold_stone detail/low bearing 24
+  metric (m): door_oak=(6.7,3.0), tree_door=(7.0,4.6), threshold_stone=(7.0,5.2), path_west=(1.0,5.4), path_east=(15.0,5.2), west_trunks=(2.9,3.6), east_trunks=(12.5,1.8), south_trunk=(6.1,7.4)
+SCN-wood-thistle-glade: PASS
+  tile 1: glade_entry->root_bank wide/eye bearing 347
+  tile 2: great_thistle->root_bank medium/low bearing 352
+  tile 3: root_bank->great_thistle wide/high_oblique bearing 172
+  tile 4: oak_trunk_west->hazel_stool_east wide/eye bearing 84
+  tile 5: hazel_stool_east->bracken_foxglove medium/eye bearing 244
+  tile 6: stick_pile->great_thistle close/low bearing 298
+  tile 7: bracken_foxglove->stick_pile close/eye bearing 75
+  tile 8: great_thistle->glade_entry medium/eye bearing 163
+  tile 9: oak_trunk_west->great_thistle detail/low bearing 98
+  metric (m): great_thistle=(11.5,6.5), root_bank=(10.8,1.1), stick_pile=(15.1,8.4), oak_trunk_west=(3.4,5.4), hazel_stool_east=(19.2,3.8), bracken_foxglove=(3.6,11.5), glade_entry=(13.4,12.8)
+SCN-caterpillar-clearing: PASS
+  tile 1: wood_gap_south->mushroom wide/eye bearing 7
+  tile 2: buttercup->mushroom close/low bearing 67
+  tile 3: mushroom->buttercup medium/high_oblique bearing 247
+  tile 4: tree_ring_east->tree_ring_west wide/eye bearing 264
+  tile 5: tree_ring_west->daisy_clump wide/low bearing 101
+  tile 6: clover_patch->daisy_clump medium/eye bearing 130
+  tile 7: daisy_clump->mushroom close/eye bearing 305
+  tile 8: tree_ring_north->buttercup medium/eye bearing 206
+  tile 9: clover_patch->buttercup detail/low bearing 205
+  metric (m): mushroom=(8.0,4.5), buttercup=(3.8,6.3), daisy_clump=(11.2,6.8), clover_patch=(5.8,2.2), tree_ring_north=(6.7,0.5), tree_ring_east=(14.7,3.1), tree_ring_west=(1.0,4.7), wood_gap_south=(7.5,8.5)
+SCN-pigeon-treetop: PASS
+  tile 1: canopy_south->nest wide/eye bearing 0
+  tile 2: nest->neck_gap medium/eye bearing 159
+  tile 3: neck_gap->nest close/eye bearing 339
+  tile 4: west_limb->canopy_east wide/high_oblique bearing 106
+  tile 5: canopy_east->canopy_west wide/eye bearing 272
+  tile 6: east_limb->nest detail/low bearing 231
+  tile 7: neck_gap->canopy_north wide/high_oblique bearing 354
+  tile 8: canopy_west->west_limb medium/eye bearing 68
+  tile 9: nest->canopy_west close/low bearing 268
+  metric (m): nest=(24.0,13.0), west_limb=(19.2,8.1), east_limb=(29.3,8.6), neck_gap=(25.4,16.7), canopy_north=(24.0,2.2), canopy_south=(24.0,24.8), canopy_west=(5.8,13.5), canopy_east=(42.2,14.9)
+SCN-duchess-house-front: PASS
+  tile 1: alice_peep_tree->front_door wide/eye bearing 27
+  tile 2: door_step->alice_peep_tree medium/low bearing 209
+  tile 3: west_wood_edge->door_step wide/eye bearing 98
+  tile 4: clearing_centre->front_door close/low bearing 31
+  tile 5: east_wood_edge->west_wood_edge wide/eye bearing 268
+  tile 6: front_door->plate_tree medium/eye bearing 149
+  tile 7: alice_peep_tree->plate_tree detail/eye bearing 71
+  tile 8: door_step->wood_path wide/high_oblique bearing 123
+  tile 9: east_wood_edge->chimney_stack medium/high_oblique bearing 294
+  metric (m): chimney_stack=(12.6,2.0), front_door=(14.0,9.0), door_step=(14.0,9.4), clearing_centre=(12.6,11.3), alice_peep_tree=(11.2,14.5), plate_tree=(16.2,12.8), wood_path=(23.0,15.3), west_wood_edge=(3.4,7.9), east_wood_edge=(24.1,7.1)
+SCN-duchess-kitchen: PASS
+  tile 1: front_door->hearth wide/eye bearing 297
+  tile 2: hearth_slab->front_door wide/low bearing 126
+  tile 3: copper_pan_rail->hearth wide/eye bearing 267
+  tile 4: hearth->stool medium/eye bearing 91
+  tile 5: front_door->stool medium/eye bearing 353
+  tile 6: dresser->stool close/high_oblique bearing 228
+  tile 7: stool->hearth_slab close/low bearing 272
+  tile 8: deal_table->bell_board medium/eye bearing 148
+  tile 9: stool->dresser detail/eye bearing 48
+  metric (m): front_door=(7.5,6.7), hearth=(2.8,4.2), hearth_slab=(4.2,4.2), stool=(7.2,4.3), deal_table=(6.1,2.4), dresser=(9.7,2.1), bell_board=(8.7,6.5), copper_pan_rail=(12.0,3.8)

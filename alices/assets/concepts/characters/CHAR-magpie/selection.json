@@ -1,0 +1,5 @@
+{"character_id":"CHAR-magpie","sheet":"sheet.png","gender":"male","gender_word_in_prompt":true,"rendering":"photoreal CGI Eurasian magpie (SUP-002)",
+"appearance_field_hits":{"glossy_black_blue_green_sheen":true,"white_belly_wing_patches":true,"long_graduated_tail":true,"strong_black_beak":true,"beady_eye":true,"fluffed_throat":"slight","unclothed":true},
+"self_check":{"layout":"pass","appearance":"pass with defect","style":"pass (photoreal)"},
+"defects":["The legs are too long (stilt-like) for a magpie."],
+"bible_conflict":"DEF-p4-char-concept-201-a (muffler: drawn bare per COS-027)","rerolls":[]}

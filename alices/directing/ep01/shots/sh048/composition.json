@@ -1,0 +1,28 @@
+{
+  "shot_id": "sh048",
+  "scene_id": "SCN-long-hall",
+  "size": "wide",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "centre",
+    "anchor_xy": [0.46, 0.50],
+    "size_in_frame": "enters the shot at about 0.62 of frame height (1.35 m) and leaves it at about 0.12 (0.254 m) — her feet never move, so she shrinks downward from the head, her hem line falling from 0.78 to 0.86 of frame height and her crown from 0.24 to 0.74"
+  },
+  "headroom": "starts at about 0.24 of frame height and opens to 0.74 across twelve seconds. The whole shot is a headroom measurement: the growth of the empty space over her head IS the effect, and no reframe is permitted to service it.",
+  "horizon_eyeline": "Locked wide at child height: flagstone line across at 0.86 of frame height, the mosaic dado level at 0.66, the glass tabletop at 0.72, the west door heads at 0.22 and the lamp row across the top at 0.12. All five stay exactly where they are for twelve seconds. Her eyeline falls through them, from 0.30 to 0.80.",
+  "layers": {
+    "fg": "the empty bottle set down on the flagstones beside her, which stays the same size all shot and is the anchor the whole effect is read against",
+    "mg": "Alice, shrinking on the spot without moving her feet, kept against the lit glass table leg so she still reads at 0.254 m",
+    "bg": "the whole west door line and the receding lamp row inside the same frame — the oak doors soaring into cliffs under their iron arches, the lamps swinging far overhead"
+  },
+  "gaze": {
+    "direction": "up_frame",
+    "lead_room": "above",
+    "note": "as she goes down, her look goes up: the eyeline travels from level to steeply raised as the doors become cliffs. The growing headroom is also her growing lead room, and it is full of things that used to be her size."
+  },
+  "balance": "Begins as a conventional centred medium-wide and ends as a vast top-heavy hall with a speck in the lower middle. The frame does not change; only the proportion of the person to it does.",
+  "leading_lines": "The lamp chain overhead, the door line at both sides and the flagstone joints below all converge into depth and all hold still. Because they never move, they become the ruler: the audience reads her against a static grid.",
+  "eye_first": "Alice, throughout — the composition is arranged so nothing ever steals the eye, because if the eye leaves her the change is missed.",
+  "safe_area_ok": true,
+  "constraint_binding": "MUST NOT BE CUT INSIDE, and the frame DOES NOT MOVE for twelve seconds: the change is read off the set, never off the lens. This dictates the framing — she is placed so that at 1.35 m her crown is well inside the top of frame and at 0.254 m she is still comfortably inside the action-safe box (crown at y 0.74, well above the 12 percent bottom margin) and still legible, by keeping her silhouetted against the lit glass table leg rather than against flagstone. A hidden-cut substitution to the oversized build is allowed inside the held frame; no visible cut at the moment of change, no morph, no glow, no dissolve, and the full twelve seconds are played so it reads as forced perspective and not as an edit."
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "p4-cr-voice",
+  "agent": "03-characters/voiceprint",
+  "attempt": 1,
+  "status": "done",
+  "date": "2026-09-23",
+  "authority": "bible/changelog.md BIB-0027; bible/cultivation.json SUP-002 (realistic_rendering, sound_signature)",
+  "changed_files": [
+    {
+      "path": "bible/characters/CHAR-frog-footman/voice.json",
+      "fields": ["reason"],
+      "note": "Removed the stale 'SUP-002, human voice only' performer wording. reason now cites SUP-002 as amended by BIB-0027: a photoreal CGI frog-bodied figure in livery (anatomy pending_H2, owned by 04-creatures/creature and 03-characters/appearance) who speaks fully articulate English lip-synced to naturalistic frog-mouth movement, with species vocalisation limited to a light tic under normal dialogue. The fields that go into the TTS prompt (gender, timbre, pitch, accent) and the other fields (speed, emotion_range, evidence, IDs) are unchanged. The key order is preserved; nested objects were re-indented only."
+    }
+  ],
+  "voice_design_changed": false,
+  "rationale_no_design_change": "BIB-0027 changes how the character is rendered, not how he speaks. SUP-002 sound_signature still requires fully articulate speech. The existing flat, croaky, low-baritone timbre was already frog-coded, so it fits the CGI frog body. gender stays 'male' and matches appearance.json.",
+  "existing_voice_sample": {
+    "file": "assets/audio/voice/refs/CHAR-frog-footman_voiceprint.mp3",
+    "casting_entry": "assets/audio/voice/casting.json (CHAR-frog-footman, voice_json_version p3-voice-vb1@2026-09-22)",
+    "invalidated": false,
+    "note": "The p3-voice-cast sample stays valid because none of the acoustic fields used to synthesise it changed. No audio was regenerated. The voice_json_version stamp in casting.json can be left as is, or 09-audio/voice-generation can re-stamp it as a metadata-only change."
+  },
+  "pending_H2": "Frog-Footman anatomy (how far it is humanised) is owned by 04-creatures/creature and 03-characters/appearance. If H2 ever picks a very small, fully naturalistic frog, only a pitch review would be needed. No change is proposed now.",
+  "defects_opened": [],
+  "skills": "none enabled for this station"
+}

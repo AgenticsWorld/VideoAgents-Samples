@@ -1,0 +1,40 @@
+{
+  "shot_id": "sh054",
+  "group_id": "grp021",
+  "scene_no": "S06",
+  "scene_id": "SCN-long-hall",
+  "duration_s": 8.0,
+  "is_dialogue": false,
+  "group_position": "first shot of grp021 — Alice on her map start (glass_table, at the foot of one glass leg); no path in this group.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "stand",
+      "start_pos": "ten inches high against a leg of the glass table, sinking down onto the flagstones",
+      "space_fragment_en": "standing ten inches high against a leg of the glass table on screen-left, facing the floor and sinking down to cry",
+      "facing": "down at the floor; the whole open screen-right of frame is left unused",
+      "path": [
+        { "t": 2.6, "to": "down on the flagstones with her back against the same leg" }
+      ],
+      "beats": [
+        { "t": 1.2, "action": "worn out, she lets go of the leg", "sync": "the giving up" },
+        { "t": 2.6, "action": "sits down on the floor against it", "sync": "the collapse, small not operatic" },
+        { "t": 4.4, "action": "she cries", "sync": "held for the rest of the shot" }
+      ],
+      "performance_beat": {
+        "objective": "stop — she has run out of things to try",
+        "goal": "stop, having run out of things to try",
+        "emotional_arc": "from exhaustion to a small, private, unperformed crying",
+        "arc_from": "exhaustion",
+        "arc_to": "small private crying",
+        "trigger": { "beat": "her back meets the table leg and she stops holding herself up", "t": 2.6 },
+        "no_early_reaction": ["the face crumpling", "a sob", "the hands going to her eyes"],
+        "forbidden_early": ["the face crumpling", "a sob", "the hands going to her eyes"],
+        "end_state": "sitting on the flags against the leg, knees up, face down and half hidden, shoulders going"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0004 result (dream) — she sits down and cries", "note": "Alice alone." }
+}

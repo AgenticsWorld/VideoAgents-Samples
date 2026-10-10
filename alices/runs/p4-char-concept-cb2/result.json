@@ -1,0 +1,63 @@
+{
+  "task_id": "p4-char-concept-cb2",
+  "attempt": 1,
+  "agent": "06-art/character-concept",
+  "status": "completed",
+  "date": "2026-09-23",
+  "summary": "15/15 character sheets generated in one pass each (--n 1, 2560x1440). Zero rerolls, zero probes, zero provider errors. Machine acceptance passes for all 15. Visual self-check found defects on 9 sheets; per retry budget 0 they are kept and listed for the user at H2.",
+  "generation": {
+    "provider": "volcengine",
+    "model": "doubao-seedream-5-0-pro-260628",
+    "billed_images": 15,
+    "provider_errors": [],
+    "shared_assembly": "runs/p4-char-concept-cb2/prompt_assembly.json"
+  },
+  "user_refs": [
+    {"path": "refs/style/alice.jpeg", "use": "Read. Applied to all sheets via style_fragment_ui. Injected as --ref only for CHAR-caterpillar (look reference: colour, body, patina)."}
+  ],
+  "acceptance_checks": {
+    "script": "code/p4-char-concept-cb2_check.py",
+    "report": "runs/p4-char-concept-cb2/machine_check.json",
+    "default_costume_in_prompt": "15/15 PASS (costumes.json default outfit visual_en verbatim)",
+    "gender_word_in_prompt": "15/15 PASS",
+    "style_fragment_ui_verbatim": "15/15 PASS",
+    "layout_sentence_in_prompt": "15/15 PASS",
+    "sheet_size_ge_2560x1440": "15/15 PASS (JPEG payload in .png name, 2560x1440)",
+    "main_dir_single_file_contract": "15/15 PASS (sheet.png, prompts.json, selection.json, and the platform's usage_ledger.jsonl only)",
+    "appearance_fields_match": "Per-field hits are in each selection.json. 6 sheets are fully clean (pigeon, duck, lory, dodo, canary, old-crab; minor notes only). The caterpillar face is a FAIL. Other items are partial and listed below."
+  },
+  "items": [
+    {"id": "CHAR-knave-of-hearts", "product": "assets/concepts/characters/CHAR-knave-of-hearts/sheet.png", "costume": "COS-011", "self_check": "pass_with_defects", "defects": ["front card tabard is a short chest bib, not shoulders-to-mid-thigh"], "pending_H2": null},
+    {"id": "CHAR-gryphon", "product": "assets/concepts/characters/CHAR-gryphon/sheet.png", "costume": "COS-048", "self_check": "pass_with_defects", "defects": ["lion hindquarters visible only in back panel; front/side read as giant eagle", "side panel is 3/4 not profile", "ear-like head tufts"], "pending_H2": null, "defect_ids": ["DEF-p4-char-concept-202"]},
+    {"id": "CHAR-mock-turtle", "product": "assets/concepts/characters/CHAR-mock-turtle/sheet.png", "costume": "COS-049", "self_check": "pass_with_defects", "defects": ["stands upright instead of sitting slumped", "shell green-olive not olive-brown", "horn buds on calf head", "flippers read as clawed arms"], "pending_H2": null, "defect_ids": ["DEF-p4-char-concept-202"]},
+    {"id": "CHAR-caterpillar", "product": "assets/concepts/characters/CHAR-caterpillar/sheet.png", "costume": "COS-019", "self_check": "fail_face", "defects": ["large glossy camera-facing eyes and a pug-like snouted face on the head capsule, against the naturalistic-head proposal and the no-cartoon-eyes rule", "thoracic eyespots missing"], "pending_H2": "pending_H2 — for user decision at H2 (H2-caterpillar-face; the sheet does not realise the proposal and needs a redo decision)"},
+    {"id": "CHAR-pigeon", "product": "assets/concepts/characters/CHAR-pigeon/sheet.png", "costume": "COS-020", "self_check": "pass", "defects": [], "pending_H2": null},
+    {"id": "CHAR-duck", "product": "assets/concepts/characters/CHAR-duck/sheet.png", "costume": "COS-023", "self_check": "pass", "defects": [], "pending_H2": null},
+    {"id": "CHAR-lory", "product": "assets/concepts/characters/CHAR-lory/sheet.png", "costume": "COS-024", "self_check": "pass", "defects": ["minor film-strip edge marks outside panels"], "pending_H2": null},
+    {"id": "CHAR-eaglet", "product": "assets/concepts/characters/CHAR-eaglet/sheet.png", "costume": "COS-025", "self_check": "pass_with_defects", "defects": ["legs too long, stilt-like upright stance"], "pending_H2": null},
+    {"id": "CHAR-dodo", "product": "assets/concepts/characters/CHAR-dodo/sheet.png", "costume": "COS-022", "self_check": "pass", "defects": ["faint smile-like gape line (minor)"], "pending_H2": null},
+    {"id": "CHAR-canary", "product": "assets/concepts/characters/CHAR-canary/sheet.png", "costume": "COS-026", "self_check": "pass", "defects": [], "pending_H2": null},
+    {"id": "CHAR-magpie", "product": "assets/concepts/characters/CHAR-magpie/sheet.png", "costume": "COS-027", "self_check": "pass_with_defects", "defects": ["legs too long"], "pending_H2": null, "defect_ids": ["DEF-p4-char-concept-201"]},
+    {"id": "CHAR-old-crab", "product": "assets/concepts/characters/CHAR-old-crab/sheet.png", "costume": "COS-028", "self_check": "pass", "defects": ["eyestalks low (minor)"], "pending_H2": null},
+    {"id": "CHAR-young-crab", "product": "assets/concepts/characters/CHAR-young-crab/sheet.png", "costume": "COS-029", "self_check": "pass_with_defects", "defects": ["walking legs far too long (spider-crab stance)"], "pending_H2": null},
+    {"id": "CHAR-fish-footman", "product": "assets/concepts/characters/CHAR-fish-footman/sheet.png", "costume": "COS-035", "self_check": "pass", "defects": ["frog-like webbed feet (depends on H2 anatomy)"], "pending_H2": "pending_H2 — for user decision at H2 (H2-footmen-anatomy; rendered per Option A proposal)", "defect_ids": ["DEF-p4-char-concept-201"]},
+    {"id": "CHAR-duchess-baby", "product": "assets/concepts/characters/CHAR-duchess-baby/sheet.png", "costume": "COS-037", "self_check": "pass_with_defects", "defects": ["standing instead of seated", "hands cropped at panel edge in front/back panels", "nose not markedly turned-up"], "pending_H2": "pending_H2 — for user decision at H2 (H2-non-speaking-animals: piglet end-state not drawn here, belongs to creature-concept)"}
+  ],
+  "defects_opened": [
+    "qa/defects/DEF-p4-char-concept-201.json (appearance vs costumes: Magpie muffler; Fish-Footman stockings/pumps)",
+    "qa/defects/DEF-p4-char-concept-202.json (appearance vs creature.json: Mock Turtle flipper skin/shell size; Gryphon eye colour/scale)"
+  ],
+  "notes": [
+    "Scope: index.json grades these 15 as B/extra. The SOUL default scope is S/A. The orchestrator's order explicitly assigned them, so they were produced as ordered.",
+    "Event-scoped props and set items were not drawn on the default sheets and are listed per character in selection.json (Knave chains/crown cushion, Pigeon nest, Dodo thimble, Canary chicks). The Caterpillar's hookah and mushroom were drawn because they are its defining marks and match the user reference.",
+    "Retry budget 0: no regeneration was done. Every defect above is left for the user at H2 to decide on a targeted redo."
+  ],
+  "files_created": [
+    "assets/concepts/characters/<15 ids>/sheet.png, prompts.json, selection.json",
+    "qa/defects/DEF-p4-char-concept-201.json",
+    "qa/defects/DEF-p4-char-concept-202.json",
+    "code/p4-char-concept-cb2_gen.sh",
+    "code/p4-char-concept-cb2_check.py",
+    "runs/p4-char-concept-cb2/ (result.json, prompt_assembly.json, machine_check.json, prompts/, inputs/, logs_*.txt, gen_exit.txt)"
+  ]
+}

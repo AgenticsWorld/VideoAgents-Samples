@@ -1,0 +1,79 @@
+{
+  "task_id": "p3-lighting-sb1",
+  "agent": "05-scenes/lighting",
+  "project": "alices",
+  "attempt": 1,
+  "status": "done",
+  "completed_at": "2026-09-22",
+  "outputs": [
+    "bible/scenes/SCN-riverbank/lighting.json",
+    "bible/scenes/SCN-field-hedge-burrow/lighting.json",
+    "bible/scenes/SCN-falling-dream/lighting.json",
+    "bible/scenes/SCN-shaft-landing-passage/lighting.json",
+    "bible/scenes/SCN-long-hall/lighting.json",
+    "bible/scenes/SCN-little-door-passage/lighting.json",
+    "bible/scenes/SCN-pool-of-tears/lighting.json",
+    "bible/scenes/SCN-pool-bank/lighting.json",
+    "bible/scenes/SCN-rabbit-house-exterior/lighting.json",
+    "bible/scenes/SCN-rabbit-house-upstairs-room/lighting.json",
+    "bible/scenes/SCN-wood-thistle-glade/lighting.json",
+    "bible/scenes/SCN-caterpillar-clearing/lighting.json"
+  ],
+  "scheme_count": 16,
+  "special_count": 3,
+  "defects_opened": ["qa/defects/DEF-p3-lighting-101.json"],
+  "helper_scripts": ["code/p3-lighting-sb1_check.py"],
+  "inputs_read": [
+    "bible/h1_summary.md",
+    "runs/h1-ruling/ruling.json",
+    "bible/scenes/index.json",
+    "bible/scenes/<12 SCN>/environment.json",
+    "bible/scenes/<12 SCN>/architecture.json (interior.openings, structure, orientation)",
+    "runs/p3-environment-sb1/result.json (ENV-ENUM-v1, waking clock, dream_light_rule)",
+    "bible/style.json (still empty), bible/color_script.json (still empty)",
+    "refs/style/alice.jpeg"
+  ],
+  "shared_conventions": {
+    "LGT-ENUM-v1": {
+      "condition": "time_of_day and weather use environment's ENV-ENUM-v1 values exactly (early_afternoon/afternoon/late_afternoon/golden_hour/sunset; fair_hot/fair_evening/none_enclosed).",
+      "key_source": {
+        "sun_direct": "unobstructed sun",
+        "sun_low_golden": "sun a few degrees above the horizon, golden hour",
+        "sun_setting": "the setting sun itself",
+        "canopy_dappled_sun": "sun broken by leaves into flecks over open shade",
+        "window_sun": "sunlight through a window",
+        "oil_lamp_row": "row of hanging oil lamps (long hall)",
+        "lamp_spill_indirect": "lamplight from an off-frame space spilling round a corner",
+        "far_daylight_opening": "daylight seen through a far opening at the end of a dark space",
+        "eyelid_glow_from_above": "dream-only: warm glow from above with no fixture, grown from sun on closed eyelids"
+      },
+      "direction": ["top", "high_side", "side", "side_back", "back", "low_side", "low_front", "low_back", "overhead_row", "far_end_backlight"],
+      "color_temp": {"warm (~2700K)": "below about 3500K", "neutral (~4500K)": "about 3500-5800K (includes 1862 afternoon sun at about 5000-5400K)", "cool (~6500K)": "above about 5800K"},
+      "kelvin_approx": "numeric design value per scheme, for cinematography and colour alignment; not written into prompt fragments",
+      "contrast": ["soft", "medium", "hard"],
+      "quality": ["hard", "soft", "mixed"]
+    },
+    "ids": "Schemes are LGT-<scene-slug>-NN; overrides are SPC-<scene-slug>-NN. There is one scheme per (time_of_day, weather) combination that appears in environment.json, so shot-planning's rule 'same scene + same time_of_day = same scheme' can hold. Environment states that share a condition share a scheme (listed in state_refs).",
+    "special_usage": "special[] entries are paragraph-range overrides stated in the source (little door open, flooding floor, window blocked by Alice's arm). Their prompt_fragment_en (or prompt_fragment_en_by_scheme[<scheme id>]) is appended word for word after the base scheme fragment, only for groups inside the listed paragraphs. The base scheme id stays the group's lighting_scheme_id.",
+    "prompt_fragment_en": "English (English project). One paragraph: key source + direction + colour temperature in words + contrast + mood. No Kelvin numbers or colour codes. It never names characters or costumes, so it can go into any group in that scene.",
+    "sun_values": "Sun elevation and azimuth come from the environment cards (computed for Oxford on 4 July, GMT). Where the environment gives none, they are interpolated on the same curve (little door passage S02: 17:36 GMT, azimuth about 278 deg).",
+    "dream_growth (ruling 5.2 A)": "Every dream card has a dream_growth block. Dream exteriors (pool bank, rabbit house, thistle glade, caterpillar clearing) take the real waking sun of their clock slot. It lowers from about 43 to 36 deg and turns from WSW toward W, scene by scene; there is never dusk inside the dream until the waking golden hour. Dream interiors have no daylight and translate the afternoon sun: the eyelid glow in the fall, amber oil lamps for the hall and pool, and a real sun only through the little door and the rabbit-house window.",
+    "style_reference": "refs/style/alice.jpeg is used for its photographic lighting grammar: volumetric haze, warm practical pools against dark cool shadow, and backlit smoke. Its fantasy set (candelabra, stained glass, a giant creature) is not taken, because the locked Bible makes this a realistic 1862 drama with human performers (SUP-002). The candle-lit look is not imported into the long hall, whose source light is a row of lamps (ch001-p11)."
+  },
+  "decisions": [
+    "Long hall: one scheme per time_of_day (early_afternoon covers S01 and the flooding S02; late_afternoon covers S03). The hall's own lamplight never changes. Only the garden light through the little door follows the waking clock (SPC-long-hall-01, with a separate fragment per scheme). The flood reflections are SPC-long-hall-02.",
+    "Upstairs room: the blocked window (S02) shares time_of_day with S01, so it is a source-cited override (SPC-rabbit-house-upstairs-room-01), not a second scheme. It is not a sub-space, and no scene split is needed.",
+    "Falling dream: no lamps or daylight are invented. The key is a fixture-less warm glow from above, grown from 2 pm sun on closed eyelids. It keeps the shelves readable (ch001-p06) and black depths below.",
+    "Shaft landing: the only light is the hall lamps' spill round the far corner, matching the lit corner in architecture.",
+    "Rabbit house exterior: faces are resolved against the architecture orientation (north lane front in open shade, sunlit west gable and south yard); clash with the environment note filed as DEF-p3-lighting-101 (minor).",
+    "Riverbank sunset: the sister faces the setting sun (ch012-p67), so her key is low-front amber; the golden hour at waking is side-back light through the elm trunks."
+  ],
+  "skills": "No auto-activation skills are ticked for this station. None were applied.",
+  "qa": "visual-qa is at level 0: skipped. Evaluation is disabled.",
+  "auto_check": {
+    "command": "python3 code/p3-lighting-sb1_check.py",
+    "exit_code": 0,
+    "output": "scenes=12 schemes=16 errors=0",
+    "checks": ["scene_id in index.json", "every environment (time_of_day, weather) covered, with no extra conditions", "enums", "non-empty prompt_fragment_en, no night vocabulary", "sources and source_chapter on schemes and specials", "state_refs valid", "dream_growth present on dream scenes", "no UNKNOWN/TBD placeholders", "ASCII names"]
+  }
+}

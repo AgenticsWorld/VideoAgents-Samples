@@ -1,0 +1,26 @@
+{
+  "character_id": "CHAR-jury-ensemble",
+  "task_id": "p4-char-concept-cb3",
+  "sheet": "sheet.png",
+  "representative_member": "J01 short-haired guinea-pig (also CHAR-crowd-ensemble X01, same CGI asset)",
+  "variants": [],
+  "status": "delivered_for_H2_review",
+  "layout_check": { "four_panels": true, "one_view_per_panel": true, "same_individual_all_panels": true, "size": "2560x1440 (JPEG payload)" },
+  "appearance_field_hits": {
+    "gender_male": "n/a visually (not sexed on screen)",
+    "species_guinea_pig_short_haired": true,
+    "coat_ginger_tan_and_white_piebald": true,
+    "small_dark_eyes_pink_ears": true,
+    "very_round": true,
+    "unclothed (COS-052)": true,
+    "slate_and_slate_pencil": true,
+    "slate_dust_on_paws": true
+  },
+  "style_check": { "photoreal_cgi_animal": true, "no_cartoon_face": true },
+  "self_check_defects": [
+    "The other ten jury slots (J02-J11) have no sheet in this order; they rely on appearance.json slot text."
+  ],
+  "pending_H2": null,
+  "rerolls": [],
+  "reroll_budget_note": "User rerun setting = 0."
+}

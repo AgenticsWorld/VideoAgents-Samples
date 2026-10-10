@@ -1,0 +1,58 @@
+{
+  "scene_id": "SCN-mad-tea-party",
+  "inherits": null,
+  "layer": "dream",
+  "int_ext": "EXT",
+  "form": "A large, long-roofed two-storey thatched house at the wood's edge, its two tall chimneys shaped like upright hare's ears and its thick roof thatch shaggy like fur; in front of it, under one big spreading tree, a very long dining table set for tea out of doors. The facade is a backdrop only; no interior is staged",
+  "stories": 2,
+  "source_chapter": "ch007",
+  "culture_ref": "geography.json#LOC-hare-cottage, LOC-tea-table-yard; world.json#wonderland_real_counterparts cp-tea; culture.json CUL-004, CUL-019, CUL-024",
+  "period": "Dream-image of 1860s English afternoon tea: the drawing-room tea service and the full dining table carried out of doors and left there, stuck at six o'clock",
+  "grows_from": {
+    "loc": "LOC-family-house",
+    "waking_detail": "the household's fixed tea-time Alice is late for when she wakes",
+    "design_growth": "The family's six o'clock tea-table, with its white cloth, silver-plated teapot, bread-and-butter and too many cups, is carried out of the house and multiplied along a table far too long for three people. The house behind is the kind of big Oxfordshire thatched farmhouse Alice hears from the bank (the neighbouring farm), grown animal features: its chimneys prick up like ears, its thatch has become fur"
+  },
+  "dream_design_language": "Everyday country building made animal: two tapering chimney stacks with rounded tops, leaning slightly apart like a hare's ears; long-straw thatch left uncut and combed down in soft brown-grey tufts that look like pelt. The house's woodwork and the tree carry the dream's Art Nouveau; the tea-things stay plain 1862",
+  "amendment": "BIB-0027 (user ruling 2026-09-22), applied p4-cr-architecture 2026-09-23",
+  "mucha_design_language": {"item": "Mucha / Art Nouveau: the plank door and casements framed in carved oak with flowing whiplash lines and a horseshoe head; the thatch combed into long flowing S-curves like Mucha hair; a round stained-glass halo window in the gable between the ear-chimneys; the horse-chestnut's candles and branches trained into a canopy that arcs over the table as a natural halo; wrought-iron whiplash brackets on the eaves; the limewash tinted a soft pastel cream with a gilt-and-sage painted vine band under the eaves. Table, chairs, cloth, crockery and clock stay 1862 pieces", "inferred": true, "culture_ref": "world.json#WR-010 (tea-party listed; hand props stay 1862); cultivation.json#XA-magic-08", "why": "Dream environment carries the language fully in its fixed fabric; props keep the 1862 lock"},
+  "structure": [
+    {"item": "the house: a long two-storey farmhouse, about 16 m wide, walls of rough-cast limewash over rubble stone, a deep thatched roof, a central plank door and four small casement windows; it faces the table", "src": "ch006-p80", "note": "'It was so large a house'; walling, width and openings inferred, culture_ref geography.json#LOC-hare-cottage.settlement.architecture_style ('a large thatched dream-cottage')"},
+    {"item": "two tall brick chimney stacks rising from the ridge, each tapering to a narrow rounded top about 3 m above the thatch, set close together and splayed slightly outward, shaped like hare's ears", "src": "ch006-p80"},
+    {"item": "the roof thatched with fur: very thick long-straw thatch, uncut, soft brown-grey, hanging in shaggy tufts over the eaves with no clean edge", "src": "ch006-p80", "note": "realised as real thatch styled to read as fur, not as animal pelt (the set is built from real building materials; the hare is the CGI March Hare, not the house)"},
+    {"item": "one great spreading horse-chestnut in front of the house, its canopy shading the whole table", "src": "ch007-p01", "note": "'a table set out under a tree in front of the house'; species inferred (typical 1860s English house tree, broad shade)"},
+    {"item": "the tea-table: one very long mahogany dining table (about 7 m, three leaves in, 12 places set) on the grass under the tree, the long axis parallel to the house front", "src": "ch007-p02", "note": "'The table was a large one'; length and material inferred"},
+    {"item": "a large upholstered arm-chair at one end of the table, where Alice sits down", "src": "ch007-p02"}
+  ],
+  "materials": [
+    {"item": "limewashed rough-cast walls, off-white weathered to grey-cream, with green damp staining near the ground", "inferred": true, "culture_ref": "geography.json#LOC-neighbouring-farm (waking farmyard)", "why": "Real Oxfordshire farmhouse finish; plain so the ears and fur-thatch carry the eye"},
+    {"item": "long-straw thatch in grey-brown and fawn", "src": "ch006-p80"},
+    {"item": "soft red brick chimney stacks", "inferred": true, "culture_ref": "geography.json#LOC-hare-cottage.visual_identifiers", "why": "Brick is how a period chimney would be built into ear shapes"},
+    {"item": "a white damask tablecloth over dark mahogany, stained with tea rings and crumbs", "inferred": true, "culture_ref": "culture.json CUL-019 (perpetual afternoon tea)", "why": "A proper cloth left out for ever becomes a record of endless tea"},
+    {"item": "mismatched dining chairs down both sides: balloon-back mahogany, rush-seated country chairs, one hall chair", "inferred": true, "culture_ref": "culture.json CUL-019 (moving one place on)", "why": "Chairs gathered from every room; gives the 'move one place on' shifts visible positions"}
+  ],
+  "details": [
+    {"item": "the table crowded along its full length with used tea-things: cups and saucers at every place, several teapots, milk-jugs, sugar-basins, plates of bread-and-butter, a butter-dish (props owned by 06-art/prop)", "src": "ch007-p58"},
+    {"item": "the three sitters crowded at one corner at the far end from the arm-chair (the Hatter a human performer; the March Hare a photoreal CGI hare in a chair; the Dormouse a photoreal CGI dormouse asleep on the cloth between them); the rest of the table set but unused", "src": "ch007-p02", "note": "rendering per SUP-002 as amended BIB-0027"},
+    {"item": "a tall-case clock standing out on the grass by the house door, its hands stopped at six o'clock", "inferred": true, "culture_ref": "world.json#wonderland_real_counterparts cp-tea; cultivation.json SUP-012 (stopped watch)", "why": "Grows from the family hall clock that calls the household to tea; a fixed architectural marker of 'always six o'clock' that does not replace the Hatter's watch prop"},
+    {"item": "a treacle tin on the table and a small stone well-head in the grass at the edge of the yard", "inferred": true, "culture_ref": "culture.json CUL-024 (treacle)", "why": "Quiet visual seeds for the Dormouse's treacle-well story"},
+    {"item": "grass under the table worn to bare earth along the chair line", "inferred": true, "culture_ref": "culture.json CUL-019", "why": "Evidence the party has sat here without end"}
+  ],
+  "scale_notes": {
+    "rule": "Approach (ch006-p80): Alice has nibbled up 'to about two feet high'. Shoot the house as a full-scale facade with oversized door (2.6 m) and step, and Alice framed low in forced perspective at about 60 cm apparent, so the house looks 'so large' and she approaches timidly. At the table (ch007-p02 onward) all is 1:1 (Alice 135 cm); the arm-chair is a real large Victorian arm-chair, slightly oversized (seat 50 cm high, back 1.2 m) so she sits in it like a child in a grown-up's chair",
+    "feeling": "Alice sets herself small before a strange house, then claims her place at the table",
+    "sources": ["cultivation.json#SUP-003", "ch006-p80", "ch007-p02"],
+    "inferred": true,
+    "why": "The text gives two feet on approach and no size at the table; the Hatter is a human performer and the March Hare and Dormouse are CGI animals at the sizes set by 04-creatures, so the table plays at true scale"
+  },
+  "negative": [
+    "no real hare fur or animal skins on the roof, no sculpted animal heads or faces on the house (the ears are plain tapering brick chimney stacks)",
+    "no fantasy crooked house, no candy colours, no giant teacups or oversized props on the table",
+    "no Tudor half-timbering, no stone cottage from a picture postcard, no roses round the door",
+    "no electric light, no modern crockery, no china patterns later than 1862",
+    "no cartoon hare or dormouse, no humans in animal costume; the March Hare and Dormouse are photoreal CGI animals",
+    "no flat poster illustration, outline graphics or matte-painting finish",
+    "no tea-time food beyond bread-and-butter, tea and treacle (no cakes stacked on tiers, no cupcakes)"
+  ],
+  "prompt_ready_en": "a large long two-storey pastel-cream limewashed farmhouse at the edge of an English wood with a very thick shaggy grey-brown long-straw thatch combed in flowing curves like fur, two tall tapering brick chimneys splayed apart like hare's ears with a round stained-glass halo window in the gable between them, door and casements framed in carved Art Nouveau whiplash oak, a gilt-and-sage vine band under the eaves in the style of Mucha, in front a great spreading horse-chestnut arching like a halo and shading a very long mahogany dining table with a stained white damask cloth crowded with Victorian teacups, teapots and plates of bread-and-butter, mismatched chairs and one big arm-chair at the end, a tall-case clock standing on the grass stopped at six o'clock, photographed live-action set"
+}

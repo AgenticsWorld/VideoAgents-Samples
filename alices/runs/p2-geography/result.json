@@ -1,0 +1,31 @@
+{
+  "task_id": "p2-geography",
+  "agent": "02-worldbuilding/geography",
+  "attempt": 1,
+  "status": "completed",
+  "generated": "2026-09-22",
+  "output": "bible/geography.json",
+  "summary": "Extracted terrain, waterways and location layout for all 12 chapters and produced 30 LOC-* entries (1 region, 1 town, 1 estate, 6 buildings, 9 rooms, 12 outdoor_sites) plus 23 spatial_relations and 5 cross_domain_assumptions, grounding the source's impossible geography as one real, walkable English river-valley setting per brief.md's realistic-drama premise.",
+  "locations_count": 30,
+  "spatial_relations_count": 23,
+  "inferred_entries_count": 13,
+  "sourced_entries_count": 17,
+  "coverage_check": "Cross-checked every 'location' field in story/events.json (ev0001-ev0054); all event locations map onto an LOC-* entry, including two initially-missed sites added during self-review: LOC-pigeon-nest-treetop (ev0022) and LOC-gryphon-sunning-spot (ev0041).",
+  "cross_domain_assumptions": [
+    { "id": "geo-xda-01", "topic": "Dream frame vs. literally-real afternoon", "refs": ["rn-01", "ev0001", "ev0053", "ev0054"] },
+    { "id": "geo-xda-02", "topic": "Impossible fall down the well", "refs": ["rn-08", "ev0002"] },
+    { "id": "geo-xda-03", "topic": "The little door's passage and the hall that 'vanished'", "refs": ["ev0003", "ev0014", "ev0032"] },
+    { "id": "geo-xda-04", "topic": "The pool of tears", "refs": ["rn-07", "ev0007", "ev0008", "ev0009"] },
+    { "id": "geo-xda-05", "topic": "Live croquet equipment and the sea-bottom cast (Gryphon, Mock Turtle)", "refs": ["rn-09", "rn-10", "ev0036", "ev0037", "ev0038", "ev0041", "ev0042", "ev0043", "ev0044"] }
+  ],
+  "notes": [
+    "All 5 assumptions are scoped to spatial/geographic matters only (where a place is, how it connects) and explicitly defer biological/transformation/identity/dream-vs-real rulings to 02-worldbuilding/magic-cultivation + world (SUP-* registry), per bible/WRITE_RULES.md §7.1.",
+    "world.json was still status: skeleton_empty at the time of writing (parallel task), so the LOC<->world.json place-name cross-check specified in the work order is deferred to memory-bible at merge time (p2-merge), as the task instruction itself anticipates ('cross-check at merge').",
+    "No settlement/nation system applies (real-world England, not a fantasy multi-nation setting), so entries omit the generic SOUL.md nation_ref field; the project's own bible/geography.json skeleton schema (region/town/estate/building/room/outdoor_site hierarchy, no nation_ref) was followed instead, per WRITE_RULES.md and the existing skeleton file taking precedence for this project.",
+    "Self-checked: no location id collisions, all parent/adjacent/spatial_relations ids resolve within this file, no UNKNOWN/TBD/N/A/empty placeholders in any data entry (only in the retained _meta.entry_schema template, which WRITE_RULES.md §3 exempts), no A-north-of-B/B-north-of-A contradictions (all relations are one-directional: adjacent_to/contains/leads_down_into/opens_into/short_walk_from)."
+  ],
+  "known_follow_ups_for_merge": [
+    "memory-bible to run the LOC<->world.json two-way place-name check once world.json is filled.",
+    "memory-bible/magic-cultivation to confirm or override the 5 cross_domain_assumptions above when ruling on SUP-* (dream frame, size changes, talking animals, live croquet equipment, transformations); none of the LOC-* physical layouts require rework under either fork."
+  ]
+}

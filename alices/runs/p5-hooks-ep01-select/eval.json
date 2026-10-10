@@ -1,0 +1,6 @@
+{
+  "task_id": "p5-hooks-ep01-select",
+  "scored": false,
+  "reason": "质量评委 = 0; evaluation is not dispatched in this project.",
+  "acceptance_decision": "PASS — selected = {oh-1, ec-2}, status = selected, hook options byte-identical."
+}

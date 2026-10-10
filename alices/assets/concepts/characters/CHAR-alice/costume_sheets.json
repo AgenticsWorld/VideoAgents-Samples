@@ -1,0 +1,24 @@
+{
+  "character_id": "CHAR-alice",
+  "task_id": "p4-costume-sheet",
+  "agent": "06-art/costume-concept",
+  "identity_anchor": "sheet.png",
+  "version_anchors": {"CHAR-alice-age01": "sheet.png", "CHAR-alice-age02": "sheet_age02.png"},
+  "sheets": [
+    {"costume_ref": "COS-001", "file": "sheet.png", "default": true, "reuse": true,
+     "label": "Blue summer frock and white pinafore", "occasion": "daily",
+     "period": "PER-waking-afternoon, PER-dream, PER-dream-court, PER-waking-close", "age_version": "CHAR-alice-age01",
+     "scenes": ["all Alice scenes: SCN-thames-riverside, SCN-riverbank, SCN-field-hedge-burrow and every dream SCN"],
+     "chapters": ["ch001","ch002","ch003","ch004","ch005","ch006","ch007","ch008","ch009","ch010","ch011","ch012"],
+     "episodes": ["ep01","ep02","ep03","ep04","ep05","ep06","ep07","ep08","ep09"],
+     "identity_refs": ["sheet.png"],
+     "note": "variants (one white kid glove / soaked / dead leaves) are carried by continuity state phrases, no separate sheet"},
+    {"costume_ref": "COS-002", "file": "sheet_age02.png", "default": false, "reuse_of": "sheet_age02.png",
+     "label": "Grown Alice's day dress (sister's reverie)", "occasion": "daily", "period": "PER-reverie-after-time",
+     "age_version": "CHAR-alice-age02",
+     "scenes": ["the sister's imagined storytelling insert, cut from SCN-riverbank"], "chapters": ["ch012"], "episodes": ["ep09"],
+     "identity_refs": ["sheet_age02.png"], "visual_en_hit": true,
+     "reuse_reason": "The age02 version base sheet_age02.png (character-concept, p4-char-concept-cb1) was itself drawn in COS-002 with its visual_en verbatim in the prompt (prompts.json sheets[file=sheet_age02.png].prompt_final). COS-002 is the only outfit of age02, so the version base is this costume's sheet. A second sheet from the same anchor would be a duplicate or a defect-fixing reroll, and the reroll budget is 0.",
+     "known_defects_from_base": ["dress is a saturated royal blue, not deeper cornflower", "rounded collar instead of a narrow high stand collar", "light freckles (spec none)"]}
+  ]
+}

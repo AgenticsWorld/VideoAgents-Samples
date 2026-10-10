@@ -1,0 +1,11 @@
+{
+  "task_id": "p2-merge-recheck",
+  "skipped": true,
+  "reason": "quality judge=0; world/timeline QA level 0",
+  "auto": {
+    "cross_refs_valid_all_namespaces": "PASS",
+    "dictionary_hit_100pct": "PASS",
+    "no_unknown_placeholder": "PASS",
+    "orchestrator_rerun": "PASS (code/p2-merge_check.py)"
+  }
+}

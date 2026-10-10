@@ -1,0 +1,32 @@
+{
+  "_meta": {"file": "bible/scenes/SCN-wood-tree-door/lighting.json", "owner": "05-scenes/lighting", "task_id": "p3-lighting-sb2", "attempt": 1, "generated": "2026-09-22", "enum_set": "LGT-ENUM-v1 (runs/p3-lighting-sb2/result.json)"},
+  "scene_id": "SCN-wood-tree-door",
+  "layer": "dream",
+  "int_ext": "EXT",
+  "daylight_access": "canopy_dappled",
+  "dream_light_growth": "The waking sun is lower, so the wood is darker and closer; one long western shaft picks out the little door and draws Alice through, like the garden-wall door she longs for (cp-garden; environment fixed.dream_growth).",
+  "schemes": [
+    {
+      "scheme_id": "LGT-wood-tree-door-01",
+      "condition": {"time_of_day": "late_afternoon", "weather": "fair_hot"},
+      "applies_to_states": ["SCN-wood-tree-door-S01"],
+      "key_source": "dappled_sun",
+      "direction": "low_side",
+      "key_bearing": "one long slanting shaft of sun from the west at about 23 deg reaching the door in the trunk",
+      "fill": "dim green canopy-filtered skylight among the trunks",
+      "practicals": [],
+      "practicals_note": "No light from inside the door; it stands ajar on darkness (architecture negative).",
+      "color_temp": "neutral (~4500K)",
+      "color_temp_k_approx": 4000,
+      "contrast": "hard",
+      "quality": "a dim, hushed wood with one visible volumetric shaft through faint woodland haze landing on the door; strong fall-off to shadow around it",
+      "prompt_fragment_en": "dim hushed dense wood in late afternoon, a single long shaft of warm sunlight slanting low from the west between tall trunks and landing on a small door in a tree, faint haze making the beam visible, deep green shade all around, the door ajar on darkness with no light inside",
+      "source_chapter": "ch007",
+      "source_refs": ["ch007-p103", "ch007-p104", "environment.json SCN-wood-tree-door-S01"],
+      "inferred": true,
+      "reason": "The door in the tree is explicit (ch007-p103) but no light is described. The single shaft follows the environment dream_growth (lower sun, one western shaft on the door); colour follows the 23 deg sun."
+    }
+  ],
+  "special": [],
+  "special_note": "The source writes no plot light for this scene."
+}

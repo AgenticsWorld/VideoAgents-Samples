@@ -1,0 +1,213 @@
+{
+  "schema_version": "scene_layout.v1",
+  "scene_id": "SCN-falling-dream",
+  "task_id": "p4-env-concept-sb1",
+  "layout_top": "layout_top.png",
+  "orientation": {
+    "top_of_map": "north (the entry tunnel side of the shaft rim)",
+    "map_extent_m": [
+      5.0,
+      2.81
+    ],
+    "projection": "looking straight down the vertical shaft; the ring of furniture tops is the wall lining, the dark disc in the centre is the open drop",
+    "note_en": "camera positions in views[] are described relative to these landmarks; xy_m = xy x map_extent_m (origin top-left). The shaft is a vertical rig set: 'from' a wall landmark means a camera rigged beside that wall section at Alice's height."
+  },
+  "landmarks": [
+    {
+      "id": "entry_tunnel",
+      "name": "the entry tunnel mouth",
+      "name_en": "the entry tunnel mouth",
+      "kind": "entrance",
+      "xy": [
+        0.5,
+        0.08
+      ],
+      "xy_m": [
+        2.5,
+        0.22
+      ]
+    },
+    {
+      "id": "glass_roundel",
+      "name": "the stained-glass roundel",
+      "name_en": "the stained-glass roundel",
+      "kind": "feature",
+      "xy": [
+        0.378,
+        0.293
+      ],
+      "xy_m": [
+        1.89,
+        0.82
+      ]
+    },
+    {
+      "id": "picture_pegs",
+      "name": "the pictures on pegs",
+      "name_en": "the pictures on pegs",
+      "kind": "feature",
+      "xy": [
+        0.58,
+        0.27
+      ],
+      "xy_m": [
+        2.9,
+        0.76
+      ]
+    },
+    {
+      "id": "cupboards",
+      "name": "the glazed cupboards",
+      "name_en": "the glazed cupboards",
+      "kind": "furniture",
+      "xy": [
+        0.68,
+        0.52
+      ],
+      "xy_m": [
+        3.4,
+        1.46
+      ]
+    },
+    {
+      "id": "pantry_shelf",
+      "name": "the pantry shelf with the marmalade jar",
+      "name_en": "the pantry shelf with the marmalade jar",
+      "kind": "furniture",
+      "xy": [
+        0.6,
+        0.76
+      ],
+      "xy_m": [
+        3.0,
+        2.14
+      ]
+    },
+    {
+      "id": "map_pegs",
+      "name": "the schoolroom maps on pegs",
+      "name_en": "the schoolroom maps on pegs",
+      "kind": "feature",
+      "xy": [
+        0.43,
+        0.8
+      ],
+      "xy_m": [
+        2.15,
+        2.25
+      ]
+    },
+    {
+      "id": "bookshelves",
+      "name": "the bookshelves",
+      "name_en": "the bookshelves",
+      "kind": "furniture",
+      "xy": [
+        0.33,
+        0.57
+      ],
+      "xy_m": [
+        1.65,
+        1.6
+      ]
+    },
+    {
+      "id": "shaft_centre",
+      "name": "the open centre of the shaft",
+      "name_en": "the open centre of the shaft",
+      "kind": "zone",
+      "xy": [
+        0.5,
+        0.5
+      ],
+      "xy_m": [
+        2.5,
+        1.41
+      ]
+    }
+  ],
+  "views": [
+    {
+      "tile": 1,
+      "camera_from": "shaft_centre",
+      "looking_at": "cupboards",
+      "size": "medium",
+      "angle": "eye",
+      "desc_en": "eye-level medium shot from the middle of the shaft, beside the drifting girl, toward the glazed mahogany cupboards on the east wall sliding slowly upward past her"
+    },
+    {
+      "tile": 2,
+      "camera_from": "shaft_centre",
+      "looking_at": "bookshelves",
+      "size": "medium",
+      "angle": "eye",
+      "desc_en": "eye-level medium shot from the middle of the shaft toward the bookshelves on the west wall, rows of old book spines passing in warm half-light"
+    },
+    {
+      "tile": 3,
+      "camera_from": "shaft_centre",
+      "looking_at": "pantry_shelf",
+      "size": "close",
+      "angle": "eye",
+      "desc_en": "eye-level close shot across the open drop toward the pantry shelf, stoneware jars and the glass jar labelled ORANGE MARMALADE within arm's reach"
+    },
+    {
+      "tile": 4,
+      "camera_from": "map_pegs",
+      "looking_at": "picture_pegs",
+      "size": "wide",
+      "angle": "high_oblique",
+      "desc_en": "high oblique wide shot from above the schoolroom maps on the south-west wall, angled down across the shaft to the framed pictures on pegs on the far wall, the brick lining curving between them and darkness below"
+    },
+    {
+      "tile": 5,
+      "camera_from": "entry_tunnel",
+      "looking_at": "shaft_centre",
+      "size": "wide",
+      "angle": "high_oblique",
+      "desc_en": "high oblique wide shot from the lip of the entry tunnel, tilted down about forty degrees into the round shaft, furniture bands receding downward into blackness around the small drifting figure"
+    },
+    {
+      "tile": 6,
+      "camera_from": "bookshelves",
+      "looking_at": "glass_roundel",
+      "size": "close",
+      "angle": "eye",
+      "desc_en": "eye-level close shot along the curving west wall from the bookshelves to the small stained-glass roundel set in the mosaic band, its colours catching the warm glow"
+    },
+    {
+      "tile": 7,
+      "camera_from": "shaft_centre",
+      "looking_at": "entry_tunnel",
+      "size": "wide",
+      "angle": "low",
+      "desc_en": "low-angle wide shot from below the girl looking up the shaft toward the entry tunnel mouth and the fading amber glow high above, the furniture bands converging upward"
+    },
+    {
+      "tile": 8,
+      "camera_from": "glass_roundel",
+      "looking_at": "cupboards",
+      "size": "wide",
+      "angle": "eye",
+      "desc_en": "eye-level wide shot from the north-west wall by the roundel across the shaft to the glazed cupboards on the east wall, the girl drifting across the gap between"
+    },
+    {
+      "tile": 9,
+      "camera_from": "cupboards",
+      "looking_at": "pantry_shelf",
+      "size": "detail",
+      "angle": "eye",
+      "desc_en": "eye-level detail shot along the wall from the cupboards to the pantry shelf: the empty ORANGE MARMALADE jar and the saucer of milk on the shelf edge"
+    }
+  ],
+  "checklist": {
+    "architecture_match": true,
+    "lighting_match": true,
+    "style_match": true
+  },
+  "calibration": {
+    "status": "calibrated_to_image",
+    "date": "2026-09-23",
+    "method": "landmark xy re-measured on the delivered layout_top.png (door/opening landmarks read at the gap in the wall line)"
+  }
+}

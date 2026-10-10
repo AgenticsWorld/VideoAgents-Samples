@@ -1,0 +1,17 @@
+{
+  "character_id": "CHAR-bill-the-lizard",
+  "task_id": "p4-costume-sheet",
+  "agent": "06-art/costume-concept",
+  "identity_anchor": "sheet.png",
+  "sheets": [
+    {"costume_ref": "COS-031", "file": "sheet.png", "default": true, "reuse": true,
+     "label": "Unclothed (natural lizard), chimney episode", "occasion": "work", "period": "PER-dream",
+     "scenes": ["SCN-rabbit-house-exterior", "SCN-rabbit-house-upstairs-room"], "chapters": ["ch004"], "episodes": ["ep03"],
+     "identity_refs": ["sheet.png"],
+     "note": "sheet.png shows the clean lizard; variant 'sooted after the chimney' (ev0017-ev0018) is carried by a continuity state phrase"},
+    {"costume_ref": "COS-032", "file": null, "default": false,
+     "label": "Unclothed (natural lizard), juror at the trial", "occasion": "formal", "period": "PER-dream-court",
+     "scenes": ["SCN-courtroom"], "chapters": ["ch011", "ch012"], "episodes": ["ep08", "ep09"],
+     "skip_reason": "Looks the same as sheet.png: COS-032 is the bare lizard with clean scales ('unclothed and unadorned ... wearing nothing'), and that is exactly what the default sheet.png shows. costumes.json also marks it costume_sheet: 'none: the character sheet.png is the only reference'. Downstream (p6/p7) use sheet.png for the court; the 'upset from the jury-box' dust state is a continuity state phrase."}
+  ]
+}

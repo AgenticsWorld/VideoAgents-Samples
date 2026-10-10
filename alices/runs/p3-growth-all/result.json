@@ -1,0 +1,114 @@
+{
+  "task_id": "p3-growth-all",
+  "agent": "03-characters/character-growth",
+  "attempt": 1,
+  "status": "done",
+  "completed_on": "2026-09-22",
+  "inputs_read": [
+    "bible/h1_summary.md", "bible/cultivation.json (SUP-001, SUP-003, SUP-010, SUP-012)", "runs/h1-ruling/ruling.json",
+    "bible/characters/index.json", "bible/characters/CHAR-alice/appearance.json", "bible/characters/CHAR-alice-sister/appearance.json",
+    "bible/world.json (periods: 'The after-time'; themes)", "bible/_index.json (forward_refs_pending)", "bible/WRITE_RULES.md",
+    "story/story_timeline.json (story_time, dream_frame, anachrony an-01..an-06)", "story/events.json (ev0001, ev0016-ev0018, ev0053, ev0054)",
+    "story/structured_story/ch004.json (ch004#p09-p10, p40)", "story/structured_story/ch012.json (ch012#p64-p71)"
+  ],
+  "shared_notes": {
+    "timeline_anchor_format": "timeline_range.from/to are story_timeline.json story_time[].event IDs (ev0001-ev0054). Where two versions share one event, from_paragraph/to_paragraph (chNNN#pMM, inside that event's events.json source range) set the split. Narrative order equals story-time order for the whole film (story_timeline _meta.finding), so the story-time lookup and the narrative lookup give the same version. The only exception is the imagined inset, which is tagged with anachrony_ref.",
+    "general_rule": "The film covers one afternoon (Friday 4 July 1862, about 2 pm to sunset). No character ages on screen. Size changes (SUP-003), the baby-to-pig change (SUP-006) and card/animal coding (SUP-002, SUP-004) are staging, not age versions. Past events that characters only describe in dialogue (an-02 the Hatter's 'last March', an-04 the Mock Turtle's schooldays, SUP-010 'told only') are not shown on screen, so they need no younger looks."
+  },
+  "decisions": [
+    {
+      "id": "D1",
+      "topic": "Alice's grown-up self in ch004",
+      "decision": "not shown on screen; no version",
+      "source": ["ch004#p09", "ch004#p10", "ev0016"],
+      "reason": "'I'm grown up now... no room to grow up any more here' is a pun on her giant size in the Rabbit's house (SUP-003). 'Never to be an old woman' is a passing thought. The source shows no picture of an older Alice, and with no narration there is no voiceover to set one up."
+    },
+    {
+      "id": "D2",
+      "topic": "The sister's reverie of Alice as a grown woman (ch012#p71)",
+      "decision": "shown on screen as a short, silent imagined insert inside ev0054; version CHAR-alice-age02 (about thirty, dressed in the 1862 style)",
+      "source": ["ch012#p67", "ch012#p71", "an-06", "bible/world.json period 'The after-time'"],
+      "reason": "This is the closing image of the book and the film's coming-of-age theme. With no narration and no line for the sister here, the beat can only survive as a picture. It is the sister's imagination with her eyes closed (subjective, not magic), so the realistic frame holds. The grown look uses 1862-style dress because the 1862 sister can only imagine the future in the clothes she knows. This keeps the rule that nothing on screen dates from after 1862.",
+      "inferred": true,
+      "if_cut": "If the script cuts the ch012#p71 beat, CHAR-alice-age02 is simply unused. CHAR-alice-age01 still covers every other Alice shot."
+    },
+    {
+      "id": "D3",
+      "topic": "Little Alice in the sister's memory (ch012#p68)",
+      "decision": "uses the base child version CHAR-alice-age01 (same look: tiny hands, bright eager eyes, head toss)",
+      "source": ["ch012#p68"]
+    }
+  ],
+  "characters_considered": [
+    { "id": "CHAR-alice", "result": "age_versions.json written", "versions": ["CHAR-alice-age01 (girl 9-10, ev0001 ch001#p01 to ev0054 ch012#p70, base)", "CHAR-alice-age02 (grown woman 28-32, ev0054 ch012#p71 only, imagined inset an-06)"] },
+    { "id": "CHAR-alice-sister", "result": "skipped", "reason": "Mid-teens throughout ch001, the trial glimpse (H1 5.3 B) and ch012. She is the one imagining in the reverie, never the one imagined older." },
+    { "id": "CHAR-family-housemaid", "result": "skipped", "reason": "Waking-world echo only, via the Mary Ann mention (ch004). One look, one afternoon." },
+    { "id": "CHAR-white-rabbit", "result": "skipped", "reason": "Dream figure played by a human performer (SUP-002), one look throughout the dream. The real rabbit in the waking frame is a creature, not handled here." },
+    { "id": "CHAR-queen-of-hearts", "result": "skipped", "reason": "Dream figure; single continuous appearance span (ch008-ch012) in one afternoon; no age change in the source." },
+    { "id": "CHAR-king-of-hearts", "result": "skipped", "reason": "Dream figure; single span ch008-ch012; no age change." },
+    { "id": "CHAR-duchess", "result": "skipped", "reason": "Dream figure; ch006/ch008/ch009 same look; no age change." },
+    { "id": "CHAR-hatter", "result": "skipped", "reason": "His 'last March' quarrel with Time (an-02, ch007#p48) is told only in dialogue (SUP-012) and not shown. Even if staged, a few months would not change his age look." },
+    { "id": "CHAR-cheshire-cat", "result": "skipped", "reason": "Dream figure; the vanishing is a photographic dissolve (SUP-005), not an age change." },
+    { "id": "CHAR-march-hare", "result": "skipped", "reason": "Dream figure; same look ch006-ch011." },
+    { "id": "CHAR-dormouse", "result": "skipped", "reason": "Dream figure; the treacle-well story (an-03) is a spoken fairy tale with no characters of its own on screen." },
+    { "id": "CHAR-mouse", "result": "skipped", "reason": "Dream figure; the Mouse's tale (an-01) is recited, not shown." },
+    { "id": "CHAR-cook", "result": "skipped", "reason": "Dream figure; one look." },
+    { "id": "CHAR-bill-the-lizard", "result": "skipped", "reason": "Kicked up the chimney (ch004), then a juror (ch011-ch012). The state changes but the age does not (story_timeline notes_for_downstream)." },
+    { "id": "CHAR-knave-of-hearts", "result": "skipped", "reason": "Dream figure; one look." },
+    { "id": "CHAR-gryphon", "result": "skipped", "reason": "Dream figure; one look." },
+    { "id": "CHAR-mock-turtle", "result": "skipped", "reason": "'Once I was a real Turtle' and the sea-school years (an-04, ch009#p53-p92) are told only (SUP-010, School in the Sea is a told-only faction). No younger self on screen." },
+    { "id": "CHAR-tortoise", "result": "skipped", "reason": "Sea-school master who exists only in the Mock Turtle's telling (an-04). Not shown on screen, so no look to age. Note: no bible/characters/CHAR-tortoise/ directory exists; that matches a figure that is only mentioned." },
+    { "id": "CHAR-caterpillar", "result": "skipped", "reason": "Dream figure (ch005); its future change into a butterfly is only talked about (ch005), never shown." },
+    { "id": "CHAR-pigeon", "result": "skipped", "reason": "Dream figure; one look." },
+    { "id": "CHAR-duck", "result": "skipped", "reason": "Dream figure; one look." },
+    { "id": "CHAR-lory", "result": "skipped", "reason": "Dream figure; its 'I am older than you' line (ch003) is a fixed age difference with Alice, not an age change." },
+    { "id": "CHAR-eaglet", "result": "skipped", "reason": "Dream figure; one look." },
+    { "id": "CHAR-dodo", "result": "skipped", "reason": "Dream figure; one look." },
+    { "id": "CHAR-canary", "result": "skipped", "reason": "Dream figure; one look." },
+    { "id": "CHAR-magpie", "result": "skipped", "reason": "Dream figure; one look." },
+    { "id": "CHAR-old-crab", "result": "skipped", "reason": "Fixed as elderly (index age 'elder'). The old/young contrast is between two characters, not two versions of one." },
+    { "id": "CHAR-young-crab", "result": "skipped", "reason": "Fixed as young (index age 'young'); see CHAR-old-crab." },
+    { "id": "CHAR-fish-footman", "result": "skipped", "reason": "Dream figure; one look." },
+    { "id": "CHAR-frog-footman", "result": "skipped", "reason": "Dream figure; one look." },
+    { "id": "CHAR-gardener-two", "result": "skipped", "reason": "Dream card figure (SUP-004); one look." },
+    { "id": "CHAR-gardener-five", "result": "skipped", "reason": "Dream card figure; one look." },
+    { "id": "CHAR-gardener-seven", "result": "skipped", "reason": "Dream card figure; one look." },
+    { "id": "CHAR-pat", "result": "skipped", "reason": "Dream figure (ch004); one look." },
+    { "id": "CHAR-executioner", "result": "skipped", "reason": "Dream card figure (ch008); one look." },
+    { "id": "CHAR-jury-ensemble", "result": "skipped", "reason": "Ensemble; one afternoon; no age change." },
+    { "id": "CHAR-card-soldiers-ensemble", "result": "skipped", "reason": "Ensemble; no age change." },
+    { "id": "CHAR-royal-gardeners-ensemble", "result": "skipped", "reason": "Ensemble; no age change." },
+    { "id": "CHAR-caucus-race-party-ensemble", "result": "skipped", "reason": "Ensemble; no age change." },
+    { "id": "CHAR-visiting-monarchs-ensemble", "result": "skipped", "reason": "Ensemble; no age change." },
+    { "id": "CHAR-royal-procession-ensemble", "result": "skipped", "reason": "Ensemble; no age change." },
+    { "id": "CHAR-court-officers-ensemble", "result": "skipped", "reason": "Ensemble; no age change." },
+    { "id": "CHAR-crowd-ensemble", "result": "skipped", "reason": "Ensemble; no age change." }
+  ],
+  "handoffs": [
+    { "to": "03-characters/character-manager", "note": "CHAR-alice index entry has age_versions: [] (field owned by character-manager). Please register CHAR-alice-age01 and CHAR-alice-age02 through memory-bible. The locked index was not edited here." },
+    { "to": "03-characters/character-manager + 01-story (script)", "note": "Staging ch012#p71 would put 'other little children' around grown Alice on screen. They are not registered in index.json. If the beat is kept, register a small child-extras ensemble for the reverie insert." },
+    { "to": "06-art/character-concept, 06-art/costume, casting", "note": "CHAR-alice-age02 needs a separate adult performer who can pass for the child actor grown up. Keep all anchors identical: grey-blue eyes, warm-brown hair with a centre parting, straight brows, small straight nose, full lower lip, and the head-toss gesture. The costume is an early-1860s woman's day dress in deeper cornflower blue. Nothing in it may date from after 1862." },
+    { "to": "08-video-gen/prompt", "note": "Pick the Alice version by paragraph. ch012#p71 uses CHAR-alice-age02; everything else uses CHAR-alice-age01, including the ch012#p68 memory of little Alice in the same reverie." }
+  ],
+  "defects_filed": [],
+  "machine_checks": {
+    "script": "code/p3-growth-all_check.py",
+    "command": "python3 code/p3-growth-all_check.py <project_dir>",
+    "verdict": "PASS",
+    "checks": {
+      "timeline_spans_valid": "PASS: every from/to is a story_timeline story_time event; paragraph bounds lie inside each event's events.json source range; an-06 exists in anachrony[]",
+      "no_overlap_contiguous": "PASS: age01 ends ch012#p70 and age02 starts ch012#p71 inside ev0054, with no gap",
+      "coverage": "PASS: ev0001 ch001#p01 to ev0054 ch012#p71 (ch012#p72 is the 'THE END' marker, not story)",
+      "char_id_in_index_G3": "PASS: CHAR-alice",
+      "diff_from_base_keys_in_appearance_schema": "PASS: base_age_range, hair, face, skin, build, marks, default_outfit_tone, prompt_base_en",
+      "no_unknown_placeholder": "PASS",
+      "ascii_filename": "PASS"
+    }
+  },
+  "skills": "No auto-activated skills are ticked for this station; none applied.",
+  "files_created": [
+    "bible/characters/CHAR-alice/age_versions.json",
+    "code/p3-growth-all_check.py",
+    "runs/p3-growth-all/result.json"
+  ]
+}

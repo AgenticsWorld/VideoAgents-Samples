@@ -1,0 +1,63 @@
+{
+  "character_id": "CHAR-frog-footman",
+  "name": "Frog-Footman",
+  "tier": "extra",
+  "card_type": "individual",
+  "gender": "male",
+  "age_sense": "adult man (appearance base_age_range 35-45)",
+  "timbre": "flat, thick, croaky man's voice, stolid and deadpan, slightly throaty",
+  "pitch": "low baritone, monotone",
+  "pitch_range_hz": [
+    85,
+    140
+  ],
+  "speed_wpm": [
+    105,
+    125
+  ],
+  "speed_cpm": [
+    399,
+    475
+  ],
+  "accent": "liveried servant's affected formal English over a flat provincial base",
+  "reference_style": "Solemn, imperturbable doorman who repeats the invitation with the words re-ordered and philosophises uselessly from the doorstep, 'in the same tone, exactly as if nothing had happened' while plates fly past.",
+  "emotion_range": {
+    "solemn": {
+      "speed_delta": "0%",
+      "pitch_delta": "0semi",
+      "note": "ch006-p02 'in the same solemn tone'"
+    },
+    "deadpan_unchanged": {
+      "speed_delta": "0%",
+      "pitch_delta": "0semi",
+      "note": "ch006-p11 — stays flat even as a plate grazes his nose"
+    }
+  },
+  "age_variants": [],
+  "source_chapter": "ch006",
+  "sources": [
+    "ch006",
+    "ch006-p02",
+    "ch006-p11"
+  ],
+  "voice_evidence": [
+    {
+      "para": "ch006-p02",
+      "quote": "The Frog-Footman repeated, in the same solemn tone"
+    },
+    {
+      "para": "ch006-p11",
+      "quote": "the Footman continued in the same tone, exactly as if nothing had happened"
+    }
+  ],
+  "inferred": true,
+  "inferred_fields": [
+    "timbre",
+    "pitch",
+    "pitch_range_hz",
+    "speed_wpm",
+    "speed_cpm",
+    "accent"
+  ],
+  "reason": "Solemn unchanging tone sourced; croaky low timbre is the frog-coded vocal touch. Per SUP-002 as amended by BIB-0027 (user ruling 2026-09-22) the Frog-Footman is a photoreal CGI frog-bodied figure in livery (anatomy pending_H2, owned by 04-creatures/creature + 03-characters/appearance), not a human performer; he still speaks fully articulate English (SUP-002 sound_signature), synced to naturalistic frog-mouth movement, with any species vocalisation limited to a light tic (a faint throat-pouch gulp) under otherwise normal dialogue. Voice design unchanged by BIB-0027."
+}

@@ -1,0 +1,16 @@
+{
+  "character_id": "CHAR-alice-sister",
+  "task_id": "p4-costume-sheet",
+  "agent": "06-art/costume-concept",
+  "identity_anchor": "sheet.png",
+  "sheets": [
+    {"costume_ref": "COS-003", "file": "sheet.png", "default": true, "reuse": true,
+     "label": "Lilac-grey muslin reading dress", "occasion": "daily", "period": "PER-waking-afternoon, PER-waking-close",
+     "scenes": ["SCN-riverbank", "SCN-thames-riverside"], "chapters": ["ch001", "ch012"], "episodes": ["ep01", "ep09"],
+     "identity_refs": ["sheet.png"]},
+    {"costume_ref": "COS-004", "file": "sheet_COS-004.png", "default": false,
+     "label": "Court-gallery glimpse (dream echo)", "occasion": "special", "period": "PER-dream-court",
+     "scenes": ["SCN-courtroom"], "chapters": ["ch011", "ch012"], "episodes": ["ep08", "ep09"],
+     "cross_ref": "COS-003", "identity_refs": ["sheet.png"], "visual_en_hit": true}
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schema_version": "whitebox_scene.v1",
+  "scene_id": "SCN-pool-bank",
+  "task_id": "p4-scene-model-sb1",
+  "dimensions_m": [40.0, 12.0, 22.5],
+  "inferred": true,
+  "scale_basis": "The image width is set to 40.0 m, kept from layout.json map_extent_m. Z = 40 x 9/16 = 22.5 m. Cross-check: the drawn race circle is about 8 m across (Bible about 10 m, -20%), and the level grass flat between the herb band and the wood (x 0.46-0.83) is about 15 m (Bible about 20 m). Y = 12 m, covering the wood-edge canopy.",
+  "orientation_note": "North at top; the pool is at the west (left), the wood edge at the east (right).",
+  "objects": [
+    {"id": "pool_water_surface", "shape": "box", "size_m": [6.8, 0.02, 22.5], "xy": [0.085, 0.5], "color": "#8fc7bd", "collision": "none (water surface marker; the pool continues west off the map)"},
+    {"id": "reeds_north", "shape": "box", "size_m": [8.4, 1.8, 9.99], "xy": [0.245, 0.222], "color": "#6f8a4e"},
+    {"id": "reeds_south", "shape": "box", "size_m": [8.0, 1.8, 8.505], "xy": [0.18, 0.811], "color": "#6f8a4e"},
+    {"id": "herb_band", "shape": "box", "size_m": [4.8, 1.1, 9.225], "xy": [0.39, 0.235], "color": "#9a7fa6"},
+    {"id": "willow_trunk", "shape": "box", "size_m": [0.6, 0.6, 12.6], "xy": [0.37, 0.7156], "elevation_m": 0.3, "yaw": 0.317, "color": "#9b8a6c"},
+    {"id": "race_stick_030", "shape": "cylinder", "size_m": [0.04, 0.6, 0.04], "xy": [0.7191, 0.5999], "color": "#7b5b3a"},
+    {"id": "race_stick_090", "shape": "cylinder", "size_m": [0.04, 0.6, 0.04], "xy": [0.6325, 0.6888], "color": "#7b5b3a"},
+    {"id": "race_stick_150", "shape": "cylinder", "size_m": [0.04, 0.6, 0.04], "xy": [0.5459, 0.5999], "color": "#7b5b3a"},
+    {"id": "race_stick_210", "shape": "cylinder", "size_m": [0.04, 0.6, 0.04], "xy": [0.5459, 0.4221], "color": "#7b5b3a"},
+    {"id": "circle_stick", "shape": "cylinder", "size_m": [0.04, 0.6, 0.04], "xy": [0.635, 0.34], "color": "#7b5b3a"},
+    {"id": "race_stick_330", "shape": "cylinder", "size_m": [0.04, 0.6, 0.04], "xy": [0.7191, 0.4221], "color": "#7b5b3a"},
+    {"id": "wood_edge_canopy", "shape": "box", "size_m": [6.8, 9.0, 22.5], "xy": [0.915, 0.5], "elevation_m": 7.5, "color": "#4f6b3a"},
+    {"id": "wood_trunk_1", "shape": "cylinder", "size_m": [0.7, 3.0, 0.7], "xy": [0.9, 0.12], "color": "#6b5a45"},
+    {"id": "wood_trunk_2", "shape": "cylinder", "size_m": [0.7, 3.0, 0.7], "xy": [0.9, 0.37], "color": "#6b5a45"},
+    {"id": "wood_trunk_3", "shape": "cylinder", "size_m": [0.7, 3.0, 0.7], "xy": [0.9, 0.62], "color": "#6b5a45"},
+    {"id": "wood_trunk_4", "shape": "cylinder", "size_m": [0.7, 3.0, 0.7], "xy": [0.9, 0.87], "color": "#6b5a45"}
+  ],
+  "walkable": {
+    "landing_mud": "Mud flat between the reed beds, x about 0.2-0.45, y 0.45-0.95: the party climbs out of the pool here. The fallen willow trunk (0.6 m high) lies across its east side.",
+    "grass_flat": "x 0.46-0.83, the whole depth: open grass. The race circle (radius 4 m) is centred at [0.6325, 0.511] and marked only by six 0.6 m sticks; the scuffed track is walkable.",
+    "wood_edge": "x 0.83-1.0: walkable under a canopy starting at 3 m, between the trunks (about 5 m apart). This is the exit toward the thick wood (ch004)."
+  },
+  "inferred_items": [
+    "Reed height 1.8 m and herb band 1.1 m at true scale (the x4 reed build is 6-8 m).",
+    "The fallen willow is a 0.6 m diameter trunk, 12.6 m in frame, lying on the drawn diagonal; the spreading branches are not modelled.",
+    "Race sticks: six at 60-degree spacing on a 4 m radius. The north one is the layout.json circle_stick.",
+    "Wood edge: canopy block 3-12 m and four representative trunks."
+  ],
+  "landmarks_covered": ["pool_water", "lily_pads", "reeds_north", "reeds_south", "landing_mud", "willow_trunk", "race_circle", "circle_stick", "wood_edge"],
+  "workflow_notes": [
+    "Image vs Bible (DEF-p4-envconcept-603-g): the race circle is drawn about 8 m across (Bible about 10 m), and the willow trunk lies diagonally. Modelled as drawn/layout.json. inferred:true.",
+    "Terrain slope (mud rising from the waterline to the grass flat) is not modelled; the ground is a flat y 0 plane. The waterline follows the reed edges, and the water marker covers only the open water strip in the image.",
+    "Lily pads are flat water-surface dressing and are not modelled.",
+    "Anti-clip handover: the Caucus-race runners (Alice + CGI animals) circle inside the grass flat. Keep the running lane clear of the sticks (0.15 m margin) and of the willow trunk at the flat's west edge."
+  ],
+  "downstream": "No storyboard yet. Hand over to whitebox-staging. No reference video was rendered."
+}

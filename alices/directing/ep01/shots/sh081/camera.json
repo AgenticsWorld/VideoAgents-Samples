@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh081",
+  "group_id": "grp031",
+  "scene_no": "S08",
+  "duration_s": 9.5,
+  "size": "close",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 50,
+  "camera_height_m": 0.55,
+  "angle": "level, water level onto her open hands",
+  "rack_focus": "none",
+  "start_frame": "The first break in the sustained set-up: water level onto her open hands, her face out of the top of frame, the doll-sized fan and one white glove lying in her palm, her fingers as long as the fan itself.",
+  "end_frame": "The same frame at the end of the recitation: the sums counted off one by one on those fingers, the answers plainly wrong, the hands and their gauge objects never leaving the frame.",
+  "constraint_honoured": "'The recitation stays dry and absolutely straight, no comic playing — the wrongness must be the audience's discovery, not hers yet.'",
+  "movement_note": "LN-ep01-024 is the episode's longest line (7.7 s) and gets 9.5 s of unmoving frame. The fan beside her fingers is the size gauge, so the framing may not drift off it.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

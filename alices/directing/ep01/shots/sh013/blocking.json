@@ -1,0 +1,45 @@
+{
+  "shot_id": "sh013",
+  "group_id": "grp007",
+  "scene_no": "S02",
+  "scene_id": "SCN-field-hedge-burrow",
+  "duration_s": 3.0,
+  "is_dialogue": false,
+  "group_position": "first shot of grp007 — Alice on her map start (spoil_fan).",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "stand",
+      "start_pos": "arriving at a run on the fan of pale spoil, then down on her knees at the burrow mouth",
+      "space_fragment_en": "standing over the fan of pale spoil on screen-right, then dropping to her knees facing the rabbit burrow",
+      "facing": "turned screen-left and down into the black oval; open ground left between her face and the hole",
+      "path": [
+        { "t": 1.1, "to": "on her knees in the pale spoil, face to the burrow mouth" }
+      ],
+      "beats": [
+        { "t": 0.0, "action": "arrives breathless", "sync": "shot opens on the arrival" },
+        { "t": 1.1, "action": "drops to her knees in the loose earth", "sync": "the pale spoil scuffs" },
+        { "t": 2.2, "action": "looks into the hole: hawthorn roots across the opening, cool dark beyond", "sync": "held to the cut" }
+      ],
+      "performance_beat": {
+        "objective": "find out where a thing like that goes",
+        "goal": "find out where it went",
+        "emotional_arc": "from chase-breathlessness to still, absorbed curiosity",
+        "arc_from": "chase-breathlessness",
+        "arc_to": "still, absorbed curiosity",
+        "trigger": { "beat": "her knees hit the loose spoil and the running stops", "t": 1.1 },
+        "no_early_reaction": ["the head tilting", "a hand reaching out", "the breath quieting"],
+        "forbidden_early": ["the head tilting", "a hand reaching out", "the breath quieting"],
+        "end_state": "on her knees, hands planted in the spoil, eyes into the dark oval, breath still loud"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": {
+    "timeline_ok": true,
+    "violations": [],
+    "story_event": "ev0001 (real_frame, T0) — 'never once considering how in the world she was to get out again'",
+    "note": "Alice alone at the hedge foot. CRE-001 is already underground and is not staged again."
+  }
+}

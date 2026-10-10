@@ -1,0 +1,80 @@
+{
+  "character_id": "CHAR-cook",
+  "name": "The Cook",
+  "source_language": "en",
+  "source_speaker_labels": ["Cook"],
+  "produced_by_task": "p3-dialogue-style-pb2",
+  "sample_note": "Two spoken lines only (ch011-d0059, ch011-d0062). In the kitchen (ch006) she says nothing; she only joins the lullaby chorus 'Wow! wow! wow!' (ch006-d0030, d0032, speaker label CHORUS, shared with the baby, type verse — not in the back-test denominator). Rules beyond her two lines are tagged inferred:true.",
+  "register": {
+    "level": "blunt, surly kitchen servant; monosyllabic, unimpressed by rank",
+    "summary": "She speaks with objects, not words: saucepans, plates and a frying-pan in the kitchen (ch006-p29, p43), a pepper-box in court (ch011-p64). When forced to answer the King she gives the fewest words possible — a flat refusal (Shan't) and a two-word answer (Pepper, mostly) — with no title, no please, no explanation. Per SUP-002 a human performer in plain kitchen dress, textually human.",
+    "examples": [
+      { "ref": "ch011-d0059", "chapter": 11, "text": "Shan't," },
+      { "ref": "ch011-d0062", "chapter": 11, "text": "Pepper, mostly," }
+    ]
+  },
+  "catchphrases": [
+    { "text": "Shan't (flat refusal)", "freq": "medium", "count_in_source": 1, "example_refs": ["ch011-d0059"], "example_chapters": [11] },
+    { "text": "pepper", "freq": "high", "count_in_source": 1, "example_refs": ["ch011-d0062"], "example_chapters": [6, 11], "note": "pepper is her motif in both chapters (ch006-p20-p21 the peppered soup; ch011-p64 the pepper-box)" }
+  ],
+  "sentence_style": {
+    "length": "one or two words (mean 1.5); never a full sentence. Any new line should stay at 1-4 words",
+    "mean_words": 1.5,
+    "patterns": [
+      {
+        "rule": "Refusal as a bare contraction, no reason and no title (Shan't).",
+        "examples": [
+          { "ref": "ch011-d0059", "chapter": 11, "text": "Shan't," }
+        ]
+      },
+      {
+        "rule": "Answers the literal question in a clipped noun phrase plus one qualifier (Pepper, mostly).",
+        "examples": [
+          { "ref": "ch011-d0062", "chapter": 11, "text": "Pepper, mostly," }
+        ]
+      },
+      {
+        "rule": "In the kitchen she is wordless: her temper is thrown, not spoken; her only 'voice' is the gruff 'Wow! wow! wow!' chorus with the baby. If the screenplay needs a kitchen line it is a one-word bark about the soup or the pepper.",
+        "inferred": true,
+        "reason": "ch006 gives her no dialogue (ch006-p19-p21, p29, p34, p43); the bark rule extends her two trial lines to the kitchen.",
+        "examples": [
+          { "ref": "ch006-d0030", "chapter": 6, "text": "Wow! wow! wow! (chorus, sung with the baby)" },
+          { "ref": "ch006-p43", "chapter": 6, "text": "(narrative) The cook threw a frying-pan after her as she went out" }
+        ]
+      }
+    ]
+  },
+  "vocabulary": {
+    "signature_words": ["Shan't", "pepper", "mostly"],
+    "preferred_fields": ["the kitchen: soup, pepper, the pot", "flat refusal"],
+    "examples": [
+      { "ref": "ch011-d0062", "chapter": 11, "text": "Pepper, mostly," }
+    ]
+  },
+  "address": {
+    "self": "no pronoun used (subjectless replies)",
+    "to_the_king": "no title at all — 'Shan't' to a direct royal order is her whole characterisation",
+    "to_the_duchess_and_baby": "no words; objects thrown instead (ch006-p29)",
+    "to_alice": "never addresses her; does not even seem to listen (ch006-p34)",
+    "examples": [
+      { "ref": "ch011-d0059", "chapter": 11, "text": "Shan't," }
+    ]
+  },
+  "interjections": ["Wow! wow! wow! (chorus only)"],
+  "forbidden_words": [
+    { "domain": "post-1862 slang / modern chat register", "regex": "\\b(okay|ok|cool|guys?|awesome|yeah|yep|nope|gonna|wanna|gotta|kinda|sorta|totally|literally|dude)\\b", "reason": "period drama, 1862" },
+    { "domain": "deference, courtesy or apology", "regex": "\\b(please|thank(s| you)|sorry|your majesty|sir|ma'am|madam|pardon|if you like)\\b", "reason": "she refuses the King without a title (ch011-d0059) and ignores the Duchess and Alice; courtesy is out of character" },
+    { "domain": "speeches", "regex": "^(\\S+\\s+){11,}\\S+", "reason": "12 or more words breaks her monosyllabic register (source max = 2 words)" }
+  ],
+  "drift": [
+    { "from_chapter": 6, "to_chapter": 6, "change": "Kitchen: speechless and violent — stirring, peppering, throwing pans; only the 'Wow!' chorus.", "examples": ["ch006-p29", "ch006-d0030", "ch006-p43"] },
+    { "from_chapter": 11, "to_chapter": 11, "change": "Witness box: still minimal, but now verbal defiance — a flat refusal to the King, then a two-word answer — before she vanishes in the Dormouse confusion (ch011-p72).", "examples": ["ch011-d0059", "ch011-d0062"] }
+  ],
+  "backtest_markers": [
+    { "id": "CK1", "rule_ref": "catchphrases pepper", "weight": 4, "regex": "\\b(pepper|peppery|soup|cauldron)\\b" },
+    { "id": "CK2", "rule_ref": "sentence_style.patterns[0] bare refusal", "weight": 4, "regex": "^(shan't|won't|sha'n't|not me|no, I won't)\\W*$" },
+    { "id": "CK3", "rule_ref": "sentence_style.patterns[1] clipped qualifier", "weight": 3, "regex": "^\\w+, (mostly|mainly|chiefly)\\W*$" },
+    { "id": "CK4", "rule_ref": "sentence_style.patterns[2] kitchen chorus", "weight": 3, "regex": "\\bwow\\b" }
+  ],
+  "backtest": {"method": "marker-claim back-test (shared yardstick with pb1 and 01-story/dialogue-rewrite): a spoken source line hits when it matches >=1 backtest_markers regex and no forbidden_words regex; verse excluded; full definition runs/p3-dialogue-style-pb2/result.json#backtest_method", "script": "code/p3-dialogue-style-pb1_backtest.py", "run_on": "2026-09-22", "threshold": 0.8, "hit_rate": 1.0, "sample_size": 2, "source_lines_total": 2, "coverage_of_spoken_lines": 1.0, "verse_excluded": 0, "forbidden_violations_in_source": 0, "cross_claim_rate": 0.003, "lift": 361.5, "attribution_top1_rate": 1.0, "misses": [], "pass": true, "small_sample_warning": "only 2 spoken source line(s); the hit rate is not statistically meaningful - rules tagged inferred:true carry the card beyond the source"}
+}

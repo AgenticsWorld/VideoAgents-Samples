@@ -1,0 +1,29 @@
+{
+  "shot_id": "sh076",
+  "scene_id": "SCN-long-hall",
+  "size": "medium",
+  "subject": {
+    "id": "CHAR-white-rabbit",
+    "grid": "bottom_centre",
+    "anchor_xy": [0.46, 0.72],
+    "size_in_frame": "starts filling the middle of frame at about 0.40 of frame height and is left small at the bottom of it, about 0.16, as the frame climbs away from him"
+  },
+  "headroom": "starts at about 0.24 of frame height and is torn open by the two-step tilt to about 0.70 — and there is still nothing at the top of it. The failure of the headroom to arrive at a face is the shot.",
+  "horizon_eyeline": "Water-level start at 0.10 m with the waterline at 0.62 of frame height; the tilt takes that line down out of frame. His eyeline goes up, stops, goes up again — and the exact eyeline to where her head would be is far above the top edge and is never reached. No lamp enters frame at any point in the climb.",
+  "layers": {
+    "fg": "the water and his own ripples at the start, gone by the end of the move",
+    "mg": "the Rabbit looking up, and up, and flinching violently backward",
+    "bg": "the dark hall, then a wall of blue cotton, then black — the frame runs out of information as it rises"
+  },
+  "gaze": {
+    "direction": "up_frame",
+    "lead_room": "above",
+    "note": "his look is the move. The lead room the tilt opens is deliberately empty: it finds her body, then more of her body, and then dark, and it never finds her face. His flinch is what ends it."
+  },
+  "balance": "Starts balanced on him and ends abandoned — a small animal at the bottom of a frame that has gone looking for something and failed. The imbalance at the end is the point and is not corrected.",
+  "leading_lines": "The vertical of her body, entering the frame as a featureless blue plane, is the only line the tilt has to climb, and it goes off the top edge unresolved.",
+  "eye_first": "His face at the start — the once in the episode it is given — then up with his look into nothing.",
+  "safe_area_ok": true,
+  "constraint_binding": "The episode's ONE two-step camera move, and it must run out of room BEFORE any lamp fixture could enter frame: the tilt starts from a lens at 0.10 m and stops at an angle that still keeps the 2.30 m lamp line outside the top edge. His face is spent here, once, in the whole episode. QUADRUPED RABBIT throughout.",
+  "start_end_framing": "Start: waterline at 0.62, him centred at 0.40 of frame height, his own ripples in the near foreground. End: waterline gone, him small at the bottom edge, the upper two thirds of frame filled by an unreadable blue mass and black above it."
+}

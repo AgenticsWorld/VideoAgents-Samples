@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh035",
+  "group_id": "grp013",
+  "scene_no": "S05",
+  "duration_s": 4.0,
+  "size": "close",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 50,
+  "camera_height_m": 1.25,
+  "angle": "level",
+  "rack_focus": "none",
+  "start_frame": "Toward one locked door of the east wall: her hand already on the large black iron handle, the mosaic dado and one blind roundel above it filling the rest of the frame.",
+  "end_frame": "The same frame after she has hauled twice and given it up — the handle has not moved at all and her hand comes away.",
+  "constraint_honoured": "'Static — the first still frame since the reveal. We join the second pass already defeated.'",
+  "movement_note": "The cut from a travelling shot onto a nailed-down close is what states the defeat; a move would keep the search alive when the scene needs it to have stopped.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

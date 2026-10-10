@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh097",
+  "group_id": "grp036",
+  "scene_no": "S10",
+  "duration_s": 3.0,
+  "size": "medium",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame; the fan drifts through it)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 50,
+  "camera_height_m": 0.05,
+  "angle": "level, lens on the water surface",
+  "rack_focus": "none",
+  "start_frame": "Water-level from beside the floating fan back toward the glass table legs: the Rabbit's fan large in the near foreground drifting on the surface, her face behind it treading water.",
+  "end_frame": "The same frame as the fan clears past her and her face falls — the realisation landing on the one object in frame she can date to her own crying.",
+  "constraint_honoured": "'The realisation lands ON THE FAN… and only then does her face fall' — the fan holds the near foreground for the whole shot, so no move may take it out of frame.",
+  "movement_note": "No rack between fan and face either: both planes stay readable, which is the episode's standing depth rule for two-plane cause-and-effect.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

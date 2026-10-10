@@ -1,0 +1,62 @@
+{
+  "task_id": "p4-cr-style",
+  "agent": "06-art/art-director",
+  "attempt": 1,
+  "status": "done_pending_H2",
+  "date": "2026-09-23",
+  "change_id": "BIB-0027",
+  "authority_read": [
+    "bible/changelog.md BIB-0027",
+    "bible/cultivation.json SUP-002, SUP-004, SUP-010, XA-magic-02, XA-magic-08",
+    "bible/world.json WR-001, WR-002, WR-010, wonderland_real_counterparts.rendering_note",
+    "bible/h1_summary.md §6",
+    "runs/p4-cr-cgi-mucha-bible/result.json (stale_files, stale_notes)",
+    "qa/defects/DEF-p4-style-001.json",
+    "refs/style/alice.jpeg (viewed again)"
+  ],
+  "changed_files": [
+    {
+      "path": "bible/style.json",
+      "version": "1.0.0 -> 1.1.0",
+      "status": "authored_v1_pending_h2 (unchanged; locked_by null)",
+      "change_note": "Re-issued for BIB-0027. (1) negative_prompt_en: removed 'CGI creature', 'monster', 'giant insect', 'literal animal-bodied character', 'anthropomorphic animal', 'animal head on human body', 'Art Nouveau', 'extra limbs', and 'CGI look'/'3D render' (replaced by 'stylised 3D animation render', 'video game graphics', 'digital matte painting look'). Kept or added bans on cartoon animal faces, big cartoon eyes, plush toys, humans in animal costume, full-head masks, mascot and fur suits, horror monsters, flat poster illustration, poster lettering and candy pastels. (2) New negative_prompt_waking_addon_en (Art Nouveau ornament, stained glass, mosaic, talking/clothed animal, CGI creature), applied only to the three waking SCN. (3) style_fragment_ui == style_fragment_en (English, 1081 chars): adds Mucha/Art Nouveau dream sets as built sets and set extensions, the waking meadow as plain realism, photoreal CGI animals with contact shadows and shared light, stained-glass colour and pastel-and-gold accents. style_string_en is updated to match. (4) CR-001: photographed finish with photoreal CGI integration allowed. CR-002: 1862 lock limited to costume, props, technology and the waking world, with Art Nouveau licensed for dream set design only. CR-003: rewritten from 'human performer' to the photoreal CGI animal design reading (species list, props fitted to anatomy, Gryphon and Mock Turtle); cards and humans stay human performers. CR-004: only the waking rabbit CRE-001 stays a real animal; non-speaking dream animals are photoreal CGI (pending_H2). CR-005, CR-007, CR-008, CR-009, CR-011, CR-012 and CR-013 get the related wording updates. New CR-014 (Mucha dream-environment rules, dream-full/waking-subtle) and CR-015 (CGI integration and speech rules). (5) references: rewrote the alice.jpeg avoid note (only the matte-painting finish, the pug-like Caterpillar face and the indoor clearing are still avoided). Pan's Labyrinth and The Fall avoid/take notes updated. Dreamchild removed (its animatronic heads no longer contrast with the new ruling and it would push past five films). The Jungle Book (2016) added as the photoreal talking-animal reference. New design_references: Alphonse Mucha. (6) palette_logic: new dream_mucha_accents family (#C9A55A Mucha gold leaf, #B7C4A4 faded sage, #B9A9C6 faded lilac, #D9B3AE pastel rose, #E8DEC6 aged ivory), a waking mucha_influence note, and updated accent rules. The existing base hexes are unchanged. (7) user_refs: alice.jpeg is now used for creature treatment and dream architecture. (8) New open_points_pending_H2: Footmen anatomy, non-speaking animals incl. pig-baby end state, Caterpillar face, Mucha scope and finish. (9) negative_list, negative_list_bible_check and downstream_notes updated. Rule IDs CR-001..CR-013 are kept, and the structure is otherwise unchanged."
+    },
+    {
+      "path": "runs/p4-cr-style/result.json",
+      "change_note": "This receipt."
+    }
+  ],
+  "checks": {
+    "json_valid": "PASS",
+    "style_fragment_ui_equals_en": "PASS",
+    "removed_negatives_absent": "PASS (cgi creature, giant insect, animal-bodied, anthropomorphic animal, art nouveau, animal head on human, extra limbs all absent from negative_prompt_en)",
+    "references_negative_list_style_anchors_nonempty": "PASS (6 references incl. user ref, 13 negative_list, 13 style_anchors)",
+    "no_placeholder": "PASS",
+    "negatives_vs_bible": "PASS: no Bible-required element is banned (see negative_list_bible_check)",
+    "ascii_filenames": "PASS"
+  },
+  "color_script_palette_changes_needed": {
+    "answer": "yes",
+    "file": "bible/color_script.json (owner 06-art/color-script; not edited here, out of scope)",
+    "items": [
+      "palette_legend: add the dream_mucha_accents family (#C9A55A, #B7C4A4, #B9A9C6, #D9B3AE, #E8DEC6) and let dream acts use them as set-surface accents inside the haze. The base waking and dream hexes stay valid.",
+      "Stained-glass colour light is now allowed in the dream (CR-007). Per-scene curves for SCN-long-hall, SCN-pool-of-tears and SCN-courtroom may take it into account. In the Hearts sets the pastels recede and the gold stays (accent_rules).",
+      "Wording: line ~349 'Cheshire Cat (performer doubling Dinah)' -> photoreal CGI cat echoing Dinah. Lines ~66/76/427 'real flamingo CRE-003 / hedgehog CRE-004' -> photoreal CGI animals (pending_H2); flamingo_pink itself can stay.",
+      "The out_of_base countersign asks (sea tones, flamingo pink, courtroom peak, garden leak) are unaffected by BIB-0027 and remain open for the art-director countersign once color_script is re-issued."
+    ]
+  },
+  "not_done_out_of_scope": [
+    "qa/defects/DEF-p4-style-001.json is not closed here (scope = style.json only). Per its pending_redo, it can be closed after H2 confirms the scope; this re-issue satisfies the 'without the CGI-creature/Art Nouveau negatives' part.",
+    "bible/changelog.md entry for this re-issue: to be appended by memory-bible (on_bible_access)."
+  ],
+  "escalations_H2": [
+    "H2-footmen-anatomy (pending_H2)",
+    "H2-non-speaking-animals incl. pig-baby end state (pending_H2)",
+    "H2-caterpillar-face (pending_H2)",
+    "H2-mucha-scope-and-finish (pending_H2; DEF-p4-style-001-c)",
+    "user_refs: no refs/NOTES.md annotations. The user may annotate refs/style/alice.jpeg from the preview menu's reference-files page."
+  ],
+  "defects_opened": [],
+  "skills": "none enabled for this station",
+  "generation": "none (no image or video generated)"
+}

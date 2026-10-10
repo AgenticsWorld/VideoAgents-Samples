@@ -1,0 +1,83 @@
+{
+  "task_id": "p6-bible-light-ep01",
+  "agent": "00-orchestration/memory-bible",
+  "project": "alices",
+  "date": "2026-09-23",
+  "status": "completed",
+  "attempt": 1,
+  "mode": "text_only",
+  "no_media": "No image, keyframe or clip was generated, re-rolled or edited. User auto-reroll budget is 0.",
+  "evaluation": "skipped (user quality-judge setting 0)",
+  "qa_cosign": "skipped (all per-dimension QA strengths are 0)",
+  "items": [
+    {
+      "item": 1,
+      "defect": "qa/defects/DEF-p6-directing-ep01-001.json",
+      "severity": "major",
+      "outcome": "closed - resolution (a)",
+      "ruling": "The long hall and the flooded hall stay WINDOWLESS; bible/color_script.json is the side that moves. SCN-long-hall keeps 'no windows, no skylights' and 25 blind halo roundels, and its lighting.json keeps roundel_glow = reflected_lamplight_only. color_script's scene_curves and the act-level stained_glass doses (ep01 acts 3-6, ep02 act 1, ep05 act 3) now carry the identical pastel dose as SURFACE colour - jewel glints and lead-came sheen on the blind roundels where a lamp hangs close, the pastel tulip lamp shades, the mosaic dado and floor border - with no pool of coloured light anywhere, and the garden green through the little door left as the hall's only coloured cast light (SPC-long-hall-01). SCN-pool-of-tears has no shaft: the way-out light Alice swims toward is the field of lamp reflections at the south end, where the reflections crowd and the shore steps lie - the heading that scene's own lighting.json dream_growth already named, now recorded there as way_out_heading. SCN-courtroom is untouched: it has real high stained-glass windows per its architecture.json, so it keeps its cast stained-glass light and style.json CR-007 ('daylight through stained glass MAY cast soft pastel colour... that is the only coloured light') stays satisfied.",
+      "ruling_basis": [
+        "1. Source text beats inferred design (WRITE_RULES.md section 1): ch001-p11 'lit up by a row of lamps hanging from the roof' and ch001-p14 'that dark hall' anchor architecture.json; the roundel-WINDOW reading was inferred with no source anchor and would add an unwritten light source to a hall the source calls dark.",
+        "2. The later, narrower ruling on the same fact wins: roundel_glow was decided on 2026-09-23 by p4-cr-architecture / p4-cr-lighting-2 under BIB-0027, closing DEF-p4-cr-architecture-001-b. color_script's BIB-0027 amendment was written in the same parallel batch and never re-read against those amended openings, so it is the stale side of the disagreement, not a live second opinion.",
+        "3. Two scene files against one plan file for the pool: SCN-pool-of-tears inherits SCN-long-hall and already carried key_source oil_lamp_row, daylight_access lamplit_no_sky and no shaft.",
+        "4. Irreversibility: a window opening is architecture, not decoration. The whiteboxes and layout packs for both scenes are H2-locked at G4 (runs/g4/gate.json), ep01's storyboard is delivered against the windowless reading, and the re-roll budget is 0.",
+        "5. Design: the little-door garden green is the film's designed way-out colour and the one motivated bright thing ep01 act 3 is built around. A second daylight source in the hall would compete with it; a daylight shaft in the pool would duplicate its job."
+      ],
+      "ep01_s05_s06_s10_lighting_repass_needed": false,
+      "repass_note": "NO re-pass. directing/ep01/storyboard.json already implements this ruling literally (director's interim direction + its own conflicts[] note): no daylight word in S05-S10 except the little-door garden, the pastel dose written as jewel glints and lead-came sheen on blind glass, and S10's swim heading for the south-end reflection field. S05, S06 and S10 are confirmed clean and must NOT be marked dirty. No storyboard re-cut. ep05 act 3 inherits the same answer through scene_curves, so it needs no separate ruling when Phase 5-6 reaches it.",
+      "written_by_me_vs_handed_back": {
+        "bible/color_script.json": "WRITTEN BY ME under on_bible_access (owner 06-art/color-script). It was the losing side and the fix is a minimal consistency repair, not a design change: the glass palette hexes, the per-act dose ramp and the acts[] lists are byte-identical, only the motivation moves. Owner countersigns at its next open, alongside the art-director countersign the file was already pending.",
+        "bible/scenes/SCN-long-hall/lighting.json": "WRITTEN BY ME - arbitration record only. No lighting value, enum, Kelvin figure or prompt_fragment_en changed.",
+        "bible/scenes/SCN-long-hall/architecture.json": "WRITTEN BY ME - arbitration record only. No opening, dimension, count or position changed.",
+        "bible/scenes/SCN-pool-of-tears/lighting.json": "WRITTEN BY ME - arbitration record plus a way_out_heading block that RECORDS (does not newly design) the south-end reflection field already named in that file's own dream_growth. No scheme re-issued.",
+        "bible/style.json": "NOT touched and NO defect handed back. CR-007 is permissive and scene-agnostic and is satisfied by SCN-courtroom, so the H2-frozen style.json contradicts nothing in this ruling."
+      },
+      "handed_back_as_defect": "none"
+    },
+    {
+      "item": 2,
+      "defect": "qa/defects/DEF-p4-creature-404.json",
+      "severity": "minor",
+      "outcome": "closed - option (a)",
+      "ruling": "It IS a collision: change_id is ONE GLOBAL namespace, not a per-file one - WRITE_RULES.md section 5 step 2 requires a duplicate check before writing, and every citation in bible/ and qa/ is a bare 'BIB-NNNN' with no file qualifier, so a per-file scope would make those citations unresolvable. The tie is broken by the register: bible/changelog.md is where an id is actually allocated. The entry already logged there (task p4-h2-bible, ~20 citations across costumes.json, characters/** and qa/defects/**) KEEPS BIB-0029; the creature.json amendment (task p4-h2-creature), which never reached the changelog, moves to BIB-0032 and receives the changelog entry it was missing (WRITE_RULES.md P-011).",
+      "renumber_map": { "BIB-0029 (task p4-h2-creature, bible/creatures/creature.json)": "BIB-0032", "BIB-0029 (task p4-h2-bible, bible/changelog.md)": "unchanged" },
+      "uniqueness_check": "BIB-0001..BIB-0031 were in use across bible/, qa/, runs/, directing/ and story/ before writing; BIB-0032 and BIB-0033 were free and are the only two ids added by this task.",
+      "signed_gate_check": "No signed gate file was renumbered, because neither cites BIB-0029: runs/g4/gate.json cites only BIB-0027 (three mentions) and runs/g5-ep01/gate.json cites no BIB id at all.",
+      "citations_not_updated": "runs/p4-h2-creature/result.json, runs/p4-h2-creature/meta.json and runs/dag.json still say BIB-0029. Run receipts are immutable records of what a task wrote at the time and were deliberately not rewritten; the redirect is the supersedes field on the BIB-0032 changelog entry - a BIB-0029 citation dated to task p4-h2-creature means BIB-0032.",
+      "rule_for_next_parallel_batch": "Precedent P-013 (bible/WRITE_RULES.md section 7.4): BIB numbers are one global namespace and bible/changelog.md is the register, so agents DO NOT self-assign a literal number. Since every write already goes through memory-bible (WRITE_RULES.md section 1), the writing agent proposes \"change_id\": \"BIB-PENDING\" with its task_id and memory-bible stamps the real number at the moment it appends the changelog entry - one writer, one register, no race. An agent writing its own file under a defect (P-011) does the same. Writing a literal number without checking bible/changelog.md first is a section 5 step 2 failure."
+    }
+  ],
+  "changelog_entries": [
+    { "change_id": "BIB-0032", "note": "Retroactive changelog record for the p4-h2-creature amendment, renumbered out of the BIB-0029 collision; carries a supersedes redirect." },
+    { "change_id": "BIB-0033", "note": "The arbitration: the long hall and the flooded hall stay windowless; color_script.json amended to match." }
+  ],
+  "changed_files": [
+    { "path": "bible/color_script.json", "note": "BIB-0033: version 1.1.1; scene_curves for SCN-long-hall and SCN-pool-of-tears re-grounded on blind front-lit glass and the south-end reflection field; act doses for ep01 acts 3-6, ep02 act 1, ep05 act 3; CR-007 restatement, user_refs applied_to and two downstream_notes. Every hex, dose ramp, grade number, act id and the whole SCN-courtroom entry unchanged." },
+    { "path": "bible/scenes/SCN-long-hall/lighting.json", "note": "BIB-0033 arbitration record only: roundel_glow.arbitration (UPHELD, do not re-open from the colour side) + an _meta.amended entry. No lighting value changed." },
+    { "path": "bible/scenes/SCN-long-hall/architecture.json", "note": "BIB-0033 arbitration record only: interior.openings_arbitration - the opening list stands, a future roundel/oculus proposal is a controlled change on this file first. No geometry changed." },
+    { "path": "bible/scenes/SCN-pool-of-tears/lighting.json", "note": "BIB-0033: _meta.amended entry + way_out_heading recording the south-end lamp-reflection field (from this file's own dream_growth) as the motivated swim heading. No scheme re-issued." },
+    { "path": "bible/creatures/creature.json", "note": "BIB-0032: _meta.amendments[1].change_id BIB-0029 -> BIB-0032 plus a renumbered_from note. No creature content touched." },
+    { "path": "bible/changelog.md", "note": "Two appended entries: BIB-0032 (the missing creature.json record, renumbered) and BIB-0033 (the arbitration, with grounds and the impacted list)." },
+    { "path": "bible/WRITE_RULES.md", "note": "New section 7.4 with precedents P-013 (BIB ids are one global namespace, changelog is the register, propose BIB-PENDING instead of self-assigning) and P-014 (built geometry beats colour intent; the later, narrower ruling wins)." },
+    { "path": "qa/defects/DEF-p6-directing-ep01-001.json", "note": "CLOSED: ruling (a) with its five grounds, the files written, and downstream_repass = NONE; bible_changed flipped to true." },
+    { "path": "qa/defects/DEF-p4-creature-404.json", "note": "CLOSED: ruling (a) with the renumber map, the signed-gate check, the citations deliberately left in run receipts, and the P-013 rule for the next parallel batch." },
+    { "path": "qa/defects/DEF-p4-creature-401.json", "note": "Citation only: 'CRE-007 amended (change_id BIB-0029)' -> BIB-0032. Stays closed." },
+    { "path": "qa/defects/DEF-p4-creature-402.json", "note": "Citation only: 'CRE-001 amended (change_id BIB-0029)' -> BIB-0032. Stays closed." },
+    { "path": "runs/p6-bible-light-ep01/result.json", "note": "This receipt." }
+  ],
+  "not_touched_by_design": [
+    "bible/style.json - frozen at H2; CR-007 needs no exception and no hand-off was opened",
+    "bible/scenes/SCN-courtroom/** - real high windows, keeps cast stained-glass light",
+    "directing/ep01/** - already compliant with the ruling; no re-pass, no dirty mark",
+    "runs/p4-h2-creature/**, runs/dag.json - immutable run receipts, redirected via the BIB-0032 supersedes field",
+    "assets/** - no media of any kind"
+  ],
+  "conflicts": [],
+  "escalations": [],
+  "notifications": [
+    { "to": "workflow-orchestrator", "message": "BIB-0033 closes DEF-p6-directing-ep01-001 with no downstream re-pass: ep01 S05/S06/S10 stay clean, no lighting re-pass to dispatch, no storyboard re-cut, nothing to mark dirty. G6 / H3A for ep01 is unblocked on this defect. Phase 7 prompt writers for ep01 S05/S06/S10 and for ep05 act 3 must carry: no daylight, no shaft, no backlit roundel, no coloured pool in the hall or the pool; the only coloured cast light in the hall is the garden through the little door." },
+    { "to": "06-art/color-script", "message": "bible/color_script.json amended under BIB-0033 (on_bible_access) - countersign at next open. Your dose, palette and act ramp were preserved deliberately; only the motivation changed." },
+    { "to": "05-scenes/lighting", "message": "Arbitration records added to both lighting cards under BIB-0033 - countersign at next open. No scheme, enum or prompt fragment changed; nothing to re-issue." },
+    { "to": "04-creatures/creature", "message": "Your p4-h2-creature amendment is now BIB-0032 and is logged in bible/changelog.md. From now on write \"change_id\": \"BIB-PENDING\" and let memory-bible stamp the number (WRITE_RULES.md P-013)." }
+  ]
+}

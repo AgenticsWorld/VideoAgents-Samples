@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh092",
+  "group_id": "grp034",
+  "scene_no": "S09",
+  "duration_s": 4.0,
+  "size": "close",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 50,
+  "camera_height_m": 0.2,
+  "angle": "level, just above the standing water",
+  "rack_focus": "none",
+  "start_frame": "Low close on her boot and the standing water, her face just above it in frame: near tears of pure frustration, the foot lifting.",
+  "end_frame": "The same frame as the stamp lands square in a puddle — a small, tidy, absurd splash, the rings running out to the frame edges.",
+  "constraint_honoured": "'Land the stamp IN A PUDDLE — a small, tidy, absurd splash, deliberately the same sound family as the big one six seconds later.'",
+  "movement_note": "Static so the splash is what moves; the shot's whole job is to set up a sound rhyme with her fall into the flood.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

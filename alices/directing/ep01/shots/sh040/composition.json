@@ -1,0 +1,34 @@
+{
+  "shot_id": "sh040",
+  "scene_id": "SCN-little-door-passage",
+  "size": "medium",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "mid_right",
+    "anchor_xy": [0.70, 0.52],
+    "size_in_frame": "kneeling body filling the right of frame, about 0.85 of frame height, cropped by the right edge"
+  },
+  "second_subject": {
+    "id": "little_door",
+    "grid": "mid_left",
+    "anchor_xy": [0.26, 0.66],
+    "note": "the 0.38 m door on the left, measured against her 1.35 m in the same frame — the door is a fifth of her standing height and the comparison is available without a cut."
+  },
+  "headroom": "she is cropped at the crown; the door has about 0.34 of frame height of blank wall above it. The disproportion of those two margins is the measurement.",
+  "horizon_eyeline": "Low from the hall floor at kneeling height, lens 0.40 m: the flagstone line runs across at 0.82 of frame height. Her eyeline is at 0.40, angled down-left to the lock; the door head is at 0.48, so she is looking slightly down at a door she is kneeling in front of.",
+  "layers": {
+    "fg": "her kneeling knee and skirt at the right edge, and her hands crossing the middle of frame to the tiny lock",
+    "mg": "the little door and its horseshoe arch, the golden key turning",
+    "bg": "the honey limestone wall and mosaic dado, and — as the leaf swings in — the first touch of green on the flagstones at the bottom left"
+  },
+  "gaze": {
+    "direction": "frame_left",
+    "lead_room": "left",
+    "note": "she looks down-left at the lock with about 0.20 of frame width open beyond the door; when the leaf opens, that lead room is where the green arrives."
+  },
+  "balance": "Right-heavy with a person, left-light with a door, and the first green in the dream entering at the lightest corner — the balance tips toward the opening exactly when it opens.",
+  "leading_lines": "Her two forearms run from the right edge down-left to the lock and are the strongest lines in frame; the dado band runs the other way. They cross at the keyhole.",
+  "eye_first": "Her hands on the key, then the door leaf swinging and the green on the flags.",
+  "safe_area_ok": true,
+  "constraint_binding": "The 0.38 m door is measured against her 1.35 m the moment it opens — both are held whole and sharp in the same frame at the same depth, so the comparison is made in the picture and not in the cutting. The first green touches the flagstones inside this frame, at the lower left, and nowhere else in the hall."
+}

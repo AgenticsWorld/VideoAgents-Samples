@@ -1,0 +1,28 @@
+{
+  "shot_id": "sh053",
+  "scene_id": "SCN-long-hall",
+  "size": "medium",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "centre",
+    "anchor_xy": [0.46, 0.60],
+    "size_in_frame": "about 0.50 of frame height, rising a little with each attempt and dropping back with her"
+  },
+  "headroom": "opens and closes with each try — about 0.34 of frame height at the bottom of a slide, about 0.24 at the top of a climb. The three attempts get visibly shorter in exactly this measurement, which is how the frame counts them.",
+  "horizon_eyeline": "Lens riding 0.15-0.25 m at the foot of the leg: the flagstone joint across the bottom at 0.90 of frame height stays put through the whole shot, so her height above it is always readable. Her eyeline is up the leg at about 0.30.",
+  "layers": {
+    "fg": "the flagstone surface and the flare of the glass leg's foot",
+    "mg": "Alice wrapped round the leg, climbing and sliding",
+    "bg": "the leg running up out of frame, the lit tabletop plane above, the dark hall behind"
+  },
+  "gaze": {
+    "direction": "up_frame",
+    "lead_room": "above",
+    "note": "always up the leg, never at camera and never down. The failures are physical, not sad, so the look never drops to self-pity."
+  },
+  "balance": "A single vertical held slightly left of centre with a small body clinging to it. The frame is deliberately plain and repetitive; three attempts land in the same composition, which is what makes them measurable against each other.",
+  "leading_lines": "The glass leg is one long vertical from bottom to top of frame, and her arms wrap across it as short horizontals. The whole picture is a ladder with no rungs.",
+  "eye_first": "Her hands on the glass, then the height she reaches, then the floor she lands on.",
+  "safe_area_ok": true,
+  "constraint_binding": "Three climbing attempts as written; contingency trim T8 is NOT taken. The failures are physical, not sad — the frame keeps the whole body, the leg and the floor in shot for each attempt so the mechanics are visible and no attempt is covered by a reaction. Deep focus throughout."
+}

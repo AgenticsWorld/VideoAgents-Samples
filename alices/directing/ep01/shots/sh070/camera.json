@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh070",
+  "group_id": "grp027",
+  "scene_no": "S08",
+  "duration_s": 3.5,
+  "size": "close",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 50,
+  "camera_height_m": 0.35,
+  "angle": "level",
+  "rack_focus": "none",
+  "start_frame": "The sh069 set-up, tighter: her mouth and jaw filling more of the frame as she snaps the order at herself.",
+  "end_frame": "The same frame a moment later: the order plainly disobeyed — she is crying harder, and nothing in the camera has acknowledged either the command or the failure.",
+  "constraint_honoured": "'Held just long enough for the order and the failure to obey it — the comedy and the distress are the same shot.'",
+  "movement_note": "A tighter static frame rather than a push in: the episode has no push-ins, and the cut is what tightens.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

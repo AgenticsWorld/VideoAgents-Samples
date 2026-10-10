@@ -1,0 +1,53 @@
+{
+  "character_id": "CHAR-executioner",
+  "card_type": "individual",
+  "tier": "extra",
+  "layer": "dream",
+  "gender": "male",
+  "gender_note": { "source_chapter": "ch008", "paragraph": "ch008-p66", "quote": "that he had never had to do such a thing before, and he wasn’t going to begin at _his_ time of life.", "reason": "'he', 'his time of life'." },
+  "hair": {
+    "color": "iron-grey, thinning",
+    "style": "receding, cropped close at the sides, bald crown; grey mutton-chop whiskers",
+    "source_chapter": "ch008", "paragraph": "ch008-p66",
+    "quote": "he wasn’t going to begin at _his_ time of life",
+    "inferred": true,
+    "reason": "Colour/style designed; greying and receding is the visual consequence of the sourced 'at his time of life' (an older man)."
+  },
+  "eyes": { "color": "pale watery blue", "inferred": true, "reason": "Not described; tired pale eyes suit a weary, procedure-minded old servant." },
+  "face": {
+    "shape": "heavy jowls, deep nasolabial lines, bulbous nose, long upper lip",
+    "expression_default": "stubborn, aggrieved, pedantic — a craftsman refusing an impossible job; later flustered, running up and down",
+    "source_chapter": "ch008", "paragraph": "ch008-p66",
+    "quote": "The executioner’s argument was, that you couldn’t cut off a head unless there was a body to cut it off from",
+    "also_seen": [{ "paragraph": "ch008-p71", "quote": "the King and the executioner ran wildly up and down looking for it" }],
+    "detail_inferred": true,
+    "detail_reason": "Features designed; expression extracted from his sourced argument."
+  },
+  "build": {
+    "height_range_cm": [183, 190],
+    "body_type": "big-framed, heavy-shouldered, gone soft and paunchy with age; still quick on his feet ('like an arrow')",
+    "scale_reference": "About 48-55 cm taller than Alice at base scale (135 cm, CHAR-alice scale anchor) — the largest body in the croquet-ground crowd, read as bulk not menace; relative size vs Alice follows SUP-003.",
+    "source_chapter": "ch008", "paragraph": "ch008-p70",
+    "quote": "And the executioner went off like an arrow.",
+    "inferred": true,
+    "reason": "Height/bulk designed from the executioner type; the comic contrast with 'went off like an arrow' is intentional."
+  },
+  "base_age_range": "58-65",
+  "base_age_source": { "source_chapter": "ch008", "paragraph": "ch008-p66", "quote": "he wasn’t going to begin at _his_ time of life", "inferred": true, "reason": "'His time of life' fixes him as elderly; the exact band is designed." },
+  "marks": [
+    { "type": "none", "description": "No scars or tattoos; nothing that implies past violence (SUP-014: the sentences are never carried out, so he has never actually executed anyone).", "inferred": true, "reason": "Source gives none; kept clean per SUP-014 tone." }
+  ],
+  "signature_items": [
+    { "item": "black cloth executioner's hood worn pushed back off the face and hanging at the nape like a cowl (face always visible)", "inferred": true, "reason": "Designed office marker that identifies him without showing any execution device (see SUP-014 and DEF-p3-appearance-301)." },
+    { "item": "crimson House-of-Hearts livery with a black-edged heart badge and a plain black rank bar in place of a numeral", "inferred": true, "reason": "FAC-house-of-hearts emblem_visual; OFF-003 is a household office with no card number in the source." }
+  ],
+  "prohibited_items": [
+    { "item": "axe, sword, block, noose or any execution device", "rule": "bible/cultivation.json SUP-014 visual_signature: 'no execution device, weapon-on-body contact, or aftermath is ever shown'", "note": "The controlled index performer_concept mentions an 'axe/block prop that is never used'. That conflicts with SUP-014, which is binding; this card omits the axe and the conflict is filed as DEF-p3-appearance-301 for memory-bible." }
+  ],
+  "default_outfit_tone": "Dark crimson House-of-Hearts livery: long, slightly too-tight crimson coat with black facings and black-edged heart badge, black waistcoat straining over the paunch, black knee-breeches, black stockings, heavy buckled shoes; black cloth hood pushed back off the head onto the shoulders.",
+  "default_outfit_tone_source": { "inferred": true, "reason": "Index performer_concept 'crown livery, no animal coding'; colours from FAC-house-of-hearts emblem_visual with black for the grim office. Full costume by 06-art/costume." },
+  "period_silhouette": { "value": "1862 senior household servant: long coat, waistcoat, knee-breeches — an old-fashioned retainer, no medieval headsman costume", "inferred": true, "reason": "Keeps him in the 1862 world (SUP-002) and in comic register (SUP-014)." },
+  "sup002_coding": { "animal_or_card": "card-court (House of Hearts household)", "touches": ["heart badge on crimson livery", "flat, square-on stance in the three-way argument (card-figure blocking, SUP-004)"], "forbidden": "no animal coding (index); no weapon", "rule": "bible/cultivation.json SUP-002, SUP-004, SUP-014" },
+  "doubling": { "value": "none", "reason": "Not part of any H1 ruling 5.3 B doubling pair." },
+  "prompt_summary_en": "Elderly big-framed man about 60, heavy jowls, bulbous nose, pale watery blue eyes, receding iron-grey hair with grey mutton-chop whiskers, aggrieved stubborn expression, dark crimson Victorian household livery coat with black facings and a black-edged heart badge, black waistcoat over a paunch, black knee-breeches and stockings, black cloth hood pushed back onto his shoulders, empty hands, no weapon, 1862 period realistic comic drama, human actor"
+}

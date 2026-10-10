@@ -1,0 +1,43 @@
+{
+  "shot_id": "sh039",
+  "group_id": "grp015",
+  "scene_no": "S05",
+  "scene_id": "SCN-little-door-passage",
+  "duration_s": 7.0,
+  "is_dialogue": false,
+  "group_position": "first shot of grp015 — Alice on her map start (hall_floor, the flagstones at the curtain). The map gives her no path, so this ground is also the group end.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "stand",
+      "start_pos": "on the flagstones at the low curtain, lifting it aside",
+      "space_fragment_en": "standing on the flagstones in front of the little door on screen-right, facing screen-left and down at the little door",
+      "facing": "down and inward along the centre line of the passage; she crouches to it without kneeling yet",
+      "path": [],
+      "beats": [
+        { "t": 1.2, "action": "notices the low curtain she had passed before", "sync": "on her second time round" },
+        { "t": 3.0, "action": "lifts the curtain aside", "sync": "the reveal" },
+        { "t": 4.6, "action": "crouches down to the fifteen-inch door under its horseshoe arch", "sync": "held to the cut" }
+      ],
+      "performance_beat": {
+        "objective": "check the one part of the wall she has not already tried",
+        "goal": "check the one thing she has not already tried",
+        "emotional_arc": "from dogged thoroughness to a quick rising hope",
+        "arc_from": "dogged thoroughness",
+        "arc_to": "quick rising hope",
+        "trigger": { "beat": "the curtain comes aside and the little door is behind it", "t": 3.0 },
+        "no_early_reaction": ["the breath catching", "the eyes widening", "the hand going to the key"],
+        "forbidden_early": ["the breath catching", "the eyes widening", "the hand going to the key"],
+        "end_state": "crouched over the little door, curtain bunched in one fist, eyes down on the small arch, mouth open"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": {
+    "timeline_ok": true,
+    "violations": [],
+    "story_event": "ev0003 (dream) — the fifteen-inch door behind the low curtain",
+    "note": "Alice alone. The little door and the passage behind it are registered as SCN-little-door-passage; the hall side of the same threshold is SCN-long-hall and uses the landmark 'the low curtain'."
+  }
+}

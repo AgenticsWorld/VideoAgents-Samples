@@ -1,0 +1,249 @@
+{
+  "schema_version": "whitebox_plan.v1",
+  "group_id": "grp035",
+  "scene_id": "SCN-pool-of-tears",
+  "basis": "Alice surfaces on the glass_table_legs anchor at (0.60, -0.30), 0.61 m high and treading water: her foot anchor sits at y -0.42 so her chin is exactly on the 0.10 m water surface and only her head and shoulders are above it, which is what both shots frame. She faces the east-wall door bases (yaw 0.2349, computed from her position to the east_doors landmark); on the tile-5 axis screen-right is -Z, so those door bases read screen-left with her lead room open on that side, as composition requires. She does not move in either shot - she comes up spluttering, licks the salt off her lips at t=2.0, and works the problem out aloud through sh095.",
+  "actors": [
+    {
+      "id": "CHAR-alice",
+      "kind": "person",
+      "size_m": [
+        0.1708,
+        0.61,
+        0.1342
+      ],
+      "keyframes": [
+        {
+          "t": 0.0,
+          "position": [
+            0.6,
+            -0.48,
+            -0.3
+          ],
+          "pose": "stand",
+          "yaw": 0.2349,
+          "head_pitch": -0.2
+        },
+        {
+          "t": 0.3,
+          "position": [
+            0.6,
+            -0.42,
+            -0.3
+          ],
+          "pose": "stand",
+          "yaw": 0.2349,
+          "head_pitch": -0.1
+        },
+        {
+          "t": 2.0,
+          "position": [
+            0.6,
+            -0.42,
+            -0.3
+          ],
+          "pose": "stand",
+          "yaw": 0.2349,
+          "head_pitch": 0.05
+        },
+        {
+          "t": 3.6,
+          "position": [
+            0.6,
+            -0.42,
+            -0.3
+          ],
+          "pose": "stand",
+          "yaw": 0.2349,
+          "head_pitch": 0.0
+        },
+        {
+          "t": 5.0,
+          "position": [
+            0.6,
+            -0.42,
+            -0.3
+          ],
+          "pose": "stand",
+          "yaw": 0.2349,
+          "head_pitch": 0.0
+        },
+        {
+          "t": 6.0,
+          "position": [
+            0.6,
+            -0.42,
+            -0.3
+          ],
+          "pose": "stand",
+          "yaw": 0.2349,
+          "head_pitch": 0.0
+        },
+        {
+          "t": 9.6,
+          "position": [
+            0.6,
+            -0.42,
+            -0.3
+          ],
+          "pose": "stand",
+          "yaw": 0.2349,
+          "head_pitch": -0.05
+        },
+        {
+          "t": 11.2,
+          "position": [
+            0.6,
+            -0.42,
+            -0.3
+          ],
+          "pose": "stand",
+          "yaw": 0.2349,
+          "head_pitch": 0.0
+        },
+        {
+          "t": 12.0,
+          "position": [
+            0.6,
+            -0.42,
+            -0.3
+          ],
+          "pose": "stand",
+          "yaw": 0.2349,
+          "head_pitch": 0.0
+        }
+      ]
+    }
+  ],
+  "cameras": [
+    {
+      "shot_id": "sh094",
+      "start": 0,
+      "duration_s": 5.0,
+      "movement": "static",
+      "keyframes": [
+        {
+          "t": 0.0,
+          "position": [
+            1.509,
+            0.13,
+            -0.095
+          ],
+          "target": [
+            0.644,
+            0.1,
+            -0.494
+          ],
+          "fov": 33.3985
+        },
+        {
+          "t": 5.0,
+          "position": [
+            1.509,
+            0.13,
+            -0.095
+          ],
+          "target": [
+            0.644,
+            0.1,
+            -0.494
+          ],
+          "fov": 33.3985
+        }
+      ]
+    },
+    {
+      "shot_id": "sh095",
+      "start": 5.0,
+      "duration_s": 7.0,
+      "movement": "static",
+      "keyframes": [
+        {
+          "t": 0.0,
+          "position": [
+            0.94,
+            0.13,
+            -0.224
+          ],
+          "target": [
+            0.6,
+            0.13,
+            -0.3
+          ],
+          "fov": 26.9915
+        },
+        {
+          "t": 7.0,
+          "position": [
+            0.94,
+            0.13,
+            -0.224
+          ],
+          "target": [
+            0.6,
+            0.13,
+            -0.3
+          ],
+          "fov": 26.9915
+        }
+      ]
+    }
+  ],
+  "continuity": {
+    "actors": "cut",
+    "camera": "cut"
+  },
+  "warnings": [
+    "Both lenses sit at 0.05 m, just under the 0.10 m surface line, so the waterline cuts the frame exactly where camera.json asks.",
+    "The three glass table legs at (0.00, 0.00) are the only obstacles in the swim area and she surfaces 0.67 m clear of them.",
+    "S10 lenses are set at 0.13 m, just above the 0.10 m modelled water slab, rather than camera.json's 0.05 m: at 0.05 m the lens sits inside the water volume and the waterline does not read at all."
+  ],
+  "issues": [
+    {
+      "issue_id": "WBI-ep01-grp035-001",
+      "kind": "model_gap",
+      "severity": "advisory",
+      "question": "SCN-pool-of-tears models the flood at its true 0.10 m depth (four inches). S10 needs a 0.61 m Alice to surface, tread water and swim in it, which 0.10 m cannot hold; the size chain licenses an x12 tank build for these beats but the whitebox scene is the true-scale one. Sink her below the modelled floor, or have the pool re-modelled at swimming depth?",
+      "provisional": "Drop her foot anchor to y -0.42 so her chin sits on the 0.10 m surface and only head and shoulders show. The waterline, her visible fraction and every camera height are then correct; she is simply 0.42 m below the modelled floor plane in the spatial view.",
+      "options": [
+        {
+          "id": "sink",
+          "label": "Sink the swimmer below the modelled floor (the default)",
+          "consequence": "Camera views are correct; the spatial/top view shows her standing through the floor of the model.",
+          "cost": "none"
+        },
+        {
+          "id": "deepen",
+          "label": "Have p4-scene-model give SCN-pool-of-tears a swimming-depth water volume for S10",
+          "consequence": "grp035-grp037 re-staged on a real water body; the scene then disagrees with the four-inch flood the S08/S09 gauges use.",
+          "cost": "one scene-model re-issue",
+          "rewrites": [
+            "bible/scenes/SCN-pool-of-tears/whitebox.json"
+          ]
+        }
+      ],
+      "recommended": "sink",
+      "shots": [
+        "sh094",
+        "sh095"
+      ],
+      "actors": [
+        "CHAR-alice"
+      ],
+      "t_range_s": [
+        0,
+        12.0
+      ],
+      "sources": [
+        {
+          "file": "bible/scenes/SCN-pool-of-tears/whitebox.json",
+          "quote": "swim_area: Water x 0-0.85, y 0.3067-0.6933 (28 m x 7.2 m), 0.1 m deep at true scale."
+        },
+        {
+          "file": "directing/ep01/continuity_plan.json",
+          "quote": "the S10 swim beats are shot on an x12 tank build (SCN-pool-of-tears layout scale_note)"
+        }
+      ]
+    }
+  ]
+}

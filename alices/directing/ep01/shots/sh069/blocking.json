@@ -1,0 +1,39 @@
+{
+  "shot_id": "sh069",
+  "group_id": "grp027",
+  "scene_no": "S08",
+  "scene_id": "SCN-long-hall",
+  "duration_s": 8.0,
+  "is_dialogue": true,
+  "group_position": "middle shot of grp027 — Alice on the map start ground (curtain), unmoved.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "sit",
+      "start_pos": "sitting hunched at the low curtain, crying down into her own knees",
+      "space_fragment_en": "sitting hunched at the low curtain on screen-right, knees to her chin, facing down into her knees and crying",
+      "facing": "down into her knees; the self-address is spoken to them, not to the room and not to the lens",
+      "path": [],
+      "beats": [
+        { "t": 0.8, "action": "begins to cry again", "sync": "shot opens on it" },
+        { "t": 2.2, "action": "scolds herself down into her knees", "sync": "LN-ep01-018 begins" },
+        { "t": 4.6, "action": "the voice hardens into somebody else's", "sync": "LN-ep01-018 on 'ashamed'" },
+        { "t": 7.4, "action": "the crying does not stop", "sync": "held to the cut" }
+      ],
+      "performance": {
+        "objective": "shame herself out of crying with the voice of the grown-ups who taught her",
+        "goal": "shame herself out of crying",
+        "emotional_arc": "from helpless crying to borrowed severity, with the crying continuing underneath it",
+        "arc_from": "helpless crying",
+        "arc_to": "borrowed severity that does not work",
+        "trigger": { "line_ref": "LN-ep01-018", "word": "ashamed" },
+        "no_early_reaction": ["the voice hardening", "the head lifting", "the breath steadying"],
+        "forbidden_early": ["the voice hardening", "the head lifting", "the breath steadying"],
+        "end_state": "face still down in her knees, wet, mouth set hard between sobs, arms tight round her shins"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0007 (dream)", "note": "Alice alone; the composition gives her nobody to say it to." }
+}

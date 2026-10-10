@@ -1,0 +1,64 @@
+{
+  "character_id": "CHAR-alice",
+  "name": "Alice",
+  "tier": "S",
+  "layer": "both",
+  "gender": "female",
+  "gender_note": { "source_chapter": "ch001", "source_para": "ch001-p02", "quote": "the hot day made her feel very sleepy and stupid" },
+  "base_age_range": "9-10",
+  "base_age_note": { "inferred": true, "reason": "Source gives no number; H1 ruling 5.6 A and CHAR-alice index entry fix 'about ten'. Base look is the waking-frame girl of Friday 4 July 1862; she keeps this same look throughout the dream (size changes are SUP-003 staging, not age changes)." },
+  "hair": {
+    "color": "warm mid-brown",
+    "style": "worn loose with a centre parting, straight to softly waved, no ringlets, no hairband; stray strands keep falling across her eyes and she tosses her head to clear them",
+    "length": "long, past the shoulder blades, slightly overgrown",
+    "source_chapter": "ch002",
+    "source_para": ["ch002-p10", "ch007-p09", "ch012-p68"],
+    "quote": "mine doesn’t go in ringlets at all / Your hair wants cutting / that queer little toss of her head to keep back the wandering hair that _would_ always get into her eyes",
+    "colour_inferred": true,
+    "reason": "Texture, length and behaviour are sourced; the colour is not stated and follows the user style reference refs/style/alice.jpeg (long brown hair)."
+  },
+  "eyes": {
+    "color": "grey-blue",
+    "shape": "large, wide-set, bright and alert",
+    "source_chapter": "ch012",
+    "source_para": "ch012-p68",
+    "quote": "the bright eager eyes were looking up into hers",
+    "colour_inferred": true,
+    "reason": "Brightness/eagerness is sourced; colour not stated, chosen as a common English colouring that reads clearly against the brown hair and blue dress, and shared with CHAR-alice-sister as a family trait."
+  },
+  "skin": { "tone": "fair, lightly sun-flushed cheeks from a hot July afternoon outdoors", "inferred": true, "reason": "Not described; upper-middle-class English child of 1862 on a hot summer day (ch001-p02 'the hot day')." },
+  "face": {
+    "shape": "oval, soft child's face",
+    "features": ["small straight nose", "full lower lip", "straight brows a shade darker than the hair", "no freckles"],
+    "default_expression": "curious, frank, slightly impatient; chin lifts when she stands up to authority",
+    "inferred": true,
+    "reason": "Face shape/features not described; expression follows her conduct (ch008-p19 'very loudly and decidedly'; CUL-002 'chin up, without groveling')."
+  },
+  "build": {
+    "height_range_cm": [132, 138],
+    "body_type": "slight, straight-backed ten-year-old; small hands",
+    "scale_reference": "ANCHOR for all character scale notes in this batch: Alice at her true size = 135 cm. Every size beat (ten inches, two feet, nine feet, 'a mile high') is SUP-003 forced perspective / scaled sets relative to this anchor, never a change to this card.",
+    "source_chapter": "ch012",
+    "source_para": "ch012-p68",
+    "quote": "once again the tiny hands were clasped upon her knee",
+    "height_inferred": true,
+    "reason": "Height not stated; typical height of a well-fed English girl of about ten; 'tiny hands' sourced."
+  },
+  "marks": [
+    { "type": "habit", "position": "head", "description": "the toss of the head to clear hair from her eyes — her recognisable gesture", "source_chapter": "ch012", "source_para": "ch012-p68" },
+    { "type": "prop_in_pocket", "position": "pinafore pocket", "description": "a small box of comfits and her thimble live in her pocket", "source_chapter": "ch003", "source_para": ["ch003-p23", "ch003-p26"] }
+  ],
+  "default_outfit_tone": {
+    "summary": "pale cornflower-blue cotton summer day dress with short puffed sleeves and a full skirt to just below the knee over petticoats, a plain white cotton pinafore apron with a front pocket over it, white stockings, black flat ankle-strap shoes",
+    "silhouette_1862": "child's crinoline-era bell skirt (petticoats, no hoop), short sleeves, rounded neckline; the white pinafore reads as a work apron, which is why the White Rabbit mistakes her for his housemaid",
+    "source_chapter": "ch012",
+    "source_para": ["ch012-p01", "ch003-p23"],
+    "quote": "she tipped over the jury-box with the edge of her skirt / she put her hand in her pocket",
+    "colour_inferred": true,
+    "reason": "Skirt and pocket are sourced; blue dress + white pinafore follows the user style reference refs/style/alice.jpeg. Full costume breakdown belongs to 06-art/costume (Phase 4)."
+  },
+  "performer_coding": null,
+  "doubling": null,
+  "events": ["ev0001", "ev0053", "ev0054"],
+  "prompt_base_en": "a ten-year-old English girl in 1862, long loose warm-brown hair with a centre parting and stray strands across her eyes, bright grey-blue eyes, fair skin with sun-flushed cheeks, slight build, pale blue short-sleeved cotton dress with full knee-length skirt, white pinafore apron with a pocket, white stockings, black ankle-strap shoes"
+}

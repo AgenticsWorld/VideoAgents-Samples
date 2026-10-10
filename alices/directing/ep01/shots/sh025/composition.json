@@ -1,0 +1,29 @@
+{
+  "shot_id": "sh025",
+  "scene_id": "SCN-falling-dream",
+  "size": "close",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "mid_left",
+    "anchor_xy": [0.38, 0.52],
+    "size_in_frame": "the sh024 profile exactly, face about 0.46 of frame height — held for nine seconds"
+  },
+  "headroom": "as sh024: hair breaking the top edge. As the last pegs clear the top of frame the upper band goes to pure black, and that black then comes down over the rest of the picture.",
+  "horizon_eyeline": "No horizon. Her eyeline is level at 0.46 until the lids close; her head then tips toward frame right, dropping the eyeline out of level by about eight degrees — the only tilt in the shot, and it belongs to her neck, not to the camera.",
+  "layers": {
+    "fg": "her floating hair, thinning as the air goes still",
+    "mg": "her profile, unmoved from sh024",
+    "bg": "the last pictures on pegs, then bare pegs, then nothing — the background empties from the bottom of frame upward and is plain dark for the last three seconds"
+  },
+  "gaze": {
+    "direction": "frame_right",
+    "lead_room": "right",
+    "note": "the sh024 lead room is kept and then vacated: her eyes close and the 0.30 of open shaft ahead of her face stays composed and empty for the rest of the take. The audience must be able to point at the frame where the dream starts, so nothing else in the picture is allowed to change at that moment."
+  },
+  "balance": "The sh024 balance, held past comfort. As the background empties, the frame becomes a lit profile on black — the most reduced composition in the episode.",
+  "leading_lines": "The travelling peg rail runs out of the top of frame and leaves the picture with no lines at all. The last thing to go is the only thing that was moving.",
+  "eye_first": "Her closed eye, and it stays there. The two heavy thumps land over a frame the eye has nowhere to leave.",
+  "safe_area_ok": true,
+  "constraint_binding": "MUST NOT BE CUT INSIDE: one unbroken take from the eyes closing, through the two-second hold, to the dark. The composition is built to make an internal cut visibly impossible — there is no second element, no alternate size and no reframe anywhere in it, so any cut inside would have to be a jump cut on the same face.",
+  "pairs_with": "sh024 — the same profile close, held. Subject placement, scale and lens axis are identical; only the background emptying and the head tip change."
+}

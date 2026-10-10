@@ -1,0 +1,29 @@
+{
+  "id": "CRE-001",
+  "name": "The White Rabbit (waking-world, real animal)",
+  "detail_source": "bible/creatures/creature.json#CRE-001 forms[0] (stage waking-real)",
+  "register": "waking world: style.json negative_prompt_waking_addon_en applied; no Art Nouveau, no fantasy treatment",
+  "sheet": "sheet.png",
+  "sheet_stage": "waking-real",
+  "variants": [],
+  "variants_waiver": "creature.json lists a single form (waking-real, ch001 only); mount.json has no entry (mounts: []). No stage variant exists to draw.",
+  "scale": { "prompt_token": "a small ordinary white rabbit, about knee-to-shin height on a ten-year-old child" },
+  "selection": {
+    "layout_check": "pass: four panels (front / side / back / full-height head close-up), one rabbit per panel, same individual",
+    "identifier_hits": {
+      "size: small ordinary rabbit": true,
+      "surface: pure white short dense fur, pink skin through ear fur and at nose": true,
+      "head: compact rounded head, long upright ears, pink nose, long white whiskers": true,
+      "eyes: pink albino eyes": true,
+      "marks: no clothing, no waistcoat, no pocket watch, no collar": true
+    },
+    "no_rider_check": true,
+    "no_person_check": true,
+    "style_check": "pass: photographed 35mm look, plain period realism, no ornament",
+    "self_check_defects": [
+      { "severity": "minor", "issue": "Panel 2 (side): the rabbit's hindquarters run past the right panel edge, so the side view is slightly cropped at the rump." }
+    ],
+    "rerolls": []
+  },
+  "pending_H2": null
+}

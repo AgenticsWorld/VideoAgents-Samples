@@ -1,0 +1,493 @@
+{
+  "schema_version": "whitebox_plan.v1",
+  "group_id": "grp008",
+  "scene_id": "SCN-falling-dream",
+  "basis": "Alice runs the entry_tunnel -> shaft_centre line: prone in the 0.75 m tunnel on its 6.0 m floor, over the lip at t=3.6, dropping clear and coming upright by t=5.0, then a steady slow drift down the open centre at about 0.11 m/s, reaching y 3.28 at the group end. She drifts to within 0.38 m of the pantry shelf face for the marmalade jar at t=12.8 and returns to the centre for sh021. All camera rigs except sh017 travel downward with her at her own drift rate: camera.json's own speed notes declare the framing locked ON HER ('the camera descends with her so she holds one place in frame'), so movement stays static and nothing pans, tilts or reframes - only the whole rig falls with the subject.",
+  "actors": [
+    {
+      "id": "CHAR-alice",
+      "kind": "person",
+      "size_m": [
+        0.378,
+        1.35,
+        0.297
+      ],
+      "keyframes": [
+        {
+          "t": 0.0,
+          "position": [
+            0.0875,
+            6.0,
+            -1.4
+          ],
+          "pose": "prone",
+          "yaw": 3.1416
+        },
+        {
+          "t": 3.6,
+          "position": [
+            0.0875,
+            6.0,
+            -1.21
+          ],
+          "pose": "prone",
+          "yaw": 3.1416
+        },
+        {
+          "t": 4.2,
+          "position": [
+            0.07,
+            5.8,
+            -1.1
+          ],
+          "pose": "prone",
+          "yaw": 3.1416
+        },
+        {
+          "t": 5.0,
+          "position": [
+            0.04,
+            5.45,
+            -0.85
+          ],
+          "pose": "stand",
+          "yaw": 3.1416,
+          "head_pitch": -0.7
+        },
+        {
+          "t": 6.8,
+          "position": [
+            0.02,
+            5.15,
+            -0.6
+          ],
+          "pose": "stand",
+          "yaw": 3.1416,
+          "head_pitch": -0.5
+        },
+        {
+          "t": 10.0,
+          "position": [
+            0.0,
+            4.8,
+            -0.2
+          ],
+          "pose": "stand",
+          "yaw": 3.1416,
+          "head_pitch": -0.2
+        },
+        {
+          "t": 12.0,
+          "position": [
+            0.1,
+            4.58,
+            0.1
+          ],
+          "pose": "stand",
+          "yaw": 0.6272,
+          "head_pitch": 0.1
+        },
+        {
+          "t": 12.8,
+          "position": [
+            0.26,
+            4.46,
+            0.4
+          ],
+          "pose": "stand",
+          "yaw": 0.6272,
+          "head_pitch": 0.3
+        },
+        {
+          "t": 15.0,
+          "position": [
+            0.26,
+            4.2,
+            0.4
+          ],
+          "pose": "stand",
+          "yaw": 0.6272,
+          "head_pitch": 0.35
+        },
+        {
+          "t": 16.4,
+          "position": [
+            0.24,
+            4.08,
+            0.36
+          ],
+          "pose": "stand",
+          "yaw": 0.6272,
+          "head_pitch": 0.2
+        },
+        {
+          "t": 18.0,
+          "position": [
+            0.14,
+            3.93,
+            0.22
+          ],
+          "pose": "stand",
+          "yaw": 0.6272,
+          "head_pitch": 0.85
+        },
+        {
+          "t": 20.0,
+          "position": [
+            0.06,
+            3.75,
+            0.1
+          ],
+          "pose": "stand",
+          "yaw": 0.6272,
+          "head_pitch": 0.85
+        },
+        {
+          "t": 21.4,
+          "position": [
+            0.04,
+            3.62,
+            0.06
+          ],
+          "pose": "stand",
+          "yaw": 1.529,
+          "head_pitch": 0.2
+        },
+        {
+          "t": 22.6,
+          "position": [
+            0.02,
+            3.5,
+            0.03
+          ],
+          "pose": "stand",
+          "yaw": 1.529,
+          "head_pitch": 0.0
+        },
+        {
+          "t": 24.0,
+          "position": [
+            0.0,
+            3.37,
+            0.0
+          ],
+          "pose": "stand",
+          "yaw": 1.529,
+          "head_yaw": -0.5
+        },
+        {
+          "t": 25.0,
+          "position": [
+            0.0,
+            3.28,
+            0.0
+          ],
+          "pose": "stand",
+          "yaw": 1.529,
+          "head_yaw": -0.5
+        }
+      ]
+    }
+  ],
+  "cameras": [
+    {
+      "shot_id": "sh017",
+      "start": 0,
+      "duration_s": 5.0,
+      "movement": "static",
+      "keyframes": [
+        {
+          "t": 0.0,
+          "position": [
+            0.0875,
+            6.55,
+            -2.6
+          ],
+          "target": [
+            0.0875,
+            5.3,
+            -0.2
+          ],
+          "fov": 46.3972
+        },
+        {
+          "t": 5.0,
+          "position": [
+            0.0875,
+            6.55,
+            -2.6
+          ],
+          "target": [
+            0.0875,
+            5.3,
+            -0.2
+          ],
+          "fov": 46.3972
+        }
+      ]
+    },
+    {
+      "shot_id": "sh018",
+      "start": 5.0,
+      "duration_s": 7.0,
+      "movement": "static",
+      "keyframes": [
+        {
+          "t": 0.0,
+          "position": [
+            0.1,
+            3.85,
+            -0.75
+          ],
+          "target": [
+            0.05,
+            5.9,
+            -0.82
+          ],
+          "fov": 46.3972
+        },
+        {
+          "t": 7.0,
+          "position": [
+            0.16,
+            2.98,
+            0.2
+          ],
+          "target": [
+            0.11,
+            5.03,
+            0.13
+          ],
+          "fov": 46.3972
+        }
+      ]
+    },
+    {
+      "shot_id": "sh019",
+      "start": 12.0,
+      "duration_s": 6.0,
+      "movement": "static",
+      "keyframes": [
+        {
+          "t": 0.0,
+          "position": [
+            0.774,
+            5.53,
+            -0.389
+          ],
+          "target": [
+            0.1,
+            5.53,
+            0.1
+          ],
+          "fov": 26.9915
+        },
+        {
+          "t": 6.0,
+          "position": [
+            0.814,
+            4.88,
+            -0.269
+          ],
+          "target": [
+            0.14,
+            4.88,
+            0.22
+          ],
+          "fov": 26.9915
+        }
+      ]
+    },
+    {
+      "shot_id": "sh020",
+      "start": 18.0,
+      "duration_s": 2.0,
+      "movement": "static",
+      "keyframes": [
+        {
+          "t": 0.0,
+          "position": [
+            0.59,
+            5.03,
+            0.22
+          ],
+          "target": [
+            0.59,
+            1.93,
+            0.22
+          ],
+          "fov": 33.3985
+        },
+        {
+          "t": 2.0,
+          "position": [
+            0.51,
+            4.85,
+            0.1
+          ],
+          "target": [
+            0.51,
+            1.75,
+            0.1
+          ],
+          "fov": 33.3985
+        }
+      ]
+    },
+    {
+      "shot_id": "sh021",
+      "start": 20.0,
+      "duration_s": 5.0,
+      "movement": "static",
+      "keyframes": [
+        {
+          "t": 0.0,
+          "position": [
+            -1.058,
+            4.45,
+            0.159
+          ],
+          "target": [
+            0.06,
+            4.45,
+            0.1
+          ],
+          "fov": 33.3985
+        },
+        {
+          "t": 5.0,
+          "position": [
+            -1.1185,
+            3.98,
+            0.0586
+          ],
+          "target": [
+            0.0,
+            3.98,
+            0.0
+          ],
+          "fov": 33.3985
+        }
+      ]
+    }
+  ],
+  "continuity": {
+    "actors": "cut",
+    "camera": "cut"
+  },
+  "warnings": [
+    "sh017 is the one genuinely fixed rig in S03: it stands in the entry tunnel 1.2 m behind her, which is past the modelled map edge because the tunnel is drawn as a 0.205 m stub that 'runs north off the map'. Nothing is modelled there, so nothing occludes.",
+    "Every other S03 rig translates downward with Alice at her drift rate, keeping her frame position fixed exactly as camera.json describes. No whitebox_contract is written for these shots because the host's static test forbids any rig translation and cannot express a camera falling with a free-falling subject.",
+    "The 6 m section carries one static instance of each fitting, so her modelled altitude does not line up with the dressing each shot names (she passes the pantry shelf at the right height, but the cupboards she posts the jar into are modelled at y 0.4-2.6, well below her at sh021). In the plate the dressing travels; in the whitebox it cannot. See WBI-ep01-grp001-001.",
+    "PROP-marmalade-jar is staged so sh019 has the object it is a close shot of: it starts on the modelled pantry shelf, comes into her hands at t=12.8 and is posted away at t=21.4. sh020's POV lens is moved 0.45 m off her own axis so her body does not block the drop."
+  ],
+  "issues": [
+    {
+      "issue_id": "WBI-ep01-grp008-001",
+      "kind": "model_gap",
+      "severity": "advisory",
+      "question": "Same root cause as WBI-ep01-grp001-001: inside the modelled 2.4 m shaft sh021 (40 mm, whole body at 0.72 of frame height) needs 3.13 m of standoff but only about 1.12 m is available, and the single static instance of each fitting cannot supply the dressing sh019/sh021 name at her modelled altitude. Ship the tighter in-model frame, or re-model the shaft first?",
+      "provisional": "Hold the authored axis, lens and height; stand the lens at the largest in-model standoff (1.12 m for sh021) and let the drift carry the descent. Positions, axes, eyelines and fall rate are correct; only field of view and which fitting is level with her are wrong.",
+      "options": [
+        {
+          "id": "remodel",
+          "label": "Re-model SCN-falling-dream at the dream shaft scale and re-stage S00/S03",
+          "consequence": "grp001/grp008/grp009/grp010 re-staged after a scene-model pass.",
+          "cost": "one scene-model re-issue",
+          "rewrites": [
+            "bible/scenes/SCN-falling-dream/whitebox.json"
+          ]
+        },
+        {
+          "id": "tight",
+          "label": "Ship the in-model frame (the default)",
+          "consequence": "The camera reference is tighter than the shot's size code for sh021 and the named dressing does not line up.",
+          "cost": "none"
+        }
+      ],
+      "recommended": "remodel",
+      "shots": [
+        "sh019",
+        "sh021"
+      ],
+      "actors": [
+        "CHAR-alice"
+      ],
+      "t_range_s": [
+        12.0,
+        25.0
+      ],
+      "sources": [
+        {
+          "file": "bible/scenes/SCN-falling-dream/whitebox.json",
+          "quote": "objects"
+        },
+        {
+          "file": "directing/ep01/shots/sh021/composition.json",
+          "quote": "subject.size_in_frame"
+        }
+      ]
+    }
+  ],
+  "props": [
+    {
+      "id": "PROP-marmalade-jar",
+      "shape": "cylinder",
+      "size_m": [
+        0.09,
+        0.13,
+        0.09
+      ],
+      "position": [
+        0.26,
+        5.41,
+        0.4
+      ],
+      "shot_ids": [
+        "sh019"
+      ],
+      "keyframes": [
+        {
+          "t": 0.0,
+          "position": [
+            0.5,
+            5.05,
+            0.731
+          ]
+        },
+        {
+          "t": 12.8,
+          "position": [
+            0.26,
+            5.41,
+            0.4
+          ]
+        },
+        {
+          "t": 18.0,
+          "position": [
+            0.14,
+            4.88,
+            0.22
+          ]
+        },
+        {
+          "t": 21.4,
+          "position": [
+            0.6,
+            3.7,
+            0.1
+          ]
+        },
+        {
+          "t": 25.0,
+          "position": [
+            0.75,
+            3.5,
+            0.06
+          ]
+        }
+      ]
+    }
+  ]
+}

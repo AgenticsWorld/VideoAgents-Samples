@@ -1,0 +1,29 @@
+{
+  "shot_id": "sh022",
+  "scene_id": "SCN-falling-dream",
+  "size": "wide",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "top_centre",
+    "anchor_xy": [0.50, 0.27],
+    "size_in_frame": "whole figure, small — about one fifth of frame height, exactly as in sh001"
+  },
+  "headroom": "about 0.13 of frame height of empty shaft above her crown — reproduced from sh001 without adjustment.",
+  "horizon_eyeline": "No horizon; the bookshelf edges and map-peg rails are the travelling horizontals. Her eyeline sits at 0.30 of frame height, level with the lens, as before.",
+  "layers": {
+    "fg": "the nearest bookshelf edge rising through the lower right corner, where the cupboard door was in sh001",
+    "mg": "Alice at the same place in frame, now settling back into the fall as if into an armchair, ankles crossing, hands coming to her lap",
+    "bg": "the second pass — bookshelves and schoolroom maps on pegs, each level cooler than the one above — and below her the open drop going black"
+  },
+  "gaze": {
+    "direction": "frame_right",
+    "lead_room": "right",
+    "note": "the one deliberate difference from sh001: there she looked frame left at the glazed cupboards; here she looks frame right at the bookshelves, which is the wall this pass belongs to. Same body, same place in frame, turned the other way — a later moment of the same descent, not a new shot."
+  },
+  "balance": "Identical to sh001: top-heavy, the lower two thirds given to dressing and dark. The recognition depends on nothing being adjusted.",
+  "leading_lines": "The same funnel of converging shaft walls and the same ladder of travelling horizontals; only the furniture on the rungs has changed.",
+  "eye_first": "Her face and floating hair, as before — and the audience should recognise the frame before they read the new dressing. That order is the point.",
+  "safe_area_ok": true,
+  "constraint_binding": "Pass 2 only: bookshelves and schoolroom maps on pegs, no cupboard or jar in frame, each level cooler than the one above. Must read as a later moment of the same descent — so anchor_xy, subject scale, headroom and lens axis are reproduced from sh001 exactly.",
+  "pairs_with": "sh001 — the same locked set-up. Composition reproduced element for element; the only licensed differences are the dressing and her gaze direction."
+}

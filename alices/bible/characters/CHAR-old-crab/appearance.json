@@ -1,0 +1,52 @@
+{
+  "character_id": "CHAR-old-crab",
+  "name": "Old Crab",
+  "tier": "extra",
+  "layer": "dream",
+  "revision": { "change_id": "BIB-0027", "task_id": "p4-cr-appearance", "date": "2026-09-23", "note": "Rewritten from the human-performer reading to a photoreal CGI animal." },
+  "rendering": {
+    "mode": "photoreal_cgi_animal",
+    "rule": "bible/cultivation.json SUP-002 (amended BIB-0027); member of FAC-caucus-race-company (no uniform)",
+    "species": "edible (brown) crab (Cancer pagurus), large old female",
+    "limits": "Crab anatomy throughout; speech by mouthpart movement with eyestalk and claw gestures. No clothing, no face added to the carapace."
+  },
+  "gender": "female",
+  "gender_note": { "source_chapter": "ch003", "paragraph": "ch003-p43", "quote": "an old Crab took the opportunity of saying to her daughter … “Hold your tongue, Ma!” said the young Crab", "note": "Sourced (not inferred). characters/index.json lists gender 'unspecified' — reported in qa/defects/DEF-p3-appearance-201.json." },
+  "base_age_range": "60-70",
+  "base_age_note": { "source_chapter": "ch003", "paragraph": "ch003-p43", "quote": "an old Crab", "inferred": true, "reason": "'Old' and a grown daughter are sourced; persona band kept for voice casting. As an animal: a big, heavy, old crab with a worn, barnacled shell." },
+  "hair": {
+    "coat": "shell (carapace)",
+    "color": "brick-red to rust-brown 'pie-crust' carapace, darker and duller with age, cream-yellow underside",
+    "style": "pie-crust scalloped shell edge, pitted and scuffed, a few barnacles and a trace of weed; wet",
+    "inferred": true,
+    "reason": "Species colouring; age marks carry the sourced 'old'."
+  },
+  "eyes": { "color": "black", "expression": "small eyes on short stalks, raised and swivelling reprovingly at her daughter", "inferred": true, "reason": "Species." },
+  "skin": { "tone": "see hair; jointed legs rust-brown with paler joints", "inferred": true, "reason": "Species." },
+  "face": { "shape": "front of the carapace with mouthparts below the eyestalks", "features": ["busy working mouthparts when she lectures", "eyestalks raised"], "inferred": true, "reason": "Species." },
+  "build": {
+    "height_range_cm": [7, 9],
+    "height_note": "Standing height; carapace width 18-22 cm, species-true for a big old female.",
+    "body_type": "broad, oval, heavy",
+    "posture": "sidles sideways; raises one black-tipped claw and wags it at her daughter while lecturing",
+    "scale_reference": "On the bank with the shrunken Alice (SUP-003), low at her feet; larger than her daughter.",
+    "inferred": true,
+    "reason": "Species-true size."
+  },
+  "entry_state": { "state": "on the bank with the party, wet from the pool", "source_chapter": "ch003", "paragraph": "ch003-p01", "quote": "all dripping wet, cross, and uncomfortable" },
+  "marks": [
+    { "type": "anatomy", "description": "heavy claws with black tips, one raised and wagged as she moralises", "position": "claws", "inferred": true, "reason": "Species; gesture designed." },
+    { "type": "age", "description": "barnacles and scuffing on the carapace", "position": "carapace", "inferred": true, "reason": "Carries 'old'." }
+  ],
+  "signature_items": [
+    { "item": "always beside her daughter CHAR-young-crab", "source_chapter": "ch003", "paragraph": "ch003-p43" }
+  ],
+  "default_outfit_tone": {
+    "summary": "none: she wears nothing; her look is the old brick-red pie-crust shell",
+    "inferred": true,
+    "reason": "The text gives her no clothing; per SUP-002 (BIB-0027) the old matron's dress, cap and claw mitts are dropped."
+  },
+  "pair_rule": "With CHAR-young-crab: same species so they read as mother and daughter. The mother is bigger, darker (rust-brown), barnacled and duller; the daughter smaller, brighter (coral-orange) and clean-shelled.",
+  "doubling": null,
+  "prompt_base_en": "photoreal large old edible crab on a muddy pool bank, brick-red to rust-brown pie-crust carapace pitted and scuffed with a few barnacles, wet, heavy black-tipped claws with one raised and wagging, small black eyes on raised stalks, standing side-on, natural crustacean anatomy, macro live-action film plate"
+}

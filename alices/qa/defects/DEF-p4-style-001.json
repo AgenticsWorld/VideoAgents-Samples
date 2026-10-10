@@ -1,0 +1,92 @@
+{
+  "id": "DEF-p4-style-001",
+  "opened_by": "06-art/art-director",
+  "opened_on": "2026-09-22",
+  "task_id": "p4-style",
+  "assigned_to": [
+    "user (H2 ruling at G4)"
+  ],
+  "domain": "style",
+  "status": "closed",
+  "closed_on": "2026-09-23",
+  "closed_by": "06-art/art-director",
+  "resolution": "superseded by BIB-0027 and locked by the user's H2 signature (approval ba96732d); see runs/g4/gate.json",
+  "severity": "minor",
+  "summary": "User style reference refs/style/alice.jpeg depicts a literal giant CGI blue caterpillar in an Art Nouveau cathedral; the H1-locked Bible (SUP-002/SUP-010, cultivation XA-magic-02) binds every talking figure to a human performer with no CGI animals, and period lock 1862 excludes Art Nouveau.",
+  "findings": [
+    {
+      "id": "DEF-p4-style-001-a",
+      "issue": "Creature rendering: reference shows a literal animal-bodied giant caterpillar; Bible SUP-002 (approved H1 5.1 A) requires a human performer (CHAR-caterpillar performer_concept).",
+      "current_handling": "Bible kept; style.json borrows only the reference's palette/lighting/texture/scale grammar; 'giant insect, literal animal-bodied character, CGI creature' in negative_prompt_en (the word caterpillar itself is not banned — CHAR-caterpillar is a Bible character).",
+      "options": [
+        "A (recommended): keep SUP-002 as locked — reference governs look, not creature ontology",
+        "B: amend SUP-002/SUP-010 via Bible change request to allow creature-bodied dream figures (large redo: characters, creatures, costumes, negatives)"
+      ]
+    },
+    {
+      "id": "DEF-p4-style-001-b",
+      "issue": "Architecture: reference ironwork is 1890s Art Nouveau; H1 5.6 A locks 1862.",
+      "current_handling": "Translated to 1850s-60s Oxford Gothic Revival cast iron + glass (CR-002; same as SCN-long-hall).",
+      "options": [
+        "A (recommended): keep translation",
+        "B: allow Art Nouveau as a dream-only anachronism"
+      ]
+    },
+    {
+      "id": "DEF-p4-style-001-c",
+      "issue": "Finish: reference is a digital matte painting; brief/SUP require photographed live-action.",
+      "current_handling": "Translated to a 35mm photographed look (CR-001).",
+      "options": [
+        "A (recommended): photographed look",
+        "B: painterly/CG look"
+      ]
+    }
+  ],
+  "due_gate": "G4",
+  "routing_note": "Surface on the H2 sign-off page; art-director does not change bible/cultivation.json.",
+  "user_response": {
+    "at": "2026-09-22",
+    "channel": "chat",
+    "answer": "会说话的角色可以用CGI动物，因为影片应该是写实奇幻风格；另外环境加入穆夏绘画的风格",
+    "answer_en": "Talking characters may be CGI animals, because the film should be realistic fantasy; also add Alphonse Mucha painting style to the environments.",
+    "mapped_options": {
+      "DEF-p4-style-001-a": "B (amend SUP-002/SUP-010: photoreal CGI talking animals and creatures; card figures stay human, SUP-004)",
+      "DEF-p4-style-001-b": "B, extended: Art Nouveau / Mucha painterly language for dream environments as a dream-only anachronism; 1862 lock kept for costume, props and the waking world",
+      "DEF-p4-style-001-c": "not changed by the ruling: the finish stays a photographed live-action look (Mucha realised as physical sets and set extensions, not flat illustration); re-confirm at H2"
+    }
+  },
+  "user_response_history": [
+    {
+      "at": "2026-09-22T22:11:27+08:00",
+      "answer": "暂缓 — user will explain preference in chat"
+    }
+  ],
+  "bible_change": {
+    "change_id": "BIB-0027",
+    "task_id": "p4-cr-cgi-mucha-bible",
+    "files": [
+      "bible/cultivation.json",
+      "bible/world.json",
+      "bible/_index.json",
+      "bible/economy.json",
+      "bible/h1_summary.md",
+      "bible/changelog.md"
+    ]
+  },
+  "pending_redo": "DONE. The downstream redo (style.json, characters, creatures, costumes, dream scenes, ep01 story notes) is listed in bible/changelog.md BIB-0027 impacted_stale and was dispatched by workflow-orchestrator. bible/style.json was re-issued at v1.1.0 without the CGI-creature / Art Nouveau negatives, and the H2 sign-off of 2026-09-23 confirmed the scope.",
+  "closure": {
+    "closed_on": "2026-09-23",
+    "closed_by": "06-art/art-director",
+    "task_id": "p4-h2-style",
+    "gate": "G4",
+    "approval_id": "ba96732d",
+    "record": "runs/g4/gate.json",
+    "change_id": "BIB-0028",
+    "findings_outcome": {
+      "DEF-p4-style-001-a": "option B adopted: photoreal CGI talking animals and creatures; card figures stay human (SUP-004). Folded into style.json at BIB-0027 and locked at H2.",
+      "DEF-p4-style-001-b": "option B extended: Mucha / Art Nouveau full in the dream, at most subtle in the waking frame (style.json CR-014, open point H2-mucha-scope-and-finish, approved_H2). The 1862 lock still holds for costume, props and the waking world.",
+      "DEF-p4-style-001-c": "unchanged by the ruling and re-confirmed at H2: the finish stays a photographed live-action look, not painterly or matte-painting (style.json CR-001; negative_prompt_en still bans 'digital matte painting look')."
+    },
+    "note": "The gate decision was PASS_WITH_WAIVER. The waived defects are unrelated to this ticket (image self-check flaws kept because the auto-reroll budget is 0); runs/g4/gate.json holds the full list."
+  }
+}

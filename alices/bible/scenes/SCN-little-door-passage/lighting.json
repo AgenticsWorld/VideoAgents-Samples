@@ -1,0 +1,71 @@
+{
+  "_meta": {
+    "file": "bible/scenes/SCN-little-door-passage/lighting.json",
+    "owner": "05-scenes/lighting",
+    "task_id": "p3-lighting-sb1",
+    "attempt": 1,
+    "generated": "2026-09-22",
+    "status": "draft_v1",
+    "enum_set": "LGT-ENUM-v1 (defined once in runs/p3-lighting-sb1/result.json)",
+    "inputs": ["bible/scenes/SCN-little-door-passage/environment.json", "bible/scenes/SCN-little-door-passage/architecture.json"]
+  },
+  "scene_id": "SCN-little-door-passage",
+  "layer": "dream",
+  "int_ext": "INT",
+  "daylight_access": "far_opening_only",
+  "dream_growth": {
+    "grows_from": "the waking sun of the current clock slot: LGT-riverbank-01 values at ch001, the lower late-afternoon sun (about 23 deg) at ch007",
+    "how": "The passage is a dim gap between the hall's lamp-heat and the real daylight. The garden arch at the west end is the one place in the dream interior where the actual afternoon sun shines through, so its colour tracks the waking bank.",
+    "ruling": "runs/h1-ruling/ruling.json 5.2 A"
+  },
+  "schemes": [
+    {
+      "lighting_scheme_id": "LGT-little-door-passage-01",
+      "condition": {"time_of_day": "early_afternoon", "weather": "none_enclosed"},
+      "state_refs": ["SCN-little-door-passage-S01"],
+      "waking_clock": "14:24-14:26 GMT (Alice asleep on the bank)",
+      "sun": {"elevation_deg_approx": 52, "azimuth_deg_approx": 232, "note": "falls on the garden beyond the arch, not in the passage"},
+      "key_source": "far_daylight_opening",
+      "key": "the small garden arch at the far (west) end, full of bright high-sun daylight",
+      "direction": "far_end_backlight",
+      "direction_note": "seen from the hall end the arch is a bright backlight at the end of a dark tube; the passage walls catch only a grazing sheen near the arch",
+      "fill": {"source": "lamp_spill", "note": "warm amber spill from the hall lamps behind the camera at the door end, on the kneeling girl's face"},
+      "practicals": ["(behind) the long hall's oil lamps, as warm spill only"],
+      "color_temp": "neutral (~4500K)",
+      "kelvin_approx": 5400,
+      "contrast": "hard",
+      "quality": "hard",
+      "atmosphere": "hot, still air at the hall end; glint of fountain spray in the sunlit garden",
+      "prompt_fragment_en": "Crawl-passage light: the tiny stone passage is dim, lit at the hall end only by warm amber lamplight from behind, while at its far end a small arch blazes with bright white high-sun garden daylight, sunlit flower beds and glinting fountain spray, flaring into the dark tunnel as a hard backlight; very high contrast between the dark tunnel and the brilliant opening, a mood of longing.",
+      "source_chapter": "ch001",
+      "sources": ["ch001-p13", "ch001-p14"],
+      "inferred": false,
+      "designed_fields": ["kelvin_approx", "fill", "sun"],
+      "reason": "'The loveliest garden', 'bright flowers' and 'that dark hall' are explicit (ch001-p14). The sun values follow the waking clock (environment S01)."
+    },
+    {
+      "lighting_scheme_id": "LGT-little-door-passage-02",
+      "condition": {"time_of_day": "late_afternoon", "weather": "none_enclosed"},
+      "state_refs": ["SCN-little-door-passage-S02"],
+      "waking_clock": "17:36-17:38 GMT (Alice asleep on the bank)",
+      "sun": {"elevation_deg_approx": 23, "azimuth_deg_approx": 278, "note": "low western sun on the garden beyond, shining almost straight down the west-running passage"},
+      "key_source": "far_daylight_opening",
+      "key": "the garden arch at the west end, now full of warm, low late-afternoon sun that reaches a little way along the passage floor",
+      "direction": "far_end_backlight",
+      "direction_note": "low western sun is nearly on the passage axis, so a warm tongue of light runs along the floor toward her; she walks into it, brighter with every step",
+      "fill": {"source": "lamp_spill", "note": "warm amber spill from the hall at her back"},
+      "practicals": ["(behind) the long hall's oil lamps, as warm spill only"],
+      "color_temp": "neutral (~4500K)",
+      "kelvin_approx": 4000,
+      "contrast": "hard",
+      "quality": "soft",
+      "atmosphere": "a faint cooler draught from the garden end",
+      "prompt_fragment_en": "Crawl-passage light: the tiny stone passage is dim, with warm amber lamplight fading behind, and at its far end the arch glows with warm golden late-afternoon garden sunlight that spills along the stone floor and grows brighter with every step toward it, flowers and cool fountains glowing beyond; strong contrast easing into warmth, a mood of hopeful release.",
+      "source_chapter": "ch007",
+      "sources": ["ch007-p105"],
+      "inferred": true,
+      "reason": "The walk into the garden is explicit (ch007-p105) but no light is described. The late-afternoon sun values are designed from the proportional dream clock (environment S02, sun about 23 deg). Azimuth is computed for Oxford on 4 July at 17:36 GMT."
+    }
+  ],
+  "special": []
+}

@@ -1,0 +1,92 @@
+{
+  "task_id": "p6-concept-audit-ep01",
+  "agent": "06-art/art-director",
+  "project": "alices",
+  "ep": "ep01",
+  "attempt": 1,
+  "status": "done",
+  "finished_at": "2026-09-23",
+  "instruction_summary": "Section 6A concept-art coverage audit for ep01 against the finalised shot_list; produce directing/ep01/concept_coverage.json as the G6 precondition for H3A and p7-* dispatch.",
+
+  "outputs": [
+    "directing/ep01/concept_coverage.json",
+    "runs/p6-concept-audit-ep01/result.json"
+  ],
+
+  "result": {
+    "concept_coverage_ok": true,
+    "entities_total": 18,
+    "entities_by_type": { "characters": 3, "creatures": 1, "scenes": 7, "props": 7 },
+    "required_views_total": 39,
+    "in_stock": 39,
+    "missing": 0,
+    "coverage_pct": 100.0,
+    "gaps": [],
+    "refills_dispatched": [],
+    "images_generated": 0
+  },
+
+  "entities": {
+    "characters": ["CHAR-alice (37 groups / 87 shots, COS-001)", "CHAR-alice-sister (grp002/003/005, 5 shots, COS-003)", "CHAR-white-rabbit (grp011/012/028/029, 8 shots, COS-006)"],
+    "creatures": ["CRE-001 (grp004, grp006; sh008/sh010/sh012)"],
+    "scenes": ["SCN-falling-dream", "SCN-riverbank", "SCN-field-hedge-burrow", "SCN-shaft-landing-passage", "SCN-long-hall", "SCN-little-door-passage", "SCN-pool-of-tears"],
+    "props": ["PROP-drink-me-bottle", "PROP-eat-me-cake", "PROP-golden-key", "PROP-orange-marmalade-jar", "PROP-sister-book", "PROP-white-kid-gloves-and-fan", "PROP-white-rabbit-pocket-watch"]
+  },
+
+  "key_rulings": [
+    "CRE-001 and CHAR-white-rabbit kept strictly separate, each with its own sheet; neither reported as the other's gap.",
+    "ep01 requires ZERO costume sheets: all three costumes in the episode (COS-001 / COS-003 / COS-006) are their character's default outfit and are carried by that character's sheet.png per the costume_sheets.json ledgers. Section 6A only requires sheet_<COS-id>.png for a non-default costume. The costume-sheet deferral therefore never bites in ep01.",
+    "CRE-001 requires no stage variant: creature.json forms[] holds a single form ('waking-real', since ch001) and mount.json registers zero mounts project-wide.",
+    "Scene required views = layout_top.png + layout.json only; grid_9views.png is retired and not counted. No ep01 scene carries a legacy single-angle main_*.png.",
+    "Prop images turned out to be fully in stock on this project (main_01 + scale_ref_01 for all seven), so the prop-image deferral is moot for ep01; it is still recorded as an explicit exclusion rather than a gap.",
+    "None of the 7 H2-waived majors in runs/g4/gate.json was re-raised. Image-quality waivers are not coverage gaps; the three that touch ep01 entities are carried forward as prompt text-layer instructions instead."
+  ],
+
+  "verification": {
+    "path_existence": "All 39 claimed in-stock paths stat-ed on disk (no inference from naming convention); a post-write re-walk of concept_coverage.json re-checked every row's `exists` flag against the filesystem — 0 mismatches.",
+    "image_dimensions": "Read from file headers. All 3 character sheets, the creature sheet and all 7 scene layout_top plates are 2560x1440 (= the 3,686,400 px MIN_PIXELS floor). Prop images are 1280x720 / 1024x1024.",
+    "host_cli": {
+      "command": "python3 code/blocking_map_check.py --project alices --ep ep01",
+      "exit_code": 0,
+      "verdict": "PASS — 0 violations, 7 WARN",
+      "warn_explanation": "The 7 WARNs are all '无法读取 layout_top.png (No module named PIL)' — Pillow is not importable from this shell, so the script could not read pixel size itself. Verified independently from the JPEG SOF headers; all seven plates meet the floor exactly."
+    },
+    "cross_check": "directing/ep01/storyboard.json yields an identical entity ID set to shot_list.json (3 CHAR, 1 CRE, 7 SCN, 7 PROP, 3 COS) — no storyboard-only entity was dropped in the shot-planning pass."
+  },
+
+  "user_deferred_exclusions_recorded": [
+    "scene grid_9views.png — retired, not a required view",
+    "prop concept images — deferred by user instruction (moot here: all present)",
+    "costume concept sheets — deferred by user instruction (moot here: none required)"
+  ],
+
+  "advisory_notes": [
+    "Prop images sit at 1280x720 / 1024x1024, below the 2560x1440 spec for newly generated video-reference images. Signed off at G4 under the older prop spec; reuse carries no pixel floor, so it blocks nothing. Re-rendering would be a user-ordered image job, not an automatic refill.",
+    "No new S/A lead appeared in ep01 that Phase 4 had missed, so no H3A preview-page 'new concept art, confirm as an H2 extension' callout is needed."
+  ],
+
+  "boundaries_observed": [
+    "No image was generated and nothing was dispatched — refills route through the orchestrator to character-concept / environment-concept / prop / creature-concept, and the auto-rerun budget is 0.",
+    "No bible/ content was modified. No new defect was opened (nothing found that was not already a signed H2 waiver or an existing open minor).",
+    "concept_coverage.json was written directly in one pass; no generator script. The only code run was the host CLI blocking_map_check.py plus inline verification one-liners."
+  ],
+
+  "acceptance": {
+    "concept_coverage_ok": "PASS — entity x required-view matrix 39/39, every path verified on disk.",
+    "qa": "11-qa/visual-qa and 11-qa/character-consistency-qa both set to 0 by the user — not dispatched, gate treats them as passed.",
+    "eval_rubric": "none — 质量评委 = 0, no evaluation scoring.",
+    "skills": [
+      { "id": "performance-control", "state": "skipped", "reason": "Project-enabled but not applicable: this is a read-only coverage audit with no dialogue / emotional-peak authoring, no blocking intent layer and no prompt evidence layer. No skill_report registration made." }
+    ]
+  },
+
+  "downstream": {
+    "unblocked": "H3A may be raised for ep01; p7-* dispatch for ep01 is unblocked as far as the section 6A gate is concerned.",
+    "carry_forward_to_p7_prompt": [
+      "CHAR-white-rabbit: write corrective quadruped / rearing-on-haunches posture wording (H2 waiver CR-003/CR-015).",
+      "Any prop image attached as a scale anchor: spot-check against the DEF-p4-prop-502 finding list.",
+      "Wardrobe wording comes from costumes.json visual_en, not from the sheet images (DEF-p4-costume-sheet-901 follow-up)."
+    ],
+    "orchestrator_note": "DEF-p4-char-concept-201 / -202, DEF-p4-costume-001, DEF-p4-cr-costume-001 are text-only Bible reconciliations that the G4 gate records as due before ep01 p7-prompt consumes those fragments. They are not coverage gaps and do not hold this audit, but they are still open against memory-bible."
+  }
+}

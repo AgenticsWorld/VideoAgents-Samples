@@ -1,0 +1,44 @@
+{
+  "scene_id": "SCN-riverbank",
+  "inherits": null,
+  "layer": "waking",
+  "int_ext": "EXT",
+  "form": "Open grassy river bank under mature shade trees, sloping down to a still reed-edged backwater of the upper Thames; no built structure in the playing area",
+  "stories": 0,
+  "source_chapter": "ch001",
+  "culture_ref": "world.json#frame.place; geography.json#LOC-riverbank, LOC-river-backwater",
+  "period": "Friday 4 July 1862, Thames valley near Oxford; unimproved water-meadow bank of the clergyman-scholar family's afternoon walk",
+  "structure": [
+    {"item": "grassy bank about 1.2 m high, sloping at roughly 25 degrees from level meadow down to the waterline, with a flat shelf under the trees where the sister sits", "src": "ch001-p01"},
+    {"item": "reed-edged backwater with still water beside the bank on the water side of the plan (the 'neighbouring pool')", "src": "ch012-p70"},
+    {"item": "the open field runs off level behind the bank toward the hawthorn hedge (links to SCN-field-hedge-burrow)", "src": "ch001-p03"},
+    {"item": "background only: the roofline and tall chimneys of the family's gabled polychrome-brick villa above the far hedge, about 400 m away, so 'run in to your tea' has a visible goal", "inferred": true, "culture_ref": "geography.json#LOC-family-house.settlement.architecture_style; world.json#frame.social_class", "why": "The house is 'a short run away' (ch012-p66); an 1860s north-Oxford Gothic Revival villa fits a senior clergyman-scholar household and is the waking root of the White Rabbit's house"},
+    {"item": "background only: a slender stone parish-church spire on the far skyline, never approached", "inferred": true, "culture_ref": "geography.json#LOC-church-spire; religion.json REL-001", "why": "Bible registers the spire as a wide-shot landmark only"}
+  ],
+  "materials": [
+    {"item": "close meadow turf with daisies and buttercups", "src": "ch001-p02"},
+    {"item": "bare trodden earth and exposed tree roots at the lip of the bank", "inferred": true, "culture_ref": "geography.json#LOC-riverbank.physical", "why": "Real river-bank erosion gives the sister's seat a physical edge"},
+    {"item": "reed beds of common reed and reedmace standing 1.5 to 2 m tall at the backwater edge", "src": "ch012-p70"},
+    {"item": "still, dark-green river water with a slight surface ripple", "src": "ch012-p70"}
+  ],
+  "details": [
+    {"item": "two or three mature English elms and a pollarded crack willow overhanging the bank, the elm sheds a few early dead leaves onto the grass (waking root of the flying pack of cards)", "src": "ch012-p64", "note": "tree species inferred from Thames-valley hedgerow country, culture_ref geography.json#LOC-riverside-region.physical.flora"},
+    {"item": "daisies thick enough on the bank to make a daisy-chain", "src": "ch001-p02"},
+    {"item": "yellow flag irises and water-lily pads in the shallows of the backwater", "inferred": true, "culture_ref": "geography.json#LOC-river-backwater.physical", "why": "Native midsummer Thames backwater plants; gives the reeds a readable foreground"}
+  ],
+  "scale_notes": {
+    "rule": "Waking frame is always true scale (1:1). Alice = 135 cm (CHAR-alice appearance anchor); this set is the reference against which every dream scale build is measured. No forced perspective or scaled set here (SUP-003 applies inside the dream only).",
+    "sources": ["cultivation.json#SUP-001", "cultivation.json#SUP-003"]
+  },
+  "negative": [
+    "no stone or concrete embankment, no revetment, no steps down to the water",
+    "no towpath fencing, no wire fences, no park benches, no signposts",
+    "no boats with engines, no moorings or jetties in frame",
+    "no bridges, lock gates or weirs in frame",
+    "no telegraph poles, pylons or later buildings on the skyline",
+    "no tended lawn or flower borders; this is a rough water-meadow",
+    "no tropical or ornamental trees (no palms, no weeping cherry)",
+    "no autumn-coloured canopy; the trees are full green midsummer foliage with only a few fallen dead leaves"
+  ],
+  "prompt_ready_en": "a grassy midsummer riverbank near Oxford in 1862, sloping to a still reed-edged backwater, shaded by mature elms and a pollarded willow, daisies and buttercups in close meadow turf, a few dead leaves on the grass, a distant stone church spire and the gabled brick roofline of a Victorian villa beyond a far hedge"
+}

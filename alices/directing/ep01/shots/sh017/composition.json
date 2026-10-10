@@ -1,0 +1,40 @@
+{
+  "shot_id": "sh017",
+  "scene_id": "SCN-falling-dream",
+  "size": "wide",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "bottom_centre",
+    "anchor_xy": [0.50, 0.66],
+    "size_in_frame": "crawling on her front, seen obliquely from above and behind, about 0.35 of frame height — then gone out of the bottom edge"
+  },
+  "headroom": "about 0.22 of frame height of hawthorn root and earth above her, and that upper band is the foreground frame, not air.",
+  "horizon_eyeline": "No horizon. The tunnel floor runs away from the bottom edge at a shallow diagonal and simply stops where it tips. Her eyeline runs forward and down into the dark ahead at about 0.50 of frame height — level with the centre of the oval she is crawling into.",
+  "layers": {
+    "fg": "hawthorn roots hanging across the top of frame as a dark ragged bar, and the earth lip of the tunnel at the lower edge",
+    "mg": "Alice crawling forward on her front, lit only from the opening behind her, her back and shoulders the one lit shape",
+    "bg": "the dark mouth of the tunnel ahead — a flat black oval, dead centre, exactly the size and shape of the burrow mouth in sh016 — and then, when the floor tips, the open drop below it"
+  },
+  "gaze": {
+    "direction": "into_depth",
+    "lead_room": "none",
+    "note": "she looks forward into the black on the lens axis; the shot gives her no lead room and no moment to stop herself, which is the point — the floor is gone before the frame offers her anywhere to put a hand."
+  },
+  "balance": "Opens centred and symmetrical (the inherited sh016 ring) and is then broken from below by her crawling body, which loads the bottom of frame and then removes itself entirely. The frame ends empty-centred again.",
+  "leading_lines": "The root bar above and the tunnel floor below converge toward the oval at centre — a compressing wedge. It is the same closed ring as sh016, now with depth and a slope in it.",
+  "eye_first": "The black oval at centre, because the cut arrives with the eye already there; her lit back enters that attention from below a beat later.",
+  "safe_area_ok": true,
+  "constraint_binding": "Set-up 1 of the licensed three in S03, and the recognised wide is held back to sh022 — so this frame must not anticipate the sh001/sh022 locked wide in scale, axis or figure placement. It is high, oblique and from above; the shaft is never shown flat-on here.",
+  "match_cut": {
+    "id": "TR-03",
+    "side": "incoming",
+    "partner": "sh016",
+    "matched_element": "the dark mouth of the earth tunnel",
+    "matched_centre_xy": [0.50, 0.50],
+    "matched_height_frac": 0.30,
+    "matched_axis": "long axis horizontal, level",
+    "matched_surround": "a pale ring — dug earth below and to the sides, hawthorn roots above — now against cold tunnel wall instead of hot grass",
+    "matched_value": "the interior of the oval is flat, lightless and depthless for the first frames of the shot, exactly as in sh016; depth only appears when the floor tips.",
+    "how_it_cuts": "The first frame of sh017 reproduces sh016's centred oval at the same size, axis and value, with the same pale earth ring and the same hawthorn roots over it. Alice does not enter the composition until the match is already made; she crawls into the oval from below, which converts the matched still shape into a moving one without the shape ever changing place. No optical, no dissolve, no grade move — the register change lands twenty seconds later, on the colour ramp."
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "task_id": "p3-dict-fix",
+  "agent": "00-orchestration/memory-bible",
+  "status": "done",
+  "date": "2026-09-22",
+  "defect_closed": "DEF-p3-dictionary-001",
+  "change_id": "BIB-0024",
+  "changes": [
+    {
+      "term": "TERM-0001",
+      "before": "The seven-year-old protagonist; ...",
+      "after": "The protagonist, a girl of about ten (H1 ruling 5.6 A; the confirmed age is recorded on CHAR-alice); ...",
+      "basis": "H1 ruling 5.6 A, bible/h1_summary.md section 1, world.json frame.social_class"
+    },
+    {
+      "term": "TERM-0025",
+      "before": "Cheshire Cat (TERM-0041)",
+      "after": "Cheshire Cat (TERM-0040)",
+      "basis": "TERM-0040 is 'Cheshire Cat', TERM-0041 is 'March Hare'"
+    }
+  ],
+  "machine_checks": {
+    "cmd": "python3 code/p2-merge_check.py",
+    "cross_refs_valid_all_namespaces": "PASS",
+    "no_unknown_placeholder": "PASS",
+    "dictionary_hit_100pct": "PASS",
+    "quote_verification_warn": "WARN 0/560"
+  },
+  "notify_orchestrator": {
+    "impacted": [
+      "bible/dictionary.json TERM-0001, TERM-0025 (definition text only)"
+    ],
+    "mark_dirty": [],
+    "note": "Nothing downstream consumes these definitions yet, so nothing needs to be marked dirty."
+  },
+  "followup_defects": [
+    "DEF-p3-dictionary-002 (open, minor): _meta note cites Alice as TERM-0002; left alone because it is out of scope for this ticket"
+  ],
+  "not_touched": [
+    "bible/characters/",
+    "bible/creatures/",
+    "bible/scenes/"
+  ],
+  "skills": "none selected for this station",
+  "files": {
+    "modified": [
+      "bible/dictionary.json",
+      "bible/changelog.md",
+      "qa/defects/DEF-p3-dictionary-001.json"
+    ],
+    "created": [
+      "qa/defects/DEF-p3-dictionary-002.json",
+      "runs/p3-dict-fix/result.json"
+    ]
+  }
+}

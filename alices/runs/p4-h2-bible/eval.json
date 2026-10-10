@@ -1,0 +1,10 @@
+{
+ "auto": {
+  "json_valid": "PASS",
+  "defect_dispositions": "PASS (6 closed, 1 handed off as DEF-p4-style-003)",
+  "club_rank_table": "PASS — soldiers Clubs A-10, gardeners moved to Spades (see note)"
+ },
+ "task_id": "p4-h2-bible",
+ "skipped": true,
+ "reason": "quality judge=0 (user setting); QA dimensions all 0"
+}

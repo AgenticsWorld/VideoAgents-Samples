@@ -1,0 +1,118 @@
+{
+  "character_id": "CHAR-gryphon",
+  "name": "The Gryphon",
+  "source_language": "en",
+  "source_speaker_labels": ["Gryphon"],
+  "produced_by_task": "p3-dialogue-style-pb2",
+  "register": {
+    "level": "hearty, bossy, working-class (Cockney-leaning) guide: the Queen's idle retainer turned Alice's minder",
+    "summary": "The only dream figure with consistently non-standard grammar (double negatives, 'they never executes nobody', 'she wants for to know … she do', 'this here young lady', 'He was an old crab, he was'). He is brisk and impatient — Come on!, Drive on, old fellow!, That's enough, Go on with the next verse — scornful of Alice's ignorance (simpleton, any shrimp could have told you that), and fond of explaining a pun as if it were plain fact (lessons lessen; a whiting does the boots and shoes). He deflates grandeur on principle: the Queen's executions and the Mock Turtle's sorrow are 'all fancy'. Per SUP-010 (amended BIB-0027) a photoreal CGI griffin; the eagle-shriek is spoken as a line (Hjckrrh!), not replaced by a creature sound effect.",
+    "examples": [
+      { "ref": "ch009-d0042", "chapter": 9, "text": "Why, she, It's all her fancy, that: they never executes nobody, you know. Come on!" },
+      { "ref": "ch009-d0086", "chapter": 9, "text": "That's the reason they're called lessons, because they lessen from day to day." },
+      { "ref": "ch010-d0048", "chapter": 10, "text": "Soles and eels, of course, any shrimp could have told you that." }
+    ]
+  },
+  "catchphrases": [
+    { "text": "Come on!", "freq": "high", "count_in_source": 4, "example_refs": ["ch009-d0042", "ch009-d0045", "ch010-d0085"], "example_chapters": [9, 10] },
+    { "text": "It's all (her/his) fancy, that", "freq": "medium", "count_in_source": 2, "example_refs": ["ch009-d0042", "ch009-d0045"], "example_chapters": [9] },
+    { "text": "old fellow (to the Mock Turtle)", "freq": "medium", "count_in_source": 2, "example_refs": ["ch009-d0056", "ch010-d0080"], "example_chapters": [9, 10] },
+    { "text": "Hjckrrh! (eagle-shriek exclamation)", "freq": "low", "count_in_source": 1, "example_refs": ["ch009-d0050"], "example_chapters": [9] }
+  ],
+  "sentence_style": {
+    "length": "short and punchy (mean 10.4, median 11 words over 43 lines); many 2-5-word shouts and orders, a few 20-35-word explanations",
+    "mean_words": 10.4,
+    "patterns": [
+      {
+        "rule": "Non-standard, working-class grammar: double negatives, subject-verb mismatch, 'for to', 'this here', tag repetition (…he was, he was / she do), 'Same as if'.",
+        "examples": [
+          { "ref": "ch009-d0045", "chapter": 9, "text": "It's all his fancy, that: he hasn't got no sorrow, you know. Come on!" },
+          { "ref": "ch009-d0046", "chapter": 9, "text": "This here young lady, she wants for to know your history, she do." },
+          { "ref": "ch009-d0080", "chapter": 9, "text": "Hadn't time, I went to the Classics master, though. He was an old crab, he was." }
+        ]
+      },
+      {
+        "rule": "Brisk orders and hurry-ups to Alice and the Mock Turtle alike (Come on! / Drive on, old fellow! Don't be all day about it! / Go on with the next verse / Stand up and repeat … / Sing her … / Chorus again!).",
+        "examples": [
+          { "ref": "ch009-d0056", "chapter": 9, "text": "Drive on, old fellow! Don't be all day about it!" },
+          { "ref": "ch010-d0063", "chapter": 10, "text": "Stand up and repeat ''Tis the voice of the sluggard,'" },
+          { "ref": "ch010-d0083", "chapter": 10, "text": "Chorus again!" }
+        ]
+      },
+      {
+        "rule": "Scorn and deflation: mocks ignorance and dismisses pretension (You ought to be ashamed … / you are a simpleton / Hold your tongue! / It's all her fancy / Hm! No accounting for tastes!).",
+        "examples": [
+          { "ref": "ch009-d0055", "chapter": 9, "text": "You ought to be ashamed of yourself for asking such a simple question," },
+          { "ref": "ch009-d0075", "chapter": 9, "text": "Well, then, if you don't know what to uglify is, you are a simpleton." },
+          { "ref": "ch010-d0080", "chapter": 10, "text": "Hm! No accounting for tastes! Sing her 'Turtle Soup,' will you, old fellow?" }
+        ]
+      },
+      {
+        "rule": "The pun delivered as plain fact, closed with a clincher (That's the reason … / The reason is … So … So … That's all. / Now you know. / any shrimp could have told you that).",
+        "examples": [
+          { "ref": "ch010-d0038", "chapter": 10, "text": "The reason is, that they would go with the lobsters to the dance. So they got thrown out to sea. … That's all." },
+          { "ref": "ch010-d0046", "chapter": 10, "text": "Boots and shoes under the sea, are done with a whiting. Now you know." },
+          { "ref": "ch010-d0042", "chapter": 10, "text": "It does the boots and shoes," }
+        ]
+      },
+      {
+        "rule": "Impatient with explanation and sentiment: cuts subjects off and moves the entertainment on (That's enough about lessons / The adventures first, explanations take such a dreadful time / She can't explain it / I think you'd better leave off / Hadn't time).",
+        "examples": [
+          { "ref": "ch009-d0090", "chapter": 9, "text": "That's enough about lessons, tell her something about the games now." },
+          { "ref": "ch010-d0058", "chapter": 10, "text": "No, no! The adventures first, explanations take such a dreadful time." },
+          { "ref": "ch010-d0077", "chapter": 10, "text": "Yes, I think you'd better leave off," }
+        ]
+      },
+      {
+        "rule": "In the Lobster Quadrille he shouts the action beats in short exclamations over the Mock Turtle's lines (Each with a lobster as a partner! / The lobsters! / Swim after them! / Change lobsters again!).",
+        "examples": [
+          { "ref": "ch010-d0013", "chapter": 10, "text": "Each with a lobster as a partner!" },
+          { "ref": "ch010-d0019", "chapter": 10, "text": "Swim after them!" },
+          { "ref": "ch010-d0021", "chapter": 10, "text": "Change lobsters again!" }
+        ]
+      }
+    ]
+  },
+  "vocabulary": {
+    "signature_words": ["Come on", "old fellow", "fancy", "you know", "simpleton", "ashamed", "Hold your tongue", "That's all", "Now you know", "lobsters", "whiting", "boots and shoes", "Hjckrrh"],
+    "preferred_fields": ["games and the Quadrille's action", "puns on everyday trades (lessons, whiting, soles)", "court gossip (the Queen, the jury)"],
+    "examples": [
+      { "ref": "ch011-d0005", "chapter": 11, "text": "They're putting down their names, for fear they should forget them before the end of the trial." },
+      { "ref": "ch010-d0061", "chapter": 10, "text": "It's all about as curious as it can be," }
+    ]
+  },
+  "address": {
+    "self": "I (rarely; he talks about others)",
+    "to_alice": "'you', or talks about her in the third person to the Mock Turtle ('This here young lady', 'tell her', 'Sing her'); scolding epithet 'simpleton'",
+    "to_mock_turtle": "old fellow; refers to him as 'the Mock Turtle' when offering him to Alice",
+    "about_the_queen": "she / her fancy — irreverent, never 'her Majesty'",
+    "examples": [
+      { "ref": "ch009-d0046", "chapter": 9, "text": "This here young lady, she wants for to know your history, she do." },
+      { "ref": "ch010-d0078", "chapter": 10, "text": "Shall we try another figure of the Lobster Quadrille? Or would you like the Mock Turtle to sing you a song?" }
+    ]
+  },
+  "interjections": ["Hjckrrh!", "What!", "Hm!", "Why,", "Well, then,", "No, no!"],
+  "forbidden_words": [
+    { "domain": "post-1862 slang / modern chat register", "regex": "\\b(okay|ok|cool|guys?|awesome|yeah|yep|nope|gonna|wanna|gotta|kinda|sorta|totally|literally|dude)\\b", "reason": "period drama, 1862 — his dialect is Victorian working-class, not modern slang" },
+    { "domain": "bookish connectives and formal hedging", "regex": "\\b(furthermore|moreover|consequently|nevertheless|notwithstanding|I venture|I daresay|if I may)\\b", "reason": "his register is blunt and ungrammatical; long connective reasoning is the Mouse's/Dodo's" },
+    { "domain": "apology and sentimental sympathy", "regex": "\\b(I beg your pardon|forgive me|I apologi[sz]e|so sorry|poor dear|how sad)\\b", "reason": "he deflates sorrow ('he hasn't got no sorrow', ch009-d0045); sighing belongs to the Mock Turtle except the one shared 'So he did' (ch009-d0082)" },
+    { "domain": "reverence for the Queen", "regex": "\\b(her majesty|her gracious|long live)\\b", "reason": "he calls the Queen's executions 'all her fancy' (ch009-d0042)" }
+  ],
+  "drift": [
+    { "from_chapter": 9, "to_chapter": 9, "change": "Waking beside the croquet-ground: lazy, chuckling, gossiping about the Queen; then a bossy host scolding Alice at the Mock Turtle's ledge.", "examples": ["ch009-d0040", "ch009-d0042", "ch009-d0055"] },
+    { "from_chapter": 10, "to_chapter": 10, "change": "Lobster Quadrille: manic, shouting the dance beats with bounds into the air; then a know-all explainer of puns; ends hurrying Alice off (Come on!).", "examples": ["ch010-d0017", "ch010-d0046", "ch010-d0085"] },
+    { "from_chapter": 11, "to_chapter": 11, "change": "In court: drops to a whisper, a knowing aside to Alice about the jury.", "examples": ["ch011-d0005"] }
+  ],
+  "backtest_markers": [
+    { "id": "G1", "rule_ref": "sentence_style.patterns[0] non-standard grammar", "weight": 5, "regex": "\\b(never executes nobody|hasn't got no|wants for to|she do|this here|same as if)\\b|, he was\\.?$" },
+    { "id": "G2", "rule_ref": "sentence_style.patterns[1] orders and hurry-ups", "weight": 4, "regex": "\\b(come on|drive on|don't be all day|go on with the next|stand up and repeat|sing her|chorus again|let's hear|shall we try)\\b" },
+    { "id": "G3", "rule_ref": "catchphrases old fellow", "weight": 3, "regex": "\\bold fellow\\b" },
+    { "id": "G4", "rule_ref": "sentence_style.patterns[2] scorn and deflation", "weight": 4, "regex": "\\b(ashamed of yourself|simpleton|hold your tongue|no accounting|what fun|fancy, that|any shrimp)\\b|^hm!|^what!" },
+    { "id": "G5", "rule_ref": "sentence_style.patterns[3] pun as fact", "weight": 4, "regex": "^the reason is|\\b(that's the reason|called|lessen|uglify|uglifying|beautify|boots and shoes|shoes|soles and eels|putting down their names)\\b" },
+    { "id": "G6", "rule_ref": "sentence_style.patterns[3] clincher", "weight": 3, "regex": "\\b(now you know|as curious as it can be)\\b|that's all\\.?$" },
+    { "id": "G7", "rule_ref": "sentence_style.patterns[4] impatient cut-offs", "weight": 4, "regex": "\\b(that's enough|explanations take|she can't explain|leave off|hadn't time|so he did|you sing|forgotten the words|different from what I used|takes some time)\\b" },
+    { "id": "G8", "rule_ref": "sentence_style.patterns[5] Quadrille beats", "weight": 3, "regex": "\\b(lobsters?|swim after|form into a line)\\b" },
+    { "id": "G9", "rule_ref": "catchphrases Hjckrrh", "weight": 5, "regex": "\\bhjckrrh\\b" }
+  ],
+  "backtest": {"method": "marker-claim back-test (shared yardstick with pb1 and 01-story/dialogue-rewrite): a spoken source line hits when it matches >=1 backtest_markers regex and no forbidden_words regex; verse excluded; full definition runs/p3-dialogue-style-pb2/result.json#backtest_method", "script": "code/p3-dialogue-style-pb1_backtest.py", "run_on": "2026-09-22", "threshold": 0.8, "hit_rate": 1.0, "sample_size": 43, "source_lines_total": 43, "coverage_of_spoken_lines": 1.0, "verse_excluded": 0, "forbidden_violations_in_source": 0, "cross_claim_rate": 0.019, "lift": 52.46, "attribution_top1_rate": 0.884, "misses": [], "pass": true}
+}

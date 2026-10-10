@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh056",
+  "group_id": "grp022",
+  "scene_no": "S07",
+  "duration_s": 4.0,
+  "size": "medium",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 28,
+  "camera_height_m": 0.2,
+  "angle": "slightly up",
+  "rack_focus": "none",
+  "start_frame": "Low from the floor at the curtain toward the glass table: ten-inch Alice sniffing and wiping her face in the near frame, flagstone joints giving the floor its scale, the two enormous clear legs standing away behind her.",
+  "end_frame": "The same frame as her look finds it: out under the glass table, half in the lamp shadow, a little glass box as tall as her chest sitting in the middle distance between the legs.",
+  "constraint_honoured": "'Static — the box is found by her eye, not by a push-in. No re-lighting between S06 and S07.'",
+  "movement_note": "Explicitly no push-in. The deep-focus wide keeps the box, the legs and the joints all sharp so the discovery is a fact about the room rather than an emphasis.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

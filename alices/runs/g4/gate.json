@@ -1,0 +1,188 @@
+{
+  "gate": "G4",
+  "checkpoint": "H2-美术风格锁定",
+  "decision": "PASS_WITH_WAIVER",
+  "opened_at": "2026-09-23T01:17:49+08:00",
+  "decided_at": "2026-09-23T07:20:00+08:00",
+  "signed": {
+    "by": "user",
+    "result": "签字",
+    "approval_id": "ba96732d",
+    "kind": "sign",
+    "via": "dispatch.py --confirm --sign --project alices",
+    "question_disclosed": "Full H2 card listed every kept major self-check flaw by name (characters / creatures / scenes / whitebox / prop / costume-sheet) plus the four open style proposals, and stated that signing records each kept flaw as a waiver with a follow-up."
+  },
+  "checks": {
+    "all_deps_passed": "PASS — 27/27 G4 dependencies in state passed (p4-char-concept-cb1..cb3, p4-costume-sheet, p4-env-concept-sb1..sb3, p4-prop, p4-creature-concept, p4-costume, p4-color-script, p4-aspect, p4-cr-* x15)",
+    "defect_clearance_open_blocker": "PASS — 0 open blocker in G4 scope",
+    "defect_clearance_open_major": "WAIVED — 7 open majors, all assigned to 'user (H2 decision at G4)', each disclosed in the signature card and waived below",
+    "due_gate_defects": "PASS/WAIVED — DEF-p3-char-index-902 (due G4) verified honoured: no axe/block/sword/noose in bible/props.json (24 props) and costumes.json COS-047 records the constraint explicitly; remaining G4-due minors waived with follow-ups below",
+    "qa_hold_advice": "N/A — all eight QA review dimensions are set to 0 by the user, so no QA dimension was dispatched at this gate and no hold advice exists",
+    "evaluation": "OFF — 质量评委 = 0, no evaluation scoring dispatched",
+    "human_checklist": "DONE — user reviewed the Phase 4 art in the preview pages and signed"
+  },
+  "scope_delivered": {
+    "character_sheets": 43,
+    "extra_costume_sheets": 6,
+    "costume_ledger_entries": 44,
+    "creature_sheets": 7,
+    "props": 24,
+    "prop_images": 48,
+    "scene_layout_packs": 23,
+    "scene_whitebox_models": 23
+  },
+  "approved_design_proposals": [
+    {
+      "id": "style.json open_points_pending_H2 #1",
+      "ruling": "Frog-Footman and Fish-Footman are upright livery figures with real frog / fish heads, photoreal CGI."
+    },
+    {
+      "id": "style.json open_points_pending_H2 #2",
+      "ruling": "Non-speaking animals (puppy, hedgehogs, flamingos) are photoreal CGI."
+    },
+    {
+      "id": "style.json open_points_pending_H2 #3",
+      "ruling": "The Duchess's baby is a human infant performer; in the pig end-state it becomes a photoreal CGI piglet IN THE SAME SWADDLING, revealed inside one continuous held shot (hidden cut / cloth-and-framing change, no morph), then trots off. This answers DEF-p4-creature-401: the swaddling is retained — style.json H2-non-speaking-animals states it explicitly and the user approved the proposals as written."
+    },
+    {
+      "id": "style.json open_points_pending_H2 #4",
+      "ruling": "Art Nouveau / Mucha styling is full in the dream world and light in the waking world; the film still reads as photoreal live action."
+    },
+    {
+      "id": "DEF-p4-cr-appearance-001",
+      "ruling": "CGI-anatomy appearance proposals marked pending_H2 in the BIB-0027 redo are approved as written."
+    },
+    {
+      "id": "style.json open_points_pending_H2 #5 (H2-caterpillar-face)",
+      "ruling": "Caterpillar keeps the reference scale / segmented body / slate-blue + moss patina but gets a naturalistic caterpillar head with articulating mouthparts instead of the reference's pug-like mammal face.",
+      "caveat": "This proposal was NOT itemised in the signature card (the card only reported that the Caterpillar sheet's face failed self-check). Adopted as the design of record because it is the same photoreal-CGI anatomy line the user approved; the user can revise it at any time via the preview page's ✏️ Modify or in chat."
+    }
+  ],
+  "waivers": [
+    {
+      "defect_id": "DEF-p4-creature-403",
+      "severity": "major",
+      "reason": "Creature sheet self-check failures (Gryphon upright + cropped profile; Mock Turtle upright on two hooves). Auto-retry budget is 0, so nothing was regenerated; the flaws were listed verbatim in the H2 card and the user signed.",
+      "signed_by": "user (approval ba96732d)",
+      "follow_up": "Not a blocker for storyboarding. If either creature appears in a生成组, the prompt工位 must carry the corrective posture wording from the defect's suggested_fix_if_regenerated; a targeted re-roll needs an explicit user order (reroll budget 0)."
+    },
+    {
+      "defect_id": "DEF-p4-envconcept-603",
+      "severity": "major",
+      "reason": "layout_top.png self-check deviations (woodland trees rendered as stumps; rose-tree yard / Gryphon spot / Duchess-house-front drawn oblique instead of orthographic top-down). Kept as generated under reroll budget 0; layout.json was calibrated to what is actually drawn. Disclosed and signed.",
+      "signed_by": "user (approval ba96732d)",
+      "follow_up": "layout.json remains the metric authority for blocking_map / route_en. Before any ep using SCN-wood / SCN-rose-tree-yard / SCN-gryphon-spot / SCN-duchess-house-front reaches p7-prompt, orchestrator re-checks that the oblique plates are not used as a视觉 reference (they are preview-only since 2026-09-09; spatial truth comes from the whitebox camera video and shot plates)."
+    },
+    {
+      "defect_id": "DEF-p4-prop-502",
+      "severity": "major",
+      "reason": "Of the 48 prop images, some carry lettering, duplication or scale faults (no person or body part appears in any image). Kept as generated under reroll budget 0; disclosed and signed.",
+      "signed_by": "user (approval ba96732d)",
+      "follow_up": "Prop images used as 比例锚 in a组's refs must be spot-checked by the prompt工位 against the defect finding list; affected images can be re-rolled later per-image by user order or via the preview page's ✏️ Modify."
+    },
+    {
+      "defect_id": "DEF-p4-costume-sheet-901",
+      "severity": "major",
+      "reason": "Self-check defects on the p4-costume-sheet images; nothing regenerated under reroll budget 0. Disclosed and signed.",
+      "signed_by": "user (approval ba96732d)",
+      "follow_up": "costumes.json (visual_en) stays the textual authority for wardrobe in prompts; the flawed sheet images are not to be used as the sole identity anchor for the affected outfits."
+    },
+    {
+      "defect_id": "DEF-p4-scenemodel-960",
+      "severity": "major",
+      "reason": "Whitebox walls follow the drawn plan (hard rule: walls measured from the image, X:Z locked to image aspect), so metric sizes differ from the Bible architecture cards where the two disagree. No image or layout.json was edited. Disclosed and signed.",
+      "signed_by": "user (approval ba96732d)",
+      "follow_up": "Whitebox/layout metrics are the single source of truth for staging and camera; Bible architecture cards are narrative reference. If a shot exposes a contradiction that reads on screen, open a new defect against 05-scenes/architecture rather than re-cutting the whitebox."
+    },
+    {
+      "defect_id": "DEF-p4-scenemodel-970",
+      "severity": "major",
+      "reason": "Interior plans are drawn smaller than the Bible architecture cards; whiteboxes follow the plans. Disclosed and signed.",
+      "signed_by": "user (approval ba96732d)",
+      "follow_up": "Same as DEF-p4-scenemodel-960: whitebox metrics govern. Watch at H3W (g6w) per episode that no blocking route overflows a shrunken room; if it does, the fix is a staging change, not a silent rescale."
+    },
+    {
+      "defect_id": "DEF-p4-scenemodel-972",
+      "severity": "major",
+      "reason": "Hero objects are drawn several times larger than Bible scale in the plan images; the whiteboxes place Bible true sizes on the landmark points, so plan images and whitebox disagree visually. Disclosed and signed.",
+      "signed_by": "user (approval ba96732d)",
+      "follow_up": "Whitebox true sizes govern. At each episode's H3W the orchestrator confirms hero-object scale reads correctly in the camera view before export."
+    },
+    {
+      "defect_id": "DEF-p4-scenemodel-971",
+      "severity": "minor",
+      "reason": "SCN-rabbit-house-exterior plan vs layout.json footprint disagreement, same family as 960/970/972.",
+      "signed_by": "user (approval ba96732d)",
+      "follow_up": "Resolved by the same rule: whitebox/layout metrics govern."
+    },
+    {
+      "defect_id": "DEF-p4-scenemodel-973",
+      "severity": "minor",
+      "reason": "SCN-duchess-house-front plan is oblique, so layout.json chimney placement is approximate (same root cause as DEF-p4-envconcept-603).",
+      "signed_by": "user (approval ba96732d)",
+      "follow_up": "Verify at that episode's H3W; plate is preview-only."
+    },
+    {
+      "defect_id": "DEF-p4-scenemodel-980",
+      "severity": "minor",
+      "reason": "SCN-courtroom layout_top.png drawn at ~70% of Bible scale.",
+      "signed_by": "user (approval ba96732d)",
+      "follow_up": "Whitebox metrics govern; re-verify at the courtroom episode's H3W."
+    },
+    {
+      "defect_id": "char-sheet self-check majors (runs/p4-char-concept-cb1..cb3/result.json)",
+      "severity": "major (self-check, no separate defect file)",
+      "reason": "White Rabbit and Bill stand upright like people; Cheshire Cat's grin reads as a snarl; Duchess chin/crinoline weak; Cook holds a pail instead of the pepper-box; Caterpillar face failed. Kept under reroll budget 0; each item was named in the H2 card and the user signed.",
+      "signed_by": "user (approval ba96732d)",
+      "follow_up": "bible/characters/*/appearance.json prompt_base_en stays the identity authority. The prompt工位 must write the corrective wording (quadruped stance for rabbit/lizard, friendly grin for the Cheshire Cat, pepper-box for the Cook) into每组 prompt; affected sheets can be re-rolled per-image only on user order."
+    },
+    {
+      "defect_id": "env-image self-check majors (runs/p4-env-concept-sb1..sb3/result.json)",
+      "severity": "major (self-check, no separate defect file)",
+      "reason": "Woodland trees rendered as stumps; several plates tilted instead of true top-down; mad-tea-party chestnut too small; Mock Turtle ledge ~3x oversize. Same set as DEF-p4-envconcept-603, disclosed and signed.",
+      "signed_by": "user (approval ba96732d)",
+      "follow_up": "Covered by the DEF-p4-envconcept-603 follow-up."
+    },
+    {
+      "defect_id": "DEF-p4-creature-401",
+      "severity": "minor",
+      "reason": "Creature card CRE-007 disagreed with the H2 proposal on the piglet end-state. Resolved by the signature: style.json H2-non-speaking-animals (approved as written) keeps the same swaddling and the one continuous held shot.",
+      "signed_by": "user (approval ba96732d)",
+      "follow_up": "04-creatures/creature aligns CRE-007 wording to the approved proposal in the H2 fold-in change order; then close the defect. No user question outstanding."
+    },
+    {
+      "defect_id": "DEF-p4-creature-402",
+      "severity": "minor",
+      "reason": "CRE-001 text still carries pre-BIB-0027 wording.",
+      "signed_by": "user (approval ba96732d)",
+      "follow_up": "Text-only cleanup; routed to 04-creatures/creature together with the BIB-0027 H2 fold-in change order (no image cost)."
+    },
+    {
+      "defect_id": "DEF-p4-char-concept-201 / -202 / DEF-p4-costume-001 / DEF-p4-cr-costume-001",
+      "severity": "minor",
+      "reason": "Small text-level disagreements between appearance.json, costumes.json and creature.json default-look details, all due at G4/H2.",
+      "signed_by": "user (approval ba96732d)",
+      "follow_up": "Routed to 00-orchestration/memory-bible as one text-only reconciliation change order together with the H2 fold-in; must be closed before ep01 p7-prompt consumes those fragments."
+    },
+    {
+      "defect_id": "DEF-p4-cr-cgi-mucha-dict-001",
+      "severity": "minor",
+      "reason": "Status fixed_pending_verify — the dictionary registration of the 'Art Nouveau' canon term was delivered but not re-verified.",
+      "signed_by": "user (approval ba96732d)",
+      "follow_up": "Verified/closed in the same memory-bible change order; no gate impact (dictionary_hit is a G2 check, already passed)."
+    },
+    {
+      "defect_id": "DEF-p4-style-001",
+      "severity": "minor",
+      "reason": "Status resolved_by_user_ruling_pending_redo — superseded by BIB-0027 (the user's earlier style ruling) and now by this H2 signature: talking animals are photoreal CGI, dream world is Mucha/Art Nouveau.",
+      "signed_by": "user (approval ba96732d)",
+      "follow_up": "Close as resolved once memory-bible clears style.json open_points_pending_H2."
+    }
+  ],
+  "open_minor_not_waived_no_gate_impact": [
+    "DEF-p3-char-index-903 (due G5, ch006 lullaby chorus — ep04 scope, not ep01)",
+    "DEF-p4-char-301 / -302, DEF-p4-char-concept-101, DEF-p4-envconcept-601/602/701/702/703/801, DEF-p4-prop-501, DEF-p4-cr-architecture-001 — minor text consistency items with no due_gate; review intensity is 0 for all eight QA dimensions, so they do not hold a gate"
+  ],
+  "effect": "Art style is locked. Phase 6 (ep01 directing / storyboard) is released. Any single image may still be repaired later via the preview page's ✏️ Modify or a chat instruction; auto reroll budget stays 0.",
+  "note": "PASS_WITH_WAIVER per WORKFLOW.md §7: majors were not auto-repaired because the user's global reroll budget is 0, were escalated in full in the signature card, and the user signed with the explicit statement that kept flaws become waivers with follow-ups."
+}

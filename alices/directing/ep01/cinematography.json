@@ -1,0 +1,855 @@
+{
+  "_meta": {
+    "file": "directing/ep01/cinematography.json",
+    "ep": "ep01",
+    "title": "Down the Rabbit-Hole",
+    "owner": "07-directing/cinematography",
+    "task_id": "p6-cinematography-ep01",
+    "version": 1,
+    "status": "draft_for_art_director_countersign",
+    "generated": "2026-09-23",
+    "language": "English (project output language; every prompt_terms string is written to be quoted verbatim into a video or image prompt)",
+    "scope": "One episode's shooting grammar: the lens set and what each focal length is for, the camera height that carries each of Alice's four scale states, the colour temperature of every light in the episode keyed to the controlled time_of_day vocabulary, the depth-of-field policy, and the texture/finish wording. NOT in scope and not written here: per-shot camera moves (07-directing/camera-movement), per-shot composition and framing (07-directing/composition), the film-wide style (06-art/art-director, H2-locked), the grade and the finish pass (Phase 9).",
+    "inputs_read": [
+      "directing/ep01/directing_plan.md (v1, draft_for_H3S) - sections 镜头语言倾向 (camera-height law, static/moving, POV list, lens and scale, prohibitions) and 重点场次处理 are the brief",
+      "directing/ep01/storyboard.json (draft; read only to see which situations actually occur - the shot list and the group split are NOT treated as final)",
+      "bible/style.json v1.2.1 (H2-locked, runs/g4/gate.json approval ba96732d): art_style, render_school_detail, style_fragment_ui, negative_prompt_en, negative_prompt_waking_addon_en, rules CR-001/002/005/006/007/011/012/013/014/015, negative_list",
+      "bible/color_script.json v1.1.1 as amended by BIB-0033: ep01 acts 1-6, variants.dream / variants.waking, scene_curves SCN-long-hall / SCN-pool-of-tears",
+      "bible/scenes/SCN-long-hall/{architecture.json,lighting.json}, SCN-pool-of-tears/lighting.json, SCN-riverbank/lighting.json, SCN-field-hedge-burrow/lighting.json, SCN-falling-dream/lighting.json, SCN-shaft-landing-passage/lighting.json, SCN-little-door-passage/lighting.json",
+      "bible/aspect_ratio.json (16:9 master, 24 fps, 480p generation -> 1080p by upscale)",
+      "runs/p3-lighting-sb1/result.json (LGT-ENUM-v1 shared conventions: the controlled time_of_day / color_temp / direction vocabularies)"
+    ],
+    "authority_order": "bible/style.json (H2-locked) > bible/scenes/<sid>/{architecture,lighting}.json > bible/color_script.json (as amended by BIB-0033) > directing/ep01/directing_plan.md > this file > the per-shot stations. Where the directing plan and an amended Bible file disagree, the Bible wins and the disagreement is listed in conflicts[].",
+    "one_line_thesis": "Nine feet and ten inches are the same girl in the same room; only the lens height and the gauge in the frame tell the audience which. Everything else in this episode is shot plainly, on three prime lenses, so that the four rationed exceptions land."
+  },
+
+  "episode": 1,
+
+  "format": {
+    "aspect": "16:9",
+    "fps": 24,
+    "generation_resolution": "480p draft, finished by upscale to 1080p (bible/aspect_ratio.json). Consequence for this file: every texture and optical instruction below is specified at the scale of the frame, never at the scale of the pixel.",
+    "focal_length_convention": "All focal lengths in this file are 35 mm full-frame equivalents, i.e. a statement about field of view. Write them into prompts exactly as given ('shot on a 40 mm lens'). Do NOT convert them, do not halve them for anamorphic squeeze, and do not translate them into sensor-specific numbers.",
+    "anamorphic_ruling": "style.json says '35mm film with anamorphic lenses'. In ep01 that word is a FINISH, not a field-of-view instruction: mildly oval highlights, a faint horizontal flare on the lamp flames, gentle halation. It never means a stretched or squeezed frame, and it never changes a focal number in this file. The style fragment carries the word; no shot-level prompt needs to repeat it."
+  },
+
+  "lens_set": {
+    "principle": "ep01 is shot as if on one small set of primes, so that ninety-odd shots made in parallel read as one photographer's work. Three lenses do 95 % of the episode; two more are rationed to single uses and are what the audience remembers without knowing why.",
+    "working_primes": [
+      { "focal_mm": 28, "role": "space and bulk. The lens that can say 'this hall is 32 m long and only 2.8 m high' in one frame, and the lens that makes a giant overflow the frame while the far end of the same room stays tiny. Also every deep-staged waking wide.", "registers": ["waking", "dream"] },
+      { "focal_mm": 40, "role": "the human-eye lens. Travelling mediums, POV, two-plane cause-and-effect inserts, and the Rabbit at water level. Six of the episode's seven POVs are 40 mm.", "registers": ["waking", "dream"] },
+      { "focal_mm": 50, "role": "faces, hands and hero objects. The longest lens permitted in the waking frame, and the only lens allowed on a face at close range at ANY of Alice's four scales.", "registers": ["waking", "dream"] }
+    ],
+    "rationed": [
+      {
+        "focal_mm": 24,
+        "budget_ep01": 2,
+        "spent_on": ["S06 - straight up the glass table leg from the flagstones (tiny scale)", "S07 - straight down her own body to her feet far below (giant scale)"],
+        "role": "The two purely vertical scale axes of the episode, and nothing else. 24 mm exaggerates near-to-far along the axis of the shot, which is exactly what those two images are for. Dream register only.",
+        "rule": "Any other request for 24 mm in ep01 is refused: it is the lens that would start to look like a fisheye distortion of a child's body, which CR-011 forbids."
+      },
+      {
+        "focal_mm": 100,
+        "budget_ep01": 1,
+        "spent_on": ["S05 - her POV down the crawl passage to the garden arch"],
+        "role": "The episode's one long lens. It flattens the garden into an unreachable postcard: the goal must look like a keyhole, not a place we could walk into (directing_plan S05).",
+        "rule": "Dream register only, once. This is the only shot in ep01 where the camera tells the audience something untrue about distance - which is precisely the feeling of the scene. It must not be reused for a second 'nice' compression anywhere."
+      }
+    ],
+    "register_separator": "The waking frame (S01, S02) is shot on 28 / 40 / 50 only. 24 mm and 100 mm are dream lenses. This is the same register discipline CR-014 applies to ornament, carried by the lens: nothing leaks across the hedge.",
+    "banned_optics_ep01": [
+      "fisheye and any visible barrel distortion (CR-011)",
+      "Dutch angle (CR-011, directing_plan prohibition 8)",
+      "macro / tilt-shift / miniature-diorama optics - see dof_policy MINIATURE-LOOK BAN",
+      "zoom moves of any kind (a zoom is not in the film's in-camera vocabulary, CR-006)",
+      "speed ramps (directing_plan prohibition 8)"
+    ]
+  },
+
+  "focal_rules": [
+    {
+      "context": "waking_establish_deep",
+      "scene_refs": ["S01 (SCN-riverbank)", "S02 (SCN-field-hedge-burrow)"],
+      "occurs_at": "S01 the opening meadow wide, the sleeping-profile wide across to the far spire, the rabbit's pass; S02 the wide from the burrow mouth back across the field",
+      "focal_mm": 28,
+      "lens_height_m": "0.25-0.50",
+      "note": "Deep-staged, low in the grass: seed-heads across the bottom of frame, the girls small and central, the far elms and spire still readable. The rabbit's pass has to hold Alice's shoes AND the animal in one unbroken frame, which only a wide can do without heroing him.",
+      "prompt_terms": [
+        "shot on a 28 mm lens, camera low in the long meadow grass",
+        "deep staging: seed-heads and grass stems crossing the bottom of frame, the figures small and central, the far trees and spire still readable"
+      ]
+    },
+    {
+      "context": "waking_travel_with_her",
+      "scene_refs": ["S02"],
+      "occurs_at": "the tracking pass alongside her through the grass; the arrival at the hedge foot",
+      "focal_mm": 40,
+      "lens_height_m": "0.80-1.10 running",
+      "note": "The lens that keeps her, the grass streaking past and the hedge in one honest space. Mild handheld is licensed here and only here (directing_plan 2); the move itself belongs to camera-movement, this rule only fixes the lens.",
+      "prompt_terms": [
+        "shot on a 40 mm lens at hip height, moving alongside her",
+        "grass whipping through the near foreground, the hedge line held in the background"
+      ]
+    },
+    {
+      "context": "waking_face_and_hero_object",
+      "scene_refs": ["S01", "S02"],
+      "occurs_at": "S01 the low medium-close past the open book, her flushed profile with the daisy, the eyes closing; S02 her cheek and one eye against the black burrow mouth",
+      "focal_mm": 50,
+      "lens_height_m": "0.25-0.35",
+      "note": "50 mm is the LONGEST lens allowed anywhere in S01-S02: the waking frame is plain period realism with no long-lens compression (directing_plan 5). Where a face shares the frame with a landmark (the burrow oval), keep the face off the frame edge so nothing stretches.",
+      "prompt_terms": [
+        "shot on a 50 mm lens, camera lying on the grass at the child's eye-line",
+        "out-of-focus grass stems crossing the near foreground, her face and the near ground sharp"
+      ]
+    },
+    {
+      "context": "pov_printed_page",
+      "scene_refs": ["S01"],
+      "occurs_at": "the insert of the sister's open book: close grey print, margin to margin, no picture (POV 1 of 7)",
+      "focal_mm": 40,
+      "lens_height_m": "about 0.30 above the book, slightly off square so the page takes no glare",
+      "note": "Her POV, so it takes the human-eye lens. The page reads as a page, not as a macro texture.",
+      "prompt_terms": [
+        "shot on a 40 mm lens, looking down at an open book from a child's eye-line",
+        "close grey printed text filling the frame margin to margin, no illustration, no glare on the paper"
+      ]
+    },
+    {
+      "context": "fall_locked_wide_on_her_axis",
+      "scene_refs": ["S00 HOOK-OPEN (provisional)", "S03 (SCN-falling-dream)"],
+      "occurs_at": "the locked wide from the shaft wall where she holds one place in frame while the dressing travels up past her; the same set-up returns at 'Down, down, down'",
+      "focal_mm": 28,
+      "lens_height_m": "on her own axis in a 2.4 m shaft; no horizon",
+      "note": "The wide is what makes the shaft a volume and the fall endless. The hook and the S03 return are the SAME lens on the SAME axis - that is what lets the audience recognise the image instead of re-watching it (directing_plan anti-repeat rule).",
+      "prompt_terms": [
+        "shot on a 28 mm lens, locked off, the camera falling with her so she holds one place in frame",
+        "the shaft walls and their dressing travelling upward past her, no horizon, no tilt"
+      ]
+    },
+    {
+      "context": "pov_straight_down_the_shaft",
+      "scene_refs": ["S03"],
+      "occurs_at": "her POV down the open centre of the shaft into black, used twice (POV 3 and 4 of 7) - identical set-up both times, only the wall dressing differs",
+      "focal_mm": 40,
+      "lens_height_m": "on her axis at the middle of the shaft",
+      "note": "Identical focal on both uses. If the second POV is shot on a different lens the repetition stops reading as the same thought returning.",
+      "prompt_terms": [
+        "shot on a 40 mm lens looking straight down the open centre of a deep shaft",
+        "the nearest wall bands just readable, the depth below falling away into total black"
+      ]
+    },
+    {
+      "context": "fall_profile_close",
+      "scene_refs": ["S03"],
+      "occurs_at": "the marmalade jar held out over the drop; the profile close as she settles with her hair floating up; the eyes closing and the two-second hold",
+      "focal_mm": 50,
+      "lens_height_m": "beside her, at her own height",
+      "note": "The one unbroken shot where the dream begins has to be a plain 50 mm profile - the audience must be able to point at the frame, and any optical event would do the announcing the whole design forbids.",
+      "prompt_terms": [
+        "shot on a 50 mm lens, camera beside her at her own height, drifting with her",
+        "her hair floating upward, the shelf dressing travelling up through the background"
+      ]
+    },
+    {
+      "context": "passage_deep_stage_distance",
+      "scene_refs": ["S04 (SCN-shaft-landing-passage)"],
+      "occurs_at": "every shot of the White Rabbit in S04: the wide down the long low passage, the medium-wide as he reads the watch, the medium past the mosaic dado to the lit corner",
+      "focal_mm": 28,
+      "lens_height_m": "1.20-1.35 (child height)",
+      "note": "The distance to the Rabbit must be REAL distance, never a long lens pretending. A deep-staged 28 mm keeps him small, in profile and far down the vault, which is the cheapest insurance against the uncanny and honours the waived character sheet (directing_plan S04). Never come closer than medium-wide on him in this scene, and never bring him closer by changing lens.",
+      "prompt_terms": [
+        "shot on a 28 mm lens down the length of a long low brick-vaulted passage",
+        "the animal genuinely far away and in profile, small in the frame, the vault receding behind him"
+      ]
+    },
+    {
+      "context": "watch_dial_insert",
+      "scene_refs": ["S04"],
+      "occurs_at": "the one insert of the watch face and the paw (his face is spent once, in S08, not here)",
+      "focal_mm": 50,
+      "lens_height_m": "at the watch",
+      "note": "Read the watch on the dial, not on his face. A 50 mm at close focus keeps the fur and the enamel in the same world; a macro would turn it into a product shot.",
+      "prompt_terms": [
+        "shot on a 50 mm lens at close focus on the enamel watch dial and the paw holding it",
+        "warm lamplight on the enamel, the chain and the fur sharp, the passage behind falling off into soft dark"
+      ]
+    },
+    {
+      "context": "hall_space_wide",
+      "scene_refs": ["S05", "S06", "S07 (SCN-long-hall)"],
+      "occurs_at": "the single hall reveal; the wide down the hall under the lamp row; the twelve-second locked wide that covers the shrink; the wide at the foot of the table leg; the held wide that covers the growth",
+      "focal_mm": 28,
+      "lens_height_m": "1.20-1.35 at normal size; per scale_lens_map at every other size",
+      "note": "28 mm is the only lens that states the hall's two facts at once - 32 m long, 2.80 m to the vault crown, lamps at 2.30 m, doors at 1.95 m (architecture.json; whitebox gauges). Every size beat is covered by this lens held still, so the change lives in the set and not in the optics (CR-005).",
+      "prompt_terms": [
+        "shot on a 28 mm lens, the long low vaulted hall running away from camera",
+        "the whole height of the low vault and the hanging lamp row inside the frame, the far end lost in darkness"
+      ]
+    },
+    {
+      "context": "hall_travelling_medium",
+      "scene_refs": ["S05", "S09"],
+      "occurs_at": "the door round along the west wall and its failing return pass (S05); two-foot Alice running the same wall (S09)",
+      "focal_mm": 40,
+      "lens_height_m": "1.30 in S05; 0.55 in S09",
+      "note": "MATCH PAIR. Same lens, same axis, different height: the wall takes three times as long to pass because she is a third of the size, and the audience feels the hall repeat. If S09 is shot on a different focal length the structural joke of the episode dies.",
+      "prompt_terms": [
+        "shot on a 40 mm lens, travelling with her along the row of locked oak doors",
+        "iron handles and horseshoe-arched door frames passing through frame at a steady rate"
+      ]
+    },
+    {
+      "context": "hall_face_at_normal_size",
+      "scene_refs": ["S05", "S06"],
+      "occurs_at": "her hand on the iron handle and her face at a locked door; the return to her face lit by the garden; the bottle held at arm's length; the three tastings",
+      "focal_mm": 50,
+      "lens_height_m": "1.20-1.35",
+      "note": "Child height, never adult height (CR-011, directing_plan camera-height law).",
+      "prompt_terms": [
+        "shot on a 50 mm lens at the child's own eye height",
+        "her face held whole in frame, the dim hall soft behind her"
+      ]
+    },
+    {
+      "context": "garden_pov_the_one_long_lens",
+      "scene_refs": ["S05 (SCN-little-door-passage)"],
+      "occurs_at": "her POV through the 0.38 m door, down the crawl passage, to the garden arch (POV 5 of 7)",
+      "focal_mm": 100,
+      "lens_height_m": "at her kneeling eye-line",
+      "note": "The episode's only long lens, spent here. The compression flattens the passage so the garden sits small and flat at the end of it like a postcard - a keyhole, not a place we could walk into. No rack focus and no defocus in this shot: the flatness must come from the lens alone (see dof_policy).",
+      "prompt_terms": [
+        "shot on a 100 mm lens looking down a long, narrow stone crawl passage",
+        "the small sunlit garden arch at the far end sitting flat and small in the frame, compressed and unreachable"
+      ]
+    },
+    {
+      "context": "tiny_scale_floor_wide",
+      "scene_refs": ["S06", "S07"],
+      "occurs_at": "the reveal of ten-inch Alice beside the bottle at the mosaic dado; the three climbing attempts at the foot of the leg; the wide of her alone in the enormous hall; the crossing of the flag joints to the glass box",
+      "focal_mm": 28,
+      "lens_height_m": "0.15-0.25 (at or below her own 0.22 m eye-line)",
+      "note": "The default lens of the ten-inch state. It works only when a gauge sits within ~0.3 m of the lens - the DRINK ME bottle at her exact height, the mosaic dado border, a flagstone joint, the base of a glass leg - so the near-to-far ratio does the shrinking. A gauge in the near foreground is the price of using 28 mm here.",
+      "prompt_terms": [
+        "shot on a 28 mm lens, camera on the flagstones below her own eye height",
+        "a near-foreground object at her exact height in the same frame, the hall towering away behind her, the low vault far above"
+      ]
+    },
+    {
+      "context": "tiny_scale_vertical_axis",
+      "scene_refs": ["S06"],
+      "occurs_at": "straight up the glass table leg from the flagstones, the tabletop a glass ceiling with the golden key visible through it (1 of the 2 rationed 24 mm shots)",
+      "focal_mm": 24,
+      "lens_height_m": "0.15, lens on the flagstones",
+      "note": "Goal and obstacle in one set-up - the episode's thesis. 24 mm because the whole image is a near-to-far exaggeration up a single vertical axis.",
+      "prompt_terms": [
+        "shot on a 24 mm lens looking straight up a tall clear glass table leg from floor level",
+        "the glass tabletop reading as a ceiling overhead with a tiny gold key visible through it"
+      ]
+    },
+    {
+      "context": "tiny_scale_face",
+      "scene_refs": ["S06", "S07"],
+      "occurs_at": "the one earned close-up at the foot of the leg where she scolds herself; the bite and the hand; the held flat cheated face",
+      "focal_mm": 50,
+      "lens_height_m": "0.15-0.20",
+      "note": "HARD RULE: never a wide lens on a face at the ten-inch scale. A 28 mm close to a child's face stretches it, and a stretched child's face is the exact failure mode style.json bans ('cartoon animal face', 'distorted face', CR-001). The room has already done the scale work in the shot before; the face shot only has to be a face.",
+      "prompt_terms": [
+        "shot on a 50 mm lens at close focus, camera on the flagstones",
+        "her face held whole and undistorted, natural facial proportions, the flagstones and the hall soft behind her"
+      ]
+    },
+    {
+      "context": "giant_fragment",
+      "scene_refs": ["S07", "S08"],
+      "occurs_at": "the bent neck and shoulder against the vault; the hand, knee and bent back crossing the frame; the wall of blue cotton and one knee at water level; the enormous hand coming down into the top of the frame",
+      "focal_mm": 28,
+      "lens_height_m": "0.30-1.00 and never above 1.00",
+      "note": "At 2.74 m in a 2.80 m room she can never be framed standing, so the widescreen frame becomes the cage: the 28 mm lets her bulk run out of frame in both directions while the far end of the same hall stays tiny in the same image. That simultaneity IS the size beat - going long would lose the room and with it the comparison.",
+      "prompt_terms": [
+        "shot on a 28 mm lens, camera low on the stone floor",
+        "part of her body filling and overflowing the frame, the far end of the hall small and dark in the same image"
+      ]
+    },
+    {
+      "context": "giant_vertical_body_axis",
+      "scene_refs": ["S07"],
+      "occurs_at": "the look down her own body to her feet far below on the flagstones - 'Good-bye, feet!' (2 of the 2 rationed 24 mm shots)",
+      "focal_mm": 24,
+      "lens_height_m": "at her own eye height near the lamp line, aimed straight down",
+      "note": "The one piece of pure comedy in the dream half, and it is an optical joke: the 24 mm stretches the body axis so the boots are absurdly far away. It is also the last set-up in the episode allowed to sit near the lamp line.",
+      "prompt_terms": [
+        "shot on a 24 mm lens looking straight down the length of her own body to her feet far below on the stone floor",
+        "her boots small and distant at the bottom of the frame, the body running away steeply down the middle of the image"
+      ]
+    },
+    {
+      "context": "giant_eye_at_the_little_door",
+      "scene_refs": ["S07"],
+      "occurs_at": "the giant lying on her side, one eye at the 0.38 m doorway with garden light across it - the image the climax then breaks",
+      "focal_mm": 50,
+      "lens_height_m": "0.35, flat across the hall",
+      "note": "50 mm so the eye stays anatomically true and the 0.38 m opening keeps its real size. A wide here would bend the eye and the arch and turn the best image in the episode into an effect.",
+      "prompt_terms": [
+        "shot on a 50 mm lens flat across the stone floor",
+        "one enormous human eye at a tiny 38 cm horseshoe-arched doorway, the eye undistorted and anatomically real, the dark mass of her body running out of frame both ways"
+      ]
+    },
+    {
+      "context": "rabbit_at_water_level",
+      "scene_refs": ["S08"],
+      "occurs_at": "his approach out of the dark between the lamp pools; the clean single on him as he mutters; the two-step look up that runs out of room",
+      "focal_mm": 40,
+      "lens_height_m": "0.10 (lens on the water surface)",
+      "note": "The human-eye lens on him for the same reason as S04: no optical flattery. This is the shot where the CGI either works or it does not, so the evidence must be photographic - displaced water, wet leg fur, ripples starting under his feet, exact eyeline (CR-015). His face is spent here, once.",
+      "prompt_terms": [
+        "shot on a 40 mm lens with the lens right on the water surface, the waterline cutting across the frame",
+        "real displaced water and ripples starting under his feet, wet fur on his legs, his reflection doubled on the flooded stone"
+      ]
+    },
+    {
+      "context": "giant_aria_sustained_close",
+      "scene_refs": ["S08"],
+      "occurs_at": "the identity aria: one sustained set-up on her face, returned to exactly, broken only for her hands",
+      "focal_mm": 50,
+      "lens_height_m": "0.55-0.60 (water level)",
+      "note": "Her head is within reach of a water-level 50 mm only because the POSE brings it down - hunched, wet-faced, folded into a room too low for her. The lens does not solve the geometry and must not be asked to: no long lens reaching up at her, because that would put the 2.30 m lamp line and the vault in frame and break act 5's 'lamps out of frame' rule. Same focal on every return so the aria reads as one continuous thing.",
+      "prompt_terms": [
+        "shot on a 50 mm lens, camera at water level on the flooded flagstones",
+        "her face held whole in the frame, lit only by broken reflected light off the water, the hall behind her almost black"
+      ]
+    },
+    {
+      "context": "insert_hands_and_gloves",
+      "scene_refs": ["S08"],
+      "occurs_at": "her open hands as she counts the arithmetic, her fingers as long as the fan; the gloves and fan hitting the water; the white kid glove that now simply fits",
+      "focal_mm": 50,
+      "lens_height_m": "0.08-0.55 (water level)",
+      "note": "The glove that fits is the episode's one image, and it is an insert, not an effect. 50 mm at close focus, with a known gauge in the frame (the fan, the wrist, the water line) so the size reads without a word.",
+      "prompt_terms": [
+        "shot on a 50 mm lens at close focus, camera at water level",
+        "the object and her hand sharp together in one frame, dark water and broken amber reflections behind"
+      ]
+    },
+    {
+      "context": "the_single_up_angle",
+      "scene_refs": ["S08"],
+      "occurs_at": "the look up into the dark vault as she asks for her family - the only up-angle in the whole episode",
+      "focal_mm": 28,
+      "lens_height_m": "0.40, tilted up",
+      "note": "Wide, not long: the shot has to show the black above her as a VOLUME she is asking into. It is also the one licensed exception to the act-5 rule, and it works only because the vault above her is unlit - a wider lens here brings in more darkness, not more lamp (and no lamp fixture may enter the frame).",
+      "prompt_terms": [
+        "shot on a 28 mm lens, camera low on the wet flagstones tilted up past her face",
+        "an enormous unlit vault of darkness above her filling the top of the frame, no light fitting anywhere in shot"
+      ]
+    },
+    {
+      "context": "cause_and_effect_insert",
+      "scene_refs": ["S08"],
+      "occurs_at": "movement 4: the fan still moving in her hand while the table edge visibly rises past frame behind it; the fan leaves her hand and the rising stops in the same frame",
+      "focal_mm": 40,
+      "lens_height_m": "0.25",
+      "note": "With narration off, the picture alone carries the cause. Both planes must be legible at once, so this is a 40 mm at deep focus and never a rack (see dof_policy). The reference axis is deliberately the one used all through S06, so the comparison lands against a frame the audience already knows.",
+      "prompt_terms": [
+        "shot on a 40 mm lens, deep focus, the moving fan in the near foreground and the table edge behind it both sharp in the same frame",
+        "no focus change during the shot"
+      ]
+    },
+    {
+      "context": "two_feet_water_level_face",
+      "scene_refs": ["S09", "S10 (SCN-pool-of-tears)"],
+      "occurs_at": "the stamped foot in the puddle; her chin almost in the water as she talks to herself; the realisation on the drifting fan; both lines whole in one shot",
+      "focal_mm": 50,
+      "lens_height_m": "0.05-0.20, just above the surface, never above",
+      "note": "The camera is in the water with her for the whole of S10 and never rises above the waterline - there is no rescuing god's-eye in this episode (directing_plan S10; this also rules out any high or crane view).",
+      "prompt_terms": [
+        "shot on a 50 mm lens with the lens just above the water surface, the waterline cutting low across the frame",
+        "her face close and whole, broken warm reflections crossing the dark water behind her"
+      ]
+    },
+    {
+      "context": "flooded_canyon_wide",
+      "scene_refs": ["S10"],
+      "occurs_at": "the flooded hall as a canyon - door bases as cliffs, glass table legs as columns, the far shore steps; her swim toward the brightest water (POV 7 of 7)",
+      "focal_mm": 28,
+      "lens_height_m": "0.05, lens on the surface",
+      "note": "The canyon is a scale statement, so it takes the space lens with the surface itself as the near-foreground gauge. The mosaic shimmering just under the surface is the one texture allowed to read here.",
+      "prompt_terms": [
+        "shot on a 28 mm lens with the lens on the water surface, looking down the length of a flooded stone hall",
+        "door bases rising like cliffs and glass table legs standing like columns out of the water, pastel-and-gold mosaic shimmering just under the surface"
+      ]
+    },
+    {
+      "context": "cliffhanger_wake_insert",
+      "scene_refs": ["S10"],
+      "occurs_at": "the last image of the episode: a single V-wake crossing the broken lamplight toward camera, its maker never breaking the surface",
+      "focal_mm": 40,
+      "lens_height_m": "0.05, lens on the surface, static",
+      "note": "Human-eye lens, practical water only, no creature asset and nothing lit from under the water. The dread is entirely in what the frame does not contain, so nothing optical may hint at a subject.",
+      "prompt_terms": [
+        "shot on a 40 mm lens, camera static with the lens right on the water surface",
+        "a single V-shaped wake travelling toward camera across broken warm reflections on black water, nothing visible above or below the surface"
+      ]
+    }
+  ],
+
+  "scale_lens_map": {
+    "why": "Alice changes scale three times inside one room (S06 drink, S07 cake, S08 fan). CR-005 forbids showing a transformation, so the lens and the camera height are where the audience reads her size - and this table is the only place a downstream prompt can get that from.",
+    "gauges": {
+      "source": "bible/scenes/SCN-long-hall/whitebox.json via directing_plan (decision 2); architecture.json gives the hall as ~32 m x 5.5 m",
+      "glass_tabletop_m": 0.715,
+      "door_leaf_m": 1.95,
+      "lamp_row_bottom_m": 2.30,
+      "vault_crown_m": 2.80,
+      "little_door_m": 0.38,
+      "binding_rule": "Every size beat shows Alice against at least TWO gauges inside one frame (directing_plan). A gauge that is out of focus is not a gauge - see dof_policy."
+    },
+    "states": [
+      {
+        "state": "alice_1p35_normal",
+        "height_m": 1.35,
+        "scenes": ["S01", "S02", "S03", "S04", "S05", "S06 up to the drink"],
+        "lens_height_m": { "waking_bank": "0.30-0.50", "waking_chase": "0.80-1.10, dropping to 0.25 at the burrow", "dream": "1.20-1.35 (child height, never adult height)" },
+        "focal_default_mm": 40,
+        "focal_by_job": { "space": 28, "travel_and_pov": 40, "face_and_object": 50 },
+        "reads_as_normal_because": "the lens sits at HER height, so nothing is exaggerated; the doors at 1.95 m are a little taller than she is and the vault is barely above an adult's reach.",
+        "prompt_terms": [
+          "camera at the child's own eye height, about 1.3 m above the stone floor",
+          "the oak doors a little taller than she is, the hanging lamps just above head height"
+        ]
+      },
+      {
+        "state": "alice_0p254_ten_inches",
+        "height_m": 0.254,
+        "scenes": ["S06 from the reveal", "S07 up to the cake"],
+        "lens_height_m": "0.15-0.25, i.e. at or below her own 0.22 m eye-line - the camera is down on the flagstones with her for every shot of this state",
+        "focal_default_mm": 28,
+        "focal_by_job": { "space_and_gauge": 28, "vertical_table_leg_axis": 24, "face": 50 },
+        "reads_as_small_because": "a wide lens sits on the floor within ~0.3 m of an object of KNOWN size at her exact height - the DRINK ME bottle, a flagstone joint, the mosaic dado border - while the 2.80 m vault and the 2.30 m lamp row tower away in the same frame. She is the same height as the bottle she just drank from; that comparison does more than any effect shot.",
+        "prompt_terms": [
+          "camera on the stone floor, about 0.2 m above it, looking slightly up",
+          "the empty bottle standing beside her at exactly her own height in the near foreground",
+          "the glass table looming overhead like a ceiling, the vault and hanging lamps far above",
+          "an oversized practical set built to this scale, photographed in one continuous angle - no transformation, no morph, no glow"
+        ],
+        "forbidden": ["macro or tilt-shift optics", "any miniature / diorama look", "a wide lens close to her face"]
+      },
+      {
+        "state": "alice_2p74_giant",
+        "height_m": 2.74,
+        "scenes": ["S07 from the rise", "S08 to the fan"],
+        "lens_height_m": "0.30-1.00 and NEVER above 1.00. From the first frame of S08 the camera is below 1.00 m and stays there for the rest of the episode.",
+        "focal_default_mm": 28,
+        "focal_by_job": { "fragments_and_bulk": 28, "vertical_body_axis": 24, "eye_at_the_little_door": 50, "aria_face": 50, "the_single_up_angle": 28 },
+        "reads_as_giant_because": "we keep the ROOM's viewpoint, not hers. The lens stays on the floor, she overflows a frame that still contains the far end of the hall, and the gauges come to meet her in sequence: the table sinks to her knee (0.715 m), the lamps come down to her shoulder (2.30 m), her head meets an iron rib of the vault (2.80 m). At 2.74 m in a 2.80 m room she can never be framed standing - every giant frame is a hunch, a lie-down or a fragment.",
+        "act5_binding_rule": "color_script act 5 requires the lamps OUT OF FRAME while her head is above the 2.30 m lamp line. The only way both are true is a camera under 1.00 m. The last set-up in the episode allowed to contain a lamp fixture is the S07 vault-knock; from S08 shot 1 no lamp fitting enters any frame.",
+        "prompt_terms": [
+          "camera low on the stone floor, well under a metre, looking across at her",
+          "the glass table only knee-high to her, the hanging lamps at her shoulder, her head against an iron rib of the low vault",
+          "part of her filling and overflowing the frame while the far end of the hall stays small in the same image",
+          "no light fitting anywhere in frame"
+        ],
+        "forbidden": ["any camera above 1.00 m", "a lamp fixture in frame", "framing her standing whole"]
+      },
+      {
+        "state": "alice_0p61_two_feet",
+        "height_m": 0.61,
+        "scenes": ["S08 after the fan", "S09", "S10"],
+        "lens_height_m": "0.50-0.60 on dry stone (S09); 0.05-0.15 above the water surface in S10, never above the waterline",
+        "focal_default_mm": 40,
+        "focal_by_job": { "repeat_of_the_S05_door_round": 40, "flooded_canyon_space": 28, "face_at_the_waterline": 50 },
+        "reads_as_small_because": "repetition, not exaggeration. The same 40 mm travelling set-up as the S05 door round, now at 0.55 m, so the same wall takes three times as long to pass; the 0.715 m table is now a high shelf with the key a spark on top of it; in the flood every measurement is taken against door bases and table legs.",
+        "prompt_terms": [
+          "camera at about 0.55 m, travelling with her along the same row of locked doors",
+          "the glass table now above her head like a high shelf, the tiny gold key a spark on top of it",
+          "lens just above the water surface at her swimming height, the waterline cutting low across the frame"
+        ],
+        "forbidden": ["any high, crane or drone view over the pool (directing_plan S10 - there is no rescuing god's-eye in this episode)"]
+      }
+    ],
+    "match_focal_pairs": [
+      { "pair": ["S05 door-round travelling medium", "S09 the run for the little door"], "focal_mm": 40, "changes": "lens height 1.30 -> 0.55", "why": "the hall must repeat; the size is the only variable" },
+      { "pair": ["S06 the floor axis from the curtain to the glass table", "S08 movement 4, she is small again"], "focal_mm": 28, "changes": "nothing but her height in the frame", "why": "the comparison lands against a frame the audience already knows" },
+      { "pair": ["S03 POV down the shaft, first use", "S03 POV down the shaft, second use"], "focal_mm": 40, "changes": "only the wall dressing", "why": "the same thought returning, not a new shot" },
+      { "pair": ["S00 HOOK-OPEN locked wide (provisional)", "S03 the recognised slow-fall wide"], "focal_mm": 28, "changes": "nothing optical", "why": "recognition, not re-watching (directing_plan anti-repeat rule)" }
+    ],
+    "pov_lens_rule": {
+      "rule": "ep01 has exactly seven POVs (directing_plan 3). Six are 40 mm, the human-eye lens: the pictureless page (S01), the dark of the burrow (S02), straight down the shaft twice (S03), the key through the tabletop glass (S06), the flooded canyon (S10). The seventh, the garden down the crawl passage (S05), is 100 mm.",
+      "why": "POV means desire, and desire is normally honest here. The garden is the one thing she cannot have, so it is the one POV that lies about distance. Keeping the other six at 40 mm is what makes that single lie legible."
+    }
+  },
+
+  "color_temp": {
+    "vocabulary": {
+      "source": "ENV-ENUM-v1 / LGT-ENUM-v1 (runs/p3-lighting-sb1/result.json shared_conventions), the controlled time_of_day set this project's scene Bible uses",
+      "values": ["early_afternoon", "afternoon", "late_afternoon", "golden_hour", "sunset"],
+      "color_temp_buckets": { "warm (~2700K)": "below about 3500 K", "neutral (~4500K)": "about 3500-5800 K, which includes the 1862 afternoon sun at about 5000-5400 K", "cool (~6500K)": "above about 5800 K" },
+      "bucket_vs_number": "A lighting card's color_temp string is a BUCKET NAME; its kelvin_approx is the design number. Where the two look different (e.g. SCN-riverbank: 'neutral (~4500K)' with kelvin_approx 5400) there is no conflict - quote the number, not the bucket.",
+      "kelvin_in_prompts": "Kelvin is written into a prompt only for an actual light SOURCE. The cool ambience of the dream is carried by named palette colours (verdigris teal, slate grey, soot shadow), never by a negative Kelvin figure. The grade shifts in color_script (dream -300 K, act 2 -150 K, act 5 -400 K) belong to color-script and the grade pass and must NEVER appear in a prompt."
+    },
+    "present_in_ep01": ["early_afternoon"],
+    "absent_in_ep01": {
+      "afternoon": "N/A - does not occur in ep01",
+      "late_afternoon": "N/A - does not occur in ep01. BINDING CONSEQUENCE: SCN-long-hall scheme LGT-long-hall-02 and SCN-little-door-passage scheme LGT-little-door-passage-02 are both late_afternoon (the ch007 return) and are OUT OF BOUNDS for this episode. No ep01 scene entry carries a late-afternoon or low-sun descriptor.",
+      "golden_hour": "N/A - does not occur in ep01 (SCN-riverbank LGT-riverbank-02 is ch012 / ep09)",
+      "sunset": "N/A - does not occur in ep01 (SCN-riverbank LGT-riverbank-03 is ch012 / ep09)",
+      "night_and_after_dark": "NOT IN THE VOCABULARY AT ALL. The dark hall is a windowless lamplit interior at early_afternoon, not a night scene. The words night, nightfall, evening, moonlight, dusk, starlight are forbidden in every ep01 prompt, in every scene, without exception."
+    },
+    "self_consistency_note": "ep01 runs from about 14:00 to about 15:05 on Friday 4 July 1862 (waking clock on the lighting cards). Alice is asleep on the bank for S03-S10, so every dream scene inherits the early_afternoon slot. That is the ONLY time_of_day in this episode, and no scene entry below carries lighting words from any other slot.",
+    "early_afternoon": [
+      {
+        "id": "CT-01-waking-meadow",
+        "applies_to": ["S01 (SCN-riverbank, LGT-riverbank-01)", "S02 (SCN-field-hedge-burrow, LGT-field-hedge-burrow-01)"],
+        "register": "waking",
+        "key_source": "canopy_dappled_sun (S01) / sun_direct (S02)",
+        "kelvin_source": 5400,
+        "on_screen_band_k": "5000-5400 on the sun; open shade under the elms fills cooler, about 6000-6500 from the sky, with a warm green-gold bounce off the sunlit grass",
+        "colour_script": "act 1 - honey gold, meadow green, the highest key and the warmest act of the first eight episodes",
+        "contrast": "hard, with short crisp shadows; heat haze softens the far field but never the near ground",
+        "prompt_terms": [
+          "hot early-afternoon midsummer sunlight, high white sun from the south-west, about 5400 K",
+          "soft cool open shade under the elms with small bright sun-flecks through the leaves",
+          "warm green-gold bounce off the sunlit meadow grass, faint heat haze over the far field, short crisp shadows"
+        ],
+        "forbidden_terms": ["golden hour", "low sun", "long evening shadows", "sunset", "night", "any Art Nouveau ornament, stained glass or coloured light (CR-014, negative_prompt_waking_addon_en)"],
+        "notes": "The rabbit is the only bright white MOVING in frame in act 1 - nothing else white may move. The directing plan's '4500-5000 K' is the enum bucket label; the number above is the lighting card's kelvin_approx and is the one to quote."
+      },
+      {
+        "id": "CT-02-fall-shaft",
+        "applies_to": ["S00 HOOK-OPEN (provisional)", "S03 (SCN-falling-dream, LGT-falling-dream-01)"],
+        "register": "dream (bridge)",
+        "key_source": "eyelid_glow_from_above - a dim warm glow high above her with NO visible fixture and NO opening",
+        "kelvin_source": 3000,
+        "on_screen_band_k": "3000 at the top of the shaft on the nearest dressing, falling off hard with depth until the lower passes keep only a 2800-3000 K rim and the readable band sits at slate and verdigris",
+        "colour_script": "act 2 - tarnished gold draining to slate/verdigris; the film's ONLY in-shot grade ramp runs across this scene and completes on the landing heap in S04",
+        "ramp_direction": "The ramp is DEPTH, not a timeline: honey-gold survives on the topmost dressing and on the jar glass, each level she passes is cooler than the last, and the colour never warms again. It never runs on a cut.",
+        "contrast": "hard fall-off, no fill; the shadow side of the girl and the shaft below go to black with a faint warm bounce off mahogany and book spines",
+        "prompt_terms": [
+          "a dim warm amber-red glow high above with no visible light fitting, falling down the shaft and fading as it goes, about 3000 K",
+          "the cupboards, shelves and jars nearest her just readable in warm half-light, the shaft below falling away into deep blackness",
+          "slow dust motes drifting in the glow, hard fall-off, no fill"
+        ],
+        "forbidden_terms": [
+          "daylight, sunlight, sky, a bright disc of sky - the entry tunnel mouth recedes into the same warm half-light and is NEVER a bright opening (daylight_access: dark_no_sky)",
+          "lamps, candles or any visible fixture in the shaft",
+          "night, moonlight",
+          "any warming or brightening as she descends"
+        ],
+        "notes": "The lighting card's own prompt_fragment_en opens with 'no daylight and no lamps' before it uses the closed-eyelid simile; quoted whole it is safe. Quoted in part it is not - do not lift the simile on its own. color_script act 2's 'start at the waking baseline' is a GRADE instruction for the ramp, not permission for a daylight source."
+      },
+      {
+        "id": "CT-03-landing-and-passage",
+        "applies_to": ["S04 (SCN-shaft-landing-passage, LGT-shaft-landing-passage-01)"],
+        "register": "dream",
+        "key_source": "lamp_spill_indirect - warm lamp-glow spilling round the right-angle corner from the long hall, far ahead",
+        "kelvin_source": 2400,
+        "on_screen_band_k": "2400 on the lit corner reveal and on the drifting leaf-dust; everything behind the camera and overhead is near-black",
+        "colour_script": "act 2 -> act 3; the in-shot ramp COMPLETES on the landing heap, after which the full dream grade simply holds",
+        "contrast": "hard; figures running toward the glow are silhouettes with warm rims; overhead is always black",
+        "prompt_terms": [
+          "pitch black overhead, cool near-black shadow over the heap of dry sticks and leaves",
+          "the only light a warm amber lamp-glow spilling round the far corner of the long low passage, about 2400 K",
+          "rim light on drifting leaf-dust, a running figure silhouetted against the glow ahead"
+        ],
+        "forbidden_terms": ["daylight, sunlight, any opening to the sky", "light coming down from the shaft she fell through", "visible lamp fixtures (the lamps are round the corner and off-frame)", "night, moonlight"],
+        "notes": "The White Rabbit is lit by this spill and nothing else. He is far down the passage and in profile; do not add a source to see him better."
+      },
+      {
+        "id": "CT-04-long-hall-lamplit",
+        "applies_to": ["S05", "S06", "S07", "S08", "S09 (SCN-long-hall, LGT-long-hall-01)"],
+        "register": "dream",
+        "key_source": "oil_lamp_row - 11 brass oil lamps with pastel tulip glass shades hanging down the centre line, bottoms at 2.35 m",
+        "kelvin_source": 2300,
+        "on_screen_band_k": "2300 in the pools under each lamp; the space between pools and the vault above fall to brown-black; the cool ambience is a palette, not a Kelvin (verdigris teal, slate grey, soot shadow)",
+        "colour_script": "acts 3-6",
+        "direction": "overhead_row: pools on the floor under each lamp, walls and doors lit from above at a glancing angle, the vault fading to dark above the lamps, the NE corner entrance a dark opening",
+        "contrast": "medium, softened by a faint haze under the vault",
+        "prompt_terms": [
+          "a single row of brass oil lamps with pastel tulip glass shades hanging down the centre of a low ribbed vault, the only light in the hall, about 2300 K",
+          "a warm amber pool on the worn flag floor under each lamp, brown-black shadow between the lamps and up in the vault",
+          "the oak doors along the walls dim and warm, the small stained-glass roundels above them unlit from behind and catching only faint jewel-coloured glints of lamplight",
+          "a faint haze hanging in the still, hot air"
+        ],
+        "forbidden_terms": [
+          "daylight, sunlight, a window, a skylight, a shaft, a beam, a pool of coloured light on the floor",
+          "backlit, glowing or evenly lit stained-glass roundels - they are BLIND, with no opening and no lamp behind them (roundel_glow: reflected_lamplight_only, upheld by BIB-0033)",
+          "candles on stands, torches, fire, electric light, any fixture other than the eleven hanging oil lamps",
+          "night, moonlight, evening"
+        ],
+        "act_doses": [
+          { "act": 3, "scenes": ["S05"], "rule": "Full lamp pools. Jewel glints and lead-came sheen on the blind roundels where a lamp hangs close, plus the pastel tulip shades themselves - all dimmer than the lamp pools. Sage is kept off the little-door wall so the garden green stays the only saturated green in the hall." },
+          { "act": 4, "scenes": ["S06", "S07"], "rule": "Held flat across the size changes so scale reads through the sets and not the grade. LIGHTING MUST NOT CHANGE BETWEEN S06 AND S07 - same lamps, same positions, same levels. The glass table is the brightest object in the hall; the roundel glints stay below it in brightness. One or two roundels stay at a FIXED position on the wall through the shrink and the later growth and work as scale markers. 'Lit roundel' here means front-lit by a nearby lamp; nothing is lit from behind, and there are no glass pools on the floor (see conflicts[0])." },
+          { "act": 5, "scenes": ["S08"], "rule": "Lamps OUT OF FRAME. The lowest luma of the episode; the blind roundels go dark with the lamps. The only light accent is small dim broken specular flecks of the off-frame lamps on the tear water - never a pool of light, never on Alice, the walls or the vault, under ~5 % of frame. Camera is a raking water-level lens, which multiplies specular area, so keep the flecks in the FAR THIRD of the shot and never under her (directing_plan risk flag). Alice's cornflower blue is the only colour left." },
+          { "act": 6, "scenes": ["S09"], "rule": "Deep pool teal creeping in; amber survives only as reflections on the wet flagstones. Lamps still out of frame." }
+        ]
+      },
+      {
+        "id": "CT-05-little-door-garden",
+        "applies_to": ["S05 - the key turning and the door swinging in, the POV down the crawl passage, the return to her face (SCN-little-door-passage, LGT-little-door-passage-01; SCN-long-hall SPC-long-hall-01 for LGT-long-hall-01)", "S07 - the garden light laid across one enormous eye at the open doorway"],
+        "register": "dream",
+        "key_source": "far_daylight_opening - the garden beyond the 0.38 m door, lit by the waking sun of the current clock slot",
+        "kelvin_source": 5400,
+        "on_screen_band_k": "5400 - bright white high-sun summer daylight, the same sun that is on the meadow in S01",
+        "colour_script": "act 3 - the ONLY warm meadow-green in the dream half of the episode; the goal is coloured as the waking world she has just left, so the garden is coloured as 'home'",
+        "containment_rule": "THIS IS THE ONLY DAYLIGHT AND THE ONLY COLOURED CAST LIGHT ANYWHERE IN THE DREAM HALF OF ep01. It lights the small arch, the patch of floor in front of the door and the face at the opening. It does NOT light the hall, it casts no shaft across the floor, and it reaches no wall, vault or door beyond the one it comes through.",
+        "spend_rule": "The last frame in ep01 that carries this light is the giant's eye at the doorway in S07. From the first frame of S08 the garden light is gone from the episode: no daylight word, no green cast, no bright opening appears in S08, S09 or S10. (S09 finds the little door shut.)",
+        "prompt_terms": [
+          "through the tiny open door low in the wall, a small arch of brilliant white summer daylight from the garden beyond, about 5400 K",
+          "a bright patch of white daylight on the stone floor in front of the little door and on the kneeling girl's face, the brightest thing in the dim hall",
+          "bright sunlit flower beds and glinting fountain spray seen small and flat at the far end of a dark stone passage"
+        ],
+        "forbidden_terms": [
+          "golden, warm, low or late-afternoon garden light - that is the ch007 scheme LGT-little-door-passage-02 and it belongs to a later episode, not to ep01",
+          "sunset, golden hour, evening light",
+          "daylight anywhere in the hall except through this one 38 cm opening",
+          "a shaft, a beam or a god-ray crossing the hall"
+        ],
+        "notes": "S07's storyboard phrase 'green-gold garden light' means WHITE 5400 K summer sun filtered through green foliage, warmed by the honey limestone and her skin as it lands. It is not a low sun and must never be written as one."
+      },
+      {
+        "id": "CT-06-pool-of-tears-water-level",
+        "applies_to": ["S10 (SCN-pool-of-tears, LGT-pool-of-tears-01)"],
+        "register": "dream",
+        "key_source": "oil_lamp_row - the hall's same lamps, now far overhead and OUT OF FRAME at a swimmer's scale",
+        "kelvin_source": 2400,
+        "on_screen_band_k": "2400 in the reflections and in the moving bounce off the water; the water body itself is deep pool teal and the walls read cold",
+        "colour_script": "act 6 - deep pool teal, amber surviving only as reflections on the water surface",
+        "way_out_rule": "The brightest water is the SOUTH END, where the off-frame lamp reflections crowd and the shore steps lie. That reflection field - not a shaft, not an opening - is the motivated heading for her swim and the last lit element before the cliffhanger (SCN-pool-of-tears/lighting.json way_out_heading, upheld by BIB-0033). Keep the field and the glass glints under ~5 % of frame.",
+        "contrast": "medium; deep brown shadow in the door reveals, a faint humid haze over cool still salt water",
+        "prompt_terms": [
+          "warm amber lamplight falling from far above and out of sight onto clear salt water, about 2400 K",
+          "trembling broken gold reflections along the swimmer's wake, shimmering ripple-light dancing on the pale limestone walls and door bases that rise like cliffs",
+          "moving amber-green bounce off the water surface lighting her face from below",
+          "the brightest water far away at the end of the flooded hall, where the reflections crowd"
+        ],
+        "forbidden_terms": [
+          "a shaft, a beam, a skylight, a high window, any opening overhead - the flooded hall is the same windowless hall (BIB-0033)",
+          "daylight, sunlight, sky, sea horizon",
+          "a pool of coloured light; any glass tint on a swimming animal's face (CR-015)",
+          "light from under the water, or any glow on or below the V-wake",
+          "night, moonlight"
+        ]
+      }
+    ]
+  },
+
+  "dof_policy": [
+    {
+      "context": "size_beat_deep_focus",
+      "scene_refs": ["S06", "S07", "S08 movement 4", "S09", "S10"],
+      "dof": "deep",
+      "equivalent_stop": "T5.6-T8",
+      "rule": "THE EPISODE'S FIRST DEPTH RULE: every size beat is deep focus, and no gauge may be defocused. A size beat is a frame that compares Alice with at least two of the fixed gauges; if one of them is soft the comparison is not made and the shot has failed. This also covers the S08 movement-4 chain (fan still moving in the near foreground WHILE the table edge rises behind it), where both planes are the whole point.",
+      "prompt_terms": [
+        "deep focus: the near-foreground object and the far end of the hall both sharp in the same frame",
+        "everything in frame in focus, no background blur"
+      ]
+    },
+    {
+      "context": "MINIATURE-LOOK BAN",
+      "scene_refs": ["S06", "S07", "S09", "S10 - everywhere Alice is not her normal size"],
+      "dof": "deep",
+      "rule": "Shallow depth of field at close range on a small subject is the visual signature of PHOTOGRAPHING A MINIATURE. Used on ten-inch or two-foot Alice it would make the oversized practical set read as a toy and destroy the whole size grammar (CR-005) and the photographed-live-action finish (CR-001). Tiny scale therefore takes deep focus and an ordinary perspective, always.",
+      "prompt_terms": ["deep focus, natural perspective, photographed at human scale"],
+      "negative_addon_en": "tilt-shift, miniature effect, diorama, toy-like, macro blur, model village, fake bokeh",
+      "negative_addon_status": "Additive to bible/style.json negative_prompt_en, which is still quoted verbatim and still wins. These terms contradict nothing in the H2 negative list; they are the ep01-specific generation failure modes of a size-change episode."
+    },
+    {
+      "context": "hall_space_deep",
+      "scene_refs": ["S05 the reveal and the hall wides", "S06 the locked wide", "S07 the held wide", "S08 the flagstone wides"],
+      "dof": "deep",
+      "equivalent_stop": "T5.6-T8",
+      "rule": "The hall's 32 m of length is the fact being stated, so it must be sharp along its length. Depth is lost to DARKNESS AND HAZE, never to focus - the far end goes away because the lamps stop, not because the lens gave up.",
+      "prompt_terms": [
+        "deep focus down the length of the hall, sharp from the near foreground to the far lamps",
+        "the far end lost in darkness and haze, not in blur"
+      ]
+    },
+    {
+      "context": "waking_grass_foreground",
+      "scene_refs": ["S01", "S02"],
+      "dof": "medium-shallow, near foreground only",
+      "equivalent_stop": "T2.8-T4",
+      "rule": "Only the grass and seed-heads within about 0.2 m of the lens go soft; the subject, the mid-ground and the far elms stay readable. The far field is softened by heat haze, not by the lens. No long-lens compression anywhere in the waking frame.",
+      "prompt_terms": [
+        "out-of-focus grass stems and seed-heads across the near foreground, the figures and the far trees sharp",
+        "the distant field softened by heat haze, not by blur"
+      ]
+    },
+    {
+      "context": "the_rabbit_pass_no_emphasis",
+      "scene_refs": ["S01"],
+      "dof": "deep",
+      "rule": "The rabbit's pass holds Alice's shoes and the animal in one unbroken frame with both planes readable. He gets no focus emphasis of any kind - the audience should half-doubt what they saw, which is what makes her run believable (directing_plan S01 b, CR-004).",
+      "prompt_terms": ["both the near foreground and the animal in the middle distance in focus, no focus emphasis on the animal"]
+    },
+    {
+      "context": "lettering_inserts",
+      "scene_refs": ["S03 ORANGE MARMALADE", "S06 DRINK ME", "S07 EAT ME"],
+      "dof": "shallow, with the lettering plane sharp corner to corner",
+      "equivalent_stop": "T2.8, square-on to the label",
+      "rule": "Exactly one clean legible read each, and the label plane must be square-on and sharp across its whole width - a tilted or partly soft label is the failure mode that makes generated lettering garble. Everywhere else these props are dressed, not hero-lit and not legible (CR-012). The delivered prop images carry known faults (DEF-p4-prop-502): spot-check before using one as a scale anchor.",
+      "prompt_terms": [
+        "square-on to the hand-lettered paper label, the lettering sharp across its whole width",
+        "the background falling away soft behind it"
+      ]
+    },
+    {
+      "context": "flat_on_page_insert",
+      "scene_refs": ["S01"],
+      "dof": "deep for the page plane",
+      "rule": "The book page is sharp margin to margin - it is the thing LN-ep01-001 is asking about, and with narration off it has to be legibly pictureless. Slightly off square so the paper takes no glare.",
+      "prompt_terms": ["the whole page sharp margin to margin, no glare on the paper"]
+    },
+    {
+      "context": "intimate_insert_shallow",
+      "scene_refs": ["S04 the watch dial in the paw", "S08 the gloves and fan hitting the water, the glove that fits"],
+      "dof": "shallow",
+      "equivalent_stop": "T2.8",
+      "rule": "The object and the hand or paw holding it stay sharp together; everything behind falls off. Never a macro: the fur, the kid leather and the enamel must stay in the same photographed world (CR-015).",
+      "prompt_terms": ["the object and the hand holding it sharp together, the space behind soft and dark", "no macro, ordinary close-focus perspective"]
+    },
+    {
+      "context": "dream_dialogue_close",
+      "scene_refs": ["S06 the one earned close-up", "S07 the held cheated face", "S08 the identity aria", "S10 at the waterline"],
+      "dof": "moderately shallow",
+      "equivalent_stop": "T2.8-T4",
+      "rule": "Her face carries the native dialogue take, so it is held whole and sharp with the hall soft behind. In S08 stop down a little rather than a lot: the background there is already almost black, and over-blurring it removes the only evidence that she is still in the room. Never split a line across a focus change.",
+      "prompt_terms": [
+        "her face sharp and held whole in frame, the hall soft and dark behind her",
+        "no focus change while she is speaking"
+      ]
+    },
+    {
+      "context": "garden_pov_flat_and_sharp",
+      "scene_refs": ["S05"],
+      "dof": "deep, on the one long lens",
+      "equivalent_stop": "T5.6 on the 100 mm",
+      "rule": "The garden POV is FLAT, not soft. The tunnel walls and the far arch are all sharp and the compression does the work; a shallow version would turn an unreachable place into a pretty one.",
+      "prompt_terms": ["the passage walls and the far sunlit arch all in focus, flattened together by the long lens"]
+    },
+    {
+      "context": "rack_focus_budget",
+      "scene_refs": ["whole episode"],
+      "dof": "n/a",
+      "rule": "ep01 spends ZERO rack focuses. CR-006 licenses rack focus film-wide and this is not a revocation - it is an episode budget of none. Every candidate rack in ep01 is either a scale comparison or a cause-and-effect pair that needs both planes sharp at once (S06 up the table leg, S08 movement 4), or would hero an image the plan forbids heroing (the rabbit's pass in S01). Nothing is left for a rack to do.",
+      "prompt_terms": ["no focus pull, no rack focus, focus stays where it starts"]
+    }
+  ],
+
+  "texture": [
+    "fine film grain (carried by style_fragment_ui verbatim - never re-stated or amplified at shot level)",
+    "gentle halation blooming softly around each lamp flame",
+    "faint haze hanging in the still air under the vault",
+    "heat haze over the open meadow (waking only)",
+    "soft light falloff into brown-black shadow",
+    "worn, damp, patinated surfaces: verdigris iron, flaking gilding, mosaic with missing tesserae, honey limestone",
+    "mildly oval highlights and a faint horizontal flare on the lamp flames (anamorphic finish, understated)",
+    "medium contrast in the hall, hard contrast and short crisp shadows in the waking meadow, hard fall-off with no fill in the fall",
+    "blacks lifted by haze rather than crushed (dream register)",
+    "everything muted except Alice's cornflower blue and the lamp flames"
+  ],
+
+  "texture_rules": {
+    "super_resolution_discipline": {
+      "why": "Video is generated at 480p and finished by upscaling (bible/aspect_ratio.json). Any texture that only exists at the pixel level is either absent from the draft or invented by the upscaler, and in both cases it is not under anyone's control.",
+      "rule": "Specify texture at the scale of the FRAME, not the pixel. Everything in texture[] above is a large-scale optical or atmospheric fact - bloom around a flame, haze in a volume, falloff across a wall, contrast across an image - and all of it survives a super-resolution pass. Grain is the one exception and it is handled by leaving it alone: style_fragment_ui already says 'fine film grain' and is quoted verbatim in every prompt, so no shot-level prompt adds a grain word.",
+      "forbidden_in_shot_level_prompts": [
+        "heavy grain, 16mm grain, grainy, grain overlay, film grain texture",
+        "film scratches, dust, hair in the gate, gate weave, light leaks, sprocket holes",
+        "chromatic aberration, lens dirt, smudged filter, heavy vignette",
+        "8K, ultra sharp, hyper-detailed, sharpened, skin pore detail, micro-detail",
+        "anamorphic blue streak flare, J.J. Abrams lens flare"
+      ],
+      "note": "The last group is banned for a second reason: a hard blue streak is an electric-light signature, and ep01 has no electric light (CR-002)."
+    },
+    "by_register": [
+      {
+        "register": "waking (S01, S02)",
+        "contrast": "hard, short crisp shadows, high key",
+        "atmosphere": "heat haze over the far field, pollen and seed-fluff lifting in the sun",
+        "finish": "clean, alive and summery; no patina, no ornament, no glass (CR-008, CR-014)",
+        "prompt_terms": ["hard high-summer sunlight with short crisp shadows", "faint heat haze and drifting pollen catching the sun", "clean, plain period realism, no ornament"]
+      },
+      {
+        "register": "fall (S00, S03)",
+        "contrast": "hard fall-off, no fill",
+        "atmosphere": "cool, still, faintly dusty air with slow motes drifting in the glow",
+        "finish": "old mahogany, glazed cupboards, book spines and jar glass catching the last of the gold",
+        "prompt_terms": ["hard light fall-off with no fill, the shadow side going to black", "slow dust motes drifting in a dim warm glow"]
+      },
+      {
+        "register": "dream hall and pool (S04-S10)",
+        "contrast": "medium, softened by haze; blacks lifted by haze rather than crushed",
+        "atmosphere": "hot, close, motionless air; a faint haze under the vault softening the lamp flares; humid haze over the flood",
+        "finish": "verdigris cast-iron whiplash ribs with traces of old gilding, flaking gilded fresco, pastel-and-gold mosaic with missing tesserae, worn honey limestone flags, damp and moss in the joints (CR-008)",
+        "prompt_terms": [
+          "a faint haze in the still hot air softening the lamp flares, gentle halation around each flame",
+          "worn honey limestone flags, verdigris ironwork with traces of old gilding, pastel-and-gold mosaic with missing tesserae, damp in the joints",
+          "medium contrast, shadows lifted by haze rather than crushed"
+        ]
+      }
+    ]
+  },
+
+  "inherited_from_director_not_re_owned": {
+    "note": "Quoted so the per-shot stations have it beside the lens rules. These are the director's numbers, not mine; shot-planning owns the final figures.",
+    "asl_targets_s": { "S01": 7.0, "S02": 4.5, "S03": 8.0, "S04": 4.5, "S05": 6.0, "S06": 5.5, "S07": 5.5, "S08": 5.0, "S09": 3.5, "S10": 4.5, "episode": 5.5 },
+    "static_vs_moving": "about 70/30; the only licensed moves in ep01 are following her walk or run, the single S05 hall reveal, and the S08 failed tilt. No handheld in the dream; mild handheld only in the S02 chase. Owned by camera-movement.",
+    "prohibited_ep01": ["Dutch angles", "fisheye", "speed ramps", "morph, dissolve or glow used to convey a size change", "drone or high-crane views in S10", "visible transitions written into video prompts", "on-screen lettering other than ORANGE MARMALADE, DRINK ME and EAT ME"]
+  },
+
+  "handoff": {
+    "camera-movement": "The lens set and the camera-height law are fixed here; the moves are yours. Two constraints bite: the S08 failed tilt starts from a lens under 1.00 m and must run out of room BEFORE any lamp fixture enters frame, and the S09 travelling medium must reuse the S05 focal (40 mm) exactly or the hall stops repeating.",
+    "composition": "The depth-of-field policy is the only thing here that constrains you: at every size beat both gauges must be sharp, which means both gauges must be IN the frame. The 24 mm and 100 mm shots are single-use and are listed by name in lens_set.rationed.",
+    "blocking": "scale_lens_map.states gives the camera height for each of Alice's four sizes. In the aria her head is reachable by a water-level 50 mm only because she is hunched and folded - the pose has to bring her face down; the lens cannot.",
+    "08-video-gen/prompt": "Quote prompt_terms verbatim. Write focal lengths exactly as given ('shot on a 40 mm lens') and do not convert them. Kelvin goes in a prompt only for a real source; the grade shifts (-300 / -150 / -400 K) never do. The forbidden_terms lists under color_temp are the daylight red line - in S04 through S10 the only daylight word permitted anywhere is the little-door garden in S05 and S07, and after S07 not even that.",
+    "continuity-planning": "Three things to hold: the lamps leave frame at the start of S08 and never return; the garden daylight is spent at the S07 eye-at-the-door and does not reappear (the little door is found shut in S09); and the S05/S09 and S06/S08 match pairs must keep the same focal length across the episode or the repetitions stop reading."
+  },
+
+  "self_check": {
+    "run_by": "07-directing/cinematography, 2026-09-23, self-run (no evaluation scoring and no QA co-sign this run per the user's review settings)",
+    "results": [
+      { "check": "focal_rules / color_temp / dof_policy non-empty and mutually consistent", "result": "PASS", "detail": "27 focal rules, 6 colour-temperature entries under the one time_of_day present, 11 depth-of-field rules. Cross-checked for contradiction: the only lens/DOF pairing that could clash (long lens + deep focus on the garden POV) is stated explicitly in both tables and agrees." },
+      { "check": "every rule keyed to something that actually occurs in ep01, with the scene cited", "result": "PASS", "detail": "Every focal_rules, scale_lens_map, color_temp and dof_policy entry carries scene_refs or applies_to naming S00-S10; each was matched against the storyboard draft's shots_draft before it was written." },
+      { "check": "every rule carries prompt-injectable wording", "result": "PASS", "detail": "prompt_terms present on all 27 focal rules, all 4 scale states, all 6 colour entries and all depth-of-field rules except rack_focus_budget, which carries a negative prompt term instead." },
+      { "check": "colour temperatures agree with each scene's lighting.json", "result": "PASS", "detail": "5400 K riverbank / hedge (LGT-riverbank-01, LGT-field-hedge-burrow-01); 3000 K fall (LGT-falling-dream-01); 2400 K landing passage (LGT-shaft-landing-passage-01); 2300 K long hall (LGT-long-hall-01); 5400 K little-door garden (LGT-little-door-passage-01 / SPC-long-hall-01 under LGT-long-hall-01); 2400 K pool (LGT-pool-of-tears-01). All are the cards' kelvin_approx values, unchanged." },
+      { "check": "colour temperatures agree with the amended color_script (no daylight in S04-S10)", "result": "PASS", "detail": "No hall or pool entry carries a daylight Kelvin, a window, a shaft, a beam or a backlit roundel; CT-04 and CT-06 forbid all of them by name, per BIB-0033. The single daylight entry, CT-05, is the 0.38 m little door, which is the Bible's own only-daylight-in-the-hall ruling (SPC-long-hall-01) and color_script act 3's thesis, and it is explicitly spent at S07 and absent from S08-S10." },
+      { "check": "time_of_day from the controlled vocabulary and matching the storyboard", "result": "PASS", "detail": "ENV-ENUM-v1 / LGT-ENUM-v1 values used; present_in_ep01 = [early_afternoon], which is exactly the storyboard's time_of_day_vocabulary.value_used and the per-scene value on all 11 scene entries. afternoon / late_afternoon / golden_hour / sunset declared N/A, and no entry below carries their lighting words - in particular LGT-long-hall-02 and LGT-little-door-passage-02 (both late_afternoon) are named as out of bounds." },
+      { "check": "self-consistency red line: no lighting word from a declared-absent time_of_day", "result": "PASS", "detail": "Grepped the finished file for golden hour / late afternoon / sunset / night / moonlight / dusk / evening: every occurrence sits inside a forbidden_terms list, the absent_in_ep01 block, the vocabulary enum itself or this check - never inside a prompt_terms string or a scene description. The S07 'green-gold' phrase from the storyboard is explicitly re-defined as 5400 K white sun through foliage, not a low sun." },
+      { "check": "nothing contradicts style.json's negative list", "result": "PASS", "detail": "The one addition, dof_policy MINIATURE-LOOK BAN negative_addon_en, is marked additive and subordinate; its terms (tilt-shift, miniature, diorama, macro blur) appear nowhere in the H2 list and serve CR-001 and CR-005. No Dutch angle, fisheye, speed ramp, glow, morph, electric-light flare or poster lettering is licensed anywhere; several are re-banned by name." },
+      { "check": "no per-shot camera moves or compositions (scope)", "result": "PASS", "detail": "Moves are referenced only where a lens choice depends on one (the S08 failed tilt, the S05 reveal, the S09 travelling repeat) and are explicitly handed back to camera-movement; framing is referenced only as a depth-of-field consequence (a gauge must be in frame to be sharp) and handed to composition." },
+      { "check": "ASCII filename", "result": "PASS", "detail": "directing/ep01/cinematography.json" }
+    ]
+  },
+
+  "conflicts": [
+    {
+      "id": "conflict-1",
+      "severity": "minor",
+      "between": "bible/color_script.json ep01 act 4 stained_glass vs bible/scenes/SCN-long-hall/lighting.json roundel_glow",
+      "finding": "After BIB-0033 the act 4 dose still reads 'one or two LIT roundels held at a fixed position on the wall across the size changes'. lighting.json rules that the 25 roundels are blind, catch the lamps from the front only, and 'never glow evenly or look backlit'. Read alone, 'lit roundels' invites a prompt writer to write a glowing or backlit roundel into S06/S07 - the exact reading BIB-0033 has just closed.",
+      "my_reading_used_here": "'Lit' means front-lit by the lamp hanging nearest it. CT-04 act 4 states that explicitly and CT-04 forbids backlit or evenly glowing roundels by name, so nothing downstream is blocked.",
+      "asked_of": "06-art/color-script (countersign is still pending on this file anyway) - a one-word wording fix at the next open, e.g. 'one or two front-lit roundels'.",
+      "defect_filed": "qa/defects/DEF-p6-cinematography-ep01-001.json",
+      "bible_edited": false
+    },
+    {
+      "id": "conflict-2",
+      "severity": "minor",
+      "between": "directing/ep01/directing_plan.md (S06 colour note) vs bible/color_script.json ep01 act 4 as amended by BIB-0033",
+      "finding": "The plan says 'one or two glass floor POOLS stay at a fixed position through the shrink and the later growth and work as scale markers (color_script act 4 stained_glass)'. The amended act 4 says the opposite: the fixed markers are roundels on the WALL and there are 'no glass pools on the floor'. The plan is quoting the pre-BIB-0033 text - it was written the same day the arbitration landed.",
+      "my_reading_used_here": "The Bible wins: the fixed scale marker in S06/S07 is a roundel at a fixed position on the wall, and no coloured pool touches the floor. The plan's intent (a fixed, unmoving colour marker that the audience can measure the size changes against) is preserved exactly.",
+      "asked_of": "07-directing/director, via orchestrator - a citation fix in the plan at its next open, before H3S if convenient. No shot design changes either way.",
+      "defect_filed": "qa/defects/DEF-p6-cinematography-ep01-001.json (finding -b)",
+      "bible_edited": false
+    },
+    {
+      "id": "note-1",
+      "severity": "note, not a defect",
+      "subject": "SCN-falling-dream/lighting.json prompt_fragment_en contains the phrase 'like afternoon sun seen through closed eyelids'.",
+      "finding": "The fragment is safe quoted whole, because it opens with 'no daylight and no lamps'. Quoted in part - which is what a prompt writer under a length limit does - the simile alone could put a sun or a sky into a shaft whose card says daylight_access: dark_no_sky.",
+      "handled_here": "CT-02 supplies daylight-free wording for the fall and forbids sun, sky and a bright tunnel mouth by name. No Bible change requested."
+    }
+  ]
+}

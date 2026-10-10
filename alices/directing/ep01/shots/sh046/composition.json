@@ -1,0 +1,34 @@
+{
+  "shot_id": "sh046",
+  "scene_id": "SCN-long-hall",
+  "size": "medium",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "mid_left",
+    "anchor_xy": [0.36, 0.46],
+    "size_in_frame": "three-quarter figure, about 0.70 of frame height, arm fully extended across the frame"
+  },
+  "second_subject": {
+    "id": "PROP-drink-me-bottle",
+    "grid": "mid_right",
+    "anchor_xy": [0.68, 0.50],
+    "note": "held at the far end of her straight arm, turning; about 0.14 of frame height."
+  },
+  "headroom": "about 0.16 of frame height, matched to sh044 so the two frames from this set-up sit together.",
+  "horizon_eyeline": "Eye-level at 1.3 m from beside the glass table: dado level behind her at 0.60 of frame height. Her eyeline is at 0.42 and runs straight along her own outstretched arm to the bottle — the eyeline and the arm are the same line.",
+  "layers": {
+    "fg": "the near edge of the glass tabletop crossing the bottom left corner",
+    "mg": "Alice with the bottle held out at full stretch, prim and careful",
+    "bg": "the low curtain and the locked doors of the west wall, dark"
+  },
+  "gaze": {
+    "direction": "frame_right",
+    "lead_room": "right",
+    "note": "she looks along her arm to frame right at the thing she is holding away from herself; the lead room is occupied by the bottle at arm's length. A well-brought-up child putting the maximum available distance between her face and an unlabelled substance."
+  },
+  "balance": "A long horizontal figure spanning nearly the whole frame width, weighted at both ends — head left, bottle right — with nothing in the middle but a straight arm. The carefulness is a shape, not an expression.",
+  "leading_lines": "Her arm is the single dominant horizontal, running from the left third to the right third at just above mid-frame; the dado behind runs parallel to it and slightly lower, doubling the gesture.",
+  "eye_first": "Her face, then straight along the arm to the bottle, and back.",
+  "safe_area_ok": true,
+  "constraint_binding": "Comedy of manners — the whole joke is carried by the extension of the arm inside a static frame, so the bottle stays inside action-safe at the end of the stretch and the frame is wide enough that her hand never approaches the right edge. No reframe and no insert: she checks the rules in one picture."
+}

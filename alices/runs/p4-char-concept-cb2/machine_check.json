@@ -1,0 +1,272 @@
+{
+ "CHAR-knave-of-hearts": {
+  "container": "JPEG",
+  "size": "2560x1440",
+  "size_ok": true,
+  "default_costume_id": "COS-011",
+  "default_costume_in_prompt": true,
+  "gender": "male",
+  "gender_word_in_prompt": true,
+  "style_fragment_verbatim": true,
+  "layout_sentence_in_prompt": true,
+  "main_dir_files": [
+   "prompts.json",
+   "selection.json",
+   "sheet.png",
+   "usage_ledger.jsonl"
+  ],
+  "main_dir_clean": true
+ },
+ "CHAR-gryphon": {
+  "container": "JPEG",
+  "size": "2560x1440",
+  "size_ok": true,
+  "default_costume_id": "COS-048",
+  "default_costume_in_prompt": true,
+  "gender": "male",
+  "gender_word_in_prompt": true,
+  "style_fragment_verbatim": true,
+  "layout_sentence_in_prompt": true,
+  "main_dir_files": [
+   "prompts.json",
+   "selection.json",
+   "sheet.png",
+   "usage_ledger.jsonl"
+  ],
+  "main_dir_clean": true
+ },
+ "CHAR-mock-turtle": {
+  "container": "JPEG",
+  "size": "2560x1440",
+  "size_ok": true,
+  "default_costume_id": "COS-049",
+  "default_costume_in_prompt": true,
+  "gender": "male",
+  "gender_word_in_prompt": true,
+  "style_fragment_verbatim": true,
+  "layout_sentence_in_prompt": true,
+  "main_dir_files": [
+   "prompts.json",
+   "selection.json",
+   "sheet.png",
+   "usage_ledger.jsonl"
+  ],
+  "main_dir_clean": true
+ },
+ "CHAR-caterpillar": {
+  "container": "JPEG",
+  "size": "2560x1440",
+  "size_ok": true,
+  "default_costume_id": "COS-019",
+  "default_costume_in_prompt": true,
+  "gender": "male",
+  "gender_word_in_prompt": true,
+  "style_fragment_verbatim": true,
+  "layout_sentence_in_prompt": true,
+  "main_dir_files": [
+   "prompts.json",
+   "selection.json",
+   "sheet.png",
+   "usage_ledger.jsonl"
+  ],
+  "main_dir_clean": true
+ },
+ "CHAR-pigeon": {
+  "container": "JPEG",
+  "size": "2560x1440",
+  "size_ok": true,
+  "default_costume_id": "COS-020",
+  "default_costume_in_prompt": true,
+  "gender": "female",
+  "gender_word_in_prompt": true,
+  "style_fragment_verbatim": true,
+  "layout_sentence_in_prompt": true,
+  "main_dir_files": [
+   "prompts.json",
+   "selection.json",
+   "sheet.png",
+   "usage_ledger.jsonl"
+  ],
+  "main_dir_clean": true
+ },
+ "CHAR-duck": {
+  "container": "JPEG",
+  "size": "2560x1440",
+  "size_ok": true,
+  "default_costume_id": "COS-023",
+  "default_costume_in_prompt": true,
+  "gender": "male",
+  "gender_word_in_prompt": true,
+  "style_fragment_verbatim": true,
+  "layout_sentence_in_prompt": true,
+  "main_dir_files": [
+   "prompts.json",
+   "selection.json",
+   "sheet.png",
+   "usage_ledger.jsonl"
+  ],
+  "main_dir_clean": true
+ },
+ "CHAR-lory": {
+  "container": "JPEG",
+  "size": "2560x1440",
+  "size_ok": true,
+  "default_costume_id": "COS-024",
+  "default_costume_in_prompt": true,
+  "gender": "female",
+  "gender_word_in_prompt": true,
+  "style_fragment_verbatim": true,
+  "layout_sentence_in_prompt": true,
+  "main_dir_files": [
+   "prompts.json",
+   "selection.json",
+   "sheet.png",
+   "usage_ledger.jsonl"
+  ],
+  "main_dir_clean": true
+ },
+ "CHAR-eaglet": {
+  "container": "JPEG",
+  "size": "2560x1440",
+  "size_ok": true,
+  "default_costume_id": "COS-025",
+  "default_costume_in_prompt": true,
+  "gender": "female",
+  "gender_word_in_prompt": true,
+  "style_fragment_verbatim": true,
+  "layout_sentence_in_prompt": true,
+  "main_dir_files": [
+   "prompts.json",
+   "selection.json",
+   "sheet.png",
+   "usage_ledger.jsonl"
+  ],
+  "main_dir_clean": true
+ },
+ "CHAR-dodo": {
+  "container": "JPEG",
+  "size": "2560x1440",
+  "size_ok": true,
+  "default_costume_id": "COS-022",
+  "default_costume_in_prompt": true,
+  "gender": "male",
+  "gender_word_in_prompt": true,
+  "style_fragment_verbatim": true,
+  "layout_sentence_in_prompt": true,
+  "main_dir_files": [
+   "prompts.json",
+   "selection.json",
+   "sheet.png",
+   "usage_ledger.jsonl"
+  ],
+  "main_dir_clean": true
+ },
+ "CHAR-canary": {
+  "container": "JPEG",
+  "size": "2560x1440",
+  "size_ok": true,
+  "default_costume_id": "COS-026",
+  "default_costume_in_prompt": true,
+  "gender": "female",
+  "gender_word_in_prompt": true,
+  "style_fragment_verbatim": true,
+  "layout_sentence_in_prompt": true,
+  "main_dir_files": [
+   "prompts.json",
+   "selection.json",
+   "sheet.png",
+   "usage_ledger.jsonl"
+  ],
+  "main_dir_clean": true
+ },
+ "CHAR-magpie": {
+  "container": "JPEG",
+  "size": "2560x1440",
+  "size_ok": true,
+  "default_costume_id": "COS-027",
+  "default_costume_in_prompt": true,
+  "gender": "male",
+  "gender_word_in_prompt": true,
+  "style_fragment_verbatim": true,
+  "layout_sentence_in_prompt": true,
+  "main_dir_files": [
+   "prompts.json",
+   "selection.json",
+   "sheet.png",
+   "usage_ledger.jsonl"
+  ],
+  "main_dir_clean": true
+ },
+ "CHAR-old-crab": {
+  "container": "JPEG",
+  "size": "2560x1440",
+  "size_ok": true,
+  "default_costume_id": "COS-028",
+  "default_costume_in_prompt": true,
+  "gender": "female",
+  "gender_word_in_prompt": true,
+  "style_fragment_verbatim": true,
+  "layout_sentence_in_prompt": true,
+  "main_dir_files": [
+   "prompts.json",
+   "selection.json",
+   "sheet.png",
+   "usage_ledger.jsonl"
+  ],
+  "main_dir_clean": true
+ },
+ "CHAR-young-crab": {
+  "container": "JPEG",
+  "size": "2560x1440",
+  "size_ok": true,
+  "default_costume_id": "COS-029",
+  "default_costume_in_prompt": true,
+  "gender": "female",
+  "gender_word_in_prompt": true,
+  "style_fragment_verbatim": true,
+  "layout_sentence_in_prompt": true,
+  "main_dir_files": [
+   "prompts.json",
+   "selection.json",
+   "sheet.png",
+   "usage_ledger.jsonl"
+  ],
+  "main_dir_clean": true
+ },
+ "CHAR-fish-footman": {
+  "container": "JPEG",
+  "size": "2560x1440",
+  "size_ok": true,
+  "default_costume_id": "COS-035",
+  "default_costume_in_prompt": true,
+  "gender": "male",
+  "gender_word_in_prompt": true,
+  "style_fragment_verbatim": true,
+  "layout_sentence_in_prompt": true,
+  "main_dir_files": [
+   "prompts.json",
+   "selection.json",
+   "sheet.png",
+   "usage_ledger.jsonl"
+  ],
+  "main_dir_clean": true
+ },
+ "CHAR-duchess-baby": {
+  "container": "JPEG",
+  "size": "2560x1440",
+  "size_ok": true,
+  "default_costume_id": "COS-037",
+  "default_costume_in_prompt": true,
+  "gender": "male",
+  "gender_word_in_prompt": true,
+  "style_fragment_verbatim": true,
+  "layout_sentence_in_prompt": true,
+  "main_dir_files": [
+   "prompts.json",
+   "selection.json",
+   "sheet.png",
+   "usage_ledger.jsonl"
+  ],
+  "main_dir_clean": true
+ }
+}

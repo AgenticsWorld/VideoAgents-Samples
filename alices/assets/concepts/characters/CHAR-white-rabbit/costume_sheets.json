@@ -1,0 +1,19 @@
+{
+  "character_id": "CHAR-white-rabbit",
+  "task_id": "p4-costume-sheet",
+  "agent": "06-art/costume-concept",
+  "identity_anchor": "sheet.png",
+  "sheets": [
+    {"costume_ref": "COS-006", "file": "sheet.png", "default": true, "reuse": true,
+     "label": "Checked silk waistcoat with watch chain", "occasion": "formal", "period": "PER-dream",
+     "scenes": ["SCN-shaft-landing-passage", "SCN-long-hall", "SCN-rabbit-house-exterior", "SCN-rabbit-house-upstairs-room", "SCN-rose-tree-yard", "SCN-croquet-ground"],
+     "chapters": ["ch001", "ch002", "ch004", "ch008"], "episodes": ["ep01", "ep03", "ep06"],
+     "identity_refs": ["sheet.png"], "pending_H2": "exact garment set beyond the waistcoat (collar and bow proposed; plum cut-away jacket optional)"},
+    {"costume_ref": "COS-007", "file": "sheet_COS-007.png", "default": false,
+     "label": "Court herald's tabard over the waistcoat", "occasion": "court", "period": "PER-dream-court",
+     "scenes": ["SCN-courtroom"], "chapters": ["ch011", "ch012"], "episodes": ["ep08", "ep09"],
+     "identity_refs": ["sheet.png"], "visual_en_hit": true,
+     "pending_H2": "tabard kept as the herald marker; confirm with the CGI anatomy from 04-creatures/creature",
+     "note": "variant 'spectacles on' (ev0050) is carried by a continuity state phrase, no separate sheet"}
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "character_id": "CHAR-caterpillar",
+  "name": "The Caterpillar",
+  "source_language": "en",
+  "source_speaker_labels": ["Caterpillar"],
+  "produced_by_task": "p3-dialogue-style-pb2",
+  "register": {
+    "level": "languid, sleepy, contemptuous examiner (ch005-p01 'a languid, sleepy voice'): an unhurried elder who makes the child do all the work",
+    "summary": "Speaks in 'very short remarks' (ch005-p13): flat one-to-three-word contradictions (It isn't. / Not a bit. / No.), stern demands for self-account (Who are you? / Explain yourself!), and schoolmaster verdicts on her recitation. Long silences with the hookah between lines are part of the delivery. He flares only once, when his own height is insulted. His final line is the one piece of real help in the scene, given as a riddle. Per SUP-002 (amended BIB-0027) a photoreal CGI blue caterpillar on the mushroom with his hookah, the pauses carried by the smoke.",
+    "examples": [
+      { "ref": "ch005-d0001", "chapter": 5, "text": "Who are you?" },
+      { "ref": "ch005-d0007", "chapter": 5, "text": "It isn't," },
+      { "ref": "ch005-d0043", "chapter": 5, "text": "One side will make you grow taller, and the other side will make you grow shorter." }
+    ]
+  },
+  "catchphrases": [
+    { "text": "Who are you?", "freq": "high", "count_in_source": 2, "example_refs": ["ch005-d0001", "ch005-d0011"], "example_chapters": [5] },
+    { "text": "flat contradiction: It isn't / Not a bit / No / I don't see / I don't know", "freq": "high", "count_in_source": 5, "example_refs": ["ch005-d0005", "ch005-d0007", "ch005-d0009"], "example_chapters": [5] },
+    { "text": "Keep your temper", "freq": "low", "count_in_source": 1, "example_refs": ["ch005-d0015"], "example_chapters": [5] }
+  ],
+  "sentence_style": {
+    "length": "very short: median 4 words, mean 5.1 over 22 lines; only the closing hint exceeds 10 words",
+    "mean_words": 5.1,
+    "patterns": [
+      {
+        "rule": "Flat contradiction of whatever Alice just assumed, in one to three words, with no softener (It isn't. / Not a bit. / I don't see. / I don't know. / No.).",
+        "examples": [
+          { "ref": "ch005-d0007", "chapter": 5, "text": "It isn't," },
+          { "ref": "ch005-d0009", "chapter": 5, "text": "Not a bit," },
+          { "ref": "ch005-d0036", "chapter": 5, "text": "I don't know," }
+        ]
+      },
+      {
+        "rule": "Interrogation of identity and meaning: blunt questions that demand she account for herself (Who are you? / What do you mean by that? Explain yourself! / Why? / So you think you're changed, do you?).",
+        "examples": [
+          { "ref": "ch005-d0001", "chapter": 5, "text": "Who are you?" },
+          { "ref": "ch005-d0003", "chapter": 5, "text": "What do you mean by that? Explain yourself!" },
+          { "ref": "ch005-d0018", "chapter": 5, "text": "So you think you're changed, do you?" }
+        ]
+      },
+      {
+        "rule": "Examiner's verdicts: sets a recitation and pronounces it wrong (Repeat, … / That is not said right. / It is wrong from beginning to end.) plus short moral admonitions (Keep your temper. / You'll get used to it in time.).",
+        "examples": [
+          { "ref": "ch005-d0022", "chapter": 5, "text": "Repeat, 'You are old, Father William,'" },
+          { "ref": "ch005-d0033", "chapter": 5, "text": "It is wrong from beginning to end," },
+          { "ref": "ch005-d0042", "chapter": 5, "text": "You'll get used to it in time," }
+        ]
+      },
+      {
+        "rule": "Size is his subject: what size, content, height, taller/shorter, one side/the other side, the mushroom — and three inches is 'a very good height indeed', the one line said angrily.",
+        "examples": [
+          { "ref": "ch005-d0034", "chapter": 5, "text": "What size do you want to be?" },
+          { "ref": "ch005-d0039", "chapter": 5, "text": "It is a very good height indeed!" },
+          { "ref": "ch005-d0045", "chapter": 5, "text": "Of the mushroom," }
+        ]
+      }
+    ]
+  },
+  "vocabulary": {
+    "signature_words": ["Who are you", "Explain yourself", "It isn't", "Not a bit", "Keep your temper", "Repeat", "size", "height", "content", "one side … the other side", "mushroom"],
+    "preferred_fields": ["identity and self-definition", "schoolroom examination", "size and growth"],
+    "examples": [
+      { "ref": "ch005-d0014", "chapter": 5, "text": "Come back! I've something important to say!" },
+      { "ref": "ch005-d0037", "chapter": 5, "text": "Are you content now?" }
+    ]
+  },
+  "address": {
+    "self": "I (rarely: I don't see / I don't know / I've something important)",
+    "to_alice": "bare 'you', stressed contemptuously (You! Who are you?); never her name, never 'child', 'my dear', 'miss' — while she calls him 'sir' throughout",
+    "examples": [
+      { "ref": "ch005-d0011", "chapter": 5, "text": "You! Who are you?" },
+      { "ref": "ch005-d0020", "chapter": 5, "text": "Can't remember what things?" }
+    ]
+  },
+  "interjections": [],
+  "forbidden_words": [
+    { "domain": "post-1862 slang / modern chat register", "regex": "\\b(okay|ok|cool|guys?|awesome|yeah|yep|nope|gonna|wanna|gotta|kinda|sorta|totally|literally|dude)\\b", "reason": "period drama, 1862" },
+    { "domain": "courtesy, endearment or apology", "regex": "\\b(please|thank(s| you)|sorry|my dear|dear child|beg (your )?pardon|sir|miss|ma'am|I'm afraid)\\b", "reason": "0 of 22 lines contain a courtesy; his power in the scene is withholding it (Alice supplies all the 'sir's)" },
+    { "domain": "chatter, hurry or excitement", "regex": "\\b(oh dear|dear me|goodness|quick(ly)?|hurry|how (lovely|delightful|curious)|wonderful)\\b", "reason": "languid and sleepy (ch005-p01); only one angry line, never excited" }
+  ],
+  "drift": [
+    { "from_chapter": 5, "to_chapter": 5, "change": "Opening (ch005-d0001 to d0013): contemptuous one-word stonewalling.", "examples": ["ch005-d0001", "ch005-d0007", "ch005-d0013"] },
+    { "from_chapter": 5, "to_chapter": 5, "change": "Middle (ch005-d0014 to d0033): turns examiner — calls her back, sets a recitation, pronounces verdicts.", "examples": ["ch005-d0014", "ch005-d0022", "ch005-d0033"] },
+    { "from_chapter": 5, "to_chapter": 5, "change": "Close (ch005-d0034 to d0045): one angry flare about height, then an offhand but genuinely useful cryptic instruction as he leaves.", "examples": ["ch005-d0039", "ch005-d0043", "ch005-d0045"] }
+  ],
+  "backtest_markers": [
+    { "id": "CT1", "rule_ref": "sentence_style.patterns[0] flat contradiction", "weight": 4, "regex": "^(it isn't|not a bit|no|I don't (see|know)|why\\?)\\W*$" },
+    { "id": "CT2", "rule_ref": "sentence_style.patterns[1] interrogation of identity", "weight": 4, "regex": "\\b(who are you|explain yourself|what do you mean by that|so you think|can't remember)\\b" },
+    { "id": "CT3", "rule_ref": "sentence_style.patterns[2] examiner's verdicts", "weight": 4, "regex": "^repeat\\b|\\b(not said right|wrong from beginning to end|keep your temper|get used to it|something important)\\b" },
+    { "id": "CT4", "rule_ref": "sentence_style.patterns[3] size", "weight": 4, "regex": "\\b(size|height|taller|shorter|content|mushroom|one side)\\b" }
+  ],
+  "backtest": {"method": "marker-claim back-test (shared yardstick with pb1 and 01-story/dialogue-rewrite): a spoken source line hits when it matches >=1 backtest_markers regex and no forbidden_words regex; verse excluded; full definition runs/p3-dialogue-style-pb2/result.json#backtest_method", "script": "code/p3-dialogue-style-pb1_backtest.py", "run_on": "2026-09-22", "threshold": 0.8, "hit_rate": 1.0, "sample_size": 22, "source_lines_total": 22, "coverage_of_spoken_lines": 1.0, "verse_excluded": 0, "forbidden_violations_in_source": 0, "cross_claim_rate": 0.013, "lift": 78.11, "attribution_top1_rate": 0.909, "misses": [], "pass": true}
+}

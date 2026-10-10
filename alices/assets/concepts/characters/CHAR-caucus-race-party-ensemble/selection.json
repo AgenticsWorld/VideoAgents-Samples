@@ -1,0 +1,26 @@
+{
+  "character_id": "CHAR-caucus-race-party-ensemble",
+  "task_id": "p4-char-concept-cb3",
+  "sheet": "sheet.png",
+  "representative_member": "C01 moorhen (female), arrival wet state",
+  "variants": [],
+  "status": "delivered_for_H2_review",
+  "layout_check": { "four_panels": true, "one_view_per_panel": true, "same_individual_all_panels": true, "size": "2560x1440 (JPEG payload)" },
+  "appearance_field_hits": {
+    "species_moorhen": true,
+    "plumage_sooty_black_dark_olive": true,
+    "red_frontal_shield_yellow_tipped_bill": true,
+    "white_flank_stripe_white_undertail": true,
+    "long_green_legs_long_toes": true,
+    "wet_state_dripping": true,
+    "unclothed (COS-030)": true
+  },
+  "style_check": { "photoreal_cgi_animal": true, "no_cartoon_face": true },
+  "self_check_defects": [
+    "The frontal shield is oversized in the close-up (it covers most of the face), beyond real moorhen proportions.",
+    "Panel gutters are faint: the three full-body panels read as separate but have no clear gaps.",
+    "The other five party slots have no sheet in this order."
+  ],
+  "rerolls": [],
+  "reroll_budget_note": "User rerun setting = 0."
+}

@@ -1,0 +1,35 @@
+{
+  "shot_id": "sh059",
+  "scene_id": "SCN-long-hall",
+  "size": "medium",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "mid_right",
+    "anchor_xy": [0.64, 0.58],
+    "size_in_frame": "about 0.48 of frame height — the sh058 scale exactly, mirrored"
+  },
+  "second_subject": {
+    "id": "PROP-eat-me-cake",
+    "grid": "mid_left",
+    "anchor_xy": [0.28, 0.66],
+    "note": "the open glass box arriving in the left of frame at the end of the move; she walks into her own lead room and it is where the box is."
+  },
+  "headroom": "about 0.20 of frame height, matched to sh058 so the return reads as the same journey run backwards.",
+  "horizon_eyeline": "Same low travelling axis reversed, lens 0.20 m. Her eyeline is level at 0.52, fixed forward on the box for the whole move — no wandering this time.",
+  "layers": {
+    "fg": "flag joints streaming the other way",
+    "mg": "Alice walking straight back, decided",
+    "bg": "the glass legs passing in reverse order, the dado band above"
+  },
+  "gaze": {
+    "direction": "frame_left",
+    "lead_room": "left",
+    "note": "the exact reversal of sh058: she now holds the right third and looks left, and the lead room ahead of her is where she arrives. The decision reads as taken because the frame closes the loop it opened."
+  },
+  "balance": "The mirror of sh058, and it resolves: where sh058 ended on empty floor, this ends with the box occupying the lead room. The composition settles for the first time since sh056.",
+  "leading_lines": "Flag joints and dado raking the other way, delivering her to the box; her own walking line is the last leading line and it stops at the open lid.",
+  "eye_first": "Her face, set — then the box she arrives over.",
+  "safe_area_ok": true,
+  "constraint_binding": "The crossing lands exactly where it started, which is what makes the decision feel taken rather than talked about: the end frame of sh059 must put her back at the box in the same relation as sh057 left her, so the walk is a closed circuit and not a drift.",
+  "pairs_with": "sh058 — same travelling axis, reversed."
+}

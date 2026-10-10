@@ -1,0 +1,50 @@
+{
+  "character_id": "CHAR-card-soldiers-ensemble",
+  "card_type": "ensemble",
+  "tier": "extra",
+  "layer": "dream",
+  "headcount": {
+    "range": [10, 12],
+    "note": "Ten in the procession (ch008-p11); the same ten bend double as croquet arches (ch008-p41) and are drawn off one by one as guards (ch009-p36); at the trial two flank the Knave (ch011-p01). Up to two extra doubles allowed only for arch-coverage continuity.",
+    "source_chapter": "ch008", "paragraph": "ch008-p11",
+    "quote": "First came ten soldiers carrying clubs"
+  },
+  "gender": "male",
+  "gender_note": { "inferred": true, "reason": "Source uses no pronouns for the soldiers; soldiers in 1862 were male and the controlled index gives no female members. All ten male." },
+  "gender_mix": { "male": 10, "female": 0 },
+  "hair": { "value": "short regulation military crop, clean or with neat moustaches; mix of brown, black and fair across the ten", "inferred": true, "reason": "Not described; 1860s soldier grooming." },
+  "eyes": { "value": "natural mixed (brown, grey, blue)", "inferred": true, "reason": "Not described." },
+  "face": { "value": "stolid, drilled, expressionless in ranks; sheepish when looking to Alice for cues", "source_chapter": "ch008", "paragraph": "ch008-p31", "quote": "The soldiers were silent, and looked at Alice, as the question was evidently meant for her.", "detail_inferred": true, "detail_reason": "Features designed; demeanour extracted." },
+  "build": {
+    "height_range_cm": [175, 183],
+    "body_type": "matched, lean, flexible — they must fold double on hands and feet to make arches",
+    "card_shape": { "value": "oblong and flat, hands and feet at the corners (shaped exactly like the gardeners)", "source_chapter": "ch008", "paragraph": "ch008-p11", "quote": "these were all shaped like the three gardeners, oblong and flat, with their hands and feet at the corners" },
+    "arch_pose": { "source_chapter": "ch008", "paragraph": "ch008-p41", "quote": "the soldiers had to double themselves up and to stand on their hands and feet, to make the arches" },
+    "scale_reference": "About 40-48 cm taller than Alice at base scale (135 cm, CHAR-alice scale anchor); a bent-double soldier's arch stands roughly at Alice's waist-to-chest height when she is at base scale; relative size follows SUP-003.",
+    "inferred": true,
+    "reason": "Height range narrow by design so the ranks read uniform."
+  },
+  "base_age_range": "20-35",
+  "base_age_inferred": true,
+  "base_age_reason": "Not given; rank-and-file soldier age.",
+  "marks": [ { "type": "none", "description": "No individual marks — uniformity is the point.", "inferred": true, "reason": "Source never distinguishes one soldier from another." } ],
+  "signature_items": [
+    { "item": "card tabard front: club-suit pips with rank indices Ace, Two, Three, Four, Five, Six, Seven, Eight, Nine and Ten of Clubs, one rank per soldier, never repeated", "source_chapter": "ch008", "paragraph": "ch008-p11", "quote": "ten soldiers carrying clubs", "rank_inferred": true, "reason": "'Carrying clubs' read as the club suit (CUL-016, TERM-0053); assigning ranks Ace-Ten is a design choice. CONFIRMED UNCHANGED by BIB-0029 (DEF-p4-char-301): the soldiers keep the club suit because it is the one suit reading the source anchors (ch008-p11, parallel to the diamond courtiers and heart royal children), and they keep Ace-Ten because ten soldiers need the suit's ten pip cards. The collision was resolved on the gardeners' side instead - they are now spades - because the source never gives the gardeners a suit." },
+    { "item": "card-back pattern on the back, identical to the rest of the pack", "source_chapter": "ch008", "paragraph": "ch008-p16", "quote": "the pattern on their backs was the same as the rest of the pack" },
+    { "item": "short ceremonial black-painted wooden baton topped with a three-lobed club-pip finial, carried at the shoulder", "source_chapter": "ch008", "paragraph": "ch008-p11", "quote": "ten soldiers carrying clubs", "inferred": true, "reason": "Keeps 'carrying clubs' literal as a held object while staying ceremonial; per SUP-014 it is never raised at or touches anyone." }
+  ],
+  "default_outfit_tone": "Ivory card-face tabard (black club pips + corner indices) front, shared crimson-and-cream lattice card-back with heart rosette behind, stiff and flat to the knee, over a crimson House-of-Hearts undress uniform: crimson shell-jacket sleeves with brass buttons at the cuff, crimson trousers with a black stripe, black boots, black shako-style pillbox cap with a small club badge.",
+  "default_outfit_tone_source": { "inferred": true, "reason": "Card shape/back sourced (ch008-p11, p16); colours from FAC-house-of-hearts emblem_visual; military cues from 1860s British line infantry. Costume detail by 06-art/costume." },
+  "period_silhouette": { "value": "1860s British line-infantry undress uniform flattened under a rigid card tabard; limbs at the corners", "inferred": true, "reason": "SUP-004 card staging on an 1862 military base." },
+  "sup002_coding": { "animal_or_card": "card (Clubs, Ace-Ten; the whole pip run of the suit)", "forbidden": "no CGI cards; no bayonets, rifles, swords; no restraint holds — 'custody' is a huddle/escort (SUP-014)", "rule": "bible/cultivation.json SUP-002, SUP-004, SUP-014" },
+  "variation_rules": [
+    "All ten identical in cut, colour and cap; only the pip count/index and natural faces differ.",
+    "Final club-rank assignment (BIB-0029, DEF-p4-char-301), one card per soldier and never doubled on camera: S01 Ace, S02 Two, S03 Three, S04 Four, S05 Five, S06 Six, S07 Seven, S08 Eight, S09 Nine, S10 Ten of Clubs. The Jack of Clubs is held in reserve and is not worn. The Queen and King of Clubs belong to CHAR-visiting-monarchs-ensemble M02/M01 and must never appear on a soldier. No gardener wears a club at all (CHAR-gardener-two/-five/-seven are the Two, Five and Seven of SPADES; CHAR-royal-gardeners-ensemble are the Three, Four, Six, Eight, Nine and Ten of SPADES), so nothing in the ch008 procession, rose-tree yard or croquet ground carries the same card twice.",
+    "The two optional arch-coverage doubles (headcount 11-12) are duplicates of soldiers already in frame and carry that soldier's own rank; they are never shown in the same frame as their original.",
+    "Face-down or bent-double they must be indistinguishable from gardeners and courtiers from behind (shared back-pattern, ch008-p16).",
+    "Arch pose: hands and feet planted, back rounded, tabard hanging down both sides like a folded card.",
+    "Guard duty (ch009-p36, ch011-p01): stand either side of the escorted person, hands at own sides — no grip on arms."
+  ],
+  "doubling": { "value": "none", "reason": "Not part of any H1 ruling 5.3 B doubling pair." },
+  "prompt_summary_en": "Ten young Victorian soldiers dressed as living playing cards, Ace to Ten of Clubs, one rank each: stiff flat oblong ivory card tabards front and back with black club pips and corner indices, arms and legs at the corners, crimson sleeves with brass buttons, crimson trousers with black stripe, black boots, small black pillbox caps with a club badge, short cropped hair, carrying short black ceremonial club-topped batons at the shoulder, marching two by two, 1862 period realistic drama, human actors"
+}

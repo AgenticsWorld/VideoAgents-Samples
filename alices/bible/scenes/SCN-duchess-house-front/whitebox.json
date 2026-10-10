@@ -1,0 +1,58 @@
+{
+  "schema_version": "whitebox_scene.v1",
+  "scene_id": "SCN-duchess-house-front",
+  "task_id": "p4-scene-model-sb2",
+  "agent": "05-scenes/scene-modeling",
+  "date": "2026-09-23",
+  "layout_top": "assets/concepts/scenes/SCN-duchess-house-front/layout_top.png",
+  "dimensions_m": [28.0, 10.0, 15.75],
+  "scale_basis": "Hero (full-size) scale. X = layout.json extent_m.x 28 m (Z = X*9/16 = 15.75). Checked with the drawn door step (about 1.2 m), the clearing (about 14 m across, as in the Bible) and a 3.6 m gable width. Y = chimney top 9.0 m (ridge 7.2 m per Bible).",
+  "inferred": true,
+  "inferred_items": [
+    "house footprint 3.64 x 5.73 m: width from the drawn roof edges less the overhang; north wall base derived by removing the oblique-camera height shift (the drawn roof north edge at y 0.084 is the elevated gable top, so the base is about y 0.205)",
+    "eaves 4.8 m, ridge 7.2 m (Bible), roof as two stepped boxes",
+    "chimney 0.9 x 0.9 m at the north-west corner as drawn, top 9.0 m; its footprint is at y 0.234 while the layout.json chimney_stack landmark (0.45, 0.13) marks the projected top in the oblique image",
+    "door 1.0 x 2.1 m (Bible 2.1 m high), step 1.2 x 0.18 x 0.5 m",
+    "wood masses as crown blocks from 3 m to 10 m on 0.6 m trunks; the peep tree and plate tree as living trunks (the plate tree is drawn as a stump)"
+  ],
+  "units": "metres; xy = normalised plan position (x right = east, y down = south = +Z); elevation_m = centre height (host loader convention)",
+  "objects": [
+    {"id": "house_body", "shape": "box", "size_m": [3.64, 4.8, 5.73], "xy": [0.502, 0.387], "collision_role": "wall", "note": "solid exterior; the interior is SCN-duchess-kitchen (11 x 7 m by the Bible, bigger inside than outside by design)"},
+    {"id": "roof_lower", "shape": "box", "size_m": [4.0, 1.2, 6.0], "xy": [0.502, 0.387], "elevation_m": 5.4, "collision_role": "solid"},
+    {"id": "roof_ridge", "shape": "box", "size_m": [1.8, 1.2, 6.0], "xy": [0.502, 0.387], "elevation_m": 6.6, "collision_role": "solid", "note": "ridge runs north-south; gable end faces the clearing"},
+    {"id": "chimney_stack", "shape": "box", "size_m": [0.9, 9.0, 0.9], "xy": [0.4485, 0.2336], "collision_role": "solid", "note": "pepper-smoke source"},
+    {"id": "front_door_leaf", "shape": "box", "size_m": [1.0, 2.1, 0.08], "xy": [0.502, 0.5714], "elevation_m": 1.05, "collision_role": "decor", "note": "the only entrance; opening it and going in cuts to the kitchen"},
+    {"id": "door_step", "shape": "box", "size_m": [1.2, 0.18, 0.5], "xy": [0.502, 0.5848], "collision_role": "ground"},
+    {"id": "front_window_w", "shape": "box", "size_m": [0.6, 0.8, 0.06], "xy": [0.4643, 0.5714], "elevation_m": 1.4, "collision_role": "decor"},
+    {"id": "front_window_e", "shape": "box", "size_m": [0.6, 0.8, 0.06], "xy": [0.5393, 0.5714], "elevation_m": 1.4, "collision_role": "decor"},
+    {"id": "alice_peep_tree", "shape": "cylinder", "size_m": [0.7, 10.0, 0.7], "xy": [0.4, 0.92], "collision_role": "solid"},
+    {"id": "plate_tree", "shape": "cylinder", "size_m": [0.6, 9.0, 0.6], "xy": [0.575, 0.804], "collision_role": "solid", "note": "chipped by the thrown plate"},
+    {"id": "wood_crowns_west", "shape": "box", "size_m": [5.3, 7.0, 15.4], "xy": [0.0964, 0.5], "elevation_m": 6.5, "collision_role": "soft"},
+    {"id": "wood_crowns_south", "shape": "box", "size_m": [15.4, 7.0, 2.3], "xy": [0.475, 0.9238], "elevation_m": 6.5, "collision_role": "soft"},
+    {"id": "wood_crowns_east", "shape": "box", "size_m": [5.6, 7.0, 12.6], "xy": [0.9, 0.4], "elevation_m": 6.5, "collision_role": "soft"},
+    {"id": "trunk_w1", "shape": "cylinder", "size_m": [0.6, 3.2, 0.6], "xy": [0.06, 0.25], "collision_role": "solid"},
+    {"id": "trunk_w2", "shape": "cylinder", "size_m": [0.6, 3.2, 0.6], "xy": [0.1, 0.55], "collision_role": "solid"},
+    {"id": "trunk_w3", "shape": "cylinder", "size_m": [0.6, 3.2, 0.6], "xy": [0.07, 0.8], "collision_role": "solid"},
+    {"id": "trunk_s1", "shape": "cylinder", "size_m": [0.6, 3.2, 0.6], "xy": [0.3, 0.95], "collision_role": "solid"},
+    {"id": "trunk_s2", "shape": "cylinder", "size_m": [0.6, 3.2, 0.6], "xy": [0.55, 0.97], "collision_role": "solid"},
+    {"id": "trunk_e1", "shape": "cylinder", "size_m": [0.6, 3.2, 0.6], "xy": [0.9, 0.2], "collision_role": "solid"},
+    {"id": "trunk_e2", "shape": "cylinder", "size_m": [0.6, 3.2, 0.6], "xy": [0.87, 0.45], "collision_role": "solid"},
+    {"id": "trunk_e3", "shape": "cylinder", "size_m": [0.6, 3.2, 0.6], "xy": [0.93, 0.7], "collision_role": "solid"},
+    {"id": "wood_path_seg_1", "shape": "box", "size_m": [4.2, 0.02, 1.6], "xy": [0.675, 0.85], "collision_role": "ground"},
+    {"id": "wood_path_seg_2", "shape": "box", "size_m": [4.2, 0.02, 1.8], "xy": [0.825, 0.94], "collision_role": "ground"}
+  ],
+  "walkable": {
+    "zones": ["the open place of trodden earth: x 0.2-0.8, y 0.1-0.85, all round the house", "path leaving south-east between the east and south crowns"],
+    "clearance_check": "From the door step, 6+ m of open ground runs south to the tree line. The Footmen (about 1.6 m, pending_H2) and Alice have full turning room at the door. Alice's peep position is north of alice_peep_tree, with 4 m clear to plate_tree."
+  },
+  "doorways": [
+    {"id": "front_door", "landmark": "front_door", "wall": "south gable", "clear_width_m": 1.0, "clear_height_m": 2.1, "outside": "stone step, then open clearing: over 6 m of straight run-out south", "note": "exterior asset only; entering cuts to SCN-duchess-kitchen"}
+  ],
+  "landmarks_covered": ["chimney_stack", "front_door", "door_step", "clearing_centre", "alice_peep_tree", "plate_tree", "wood_path", "west_wood_edge", "east_wood_edge"],
+  "workflow_notes": [
+    "The plan is slightly oblique, so the south facade shows as an elevation (a known defect from p4-env-concept-sb2). Wall bases were derived by removing the height shift. The front door and step sit at the drawn facade base (y 0.57-0.59), which matches layout.json. Logged as DEF-p4-scenemodel-973 together with the chimney landmark projection.",
+    "Two scales (Bible scale_notes): this asset is the full-size hero house. The 1:6 arrival miniature (ridge about 1.2 m) is staged by scaling the house, not as a separate asset; if a separate miniature coordinate space is needed, the director should order a split scene asset.",
+    "The Footmen's anatomy and size are pending_H2 (proposal: upright, about 1.6 m). They are actors, not scene geometry."
+  ],
+  "handover": "no storyboard yet — hand over to whitebox-staging (no directing/*/shot_list.json exists; no videos rendered)"
+}

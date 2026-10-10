@@ -1,0 +1,35 @@
+{
+  "shot_id": "sh012",
+  "scene_id": "SCN-field-hedge-burrow",
+  "size": "medium",
+  "subject": {
+    "id": "CRE-001",
+    "in_frame_characters": ["CHAR-alice"],
+    "grid": "centre",
+    "anchor_xy": [0.44, 0.58],
+    "size_in_frame": "a real rabbit at true scale reaching the hedge foot, about 0.12 of frame height"
+  },
+  "second_subject": {
+    "id": "CHAR-alice",
+    "grid": "mid_right",
+    "anchor_xy": [0.82, 0.48],
+    "note": "her shoulder and loose hair occupy the near right third, soft — an over-shoulder mass, no face."
+  },
+  "headroom": "the hedge crown closes the top 0.20 of frame; the rabbit has about 0.25 of frame height of hedge bank above him, which is what makes the hole look low and found rather than presented.",
+  "horizon_eyeline": "Eye-level at 0.9 m: the hedge bank base runs across at 0.64 of frame height. Her eyeline, from behind, goes down-left onto the hedge foot; his is at his own height and stays there.",
+  "layers": {
+    "fg": "Alice's shoulder and hair, soft, right third",
+    "mg": "the fan of pale spoil and the burrow mouth in the narrow band of hedge shade, just left of centre",
+    "bg": "the laid hawthorn hedge running across the frame, farmland light showing through its base"
+  },
+  "gaze": {
+    "direction": "frame_left",
+    "lead_room": "left",
+    "note": "her look goes over her own shoulder down to the hedge foot, and the rabbit's line of travel runs the same way — left and down. Screen direction is held from sh010, so he has not doubled back."
+  },
+  "balance": "Right-weighted by the soft shoulder mass, with the sharp event just left of centre in the gap it leaves. The frame is unbalanced toward the person who is learning something and empty where the thing is learnt.",
+  "leading_lines": "The laid hawthorn stems rake down from upper right to lower left and deliver the eye straight into the black of the hole; the spoil fan is a pale arrow pointing at it.",
+  "eye_first": "Her out-of-focus shoulder announces whose shot this is, then the eye goes past it to the rabbit and drops with him into the hole.",
+  "safe_area_ok": true,
+  "constraint_binding": "Past her shoulder — no shot in this episode knows more than Alice knows: the burrow mouth is never given a clean, unobstructed angle here, and her soft shoulder stays in frame so the information arrives through her."
+}

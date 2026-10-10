@@ -1,0 +1,28 @@
+{
+  "shot_id": "sh073",
+  "scene_id": "SCN-long-hall",
+  "size": "medium",
+  "subject": {
+    "id": "CHAR-white-rabbit",
+    "grid": "centre",
+    "anchor_xy": [0.48, 0.48],
+    "size_in_frame": "coming toward camera at a bound, from about 0.14 to about 0.34 of frame height — still a small animal, and never larger than that"
+  },
+  "headroom": "about 0.34 of frame height above him of dark hall; the top edge sits well below the lamp line so no fitting enters, and the darkness over him is what he is coming out of.",
+  "horizon_eyeline": "Lens at 0.10 m — the water surface IS the eye-line, running across at 0.56 of frame height and reflecting him. His eyeline is at his own height, forward, on his errand.",
+  "layers": {
+    "fg": "the water surface running to the bottom edge, and the ripple rings from his last footfall arriving at the lens",
+    "mg": "the White Rabbit bounding through four inches of water on four legs, gloves and fan carried in his mouth, wet fur to the elbow",
+    "bg": "the dark between the lamp pools up the hall, and the glass table legs standing in the water"
+  },
+  "gaze": {
+    "direction": "into_depth",
+    "lead_room": "none",
+    "note": "he comes down the lens axis at speed with his eyes forward; no look to camera and no look toward Alice, who is behind the lens."
+  },
+  "balance": "A low, wide, water-dominated frame with a small determined shape arriving at its centre — the mirror of sh030, played by an animal.",
+  "leading_lines": "The ripple rings spread from under his own feet outward toward the frame edges, and the reflected verticals of the table legs break as he passes them. The water does all the drawing.",
+  "eye_first": "The white shape coming out of the dark, then the water breaking under it.",
+  "safe_area_ok": true,
+  "constraint_binding": "QUADRUPED RABBIT — a real rabbit's bounding gait on four legs, gloves and fan carried IN HIS MOUTH. Contact evidence is mandatory and is a compositional requirement here: every foot displaces water and the ripples begin where he touches, so the lens sits at 0.10 m to put the contact points at eye level, and the surface is kept unbroken elsewhere so the rings he makes are the only disturbance in frame. Wet fur to the elbow."
+}

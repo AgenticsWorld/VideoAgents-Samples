@@ -1,0 +1,29 @@
+{
+  "id": "DEF-p4-prop-502",
+  "opened_by": "06-art/prop",
+  "opened_on": "2026-09-23",
+  "task_id": "p4-prop",
+  "assigned_to": ["user (H2 / g4)", "00-orchestration/orchestrator"],
+  "domain": "prop",
+  "status": "open",
+  "severity": "major",
+  "summary": "Self-check of the 48 prop images (p4-prop). No person or body part appears in any image. Some images have lettering, duplication or scale faults. The auto-retry budget is 0, so every image was kept as generated. The user decides at H2 which ones to re-roll.",
+  "findings": [
+    { "id": "DEF-p4-prop-502-a", "severity": "major", "file": "assets/concepts/props/PROP-queens-invitation-letter/main_01.png", "issue": "Legible 'For the Duchess' copperplate on the FRONT panel; CR-012 allows legible lettering only on whitelisted props.", "suggested_fix": "re-roll with the address described as 'faint pale ink flourishes, no words'; or art-director whitelists this line" },
+    { "id": "DEF-p4-prop-502-b", "severity": "major", "file": "assets/concepts/props/PROP-king-note-book/main_01.png", "issue": "The open page carries legible handwriting 'Rule Forty-two ... is spoken, CR-012'. The prompt's own rule reference leaked into the image. Do not use the open-page panel as a ref until it is re-rolled. The closed panel and scale_ref_01 are clean.", "suggested_fix": "re-roll with no rule codes or quoted words in the readable-face text of the prompt" },
+    { "id": "DEF-p4-prop-502-c", "severity": "major", "file": "assets/concepts/props/PROP-white-rabbit-trumpet-and-scroll/scale_ref_01.png", "issue": "Copied the two-view sheet: shows two trumpets and a 'FRONT' label card on the table.", "suggested_fix": "re-roll the scale image without --ref to the sheet (or with a single-instance sentence)" },
+    { "id": "DEF-p4-prop-502-d", "severity": "major", "file": "assets/concepts/props/PROP-eat-me-cake/scale_ref_01.png", "issue": "Copied the two-view sheet: two glass boxes with two cakes (one standing on edge).", "suggested_fix": "same as -c" },
+    { "id": "DEF-p4-prop-502-e", "severity": "minor", "file": "assets/concepts/props/PROP-rabbit-house-bottle/scale_ref_01.png", "issue": "Bottle reads decanter-sized (about 2.5x the teacup); card says about 9 cm, a little taller than a teacup." },
+    { "id": "DEF-p4-prop-502-f", "severity": "minor", "file": "assets/concepts/props/PROP-hatter-watch/scale_ref_01.png + main_01.png", "issue": "Watch about twice the width of the teacup mouth (card: a little narrower). The small sub-dial reads as a seconds dial, not a day-of-month dial." },
+    { "id": "DEF-p4-prop-502-g", "severity": "minor", "file": "assets/concepts/props/PROP-white-rabbit-pocket-watch/scale_ref_01.png", "issue": "Watch slightly wider than the teacup mouth (card: a little narrower)." },
+    { "id": "DEF-p4-prop-502-h", "severity": "minor", "file": "assets/concepts/props/PROP-pebbles-and-little-cakes/main_01.png + scale_ref_01.png", "issue": "Pebbles are visibly smaller than the cakes and than the penny; SUP-009's hidden cut needs matched size and outline." },
+    { "id": "DEF-p4-prop-502-i", "severity": "minor", "file": "assets/concepts/props/PROP-thimble/scale_ref_01.png", "issue": "Thimble as wide as the penny (about 3 cm; card 1.6 cm, child's thimble)." },
+    { "id": "DEF-p4-prop-502-j", "severity": "minor", "file": "assets/concepts/props/PROP-drink-me-bottle/main_01.png + scale_ref_01.png", "issue": "Label is tied round the body of the bottle, not round the neck as the text says (ch001-p15)." },
+    { "id": "DEF-p4-prop-502-k", "severity": "minor", "file": "assets/concepts/props/PROP-mushroom/main_01.png", "issue": "The pieces look like broken whole button mushrooms, not rim pieces of the flat-capped field mushroom built in SCN-caterpillar-clearing." },
+    { "id": "DEF-p4-prop-502-l", "severity": "minor", "file": "assets/concepts/props/PROP-gardeners-paint-pot-and-brushes/*", "issue": "Dark glossy crimson drips down the pail could read as blood (CR-010 caution). A brighter, opaque distemper red would be safer." },
+    { "id": "DEF-p4-prop-502-m", "severity": "minor", "file": "assets/concepts/props/PROP-tarts/*", "issue": "The dish rim is engraved with Art Nouveau whiplash ornament; CR-002 says props stay 1862 even in the dream." },
+    { "id": "DEF-p4-prop-502-n", "severity": "minor", "file": "assets/concepts/props/PROP-hookah/scale_ref_01.png", "issue": "Hookah about 1.15x the chair height (card about 1.5x); the hose is shorter than the 3 m on the card." },
+    { "id": "DEF-p4-prop-502-o", "severity": "info", "file": "scale_ref_01.png of PROP-golden-key, PROP-white-rabbit-pocket-watch, PROP-drink-me-bottle, PROP-box-of-comfits, PROP-thimble, PROP-pebbles-and-little-cakes, PROP-mushroom", "issue": "The bronze penny used as a size anchor carries a small relief portrait head, which is part of a real coin design. It is not a person or body part, but it is flagged for the user to judge against the prop no-person rule (the rule bans 'face' in prompts)." }
+  ],
+  "requested_action": "User decides at H2 which images to re-roll; 06-art/prop re-runs the named props with code/gen_props_p4-prop.py <PROP-ID> (the script regenerates both images of a prop, so a scale-only fix needs a one-line change to skip main_01), after moving the old images into <id>/candidates/."
+}

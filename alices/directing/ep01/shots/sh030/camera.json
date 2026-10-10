@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh030",
+  "group_id": "grp012",
+  "scene_no": "S04",
+  "duration_s": 4.5,
+  "size": "wide",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame; she supplies all the speed by running through it)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 28,
+  "camera_height_m": 1.25,
+  "angle": "level",
+  "rack_focus": "none",
+  "start_frame": "From the brick-vaulted middle of the passage back toward the dark landing chamber: Alice small, out on the leaf heap, staring after him — the waistcoat-pocket, the watch.",
+  "end_frame": "The same frame as she comes at camera out of the black and clears it low and close, leaves flying off her skirt, leaving the empty lit vault behind her.",
+  "constraint_honoured": "'The only fast shot in the scene' — the speed is hers; the camera stays put so her arrival at the lens is what accelerates the scene.",
+  "movement_note": "A follow here would flatten the burst; letting her cross the whole depth of a fixed wide is the cheapest and most stable way to generate speed.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

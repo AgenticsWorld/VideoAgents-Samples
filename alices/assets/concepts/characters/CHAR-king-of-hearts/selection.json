@@ -1,0 +1,69 @@
+{
+  "character_id": "CHAR-king-of-hearts",
+  "task_id": "p4-char-concept-cb1",
+  "sheet": "sheet.png",
+  "variants": [],
+  "self_check": {
+    "sheet.png": {
+      "layout": "PASS",
+      "appearance_field_hits": {
+        "gender_male_about_sixty": true,
+        "thinning_grey_hair_short_grey_beard": true,
+        "small_deep_set_pale_blue_eyes": true,
+        "pale_round_jowly_face_worried_brow": true,
+        "anxious_expression": true,
+        "short_round_shouldered_pot_belly": "partial",
+        "bareheaded_default": true
+      },
+      "costume_COS-009_hits": {
+        "flat_crimson_tabard_white_piping_black_edge": true,
+        "red_heart_on_white_field_gold_crown_device": true,
+        "lattice_card_back_heart_rosette": true,
+        "crimson_robe_white_fur_edge": true,
+        "black_frock_coat_narrow_trousers": true,
+        "white_high_collar_cravat": true,
+        "black_buckled_shoes": true
+      },
+      "style": "PASS",
+      "defects": [
+        "Robe is knee/calf length rather than a long ceremonial robe (minor).",
+        "Pot belly barely readable under the tabard (minor)."
+      ]
+    }
+  },
+  "not_rendered_by_design": [
+    "reading spectacles and note-book (appearance lists them; bible/costumes.json puts spectacles only on COS-010 in court) - see DEF-p4-char-concept-101-a",
+    "crown (COS-009 is bareheaded; the Knave carries it)"
+  ],
+  "rerolls": [],
+  "costume_sheets": {
+    "sheet_COS-010.png": {
+      "task_id": "p4-costume-sheet",
+      "agent": "06-art/costume-concept",
+      "costume_ref": "COS-010",
+      "status": "final (kept; reroll budget 0)",
+      "self_check": {
+        "layout": "PASS",
+        "identity": "PASS (same face, beard, build as sheet.png)",
+        "costume_hits": {
+          "full_bottomed_white_horsehair_wig_to_shoulders": true,
+          "gold_crown_with_red_heart_on_wig": true,
+          "flat_crimson_card_tabard_white_piping_black_edge": true,
+          "red_heart_on_white_field_and_gold_crown_device": true,
+          "crimson_cream_lattice_card_back_with_heart_rosette": true,
+          "long_crimson_robe_white_fur_edge": "partial (robe is calf length, as in the base sheet)",
+          "black_frock_coat_and_trousers": true,
+          "white_high_collar_and_cravat": true,
+          "black_buckled_shoes": true,
+          "wig_and_crown_askew": "partial (crown sits fairly straight)"
+        },
+        "style": "PASS"
+      },
+      "defects": [
+        "minor (inherited from base, DEF-p4-char-concept-101-a): the robe is calf length rather than long",
+        "minor: the crown sits nearly level rather than awkwardly askew"
+      ]
+    }
+  },
+  "costume_rerolls": []
+}

@@ -1,0 +1,28 @@
+{
+  "shot_id": "sh003",
+  "scene_id": "SCN-riverbank",
+  "size": "medium-close",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "top_right",
+    "anchor_xy": [0.66, 0.34],
+    "size_in_frame": "head and one shoulder, face about 0.22 of frame height"
+  },
+  "headroom": "tight — about 0.08 of frame height above her crown, elm leaf shadow closing the top edge, so she feels pressed down into the near foreground clutter.",
+  "horizon_eyeline": "No true horizon; the water-side lens at 0.30 m puts the far bank grass line across at 0.24 of frame height, high and soft behind her. Her eyeline is at 0.32 and runs diagonally down-left onto the page.",
+  "layers": {
+    "fg": "the open book filling the lower left quadrant, page plane large and bright, edge running out of the bottom-left corner",
+    "mg": "the sister's forearm and shoulder cutting across the left half of frame as a dark diagonal bar",
+    "bg": "the sloping bank grass and the shaded elm trunk, soft; nothing readable behind her head"
+  },
+  "gaze": {
+    "direction": "frame_left",
+    "lead_room": "left",
+    "note": "her eyes go down-left over her sister's arm onto the page; the lead room is the page itself, so the look is answered inside the frame rather than sent out of it. She asks the line without lifting her eyes."
+  },
+  "balance": "Heavily weighted to the lower left — book and arm take two quadrants — with only her face to hold the upper right. The imbalance is the point: the page outweighs her, which is what she is complaining about.",
+  "leading_lines": "The sister's forearm is the dominant diagonal, running from the left edge up to the right and delivering the eye straight to Alice's face; the book's gutter and the top edge of the page repeat it.",
+  "eye_first": "The lit page bottom-left, then up the forearm to Alice's eyes.",
+  "safe_area_ok": true,
+  "constraint_binding": "Only Alice gets a clean read: the Sister is kept to a forearm and a shoulder, no part of her face enters the frame, and no reframe gives her one."
+}

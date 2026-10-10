@@ -1,0 +1,141 @@
+{
+  "task_id": "p4-env-concept-sb3",
+  "attempt": 1,
+  "agent": "06-art/environment-concept",
+  "date": "2026-09-23",
+  "status": "completed",
+  "status_note": "All 7 layout packs delivered and every host check passes (scene_layout_pack_ok). Four renders fail parts of my own self-check. The auto-retry budget is 0, so all images are kept as generated and each defect is listed below for the user to decide at H2 (keep, or approve a re-render).",
+  "mode": "spatial_blocking ON: layout pack (layout_top.png + layout.json). grid_9views.png is retired and was not generated.",
+  "provider": { "image": "volcengine", "model": "doubao-seedream-5-0-pro-260628", "size": "2560x1440", "n": 1, "provider_errors": [] },
+  "shared_inputs": [
+    "brief.md",
+    "bible/style.json v1.1.0 (BIB-0027): style_fragment_ui verbatim as style paragraph; negative_prompt_en verbatim + plan-view negatives; dream register for all 7 (no waking addon)",
+    "bible/changelog.md BIB-0027; qa/defects/DEF-p4-style-001.json (context)",
+    "bible/scenes/index.json + per-scene architecture/lighting/environment.json"
+  ],
+  "user_refs": [
+    {
+      "path": "refs/style/alice.jpeg",
+      "use": "Read as a look reference only; NOT injected via --ref.",
+      "why": "The reference is an oblique interior view with a large creature. As --ref for a nadir plan it would pull in camera tilt, interior and creature (known seedream plan-view elevation prior). Its palette, texture and Art Nouveau vocabulary reach the image through style_fragment_ui, which art-director wrote from it. Flagged for the user: say so at H2 if you want it injected directly."
+    }
+  ],
+  "pending_H2": [
+    { "id": "H2-mucha-scope-and-finish", "applies_to": "all 7 scenes (all dream layer)", "note": "Full Mucha / Art Nouveau dressing rendered per the current proposal (CR-014) with a photographed finish. pending_H2 — for user decision at H2." },
+    { "id": "H2-non-speaking-animals", "applies_to": "SCN-croquet-ground (flamingo/hedgehog), SCN-cheshire-cat-path (piglet exit gap kept clear)", "note": "Plan images contain no animals; the space for the proposal is reserved only. pending_H2 — for user decision at H2." }
+  ],
+  "items": [
+    {
+      "scene_id": "SCN-cheshire-cat-path",
+      "products": ["assets/concepts/scenes/SCN-cheshire-cat-path/layout_top.png", "assets/concepts/scenes/SCN-cheshire-cat-path/layout.json", "assets/concepts/scenes/SCN-cheshire-cat-path/prompts.json"],
+      "scene_layout_pack_ok": "PASS (0 violations, 0 WARN)",
+      "views_self_check": "PASS (sector max 3; wide 3, close/detail 3, low 3; no banned wording)",
+      "image_self_check": {
+        "no_people_no_text_no_arrows": "PASS",
+        "orthographic": "near-nadir; slight outward lean of edge trunks (minor)",
+        "defects": [
+          "The crab-apple's low limb reaches north-east beside the path instead of across it (the card needs the Cat's bough over the path at 1.8 m).",
+          "Flush Art Nouveau mosaic roundels are scattered over the woodland floor. The card realises Mucha in this scene only through living flora and carved wood, so this is style leakage.",
+          "No visible round halo gaps in the canopy behind the boughs (hard to judge from above)."
+        ]
+      }
+    },
+    {
+      "scene_id": "SCN-mad-tea-party",
+      "products": ["assets/concepts/scenes/SCN-mad-tea-party/layout_top.png", "assets/concepts/scenes/SCN-mad-tea-party/layout.json", "assets/concepts/scenes/SCN-mad-tea-party/prompts.json"],
+      "scene_layout_pack_ok": "PASS (0 violations, 0 WARN)",
+      "views_self_check": "PASS (sector max 3)",
+      "image_self_check": {
+        "no_people_no_text_no_arrows": "PASS",
+        "orthographic": "near-nadir; thin strip of house facade visible below the eave (minor)",
+        "defects": [
+          "The horse-chestnut is a small young tree, not a great spreading crown, so the table stands in full sun. This contradicts the architecture card and LGT-mad-tea-party-01 (dappled shade on the table).",
+          "The two ear-shaped chimneys read as one stack with two pots from above.",
+          "The table is about 10.7 m long against 7 m in the card (minor)."
+        ]
+      },
+      "defect_ids": ["DEF-p4-envconcept-801"]
+    },
+    {
+      "scene_id": "SCN-rose-tree-yard",
+      "products": ["assets/concepts/scenes/SCN-rose-tree-yard/layout_top.png", "assets/concepts/scenes/SCN-rose-tree-yard/layout.json", "assets/concepts/scenes/SCN-rose-tree-yard/prompts.json"],
+      "scene_layout_pack_ok": "PASS (0 violations, 0 WARN)",
+      "views_self_check": "PASS (sector max 3)",
+      "image_self_check": {
+        "no_people_no_text_no_arrows": "PASS",
+        "orthographic": "FAIL",
+        "defects": [
+          "The camera is tilted about 30-40 deg from vertical. The south wall shows its full face and gate piers, and the arbour arch is seen from the side. This fails SOUL duty 3 (true nadir). All features are present and correctly placed; xy values are ground-contact points."
+        ]
+      }
+    },
+    {
+      "scene_id": "SCN-croquet-ground",
+      "products": ["assets/concepts/scenes/SCN-croquet-ground/layout_top.png", "assets/concepts/scenes/SCN-croquet-ground/layout.json", "assets/concepts/scenes/SCN-croquet-ground/prompts.json"],
+      "scene_layout_pack_ok": "PASS (0 violations, 0 WARN)",
+      "views_self_check": "PASS (sector max 3)",
+      "image_self_check": {
+        "no_people_no_text_no_arrows": "PASS",
+        "orthographic": "PASS",
+        "defects": [
+          "The hedge arches came out at the middle of the west and east hedges, not at the south corners. layout.json follows the image (west_arch / east_arch). Minor: the arrest exits and the walk toward the Gryphon now leave from the east arch."
+        ]
+      }
+    },
+    {
+      "scene_id": "SCN-gryphon-sunning-spot",
+      "products": ["assets/concepts/scenes/SCN-gryphon-sunning-spot/layout_top.png", "assets/concepts/scenes/SCN-gryphon-sunning-spot/layout.json", "assets/concepts/scenes/SCN-gryphon-sunning-spot/prompts.json"],
+      "scene_layout_pack_ok": "PASS (0 violations, 0 WARN)",
+      "views_self_check": "PASS (sector max 3)",
+      "image_self_check": {
+        "no_people_no_text_no_arrows": "PASS",
+        "orthographic": "FAIL",
+        "defects": [
+          "The camera is tilted about 35-45 deg. The yew hedge face, the arch and the ha-ha wall face show as elevations, and the griffin statue is seen from the side. This fails SOUL duty 3 (true nadir). Content matches the card; xy values are ground-contact points."
+        ]
+      }
+    },
+    {
+      "scene_id": "SCN-mock-turtle-ledge",
+      "products": ["assets/concepts/scenes/SCN-mock-turtle-ledge/layout_top.png", "assets/concepts/scenes/SCN-mock-turtle-ledge/layout.json", "assets/concepts/scenes/SCN-mock-turtle-ledge/prompts.json"],
+      "scene_layout_pack_ok": "PASS (0 violations, 0 WARN)",
+      "views_self_check": "PASS (sector max 3)",
+      "image_self_check": {
+        "no_people_no_text_no_arrows": "PASS",
+        "orthographic": "partial: moderate tilt (groyne posts and spades seen from the side)",
+        "defects": [
+          "The rock ledge is about 9-10 m long, roughly 3x the card's 3 x 1.5 m 'little ledge', and sits on the foam line at the foot of the shingle rather than apart on the upper beach.",
+          "bathing_machines is an off-map direction marker (xy [0.40, 0.01]); they are not in the image, as the card places them far along the shore."
+        ]
+      }
+    },
+    {
+      "scene_id": "SCN-courtroom",
+      "products": ["assets/concepts/scenes/SCN-courtroom/layout_top.png", "assets/concepts/scenes/SCN-courtroom/layout.json", "assets/concepts/scenes/SCN-courtroom/prompts.json"],
+      "scene_layout_pack_ok": "PASS (0 violations, 0 WARN)",
+      "views_self_check": "PASS (sector max 3)",
+      "image_self_check": {
+        "no_people_no_text_no_arrows": "PASS",
+        "orthographic": "PASS (near-nadir; slight inner wall faces)",
+        "defects": [
+          "The public gallery over the south doors does not read; only a curved verdigris iron screen stands in the south-west corner.",
+          "The officers' door and the herald's step are not drawn; their xy is the Bible position, not a measured one.",
+          "The jury-box shows no visible raised floor (+1.2 m), which the tipping beat needs."
+        ]
+      }
+    }
+  ],
+  "acceptance_checks": {
+    "host_cli": "python3 code/blocking_map_check.py --project alices --scene <id>. Run with the app runtime python3.12 because system python3 lacks Pillow; system-python runs also PASSED but WARNed that the image size check was skipped. 7/7 PASS, 0 WARN.",
+    "views_rules": "code/views_rule_check_p4-env-concept-sb3.py: 7/7 PASS, re-run after calibrating coordinates to the renders",
+    "filenames_ascii": "PASS"
+  },
+  "defect_ids": ["DEF-p4-envconcept-801"],
+  "auto_retries_used": 0,
+  "background_processes": "none; all 7 genmedia jobs exited before this receipt",
+  "notes": [
+    "SOUL order kept: layout.json drafts were written first; prompts carried their landmark positions; after rendering, xy values were re-measured from the images and bearings re-checked.",
+    "genmedia wrote usage_ledger.jsonl into each scene folder (its own ledger, left in place).",
+    "Prompt fragments and logs: runs/p4-env-concept-sb3/prompts/, runs/p4-env-concept-sb3/logs/."
+  ]
+}

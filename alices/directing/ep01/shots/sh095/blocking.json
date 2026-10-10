@@ -1,0 +1,38 @@
+{
+  "shot_id": "sh095",
+  "group_id": "grp035",
+  "scene_no": "S10",
+  "scene_id": "SCN-pool-of-tears",
+  "duration_s": 7.0,
+  "is_dialogue": true,
+  "group_position": "last shot of grp035 — Alice on the map start/end ground (glass_table_legs), treading water without moving.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "stand",
+      "start_pos": "treading water beside the glass table legs, chin at the waterline",
+      "space_fragment_en": "standing upright treading water beside the glass table legs, centred in frame, facing screen-left into the open water",
+      "facing": "screen-left into the practical middle distance where railway timetables live",
+      "path": [],
+      "beats": [
+        { "t": 1.0, "action": "works it out aloud", "sync": "LN-ep01-029 begins" },
+        { "t": 4.6, "action": "the solution arrives and steadies her", "sync": "LN-ep01-029 on 'railway'" },
+        { "t": 6.2, "action": "she treads water, satisfied", "sync": "held to the cut" }
+      ],
+      "performance": {
+        "objective": "place herself on a map she knows, so that there is a way home from here",
+        "goal": "place herself on a map she knows",
+        "emotional_arc": "from bewilderment to the practical satisfaction of a child who has solved a problem, not a child in danger",
+        "arc_from": "bewilderment",
+        "arc_to": "practical satisfaction",
+        "trigger": { "line_ref": "LN-ep01-029", "word": "railway" },
+        "no_early_reaction": ["the face clearing", "a nod", "the chin lifting"],
+        "forbidden_early": ["the face clearing", "a nod", "the chin lifting"],
+        "end_state": "chin lifted clear of the water, eyes level screen-left, mouth closed on a small satisfied set, arms sculling"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0008 result (dream)", "note": "Alice alone." }
+}

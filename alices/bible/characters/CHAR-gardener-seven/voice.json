@@ -1,0 +1,28 @@
+{
+  "character_id": "CHAR-gardener-seven",
+  "name": "Seven",
+  "tier": "extra",
+  "card_type": "individual",
+  "gender": "male",
+  "age_sense": "adult man (appearance base_age_range 33-40)",
+  "timbre": "sharp, nasal, reedy man's voice, quick and indignant",
+  "pitch": "high baritone to tenor, the highest of the three gardeners",
+  "pitch_range_hz": [115, 200],
+  "speed_wpm": [155, 180],
+  "speed_cpm": [589, 684],
+  "accent": "rural Oxfordshire working-class English, clipped quick delivery",
+  "reference_style": "The prickly, sarcastic one: 'Always lay the blame on others!', then an indignant outburst cut off mid-line when he spots Alice.",
+  "emotion_range": {
+    "sarcastic": { "speed_delta": "0%", "pitch_delta": "+1semi", "note": "'That's right, Five!'" },
+    "indignant_cutoff": { "speed_delta": "+15%", "pitch_delta": "+3semi", "volume": "loud", "note": "ch008-p08 'Well, of all the unjust things—'" }
+  },
+  "age_variants": [],
+  "source_chapter": "ch008",
+  "sources": ["ch008", "ch008-p08", "ch008-d0003", "ch008-d0006", "ch008-d0008"],
+  "voice_evidence": [
+    { "para": "ch008-p08", "quote": "Seven flung down his brush, and had just begun “Well, of all the unjust things—”" }
+  ],
+  "inferred": true,
+  "inferred_fields": ["timbre", "pitch", "pitch_range_hz", "speed_wpm", "speed_cpm", "accent"],
+  "reason": "No voice description in source; designed from his lines and appearance (tall, rangy)."
+}

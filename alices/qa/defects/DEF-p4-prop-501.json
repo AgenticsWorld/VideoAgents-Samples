@@ -1,0 +1,24 @@
+{
+  "id": "DEF-p4-prop-501",
+  "opened_by": "06-art/prop",
+  "opened_on": "2026-09-23",
+  "task_id": "p4-prop",
+  "assigned_to": ["02-worldbuilding/dictionary", "00-orchestration/memory-bible"],
+  "domain": "prop",
+  "status": "open",
+  "severity": "minor",
+  "summary": "10 plot props in bible/props.json have no dictionary entry for the object (name_hit_dictionary cannot be 100% until they are registered). Each card uses the source wording as its working name, so nothing downstream is blocked.",
+  "findings": [
+    { "id": "DEF-p4-prop-501-a", "prop": "PROP-sister-book", "working_name": "the book her sister was reading", "source": "ch001-p01" },
+    { "id": "DEF-p4-prop-501-b", "prop": "PROP-box-of-comfits", "working_name": "a box of comfits", "source": "ch003-p23", "note": "currently only mentioned inside TERM-0081's definition" },
+    { "id": "DEF-p4-prop-501-c", "prop": "PROP-rabbit-house-bottle", "working_name": "a little bottle that stood near the looking-glass", "source": "ch004-p05" },
+    { "id": "DEF-p4-prop-501-d", "prop": "PROP-pebbles-and-little-cakes", "working_name": "the pebbles turning into little cakes", "source": "ch004-p32..p33", "note": "event is SUP-009" },
+    { "id": "DEF-p4-prop-501-e", "prop": "PROP-queens-invitation-letter", "working_name": "a great letter, nearly as large as himself", "source": "ch006-p02" },
+    { "id": "DEF-p4-prop-501-f", "prop": "PROP-hatter-teacup-and-bread-and-butter", "working_name": "a teacup in one hand and a piece of bread-and-butter in the other", "source": "ch011-p16" },
+    { "id": "DEF-p4-prop-501-g", "prop": "PROP-gardeners-paint-pot-and-brushes", "working_name": "the gardeners' red paint and brushes", "source": "ch008-p01" },
+    { "id": "DEF-p4-prop-501-h", "prop": "PROP-jurors-slates-and-pencils", "working_name": "the jurors' slates and pencils", "source": "ch011-p05, ch011-p09" },
+    { "id": "DEF-p4-prop-501-i", "prop": "PROP-king-note-book", "working_name": "the King's note-book (Rule Forty-two)", "source": "ch012-p14", "note": "TERM-0091 names the rule, not the object" },
+    { "id": "DEF-p4-prop-501-j", "prop": "PROP-verses-paper", "working_name": "They told me you had been to her (the paper of verses)", "source": "ch012-p23, ch012-p28", "note": "TERM-0114 names the verses, not the paper" }
+  ],
+  "requested_action": "dictionary registers one object TERM per finding (or an alias on an existing TERM) with entity_ref = the PROP id; memory-bible then back-fills term_ref in bible/props.json with the prop owner. Also back-fill entity_ref on TERM-0072..0086 to their PROP ids (listed in props.json plot_prop_coverage.list)."
+}

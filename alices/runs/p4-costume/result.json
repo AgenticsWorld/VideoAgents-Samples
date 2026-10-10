@@ -1,0 +1,38 @@
+{
+  "task_id": "p4-costume",
+  "agent": "06-art/costume",
+  "attempt": 1,
+  "status": "done",
+  "finished_on": "2026-09-22",
+  "outputs": ["bible/costumes.json"],
+  "side_outputs": ["qa/defects/DEF-p4-costume-001.json", "code/p4-costume_check.py", "runs/p4-costume/check_report.json"],
+  "summary": "Costume system for all 44 registered characters (S 1, A 7, B 11, extra 25 incl. told-only CHAR-tortoise): 52 outfits COS-001..COS-052, exactly one default per character (default_outfit_id), 10 explicit costume change points hung on story_timeline events, plus variant_points for wet/sooty/leaves/accessory states for continuity-planning.",
+  "acceptance": {
+    "no_unknown_placeholder": "PASS (check script scans for UNKNOWN/TBD/TODO/未知/待定/empty strings)",
+    "costume_change_points_explicit": "PASS: every CP has after_event, effective_from_event (+ paragraph where it splits ev0054), from/to outfits of the same character; all switches happen off screen between scenes so none falls inside a generation group",
+    "coverage": "PASS 44/44 registry characters",
+    "unique_ids_and_single_default": "PASS",
+    "source_quotes": "PASS: every cited quote found in its cited paragraph of story/structured_story"
+  },
+  "key_decisions": [
+    "Schema: platform characters[].outfits[] with COS-NNN ids, so costume sheets are sheet_<COS-id>.png; the skeleton's flat costumes[] list is dropped so core.py does not read entries twice.",
+    "Alice COS-001 (default, verbatim for sheet.png): pale cornflower-blue 1862 child's summer frock, white bib pinafore with a pocket, white stockings, black ankle-strap shoes (user ref refs/style/alice.jpeg). She wears it through the whole dream; the only change is the grown-Alice reverie insert COS-002 (age02, ch012#p71).",
+    "Wet, sooty, leaf-strewn, tea-splashed, one-glove and spectacles states are variants with on/off events, not separate outfits (SOUL: per-shot state is continuity-planning's job). The Caucus-race members are drawn dry by default; soaked ev0009-ev0010.",
+    "Sourced changes: King is bareheaded in the procession because the Knave carries his crown (ch008-p11), then wears the crown over a judge's wig at the trial (COS-010, ch011-p03); Knave in chains at the trial (COS-012); White Rabbit becomes herald (COS-007).",
+    "Designed changes, each with a reason: the Duchess wears outdated visiting finery for the Queen's croquet invitation (COS-014); the cook puts on a shawl and bonnet to go to court (COS-039); Bill wears a borrowed juror's coat (COS-032); the sister's courtroom glimpse adds a shawl and bonnet (COS-004, ruling 5.3 B).",
+    "Doubling echoes (5.3 B): housemaid's white bib apron echoed by Alice's pinafore; Cheshire Cat in Dinah's brown-tabby palette; the sister's lilac-grey dress kept under the gallery shawl so she is recognisable on the wake-up cut.",
+    "DEF-p3-char-index-902 honoured: the executioner reads from dark crimson livery and a pushed-back black hood only. No device of any kind; the banned words stay out of visual_en (prohibited_in_prompt only).",
+    "Palette rules applied: cornflower only on Alice; Hearts crimson only on the Hearts household; Caterpillar set to slate blue (conflict filed).",
+    "DEF-p3-char-index-903 (ch006 chorus attribution) was checked: it has no costume impact."
+  ],
+  "defects_opened": ["DEF-p4-costume-001 (a: Caterpillar 'cornflower' wording; b: CR-012 whitelist missing Hatter 10/6 ticket; c: prop vs costume ownership of the Knave's chain, glove and spectacles; d: jury J09 coat white to cream)"],
+  "downstream_notes": {
+    "character-concept": "use each character's default outfit visual_en verbatim in sheet.png",
+    "costume-concept": "non-default outfits needing sheets: COS-002 (blocked until the age02 base sheet exists), COS-004, COS-007, COS-010, COS-012, COS-014, COS-032, COS-039. COS-004/010/012/039 carry cross_ref to their base outfit (same garment, different silhouette), so a separate sheet is still needed. COS-050 Tortoise is told only: no sheet unless screenplay adds an insert.",
+    "storyboard/shot-planning": "use change_points and period_range to set costumes per group; every change is off screen between scenes",
+    "continuity-planning": "variant_points list the state on/off events"
+  },
+  "skills": "none selected for this station",
+  "genmedia_calls": 0,
+  "user_refs": ["refs/style/alice.jpeg"]
+}

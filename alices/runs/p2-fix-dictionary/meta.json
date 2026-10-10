@@ -1,0 +1,13 @@
+{
+  "task_id": "p2-fix-dictionary",
+  "run_id": "90eeb38a8152",
+  "attempt": 1,
+  "model": "agent default",
+  "tokens": null,
+  "started_at": null,
+  "finished_at": "2026-09-22T17:52:03+08:00",
+  "inputs_sha256": {},
+  "artifact_versions": {
+    "bible/dictionary.json": "v1.1"
+  }
+}

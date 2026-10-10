@@ -1,0 +1,13 @@
+{
+  "task_id": "p3-growth-all",
+  "run_id": "a2e37d5c7082",
+  "attempt": 1,
+  "model": "agent default",
+  "tokens": null,
+  "started_at": null,
+  "finished_at": "2026-09-22T19:42:46+08:00",
+  "inputs_sha256": {},
+  "artifact_versions": {
+    "bible/characters/{id}/age_versions.json": "v1"
+  }
+}

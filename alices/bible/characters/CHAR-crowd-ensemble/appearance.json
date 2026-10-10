@@ -1,0 +1,71 @@
+{
+  "character_id": "CHAR-crowd-ensemble",
+  "card_type": "ensemble",
+  "tier": "extra",
+  "layer": "dream",
+  "revision": { "change_id": "BIB-0027", "task_id": "p4-cr-appearance", "date": "2026-09-23", "note": "Slots rewritten from animal-coded human performers to photoreal CGI animals." },
+  "rendering": {
+    "mode": "photoreal_cgi_animal",
+    "rule": "bible/cultivation.json SUP-002 (amended BIB-0027): 'the talking crowd of little animals and birds'",
+    "composition": { "cgi_animals": 10, "human_performers": 0, "note": "Every member of this crowd is a CGI animal. The humans at this location have their own cards: Pat (CHAR-pat, human performer) and, off-screen, the voices already assigned to named characters." },
+    "limits": "Natural anatomy per species; no clothing. Props (ladders, rope, barrow, bottle) are handled only as far as the animal's body allows.",
+    "heavy_prop_staging": { "status": "pending_H2", "proposal": "The two tied ladders and the barrow of pebbles are handled by Pat (human, own card) with the animals clustering and helping: birds tug the rope from the roof by beak, the stoat and rabbit shove the barrow. No animal carries a ladder on two legs. Final staging belongs to 07-directing." }
+  },
+  "scope": {
+    "on_screen": "ch004 only: the crowd of little animals and birds outside the White Rabbit's house, and those helping with the ladder and roof (ev0016-ev0017).",
+    "ch006_chorus": "Voice-only in this card. The ch006 'Wow! wow! wow!' chorus belongs to the cook and the baby joining the Duchess (ch006-p37); no crowd members appear in the kitchen (see DEF-p3-appearance-302).",
+    "source_chapter": "ch006", "paragraph": "ch006-p37", "quote": "CHORUS. (In which the cook and the baby joined):"
+  },
+  "headcount": {
+    "range": [6, 10],
+    "note": "Includes the two guinea-pigs holding up Bill (CHAR-bill-the-lizard, own card). The White Rabbit and Pat have their own cards.",
+    "source_chapter": "ch004", "paragraph": "ch004-p34",
+    "quote": "found quite a crowd of little animals and birds waiting outside. The poor little Lizard, Bill, was in the middle, being held up by two guinea-pigs, who were giving it something out of a bottle."
+  },
+  "gender": "male",
+  "gender_note": { "inferred": true, "reason": "Mixed crowd; source gives no genders. Designed as a neighbourhood crew, male 6 / female 4 at full headcount. Gender matters for voices and, where the species differs by sex, plumage." },
+  "gender_mix": { "male": 6, "female": 4 },
+  "slots": [
+    { "slot": "X01", "type": "cgi_animal", "species": "guinea-pig", "gender": "male", "persona_age": "45-55", "look": "same CGI asset as jury J01 (ginger-tan and white piebald)", "source_chapter": "ch004", "paragraph": "ch004-p34" },
+    { "slot": "X02", "type": "cgi_animal", "species": "guinea-pig", "gender": "male", "persona_age": "40-50", "look": "same CGI asset as jury J02 (black-and-cream rosette coat)", "source_chapter": "ch004", "paragraph": "ch004-p34" },
+    { "slot": "X03", "type": "cgi_animal", "species": "dunnock / hedge-sparrow (Prunella modularis)", "gender": "female", "persona_age": "30-40", "look": "small streaky brown bird with slate-grey head and breast" },
+    { "slot": "X04", "type": "cgi_animal", "species": "rook (Corvus frugilegus)", "gender": "male", "persona_age": "40-50", "look": "glossy purple-black crow with a bare grey-white face at the bill base; on the roof tugging the rope" },
+    { "slot": "X05", "type": "cgi_animal", "species": "wild brown rabbit (Oryctolagus cuniculus)", "gender": "female", "persona_age": "20-30", "look": "grey-brown agouti coat, NOT white, so she never reads as the White Rabbit" },
+    { "slot": "X06", "type": "cgi_animal", "species": "common shrew (Sorex araneus)", "gender": "female", "persona_age": "12-15", "look": "tiny, long pointed twitching snout, dark brown back with paler flanks" },
+    { "slot": "X07", "type": "cgi_animal", "species": "jackdaw (Corvus monedula)", "gender": "male", "persona_age": "25-35", "look": "small black crow with a grey nape and pale silvery-grey eyes; on the roof with the rope" },
+    { "slot": "X08", "type": "cgi_animal", "species": "European robin (Erithacus rubecula)", "gender": "female", "persona_age": "35-45", "look": "round, orange-red breast, olive-brown back, busy" },
+    { "slot": "X09", "type": "cgi_animal", "species": "stoat (Mustela erminea), summer coat", "gender": "male", "persona_age": "30-40", "look": "lean, sandy-brown back, cream belly, black tail tip; shoves the barrow of pebbles" },
+    { "slot": "X10", "type": "cgi_animal", "species": "song thrush (Turdus philomelos)", "gender": "male", "persona_age": "50-60", "look": "brown back, cream breast boldly spotted with dark brown" }
+  ],
+  "slots_inferred": true,
+  "slots_reason": "Source: 'little animals and birds' plus two guinea-pigs; all other species designed, avoiding species cast elsewhere. The guinea-pig recurrence with the jury is a designed dream echo (TERM-0036). The brandy bottle is held by the guinea-pigs (X01/X02), as in the source.",
+  "hair": { "coat": "fur or feathers per slot", "value": "species-natural; dusted with brick grime from the roof work", "inferred": true, "reason": "Species." },
+  "eyes": { "value": "species-natural per slot", "inferred": true, "reason": "Species." },
+  "face": { "value": "excited, flustered, chattering; they rush at Alice together", "source_chapter": "ch004", "paragraph": "ch004-p34", "quote": "They all made a rush at Alice the moment she appeared" },
+  "build": {
+    "height_range_cm": [5, 45],
+    "body_type": "species-true per slot; all 'little' (shrew smallest, rook and rabbit largest)",
+    "scale_reference": "When Alice comes out she has just shrunk (ch004-p34) and is small, so the crowd is roughly at her scale. While she is inside and giant they are tiny figures below the window (SUP-003).",
+    "inferred": true,
+    "reason": "Species-true sizes; 'little' is sourced."
+  },
+  "base_age_range": "12-60 (persona age per slot)",
+  "base_age_inferred": true,
+  "base_age_reason": "Persona ages for voice casting only; all animals are adults of their species.",
+  "marks": [ { "type": "dust and brick-grime", "position": "fur, feathers, feet", "description": "from the roof slates, the ladders and the pebble barrow", "source_chapter": "ch004", "paragraph": "ch004-p24", "quote": "Mind that loose slate—Oh, it’s coming down! Heads below!", "inferred": true, "reason": "Grime is a designed consequence of the sourced roof work." } ],
+  "signature_items": [
+    { "item": "two ladders tied together, rope", "source_chapter": "ch004", "paragraph": "ch004-p24", "quote": "Where’s the other ladder?—Why, I hadn’t to bring but one; Bill’s got the other" },
+    { "item": "a barrow of pebbles (the pebbles turn to little cakes, SUP-009)", "source_chapter": "ch004", "paragraph": "ch004-p31", "quote": "A barrowful will do, to begin with." },
+    { "item": "a small brandy bottle, tipped to Bill's mouth by the two guinea-pigs", "source_chapter": "ch004", "paragraph": "ch004-p34", "quote": "who were giving it something out of a bottle" }
+  ],
+  "default_outfit_tone": "none: no clothing on any member; natural earthy browns, blacks, greys and the robin's red",
+  "default_outfit_tone_source": { "inferred": true, "reason": "Per SUP-002 (BIB-0027) the old village working-dress reading is dropped; the text gives them no clothes." },
+  "variation_rules": [
+    "X01/X02 are the same guinea-pig CGI assets as jury J01/J02.",
+    "No white animal in the crowd (white is reserved for the White Rabbit).",
+    "No card-suit devices: this is not the House of Hearts.",
+    "Nobody from this crowd appears in the Duchess's kitchen (ch006)."
+  ],
+  "doubling": { "value": "none", "reason": "Not part of any H1 ruling 5.3 B doubling pair." },
+  "prompt_summary_en": "A crowd of photoreal little wild animals and birds outside a small cottage, rushing forward excitedly: two round piebald guinea-pigs holding up a limp small lizard and tipping a tiny bottle to its mouth, a brown agouti rabbit, a stoat, a tiny shrew, a robin, a song thrush, a dunnock, a rook and a jackdaw on the roof with a rope, two ladders tied together, a wheelbarrow of pebbles, dusty with brick grime, natural animal anatomy, no clothing, live-action film plate"
+}

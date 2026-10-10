@@ -1,0 +1,92 @@
+{
+  "character_id": "CHAR-duchess-baby",
+  "name": "The Duchess's Baby",
+  "tier": "extra",
+  "layer": "dream",
+  "revision": { "change_id": "BIB-0027", "task_id": "p4-cr-appearance", "date": "2026-09-23", "note": "Human infant stage unchanged; pig end-state added as a photoreal CGI piglet, pending_H2." },
+  "gender": "male",
+  "gender_note": {
+    "inferred": true,
+    "source_chapter": "ch006",
+    "paragraph": ["ch006-p36", "ch006-p40"],
+    "quote": "Speak roughly to your little boy / I speak severely to my boy",
+    "reason": "The narration only says 'it' (ch006-p45, ch006-p49), but the Duchess's lullaby twice calls it a boy; applies to both stages."
+  },
+  "base_age_range": "8-12 months",
+  "base_age_note": {
+    "source_chapter": "ch006",
+    "paragraph": ["ch006-p19", "ch006-p43", "ch006-p44"],
+    "quote": "nursing a baby / flinging the baby at her / Alice caught the baby with some difficulty",
+    "months_inferred": true,
+    "reason": "'Baby' and being nursed, tossed and carried in arms are sourced; 8-12 months is a sturdy pre-walking infant a 10-year-old can just manage to hold, and a practical age for a real infant performer. The pig end-state is a matching young piglet."
+  },
+  "stages": {
+    "infant": { "mode": "human infant performer", "span": "ch006-p19 to the start of the slide in ch006-p46", "note": "Unchanged by BIB-0027." },
+    "slide": { "mode": "continuous held-in-arms shot (SUP-006)", "span": "ch006-p46 to ch006-p48", "status": "pending_H2", "proposal": "Option A (proposed): an imperceptible CGI drift inside one continuous shot. Nose, eyes, skin texture and body proportions shift by degrees from infant to piglet, the gown bunching as the body changes, the cry sliding to grunts by sound. This matches SUP-006's 'proportions and texture drift across the scene'. Option B: the human infant is held until a hidden handover to a CGI piglet in the swaddle at ch006-p48, with no morph." },
+    "pig": { "mode": "photoreal_cgi_animal", "rule": "bible/cultivation.json SUP-002 (non-speaking dream animals, BIB-0027) + SUP-006", "span": "ch006-p48 to the trot-off at ch006-p49", "status": "pending_H2", "note": "Whether this end-state also registers as a linked CRE-* entry is for 04-creatures/creature (index.json disambiguation, DEF-p3-relationship-001-c)." }
+  },
+  "hair": {
+    "infant": { "color": "pale fair", "style": "sparse, fine wisps, damp and ruffled from crying", "length": "very short", "inferred": true, "reason": "Not described; typical for an English infant of this age." },
+    "pig": { "coat": "sparse fine pale bristles over pink skin", "color": "pale pink-white (English Large White-type piglet)", "inferred": true, "reason": "Continuity from the infant's fair colouring and flushed pink skin; status pending_H2." }
+  },
+  "eyes": {
+    "infant": {
+      "color": "pale blue-grey",
+      "shape": "small and puffy, screwed up from howling and pepper; reads as 'extremely small for a baby' when Alice looks into its face",
+      "source_chapter": "ch006",
+      "paragraph": "ch006-p46",
+      "quote": "its eyes were getting extremely small for a baby",
+      "color_inferred": true,
+      "reason": "Smallness is sourced; colour designed (common infant eye colour)."
+    },
+    "pig": { "color": "pale blue-grey (kept from the infant)", "shape": "small, deep-set piglet eyes with pale lashes", "inferred": true, "reason": "Holding the eye colour across the slide keeps the change gradual; pending_H2." }
+  },
+  "skin": {
+    "infant": { "tone": "fair, blotchy pink, flushed red around the nose and cheeks from crying and pepper", "source_chapter": "ch006", "paragraph": "ch006-p21", "quote": "as for the baby, it was sneezing and howling alternately without a moment's pause", "tone_inferred": true, "reason": "The flush is the natural result of the sourced crying." },
+    "pig": { "tone": "pink, slightly flushed at the snout and ears", "inferred": true, "reason": "Continuity; pending_H2." }
+  },
+  "face": {
+    "infant": {
+      "shape": "round, chubby infant face",
+      "features": ["a very turned-up button nose", "small puffy eyes", "wide open howling mouth"],
+      "default_expression": "howling and sneezing in the kitchen; later quietening to grunts and snuffles outdoors",
+      "source_chapter": "ch006",
+      "paragraph": "ch006-p46",
+      "quote": "it had a _very_ turn-up nose, much more like a snout than a real nose"
+    },
+    "pig": { "shape": "young piglet head", "features": ["flat pink snout", "small upright ears", "grunting mouth"], "source_chapter": "ch006", "paragraph": "ch006-p48", "quote": "it was neither more nor less than a pig", "status": "pending_H2" }
+  },
+  "build": {
+    "height_range_cm": [68, 76],
+    "height_note": "Infant length. Pig end-state: a piglet of about 35-45 cm body length and 20-25 cm at the shoulder, small enough for Alice to carry in her arms and set down.",
+    "body_type": "plump, sturdy, wriggling infant; ends as a stocky piglet",
+    "movement": "flings its arms and legs out in all directions and keeps doubling up and straightening out; as a pig it trots away quietly into the wood",
+    "source_chapter": "ch006",
+    "paragraph": ["ch006-p44", "ch006-p49"],
+    "quote": "a queer-shaped little creature, and held out its arms and legs in all directions, 'just like a star-fish' / So she set the little creature down, and felt quite relieved to see it trot away quietly into the wood",
+    "height_inferred": true,
+    "reason": "Behaviour sourced; lengths are standard for an 8-12-month infant and a young piglet."
+  },
+  "marks": [
+    { "type": "none", "description": "No scars, tattoos or birthmarks; the reddened nose and flushed face are a state from crying and pepper, not a base mark.", "inferred": true, "reason": "Source gives no permanent marks." }
+  ],
+  "signature_items": [
+    { "item": "the 'knot' carrying hold: Alice twists it up and keeps hold of its right ear and left foot", "source_chapter": "ch006", "paragraph": "ch006-p45", "quote": "to twist it up into a sort of knot, and then keep tight hold of its right ear and left foot", "note": "For the human infant: a snug swaddle-hold, never a real twist. The ear-and-foot grip lands naturally once the body is a piglet." },
+    { "item": "sound progression: sneezing and howling, then snorting 'like a steam-engine', then grunting and sobbing-or-grunting", "source_chapter": "ch006", "paragraph": ["ch006-p21", "ch006-p44", "ch006-p45", "ch006-p47"], "quote": "snorting like a steam-engine / the little thing grunted in reply / sobbed again (or grunted, it was impossible to say which)", "note": "Per SUP-006 the cry shifts toward a grunt gradually through sound design." }
+  ],
+  "default_outfit_tone": {
+    "summary": "a long, grubby, once-white cotton infant gown gone greyish, with a frayed plain hem, loosely tied and rumpled, pepper-dusted; no bonnet. The pig wears the same gown slipping off, and leaves it behind when set down to trot away.",
+    "silhouette_1862": "1862 long infant frock reaching well past the feet, the usual dress for babies of the period; plain, with no lace or embroidery, matching a poorer household",
+    "inferred": true,
+    "reason": "Clothing not described; FAC-duchess-household emblem_visual (visibly poorer than the Hearts court). The gown on the pig stage is designed continuity, pending_H2. Costume detail by 06-art/costume."
+  },
+  "performer_coding": {
+    "code": "human infant performer (infant stage); photoreal CGI piglet (pig end-state, pending_H2)",
+    "rule": "bible/cultivation.json SUP-006; SUP-002 non-speaking dream animals (BIB-0027)",
+    "limits": "No pig mask, prosthetic snout or pink body paint on the real infant. The infant never shows a half-pig face in a still-readable frame; any CGI drift stays below noticeable per-frame change."
+  },
+  "doubling": null,
+  "events": ["ev0027"],
+  "prompt_base_en": "a plump English baby boy about ten months old in 1862, sparse pale fair wispy hair, round chubby face with a very turned-up button nose, small puffy pale blue-grey eyes screwed up from crying, blotchy flushed pink skin with a red nose, arms and legs flung out, wearing a long grubby greyish once-white plain cotton infant gown, real human infant, live-action film plate",
+  "prompt_pig_en": "photoreal small pink-white piglet with sparse pale bristles, flat pink snout, small upright ears, small pale blue-grey eyes, a grubby greyish infant gown slipping off it, trotting away quietly into a wood, natural pig anatomy, live-action film plate"
+}

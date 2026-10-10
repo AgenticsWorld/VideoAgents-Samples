@@ -1,0 +1,81 @@
+{
+  "task_id": "p2-political",
+  "agent": "02-worldbuilding/political",
+  "project": "alices",
+  "phase": "Phase 2 (world bible)",
+  "attempt": 1,
+  "status": "done",
+  "generated": "2026-09-22",
+  "output_file": "bible/politics.json",
+  "summary": "Extracted the political domain (government, factions, court/authority structure, trial procedure, executioner, Duchess's standing, diplomatic relations) from structured_story + events.json for all 12 source chapters. Wrote factions[2], offices[8], laws[5], relationships[1] to bible/politics.json, keeping the existing _meta id_prefixes/entry_schema and updating status to phase2_draft_pending_merge.",
+  "content_language": "English (project setting, 2026-09-22)",
+  "counts": {
+    "factions": 2,
+    "offices": 8,
+    "laws": 5,
+    "relationships": 1,
+    "relationship_phases": 4,
+    "cross_domain_assumptions": 5,
+    "entries_with_verbatim_source_quote": "all (100%)",
+    "entries_marked_inferred_true": 3
+  },
+  "cross_domain_assumptions": [
+    {
+      "id": "assume-01-card-court-as-human-livery",
+      "note": "The source's literal 'living playing-card' court (flat, two-dimensional, card-shaped soldiers/courtiers/gardeners; Knave 'made entirely of cardboard') is modelled here as a human household in Hearts-suit livery/heraldry for faction/office purposes only. Final visual/physical treatment is p2-magic's SUP-* call (bible/cultivation.json); if it differs, only emblem_visual/summary text needs updating, not the office/law structure."
+    },
+    {
+      "id": "assume-02-dream-frame-neutral",
+      "note": "Court institutions described as internally consistent regardless of whether the dream frame is kept literal, ambiguous, or reinterpreted as real (that's world/magic-cultivation's call); no political entry depends on the answer."
+    },
+    {
+      "id": "assume-03-theatrical-terror-not-literal-executions",
+      "note": "Uses the Gryphon's on-page reveal (ch009, 'they never executes nobody') as the interpretive key: the Queen's rule is read as performative/theatrical terror, not literal bloodless beheadings. This is a faithful source-grounded reading (not an invention) but is load-bearing for LAW-001 and the FAC-house-of-hearts summary, so it is flagged explicitly."
+    },
+    {
+      "id": "assume-04-cat-head-dispute-procedural-only",
+      "note": "OFF-003 (executioner) records only the procedural/jurisdictional dispute over the disembodied Cheshire Cat head (ch008), not how the Cat's head itself is rendered — that belongs to 04-creatures / p2-magic SUP-*."
+    },
+    {
+      "id": "assume-05-single-isolated-polity",
+      "note": "Source names no neighbouring nation or rival court; the House of Hearts is treated as a single isolated micro-polity (a walled estate). 'Diplomatic relations' in this file are therefore internal (crown vs. subordinate household) rather than international — no external polity was invented to fill a gap that doesn't exist in the source."
+    }
+  ],
+  "known_cross_ref_risks_for_merge": [
+    {
+      "field": "factions[].seat",
+      "risk": "References LOC-hearts-estate and LOC-duchess-house in bible/geography.json, which is still skeleton_empty (02-worldbuilding/geography runs in parallel). These are this agent's best-guess, source-grounded slugs, marked inferred:true with reason. memory-bible's cross_refs_valid_all_namespaces check must reconcile against geography's actual LOC-* registry at merge and return a conflict to this agent (02-worldbuilding/political) if the slugs do not match — per SOUL.md boundary, this agent does not create LOC-* entries itself."
+    },
+    {
+      "field": "relationships[].period",
+      "risk": "Schema calls for TL-*/ERA-* refs from bible/timeline.json, which is also still skeleton_empty in parallel. Left as an empty array; the phase-by-phase chapter record is instead carried in relationships[].phases (chapter-cited, resolvable now) so no political fact is blocked. memory-bible should backfill period once bible/timeline.json lands."
+    },
+    {
+      "field": "leader_refs / holders (CHAR-*)",
+      "risk": "CHAR-* is forward-reference whitelisted per WRITE_RULES.md section 4. Used predictable slugs (CHAR-king-of-hearts, CHAR-queen-of-hearts, CHAR-duchess, CHAR-white-rabbit, CHAR-bill-the-lizard, CHAR-knave-of-hearts) expected to align with 03-characters/character-manager's naming; not yet verifiable since bible/characters/index.json is still skeleton_empty."
+    }
+  ],
+  "deliberately_unrevealed_in_source": [
+    "OFF-003 (Royal Executioner) holders left empty: the source never names this character, referring to him only as 'the executioner' (ch008#p61-p71). Recorded as deliberately unrevealed, not a placeholder gap.",
+    "The verdict of the tart-theft trial (LAW-004) is never reached in the source; the trial is interrupted by the flying pack of cards and Alice's waking (see story/events.json broken_chains on ev0052). Recorded as unresolved-by-source, not a placeholder gap.",
+    "How the Duchess's death sentence (ch008) was lifted before her reappearance free in ch009 is never shown (see story/events.json broken_chains on ev0039); recorded as an unexplained-in-source narrative gap within FREL-001's phase notes, not invented."
+  ],
+  "no_unknown_placeholder_self_check": "PASS - grepped all string values for UNKNOWN/unknown/TBD/N/A; only hit was the literal 'chNNN' template token inside _meta.entry_schema (documentation, not a real entry) and citation-format text, which is expected and not a violation.",
+  "cross_ref_self_check": "PASS (internal) - all offices[].faction_ref, laws[].issued_by, relationships[].from/to resolve within this file; all entry IDs unique; FAC-* slugs match ^FAC-[a-z0-9]+(-[a-z0-9]+)*$; all chapter citations fall within ch001-ch012 per story/chapter_manifest.json.",
+  "world_faction_table_alignment": "NOT YET VERIFIABLE - bible/world.json is still skeleton_empty (owned by 02-worldbuilding/world, running in parallel; world.json's own scope note states faction detail belongs to this file, politics.json, so no FAC-* table is expected on world's side to diff against yet). This file's FAC-* entries (FAC-house-of-hearts, FAC-duchess-household) are the authoritative faction registry for the project per WRITE_RULES.md section 4 cross-reference table. Flagging for p2-merge to confirm world.json does not independently register overlapping factions.",
+  "evaluation": "skipped per project settings (quality judge = 0)",
+  "qa": "skipped per project settings (all QA dimensions = 0; per WORKFLOW.md draft-iteration rule, gate-level QA will be re-applied at the relevant G-gate at whatever dimension strength is configured then, still 0 currently)",
+  "inputs_used": [
+    "story/structured_story.json (chapter_manifest cross-check only; full text read directly from novel/Alices_Adventures_in_Wonderland_English.md for verbatim quotes)",
+    "story/events.json (ev0024, ev0033-ev0041, ev0045-ev0052; realistic_adaptation_flags; broken_chains)",
+    "story/story_graph.json (arc-duchess-household, arc-white-rabbit-errand context)",
+    "story/chapter_manifest.json (ch001-ch012 line ranges, used to pull verbatim quotes directly from the source novel file)",
+    "bible/WRITE_RULES.md (ID prefixes, citation format, forward-reference whitelist)",
+    "bible/politics.json skeleton (kept _meta id_prefixes/entry_schema, added cross_domain_assumptions and notes)",
+    "novel/Alices_Adventures_in_Wonderland_English.md (direct verbatim quotes for all source entries, ch006/ch008/ch009/ch011/ch012)"
+  ],
+  "files_written": [
+    "bible/politics.json",
+    "runs/p2-political/result.json"
+  ]
+}

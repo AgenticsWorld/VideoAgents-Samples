@@ -1,0 +1,15 @@
+{
+  "checkpoint": "H1 pre-ruling (bible/h1_summary.md §5)",
+  "decision": "签字 — adopt all recommendations",
+  "signed_by": "user",
+  "signed_at": "2026-09-22T17:33:21+08:00",
+  "rulings": {
+    "5.1": "A — approve SUP-001..014 as written",
+    "5.2": "A — Wonderland places are dream-only space, each linked to the waking detail it grows from; waking world stays small and real (reject estate/village/cellar-shaft/second-hatch/tidal-estuary grounding)",
+    "5.3": "B — light doubling (a few echoes: housemaid→Mary Ann, Dinah→Cheshire Cat, sister glimpsed at trial)",
+    "5.4": "B — guinea-pig juror: sack over head and shoulders, hustled out, nobody sits on them",
+    "5.5": "A — register households/groups that characters belong to (at least Alice's family, neighbouring farm, White Rabbit household, tea-party)",
+    "5.6": "A — confirm Oxford/Thames, Friday 4 July 1862, clergyman-scholar family, Alice ~10, sister mid-teens"
+  },
+  "note": "This is the pre-ruling, not the H1 lock signature; formal H1 (g2) sign-off follows after DEF-p2-bible-001..006 are fixed and p2-merge checks re-run."
+}

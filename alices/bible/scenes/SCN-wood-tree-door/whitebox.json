@@ -1,0 +1,70 @@
+{
+  "schema_version": "whitebox_scene.v1",
+  "scene_id": "SCN-wood-tree-door",
+  "task_id": "p4-scene-model-sb2",
+  "agent": "05-scenes/scene-modeling",
+  "date": "2026-09-23",
+  "layout_top": "assets/concepts/scenes/SCN-wood-tree-door/layout_top.png",
+  "dimensions_m": [16.0, 14.0, 9.0],
+  "scale_basis": "X = layout.json extent_m.x 16 m (Z = X*9/16 = 9.0). Checked with the drawn oak bole (about 2.4 m, Bible 3 m), the threshold stone (0.84 m) and the path width (about 1.2 m). Y = oak crown top 13.5 m.",
+  "inferred": true,
+  "inferred_items": [
+    "door oak modelled as a living tree (trunk cylinder 3.0 m across per Bible, 9 m bole, crown 10 x 5 x 5.6 m from 8.5 m up) although the plan draws a sawn stump",
+    "side trees modelled as living trunks 10 m high at the drawn stump positions and diameters",
+    "root spurs flanking the door simplified to two 0.5 m high blocks",
+    "path simplified to four ground strips following the drawn line"
+  ],
+  "units": "metres; xy = normalised plan position (x right = east, y down = south = +Z); elevation_m = centre height (host loader convention)",
+  "objects": [
+    {"id": "door_oak_trunk", "shape": "cylinder", "size_m": [3.0, 9.0, 3.0], "xy": [0.42, 0.33], "collision_role": "solid"},
+    {"id": "door_oak_crown", "shape": "sphere", "size_m": [10.0, 5.0, 5.6], "xy": [0.42, 0.33], "elevation_m": 11.0, "collision_role": "soft"},
+    {"id": "door_frame", "shape": "box", "size_m": [1.1, 1.8, 0.15], "xy": [0.44, 0.4944], "collision_role": "solid", "note": "honey limestone horseshoe frame flush in the south face of the trunk"},
+    {"id": "tree_door_leaf", "shape": "box", "size_m": [0.8, 1.5, 0.06], "xy": [0.44, 0.5033], "elevation_m": 0.75, "collision_role": "decor", "note": "door 0.8 x 1.5 m; opens on darkness. Passing through cuts to SCN-long-hall; there is no tunnel geometry"},
+    {"id": "threshold_stone", "shape": "box", "size_m": [0.85, 0.08, 0.7], "xy": [0.441, 0.564], "collision_role": "ground"},
+    {"id": "root_spur_west", "shape": "box", "size_m": [0.96, 0.5, 1.5], "xy": [0.35, 0.528], "collision_role": "solid"},
+    {"id": "root_spur_east", "shape": "box", "size_m": [1.1, 0.5, 1.6], "xy": [0.5138, 0.5333], "collision_role": "solid"},
+    {"id": "path_seg_1", "shape": "box", "size_m": [4.8, 0.02, 1.26], "xy": [0.15, 0.65], "collision_role": "ground"},
+    {"id": "path_seg_2", "shape": "box", "size_m": [5.12, 0.02, 1.53], "xy": [0.46, 0.715], "collision_role": "ground"},
+    {"id": "path_seg_3", "shape": "box", "size_m": [3.68, 0.02, 1.35], "xy": [0.735, 0.705], "collision_role": "ground"},
+    {"id": "path_seg_4", "shape": "box", "size_m": [2.4, 0.02, 1.26], "xy": [0.925, 0.59], "collision_role": "ground"},
+    {"id": "trunk_w1", "shape": "cylinder", "size_m": [0.72, 10.0, 0.72], "xy": [0.095, 0.298], "collision_role": "solid"},
+    {"id": "trunk_w2", "shape": "cylinder", "size_m": [0.8, 10.0, 0.8], "xy": [0.03, 0.471], "collision_role": "solid"},
+    {"id": "trunk_w3", "shape": "cylinder", "size_m": [0.48, 10.0, 0.48], "xy": [0.1325, 0.416], "collision_role": "solid"},
+    {"id": "trunk_w4", "shape": "cylinder", "size_m": [0.56, 10.0, 0.56], "xy": [0.2075, 0.302], "collision_role": "solid"},
+    {"id": "trunk_w5", "shape": "cylinder", "size_m": [0.44, 10.0, 0.44], "xy": [0.1925, 0.411], "collision_role": "solid"},
+    {"id": "trunk_w6", "shape": "cylinder", "size_m": [0.88, 10.0, 0.88], "xy": [0.22, 0.502], "collision_role": "solid"},
+    {"id": "trunk_w7", "shape": "cylinder", "size_m": [0.44, 10.0, 0.44], "xy": [0.265, 0.391], "collision_role": "solid"},
+    {"id": "trunk_w8", "shape": "cylinder", "size_m": [0.48, 10.0, 0.48], "xy": [0.2525, 0.142], "collision_role": "solid"},
+    {"id": "trunk_w9", "shape": "cylinder", "size_m": [0.4, 10.0, 0.4], "xy": [0.0675, 0.203], "collision_role": "solid"},
+    {"id": "trunk_n1", "shape": "cylinder", "size_m": [0.48, 10.0, 0.48], "xy": [0.46, 0.03], "collision_role": "solid"},
+    {"id": "trunk_e1", "shape": "cylinder", "size_m": [0.6, 10.0, 0.6], "xy": [0.6425, 0.129], "collision_role": "solid"},
+    {"id": "trunk_e2", "shape": "cylinder", "size_m": [0.72, 10.0, 0.72], "xy": [0.725, 0.053], "collision_role": "solid"},
+    {"id": "trunk_e3", "shape": "cylinder", "size_m": [0.4, 10.0, 0.4], "xy": [0.75, 0.218], "collision_role": "solid"},
+    {"id": "trunk_e4", "shape": "cylinder", "size_m": [0.48, 10.0, 0.48], "xy": [0.85, 0.24], "collision_role": "solid"},
+    {"id": "trunk_e5", "shape": "cylinder", "size_m": [0.64, 10.0, 0.64], "xy": [0.8575, 0.32], "collision_role": "solid"},
+    {"id": "trunk_e6", "shape": "cylinder", "size_m": [0.56, 10.0, 0.56], "xy": [0.885, 0.089], "collision_role": "solid"},
+    {"id": "trunk_e7", "shape": "cylinder", "size_m": [0.56, 10.0, 0.56], "xy": [0.96, 0.364], "collision_role": "solid"},
+    {"id": "trunk_s1", "shape": "cylinder", "size_m": [0.88, 10.0, 0.88], "xy": [0.38, 0.822], "collision_role": "solid"},
+    {"id": "trunk_s2", "shape": "cylinder", "size_m": [0.32, 10.0, 0.32], "xy": [0.22, 0.791], "collision_role": "solid"},
+    {"id": "trunk_s3", "shape": "cylinder", "size_m": [0.8, 10.0, 0.8], "xy": [0.79, 0.95], "collision_role": "solid"},
+    {"id": "mossy_boulder", "shape": "sphere", "size_m": [0.64, 0.45, 0.64], "xy": [0.655, 0.413], "elevation_m": 0.2, "collision_role": "solid"}
+  ],
+  "walkable": {
+    "zones": [
+      "the path, west to east, about 1.2-1.5 m wide",
+      "open forest floor between the path and the oak (y 0.56-0.62), including the lit threshold pool",
+      "forest floor east of the oak (x 0.55-0.95, y 0.3-0.9), sparse trunks and one boulder"
+    ],
+    "clearance_check": "The approach to the door between root_spur_west and root_spur_east is 1.6 m clear (x 6.08-7.69 m). Alice (0.40 x 0.25 m, 1.35 m tall) has 0.6 m side margin to the 0.8 m door, and must stoop under the 1.5 m head. From the door to the path there are 1.2 m of straight run-out south before turning."
+  },
+  "doorways": [
+    {"id": "tree_door", "landmark": "tree_door", "clear_width_m": 0.8, "clear_height_m": 1.5, "facing": "south onto the path", "outside": "threshold stone plus 1.2 m open ground to the path", "note": "portal only; the model keeps the leaf closed-plane on the trunk face, and staging cuts to SCN-long-hall on passing"}
+  ],
+  "landmarks_covered": ["door_oak", "tree_door", "threshold_stone", "path_west", "path_east", "west_trunks", "east_trunks", "south_trunk"],
+  "workflow_notes": [
+    "Plan-image defect (from p4-env-concept-sb2): every tree is drawn as a sawn stump. Trunks are modelled as living trees at the drawn stump positions and diameters. The door oak uses the Bible 3.0 m trunk.",
+    "Not modelled, being plan-image defects not in the Bible: the dark pipe-like object on the path (about x 0.81, y 0.73) and the stained-glass disc lying top-left.",
+    "Side-tree crowns are not modelled (only the door oak crown), so the preview stays readable. The wood canopy is closed overhead from roughly 8 m up."
+  ],
+  "handover": "no storyboard yet — hand over to whitebox-staging (no directing/*/shot_list.json exists; no videos rendered)"
+}

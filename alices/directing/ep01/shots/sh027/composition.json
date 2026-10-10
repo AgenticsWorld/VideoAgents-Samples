@@ -1,0 +1,35 @@
+{
+  "shot_id": "sh027",
+  "scene_id": "SCN-shaft-landing-passage",
+  "size": "wide",
+  "subject": {
+    "id": "CHAR-white-rabbit",
+    "in_frame_characters": ["CHAR-alice", "CHAR-white-rabbit"],
+    "grid": "centre",
+    "anchor_xy": [0.52, 0.56],
+    "size_in_frame": "far down the passage in profile, about 0.09 of frame height — small enough that the waistcoat reads as a pattern before it reads as clothing"
+  },
+  "second_subject": {
+    "id": "CHAR-alice",
+    "grid": "bottom_left",
+    "anchor_xy": [0.10, 0.74],
+    "note": "a dark back-of-head and shoulder at the very edge of the near foreground, unlit, cropped by the left and bottom edges."
+  },
+  "headroom": "the brick vault closes the top 0.24 of frame and runs away in receding arcs; the Rabbit has about 0.20 of frame height of vault above him, which keeps the passage low and pressing.",
+  "horizon_eyeline": "Child-height lens at 1.3 m: the passage floor line runs from the bottom corners to a vanishing point at [0.52, 0.52]. The Rabbit's eyeline is at his own low height and is resolutely side-on — he never looks back along the axis, so no eyeline is ever exchanged.",
+  "layers": {
+    "fg": "Alice's dark shoulder and the back of her head at the extreme left edge, a silhouette with no detail",
+    "mg": "the brick-vaulted passage running away, lamp pools laid along the floor at intervals",
+    "bg": "the White Rabbit hurrying away on four legs, in profile, with the far lamp glow beyond him"
+  },
+  "gaze": {
+    "direction": "into_depth",
+    "lead_room": "centre",
+    "note": "Alice's look runs down the passage on the lens axis. The Rabbit is side-on and travelling away; he never looks at her and is given no return look. Distance discipline: the composition is never allowed to close on him."
+  },
+  "balance": "A heavy dark corner bottom left against a long lit corridor — almost all the picture is empty passage. The person is huge and unreadable; the thing she wants is tiny and clear.",
+  "leading_lines": "The brick vault arcs and the two floor edges converge hard on the vanishing point, and the lamp pools are stepping stones along that line straight to him. The perspective does all the pointing, which is why no push-in is needed.",
+  "eye_first": "Down the corridor to the small white shape at the vanishing point — the deep-staged perspective delivers the eye there before it registers Alice at the edge.",
+  "safe_area_ok": true,
+  "constraint_binding": "QUADRUPED RABBIT and the distance discipline: never closer than a medium-wide in this scene, so he is composed at 0.09 of frame height with the whole passage between them. Real rabbit gait on all four feet, profile to the lens, no bipedal carriage, and he never looks at Alice in S04 — the frame is laid out so that a look back would be geometrically visible and is simply never given."
+}

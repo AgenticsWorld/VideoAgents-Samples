@@ -1,0 +1,63 @@
+{
+  "schema_version": "whitebox_scene.v1",
+  "scene_id": "SCN-shaft-landing-passage",
+  "task_id": "p4-scene-model-sb1",
+  "dimensions_m": [30.0, 2.8, 16.875],
+  "inferred": true,
+  "scale_basis": "The image width is set to 30.0 m, kept from layout.json map_extent_m (env-concept calibration). Z = 30 x 9/16 = 16.875 m. No drawn element matches a Bible dimension: the passage is drawn about 2.8 m wide (Bible 1.4 m), the straight run about 12 m (Bible 25 m) and the chamber about 6.75 m across (Bible 3 m). The walls follow the drawing, and the scale is the layout.json scale. Y = 2.8 m, the hall height. The passage walls are 2.1 m (Bible clear height).",
+  "orientation_note": "North at top. The landing chamber is at the east. The passage runs west, then turns north at the corner and enters the long hall through hall_opening.",
+  "objects": [
+    {"id": "hall_wall_e", "shape": "box", "size_m": [0.9, 2.8, 5.17], "xy": [0.4525, 0.1535], "collision_role": "wall"},
+    {"id": "hall_wall_s_w", "shape": "box", "size_m": [5.1, 2.8, 0.675], "xy": [0.085, 0.2867], "collision_role": "wall"},
+    {"id": "hall_wall_s_e", "shape": "box", "size_m": [5.925, 2.8, 0.675], "xy": [0.36875, 0.2867], "collision_role": "wall"},
+    {"id": "hall_opening_lintel", "shape": "box", "size_m": [3.0, 0.7, 0.675], "xy": [0.22, 0.2867], "elevation_m": 2.45, "collision_role": "wall"},
+    {"id": "leg_wall_w", "shape": "box", "size_m": [0.675, 2.1, 7.4], "xy": [0.15875, 0.5282], "collision_role": "wall"},
+    {"id": "leg_wall_e", "shape": "box", "size_m": [0.6, 2.1, 3.825], "xy": [0.28, 0.4200], "collision_role": "wall"},
+    {"id": "passage_wall_n", "shape": "box", "size_m": [7.725, 2.1, 0.6], "xy": [0.39875, 0.5333], "collision_role": "wall"},
+    {"id": "passage_wall_s", "shape": "box", "size_m": [11.4, 2.1, 0.525], "xy": [0.3375, 0.7356], "collision_role": "wall"},
+    {"id": "earth_wall_n", "shape": "box", "size_m": [4.575, 2.1, 0.3], "xy": [0.60375, 0.5467], "collision_role": "wall"},
+    {"id": "earth_wall_s", "shape": "box", "size_m": [4.575, 2.1, 0.3], "xy": [0.60375, 0.7244], "collision_role": "wall"},
+    {"id": "chamber_wall_000", "shape": "box", "size_m": [0.45, 3.0, 0.96], "xy": [0.91, 0.6222], "elevation_m": 1.5, "collision_role": "wall"},
+    {"id": "chamber_wall_015", "shape": "box", "size_m": [0.96, 3.0, 0.45], "xy": [0.9059, 0.6774], "elevation_m": 1.5, "yaw": 1.309, "collision_role": "wall"},
+    {"id": "chamber_wall_030", "shape": "box", "size_m": [0.96, 3.0, 0.45], "xy": [0.8939, 0.7289], "elevation_m": 1.5, "yaw": 1.047, "collision_role": "wall"},
+    {"id": "chamber_wall_045", "shape": "box", "size_m": [0.96, 3.0, 0.45], "xy": [0.8749, 0.7731], "elevation_m": 1.5, "yaw": 0.785, "collision_role": "wall"},
+    {"id": "chamber_wall_060", "shape": "box", "size_m": [0.96, 3.0, 0.45], "xy": [0.85, 0.807], "elevation_m": 1.5, "yaw": 0.524, "collision_role": "wall"},
+    {"id": "chamber_wall_075", "shape": "box", "size_m": [0.96, 3.0, 0.45], "xy": [0.8211, 0.8283], "elevation_m": 1.5, "yaw": 0.262, "collision_role": "wall"},
+    {"id": "chamber_wall_090", "shape": "box", "size_m": [0.96, 3.0, 0.45], "xy": [0.79, 0.8356], "elevation_m": 1.5, "collision_role": "wall"},
+    {"id": "chamber_wall_105", "shape": "box", "size_m": [0.96, 3.0, 0.45], "xy": [0.7589, 0.8283], "elevation_m": 1.5, "yaw": -0.262, "collision_role": "wall"},
+    {"id": "chamber_wall_120", "shape": "box", "size_m": [0.96, 3.0, 0.45], "xy": [0.73, 0.807], "elevation_m": 1.5, "yaw": -0.524, "collision_role": "wall"},
+    {"id": "chamber_wall_135", "shape": "box", "size_m": [0.96, 3.0, 0.45], "xy": [0.7051, 0.7731], "elevation_m": 1.5, "yaw": -0.785, "collision_role": "wall"},
+    {"id": "chamber_wall_150", "shape": "box", "size_m": [0.96, 3.0, 0.45], "xy": [0.6861, 0.7289], "elevation_m": 1.5, "yaw": -1.047, "collision_role": "wall"},
+    {"id": "chamber_wall_210", "shape": "box", "size_m": [0.96, 3.0, 0.45], "xy": [0.6861, 0.5156], "elevation_m": 1.5, "yaw": -2.094, "collision_role": "wall"},
+    {"id": "chamber_wall_225", "shape": "box", "size_m": [0.96, 3.0, 0.45], "xy": [0.7051, 0.4714], "elevation_m": 1.5, "yaw": -2.356, "collision_role": "wall"},
+    {"id": "chamber_wall_240", "shape": "box", "size_m": [0.96, 3.0, 0.45], "xy": [0.73, 0.4375], "elevation_m": 1.5, "yaw": -2.618, "collision_role": "wall"},
+    {"id": "chamber_wall_255", "shape": "box", "size_m": [0.96, 3.0, 0.45], "xy": [0.7589, 0.4162], "elevation_m": 1.5, "yaw": -2.88, "collision_role": "wall"},
+    {"id": "chamber_wall_270", "shape": "box", "size_m": [0.96, 3.0, 0.45], "xy": [0.79, 0.4089], "elevation_m": 1.5, "collision_role": "wall"},
+    {"id": "chamber_wall_285", "shape": "box", "size_m": [0.96, 3.0, 0.45], "xy": [0.8211, 0.4162], "elevation_m": 1.5, "yaw": 2.88, "collision_role": "wall"},
+    {"id": "chamber_wall_300", "shape": "box", "size_m": [0.96, 3.0, 0.45], "xy": [0.85, 0.4375], "elevation_m": 1.5, "yaw": 2.618, "collision_role": "wall"},
+    {"id": "chamber_wall_315", "shape": "box", "size_m": [0.96, 3.0, 0.45], "xy": [0.8749, 0.4714], "elevation_m": 1.5, "yaw": 2.356, "collision_role": "wall"},
+    {"id": "chamber_wall_330", "shape": "box", "size_m": [0.96, 3.0, 0.45], "xy": [0.8939, 0.5156], "elevation_m": 1.5, "yaw": 2.094, "collision_role": "wall"},
+    {"id": "chamber_wall_345", "shape": "box", "size_m": [0.96, 3.0, 0.45], "xy": [0.9059, 0.567], "elevation_m": 1.5, "yaw": 1.833, "collision_role": "wall"},
+    {"id": "leaf_heap", "shape": "cylinder", "size_m": [1.6, 0.5, 1.6], "xy": [0.7725, 0.622], "color": "#8c6a3f"}
+  ],
+  "walkable": {
+    "chamber": "A round landing chamber centred at [0.79, 0.622], 6.75 m inner diameter, walls 3 m (the shaft continues above). The leaf heap is a 1.6 m soft landing mound, not a hard obstacle for the landing beat.",
+    "chamber_mouth": "West gap in the chamber ring, about 2.7 m clear, into the earth tunnel.",
+    "earth_tunnel": "x 0.5275-0.68, y 0.5556-0.7156: about 4.6 m long x 2.7 m wide.",
+    "brick_passage": "x 0.29-0.5275, y 0.5511-0.72: about 7.1 m long x 2.85 m wide, 2.1 m clear height.",
+    "corner_and_north_leg": "The north leg runs x 0.17-0.27 from the corner (y 0.72) up to hall_opening (y 0.2867): 3.0 m wide. At the corner the runner must reach the corner square fully (about x 0.17-0.29, y 0.55-0.72) before turning north.",
+    "hall_opening": "Into the hall at y 0.2667-0.3067: 3.0 m wide as drawn, 2.1 m high under the lintel. The hall floor north of it is open."
+  },
+  "inferred_items": [
+    "The scale is kept from layout.json (30 m image width). None of the drawn widths matches the Bible, see workflow_notes.",
+    "Chamber wall height 3.0 m; passage walls 2.1 m (Bible clear height); hall walls 2.8 m.",
+    "Leaf heap 1.6 m across x 0.5 m high."
+  ],
+  "landmarks_covered": ["hall_opening", "corner", "mosaic_dado", "brick_mid", "root_tunnel", "chamber_roots", "leaf_heap"],
+  "workflow_notes": [
+    "Image vs Bible (DEF-p4-envconcept-603-c): walls follow the drawn lines. In the image the straight run is about 11.6 m (Bible 25 m), the north leg about 6.5 m, the passage 2.7-3.1 m wide (Bible 1.4 m) and the chamber 6.75 m across (Bible about 3 m, and the SCN-falling-dream shaft is 2.4 m). The mosaic dado is on the north leg. All inferred:true, left for the user at H2 (see DEF-p4-scenemodel-960).",
+    "The chamber ring is 21 of 24 segments at 15 degrees: three segments are left out on the west for the tunnel mouth. In the overlay the yawed segments show as unrotated boxes; the 3D geometry is a true ring.",
+    "The chase is the White Rabbit (CGI, sized by 04-creatures) running ahead of Alice. Both run along the passage centre line. Turning into the north leg, route through the corner square, not diagonally across the inside corner of leg_wall_e/passage_wall_n (inflate that corner by body radius + 0.15 m)."
+  ],
+  "downstream": "No storyboard yet. Hand over to whitebox-staging. No reference video was rendered."
+}

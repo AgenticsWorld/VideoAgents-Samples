@@ -1,0 +1,44 @@
+{
+  "character_id": "CHAR-cheshire-cat",
+  "task_id": "p4-char-concept-cb1",
+  "kind": "animal",
+  "waking_addon": false,
+  "inputs": [
+    "bible/characters/CHAR-cheshire-cat/appearance.json",
+    "bible/characters/CHAR-cheshire-cat/personality.json",
+    "bible/costumes.json",
+    "bible/style.json",
+    "bible/characters/index.json"
+  ],
+  "user_refs": [
+    {
+      "path": "refs/style/alice.jpeg",
+      "use": "read; applied through style.json style_fragment_ui / CR-003 / CR-015. Not injected as --ref."
+    }
+  ],
+  "pending_H2": [
+    "appearance.face.grin proposal (status pending_H2): ear-to-ear grin rendered per the current proposal text"
+  ],
+  "sheets": [
+    {
+      "file": "sheet.png",
+      "costume_id": "COS-016",
+      "character_en": "The Cheshire Cat, a female animal: a photoreal large, heavy-boned, supple adult domestic shorthair cat of about 7-8 kg, real feline anatomy throughout. In all three full-body views she sits upright on her haunches, her long ringed tail curled along the floor beside her. Brown classic tabby coat: warm dark-brown and black marbled swirls on a honey-gold ground, bullseye whorls on the flanks, a ringed tail, cream-gold chin and chest; dense, plush, glossy short fur. Large round-almond green-gold eyes with pupils narrowed to slits. Brick-pink nose leather rimmed dark; dark paw pads; very long, sharp, curved claws visibly unsheathed on the front paws. A broad-cheeked round tabby face with the 'M' mark on the forehead and long white whiskers. Her fixed, good-natured grin: lips drawn back and up along the whole jaw line so the full natural set of cat teeth (canines, premolars, molars) shows from cheek to cheek, cheeks lifted, eyes softened to a contented half-close; jaw, teeth and lip anatomy stay real. Perfectly still.",
+      "prompt_final": "Four-panel creature reference sheet following the reference layout: three full-body views of the animal (front / side / back) left to right, and one large head close-up filling the right column; the exact same animal, markings and proportions in every panel; plain background. The sheet looks like four production photographs mounted side by side on one board: the image is divided by three thin vertical gaps into three narrow full-height panels on the left and one wide panel on the right; each panel is its own small photograph and the animal is scaled to fit completely inside each narrow panel. Panel 1: full-body front view, facing the camera. Panel 2: full-body side profile view facing right. Panel 3: full-body back view. Panel 4 (right column): large close-up of the head and chest, facing the camera or a slight three-quarter turn, eyes, nose and whiskers sharp. Macro studio photography at the animal's own eye level: in each full-body view the whole animal, including the ears, feet and the full tail, sits inside the panel with clear space around it, on a small patch of floor with a soft contact shadow. Plain seamless warm light-grey studio backdrop in every panel, soft even light, no scenery, no props other than those named below. Identity lock: one and the same individual animal in all four panels, with identical fur or scale pattern, markings, eye colour and build; exactly one animal per panel; no duplicated or extra animals. Character: The Cheshire Cat, a female animal: a photoreal large, heavy-boned, supple adult domestic shorthair cat of about 7-8 kg, real feline anatomy throughout. In all three full-body views she sits upright on her haunches, her long ringed tail curled along the floor beside her. Brown classic tabby coat: warm dark-brown and black marbled swirls on a honey-gold ground, bullseye whorls on the flanks, a ringed tail, cream-gold chin and chest; dense, plush, glossy short fur. Large round-almond green-gold eyes with pupils narrowed to slits. Brick-pink nose leather rimmed dark; dark paw pads; very long, sharp, curved claws visibly unsheathed on the front paws. A broad-cheeked round tabby face with the 'M' mark on the forehead and long white whiskers. Her fixed, good-natured grin: lips drawn back and up along the whole jaw line so the full natural set of cat teeth (canines, premolars, molars) shows from cheek to cheek, cheeks lifted, eyes softened to a contented half-close; jaw, teeth and lip anatomy stay real. Perfectly still. Costume: unclothed and unadorned: the bare natural cat, wearing nothing. Style: Photorealistic live-action fantasy film rooted in England in 1862, shot on 35mm film with anamorphic lenses, 16:9 widescreen. Real sets, real locations and real costumed actors in 1862 dress. Wonderland spaces are real built sets and set extensions in an Alphonse Mucha-inspired Art Nouveau design: flowing organic lines, floral and vine ornament, circular halo roundels, mosaic and stained glass, aged pastel-and-gold surfaces with patina and moss; the waking 1862 meadow stays plain period realism. Talking animals and fantastical creatures are photoreal CGI animals with naturalistic anatomy, real fur, feathers, skin and scales, lit by the same light and grounded with real contact shadows. Natural and practical light: sunlight, candlelight and oil lamps, soft haze with volumetric light shafts and soft colour through stained glass. Restrained palette of verdigris teal, slate grey, dusty rose, soft sage and lilac pastels and tarnished-gold accents, warmed by amber sun and candle glow. Fine film grain, gentle halation, soft depth of field, grounded and quietly melancholy. Layout recap (highest priority): four separate photographic panels side by side on one sheet: front, side profile, back, head close-up; plain studio backdrop; never one single full-bleed picture; a real photographed animal, not a cartoon.",
+      "negative_final": "cartoon, anime, animation, illustration, flat poster illustration, outline graphics, concept-art painting, digital painting, digital matte painting look, stylised 3D animation render, video game graphics, Pixar style, Disney animation style, cartoon animal face, big cartoon eyes, plush toy, human in animal costume, full-head animal mask, mascot costume, full-body fur suit, plastic skin, airbrushed, oversaturated, HDR, neon colors, candy pastel colors, horror monster, glowing magic, magic sparkles, fairy dust, energy beams, electric light, light bulb, neon sign, modern clothing, zipper, plastic, sunglasses, wristwatch, eyeglasses with modern frames, car, bicycle, power lines, tarmac road, Art Deco, steampunk gears, poster lettering, decorative text, gore, blood, wound, severed head, decapitation, executioner's axe, chopping block, guillotine, noose, gallows, blade at neck, execution, corpse, skeleton, horror, animal being struck, sexualized, watermark, logo, subtitles, caption, UI overlay, deformed hands, extra fingers, distorted face, single full-bleed illustration, one single panel, scenery background, crowd, text labels",
+      "costume_visual_en_verbatim": "unclothed and unadorned: the bare natural cat, wearing nothing",
+      "refs": [
+        "runs/p4-char-concept-cb1/work/character_sheet_template.jpg"
+      ],
+      "size": "2560x1440",
+      "n": 1,
+      "seed": null,
+      "genmedia": "image → volcengine model=doubao-seedream-5-0-pro-260628\nvideo → volcengine model=doubao-seedance-2-0-260128\nmusic → elevenlabs model=music_v2\ntts   → volcengine model=seed-audio-1.0",
+      "submitted_at": "2026-09-23T00:40:20+08:00",
+      "elapsed_s": 163.7,
+      "exit_code": 0,
+      "log": "runs/p4-char-concept-cb1/gen_logs/CHAR-cheshire-cat_sheet.png.log",
+      "error_raw": null
+    }
+  ]
+}

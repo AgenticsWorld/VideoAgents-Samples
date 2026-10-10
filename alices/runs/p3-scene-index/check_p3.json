@@ -1,0 +1,52 @@
+{
+  "pass": true,
+  "n_scenes": 26,
+  "n_shootable": 23,
+  "n_story_scenes": 46,
+  "checks": {
+    "ids_unique": {
+      "pass": true,
+      "failures": []
+    },
+    "id_slug_format": {
+      "pass": true,
+      "failures": []
+    },
+    "parent_valid_acyclic": {
+      "pass": true,
+      "failures": []
+    },
+    "geography_refs_valid": {
+      "pass": true,
+      "failures": []
+    },
+    "scene_single_space": {
+      "pass": true,
+      "failures": []
+    },
+    "int_ext_enum": {
+      "pass": true,
+      "failures": []
+    },
+    "chapters_nonempty": {
+      "pass": true,
+      "failures": []
+    },
+    "story_scenes_100pct_covered": {
+      "pass": true,
+      "failures": []
+    },
+    "other_refs_valid": {
+      "pass": true,
+      "failures": []
+    },
+    "quotes_verbatim": {
+      "pass": true,
+      "failures": []
+    },
+    "no_unknown_placeholder": {
+      "pass": true,
+      "failures": []
+    }
+  }
+}

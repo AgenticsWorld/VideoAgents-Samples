@@ -1,0 +1,31 @@
+{
+  "character_id": "CHAR-gardener-two",
+  "task_id": "p4-char-concept-cb3",
+  "sheet": "sheet.png",
+  "variants": [],
+  "status": "delivered_for_H2_review",
+  "layout_check": { "four_panels": true, "one_view_per_panel": true, "same_individual_all_panels": true, "size": "2560x1440 (JPEG payload)" },
+  "appearance_field_hits": {
+    "gender_male": true,
+    "age_40_50": "partial (reads mid-30s)",
+    "hair_sandy_brown_short_side_parted": true,
+    "eyes_light_blue": true,
+    "face_long_oval_mild_anxious_brows_clean_shaven": true,
+    "build_slim_narrow_shouldered": true,
+    "card_tabard_flat_oblong_front_and_back": true,
+    "card_front_two_club_pips_2_indices": false,
+    "card_back_crimson_cream_lattice_heart_rosette": true,
+    "crimson_shirt_sleeves_and_breeches": true,
+    "cream_stockings_brown_lace_up_boots": true,
+    "red_paint_on_hands_and_tabard_edge": true,
+    "house_painters_brush": true
+  },
+  "style_check": { "photoreal_live_action": true, "palette_within_style": true },
+  "self_check_defects": [
+    "Card face shows three large club pips (top, centre, bottom-right) plus the '2' indices. A Two of Clubs has two pips. Must-show mark miss.",
+    "Tabard ends at mid-thigh, not at the knee as COS-040 states.",
+    "He looks younger than the 40-50 card age."
+  ],
+  "rerolls": [],
+  "reroll_budget_note": "User rerun setting = 0: no self-regeneration; the defects above are for user decision."
+}

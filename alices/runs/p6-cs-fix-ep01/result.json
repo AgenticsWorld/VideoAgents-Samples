@@ -1,0 +1,92 @@
+{
+  "task_id": "p6-cs-fix-ep01",
+  "agent": "06-art/color-script",
+  "project": "alices",
+  "date": "2026-09-23",
+  "status": "done",
+  "attempt": 1,
+  "scope": "Wording fix only, under qa/defects/DEF-p6-cinematography-ep01-001 finding -a. No re-ruling: BIB-0033 stands exactly as written and is countersigned by this write. No dose, hex, palette, act, event_ref, scene_id, mood, trend, variant, variant_grade or peak changed anywhere in bible/color_script.json.",
+  "machine_check": {
+    "name": "color_script_ok",
+    "command": "python3 code/check_color_script.py --project alices --strict",
+    "result": "OK color_script_ok: 9 episodes, 0 violations, 0 warnings"
+  },
+  "skills": "No auto-activation skill is enabled for this station (performance-control is not applicable: this task writes no performance, blocking or prompt layer). Nothing registered.",
+  "sentences_touched": [
+    {
+      "where": "bible/color_script.json episodes[ep01].acts[4].stained_glass",
+      "before": "Low: one or two lit roundels held at a fixed position on the wall across the size changes, so the roundels themselves work as scale markers; always below the glass table in brightness, and no glass pools on the floor (scene_curves.SCN-long-hall).",
+      "after": "Low: one or two FRONT-LIT roundels - 'lit' here means front-lit by the nearest hanging lamp only, never backlit and never evenly glowing (the 25 halo roundels are blind: no opening and no lamp behind them, roundel_glow = reflected_lamplight_only, BIB-0033) - held at a fixed position on the wall across the size changes, so the roundels themselves work as scale markers; always below the glass table in brightness, and no glass pools on the floor (scene_curves.SCN-long-hall; directing/ep01/cinematography.json CT-04 act 4).",
+      "note": "The only content sentence changed in the whole task. The wording of the inserted clause is taken from directing/ep01/cinematography.json CT-04 act 4 ('Lit roundel here means front-lit by a nearby lamp; nothing is lit from behind') and its forbidden_terms ('backlit, glowing or evenly lit stained-glass roundels - they are BLIND'). The scale-marker idea, the 'below the glass table in brightness' clause and the 'no glass pools on the floor' clause are byte-identical to before."
+    }
+  ],
+  "bookkeeping_touched": [
+    {
+      "where": "bible/color_script.json _meta.version",
+      "before": "1.1.1",
+      "after": "1.1.2",
+      "note": "Version bump for the amendment; no contract or status field changed (_meta.status stays authored_v1_pending_art_director_countersign - the art-director countersign is still outstanding)."
+    },
+    {
+      "where": "bible/color_script.json _meta.amendments[]",
+      "before": "[BIB-0027, BIB-0033]",
+      "after": "[BIB-0027, BIB-0033, BIB-0034]",
+      "note": "New entry records the wording fix, the owner's countersign of BIB-0033, and the sweep result. No existing amendment entry edited."
+    }
+  ],
+  "sweep": {
+    "question": "Any surviving daylight / backlit-roundel / coloured-pool-on-the-floor wording left in the Long Hall or the Pool of Tears, including scene_curves and every act that inherits through them?",
+    "method": "Whole-file read plus case-insensitive grep over daylight | backlit | back-lit | glow | glowing | pool | shaft | beam | sun | window | illuminate | luminous | lit from | lantern, then a per-act dump of every act whose scene_ids contain SCN-long-hall or SCN-pool-of-tears (ep01 acts 3-6, ep02 act 1, ep05 act 3).",
+    "found_and_fixed": ["episodes[ep01].acts[4].stained_glass (the defect's finding -a, above)"],
+    "checked_and_already_conformant_not_touched": [
+      "scene_curves._note - 'only ONE of them casts coloured light: SCN-courtroom ... SCN-long-hall and SCN-pool-of-tears are windowless ... front-lit by the hall oil lamps only ... never as a pool of light on floor, wall or water'",
+      "scene_curves['SCN-long-hall'].stained_glass = surface_only_no_cast_light; .curve (surfaces, not light); .limits ('No daylight, no shaft and no pool of coloured light anywhere in the hall; the roundels must never read as backlit')",
+      "scene_curves['SCN-pool-of-tears'].stained_glass = surface_only_no_cast_light; .curve ('no shaft and no opening overhead'; the south-end lamp-reflection field); .limits ('no shaft, no beam, no coloured pool')",
+      "episodes[ep01].acts[3].stained_glass - 'Surface only: ... glints and lead-came sheen on the blind roundels ... no pool of glass light on the floor'",
+      "episodes[ep01].acts[5].stained_glass - 'None: the lamps are out of frame, so the blind roundels go dark with them'; the act 5 reflection_allowance was left exactly as p5-colorscript-fix-ep01 wrote it",
+      "episodes[ep01].acts[6].stained_glass - 'Reflections only, and all of them lamplight ... dim lilac glints off the blind roundels'",
+      "episodes[ep02].acts[0].stained_glass - 'No shaft (the hall is windowless): the way-out light is the field of lamp reflections at the south end'",
+      "episodes[ep05].acts[2].stained_glass - the act named in the defect's impact line: 'Hall passage only, and surface only: the same lilac and ivory roundel glints and lead-came sheen as ep01 act 3 ... no glass pools on the floor; none in the garden'",
+      "_meta.constraints_honoured CR-007 and downstream_notes['lighting / environment-concept / architecture'] and ['grade-planner'] - all three already carry the BIB-0033 reading"
+    ],
+    "out_of_scope_left_alone": [
+      "scene_curves['SCN-courtroom'] and episodes[ep09] acts 1-6: that scene has real high stained-glass windows per its own architecture.json interior.openings, so its golden-hour shafts and 'gold only' glass light are correct and BIB-0033 explicitly left them standing.",
+      "_meta.curve_logic 'warmed only by candle pools and daylight shafts': a whole-dream statement about the dream register, not a Long Hall or Pool of Tears rule (the dream's daylight shafts live in SCN-pool-bank, the wood, the mushroom clearing and the court). Not Long Hall wording, so not touched under a 'change nothing else' work order.",
+      "episodes[ep03] and later acts set in other scenes: no hall or pool scene_ids, nothing to sweep."
+    ]
+  },
+  "defect": {
+    "file": "qa/defects/DEF-p6-cinematography-ep01-001.json",
+    "finding_a": "fixed by this task (status open -> fixed, with fixed_by / fixed_on / fixed_in_task / fix). The director's 10:15 re-verification text is kept verbatim as the historical record of that check, with one added clause saying it was fixed later the same day.",
+    "finding_b": "NOT edited by me. Between my first read (04:11-format mtime 10:11, -b still open) and my write, 07-directing/director landed p6-plan-fix-ep01 and annotated -b itself as fixed (directing/ep01/directing_plan.md v2, citation fix only). I re-read the file immediately before writing and preserved that block byte-for-byte.",
+    "ticket": "CLOSED. Both findings are now fixed by their own owners, which is the condition the work order set for closing; the ticket-level status_note and history record who did which and that nothing downstream needs a re-pass. Top-level status open -> closed, plus closed_by / closed_on; history gained one entry for this task."
+  },
+  "changed_files": [
+    {
+      "path": "bible/color_script.json",
+      "note": "ep01 act 4 stained_glass now says FRONT-LIT and spells out front-lit-by-the-nearest-lamp / never backlit / never evenly glowing; plus _meta.version 1.1.2 and the _meta.amendments BIB-0034 entry (which also carries the owner's countersign of BIB-0033). Nothing else in the file moved; color_script_ok --strict OK."
+    },
+    {
+      "path": "bible/changelog.md",
+      "note": "One appended entry, change_id BIB-0034 (verified free against every BIB id in the register and the whole project tree before use, WRITE_RULES.md P-013, and allocated in the same write) recording the wording fix, the sweep result and the BIB-0033 countersign."
+    },
+    {
+      "path": "qa/defects/DEF-p6-cinematography-ep01-001.json",
+      "note": "Finding -a annotated fixed; ticket closed now that -b was fixed in parallel by its own owner; status_note rewritten and one history entry appended. Finding -b's own block untouched."
+    },
+    {
+      "path": "runs/p6-cs-fix-ep01/result.json",
+      "note": "This receipt."
+    }
+  ],
+  "not_touched_by_design": [
+    "bible/scenes/** - the scene cards are the authority this fix defers to; no lighting value, opening or prompt_fragment_en was edited",
+    "bible/style.json - H2-locked, CR-007 needs no exception",
+    "directing/ep01/** - finding -b belongs to 07-directing/director and was fixed there in parallel",
+    "assets/**, runs/** receipts of earlier tasks - nothing generated, nothing re-rolled (auto-reroll budget 0)"
+  ],
+  "acceptance": "No evaluation scoring and no QA co-sign (all review settings are 0). Verification is the machine check plus the defect annotation. The art-director countersign on bible/color_script.json remains outstanding and now covers v1.1.2.",
+  "open_items": [
+    "06-art/art-director: countersign bible/color_script.json v1.1.2 (outstanding since v1.0; BIB-0033 and BIB-0034 both fall inside it). Nothing is blocked on it - the file passes its machine check and the out_of_base entry for ep05 act 3 is the only item that actually needs a ruling."
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "_meta": {"file": "bible/scenes/SCN-gryphon-sunning-spot/lighting.json", "owner": "05-scenes/lighting", "task_id": "p3-lighting-sb2", "attempt": 1, "generated": "2026-09-22", "enum_set": "LGT-ENUM-v1 (runs/p3-lighting-sb2/result.json)"},
+  "scene_id": "SCN-gryphon-sunning-spot",
+  "layer": "dream",
+  "int_ext": "EXT",
+  "daylight_access": "open_sky",
+  "dream_light_growth": "The Gryphon asleep in the sun mirrors Alice asleep in the same real evening sun on the bank; the sun-trap catches the lowering western sun head-on, still warm when the lawn has cooled (cp-court; environment fixed.dream_growth).",
+  "schemes": [
+    {
+      "scheme_id": "LGT-gryphon-sunning-spot-01",
+      "condition": {"time_of_day": "late_afternoon", "weather": "fair_hot"},
+      "applies_to_states": ["SCN-gryphon-sunning-spot-S01"],
+      "key_source": "direct_sun",
+      "direction": "low_side",
+      "key_bearing": "sun west-north-west at about 15 deg, falling full on the rough grass strip and the ha-ha wall",
+      "fill": "warm bounce off the honey-coloured limestone ha-ha wall and the golden grass; bright pale haze beyond the ha-ha",
+      "practicals": [],
+      "color_temp": "neutral (~4500K)",
+      "color_temp_k_approx": 3700,
+      "contrast": "medium",
+      "quality": "drowsy, warm sun-trap light, slightly golden but not yet golden hour; glowing grass seed-heads; the land beyond dissolves into bright haze",
+      "prompt_fragment_en": "warm low sun from the west falling full on a sheltered strip of long golden grass against a sun-warmed limestone wall, slightly golden late-afternoon light glowing in the grass seed-heads, warm bounce from the stone, the open land beyond fading into bright pale haze, drowsy still sun-trap warmth",
+      "source_chapter": "ch009",
+      "source_refs": ["ch009-p43", "environment.json SCN-gryphon-sunning-spot-S01"],
+      "inferred": false,
+      "reason": "Sunlight on the spot is explicit: the Gryphon is 'lying fast asleep in the sun' (ch009-p43). Direction, colour and quality are designed from the environment sun (15 deg, WNW) and the architecture (ha-ha wall, long grass).",
+      "designed_fields": ["direction", "key_bearing", "fill", "color_temp", "contrast", "quality"]
+    }
+  ],
+  "special": [],
+  "special_note": "The source writes no plot light for this scene."
+}

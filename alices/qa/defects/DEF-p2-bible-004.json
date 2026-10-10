@@ -1,0 +1,48 @@
+{
+  "id": "DEF-p2-bible-004",
+  "task_id": "p2-merge",
+  "raised_by": "00-orchestration/memory-bible",
+  "raised_on": "2026-09-22",
+  "type": "registry_mismatch",
+  "severity": "minor",
+  "status": "closed",
+  "escalation": "user ruling at H1 (world.json XA-04: 'a mismatch in existence ... is a real conflict to raise at H1')",
+  "owner_after_ruling": "02-worldbuilding/political",
+  "files": [
+    "bible/world.json",
+    "bible/politics.json"
+  ],
+  "summary": "world.json faction_register proposes 10 factions; politics.json (the FAC-* owner) registers 2. At merge, court-of-hearts was re-keyed to FAC-house-of-hearts and duchess-household matched FAC-duchess-household. The other 8 keep plain proposal keys with fac_ref null.",
+  "unregistered": [
+    "alice-family-household (waking)",
+    "neighbouring-farm (waking)",
+    "pack-of-cards (dream)",
+    "visiting-monarchs (dream)",
+    "white-rabbit-household (dream)",
+    "mad-tea-party (dream)",
+    "caucus-race-company (dream)",
+    "school-in-the-sea (dream, told only)"
+  ],
+  "options": [
+    {
+      "key": "A",
+      "label": "Register households/groups that characters belong to",
+      "effect": "political registers at least alice-family-household, neighbouring-farm, white-rabbit-household and mad-tea-party (plus pack-of-cards as a sub-unit of FAC-house-of-hearts) so that characters/index.json factions[] can reference them."
+    },
+    {
+      "key": "B",
+      "label": "Keep them descriptive only",
+      "effect": "Only the two politically active bodies get FAC-* IDs; the rest stay world-level descriptions, and characters record membership in free text."
+    }
+  ],
+  "recommendation": "A (03-characters needs FAC refs for household membership in Phase 3)",
+  "assigned_to": "02-worldbuilding/political",
+  "due_gate": "G2",
+  "routing_note": "routed by workflow-orchestrator 2026-09-22T17:20:54+08:00; fix dispatched only after user H1 ruling (decision 5.x in bible/h1_summary.md)",
+  "fix_task_id": "p2-fix-political",
+  "fix_note": "Applied ruling 5.5 A. Registered 7 new FAC-* entries in bible/politics.json for the world.json faction_register proposal keys that had fac_ref: null: FAC-alice-family (alice-family-household), FAC-neighbouring-farm (neighbouring-farm), FAC-visiting-monarchs (visiting-monarchs), FAC-white-rabbit-household (white-rabbit-household), FAC-mad-tea-party (mad-tea-party), FAC-caucus-race-company (caucus-race-company), FAC-school-in-the-sea (school-in-the-sea, seat left null with reason - source states this location is never shown). pack-of-cards was NOT given a new FAC-* id, per option A's own wording ('as a sub-unit of FAC-house-of-hearts'): it is mapped to the existing FAC-house-of-hearts, whose summary was extended with an explicit cross-reference to this proposal_key and to the pre-existing OFF-005/OFF-006/OFF-008 entries that already cover the soldiers/gardeners/Knave ranks. Also added layer:'dream' to the two pre-existing factions (FAC-house-of-hearts, FAC-duchess-household) per the fix instruction's 'mark dream-only groups with layer: dream'. Went beyond the 4 explicitly-named groups and also reviewed+registered visiting-monarchs, caucus-race-company and school-in-the-sea (each has named or role-identified on-page members who need a faction of belonging), per the fix instruction to 'review the other world.json faction_register proposals and register those characters belong to'. All 8 unregistered proposal keys are now resolved (7 new FAC-* ids + 1 sub-unit mapping); none left at fac_ref: null. Full proposal_key -> FAC-* mapping table is in runs/p2-fix-political/result.json for memory-bible to re-point world.json's fac_ref fields. Two of the new factions' seat values (FAC-alice-family: LOC-family-house; FAC-neighbouring-farm: LOC-farmyard) are best-guess slugs pending geography's own DEF-p2-bible-003 fix (those waking-world places are not yet registered in bible/geography.json) - flagged as a known cross-ref risk for memory-bible's recheck, same pattern as this file's original seat guesses. Status left 'fixed' (not closed) per instructions, for memory-bible re-verification (p2-merge_check.py) before H1 lock.",
+  "closed_by": "00-orchestration/memory-bible (p2-merge-recheck)",
+  "closed_on": "2026-09-22",
+  "verification": "Ruling 5.5 A verified: politics.json registers FAC-alice-family, FAC-neighbouring-farm, FAC-visiting-monarchs, FAC-white-rabbit-household, FAC-mad-tea-party, FAC-caucus-race-company and FAC-school-in-the-sea; pack-of-cards is a sub-unit of FAC-house-of-hearts. All 10 world.json faction_register entries now carry a live fac_ref (BIB-0012). The new leader ref CHAR-tortoise was added to the forward-reference ledger (BIB-0017).",
+  "ruling_ref": "runs/h1-ruling/ruling.json"
+}

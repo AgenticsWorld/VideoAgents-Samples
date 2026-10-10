@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh044",
+  "group_id": "grp017",
+  "scene_no": "S06",
+  "duration_s": 6.0,
+  "size": "medium",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 40,
+  "camera_height_m": 1.3,
+  "angle": "level",
+  "rack_focus": "none",
+  "start_frame": "Eye-level from beside the glass table looking back across to the low curtain: the bare tabletop held in the near foreground with the one new object standing on it, Alice in the middle distance walking toward camera out of the direction she has just come from.",
+  "end_frame": "The same frame with her arrived at the table edge and stopped short, the little bottle now between her and the lens — both planes sharp, her size still read off the 1.30 m lens height.",
+  "constraint_honoured": "'She walks toward camera out of the direction she has just come from. Alice 1.35 m.' — a fixed two-plane frame states the new object and her arrival at it without a reveal move.",
+  "movement_note": "LN-ep01-008 (2.8 s) lands whole in 6.0 s. Staying still also keeps this the last clean statement of her normal size before the drink.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

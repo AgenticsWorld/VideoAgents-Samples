@@ -1,0 +1,64 @@
+{
+  "character_id": "CHAR-dodo",
+  "name": "The Dodo",
+  "tier": "B",
+  "layer": "dream",
+  "revision": { "change_id": "BIB-0027", "task_id": "p4-cr-appearance", "date": "2026-09-23", "note": "Rewritten from the human-performer reading to a photoreal CGI animal." },
+  "rendering": {
+    "mode": "photoreal_cgi_animal",
+    "rule": "bible/cultivation.json SUP-002 (amended BIB-0027); leader of FAC-caucus-race-company (no uniform)",
+    "species": "dodo (Raphus cucullatus), reconstructed from the modern scientific consensus: grey-brown plumage, not the fat 'Tenniel' cartoon",
+    "limits": "Bird anatomy throughout; speech by beak and throat movement. No clothing, no cartoon face."
+  },
+  "gender": "male",
+  "gender_note": { "inferred": true, "reason": "The source calls the Dodo 'it'; index.json registers him male. His pompous committee-chairman manner (ch003) and solemn presentation speech (ch003-p28) read as an elder gentleman." },
+  "base_age_range": "50-60",
+  "base_age_note": { "inferred": true, "reason": "Persona age (elder statesman of the party), kept for voice casting. As an animal: a mature, heavy adult bird with slightly worn tail plumes." },
+  "hair": {
+    "coat": "feathers",
+    "color": "brownish-grey body, paler grey-white at the throat and belly, dark grey wing stubs, a tuft of curly pale-grey tail plumes",
+    "style": "loose, soft, slightly shaggy plumage; draggled and dripping on arrival, fluffing out after the race",
+    "source_chapter": "ch003",
+    "source_para": "ch003-p01",
+    "quote": "the birds with draggled feathers",
+    "colour_inferred": true,
+    "reason": "Draggled state sourced; colours follow the dodo reconstruction."
+  },
+  "eyes": { "color": "pale yellow iris", "expression": "small, round, set far back on the head, self-important; blinks slowly while thinking", "inferred": true, "reason": "Not described; small eyes against the massive beak give the dodo read." },
+  "skin": { "tone": "bare grey facial skin around the eye and beak base; yellow-green legs and feet", "inferred": true, "reason": "Dodo reconstruction." },
+  "face": {
+    "shape": "large head with a massive hooked beak, pale greenish-yellow with a darker hooked tip",
+    "features": ["heavy hooked beak", "bare grey face patch", "deliberate slow head turns"],
+    "default_expression": "solemn and pompous",
+    "shakespeare_pose": "sits for a long time with one wing-tip pressed to its forehead",
+    "source_chapter": "ch003",
+    "source_para": "ch003-p20",
+    "quote": "it sat for a long time with one finger pressed upon its forehead (the position in which you usually see Shakespeare, in the pictures of him)",
+    "rendering_inferred": true,
+    "reason": "The sourced 'finger' becomes a wing-tip on a bird body."
+  },
+  "build": {
+    "height_range_cm": [65, 75],
+    "height_note": "Standing height, species-true.",
+    "body_type": "heavy, round-bodied, short-legged, tiny wings",
+    "posture": "chest out, head up; waddling deliberate walk; ceremonious slow bows",
+    "scale_reference": "The largest of the pool-bank party. With Alice shrunk for the pool (SUP-003) he stands about her height or a little under; he is the one who hands her the thimble beak-to-hand.",
+    "source_chapter": "ch003",
+    "source_para": "ch003-p28",
+    "quote": "the Dodo solemnly presented the thimble",
+    "inferred": true,
+    "reason": "Species-true size; relative scale designed."
+  },
+  "entry_state": { "state": "first seen dripping wet, feathers plastered, on the bank of the pool", "source_chapter": "ch003", "source_para": "ch003-p01", "quote": "all dripping wet, cross, and uncomfortable" },
+  "marks": [
+    { "type": "gesture", "description": "one wing-tip pressed to the forehead in the Shakespeare pose", "position": "forehead", "source_chapter": "ch003", "source_para": "ch003-p20" },
+    { "type": "signature_item", "description": "Alice's own thimble, presented back to her as her prize, held in the beak", "position": "beak", "source_chapter": "ch003", "source_para": "ch003-p28" }
+  ],
+  "default_outfit_tone": {
+    "summary": "none: he wears nothing; his look is the grey-brown plumage",
+    "inferred": true,
+    "reason": "The text gives the Dodo no clothing; per SUP-002 (BIB-0027) the old frock-coat reading is dropped."
+  },
+  "doubling": null,
+  "prompt_base_en": "photoreal dodo bird, scientifically reconstructed, brownish-grey loose plumage wet and draggled, pale grey belly, massive hooked pale yellow-green beak with a dark tip, small pale yellow eye, bare grey face patch, tiny wings, curly tail tuft, stout yellow legs, standing solemnly on a muddy pool bank with one wing-tip pressed to its forehead, natural bird anatomy, live-action film plate"
+}

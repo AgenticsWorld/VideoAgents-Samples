@@ -1,0 +1,28 @@
+{
+  "shot_id": "sh006",
+  "scene_id": "SCN-riverbank",
+  "size": "close",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "centre",
+    "anchor_xy": [0.48, 0.46],
+    "size_in_frame": "profile head and a little shoulder, face about 0.42 of frame height"
+  },
+  "headroom": "about 0.10 of frame height above her temple; the top edge is crossed by soft grass, so the roof of the frame is vegetation rather than air.",
+  "horizon_eyeline": "Lens on the grass at 0.30 m — the ground plane runs across the frame at about 0.62 of frame height, just below her cheek, so she is lying along the bottom of the world. Eyeline horizontal at 0.44 until the lids drop.",
+  "layers": {
+    "fg": "out-of-focus grass stems and seed-heads standing up across the whole frame within 0.2 m of the lens, densest at the left and lower edges",
+    "mg": "her profile in the turf, cheek to the ground, the fallen daisy on the pinafore in the lower right corner",
+    "bg": "sunlit meadow and heat haze, soft and bright, with no readable shape in it"
+  },
+  "gaze": {
+    "direction": "frame_right",
+    "lead_room": "right",
+    "note": "she looks out along the grass to frame right, about 0.20 of frame width of clear space ahead of her face — and then that lead room is simply abandoned when the lids close and stay closed for a full two seconds. The composition is built so there is somewhere for her look to go, and then nobody goes there."
+  },
+  "balance": "Held slightly left of centre and low, with the empty lead room right; the daisy in the lower right corner is the small counterweight that keeps the emptiness from reading as a mistake.",
+  "leading_lines": "The grass stems are near-vertical strokes across the frame, and the ground plane is one long horizontal under her — a lattice that boxes her in without touching her.",
+  "eye_first": "Her eye, then the lashes, then the daisy — and once the lids close, the eye has nothing left to do but sit on the closed lid, which is what plants the nap.",
+  "safe_area_ok": true,
+  "constraint_binding": "The closed-eye hold runs a real two seconds — the composition gives the frame nothing else to look at for that time (no secondary movement, no other face, no bright object) so the hold cannot be cut short without the shot visibly failing."
+}

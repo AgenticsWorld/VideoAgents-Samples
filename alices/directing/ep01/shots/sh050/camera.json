@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh050",
+  "group_id": "grp019",
+  "scene_no": "S06",
+  "duration_s": 7.0,
+  "size": "medium",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 50,
+  "camera_height_m": 0.2,
+  "angle": "slightly up",
+  "rack_focus": "none",
+  "start_frame": "Closer than sh049 on the same low axis: her face brightening as she realises she is now the right size for the little door, the empty bottle still beside her at her exact height as the gauge.",
+  "end_frame": "The same frame with one hand laid flat on top of her head, waiting, nervous — held still while nothing whatever happens.",
+  "constraint_honoured": "'The hand flat on the head is the whole performance; the nervousness is in the waiting, not in the framing.'",
+  "movement_note": "50 mm, not 28, because her face is large in frame at ten-inch scale — a wide lens this close to a child's face is the banned failure mode. LN-ep01-011 (5.1 s) sits whole in 7.0 s.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

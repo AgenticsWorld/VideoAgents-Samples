@@ -1,0 +1,44 @@
+{
+  "character_id": "CHAR-visiting-monarchs-ensemble",
+  "task_id": "p4-char-concept-cb3",
+  "sheet": "sheet.png",
+  "variants": ["sheet_queen-of-diamonds.png"],
+  "representative_members": { "sheet.png": "M01 King of Clubs", "sheet_queen-of-diamonds.png": "M04 Queen of Diamonds" },
+  "status": "delivered_for_H2_review",
+  "layout_check": {
+    "sheet.png": { "four_panels": true, "one_view_per_panel": true, "same_individual_all_panels": true, "size": "2560x1440 (JPEG payload)" },
+    "sheet_queen-of-diamonds.png": { "four_panels": true, "one_view_per_panel": true, "same_individual_all_panels": true, "size": "2560x1440 (JPEG payload)" }
+  },
+  "appearance_field_hits": {
+    "sheet.png": {
+      "gender_male": true,
+      "age_55_65_grey_full_beard": true,
+      "black_and_ivory_only": true,
+      "flat_rectangular_card_panel_robe_ermine_edged": true,
+      "club_symbol_on_panel": true,
+      "tail_coat_and_knee_breeches": true,
+      "gilt_openwork_crown_with_club": true,
+      "back_crimson_cream_lattice_heart_rosette": "partial (diagonal lattice with a gilt heart; reads as card back)",
+      "no_heart_on_front": true
+    },
+    "sheet_queen-of-diamonds.png": {
+      "gender_female": true,
+      "age_35_45_fair_ringlets": true,
+      "scarlet_and_gold_only": true,
+      "ermine_edged_robe_with_diamond_lozenges": true,
+      "crinoline_gown": true,
+      "coronet_with_diamond": true,
+      "fan": true,
+      "back_crimson_cream_lattice_heart_rosette": false,
+      "robe_as_stiff_flat_card_panel": "partial (reads as an open ermine-edged cape)"
+    }
+  },
+  "style_check": { "photoreal_live_action": true, "palette_within_style": true },
+  "self_check_defects": [
+    "Queen: the robe back is a large harlequin diamond check with a bow, not the pack's crimson-and-cream lattice with a heart rosette (ch008-p16 shared back pattern).",
+    "Queen: the robe reads as an open cape, not a stiff flat rectangular card panel; the coronet is a full crown rather than a small coronet; the fan is open (prompt asked closed).",
+    "King: white gloves and a gold chain added (not in the card); acceptable court detail."
+  ],
+  "rerolls": [],
+  "reroll_budget_note": "User rerun setting = 0."
+}

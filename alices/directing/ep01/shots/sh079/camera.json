@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh079",
+  "group_id": "grp030",
+  "scene_no": "S08",
+  "duration_s": 8.5,
+  "size": "close",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 50,
+  "camera_height_m": 0.6,
+  "angle": "level, water level",
+  "rack_focus": "none",
+  "start_frame": "The same sustained set-up, a little closer: her face whole in frame, the fan still moving in the bottom of shot, the broken amber reflections crossing behind her.",
+  "end_frame": "The same frame with the fan stopped dead in mid-stroke inside the shot and the question landed on her — a clean line end and clear silence after it, with nothing else in the frame having changed.",
+  "constraint_honoured": "'MUST NOT BE CUT INSIDE OR ACROSS… must LAND AND END inside this shot… The fan stops inside the frame on the question.'",
+  "movement_note": "LN-ep01-022 (6.4 s) must be liftable whole by the edit, so the shot contains no camera event, no focus change and no reframe anywhere near it.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

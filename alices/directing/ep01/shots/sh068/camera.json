@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh068",
+  "group_id": "grp027",
+  "scene_no": "S08",
+  "duration_s": 4.5,
+  "size": "close",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 28,
+  "camera_height_m": 0.35,
+  "angle": "level, lens on the dry flagstones",
+  "rack_focus": "none",
+  "start_frame": "Straight across the hall from the south-east doors to the low curtain, lens on the stone: she sits up out of the lie-down, a wall of blue cotton and one knee filling the frame, her face high in it and only half in shot.",
+  "end_frame": "The same frame as she hunches under the vault with her knees pulled to her chin and her face crumples — the dry stone still dry, no lamp fitting anywhere in frame.",
+  "constraint_honoured": "'From this frame to the end of the episode the camera stays below 1.0 m and NO lamp fixture appears in frame' — the height is set here at 0.35 m and never rises again.",
+  "movement_note": "Giant-fragment grammar on the space lens; her bulk fills the upper frame, which is what keeps the 2.30 m lamp line out of shot without any cheating.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

@@ -1,0 +1,38 @@
+{
+  "shot_id": "sh065",
+  "group_id": "grp025",
+  "scene_no": "S07",
+  "scene_id": "SCN-long-hall",
+  "duration_s": 5.0,
+  "is_dialogue": false,
+  "group_position": "last shot of grp025 — Alice on the map start/end ground (glass_table), stooped under the vault, facing the west wall as the map requires.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "stand",
+      "start_pos": "standing where she grew beside the glass table, head against a vault rib, stooping",
+      "space_fragment_en": "standing beside the glass table on screen-right, stooping under the vault, facing the locked doors of the west wall",
+      "facing": "down and screen-left into a room she no longer fits; her head is against the iron rib above her",
+      "path": [],
+      "beats": [
+        { "t": 1.0, "action": "her head knocks against a verdigris iron rib of the vault", "sync": "GAUGE THREE" },
+        { "t": 2.0, "action": "flakes of old gilding sift down through the lamplight", "sync": "the impact registers on the room" },
+        { "t": 3.4, "action": "she stoops down under the roof", "sync": "more than nine feet high" }
+      ],
+      "performance_beat": {
+        "objective": "get her head out of the ceiling without knocking the hall about",
+        "goal": "get her head out of the ceiling",
+        "emotional_arc": "from wonder at her own size to a cramped, apologetic carefulness",
+        "arc_from": "wonder at her own size",
+        "arc_to": "cramped apologetic carefulness",
+        "trigger": { "beat": "her head knocks the iron rib", "t": 1.0 },
+        "no_early_reaction": ["ducking", "a hand to her head", "the shoulders hunching"],
+        "forbidden_early": ["ducking", "a hand to her head", "the shoulders hunching"],
+        "end_state": "stooped hard under the vault, one hand up to the rib, eyes down into the room, breathing carefully"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0006 result (dream) — more than nine feet high", "note": "Alice alone." }
+}

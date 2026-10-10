@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh004",
+  "group_id": "grp002",
+  "scene_no": "S01",
+  "duration_s": 3.0,
+  "size": "detail",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 40,
+  "camera_height_m": "about 0.30 above the book, at Alice's eye-line over her sister's shoulder",
+  "angle": "looking down at the page, slightly off square so the paper takes no glare",
+  "rack_focus": "none",
+  "start_frame": "POV insert: close grey printed text filling the frame margin to margin, the sister's thumb holding the outer edge, no illustration and no drop cap anywhere in the page.",
+  "end_frame": "The identical frame at the end of the three seconds — the page has not been turned and nothing has been revealed; the emptiness is the answer.",
+  "constraint_honoured": "'Frame filled edge to edge with grey type' — a locked square-ish insert is the only way the page reads as a page and stays legibly pictureless.",
+  "movement_note": "POV 1 of 7, on the human-eye lens; 3.0 s is a single clean read and far too short to carry any move.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

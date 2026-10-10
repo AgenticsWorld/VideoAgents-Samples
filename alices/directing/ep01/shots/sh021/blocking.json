@@ -1,0 +1,39 @@
+{
+  "shot_id": "sh021",
+  "group_id": "grp008",
+  "scene_no": "S03",
+  "scene_id": "SCN-falling-dream",
+  "duration_s": 5.0,
+  "is_dialogue": true,
+  "group_position": "last shot of grp008 — Alice reaches her map end (shaft_centre) and settles into the open middle of the shaft.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "stand",
+      "start_pos": "upright in mid-air at the open centre of the shaft, the cupboard wall within reach on her screen-left",
+      "space_fragment_en": "standing upright in mid-air at the open centre of the shaft, centred in frame, facing the glazed cupboards on screen-left",
+      "facing": "body square to the cupboard wall; her look goes out past it into the open shaft while she speaks",
+      "path": [],
+      "beats": [
+        { "t": 0.6, "action": "thinks better of dropping the jar", "sync": "before the line" },
+        { "t": 1.4, "action": "posts the empty jar tidily into a glazed cupboard as it slides by", "sync": "the manners beat" },
+        { "t": 2.6, "action": "settles to the idea that this is going to go on for a while, and speaks", "sync": "LN-ep01-003 begins" },
+        { "t": 4.0, "action": "her head turns out into the open shaft", "sync": "LN-ep01-003 on 'miles'" }
+      ],
+      "performance": {
+        "objective": "put the fall on a footing she can manage — a distance, a sum, something with an answer",
+        "goal": "turn the fall into a sum she can do",
+        "emotional_arc": "from a well-brought-up child tidying up after herself to a child settling in for a long journey",
+        "arc_from": "tidy, well-mannered busyness",
+        "arc_to": "settled, conversational curiosity",
+        "trigger": { "line_ref": "LN-ep01-003", "word": "miles" },
+        "no_early_reaction": ["looking down the shaft", "the eyes going far away", "the head tipping"],
+        "forbidden_early": ["looking down the shaft", "the eyes going far away", "the head tipping"],
+        "end_state": "hands come to rest in front of her, eyes out into the open shaft on screen-left, mouth closed on the question"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0002 (dream) — she muses aloud as she falls", "note": "Alice alone." }
+}

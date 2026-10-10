@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh054",
+  "group_id": "grp021",
+  "scene_no": "S06",
+  "duration_s": 8.0,
+  "size": "wide",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 28,
+  "camera_height_m": 0.2,
+  "angle": "slightly up",
+  "rack_focus": "none",
+  "start_frame": "Wide at the foot of the glass leg, lens on the flagstones: Alice worn out and still on her feet, tiny against an enormous empty hall with the lamp pools running away behind her into the dark.",
+  "end_frame": "The same frame with her sunk down on the floor against the leg, crying — smaller in the frame than when the shot began and swallowed by the room around her.",
+  "constraint_honoured": "'The first cry is SMALL: no close-up here. The frame is what makes it small.'",
+  "movement_note": "Holding the wide is the whole idea; any move toward her would grant the cry importance the scene deliberately withholds until sh055.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

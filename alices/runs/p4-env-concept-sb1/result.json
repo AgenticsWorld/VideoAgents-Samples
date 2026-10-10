@@ -1,0 +1,61 @@
+{
+  "task_id": "p4-env-concept-sb1",
+  "attempt": 1,
+  "agent": "06-art/environment-concept",
+  "status": "completed",
+  "finished": "2026-09-23",
+  "summary": "8 scene layout packs delivered: layout_top.png (true-orthographic plan, 2560x1440, no people, text or arrows) + layout.json (scene_layout.v1, landmarks calibrated to the image with xy and xy_m, 9 views) + prompts.json + notes.md. The 9-view grid was not generated (retired 2026-09-09). Host check scene_layout_pack_ok PASS on all 8. 4 images carry major deviations kept for the H2 decision (auto-retry = 0).",
+  "generation": {
+    "tool": "modules/genmedia.py image",
+    "provider_model": "volcengine doubao-seedream-5-0-pro-260628",
+    "calls": 8,
+    "n_per_call": 1,
+    "retries": 0,
+    "provider_errors": [],
+    "helper_scripts": ["code/p4-env-concept-sb1_gen.py (batch genmedia call + prompts.json record)", "code/p4-env-concept-sb1_views_check.py (views camera-rule self-check)"],
+    "logs": "runs/p4-env-concept-sb1/gen_<SCN>.log"
+  },
+  "style_inputs": {
+    "style_paragraph": "bible/style.json style_fragment_ui, verbatim",
+    "register": "dream register for 6 dream scenes (full Mucha); waking register for SCN-riverbank and SCN-field-hedge-burrow (no ornament, per CR-014 / style_anchors_by_register)",
+    "negatives": "negative_prompt_en verbatim + a top-down projection negative list; + negative_prompt_waking_addon_en for the 2 waking scenes",
+    "user_refs": [
+      {
+        "path": "refs/style/alice.jpeg",
+        "read": true,
+        "used_as": "Look reference, applied through text. The style_fragment_ui and dream register already encode its palette, ironwork, mosaic, roundels, patina, moss and amber/teal light, and the plan prompts name those materials.",
+        "injected_as_ref": false,
+        "why_not_injected": "It is an eye-level perspective interior with a girl and the Caterpillar. As a --ref on a plan view it pulls the camera off nadir (elevation and perspective prior) and pushes figures and creatures into an image that must have none. For the waking scenes it would also leak Art Nouveau into the no-ornament register. For shot plates (eye-level), downstream may inject it."
+      }
+    ]
+  },
+  "acceptance": {
+    "scene_layout_pack_ok": "PASS x8. Command: code/blocking_map_check.py --project alices --scene <id>. It was run with the app runtime python3.12, because the system python3 lacks PIL and could only WARN on the image size; with python3.12: 0 violations, 0 WARN.",
+    "scene_single_space": "PASS x8 (no landmarks_*/views_*/orientation_* keys)",
+    "views_self_check": "PASS x8 after image calibration, via code/p4-env-concept-sb1_views_check.py: angles in {eye, low, high_oblique}, no top-down wording, unique camera pairs, looking_at <= 3, wide <= 4, close+detail >= 2, low >= 1, max 3 views per +-30 deg sector (aspect-corrected bearings).",
+    "image_clean": "No people, animals, text, labels or arrows in any of the 8 images (visual check)",
+    "prompt_record": "prompts.json in each scene dir (prompt, negative, size, n, provider/model, user_refs)",
+    "evaluation_qa": "skipped (review settings all 0)"
+  },
+  "items": [
+    { "scene": "SCN-falling-dream", "dir": "assets/concepts/scenes/SCN-falling-dream/", "files": ["layout_top.png", "layout.json", "prompts.json", "notes.md"], "check": "PASS", "self_check": "minor deviations: 603-e", "pending_H2": ["H2-mucha-scope-and-finish"] },
+    { "scene": "SCN-long-hall", "dir": "assets/concepts/scenes/SCN-long-hall/", "files": ["layout_top.png", "layout.json", "prompts.json", "notes.md"], "check": "PASS", "self_check": "MAJOR 603-b: entrance drawn 8 m in from the NE corner; 10 not 12 door notches per wall; table oversized", "pending_H2": ["H2-mucha-scope-and-finish"] },
+    { "scene": "SCN-little-door-passage", "dir": "assets/concepts/scenes/SCN-little-door-passage/", "files": ["layout_top.png", "layout.json", "prompts.json", "notes.md"], "check": "PASS", "self_check": "MAJOR 603-d: hall doors drawn as slabs in the masonry (landmarks follow the architecture, not the image); curtain drawn inside the passage", "pending_H2": ["H2-mucha-scope-and-finish"] },
+    { "scene": "SCN-shaft-landing-passage", "dir": "assets/concepts/scenes/SCN-shaft-landing-passage/", "files": ["layout_top.png", "layout.json", "prompts.json", "notes.md"], "check": "PASS", "self_check": "MAJOR 603-c: straight run about 13 m vs 25 m spec; mosaic on the north leg", "pending_H2": ["H2-mucha-scope-and-finish"] },
+    { "scene": "SCN-pool-of-tears", "dir": "assets/concepts/scenes/SCN-pool-of-tears/", "files": ["layout_top.png", "layout.json", "prompts.json", "notes.md"], "check": "PASS", "self_check": "minor 603-f: curtain not drawn; flood extent choice under DEF-p4-envconcept-601", "pending_H2": ["H2-mucha-scope-and-finish"] },
+    { "scene": "SCN-pool-bank", "dir": "assets/concepts/scenes/SCN-pool-bank/", "files": ["layout_top.png", "layout.json", "prompts.json", "notes.md"], "check": "PASS", "self_check": "minor 603-g; no flag irises pending DEF-p4-envconcept-602", "pending_H2": ["H2-mucha-scope-and-finish"] },
+    { "scene": "SCN-riverbank", "dir": "assets/concepts/scenes/SCN-riverbank/", "files": ["layout_top.png", "layout.json", "prompts.json", "notes.md"], "check": "PASS", "self_check": "no deviations found", "pending_H2": ["H2-mucha-scope-and-finish (waking scene drawn with no Art Nouveau at all)"] },
+    { "scene": "SCN-field-hedge-burrow", "dir": "assets/concepts/scenes/SCN-field-hedge-burrow/", "files": ["layout_top.png", "layout.json", "prompts.json", "notes.md"], "check": "PASS", "self_check": "MAJOR 603-a: burrow drawn about 3 m out in the field, not at the hedge foot; minor 603-h", "pending_H2": ["H2-mucha-scope-and-finish (waking scene drawn with no Art Nouveau at all)"] }
+  ],
+  "pending_H2_note": "H2-mucha-scope-and-finish (pending_H2 — for user decision at H2): the dream scenes are drawn with the full Mucha layer, and the waking scenes with none (style.json CR-014 wording: 'no Art Nouveau ornament', stricter than the ruling's 'light'). The other open_points_pending_H2 (Footmen, non-speaking animals, Caterpillar face) do not apply: these plans contain no creatures.",
+  "defects": [
+    { "id": "DEF-p4-envconcept-601", "type": "bible conflict", "scene": "SCN-pool-of-tears", "summary": "flood extent 'north half' vs table and shore steps in the south half" },
+    { "id": "DEF-p4-envconcept-602", "type": "bible conflict", "scene": "SCN-pool-bank (+SCN-riverbank)", "summary": "architecture flag irises vs environment seasonal guard" },
+    { "id": "DEF-p4-envconcept-603", "type": "image self-check", "scene": "all", "summary": "4 major + 4 minor image deviations kept (retry = 0), for the user at H2" }
+  ],
+  "downstream_notes": [
+    "SCN-long-hall and SCN-pool-of-tears have separate frames: the same space, but different xy.",
+    "In SCN-little-door-passage, hall_door_9 and hall_door_10 are architecture positions and are not drawn in the image.",
+    "grid_9views.png is not produced (retired); views[] is text only, for view_tile and whitebox view axes."
+  ]
+}

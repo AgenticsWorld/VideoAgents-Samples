@@ -1,0 +1,44 @@
+{
+  "scene_id": "SCN-pool-bank",
+  "inherits": null,
+  "layer": "dream",
+  "int_ext": "EXT",
+  "form": "A muddy, reed-fringed shore at the edge of the pool, open to the sky, with no built structure: the dream's version of the backwater bank, where a rough circle is trampled into the grass for the Caucus-race",
+  "stories": 0,
+  "source_chapter": "ch003",
+  "culture_ref": "world.json#wonderland_real_counterparts.cp-pool; geography.json#LOC-pool-bank",
+  "grows_from": {"loc": "LOC-river-backwater", "waking_detail": "the muddy, reed-fringed edge of the river backwater beside the bank"},
+  "amendment": "BIB-0027 (user ruling 2026-09-22), applied p4-cr-architecture 2026-09-23",
+  "mucha_design_language": {"item": "Mucha / Art Nouveau carried by the waterside planting: yellow flag irises and white water-lilies (native English, Mucha's own motifs) massed along the waterline in flowing drifts; reeds and reedmace leaning in long whiplash curves; the fallen willow trunk's grain and limbs sweeping in organic S-curves; the scuffed race-circle reading as a round halo roundel from above; pastel-and-gold palette of iris yellow, lily white, sage and pale sky; no built ornament (the text gives no structure)", "inferred": true, "culture_ref": "world.json#WR-010; cultivation.json#XA-magic-08; geography.json#LOC-river-backwater (native waterside flora)", "why": "Dream environment; the text's shore has no buildings, so the language is expressed in real living flora"},
+  "structure": [
+    {"item": "a gently sloping shore of mud and flattened grass rising from the waterline to a level grassy flat about 20 m across", "src": "ch003-p01", "note": "dimensions inferred"},
+    {"item": "a rough circle about 10 m across, scuffed into the grass and marked with a few sticks, the Caucus-race course", "src": "ch003-p19", "note": "'a race-course, in a sort of circle'; sticks inferred"},
+    {"item": "the waterline of the pool along one side of the plan, still water with no far shore visible", "src": "ch003-p01"},
+    {"item": "the edge of a dense wood on the landward side (exit toward SCN-wonderland-wood area in ch004)", "src": "ch004-p34", "note": "geography.json LOC-thick-wood is 'close to the pool-bank'"}
+  ],
+  "materials": [
+    {"item": "wet dark mud trampled with footprints at the water edge", "src": "ch003-p01", "note": "geography.json LOC-pool-bank 'muddy, trampled'"},
+    {"item": "flattened meadow grass with daisies and buttercups (the same flowers as the waking bank)", "inferred": true, "culture_ref": "SCN-riverbank materials", "why": "The dream shore grows from the waking bank"},
+    {"item": "tall reed beds and reedmace along the water", "src": "ch012-p70", "note": "the waking backwater reeds (cp-pool)"}
+  ],
+  "details": [
+    {"item": "a single fallen willow trunk lying along the shore, used as a seat for the Mouse's lecture", "inferred": true, "culture_ref": "SCN-riverbank details (pollarded crack willow)", "why": "Gives the party a raised speaking place and the plan a fixed landmark; grows from the waking willow"}
+  ],
+  "scale_notes": {
+    "anchor": "Alice is still small after the pool. The party (Mouse, Dodo, Duck, Lory, Eaglet and the other birds and beasts) and the White Rabbit are photoreal CGI animals (SUP-002 as amended BIB-0027) at the sizes set by 04-creatures relative to Alice.",
+    "builds": [
+      {"beat": "assembly, lecture, Caucus-race, the Mouse's tale, the White Rabbit's return", "events": ["ev0010", "ev0011", "ev0012", "ev0013", "ev0014"], "build": "1:1 ground with oversized x4 reed beds (6 to 8 m tall) and oversized daisy, buttercup and flag-iris heads near camera, so the true-size Alice reads small; the CGI animals are composited to match"}
+    ],
+    "rule": "No hall walls, doors or lamps remain; the hall has vanished completely (ch004-p01, SUP-013).",
+    "sources": ["cultivation.json#SUP-003", "cultivation.json#SUP-013"]
+  },
+  "negative": [
+    "no hall, doors, stone walls or lamps",
+    "no sea, sand beach, waves, pier or boats",
+    "no buildings, fences or paths",
+    "no cartoon animals, no humans in animal costume; the party are photoreal CGI animals",
+    "no modern objects",
+    "no flat poster illustration, outline graphics or matte-painting finish"
+  ],
+  "prompt_ready_en": "a muddy reed-fringed shore at the edge of a still pool under an open summer sky, trampled footprints in wet mud, flattened meadow grass with daisies and buttercups, drifts of yellow flag irises and white water-lilies along the water in flowing Art Nouveau lines after Mucha, very tall reed beds leaning in long whiplash curves, a fallen willow trunk along the shore, a rough circle scuffed into the grass marked with a few sticks, the edge of a dense wood behind, soft pastel-and-gold light, photographed live-action"
+}

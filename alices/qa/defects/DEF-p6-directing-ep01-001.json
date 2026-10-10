@@ -1,0 +1,51 @@
+{
+  "id": "DEF-p6-directing-ep01-001",
+  "opened_by": "07-directing/director",
+  "opened_on": "2026-09-23",
+  "task_id": "p6-plan-ep01",
+  "assigned_to": "00-orchestration/memory-bible (co-sign: 06-art/color-script, 05-scenes/lighting)",
+  "domain": "color_script_vs_scene_bible",
+  "status": "closed",
+  "severity": "major",
+  "closed_on": "2026-09-23",
+  "closed_by": "00-orchestration/memory-bible (task p6-bible-light-ep01, change bible/changelog.md BIB-0033)",
+  "ruling": "RESOLUTION (a). The hall and the flooded hall stay WINDOWLESS; bible/color_script.json is the side that moves. Both findings are ruled the same way. (-a) SCN-long-hall keeps 'no windows, no skylights' and 25 blind roundels, and lighting.json keeps roundel_glow = reflected_lamplight_only. color_script scene_curves and the act-level stained_glass doses for ep01 acts 3-6 and ep05 act 3 now carry the identical pastel dose as SURFACE colour - jewel glints and lead-came sheen on the blind roundels where a lamp hangs close, the pastel tulip lamp shades, the mosaic dado and floor border - with no pool of glass light anywhere, and the garden green through the little door left as the hall's only coloured cast light (SPC-long-hall-01). (-b) SCN-pool-of-tears has no shaft: the way-out light Alice swims toward is the field of lamp reflections at the south end, where the reflections crowd and the shore steps lie, which this scene's own lighting.json dream_growth already named; it is now recorded there as way_out_heading and written into scene_curves and the ep02 act 1 dose. SCN-courtroom is untouched - it has real high windows and keeps its cast stained-glass light, so style.json CR-007 ('daylight through stained glass MAY cast soft pastel colour... that is the only coloured light') is still satisfied and the H2-frozen style.json needed no change and no hand-off.",
+  "ruling_basis": [
+    "Source text over inferred design (WRITE_RULES.md section 1): ch001-p11 'lit up by a row of lamps hanging from the roof' and ch001-p14 'that dark hall' anchor the architecture card; the roundel-window reading was inferred, unanchored, and would add an unwritten light source to a hall the source calls dark.",
+    "The later, narrower ruling on the same fact wins: roundel_glow was decided on 2026-09-23 by p4-cr-architecture / p4-cr-lighting-2 under BIB-0027 (closing DEF-p4-cr-architecture-001-b); color_script's BIB-0027 amendment was written in the same parallel batch and never re-read against the amended openings, so it is the stale side. Recorded as precedent P-014 in bible/WRITE_RULES.md.",
+    "Two scene files against one plan file for the pool: SCN-pool-of-tears inherits SCN-long-hall and already carried key_source oil_lamp_row, daylight_access lamplit_no_sky and no shaft.",
+    "Irreversibility: a window opening is architecture, not decoration. The whiteboxes and layout packs for both scenes are H2-locked at G4 (runs/g4/gate.json), ep01's storyboard is delivered against the windowless reading, and the user's auto-reroll budget is 0.",
+    "Design: the little-door garden green is the film's designed way-out colour and the one motivated bright thing ep01 act 3 is built around; a second daylight source in the hall would compete with it and a pool shaft would duplicate its job."
+  ],
+  "downstream_repass": "NONE. directing/ep01/storyboard.json already implements this ruling literally (its own conflicts[] note and the director's interim direction), so ep01 S05, S06 and S10 are confirmed clean and are NOT marked dirty; no lighting re-pass and no storyboard re-cut. ep05 act 3 inherits the answer through scene_curves.",
+  "files_written": [
+    "bible/color_script.json - amended by memory-bible under on_bible_access (minimal consistent edit, owner 06-art/color-script countersigns at next open)",
+    "bible/scenes/SCN-long-hall/lighting.json, bible/scenes/SCN-long-hall/architecture.json, bible/scenes/SCN-pool-of-tears/lighting.json - arbitration records only, no lighting value / opening / dimension / prompt fragment changed",
+    "bible/changelog.md BIB-0033; bible/WRITE_RULES.md precedent P-014"
+  ],
+  "due": "G6 (before ep01 lighting_scheme_id binding / p7-prompt for S05, S06, S10; also affects ep05 act 3)",
+  "summary": "bible/color_script.json scene_curves describes daylight through high halo-roundel WINDOWS in SCN-long-hall and a single daylight shaft through one high roundel in SCN-pool-of-tears; bible/scenes/SCN-long-hall/architecture.json says the hall is windowless and the 25 stained-glass roundels are blind (no opening behind), and lighting.json rules roundel_glow = reflected_lamplight_only with no daylight anywhere. SCN-pool-of-tears/lighting.json likewise has no daylight shaft.",
+  "findings": [
+    {
+      "id": "DEF-p6-directing-ep01-001-a",
+      "issue": "color_script.scene_curves['SCN-long-hall'].curve: 'The high halo-roundel windows of the reference hall lay faded lilac, sage and ivory pools on the wet stone, cooler than the candle_amber lamp pools'; episodes[ep01].acts[3].stained_glass: 'Soft faded-lilac and ivory pools from the high roundels on the stone floor'.",
+      "scene_bible": "architecture.json interior.openings: 'roundels above the door heads (no opening behind; they only catch the hall's lamplight)', 'no windows, no skylights'; lighting.json roundel_glow.decision = 'reflected_lamplight_only' (amended 2026-09-23 p4-cr-lighting-2, fixing DEF-p4-cr-architecture-001-b).",
+      "impact": "Whether coloured pools of daylight may fall on the hall floor in ep01 S05/S06 (colour peak act 3, scale markers act 4) and in ep05 act 3. Affects lighting prompt fragments and every S05/S06 video prompt."
+    },
+    {
+      "id": "DEF-p6-directing-ep01-001-b",
+      "issue": "color_script.scene_curves['SCN-pool-of-tears'].curve: 'The single shaft Alice swims toward falls through one high roundel: an aged-ivory and gold core with a faded-lilac rim... It is the only coloured light in the film's coldest water, so it reads as the way out.'",
+      "scene_bible": "SCN-pool-of-tears inherits SCN-long-hall (windowless); its lighting.json has key_source 'oil_lamp_row', 'the hall's oil lamps, far overhead and out of frame', daylight_access 'lamplit_no_sky', and no shaft.",
+      "impact": "ep01 S10: the motivated heading for Alice's swim and the episode's last lit element before the cliffhanger."
+    }
+  ],
+  "possible_resolution": [
+    "(a) color-script confirms the roundel wording is figurative and the act 3/4 pastel dose is delivered by front-lit blind glass (jewel glints, lead-came sheen) plus the pastel tulip lamp shades, with the garden green through the little door as the only coloured cast light in the hall; for SCN-pool-of-tears the 'way out' light is the brightest lamp-reflection field at the south end. No Bible change beyond a scene_curves wording fix.",
+    "(b) architecture/lighting are amended to open the roundels (or add one high oculus) to daylight — a set change that contradicts ch001-p14 'that dark hall' and would add a light source against the source text; it would also need lighting.json schemes re-issued for both scenes."
+  ],
+  "interim_direction": "directing/ep01/directing_plan.md (section 与 style/color_script 的衔接说明) directs resolution (a) so Phase 6 is not blocked: surfaces and glints carry the pastel dose, the little-door garden green is the only coloured cast light in the hall, and S10's swim heads for the reflection field at the south end. If (b) is ruled instead, S05/S06/S10 need a lighting re-pass; no shot design in the plan has to change.",
+  "bible_changed": true,
+  "screenplay_changed": false,
+  "due_gate": "G6",
+  "routing_note": "orchestrator: this is a Bible-vs-Bible conflict, not a screenplay problem. Director does not edit bible/. memory-bible arbitrates with color-script and lighting; whichever way it rules, record it in color_script scene_curves so ep05 act 3 inherits the same answer."
+}

@@ -1,0 +1,73 @@
+{
+  "shot_id": "sh009",
+  "group_id": "grp005",
+  "scene_no": "S01",
+  "scene_id": "SCN-riverbank",
+  "duration_s": 8.0,
+  "is_dialogue": false,
+  "group_position": "the only shot of grp005 — Alice runs her whole map line here: start sitting_shelf -> path meadow -> end field_way. The sister holds her map start and never moves.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "sit",
+      "start_pos": "sitting bolt upright on the grass at sitting_shelf, then up and away across the meadow",
+      "space_fragment_en": "sitting bolt upright on the grass at the sister's sitting place on screen-right, then scrambling up and running out toward the open meadow",
+      "facing": "first out to screen-right after the animal, then up and across to her sister at screen-left, then away down the meadow with her back to camera",
+      "body_facing_target_id": "CHAR-alice-sister",
+      "path": [
+        { "t": 4.6, "to": "on her feet on the flattened grass at the sitting place" },
+        { "t": 5.4, "to": "out of the bottom of frame, running across the open meadow toward the way across the field to the hedge" }
+      ],
+      "beats": [
+        { "t": 0.4, "action": "sits bolt upright", "sync": "shot opens on the movement" },
+        { "t": 1.8, "action": "stares after the animal down the meadow", "sync": "the held look" },
+        { "t": 3.4, "action": "turns her look up and across to her sister", "sync": "the unanswered look" },
+        { "t": 4.6, "action": "scrambles to her feet", "sync": "the decision" },
+        { "t": 5.4, "action": "runs out of the bottom of frame", "sync": "exit; the frame is left with the sister, the book and one daisy" }
+      ],
+      "performance_beat": {
+        "objective": "get someone to confirm what she saw — and, when nobody does, go after it herself",
+        "goal": "get her sister to confirm what she saw",
+        "emotional_arc": "from startled disbelief, through a beat of being entirely unwitnessed, to reckless decision",
+        "arc_from": "startled disbelief",
+        "arc_to": "reckless decision",
+        "trigger": { "beat": "her look reaches her sister and is not returned", "t": 3.4 },
+        "no_early_reaction": ["gathering her skirt", "the knees coming under her", "leaning toward the meadow"],
+        "forbidden_early": ["gathering her skirt", "the knees coming under her", "leaning toward the meadow"],
+        "end_state": "out of frame — the last visible state is her back going away, head up, one fist closed in her skirt"
+      }
+    },
+    {
+      "id": "CHAR-alice-sister",
+      "label": "Alice's Sister",
+      "pose": "sit",
+      "start_pos": "upright at sitting_shelf under the northern elm, unchanged",
+      "space_fragment_en": "sitting upright at the sister's sitting place under the northern elm, small on screen-left, eyes down on the book",
+      "facing": "square to the backwater, head bowed; her eyeline never rises",
+      "path": [],
+      "beats": [
+        { "t": 3.4, "action": "reads on, gives nothing", "sync": "against Alice's look" },
+        { "t": 6.0, "action": "still reading after Alice has gone", "sync": "the shot's last image" }
+      ],
+      "performance_beat": {
+        "objective": "keep reading",
+        "goal": "keep reading",
+        "emotional_arc": "from absorbed to absorbed — the absence of reaction is the whole function of the performance",
+        "arc_from": "absorbed",
+        "arc_to": "absorbed",
+        "trigger": { "beat": "Alice runs out of frame beside her", "t": 5.4 },
+        "no_early_reaction": ["looking up", "following Alice with her eyes", "calling after her"],
+        "forbidden_early": ["looking up", "following Alice with her eyes", "calling after her"],
+        "end_state": "head still bowed to the page, eyes on the print, shoulders unmoved"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": {
+    "timeline_ok": true,
+    "violations": [],
+    "story_event": "ev0001 (real_frame, T0) — 'burning with curiosity, Alice runs after it across the field'",
+    "note": "Alice leaves the riverbank here and does not return in ep01. The sister stays on the bank and appears in no later ep01 shot."
+  }
+}

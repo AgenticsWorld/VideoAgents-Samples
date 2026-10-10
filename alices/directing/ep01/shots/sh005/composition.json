@@ -1,0 +1,34 @@
+{
+  "shot_id": "sh005",
+  "scene_id": "SCN-riverbank",
+  "size": "medium",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "bottom_right",
+    "anchor_xy": [0.62, 0.66],
+    "size_in_frame": "head and upper body large in the near foreground, face about 0.20 of frame height"
+  },
+  "second_subject": {
+    "id": "CHAR-alice-sister",
+    "grid": "top_left",
+    "anchor_xy": [0.33, 0.30],
+    "note": "upright in the upper third with the book — the water-side camera faces east, so the sister's northern sitting place falls screen left."
+  },
+  "headroom": "the sister keeps about 0.10 of frame height of leaf shade above her; Alice, rolled onto her back in the near foreground, has none — her crown runs out of the right edge at eye height.",
+  "horizon_eyeline": "Far bank grass line at 0.22 of frame height. The sister's eyeline stays down on her page; Alice's turns up out of the top of frame to the elm leaves and then closes.",
+  "layers": {
+    "fg": "Alice's face and shoulder, and the single daisy dropping onto her pinafore in the lower right corner",
+    "mg": "the flattened grass of the shelf between them, daisies in the turf",
+    "bg": "the sister upright with the book, the elm trunk behind her, the shaded bank beyond"
+  },
+  "gaze": {
+    "direction": "up_frame",
+    "lead_room": "above",
+    "note": "Alice rolls onto her back and her look goes straight up out of frame into the canopy; the lead room is the strip of leaf shade along the top edge. The sister never looks up, so the two eyelines never meet — the hush is delivered to someone who is not being looked at."
+  },
+  "balance": "A long diagonal see-saw from the small upright sister at top left to the large recumbent Alice at bottom right. Big-near versus small-far keeps the frame from settling for all eleven seconds.",
+  "leading_lines": "The slope of the bank runs from lower right to upper left and ties the two figures together; the sister's vertical spine and the elm trunk are the only uprights, and they hold the far end of that diagonal.",
+  "eye_first": "Alice's face large in the near foreground, then along the bank slope up to the sister and the page, then back down to the falling daisy.",
+  "safe_area_ok": true,
+  "constraint_binding": "One take, no move, single pick-and-drop: the daisy is picked and dropped within one frame with no reframe onto the hand, and no weighing sequence is staged — the whole comparison happens in one wide composition."
+}

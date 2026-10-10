@@ -1,0 +1,146 @@
+{
+ "summary": {
+  "costume_sheet_coverage": "PASS 52/52",
+  "costume_visual_en_in_prompt": "PASS 7/7",
+  "costume_sheet_identity_ref": "PASS 7/7",
+  "size": "PASS 7/7",
+  "ascii_names": "PASS 225/225",
+  "hygiene": "PASS 225/225"
+ },
+ "detail": {
+  "costume_sheet_coverage": "all pass",
+  "costume_visual_en_in_prompt": "all pass",
+  "costume_sheet_identity_ref": "all pass",
+  "size": "all pass",
+  "ascii_names": "all pass",
+  "hygiene": "all pass"
+ },
+ "generated_items": [
+  [
+   "CHAR-alice",
+   "COS-002",
+   true
+  ],
+  [
+   "CHAR-alice-sister",
+   "COS-004",
+   true
+  ],
+  [
+   "CHAR-white-rabbit",
+   "COS-007",
+   true
+  ],
+  [
+   "CHAR-king-of-hearts",
+   "COS-010",
+   true
+  ],
+  [
+   "CHAR-knave-of-hearts",
+   "COS-012",
+   true
+  ],
+  [
+   "CHAR-duchess",
+   "COS-014",
+   true
+  ],
+  [
+   "CHAR-cook",
+   "COS-039",
+   true
+  ],
+  [
+   "CHAR-alice",
+   "COS-002",
+   true
+  ],
+  [
+   "CHAR-alice-sister",
+   "COS-004",
+   true
+  ],
+  [
+   "CHAR-white-rabbit",
+   "COS-007",
+   true
+  ],
+  [
+   "CHAR-king-of-hearts",
+   "COS-010",
+   true
+  ],
+  [
+   "CHAR-knave-of-hearts",
+   "COS-012",
+   true
+  ],
+  [
+   "CHAR-duchess",
+   "COS-014",
+   true
+  ],
+  [
+   "CHAR-cook",
+   "COS-039",
+   true
+  ],
+  [
+   "sheet_age02.png",
+   [
+    2560,
+    1440
+   ],
+   true
+  ],
+  [
+   "sheet_COS-004.png",
+   [
+    2560,
+    1440
+   ],
+   true
+  ],
+  [
+   "sheet_COS-007.png",
+   [
+    2560,
+    1440
+   ],
+   true
+  ],
+  [
+   "sheet_COS-010.png",
+   [
+    2560,
+    1440
+   ],
+   true
+  ],
+  [
+   "sheet_COS-012.png",
+   [
+    2560,
+    1440
+   ],
+   true
+  ],
+  [
+   "sheet_COS-014.png",
+   [
+    2560,
+    1440
+   ],
+   true
+  ],
+  [
+   "sheet_COS-039.png",
+   [
+    2560,
+    1440
+   ],
+   true
+  ]
+ ]
+}

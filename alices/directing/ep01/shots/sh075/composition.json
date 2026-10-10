@@ -1,0 +1,28 @@
+{
+  "shot_id": "sh075",
+  "scene_id": "SCN-long-hall",
+  "size": "close",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "top_centre",
+    "anchor_xy": [0.52, 0.22],
+    "size_in_frame": "an enormous hand and the lower half of a face coming down into the top of frame, far too big for it — the mouth alone is about 0.20 of frame height"
+  },
+  "headroom": "none: she enters through the top edge. The frame has no room for her and she comes into it anyway, which is the joke and the apology at once.",
+  "horizon_eyeline": "Water-level close from the south-east doors, lens 0.30 m: waterline across at 0.70 of frame height. Her eyes are above the top edge; only her mouth and jaw are in shot, so the line stays on its speaker without her face dominating.",
+  "layers": {
+    "fg": "the water surface across the bottom of frame",
+    "mg": "her enormous hand lowering into frame at the left, palm open and harmless",
+    "bg": "the dark hall between them"
+  },
+  "gaze": {
+    "direction": "down_frame",
+    "lead_room": "none",
+    "note": "she bends right down toward the little animal, so her whole attention comes downward through the top edge. No eyeline is visible, by instruction — the timidity is in the mouth and the lowered hand."
+  },
+  "balance": "Top-loaded to the point of oppression, with an empty lit strip of water along the bottom where the small animal is about to be. The frame is composed for someone who is not in it.",
+  "leading_lines": "Her forearm comes down from the upper left as a long diagonal and her jaw runs the other way — a closing V aimed at the empty water at the bottom of frame.",
+  "eye_first": "The mouth, on the line; then the huge hand descending.",
+  "safe_area_ok": true,
+  "constraint_binding": "Only her mouth is in shot, which keeps the line on its speaker while the scale does the joke: the crop is set so no eye is visible, and her hand — not her face — carries the gentleness."
+}

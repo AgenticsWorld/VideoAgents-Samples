@@ -1,0 +1,51 @@
+{
+  "scene_id": "SCN-falling-dream",
+  "inherits": null,
+  "layer": "dream",
+  "int_ext": "INT",
+  "form": "A vertical, round brick-lined well shaft about 2.4 m across whose walls are fitted, floor-to-infinity, with the furniture of a Victorian family house turned on end: glazed cupboards, bookshelves, maps and pictures on pegs",
+  "stories": 1,
+  "source_chapter": "ch001",
+  "culture_ref": "world.json#wonderland_real_counterparts.cp-rabbit-hole; world.json#frame.social_class; cultivation.json#SUP-008",
+  "grows_from": {"loc": "LOC-rabbit-hole-entrance", "waking_detail": "the hedge burrow plus Alice's drowsy thoughts of home, Dinah and tea-time; the shaft is the burrow's darkness furnished with the family house (LOC-family-house) schoolroom, study and pantry"},
+  "amendment": "BIB-0027 (user ruling 2026-09-22), applied p4-cr-architecture 2026-09-23",
+  "mucha_design_language": {"item": "Mucha / Art Nouveau in the shaft's fixed lining only: between the furniture bands the brick carries encircling mosaic bands of pastel-and-gold tesserae with flowing vine and poppy (sleep) motifs; the wooden pegs and shelf brackets become wrought-iron whiplash vine brackets with verdigris and traces of gilding; at intervals a round stained-glass halo roundel is set into the wall, dimly glowing from the faint daylight above; the furniture, books, maps, pictures and jars stay plain 1862 household pieces", "inferred": true, "culture_ref": "world.json#WR-010 (the fall listed); cultivation.json#XA-magic-08; cultivation.json#SUP-008", "why": "The fall is listed in WR-010; the household things stay 1862 (WR-009) so the grows_from link to the family house still reads"},
+  "structure": [
+    {"item": "the entry: a short, near-level earth tunnel laced with hawthorn roots that dips suddenly into the vertical shaft", "src": "ch001-p05"},
+    {"item": "a round shaft about 2.4 m inside diameter, no visible top or bottom; the lower darkness is unlit", "src": "ch001-p06"},
+    {"item": "wall lining of soot-darkened red brick in English bond, visible between the furniture as the 'well' surface", "inferred": true, "culture_ref": "world.json#frame.period", "why": "The source calls it a well; brick well-lining is the period well material, and it makes the domestic furniture read as wrongly placed"}
+  ],
+  "materials": [
+    {"item": "dark soot-stained red brick", "inferred": true, "culture_ref": "world.json#frame.period", "why": "See structure"},
+    {"item": "mahogany and grained-deal cupboard carcasses with small-paned glazed doors and brass cup handles", "src": "ch001-p06", "note": "wood species inferred: upper-middle-class 1860s household furniture (world.json#frame.social_class)"},
+    {"item": "open bookshelves of stained pine loaded with cloth- and leather-bound books", "src": "ch001-p06"}
+  ],
+  "details": [
+    {"item": "cupboards and book-shelves filling the sides of the well", "src": "ch001-p06"},
+    {"item": "maps hung on wooden pegs: 1860s schoolroom wall maps of England and of Europe on rollers, and a folded map of New Zealand and Australia", "src": "ch001-p06", "note": "map subjects inferred from Alice's fall monologue on latitude and the Antipodes (ch001-p08/p09) and the schoolroom (culture.json#CUL-027)"},
+    {"item": "framed pictures on pegs: small engravings and a family silhouette in oval frames", "src": "ch001-p06", "note": "subjects inferred, culture_ref world.json#frame.social_class"},
+    {"item": "pantry shelf with stoneware and glass jars, one labelled ORANGE MARMALADE (empty)", "src": "ch001-p06", "note": "labelling convention culture.json#CUL-022"},
+    {"item": "on one shelf, a saucer of milk set out as if for a cat", "inferred": true, "culture_ref": "geography.json#LOC-family-house.visual_identifiers (Dinah's saucer)", "why": "Grows from Alice's line 'I hope they'll remember her saucer of milk at tea-time' (ch001-p10), the thought she falls asleep on"}
+  ],
+  "interior": {
+    "layout": "a single vertical cylinder; furniture fixed all round the wall in stacked bands (cupboards, bookshelves, map-and-picture pegs, pantry shelf) repeating downward; the entry tunnel joins at the top",
+    "openings": ["entry tunnel mouth at the top of the shaft, faint daylight far above", "no other openings; the bottom is unseen darkness until the landing (SCN-shaft-landing-passage)"],
+    "ceiling_height_m": 6.0,
+    "ceiling_note": "no ceiling; 6.0 m is the height of the repeating rig wall section",
+    "furniture_tone": "the family house's schoolroom, study and pantry: respectable, slightly worn mid-Victorian mahogany and pine"
+  },
+  "scale_notes": {
+    "rule": "True scale (Alice 135 cm): every shelf must be within her arm's reach as she passes, since she takes down a jar and puts it back in a cupboard. Built as a vertical rig set: the furniture wall section (about 6 m tall) travels past a wire-rigged Alice rather than Alice falling past a static set; repeat the section in dressing variants so the fall reads endless.",
+    "sources": ["ch001-p06", "cultivation.json#SUP-008", "cultivation.json#SUP-003"]
+  },
+  "negative": [
+    "no water at the bottom, no windlass, no bucket, no rope",
+    "no CG infinite tunnel, no floating objects without fixings, no glowing or magic light",
+    "no rock cave, no mine timbering, no ladders",
+    "no furniture, books, maps or jars later than 1862 (Art Nouveau only in the mosaic bands, iron brackets and glass roundels of the lining)",
+    "no flat poster illustration, outline graphics or matte-painting finish; built rig set",
+    "no modern printed labels or plastic jars",
+    "no skeletons, bats or creatures on the shelves"
+  ],
+  "prompt_ready_en": "a deep round well shaft lined with soot-dark red brick banded with pastel-and-gold Art Nouveau mosaic of flowing vines and poppies in the style of Mucha, small round stained-glass roundels set in the wall, its walls fitted with Victorian glazed mahogany cupboards, bookshelves full of old books, schoolroom maps and small framed pictures hung on verdigris wrought-iron whiplash brackets, a pantry shelf with stoneware jars and one glass jar labelled ORANGE MARMALADE, darkness below, photographed live-action set"
+}

@@ -1,0 +1,32 @@
+{
+  "task_id": "p5-hooks-ep01",
+  "agent": "01-story/hook",
+  "project": "alices",
+  "attempt": 1,
+  "status": "done_pending_selection",
+  "date": "2026-09-22",
+  "outputs": ["story/episodes/ep01/hooks.json"],
+  "inputs_read": [
+    "story/episodes/ep01/screenplay.md v2",
+    "story/episode_plan.json (ep01 hook_point/climax, ep02 hook_point.opening ev0009)",
+    "story/story_graph.json episode_planner_hints",
+    "bible/scenes/index.json (scene ID check)"
+  ],
+  "summary": {
+    "opening_hooks": ["oh-1 flashforward S03 fall (recommended)", "oh-2 cold_open S01 book line", "oh-3 flashforward S08 'who in the world am I?'"],
+    "ending_cliffhangers": ["ec-1 sound-only as written (spoiler none)", "ec-2 approaching V-wake glimpse (spoiler low, recommended)", "ec-3 rising wide, many ripples (spoiler low)"],
+    "selected": {"opening": null, "ending": null}
+  },
+  "machine_checks": {
+    "count_ge_3": "PASS (3 opening, 3 ending)",
+    "fields_present": "PASS (type/visual/est_duration_s on all; spoiler_level on all endings)",
+    "scene_ids_valid": "PASS (SCN-riverbank, SCN-falling-dream, SCN-long-hall, SCN-pool-of-tears in bible/scenes/index.json)",
+    "teases_next_ep": "PASS (ep02, hook_point.opening ev0009)",
+    "json_valid": "PASS",
+    "no_narration_or_text": "PASS (no narration/text_card types; dialogue lines only from screenplay v2)"
+  },
+  "constraints_honoured": ["narration off", "captions off", "intro/outro/teaser disabled", "SUP-001 dream frame", "SUP-002 no talking real rabbit", "Mouse withheld to ep02", "DEF-902/903 not applicable to ep01"],
+  "screenplay_edits": "none — changes described as proposals in hooks.json",
+  "handoffs": ["screenplay (apply selected proposal)", "pacing (+2..6 s)", "edit (uses selected)"],
+  "skills": "none enabled for this station"
+}

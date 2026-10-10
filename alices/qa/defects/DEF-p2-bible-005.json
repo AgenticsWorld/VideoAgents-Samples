@@ -1,0 +1,93 @@
+{
+  "id": "DEF-p2-bible-005",
+  "task_id": "p2-merge",
+  "raised_by": "00-orchestration/memory-bible",
+  "raised_on": "2026-09-22",
+  "type": "dictionary_gap (dictionary_hit_100pct FAIL)",
+  "severity": "major (blocks the dictionary_hit_100pct auto-check)",
+  "status": "closed",
+  "fix_note": "Fixed by 02-worldbuilding/dictionary (task p2-fix-dictionary, 2026-09-22) after user H1 pre-ruling 5.6 A confirmed the Oxford/Thames-valley, Friday 4 July 1862, clergyman-scholar-family frame (runs/h1-ruling/ruling.json). Registered TERM-0124 to TERM-0151 (28 new entries) in bible/dictionary.json: the 17 designed/real-world names listed in this ticket's `terms` map, folded to 16 distinct new TERM entries because 'Kingdom of Hearts' (world.json's working label) and 'House of Hearts' (politics.json's registered FAC-house-of-hearts name) are registered as ONE canonical term (TERM-0139 'House of Hearts', category institution, entity_ref FAC-house-of-hearts) with 'Kingdom of Hearts' as an alias -- resolving this ticket's extra_note about two designed names for one polity, per the ticket's own recommended fix. All 16 are inferred:true with a reason citing user H1 ruling 5.6 A and the specific owning bible file/field. Also picked up and registered the follow-on proper nouns introduced by the same-day sibling fixes: 7 new waking-world place names from runs/p2-fix-geography/result.json's dictionary_note (The Thames Valley Near Oxford, The Family House, The Neighbouring Farm, The Farmyard, The Reedy River Backwater, The Seaside Town (Remembered), A Distant Parish Church Spire -- TERM-0140 to TERM-0146), and 5 new institution names from runs/p2-fix-political/result.json's ids_used_dictionary_should_register (Alice's Family Household, the Guest Kings and Queens, the White Rabbit's Household, the Caucus-Race Company, the School in the Sea -- TERM-0147 to TERM-0151; 'the Neighbouring Farm' merged into the single TERM-0142 already covering geography's identically-named LOC-neighbouring-farm and politics' FAC-neighbouring-farm, to keep terms_unique). 'Mary Ann', 'Pat' and 'the Mad Tea-Party' from the political fix's list were already registered (TERM-0010, TERM-0024, TERM-0089) and only needed entity_ref backfills (TERM-0089 -> FAC-mad-tea-party; TERM-0090 'the pack of cards' -> FAC-house-of-hearts; TERM-0054 'Wonderland' -> LOC-wonderland-dream, plus an alias for geography's 'Wonderland (Alice's Dream)' label). No existing IDs were removed, renumbered, or recycled; TERM-0054, TERM-0089 and TERM-0090 were updated in place, not duplicated. Verified: valid JSON, terms_unique (id/term/alias all unique, scripted check), no UNKNOWN/TBD/empty placeholders, all 151 entries carry first_seen.chapter+quote or (for designed/real-world entries) inferred:true+reason. Ran code/p2-merge_check.py read-only (not modified, per scope): cross_refs_valid_all_namespaces and no_unknown_placeholder FAIL only on pre-existing issues in politics.json (CHAR-tortoise forward-ref ledger) and geography.json (deprecated LOC-manor-grounds/LOC-cellar-passage/LOC-village missing settlement fields) -- both outside this file and this ticket's scope, not caused by or fixable in dictionary.json. dictionary_hit_100pct still reports FAIL, but source_terms_unresolved is now empty (every source-book term resolves); the remaining designed_terms_not_in_dictionary hits are solely because the checker's own hardcoded LEXICON dict (script-internal, not read from bible/dictionary.json) still maps all 17 original surface strings to None -- this agent cannot edit code/p2-merge_check.py per its file-ownership scope. memory-bible needs to re-point those 17 LEXICON entries (plus add the ~15 new geography/political surfaces) to the TERM ids registered in this fix at the next merge run, the same pattern already used for TERM-0120..0123. Full surface -> TERM-id mapping table is in runs/p2-fix-dictionary/result.json. Left open for memory-bible re-verification per instructions (status set to fixed, ticket not closed).",
+  "escalation": "re-dispatch 02-worldbuilding/dictionary after H1 confirms the waking-world setting. memory-bible added only plain source terms (TERM-0120 to TERM-0123 and one alias), as the work order allows.",
+  "owner": "02-worldbuilding/dictionary",
+  "files": [
+    "bible/dictionary.json",
+    "bible/world.json",
+    "bible/timeline.json",
+    "bible/religion.json",
+    "bible/culture.json",
+    "bible/economy.json",
+    "bible/geography.json",
+    "bible/politics.json"
+  ],
+  "summary": "Seventeen designed or real-world proper nouns appear in canon fields of the other 8 files but have no dictionary entry. They come from the design choice of Oxford, 1862, a clergyman household, which is itself pending H1.",
+  "terms": {
+    "Oxford": [
+      "world",
+      "culture"
+    ],
+    "Oxfordshire": [
+      "world"
+    ],
+    "Thames": [
+      "world"
+    ],
+    "Victorian": [
+      "world",
+      "timeline",
+      "geography",
+      "religion",
+      "culture",
+      "economy"
+    ],
+    "Queen Victoria": [
+      "world",
+      "timeline"
+    ],
+    "United Kingdom": [
+      "world"
+    ],
+    "Britain": [
+      "timeline"
+    ],
+    "Napoleon III": [
+      "world"
+    ],
+    "Norman Conquest": [
+      "world",
+      "timeline"
+    ],
+    "Anglo-Saxon": [
+      "timeline"
+    ],
+    "Georgian": [
+      "timeline"
+    ],
+    "Church of England": [
+      "religion"
+    ],
+    "Anglican": [
+      "religion"
+    ],
+    "Binsey": [
+      "culture"
+    ],
+    "St Frideswide": [
+      "culture"
+    ],
+    "Kingdom of Hearts": [
+      "world"
+    ],
+    "House of Hearts": [
+      "politics"
+    ]
+  },
+  "extra_note": "Two different designed names exist for the Hearts polity: 'Kingdom of Hearts' (world.json realm label) and 'House of Hearts' (politics.json FAC-house-of-hearts name). The dictionary should register one canonical name with the other as an alias, or world.json should switch to the politics name.",
+  "fix": "Register each as an inferred:true term (original_name = real-world spelling, reason = design source) and pick one canonical name for the Hearts polity. Then re-run code/p2-merge_check.py.",
+  "assigned_to": "02-worldbuilding/dictionary",
+  "due_gate": "G2",
+  "routing_note": "routed by workflow-orchestrator 2026-09-22T17:20:54+08:00; fix dispatched only after user H1 ruling (decision 5.x in bible/h1_summary.md)",
+  "closed_by": "00-orchestration/memory-bible (p2-merge-recheck)",
+  "closed_on": "2026-09-22",
+  "verification": "Ruling 5.6 A verified: TERM-0124 to TERM-0151 registered; 'Kingdom of Hearts' is an alias of TERM-0139 'House of Hearts'. The checker LEXICON was updated with the fix task's surface-to-TERM mapping only (BIB-0018). One further real-world name introduced by the geography fix ('Teddington', in a visual_identifiers rationale clause) was moved to the entry's reason field (BIB-0015) rather than registered. dictionary_hit_100pct PASS (84 surfaces hit, 0 unresolved).",
+  "ruling_ref": "runs/h1-ruling/ruling.json"
+}

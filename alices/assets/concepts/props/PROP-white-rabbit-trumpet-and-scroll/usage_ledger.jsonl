@@ -1,0 +1,2 @@
+{"file": "main_01.png", "kind": "image", "provider": "volcengine", "model": "doubao-seedream-5-0-pro-260628", "size": "1280x720", "completion_tokens": 3600, "total_tokens": 3600, "generated_images": 1, "recorded_at": "2026-09-23T00:46:17"}
+{"file": "scale_ref_01.png", "kind": "image", "provider": "volcengine", "model": "doubao-seedream-5-0-pro-260628", "size": "1280x720", "completion_tokens": 3600, "total_tokens": 3600, "generated_images": 1, "recorded_at": "2026-09-23T00:47:50"}

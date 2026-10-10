@@ -1,0 +1,62 @@
+{
+  "_meta": {
+    "file": "bible/scenes/SCN-falling-dream/environment.json",
+    "owner": "05-scenes/environment",
+    "task_id": "p3-environment-sb1",
+    "attempt": 1,
+    "generated": "2026-09-22",
+    "amended": {"change_id": "BIB-0027", "task_id": "p4-cr-environment", "date": "2026-09-23", "fields": ["fixed.dream_design (new)"]},
+    "enum_set": "ENV-ENUM-v1 (defined once in runs/p3-environment-sb1/result.json)"
+  },
+  "scene_id": "SCN-falling-dream",
+  "layer": "dream",
+  "fixed": {
+    "climate": "none of its own: an enclosed dream-only falling space (geography.json LOC-descent-shaft 'cool, still dream-air')",
+    "indoor": true,
+    "daylight_access": "dark_no_sky",
+    "dream_design": {
+      "rule": "WR-010 / XA-magic-08 (dream, full)",
+      "flora": "carved and painted vine, lily and poppy tendrils climb the shaft walls between the cupboards and book-shelves, winding downward into the dark; pale roots curl out of the earth between the shelves",
+      "ornament_cues": "the fading glow above is a circular halo roundel of warm light, the one bright disc in the frame; shelf edges and picture frames carry whiplash mouldings and gilt inlay; the shaft's walls curve in organic spirals, not straight shafts (form belongs to architecture; the marmalade jar and hand props stay 1862, WR-009)",
+      "palette": "dusty rose, faded lilac and ivory in the glow, gilt glints on mouldings, sinking into blue-black below",
+      "seasonal_guard": "no season in the shaft; carved flora only, so no season clash",
+      "inferred": true,
+      "reason": "Cupboards, book-shelves, maps and pictures and the dark are explicit (ch001-p06). Carving, the roundel glow and palette are designed to WR-010 and SUP-008."
+    },
+    "dream_growth": "Grows from the hot bank and the shade of the hedge burrow. As Alice's eyes close against the 2 pm glare, the bright field narrows to a shaft; the last warm daylight fades to a dim glow above her, and the air turns cool and still like the shade under the hedge. There is no weather, sky or wind in the shaft: its only 'time' is the afternoon she is sleeping through.",
+    "source": {"chapter": "ch001", "quote": "First, she tried to look down and make out what she was coming to, but it was too dark to see anything"},
+    "inferred": true,
+    "reason": "Darkness below is explicit (ch001-p06). The cool air follows geography.json. How the shaft grows from the waking afternoon is designed per ruling 5.2 A and SUP-008 (anxiety-dream fall, not a real shaft)."
+  },
+  "variable_dims": {
+    "season": ["summer"],
+    "time_of_day": ["early_afternoon"],
+    "weather": ["none_enclosed"],
+    "wind": ["still"],
+    "temperature": ["cool"]
+  },
+  "states": [
+    {
+      "state_id": "SCN-falling-dream-S01",
+      "chapter": 1,
+      "chapter_id": "ch001",
+      "story_scene": "ch001-sc02",
+      "paragraphs": "ch001-p05..ch001-p10",
+      "timeline_ref": "ev0002",
+      "timeline_node": "TL-003",
+      "season": "summer",
+      "weather": "none_enclosed",
+      "wind": "still",
+      "temperature": "cool",
+      "time_of_day": "early_afternoon",
+      "waking_clock": "14:15-14:20 GMT (Alice asleep on the bank)",
+      "diegetic_daylight": "none; a fading warm glow high above, the shelves and pictures dimly readable, and blackness below",
+      "conditions": "still, cool, faintly dusty air; Alice drifts slowly rather than plummeting, her dress and hair lifting gently",
+      "source_chapter": "ch001",
+      "source": {"chapter": "ch001", "quote": "it was too dark to see anything; then she looked at the sides of the well, and noticed that they were filled with cupboards and book-shelves"},
+      "also_seen": [{"chapter": "ch001", "refs": ["ch001-p10"], "quote": "She felt that she was dozing off"}],
+      "inferred": true,
+      "reason": "Darkness is explicit (ch001-p06). The shelves must stay readable while the depths stay black, so a dim upper glow is designed. The waking clock is designed from the dream's start time: Alice dozes off right after the 14:10 chase (ev0002 follows ev0001 'continuous', story_timeline). time_of_day is the waking-clock phase; no daylight reaches the shaft."
+    }
+  ]
+}

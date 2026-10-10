@@ -1,0 +1,42 @@
+{
+  "task_id": "p5-pacing-ep01",
+  "agent": "01-story/pacing",
+  "project": "alices",
+  "attempt": 1,
+  "status": "done",
+  "date": "2026-09-22",
+  "outputs": ["story/episodes/ep01/pacing.json", "qa/defects/DEF-p5-pacing-ep01-001.json"],
+  "inputs_read": [
+    "story/episodes/ep01/screenplay.md v2",
+    "story/episodes/ep01/hooks.json v1 (awaiting_selection)",
+    "bible/color_script.json v1.0.0 (ep01 acts 1-6, peaks, downstream_notes)",
+    "story/episode_plan.json (ep01 duration_budget_s 540)"
+  ],
+  "summary": {
+    "duration_budget_s": 540,
+    "total_s": 537,
+    "scenes_sum_s": 534,
+    "opening_segment_s": 3,
+    "deviation_pct": -0.6,
+    "assumed_hooks": "oh-1 + ec-2 (recommended); all 6 option combinations evaluated, range 532-538 s",
+    "climax": "S08 110 s (min 100 s), 20.5% of the episode",
+    "hook_reserve_s": {"opening": 3, "ending": 8}
+  },
+  "machine_checks": {
+    "total_duration_pm_10pct": "PASS (537 vs 540, window 486-594)",
+    "scene_coverage": "PASS (S01-S10 all have alloc_s + emotion; scene ids match screenplay headings)",
+    "hook_reserve_present": "PASS (opening 3 / ending 8, positions stated)",
+    "beats_sum_eq_alloc": "PASS (every scene)",
+    "dialogue_fit_scene_level": "PASS (dialogue_est/0.7 <= alloc_s in every scene; tightest S08 73.6 <= 110)",
+    "json_valid": "PASS"
+  },
+  "flags_for_orchestrator": [
+    "S10 LN-ep01-029 'And in that case I can go back by railway.' points at a thought that was dropped ('fallen into the sea'), so with narration off it reads as a non sequitur. Route to screenplay/dialogue-rewrite: add a source-derived lead-in line (+2 s) or cut LN-029 (-4 s). Either way the total stays in budget.",
+    "S08 fan→shrink causality must be shown in picture (fan waving while the table rises; shrinking stops when the fan is thrown). Condition passed to shot-planning.",
+    "DEF-p5-pacing-ep01-001 (minor): S08 'lamplight on tear water' vs color_script act 5 'candles out of frame'."
+  ],
+  "screenplay_edits": "none",
+  "bible_edits": "none",
+  "qa": "director co-sign / evaluation skipped (QA level 0, evaluation 0)",
+  "skills": "none enabled for this station"
+}

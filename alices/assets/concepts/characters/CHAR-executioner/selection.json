@@ -1,0 +1,28 @@
+{
+  "character_id": "CHAR-executioner",
+  "task_id": "p4-char-concept-cb3",
+  "sheet": "sheet.png",
+  "variants": [],
+  "status": "delivered_for_H2_review",
+  "layout_check": { "four_panels": true, "one_view_per_panel": true, "same_individual_all_panels": true, "size": "2560x1440 (JPEG payload)" },
+  "appearance_field_hits": {
+    "gender_male": true,
+    "age_58_65": true,
+    "hair_iron_grey_receding_bald_crown_mutton_chops": true,
+    "eyes_pale_watery_blue": true,
+    "face_heavy_jowls_bulbous_nose_long_upper_lip": true,
+    "expression_stubborn_aggrieved": true,
+    "build_big_framed_paunchy": true,
+    "dark_crimson_long_coat_black_facings": true,
+    "black_edged_red_heart_badge_and_black_rank_bar": true,
+    "black_waistcoat_knee_breeches_stockings_buckled_shoes": true,
+    "black_hood_pushed_back_on_shoulders_face_visible": true,
+    "empty_hands_no_execution_device (SUP-014)": true
+  },
+  "style_check": { "photoreal_live_action": true, "palette_within_style": true, "no_negative_list_items": true },
+  "self_check_defects": [
+    "In the side view the gathered hood stands up a little behind the head; it still lies on the shoulders and never covers the face."
+  ],
+  "rerolls": [],
+  "reroll_budget_note": "User rerun setting = 0."
+}

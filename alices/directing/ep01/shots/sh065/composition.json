@@ -1,0 +1,34 @@
+{
+  "shot_id": "sh065",
+  "scene_id": "SCN-long-hall",
+  "size": "medium",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "mid_right",
+    "anchor_xy": [0.62, 0.44],
+    "size_in_frame": "a fragment — her bent neck, the back of her head and one shoulder, filling the right half of frame; no part of her is whole and she cannot be framed standing"
+  },
+  "second_subject": {
+    "id": "vault_rib",
+    "grid": "top_centre",
+    "anchor_xy": [0.44, 0.18],
+    "note": "GAUGE THREE. A verdigris iron whiplash rib of the 2.80 m vault, hard against the top of frame, with her head knocking it."
+  },
+  "headroom": "none — negative headroom. Her crown is in contact with the rib and the rib is the top edge of the world; the frame is closed above her by architecture she is too big for.",
+  "horizon_eyeline": "Lens 0.9 m from the centre of the hall, looking up. The lamp line runs across at 0.30 of frame height and is now BELOW her head. Her eyeline drops to about 0.40, stooping — she is looking downward for the first time since she grew.",
+  "layers": {
+    "fg": "the last hanging lamp the film will ever show, its gilt halo and pastel tulip shade at her shoulder height at the left of frame",
+    "mg": "her bent neck and shoulder against the iron rib, flakes of old gilding sifting down through the lamplight",
+    "bg": "the far hall running away small in the same frame, so the room stays a room while she overflows it"
+  },
+  "gaze": {
+    "direction": "down_frame",
+    "lead_room": "none",
+    "note": "she stoops and her look goes down into the room she no longer fits. No lead room is given; there is nowhere in this frame for a person of 2.74 m to look."
+  },
+  "balance": "Top-jammed and right-heavy: a body pressed into the upper right corner by a ceiling, with the small far hall in the lower left as the only breathing space. Deliberately uncomfortable.",
+  "leading_lines": "The iron rib's whiplash curve runs across the top of frame and down the left, and the lamp chain runs away beneath it — the two lines that used to be overhead are now beside her and below her.",
+  "eye_first": "The point of contact — her crown against the iron rib — then the gilding flakes falling through the lamplight.",
+  "safe_area_ok": true,
+  "constraint_binding": "GAUGE THREE, last of the three in sequence. At 2.74 m she can never be framed standing — every giant frame is a hunch, a lie-down or a fragment, so this composition crops her deliberately and never attempts a whole figure. THE LAST LAMP FIXTURE the film will ever show: from sh068 onward no light fitting enters any frame, so the fixture here is placed prominently and spent. Deep focus."
+}

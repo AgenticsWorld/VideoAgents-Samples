@@ -1,0 +1,105 @@
+{
+  "character_id": "CHAR-duchess",
+  "name": "The Duchess",
+  "source_language": "en",
+  "source_speaker_labels": ["Duchess"],
+  "produced_by_task": "p3-dialogue-style-pb1",
+  "register": {
+    "level": "aristocratic but coarse-grained: blunt dismissals and folk proverbs in a titled lady's mouth",
+    "summary": "In her own kitchen she is rough, violent in word and short-tempered ('Pig!', 'chop off her head!'). At the croquet-ground she turns cloyingly affectionate and attaches a 'moral' to everything, delivered with total confidence and no logic. Either way she talks at people, not with them.",
+    "examples": [
+      { "ref": "ch006-d0022", "chapter": 6, "text": "You don't know much, and that's a fact." },
+      { "ref": "ch009-d0005", "chapter": 9, "text": "Tut, tut, child! Everything's got a moral, if only you can find it." },
+      { "ref": "ch009-d0013", "chapter": 9, "text": "Very true, flamingoes and mustard both bite. And the moral of that is—'Birds of a feather flock together.'" }
+    ]
+  },
+  "catchphrases": [
+    { "text": "and the moral of that is—'…'", "freq": "high", "count_in_source": 7, "example_refs": ["ch009-d0007", "ch009-d0017", "ch009-d0019"], "example_chapters": [9] },
+    { "text": "my dear / you dear old thing", "freq": "medium", "count_in_source": 2, "example_refs": ["ch009-d0001", "ch009-d0003"], "example_chapters": [9] },
+    { "text": "Pig!", "freq": "low", "count_in_source": 1, "example_refs": ["ch006-d0018"], "example_chapters": [6] }
+  ],
+  "sentence_style": {
+    "length": "the longest average line of the cast (mean 17.8 words): statement plus proverb, statement plus 'and that's a fact'",
+    "mean_words": 17.8,
+    "patterns": [
+      {
+        "rule": "Moral-tagging: a remark followed by 'and the moral of that is—' and a proverb that does not fit, sometimes an absurd self-generated one.",
+        "examples": [
+          { "ref": "ch009-d0009", "chapter": 9, "text": "Ah, well! It means much the same thing, and the moral of that is—'Take care of the sense, and the sounds will take care of themselves.'" },
+          { "ref": "ch009-d0017", "chapter": 9, "text": "Of course it is, there's a large mustard-mine near here. And the moral of that is—'The more there is of mine, the less there is of yours.'" },
+          { "ref": "ch009-d0027", "chapter": 9, "text": "Just about as much right, as pigs have to fly; and the m—" }
+        ]
+      },
+      {
+        "rule": "Blunt, dismissive clinchers ('and that's why', 'and that's a fact', 'don't bother me') that shut the other person down.",
+        "examples": [
+          { "ref": "ch006-d0018", "chapter": 6, "text": "It's a Cheshire cat, and that's why. Pig!" },
+          { "ref": "ch006-d0028", "chapter": 6, "text": "Oh, don't bother me, I never could abide figures!" },
+          { "ref": "ch009-d0023", "chapter": 9, "text": "Oh, don't talk about trouble! I make you a present of everything I've said as yet." }
+        ]
+      },
+      {
+        "rule": "Sweeping generalisations about 'everybody', 'everything' and 'the world'.",
+        "examples": [
+          { "ref": "ch006-d0024", "chapter": 6, "text": "If everybody minded their own business, the world would go round a deal faster than it does." },
+          { "ref": "ch006-d0020", "chapter": 6, "text": "They all can, and most of 'em do." }
+        ]
+      },
+      {
+        "rule": "Gushing, patronising agreement in the croquet scene ('Very true', 'Right, as usual', 'I quite agree with you'), with endearments.",
+        "examples": [
+          { "ref": "ch009-d0015", "chapter": 9, "text": "Right, as usual, what a clear way you have of putting things!" },
+          { "ref": "ch009-d0001", "chapter": 9, "text": "You can't think how glad I am to see you again, you dear old thing!" }
+        ]
+      },
+      {
+        "rule": "Violent words used carelessly as household speech (chop off her head, beat him, Pig!); never meant literally (SUP-014 tone).",
+        "examples": [
+          { "ref": "ch006-d0026", "chapter": 6, "text": "Talking of axes, chop off her head!" },
+          { "ref": "ch006-d0033", "chapter": 6, "text": "Here! you may nurse it a bit, if you like! I must go and get ready to play croquet with the Queen," }
+        ]
+      }
+    ]
+  },
+  "vocabulary": {
+    "signature_words": ["moral", "and that's a fact", "Tut, tut", "a deal", "'em", "my dear", "the world", "everybody", "abide"],
+    "preferred_fields": ["proverbs and maxims", "the kitchen (pepper, mustard, the baby)", "croquet with the Queen"],
+    "colloquialisms": ["a deal faster", "most of 'em", "'Tis so"],
+    "examples": [
+      { "ref": "ch009-d0007", "chapter": 9, "text": "'Tis so, and the moral of that is—'Oh, 'tis love, 'tis love, that makes the world go round!'" }
+    ]
+  },
+  "address": {
+    "self": "I",
+    "to_alice": "my dear / child / you dear old thing",
+    "to_the_baby": "Pig!",
+    "to_the_queen": "your Majesty",
+    "examples": [
+      { "ref": "ch009-d0003", "chapter": 9, "text": "You're thinking about something, my dear, and that makes you forget to talk." },
+      { "ref": "ch009-d0028", "chapter": 9, "text": "A fine day, your Majesty!" }
+    ]
+  },
+  "interjections": ["Tut, tut!", "Oh,", "Ah, well!", "Here!"],
+  "forbidden_words": [
+    { "domain": "post-1862 slang / modern chat register", "regex": "\\b(okay|ok|cool|guys?|awesome|yeah|yep|nope|gonna|wanna|gotta|kinda|sorta|totally|literally|dude)\\b", "reason": "period drama, 1862" },
+    { "domain": "humility, apology and uncertainty", "regex": "\\b(please|sorry|beg (your )?pardon|I'm afraid|I wonder|I don't know|I'm not sure|excuse me)\\b", "reason": "she is never unsure and never apologises: no softener in her 22 spoken lines; even a missing moral is deferred ('I shall remember it in a bit')" },
+    { "domain": "precise facts and schoolroom terms", "regex": "\\b(twenty-four hours|latitude|longitude|axis|arithmetic)\\b", "reason": "figures are what she 'never could abide'; exact knowledge is Alice's register" }
+  ],
+  "drift": [
+    { "from_chapter": 6, "to_chapter": 6, "change": "Kitchen: rough, curt and violent in word; nursing a howling baby amid pepper.", "examples": ["ch006-d0018", "ch006-d0026", "ch006-d0028"] },
+    { "from_chapter": 9, "to_chapter": 9, "change": "Croquet-ground: abruptly sugary and clinging, every remark tagged with a moral; the rough edge returns only as fear the moment the Queen appears ('A fine day, your Majesty!').", "examples": ["ch009-d0001", "ch009-d0019", "ch009-d0028"] }
+  ],
+  "recitation_repertoire": {
+    "note": "Her lullaby 'Speak roughly to your little boy' (ch006-d0029, ch006-d0031) is sung text, excluded from the hit-rate denominator; it matches the kitchen-phase roughness.",
+    "refs": ["ch006-d0029", "ch006-d0031"]
+  },
+  "backtest_markers": [
+    { "id": "D1", "rule_ref": "catchphrases moral", "weight": 4, "regex": "\\bmoral\\b|\\band the m—" },
+    { "id": "D2", "rule_ref": "sentence_style.patterns[1] dismissive clinchers", "weight": 3, "regex": "\\b(and that's (why|a fact)|don't bother|don't talk about|never could abide|that's nothing to|I make you a present)\\b" },
+    { "id": "D3", "rule_ref": "sentence_style.patterns[2] generalisations", "weight": 2, "regex": "\\b(everybody|everything's|the world|they all|most of 'em|a deal)\\b" },
+    { "id": "D4", "rule_ref": "sentence_style.patterns[3] gushing agreement and endearments", "weight": 3, "regex": "^(very true|right, as usual|I quite agree|'tis so|of course it is|ah, well)\\b|\\b(my dear|dear old thing|tut)\\b" },
+    { "id": "D5", "rule_ref": "sentence_style.patterns[4] careless violence", "weight": 3, "regex": "\\b(pig|chop off|axes|nurse it)\\b" },
+    { "id": "D6", "rule_ref": "address to_the_queen / croquet", "weight": 2, "regex": "\\b(your majesty|croquet|flamingo|thinking)\\b" }
+  ],
+  "backtest": {"method": "marker-claim back-test: a spoken source line hits when it matches >=1 backtest_markers regex and no forbidden_words regex; verse (recited text) excluded; full definition runs/p3-dialogue-style-pb1/result.json#backtest_method", "script": "code/p3-dialogue-style-pb1_backtest.py", "run_on": "2026-09-22", "threshold": 0.8, "hit_rate": 1.0, "sample_size": 22, "source_lines_total": 24, "coverage_of_spoken_lines": 1.0, "verse_excluded": 2, "forbidden_violations_in_source": 0, "cross_claim_rate": 0.037, "lift": 27.2, "attribution_top1_rate": 0.864, "misses": [], "pass": true}
+}

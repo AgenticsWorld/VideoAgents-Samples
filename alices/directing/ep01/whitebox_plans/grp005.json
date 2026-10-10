@@ -1,0 +1,50 @@
+{
+  "schema_version": "whitebox_plan.v1",
+  "group_id": "grp005",
+  "scene_id": "SCN-riverbank",
+  "basis": "Alice runs her whole blocking_map line inside sh009: sitting_shelf -> meadow -> field_way. She sits bolt upright at t=0.4, stares after the animal down the meadow, turns her look up and across to her sister at t=3.4, is on her feet at t=4.6 and runs out of the bottom of frame at t=5.4; in the remaining 2.6 s she covers 6.8 m at a child's 2.6 m/s, so she leaves frame on the field_way line but is nowhere near reaching it - the map end is the direction, not a position she attains in this shot. Her stare at t=1.8 is aimed at the point the rabbit actually left toward (field_way, X +16 / Z -6.30), i.e. the true spatial direction, not the screen side written in blocking sh009 facing / composition sh009 gaze; continuity_plan AX-02 and DEF-p6-continuity-ep01-001 already own that text and the work order routes it to composition. CRE-001 has gone: declared absent for this group in scene_presence. The Sister never lifts her eyeline.",
+  "actors": [
+    {
+      "id": "CHAR-alice",
+      "kind": "person",
+      "size_m": [0.378, 1.35, 0.297],
+      "keyframes": [
+        {"t": 0.0, "position": [-3.6, 0.0, 0.675], "pose": "lie", "yaw": 1.5708},
+        {"t": 0.4, "position": [-3.6, 0.0, 0.675], "pose": "sit", "yaw": 1.9129},
+        {"t": 1.8, "position": [-3.6, 0.0, 0.675], "pose": "sit", "yaw": 1.9129},
+        {"t": 3.4, "position": [-3.6, 0.0, 0.675], "pose": "sit", "yaw": 2.6061, "head_pitch": -0.2},
+        {"t": 4.6, "position": [-3.6, 0.0, 0.675], "pose": "stand", "yaw": 1.9129},
+        {"t": 5.4, "position": [-3.6, 0.0, 0.675], "pose": "stand", "yaw": 1.9129},
+        {"t": 8.0, "position": [2.81, 0.0, -1.606], "pose": "stand", "yaw": 1.9129}
+      ]
+    },
+    {
+      "id": "CHAR-alice-sister",
+      "kind": "person",
+      "size_m": [0.448, 1.6, 0.352],
+      "keyframes": [
+        {"t": 0.0, "position": [-2.8, 0.0, -0.675], "pose": "sit", "yaw": -1.5708, "head_pitch": 0.5},
+        {"t": 3.4, "position": [-2.8, 0.0, -0.675], "pose": "sit", "yaw": -1.5708, "head_pitch": 0.5},
+        {"t": 6.0, "position": [-2.8, 0.0, -0.675], "pose": "sit", "yaw": -1.5708, "head_pitch": 0.5},
+        {"t": 8.0, "position": [-2.8, 0.0, -0.675], "pose": "sit", "yaw": -1.5708, "head_pitch": 0.5}
+      ]
+    }
+  ],
+  "cameras": [
+    {
+      "shot_id": "sh009",
+      "start": 0,
+      "duration_s": 8.0,
+      "movement": "static",
+      "keyframes": [
+        {"t": 0.0, "position": [-8.133, 0.35, 0.926], "target": [-3.628, 0.35, 0.172], "fov": 26.9915},
+        {"t": 8.0, "position": [-8.133, 0.35, 0.926], "target": [-3.628, 0.35, 0.172], "fov": 26.9915}
+      ]
+    }
+  ],
+  "continuity": {"actors": "inherit", "camera": "cut"},
+  "warnings": [
+    "sh009 holds the water-side axis (camera on the bank lip looking +X): Alice reads screen-right at about 0.63 of frame width, the Sister screen-left at about 0.32, matching composition and AX-01's binding.",
+    "Alice's run leaves the frame at group t=5.4 and the camera does not follow her out, per camera.json."
+  ]
+}

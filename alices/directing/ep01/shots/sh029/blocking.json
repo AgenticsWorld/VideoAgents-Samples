@@ -1,0 +1,39 @@
+{
+  "shot_id": "sh029",
+  "group_id": "grp011",
+  "scene_no": "S04",
+  "scene_id": "SCN-shaft-landing-passage",
+  "duration_s": 3.0,
+  "is_dialogue": false,
+  "group_position": "last shot of grp011 — the White Rabbit holds his map end (brick_mid). Alice holds her map start/end (leaf_heap) off-frame.",
+  "characters": [
+    {
+      "id": "CHAR-white-rabbit",
+      "label": "White Rabbit",
+      "pose": "sit",
+      "start_pos": "unmoved in the middle of the brick-vaulted passage, the watch braced in one forepaw against his chest",
+      "space_fragment_en": "sitting back on his haunches in the middle of the brick-vaulted passage, centred in frame, the watch braced against his chest",
+      "facing": "unchanged from sh028 — away down the passage; no face in shot by instruction",
+      "path": [],
+      "beats": [
+        { "t": 1.4, "action": "the paw tightens on the case", "sync": "two o'clock is long past" }
+      ],
+      "performance_beat": {
+        "objective": "read the dial again in case it says something different",
+        "goal": "read the dial again in case it says something different",
+        "emotional_arc": "from checking to confirmation — the shot is the bad news arriving, played in one paw",
+        "arc_from": "checking",
+        "arc_to": "confirmation",
+        "trigger": { "beat": "the second hand crosses and the reading is confirmed", "t": 1.4 },
+        "no_early_reaction": ["the paw tightening", "the watch tilting", "a tremor in the fur"],
+        "forbidden_early": ["the paw tightening", "the watch tilting", "a tremor in the fur"],
+        "end_state": "paw closed tight on the watch case, the dial held flat to his chest, no other movement in frame"
+      }
+    }
+  ],
+  "creatures": [],
+  "offscreen_presence": [
+    { "id": "CHAR-alice", "where": "on the heap of sticks and dry leaves, still watching", "note": "In the space, out of frame." }
+  ],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0003 (dream)", "note": "Insert; no face in frame by instruction." }
+}

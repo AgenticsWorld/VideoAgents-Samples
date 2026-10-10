@@ -1,0 +1,34 @@
+{
+  "_meta": {"file": "bible/scenes/SCN-duchess-kitchen/lighting.json", "owner": "05-scenes/lighting", "task_id": "p3-lighting-sb2", "attempt": 1, "generated": "2026-09-22", "enum_set": "LGT-ENUM-v1 (runs/p3-lighting-sb2/result.json)"},
+  "scene_id": "SCN-duchess-kitchen",
+  "layer": "dream",
+  "int_ext": "INT",
+  "daylight_access": "smoke_filled_interior",
+  "dream_light_growth": "The hot summer afternoon becomes a fire lit on a July day: the roaring hearth is the key, and the real afternoon sun is only a hazy glow at the door and the smoked windows (environment fixed.dream_growth; architecture grows_from: the family range turned open hearth).",
+  "natural_light_logic": "Per architecture interior.openings: the front door and two small smoked leaded windows are on the south wall, the hearth on the west end wall, one small half-shuttered high window on the north wall. With the sun due west (az about 268), the south door gets no square-on beam, only a glancing raking sliver at the jamb and the bright glare of the sunlit yard; the smoke turns this into a soft pale glow. The north high window gives dim sky light only. No direct sun reaches the floor.",
+  "schemes": [
+    {
+      "scheme_id": "LGT-duchess-kitchen-01",
+      "condition": {"time_of_day": "late_afternoon", "weather": "none_enclosed"},
+      "applies_to_states": ["SCN-duchess-kitchen-S01", "SCN-duchess-kitchen-S02"],
+      "key_source": "hearth_fire",
+      "direction": "low_side",
+      "key_bearing": "from the open hearth centred on the west end wall, about 0.5-1.5 m above the floor, raking along the room",
+      "fill": "pale smoky daylight glow from the open south door and the two smoked windows beside it; dim sky light from the high north window; everything else lost in pepper-smoke",
+      "practicals": ["open hearth fire under the brick arch (west wall)", "fire glow under the black cauldron on its crane"],
+      "color_temp": "warm (~2700K)",
+      "color_temp_k_approx": 2200,
+      "secondary_color_temp": "daylight glow at the door reads neutral-cool (~5000K) against the fire",
+      "contrast": "medium",
+      "quality": "flickering orange firelight, bloom and haze in thick grey-brown smoke that lifts the blacks and swallows the far walls; hard fire-lit edges near the hearth, soft murk beyond",
+      "prompt_fragment_en": "smoke-filled low kitchen lit mainly by a roaring open hearth fire, flickering warm orange firelight raking low from one end of the room, thick grey-brown pepper-smoke catching the glow and blurring the far walls, a pale hazy daylight glow from the open door and small smoked windows, dim murky corners, no direct sunlight inside",
+      "source_chapter": "ch006",
+      "source_refs": ["ch006-p19", "ch006-p20", "ch006-p21", "architecture.json interior.openings", "environment.json SCN-duchess-kitchen-S01..S02"],
+      "inferred": true,
+      "reason": "The fire, cauldron and smoke are explicit (ch006-p19 'full of smoke from one end to the other', 'leaning over the fire'); the light plan, openings logic and colour are designed. Enclosed interior with a fire as key, so no daylight-level exposure inside (visual-qa rule).",
+      "state_notes": {"SCN-duchess-kitchen-S02": "The open door is the bright rectangle Alice carries the baby toward (environment S02); it stays the fill source of this scheme, exposed hot, not a new key."}
+    }
+  ],
+  "special": [],
+  "special_note": "The source writes no plot light for this scene."
+}

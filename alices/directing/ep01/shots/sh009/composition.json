@@ -1,0 +1,34 @@
+{
+  "shot_id": "sh009",
+  "scene_id": "SCN-riverbank",
+  "size": "medium",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "bottom_right",
+    "anchor_xy": [0.63, 0.60],
+    "size_in_frame": "sitting bolt upright, head and torso, about 0.45 of frame height — then she vacates the frame entirely"
+  },
+  "second_subject": {
+    "id": "CHAR-alice-sister",
+    "grid": "top_left",
+    "anchor_xy": [0.33, 0.30],
+    "note": "same place and scale as sh005 — this is that composition re-used so the ending lands on a frame we already know."
+  },
+  "headroom": "Alice sits up into about 0.14 of frame height of clear leaf shade above her crown; the sister keeps her 0.10 unchanged from sh005.",
+  "horizon_eyeline": "Far bank grass line at 0.22 of frame height. Alice's eyeline starts out of the bottom-right of frame after the rabbit, then swings up-left onto her sister, who never lifts hers off the page.",
+  "layers": {
+    "fg": "the flattened grass where she has been lying, and the dropped daisy, lower right",
+    "mg": "Alice sitting up, then getting to her feet and clearing the bottom of frame",
+    "bg": "the sister upright with the book, elm trunk and shaded bank behind her"
+  },
+  "gaze": {
+    "direction": "frame_right",
+    "lead_room": "right",
+    "note": "she stares after the rabbit out of the lower right of frame, then turns her look up and across to her sister at top left. The sister's eyeline never rises to meet it — the unanswered look is what sends her running."
+  },
+  "balance": "Starts as the sh005 see-saw and then loses one end of it: when Alice runs out of the bottom of frame the picture is left bottom-heavy-empty, a small upright figure at top left over a wide patch of pressed grass.",
+  "leading_lines": "The bank slope from lower right to upper left, again; with Alice gone it runs from the empty flattened grass straight to the sister and stops there.",
+  "eye_first": "Alice sitting bolt upright — then, after she goes, the flattened grass and the one daisy, which is where the shot ends.",
+  "safe_area_ok": true,
+  "constraint_binding": "No pan, no reframe: the camera does not follow her out. The frame is composed from the first second to survive her leaving it — the sister, the book, the flattened grass and the daisy are all placed so the residual composition is complete and intentional without her in it."
+}

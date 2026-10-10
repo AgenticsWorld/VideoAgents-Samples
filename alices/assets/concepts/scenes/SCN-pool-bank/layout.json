@@ -1,0 +1,227 @@
+{
+  "schema_version": "scene_layout.v1",
+  "scene_id": "SCN-pool-bank",
+  "task_id": "p4-env-concept-sb1",
+  "layout_top": "layout_top.png",
+  "orientation": {
+    "top_of_map": "north; the pool is at the west (left), the wood edge at the east (right)",
+    "map_extent_m": [
+      40.0,
+      22.5
+    ],
+    "sun": "LGT-pool-bank-01 sun from the west-south-west (from the pool side, lower left of the map); shadows fall toward the upper right",
+    "note_en": "camera positions in views[] are described relative to these landmarks; xy_m = xy x map_extent_m (origin top-left)."
+  },
+  "landmarks": [
+    {
+      "id": "pool_water",
+      "name": "the open water of the pool",
+      "name_en": "the open water of the pool",
+      "kind": "water",
+      "xy": [
+        0.08,
+        0.5
+      ],
+      "xy_m": [
+        3.2,
+        11.25
+      ]
+    },
+    {
+      "id": "lily_pads",
+      "name": "the water-lily pads",
+      "name_en": "the water-lily pads",
+      "kind": "flora",
+      "xy": [
+        0.09,
+        0.13
+      ],
+      "xy_m": [
+        3.6,
+        2.93
+      ]
+    },
+    {
+      "id": "reeds_north",
+      "name": "the northern reed bed",
+      "name_en": "the northern reed bed",
+      "kind": "flora",
+      "xy": [
+        0.235,
+        0.18
+      ],
+      "xy_m": [
+        9.4,
+        4.05
+      ]
+    },
+    {
+      "id": "reeds_south",
+      "name": "the southern reed bed",
+      "name_en": "the southern reed bed",
+      "kind": "flora",
+      "xy": [
+        0.19,
+        0.8
+      ],
+      "xy_m": [
+        7.6,
+        18.0
+      ]
+    },
+    {
+      "id": "landing_mud",
+      "name": "the trampled mud of the landing place",
+      "name_en": "the trampled mud of the landing place",
+      "kind": "ground",
+      "xy": [
+        0.28,
+        0.62
+      ],
+      "xy_m": [
+        11.2,
+        13.95
+      ]
+    },
+    {
+      "id": "willow_trunk",
+      "name": "the fallen willow trunk",
+      "name_en": "the fallen willow trunk",
+      "kind": "feature",
+      "xy": [
+        0.395,
+        0.73
+      ],
+      "xy_m": [
+        15.8,
+        16.43
+      ]
+    },
+    {
+      "id": "race_circle",
+      "name": "the centre of the race circle",
+      "name_en": "the centre of the race circle",
+      "kind": "zone",
+      "xy": [
+        0.63,
+        0.51
+      ],
+      "xy_m": [
+        25.2,
+        11.47
+      ]
+    },
+    {
+      "id": "circle_stick",
+      "name": "the marker stick at the top of the circle",
+      "name_en": "the marker stick at the top of the circle",
+      "kind": "feature",
+      "xy": [
+        0.635,
+        0.34
+      ],
+      "xy_m": [
+        25.4,
+        7.65
+      ]
+    },
+    {
+      "id": "wood_edge",
+      "name": "the edge of the wood",
+      "name_en": "the edge of the wood",
+      "kind": "flora",
+      "xy": [
+        0.9,
+        0.5
+      ],
+      "xy_m": [
+        36.0,
+        11.25
+      ]
+    }
+  ],
+  "views": [
+    {
+      "tile": 1,
+      "camera_from": "pool_water",
+      "looking_at": "landing_mud",
+      "size": "wide",
+      "angle": "low",
+      "desc_en": "low wide shot from the water surface toward the reed-fringed shore and the trampled mud where the dripping party scrambles out"
+    },
+    {
+      "tile": 2,
+      "camera_from": "willow_trunk",
+      "looking_at": "race_circle",
+      "size": "medium",
+      "angle": "eye",
+      "desc_en": "eye-level medium shot from the fallen willow trunk across the flattened grass to the rough race circle marked with sticks"
+    },
+    {
+      "tile": 3,
+      "camera_from": "race_circle",
+      "looking_at": "willow_trunk",
+      "size": "medium",
+      "angle": "eye",
+      "desc_en": "eye-level medium shot from inside the race circle back to the fallen willow trunk where the Mouse lectures, reeds and still water behind"
+    },
+    {
+      "tile": 4,
+      "camera_from": "wood_edge",
+      "looking_at": "pool_water",
+      "size": "wide",
+      "angle": "high_oblique",
+      "desc_en": "high oblique wide shot from the wood edge over the grassy flat, the race circle and the reed beds out to the still pool with no far shore"
+    },
+    {
+      "tile": 5,
+      "camera_from": "race_circle",
+      "looking_at": "circle_stick",
+      "size": "close",
+      "angle": "eye",
+      "desc_en": "eye-level close shot across the scuffed grass to a marker stick on the edge of the race circle, daisies and buttercups around it"
+    },
+    {
+      "tile": 6,
+      "camera_from": "landing_mud",
+      "looking_at": "lily_pads",
+      "size": "close",
+      "angle": "low",
+      "desc_en": "low close shot from the wet mud out over the shallows to the round white water-lily pads floating on the still pool"
+    },
+    {
+      "tile": 7,
+      "camera_from": "reeds_north",
+      "looking_at": "landing_mud",
+      "size": "medium",
+      "angle": "eye",
+      "desc_en": "eye-level medium shot through the tall northern reeds along the shore to the trampled mud where the dripping party gathers"
+    },
+    {
+      "tile": 8,
+      "camera_from": "reeds_north",
+      "looking_at": "race_circle",
+      "size": "wide",
+      "angle": "high_oblique",
+      "desc_en": "high oblique wide shot from above the northern reed bed down across the shore to the whole race circle and the wood edge beyond"
+    },
+    {
+      "tile": 9,
+      "camera_from": "willow_trunk",
+      "looking_at": "reeds_south",
+      "size": "detail",
+      "angle": "eye",
+      "desc_en": "eye-level detail shot from the willow trunk into the southern reeds: curving stems, purple loosestrife and cream meadowsweet"
+    }
+  ],
+  "checklist": {
+    "architecture_match": true,
+    "lighting_match": true,
+    "style_match": true
+  },
+  "calibration": {
+    "status": "calibrated_to_image",
+    "date": "2026-09-23",
+    "method": "landmark xy re-measured on the delivered layout_top.png (door/opening landmarks read at the gap in the wall line)"
+  }
+}

@@ -1,0 +1,391 @@
+{
+ "task_id": "p0-merge",
+ "agent": "01-story/novel-parser",
+ "attempt": 1,
+ "status": "done",
+ "date": "2026-09-22",
+ "inputs": [
+  "story/chapter_manifest.json",
+  "story/structured_story/ch001.json..ch012.json",
+  "runs/p0-parse-b01..b04/result.json",
+  "novel/Alices_Adventures_in_Wonderland_English.md (reconciliation only)"
+ ],
+ "outputs": [
+  "story/structured_story.json"
+ ],
+ "helper_scripts": [
+  "code/merge_structured_story.py (assembly + machine check; exit 0)"
+ ],
+ "acceptance": {
+  "schema": "PASS - every chapter has _shard/id/order/title/heading/word_count/body_word_count/source/paragraph_count/scenes; every scene has id/boundary_reason/setting/present/source/paragraphs/dialogues/entities; all entity types in person|place|item|skill",
+  "chapter_coverage_100": "PASS - 12/12 chapters in manifest order; words incl. headings 26453 = novel chapter ranges 26453 (file 26545 minus 92 front-matter words); body words (excl. headings) 26371 = manifest; 799/799 paragraphs match novel blank-line blocks (line ranges exact, text whitespace-normalized)",
+  "ids_unique_across_shards": "PASS - 1682 chapter/scene/paragraph/dialogue/quote ids, 0 duplicates",
+  "speaker_missing_lt_2pct": "PASS - 2/817 = 0.24%",
+  "source_locators": "PASS - every dialogue segment and entity mention is a substring of the paragraph its source points to, inside its own scene; scene source ranges equal their paragraph sets",
+  "shards_untouched": "PASS - sha256 of all 12 shards identical before/after (recorded in structured_story.json _meta.shard_sha256)"
+ },
+ "note_on_word_count": "The work order calls 26,453 'body words'; per the manifest it is the chapter-range count INCLUDING the 12 heading lines (82 words). Body-only is 26,371. Both reconcile.",
+ "stats": {
+  "chapters": 12,
+  "scenes": 46,
+  "paragraphs": 799,
+  "word_count_incl_headings": 26453,
+  "body_word_count": 26371,
+  "dialogue_entries": 817,
+  "dialogue_by_type": {
+   "dialogue": 723,
+   "thought": 58,
+   "verse": 36
+  },
+  "unknown_speaker": 2,
+  "unknown_rate": 0.00245,
+  "unknown_entries": [
+   {
+    "id": "ch007-d0002",
+    "source": "ch007#p02",
+    "text": "No room! No room!",
+    "candidates": [
+     {
+      "speaker": "March Hare + Hatter",
+      "confidence": 0.6
+     },
+     {
+      "speaker": "March Hare + Hatter + Dormouse",
+      "confidence": 0.4
+     }
+    ]
+   },
+   {
+    "id": "ch010-d0084",
+    "source": "ch010#p78",
+    "text": "The trial’s beginning!",
+    "candidates": [
+     {
+      "speaker": "White Rabbit (acting as herald of the court, ch011)",
+      "confidence": 0.4
+     },
+     {
+      "speaker": "unnamed crier/voice at the court",
+      "confidence": 0.6
+     }
+    ]
+   }
+  ],
+  "entity_entries": 1646,
+  "entity_occurrences": 1711,
+  "entity_by_type": {
+   "item": 298,
+   "person": 1124,
+   "place": 198,
+   "skill": 26
+  },
+  "quoted_text_entries_b01": 8,
+  "inscriptions_entries_b02": 1,
+  "per_chapter": {
+   "ch001": {
+    "body_words": 2181,
+    "dialogue_entries": 33,
+    "entity:item": 39,
+    "entity:person": 26,
+    "entity:place": 24,
+    "entity_entries": 89,
+    "entity_occurrences": 89,
+    "paragraphs": 30,
+    "quoted_text": 6,
+    "scenes": 3,
+    "type:dialogue": 25,
+    "type:thought": 8,
+    "word_count": 2187
+   },
+   "ch002": {
+    "body_words": 2093,
+    "dialogue_entries": 52,
+    "entity:item": 20,
+    "entity:person": 42,
+    "entity:place": 26,
+    "entity_entries": 88,
+    "entity_occurrences": 88,
+    "paragraphs": 26,
+    "quoted_text": 1,
+    "scenes": 2,
+    "type:dialogue": 36,
+    "type:thought": 14,
+    "type:verse": 2,
+    "word_count": 2100
+   },
+   "ch003": {
+    "body_words": 1694,
+    "dialogue_entries": 71,
+    "entity:item": 8,
+    "entity:person": 78,
+    "entity:place": 7,
+    "entity:skill": 2,
+    "entity_entries": 95,
+    "entity_occurrences": 95,
+    "paragraphs": 48,
+    "quoted_text": 1,
+    "scenes": 3,
+    "type:dialogue": 70,
+    "type:verse": 1,
+    "word_count": 1703
+   },
+   "ch004": {
+    "body_words": 2607,
+    "dialogue_entries": 46,
+    "entity:item": 41,
+    "entity:person": 63,
+    "entity:place": 40,
+    "entity_entries": 144,
+    "entity_occurrences": 144,
+    "inscriptions": 1,
+    "paragraphs": 42,
+    "scenes": 5,
+    "type:dialogue": 38,
+    "type:thought": 8,
+    "word_count": 2617
+   },
+   "ch005": {
+    "body_words": 2180,
+    "dialogue_entries": 67,
+    "entity:item": 19,
+    "entity:person": 83,
+    "entity:place": 6,
+    "entity_entries": 108,
+    "entity_occurrences": 108,
+    "paragraphs": 78,
+    "scenes": 4,
+    "type:dialogue": 56,
+    "type:thought": 3,
+    "type:verse": 8,
+    "word_count": 2187
+   },
+   "ch006": {
+    "body_words": 2588,
+    "dialogue_entries": 72,
+    "entity:item": 24,
+    "entity:person": 118,
+    "entity:place": 22,
+    "entity_entries": 164,
+    "entity_occurrences": 164,
+    "paragraphs": 80,
+    "scenes": 6,
+    "type:dialogue": 62,
+    "type:thought": 6,
+    "type:verse": 4,
+    "word_count": 2594
+   },
+   "ch007": {
+    "body_words": 2282,
+    "dialogue_entries": 105,
+    "entity:item": 34,
+    "entity:person": 132,
+    "entity:place": 16,
+    "entity_entries": 182,
+    "entity_occurrences": 193,
+    "paragraphs": 105,
+    "scenes": 3,
+    "type:dialogue": 99,
+    "type:thought": 3,
+    "type:verse": 3,
+    "unknown": 1,
+    "word_count": 2288
+   },
+   "ch008": {
+    "body_words": 2482,
+    "dialogue_entries": 60,
+    "entity:item": 32,
+    "entity:person": 140,
+    "entity:place": 5,
+    "entity:skill": 1,
+    "entity_entries": 178,
+    "entity_occurrences": 197,
+    "paragraphs": 71,
+    "scenes": 7,
+    "type:dialogue": 56,
+    "type:thought": 4,
+    "word_count": 2488
+   },
+   "ch009": {
+    "body_words": 2266,
+    "dialogue_entries": 90,
+    "entity:item": 12,
+    "entity:person": 127,
+    "entity:place": 13,
+    "entity:skill": 20,
+    "entity_entries": 172,
+    "entity_occurrences": 188,
+    "paragraphs": 92,
+    "scenes": 5,
+    "type:dialogue": 85,
+    "type:thought": 5,
+    "word_count": 2273
+   },
+   "ch010": {
+    "body_words": 2025,
+    "dialogue_entries": 88,
+    "entity:item": 5,
+    "entity:person": 109,
+    "entity:place": 13,
+    "entity:skill": 3,
+    "entity_entries": 130,
+    "entity_occurrences": 135,
+    "paragraphs": 81,
+    "scenes": 2,
+    "type:dialogue": 76,
+    "type:thought": 1,
+    "type:verse": 11,
+    "unknown": 1,
+    "word_count": 2031
+   },
+   "ch011": {
+    "body_words": 1872,
+    "dialogue_entries": 68,
+    "entity:item": 35,
+    "entity:person": 111,
+    "entity:place": 14,
+    "entity_entries": 160,
+    "entity_occurrences": 171,
+    "paragraphs": 74,
+    "scenes": 3,
+    "type:dialogue": 62,
+    "type:thought": 5,
+    "type:verse": 1,
+    "word_count": 1879
+   },
+   "ch012": {
+    "body_words": 2101,
+    "dialogue_entries": 65,
+    "entity:item": 29,
+    "entity:person": 95,
+    "entity:place": 12,
+    "entity_entries": 136,
+    "entity_occurrences": 139,
+    "paragraphs": 72,
+    "scenes": 3,
+    "type:dialogue": 58,
+    "type:thought": 1,
+    "type:verse": 6,
+    "word_count": 2106
+   }
+  }
+ },
+ "normalization": {
+  "canonical_layout": "b03/b04 shard layout (ch007-ch012)",
+  "scene_alias_map": {
+   "scene.location": {
+    "canonical": "scene.setting",
+    "used_by": "b01",
+    "ruled_by": "orchestrator",
+    "renames": 8,
+    "renames_by_batch": {
+     "b01": 8
+    }
+   },
+   "scene.location_cue": {
+    "canonical": "scene.setting",
+    "used_by": "b02",
+    "ruled_by": "orchestrator",
+    "renames": 15,
+    "renames_by_batch": {
+     "b02": 15
+    }
+   },
+   "scene.cast_present": {
+    "canonical": "scene.present",
+    "used_by": "b01",
+    "ruled_by": "orchestrator",
+    "renames": 8,
+    "renames_by_batch": {
+     "b01": 8
+    }
+   },
+   "entity.tentative_key": {
+    "canonical": "entity.key",
+    "used_by": "b02",
+    "ruled_by": "orchestrator",
+    "renames": 416,
+    "renames_by_batch": {
+     "b02": 416
+    }
+   },
+   "dialogue.candidates": {
+    "canonical": "dialogue.speaker_candidates",
+    "used_by": "b01,b02",
+    "ruled_by": "merge (same field as b03/b04 speaker_candidates[{speaker,confidence}])",
+    "renames": 14,
+    "renames_by_batch": {
+     "b01": 1,
+     "b02": 13
+    }
+   },
+   "paragraph.format": {
+    "canonical": "paragraph.kind",
+    "used_by": "b02",
+    "ruled_by": "merge (same field as b01/b03 kind: paragraph block type)",
+    "renames": 17,
+    "renames_by_batch": {
+     "b02": 17
+    }
+   }
+  },
+  "chapter_meta": {
+   "canonical": "chapter._shard {task_id?, batch, conventions?, agent?, generated?} + chapter.source {file, line_start, line_end, byte_*?}",
+   "moves": {
+    "chapter.batch": {
+     "canonical": "chapter._shard.batch",
+     "renames_by_batch": {
+      "b01": 3
+     },
+     "renames": 3
+    },
+    "chapter.file": {
+     "canonical": "chapter.source.file",
+     "renames_by_batch": {
+      "b01": 3
+     },
+     "renames": 3
+    },
+    "chapter.line_start": {
+     "canonical": "chapter.source.line_start",
+     "renames_by_batch": {
+      "b01": 3
+     },
+     "renames": 3
+    },
+    "chapter.line_end": {
+     "canonical": "chapter.source.line_end",
+     "renames_by_batch": {
+      "b01": 3
+     },
+     "renames": 3
+    },
+    "chapter._meta": {
+     "canonical": "chapter._shard",
+     "renames_by_batch": {
+      "b02": 3
+     },
+     "renames": 3
+    }
+   }
+  },
+  "preserved_batch_specific_fields": "kept as-is (not renamed, not dropped): e.g. b01 attribution/time/paragraph_range/quoted_text, b02 speaker_key/speaker_basis/mode/segments/inscriptions/time_cue/type_note, b03/b04 count/delivery/addressee/group/speaker_kind",
+  "residual_differences_not_normalized": [
+   "chapter.heading: b01 is an object {id:'chNNN-p00',source,lines,word_count,text}; b02-b04 are the heading string. Value shape, not a key name -> kept as-is; readers use heading.text for b01.",
+   "scene time: b01 'time', b02 'time_cue', b03/b04 none (not in canonical layout) -> kept as-is.",
+   "interrupted speech: b01 = consecutive entries per quoted segment; b02 = one entry with segments[] and text joined by one space; b03/b04 = one entry with text joined by ' [...] '. Dialogue-entry counts are therefore not strictly comparable across batches.",
+   "entity granularity: b01/b02 one entry per (paragraph, surface form) without count; b03/b04 same with count = occurrences in the paragraph. entity_occurrences treats missing count as 1.",
+   "non-speech quotes: b01 quoted_text[], b02 inscriptions[], b03/b04 excluded (noted on nearby dialogue entries). Not counted as dialogue."
+  ],
+  "key_collisions": []
+ },
+ "decisions": [
+  "Canonical layout = b03/b04. Chapter meta: b02 _meta -> _shard; b01 top-level batch -> _shard.batch; b01 top-level file/line_start/line_end -> chapter.source{} (the b03/b04 location for these fields, instead of a new meta object). Chapter keys reordered to the b03 order.",
+  "Beyond the orchestrator's alias list, two further pure key-name aliases of canonical b03 fields were normalized: dialogue.candidates -> speaker_candidates (b01 x1, b02 x13) and paragraph.format -> kind (b02 x17). Values unchanged. Flagged here so the orchestrator can overrule.",
+  "Not renamed (no canonical b03 counterpart or value-shape difference): scene time (b01) / time_cue (b02); b01 chapter.heading object vs string; interrupted-speech and entity-count conventions; quoted_text (b01) / inscriptions (b02). Listed in _meta.normalization.residual_differences_not_normalized for downstream readers.",
+  "UNKNOWN rate uses dialogue entries (dialogue/thought/verse) as denominator; b01 quoted_text (8) and b02 inscriptions (1) are non-speech and excluded. Group speakers (CROWD, CHORUS, 'the party (chorus)', etc.) count as attributed, per batch rulings."
+ ],
+ "shard_defects": [],
+ "defects_filed": [],
+ "g0_note": "p0-merge machine checks all PASS. Evaluation disabled (quality judge = 0); QA dimensions at 0.",
+ "skills": "none selected for this station"
+}

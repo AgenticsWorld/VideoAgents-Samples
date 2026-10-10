@@ -1,0 +1,28 @@
+{
+  "character_id": "CHAR-executioner",
+  "name": "the Executioner",
+  "tier": "extra",
+  "card_type": "individual",
+  "gender": "male",
+  "age_sense": "older man (appearance base_age_range 58-65)",
+  "timbre": "heavy, gravelly, slow older man's voice, gruff but mild, a bit wheezy",
+  "pitch": "low bass, flat and stubborn",
+  "pitch_range_hz": [75, 130],
+  "speed_wpm": [105, 125],
+  "speed_cpm": [399, 475],
+  "accent": "plain working-class southern English, broad vowels",
+  "reference_style": "Stubborn old tradesman in the farcical beheading dispute (SUP-005/SUP-014): he has never had to do such a thing and won't begin at his time of life. Reported speech only in the source; card provided because the film has no narration and the argument must be spoken if staged.",
+  "emotion_range": {
+    "stubborn": { "speed_delta": "0%", "pitch_delta": "0semi", "note": "plodding argument" },
+    "exasperated": { "speed_delta": "+10%", "pitch_delta": "+2semi", "volume": "loud", "note": "everyone talking at once" }
+  },
+  "age_variants": [],
+  "source_chapter": "ch008",
+  "sources": ["ch008", "ch008-p66"],
+  "voice_evidence": [
+    { "para": "ch008-p66", "quote": "that he had never had to do such a thing before, and he wasn’t going to begin at _his_ time of life." }
+  ],
+  "inferred": true,
+  "inferred_fields": ["timbre", "pitch", "pitch_range_hz", "speed_wpm", "speed_cpm", "accent"],
+  "reason": "Only reported speech in the source (no structured_story dialogue line); designed from appearance age and build. Precautionary card since narration is off."
+}

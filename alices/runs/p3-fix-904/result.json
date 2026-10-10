@@ -1,0 +1,32 @@
+{
+  "task_id": "p3-fix-904",
+  "agent": "03-characters/relationship",
+  "status": "done",
+  "date": "2026-09-22",
+  "defect": "qa/defects/DEF-p3-char-index-904.json",
+  "defect_status": "closed",
+  "changes": [
+    {
+      "file": "bible/characters/relationship.json",
+      "edits": [
+        "added edge CHAR-duchess <-> CHAR-duchess-baby kinship (ev0026)",
+        "added edge CHAR-alice -> CHAR-duchess-baby alliance (ev0026, ev0027)",
+        "unregistered_participants TERM-0039 status -> resolved",
+        "isolation_review.note: 43 -> 44 CHAR ids"
+      ]
+    },
+    {
+      "file": "qa/defects/DEF-p3-char-index-904.json",
+      "edits": [
+        "status closed + fix_note"
+      ]
+    }
+  ],
+  "machine_check": {
+    "script": "code/p3-relationship_check.py",
+    "overall": "PASS",
+    "edge_ids_valid": "PASS",
+    "edges": 82
+  },
+  "notes": "Bible v1 locked: no other bible files touched. Evaluation/QA disabled per project settings. Finding -b required no change. Skills: none selected for this station."
+}

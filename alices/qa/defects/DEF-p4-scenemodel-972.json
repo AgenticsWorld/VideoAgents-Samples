@@ -1,0 +1,20 @@
+{
+  "id": "DEF-p4-scenemodel-972",
+  "opened_by": "05-scenes/scene-modeling",
+  "opened_on": "2026-09-23",
+  "task_id": "p4-scene-model-sb2",
+  "domain": "scenemodel",
+  "assigned_to": ["06-art/environment-concept", "user (H2 decision at G4)"],
+  "status": "open",
+  "severity": "major",
+  "summary": "Hero objects in the plan images are drawn several times larger than the Bible, inside maps whose extent is in true units. The whiteboxes use the Bible true sizes on the landmark points.",
+  "findings": [
+    {"scene": "SCN-caterpillar-clearing", "issue": "Mushroom cap drawn about 2.1 m across (the x9-set size) vs true 0.244 m (cap top 0.15 m = Alice's height). Result: the buttercup landmark is 4.2 m true (about 28 Alice-heights) from the mushroom, whereas the text puts it 'near the mushroom'."},
+    {"scene": "SCN-wood-thistle-glade", "issue": "Thistle rosette drawn about 4.4 m across vs Bible 1.2 m tall; stick pile drawn about 3.5 m vs true sticks 0.11-0.22 m."},
+    {"scene": "SCN-pigeon-treetop", "issue": "Nest drawn about 3.5 m across vs Bible 0.6 m."}
+  ],
+  "options": [
+    "A: accept the whiteboxes as modelled; whitebox-staging cuts between the buttercup and mushroom beats rather than walking the distance",
+    "B: environment-concept redraws the tiny-scale plans consistently (either all true units with true-size flora, or declare the map in x9 set units) and recalibrates layout.json; scene-modeling re-models"
+  ]
+}

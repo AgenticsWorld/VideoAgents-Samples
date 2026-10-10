@@ -1,0 +1,29 @@
+{
+  "task_id": "p3-bible-defects-2",
+  "agent": "00-orchestration/memory-bible",
+  "status": "done",
+  "date": "2026-09-22",
+  "summary": "Triaged 3 new minor defects. None touches the locked v1 worldbuilding files, so no BIB change was made. All three concern Phase 3 files (scenes, characters) or story/structured_story. Each ticket gets a memory-bible ruling and an exact fix instruction and is routed to its owner. None needs a user creative ruling.",
+  "dispositions": [
+    {"ticket": "DEF-p3-lighting-101", "disposition": "routed_open", "assigned_to": "05-scenes/environment", "ruling": "Architecture orientation governs: north lane front, WSW sun. The source says only 'bright' brass (ch004-p03). Environment S01 sun note is changed to put the plate in bright open shade. Architecture is not changed."},
+    {"ticket": "DEF-p3-voice-001", "disposition": "routed_open", "assigned_to": "03-characters/dialogue-style", "ruling": "Cheshire Cat is female (inferred, H1 5.3 B Dinah echo; already ruled under DEF-p3-appearance-001). Replace 12 he/his/him in dialogue_style.json with she/her. voice.json stays as it is."},
+    {"ticket": "DEF-p3-voice-002", "disposition": "routed_open", "assigned_to": "03-characters/character-manager (a) + 01-story/novel-parser (b)", "ruling": "(a) Duplicate of DEF-p3-appearance-302: CHORUS = Duchess + cook + baby (ch006-p37), crowd ensemble is ch004 only. (b) ch007-d0002 speakers = Hatter, March Hare, Dormouse ('the three', ch007-p02). (c) ch010-d0084 stays UNKNOWN (unattributed in the source). The court-officers voice mapping is accepted as inferred staging for screenplay to confirm."}
+  ],
+  "needs_user_ruling": [],
+  "checks": {"code/p2-merge_check.py": {"cross_refs_valid_all_namespaces": "PASS", "no_unknown_placeholder": "PASS", "dictionary_hit_100pct": "PASS", "quote_verification_warn": "WARN 0/560"}, "report": "runs/p3-bible-defects-2/p2-merge_check.json"},
+  "notify_orchestrator": {
+    "bible_changes": [],
+    "mark_dirty": [],
+    "dispatch": [
+      "05-scenes/environment: DEF-p3-lighting-101 (one sun note in SCN-rabbit-house-exterior/environment.json)",
+      "03-characters/dialogue-style: DEF-p3-voice-001 (pronouns in CHAR-cheshire-cat/dialogue_style.json)",
+      "03-characters/character-manager: DEF-p3-voice-002 (a), fix together with DEF-p3-appearance-302 in the index.json pass already in progress",
+      "01-story/novel-parser: DEF-p3-voice-002 (b), speaker of ch007-d0002"
+    ],
+    "note": "No Phase 4+ artefacts consume these fields yet, so nothing needs to be marked dirty. character-manager is already editing index.json and was not touched here."
+  },
+  "not_touched": ["bible/characters/index.json (character-manager editing in parallel)", "bible/scenes/**", "bible/characters/**", "story/**", "all locked v1 files"],
+  "skills": "none selected for this station",
+  "files_modified": ["qa/defects/DEF-p3-lighting-101.json", "qa/defects/DEF-p3-voice-001.json", "qa/defects/DEF-p3-voice-002.json"],
+  "files_created": ["runs/p3-bible-defects-2/result.json", "runs/p3-bible-defects-2/p2-merge_check.json"]
+}

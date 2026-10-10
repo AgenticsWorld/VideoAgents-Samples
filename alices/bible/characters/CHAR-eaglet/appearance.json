@@ -1,0 +1,50 @@
+{
+  "character_id": "CHAR-eaglet",
+  "name": "Eaglet",
+  "tier": "extra",
+  "layer": "dream",
+  "revision": { "change_id": "BIB-0027", "task_id": "p4-cr-appearance", "date": "2026-09-23", "note": "Rewritten from the human-performer reading to a photoreal CGI animal." },
+  "rendering": {
+    "mode": "photoreal_cgi_animal",
+    "rule": "bible/cultivation.json SUP-002 (amended BIB-0027); member of FAC-caucus-race-company (no uniform)",
+    "species": "golden eagle (Aquila chrysaetos) chick, late downy stage with first dark feathers coming through",
+    "limits": "Raptor chick anatomy throughout; speech by beak movement. No clothing, no cartoon face."
+  },
+  "gender": "female",
+  "gender_note": { "inferred": true, "reason": "The source calls the Eaglet 'it'. A cheeky young fledgling who mocks the Dodo's long words and hides a smile (ch003-p15); female, the party's youngest." },
+  "base_age_range": "8-9",
+  "base_age_note": { "inferred": true, "reason": "Persona age (a child younger than Alice), kept for voice casting. As an animal: a golden-eagle chick of about six to seven weeks, still half in down." },
+  "hair": {
+    "coat": "down and emerging feathers",
+    "color": "creamy white-buff down with dark brown contour feathers breaking through on the wings and back",
+    "style": "fluffy, flyaway, uneven; plastered into wet spikes on arrival, fluffing out enormously as it dries",
+    "source_chapter": "ch003",
+    "source_para": "ch003-p01",
+    "quote": "the birds with draggled feathers",
+    "colour_inferred": true,
+    "reason": "Wet state sourced; colours follow the species at this stage."
+  },
+  "eyes": { "color": "dark brown", "expression": "bright, sharp, mischievous; ducks her head into her down to hide a smile", "source_chapter": "ch003", "source_para": "ch003-p15", "quote": "the Eaglet bent down its head to hide a smile", "colour_inferred": true, "reason": "Young golden eagles have dark brown eyes; expression sourced and played as a head-duck." },
+  "skin": { "tone": "pale yellow cere and feet", "inferred": true, "reason": "Species." },
+  "face": { "shape": "big-headed chick with an oversized hooked beak", "features": ["dark hooked beak with yellow cere", "heavy brow ridge already forming", "quick darting head movements"], "inferred": true, "reason": "Species." },
+  "build": {
+    "height_range_cm": [40, 48],
+    "height_note": "Standing height of a large downy chick.",
+    "body_type": "round, fluffy, clumsy, big-footed",
+    "posture": "restless, hops rather than walks, flaps half-grown wings",
+    "scale_reference": "The youngest of the party but not the smallest: about the Dodo's chest height, bigger than the Lory and the Canary.",
+    "inferred": true,
+    "reason": "Species-true for the chosen stage; 'young' reading kept."
+  },
+  "entry_state": { "state": "first seen dripping wet, down plastered flat", "source_chapter": "ch003", "source_para": "ch003-p01", "quote": "the birds with draggled feathers" },
+  "marks": [
+    { "type": "plumage", "description": "patchy mix of white down and dark new feathers, her identifier", "position": "whole body", "inferred": true, "reason": "Species stage." }
+  ],
+  "default_outfit_tone": {
+    "summary": "none: she wears nothing; her look is the half-downy eaglet",
+    "inferred": true,
+    "reason": "The text gives the Eaglet no clothing; per SUP-002 (BIB-0027) the old frock and feather collar are dropped."
+  },
+  "doubling": null,
+  "prompt_base_en": "photoreal golden eagle chick about six weeks old, fluffy creamy white-buff down with dark brown feathers breaking through on the wings, wet and spiky, oversized dark hooked beak with yellow cere, bright dark eyes, big yellow feet, standing on a muddy pool bank ducking its head mischievously, natural bird anatomy, live-action film plate"
+}

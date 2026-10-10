@@ -1,0 +1,34 @@
+{
+  "shot_id": "sh066",
+  "scene_id": "SCN-long-hall",
+  "size": "medium",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "mid_right",
+    "anchor_xy": [0.66, 0.50],
+    "size_in_frame": "a fragment crossing the frame — a hand, then a knee, then a bent back; no single part of her is less than a third of frame height and none of her is whole"
+  },
+  "second_subject": {
+    "id": "PROP-golden-key",
+    "grid": "centre",
+    "anchor_xy": [0.44, 0.46],
+    "note": "pinched between finger and thumb, the size of a crumb in her fingers — still the brightest object in frame, and now absurd."
+  },
+  "headroom": "none; she is cropped at the top by the frame and above her by the vault. The only air in the picture is at the far left, over the low curtain.",
+  "horizon_eyeline": "Lens 0.9 m from beside the glass table: the tabletop plane crosses at 0.72 of frame height, now low and small. No eyeline — her face is not in this frame.",
+  "layers": {
+    "fg": "her hand and the key, sharp, and the bare glass tabletop she has just lifted it from",
+    "mg": "her bent back crossing the frame right to left as she hurries",
+    "bg": "the low curtain and the west wall, glimpsed past her between the parts of her body"
+  },
+  "gaze": {
+    "direction": "frame_left",
+    "lead_room": "left",
+    "note": "she is heading frame left toward the curtain and the little door; her body's direction of travel is the only eyeline the shot has, and the lead room ahead of her is almost entirely blocked by her own moving mass."
+  },
+  "balance": "Chaotically overloaded on the right by body, with one very small bright object near the centre. The frame cannot contain her and stops trying.",
+  "leading_lines": "The tabletop edge runs left into the frame and the curve of her back runs the same way above it — two parallel sweeps carrying the eye toward the door she is going to.",
+  "eye_first": "The key, tiny and gold in an enormous hand, and the size joke is made in that one glance.",
+  "safe_area_ok": true,
+  "constraint_binding": "At 2.74 m she can never be framed whole, so the composition is built from fragments in motion. The key is the size of a crumb in her fingers — the scale joke paid off — so the key and her fingertips are at the same focal plane and both sharp, with no insert to help them."
+}

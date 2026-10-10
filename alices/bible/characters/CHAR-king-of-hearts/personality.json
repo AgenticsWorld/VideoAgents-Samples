@@ -1,0 +1,122 @@
+{
+  "_meta": {
+    "file": "bible/characters/CHAR-king-of-hearts/personality.json",
+    "owner": "03-characters/personality",
+    "produced_by_task": "p3-personality-pb1",
+    "produced_on": "2026-09-22",
+    "content_language": "en",
+    "status": "draft_v1"
+  },
+  "character_id": "CHAR-king-of-hearts",
+  "name": "King of Hearts",
+  "tier": "A",
+  "layer": "dream",
+  "temperament": "Timid, fussy and self-important. He hides behind procedure, spectacles and his wife. He is quietly softer than the Queen, but vain about looking wise and quick to threaten anyone weaker when he feels unsure.",
+  "traits": [
+    {
+      "trait": "Timid, defers to the Queen",
+      "description": "Restrains the Queen only 'timidly', hands her the hard parts, and never overrules her in public.",
+      "evidence": [
+        { "chapter": "ch008", "chapter_no": 8, "ref": "ch008-p20", "event": "ev0034", "quote": "The King laid his hand upon her arm, and timidly said “Consider, my dear: she is only a child!”", "note": "His one attempt to restrain her." },
+        { "chapter": "ch011", "chapter_no": 11, "ref": "ch011-p73", "event": "ev0047", "quote": "Really, my dear, _you_ must cross-examine the next witness. It quite makes my forehead ache!", "note": "Passes the difficult job to her." }
+      ]
+    },
+    {
+      "trait": "Quietly merciful in secret",
+      "description": "Undoes the Queen's sentences out of her hearing. Kind, but not brave enough to say so openly.",
+      "evidence": [
+        { "chapter": "ch009", "chapter_no": 9, "ref": "ch009-p42", "event": "ev0040", "quote": "Alice heard the King say in a low voice, to the company generally, “You are all pardoned.”", "note": "A secret pardon." }
+      ]
+    },
+    {
+      "trait": "Vain about seeming wise; invents rules and reasons",
+      "description": "Wants to look judicial. He makes up rules, twists evidence into conclusions and fishes for applause.",
+      "evidence": [
+        { "chapter": "ch012", "chapter_no": 12, "ref": "ch012-p14", "event": "ev0050", "quote": "Rule Forty-two", "note": "A rule invented on the spot (LAW-002)." },
+        { "chapter": "ch012", "chapter_no": 12, "ref": "ch012-p33", "event": "ev0051", "quote": "You _must_ have meant some mischief, or else you’d have signed your name like an honest man.", "note": "Takes the lack of a signature as proof of guilt." },
+        { "chapter": "ch012", "chapter_no": 12, "ref": "ch012-p57", "event": "ev0051", "quote": "“It’s a pun!” the King added in an offended tone", "note": "Offended that his joke got no laugh." }
+      ]
+    },
+    {
+      "trait": "Bullies those beneath him when he is unsure",
+      "description": "Threatens a nervous witness with execution to cover his own muddle.",
+      "evidence": [
+        { "chapter": "ch011", "chapter_no": 11, "ref": "ch011-p27", "event": "ev0046", "quote": "don’t be nervous, or I’ll have you executed on the spot", "note": "To the Hatter." },
+        { "chapter": "ch011", "chapter_no": 11, "ref": "ch011-p52", "event": "ev0046", "quote": "“You’re a _very_ poor _speaker_,” said the King.", "note": "Puts the witness down." }
+      ]
+    },
+    {
+      "trait": "Easily unsettled, self-protective",
+      "description": "The Cat's gaze frightens him and he hides behind Alice. He is eager to have the threat removed, and happy to fetch the executioner himself.",
+      "evidence": [
+        { "chapter": "ch008", "chapter_no": 8, "ref": "ch008-p56", "event": "ev0037", "quote": "He got behind Alice as he spoke.", "note": "Hides behind a child." },
+        { "chapter": "ch008", "chapter_no": 8, "ref": "ch008-p60", "event": "ev0037", "quote": "“I’ll fetch the executioner myself,” said the King eagerly", "note": "Eager when the threat is to him." }
+      ]
+    },
+    {
+      "trait": "Unsure of words; weighs how things sound, not what they mean",
+      "description": "Needs the Rabbit to prompt him, and tries out 'important' and 'unimportant' as if they were interchangeable.",
+      "evidence": [
+        { "chapter": "ch012", "chapter_no": 12, "ref": "ch012-p12", "event": "ev0049", "quote": "as if he were trying which word sounded best", "note": "Justice as a matter of sound." }
+      ]
+    }
+  ],
+  "motivation": {
+    "core": "To keep the peace at home and look like a proper judge-king, without ever having to confront the Queen.",
+    "want": "A verdict reached quickly with a show of correct procedure; a quiet life; to be thought clever.",
+    "fear": "The Queen's temper, being made a fool of in public, and anything he can't control (the grinning Cat).",
+    "evidence": [
+      { "chapter": "ch012", "chapter_no": 12, "ref": "ch012-p22", "event": "ev0050", "quote": "The King turned pale, and shut his note-book hastily.", "note": "Caught out by Alice, he retreats into procedure." },
+      { "chapter": "ch011", "chapter_no": 11, "ref": "ch011-p13", "event": "ev0045", "quote": "Consider your verdict", "note": "Wants the verdict at once." }
+    ],
+    "shifts": [
+      { "chapter": "ch009", "chapter_no": 9, "event": "ev0040", "from": "silent consort", "to": "secret pardoner: his mercy shows, though only in a whisper", "evidence_ref": "ch009-p42" },
+      { "chapter": "ch012", "chapter_no": 12, "event": "ev0050", "from": "presiding judge, confident in his rules", "to": "exposed and pale: Alice sees through Rule Forty-two", "evidence_ref": "ch012-p22" }
+    ]
+  },
+  "habits": [
+    { "habit": "Keeps calling for the verdict ('Consider your verdict'), about twenty times a day", "evidence_ref": "ch012-p57", "event": "ev0051" },
+    { "habit": "Puts on spectacles and looks anxiously round at any noise", "evidence_ref": "ch011-p07", "event": "ev0045" },
+    { "habit": "Writes busily in a note-book, then reads a 'rule' out of it", "evidence_ref": "ch012-p14", "event": "ev0050" },
+    { "habit": "Glances anxiously at the White Rabbit for cues", "evidence_ref": "ch011-p67", "event": "ev0047" },
+    { "habit": "Folds his arms and frowns hard to look severe", "evidence_ref": "ch011-p68", "event": "ev0047" },
+    { "habit": "Rubs his hands when he thinks he has found proof", "evidence_ref": "ch012-p47", "event": "ev0051" }
+  ],
+  "decision_pattern": "Looks for a rule, a formula or a prompt to decide for him. When there is none he invents one, or hands the decision to the Queen. He says what the Queen wants in public and softens it in private.",
+  "taboos": [
+    { "taboo": "Never openly overrules or contradicts the Queen", "rationale": "His mercy is private ('in a low voice'); in public he only appeals to her ('Consider, my dear').", "evidence_ref": "ch009-p42", "event": "ev0040", "qa_check": "No scene where the King countermands the Queen to her face." },
+    { "taboo": "Never actually has anyone executed", "rationale": "SUP-014, and his whispered pardon. His threats to the Hatter are procedural bluster.", "evidence_ref": "ch009-p42", "event": "ev0040", "qa_check": "Execution threats get no follow-through on screen." },
+    { "taboo": "Never admits he has made something up", "rationale": "Insists that Rule Forty-two is 'the oldest rule in the book', and shuts the note-book rather than concede.", "evidence_ref": "ch012-p20", "event": "ev0050", "qa_check": "No confession line." }
+  ],
+  "facade": {
+    "applies": true,
+    "surface": "A grave judge-king in crown and wig, upholding procedure",
+    "true_self": "A timid, well-meaning muddler who makes up the law as he goes and hides behind his wife",
+    "reveal_chapter": "ch012",
+    "reveal_event": "ev0050",
+    "note": "His secret pardon (ch009-p42) shows the kindness under the pomp early. The exposure of his judicial fraud comes with Rule Forty-two."
+  },
+  "waking_life_embodiment": {
+    "applies": true,
+    "adult_trait": "Pompous, procedural authority that is secretly unsure: the magistrate or father-figure who sounds grave, invents 'rules', gives way to a stronger will at home, and smooths things over privately instead of standing up for what is fair.",
+    "waking_source": "The court of justice Alice has only read about in books and newspapers, fused with the placid, deferring masculine authority of her class (her father never appears on screen; world.json frame.social_class).",
+    "evidence": [
+      { "chapter": "ch011", "chapter_no": 11, "ref": "ch011-p02", "event": "ev0045", "quote": "Alice had never been in a court of justice before, but she had read about them in books", "note": "The trial is built from her reading." },
+      { "chapter": "ch011", "chapter_no": 11, "ref": "ch011-p54", "event": "ev0046", "quote": "I’ve so often read in the newspapers", "note": "Newspaper court reports." }
+    ],
+    "inferred": true,
+    "reason": "The trial-from-reading grounding is in the source and world.json cp-court. The father/magistrate reading is a design interpretation. The parents stay off-screen, so this is thematic only, not a doubling."
+  },
+  "performance_keynote": "Card-flat posture, with a crown sitting awkwardly on a wig. Small, anxious eyes behind spectacles, and a voice that starts grave and cracks when he is challenged. His comedy is fussy, not cruel.",
+  "consistency_flags": [
+    {
+      "flag": "The merciful secret pardoner (ch009-p42) versus the eager fetcher of the executioner for the Cat (ch008-p60) and threatener of the Hatter",
+      "note": "Resolved in character, not a defect: he is merciful towards others at no cost to himself, but ruthless when he is frightened. The Cat threatens his dignity, and the Hatter stands between him and a quick verdict. logic-qa should read these as self-protection, not cruelty.",
+      "refs": ["ch009-p42", "ch008-p60", "ch011-p27"],
+      "reported_to": "11-qa/logic-qa (via result.json)"
+    }
+  ],
+  "inferred_fields": ["waking_life_embodiment"],
+  "inferred": true,
+  "reason": "The waking embodiment is a design reading. Everything else is sourced."
+}

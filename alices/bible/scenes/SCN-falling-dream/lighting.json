@@ -1,0 +1,47 @@
+{
+  "_meta": {
+    "file": "bible/scenes/SCN-falling-dream/lighting.json",
+    "owner": "05-scenes/lighting",
+    "task_id": "p3-lighting-sb1",
+    "attempt": 1,
+    "generated": "2026-09-22",
+    "status": "draft_v1",
+    "enum_set": "LGT-ENUM-v1 (defined once in runs/p3-lighting-sb1/result.json)",
+    "inputs": ["bible/scenes/SCN-falling-dream/environment.json", "bible/scenes/SCN-falling-dream/architecture.json"]
+  },
+  "scene_id": "SCN-falling-dream",
+  "layer": "dream",
+  "int_ext": "INT",
+  "daylight_access": "dark_no_sky",
+  "dream_growth": {
+    "grows_from": "LGT-riverbank-01 (the 2 pm sun on the bank) and the dark of the hedge burrow (LGT-field-hedge-burrow-01)",
+    "how": "Alice falls asleep with the high afternoon sun on her closed eyes. That warm red-amber glow of sunlight through eyelids becomes the only light in the shaft: it hangs high above her and fades as she drifts down, while the depth below is the black of the burrow mouth. No lamps, no daylight source in frame.",
+    "ruling": "runs/h1-ruling/ruling.json 5.2 A; cultivation.json SUP-008"
+  },
+  "schemes": [
+    {
+      "lighting_scheme_id": "LGT-falling-dream-01",
+      "condition": {"time_of_day": "early_afternoon", "weather": "none_enclosed"},
+      "state_refs": ["SCN-falling-dream-S01"],
+      "waking_clock": "14:15-14:20 GMT (Alice asleep on the bank)",
+      "sun": null,
+      "key_source": "eyelid_glow_from_above",
+      "key": "a dim warm glow high above the girl, with no visible fixture, falling down the shaft",
+      "direction": "top",
+      "direction_note": "light always comes from above and falls off downward; the wall bands nearest her are readable, the depths are black",
+      "fill": {"source": "none", "note": "no fill; shadow side of the girl and the shaft below go to black, with a faint warm bounce from the mahogany and book spines"},
+      "practicals": [],
+      "color_temp": "warm (~2700K)",
+      "kelvin_approx": 3000,
+      "contrast": "hard",
+      "quality": "soft",
+      "atmosphere": "cool, still, faintly dusty air; motes drifting slowly in the glow",
+      "prompt_fragment_en": "Dream-fall light: no daylight and no lamps; a dim, warm amber-red glow high above, like afternoon sun seen through closed eyelids, falls softly down the round brick shaft and fades as it goes, so the cupboards, bookshelves and pictures nearest the drifting girl are just readable in warm half-light while the shaft below falls away into deep blackness; slow dust motes in the glow, hard fall-off, hushed, drowsy, weightless mood.",
+      "source_chapter": "ch001",
+      "sources": ["ch001-p05", "ch001-p06", "ch001-p10"],
+      "inferred": true,
+      "reason": "Darkness below and readable shelves are explicit (ch001-p06), and she is dozing off (ch001-p10). No light source is named, so the eyelid-glow key is designed per ruling 5.2 A: it keeps the shelves readable without inventing lamps or daylight."
+    }
+  ],
+  "special": []
+}

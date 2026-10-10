@@ -1,0 +1,302 @@
+{
+  "ep": "ep01",
+  "title": "Down the Rabbit-Hole",
+  "task_id": "p5-pacing-ep01",
+  "agent": "01-story/pacing",
+  "version": 2,
+  "status": "draft_for_H3",
+  "based_on": {
+    "screenplay": "story/episodes/ep01/screenplay.md v2 (S01-S10, rough sum 550 s)",
+    "hooks": "story/episodes/ep01/hooks.json v1 (awaiting_selection; recommended oh-1 / ec-2)",
+    "color_script": "bible/color_script.json v1.0.0 episodes[ep01] acts 1-6, peaks[ep01]",
+    "episode_plan": "story/episode_plan.json ep01 (duration_budget_s 540, climax ev0007, cliffhanger ev0008)"
+  },
+  "duration_budget_s": 540,
+  "tolerance": { "pct": 10, "min_s": 486, "max_s": 594 },
+  "allocation_basis": "Assumes the recommended hook pair oh-1 + ec-2. Timings = on-screen dialogue est_duration_s (screenplay v2) + action volume + hook holds. Dialogue load is checked against the downstream fit rule (dialogue ≤ 0.7 × time): every scene has room to spare, the tightest is S08 (51.5 s of lines needs ≥ 73.6 s, it gets 110 s).",
+  "opening_segment": {
+    "id": "HOOK-OPEN",
+    "hook_option": "oh-1",
+    "alloc_s": 3,
+    "timecode_in_s": 0,
+    "source": "trim of the S03 slow-fall wide (SCN-falling-dream); not a scene, counted in total_s",
+    "emotion": { "type": "uncanny wonder", "intensity": 0.6 },
+    "color_note": "Carries the ep01 act 2 fall grade (mid-ramp). The hard cut to S01's high-key waking gold is intended: it is a cut, not a grade ramp, so it does not break color_script's single in-shot ramp rule (that ramp stays inside S03)."
+  },
+  "scenes": [
+    {
+      "scene": "S01",
+      "scene_id": "SCN-riverbank",
+      "events": ["ev0001"],
+      "screenplay_rough_s": 60,
+      "alloc_s": 57,
+      "timecode_in_s": 3,
+      "dialogue_est_s": 6.2,
+      "silent_s_approx": 45,
+      "emotion": { "type": "drowsy boredom tipping into curiosity", "intensity": 0.35, "arc": "0.25 (heat, the pictureless book) → 0.5 (the white rabbit, she runs)" },
+      "color_act": 1,
+      "color_mood": "drowsy summer heat, boredom tipping into curiosity",
+      "beats_s": { "establishing bank + sister reading": 8, "peek at page + LN-001/002": 9, "daisy / heat / eyelids droop": 14, "church clock strikes two": 6, "rabbit passes": 6, "Alice sits up, looks at sister, runs": 14 },
+      "note": "Waking anchor, deliberately calm; the flash-forward in front carries the retention job so S01 can breathe. Clock strike needs a clean ~6 s (two strikes plus decay) because it seeds the lateness motif."
+    },
+    {
+      "scene": "S02",
+      "scene_id": "SCN-field-hedge-burrow",
+      "events": ["ev0001"],
+      "screenplay_rough_s": 30,
+      "alloc_s": 26,
+      "timecode_in_s": 60,
+      "dialogue_est_s": 0,
+      "silent_s_approx": 26,
+      "emotion": { "type": "eager pursuit", "intensity": 0.55 },
+      "color_act": 1,
+      "color_mood": "drowsy summer heat, boredom tipping into curiosity (last waking light)",
+      "beats_s": { "run through meadow": 7, "rabbit drops into burrow": 4, "Alice at the hole, cool shade": 7, "crawls in, boots vanish, sound drains": 8 },
+      "note": "Silent; carried by the chase. Hold the sound drain-out (≈3 s of it) on the empty hedge after the boots vanish: that is the onset of the dream."
+    },
+    {
+      "scene": "S03",
+      "scene_id": "SCN-falling-dream",
+      "events": ["ev0001", "ev0002"],
+      "screenplay_rough_s": 50,
+      "alloc_s": 48,
+      "timecode_in_s": 86,
+      "dialogue_est_s": 11.4,
+      "silent_s_approx": 30,
+      "emotion": { "type": "dreamy wonder, sliding into sleep", "intensity": 0.4, "arc": "0.55 (the drop) → 0.3 (asleep mid-fall) → 0.5 (Thump! Thump!)" },
+      "color_act": 2,
+      "color_mood": "sliding into sleep, curiosity without fear",
+      "beats_s": { "tunnel crawl + drop": 6, "slow fall, well of cupboards": 8, "ORANGE MARMALADE jar": 9, "LN-003": 5, "settles into the fall + LN-004/005": 11, "eyes close, asleep": 6, "Thump! Thump!": 3 },
+      "note": "Deliberate valley in the curve; the only in-shot grade ramp of the film runs across this scene (waking → full dream by the landing). Keep it slow; don't cut it faster to chase retention."
+    },
+    {
+      "scene": "S04",
+      "scene_id": "SCN-shaft-landing-passage",
+      "events": ["ev0003"],
+      "screenplay_rough_s": 30,
+      "alloc_s": 28,
+      "timecode_in_s": 134,
+      "dialogue_est_s": 5.0,
+      "silent_s_approx": 18,
+      "emotion": { "type": "startled excitement, the chase resumes", "intensity": 0.6 },
+      "color_act": "2→3",
+      "color_mood": "sliding into sleep → wonder (full dream grade reached on the landing heap)",
+      "beats_s": { "landing heap, up at once": 5, "Rabbit far down the passage + watch + LN-006": 8, "Alice stares, gives chase": 6, "corner + LN-007": 5, "Alice rounds corner, stops": 4 }
+    },
+    {
+      "scene": "S05",
+      "scene_id": "SCN-long-hall",
+      "events": ["ev0003"],
+      "screenplay_rough_s": 70,
+      "alloc_s": 62,
+      "timecode_in_s": 162,
+      "dialogue_est_s": 0,
+      "silent_s_approx": 62,
+      "emotion": { "type": "puzzlement → wonder → longing", "intensity": 0.55, "arc": "0.4 (locked doors) → 0.7 (the garden glimpsed) → 0.55 (head won't fit)" },
+      "color_act": 3,
+      "color_mood": "wonder at a locked door",
+      "beats_s": { "hall reveal": 5, "door-rattling round": 10, "glass table + golden key": 8, "key fails the big doors": 6, "curtain, little door, key turns": 11, "kneel, the garden through the passage": 12, "forehead to frame, sits back, longing": 10 },
+      "note": "Longest dialogue-free scene of the episode. The garden glimpse (≈12 s) is the colour peak 'wonder' and the film's goal; protect it, compress the door-rattling instead (see trim T2)."
+    },
+    {
+      "scene": "S06",
+      "scene_id": "SCN-long-hall",
+      "events": ["ev0004"],
+      "screenplay_rough_s": 75,
+      "alloc_s": 75,
+      "timecode_in_s": 224,
+      "dialogue_est_s": 23.3,
+      "silent_s_approx": 30,
+      "emotion": { "type": "cautious curiosity → giddy delight → despair", "intensity": 0.65, "arc": "0.45 (DRINK ME) → 0.7 (shrinking) → 0.75 (key out of reach, crying) → 0.6 (self-scolding)" },
+      "color_act": 4,
+      "color_mood": "giddy trial and error",
+      "beats_s": { "bottle + LN-008": 6, "label, LN-009, sip, tasting": 12, "LN-010 + shrink (forced perspective)": 12, "hand on head + LN-011": 8, "door locked, key above": 8, "climbing attempts, slides, cries": 18, "LN-012 self-scold": 11 },
+      "note": "The shrink needs air (≈12 s) to read as forced perspective rather than a cut. Contingency trim T8 (one climbing attempt fewer) only if Phase 6 runs long."
+    },
+    {
+      "scene": "S07",
+      "scene_id": "SCN-long-hall",
+      "events": ["ev0006", "ev0005"],
+      "screenplay_rough_s": 70,
+      "alloc_s": 68,
+      "timecode_in_s": 299,
+      "dialogue_est_s": 24.1,
+      "silent_s_approx": 22,
+      "emotion": { "type": "giddy astonishment", "intensity": 0.7, "arc": "0.5 (EAT ME reasoning) → 0.4 (nothing happens) → 0.8 (telescoping up, 'Curiouser and curiouser!')" },
+      "color_act": 4,
+      "color_mood": "giddy trial and error",
+      "beats_s": { "glass box, EAT ME": 6, "LN-013/013b/014": 16, "bite + LN-015": 5, "nothing; finishes the cake": 7, "rise begins": 6, "LN-016 + feet far below + LN-017": 12, "head knocks vault": 5, "key, lies down, one eye at the door": 11 }
+    },
+    {
+      "scene": "S08",
+      "scene_id": "SCN-long-hall",
+      "events": ["ev0007"],
+      "screenplay_rough_s": 105,
+      "alloc_s": 110,
+      "min_alloc_s": 100,
+      "climax": true,
+      "timecode_in_s": 367,
+      "dialogue_est_s": 51.5,
+      "silent_s_approx": 30,
+      "emotion": { "type": "despair and identity crisis (pinch 1, episode climax)", "intensity": 0.9, "arc": "0.8 (giant weeping, flood) → 0.6 (Rabbit's comic panic and flight) → 0.95 ('who in the world am I?', Mabel, 'so very tired of being all alone') → 0.85 (shrinking by the fan, narrow escape)" },
+      "color_act": 5,
+      "color_mood": "lost, 'Who in the world am I?'",
+      "beats_s": { "hunched, crying + LN-018/018b": 13, "tears flood the hall": 9, "pattering, Rabbit arrives + LN-019": 10, "LN-020, Rabbit bolts, drops gloves and fan": 8, "picks up fan, LN-021/022": 16, "LN-023 beat": 4, "LN-024 recitation": 10, "appalled + LN-025": 7, "eyes fill, LN-026 up to the vault": 11, "glove fits, table taller, fan waving": 10, "flings fan, two feet high + LN-027": 12 },
+      "note": "Protected climax: ≥100 s. +5 s over the screenplay's rough 105 s go to two silent holds that carry un-narrated thoughts: the beat after 'Ah, that's the great puzzle!' and the fan→shrink realisation. For hook oh-3: keep 'who in the world am I?' as a clean line-end inside one shot."
+    },
+    {
+      "scene": "S09",
+      "scene_id": "SCN-long-hall",
+      "events": ["ev0008"],
+      "screenplay_rough_s": 25,
+      "alloc_s": 22,
+      "timecode_in_s": 477,
+      "dialogue_est_s": 1.7,
+      "silent_s_approx": 19,
+      "emotion": { "type": "brief hope → frustration", "intensity": 0.6 },
+      "color_act": 6,
+      "color_mood": "shock, cold plunge (lead-in)",
+      "beats_s": { "LN-028 + run to door": 5, "door shut, key far above": 6, "stamps foot": 4, "runs along the water's edge, slips, Splash!": 7 },
+      "note": "Short breather after the climax and before the cliffhanger. Hard cut on the splash."
+    },
+    {
+      "scene": "S10",
+      "scene_id": "SCN-pool-of-tears",
+      "events": ["ev0008"],
+      "screenplay_rough_s": 35,
+      "alloc_s": 38,
+      "timecode_in_s": 499,
+      "dialogue_est_s": 16.4,
+      "silent_s_approx": 15,
+      "emotion": { "type": "shock → dread-tinged suspense", "intensity": 0.8, "arc": "0.7 (comes up spluttering, salt) → 0.65 (wry 'everything is queer') → 0.85 (splashing, the wake approaches)" },
+      "color_act": 6,
+      "color_mood": "shock, cold plunge",
+      "beats_s": { "surfaces, salt": 5, "LN-029": 4, "flooded-canyon POV, realises it's her tears": 7, "LN-030/030b": 8, "swims + LN-031": 6, "ending hook ec-2 (splash off, turns, V-wake, black, one splash)": 8 },
+      "note": "Includes +2 s for the ec-2 wake insert and the black-plus-splash tail; the last 8 s are the ending hook reserve."
+    }
+  ],
+  "hook_reserve_s": {
+    "opening": 3,
+    "ending": 8,
+    "opening_position": "0.0-3.0 s: HOOK-OPEN (oh-1 flash-forward of the S03 fall), hard cut into S01 at 3.0 s",
+    "ending_position": "529.0-537.0 s: tail of S10 — Alice stops swimming and turns to the sound (≈2 s), water-level V-wake approaches (≈3 s), cut to black and one splash over black (≈3 s)",
+    "compliance": "PASS for every hook option: the opening 3 s is always a hook (oh-1/oh-3 as an added head segment, oh-2 as the first 3 s of S01's reordered book line); the ending hold is ≥6 s in every option."
+  },
+  "hook_option_impact": {
+    "note": "hooks.json is awaiting user selection. Everything is within 486-594 s, so none of the options needs a screenplay cut.",
+    "rows": [
+      { "opening": "oh-1", "ending": "ec-2", "recommended": true, "delta_s": 0, "total_s": 537, "opening_reserve_s": 3, "ending_reserve_s": 8, "impact": "Baseline of this plan." },
+      { "opening": "oh-1", "ending": "ec-1", "delta_s": -2, "total_s": 535, "opening_reserve_s": 3, "ending_reserve_s": 6, "impact": "S10 36 s; the ending holds on Alice's face, then black." },
+      { "opening": "oh-1", "ending": "ec-3", "delta_s": 1, "total_s": 538, "opening_reserve_s": 3, "ending_reserve_s": 9, "impact": "S10 39 s; a rising high wide needs a whitebox camera path in the S10 group." },
+      { "opening": "oh-2", "ending": "ec-2", "delta_s": -3, "total_s": 534, "opening_reserve_s": 3, "ending_reserve_s": 8, "impact": "No head segment. The S01 book-line close-up opens the episode and the establishing wide moves after 'Hush, Alice dear.' S01 stays 57 s. The cold open is weaker for retention because nothing impossible happens in the first 60 s." },
+      { "opening": "oh-2", "ending": "ec-1", "delta_s": -5, "total_s": 532, "opening_reserve_s": 3, "ending_reserve_s": 6, "impact": "The hooks.json fallback that needs no screenplay change." },
+      { "opening": "oh-3", "ending": "ec-2", "delta_s": 0, "total_s": 537, "opening_reserve_s": 3, "ending_reserve_s": 8, "impact": "Same length as oh-1. The head is lifted from S08, so the climax line is heard twice; shot-planning must keep it as a clean line-end." }
+    ]
+  },
+  "emotion_curve": {
+    "shape": "Warm, low plateau (S01-S02) → valley at the fall (S03) → rising wonder/longing (S04-S05, peak at the garden glimpse) → giddy two-step of shrink and grow (S06-S07) → episode peak (S08) → short breather (S09) → high, open cliffhanger (S10).",
+    "points": [
+      { "t_s": 0, "label": "HOOK-OPEN fall", "intensity": 0.6 },
+      { "t_s": 3, "label": "S01 heat, pictureless book", "intensity": 0.25 },
+      { "t_s": 45, "label": "S01 white rabbit passes", "intensity": 0.5 },
+      { "t_s": 72, "label": "S02 into the burrow", "intensity": 0.55 },
+      { "t_s": 125, "label": "S03 asleep mid-fall (valley)", "intensity": 0.3 },
+      { "t_s": 142, "label": "S04 the White Rabbit, 'I shall be late!'", "intensity": 0.6 },
+      { "t_s": 205, "label": "S05 the garden through the little door (wonder peak)", "intensity": 0.7 },
+      { "t_s": 260, "label": "S06 ten inches high", "intensity": 0.7 },
+      { "t_s": 285, "label": "S06 key out of reach, cries", "intensity": 0.75 },
+      { "t_s": 335, "label": "S07 'Curiouser and curiouser!'", "intensity": 0.8 },
+      { "t_s": 395, "label": "S08 the Rabbit flees (comic relief dip)", "intensity": 0.6 },
+      { "t_s": 420, "label": "S08 'who in the world am I?' (EPISODE PEAK)", "intensity": 0.95 },
+      { "t_s": 470, "label": "S08 narrow escape", "intensity": 0.85 },
+      { "t_s": 490, "label": "S09 door shut again (breather)", "intensity": 0.6 },
+      { "t_s": 499, "label": "S10 plunge", "intensity": 0.75 },
+      { "t_s": 536, "label": "S10 the wake reaches her (cliffhanger)", "intensity": 0.85 }
+    ],
+    "peaks": ["S05 garden glimpse (color peak ep01 act 3 'wonder')", "S08 identity question (color peak ep01 act 5 'dark_moment'; episode_plan climax ev0007)", "S10 cliffhanger"],
+    "valleys": ["S01 opening heat (waking anchor, color peak act 1)", "S03 falling asleep", "S09 breather"],
+    "climax_share": "S08 = 110 s = 20.5% of the episode; S08+S10 = 27.6%. The climax is not spread thin."
+  },
+  "color_alignment": {
+    "status": "aligned, with one minor note",
+    "mapping": { "act 1": ["S01", "S02"], "act 2": ["HOOK-OPEN", "S03", "S04 (landing)"], "act 3": ["S04 (passage)", "S05"], "act 4": ["S06", "S07"], "act 5": ["S08"], "act 6": ["S09", "S10"] },
+    "checks": [
+      "Colour peaks line up with pacing peaks and valleys: act 1 waking anchor = S01 valley; act 3 'wonder' = S05 garden-glimpse peak; act 5 'dark_moment' = S08 episode peak; act 6 plunge = S10 cliffhanger.",
+      "The in-shot grade ramp of act 2 fits S03's 48 s allocation and has room to finish by the S04 landing heap (color_script: 'reach the full dream grade by the landing heap').",
+      "The S08 comic beat (the Rabbit's entrance and flight, ≈18 s) is a brief intensity dip inside the 'lost' act. It does not conflict: the palette stays act 5, and the dip sets up the 0.95 peak."
+    ],
+    "minor_note": "S08 screenplay: 'lamplight trembles on [the tear water]' vs color_script act 5: 'The candles are out of frame… lowest luma', with no candle_amber in the act 5 palette. Reflected lamplight on the water can live with lamps out of frame, but lighting/cinematography must decide. Logged as qa/defects/DEF-p5-pacing-ep01-001.json (minor). Pacing is not affected, and color_script was not changed."
+  },
+  "silent_stretches": {
+    "rule": "Narration is off. Every dialogue-free stretch must tell its story in picture and diegetic sound. Verdicts: carried / carried_with_conditions / not_carried.",
+    "items": [
+      {
+        "span": "S01 after LN-002 → S02 → S03 up to LN-003 (≈18 s → ≈100 s)",
+        "length_s": 82,
+        "verdict": "carried_with_conditions",
+        "why": "The chase is clear goal-driven action: rabbit, pursuit, burrow, fall. One beat cannot be read in picture: the daisy-chain calculation ('whether the pleasure of making a daisy-chain would be worth the trouble'). As staged it reads only as 'bored, drowsy'. That is enough, so play it as one gesture, not as a sequence of 'weighing' shots.",
+        "condition": "Keep the drop-daisy moment short (trim T1). The dream onset must come from the sound drain in S02 and the colour ramp in S03, because no title card is allowed."
+      },
+      {
+        "span": "S05 whole scene + S06 opening (≈162 s → ≈229 s)",
+        "length_s": 67,
+        "verdict": "carried",
+        "why": "Each beat is a clear physical problem and attempt: locked doors, key, too small, curtain, little door, garden, head too big. The goal (the garden) is shown on screen, not thought. Main risk is monotony, not clarity, so compress the door-rattling (T2).",
+        "condition": "The garden glimpse needs a POV through the passage and a return shot of Alice's face (≈12 s)."
+      },
+      {
+        "span": "S08 fan→shrink realisation (≈455 s → ≈467 s)",
+        "length_s": 10,
+        "verdict": "carried_with_conditions",
+        "why": "Source cause 'How can I have done that? … it's the fan' is a thought (ch002-p14). Only the picture can show that the fan makes her shrink.",
+        "condition": "shot-planning: 1) an insert of the fan still waving while the table visibly rises past her; 2) shrinking stops the instant the fan leaves her hand. Without both, 'flings the fan away just in time' makes no sense."
+      },
+      {
+        "span": "S09 after LN-028 (≈479 s → ≈499 s)",
+        "length_s": 20,
+        "verdict": "carried",
+        "why": "Clear run, shut door, key out of reach, stamp, slip."
+      }
+    ],
+    "not_carried": [
+      {
+        "scene": "S10",
+        "line": "LN-ep01-029 “And in that case I can go back by railway.”",
+        "problem": "In the source this line answers an unspoken thought ('her first idea was that she had somehow fallen into the sea', ch002-p16). The adaptation note drops that thought, so 'in that case' points at nothing on screen. She has just come up in what looks like water in a hall, and the viewer can't infer 'the sea'. With narration off, the line reads as a non sequitur.",
+        "recommendation": "Route via orchestrator to 01-story/screenplay / dialogue-rewrite (not edited here). Either (a) add a spoken lead-in taken from the source, e.g. CHAR-alice: “I must have fallen into the sea!” (~2 s; S10 → 40 s, total 539 s), or (b) cut LN-029 and let the licked-salt beat carry the 'sea' idea (−4 s, total 533 s). Either way, the total stays within budget."
+      }
+    ]
+  },
+  "trim_suggestions": [
+    { "id": "T1", "scene": "S01", "save_s": 3, "how": "Shorter establishing (one wide + one push-in, not three angles); daisy beat as a single pick-and-drop gesture.", "risk": "low", "requires_screenplay_change": false, "executor": "shot-planning / edit (allocation only)" },
+    { "id": "T2", "scene": "S05", "save_s": 8, "how": "Door-rattling as one tracking pass along 3-4 doors, not a full circuit of both walls; the key-in-every-lock attempts collapse into two tries and a cut.", "risk": "low", "requires_screenplay_change": false, "executor": "shot-planning / edit (allocation only)" },
+    { "id": "T3", "scene": "S02", "save_s": 4, "how": "One running shot and one reverse at the hedge; burrow entry in two shots.", "risk": "low", "requires_screenplay_change": false, "executor": "shot-planning" },
+    { "id": "T4", "scene": "S03", "save_s": 2, "how": "Tighten the tunnel crawl before the drop.", "risk": "low", "requires_screenplay_change": false, "executor": "shot-planning" },
+    { "id": "T5", "scene": "S04", "save_s": 2, "how": "Landing and 'jumps to her feet' in one shot.", "risk": "low", "requires_screenplay_change": false, "executor": "shot-planning" },
+    { "id": "T6", "scene": "S07", "save_s": 2, "how": "Finishing the cake in one shot with crumbs brushed off.", "risk": "low", "requires_screenplay_change": false, "executor": "shot-planning" },
+    { "id": "T7", "scene": "S09", "save_s": 3, "how": "Run to the door and discover it shut in one move; no second look back.", "risk": "low", "requires_screenplay_change": false, "executor": "shot-planning" },
+    { "id": "T8", "scene": "S06", "save_s": 4, "how": "CONTINGENCY, only if Phase 6 Σ shots runs over: two slide-down attempts instead of three ('Again. Again.').", "risk": "low", "requires_screenplay_change": true, "executor": "screenplay via orchestrator (only if triggered)" },
+    { "id": "T9", "scene": "S10", "save_s": 4, "how": "CONTINGENCY / clarity: cut LN-029 railway line (see silent_stretches.not_carried).", "risk": "medium (removes a period-flavour line, the 'sea' idea is then carried only by salt)", "requires_screenplay_change": true, "executor": "screenplay / dialogue-rewrite via orchestrator" }
+  ],
+  "rebalanced_up": [
+    { "scene": "S08", "add_s": 5, "why": "Protected climax: silent holds for the un-narrated identity thought and for the fan→shrink realisation." },
+    { "scene": "S10", "add_s": 3, "why": "ec-2 wake insert (+2 s) and the black-plus-splash tail." }
+  ],
+  "downstream_notes": {
+    "shot-planning": "Scene alloc_s is the Σ-shot basis (±10% per episode). S08 must keep ≥100 s. For oh-3, 'who in the world am I?' must end cleanly inside one shot. See the fan→shrink condition in silent_stretches. Every scene fits the dialogue ≤ 0.7 × time rule.",
+    "edit": "HOOK-OPEN is a 3 s lift from the S03 slow-fall wide, hard-cut into S01. Cut to black at the end on the ec-2 wake; the splash plays over black.",
+    "music": "Suggested BGM windows (keeps coverage near 40%): S03 fall (86-134 s); S05 from the curtain to the garden glimpse (≈190-224 s); S07 rise (≈320-345 s); S08 from LN-026 to the narrow escape (≈440-477 s); S10 cliffhanger tail (≈525-537 s). Leave S01, S02, S04, S06 dialogue and the S08 recitation dry.",
+    "director": "The curve peaks at S08 and needs S09 as a real breather before S10. Do not cut S09 below ≈20 s."
+  },
+  "constraints_honoured": [
+    "Narration off: no voice-over time is allocated, and silent stretches were checked for picture-only clarity.",
+    "No captions, text cards, intro, outro or teaser; the opening hook is picture and sound only.",
+    "SUP-001 dream frame: the in-shot grade ramp stays in S03; the dream onset has no title card.",
+    "SUP-002 (as amended by BIB-0027): the real, mute, unclothed rabbit (CRE-001) appears only in the waking frame, S01-S02; the dream White Rabbit (S04, S08) is a photoreal CGI animal composited into the live-action plates, with only its period props (waistcoat, watch, white kid gloves, fan). Timings unchanged.",
+    "DEF-p3-char-index-902 / 903: not applicable to ep01 (no executioner, no lullaby).",
+    "Screenplay not edited; trims are allocation-level or routed as proposals."
+  ],
+  "scenes_sum_s": 534,
+  "total_s": 537,
+  "total_formula": "HOOK-OPEN 3 + Σ scenes 534 = 537 s; budget 540 s → −0.6% (window 486-594)."
+}

@@ -1,0 +1,89 @@
+{
+  "character_id": "CHAR-pigeon",
+  "name": "The Pigeon",
+  "source_language": "en",
+  "source_speaker_labels": ["Pigeon"],
+  "produced_by_task": "p3-dialogue-style-pb2",
+  "register": {
+    "level": "harried, sleepless mother guarding her eggs: shrieking accusation alternating with a sobbing litany of grievance",
+    "summary": "She has decided Alice is a serpent and no evidence will move her. She speaks at, not to, Alice ('without attending to her', ch005-p53): long complaints built on repetition (I've tried …, and I've tried …, and I've tried …; just as I'd …, and just as I was …), shrieked accusations (Serpent!), and contemptuous dismissal (A likely story indeed!). Her logic bends every fact to her fear (if little girls eat eggs, they're a kind of serpent). Per SUP-002 (amended BIB-0027) a photoreal CGI pigeon, agitated wing-beats punctuating the shrieks, defending an unseen nest.",
+    "examples": [
+      { "ref": "ch005-d0049", "chapter": 5, "text": "Serpent!" },
+      { "ref": "ch005-d0053", "chapter": 5, "text": "I've tried the roots of trees, and I've tried banks, and I've tried hedges, but those serpents! There's no pleasing them!" },
+      { "ref": "ch005-d0062", "chapter": 5, "text": "I don't believe it, but if they do, why then they're a kind of serpent, that's all I can say." }
+    ]
+  },
+  "catchphrases": [
+    { "text": "Serpent!", "freq": "high", "count_in_source": 8, "example_refs": ["ch005-d0049", "ch005-d0051", "ch005-d0056"], "example_chapters": [5] },
+    { "text": "I've tried …", "freq": "medium", "count_in_source": 4, "example_refs": ["ch005-d0051", "ch005-d0053"], "example_chapters": [5] },
+    { "text": "eggs", "freq": "medium", "count_in_source": 3, "example_refs": ["ch005-d0054", "ch005-d0060", "ch005-d0063"], "example_chapters": [5] }
+  ],
+  "sentence_style": {
+    "length": "mixed: a shrieked single word (Serpent!) against long run-on complaints of 20-30 words; mean 21.2 words over 10 lines",
+    "mean_words": 21.2,
+    "patterns": [
+      {
+        "rule": "Accusation by epithet, shrieked and repeated regardless of reply (Serpent! / Serpent, I say again! / Ugh, Serpent! / You're a serpent).",
+        "examples": [
+          { "ref": "ch005-d0049", "chapter": 5, "text": "Serpent!" },
+          { "ref": "ch005-d0051", "chapter": 5, "text": "Serpent, I say again!" },
+          { "ref": "ch005-d0056", "chapter": 5, "text": "…they must needs come wriggling down from the sky! Ugh, Serpent!" }
+        ]
+      },
+      {
+        "rule": "Grievance litany: anaphora and accumulation (I've tried …, and I've tried …; just as I'd …, and just as I was …; As if it wasn't trouble enough …, but I must …), ending in an exclamation of despair.",
+        "examples": [
+          { "ref": "ch005-d0053", "chapter": 5, "text": "I've tried the roots of trees, and I've tried banks, and I've tried hedges, but those serpents! There's no pleasing them!" },
+          { "ref": "ch005-d0054", "chapter": 5, "text": "As if it wasn't trouble enough hatching the eggs, but I must be on the look-out for serpents night and day!" }
+        ]
+      },
+      {
+        "rule": "Contemptuous disbelief and dismissal (A likely story indeed! / I don't believe it / there's no use denying it / I can see you're trying to invent something / Well, be off, then!).",
+        "examples": [
+          { "ref": "ch005-d0060", "chapter": 5, "text": "A likely story indeed! … No, no! You're a serpent; and there's no use denying it." },
+          { "ref": "ch005-d0058", "chapter": 5, "text": "Well! What are you? I can see you're trying to invent something!" },
+          { "ref": "ch005-d0065", "chapter": 5, "text": "Well, be off, then!" }
+        ]
+      },
+      {
+        "rule": "Nesting-mother vocabulary: eggs, hatching, the highest tree, the look-out night and day, not a wink of sleep these three weeks.",
+        "examples": [
+          { "ref": "ch005-d0054", "chapter": 5, "text": "Why, I haven't had a wink of sleep these three weeks!" },
+          { "ref": "ch005-d0063", "chapter": 5, "text": "You're looking for eggs, I know that well enough;" }
+        ]
+      }
+    ]
+  },
+  "vocabulary": {
+    "signature_words": ["Serpent", "I've tried", "no pleasing them", "hatching", "eggs", "wink of sleep", "a likely story", "no use denying it", "be off"],
+    "preferred_fields": ["nesting and eggs", "trees, banks, hedges", "fatigue and persecution"],
+    "examples": [
+      { "ref": "ch005-d0056", "chapter": 5, "text": "And just as I'd taken the highest tree in the wood…" }
+    ]
+  },
+  "address": {
+    "self": "I (the long-suffering sufferer at the centre of every sentence)",
+    "to_alice": "Serpent! as a term of address; otherwise 'you' in accusations; never 'child', 'little girl' as an address",
+    "about_serpents": "they / them / those serpents",
+    "examples": [
+      { "ref": "ch005-d0051", "chapter": 5, "text": "Serpent, I say again!" },
+      { "ref": "ch005-d0063", "chapter": 5, "text": "…what does it matter to me whether you're a little girl or a serpent?" }
+    ]
+  },
+  "interjections": ["Ugh,", "Well!", "Why,", "No, no!"],
+  "forbidden_words": [
+    { "domain": "post-1862 slang / modern chat register", "regex": "\\b(okay|ok|cool|guys?|awesome|yeah|yep|nope|gonna|wanna|gotta|kinda|sorta|totally|literally|dude)\\b", "reason": "period drama, 1862" },
+    { "domain": "conceding, apologising or reassuring", "regex": "\\b(sorry|I beg your pardon|forgive me|I believe you|you're right|my mistake|never mind|don't worry)\\b", "reason": "she never accepts Alice's account (ch005-d0060, d0062); a concession would break the scene's logic" },
+    { "domain": "calm, courteous address", "regex": "\\b(my dear|dear child|please|thank you|miss|ma'am|young lady)\\b", "reason": "0 of 10 lines are courteous; she speaks at Alice, not to her" }
+  ],
+  "drift": [
+    { "from_chapter": 5, "to_chapter": 5, "change": "Arc within one scene: shriek (ch005-d0049) → sob-laden grievance (d0051-d0056) → cold contempt and 'logic' (d0058-d0063) → sulky dismissal as she settles back on the nest (d0065, 'in a sulky tone').", "examples": ["ch005-d0049", "ch005-d0054", "ch005-d0060", "ch005-d0065"] }
+  ],
+  "backtest_markers": [
+    { "id": "P1", "rule_ref": "sentence_style.patterns[0] accusation by epithet", "weight": 5, "regex": "\\bserpents?\\b" },
+    { "id": "P2", "rule_ref": "sentence_style.patterns[1] grievance litany", "weight": 4, "regex": "\\b(I've tried|no pleasing|nothing seems to suit|as if it wasn't|just as I)\\b" },
+    { "id": "P3", "rule_ref": "sentence_style.patterns[2] disbelief and dismissal", "weight": 4, "regex": "\\b(a likely story|I don't believe|no use denying|trying to invent|be off|what are you\\?)" },
+    { "id": "P4", "rule_ref": "sentence_style.patterns[3] nesting vocabulary", "weight": 4, "regex": "\\b(eggs?|hatch\\w*|nest|highest tree|wink of sleep|night and day)\\b" }
+  ],
+  "backtest": {"method": "marker-claim back-test (shared yardstick with pb1 and 01-story/dialogue-rewrite): a spoken source line hits when it matches >=1 backtest_markers regex and no forbidden_words regex; verse excluded; full definition runs/p3-dialogue-style-pb2/result.json#backtest_method", "script": "code/p3-dialogue-style-pb1_backtest.py", "run_on": "2026-09-22", "threshold": 0.8, "hit_rate": 1.0, "sample_size": 10, "source_lines_total": 10, "coverage_of_spoken_lines": 1.0, "verse_excluded": 0, "forbidden_violations_in_source": 0, "cross_claim_rate": 0.01, "lift": 102.14, "attribution_top1_rate": 1.0, "misses": [], "pass": true}
+}

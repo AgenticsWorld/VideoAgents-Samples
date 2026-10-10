@@ -1,0 +1,43 @@
+{
+  "shot_id": "sh001",
+  "group_id": "grp001",
+  "scene_no": "S00",
+  "scene_id": "SCN-falling-dream",
+  "duration_s": 4.0,
+  "is_dialogue": false,
+  "group_position": "first_and_last shot of grp001 — Alice holds blocking_map start (shaft_centre); the map gives her no path, so start = end.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "stand",
+      "start_pos": "mid-air at shaft_centre, clear of every wall, the glazed-cupboard wall on her screen-left",
+      "space_fragment_en": "standing upright in mid-air at the open centre of the shaft, centred in frame, facing the glazed cupboards on screen-left",
+      "facing": "body square to the cupboard wall, eyes across and a little down at the passing shelves",
+      "path": [],
+      "beats": [
+        { "t": 0.0, "action": "drifting downward, arms loose at her sides, hair pulled straight up", "sync": "shot opens on the descent already in progress" },
+        { "t": 2.0, "action": "eyes travel up with one shelf of stoneware jars as it clears her head", "sync": "the first jar row leaves the top of frame" },
+        { "t": 3.6, "action": "head settles level again, breath unhurried", "sync": "handover to the hard cut out of the hook" }
+      ],
+      "performance_beat": {
+        "objective": "go on falling as though falling were an ordinary afternoon occupation",
+        "goal": "go on falling as though falling were an ordinary afternoon occupation",
+        "emotional_arc": "from unhurried curiosity to unhurried curiosity — the whole point is that nothing in her changes",
+        "arc_from": "unhurried curiosity",
+        "arc_to": "unhurried curiosity, entirely undisturbed",
+        "trigger": { "beat": "the first row of stoneware jars clears the top of frame", "t": 2.0 },
+        "no_early_reaction": ["grabbing at the wall", "kicking her legs", "mouth opening to cry out"],
+        "forbidden_early": ["grabbing at the wall", "kicking her legs", "mouth opening to cry out"],
+        "end_state": "lips just parted, eyes tracking the shelves upward, hands open at her sides, shoulders level"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": {
+    "timeline_ok": true,
+    "violations": [],
+    "story_event": "ev0002 (dream layer) — lifted forward as the S00 hook head per narrative_block FF-ep01-open",
+    "note": "Alice alone. No other character is legal in the shaft at ev0002; CHAR-white-rabbit has already gone ahead and is not in this space."
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "task_id": "p3-architecture-sb1",
+  "agent": "05-scenes/architecture",
+  "attempt": 1,
+  "status": "done",
+  "date": "2026-09-22",
+  "outputs": [
+    "bible/scenes/SCN-riverbank/architecture.json",
+    "bible/scenes/SCN-field-hedge-burrow/architecture.json",
+    "bible/scenes/SCN-falling-dream/architecture.json",
+    "bible/scenes/SCN-shaft-landing-passage/architecture.json",
+    "bible/scenes/SCN-long-hall/architecture.json",
+    "bible/scenes/SCN-little-door-passage/architecture.json",
+    "bible/scenes/SCN-pool-of-tears/architecture.json",
+    "bible/scenes/SCN-pool-bank/architecture.json",
+    "bible/scenes/SCN-rabbit-house-exterior/architecture.json",
+    "bible/scenes/SCN-rabbit-house-upstairs-room/architecture.json",
+    "bible/scenes/SCN-wood-thistle-glade/architecture.json",
+    "bible/scenes/SCN-caterpillar-clearing/architecture.json"
+  ],
+  "helper_scripts": ["code/p3-architecture-sb1_check.py"],
+  "inputs_read": [
+    "bible/h1_summary.md", "runs/h1-ruling/ruling.json", "bible/WRITE_RULES.md", "bible/scenes/index.json",
+    "bible/geography.json", "bible/culture.json", "bible/world.json (setting, frame, wonderland_real_counterparts)",
+    "bible/cultivation.json SUP-001/002/003/007/008/013", "bible/characters/CHAR-alice/appearance.json (135 cm scale anchor)",
+    "bible/creatures/index.json (CRE-002 puppy)", "bible/style.json (still skeleton_empty)", "story/structured_story/ch001-ch007, ch012",
+    "refs/style/alice.jpeg"
+  ],
+  "shared_conventions": {
+    "card_schema": "SOUL fields (scene_id, inherits, form, stories, materials, details, interior, negative, source_chapter, culture_ref) plus: layer, int_ext, grows_from (dream cards), structure[], scale_notes, prompt_ready_en. Each structure/materials/details element is {item, src:<chNNN-pNN>} or {item, inferred:true, culture_ref, why}; 'note' marks sourced items whose size/species/colour was designed.",
+    "inherits": "Only set where the parent is on the index parent chain and has a card: shaft-landing-passage -> falling-dream; little-door-passage and pool-of-tears -> long-hall; rabbit-house-upstairs-room -> rabbit-house-exterior. Those cards carry diff_only:true. Other parents (SCN-thames-riverside, SCN-wonderland-wood) are containers with no card, so inherits is null.",
+    "units": "All dimensions are true-scale metres/cm unless a scale_notes build says otherwise. Alice true size = 135 cm (CHAR-alice anchor).",
+    "language": "All content in English (project setting); prompt_ready_en is English prompt text."
+  },
+  "key_decisions": [
+    "Culture gap handled by design: culture.json has no architecture entries, so the waking style anchor is the 1860s Oxford Gothic Revival of the senior clergyman-scholar milieu (polychrome-brick north-Oxford villa, honey limestone college undercroft). This comes from world.json frame.social_class and geography LOC-family-house.settlement. It is tagged inferred and the culture_ref points at those anchors. No culture was invented.",
+    "Dream spaces grow from waking detail (ruling 5.2 A). The falling shaft is the hedge burrow furnished with the family house's schoolroom and pantry, including Dinah's saucer from ch001-p10. The long hall is the cp-garden wall gate stretched into a Gothic college passage, with hawthorn-leaf capitals echoing the hedge. The pool of tears and pool bank bring in the backwater's reeds and duckweed. The Rabbit's house is a shrunken copy of the family villa, which is shown in the background of the riverbank wide shot so the echo reads. The wood and clearing use Thames-valley copse flora, and the mushroom is an English field mushroom.",
+    "Forced perspective (SUP-003): every size beat has a named build and scale factor. Hall: x5.4 when Alice is ten inches, 1:2 when she is nine feet. Pool: x12 water tank. Little door passage: x4.5 when she is one foot. Rabbit room: 1:3 miniature, and the exterior window is also 1:3. Wood and clearing share one x9 factor so they cut together, with a x27 insert when her chin hits her foot. Human performers are always true size, and the sets carry the scale (SUP-002). The puppy (CRE-002) is a real animal staged in forced perspective, never CGI.",
+    "Hall roof height is derived from the source: a vault crown of 2.8 m, so that at 'more than nine feet' Alice's head strikes the roof (ch002-p05).",
+    "Rabbit house geometry follows the source. The upstairs window is on the yard side, not the door side, because the Rabbit has to 'go round' to reach it (ch004-p14). The room door opens inwards. The fireplace is narrow but the stack flue at the top is sized to take a slight performer (Bill).",
+    "User style reference (refs/style/alice.jpeg): I took only its architectural mood for the dream interiors (weathered ornament, verdigris ironwork, traces of gilding) and expressed it in 1862 Gothic Revival terms. Its Art Nouveau curves, the giant mushrooms indoors and the creature Caterpillar are excluded by the negatives, because they contradict the 1862 period and SUP-002. style.json is still skeleton_empty, so art-director should confirm this reading at H2."
+  ],
+  "checks": {
+    "script": "python3 code/p3-architecture-sb1_check.py",
+    "result": "ALL PASS (12 cards)",
+    "covers": ["scene_id in index.json", "inherits on the parent chain", "form/materials/negative present", "INT cards have an interior block", "every structure/materials/details element has src or inferred+culture_ref", "no UNKNOWN/TBD/empty placeholders", "every cited chNNN-pNN exists in structured_story", "ASCII paths"]
+  },
+  "conflicts": [],
+  "advisories": [
+    {"to": "00-orchestration/memory-bible", "note": "culture.json has no building or architecture-style entries. These cards anchor on world.json frame.social_class and geography settlement.architecture_style instead. If a formal CUL architecture entry is wanted, it belongs to 02-worldbuilding/culture. This does not block anything, so no defect was filed."},
+    {"to": "05-scenes/lighting", "note": "Openings are listed in each interior block. The long hall and the pool have no windows, and the lamp row is the only fixture. The rabbit room has a single south sash window."},
+    {"to": "06-art/prop", "note": "The glass table, fan and gloves, bottle and marmalade jar are only positioned and roughly sized here. Final prop scale is prop's to set."}
+  ],
+  "skills": "none ticked for this station; none applied",
+  "qa": "evaluation disabled (quality judge 0); all QA dimensions 0; no QA dispatched"
+}

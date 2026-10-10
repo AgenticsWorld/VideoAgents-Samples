@@ -1,0 +1,68 @@
+{
+  "character_id": "CHAR-mock-turtle",
+  "name": "The Mock Turtle",
+  "tier": "B",
+  "layer": "dream",
+  "revision": { "change_id": "BIB-0027", "task_id": "p4-cr-appearance", "date": "2026-09-23", "note": "Rewritten from the human-in-partial-costume reading to a photoreal CGI fantastical creature." },
+  "rendering": {
+    "mode": "photoreal_cgi_creature",
+    "rule": "bible/cultivation.json SUP-010 (amended BIB-0027); anatomy detail owned by 04-creatures/creature",
+    "species": "turtle-bodied creature (green-sea-turtle shell and front flippers) with a calf's head, calf hind legs ending in cloven hooves, and a calf's tail: the parts of 'mock turtle soup'",
+    "limits": "Built as if a real animal: real shell, turtle skin, calf hide and hair, weight and wet light; the neck blends from turtle skin into calf hide. Speech by the calf's muzzle and lips. No clothing, no cartoon face, no human in costume."
+  },
+  "gender": "male",
+  "gender_note": { "source_chapter": "ch009", "paragraph": "ch009-p48", "quote": "Alice could hear him sighing as if his heart would break" },
+  "base_age_range": "45-55",
+  "base_age_note": { "inferred": true, "reason": "Persona age ('When we were little', ch009-p55; 'Once I was a real Turtle', ch009-p53), kept for voice casting. As a creature: an old turtle with a worn, barnacle-spotted shell and a calf's face that looks faded and tired." },
+  "hair": {
+    "coat": "shell and turtle skin (body); short calf hair (head, hind legs, tail)",
+    "color": "carapace olive-brown with faded amber-and-dark hexagonal scutes; grey-olive scaled turtle skin on flippers and neck; brown-and-white patched calf head with a white blaze",
+    "style": "calf hair damp and flattened; shell scuffed with a few barnacles",
+    "inferred": true,
+    "reason": "Turtle and calf cues per SUP-010."
+  },
+  "eyes": {
+    "color": "large dark brown calf eyes",
+    "expression": "brimming with tears, lids reddened; shuts them when he yawns",
+    "source_chapter": "ch009",
+    "paragraph": "ch009-p49",
+    "quote": "looked at them with large eyes full of tears",
+    "colour_inferred": true,
+    "reason": "Size and tears sourced; colour follows the calf head."
+  },
+  "skin": { "tone": "pink-grey wet calf nose; tear-wet matted hair on the cheeks", "source_chapter": "ch010", "paragraph": "ch010-p01", "quote": "with tears running down his cheeks", "inferred": true, "reason": "Tear tracks sourced." },
+  "face": {
+    "shape": "long, mournful calf's head with soft floppy ears",
+    "features": ["broad wet calf muzzle", "drooping lower lip", "tear tracks on the cheeks", "ears drooping low"],
+    "default_expression": "deep melancholy; sobs and sighs",
+    "expressiveness": "ear droop, eye tears, muzzle quiver and heaving shell; no human expressions",
+    "source_chapter": "ch009",
+    "paragraph": "ch009-p48",
+    "inferred": true,
+    "reason": "Mournfulness sourced (ch009-p48/p53 sighs and sobbing)."
+  },
+  "build": {
+    "height_range_cm": [110, 125],
+    "height_note": "Head height when sitting upright on his calf hind legs against a rock; carapace length about 110-120 cm.",
+    "body_type": "heavy domed turtle body",
+    "posture": "sits slumped and upright on a rock ledge, leaning back on the shell, front flippers used as hands; heavy and slow except when he suddenly 'jumps about like mad' in the Quadrille, flippers flapping",
+    "source_chapter": "ch010",
+    "paragraph": "ch010-p17",
+    "quote": "the two creatures, who had been jumping about like mad things all this time, sat down again very sadly and quietly",
+    "inferred": true,
+    "reason": "Upright sitting is a dream licence so he can talk face to face; size designed smaller than the Gryphon."
+  },
+  "scale_reference": { "in_scene": "Seated on a low rock ledge, his eye line roughly level with Alice standing (about 135 cm); smaller and softer than the Gryphon beside him.", "inferred": true, "reason": "Pairing contrast with CHAR-gryphon." },
+  "marks": [
+    { "type": "anatomy", "description": "front flippers ('flappers') used as hands: counting subjects, wiping his eyes", "position": "front flippers", "source_chapter": "ch010", "paragraph": "ch010-p01", "quote": "drew the back of one flapper across his eyes", "also": [{ "source_chapter": "ch009", "paragraph": "ch009-p79", "quote": "counting off the subjects on his flappers" }] },
+    { "type": "anatomy", "description": "calf hind legs with small black cloven hooves, and a tufted calf tail at the back of the shell", "position": "hind end", "inferred": true, "reason": "Mock-turtle-soup cues per SUP-010." },
+    { "type": "feature", "description": "permanent tear tracks and reddened eyelids", "position": "face", "source_chapter": "ch009", "paragraph": "ch009-p49" }
+  ],
+  "default_outfit_tone": {
+    "summary": "none: he wears nothing; his look is the shell, flippers and calf parts",
+    "inferred": true,
+    "reason": "The text gives him no clothing; per SUP-010 (BIB-0027) the old frock coat, shell cape and calf-hide waistcoat are dropped. The old designed handkerchief prop is also dropped (not in the text)."
+  },
+  "doubling": null,
+  "prompt_base_en": "photoreal mock turtle creature sitting slumped upright on a rock ledge by the sea, large olive-brown domed turtle shell with faded hexagonal scutes and a few barnacles, grey-olive scaled front flippers, a brown-and-white calf's head with a white blaze and floppy drooping ears, large dark brown eyes full of tears, tear-wet cheeks, calf hind legs with small black cloven hooves, tufted calf tail, naturalistic anatomy and wet light, live-action film plate"
+}

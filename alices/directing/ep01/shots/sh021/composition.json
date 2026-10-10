@@ -1,0 +1,28 @@
+{
+  "shot_id": "sh021",
+  "scene_id": "SCN-falling-dream",
+  "size": "medium",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "centre",
+    "anchor_xy": [0.46, 0.50],
+    "size_in_frame": "whole body in frame, about 0.72 of frame height, head to shoe"
+  },
+  "headroom": "about 0.12 of frame height above her crown and the same below her shoes — she is given a complete, unhurried box to be calm in.",
+  "horizon_eyeline": "No horizon; the cupboard door rails travel up through the frame as a moving ladder of horizontals. Her eyeline is level at 0.36 of frame height, the lens height, and wanders about her as she looks around — never down.",
+  "layers": {
+    "fg": "the near cupboard door edge passing up through the right edge of frame",
+    "mg": "Alice upright and whole, posting the jar into a passing cupboard",
+    "bg": "the glazed cupboard wall travelling steadily upward, glass and mahogany, the open drop dark at the left edge"
+  },
+  "gaze": {
+    "direction": "frame_left",
+    "lead_room": "left",
+    "note": "having tidied the jar away to her right, she turns her look out to frame left and the open shaft while she speaks — about 0.24 of frame width of clear space ahead of her. The lead room is the falling itself."
+  },
+  "balance": "Her whole figure just left of centre, the cupboard wall filling the right; the picture is weighted toward the furniture, which is exactly how she is treating it.",
+  "leading_lines": "The horizontal shelf and rail lines cross the frame and travel up through it, so the only sense of motion is a ladder passing a stationary girl; her outstretched arm to the cupboard makes the one diagonal.",
+  "eye_first": "Her whole upright body — the shape of a person standing still in mid-air — then the jar going into the cupboard.",
+  "safe_area_ok": true,
+  "constraint_binding": "Her whole body in frame so the impossible calm reads: no crop of the figure at any point, top or bottom, and no move. The composure is the information, and it only exists if the entire silhouette is visible."
+}

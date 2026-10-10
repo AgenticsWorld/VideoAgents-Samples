@@ -1,0 +1,1039 @@
+{
+ "whitebox_layout_ok": [
+  {
+   "scene_id": "SCN-falling-dream",
+   "status": "PASS",
+   "dimensions_m": [
+    5.0,
+    6.0,
+    2.8125
+   ],
+   "image": [
+    2560,
+    1440
+   ],
+   "aspect_deviation_pct": 0.0,
+   "problems": [],
+   "notes": [],
+   "walls": [
+    {
+     "id": "shaft_wall_000",
+     "x": [
+      0.74,
+      0.776
+     ],
+     "y": [
+      0.376,
+      0.624
+     ],
+     "height_m": 6.0,
+     "elevation_m": 0.0
+    },
+    {
+     "id": "shaft_wall_030",
+     "x": [
+      0.653,
+      0.793
+     ],
+     "y": [
+      0.697,
+      0.761
+     ],
+     "height_m": 6.0,
+     "elevation_m": 0.0
+    },
+    {
+     "id": "shaft_wall_060",
+     "x": [
+      0.559,
+      0.699
+     ],
+     "y": [
+      0.865,
+      0.929
+     ],
+     "height_m": 6.0,
+     "elevation_m": 0.0
+    },
+    {
+     "id": "shaft_wall_090",
+     "x": [
+      0.43,
+      0.57
+     ],
+     "y": [
+      0.927,
+      0.991
+     ],
+     "height_m": 6.0,
+     "elevation_m": 0.0
+    },
+    {
+     "id": "shaft_wall_120",
+     "x": [
+      0.301,
+      0.441
+     ],
+     "y": [
+      0.865,
+      0.929
+     ],
+     "height_m": 6.0,
+     "elevation_m": 0.0
+    },
+    {
+     "id": "shaft_wall_150",
+     "x": [
+      0.207,
+      0.347
+     ],
+     "y": [
+      0.697,
+      0.761
+     ],
+     "height_m": 6.0,
+     "elevation_m": 0.0
+    },
+    {
+     "id": "shaft_wall_180",
+     "x": [
+      0.224,
+      0.26
+     ],
+     "y": [
+      0.376,
+      0.624
+     ],
+     "height_m": 6.0,
+     "elevation_m": 0.0
+    },
+    {
+     "id": "shaft_wall_210",
+     "x": [
+      0.207,
+      0.347
+     ],
+     "y": [
+      0.239,
+      0.303
+     ],
+     "height_m": 6.0,
+     "elevation_m": 0.0
+    },
+    {
+     "id": "shaft_wall_240",
+     "x": [
+      0.301,
+      0.441
+     ],
+     "y": [
+      0.071,
+      0.135
+     ],
+     "height_m": 6.0,
+     "elevation_m": 0.0
+    },
+    {
+     "id": "shaft_wall_270",
+     "x": [
+      0.43,
+      0.57
+     ],
+     "y": [
+      0.009,
+      0.073
+     ],
+     "height_m": 6.0,
+     "elevation_m": 0.0
+    },
+    {
+     "id": "shaft_wall_300",
+     "x": [
+      0.559,
+      0.699
+     ],
+     "y": [
+      0.071,
+      0.135
+     ],
+     "height_m": 6.0,
+     "elevation_m": 0.0
+    },
+    {
+     "id": "shaft_wall_330",
+     "x": [
+      0.653,
+      0.793
+     ],
+     "y": [
+      0.239,
+      0.303
+     ],
+     "height_m": 6.0,
+     "elevation_m": 0.0
+    },
+    {
+     "id": "entry_tunnel_wall_w",
+     "x": [
+      0.422,
+      0.443
+     ],
+     "y": [
+      0.0,
+      0.073
+     ],
+     "height_m": 1.2,
+     "elevation_m": 6.0
+    },
+    {
+     "id": "entry_tunnel_wall_e",
+     "x": [
+      0.593,
+      0.613
+     ],
+     "y": [
+      0.0,
+      0.073
+     ],
+     "height_m": 1.2,
+     "elevation_m": 6.0
+    }
+   ],
+   "overlay": "assets/concepts/scenes/SCN-falling-dream/whitebox_overlay.png"
+  },
+  {
+   "scene_id": "SCN-long-hall",
+   "status": "PASS",
+   "dimensions_m": [
+    40.5,
+    2.8,
+    22.781
+   ],
+   "image": [
+    2560,
+    1440
+   ],
+   "aspect_deviation_pct": 0.0,
+   "problems": [],
+   "notes": [],
+   "walls": [
+    {
+     "id": "wall_west",
+     "x": [
+      0.05,
+      0.947
+     ],
+     "y": [
+      0.298,
+      0.356
+     ],
+     "height_m": 2.8,
+     "elevation_m": 0.0
+    },
+    {
+     "id": "wall_east_north",
+     "x": [
+      0.05,
+      0.24
+     ],
+     "y": [
+      0.653,
+      0.707
+     ],
+     "height_m": 2.8,
+     "elevation_m": 0.0
+    },
+    {
+     "id": "wall_east_south",
+     "x": [
+      0.31,
+      0.948
+     ],
+     "y": [
+      0.653,
+      0.707
+     ],
+     "height_m": 2.8,
+     "elevation_m": 0.0
+    },
+    {
+     "id": "wall_north_end",
+     "x": [
+      0.05,
+      0.105
+     ],
+     "y": [
+      0.356,
+      0.653
+     ],
+     "height_m": 2.8,
+     "elevation_m": 0.0
+    },
+    {
+     "id": "wall_south_end",
+     "x": [
+      0.887,
+      0.948
+     ],
+     "y": [
+      0.356,
+      0.653
+     ],
+     "height_m": 2.8,
+     "elevation_m": 0.0
+    },
+    {
+     "id": "entrance_lintel",
+     "x": [
+      0.24,
+      0.31
+     ],
+     "y": [
+      0.653,
+      0.707
+     ],
+     "height_m": 0.7,
+     "elevation_m": 2.1
+    },
+    {
+     "id": "passage_wall_w",
+     "x": [
+      0.192,
+      0.24
+     ],
+     "y": [
+      0.707,
+      0.999
+     ],
+     "height_m": 2.1,
+     "elevation_m": 0.0
+    },
+    {
+     "id": "passage_wall_e",
+     "x": [
+      0.31,
+      0.332
+     ],
+     "y": [
+      0.707,
+      0.999
+     ],
+     "height_m": 2.1,
+     "elevation_m": 0.0
+    }
+   ],
+   "overlay": "assets/concepts/scenes/SCN-long-hall/whitebox_overlay.png"
+  },
+  {
+   "scene_id": "SCN-little-door-passage",
+   "status": "PASS",
+   "dimensions_m": [
+    5.0,
+    2.8,
+    2.8125
+   ],
+   "image": [
+    2560,
+    1440
+   ],
+   "aspect_deviation_pct": 0.0,
+   "problems": [],
+   "notes": [],
+   "walls": [
+    {
+     "id": "masonry_wall_n",
+     "x": [
+      0.16,
+      0.747
+     ],
+     "y": [
+      0.0,
+      0.444
+     ],
+     "height_m": 2.8,
+     "elevation_m": 0.0
+    },
+    {
+     "id": "masonry_wall_s",
+     "x": [
+      0.16,
+      0.747
+     ],
+     "y": [
+      0.582,
+      1.0
+     ],
+     "height_m": 2.8,
+     "elevation_m": 0.0
+    },
+    {
+     "id": "passage_vault_head",
+     "x": [
+      0.16,
+      0.747
+     ],
+     "y": [
+      0.444,
+      0.582
+     ],
+     "height_m": 2.44,
+     "elevation_m": 0.36
+    },
+    {
+     "id": "little_door_jamb_n",
+     "x": [
+      0.728,
+      0.748
+     ],
+     "y": [
+      0.444,
+      0.464
+     ],
+     "height_m": 0.38,
+     "elevation_m": 0.0
+    },
+    {
+     "id": "little_door_jamb_s",
+     "x": [
+      0.728,
+      0.748
+     ],
+     "y": [
+      0.556,
+      0.582
+     ],
+     "height_m": 0.38,
+     "elevation_m": 0.0
+    }
+   ],
+   "overlay": "assets/concepts/scenes/SCN-little-door-passage/whitebox_overlay.png"
+  },
+  {
+   "scene_id": "SCN-shaft-landing-passage",
+   "status": "PASS",
+   "dimensions_m": [
+    30.0,
+    2.8,
+    16.875
+   ],
+   "image": [
+    2560,
+    1440
+   ],
+   "aspect_deviation_pct": 0.0,
+   "problems": [],
+   "notes": [],
+   "walls": [
+    {
+     "id": "hall_wall_e",
+     "x": [
+      0.438,
+      0.468
+     ],
+     "y": [
+      0.0,
+      0.307
+     ],
+     "height_m": 2.8,
+     "elevation_m": 0.0
+    },
+    {
+     "id": "hall_wall_s_w",
+     "x": [
+      0.0,
+      0.17
+     ],
+     "y": [
+      0.267,
+      0.307
+     ],
+     "height_m": 2.8,
+     "elevation_m": 0.0
+    },
+    {
+     "id": "hall_wall_s_e",
+     "x": [
+      0.27,
+      0.468
+     ],
+     "y": [
+      0.267,
+      0.307
+     ],
+     "height_m": 2.8,
+     "elevation_m": 0.0
+    },
+    {
+     "id": "hall_opening_lintel",
+     "x": [
+      0.17,
+      0.27
+     ],
+     "y": [
+      0.267,
+      0.307
+     ],
+     "height_m": 0.7,
+     "elevation_m": 2.1
+    },
+    {
+     "id": "leg_wall_w",
+     "x": [
+      0.147,
+      0.17
+     ],
+     "y": [
+      0.309,
+      0.747
+     ],
+     "height_m": 2.1,
+     "elevation_m": 0.0
+    },
+    {
+     "id": "leg_wall_e",
+     "x": [
+      0.27,
+      0.29
+     ],
+     "y": [
+      0.307,
+      0.533
+     ],
+     "height_m": 2.1,
+     "elevation_m": 0.0
+    },
+    {
+     "id": "passage_wall_n",
+     "x": [
+      0.27,
+      0.527
+     ],
+     "y": [
+      0.516,
+      0.551
+     ],
+     "height_m": 2.1,
+     "elevation_m": 0.0
+    },
+    {
+     "id": "passage_wall_s",
+     "x": [
+      0.148,
+      0.528
+     ],
+     "y": [
+      0.72,
+      0.751
+     ],
+     "height_m": 2.1,
+     "elevation_m": 0.0
+    },
+    {
+     "id": "earth_wall_n",
+     "x": [
+      0.527,
+      0.68
+     ],
+     "y": [
+      0.538,
+      0.556
+     ],
+     "height_m": 2.1,
+     "elevation_m": 0.0
+    },
+    {
+     "id": "earth_wall_s",
+     "x": [
+      0.527,
+      0.68
+     ],
+     "y": [
+      0.716,
+      0.733
+     ],
+     "height_m": 2.1,
+     "elevation_m": 0.0
+    },
+    {
+     "id": "chamber_wall_000",
+     "x": [
+      0.903,
+      0.917
+     ],
+     "y": [
+      0.594,
+      0.651
+     ],
+     "height_m": 3.0,
+     "elevation_m": 0.0
+    },
+    {
+     "id": "chamber_wall_015",
+     "x": [
+      0.89,
+      0.922
+     ],
+     "y": [
+      0.664,
+      0.691
+     ],
+     "height_m": 3.0,
+     "elevation_m": 0.0
+    },
+    {
+     "id": "chamber_wall_030",
+     "x": [
+      0.878,
+      0.91
+     ],
+     "y": [
+      0.716,
+      0.742
+     ],
+     "height_m": 3.0,
+     "elevation_m": 0.0
+    },
+    {
+     "id": "chamber_wall_045",
+     "x": [
+      0.859,
+      0.891
+     ],
+     "y": [
+      0.76,
+      0.786
+     ],
+     "height_m": 3.0,
+     "elevation_m": 0.0
+    },
+    {
+     "id": "chamber_wall_060",
+     "x": [
+      0.834,
+      0.866
+     ],
+     "y": [
+      0.794,
+      0.82
+     ],
+     "height_m": 3.0,
+     "elevation_m": 0.0
+    },
+    {
+     "id": "chamber_wall_075",
+     "x": [
+      0.805,
+      0.837
+     ],
+     "y": [
+      0.815,
+      0.842
+     ],
+     "height_m": 3.0,
+     "elevation_m": 0.0
+    },
+    {
+     "id": "chamber_wall_090",
+     "x": [
+      0.774,
+      0.806
+     ],
+     "y": [
+      0.822,
+      0.849
+     ],
+     "height_m": 3.0,
+     "elevation_m": 0.0
+    },
+    {
+     "id": "chamber_wall_105",
+     "x": [
+      0.743,
+      0.775
+     ],
+     "y": [
+      0.815,
+      0.842
+     ],
+     "height_m": 3.0,
+     "elevation_m": 0.0
+    },
+    {
+     "id": "chamber_wall_120",
+     "x": [
+      0.714,
+      0.746
+     ],
+     "y": [
+      0.794,
+      0.82
+     ],
+     "height_m": 3.0,
+     "elevation_m": 0.0
+    },
+    {
+     "id": "chamber_wall_135",
+     "x": [
+      0.689,
+      0.721
+     ],
+     "y": [
+      0.76,
+      0.786
+     ],
+     "height_m": 3.0,
+     "elevation_m": 0.0
+    },
+    {
+     "id": "chamber_wall_150",
+     "x": [
+      0.67,
+      0.702
+     ],
+     "y": [
+      0.716,
+      0.742
+     ],
+     "height_m": 3.0,
+     "elevation_m": 0.0
+    },
+    {
+     "id": "chamber_wall_210",
+     "x": [
+      0.67,
+      0.702
+     ],
+     "y": [
+      0.502,
+      0.529
+     ],
+     "height_m": 3.0,
+     "elevation_m": 0.0
+    },
+    {
+     "id": "chamber_wall_225",
+     "x": [
+      0.689,
+      0.721
+     ],
+     "y": [
+      0.458,
+      0.485
+     ],
+     "height_m": 3.0,
+     "elevation_m": 0.0
+    },
+    {
+     "id": "chamber_wall_240",
+     "x": [
+      0.714,
+      0.746
+     ],
+     "y": [
+      0.424,
+      0.451
+     ],
+     "height_m": 3.0,
+     "elevation_m": 0.0
+    },
+    {
+     "id": "chamber_wall_255",
+     "x": [
+      0.743,
+      0.775
+     ],
+     "y": [
+      0.403,
+      0.43
+     ],
+     "height_m": 3.0,
+     "elevation_m": 0.0
+    },
+    {
+     "id": "chamber_wall_270",
+     "x": [
+      0.774,
+      0.806
+     ],
+     "y": [
+      0.396,
+      0.422
+     ],
+     "height_m": 3.0,
+     "elevation_m": 0.0
+    },
+    {
+     "id": "chamber_wall_285",
+     "x": [
+      0.805,
+      0.837
+     ],
+     "y": [
+      0.403,
+      0.43
+     ],
+     "height_m": 3.0,
+     "elevation_m": 0.0
+    },
+    {
+     "id": "chamber_wall_300",
+     "x": [
+      0.834,
+      0.866
+     ],
+     "y": [
+      0.424,
+      0.451
+     ],
+     "height_m": 3.0,
+     "elevation_m": 0.0
+    },
+    {
+     "id": "chamber_wall_315",
+     "x": [
+      0.859,
+      0.891
+     ],
+     "y": [
+      0.458,
+      0.485
+     ],
+     "height_m": 3.0,
+     "elevation_m": 0.0
+    },
+    {
+     "id": "chamber_wall_330",
+     "x": [
+      0.878,
+      0.91
+     ],
+     "y": [
+      0.502,
+      0.529
+     ],
+     "height_m": 3.0,
+     "elevation_m": 0.0
+    },
+    {
+     "id": "chamber_wall_345",
+     "x": [
+      0.89,
+      0.922
+     ],
+     "y": [
+      0.554,
+      0.58
+     ],
+     "height_m": 3.0,
+     "elevation_m": 0.0
+    }
+   ],
+   "overlay": "assets/concepts/scenes/SCN-shaft-landing-passage/whitebox_overlay.png"
+  },
+  {
+   "scene_id": "SCN-pool-of-tears",
+   "status": "PASS",
+   "dimensions_m": [
+    33.0,
+    2.8,
+    18.5625
+   ],
+   "image": [
+    2560,
+    1440
+   ],
+   "aspect_deviation_pct": 0.0,
+   "problems": [],
+   "notes": [],
+   "walls": [
+    {
+     "id": "wall_west",
+     "x": [
+      0.0,
+      1.0
+     ],
+     "y": [
+      0.209,
+      0.307
+     ],
+     "height_m": 2.8,
+     "elevation_m": 0.0
+    },
+    {
+     "id": "wall_east_north",
+     "x": [
+      0.0,
+      0.278
+     ],
+     "y": [
+      0.693,
+      0.791
+     ],
+     "height_m": 2.8,
+     "elevation_m": 0.0
+    },
+    {
+     "id": "wall_east_south",
+     "x": [
+      0.397,
+      1.0
+     ],
+     "y": [
+      0.693,
+      0.791
+     ],
+     "height_m": 2.8,
+     "elevation_m": 0.0
+    },
+    {
+     "id": "entrance_lintel",
+     "x": [
+      0.278,
+      0.398
+     ],
+     "y": [
+      0.693,
+      0.791
+     ],
+     "height_m": 0.7,
+     "elevation_m": 2.1
+    },
+    {
+     "id": "passage_wall_w",
+     "x": [
+      0.208,
+      0.277
+     ],
+     "y": [
+      0.791,
+      1.0
+     ],
+     "height_m": 2.1,
+     "elevation_m": 0.0
+    },
+    {
+     "id": "passage_wall_e",
+     "x": [
+      0.398,
+      0.44
+     ],
+     "y": [
+      0.791,
+      1.0
+     ],
+     "height_m": 2.1,
+     "elevation_m": 0.0
+    }
+   ],
+   "overlay": "assets/concepts/scenes/SCN-pool-of-tears/whitebox_overlay.png"
+  },
+  {
+   "scene_id": "SCN-pool-bank",
+   "status": "PASS",
+   "dimensions_m": [
+    40.0,
+    12.0,
+    22.5
+   ],
+   "image": [
+    2560,
+    1440
+   ],
+   "aspect_deviation_pct": 0.0,
+   "problems": [],
+   "notes": [],
+   "walls": [],
+   "overlay": "assets/concepts/scenes/SCN-pool-bank/whitebox_overlay.png"
+  },
+  {
+   "scene_id": "SCN-riverbank",
+   "status": "PASS",
+   "dimensions_m": [
+    40.0,
+    20.0,
+    22.5
+   ],
+   "image": [
+    2560,
+    1440
+   ],
+   "aspect_deviation_pct": 0.0,
+   "problems": [],
+   "notes": [],
+   "walls": [],
+   "overlay": "assets/concepts/scenes/SCN-riverbank/whitebox_overlay.png"
+  },
+  {
+   "scene_id": "SCN-field-hedge-burrow",
+   "status": "PASS",
+   "dimensions_m": [
+    53.0,
+    12.0,
+    29.8125
+   ],
+   "image": [
+    2560,
+    1440
+   ],
+   "aspect_deviation_pct": 0.0,
+   "problems": [],
+   "notes": [],
+   "walls": [
+    {
+     "id": "hedge_bank_w",
+     "x": [
+      0.0,
+      0.3
+     ],
+     "y": [
+      0.684,
+      0.831
+     ],
+     "height_m": 0.4,
+     "elevation_m": 0.0
+    },
+    {
+     "id": "hedge_w",
+     "x": [
+      0.0,
+      0.3
+     ],
+     "y": [
+      0.684,
+      0.831
+     ],
+     "height_m": 1.4,
+     "elevation_m": 0.4
+    },
+    {
+     "id": "hedge_bank_e",
+     "x": [
+      0.4,
+      1.0
+     ],
+     "y": [
+      0.684,
+      0.831
+     ],
+     "height_m": 0.4,
+     "elevation_m": 0.0
+    },
+    {
+     "id": "hedge_e",
+     "x": [
+      0.4,
+      1.0
+     ],
+     "y": [
+      0.684,
+      0.831
+     ],
+     "height_m": 1.4,
+     "elevation_m": 0.4
+    }
+   ],
+   "overlay": "assets/concepts/scenes/SCN-field-hedge-burrow/whitebox_overlay.png"
+  }
+ ]
+}
+[whitebox_layout_ok] alices: 8 场景,0 场景不合格 -> PASS

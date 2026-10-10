@@ -1,0 +1,32 @@
+{
+  "schema_version": "scene_layout.v1",
+  "scene_id": "SCN-wood-tree-door",
+  "layout_top": "layout_top.png",
+  "orientation": {
+    "top_of_map": "north (the wood behind the door-tree)",
+    "note_en": "A woodland path runs west-east across the lower middle of the map; the great oak with the door stands on the north side of the path, its door facing south onto the path; the low sun-shaft comes from the west (left). Camera positions in views[] are described relative to these landmarks."
+  },
+  "extent_m": {"x": 16.0, "y": 9.0},
+  "landmarks": [
+    {"id": "door_oak", "name": "door oak", "name_en": "the great oak with the door", "kind": "tree", "xy": [0.42, 0.33]},
+    {"id": "tree_door", "name": "tree door", "name_en": "the little door in the oak", "kind": "entrance", "xy": [0.44, 0.51]},
+    {"id": "threshold_stone", "name": "threshold stone", "name_en": "the worn threshold stone", "kind": "ground", "xy": [0.44, 0.58]},
+    {"id": "path_west", "name": "path west", "name_en": "the path to the west", "kind": "path", "xy": [0.06, 0.60]},
+    {"id": "path_east", "name": "path east", "name_en": "the path to the east", "kind": "path", "xy": [0.94, 0.58]},
+    {"id": "west_trunks", "name": "west trunks", "name_en": "the tall trunks west of the oak", "kind": "tree", "xy": [0.18, 0.40]},
+    {"id": "east_trunks", "name": "east trunks", "name_en": "the tall trunks east of the oak", "kind": "tree", "xy": [0.78, 0.20]},
+    {"id": "south_trunk", "name": "south trunk", "name_en": "the oak across the path", "kind": "tree", "xy": [0.38, 0.82]}
+  ],
+  "views": [
+    {"tile": 1, "camera_from": "path_west", "looking_at": "tree_door", "size": "wide", "angle": "eye", "desc_en": "eye-level wide shot along the path from the west, the low sun-shaft slanting past between tall trunks onto the little door in the great oak"},
+    {"tile": 2, "camera_from": "path_east", "looking_at": "door_oak", "size": "wide", "angle": "eye", "desc_en": "eye-level wide shot along the path from the east into the low sun, the great oak with the door in silhouette beside the path"},
+    {"tile": 3, "camera_from": "south_trunk", "looking_at": "tree_door", "size": "medium", "angle": "eye", "desc_en": "eye-level medium shot straight across the path at the horseshoe-arched door set into the fluted trunk, its carved limestone frame and roundel"},
+    {"tile": 4, "camera_from": "threshold_stone", "looking_at": "tree_door", "size": "close", "angle": "low", "desc_en": "low-angle close shot from the threshold stone up at the studded door standing a hand's width ajar on darkness"},
+    {"tile": 5, "camera_from": "tree_door", "looking_at": "south_trunk", "size": "wide", "angle": "eye", "desc_en": "eye-level wide shot from the doorway looking out across the path into the dim wood"},
+    {"tile": 6, "camera_from": "west_trunks", "looking_at": "door_oak", "size": "medium", "angle": "high_oblique", "desc_en": "high oblique medium shot from among the western trunks down across ferns to the huge oak and its roots"},
+    {"tile": 7, "camera_from": "tree_door", "looking_at": "path_east", "size": "medium", "angle": "eye", "desc_en": "eye-level medium shot from beside the door along the path eastward into deep green shade"},
+    {"tile": 8, "camera_from": "east_trunks", "looking_at": "threshold_stone", "size": "close", "angle": "high_oblique", "desc_en": "high oblique close shot from the eastern trunks onto the half-buried threshold stone and leaf litter in the pool of sun"},
+    {"tile": 9, "camera_from": "south_trunk", "looking_at": "threshold_stone", "size": "detail", "angle": "low", "desc_en": "low-angle detail shot at ground level across the leaf litter and ferns to the threshold stone and the foot of the door"}
+  ],
+  "checklist": {"architecture_match": false, "lighting_match": true, "style_match": false, "plan_view_clean": false, "note_en": "trees drawn as sawn-off stumps (the living veteran oak reads as a felled stump); a stray dark pipe-like object on the path east of the door; a stained-glass mosaic disc lying on the ground top-left; kept for H2"}
+}

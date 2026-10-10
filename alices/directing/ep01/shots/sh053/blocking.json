@@ -1,0 +1,39 @@
+{
+  "shot_id": "sh053",
+  "group_id": "grp020",
+  "scene_no": "S06",
+  "scene_id": "SCN-long-hall",
+  "duration_s": 9.0,
+  "is_dialogue": false,
+  "group_position": "last shot of grp020 — Alice at her map end (glass_table), on the leg she has been trying to climb.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "stand",
+      "start_pos": "ten inches high with both arms round a leg of the glass table",
+      "space_fragment_en": "standing ten inches high against a leg of the glass table, centred in frame, facing up and hugging the leg",
+      "facing": "always up the leg — never down and never to the lens",
+      "path": [],
+      "beats": [
+        { "t": 1.0, "action": "first attempt: gets a little way and slides down the slippery glass", "sync": "attempt one" },
+        { "t": 4.0, "action": "second attempt, shorter", "sync": "attempt two" },
+        { "t": 6.6, "action": "third attempt, shorter still", "sync": "attempt three" },
+        { "t": 8.2, "action": "she stops trying, arms still round the leg", "sync": "held to the cut" }
+      ],
+      "performance_beat": {
+        "objective": "climb the leg by main force, because there is no other way up",
+        "goal": "climb the leg by main force",
+        "emotional_arc": "from determined effort to physical exhaustion — the failures are physical, not self-pitying",
+        "arc_from": "determined effort",
+        "arc_to": "physical exhaustion",
+        "trigger": { "beat": "the third attempt comes up shorter than the second", "t": 6.6 },
+        "no_early_reaction": ["the arms going slack", "the head dropping to the glass", "the breath breaking"],
+        "forbidden_early": ["the arms going slack", "the head dropping to the glass", "the breath breaking"],
+        "end_state": "both arms round the leg, cheek against the glass, chin still turned up, chest heaving"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0004 (dream)", "note": "Alice alone." }
+}

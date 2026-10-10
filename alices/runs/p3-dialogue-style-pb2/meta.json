@@ -1,0 +1,21 @@
+{
+  "task_id": "p3-dialogue-style-pb2",
+  "run_id": "ac03e823f200",
+  "attempt": 1,
+  "model": "agent default",
+  "tokens": null,
+  "started_at": null,
+  "finished_at": "2026-09-22T18:32:59+08:00",
+  "inputs_sha256": {},
+  "artifact_versions": {
+    "bible/characters/CHAR-mouse/dialogue_style.json": "v1",
+    "bible/characters/CHAR-cook/dialogue_style.json": "v1",
+    "bible/characters/CHAR-bill-the-lizard/dialogue_style.json": "v1",
+    "bible/characters/CHAR-knave-of-hearts/dialogue_style.json": "v1",
+    "bible/characters/CHAR-gryphon/dialogue_style.json": "v1",
+    "bible/characters/CHAR-mock-turtle/dialogue_style.json": "v1",
+    "bible/characters/CHAR-caterpillar/dialogue_style.json": "v1",
+    "bible/characters/CHAR-pigeon/dialogue_style.json": "v1",
+    "bible/characters/CHAR-dodo/dialogue_style.json": "v1"
+  }
+}

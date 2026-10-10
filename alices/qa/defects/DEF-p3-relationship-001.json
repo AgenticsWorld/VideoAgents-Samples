@@ -1,0 +1,43 @@
+{
+  "id": "DEF-p3-relationship-001",
+  "opened_by": "03-characters/relationship",
+  "opened_on": "2026-09-22",
+  "task_id": "p3-relationship",
+  "assigned_to": "03-characters/character-manager",
+  "domain": "characters",
+  "status": "closed",
+  "severity": "minor",
+  "summary": "Three registry inconsistencies found while building bible/characters/relationship.json. Relationship does not mint ids or edit the index; routed to memory-bible for character-manager / creature.",
+  "findings": [
+    {
+      "id": "DEF-p3-relationship-001-a",
+      "file": "bible/characters/index.json",
+      "entity": "CHAR-frog-footman",
+      "issue": "Registered under FAC-house-of-hearts in crown livery, but the source places him at the Duchess's door receiving the Queen's invitation for her (ch006#p02, ch006#p05-p18; FREL-001 describes a footman-to-footman hand-off between crown and Duchess household). relationship.json models CHAR-duchess -> CHAR-frog-footman master_servant as inferred.",
+      "suggested_fix": "character-manager reviews the faction: FAC-duchess-household (with Duchess livery) or keep crown livery with a reason. relationship.json follows whichever is confirmed."
+    },
+    {
+      "id": "DEF-p3-relationship-001-b",
+      "file": "bible/characters/index.json",
+      "entity": "CHAR-cheshire-cat",
+      "issue": "doubling.note says Dinah 'is a real, on-screen animal and is registered by 04-creatures/creature', but bible/creatures/creature.json _meta.zero_entries_considered_and_excluded excludes Dinah as never shown on screen, and no CRE id exists for her.",
+      "suggested_fix": "Align the note with creature.json: Dinah is spoken of only (TERM-0025) and has no registry id. relationship.json anchors the echo on CHAR-alice -> CHAR-cheshire-cat dream_echo."
+    },
+    {
+      "id": "DEF-p3-relationship-001-c",
+      "file": "bible/characters/index.json + bible/creatures/index.json",
+      "entity": "TERM-0039 the Duchess's baby (pig-baby)",
+      "issue": "On screen in ev0026-ev0027 (ch006#p19-p49; SUP-006 one-shot transformation), handled by Alice for a whole scene, yet registered in neither characters/index.json nor creatures/index.json. Edges Duchess -> baby and Alice -> baby ('wouldn't it be murder to leave it behind?', ch006#p45) cannot be written without an id.",
+      "suggested_fix": "character-manager (a human infant performer per SUP-006) or creature (the pig at the end of the shot) registers an id; relationship.json then adds the two edges."
+    }
+  ],
+  "triaged_by": "00-orchestration/memory-bible",
+  "triage_task_id": "p3-bible-defects",
+  "triaged_on": "2026-09-22",
+  "routed_from": "00-orchestration/memory-bible",
+  "ruling": "(a) Same ruling as DEF-p3-appearance-303-a: CHAR-frog-footman moves to FAC-duchess-household. relationship.json CHAR-duchess -> CHAR-frog-footman master_servant stands. (b) creature.json governs: Dinah is spoken of only (TERM-0025) and has no CRE id, so the index note is wrong. (c) The Duchess's baby is on screen for a full scene (ch006-p19..p49; SUP-006: an infant perceived gradually as pig-like). Per precedent P-007 (human performers register as CHAR-*), it is registered by character-manager.",
+  "fix_instruction": "bible/characters/index.json: (a) see DEF-p3-appearance-303-a. (b) CHAR-cheshire-cat.doubling.note -> 'Dinah is spoken of only (TERM-0025), never shown on screen, and has no registry id (bible/creatures/creature.json _meta.zero_entries_considered_and_excluded). This entry carries the dream-side half of the echo.' Also fix disambiguation: remove 'CRE-* namespace'. (c) Register a new id, suggested CHAR-duchess-baby, name \"the Duchess's baby\", original_name 'the baby', dictionary TERM-0039. It is a human infant performer per SUP-006: layer dream, factions FAC-duchess-household, appearances ch006 in_person, first_appearance verbatim from ch006. Create detail_dir bible/characters/CHAR-duchess-baby/ and hand appearance off to 03-characters/appearance. Coordinate with 04-creatures/creature on whether the ch006-p49 trot-off ('trot away quietly into the wood') shows a real piglet. If it does, creature registers a CRE id linked back to CHAR-duchess-baby (SUP-006). Then notify 03-characters/relationship to add the Duchess -> baby and Alice -> baby edges (ch006-p45).",
+  "fixed_by": "03-characters/character-manager",
+  "fixed_on": "2026-09-22",
+  "fix_note": "bible/characters/index.json updated: (a) CHAR-frog-footman re-pointed to FAC-duchess-household (same edit as DEF-p3-appearance-303-a). (b) CHAR-cheshire-cat.doubling.note and disambiguation rewritten to drop the stale 'Dinah has a CRE-* id' claim, and the same correction applied to _meta.layer_enum.both-echo for file-wide consistency. (c) New id CHAR-duchess-baby registered (name \"The Duchess's Baby\", original_name 'the baby', alias 'the pig-baby' ch006, layer dream, factions FAC-duchess-household, tier extra, first_appearance ch006-p19, gender left 'unspecified' pending appearance's concrete value); detail_dir created; _meta.counts updated to total 44 / extra 25. Handoffs opened: 03-characters/appearance (qa/defects/DEF-p3-char-index-901.json), 04-creatures/creature (qa/defects/DEF-p3-char-index-905.json), 03-characters/relationship (qa/defects/DEF-p3-char-index-904.json) for the two new edges. code/p3-char-index_check.py re-run: PASS."
+}

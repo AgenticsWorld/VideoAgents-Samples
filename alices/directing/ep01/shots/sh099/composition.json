@@ -1,0 +1,28 @@
+{
+  "shot_id": "sh099",
+  "scene_id": "SCN-pool-of-tears",
+  "size": "wide",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "mid_left",
+    "anchor_xy": [0.32, 0.56],
+    "size_in_frame": "swimming, head and shoulders and one arm above the surface, about 0.22 of frame height, held at a constant screen position as the hall passes"
+  },
+  "headroom": "about 0.30 of frame height of dark vault above her; the frame keeps the flooded canyon over her head for the whole swim so she never looks like she is in open water.",
+  "horizon_eyeline": "Water-level from among the glass table legs, lens on the surface, travelling with her at her own pace: the waterline runs level across at 0.50 of frame height for the whole shot. Her eyeline is at 0.44, forward, on the bright water ahead.",
+  "layers": {
+    "fg": "her bow wave and the surface running past the bottom edge",
+    "mg": "Alice swimming, and the glass table legs passing like columns",
+    "bg": "the flooded hall running away to the brightest water at the far south end where the lamp reflections crowd"
+  },
+  "gaze": {
+    "direction": "frame_right",
+    "lead_room": "right",
+    "note": "she swims and looks screen right toward the brightest water; about 0.40 of frame width of lit water is held open ahead of her for the whole shot. This is the largest and most hopeful lead room in the second half of the episode, and it is the heading ep02 inherits."
+  },
+  "balance": "Figure in the left third, bright destination in the right two thirds, columns passing between. A travelling frame with a clear heading — the last composed calm in the episode.",
+  "leading_lines": "The waterline and its reflected double converge toward the bright far end; the table legs pass through as a slow vertical beat that measures progress. Everything in frame agrees on a direction.",
+  "eye_first": "Alice's head and bow wave, then out along the water to the bright end she is making for.",
+  "safe_area_ok": true,
+  "constraint_binding": "Her swim has a heading — toward the brightest water at the far south end where the lamp reflections crowd. Dry wit, not distress: the composition is steady, level and uncrowded, with no dark mass closing in and nothing entering frame behind her. No high, crane or drone view over the pool."
+}

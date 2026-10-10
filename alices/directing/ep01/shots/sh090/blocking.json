@@ -1,0 +1,38 @@
+{
+  "shot_id": "sh090",
+  "group_id": "grp033",
+  "scene_no": "S09",
+  "scene_id": "SCN-long-hall",
+  "duration_s": 4.0,
+  "is_dialogue": false,
+  "group_position": "middle shot of grp033 — Alice on the map start ground (curtain), at the little door itself.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "stand",
+      "start_pos": "two feet high at the low curtain with both hands on the little door",
+      "space_fragment_en": "standing two feet high at the low curtain, centred in frame, facing the little door on screen-right and hauling at it",
+      "facing": "into the door, which is shoulder-high to her now and immediately in front of her",
+      "path": [],
+      "beats": [
+        { "t": 0.6, "action": "gets both hands to it and pulls", "sync": "the attempt" },
+        { "t": 2.0, "action": "shut again; it does not give at all", "sync": "discovery and defeat in the same composition" },
+        { "t": 3.2, "action": "her hands come off the wood", "sync": "held to the cut" }
+      ],
+      "performance_beat": {
+        "objective": "open a door she opened once already today",
+        "goal": "open a door she opened once already today",
+        "emotional_arc": "from certainty to winded, disbelieving defeat",
+        "arc_from": "certainty",
+        "arc_to": "winded defeat",
+        "trigger": { "beat": "the door refuses her weight and does not move", "t": 2.0 },
+        "no_early_reaction": ["the hands slackening", "the head dropping", "a step back"],
+        "forbidden_early": ["the hands slackening", "the head dropping", "a step back"],
+        "end_state": "hands sliding off the little door, arms dropping, chin up at a door that is shoulder-high to her"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0008 (dream)", "note": "Alice alone." }
+}

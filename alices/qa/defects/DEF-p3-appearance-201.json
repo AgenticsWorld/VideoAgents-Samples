@@ -1,0 +1,53 @@
+{
+  "id": "DEF-p3-appearance-201",
+  "opened_by": "03-characters/appearance",
+  "opened_on": "2026-09-22",
+  "task_id": "p3-appearance-cb2",
+  "assigned_to": "03-characters/character-manager",
+  "route_fix_to": "03-characters/character-manager",
+  "domain": "characters",
+  "status": "closed",
+  "severity": "minor",
+  "summary": "bible/characters/index.json records gender 'unspecified' for CHAR-old-crab and CHAR-young-crab, but the source states both are female.",
+  "findings": [
+    {
+      "id": "DEF-p3-appearance-201-a",
+      "file": "bible/characters/index.json",
+      "entries": [
+        "CHAR-old-crab",
+        "CHAR-young-crab"
+      ],
+      "issue": "Both entries have gender 'unspecified' with inferred_fields ['gender'] and reason 'No gender stated in the source beyond old/young'. The source does state it: ch003-p43 “an old Crab took the opportunity of saying to her daughter … ‘Hold your tongue, Ma!’ said the young Crab”. Mother and daughter are both female.",
+      "source": {
+        "chapter": "ch003",
+        "paragraph": "ch003-p43",
+        "quote": "an old Crab took the opportunity of saying to her daughter"
+      },
+      "suggested_fix": "Set gender 'female' for both, remove 'gender' from inferred_fields and cite ch003-p43."
+    },
+    {
+      "id": "DEF-p3-appearance-201-b",
+      "file": "bible/characters/index.json",
+      "entries": [
+        "CHAR-duck",
+        "CHAR-lory",
+        "CHAR-eaglet",
+        "CHAR-canary",
+        "CHAR-magpie"
+      ],
+      "issue": "Not a conflict, alignment only: these have gender 'unspecified' in the index, but the appearance cards must fix gender to male/female (SOUL gender hard anchor). The cards set Duck male, Lory female, Eaglet female, Canary female, Magpie male, each tagged inferred with reasons.",
+      "suggested_fix": "character-manager may mirror these inferred values into index.json so voiceprint/casting read one value."
+    }
+  ],
+  "impact": "The appearance cards already use the source-backed value (female) for both Crabs; downstream readers of index.json alone would see 'unspecified'.",
+  "requested_action": "memory-bible routes a controlled change to character-manager; appearance did not edit index.json (outside its write scope).",
+  "triaged_by": "00-orchestration/memory-bible",
+  "triage_task_id": "p3-bible-defects",
+  "triaged_on": "2026-09-22",
+  "routed_from": "00-orchestration/memory-bible",
+  "ruling": "(a) Source-stated: both Crabs are female (ch003-p43 'an old Crab ... to her daughter'). The current 'unspecified / no gender stated' is wrong. (b) Alignment only: mirror the appearance cards' inferred values into the index.",
+  "fix_instruction": "bible/characters/index.json: (a) CHAR-old-crab and CHAR-young-crab: gender 'female', remove 'gender' from inferred_fields, replace the reason with a citation of ch003-p43 (verbatim quote 'an old Crab took the opportunity of saying to her daughter'). (b) Set CHAR-duck male, CHAR-lory female, CHAR-eaglet female, CHAR-canary female, CHAR-magpie male. Keep 'gender' in inferred_fields and copy each reason from the matching appearance.json.",
+  "fixed_by": "03-characters/character-manager",
+  "fixed_on": "2026-09-22",
+  "fix_note": "bible/characters/index.json updated: (a) CHAR-old-crab and CHAR-young-crab gender -> female, 'gender' removed from inferred_fields, reason replaced with the ch003-p43 citation. (b) CHAR-duck gender -> male ('gender' added to inferred_fields, was missing); CHAR-lory -> female, CHAR-eaglet -> female, CHAR-canary -> female, CHAR-magpie -> male, all with reason copied verbatim from the matching appearance.json gender_note.reason. code/p3-char-index_check.py re-run: PASS."
+}

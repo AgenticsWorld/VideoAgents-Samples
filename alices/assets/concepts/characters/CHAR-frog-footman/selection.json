@@ -1,0 +1,32 @@
+{
+  "character_id": "CHAR-frog-footman",
+  "task_id": "p4-char-concept-cb3",
+  "sheet": "sheet.png",
+  "variants": [],
+  "status": "delivered_for_H2_review",
+  "layout_check": { "four_panels": true, "one_view_per_panel": true, "same_individual_all_panels": true, "size": "2560x1440 (JPEG payload)" },
+  "appearance_field_hits": {
+    "gender_male": true,
+    "species_common_frog_photoreal": true,
+    "skin_olive_brown_mottled_dark_eye_mask_cream_throat": true,
+    "eyes_gold_bronze_bulging_top_of_head": true,
+    "face_round_flat_wide_mouth": true,
+    "expression_vacant_gazing_up": true,
+    "powdered_curled_wig_on_frog_head": true,
+    "livery_snuff_brown_tail_coat_tarnished_brass_no_badge": true,
+    "waistcoat_buff_wool_per_COS-036": true,
+    "cream_knee_breeches": true,
+    "bare_webbed_feet": true,
+    "body_squat_pear_shaped_no_neck": "partial"
+  },
+  "style_check": { "photoreal_not_cartoon": true, "not_person_in_costume": true, "palette_within_style": true },
+  "self_check_defects": [
+    "Anatomy: stands fully upright on long thin legs with little knee bend; the body reads taller and more humanoid than Option A's squat semi-crouched frog. This is closer to Option B (semi-upright, humanised).",
+    "Forelimbs look like long-fingered hands (4-5 slender digits) rather than short frog forelimbs with round toe tips.",
+    "Close-up gaze is at the camera, not the habitual upward stare (acceptable for a neutral anchor)."
+  ],
+  "pending_H2": "H2-footmen-anatomy: rendered per the Option A proposal text; the result drifts toward Option B. For user decision at H2 (Option A vs B). Whatever is chosen must also apply to CHAR-fish-footman.",
+  "bible_conflicts": ["DEF-p4-char-302 (waistcoat colour: appearance.json vs costumes.json; sheet follows costumes.json)"],
+  "rerolls": [],
+  "reroll_budget_note": "User rerun setting = 0: no self-regeneration; the defects above are for user decision."
+}

@@ -1,0 +1,285 @@
+{
+  "schema_version": "whitebox_plan.v1",
+  "group_id": "grp004",
+  "scene_id": "SCN-riverbank",
+  "basis": "Alice holds the sitting_shelf anchor asleep on her back for the whole group. CRE-001 is the real waking-world rabbit at true animal scale (0.38 m nose-to-tail, about 0.22 m at the shoulder, bible/creatures/creature.json CRE-001): he is crouched out of sight in the long grass of the meadow until sh008 t=2.2 (group t=10.2), breaks cover on the screen-right side of the tile-4 axis, gallops at about 4 m/s across the near ground within arm's reach of her shoes at group t=11.4 (blocking_map path point [0.44,0.56]), then turns away and bounds off down the meadow toward field_way. He never changes stride at her shoes and is never given a look toward her or toward the lens. The Sister is same-scene cast outside the blocking map and is staged explicitly so she keeps her reading pose and her own anchor rather than an inherited placeholder.",
+  "actors": [
+    {
+      "id": "CHAR-alice",
+      "kind": "person",
+      "size_m": [
+        0.378,
+        1.35,
+        0.297
+      ],
+      "keyframes": [
+        {
+          "t": 0.0,
+          "position": [
+            -3.6,
+            0.0,
+            0.675
+          ],
+          "pose": "lie",
+          "yaw": 1.5708,
+          "head_yaw": 0.0
+        },
+        {
+          "t": 6.8,
+          "position": [
+            -3.6,
+            0.0,
+            0.675
+          ],
+          "pose": "lie",
+          "yaw": 1.5708,
+          "head_yaw": 0.0
+        },
+        {
+          "t": 7.3,
+          "position": [
+            -3.6,
+            0.0,
+            0.675
+          ],
+          "pose": "lie",
+          "yaw": 1.5708,
+          "head_yaw": 0.0
+        },
+        {
+          "t": 10.2,
+          "position": [
+            -3.6,
+            0.0,
+            0.675
+          ],
+          "pose": "lie",
+          "yaw": 1.5708,
+          "head_yaw": -0.35
+        },
+        {
+          "t": 11.4,
+          "position": [
+            -3.6,
+            0.0,
+            0.675
+          ],
+          "pose": "lie",
+          "yaw": 1.5708,
+          "head_yaw": -0.1
+        },
+        {
+          "t": 13.0,
+          "position": [
+            -3.6,
+            0.0,
+            0.675
+          ],
+          "pose": "lie",
+          "yaw": 1.5708,
+          "head_yaw": 0.25
+        },
+        {
+          "t": 15.0,
+          "position": [
+            -3.6,
+            0.0,
+            0.675
+          ],
+          "pose": "lie",
+          "yaw": 1.5708,
+          "head_yaw": 0.25
+        }
+      ]
+    },
+    {
+      "id": "CRE-001",
+      "kind": "creature",
+      "size_m": [
+        0.13,
+        0.22,
+        0.38
+      ],
+      "keyframes": [
+        {
+          "t": 0.0,
+          "position": [
+            -1.0,
+            0.0,
+            6.0
+          ],
+          "pose": "stand",
+          "yaw": 2.9
+        },
+        {
+          "t": 8.0,
+          "position": [
+            -1.0,
+            0.0,
+            6.0
+          ],
+          "pose": "stand",
+          "yaw": 2.9
+        },
+        {
+          "t": 10.2,
+          "position": [
+            -1.0,
+            0.0,
+            6.0
+          ],
+          "pose": "stand",
+          "yaw": -2.849
+        },
+        {
+          "t": 11.4,
+          "position": [
+            -2.4,
+            0.0,
+            1.35
+          ],
+          "pose": "stand",
+          "yaw": -2.849
+        },
+        {
+          "t": 13.0,
+          "position": [
+            -1.6,
+            0.0,
+            -0.6
+          ],
+          "pose": "stand",
+          "yaw": 2.7524
+        },
+        {
+          "t": 15.0,
+          "position": [
+            5.3,
+            0.0,
+            -3.47
+          ],
+          "pose": "stand",
+          "yaw": 1.9646
+        }
+      ]
+    }
+  ],
+  "scene_actors": [
+    {
+      "id": "CHAR-alice-sister",
+      "label": "Alice's Sister",
+      "kind": "person",
+      "size_m": [
+        0.448,
+        1.6,
+        0.352
+      ],
+      "keyframes": [
+        {
+          "t": 0.0,
+          "position": [
+            -2.8,
+            0.0,
+            -0.675
+          ],
+          "pose": "sit",
+          "yaw": -1.5708,
+          "head_pitch": 0.5
+        },
+        {
+          "t": 15.0,
+          "position": [
+            -2.8,
+            0.0,
+            -0.675
+          ],
+          "pose": "sit",
+          "yaw": -1.5708,
+          "head_pitch": 0.5
+        }
+      ]
+    }
+  ],
+  "cameras": [
+    {
+      "shot_id": "sh007",
+      "start": 0,
+      "duration_s": 8.0,
+      "movement": "static",
+      "keyframes": [
+        {
+          "t": 0.0,
+          "position": [
+            -6.269,
+            0.35,
+            2.018
+          ],
+          "target": [
+            -3.418,
+            0.35,
+            1.083
+          ],
+          "fov": 46.3972
+        },
+        {
+          "t": 8.0,
+          "position": [
+            -6.269,
+            0.35,
+            2.018
+          ],
+          "target": [
+            -3.418,
+            0.35,
+            1.083
+          ],
+          "fov": 46.3972
+        }
+      ]
+    },
+    {
+      "shot_id": "sh008",
+      "start": 8.0,
+      "duration_s": 7.0,
+      "movement": "static",
+      "keyframes": [
+        {
+          "t": 0.0,
+          "position": [
+            -5.4,
+            0.25,
+            2.0
+          ],
+          "target": [
+            -2.739,
+            0.25,
+            1.127
+          ],
+          "fov": 46.3972
+        },
+        {
+          "t": 7.0,
+          "position": [
+            -5.4,
+            0.25,
+            2.0
+          ],
+          "target": [
+            -2.739,
+            0.25,
+            1.127
+          ],
+          "fov": 46.3972
+        }
+      ]
+    }
+  ],
+  "continuity": {
+    "actors": "inherit",
+    "camera": "cut"
+  },
+  "warnings": [
+    "sh008: with the lens flat on the grass on the tile-4 axis, Alice's head falls behind the lens and only her hem and shoes are in frame in the near screen-left third, which is what composition asks for. Her body runs head-downhill (-X) and feet toward the meadow, so the animal really does cross her own feet.",
+    "CRE-001 clears Alice by 1.05 m at the closest pass (group t=11.4, his 0.19 m half-width against her 0.19 m prone half-width) - well outside the 0.20 m reference clearance; no swept-volume contact anywhere on his line."
+  ]
+}

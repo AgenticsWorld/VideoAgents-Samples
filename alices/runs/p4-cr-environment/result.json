@@ -1,0 +1,61 @@
+{
+  "task_id": "p4-cr-environment",
+  "agent": "05-scenes/environment",
+  "attempt": 1,
+  "status": "done",
+  "date": "2026-09-23",
+  "change_request": "BIB-0027 (user ruling 2026-09-22; world.json WR-010, cultivation.json XA-magic-08, SUP-002, SUP-010)",
+  "shared_convention": {
+    "new_field": "fixed.dream_design in every dream scene card: rule, flora, ornament_cues, palette, seasonal_guard, inferred, reason (plus animals_in_plate where non-speaking animals share the plate).",
+    "meaning": "These are environment cues in the Mucha / Art Nouveau language (flowing organic lines, July-true flora, halo roundels, mosaic and stained-glass accents, pastel-and-gold palette). Everything is realised as photographed physical sets and set extensions, never flat illustration (WR-010). ornament_cues name where ornament goes. Its form and material belong to 05-scenes/architecture, and light values belong to 05-scenes/lighting, which takes palette only as a colour target. Hand props and costume stay 1862 (WR-009).",
+    "season_guard": "Every Mucha flower chosen is July-flowering in lowland or coastal England (roses, lilies, hollyhocks, sweet peas, honeysuckle, foxglove, thistle, poppy, loosestrife, meadowsweet, water-lily, sea-holly, lime flower). No spring blossom and no autumn colour were added, so no season/time_of_day conflict is introduced.",
+    "unchanged": "IDs, layout/landmark references, variable_dims, and every states[] entry (timeline_ref, season, weather, wind, temperature, time_of_day, sun, clock) are unchanged, except the two duchess-house-front condition strings noted below."
+  },
+  "changed_files": {
+    "bible/scenes/SCN-caterpillar-clearing/environment.json": "fixed.dream_design: giant July meadow stems as a green 'nave' (echoes refs/style/alice.jpeg), mushroom cap as halo roundel, smoke ribbon-curls; buttercup gold / lilac-blue / jade palette. _meta.amended.",
+    "bible/scenes/SCN-cheshire-cat-path/environment.json": "fixed.dream_design: foxglove, honeysuckle and ivy; whiplash boughs; canopy-gap roundels framing the Cat; moss green / mauve / gold. _meta.amended.",
+    "bible/scenes/SCN-courtroom/environment.json": "fixed.dream_design: rose garlands, stained-glass rose-and-heart roundels in the west windows (tinted golden-hour shafts), throne halo roundel; ivory / old gold / rose-amber. _meta.amended.",
+    "bible/scenes/SCN-croquet-ground/environment.json": "fixed.dream_design: July borders, lime trees, flowing furrow bands, rounded topiary; pale gold lawn with pastel borders. animals_in_plate: hedgehogs and flamingoes as CGI (pending_H2). _meta.amended.",
+    "bible/scenes/SCN-duchess-house-front/environment.json": "fixed.dream_design: hollyhocks and roses on the little house, door arch with a round fanlight, sky roundel; straw gold / pastel pink / hazy blue. states S02.conditions: 'powdered wigs' reworded to 'powdered curls' + CGI frog/fish-bodied Footmen (anatomy pending_H2). states S04.conditions: pig end-state as CGI piglet (pending_H2). _meta.amended.",
+    "bible/scenes/SCN-duchess-kitchen/environment.json": "fixed.dream_design: hanging herbs, geranium, pepper-smoke ribbon-curls, poppy-and-vine mosaic hearth, copper-hood roundel; smoky amber / copper gold. _meta.amended.",
+    "bible/scenes/SCN-falling-dream/environment.json": "fixed.dream_design: carved vine, lily and poppy tendrils between the shelves; the glow above as a halo roundel; gilt mouldings; dusty rose / lilac into blue-black. _meta.amended.",
+    "bible/scenes/SCN-gryphon-sunning-spot/environment.json": "fixed.dream_design: combed seeding grass, poppies and cornflowers, lion-and-eagle roundel frieze on the wall; straw gold / coral / cornflower. _meta.amended.",
+    "bible/scenes/SCN-little-door-passage/environment.json": "fixed.dream_design: root and ivy tendrils; the far opening as a flower-wreathed arch-roundel; umber-to-pastel gradient that matches the air gradient. _meta.amended.",
+    "bible/scenes/SCN-long-hall/environment.json": "fixed.dream_design: carved lily and iris stems between the doors, gilt lamp roundels, floral door frieze, glass table, vine-band mosaic floor; amber gold over ivory/sage/rose. Replaces the Gothic-Revival reading for the dream hall (DEF-p4-style-001 b = B). _meta.amended.",
+    "bible/scenes/SCN-mad-tea-party/environment.json": "fixed.dream_design: sweeping horse-chestnut boughs as a canopy roundel, dog-rose and honeysuckle on the house; cream china / pastel / gold dapple. _meta.amended.",
+    "bible/scenes/SCN-mock-turtle-ledge/environment.json": "fixed.dream_design: sea-pinks, sea-holly, hair-like seaweed ribbons, shell-spiral rock, wave scrolls, sun-disc halo; pearl / aqua-jade / rose-gold. _meta.amended.",
+    "bible/scenes/SCN-pigeon-treetop/environment.json": "fixed.dream_design: whiplash canopy edges and a sky roundel; foliage only, so the no-blossom guard is kept; green-gold / powder blue. _meta.amended.",
+    "bible/scenes/SCN-pool-bank/environment.json": "fixed.dream_design: reeds, water-lilies (pad roundels), loosestrife, meadowsweet, organic race-circle; sage / mauve / cream / pale gold. _meta.amended.",
+    "bible/scenes/SCN-pool-of-tears/environment.json": "fixed.dream_design: inherits the long-hall design; lamp roundels reflected on the water, mosaic floor through the shallows, ripple rings; aqua-jade / amber gold. _meta.amended.",
+    "bible/scenes/SCN-rabbit-house-exterior/environment.json": "fixed.dream_design: roses, honeysuckle and sweet peas; the brass plate in a floral cartouche; round fanlight and arched window; cream / rose / brass gold. _meta.amended.",
+    "bible/scenes/SCN-rabbit-house-upstairs-room/environment.json": "fixed.dream_design: poppy-and-vine wallpaper, stained-glass rose roundel in the window (tinted sun), tiled floral fireplace; ivory / dusty rose / gold, turning muted when the window is blocked. _meta.amended.",
+    "bible/scenes/SCN-rose-tree-yard/environment.json": "fixed.dream_design: the goal-image and fullest Mucha space. Rose-tree crown as a halo roundel, Madonna lilies, clematis arches, mosaic-and-bronze fountains, curving parterre; white / blush / lavender / pale gold. _meta.amended.",
+    "bible/scenes/SCN-shaft-landing-passage/environment.json": "fixed.dream_design (kept restrained): root arabesque lattice leading to the amber lamp glow; no built ornament; umber / ochre. _meta.amended.",
+    "bible/scenes/SCN-wood-thistle-glade/environment.json": "fixed.dream_design: the great thistle as the glade's Mucha motif, head roundels, foxglove and bracken; mauve / moss / silver-white / gold. animals_in_plate: giant puppy as CGI (pending_H2). _meta.amended.",
+    "bible/scenes/SCN-wood-tree-door/environment.json": "fixed.dream_design: swirling bark grain round the arched, vine-carved door, ivy and honeysuckle, the light-shaft as a gold halo roundel; bark brown / bottle green / gold. _meta.amended."
+  },
+  "stale_wording_found": "In the 21 cards the only BIB-0027-stale wording was duchess-house-front S02 ('powdered wigs' on the Footmen, now tied to the CGI Footmen). No performer_concept, 'human performer', 'no CGI' or 'Art Nouveau excluded' text existed in these environment cards.",
+  "pending_H2": [
+    "Frog-/Fish-Footman anatomy: referenced only (owner 04-creatures / 03-characters); the environment card does not define it.",
+    "Non-speaking animals: proposed as photoreal CGI animals in the plate (hedgehogs and flamingoes: croquet-ground; puppy: wood-thistle-glade; pig end-state: duchess-house-front S04). Only the environment consequences (grass and litter dressing) are recorded here."
+  ],
+  "checks": {
+    "json_valid": "PASS (21/21)",
+    "scene_id_in_index": "PASS (unchanged)",
+    "timeline_ref_unchanged": "PASS (no states[] anchors touched)",
+    "season_time_conflicts": "0 (all added flora July-true; no time_of_day values changed)",
+    "chapter_coverage": "unchanged from p3 (complete)",
+    "no_unknown_placeholder": "PASS",
+    "waking_scenes_untouched": "PASS (SCN-riverbank, SCN-field-hedge-burrow, SCN-thames-riverside not edited)",
+    "paragraph_refs": "the new dream_design reasons were checked against story/structured_story; the tree-door is ch007-p104 and the puppy runs to ch004-p40. A pre-existing minor imprecision is left in SCN-wood-tree-door fixed.reason ('tree-door ... ch007-p103'; the door itself is p104). It is outside BIB-0027 scope and was not edited."
+  },
+  "bible_write_path": "Edits limited to the 21 listed files, which are already recorded as impacted in the changelog entry BIB-0027 (impacted_stale). No new changelog entry was written, because memory-bible owns changelog.md. Please register this redo under BIB-0027 through on_bible_access.",
+  "downstream_notice": [
+    "05-scenes/lighting: can read dream_design.palette and the stained-glass window tints (courtroom, rabbit-house-upstairs-room) as colour targets.",
+    "05-scenes/architecture: ornament_cues name where ornament goes; form and material are yours to set.",
+    "06-art/environment-concept, 08-video-gen/prompt: dream_design gives the per-scene Mucha dressing; waking scenes carry none."
+  ],
+  "defects_opened": [],
+  "skills": "none enabled for this station",
+  "evaluation": "skipped (quality judge = 0)"
+}

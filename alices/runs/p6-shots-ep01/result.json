@@ -1,0 +1,260 @@
+{
+  "task_id": "p6-shots-ep01",
+  "agent": "07-directing/shot-planning",
+  "project": "alices",
+  "ep": "ep01",
+  "attempt": 1,
+  "status": "completed",
+  "finished": "2026-09-23",
+  "product": "directing/ep01/shot_list.json",
+
+  "summary": "ep01 finalised shot list: 101 shots in 37 generation groups, 542.0 s against the 540 s episode_plan budget (+0.37%). Every shot carries final duration, size, camera position, content, the screenplay action/dialogue line it realises, characters / creatures / costumes / props, is_dialogue with inline dialogue_lines, view_tile and poses. Every group carries scene_no / scene_id, integer total_duration_s, time_of_day + lighting_scheme_id, characters_union / creatures_union / costumes_by_char, has_dialogue, audio_plan, continuity_from, scene_refs and blocking_map, and the six director transitions are re-hung on the final boundaries. narration_anchors is absent by design (narration off project-wide). All host machine checks PASS.",
+
+  "counts": {
+    "shots": 101,
+    "generation_groups": 37,
+    "scenes_covered": "S01-S10 (10 screenplay scenes, 100%) plus the confirmed hook head block S00",
+    "dialogue_groups": 24,
+    "ambient_only_groups": 13,
+    "dialogue_lines": 34,
+    "non_hard_cut_transitions": 5,
+    "narrative_blocks": 1
+  },
+
+  "duration": {
+    "budget_s": 540,
+    "authority": "story/episode_plan.json episodes[ep01].duration_budget_s = 540",
+    "total_s": 542.0,
+    "deviation_pct": 0.37,
+    "tolerance": "+/-10% = 486-594 s",
+    "storyboard_draft_total_s": 537.0,
+    "delta_vs_storyboard_s": 5.0,
+    "shot_duration_range_s": [2.0, 12.0],
+    "group_duration_range_s": [4, 30],
+    "episode_asl_s": 5.37
+  },
+
+  "group_boundaries": "Unchanged from the storyboard. All 37 draft groups were kept exactly as signed at H3S — same shot membership, same scene splits (including the S05 SCN-long-hall / SCN-little-door-passage split at shots 6|7), same five must-not-cut-inside protections (sh025 the unbroken fall-asleep take, sh048 the 12 s locked shrink, sh062-sh063 the gauge sequence, sh079 'who in the world am I?', sh086-sh087 the fan and the shrink stopping in one frame). Because no group was re-cut, every blocking_map, scene_refs and view_tile is inherited verbatim and no動線 re-slicing was needed.",
+
+  "duration_changes_from_storyboard": {
+    "why": "code/check_generation_groups.py requires total_duration_s to be an INTEGER in [4, max_group_s]. The storyboard's 0.5 s steps left 12 groups on half-second totals and the S00 hook group at 3 s, below the 4 s floor. Thirteen single shots were nudged by 0.5-1.0 s to land every group on an integer; no group boundary, beat or line moved.",
+    "net_effect_s": 5.0,
+    "changes": [
+      { "shot": "sh001", "from_s": 3.0, "to_s": 4.0, "group": "grp001", "reason": "USER-FACING DEVIATION — see deviations[0]. 4 s is the host floor for a generation group and this shot is a group of one." },
+      { "shot": "sh029", "from_s": 2.5, "to_s": 3.0, "group": "grp011 -> 16 s", "reason": "the one legible watch-dial insert gets its full beat" },
+      { "shot": "sh032", "from_s": 3.5, "to_s": 3.0, "group": "grp012 -> 12 s", "reason": "the beat is a hard stop and loses nothing" },
+      { "shot": "sh045", "from_s": 2.5, "to_s": 3.0, "group": "grp017 -> 15 s", "reason": "the one legible DRINK ME read" },
+      { "shot": "sh047", "from_s": 3.5, "to_s": 4.0, "group": "grp018 -> 16 s", "reason": "three distinct tastings need the room; the 12 s locked wide sh048 was NOT touched" },
+      { "shot": "sh058", "from_s": 11.0, "to_s": 11.5, "group": "grp022 -> 25 s", "reason": "drops the two reasoning lines from 86% to 83% of the shot, keeping the required silent head and tail" },
+      { "shot": "sh067", "from_s": 6.5, "to_s": 7.0, "group": "grp026 -> 12 s", "reason": "lengthens the held one-eye close the director asked to hold" },
+      { "shot": "sh073", "from_s": 2.5, "to_s": 3.0, "group": "grp028 -> 11 s", "reason": "the shot that has to sell quadruped water contact" },
+      { "shot": "sh076", "from_s": 3.0, "to_s": 3.5, "group": "grp029 -> 8 s", "reason": "the episode's only two-step tilt needs room to stop and go again" },
+      { "shot": "sh080", "from_s": 5.5, "to_s": 6.0, "group": "grp030 -> 23 s", "reason": "lengthens the held beat and drops group dialogue density 0.67 -> 0.65" },
+      { "shot": "sh085", "from_s": 2.5, "to_s": 2.0, "group": "grp032 -> 17 s", "reason": "a single glance carries at 2.0 s; the trim protects the sh086-sh087 pair, which may not be shortened" },
+      { "shot": "sh095", "from_s": 6.5, "to_s": 7.0, "group": "grp035 -> 12 s", "reason": "the railway line drops from 85% to 79% of the shot" },
+      { "shot": "sh098", "from_s": 9.0, "to_s": 9.5, "group": "grp036 -> 16 s", "reason": "the two lines drop from 86% to 81% and keep the air between them" }
+    ],
+    "side_effect": "After these nudges no shot in the episode sits above the 0.85 dialogue-density warn line; check_dialogue_fit reports 0 tight shots (the storyboard draft had two at 0.86)."
+  },
+
+  "user_rulings_carried": [
+    {
+      "item": "hook pair oh-1 + ec-2",
+      "carried_as": "S00 / grp001 / sh001 kept as the episode head with TR-01 (hard_cut, narrative_block FF-ep01-open entry) and TR-02 on grp002 (smash_cut, block exit); sh101 kept as the S10 V-wake insert in grp037. Both carry hook_ref fields naming the confirmed hook. Nothing tagged provisional survives in shot_list.json — the elements are simply final."
+    },
+    {
+      "item": "S08 White Rabbit carries gloves and fan in his mouth",
+      "carried_as": "sh073 content and constraint state the mouth-carry explicitly while he trots on four legs; sh074 is where they transfer to his forepaws as he sits back on his haunches; sh077 drops them exactly as the screenplay writes it. grp028 quadruped_note repeats the mouth-carry as mandatory prompt wording. screenplay.md untouched."
+    }
+  ],
+
+  "audio_plan": {
+    "rule_applied": "Narration is off project-wide (settings.json output.narration_enabled=false), so narration_anchors is omitted entirely and narration_over is never used. Every group is dialogue (has a spoken line) or ambient_only (does not).",
+    "dialogue_groups": 24,
+    "ambient_only_groups": ["grp001", "grp004", "grp005", "grp006", "grp007", "grp010", "grp013", "grp014", "grp015", "grp016", "grp020", "grp026", "grp034"],
+    "silent_rationale": "All 13 ambient_only groups carry their own silent_rationale. Every one of them is silent by the director's design rather than by omission: the hook head (a promise, not an explanation), the rabbit's pass and her run-off (reaction only, and the sister must not answer), the chase and the drain to silence at the burrow (the silence IS the dream's front door), the unbroken fall-asleep take (the onset must not be announced), the whole of S05 (62 s of architecture argument, the longest dialogue-free stretch in the episode by design, plus the silently played garden beat per the screenplay adaptation_note), the three failed climbs (a physical defeat that must not become complaint, protecting the scolding close-up two groups later), the key-and-one-eye pair, and the two splashes before the plunge. Nothing was routed to narration and nothing needed to be.",
+    "no_group_needs_help": "No ambient_only group was found that cannot carry its story in pictures, so nothing was escalated to orchestrator on this account."
+  },
+
+  "dialogue_fit_table": {
+    "rule": "per group Sigma line estimates <= total_duration_s x 0.7; per shot Sigma <= shot duration; single line <= 10.5 s",
+    "source": "code/check_dialogue_fit.py --project alices --ep ep01 (read-only, no --write-est); report at directing/ep01/dialogue_fit.json",
+    "totals": { "dialogue_groups_checked": 24, "groups_over": 0, "shots_over": 0, "shots_tight": 0, "lines": 34, "est_total_s": 142.0, "capacity_total_s": 266.0 },
+    "rows": [
+      { "group": "grp002", "total_s": 17, "cap_s": 11.9, "est_s": 4.8, "ratio": 0.282, "status": "ok" },
+      { "group": "grp003", "total_s": 17, "cap_s": 11.9, "est_s": 1.4, "ratio": 0.082, "status": "ok" },
+      { "group": "grp008", "total_s": 25, "cap_s": 17.5, "est_s": 3.7, "ratio": 0.148, "status": "ok" },
+      { "group": "grp009", "total_s": 14, "cap_s": 9.8, "est_s": 7.7, "ratio": 0.55, "status": "ok" },
+      { "group": "grp011", "total_s": 16, "cap_s": 11.2, "est_s": 2.0, "ratio": 0.125, "status": "ok" },
+      { "group": "grp012", "total_s": 12, "cap_s": 8.4, "est_s": 3.0, "ratio": 0.25, "status": "ok" },
+      { "group": "grp017", "total_s": 15, "cap_s": 10.5, "est_s": 7.4, "ratio": 0.493, "status": "ok" },
+      { "group": "grp018", "total_s": 16, "cap_s": 11.2, "est_s": 4.9, "ratio": 0.306, "status": "ok" },
+      { "group": "grp019", "total_s": 11, "cap_s": 7.7, "est_s": 5.1, "ratio": 0.464, "status": "ok" },
+      { "group": "grp021", "total_s": 17, "cap_s": 11.9, "est_s": 5.9, "ratio": 0.347, "status": "ok" },
+      { "group": "grp022", "total_s": 25, "cap_s": 17.5, "est_s": 14.7, "ratio": 0.588, "status": "ok" },
+      { "group": "grp023", "total_s": 10, "cap_s": 7.0, "est_s": 1.6, "ratio": 0.16, "status": "ok" },
+      { "group": "grp024", "total_s": 10, "cap_s": 7.0, "est_s": 2.0, "ratio": 0.2, "status": "ok" },
+      { "group": "grp025", "total_s": 12, "cap_s": 8.4, "est_s": 5.8, "ratio": 0.483, "status": "ok" },
+      { "group": "grp027", "total_s": 22, "cap_s": 15.4, "est_s": 8.6, "ratio": 0.391, "status": "ok" },
+      { "group": "grp028", "total_s": 11, "cap_s": 7.7, "est_s": 4.8, "ratio": 0.436, "status": "ok" },
+      { "group": "grp029", "total_s": 8, "cap_s": 5.6, "est_s": 1.4, "ratio": 0.175, "status": "ok" },
+      { "group": "grp030", "total_s": 23, "cap_s": 16.1, "est_s": 15.0, "ratio": 0.652, "status": "ok" },
+      { "group": "grp031", "total_s": 30, "cap_s": 21.0, "est_s": 19.8, "ratio": 0.66, "status": "ok" },
+      { "group": "grp032", "total_s": 17, "cap_s": 11.9, "est_s": 1.9, "ratio": 0.112, "status": "ok" },
+      { "group": "grp033", "total_s": 13, "cap_s": 9.1, "est_s": 1.7, "ratio": 0.131, "status": "ok" },
+      { "group": "grp035", "total_s": 12, "cap_s": 8.4, "est_s": 5.5, "ratio": 0.458, "status": "ok" },
+      { "group": "grp036", "total_s": 16, "cap_s": 11.2, "est_s": 7.7, "ratio": 0.481, "status": "ok" },
+      { "group": "grp037", "total_s": 11, "cap_s": 7.7, "est_s": 5.6, "ratio": 0.509, "status": "ok" }
+    ],
+    "tightest": "grp031 at 0.66 and grp030 at 0.652 — both under the 0.7 rule but with little headroom. grp031 sits exactly on the 30 s model cap and therefore cannot absorb any further length: if any of LN-024 / LN-025 / LN-026 grows, the only remedy is trimming the text, not extending the group. Recorded in that group's group_integrity field for p6-dialogue-fit and dialogue-rewrite.",
+    "note": "No overflow was pushed to p6-dialogue-fit. Running the CLI regenerated directing/ep01/dialogue_fit.json, which previously held a source-only check from 2026-09-22; it now reflects the finalised shot list. No --write-est was used, so no estimate was rewritten."
+  },
+
+  "machine_checks": {
+    "runtime": "/Users/dolores/Library/Application Support/@videoagents/desktop/python-runtimes/versions/1.0.33/py/bin/python3 (the app runtime, so PIL is present and layout_top.png dimensions are read — no spurious WARNs). Run from /Applications/VideoAgents.app/Contents/Resources/backend. Nothing was copied or rewritten into the project code/.",
+    "check_generation_groups": {
+      "command_requested_in_work_order": "python3 code/check_generation_groups.py --project alices --ep ep01",
+      "command_actually_run": "python3 code/check_generation_groups.py '<project>/directing/ep01/shot_list.json'",
+      "why_different": "This host CLI takes the shot_list.json path as a positional argument and has no --project/--ep options (it would exit 2 on unrecognised arguments). The path form is the documented usage in the script's own docstring.",
+      "output": [
+        "[7d] skipped: narration off(项目输出设置「旁白」已关闭,全片无旁白)—— 仅查 audio_plan(禁 narration_over)",
+        "机检通过: 37 组全部合规;§7D ① 旁白已关闭(skipped: narration off)/audio_plan 齐备;transition_ok 非硬切转场 5 处",
+        "exit=0"
+      ],
+      "verdict": "PASS (groups_cover_all_shots, group_shots_contiguous_same_scene, group duration integer + in range, group_characters_lte_4, continuity_from chain, audio_plan_complete + no narration_over, ambient_only silent_rationale, transition_type_valid, transition_reason_required, transition_budget_le_1pct, transition_pad_valid, narrative_block_paired, script_keypoints_covered)"
+    },
+    "blocking_map_check": {
+      "command": "python3 code/blocking_map_check.py --project alices --ep ep01 --strict",
+      "output": [
+        "[blocking_map] alices/ep01: 违规 0 条, WARN 0 条 -> PASS",
+        "exit=0"
+      ],
+      "verdict": "PASS (blocking_map_present, label_ok, creature_blocking_ok, scene_layout_pack_ok, landmark references, route_en, cross-group continuity within each scene)"
+    },
+    "storyboard_pose_check": {
+      "command": "python3 code/storyboard_pose_check.py --project alices --ep ep01 --source shot_list --strict",
+      "output": [
+        "OK pose_present shot_list ep01:101 镜,0 违规,0 提醒",
+        "exit=0"
+      ],
+      "verdict": "PASS — run as an extra self-check beyond the two the work order required, because poses are inherited per shot."
+    },
+    "check_dialogue_fit": {
+      "command": "python3 code/check_dialogue_fit.py --project alices --ep ep01",
+      "output": [
+        "报告 → <project>/directing/ep01/dialogue_fit.json",
+        "dialogue_fit: 对白组 24 组已查,超限 0 组,镜级超限 0 / 紧 0 镜,台词 34 句 Σ估时 142.0s / 承载 266.0s;0 FAIL / 0 WARN",
+        "exit=0"
+      ],
+      "verdict": "PASS on all seven sub-checks (dialogue_fit_group, dialogue_fit_shot, line_le_cap, line_est_consistent, lines_text_match_source, source_lines_covered, speaker_speed_unknown). Run read-only as a self-check; the p6-dialogue-fit node still owns the gate."
+    }
+  },
+
+  "acceptance_self_run": {
+    "duration_sum_pm_10pct": "PASS — 542.0 s vs 540 s budget, +0.37%.",
+    "id_refs_valid": "PASS — every scene_id in bible/scenes/index.json, every CHAR-id in bible/characters/index.json, every CRE-id in bible/creatures/index.json, every PROP-id in bible/props.json.",
+    "shot_ids_unique": "PASS — sh001..sh101, unique, contiguous, in screen order.",
+    "groups_cover_all_shots": "PASS — host check.",
+    "group_shots_contiguous_same_scene": "PASS — host check; also same scene_no, so no group straddles two instances of SCN-long-hall.",
+    "group_duration_cap_30s": "PASS — max 30 s (grp031), min 4 s (grp001); all integers, which the host check additionally requires.",
+    "group_characters_lte_4": "PASS — max cast 2 (grp002/grp003/grp005 Alice + Sister; grp011/grp012/grp028/grp029 Alice + White Rabbit).",
+    "group_audio_plan_defined": "PASS — 24 dialogue / 13 ambient_only, all consistent with has_dialogue; narration_over never used.",
+    "ambient_only_groups_justified": "PASS — 13/13 carry silent_rationale.",
+    "dialogue_est_fits_group_x0.7": "PASS — 0 groups over, 0 shots over, 0 shots tight (see table).",
+    "creature_refs_valid": "PASS — CRE-001 appears in grp004 and grp006 only, registered in creatures[] per shot and creatures_union per group, with its own independent blocking_map entry in both. Every other group carries creatures_union: []. CHAR-white-rabbit is kept strictly in characters[] with COS-006 in grp011/grp012/grp028/grp029 and never appears as a creature.",
+    "costume_refs_valid": "PASS — every shot's costumes covers exactly its characters; every COS-id exists in bible/costumes.json and belongs to that character; each group's costumes_by_char is the union of its shots and gives each character exactly one outfit. CHAR-alice COS-001 / CHAR-alice-sister COS-003 / CHAR-white-rabbit COS-006 throughout; no change_point falls inside ep01, so no costume changes at any boundary.",
+    "transition_ok": "PASS — 6 transitions, all six from the directing_plan 转场清单 landed and none invented: TR-01 hard_cut (grp001), TR-02 smash_cut (grp002), TR-03 match_cut (grp008), TR-04 dissolve 0.6 s (grp009), TR-05 dissolve 0.8 s (grp010), TR-06 smash_cut (grp035). Sigma renderable = 1.4 s <= 5.4 s (1% of 540). No hold_s / freeze_s pads used. narrative_block FF-ep01-open is a single-group block whose entry group carries TR-01 and whose following group carries TR-02.",
+    "blocking_map_present": "PASS — host check, strict mode, 0 violations 0 WARN.",
+    "label_ok": "PASS — Alice / Alice's Sister / White Rabbit / Wild White Rabbit, one word per character across the whole episode, no pronouns, no explanatory punctuation.",
+    "narration_anchors_cover_all": "SKIPPED — narration off.",
+    "narration_window_gte_est_x1.15": "SKIPPED — narration off.",
+    "eval_rubric": "none — 质量评委 = 0, no evaluation dispatched.",
+    "qa": "none — all eight QA dimensions are 0."
+  },
+
+  "deviations": [
+    {
+      "id": "DEV-1",
+      "severity": "needs the user to know",
+      "item": "The hook head shot sh001 / grp001 runs 4.0 s, not the 3 s the user signed at H3S.",
+      "why": "The gate ruling names 'oh-1 (opening, 3s flash-forward of the slow well-fall)'. A 3 s group cannot be produced: code/check_generation_groups.py enforces a 4 s floor on total_duration_s (MIN_GROUP_S), which is the video model's minimum clip length, and this shot is a group of one with nothing to merge it into. Merging it into grp002 is impossible — different scene_id, and it is the narrative_block entry.",
+      "decided": "Extended to 4.0 s. The design is untouched: same locked wide, same framing, same content; it simply holds one second longer. Episode total 542.0 s, still +0.37% of budget.",
+      "if_the_user_disagrees": "The only alternatives are dropping the hook (which reverses their ruling) or changing the project's video model to one with a shorter minimum clip. Both are user decisions, not mine. Routed to orchestrator for disclosure; no rework is needed either way unless the user rules otherwise."
+    },
+    {
+      "id": "DEV-2",
+      "severity": "informational",
+      "item": "Group totals are integers, contrary to the work order's note that 'integer seconds are not required'.",
+      "why": "The host check the same work order told me to run enforces isinstance(total_duration_s, int) alongside the [4, max_group_s] range; the 30 s cap from the user's video-model setting supersedes the 15 s ceiling but not the integer rule. Leaving the storyboard's 15.5 / 12.5 / 24.5 totals would have failed the check outright.",
+      "decided": "Thirteen single shots nudged by 0.5-1.0 s (table above). Per-shot durations still use 0.5 s steps; only group totals are integers. No boundary, beat or line moved."
+    },
+    {
+      "id": "DEV-3",
+      "severity": "informational",
+      "item": "check_generation_groups.py was invoked with the shot_list.json path, not --project alices --ep ep01.",
+      "why": "That CLI has no --project/--ep options. Documented above under machine_checks; the check itself is the one the work order asked for."
+    },
+    {
+      "id": "DEV-4",
+      "severity": "informational",
+      "item": "Four transition_in intents and one narrative_block kind were remapped to the host's controlled enums.",
+      "why": "The storyboard wrote descriptive intents (start_on_picture, register_jolt, unannounced_dream_onset, time_ellipsis, sleep_onset, plunge_impact) and kind 'flashforward', none of which are in code/check_generation_groups.py's TRANSITION_INTENTS / BLOCK_KINDS.",
+      "decided": "TR-01 -> episode_open, TR-02 -> flashback_out, TR-03 -> dream_in, TR-04 -> time_skip, TR-05 -> other, TR-06 -> scene_change; FF-ep01-open kind -> flashback. Every one carries an intent_note / kind_note stating the original word and, for FF-ep01-open, warning downstream that the block is a flash-FORWARD and the direction must be read from the id and the note, not from kind. No reason text was altered and no transition was added or dropped."
+    }
+  ],
+
+  "problems_found_not_fixed": [
+    {
+      "id": "FF-ep01-open kind has no correct enum value",
+      "severity": "minor / schema",
+      "routed_to": "orchestrator -> whoever owns code/check_generation_groups.py BLOCK_KINDS",
+      "detail": "The episode's head block is a flash-forward. BLOCK_KINDS is (flashback, dream, montage, imagination) and has no flashforward member, so the block is filed as 'flashback' with a kind_note. Any downstream tool that reads kind literally will have the time direction backwards. Not patched here — the fix belongs in the host enum, not in project data.",
+      "mitigation_in_place": "grp001.narrative_block.kind_note spells out the real direction, and the block id FF-ep01-open is self-describing."
+    },
+    {
+      "id": "DEF-p6-directing-ep01-001",
+      "severity": "carried, not re-raised",
+      "routed_to": "already open, raised by the director and routed to memory-bible",
+      "detail": "color_script's scene_curves describe daylight through high halo-roundel windows in the hall and a daylight shaft in the pool; architecture.json says the hall is windowless with blind roundels and lighting.json rules roundel_glow: reflected_lamplight_only. The director's interim direction is followed literally in every S05-S10 shot here: no daylight, no roundel shaft, no cast coloured light in the hall except the garden green through the little door, and in S10 the way-out light is the brightest reflection field at the south end. If memory-bible rules the other way, S05/S06/S10 need a lighting re-pass but NO re-cut and no change to this shot list."
+    },
+    {
+      "id": "script-note-ep01-s08-rabbit-hands",
+      "severity": "closed by user ruling",
+      "detail": "The S08 action line gives the Rabbit gloves in one hand and a fan in the other while trotting. The user ruled at H3S that the mouth-carry staging stands and the screenplay stays frozen. Staged accordingly in sh073/sh074/sh077 and recorded in grp028's quadruped_note. No further action."
+    },
+    {
+      "id": "asl-deviation-s03",
+      "severity": "closed",
+      "detail": "The storyboard flagged S03 at 9 shots / ASL 5.3 s against the plan's ~6 / ~8 s, and handed the final numbers to me. Reviewed and kept: both POV-straight-down inserts are separately required by the plan's seven-POV list, the three dressing passes must read as distinct, and TR-04 / TR-05 need boundaries to hang on. S03 finalises at 9 shots / 48.0 s / ASL 5.3 s, on its pacing allocation of 48.0 s. No change."
+    },
+    {
+      "id": "grp031 has no headroom",
+      "severity": "advisory to p6-dialogue-fit",
+      "detail": "grp031 is 30 s — exactly the project's group cap — and runs 0.66 dialogue density. It cannot be lengthened. Any future growth in LN-024 / LN-025 / LN-026 must be solved by trimming the text. Recorded in the group's group_integrity field."
+    }
+  ],
+
+  "handoff": {
+    "camera-movement / composition / blocking": "Shot ids, durations, sizes and camera_position are frozen. Each shot also carries a 'constraint' field holding the director instructions that are not mine to relitigate (locked frames, unbroken takes, the single up-angle, the one two-step tilt, distance discipline on the Rabbit, the camera that does not follow). blocking must put every per-shot station on the group's blocking_map line and may not contradict route_en.",
+    "continuity-planning": "Three live risks unchanged from the storyboard: Alice's four size states inside one room (1.35 / 0.254 / 2.74 / 0.61 m, gauged against 0.715 / 1.95 / 2.30 / 2.80 / 0.38 m, written on the shots' and groups' scale_note fields); the water level ratcheting from nothing in S07 to four inches in S08 to swimmable in S10, which must never reset; and the Rabbit's prop ledger ending with one glove on Alice's hand and the fan drifting past her in S10. One boundary needs boundary_cast_framing attention: grp027 -> grp028, where the White Rabbit joins the cast — mitigated by opening grp028 on Alice alone and having him enter from the far dark end on a different axis; the note is in grp028.boundary_cast_note.",
+    "08-video-gen/prompt": "Quadruped corrective wording is mandatory in grp011, grp012, grp028, grp029 (quadruped_note on each). audio_plan is the hard input for the no-dialogue constraint on all 13 ambient_only groups. time_of_day + lighting_scheme_id are the only legitimate source for light description. Do not write inter-group transitions into any video_prompt.",
+    "09-edit/transition": "Six entries; two are renderable (grp009 dissolve 0.6 s, grp010 dissolve 0.8 s), four are annotation-only and render as hard cuts. Sigma renderable 1.4 s, inside the 1% budget. The tail to black plus one splash over black after sh101 is the edit's tail, is not a group and carries no transition_in.",
+    "long_take_off": "settings.duration.long_take = false, so group_transitions anchor is always none. continuity_from in this file is an ordering pointer demanded by the host check and must NOT be read as a tail-frame anchor; a top-level note in shot_list.json says so."
+  },
+
+  "not_done_and_why": {
+    "narration_anchors": "Deliberately absent — narration is off project-wide. The host check confirms shot_list must not retain the field.",
+    "dispatch": "Nothing dispatched, per the work order.",
+    "evaluation_and_qa": "Not run — 质量评委 = 0 and all eight QA dimensions are 0.",
+    "storyboard_notes": "directing/ep01/storyboard_notes.json does not exist, so there were no user shot notes to apply this round.",
+    "skills": "This station has no auto-activated project skills. The 表演控制 (performance-direction) skill is scoped to blocking / prompt / video-generation / QA, not to shot planning, so nothing was registered with services/runtime/skill_report.py."
+  },
+
+  "files_written": [
+    "directing/ep01/shot_list.json",
+    "directing/ep01/dialogue_fit.json (regenerated as a side effect of running the host CLI read-only; it previously held a source-only check and now reflects the finalised shot list)",
+    "runs/p6-shots-ep01/result.json"
+  ],
+
+  "next": "G6 gate. On PASS the shot list freezes: any later change to a shot id, a group id, a duration or a group boundary goes through the change process with a new version and orchestrator marks the affected downstream chain dirty."
+}

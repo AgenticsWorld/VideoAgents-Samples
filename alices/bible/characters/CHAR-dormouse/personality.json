@@ -1,0 +1,103 @@
+{
+  "_meta": {
+    "file": "bible/characters/CHAR-dormouse/personality.json",
+    "owner": "03-characters/personality",
+    "produced_by_task": "p3-personality-pb1",
+    "produced_on": "2026-09-22",
+    "content_language": "en",
+    "status": "draft_v1"
+  },
+  "character_id": "CHAR-dormouse",
+  "name": "The Dormouse",
+  "tier": "B",
+  "layer": "dream",
+  "temperament": "Drowsy, put-upon and quietly touchy. It is used as a cushion and pinched awake, drifts off mid-sentence, and yet insists it heard everything. It takes offence at interruptions and at anyone growing too fast.",
+  "traits": [
+    {
+      "trait": "Perpetually drowsy",
+      "description": "Sleeps through most of the tea-party and the trial, and even talks and sings in its sleep.",
+      "evidence": [
+        { "chapter": "ch007", "chapter_no": 7, "ref": "ch007-p01", "event": "ev0029", "quote": "a Dormouse was sitting between them, fast asleep", "note": "First seen asleep." },
+        { "chapter": "ch007", "chapter_no": 7, "ref": "ch007-p19", "event": "ev0029", "quote": "who seemed to be talking in his sleep", "note": "Contributes while half-asleep." },
+        { "chapter": "ch011", "chapter_no": 11, "ref": "ch011-p46", "event": "ev0046", "quote": "the Dormouse denied nothing, being fast asleep", "note": "Asleep in court." }
+      ]
+    },
+    {
+      "trait": "Proud; insists it is alert",
+      "description": "Claims it heard every word, in spite of the evidence.",
+      "evidence": [
+        { "chapter": "ch007", "chapter_no": 7, "ref": "ch007-p66", "event": "ev0031", "quote": "I wasn’t asleep", "note": "Said 'in a hoarse, feeble voice'." }
+      ]
+    },
+    {
+      "trait": "Touchy storyteller",
+      "description": "Sulks at interruptions, but consents to go on when asked humbly.",
+      "evidence": [
+        { "chapter": "ch007", "chapter_no": 7, "ref": "ch007-p83", "event": "ev0031", "quote": "If you can’t be civil, you’d better finish the story for yourself.", "note": "Sulks at Alice's objection." },
+        { "chapter": "ch007", "chapter_no": 7, "ref": "ch007-p85", "event": "ev0031", "quote": "However, he consented to go on.", "note": "Soothed by her apology." }
+      ]
+    },
+    {
+      "trait": "Stickler for 'reasonable' growth",
+      "description": "Scolds Alice for growing too fast and walks off in a sulk.",
+      "evidence": [
+        { "chapter": "ch011", "chapter_no": 11, "ref": "ch011-p32", "event": "ev0046", "quote": "You’ve no right to grow _here_", "note": "In court." },
+        { "chapter": "ch011", "chapter_no": 11, "ref": "ch011-p34", "event": "ev0046", "quote": "And he got up very sulkily and crossed over to the other side of the court.", "note": "Sulky withdrawal." }
+      ]
+    },
+    {
+      "trait": "Blurts the truth when half-awake",
+      "description": "Its sleepy interjection 'Treacle' contradicts the cook and gets it thrown out of court.",
+      "evidence": [
+        { "chapter": "ch011", "chapter_no": 11, "ref": "ch011-p70", "event": "ev0047", "quote": "“Treacle,” said a sleepy voice behind her.", "note": "An unguarded answer." }
+      ]
+    }
+  ],
+  "motivation": {
+    "core": "To be left in peace to sleep, and, when awake, to be listened to with proper respect.",
+    "want": "Rest; an audience that doesn't interrupt; things to grow at 'a reasonable pace'.",
+    "fear": "Being pinched, squeezed or made to hurry. It is shown only as mild discomfort.",
+    "evidence": [
+      { "chapter": "ch011", "chapter_no": 11, "ref": "ch011-p30", "event": "ev0046", "quote": "I wish you wouldn’t squeeze so", "note": "Wants its space." },
+      { "chapter": "ch007", "chapter_no": 7, "ref": "ch007-p84", "event": "ev0031", "quote": "I won’t interrupt again", "note": "Alice's apology is what gets the story going again." }
+    ],
+    "inferred": true,
+    "reason": "The Dormouse's motive is never narrated. It is designed from its consistent behaviour.",
+    "shifts": [
+      { "chapter": "ch011", "chapter_no": 11, "event": "ev0046", "from": "passive cushion at the tea-table", "to": "active complainant: it confronts Alice for growing and moves away", "evidence_ref": "ch011-p34" }
+    ]
+  },
+  "habits": [
+    { "habit": "Falls asleep instantly whenever it is not being addressed", "evidence_ref": "ch007-p102", "event": "ev0031" },
+    { "habit": "Takes 'a minute or two' to think before answering", "evidence_ref": "ch007-p82", "event": "ev0031" },
+    { "habit": "Yawns and rubs its eyes as it talks", "evidence_ref": "ch007-p95", "event": "ev0031" },
+    { "habit": "Sings 'Twinkle, twinkle' in its sleep until pinched to stop", "evidence_ref": "ch007-p54", "event": "ev0030" },
+    { "habit": "Starts a story in a great hurry to get it out before it drops off", "evidence_ref": "ch007-p70", "event": "ev0031" }
+  ],
+  "decision_pattern": "Barely decides anything: it drifts, answers by reflex, and sulks when pushed. Its only firm choices are to finish a story it has started and to move away from someone who crowds it.",
+  "taboos": [
+    { "taboo": "Never fights back physically", "rationale": "It puts up with being a cushion and being pinched. Its only resistance is words and walking off.", "evidence_ref": "ch007-p65", "event": "ev0031", "qa_check": "No shove, strike or struggle. Being 'put into the teapot' (ch007-p102) is staged literally with the photoreal CGI dormouse (SUP-002 as amended by BIB-0027): the others try to tip the limp, drowsy animal into the teapot, a slapstick attempt that never harms it." },
+    { "taboo": "Never admits it was asleep", "rationale": "'I wasn't asleep.'", "evidence_ref": "ch007-p66", "event": "ev0031", "qa_check": "No admission line." },
+    { "taboo": "Never raises its voice", "rationale": "Hoarse, feeble and sulky, never shouting.", "evidence_ref": "ch007-p66", "event": "ev0031", "inferred": true, "reason": "Designed from 'a hoarse, feeble voice' and its sleepiness. The voice itself is voiceprint's job; this is a behaviour limit only.", "qa_check": "No shouted line." }
+  ],
+  "facade": {
+    "applies": false,
+    "note": "No disguise. The gap between 'I wasn't asleep' and its dozing is comic self-deception, not a hidden self."
+  },
+  "waking_life_embodiment": {
+    "applies": true,
+    "adult_trait": "The drowsy grown-up who starts a bedtime story and nods off, takes offence at a child's questions, and insists children grow up 'at a reasonable pace' and know their place: the adult who dismisses a child's growing up as 'ridiculous'.",
+    "waking_source": "The heat and drowsiness of the afternoon Alice falls asleep in (ch001-p02 'the hot day made her feel very sleepy'), and her own sleeping body as the dream goes on. Also nursery storytelling and the 'Twinkle, twinkle' of the nursery.",
+    "evidence": [
+      { "chapter": "ch001", "chapter_no": 1, "ref": "ch001-p02", "event": "ev0001", "quote": "the hot day made her feel very sleepy and stupid", "note": "The waking drowsiness it personifies." },
+      { "chapter": "ch011", "chapter_no": 11, "ref": "ch011-p34", "event": "ev0046", "quote": "_I_ grow at a reasonable pace", "note": "The adult rebuke of a child who is growing up." }
+    ],
+    "inferred": true,
+    "reason": "A design reading for the coming-of-age frame. Not a doubling of any waking person."
+  },
+  "performance_keynote": "Photoreal CGI dormouse (SUP-002, BIB-0027): curled into a furry ball with the tail wrapped round, heavy-lidded, slow to uncurl, whiskers drooping. It comes alive only in the hurried opening of its story, then sags back into sleep.",
+  "consistency_flags": [],
+  "inferred_fields": ["motivation", "taboos[2]", "waking_life_embodiment"],
+  "inferred": true,
+  "reason": "B-tier figure with no narrated inner life. Its motive, the voice-level taboo and its embodiment are designed from its sourced behaviour."
+}

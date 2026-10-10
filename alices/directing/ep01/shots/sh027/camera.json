@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh027",
+  "group_id": "grp011",
+  "scene_no": "S04",
+  "duration_s": 4.0,
+  "size": "wide",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 28,
+  "camera_height_m": 1.3,
+  "angle": "level",
+  "rack_focus": "none",
+  "start_frame": "From the leaf heap down the whole length of the long low brick-vaulted passage: Alice a dark back-of-head and shoulder at the very edge of the near foreground, the White Rabbit already small and in profile far down the vault, gloves in his mouth.",
+  "end_frame": "The same frame with him smaller still, hurrying away on four legs into the lamplit depth; the distance between them has grown inside one unbroken frame.",
+  "constraint_honoured": "'Never closer to him than a medium-wide in this scene… he is genuinely far away' — no push-in of any kind, so the distance stays real distance instead of a lens trick.",
+  "movement_note": "A move toward him would hero the animal and break the character-sheet waiver's cheapest insurance against the uncanny.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

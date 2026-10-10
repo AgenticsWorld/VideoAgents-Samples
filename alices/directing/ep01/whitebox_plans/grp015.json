@@ -1,0 +1,73 @@
+{
+  "schema_version": "whitebox_plan.v1",
+  "group_id": "grp015",
+  "scene_id": "SCN-little-door-passage",
+  "basis": "Alice holds the hall_floor anchor (X 1.90 / Z 0.028) on the flagstones in front of the little door, facing -X into the wall face at X 1.24. She notices the low curtain at t=1.2, leans in and lifts it at t=3.0, crouches to the 0.38 m door at t=4.6 and is on her knees with both hands at the lock from sh040. The little door's clear opening is 0.26 x 0.38 m between the jambs at X 1.1875 and the curtain hangs on the hall face to y 0.6, so her kneeling body sits 0.36 m clear of the wall.",
+  "actors": [
+    {
+      "id": "CHAR-alice",
+      "kind": "person",
+      "size_m": [0.378, 1.35, 0.297],
+      "keyframes": [
+        {"t": 0.0, "position": [1.9, 0.0, 0.028], "pose": "stand", "yaw": -1.5708, "head_pitch": 0.2},
+        {"t": 1.2, "position": [1.9, 0.0, 0.028], "pose": "stand", "yaw": -1.5708, "head_pitch": 0.45},
+        {"t": 3.0, "position": [1.75, 0.0, 0.028], "pose": "stand", "yaw": -1.5708, "bend": 0.5, "head_pitch": 0.3},
+        {"t": 4.6, "position": [1.62, 0.0, 0.028], "pose": "crouch", "yaw": -1.5708, "head_pitch": 0.3},
+        {"t": 7.0, "position": [1.6, 0.0, 0.028], "pose": "kneel", "yaw": -1.5708, "head_pitch": 0.5},
+        {"t": 7.8, "position": [1.6, 0.0, 0.028], "pose": "kneel", "yaw": -1.5708, "head_pitch": 0.5},
+        {"t": 8.8, "position": [1.6, 0.0, 0.028], "pose": "kneel", "yaw": -1.5708, "head_pitch": 0.5},
+        {"t": 9.6, "position": [1.6, 0.0, 0.028], "pose": "kneel", "yaw": -1.5708, "head_pitch": 0.35},
+        {"t": 10.2, "position": [1.6, 0.0, 0.028], "pose": "kneel", "yaw": -1.5708, "head_pitch": 0.4},
+        {"t": 11.0, "position": [1.6, 0.0, 0.028], "pose": "kneel", "yaw": -1.5708, "head_pitch": 0.4}
+      ]
+    }
+  ],
+  "cameras": [
+    {
+      "shot_id": "sh039",
+      "start": 0,
+      "duration_s": 7.0,
+      "movement": "pedestal_down",
+      "keyframes": [
+        {"t": 0.0, "position": [4.4, 1.3, 0.615], "target": [1.9, 1.3, 0.615], "fov": 33.3985},
+        {"t": 1.6, "position": [4.4, 1.3, 0.615], "target": [1.9, 1.3, 0.615], "fov": 33.3985},
+        {"t": 3.8, "position": [4.4, 0.9, 0.615], "target": [1.9, 0.9, 0.615], "fov": 33.3985},
+        {"t": 7.0, "position": [4.4, 0.9, 0.615], "target": [1.9, 0.9, 0.615], "fov": 33.3985}
+      ]
+    },
+    {
+      "shot_id": "sh040",
+      "start": 7.0,
+      "duration_s": 4.0,
+      "movement": "static",
+      "keyframes": [
+        {"t": 0.0, "position": [3.463, 0.4, 0.426], "target": [1.6, 0.4, 0.426], "fov": 33.3985},
+        {"t": 4.0, "position": [3.463, 0.4, 0.426], "target": [1.6, 0.4, 0.426], "fov": 33.3985}
+      ]
+    }
+  ],
+  "continuity": {"actors": "cut", "camera": "cut"},
+  "warnings": [
+    "sh039's pedestal is a pure vertical 1.30 -> 0.90 m with the axis unchanged, held 1.6 s before and 3.2 s after, matching camera.json's 0.18 m/s.",
+    "Screen sides: both lenses look -X, so screen-right is -Z; Alice is offset to the -Z side of the axis and reads at about 0.72 (sh039) and 0.70 (sh040) of frame width, as composition requires."
+  ],
+  "issues": [
+    {
+      "issue_id": "WBI-ep01-grp015-001",
+      "kind": "model_gap",
+      "severity": "advisory",
+      "question": "SCN-little-door-passage is modelled as a 5.0 x 2.81 m detail tile whose hall-side floor is only 1.26 m deep (X 1.24 to 2.50). sh039 needs 2.5 m of standoff and sh040 1.86 m, so both lenses stand 1.0-1.9 m beyond the tile's edge. Stage them outside the tile, or move these two shots onto the SCN-long-hall model where the same floor really exists?",
+      "provisional": "Place the lenses at the distance the size codes need, outside the modelled tile on the hall side. Nothing is modelled there, so nothing occludes and the geometry is correct; the whitebox simply shows floor running out behind the camera.",
+      "options": [
+        {"id": "outside", "label": "Keep the lens outside the detail tile (the default)", "consequence": "Correct framing and geometry; the spatial view shows the camera standing off the edge of the modelled ground plane.", "cost": "none"},
+        {"id": "rescene", "label": "Re-point grp015/grp016 at SCN-long-hall, whose west wall already carries the little door and curtain at (9.92, -3.33)", "consequence": "The lens stands on real modelled floor and the neighbouring hall doors are in frame at true spacing; needs a shot_list scene_id change, which is outside this station's authority.", "cost": "shot_list edit by 06-storyboard / shot-planning", "rewrites": ["directing/ep01/shot_list.json"]},
+        {"id": "tight", "label": "Clamp the lens to the tile edge and accept a tighter frame", "consequence": "sh039 loses about half its frame height; a kneeling Alice no longer fits.", "cost": "framing no longer matches composition"}
+      ],
+      "recommended": "rescene",
+      "shots": ["sh039", "sh040"],
+      "actors": ["CHAR-alice"],
+      "t_range_s": [0, 11.0],
+      "sources": [{"file": "bible/scenes/SCN-little-door-passage/whitebox.json", "quote": "hall_floor: x 0.7475-1.0: open hall floor; the curtain hangs on the hall face in front of the little door."}, {"file": "directing/ep01/shots/sh039/composition.json", "quote": "standing then crouching, about 0.90 of frame height falling"}]
+    }
+  ]
+}

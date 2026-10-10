@@ -1,0 +1,44 @@
+{
+ "schema": "env_concept_prompts.v1",
+ "scene_id": "SCN-rabbit-house-upstairs-room",
+ "task_id": "p4-env-concept-sb2",
+ "attempt": 1,
+ "date": "2026-09-23",
+ "generator": {
+  "module": "modules/genmedia.py image",
+  "provider": "volcengine",
+  "model": "doubao-seedream-5-0-pro-260628",
+  "size": "2560x1440",
+  "n": 1,
+  "seed": null
+ },
+ "items": [
+  {
+   "file": "layout_top.png",
+   "prompt": "Straight-down orthographic plan photograph of a built live-action film set: camera axis exactly perpendicular to the ground; no wall face, no elevation, no side of any building or tree trunk is visible; only the ground plane, the top edges of walls, the tops of roofs, furniture and tree crowns are seen. The top of the image is north. A tidy little upstairs room of a brick cottage with its ceiling removed. The room is a rectangle in the middle of the image, slightly wider than deep, enclosed by continuous thick plastered wall lines on all four sides; outside the walls is plain dark. Floor: scrubbed pale deal floorboards running left to right, a round rag rug in the centre. Top (north) wall: near its left end a door-width gap in the wall line, the thin pine door leaf swung open inward against the wall, seen only as a thin plank; a small chest of drawers against the north wall just right of the middle. Right (east) wall: at its middle a narrow fireplace, seen only as a small dark recess in the wall thickness with a narrow painted mantel shelf edge carved with a flowing vine line. Left (west) wall: at its middle a small washstand top against the wall with a basin and one little glass bottle. Bottom (south) wall: fully present along the bottom of the room, seen only as its top edge; in its middle a single narrow window gap in the wall line, a small table directly in front of it holding an open fan and pairs of tiny white kid gloves, a rush-seated chair beside the table. Warm afternoon sunlight from the window lays a slanted bright band across the table and the floorboards toward the fireplace, dust in the beam. Window lattices, door panels, the looking-glass, wallpaper and anything mounted on a wall face are not visible from directly above and must not be drawn. Clean base image for a layout plan: no people, no animals, no birds, no creatures, no text, no labels, no arrows, no grid lines, no compass.\n Photorealistic live-action fantasy film rooted in England in 1862, shot on 35mm film with anamorphic lenses, 16:9 widescreen. Real sets, real locations and real costumed actors in 1862 dress. Wonderland spaces are real built sets and set extensions in an Alphonse Mucha-inspired Art Nouveau design: flowing organic lines, floral and vine ornament, circular halo roundels, mosaic and stained glass, aged pastel-and-gold surfaces with patina and moss; the waking 1862 meadow stays plain period realism. Talking animals and fantastical creatures are photoreal CGI animals with naturalistic anatomy, real fur, feathers, skin and scales, lit by the same light and grounded with real contact shadows. Natural and practical light: sunlight, candlelight and oil lamps, soft haze with volumetric light shafts and soft colour through stained glass. Restrained palette of verdigris teal, slate grey, dusty rose, soft sage and lilac pastels and tarnished-gold accents, warmed by amber sun and candle glow. Fine film grain, gentle halation, soft depth of field, grounded and quietly melancholy.",
+   "negative": "cartoon, anime, animation, illustration, flat poster illustration, outline graphics, concept-art painting, digital painting, digital matte painting look, stylised 3D animation render, video game graphics, Pixar style, Disney animation style, cartoon animal face, big cartoon eyes, plush toy, human in animal costume, full-head animal mask, mascot costume, full-body fur suit, plastic skin, airbrushed, oversaturated, HDR, neon colors, candy pastel colors, horror monster, glowing magic, magic sparkles, fairy dust, energy beams, electric light, light bulb, neon sign, modern clothing, zipper, plastic, sunglasses, wristwatch, eyeglasses with modern frames, car, bicycle, power lines, tarmac road, Art Deco, steampunk gears, poster lettering, decorative text, gore, blood, wound, severed head, decapitation, executioner's axe, chopping block, guillotine, noose, gallows, blade at neck, execution, corpse, skeleton, horror, animal being struck, sexualized, watermark, logo, subtitles, caption, UI overlay, deformed hands, extra fingers, distorted face, door lying on the floor, window lying on the floor, door bar on the floor, wall elements projected onto the floor, elevation view of a door or window, missing wall, open side, dollhouse cutaway, tilted camera, oblique aerial view, perspective view, horizon, people, person, child, animal, bird, caterpillar, text, label, arrow, map legend, diagram lines",
+   "refs": [],
+   "prompt_parts": {
+    "body_en": "scene-specific plan-view text (orthographic camera sentence, wall-line openings, near wall stated, clean-base sentence)",
+    "style_segment": "bible/style.json style_fragment_ui verbatim",
+    "negative": "bible/style.json negative_prompt_en verbatim + plan-view negatives (SOUL duty 3 rule 4) + no people/animals/text"
+   }
+  }
+ ],
+ "user_refs": [
+  {
+   "path": "refs/style/alice.jpeg",
+   "used_as": "look reference read by the agent (palette, material and Art Nouveau vocabulary via style_fragment_ui)",
+   "injected_via_ref": false,
+   "why_not_injected": "It is an oblique interior perspective image with a large creature in it. Used as --ref on a straight-down plan, it pulls in perspective and elevations and risks a creature in a clean base map (SOUL duty 3; seedream plan-view elevation prior). refs/scenes/ is empty."
+  }
+ ],
+ "bible_inputs": [
+  "bible/scenes/SCN-rabbit-house-upstairs-room/architecture.json",
+  "bible/scenes/SCN-rabbit-house-upstairs-room/lighting.json",
+  "bible/scenes/SCN-rabbit-house-upstairs-room/environment.json",
+  "bible/scenes/index.json",
+  "bible/style.json"
+ ],
+ "design_check": "runs/p4-env-concept-sb2/result.json#items (per-scene comparison of image vs. setting cards, defects kept for H2)"
+}

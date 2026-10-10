@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh086",
+  "group_id": "grp032",
+  "scene_no": "S08",
+  "duration_s": 5.0,
+  "size": "close",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame; the table edge is the only thing travelling)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 40,
+  "camera_height_m": 0.25,
+  "angle": "level",
+  "rack_focus": "none",
+  "start_frame": "Insert composed in two planes: the fan still waving in her hand in the near foreground, the edge of the glass tabletop behind it — both sharp in the same frame.",
+  "end_frame": "The same frame with the table edge visibly climbing past the top of frame behind the still-moving fan; she is shrinking fast and has not noticed.",
+  "constraint_honoured": "'Cause and effect in one unbroken frame — the only way the picture can carry it with no narration', and sh086-sh087 must read as the same continuous frame.",
+  "movement_note": "Deep focus and no rack: with narration off, both planes must be legible at once, and a focus change would nominate one of them as the subject. The rising table edge is set motion, not camera motion.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

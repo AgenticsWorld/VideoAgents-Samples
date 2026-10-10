@@ -1,0 +1,267 @@
+{
+  "_meta": {
+    "file": "bible/timeline.json",
+    "status": "locked_v1",
+    "owner": "02-worldbuilding/timeline",
+    "write_via": "00-orchestration/memory-bible (on_bible_access)",
+    "scope": "In-world chronology: calendar/dating convention, eras, timeline nodes, the frame of the story (e.g. waking-world time vs. inner-story time, to be decided in Phase 2), unresolved temporal questions. Events are authoritative in story/events.json (ev*); this file only references them.",
+    "id_prefixes": {
+      "TL-": "timeline node (point)",
+      "ERA-": "era/period (span)",
+      "UTQ-": "unresolved temporal question (file-local)"
+    },
+    "entry_schema": {
+      "calendar": {
+        "system": "",
+        "anchor_year": null,
+        "notes": "",
+        "source": {},
+        "inferred": false,
+        "reason": null
+      },
+      "eras[]": {
+        "id": "ERA-001",
+        "name": "",
+        "start": "<TL-*>",
+        "end": "<TL-*>",
+        "summary": "",
+        "source": {},
+        "inferred": false,
+        "reason": null
+      },
+      "nodes[]": {
+        "id": "TL-001",
+        "label": "",
+        "when": "",
+        "relative_to": "<TL-*|null>",
+        "event_refs": [
+          "<ev*>"
+        ],
+        "chapters": [
+          "chNNN"
+        ],
+        "source": {
+          "chapter": "chNNN",
+          "quote": ""
+        },
+        "inferred": false,
+        "reason": null
+      },
+      "unresolved[]": {
+        "id": "UTQ-001",
+        "question": "",
+        "status": "open|resolved",
+        "resolution": null
+      }
+    },
+    "task_id": "p2-timeline",
+    "attempt": 1,
+    "content_language": "English (project output-language setting, 2026-09-22)",
+    "genre_note": "Premise (brief.md): realistic drama adapted from a fairy tale. This file's job is the real-world calendar/history layer of that realistic register (real Victorian England), not the dream-frame reality question itself -- see cross_domain_assumptions in runs/p2-timeline/result.json and UTQ-003 below for what is deferred to 02-worldbuilding/magic-cultivation.",
+    "version": "v1",
+    "merged_by": "p2-merge (00-orchestration/memory-bible)",
+    "merged_on": "2026-09-22",
+    "h1_status": "signed",
+    "rechecked_by": "p2-merge-recheck (00-orchestration/memory-bible)",
+    "rechecked_on": "2026-09-22",
+    "locked_at": "2026-09-22T17:59:52+08:00",
+    "locked_by": "H1 user signature (G2 PASS), recorded by 00-orchestration/memory-bible task p2-lock",
+    "lock_record": "runs/g2/gate.json",
+    "lock_changelog": "BIB-0023",
+    "controlled": "Writes only via memory-bible controlled change (WRITE_RULES.md section 5)."
+  },
+  "calendar": {
+    "system": "Gregorian calendar; real-world English civil calendar, mid-Victorian Britain, consistent with the realistic-adaptation premise (brief.md).",
+    "anchor_year": 1862,
+    "notes": "The source states only a day-of-month for the story's present day ('the fourth', ch007#p21-p22) and gives Victorian-era social/technological texture -- a railway station and seaside bathing-machine resort culture Alice has personally visited (ch002#p16), and a formal judge-and-jury criminal trial with sworn witnesses (ch011-ch012) -- but it never names a month or a year. Both are designed for production: month = July, matching the 'hot summer afternoon' frame opening (ch001#p01-p02) and the day named 'the fourth'; year = 1862, a plausible mid-Victorian production year consistent with the source's own railway/seaside and formal-court markers. The story's present day is therefore anchored as 4 July 1862 (see node TL-003). No in-world year is ever stated by the text; this is a production default, not a claimed textual fact.",
+    "source": {
+      "chapter": "ch007",
+      "quote": "The Hatter was the first to break the silence. “What day of the month is it?” he said, turning to Alice ... Alice considered a little, and then said “The fourth.”"
+    },
+    "inferred": true,
+    "reason": "Day-of-month is explicit text; month and year are self-designed per WORKFLOW.md §1 principle 10 (production-required fields with no source basis must still get a concrete, self-consistent value, never left UNKNOWN)."
+  },
+  "eras": [
+    {
+      "id": "ERA-001",
+      "name": "Anglo-Saxon England",
+      "start": null,
+      "end": "TL-001",
+      "summary": "Pre-Conquest England under Anglo-Saxon rule, referenced only through the named Anglo-Saxon nobles (Edwin, earl of Mercia; Morcar, earl of Northumbria; Edgar Atheling) in the Mouse's history recitation, ending with the Norman Conquest of 1066 (TL-001). No start date is given or needed by the source; left open-ended rather than inventing an unattested starting event.",
+      "source": {
+        "chapter": "ch003",
+        "quote": "Edwin and Morcar, the earls of Mercia and Northumbria—"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "ERA-002",
+      "name": "Post-Conquest to Georgian England",
+      "start": "TL-001",
+      "end": "TL-002",
+      "summary": "The eight centuries from the Norman Conquest (1066) to the accession of Queen Victoria (1837), bridging the source's one named historical anchor (the Conquest) and the source's own present-day register (Victorian England). The source names no events within this span; it exists purely to keep the calendar continuous between TL-001 and TL-002.",
+      "source": {
+        "chapter": "ch003",
+        "quote": "‘William the Conqueror, whose cause was favoured by the pope, was soon submitted to by the English—’"
+      },
+      "inferred": true,
+      "reason": "The source never references anything from this span; it is a self-designed bridging era so the timeline has no unexplained gap between the one named medieval event and the story's own present-day setting. No sub-events are asserted within it."
+    },
+    {
+      "id": "ERA-003",
+      "name": "Victorian Era (the story's present)",
+      "start": "TL-002",
+      "end": null,
+      "summary": "The real-world present-day register of the realistic adaptation: railway travel, seaside bathing-resort holidays, formal judge-and-jury criminal trials, and the general social texture the source itself depicts. The story's single present day (TL-003, 4 July 1862) falls within this era. Left open-ended since Victoria's real reign (to 1901) extends well beyond the story's present day and no production need requires closing it.",
+      "source": {
+        "chapter": "ch002",
+        "quote": "“and in that case I can go back by railway,” she said to herself. (Alice had been to the seaside once in her life, and had come to the general conclusion, that wherever you go to on the English coast you find a number of bathing machines in the sea, some children digging in the sand with wooden spades, then a row of lodging houses, and behind them a railway station.)"
+      },
+      "inferred": true,
+      "reason": "The source's social/technological texture (railway, seaside bathing resorts, formal court procedure) places the setting in mid-19th-century England, but no source line names 'Victoria' or 'Victorian'; the era label and its 1837 start (TL-002) are self-designed to give this texture a real-world historical name and boundary."
+    }
+  ],
+  "nodes": [
+    {
+      "id": "TL-001",
+      "label": "The Norman Conquest of England",
+      "when": "1066 CE (exact; real historical date -- the year itself is real-world historical knowledge, not a number the source text states)",
+      "relative_to": null,
+      "event_refs": [
+        "ev0010"
+      ],
+      "chapters": [
+        "ch002",
+        "ch003"
+      ],
+      "source": {
+        "chapter": "ch003",
+        "quote": "‘William the Conqueror, whose cause was favoured by the pope, was soon submitted to by the English, who wanted leaders, and had been of late much accustomed to usurpation and conquest. Edwin and Morcar, the earls of Mercia and Northumbria—’ ... ‘—found it advisable to go with Edgar Atheling to meet William and offer him the crown. William’s conduct at first was moderate. But the insolence of his Normans—’"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch002",
+          "quote": "“Perhaps it doesn’t understand English,” thought Alice; “I daresay it’s a French mouse, come over with William the Conqueror.” (For, with all her knowledge of history, Alice had no very clear notion how long ago anything had happened.)"
+        }
+      ],
+      "inferred": true,
+      "reason": "The source has the Mouse recite this passage (a real 19th-century English-history-primer text, used as its 'driest thing' to dry the party off) verbatim, and separately has Alice muse that the Mouse might be 'a French mouse, come over with William the Conqueror' while noting she herself has 'no very clear notion how long ago anything had happened' -- itself a wry cue that the exact year is not something the story states. The event and its named participants are textual; the specific year 1066 is supplied here as real-world historical knowledge."
+    },
+    {
+      "id": "TL-002",
+      "label": "Accession of Queen Victoria (start of the Victorian era)",
+      "when": "20 June 1837 CE (exact; real historical date)",
+      "relative_to": null,
+      "event_refs": [],
+      "chapters": [
+        "ch002",
+        "ch011",
+        "ch012"
+      ],
+      "source": {
+        "chapter": "ch002",
+        "quote": "wherever you go to on the English coast you find a number of bathing machines in the sea, some children digging in the sand with wooden spades, then a row of lodging houses, and behind them a railway station"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch011",
+          "quote": "“And that’s the jury-box,” thought Alice, “and those twelve creatures,” ... “I suppose they are the jurors.”"
+        }
+      ],
+      "inferred": true,
+      "reason": "Not stated anywhere in the source; designed as the real-world start of the Victorian era to give ERA-003 (the story's present-day register) a concrete historical boundary. Supported indirectly by the source's own period texture: a railway station and seaside bathing-machine resort culture Alice has personally visited (ch002#p16), and a formal judge-and-jury criminal trial with a sworn jury (ch011), both consistent with mid-19th-century England and inconsistent with any earlier era. Cross-domain: see cross_domain_assumptions in runs/p2-timeline/result.json for how this should reconcile with 02-worldbuilding/world's setting.era."
+    },
+    {
+      "id": "TL-003",
+      "label": "The story's present day (the frame narrative's single afternoon)",
+      "when": "4 July 1862 CE (day-of-month exact per source, 'the fourth'; month and year designed for production -- see calendar.reason)",
+      "relative_to": null,
+      "event_refs": [
+        "ev0001",
+        "ev0053",
+        "ev0054"
+      ],
+      "chapters": [
+        "ch001",
+        "ch007",
+        "ch012"
+      ],
+      "source": {
+        "chapter": "ch007",
+        "quote": "“What day of the month is it?” ... Alice considered a little, and then said “The fourth.”"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch001",
+          "quote": "the hot day made her feel very sleepy and stupid"
+        },
+        {
+          "chapter": "ch012",
+          "quote": "“Wake up, Alice dear!” said her sister; “Why, what a long sleep you’ve had!”"
+        },
+        {
+          "chapter": "ch012",
+          "quote": "watching the setting sun"
+        }
+      ],
+      "inferred": true,
+      "reason": "Day-of-month is explicit text (ch007#p21-p22); month and year are not stated by the source (see calendar.reason for the production design of July 1862). This node anchors the single-day frame narrative -- real-world open at ev0001, waking at ev0053, the sister's sunset coda at ev0054 -- to one calendar date; the minute-by-minute sequencing of everything within that day is story/story_timeline.json's job (01-story/timeline-story), not repeated here."
+    },
+    {
+      "id": "TL-004",
+      "label": "The Queen's concert and the start of the Hatter's quarrel with Time (the tea-party's eternal six o'clock)",
+      "when": "March 1862 CE, exact day disputed in-story: the Hatter says the 14th (ch011#p18), the March Hare says the 15th (ch011#p19), the Dormouse says the 16th (ch011#p20); independently referred to simply as 'last March' by the Hatter at the tea-party itself (ch007#p48)",
+      "relative_to": "TL-003",
+      "event_refs": [
+        "ev0030"
+      ],
+      "chapters": [
+        "ch007",
+        "ch011"
+      ],
+      "source": {
+        "chapter": "ch007",
+        "quote": "“We quarrelled last March—just before _he_ went mad, you know—” (pointing with his tea spoon at the March Hare,) “—it was at the great concert given by the Queen of Hearts, and I had to sing”"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch011",
+          "quote": "“Fourteenth of March, I _think_ it was,” he said. ... “Fifteenth,” said the March Hare. ... “Sixteenth,” added the Dormouse."
+        },
+        {
+          "chapter": "ch011",
+          "quote": "“Bring me the list of the singers in the last concert!”"
+        }
+      ],
+      "inferred": true,
+      "reason": "The 'last March' phrasing (ch007#p48) is explicit text; the exact day is left disputed by design -- three characters give three different March dates for what the source presents as the same occasion (ch011#p18-p20), and the jury simply writes down all three and totals them 'to shillings and pence' (ch011#p21) rather than the narrator adjudicating, so no single day is picked here either (see UTQ-002). The Queen's own line 'Bring me the list of the singers in the last concert!' (ch011#p35) confirms this is one recurring, singular event within the storyworld, corroborating that the tea-party's backstory (ev0030) and the trial's questioning of the Hatter refer to the same occasion. Calendar placement in the same year as TL-003 (rather than the year before) follows ordinary usage of 'last March' when the present month is July: the most recent March precedes the current July within the same calendar year. Cross-domain: this node's placement on the real-world calendar assumes Wonderland's internal relative-time statements remain meaningful real-world time offsets regardless of how magic-cultivation ultimately treats the dream frame's reality status -- see UTQ-003 and cross_domain_assumptions in runs/p2-timeline/result.json.",
+      "layer": "dream_internal",
+      "calendar_binding": false,
+      "alignment_note": "Under SUP-001 (approved at H1 pre-ruling 5.1 A) the Queen's concert is backstory told inside Alice's dream (ev0030), not a waking-world event. Its March 1862 placement is the dream's own internal reference and is not a production fact for the waking frame."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "UTQ-001",
+      "question": "How much real-world time elapsed between Alice falling asleep (implied before ev0002, never explicitly narrated) and waking at ev0053? Her sister calls it only 'a long sleep' (ch012#p65), with no duration given.",
+      "status": "open",
+      "resolution": null,
+      "note": "Deliberately unrevealed in source. Left open here since it is a runtime/staging-pacing question rather than a world-chronology fact; both TL-003's calendar day and ev0001/ev0053's placement within it already stand without needing this number. If a later production step needs a concrete nap duration, that value should be designed at that point, not forced here."
+    },
+    {
+      "id": "UTQ-002",
+      "question": "Which of the three March dates given for the Hatter's quarrel with Time (TL-004) is correct: the 14th (Hatter, ch011#p18), the 15th (March Hare, ch011#p19), or the 16th (Dormouse, ch011#p20)?",
+      "status": "open",
+      "resolution": null,
+      "note": "Deliberately unrevealed in source -- staged as a three-way comic disagreement with no narrator adjudication. TL-004 records all three without privileging one; production should keep the disagreement rather than silently harmonizing it, since resolving it would remove the joke."
+    },
+    {
+      "id": "UTQ-003",
+      "question": "Is the Queen's concert (TL-004) meant to have really happened in the storyworld's waking reality, or is it purely content of Alice's dream (like the rest of ev0002-ev0052) with no claim to real-world truth?",
+      "status": "resolved",
+      "resolution": "Resolved by SUP-001, approved at H1 pre-ruling 5.1 A: everything from ev0002 to ev0052 is Alice's dream, so the concert is dream-internal backstory with no claim to waking-world truth. TL-004 is flagged layer dream_internal, calendar_binding false.",
+      "note": "Depends on 02-worldbuilding/magic-cultivation's reinterpretation decision for the dream frame (story/events.json realistic_adaptation_flags 'dream frame', events ev0001/ev0053/ev0054; per bible/WRITE_RULES.md §7.1 this is decided by magic-cultivation with world and confirmed at H1). This file places TL-004 on the calendar on the working assumption that 'last March' remains a meaningful real-world time offset whatever that decision turns out to be; see cross_domain_assumptions in runs/p2-timeline/result.json."
+    }
+  ]
+}

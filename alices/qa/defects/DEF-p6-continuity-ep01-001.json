@@ -1,0 +1,71 @@
+{
+  "id": "DEF-p6-continuity-ep01-001",
+  "opened_by": "07-directing/continuity-planning",
+  "opened_on": "2026-09-23",
+  "task_id": "p6-continuity-ep01",
+  "assigned_to": "07-directing/composition",
+  "cc": [
+    "07-directing/blocking",
+    "00-orchestration/orchestrator",
+    "08-video-gen/prompt"
+  ],
+  "domain": "screen_direction_axis",
+  "status": "open_accepted_by_user",
+  "severity": "major",
+  "blocking": false,
+  "blocks_prompting_of": [
+    "grp005",
+    "grp032"
+  ],
+  "due_gate": "before p7 prompt for grp005 and grp032 (does not block g6w whitebox staging - see note)",
+  "summary": "Two screen-direction defects found during the ep01 cross-shot axis check. Both are single-shot text errors in already-final design files, both are recorded in directing/ep01/continuity_plan.json axis_violations as AX-02 and AX-04, and neither is fixable by this station.",
+  "findings": [
+    {
+      "id": "DEF-p6-continuity-ep01-001-a",
+      "shots": [
+        "sh008",
+        "sh009"
+      ],
+      "group_boundary": "grp004 -> grp005",
+      "scene": "S01 SCN-riverbank",
+      "issue": "CRE-001's exit direction and the reaction to it point opposite ways. sh008 stages the rabbit entering 'from the open meadow on screen-right', crossing right-to-left across the near ground and going away into depth toward the way across the field (SCN-riverbank layout field_way [0.90, 0.22], north-east of the sitting place); its own gaze note says 'her look crosses the frame the same way his body does', i.e. right to left. sh009 is the water-side axis re-used from sh005, on which north is screen-left (the Sister is composed at 0.33 'because the water-side camera faces east, so the sister's northern sitting place falls screen left') and screen-right is therefore the opposite side of the field from where the animal went. sh009 nonetheless writes gaze.note 'she stares after the rabbit out of the LOWER RIGHT of frame' and blocking/sh009 facing 'first out to screen-right after the animal'.",
+      "evidence": [
+        "directing/ep01/shots/sh008/composition.json gaze.note and blocking/sh008.json CRE-001 space_fragment_en",
+        "directing/ep01/shots/sh005/composition.json second_subject.note (the derivation that fixes north = screen-left on this axis)",
+        "directing/ep01/shots/sh009/composition.json gaze.note and second_subject.note, directing/ep01/shots/sh009/blocking.json CHAR-alice facing",
+        "assets/concepts/scenes/SCN-riverbank/layout.json orientation.top_of_map + landmarks field_way, meadow, sitting_shelf, elm_north"
+      ],
+      "requested_fix": "Composition's call, not this station's. Either (a) turn sh009's look to screen-left-and-into-depth, a one-field change, accepting that the look after the rabbit then shares a side with the look up to the Sister; or (b) leave sh009 and re-point sh008's exit so the animal leaves screen-right-and-away - a one-line change to sh008, but it must not disturb the right-to-left pass across her shoes, which is the shot's whole design ('the rabbit passes in one unbroken shot that also contains Alice's shoes', directing_plan.md S01 Required shots b). Whichever is chosen, sh009's composition.json gaze and blocking.json facing must be changed together; they currently carry the same wrong side.",
+      "not_self_resolved_because": "continuity-planning does not edit camera.json / composition.json / blocking.json (SOUL: '不修改任何镜头设计'). The choice between (a) and (b) is a staging decision that belongs to composition and, if it touches the rabbit's pass, to the director."
+    },
+    {
+      "id": "DEF-p6-continuity-ep01-001-b",
+      "shots": [
+        "sh085"
+      ],
+      "group": "grp032",
+      "scene": "S08 SCN-long-hall",
+      "issue": "sh085 inverts the curtain-to-table axis that every other frame on that axis keeps, and contradicts the frame it says it is quoting. The axis puts Alice screen-left and the glass table (or the object under it) screen-right in sh054 (Alice 0.30, 'the whole open screen-right of frame left unused'), sh056 (Alice 0.30 / glass box 0.58), sh086 (fan 0.32 / table edge 0.70), sh087 (identical to sh086), sh088 (Alice 0.36 / table 0.66) and sh091 (Alice 0.28 / key on the tabletop 0.66). sh085 alone has Alice at 0.66 with the glass table at 0.30 and her look going frame-left, while its own camera.json calls the set-up 'the same axis used all through S06, so the comparison is against a frame the audience already owns'. Under that axis the table is screen-right.",
+      "evidence": [
+        "directing/ep01/shots/sh085/{camera,composition,blocking}.json",
+        "directing/ep01/shots/{sh054,sh056,sh086,sh087,sh088,sh091}/composition.json subject and second_subject anchor_xy",
+        "directing/ep01/shots/sh086/blocking.json axis_note, which raised the swap for this station but attributed it to sh086"
+      ],
+      "requested_fix": "Mirror sh085 only: composition.json subject.grid/anchor_xy to mid_left (~0.34), second_subject glass_table to mid_right (~0.70), gaze.direction to frame_right with the note rewritten to match; blocking.json facing and space_fragment_en from 'on screen-right, facing screen-left at the glass table' to 'on screen-left, facing screen-right at the glass table'. Do NOT change sh086: directing_plan.md S08 movement 4 (c) requires the moving fan in the near plane with the rising table edge behind it in one frame, and sh086/sh087/sh088 already agree with the S06/S07/S09 axis.",
+      "not_self_resolved_because": "Same as finding a. Recording the inversion and its direction of fix is this station's job; editing the two files is composition's and blocking's.",
+      "supersedes_note": "blocking/sh086.json axis_note flagged this boundary as a deliberate camera change at sh086. The evidence above shows the outlier is sh085, so that note should be retired or re-pointed when sh085 is fixed."
+    }
+  ],
+  "impact_if_not_fixed": "The project's long-take switch is OFF, so every group_transitions entry carries anchor 'none' and no group takes a tail frame from its predecessor. There is therefore nothing downstream that can pull a mis-pointed eyeline or a mirrored axis back into line: whatever the prompt says is what gets generated, and the two clips then sit next to each other in the cut. AX-02 establishes the chase's heading wrong at the exact moment it is established, three shots before S02 pays it off. AX-04 turns a two-second measuring glance into an apparent new camera position and flips the glass table across two consecutive cuts inside one 17-second group.",
+  "does_not_block": "07-directing/whitebox-staging and the g6w export. Both findings are composition/blocking TEXT, not blocking_map routes or camera positions, so the whitebox for grp005 and grp032 renders the same either way. The block is on p7 prompt for those two groups only.",
+  "user_decision": {
+    "decided_on": "2026-09-23",
+    "decided_by": "user",
+    "via": "dispatch.py --confirm --default 跳过 (auto-rerun budget is 0, so this was an escalation, not an auto-retry)",
+    "ruling": "跳过 / SKIP — do not dispatch the composition repair. The four shots ship as written.",
+    "disclosed_to_user": "The confirm text named all four shots, quoted the wrong values against bible/props.json, and stated the consequence: with long-take OFF and anchor none on every boundary there is no tail-frame mechanism to correct a mis-pointed eyeline or a wrong scale downstream, and the prompt station reads composition ratios literally.",
+    "effect": "Defect stays OPEN. It is NOT waived and NOT closed. It carries onto the H3A signature card so the user sees it again before the shot design is frozen for prompting.",
+    "reopen_path": "If the user changes their mind, a text-only repair order to 07-directing/composition for these shots is still cheap — no image or video cost has been incurred on them yet."
+  },
+  "orchestrator_note": "Routing was correct and the finding is sound; this is a user decision to accept the defect, not a QA pass. blocks_prompting_of is left as recorded so the prompt station sees the contested groups."
+}

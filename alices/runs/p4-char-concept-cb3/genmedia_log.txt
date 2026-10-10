@@ -1,0 +1,108 @@
+
+=== 2026-09-23T00:33:44.935631 CHAR-executioner sheet.png probe=True rc=0
+已生成: /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/runs/p4-char-concept-cb3/probe/CHAR-executioner_sheet_probe.png
+
+--- stderr ---
+
+
+=== 2026-09-23T00:34:00.898738 CHAR-jury-ensemble sheet.png probe=True rc=0
+已生成: /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/runs/p4-char-concept-cb3/probe/CHAR-jury-ensemble_sheet_probe.png
+
+--- stderr ---
+
+
+=== 2026-09-23T00:34:08.044832 CHAR-gardener-two sheet.png probe=False rc=0
+已生成: /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/concepts/characters/CHAR-gardener-two/sheet.png
+
+--- stderr ---
+
+
+=== 2026-09-23T00:34:36.235523 CHAR-frog-footman sheet.png probe=False rc=0
+已生成: /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/concepts/characters/CHAR-frog-footman/sheet.png
+
+--- stderr ---
+
+
+=== 2026-09-23T00:37:40.862244 CHAR-gardener-seven sheet.png probe=False rc=0
+已生成: /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/concepts/characters/CHAR-gardener-seven/sheet.png
+
+--- stderr ---
+
+
+=== 2026-09-23T00:37:50.030747 CHAR-jury-ensemble sheet.png probe=False rc=0
+已生成: /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/concepts/characters/CHAR-jury-ensemble/sheet.png
+
+--- stderr ---
+
+
+=== 2026-09-23T00:37:53.223214 CHAR-executioner sheet.png probe=False rc=0
+已生成: /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/concepts/characters/CHAR-executioner/sheet.png
+
+--- stderr ---
+
+
+=== 2026-09-23T00:37:56.197815 CHAR-pat sheet.png probe=False rc=0
+已生成: /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/concepts/characters/CHAR-pat/sheet.png
+
+--- stderr ---
+
+
+=== 2026-09-23T00:38:14.630049 CHAR-gardener-five sheet.png probe=False rc=0
+已生成: /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/concepts/characters/CHAR-gardener-five/sheet.png
+
+--- stderr ---
+
+
+=== 2026-09-23T00:40:40.960703 CHAR-royal-gardeners-ensemble sheet.png probe=False rc=0
+已生成: /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/concepts/characters/CHAR-royal-gardeners-ensemble/sheet.png
+
+--- stderr ---
+
+
+=== 2026-09-23T00:40:41.969365 CHAR-caucus-race-party-ensemble sheet.png probe=False rc=0
+已生成: /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/concepts/characters/CHAR-caucus-race-party-ensemble/sheet.png
+
+--- stderr ---
+
+
+=== 2026-09-23T00:40:51.543138 CHAR-court-officers-ensemble sheet.png probe=False rc=0
+已生成: /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/concepts/characters/CHAR-court-officers-ensemble/sheet.png
+
+--- stderr ---
+
+
+=== 2026-09-23T00:40:54.404504 CHAR-card-soldiers-ensemble sheet.png probe=False rc=0
+已生成: /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/concepts/characters/CHAR-card-soldiers-ensemble/sheet.png
+
+--- stderr ---
+
+
+=== 2026-09-23T00:42:25.532791 CHAR-visiting-monarchs-ensemble sheet_queen-of-diamonds.png probe=False rc=0
+已生成: /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/concepts/characters/CHAR-visiting-monarchs-ensemble/sheet_queen-of-diamonds.png
+
+--- stderr ---
+
+
+=== 2026-09-23T00:42:35.592906 CHAR-royal-procession-ensemble sheet_royal-child.png probe=False rc=0
+已生成: /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/concepts/characters/CHAR-royal-procession-ensemble/sheet_royal-child.png
+
+--- stderr ---
+
+
+=== 2026-09-23T00:42:41.115336 CHAR-crowd-ensemble sheet.png probe=False rc=0
+已生成: /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/concepts/characters/CHAR-crowd-ensemble/sheet.png
+
+--- stderr ---
+
+
+=== 2026-09-23T00:42:43.468432 CHAR-visiting-monarchs-ensemble sheet.png probe=False rc=0
+已生成: /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/concepts/characters/CHAR-visiting-monarchs-ensemble/sheet.png
+
+--- stderr ---
+
+
+=== 2026-09-23T00:42:51.685473 CHAR-royal-procession-ensemble sheet.png probe=False rc=0
+已生成: /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/concepts/characters/CHAR-royal-procession-ensemble/sheet.png
+
+--- stderr ---
+

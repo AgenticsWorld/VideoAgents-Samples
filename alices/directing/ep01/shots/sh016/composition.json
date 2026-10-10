@@ -1,0 +1,43 @@
+{
+  "shot_id": "sh016",
+  "scene_id": "SCN-field-hedge-burrow",
+  "size": "close",
+  "subject": {
+    "id": null,
+    "id_note": "no character in frame — the shot is the empty hedge. shot_list registers CHAR-alice with a poses_note because she is already inside the burrow, out of frame.",
+    "kind": "environment",
+    "what": "the burrow mouth",
+    "grid": "centre",
+    "anchor_xy": [0.50, 0.50],
+    "size_in_frame": "the black oval is 0.30 of frame height and 0.19 of frame width, dead centre, its long axis horizontal"
+  },
+  "headroom": "0.35 of frame height of hawthorn root and hedge shade above the oval, matching the 0.35 of spoil and grass below it — the oval is centred vertically as well as horizontally.",
+  "horizon_eyeline": "No eyeline, no figure. The spoil line runs across at 0.74 of frame height and the root arch at 0.22; the oval floats between them with nothing to measure it against but itself.",
+  "layers": {
+    "fg": "loose pale spoil across the bottom edge",
+    "mg": "the fan of pale dug earth ringing the mouth, and the arching hawthorn roots ringing it above",
+    "bg": "hot grass at the outer edges of frame, bleached and still"
+  },
+  "gaze": {
+    "direction": "none",
+    "lead_room": "none",
+    "note": "the frame contains no living thing and no look. That is what makes the sound drain audible."
+  },
+  "balance": "Absolute central symmetry — the only perfectly centred, perfectly static frame in the waking half of the episode. The stillness is doing the work that a title card is not allowed to do.",
+  "leading_lines": "The spoil fan and the root arch form a closed ring around the oval; every line in frame terminates on it and none leaves.",
+  "eye_first": "The black oval, immediately, and then there is nowhere else for the eye to go for three seconds.",
+  "safe_area_ok": true,
+  "constraint_binding": "Matched in size and position to the earth-tunnel frame that opens S03, and identical to the frame sh015 just vacated — no reframe between sh015 and sh016. The register change is carried by silence alone; nothing is added to or removed from the composition to mark it.",
+  "match_cut": {
+    "id": "TR-03",
+    "side": "outgoing",
+    "partner": "sh017",
+    "matched_element": "the dark oval of the burrow mouth",
+    "matched_centre_xy": [0.50, 0.50],
+    "matched_height_frac": 0.30,
+    "matched_axis": "long axis horizontal, level",
+    "matched_surround": "a pale ring — dug earth below and to the sides, arching hawthorn roots above — against a hot bleached outer field",
+    "matched_value": "the interior of the oval is flat, lightless and depthless: no texture, no falloff, no detail to read",
+    "how_it_cuts": "Outgoing and incoming frames put an identical black oval at the identical centre, size and axis, ringed by the same pale earth and the same hawthorn roots. The cut therefore changes only what surrounds the ring — hot grass becomes cold tunnel — and the audience's eye, already parked on the oval, has no reason to register a cut at all."
+  }
+}

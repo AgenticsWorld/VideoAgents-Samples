@@ -1,0 +1,41 @@
+{
+  "task_id": "p2-world",
+  "agent": "02-worldbuilding/world",
+  "attempt": 1,
+  "status": "done",
+  "finished": "2026-09-22",
+  "outputs": ["bible/world.json"],
+  "helper_scripts": ["code/p2-world_check.py"],
+  "inputs_read": ["story/structured_story/ch001-ch012.json", "story/events.json", "story/story_graph.json", "story/chapter_manifest.json", "bible/WRITE_RULES.md", "bible/world.json (skeleton)", "bible/politics.json, geography.json, cultivation.json, timeline.json (skeletons, empty at write time)"],
+  "self_check": {
+    "script": "python3 code/p2-world_check.py",
+    "result": "ALL PASS",
+    "json_valid": true,
+    "source_refs_required": "PASS — 115 source quotes, each verified as a verbatim substring of the cited chapter; every entry has source, inferred entries all carry reason",
+    "no_unknown_placeholder": "PASS — no UNKNOWN/unknown/TBD/N/A/empty strings outside _meta",
+    "ids_unique": "PASS (WR-001..009, OQ-001..005, XA-01..08, realm keys, proposed FAC slugs)",
+    "allegiance_resolves": "PASS — every faction_register.allegiance points to a realm key in this file",
+    "fallen_status_marked": "PASS — Kingdom of Hearts, Court of Hearts, pack of cards fallen at ch012 (ev0052/ev0053); Wonderland dissolved ch012; Caucus-race company dispersed ch003 (ev0013); Duchess household broken ch008"
+  },
+  "counts": { "world_rules": 9, "realms": 5, "faction_register": 10, "wonderland_real_counterparts": 10, "history_overview": 5, "open_questions": 5, "cross_domain_assumptions": 8, "entries_with_inferred_flag": 45, "inferred_true": 22 },
+  "key_decisions": [
+    "Kept the p0 skeleton _meta and schema; added SOUL-required sections (realms, faction_register, history_overview) plus frame, wonderland_real_counterparts and cross_domain_assumptions, declared in _meta.p2_world_extensions. No new registered ID prefix used (realm/counterpart keys are file-local slugs; factions carry proposed_fac_id only).",
+    "Real-world frame: England, summer 1862 (4 July), Thames-valley riverside meadow near Oxford, upper-middle-class clergyman-scholar household — all designed values flagged inferred with reasons.",
+    "Wonderland = Alice's dream (the source's own frame), a dream layer that dissolves at ch012; realistic counterparts mapped from source (cards→dead leaves, noises→farmyard, pool→reeds) plus designed mappings.",
+    "No live FAC-/LOC-/TL-/SUP- cross-references, because sibling files were empty at write time; only whitelisted forward CHAR refs (CHAR-alice, CHAR-alice-sister)."
+  ],
+  "cross_domain_assumptions": [
+    "XA-01 (magic-cultivation): dream frame kept as in the source; the waking world has nothing supernatural",
+    "XA-02 (magic-cultivation, creature): talking animals and cards are played by human actors in period costume inside the dream; only a real white rabbit appears in the waking frame",
+    "XA-03 (magic-cultivation): size changes and transformations use practical or camera means or metaphor only",
+    "XA-04 (political): 10 proposed FAC slugs; political's IDs win, but differences in existence, allegiance or status are real conflicts",
+    "XA-05 (geography): Oxfordshire/Thames region; dream places are dream-space",
+    "XA-06 (timeline): Fri 4 July 1862, about 2 pm to sunset about 8 pm",
+    "XA-07 (characters): CHAR-alice / CHAR-alice-sister; Alice about 10, sister mid-teens",
+    "XA-08 (dictionary): 'Kingdom of Hearts' and similar are working labels"
+  ],
+  "conflicts": [],
+  "requests_to_memory_bible": ["Consider registering a file-local prefix for world realms (e.g. RLM-) if merge wants IDs instead of 'key' slugs."],
+  "skills": [],
+  "notes": "No subprocesses left running."
+}

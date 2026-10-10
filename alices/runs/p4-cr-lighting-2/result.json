@@ -1,0 +1,31 @@
+{
+  "task_id": "p4-cr-lighting-2",
+  "agent": "05-scenes/lighting",
+  "attempt": 1,
+  "date": "2026-09-23",
+  "change_request": "BIB-0027",
+  "status": "done",
+  "changed_files": [
+    {
+      "file": "bible/scenes/SCN-courtroom/lighting.json",
+      "note": "Fixes DEF-p4-cr-architecture-001-a. natural_light_logic, key_bearing, fill, practicals_note, quality, source_refs, reason and prompt_fragment_en now describe the reissued openings. The west and east walls have round-headed pale pastel stained glass, mostly clear-toned. The north wall has a 3.5 m halo roundel with a red heart. The golden west shafts stay the key and break into soft rose, lilac, sage and gold dapples, recorded in a new coloured_spill field. The east windows give cool, faintly tinted fill. The halo roundel glows from sky light behind the throne but does not light the dais. Sun bearing, elevation, scheme ID, condition and enums are unchanged: window_sun / high_side / warm (~2700K) / hard. _meta.amended records the CR."
+    },
+    {
+      "file": "bible/scenes/SCN-long-hall/lighting.json",
+      "note": "Fixes DEF-p4-cr-architecture-001-b with the new roundel_glow field, decision reflected_lamplight_only. There is no hidden lamp. The 25 blind roundels are front-lit by the 11 oil lamps, show faint jewel glints and never look backlit. Reasons: there is no cavity behind them in the architecture, the text calls it 'that dark hall' (ch001-p14), and the eleven lamps stay the only key. The key and practicals now name the pastel tulip glass shades from the reissued architecture, and the light they cast stays amber. The fill notes point to roundel_glow. The prompt_fragment_en of LGT-long-hall-01 and -02 each gain one clause saying the roundels are unlit from behind. Enums, kelvin_approx 2300, contrast and the specials SPC-long-hall-01/02 are unchanged. _meta.amended records the CR."
+    },
+    {
+      "file": "qa/defects/DEF-p4-cr-architecture-001.json",
+      "note": "Findings a and b are set to fixed_pending_verify, each with a resolution block. Findings c and d and the ticket status are left for the orchestrator and H2."
+    }
+  ],
+  "decisions": {
+    "long_hall_roundels": "reflected oil-lamp light only (no hidden lamp, no electric light, no daylight). This matches the architecture assumption, so architecture.json needs no change.",
+    "courtroom_tint": "The stained-glass colour is kept pale and secondary so the key still reads as photographed golden sunlight (XA-magic-08 live-action finish)."
+  },
+  "downstream_notice": "The prompt_fragment_en values of LGT-courtroom-01, LGT-long-hall-01 and LGT-long-hall-02 changed wording. No video prompts exist yet, so nothing needs re-sync. 06-art/environment-concept should read roundel_glow and coloured_spill.",
+  "pending_H2": "none raised by this station",
+  "defects_opened": [],
+  "bible_write_path": "Owner-file writes within scope under BIB-0027. memory-bible arbitrates through the on_bible_access hook. No other Bible file was touched.",
+  "skills": "none selected for this station"
+}

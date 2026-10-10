@@ -1,0 +1,10 @@
+{
+  "task_id": "p1-structure-eventrefs",
+  "skipped": true,
+  "reason": "quality judge=0",
+  "auto": {
+    "events_referenced": "54/54",
+    "dangling": 0,
+    "chapter_refs_valid": "PASS"
+  }
+}

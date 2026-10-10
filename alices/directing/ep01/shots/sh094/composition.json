@@ -1,0 +1,28 @@
+{
+  "shot_id": "sh094",
+  "scene_id": "SCN-pool-of-tears",
+  "size": "medium",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "bottom_left",
+    "anchor_xy": [0.30, 0.64],
+    "size_in_frame": "head and shoulders above water, about 0.34 of frame height; everything below her chin is under the surface and unreadable"
+  },
+  "headroom": "about 0.28 of frame height of dark flooded hall above her. She is low in frame because the lens is lower still — the camera is in the water with her, not looking down at her.",
+  "horizon_eyeline": "Water-level at swimmer height, lens 0.05 m above the surface: the waterline cuts the frame at 0.58 of frame height, hard and level, and everything below it is opaque dark water. Her eyeline is at 0.52, barely above the line, going out to frame left toward the door bases of the east wall.",
+  "layers": {
+    "fg": "the surface running to the bottom edge, still rocking from her fall, broken amber reflections on it",
+    "mg": "Alice surfacing, spluttering, up to her chin",
+    "bg": "the glass table legs rising out of the water like columns, the dark hall beyond"
+  },
+  "gaze": {
+    "direction": "frame_left",
+    "lead_room": "left",
+    "note": "she treads water facing the east-wall door bases, which are screen left on this axis; about 0.24 of frame width of open water ahead of her. Her chin is at the waterline, so the eyeline and the horizon are almost the same line — the most vulnerable framing in the episode."
+  },
+  "balance": "Left of centre and very low, with a wide empty flooded frame above and around. No high angle exists in this scene to reassure the picture.",
+  "leading_lines": "The waterline is the dominant horizontal and it sits just under her mouth; the table legs are verticals rising out of it. The surface cuts the frame in two and she is stuck on the line between the halves.",
+  "eye_first": "Her face at the waterline, then the salt on her lip.",
+  "safe_area_ok": true,
+  "constraint_binding": "The camera is IN the water with her at her 0.61 m scale for the whole scene — no high or crane view anywhere, so the lens never rises above 0.15 m and never looks down. Her surfacing position is matched to her exit at the end of sh093 (bottom of frame, screen left). The salt is a clean unhurried beat: the taste before the idea, so the lick is composed at the centre of the frame's attention with nothing else happening in the picture."
+}

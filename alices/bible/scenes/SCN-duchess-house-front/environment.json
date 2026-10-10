@@ -1,0 +1,218 @@
+{
+  "_meta": {
+    "file": "bible/scenes/SCN-duchess-house-front/environment.json",
+    "owner": "05-scenes/environment",
+    "task_id": "p3-environment-sb2",
+    "attempt": 1,
+    "generated": "2026-09-22",
+    "amended": {"change_id": "BIB-0027", "task_id": "p4-cr-environment", "date": "2026-09-23", "fields": ["fixed.dream_design (new)", "states[S02].conditions (Footmen wording)", "states[S04].conditions (pig note)"]},
+    "enum_set": "ENV-ENUM-v1 (runs/p3-environment-sb1/result.json) + sb2 extensions (runs/p3-environment-sb2/result.json)"
+  },
+  "scene_id": "SCN-duchess-house-front",
+  "layer": "dream",
+  "fixed": {
+    "climate": "dream-midsummer at the wood's edge: open, hot, still (grown from LOC-riverside-region)",
+    "indoor": false,
+    "daylight_access": "open_sky",
+    "dream_design": {
+      "rule": "WR-010 / XA-magic-08 (dream, full)",
+      "flora": "hollyhocks and climbing roses crowd the walls of the four-foot house, and a curling vine frames the door; the wood's edge behind shows arching, whiplash-curved boughs; the trodden grass stays dry and sparse",
+      "ornament_cues": "the door and its surround form the frame's central arch-and-roundel, with a circular fanlight over the door; vine tracery runs under the eaves (form and material belong to architecture); the open sky the Frog-Footman stares into is framed as a pale roundel by the tree crowns",
+      "palette": "sun-baked straw gold and warm ochre ground, pastel hollyhock pink and cream, pale hazy sky blue; livery gold as accent",
+      "seasonal_guard": "hollyhocks and roses flower in July; no spring blossom",
+      "inferred": true,
+      "reason": "The open place, the little house and the sky are explicit (ch005-p78, ch006-p04). Flora, framing and palette are designed to WR-010; the dry heat of every state is unchanged."
+    },
+    "ground_and_flora": "a sun-baked open place of dry, trodden summer grass in front of the little house; the wood's edge in full green leaf behind; dust at the doorstep",
+    "dream_growth": "Grows from the service door of the family house (index grows_from, cp-cat). It is the same hot late-afternoon sun Alice sleeps under: the dream makes the open place a bright, still clearing, and the heat makes the Frog-Footman sit idle and stare 'stupidly up into the sky'. The baby's soft grunting is dream-sound built from the real farm nearby (cp-sounds).",
+    "source": {
+      "chapter": "ch005",
+      "quote": "she came suddenly upon an open place, with a little house in it about four feet high"
+    },
+    "also_seen": [
+      {
+        "chapter": "ch006",
+        "refs": [
+          "ch006-p04"
+        ],
+        "quote": "staring stupidly up into the sky"
+      }
+    ],
+    "inferred": true,
+    "reason": "The open place and the visible sky are explicit (ch005-p78, ch006-p04, ch006-p08). Heat, stillness and grass state are designed for early July. The dream link is designed per ruling 5.2 A."
+  },
+  "variable_dims": {
+    "season": [
+      "summer"
+    ],
+    "time_of_day": [
+      "late_afternoon"
+    ],
+    "weather": [
+      "fair_hot"
+    ],
+    "wind": [
+      "still"
+    ],
+    "temperature": [
+      "hot"
+    ]
+  },
+  "states": [
+    {
+      "state_id": "SCN-duchess-house-front-S01",
+      "chapter": 5,
+      "chapter_id": "ch005",
+      "story_scene": "ch005-sc04",
+      "paragraphs": "ch005-p78..ch005-p78",
+      "timeline_ref": "ev0023",
+      "timeline_node": "TL-003",
+      "season": "summer",
+      "weather": "fair_hot",
+      "wind": "still",
+      "temperature": "hot",
+      "time_of_day": "late_afternoon",
+      "waking_clock": "16:30-16:35 GMT",
+      "sun": {
+        "elevation_deg_approx": 33,
+        "azimuth_deg_approx": 266,
+        "note": "sun in the west; the little house throws its shadow to the east"
+      },
+      "sky": "clear, hazy-blue midsummer sky",
+      "conditions": "still, hot air; the clearing sunlit and quiet after the breezy treetop",
+      "source_chapter": "ch005",
+      "source": {
+        "chapter": "ch005",
+        "quote": "she came suddenly upon an open place"
+      },
+      "inferred": true,
+      "designed_fields": [
+        "waking_clock",
+        "sun",
+        "sky",
+        "wind",
+        "temperature",
+        "weather"
+      ],
+      "reason": "Only the open place is explicit. Weather and time follow the waking afternoon mapped in event order (ev0023 follows ev0022 'continuous', story_timeline); the sun is computed for Oxford on 4 July 1862."
+    },
+    {
+      "state_id": "SCN-duchess-house-front-S02",
+      "chapter": 6,
+      "chapter_id": "ch006",
+      "story_scene": "ch006-sc01",
+      "paragraphs": "ch006-p01..ch006-p04",
+      "timeline_ref": "ev0024",
+      "timeline_node": "TL-003",
+      "season": "summer",
+      "weather": "fair_hot",
+      "wind": "still",
+      "temperature": "hot",
+      "time_of_day": "late_afternoon",
+      "waking_clock": "16:35-16:40 GMT",
+      "sun": {
+        "elevation_deg_approx": 32,
+        "azimuth_deg_approx": 267,
+        "note": "unchanged late-afternoon sun"
+      },
+      "sky": "clear sky; the Frog-Footman stares up into it",
+      "conditions": "still, hot; the Footmen's liveries and powdered curls in full sun (the Footmen are CGI frog- and fish-bodied figures per BIB-0027; exact anatomy pending_H2, owned by 04-creatures/03-characters)",
+      "source_chapter": "ch006",
+      "source": {
+        "chapter": "ch006",
+        "quote": "the other was sitting on the ground near the door, staring stupidly up into the sky"
+      },
+      "inferred": true,
+      "designed_fields": [
+        "waking_clock",
+        "sun",
+        "wind",
+        "temperature",
+        "weather"
+      ],
+      "reason": "Open sky is explicit (ch006-p04). The rest follows the waking afternoon in event order; the sun is computed for Oxford on 4 July 1862."
+    },
+    {
+      "state_id": "SCN-duchess-house-front-S03",
+      "chapter": 6,
+      "chapter_id": "ch006",
+      "story_scene": "ch006-sc02",
+      "paragraphs": "ch006-p05..ch006-p18",
+      "timeline_ref": "ev0025",
+      "timeline_node": "TL-003",
+      "season": "summer",
+      "weather": "fair_hot",
+      "wind": "still",
+      "temperature": "hot",
+      "time_of_day": "late_afternoon",
+      "waking_clock": "16:40-16:46 GMT",
+      "sun": {
+        "elevation_deg_approx": 31,
+        "azimuth_deg_approx": 268,
+        "note": "sun in the west, on Alice's side of the step"
+      },
+      "sky": "clear sky; the Footman keeps looking up into it as he talks",
+      "conditions": "still, hot; through the door, the din of the kitchen (howling, sneezing, crashing) and a faint drift of pepper-smoke",
+      "source_chapter": "ch006",
+      "source": {
+        "chapter": "ch006",
+        "quote": "He was looking up into the sky all the time he was speaking"
+      },
+      "inferred": true,
+      "designed_fields": [
+        "waking_clock",
+        "sun",
+        "wind",
+        "temperature",
+        "weather"
+      ],
+      "reason": "Open sky is explicit (ch006-p08). The smoke drifting out at the door is carried over from the kitchen (ch006-p19). Other fields follow the waking afternoon in event order."
+    },
+    {
+      "state_id": "SCN-duchess-house-front-S04",
+      "chapter": 6,
+      "chapter_id": "ch006",
+      "story_scene": "ch006-sc04",
+      "paragraphs": "ch006-p45..ch006-p49",
+      "timeline_ref": "ev0027",
+      "timeline_node": "TL-003",
+      "season": "summer",
+      "weather": "fair_hot",
+      "wind": "still",
+      "temperature": "hot",
+      "time_of_day": "late_afternoon",
+      "waking_clock": "16:58-17:02 GMT",
+      "sun": {
+        "elevation_deg_approx": 29,
+        "azimuth_deg_approx": 271,
+        "note": "bright sun after the dark, smoky kitchen"
+      },
+      "sky": "clear sky",
+      "conditions": "Alice steps out of the smoke into clean, hot, still open air; the baby-turned-pig trots off into the wood's green shade (pig end-state as a photoreal CGI piglet in the plate, BIB-0027 extension, pending_H2)",
+      "source_chapter": "ch006",
+      "source": {
+        "chapter": "ch006",
+        "quote": "As soon as she had made out the proper way of nursing it ... she carried it out into the open air."
+      },
+      "also_seen": [
+        {
+          "chapter": "ch006",
+          "refs": [
+            "ch006-p49"
+          ],
+          "quote": "felt quite relieved to see it trot away quietly into the wood"
+        }
+      ],
+      "inferred": true,
+      "designed_fields": [
+        "waking_clock",
+        "sun",
+        "sky",
+        "wind",
+        "temperature",
+        "weather"
+      ],
+      "reason": "'The open air' is explicit (ch006-p45). Weather and time follow the waking afternoon in event order; the sun is computed for Oxford on 4 July 1862."
+    }
+  ]
+}

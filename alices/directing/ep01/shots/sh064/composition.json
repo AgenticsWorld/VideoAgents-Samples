@@ -1,0 +1,34 @@
+{
+  "shot_id": "sh064",
+  "scene_id": "SCN-long-hall",
+  "size": "wide",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "centre",
+    "anchor_xy": [0.50, 0.50],
+    "size_in_frame": "her own body seen end-on down its length: bodice and pinafore filling the near frame, waist, skirt and then her boots tiny at the far end, about 0.07 of frame height"
+  },
+  "second_subject": {
+    "id": "alice_boots",
+    "grid": "bottom_centre",
+    "anchor_xy": [0.50, 0.80],
+    "note": "the same black ankle-strap boots that kicked once and vanished under the hedge in sh015 — far below on the flagstones, and identifiable."
+  },
+  "headroom": "not applicable: the axis is vertical, looking straight down her own body, so there is no tile equivalent and no horizon. The frame's 'top' is her own chest.",
+  "horizon_eyeline": "None. The only spatial reference is the flagstone pattern at the far bottom of frame, and it is small enough to be a gauge in itself. Her eyeline is the lens.",
+  "layers": {
+    "fg": "her bodice and pinafore, enormous, filling the upper half of frame",
+    "mg": "the fall of her skirt running away down the frame and narrowing hard",
+    "bg": "the flagstones and her boots, almost out of sight far below"
+  },
+  "gaze": {
+    "direction": "down_frame",
+    "lead_room": "below",
+    "note": "the shot is her look. The lead room is the entire length of her own body, and what is at the end of it is her feet, waving goodbye."
+  },
+  "balance": "A single steep funnel on the vertical centre line: near mass at the top, vanishing point at the bottom. Symmetrical and absurd.",
+  "leading_lines": "The two edges of her own skirt converge from the frame edges down to her boots — her body is the perspective. The flagstone joints at the bottom give the funnel a floor.",
+  "eye_first": "Straight down the funnel to the boots, because they are the smallest and brightest-edged thing in the frame.",
+  "safe_area_ok": true,
+  "constraint_binding": "Played absolutely straight — the one piece of pure comedy in the dream half, so no comic angle, no wide-angle distortion of her face and no cutaway. The boots are the SAME black ankle-strap boots that kicked once and vanished in sh015, and they must be legible as such: they are kept sharp (deep focus, size beat) and unobstructed at the bottom of frame. The second and last of the two rationed 24 mm shots; its partner is sh052."
+}

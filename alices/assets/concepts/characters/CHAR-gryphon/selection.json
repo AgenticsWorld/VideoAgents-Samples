@@ -1,0 +1,5 @@
+{"character_id":"CHAR-gryphon","sheet":"sheet.png","gender":"male","gender_word_in_prompt":true,"rendering":"photoreal CGI griffin (SUP-010, CRE-005)",
+"appearance_field_hits":{"eagle_head_dark_brown_feathers":true,"golden_tawny_nape":"weak","hooked_beak_yellow_cere":true,"amber_hazel_drowsy_eyes":true,"folded_eagle_wings":true,"eagle_forelegs_yellow_feet_black_talons":true,"lion_hindquarters_tawny":true,"tufted_tail_dark_tip":true,"feather_to_fur_blend":true,"unclothed":true},
+"self_check":{"layout":"pass","appearance":"pass with defects","style":"pass (photoreal)"},
+"defects":["Front and side panels read almost entirely as a giant eagle. The lion hindquarters show only in the back panel.","The side panel is three-quarter, not exact profile.","Feather tufts on the head read like mammal ears.","The golden-tawny nape is weak (the head is mostly dark)."],
+"bible_conflict":"DEF-p4-char-concept-202-b (eye colour and scale vs creature.json CRE-005)","rerolls":[]}

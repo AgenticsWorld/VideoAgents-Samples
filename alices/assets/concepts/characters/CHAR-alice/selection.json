@@ -1,0 +1,100 @@
+{
+  "character_id": "CHAR-alice",
+  "task_id": "p4-char-concept-cb1",
+  "sheet": "sheet.png",
+  "variants": [
+    "sheet_age02.png"
+  ],
+  "age_version_map": {
+    "sheet.png": {
+      "version": "CHAR-alice-age01",
+      "timeline": "ev0001-ev0054 (ch001#p01-ch012#p70)",
+      "costume": "COS-001 (default)"
+    },
+    "sheet_age02.png": {
+      "version": "CHAR-alice-age02",
+      "timeline": "ev0054 ch012#p71 only (sister's reverie)",
+      "costume": "COS-002 (the age02 outfit)"
+    }
+  },
+  "self_check": {
+    "sheet.png": {
+      "layout": "PASS: four panels (front / right-facing profile / back / head-and-shoulders close-up), one figure each, plain grey backdrop, full figure with floor shadow; panel gutters are soft (no drawn frames).",
+      "appearance_field_hits": {
+        "gender_female_child": true,
+        "hair_warm_mid_brown_long_loose_centre_parting_no_ringlets_no_band": true,
+        "stray_strands_across_eyes": true,
+        "eyes_grey_blue_large_wide_set": true,
+        "brows_darker_than_hair": true,
+        "small_straight_nose": true,
+        "full_lower_lip": true,
+        "oval_child_face": true,
+        "no_freckles": false,
+        "fair_skin_sun_flushed_cheeks": true,
+        "slight_build_small_hands": true,
+        "pinafore_front_pocket_mark": true
+      },
+      "costume_COS-001_hits": {
+        "cornflower_blue_frock_short_puffed_sleeves": true,
+        "rounded_neckline": true,
+        "knee_length_bell_skirt_white_petticoats": true,
+        "bib_pinafore_frilled_straps": true,
+        "back_sash_bow": true,
+        "one_deep_patch_pocket": false,
+        "white_stockings": true,
+        "black_ankle_strap_shoes": true,
+        "bare_headed": true
+      },
+      "style": "PASS: reads as photographed 35mm production still; no illustration look; no anachronism.",
+      "defects": [
+        "Pinafore has TWO front patch pockets; COS-001 specifies one deep patch pocket.",
+        "Faint freckles on nose and cheeks in the close-up; appearance says no freckles.",
+        "Close-up expression reads worried/parted-lips rather than 'curious, frank, chin slightly lifted' (minor)."
+      ]
+    },
+    "sheet_age02.png": {
+      "layout": "PASS: four panels, one figure each, plain backdrop, feet and shadows in frame.",
+      "appearance_field_hits": {
+        "gender_female_adult": true,
+        "centre_parting_low_knot_at_nape": true,
+        "loose_wavy_strand_on_brow": true,
+        "eyes_grey_blue": true,
+        "straight_brows_nose_lip_anchors": true,
+        "no_freckles": false,
+        "slim_straight_backed": true,
+        "warm_lively_expression": true
+      },
+      "costume_COS-002_hits": {
+        "deeper_cornflower_blue_dress": "partial",
+        "front_covered_buttons": true,
+        "narrow_high_white_collar_with_gold_brooch": "partial",
+        "white_cuffs_long_sleeves": true,
+        "belt_at_waist": true,
+        "floor_length_bell_skirt_moderate_crinoline": true,
+        "black_ankle_boots": true
+      },
+      "style": "PASS",
+      "defects": [
+        "Dress blue is a saturated royal/Prussian blue, darker and more saturated than 'deeper cornflower-blue'.",
+        "Collar is a rounded turn-down collar rather than a narrow high stand collar (brooch present).",
+        "Light freckles visible in close-up (no freckles on card)."
+      ]
+    }
+  },
+  "user_refs": [
+    "refs/style/alice.jpeg (read; applied via style_fragment_ui and the sourced blue-dress/white-pinafore/brown-hair look; not injected)"
+  ],
+  "rerolls": [],
+  "reroll_budget": "0 (user setting): defects kept for user decision at H2",
+  "costume_sheets": {
+    "sheet_age02.png#COS-002": {
+      "task_id": "p4-costume-sheet",
+      "costume_ref": "COS-002",
+      "status": "reuse of version base; no generation",
+      "defects": [
+        "inherited from base: royal blue instead of deeper cornflower; rounded collar instead of high stand collar; light freckles"
+      ]
+    }
+  },
+  "costume_rerolls": []
+}

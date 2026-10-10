@@ -1,0 +1,100 @@
+{
+  "character_id": "CHAR-caterpillar",
+  "name": "The Caterpillar",
+  "tier": "B",
+  "layer": "dream",
+  "temperament": {
+    "summary": "Languid, laconic and superior; unhurried to the point of rudeness. It keeps the whole conversation on its own terms and its own clock.",
+    "baseline": "Sleepy, sparing with words, long silences between remarks.",
+    "under_pressure": "Brief flashes of stern anger ('Explain yourself!', rearing upright), then straight back to calm.",
+    "inferred": false
+  },
+  "traits": [
+    {
+      "trait": "Contemptuous, terse questioner",
+      "description": "Answers questions with questions and gives very short replies. Its 'Who are you?' puts Alice's identity on trial.",
+      "evidence": [
+        { "chapter": "ch005", "ref": "ch005-p02", "event": "ev0019", "note": "Opens with 'Who are you?'." },
+        { "chapter": "ch005", "ref": "ch005-p12", "event": "ev0019", "note": "Asks it again, contemptuously." },
+        { "chapter": "ch005", "ref": "ch005-p13", "note": "Alice is irritated by its 'very short remarks'." },
+        { "chapter": "ch005", "ref": "ch005-p14", "note": "Meets her demand with a one-word 'Why?'." }
+      ],
+      "inferred": false
+    },
+    {
+      "trait": "Unhurried, controls the pace",
+      "description": "Takes its time, smokes, yawns and makes Alice wait until it chooses to speak.",
+      "evidence": [
+        { "chapter": "ch005", "ref": "ch005-p01", "note": "They look at each other a long time in silence before it speaks, languid and sleepy." },
+        { "chapter": "ch005", "ref": "ch005-p48", "event": "ev0020", "note": "Alice waits patiently; it yawns and shakes itself before speaking." }
+      ],
+      "inferred": false
+    },
+    {
+      "trait": "Exacting judge of performance",
+      "description": "Sets her a recitation, then pronounces it wrong 'from beginning to end'.",
+      "evidence": [
+        { "chapter": "ch005", "ref": "ch005-p25", "event": "ev0019", "note": "Orders the 'Father William' recitation." },
+        { "chapter": "ch005", "ref": "ch005-p37", "event": "ev0019", "note": "Pronounces it 'wrong from beginning to end', decidedly." }
+      ],
+      "inferred": false
+    },
+    {
+      "trait": "Touchy about its own size",
+      "description": "Shows it is vulnerable to the same kind of remark it hands out: when Alice calls three inches wretched, it rears up angrily.",
+      "evidence": [
+        { "chapter": "ch005", "ref": "ch005-p45", "event": "ev0020", "note": "'It is a very good height indeed!' said angrily, rearing upright; it is exactly three inches high." }
+      ],
+      "inferred": false
+    },
+    {
+      "trait": "Grudgingly helpful",
+      "description": "Under the rudeness it does give her the one thing she needs, the mushroom and how to use it, but it does so obliquely and leaves her to work out the rest.",
+      "evidence": [
+        { "chapter": "ch005", "ref": "ch005-p16", "note": "Calls her back: it has 'something important to say'." },
+        { "chapter": "ch005", "ref": "ch005-p48", "event": "ev0020", "note": "Tells her one side makes her taller and the other shorter, without saying which is which." },
+        { "chapter": "ch005", "ref": "ch005-p50", "note": "Answers her unspoken question ('Of the mushroom') and is gone." }
+      ],
+      "inferred": false
+    }
+  ],
+  "motivation": {
+    "core": "To make the visitor account for herself, and keep its own composure and seniority while it does.",
+    "fear": "Being thought small or of no account; its dignity on its perch.",
+    "wants_from_alice": "A proper answer to 'Who are you?' and composure: 'Keep your temper.'",
+    "shifts": [
+      { "chapter": "ch005", "ref": "ch005-p16", "event": "ev0019", "from": "dismiss her with short, circular questions", "to": "call her back to deliver advice", "trigger": "Alice turns to walk away" },
+      { "chapter": "ch005", "ref": "ch005-p48", "event": "ev0020", "from": "offended at her remark about height", "to": "give her the practical key (the mushroom) and leave", "trigger": "her patience: she waits in silence for it to speak" }
+    ]
+  },
+  "habits": [
+    { "habit": "Takes the hookah out of its mouth before speaking and puts it back to end the exchange", "evidence": [ { "chapter": "ch005", "ref": "ch005-p01" }, { "chapter": "ch005", "ref": "ch005-p47" } ], "inferred": false },
+    { "habit": "Uses long silences as pressure, letting the other person fill them", "evidence": [ { "chapter": "ch005", "ref": "ch005-p37" }, { "chapter": "ch005", "ref": "ch005-p48" } ], "inferred": false },
+    { "habit": "Rears upright to its full height when its dignity is touched", "evidence": [ { "chapter": "ch005", "ref": "ch005-p45" } ], "inferred": false },
+    { "habit": "Leaves without farewell, climbing down and moving off through the grass mid-remark", "evidence": [ { "chapter": "ch005", "ref": "ch005-p48" }, { "chapter": "ch005", "ref": "ch005-p50" } ], "inferred": false }
+  ],
+  "decision_pattern": "Tests first, helps last. It withholds until the other person shows patience, then gives exactly enough and no more.",
+  "taboos": [
+    { "taboo": "Never explains itself or answers a question it has not chosen to answer", "basis": [ { "chapter": "ch005", "ref": "ch005-p14" }, { "chapter": "ch005", "ref": "ch005-p41" } ], "inferred": false },
+    { "taboo": "Never hurries or raises its energy to match another's agitation", "basis": [ { "chapter": "ch005", "ref": "ch005-p18" }, { "chapter": "ch005", "ref": "ch005-p47" } ], "inferred": false },
+    { "taboo": "Never lays a hand on Alice; its whole power is its gaze and its questions", "basis": [ { "chapter": "ch005", "ref": "ch005-p01" } ], "inferred": true, "reason": "No physical contact occurs in ch005. Keeping it untouchable preserves the examiner distance." }
+  ],
+  "facade": {
+    "applies": true,
+    "surface": "Indifferent, hostile, unhelpful elder",
+    "true_self": "A mentor of sorts who gives Alice the tool she needs to control her own size",
+    "reveal_chapter": "ch005",
+    "reveal_note": "The turn comes at the end of the same scene (ch005-p16 call-back, ch005-p48 advice). Screenplay should not soften the first half; the help only lands if the hostility is played straight.",
+    "inferred": false
+  },
+  "waking_life_embodiment": {
+    "embodies": "The examining elder: the visiting clergyman or schoolmaster who hears a child's catechism and set pieces, asks 'Who are you?' in the catechism's sense, and marks her recitation wrong.",
+    "waking_source": "Alice's recitation pieces from the schoolroom ('You are old, Father William' parodies a moral poem children learned by heart) and the catechism a clergy family's child would be examined on.",
+    "authority_trait": "The adult examiner who demands that a child define herself, never defines himself, and judges her performance curtly.",
+    "coming_of_age_reading": "The central identity scene. Alice cannot say who she is because she keeps changing, which is growing up in miniature. The examiner does not help her answer. Instead he hands her the means to manage the changes herself: adult approval is not coming, but self-command is possible.",
+    "grounding": [ "ch005-p02", "ch005-p03", "ch005-p25", "ch005-p37", "bible/world.json wonderland_real_counterparts cp-lessons" ],
+    "inferred": true,
+    "reason": "The recitation-as-lesson link is sourced (cp-lessons). The catechism and clergyman-examiner reading is a design choice grounded in the clergyman-scholar household (ruling 5.6 A)."
+  },
+  "performance_baseline": "Stillness. Heavy-lidded, cross-legged, economical; the only big movement is the upright rear at ch005-p45. Hookah handling is the rhythm of the scene."
+}

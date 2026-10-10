@@ -1,0 +1,38 @@
+{
+  "shot_id": "sh067",
+  "group_id": "grp026",
+  "scene_no": "S07",
+  "scene_id": "SCN-long-hall",
+  "duration_s": 7.0,
+  "is_dialogue": false,
+  "group_position": "last shot of grp026 — Alice reaches her map end (curtain), lying on her side with one eye at the little door.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "lie",
+      "start_pos": "lying on her side on the flagstones at the low curtain, the rest of her filling the hall behind her",
+      "space_fragment_en": "lying on her side on the flagstones at the low curtain, centred in frame, one eye at the little door below her",
+      "facing": "one eye down into the open doorway; the summer light from the passage falls across that eye only",
+      "path": [],
+      "beats": [
+        { "t": 1.4, "action": "gets down on her side on the floor", "sync": "the only way to reach the opening" },
+        { "t": 3.0, "action": "brings one eye to the open doorway", "sync": "the most extreme scale comparison in the episode" },
+        { "t": 5.6, "action": "the eye stays there", "sync": "held to the cut" }
+      ],
+      "performance_beat": {
+        "objective": "get as much of herself as will fit into the garden — which turns out to be one eye",
+        "goal": "get as much of herself as will fit into the garden",
+        "emotional_arc": "from urgency to a stilled, hopeless wanting held on a single eye",
+        "arc_from": "urgency",
+        "arc_to": "stilled hopeless wanting",
+        "trigger": { "beat": "her eye arrives at the opening and finds it narrower than the eye itself", "t": 3.0 },
+        "no_early_reaction": ["the eye filling", "a blink", "the head pressing to the floor"],
+        "forbidden_early": ["the eye filling", "a blink", "the head pressing to the floor"],
+        "end_state": "cheek flat on the flagstones, one eye open at the little door, unblinking, breath going across the stone"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0006 result (dream)", "note": "Alice alone; nobody in the passage or the garden beyond it." }
+}

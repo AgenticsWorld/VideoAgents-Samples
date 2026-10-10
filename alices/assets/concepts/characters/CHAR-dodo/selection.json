@@ -1,0 +1,5 @@
+{"character_id":"CHAR-dodo","sheet":"sheet.png","gender":"male","gender_word_in_prompt":true,"rendering":"photoreal CGI dodo, scientific reconstruction (SUP-002)",
+"appearance_field_hits":{"brownish_grey_loose_plumage":true,"pale_grey_belly":true,"massive_hooked_yellow_green_beak_dark_tip":true,"bare_grey_face_patch":true,"small_pale_yellow_eye":true,"tiny_wings":true,"curly_tail_tuft":true,"stout_yellow_legs":true,"solemn_pompous":true,"unclothed":true},
+"self_check":{"layout":"pass","appearance":"pass","style":"pass (photoreal, not Tenniel cartoon)"},
+"defects":["The gape line reads as a faint smile. Minor."],
+"not_drawn_scoped":["thimble in beak (ch003-p28 prop moment)","wing-tip-to-forehead pose (ch003-p20 gesture)"],"rerolls":[]}

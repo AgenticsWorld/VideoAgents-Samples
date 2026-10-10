@@ -1,0 +1,27 @@
+{
+  "character_id": "CHAR-duck",
+  "name": "Duck",
+  "tier": "extra",
+  "card_type": "individual",
+  "gender": "male",
+  "age_sense": "adult man (appearance base_age_range 30-38)",
+  "timbre": "soft, plummy, slightly nasal and flat-toned man's voice, pedantic",
+  "pitch": "mid tenor, prim rising queries",
+  "pitch_range_hz": [110, 180],
+  "speed_wpm": [135, 155],
+  "speed_cpm": [513, 589],
+  "accent": "churchy, educated Received Pronunciation, over-precise",
+  "reference_style": "Literal-minded young gent who interrupts the Mouse's history to ask what the Archbishop 'found' — frogs and worms, delivered with pedantic seriousness.",
+  "emotion_range": {
+    "pedantic": { "speed_delta": "0%", "pitch_delta": "+1semi", "note": "'Found what?'" }
+  },
+  "age_variants": [],
+  "source_chapter": "ch003",
+  "sources": ["ch003", "ch003-p09", "ch003-d0011", "ch003-d0014", "ch003-d0015"],
+  "voice_evidence": [
+    { "para": "ch003-p09", "quote": "“Found _what_?” said the Duck." }
+  ],
+  "inferred": true,
+  "inferred_fields": ["timbre", "pitch", "pitch_range_hz", "speed_wpm", "speed_cpm", "accent"],
+  "reason": "No voice description in source; designed from appearance gender note ('a churchy, literal-minded young gent')."
+}

@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh023",
+  "group_id": "grp009",
+  "scene_no": "S03",
+  "duration_s": 2.0,
+  "size": "wide",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 40,
+  "camera_height_m": "on her axis at the middle of the shaft — the sh020 set-up repeated exactly",
+  "angle": "straight down the open centre of the shaft",
+  "rack_focus": "none",
+  "start_frame": "The sh020 frame repeated: straight down the open centre of the shaft, bookshelf bands and map pegs now at the edges instead of cupboards, the black below deeper and emptier.",
+  "end_frame": "Identical at the end of the two seconds — nothing has come up out of it and there is no glint left in it at all.",
+  "constraint_honoured": "'The repetition is the measurement: same frame… and the last glint gone' — same lens, same axis, no move, only the dressing and the light changed.",
+  "movement_note": "POV 4 of 7. The whole shot is a comparison with sh020, so any difference in camera behaviour would destroy its only function.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

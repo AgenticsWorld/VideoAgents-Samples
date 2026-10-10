@@ -1,0 +1,48 @@
+{
+  "shot_id": "sh032",
+  "group_id": "grp012",
+  "scene_no": "S04",
+  "scene_id": "SCN-shaft-landing-passage",
+  "duration_s": 3.0,
+  "is_dialogue": false,
+  "group_position": "last shot of grp012 — Alice reaches her map end (corner). The White Rabbit reaches his map end (hall_opening) off-frame and is gone.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "stand",
+      "start_pos": "rounding the right-angle corner at a run and pulling up short on it",
+      "space_fragment_en": "standing at the right-angle corner on screen-left, pulled up short, facing the opening into the long hall on screen-right",
+      "facing": "round the corner and past the lens toward the hall lamplight; the open screen-right of frame is where her look is going",
+      "path": [
+        { "t": 1.0, "to": "stopped on the corner itself, both feet planted" }
+      ],
+      "beats": [
+        { "t": 0.0, "action": "comes round the corner close behind him", "sync": "shot opens mid-run" },
+        { "t": 1.0, "action": "stops dead", "sync": "he is gone and the hall is there instead" },
+        { "t": 2.2, "action": "her look goes on past the lens into the opening hall", "sync": "hands the cut to S05" }
+      ],
+      "performance_beat": {
+        "objective": "catch sight of him again before the corner costs her the chase",
+        "goal": "catch sight of him again",
+        "emotional_arc": "from full pursuit to a stopped, wide-open astonishment at the room in front of her",
+        "arc_from": "full pursuit",
+        "arc_to": "stopped astonishment",
+        "trigger": { "beat": "she plants both feet and the run stops", "t": 1.0 },
+        "no_early_reaction": ["the eyes widening", "the head coming up", "the mouth opening"],
+        "forbidden_early": ["the eyes widening", "the head coming up", "the mouth opening"],
+        "end_state": "stopped on the corner, weight still forward, eyes past the lens into the lamplight, lips apart"
+      }
+    }
+  ],
+  "creatures": [],
+  "offscreen_presence": [
+    { "id": "CHAR-white-rabbit", "where": "through the opening into the long hall, already out of sight", "note": "grp012 map end. He is lost here and does not reappear until grp028." }
+  ],
+  "presence_check": {
+    "timeline_ok": true,
+    "violations": [],
+    "story_event": "ev0003 (dream) — 'she lost the Rabbit around a corner'",
+    "note": "The Rabbit must be out of frame here; S05 is composed so that his absence from the hall is provable."
+  }
+}

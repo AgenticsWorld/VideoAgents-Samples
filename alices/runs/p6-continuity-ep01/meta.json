@@ -1,0 +1,19 @@
+{
+  "task_id": "p6-continuity-ep01",
+  "agent": "07-directing/continuity-planning",
+  "run_id": "909e0dca5a1c",
+  "parent_run_id": "1f5ab5bd58b7",
+  "attempt": 1,
+  "engine_model": "per-agent console configuration (not overridden by orchestrator)",
+  "duration_s": 1930,
+  "tokens": "not reported by dispatch --status",
+  "outputs_sha256": { "directing/ep01/continuity_plan.json": "e7185988c584f9841a6a36812e548e022fd01b400185f3fc7e378ab77afc0c37" },
+  "product_version": "ep01 continuity plan v1",
+  "verified_by_orchestrator": [
+    "group_transitions: 36 entries = 36 adjacent pairs of 37 groups, unique, no gaps -> group_transitions_cover_all_adjacent PASS",
+    "anchor = 'none' on 36/36 -> transition_anchor_consistent PASS (long-take switch is OFF)",
+    "axis_violations: 7 found, 5 waived with a cited basis, 2 routed as defects -> axis_jumps_zero_or_waived PASS",
+    "TR-03 match cut verified field-by-field between sh016 and sh017: centre, height and axis all agree"
+  ],
+  "defects_opened": ["DEF-p6-continuity-ep01-001", "DEF-p6-continuity-ep01-002"]
+}

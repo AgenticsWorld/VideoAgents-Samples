@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh022",
+  "group_id": "grp009",
+  "scene_no": "S03",
+  "duration_s": 6.0,
+  "size": "wide",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame; the second pass of dressing travels upward past her)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 28,
+  "camera_height_m": "on her own axis, level with her (no floor datum, no horizon) — the sh001 set-up exactly",
+  "angle": "level",
+  "rack_focus": "none",
+  "start_frame": "The recognised wide from the roundel wall: Alice held small at one place in frame, bookshelves and schoolroom maps on pegs sliding up behind her, a long empty drop below.",
+  "end_frame": "The same frame with her settled back into the fall as if into an armchair — ankles crossed, hands in her lap — and a cooler run of shelves and map pegs behind her.",
+  "constraint_honoured": "'Must read as a later moment of the same descent, not a new place' — identical lens, axis and framing to sh001, with only the dressing changed.",
+  "movement_note": "Match pair with the hook. Recognition depends on nothing optical changing, so no move is available here even if one were wanted.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

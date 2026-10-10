@@ -1,0 +1,13 @@
+{
+ "task_id": "p6-storyboard-ep01",
+ "run_id": "c6bc689f3d10",
+ "agent": "07-directing/storyboard",
+ "attempt": 1,
+ "finished_at": "2026-09-23T08:40:00+08:00",
+ "duration_s": 2477,
+ "model": "per-agent console config",
+ "engine": "unchanged (no --engine override)",
+ "artifact_versions": {
+  "directing/ep01/storyboard.json": "v1"
+ }
+}

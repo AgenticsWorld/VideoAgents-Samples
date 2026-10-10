@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh085",
+  "group_id": "grp032",
+  "scene_no": "S08",
+  "duration_s": 2.0,
+  "size": "medium",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 28,
+  "camera_height_m": 0.25,
+  "angle": "slightly up",
+  "rack_focus": "none",
+  "start_frame": "The S06 floor axis, low from the curtain toward the glass table: she turns her head sharply to the table, the tabletop already well above her shoulder.",
+  "end_frame": "The same frame two seconds later, the measurement taken — the same axis, the same lens, the same table, and only her height in the frame changed.",
+  "constraint_honoured": "'Required shot (b) of movement 4. The tabletop now sits well above her shoulder.'",
+  "movement_note": "Match pair with the S06 floor axis: the comparison only works if nothing optical differs, so no move and no lens change is available here. 2.0 s carries a single glance.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

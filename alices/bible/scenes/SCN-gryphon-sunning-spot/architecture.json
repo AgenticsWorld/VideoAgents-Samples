@@ -1,0 +1,47 @@
+{
+  "scene_id": "SCN-gryphon-sunning-spot",
+  "inherits": null,
+  "inherits_note": "Parent SCN-queens-garden is a container node with no card; limestone and garden vocabulary repeated by value from SCN-rose-tree-yard",
+  "layer": "dream",
+  "int_ext": "EXT",
+  "form": "The sunny far edge of the Queen's garden: a warm south-facing stretch of rough grass at the top of a stone-faced ha-ha, with an old stone gate-pier at one end; beyond the ha-ha the ground runs away in pale haze toward the shore",
+  "stories": 0,
+  "source_chapter": "ch009",
+  "culture_ref": "geography.json#LOC-gryphon-sunning-spot; world.json#wonderland_real_counterparts cp-court, cp-garden",
+  "period": "Dream-image of the boundary of an 1860s great-house or college garden: the sunk fence (ha-ha) where tended garden gives way to open country",
+  "grows_from": {
+    "loc": null,
+    "waking_detail": "a sunlit corner of a great-house garden beyond the croquet lawn",
+    "design_growth": "The warm, overlooked edge of a grand garden where the grown-ups never go: a ha-ha wall catching full sun, long grass, and an old stone gate-pier topped by a weathered heraldic griffin of the kind carved on Oxford college gates, the stone seed of the dream's Gryphon"
+  },
+  "amendment": "BIB-0027 (user ruling 2026-09-22), applied p4-cr-architecture 2026-09-23",
+  "dream_design_language": "The garden runs out: clipped order stops at a sunlit wall and the land beyond has no detail, only brightness, as though the dream has not built it yet",
+  "mucha_design_language": {"item": "Mucha / Art Nouveau at the garden's edge: the gate-pier's faces carved in flowing lily-and-vine relief, its cap a carved round halo disc behind the small stone griffin so the statue sits framed like a Mucha emblem; the ha-ha coping carries a thin inlaid band of gold-and-pastel mosaic; the long grass and moon daisies drift in soft flowing lines; pastel-and-gold haze beyond", "inferred": true, "culture_ref": "world.json#WR-010 (Queen's garden listed); cultivation.json#XA-magic-08; SCN-rose-tree-yard mucha_design_language", "why": "Same garden language, thinning out where the garden ends"},
+  "structure": [
+    {"item": "a strip of unmown rough grass about 20 m long and 8 m deep, open to the full sun, where the Gryphon (photoreal CGI griffin, SUP-010 as amended BIB-0027) lies asleep in the sun", "src": "ch009-p43"},
+    {"item": "a ha-ha along the front edge: a vertical dry-stone retaining wall about 1.5 m high dropping to lower ground, so the view is open with no visible fence", "inferred": true, "culture_ref": "world.json#wonderland_real_counterparts cp-garden", "why": "Real period garden boundary; puts the shore 'beyond' without joining it"},
+    {"item": "a square limestone gate-pier about 2.8 m high at one end of the ha-ha, with a small weathered stone griffin crouched on its cap", "inferred": true, "culture_ref": "world.json#wonderland_real_counterparts cp-court (the adult world as a child meets it)", "why": "College-gate heraldry a child would have seen in Oxford; the waking image the Gryphon grows from. It is plainly a statue, lichened and worn"},
+    {"item": "behind, a clipped yew hedge with an arched opening back to the croquet-ground", "inferred": true, "culture_ref": "SCN-croquet-ground architecture structure (yew openings)", "why": "Continuity of the walk from the croquet-ground"}
+  ],
+  "materials": [
+    {"item": "honey-coloured limestone, sun-warmed, lichened gold and grey", "inferred": true, "culture_ref": "SCN-rose-tree-yard architecture materials", "why": "Same garden stone"},
+    {"item": "long summer grass going to seed, pale gold tips, a few moon daisies", "inferred": true, "culture_ref": "geography.json#LOC-gryphon-sunning-spot.physical.flora ('grass')", "why": "Unmown edge contrasts with the croquet lawn"}
+  ],
+  "details": [
+    {"item": "a flat sun-warmed patch of grass pressed down where the Gryphon lies", "src": "ch009-p43"},
+    {"item": "beyond the ha-ha: open land dropping away into a bright pale haze, a faint line of sea-light at the horizon", "inferred": true, "culture_ref": "geography.json#LOC-gryphon-sunning-spot.adjacent (LOC-estuary-shore)", "why": "Sets up the walk to the Mock Turtle's shore without mapping a real route"}
+  ],
+  "scale_notes": {
+    "rule": "True 1:1 (Alice 135 cm). The Gryphon is a photoreal CGI griffin lying on the grass (SUP-010 as amended BIB-0027; size set by 04-creatures); the grass strip (20 x 8 m) is kept large enough for its full wingspan. The stone griffin on the pier is small (about 60 cm), weathered and plainly a statue, so it never competes with the living creature",
+    "sources": ["cultivation.json#SUP-003", "cultivation.json#SUP-010", "ch009-p43"]
+  },
+  "negative": [
+    "no living or moving statue, no giant griffin sculpture, no winged creature in the sky",
+    "no cartoon griffin, no human in partial griffin costume; the Gryphon is a photoreal CGI creature; no real eagle or lion",
+    "no flat poster illustration, outline graphics or matte-painting finish",
+    "no fence, railings or wall that visibly block the view beyond",
+    "no buildings, town or sea detail beyond the ha-ha; only haze",
+    "no fantasy ruins, no Greek temple"
+  ],
+  "prompt_ready_en": "the sunlit edge of a formal English garden in midsummer, a strip of long golden grass at the top of a honey-coloured dry-stone ha-ha wall, a thin gold-and-pastel mosaic band along its coping, an old square limestone gate-pier carved in flowing Art Nouveau lily-and-vine relief with a small weathered lichened stone griffin on its cap framed by a carved round halo disc, a clipped yew hedge behind, beyond the ha-ha the land falls away into bright pale pastel-and-gold haze with a faint line of sea-light on the horizon, photographed live-action"
+}

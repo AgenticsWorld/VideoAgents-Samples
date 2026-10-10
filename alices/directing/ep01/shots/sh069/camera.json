@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh069",
+  "group_id": "grp027",
+  "scene_no": "S08",
+  "duration_s": 8.0,
+  "size": "close",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 50,
+  "camera_height_m": 0.35,
+  "angle": "level",
+  "rack_focus": "none",
+  "start_frame": "The same axis, the frame finding her mouth and jaw rather than her eyes: her head down over her knees, the hall behind her almost black, the first tears already striking stone below frame.",
+  "end_frame": "The same frame at the end of the line, still on the mouth and jaw — the scolding spoken down into her own knees and never up at camera.",
+  "constraint_honoured": "'The self-address is spoken to her knees, not to camera. Long take.'",
+  "movement_note": "LN-ep01-018 (6.5 s) is one of the longest lines in the episode and must not meet a camera event or a focus change; 8.0 s locked gives it silent head and tail.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

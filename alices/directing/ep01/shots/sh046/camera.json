@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh046",
+  "group_id": "grp017",
+  "scene_no": "S06",
+  "duration_s": 6.0,
+  "size": "medium",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 50,
+  "camera_height_m": 1.3,
+  "angle": "level",
+  "rack_focus": "none",
+  "start_frame": "Eye-level from beside the glass table toward the curtain: Alice with the bottle held out at arm's length, prim and careful, the extended arm making the carefulness a shape in the frame.",
+  "end_frame": "The same frame after she has turned the bottle all the way round and read every side of it; no mark anywhere, and her arm still fully extended.",
+  "constraint_honoured": "'Comedy of manners — a well-brought-up child checking the rules in an impossible room' — played in one plain held frame, with no camera comment on the joke.",
+  "movement_note": "LN-ep01-009 (4.6 s) sits whole inside 6.0 s with silent head and tail and no camera event across the line.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

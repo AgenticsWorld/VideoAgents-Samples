@@ -1,0 +1,58 @@
+{
+  "character_id": "CHAR-march-hare",
+  "name": "March Hare",
+  "tier": "B",
+  "layer": "dream",
+  "revision": { "change_id": "BIB-0027", "task_id": "p4-cr-appearance", "date": "2026-09-23", "note": "Rewritten from the human-performer reading to a photoreal CGI animal." },
+  "rendering": {
+    "mode": "photoreal_cgi_animal",
+    "rule": "bible/cultivation.json SUP-002 (amended BIB-0027)",
+    "species": "brown hare (Lepus europaeus)",
+    "limits": "Hare anatomy throughout; speech by mouth, nose and whisker movement. No clothing, no cartoon face. Sits at the table beside the human Hatter (CHAR-hatter, human performer)."
+  },
+  "gender": "male",
+  "gender_note": { "source_chapter": "ch007", "source_para": "ch007-p26", "quote": "then he dipped it into his cup of tea" },
+  "base_age_range": "30-38",
+  "base_age_note": { "inferred": true, "reason": "Persona age (the Hatter's contemporary), kept for voice casting. As an animal: a prime adult buck in spring ('March') condition, rangy and wild." },
+  "hair": {
+    "coat": "fur",
+    "color": "tawny russet-brown flecked with black on the back, sandy flanks, white belly and chin, black-tipped ears, black-topped white tail",
+    "style": "coarse and unkempt, sticking up in tufts, with wisps of straw caught in the fur",
+    "inferred": true,
+    "reason": "Species colouring; the straw echoes his fur-thatched house (ch006-p80) and 'mad as a March hare'."
+  },
+  "eyes": { "color": "amber-gold", "shape": "large, round, bulging, set high on the sides of the head, staring and rarely blinking", "inferred": true, "reason": "Species." },
+  "skin": { "tone": "dark nose leather", "inferred": true, "reason": "Species." },
+  "face": {
+    "shape": "long hare head with a long upper lip, very long black-tipped ears",
+    "features": ["twitching nose", "split upper lip", "front incisors showing when he speaks", "ears swivelling independently"],
+    "default_expression": "gloomy one moment, manic the next; stares",
+    "expressiveness": "ear carriage, eye-staring, sudden freezing and bolting starts; no human expressions",
+    "source_chapter": "ch007",
+    "source_para": "ch007-p26",
+    "quote": "The March Hare took the watch and looked at it gloomily",
+    "features_inferred": true,
+    "reason": "Gloom sourced; features species-true."
+  },
+  "build": {
+    "height_range_cm": [45, 55],
+    "height_note": "Sitting-up height, head top without ears; ears add about 10 cm. Body length 55-65 cm.",
+    "body_type": "lanky, long-legged, springy, restless",
+    "posture": "sits up on a chair at the tea table, forepaws on the table edge to handle the watch and butter knife; leaps up and changes places",
+    "scale_reference": "Alice comes to the tea-party at about two feet high (ch006 end, SUP-003), so sitting up he is roughly her height. He sits beside the human Hatter, who rests an elbow on the Dormouse between them.",
+    "inferred": true,
+    "reason": "Species-true size; relative scale designed."
+  },
+  "marks": [
+    { "type": "signature_item", "position": "forepaws / table", "description": "a butter knife and the Hatter's watch, which he dips in his tea ('It was the best butter')", "source_chapter": "ch007", "source_para": "ch007-p26" },
+    { "type": "signature_item", "position": "fur", "description": "wisps of straw in the fur", "inferred": true, "reason": "Ties him to his fur-thatched house (ch006-p80)." }
+  ],
+  "default_outfit_tone": {
+    "summary": "none: he wears nothing; his look is the tawny brown hare",
+    "inferred": true,
+    "reason": "The text gives him no clothing; per SUP-002 (BIB-0027) the old tweed coat and neckerchief are dropped."
+  },
+  "doubling": null,
+  "events": ["ev0029", "ev0030", "ev0031", "ev0046"],
+  "prompt_base_en": "photoreal wild brown hare sitting up at a cluttered tea table, coarse unkempt tawny russet fur flecked black with wisps of straw caught in it, very long black-tipped ears, large bulging amber eyes staring, long upper lip and twitching nose, forepaws holding a pocket watch over a teacup, natural hare anatomy, live-action film plate"
+}

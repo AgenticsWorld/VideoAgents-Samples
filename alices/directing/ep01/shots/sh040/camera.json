@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh040",
+  "group_id": "grp015",
+  "scene_no": "S05",
+  "duration_s": 4.0,
+  "size": "medium",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 40,
+  "camera_height_m": 0.4,
+  "angle": "level",
+  "rack_focus": "none",
+  "start_frame": "Low from the hall floor at kneeling height: her kneeling body filling the right of frame, the tiny horseshoe-arched door filling the left, her hands turning the golden key in the tiny lock.",
+  "end_frame": "The same frame as the lock turns and she pushes the fifteen-inch leaf open — her 1.35 m against its 0.38 m in one frame, and the first green light touching the flagstones as the leaf swings in.",
+  "constraint_honoured": "'The 0.38 m door is measured against her 1.35 m the moment it opens' — both gauges stay inside one still frame, deep focus, no reframe.",
+  "movement_note": "A move would take one of the two gauges out of frame at the exact moment the comparison has to be made.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

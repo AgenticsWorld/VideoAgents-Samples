@@ -1,0 +1,35 @@
+{
+  "shot_id": "sh097",
+  "scene_id": "SCN-pool-of-tears",
+  "size": "medium",
+  "subject": {
+    "id": "PROP-white-kid-gloves-and-fan",
+    "in_frame_characters": ["CHAR-alice"],
+    "grid": "mid_left",
+    "anchor_xy": [0.28, 0.62],
+    "size_in_frame": "the fan drifting on the surface in the near foreground, about 0.28 of frame height including its reflection"
+  },
+  "second_subject": {
+    "id": "CHAR-alice",
+    "grid": "centre",
+    "anchor_xy": [0.54, 0.48],
+    "note": "her face behind the fan, in the middle distance, smaller than it has been since sh091 — the realisation lands on the object first and on her second."
+  },
+  "headroom": "about 0.26 of frame height above her of dark flooded hall. She is not crowded; the fan is what is close.",
+  "horizon_eyeline": "Water-level from beside the floating fan, lens on the surface: the waterline runs across at 0.60 of frame height. Her eyeline is at 0.46 and comes down and left onto the fan — the look travels from her to the object, which is the wrong way round for a reveal and exactly right for a realisation.",
+  "layers": {
+    "fg": "the Rabbit's fan drifting past on the surface, one of only two white objects left in the water",
+    "mg": "Alice treading water, watching it go by",
+    "bg": "the glass table legs and the dark hall, broken amber reflections"
+  },
+  "gaze": {
+    "direction": "frame_left",
+    "lead_room": "left",
+    "note": "she watches the fan drift across her own lead room. It is the one object in frame she can date to her own crying, and the composition makes her look at it before her face falls."
+  },
+  "balance": "Near-left object against mid-distance face — a depth-staged two-shot where one of the two is a fan. The fan is closer and therefore larger than she is, which is the inversion the shot needs.",
+  "leading_lines": "The fan's drift line runs across the frame's lower left and its reflection doubles it; the waterline runs behind. Three near-parallel horizontals, all drifting, none going anywhere.",
+  "eye_first": "The fan, because it is near, white and moving — then up to her face for the fall.",
+  "safe_area_ok": true,
+  "constraint_binding": "The realisation lands ON THE FAN — the one object in frame she can date to her own crying — and only then does her face fall. The composition therefore gives the fan the foreground and the larger apparent size and holds both it and her face sharp in the same frame; the fan is one of only two white objects in the water, the other being the glove on her hand, and no third white is permitted in shot."
+}

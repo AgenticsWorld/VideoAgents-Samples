@@ -1,0 +1,29 @@
+{
+  "shot_id": "sh070",
+  "scene_id": "SCN-long-hall",
+  "size": "close",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "top_right",
+    "anchor_xy": [0.62, 0.32],
+    "size_in_frame": "tighter than sh069 — mouth and jaw about 0.34 of frame height, the crop closing in without moving the axis"
+  },
+  "headroom": "none, and less of it than sh069: the tightening is the only change between the two frames, and it is what makes the order and the failure to obey it land in three and a half seconds.",
+  "horizon_eyeline": "Same set-up, tighter. Flagstone line pushed to 0.92 of frame height. Still no eyes in frame.",
+  "layers": {
+    "fg": "her knee, now nearly abstract, a field of blue cotton weave",
+    "mg": "her mouth, snapping the order",
+    "bg": "black"
+  },
+  "gaze": {
+    "direction": "down_frame",
+    "lead_room": "none",
+    "note": "unchanged from sh069 — she is still talking downward at herself, and the composition still gives her nobody."
+  },
+  "balance": "The sh069 balance compressed. Less air, more cotton, same single lit mouth.",
+  "leading_lines": "The jaw line and the knee line, closer together than before — the frame is squeezing.",
+  "eye_first": "The mouth, immediately; there is nothing else in frame.",
+  "safe_area_ok": true,
+  "constraint_binding": "Held just long enough for the order and the failure to obey it — the comedy and the distress are the same shot, so there is no reframe between the two and no second angle to separate them.",
+  "pairs_with": "sh069 — same set-up, tighter."
+}

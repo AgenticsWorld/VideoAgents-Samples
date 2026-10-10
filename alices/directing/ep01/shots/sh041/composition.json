@@ -1,0 +1,32 @@
+{
+  "shot_id": "sh041",
+  "scene_id": "SCN-little-door-passage",
+  "size": "wide",
+  "subject": {
+    "id": null,
+    "id_note": "POV — no character in frame. shot_list registers CHAR-alice with a poses_note; she is kneeling behind the lens at the open little door.",
+    "pov_of": "CHAR-alice",
+    "kind": "environment",
+    "what": "the garden at the far end of the stone passage",
+    "grid": "centre",
+    "anchor_xy": [0.50, 0.48],
+    "size_in_frame": "a small bright postcard — the garden arch occupies about 0.22 of frame height and 0.14 of frame width, no more"
+  },
+  "headroom": "not applicable. The passage's iron ribs close the top 0.26 of frame in a dark band, and that band runs unbroken to the arch — there is no air anywhere above the bright rectangle.",
+  "horizon_eyeline": "Lens at her kneeling eye-line, straight down the passage: floor and ribs converge on the arch at [0.50, 0.48]. No figure, no eyeline; the axis is hers.",
+  "layers": {
+    "fg": "the near iron ribs and the mosaic border of the passage mouth, very dark, framing all four edges",
+    "mg": "the slate passage running away, not much larger than a rat-hole, its ribs stepping down in scale",
+    "bg": "the garden in full high summer sun — beds of bright flowers, cool fountains throwing spray — compressed flat by the long lens into a small bright plate at the end"
+  },
+  "gaze": {
+    "direction": "into_depth",
+    "lead_room": "centre",
+    "note": "the whole frame is a single look down a single axis. The compression is deliberate: nothing in the composition suggests a route, a threshold you could step over or a floor you could walk on."
+  },
+  "balance": "A dark frame with a small bright centre — the highest contrast ratio in the episode. All the weight is at the edges and all the value is in the middle, and the middle is unreachable.",
+  "leading_lines": "The iron ribs and the mosaic border converge hard on the arch. They lead the eye there in under a second and then offer nothing to do on arrival — the long lens flattens the depth so the eye cannot walk in.",
+  "eye_first": "The bright arch, instantly.",
+  "safe_area_ok": true,
+  "constraint_binding": "The dream's ONE long lens, spent here and deliberately flat: the garden must read as a compressed postcard, not as somewhere we could walk into, so it is kept small, centred, planar and without any foreground element that would give it depth. This is the only warm meadow-green in the dream half of the episode and it exists only inside this rectangle — no green spills onto the passage walls or the near mosaic."
+}

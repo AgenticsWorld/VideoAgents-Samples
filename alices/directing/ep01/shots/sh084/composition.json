@@ -1,0 +1,34 @@
+{
+  "shot_id": "sh084",
+  "scene_id": "SCN-long-hall",
+  "size": "close",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "centre",
+    "anchor_xy": [0.48, 0.52],
+    "size_in_frame": "one hand filling the middle of frame, about 0.52 of frame height, with the white kid glove on it"
+  },
+  "second_subject": {
+    "id": "PROP-white-kid-gloves-and-fan",
+    "grid": "centre",
+    "anchor_xy": [0.48, 0.52],
+    "note": "the glove — doll-sized ninety seconds ago, now simply a glove, buttoned at the wrist, exactly her size. The whole cause of the scene's last movement is in this one frame and nothing else explains it."
+  },
+  "headroom": "none — a hand insert at 0.30 m. The glove is centred with an even dark margin all round, about 0.20 of frame height top and bottom, so its fit can be read without distraction.",
+  "horizon_eyeline": "Waterline across the bottom 0.14 of frame. No face in shot; her look comes down from above the top edge, continuous with the descent of her eyes from the vault in sh083.",
+  "layers": {
+    "fg": "her gloved hand, the button at the wrist, the kid leather taking her knuckles exactly",
+    "mg": "the dark water just below",
+    "bg": "black"
+  },
+  "gaze": {
+    "direction": "down_frame",
+    "lead_room": "none",
+    "note": "the shot is the end of a single continuous eye movement that began in sh083 looking up at the vault: her eyes come down, and land here. The two shots are one look."
+  },
+  "balance": "One object, centred, in the dark — the plainest evidential framing in the episode. There is nothing to weigh it against because nothing else is allowed in frame.",
+  "leading_lines": "The line of the buttoned wrist runs across the hand as a hard edge and is the fact of the shot: the leather stops exactly where her wrist does.",
+  "eye_first": "The glove, and specifically the button at the wrist, which is what proves it fits.",
+  "safe_area_ok": true,
+  "constraint_binding": "Required shot (a) of movement 4, and it stays in this group: lowering her eyes from the vault to her hands is one continuous movement, so this frame is composed as the arrival of the sh083 eyeline, not as a new idea. The whole cause of the scene's last movement is in this one frame and nothing else explains it — so nothing else is in the frame. Per BIB-0029 the gloves are a prop, not a costume change: she stays on COS-001 and no change of dress is implied by the composition."
+}

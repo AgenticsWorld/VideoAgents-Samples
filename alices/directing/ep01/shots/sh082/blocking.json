@@ -1,0 +1,39 @@
+{
+  "shot_id": "sh082",
+  "group_id": "grp031",
+  "scene_no": "S08",
+  "scene_id": "SCN-long-hall",
+  "duration_s": 6.5,
+  "is_dialogue": true,
+  "group_position": "middle shot of grp031 — Alice on the map start ground (curtain), back in the sustained set-up.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "sit",
+      "start_pos": "sitting in the water at the low curtain, hands still raised from the counting",
+      "space_fragment_en": "sitting in the water at the low curtain, centred in frame, facing screen-left, stopped dead with her hands still up",
+      "facing": "screen-left, into the space that has been empty for three shots — and now she is staring into it with focus",
+      "path": [],
+      "beats": [
+        { "t": 0.4, "action": "stops, appalled at her own answers", "sync": "before the line" },
+        { "t": 1.2, "action": "she is certain it is all wrong", "sync": "LN-ep01-025 begins" },
+        { "t": 4.6, "action": "she names the other girl", "sync": "LN-ep01-025 on 'Mabel'" },
+        { "t": 5.8, "action": "her eyes lock into the empty screen-left space", "sync": "the space is where she puts Mabel" }
+      ],
+      "performance": {
+        "objective": "find the only explanation that fits the evidence, and be appalled by it",
+        "goal": "find the only explanation that fits the evidence",
+        "emotional_arc": "from appalled doubt to a horrified, entirely serious conclusion",
+        "arc_from": "appalled doubt",
+        "arc_to": "horrified conclusion",
+        "trigger": { "line_ref": "LN-ep01-025", "word": "Mabel" },
+        "no_early_reaction": ["the eyes locking", "the hands dropping", "the mouth going slack"],
+        "forbidden_early": ["the eyes locking", "the hands dropping", "the mouth going slack"],
+        "end_state": "hands still half raised and forgotten, eyes fixed screen-left, mouth closed hard, no blink"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0007 result (dream) — 'I must have been changed for Mabel'", "note": "Alice alone; the screen-left space stays empty and no second figure may be staged in it." }
+}

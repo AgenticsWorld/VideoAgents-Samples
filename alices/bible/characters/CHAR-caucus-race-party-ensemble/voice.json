@@ -1,0 +1,38 @@
+{
+  "character_id": "CHAR-caucus-race-party-ensemble",
+  "name": "Caucus-race party (ensemble)",
+  "tier": "extra",
+  "card_type": "ensemble_group_voice",
+  "gender": "female",
+  "age_sense": "mixed 10-65; sample voice = lead slot C01, woman 40-50",
+  "timbre": "damp, eager, slightly breathless woman's voice, fussy and chattering",
+  "pitch": "mezzo-soprano, chorus rising on exclamations",
+  "pitch_range_hz": [170, 330],
+  "speed_wpm": [140, 170],
+  "speed_cpm": [532, 646],
+  "accent": "mixed middle-class southern English",
+  "reference_style": "Soaked party members chiming in together: 'But who has won?', 'Prizes! Prizes!', 'Yes, please do!'. A loose chorus of 4-6 mixed voices (children to elderly), slightly ragged in timing.",
+  "group_voice": {
+    "mode": "loose unison chorus, ragged timing, individual voices audible",
+    "headcount": "4-6 (appearance slots C01-C06), female 4 / male 2",
+    "speaking_slots": [
+      { "slot": "C01", "gender": "female", "age": "40-50", "timbre": "plump nervous matron's mezzo, leads the chorus" },
+      { "slot": "C02", "gender": "male", "age": "55-65", "timbre": "dry elderly baritone" },
+      { "slot": "C04", "gender": "female", "age": "10-14", "timbre": "tiny piping girl's voice, loudest on 'Prizes!'" },
+      { "slot": "C05", "gender": "male", "age": "50-60", "timbre": "slow deep bass under the rest" }
+    ]
+  },
+  "emotion_range": {
+    "clamour": { "speed_delta": "+15%", "pitch_delta": "+3semi", "volume": "loud", "note": "ch003-d0034 'Prizes! Prizes!'" },
+    "polite_chorus": { "speed_delta": "0%", "pitch_delta": "0semi", "note": "ch003-d0059 'Yes, please do!'" }
+  },
+  "age_variants": [],
+  "source_chapter": "ch003",
+  "sources": ["ch003", "ch003-p22", "ch003-d0030", "ch003-d0032", "ch003-d0034", "ch003-d0059"],
+  "voice_evidence": [
+    { "para": "ch003-p22", "quote": "the whole party at once crowded round her, calling out in a confused way, “Prizes! Prizes!”" }
+  ],
+  "inferred": true,
+  "inferred_fields": ["timbre", "pitch", "pitch_range_hz", "speed_wpm", "speed_cpm", "accent", "group_voice.speaking_slots"],
+  "reason": "Chorus lines sourced (structured_story speaker 'the party (chorus)'); voices designed per appearance slots. Gender copied from appearance.json (female majority)."
+}

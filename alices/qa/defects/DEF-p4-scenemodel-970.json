@@ -1,0 +1,20 @@
+{
+  "id": "DEF-p4-scenemodel-970",
+  "opened_by": "05-scenes/scene-modeling",
+  "opened_on": "2026-09-23",
+  "task_id": "p4-scene-model-sb2",
+  "domain": "scenemodel",
+  "assigned_to": ["06-art/environment-concept", "05-scenes/architecture", "user (H2 decision at G4)"],
+  "status": "open",
+  "severity": "major",
+  "summary": "Interior plans are drawn smaller than the Bible architecture cards. The whiteboxes follow the plans (SOUL wall rule), so the room sizes disagree with the Bible.",
+  "findings": [
+    {"scene": "SCN-duchess-kitchen", "issue": "The drawn flagstone floor is 7.87 x 3.99 m at the layout.json extent (14.5 m); architecture.json interior and the layout.json orientation text both say 11 x 7 m. The furniture scale agrees with the extent, so the room itself is drawn too small, too shallow in particular.", "whitebox_handling": "Walls on the drawn floor edge; every landmark lands on its wall; inferred:true."},
+    {"scene": "SCN-rabbit-house-upstairs-room", "issue": "Drawn floor 3.04 x 2.07 m vs Bible 3.0 x 2.7 m (width matches, depth 0.63 m short).", "whitebox_handling": "Walls on the drawn floor edge; inferred:true."}
+  ],
+  "options": [
+    "A: accept the plan sizes (no redraw). The whitebox stands as delivered; the architecture cards are annotated by their owner.",
+    "B: environment-concept redraws the plans at Bible proportions and recalibrates layout.json; scene-modeling then re-models both rooms."
+  ],
+  "note": "Plan images and layout.json were not edited (not this agent's files)."
+}

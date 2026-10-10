@@ -1,0 +1,23 @@
+{
+  "task_id": "p3-environment-sb2",
+  "run_id": "2ea395afbc4d",
+  "attempt": 1,
+  "model": "agent default",
+  "tokens": null,
+  "started_at": null,
+  "finished_at": "2026-09-22T18:32:59+08:00",
+  "inputs_sha256": {},
+  "artifact_versions": {
+    "bible/scenes/SCN-pigeon-treetop/environment.json": "v1",
+    "bible/scenes/SCN-duchess-house-front/environment.json": "v1",
+    "bible/scenes/SCN-duchess-kitchen/environment.json": "v1",
+    "bible/scenes/SCN-cheshire-cat-path/environment.json": "v1",
+    "bible/scenes/SCN-mad-tea-party/environment.json": "v1",
+    "bible/scenes/SCN-wood-tree-door/environment.json": "v1",
+    "bible/scenes/SCN-rose-tree-yard/environment.json": "v1",
+    "bible/scenes/SCN-croquet-ground/environment.json": "v1",
+    "bible/scenes/SCN-gryphon-sunning-spot/environment.json": "v1",
+    "bible/scenes/SCN-mock-turtle-ledge/environment.json": "v1",
+    "bible/scenes/SCN-courtroom/environment.json": "v1"
+  }
+}

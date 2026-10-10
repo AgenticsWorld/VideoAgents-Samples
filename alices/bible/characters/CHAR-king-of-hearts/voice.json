@@ -1,0 +1,32 @@
+{
+  "character_id": "CHAR-king-of-hearts",
+  "name": "King of Hearts",
+  "tier": "A",
+  "card_type": "individual",
+  "gender": "male",
+  "age_sense": "older man (appearance base_age_range 55-62)",
+  "timbre": "mild, soft-edged older man's voice, slightly pinched and fussy, that strains for gravity and cracks upward when unsure",
+  "pitch": "light baritone, affects a deeper 'grave' pitch for pronouncements",
+  "pitch_range_hz": [100, 190],
+  "speed_wpm": [125, 150],
+  "speed_cpm": [475, 570],
+  "accent": "educated Received Pronunciation, precise and schoolmasterly, over-careful articulation",
+  "reference_style": "Pompous-procedural: court formulae, reasoning aloud in circles, conditional threats never followed through, 'my dear' to the Queen. Fussy, not cruel; must sound clearly softer and lower-energy than the Queen.",
+  "emotion_range": {
+    "calm": { "speed_delta": "0%", "pitch_delta": "0semi", "note": "procedural murmuring" },
+    "grave_pronouncement": { "speed_delta": "-15%", "pitch_delta": "-2semi", "volume": "medium", "note": "ch011-p68 'in a deep voice'; ch012-p03 'in a very grave voice'" },
+    "flustered": { "speed_delta": "+15%", "pitch_delta": "+3semi", "note": "voice cracks when challenged; ch012-p57 'in an offended tone'" },
+    "aside_low": { "speed_delta": "-5%", "pitch_delta": "-1semi", "volume": "soft", "note": "ch009-p42 'in a low voice, to the company generally'" }
+  },
+  "age_variants": [],
+  "source_chapter": "ch011",
+  "sources": ["ch008", "ch009", "ch011", "ch012", "ch009-p42", "ch011-p68", "ch012-p03", "ch012-p57"],
+  "voice_evidence": [
+    { "para": "ch011-p68", "quote": "he said in a deep voice" },
+    { "para": "ch012-p03", "quote": "said the King in a very grave voice" },
+    { "para": "ch009-p42", "quote": "Alice heard the King say in a low voice" }
+  ],
+  "inferred": true,
+  "inferred_fields": ["timbre", "pitch_range_hz", "speed_wpm", "speed_cpm", "accent"],
+  "reason": "Deep/grave/low deliveries are sourced; the soft cracking baseline follows personality ('a voice that starts grave and cracks when he is challenged')."
+}

@@ -1,0 +1,28 @@
+{
+  "shot_id": "sh028",
+  "scene_id": "SCN-shaft-landing-passage",
+  "size": "medium-wide",
+  "subject": {
+    "id": "CHAR-white-rabbit",
+    "grid": "centre",
+    "anchor_xy": [0.52, 0.58],
+    "size_in_frame": "sitting back on his haunches, about 0.18 of frame height — no closer than sh027's set-up allows, the frame simply loses Alice"
+  },
+  "headroom": "about 0.26 of frame height of brick vault above him. The vault is kept over his head in every frame of this shot so he never reads as free-standing or human-scaled.",
+  "horizon_eyeline": "Floor line and vault arcs converge as in sh027, vanishing point at [0.52, 0.52]. His eyeline drops to the watch braced against his chest and stays there for the whole shot — it never rises to the lens.",
+  "layers": {
+    "fg": "empty wet brick floor and one lamp pool across the bottom of frame; Alice is out of shot entirely",
+    "mg": "the Rabbit, a small clear silhouette against the lamplight, the dropped gloves between his forefeet",
+    "bg": "the passage running on past him to the far corner glow"
+  },
+  "gaze": {
+    "direction": "down_frame",
+    "lead_room": "none",
+    "note": "his whole attention is on the watch; he is given no lead room and no space to look back into, because he does not look back. Performance is muzzle, ears and the set of his back only."
+  },
+  "balance": "A single small subject held dead centre in a long empty corridor. The symmetry is unglamorous and slightly comic — a very small animal taking up the exact middle of a very large room.",
+  "leading_lines": "The converging vault and floor lines again, all arriving at him. The gloves on the bricks in front of his forefeet are a small pale mark that stops the eye at floor level.",
+  "eye_first": "The white of his fur against the lamplit brick, then down to the gloves at his feet.",
+  "safe_area_ok": true,
+  "constraint_binding": "QUADRUPED RABBIT: he stops and sits back on his haunches with the watch braced in a paw against his chest — the composition never shows him upright on two legs and never frames him from a height that would imply a human stance. Clean single so the native dialogue take has one speaker in frame: Alice is wholly out of the frame for the line."
+}

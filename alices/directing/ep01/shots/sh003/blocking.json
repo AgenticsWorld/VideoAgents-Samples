@@ -1,0 +1,69 @@
+{
+  "shot_id": "sh003",
+  "group_id": "grp002",
+  "scene_no": "S01",
+  "scene_id": "SCN-riverbank",
+  "duration_s": 6.0,
+  "is_dialogue": true,
+  "group_position": "middle shot of grp002 — both girls held on the blocking_map start (sitting_shelf); no path in the map, so no ground is given up.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "prone",
+      "start_pos": "on the grass downhill of her sister at sitting_shelf, wriggled up onto her elbows at her sister's arm",
+      "space_fragment_en": "lying face down on her elbows at the sister's sitting place, held screen-right, peeping over her sister's arm at the open book",
+      "facing": "body still along the slope, head and shoulders turned uphill into her sister; eyes down-left onto the page",
+      "body_facing_target_id": "CHAR-alice-sister",
+      "path": [
+        { "t": 0.6, "to": "up on both elbows, head over her sister's forearm, the same patch of grass under her" }
+      ],
+      "beats": [
+        { "t": 0.6, "action": "wriggles up onto her elbows", "sync": "before the line" },
+        { "t": 1.4, "action": "speaks without lifting her eyes off the page", "sync": "LN-ep01-001 begins" },
+        { "t": 3.4, "action": "her mouth stills on the word", "sync": "LN-ep01-001 on 'pictures'" }
+      ],
+      "performance": {
+        "objective": "get her sister to admit the book is worthless and give her the afternoon back",
+        "goal": "get her sister to admit the book is worthless",
+        "emotional_arc": "from idle complaint to a small genuine grievance she does not expect anyone to answer",
+        "arc_from": "idle, sing-song complaint",
+        "arc_to": "a real grievance, quietly abandoned",
+        "trigger": { "line_ref": "LN-ep01-001", "word": "pictures" },
+        "no_early_reaction": ["frowning", "eyes lifting to her sister's face", "chin coming off her hand"],
+        "forbidden_early": ["frowning", "eyes lifting to her sister's face", "chin coming off her hand"],
+        "end_state": "mouth closed, eyes still down on the page, one blink, chin sinking back onto her fist"
+      }
+    },
+    {
+      "id": "CHAR-alice-sister",
+      "label": "Alice's Sister",
+      "pose": "sit",
+      "start_pos": "upright at sitting_shelf under the northern elm, the book held open across her knee",
+      "space_fragment_en": "sitting upright at the sister's sitting place, her forearm crossing screen-left, eyes down on the open book",
+      "facing": "square to the backwater, head bowed to the page, never turning to Alice",
+      "path": [],
+      "beats": [
+        { "t": 2.0, "action": "holds the page flat, gives no sign of having heard", "sync": "under LN-ep01-001" }
+      ],
+      "performance_beat": {
+        "objective": "finish the paragraph without being drawn into a conversation",
+        "goal": "finish the paragraph",
+        "emotional_arc": "from absorbed to absorbed — the refusal to answer is the performance",
+        "arc_from": "absorbed",
+        "arc_to": "absorbed, marginally aware of being asked something",
+        "trigger": { "beat": "Alice's head comes over her forearm", "t": 0.9 },
+        "no_early_reaction": ["turning her head", "answering breath", "eyes leaving the page"],
+        "forbidden_early": ["turning her head", "answering breath", "eyes leaving the page"],
+        "end_state": "eyes on the print, jaw unmoved, thumb still holding the margin"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": {
+    "timeline_ok": true,
+    "violations": [],
+    "story_event": "ev0001 (real_frame, T0)",
+    "note": "Same two presences as sh002, unchanged."
+  }
+}

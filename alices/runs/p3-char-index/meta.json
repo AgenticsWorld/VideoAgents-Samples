@@ -1,0 +1,13 @@
+{
+  "task_id": "p3-char-index",
+  "run_id": "e20e242ac1cc",
+  "attempt": 1,
+  "model": "agent default",
+  "tokens": null,
+  "started_at": null,
+  "finished_at": "2026-09-22T18:12:44+08:00",
+  "inputs_sha256": {},
+  "artifact_versions": {
+    "bible/characters/index.json": "v1"
+  }
+}

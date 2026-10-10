@@ -1,0 +1,39 @@
+{
+  "shot_id": "sh046",
+  "group_id": "grp017",
+  "scene_no": "S06",
+  "scene_id": "SCN-long-hall",
+  "duration_s": 6.0,
+  "is_dialogue": true,
+  "group_position": "last shot of grp017 — Alice at her map end (glass_table), the bottle held out at arm's length.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "stand",
+      "start_pos": "at the glass table with the bottle out at the end of her straight arm",
+      "space_fragment_en": "standing at the glass table on screen-left, facing screen-right along her straight arm at the bottle held away from her",
+      "facing": "screen-right along her own arm; maximum distance kept between her face and the bottle",
+      "path": [],
+      "beats": [
+        { "t": 0.6, "action": "turns the bottle a quarter round, reading", "sync": "first face of the label" },
+        { "t": 2.0, "action": "speaks while she turns it", "sync": "LN-ep01-009 begins" },
+        { "t": 4.4, "action": "the turning stops for a beat on the word", "sync": "LN-ep01-009 on 'poison'" },
+        { "t": 5.2, "action": "completes the turn; no such mark anywhere", "sync": "the verdict" }
+      ],
+      "performance": {
+        "objective": "satisfy the rules she has been taught before she does the thing she has already decided to do",
+        "goal": "satisfy the rules before doing what she has already decided to do",
+        "emotional_arc": "from prim procedure to slightly disappointed permission",
+        "arc_from": "prim procedure",
+        "arc_to": "disappointed permission",
+        "trigger": { "line_ref": "LN-ep01-009", "word": "poison" },
+        "no_early_reaction": ["the arm bending", "the bottle coming closer", "a smile"],
+        "forbidden_early": ["the arm bending", "the bottle coming closer", "a smile"],
+        "end_state": "arm still extended screen-right, bottle steady, eyes travelling the last face of the label, mouth closed"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0004 (dream)", "note": "Alice alone." }
+}

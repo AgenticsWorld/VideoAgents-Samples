@@ -1,0 +1,92 @@
+{
+  "_meta": {
+    "file": "bible/scenes/SCN-wood-tree-door/environment.json",
+    "owner": "05-scenes/environment",
+    "task_id": "p3-environment-sb2",
+    "attempt": 1,
+    "generated": "2026-09-22",
+    "amended": {"change_id": "BIB-0027", "task_id": "p4-cr-environment", "date": "2026-09-23", "fields": ["fixed.dream_design (new)"]},
+    "enum_set": "ENV-ENUM-v1 (runs/p3-environment-sb1/result.json) + sb2 extensions (runs/p3-environment-sb2/result.json)"
+  },
+  "scene_id": "SCN-wood-tree-door",
+  "layer": "dream",
+  "fixed": {
+    "climate": "dream-midsummer woodland interior: warm, still, deeper shade than the Cat's path (grown from LOC-riverside-region via LOC-thick-wood)",
+    "indoor": false,
+    "daylight_access": "canopy_dappled",
+    "dream_design": {
+      "rule": "WR-010 / XA-magic-08 (dream, full)",
+      "flora": "the bark grain of the door-tree flows in organic, swirling lines round the little door; ivy and honeysuckle frame it; hart's-tongue and male fern push through the old leaf-litter",
+      "ornament_cues": "the door is a small rounded arch with carved vine tracery and a round brass knob (form and material belong to architecture); the single low western light-shaft lands on it as a gold halo roundel among the dark trunks",
+      "palette": "deep bark brown and bottle green, fern green, honeysuckle cream, and one warm gold pool of light on the door",
+      "seasonal_guard": "green fern through the old litter keeps it July (unchanged); honeysuckle in flower",
+      "inferred": true,
+      "reason": "The wood and the tree-door are explicit (ch007-p104). Bark flow, framing and palette are designed to WR-010; the light-shaft in the states is unchanged."
+    },
+    "ground_and_flora": "denser part of the wood: tall old trunks, one broad trunk with a small wooden door set into it; thick July canopy; leaf-litter from last autumn, dry and brown underfoot, with green fern growing through it (so it does not read as autumn)",
+    "dream_growth": "Grows from the small door in a garden wall the child longs to go through (cp-garden). The late-afternoon sun is now lower, so the wood gets darker and more enclosed. The door is lit by one low shaft of western light that picks it out among the trunks and draws her through.",
+    "source": {
+      "chapter": "ch007",
+      "quote": "Just as she said this, she noticed that one of the trees had a door leading right into it."
+    },
+    "inferred": true,
+    "reason": "The wood and the tree-door are explicit (ch007-p103). Density, light shaft, leaf-litter guard and dream link are designed per ruling 5.2 A."
+  },
+  "variable_dims": {
+    "season": [
+      "summer"
+    ],
+    "time_of_day": [
+      "late_afternoon"
+    ],
+    "weather": [
+      "fair_hot"
+    ],
+    "wind": [
+      "still"
+    ],
+    "temperature": [
+      "warm"
+    ]
+  },
+  "states": [
+    {
+      "state_id": "SCN-wood-tree-door-S01",
+      "chapter": 7,
+      "chapter_id": "ch007",
+      "story_scene": "ch007-sc02",
+      "paragraphs": "ch007-p103..ch007-p104",
+      "timeline_ref": "ev0032",
+      "timeline_node": "TL-003",
+      "season": "summer",
+      "weather": "fair_hot",
+      "wind": "still",
+      "temperature": "warm",
+      "time_of_day": "late_afternoon",
+      "waking_clock": "17:33-17:36 GMT (the cut lands in SCN-long-hall at 17:36)",
+      "sun": {
+        "elevation_deg_approx": 23,
+        "azimuth_deg_approx": 278,
+        "note": "sun due west and lower; one long slanting shaft reaches the door"
+      },
+      "sky": "barely visible through the thick canopy",
+      "conditions": "still, warm, hushed wood; no birdsong close by; Alice picks her way between trunks",
+      "seasonal_guard": "Old leaf-litter underfoot is normal in a July wood. The canopy stays fully green; no falling or yellow leaves in this scene.",
+      "source_chapter": "ch007",
+      "source": {
+        "chapter": "ch007",
+        "quote": "said Alice as she picked her way through the wood"
+      },
+      "inferred": true,
+      "designed_fields": [
+        "waking_clock",
+        "sun",
+        "sky",
+        "wind",
+        "temperature",
+        "weather"
+      ],
+      "reason": "The wood is explicit (ch007-p103). Time follows the waking afternoon in event order (ev0032 follows ev0031 'continuous', story_timeline); the sun is computed for Oxford on 4 July 1862. The next beat cuts to SCN-long-hall (not covered here)."
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+p4-cr-colorscript 06-art/color-script 4f6a9e136fb1
+p4-cr-lighting-2 05-scenes/lighting 10bfca0810a6
+p4-cr-screenplay-ep01-2 01-story/screenplay 687facfc9219

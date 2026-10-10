@@ -1,0 +1,38 @@
+{
+  "shot_id": "sh063",
+  "group_id": "grp024",
+  "scene_no": "S07",
+  "scene_id": "SCN-long-hall",
+  "duration_s": 4.0,
+  "is_dialogue": true,
+  "group_position": "last shot of grp024 — Alice on the map start/end ground (glass_table), still growing from the same spot; map facing_end is the locked doors of the west wall.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "stand",
+      "start_pos": "rising on the same fixed spot beside the glass table, up through the lamp row",
+      "space_fragment_en": "standing beside the glass table, centred in frame, facing the locked doors of the west wall on screen-left",
+      "facing": "screen-left across the frame at the tulip shades arriving level with her face — for the first time the thing she measures against has come down to her",
+      "path": [],
+      "beats": [
+        { "t": 0.6, "action": "the pastel tulip shades arrive level with her face", "sync": "GAUGE TWO, first mark" },
+        { "t": 1.4, "action": "she speaks", "sync": "LN-ep01-016 begins" },
+        { "t": 2.4, "action": "the shades drop to her shoulder", "sync": "LN-ep01-016 on 'Curiouser'" }
+      ],
+      "performance": {
+        "objective": "name a thing that has got past the edge of the words she has",
+        "goal": "name a thing her vocabulary cannot reach",
+        "emotional_arc": "from startled measuring to delighted, ungrammatical astonishment",
+        "arc_from": "startled measuring",
+        "arc_to": "delighted ungrammatical astonishment",
+        "trigger": { "line_ref": "LN-ep01-016", "word": "Curiouser" },
+        "no_early_reaction": ["a grin", "the eyebrows going up", "the head turning to the lamps"],
+        "forbidden_early": ["a grin", "the eyebrows going up", "the head turning to the lamps"],
+        "end_state": "head level with the lamp shades, eyes wide on them screen-left, mouth open, shoulders still rising"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0006 (dream)", "note": "Alice alone." }
+}

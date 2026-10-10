@@ -1,0 +1,190 @@
+{
+  "_meta": {
+    "file": "bible/scenes/SCN-mock-turtle-ledge/environment.json",
+    "owner": "05-scenes/environment",
+    "task_id": "p3-environment-sb2",
+    "attempt": 1,
+    "generated": "2026-09-22",
+    "amended": {"change_id": "BIB-0027", "task_id": "p4-cr-environment", "date": "2026-09-23", "fields": ["fixed.dream_design (new)"]},
+    "enum_set": "ENV-ENUM-v1 (runs/p3-environment-sb1/result.json) + sb2 extensions (runs/p3-environment-sb2/result.json)"
+  },
+  "scene_id": "SCN-mock-turtle-ledge",
+  "layer": "dream",
+  "fixed": {
+    "climate": "dream English south-coast summer seashore: warm sun, an onshore sea breeze (geography.json LOC-rock-ledge 'warm, in full sun'; grows from LOC-seaside-town)",
+    "indoor": false,
+    "daylight_access": "open_sky",
+    "dream_design": {
+      "rule": "WR-010 / XA-magic-08 (dream, full)",
+      "flora": "sea-pinks and sea-holly on the ledge crevices, sea-kale above the shingle; the brown seaweed at the high-water line lies in long, combed, hair-like ribbons (Mucha hair-lines); rock-pools fringed with pink coralline weed",
+      "ornament_cues": "the rock ledge is weathered into curving, shell-spiral forms; small breaking wavelets curl in regular Art Nouveau wave scrolls; the gold sun-path on the water ends in a low halo disc of the setting sun behind the Mock Turtle (form belongs to architecture; a natural shore, no built ornament)",
+      "palette": "pearl grey rock, pale aqua and jade sea, sea-pink and shell rose, rose-gold on the water at golden hour",
+      "seasonal_guard": "sea-pinks late in flower and sea-holly coming into flower in July; no winter storm-wrack",
+      "inferred": true,
+      "reason": "The ledge, shingle, sea and breeze are explicit (ch009-p48, ch010-p24, p80). Shore flora, wave scrolls and palette are designed to WR-010; the breeze states keep the seaweed ribbons moving slightly."
+    },
+    "ground_and_flora": "a low ledge of grey rock above a shingle beach, dry rock-pools and a band of brown seaweed at the high-water line; calm summer sea; the tide about half out, leaving wet shingle and sand for the Quadrille. No bathing machines or town in frame; they belong to the memory only.",
+    "water": "calm, glittering summer sea with small breaking wavelets; the low western sun lays a gold path on the water",
+    "dream_growth": "Grows from Alice's one seaside trip mixed with her schoolroom lessons (cp-lessons, SUP-010). The Thames backwater beside the sleeping Alice becomes a sea, and the evening breeze that starts to stir on the real bank becomes the sea breeze. The golden-hour light is the real evening sun, which now comes in low under the trees and falls on her face.",
+    "source": {
+      "chapter": "ch009",
+      "quote": "they saw the Mock Turtle in the distance, sitting sad and lonely on a little ledge of rock"
+    },
+    "also_seen": [
+      {
+        "chapter": "ch010",
+        "refs": [
+          "ch010-p24"
+        ],
+        "quote": "They are waiting on the shingle—will you come and join the dance?"
+      },
+      {
+        "chapter": "ch010",
+        "refs": [
+          "ch010-p80"
+        ],
+        "quote": "carried on the breeze that followed them, the melancholy words"
+      }
+    ],
+    "inferred": true,
+    "reason": "Rock ledge, shingle, sea-shore and breeze are explicit (ch009-p48, ch010-p04, ch010-p24, ch010-p80). Tide, seaweed and sea state are designed for an English summer shore; the dream link follows cp-lessons per ruling 5.2 A."
+  },
+  "variable_dims": {
+    "season": [
+      "summer"
+    ],
+    "time_of_day": [
+      "golden_hour"
+    ],
+    "weather": [
+      "fair_evening"
+    ],
+    "wind": [
+      "light_breeze",
+      "breeze"
+    ],
+    "temperature": [
+      "warm"
+    ]
+  },
+  "states": [
+    {
+      "state_id": "SCN-mock-turtle-ledge-S01",
+      "chapter": 9,
+      "chapter_id": "ch009",
+      "story_scene": "ch009-sc05",
+      "paragraphs": "ch009-p48..ch009-p92",
+      "timeline_ref": "ev0042",
+      "timeline_node": "TL-003",
+      "season": "summer",
+      "weather": "fair_evening",
+      "wind": "light_breeze",
+      "temperature": "warm",
+      "time_of_day": "golden_hour",
+      "waking_clock": "18:32-18:42 GMT",
+      "sun": {
+        "elevation_deg_approx": 14,
+        "azimuth_deg_approx": 289,
+        "note": "sun west-north-west over the sea; the Mock Turtle on his ledge seen against the light"
+      },
+      "sky": "clear, warm gold low in the west, pale blue overhead",
+      "conditions": "warm evening; a light onshore breeze; small waves on the shingle; the Mock Turtle's sobs over the wash of the sea",
+      "source_chapter": "ch009",
+      "source": {
+        "chapter": "ch009",
+        "quote": "sitting sad and lonely on a little ledge of rock"
+      },
+      "inferred": true,
+      "designed_fields": [
+        "waking_clock",
+        "sun",
+        "sky",
+        "wind",
+        "temperature",
+        "weather"
+      ],
+      "reason": "Ledge and seaside setting are explicit (ch009-p48, ch009-p55). The golden hour is designed to start here from the waking-clock mapping; it matches the 'Soup of the evening' song (ch010-p76). The breeze is taken back from ch010-p80."
+    },
+    {
+      "state_id": "SCN-mock-turtle-ledge-S02",
+      "chapter": 10,
+      "chapter_id": "ch010",
+      "story_scene": "ch010-sc01",
+      "paragraphs": "ch010-p01..ch010-p77",
+      "timeline_ref": "ev0043",
+      "timeline_node": "TL-003",
+      "season": "summer",
+      "weather": "fair_evening",
+      "wind": "light_breeze",
+      "temperature": "warm",
+      "time_of_day": "golden_hour",
+      "waking_clock": "18:42-18:52 GMT",
+      "sun": {
+        "elevation_deg_approx": 13,
+        "azimuth_deg_approx": 291,
+        "note": "sun lower over the sea; long shadows of the dancers across the wet shingle"
+      },
+      "sky": "clear, deepening gold in the west",
+      "conditions": "light sea breeze; the Lobster Quadrille danced round Alice on the shore; 'Beautiful Soup... Soup of the evening' sung as the light warms",
+      "source_chapter": "ch010",
+      "source": {
+        "chapter": "ch010",
+        "quote": "you first form into a line along the sea-shore"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch010",
+          "refs": [
+            "ch010-p76"
+          ],
+          "quote": "Soup of the evening, beautiful Soup!"
+        }
+      ],
+      "inferred": true,
+      "designed_fields": [
+        "waking_clock",
+        "sun",
+        "sky",
+        "wind",
+        "temperature",
+        "weather"
+      ],
+      "reason": "The shore is explicit (ch010-p04, ch010-p24). 'Evening' is in the song lyric, not the narration, but it agrees with the designed golden_hour. The told curriculum and recap (an-04, an-05) are not staged."
+    },
+    {
+      "state_id": "SCN-mock-turtle-ledge-S03",
+      "chapter": 10,
+      "chapter_id": "ch010",
+      "story_scene": "ch010-sc02",
+      "paragraphs": "ch010-p78..ch010-p81",
+      "timeline_ref": "ev0044",
+      "timeline_node": "TL-003",
+      "season": "summer",
+      "weather": "fair_evening",
+      "wind": "breeze",
+      "temperature": "warm",
+      "time_of_day": "golden_hour",
+      "waking_clock": "18:52-18:56 GMT",
+      "sun": {
+        "elevation_deg_approx": 11,
+        "azimuth_deg_approx": 293,
+        "note": "low gold sun behind Alice and the Gryphon as they run along the shore"
+      },
+      "sky": "clear, gold low in the west",
+      "conditions": "the breeze freshens and follows them along the shore, carrying the fading song; hair and skirts blown forward",
+      "source_chapter": "ch010",
+      "source": {
+        "chapter": "ch010",
+        "quote": "more and more faintly came, carried on the breeze that followed them, the melancholy words"
+      },
+      "inferred": false,
+      "designed_fields": [
+        "waking_clock",
+        "sun",
+        "sky",
+        "temperature"
+      ],
+      "reason": "The following breeze is explicit (ch010-p80). The waking-clock mapping and sun position are designed for Oxford on 4 July 1862 (the dream sea keeps the waking sun's angle)."
+    }
+  ]
+}

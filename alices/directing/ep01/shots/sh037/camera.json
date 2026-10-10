@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh037",
+  "group_id": "grp014",
+  "scene_no": "S05",
+  "duration_s": 4.0,
+  "size": "close",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 50,
+  "camera_height_m": 0.5,
+  "angle": "slightly up",
+  "rack_focus": "none",
+  "start_frame": "Low from the floor at the curtain back toward the glass table: the 0.715 m tabletop reading as a lit plane with the three clear legs beneath it, the tiny golden key alone in the middle of the bare glass and the brightest thing in frame, her face a soft shape above it.",
+  "end_frame": "The same frame as her hand comes in over the glass and takes the key; the tabletop is left bare and still lit.",
+  "constraint_honoured": "'The key is the brightest object in the frame, and the hall is established here as holding it that way for the whole size sequence' — a fixed low set-up that sh052, sh066 and sh091 can all be measured against.",
+  "movement_note": "This low floor-to-table axis is the reference frame for the entire size sequence, so it is established static and clean.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

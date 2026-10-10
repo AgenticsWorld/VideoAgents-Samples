@@ -1,0 +1,25 @@
+{
+  "id": "DEF-p4-envconcept-701",
+  "opened_by": "06-art/environment-concept",
+  "opened_on": "2026-09-23",
+  "task_id": "p4-env-concept-sb2",
+  "domain": "environment-concept",
+  "route_to_owner": "05-scenes/architecture",
+  "status": "open",
+  "severity": "minor",
+  "summary": "The Duchess's house exterior and kitchen cards place the front door and the hearth differently. The exterior card puts the only door in the gable end that faces the clearing, with the chimney stack on the rear gable. The kitchen card puts the door in the middle of the south long wall and the hearth on the west end wall.",
+  "findings": [
+    {
+      "id": "DEF-p4-envconcept-701-a",
+      "files": [
+        "bible/scenes/SCN-duchess-house-front/architecture.json (structure: 'two bays wide, gable end facing the clearing'; 'two small ground-floor windows either side of the door and one upper window in the gable'; 'a tall square brick chimney stack on the rear gable')",
+        "bible/scenes/SCN-duchess-kitchen/architecture.json (interior.layout: 'Door centred on the south long wall (from SCN-duchess-house-front). Open hearth centred on the west end wall')"
+      ],
+      "impact": "Low to medium. The kitchen is explicitly 'bigger inside than outside', so its size can differ. The door wall and the hearth/chimney end should still match, because the scene-modeling whiteboxes and the cut from the doorstep into the kitchen depend on it. As drawn, the exterior door is on a short gable wall facing south, with the chimney at the north gable. In the kitchen the door is on a long south wall and the hearth is at the west end.",
+      "how_the_layout_packs_resolve_it_for_now": "Each pack follows its own card. The exterior layout_top/layout.json has the door in the south gable and the chimney at the north gable. The kitchen layout has the door mid south long wall and the hearth on the west wall. Neither Bible file was edited.",
+      "proposed_fix": "Option A: the kitchen card keeps its plan and the exterior becomes a broad-fronted house (door in the long south wall, chimney on the west gable). Option B: the kitchen door moves to the middle of the east end wall and the hearth goes to the opposite west end, so the chimney on the rear gable matches the exterior. Whichever option is chosen, the environment-concept layout pack of the other scene must be redone.",
+      "inferred": false
+    }
+  ],
+  "not_self_fixed": "Per SOUL: architecture cards belong to 05-scenes/architecture; the layout packs record the clash and do not patch the Bible."
+}

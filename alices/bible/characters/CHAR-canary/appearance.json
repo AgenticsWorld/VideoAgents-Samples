@@ -1,0 +1,51 @@
+{
+  "character_id": "CHAR-canary",
+  "name": "Canary",
+  "tier": "extra",
+  "layer": "dream",
+  "revision": { "change_id": "BIB-0027", "task_id": "p4-cr-appearance", "date": "2026-09-23", "note": "Rewritten from the human-performer reading to a photoreal CGI animal." },
+  "rendering": {
+    "mode": "photoreal_cgi_animal",
+    "rule": "bible/cultivation.json SUP-002 (amended BIB-0027); member of FAC-caucus-race-company (no uniform)",
+    "species": "domestic canary (Serinus canaria domestica), clear yellow",
+    "limits": "Bird anatomy throughout; speech by beak movement. No clothing, no cartoon face."
+  },
+  "gender": "female",
+  "gender_note": { "source_chapter": "ch003", "source_para": "ch003-p47", "quote": "a Canary called out in a trembling voice to its children, “Come away, my dears! It’s high time you were all in bed!”", "inferred": true, "reason": "The source says 'it'; a parent gathering her brood is played as a mother." },
+  "base_age_range": "28-35",
+  "base_age_note": { "inferred": true, "reason": "Persona age (a young mother), kept for voice casting. As an animal: an adult hen canary." },
+  "hair": {
+    "coat": "feathers",
+    "color": "clear canary yellow, slightly paler (lemon-cream) on the belly",
+    "style": "soft; damp and darkened on the bank; fluffed up round with fright at the mention of Dinah",
+    "source_chapter": "ch003",
+    "source_para": "ch003-p01",
+    "quote": "the birds with draggled feathers",
+    "colour_inferred": true,
+    "reason": "Wet state sourced; colour is the species."
+  },
+  "eyes": { "color": "black", "expression": "small, wide, startled, anxious", "inferred": true, "reason": "Species; fright from ch003-p47 'trembling voice'." },
+  "skin": { "tone": "pink legs, pale pinkish-horn beak", "inferred": true, "reason": "Species." },
+  "face": { "shape": "small round head", "features": ["short conical pale beak", "quick nervous head jerks"], "inferred": true, "reason": "Species." },
+  "build": {
+    "height_range_cm": [8, 10],
+    "height_note": "Perched height; total length 12-13 cm, species-true.",
+    "body_type": "tiny, round, fine-boned",
+    "posture": "quick fluttering hops; spreads her wings over her chicks to herd them away",
+    "scale_reference": "The smallest of the named party, tiny even next to the shrunken Alice (SUP-003).",
+    "inferred": true,
+    "reason": "Species-true size."
+  },
+  "entry_state": { "state": "on the bank with the party, still damp from the pool", "source_chapter": "ch003", "source_para": "ch003-p01", "quote": "all dripping wet, cross, and uncomfortable" },
+  "marks": [
+    { "type": "signature_item", "description": "her brood of small fledgling canaries, herded away to bed", "position": "around her", "source_chapter": "ch003", "source_para": "ch003-p47", "note": "The chicks are not registered in characters/index.json and have no card; if shown they are background CGI chicks (3-4, fluffy pale yellow fledglings)." }
+  ],
+  "default_outfit_tone": {
+    "summary": "none: she wears nothing; her look is the yellow canary plumage",
+    "inferred": true,
+    "reason": "The text gives the Canary no clothing; per SUP-002 (BIB-0027) the old yellow dress is dropped."
+  },
+  "sound_tic": "a small trill under her trembling voice",
+  "doubling": null,
+  "prompt_base_en": "photoreal clear yellow domestic canary, small round bird with damp slightly draggled yellow feathers, short pale conical beak, small black startled eyes, fluffed up in fright, herding three fluffy pale yellow fledglings away across a muddy pool bank at dusk, natural bird anatomy, live-action film plate"
+}

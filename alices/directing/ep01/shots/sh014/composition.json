@@ -1,0 +1,34 @@
+{
+  "shot_id": "sh014",
+  "scene_id": "SCN-field-hedge-burrow",
+  "size": "close",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "mid_left",
+    "anchor_xy": [0.26, 0.52],
+    "size_in_frame": "cheek, jaw and one eye filling the left third; her face about 0.70 of frame height, cropped by the left edge"
+  },
+  "second_subject": {
+    "id": "burrow",
+    "grid": "mid_right",
+    "anchor_xy": [0.66, 0.50],
+    "note": "the black oval, about 0.42 of frame height, held on the right — the scene's other face."
+  },
+  "headroom": "none for her — the crop takes her crown at the top edge. The oval keeps about 0.20 of frame height of hawthorn root and shade above it.",
+  "horizon_eyeline": "Lens at 0.25 m on the earth: the spoil surface runs across the bottom third at 0.76 of frame height and is the only horizontal. Her one visible eye sits at 0.44, level with the centre of the oval — the two are on the same line, which is the whole composition.",
+  "layers": {
+    "fg": "loose crumbs of pale spoil across the bottom edge, and one hawthorn root crossing the top",
+    "mg": "her cheek and eye screen left, the dark mouth screen right",
+    "bg": "nothing — inside the oval is flat, lightless and depthless, and that is what she is looking into"
+  },
+  "gaze": {
+    "direction": "frame_right",
+    "lead_room": "right",
+    "note": "her one eye looks straight across the frame into the black; the lead room is the hole itself, so her look is answered by an absence."
+  },
+  "balance": "Two masses of equal weight facing each other across the vertical centre line — hot flushed skin left, cool black right. Perfectly even, and therefore uneasy.",
+  "leading_lines": "The root crossing the top and the spoil line along the bottom make a compressed horizontal channel between her eye and the hole; nothing in frame runs vertically.",
+  "eye_first": "Her eye, then straight across to the black — the shortest and most direct eye-path in the episode.",
+  "safe_area_ok": true,
+  "constraint_binding": "The one image of the scene: it is built as a single opposed pair with no third element, so nothing competes with it and it cannot be improved by a reframe."
+}

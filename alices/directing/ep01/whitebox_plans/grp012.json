@@ -1,0 +1,82 @@
+{
+  "schema_version": "whitebox_plan.v1",
+  "group_id": "grp012",
+  "scene_id": "SCN-shaft-landing-passage",
+  "basis": "Both run their whole blocking_map lines inside the group. Alice: leaf_heap -> root_tunnel -> brick_mid -> corner, off the heap at t=2.6 and running the 17 m of passage at about 2.1 m/s, arriving on the corner at t=10.0 and stopping dead with both feet planted, then turning north to the hall opening. The White Rabbit is ahead of her the whole way: brick_mid -> the corner and its mosaic dado (he sits back there through the first half of sh031) -> north up the final leg -> hall_opening, which he clears at t=10.5, a full 5.8 m ahead of her at the moment she rounds the corner. The passage centre line is Z 2.363 between the brick walls (clear Z 0.862-3.714) and the final leg runs north at X -8.25 between leg_wall_w and leg_wall_e; both actors stay on those centre lines, so nothing clips a wall and they never come within 4.9 m of each other.",
+  "actors": [
+    {
+      "id": "CHAR-alice",
+      "kind": "person",
+      "size_m": [0.378, 1.35, 0.297],
+      "keyframes": [
+        {"t": 0.0, "position": [8.7, 0.5, 2.025], "pose": "stand", "yaw": -1.5708},
+        {"t": 0.4, "position": [8.7, 0.5, 2.025], "pose": "stand", "yaw": -1.5708},
+        {"t": 2.0, "position": [8.7, 0.5, 2.025], "pose": "stand", "yaw": -1.5708},
+        {"t": 2.6, "position": [7.5, 0.2, 2.1], "pose": "stand", "yaw": -1.5708},
+        {"t": 4.5, "position": [3.4, 0.0, 2.3], "pose": "stand", "yaw": -1.5708},
+        {"t": 6.5, "position": [-0.8, 0.0, 2.363], "pose": "stand", "yaw": -1.5708},
+        {"t": 9.0, "position": [-6.0, 0.0, 2.363], "pose": "stand", "yaw": -1.5708},
+        {"t": 10.0, "position": [-8.25, 0.0, 2.363], "pose": "stand", "yaw": -1.5708},
+        {"t": 10.8, "position": [-8.25, 0.0, 2.363], "pose": "stand", "yaw": 3.1416},
+        {"t": 12.0, "position": [-8.25, 0.0, 2.363], "pose": "stand", "yaw": 3.1416}
+      ]
+    },
+    {
+      "id": "CHAR-white-rabbit",
+      "kind": "creature",
+      "size_m": [0.15, 0.3, 0.36],
+      "keyframes": [
+        {"t": 0.0, "position": [-2.7, 0.0, 2.363], "pose": "sit", "yaw": -1.5708, "head_pitch": 0.45},
+        {"t": 1.8, "position": [-2.7, 0.0, 2.363], "pose": "sit", "yaw": -1.5708, "head_pitch": 0.45},
+        {"t": 2.2, "position": [-2.7, 0.0, 2.363], "pose": "stand", "yaw": -1.5708},
+        {"t": 4.0, "position": [-7.6, 0.0, 2.363], "pose": "stand", "yaw": -1.5708},
+        {"t": 4.5, "position": [-8.25, 0.0, 1.6], "pose": "sit", "yaw": 3.1416},
+        {"t": 6.5, "position": [-8.25, 0.0, 1.6], "pose": "sit", "yaw": 3.1416},
+        {"t": 6.9, "position": [-8.25, 0.0, 1.6], "pose": "stand", "yaw": 3.1416},
+        {"t": 8.5, "position": [-8.25, 0.0, -0.844], "pose": "stand", "yaw": 3.1416},
+        {"t": 9.5, "position": [-8.25, 0.0, -2.6], "pose": "stand", "yaw": 3.1416},
+        {"t": 10.5, "position": [-8.25, 0.0, -3.881], "pose": "stand", "yaw": 3.1416},
+        {"t": 12.0, "position": [-8.25, 0.0, -4.1], "pose": "stand", "yaw": 3.1416}
+      ]
+    }
+  ],
+  "cameras": [
+    {
+      "shot_id": "sh030",
+      "start": 0,
+      "duration_s": 4.5,
+      "movement": "static",
+      "keyframes": [
+        {"t": 0.0, "position": [3.0, 1.25, 2.363], "target": [8.7, 1.0, 2.025], "fov": 46.3972},
+        {"t": 4.5, "position": [3.0, 1.25, 2.363], "target": [8.7, 1.0, 2.025], "fov": 46.3972}
+      ]
+    },
+    {
+      "shot_id": "sh031",
+      "start": 4.5,
+      "duration_s": 4.5,
+      "movement": "static",
+      "keyframes": [
+        {"t": 0.0, "position": [-5.75, 1.3, 2.363], "target": [-8.25, 0.364, 1.6], "fov": 46.3972},
+        {"t": 4.5, "position": [-5.75, 1.3, 2.363], "target": [-8.25, 0.364, 1.6], "fov": 46.3972}
+      ]
+    },
+    {
+      "shot_id": "sh032",
+      "start": 9.0,
+      "duration_s": 3.0,
+      "movement": "static",
+      "keyframes": [
+        {"t": 0.0, "position": [-8.25, 1.2, 0.653], "target": [-8.075, 1.15, 2.363], "fov": 26.9915},
+        {"t": 3.0, "position": [-8.25, 1.2, 0.653], "target": [-8.075, 1.15, 2.363], "fov": 26.9915}
+      ]
+    }
+  ],
+  "continuity": {"actors": "inherit", "camera": "cut"},
+  "warnings": [
+    "sh031 is set in the brick passage looking -X at the corner rather than on the layout tile-4 sight line (mosaic_dado toward the corner). On the tile-4 axis the Rabbit would be coming TOWARD the lens; composition sh031 requires him small, going away and exiting to frame right, which only the down-passage axis delivers (looking -X, screen-right is -Z, the way he turns).",
+    "The blocking_map lists the Rabbit's path as mosaic_dado then corner, but the modelled geometry puts the corner (X -8.25 / Z 2.363) before the mosaic dado (X -8.25 / Z -0.844) on the run from brick_mid to the hall opening. The route is staged in geometric order; he sits back on his haunches at the corner beside the dado, which is what sh031's blocking describes.",
+    "Alice passes the sh030 lens at about t=4.3 and the sh031 lens at about t=8.9, both inside their own shots, so no rig is left standing in her path at a cut.",
+    "Swept-volume check: minimum separation Alice/Rabbit is 4.96 m (t=9.0); both stay on the passage and leg centre lines with at least 1.2 m to either wall face."
+  ]
+}

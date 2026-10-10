@@ -1,0 +1,61 @@
+{
+  "task_id": "p5-screenplay-ep01",
+  "agent": "01-story/screenplay",
+  "project": "alices",
+  "attempt": 1,
+  "status": "done_pending_H3",
+  "date": "2026-09-22",
+  "outputs": ["story/episodes/ep01/screenplay.md"],
+  "inputs_read": [
+    "story/episode_plan.json (ep01 treatments, dream_frame, duration_budget_s 540)",
+    "story/events.json ev0001-ev0009",
+    "story/structured_story/ch001.json, ch002.json (p01-p18)",
+    "story/story_graph.json (fs-001, fs-002, fs-005, fs-008, fs-030, fs-032, fs-038)",
+    "bible/h1_summary.md, bible/cultivation.json SUP-001/002/003/007/008/013, bible/world.json wonderland_real_counterparts",
+    "bible/scenes/index.json + architecture/environment of the 7 ep01 scenes",
+    "bible/characters/index.json, CHAR-alice / CHAR-alice-sister / CHAR-white-rabbit dialogue_style.json + voice.json",
+    "bible/creatures/index.json + creature.json (CRE-001)",
+    "bible/style.json (CR-012 lettering whitelist)"
+  ],
+  "summary": {
+    "scenes": 10,
+    "scene_length_sum_s": 550,
+    "budget_s": 540,
+    "dialogue_lines": 34,
+    "dramatize": {"ev0001": ["S01", "S02", "S03"], "ev0003": ["S04", "S05"], "ev0004": ["S06"], "ev0006": ["S07"], "ev0007": ["S08"], "ev0008": ["S09", "S10"]},
+    "merge": {"ev0002": "S03 (merge_into ev0001)", "ev0005": "S07 (merge_into ev0006)"},
+    "mention": [],
+    "cut": [],
+    "scene_ids_used": ["SCN-riverbank", "SCN-field-hedge-burrow", "SCN-falling-dream", "SCN-shaft-landing-passage", "SCN-long-hall", "SCN-pool-of-tears"],
+    "character_ids_used": ["CHAR-alice", "CHAR-alice-sister", "CHAR-white-rabbit"],
+    "creature_ids_used": ["CRE-001"]
+  },
+  "machine_checks": {
+    "check_screenplay_events": {"cmd": "python3 code/check_screenplay_events.py --project alices --ep ep01", "exit": 0, "result": "PASS", "dramatized_events_covered": "PASS", "cut_events_absent": "PASS", "scene_has_dramatized_event": "PASS", "warns": []},
+    "check_scene_int_ext": {"cmd": "python3 code/check_scene_int_ext.py --project alices --ep ep01", "exit": 0, "result": "PASS", "errors": 0, "warns": 0},
+    "id_validity": "PASS: every SCN-*/CHAR-*/CRE-* in the screenplay resolves in bible/scenes|characters|creatures index.json",
+    "dialogue_fit_precheck": "every line <= 10.5 s estimated at the speaker's speed_cpm midpoint; per-scene dialogue <= 0.7 x scene length (S08 about 0.64, S10 about 0.63)"
+  },
+  "scene_gaps": [],
+  "key_decisions": [
+    "The waking rabbit (CRE-001) is mute and unclothed. The source's 'Oh dear! I shall be late!' and the watch from the waistcoat-pocket are moved to the dream White Rabbit in S04. The lateness motif is seeded on the bank by the church clock striking two.",
+    "Sleep onset: Alice's eyes close for a moment on the bank just before the rabbit passes (fs-032). Following the episode plan, the dream becomes visible when she crawls into a burrow too small for her (S02) and is complete when her eyes close mid-fall (S03).",
+    "No narration. Carroll's 'thought' lines are played through action. The one exception is the opening line 'What is the use of a book without pictures or conversations?', a thought in the source, which Alice says to her sister in S01. The sister's 'Hush, Alice.' is a designed line.",
+    "Cut for length (noted in adaptation_note): the Latitude/Antipathies speeches, the feet monologue after 'Good-bye, feet!', the Ada comparison, the 'How doth the little crocodile' recitation, and the long 'stay down here' speech (its 'put their heads down' line is kept).",
+    "Cliffhanger: the ep ends on splashing heard in the dark pool. The Mouse is not shown; the reveal stays with ev0009 in ep02."
+  ],
+  "open_items_for_H3": [
+    "S01: is it acceptable to turn the book thought into a spoken line to the sister? If not, the fallback is to play it silently (Alice peeps at the page with no pictures and flops back).",
+    "Dream frame continuity: in ep09 Alice wakes on the bank with her head in her sister's lap, but here she runs to the hedge. S01 plants a moment of dozing so the chase can read as her sleep beginning. Please confirm this reading, or rule that the dream starts on the bank."
+  ],
+  "defect_tickets": {
+    "DEF-p3-char-index-902": "Not applicable to ep01: no executioner and no execution device appear.",
+    "DEF-p3-char-index-903": "Not applicable to ep01: the ch006 lullaby is ep04+ material."
+  },
+  "doubling_5_3_B": "Dinah is seeded in Alice's speech (S03). The housemaid is not glimpsed: ep01 never goes to the family house and no family-house SCN is registered, so no scene gap was raised.",
+  "skills": "No auto-activated skills are checked for this station. None were run and none were registered.",
+  "notes": [
+    "Structural markers (动作:/声音:/转场:, [事件]/[出场]/[时长]) stay as machine-read anchors for code/modules/script_breakdown.py. All content is in English.",
+    "The host parser's _CHAR_RE only recognises numeric CHAR-\\d+ IDs, so slug IDs (CHAR-alice) are not captured into the cast list. Dialogue lines therefore use the [LN-ep01-NNN] prefix form, which the parser reads regardless of the speaker ID pattern. This is a host-parser limitation, not a screenplay defect; reported for the orchestrator."
+  ]
+}

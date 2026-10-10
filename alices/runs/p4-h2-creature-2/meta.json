@@ -1,0 +1,13 @@
+{
+ "task_id": "p4-h2-creature-2",
+ "run_id": "498b51e3b604",
+ "agent": "04-creatures/creature",
+ "attempt": 1,
+ "finished_at": "2026-09-23T08:40:00+08:00",
+ "duration_s": 268,
+ "model": "per-agent console config",
+ "engine": "unchanged (no --engine override)",
+ "artifact_versions": {
+  "bible/creatures/creature.json": "BIB-0031"
+ }
+}

@@ -1,0 +1,65 @@
+{
+  "id": "DEF-p3-appearance-303",
+  "opened_by": "03-characters/appearance",
+  "opened_on": "2026-09-22",
+  "task_id": "p3-appearance-cb3",
+  "assigned_to": "03-characters/character-manager",
+  "route_fix_to": "03-characters/character-manager",
+  "domain": "characters",
+  "status": "closed",
+  "severity": "minor",
+  "summary": "Two index.json points to confirm: the Frog-Footman's faction/livery, and 'unspecified' gender on the ensemble entries, which the appearance cards now fix to concrete values.",
+  "findings": [
+    {
+      "id": "DEF-p3-appearance-303-a",
+      "file": "bible/characters/index.json",
+      "entry": "CHAR-frog-footman",
+      "fields": [
+        "factions",
+        "performer_concept ('crown livery')"
+      ],
+      "current": "FAC-house-of-hearts, crown livery",
+      "source": [
+        {
+          "paragraph": "ch006-p01",
+          "quote": "It was opened by another footman in livery, with a round face"
+        },
+        {
+          "paragraph": "ch006-p02",
+          "quote": "“For the Duchess. An invitation from the Queen to play croquet.”"
+        }
+      ],
+      "issue": "The source says the Frog-Footman opens the Duchess's door and receives the Queen's invitation on her behalf, so he reads as the Duchess's servant (FAC-duchess-household). The source never names the livery, so this is a question for arbitration, not an outright conflict.",
+      "suggested_fix": "Confirm FAC-house-of-hearts, or re-point him to FAC-duchess-household. If re-pointed, his livery becomes the Duchess household's plainer, faded look (see FAC-duchess-household emblem_visual) instead of Hearts crimson.",
+      "interim_handling": "The appearance card follows the controlled index (crimson Hearts livery, matching CHAR-fish-footman). A ruling would change only the coat colour and badge."
+    },
+    {
+      "id": "DEF-p3-appearance-303-b",
+      "file": "bible/characters/index.json",
+      "entries": [
+        "CHAR-jury-ensemble",
+        "CHAR-card-soldiers-ensemble",
+        "CHAR-royal-gardeners-ensemble",
+        "CHAR-caucus-race-party-ensemble",
+        "CHAR-visiting-monarchs-ensemble",
+        "CHAR-royal-procession-ensemble",
+        "CHAR-court-officers-ensemble",
+        "CHAR-crowd-ensemble"
+      ],
+      "field": "gender",
+      "current": "unspecified",
+      "issue": "Under the 2026-07-20 appearance rule, gender must be male or female, never blank or unspecified. The appearance cards set concrete values plus a gender_mix breakdown. Jury is all male, sourced from 'jury-men' (ch011-p04). Soldiers, gardeners and court officers are all male (inferred). The Caucus remainder, visiting monarchs, procession and crowd are mixed, with the split given in gender_mix.",
+      "suggested_fix": "Update the index gender for these entries to match the appearance cards, or add a gender_mix note."
+    }
+  ],
+  "impact": "Voice casting (voiceprint) and image generation read gender from the appearance cards, so these points don't block that work. The index should be brought in line for G3 consistency.",
+  "triaged_by": "00-orchestration/memory-bible",
+  "triage_task_id": "p3-bible-defects",
+  "triaged_on": "2026-09-22",
+  "routed_from": "00-orchestration/memory-bible",
+  "ruling": "(a) Ruled: re-point CHAR-frog-footman to FAC-duchess-household. The source has him open the Duchess's door and receive the Queen's invitation on her behalf (ch006-p01..p02). Locked FREL-001 models a crown-to-Duchess-household hand-off, and CHAR-fish-footman stays crown. His livery follows FAC-duchess-household emblem_visual (plainer, faded, less formal than Hearts crimson; inferred, as the source names no livery). This is an inference from the source and locked politics, not a new creative choice. (b) Accepted: mirror the appearance cards' concrete gender values.",
+  "fix_instruction": "bible/characters/index.json: (a) CHAR-frog-footman.factions -> [{'ref':'FAC-duchess-household','period':[]}]. In performer_concept, replace 'crown livery' with 'the Duchess household's plain, faded livery (FAC-duchess-household emblem_visual)'. Add inferred_fields ['factions'] with a reason citing ch006-p01/p02 and FREL-001. Hand off to 03-characters/appearance: CHAR-frog-footman/appearance.json coat colour and badge change to Duchess-household livery (only those fields). (b) For CHAR-jury-ensemble (male, sourced ch011-p04 'jury-men'), card-soldiers, royal-gardeners and court-officers (male, inferred), and caucus-race-party, visiting-monarchs, royal-procession and crowd (the mixed ensembles): set gender and a gender_mix note exactly as in each appearance.json, with 'gender' in inferred_fields where inferred.",
+  "fixed_by": "03-characters/character-manager",
+  "fixed_on": "2026-09-22",
+  "fix_note": "bible/characters/index.json updated: (a) CHAR-frog-footman.factions re-pointed to FAC-duchess-household; performer_concept livery text replaced; 'factions' added to inferred_fields with a reason citing ch006-p01/p02 and FREL-001; appearance handoff opened as qa/defects/DEF-p3-char-index-901.json. (b) gender + gender_mix set on all 8 listed ensembles from their appearance.json cards (jury-ensemble noted as sourced, not added to inferred_fields; the other 7 got 'gender' added to inferred_fields). code/p3-char-index_check.py re-run: PASS."
+}

@@ -1,0 +1,27 @@
+{
+  "character_id": "CHAR-eaglet",
+  "name": "Eaglet",
+  "tier": "extra",
+  "card_type": "individual",
+  "gender": "female",
+  "age_sense": "young girl (appearance base_age_range 8-9)",
+  "timbre": "piping, sharp, slightly scratchy little girl's voice, cheeky and forthright",
+  "pitch": "high child's register, a touch higher and thinner than Alice",
+  "pitch_range_hz": [260, 420],
+  "speed_wpm": [165, 190],
+  "speed_cpm": [627, 722],
+  "accent": "plain southern English child, a little rougher and less polished than Alice",
+  "reference_style": "Youngest of the party: blurts 'Speak English!' at the Dodo's long words. Must never be confused with Alice in the same scene — thinner, scratchier, faster, less refined.",
+  "emotion_range": {
+    "cheeky": { "speed_delta": "+10%", "pitch_delta": "+2semi", "volume": "loud", "note": "'Speak English!'" }
+  },
+  "age_variants": [],
+  "source_chapter": "ch003",
+  "sources": ["ch003", "ch003-p15", "ch003-d0021", "ch003-d0022"],
+  "voice_evidence": [
+    { "para": "ch003-p15", "quote": "“Speak English!” said the Eaglet." }
+  ],
+  "inferred": true,
+  "inferred_fields": ["timbre", "pitch", "pitch_range_hz", "speed_wpm", "speed_cpm", "accent"],
+  "reason": "No voice description in source; designed for an 8-9-year-old girl (appearance.json) distinct from Alice."
+}

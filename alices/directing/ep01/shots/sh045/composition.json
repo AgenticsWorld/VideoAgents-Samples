@@ -1,0 +1,29 @@
+{
+  "shot_id": "sh045",
+  "scene_id": "SCN-long-hall",
+  "size": "detail",
+  "subject": {
+    "id": "PROP-drink-me-bottle",
+    "in_frame_characters": ["CHAR-alice"],
+    "grid": "centre",
+    "anchor_xy": [0.50, 0.52],
+    "size_in_frame": "the bottle stands about 0.62 of frame height; the paper label round its neck is square-on and about 0.20 of frame height"
+  },
+  "headroom": "about 0.16 of frame height between the bottle's stopper and the underside of the glass tabletop above — the tabletop is the lid of this frame, so the insert still knows which room it is in.",
+  "horizon_eyeline": "Low from the floor at the curtain, lens 0.50 m: the tabletop plane runs across the top of frame at 0.14 of frame height and the flagstone line across the bottom at 0.92. The label plane is dead square-on to the lens and level.",
+  "layers": {
+    "fg": "her hands just entering frame from the right, fingertips only",
+    "mg": "the bottle and its label, sharp across the whole width of the lettering",
+    "bg": "the glass tabletop above and the dark hall beyond, falling away soft"
+  },
+  "gaze": {
+    "direction": "none",
+    "lead_room": "none",
+    "note": "no face in frame; the shot is an object and a hand."
+  },
+  "balance": "One vertical object on the exact centre line with symmetrical dark either side — the plainest possible framing, because the point is to read two words and nothing else.",
+  "leading_lines": "The bottle's own shoulders and the two edges of the label form a tight horizontal band across the middle; the tabletop above is a long level line pressing down on it.",
+  "eye_first": "The lettering, immediately — that is the whole function of the frame.",
+  "safe_area_ok": true,
+  "constraint_binding": "DRINK ME gets exactly one clean legible read here: the label plane is square-on, unbroken by fingers, sharp across its whole width, and sits wholly inside title-safe (x 0.38-0.62, y 0.42-0.62) so no platform crop can clip the whitelisted lettering. Everywhere else in the episode the bottle is dressed, not hero-lit — so it takes the ordinary lamp key here, with no rim, no halo and no separate source."
+}

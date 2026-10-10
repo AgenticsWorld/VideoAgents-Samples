@@ -1,0 +1,39 @@
+{
+  "shot_id": "sh066",
+  "group_id": "grp026",
+  "scene_no": "S07",
+  "scene_id": "SCN-long-hall",
+  "duration_s": 5.0,
+  "is_dialogue": false,
+  "group_position": "first shot of grp026 — Alice on her map start (glass_table, reaching over the tabletop for the key) and away along her glass_table -> curtain line.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "stand",
+      "start_pos": "stooped over the glass table, the tiny key between finger and thumb, then crossing the hall bent double",
+      "space_fragment_en": "standing over the glass table on screen-right, taking the golden key, then crossing bent double toward the low curtain on screen-left",
+      "facing": "screen-left, the direction of travel; her own moving mass fills most of the space ahead of her",
+      "path": [
+        { "t": 3.0, "to": "part way across the hall toward the low curtain, bent double under the vault" }
+      ],
+      "beats": [
+        { "t": 0.8, "action": "pinches the golden key off the tabletop between finger and thumb", "sync": "the key is now the size of a crumb" },
+        { "t": 2.2, "action": "turns and hurries, bent double, for the garden door", "sync": "the crossing" }
+      ],
+      "performance_beat": {
+        "objective": "get the key to the door before anything else changes",
+        "goal": "get the key to the door before anything else changes",
+        "emotional_arc": "from satisfaction at finally reaching the key to hurried, hunched urgency",
+        "arc_from": "satisfaction at reaching the key",
+        "arc_to": "hunched urgency",
+        "trigger": { "beat": "her fingers close on the key and she straightens toward the curtain", "t": 2.2 },
+        "no_early_reaction": ["turning away", "the body bending", "the pace picking up"],
+        "forbidden_early": ["turning away", "the body bending", "the pace picking up"],
+        "end_state": "bent double, key pinched in one hand held clear of the floor, eyes screen-left on the curtain"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0006 result (dream) — she can reach the key but is far too large for the door", "note": "Alice alone." }
+}

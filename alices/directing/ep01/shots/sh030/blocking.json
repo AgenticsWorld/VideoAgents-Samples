@@ -1,0 +1,45 @@
+{
+  "shot_id": "sh030",
+  "group_id": "grp012",
+  "scene_no": "S04",
+  "scene_id": "SCN-shaft-landing-passage",
+  "duration_s": 4.5,
+  "is_dialogue": false,
+  "group_position": "first shot of grp012 — Alice on her map start (leaf_heap) and away down the first leg of her leaf_heap -> root_tunnel -> brick_mid -> corner line. The White Rabbit is on his map start (brick_mid), out of frame.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "stand",
+      "start_pos": "on the heap of sticks and dry leaves, then off after him down the passage",
+      "space_fragment_en": "standing on the heap of sticks and dry leaves, centred in frame, then running forward down the root-laced earth stretch",
+      "facing": "down the passage after him on the lens axis; she runs past camera and out of frame",
+      "body_facing_target_id": "CHAR-white-rabbit",
+      "path": [
+        { "t": 2.0, "to": "off the heap and onto the root-laced earth stretch, running" },
+        { "t": 4.0, "to": "past camera and out of frame, leaves flying from her skirt" }
+      ],
+      "beats": [
+        { "t": 0.4, "action": "stares — the waistcoat-pocket, the watch", "sync": "the thing that cannot be explained away" },
+        { "t": 2.0, "action": "she is off after him like the wind", "sync": "the decision, taken in one frame" },
+        { "t": 4.0, "action": "runs past camera, leaves flying from her skirt", "sync": "exit" }
+      ],
+      "performance_beat": {
+        "objective": "catch it before it gets round whatever is at the end of this passage",
+        "goal": "catch it before it gets away",
+        "emotional_arc": "from stunned staring to a headlong run, with nothing in between",
+        "arc_from": "stunned staring",
+        "arc_to": "headlong pursuit",
+        "trigger": { "beat": "the watch goes back into the waistcoat-pocket", "t": 1.7 },
+        "no_early_reaction": ["a step forward", "the weight shifting", "the hands coming up"],
+        "forbidden_early": ["a step forward", "the weight shifting", "the hands coming up"],
+        "end_state": "out of frame past the lens — the last visible state is her shoulder and flying hair, eyes forward"
+      }
+    }
+  ],
+  "creatures": [],
+  "offscreen_presence": [
+    { "id": "CHAR-white-rabbit", "where": "in the middle of the brick-vaulted passage, gathering himself to run on", "note": "grp012 map start; in the space, out of frame." }
+  ],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0003 (dream) — 'she was off at once like the wind'", "note": "Two legal presences in the passage." }
+}

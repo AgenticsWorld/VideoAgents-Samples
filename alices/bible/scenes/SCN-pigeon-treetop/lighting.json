@@ -1,0 +1,31 @@
+{
+  "_meta": {"file": "bible/scenes/SCN-pigeon-treetop/lighting.json", "owner": "05-scenes/lighting", "task_id": "p3-lighting-sb2", "attempt": 1, "generated": "2026-09-22", "enum_set": "LGT-ENUM-v1 (runs/p3-lighting-sb2/result.json)"},
+  "scene_id": "SCN-pigeon-treetop",
+  "layer": "dream",
+  "int_ext": "EXT",
+  "daylight_access": "open_sky",
+  "dream_light_growth": "The real 16:25 sun over the sleeping Alice, lifted above the leaves: the only Wonderland space with nothing between her and the waking sky. Brightest, most open light of the wood sequence; the green canopy below acts as a giant reflector (environment fixed.dream_growth).",
+  "schemes": [
+    {
+      "scheme_id": "LGT-pigeon-treetop-01",
+      "condition": {"time_of_day": "afternoon", "weather": "fair_hot"},
+      "applies_to_states": ["SCN-pigeon-treetop-S01"],
+      "key_source": "direct_sun",
+      "direction": "high_side",
+      "key_bearing": "sun from the west, elevation about 34 deg (environment S01 sun)",
+      "fill": "open clear-blue sky overhead (cool) plus green light bounced up from the sunlit leaf canopy below",
+      "practicals": [],
+      "color_temp": "neutral (~4500K)",
+      "color_temp_k_approx": 5000,
+      "contrast": "hard",
+      "quality": "crisp direct sunlight, sharp-edged shadows, leaves in the breeze flicker between light and shade",
+      "prompt_fragment_en": "bright open afternoon sunlight high in the west above a sea of treetops, hard neutral-white daylight falling from the side, soft cool fill from the clear blue sky and green light bouncing up from the leaf canopy below, crisp shadows and flickering leaf highlights in a fresh breeze",
+      "source_chapter": "ch005",
+      "source_refs": ["ch005-p57", "ch005-p68", "environment.json SCN-pigeon-treetop-S01"],
+      "inferred": true,
+      "reason": "The source names only the open sky and the sea of green leaves (ch005-p57, ch005-p68); no light is described. Source, direction and colour follow the environment sun (34 deg, west, fair_hot) and ruling 5.2 A."
+    }
+  ],
+  "special": [],
+  "special_note": "The source writes no plot light for this scene."
+}

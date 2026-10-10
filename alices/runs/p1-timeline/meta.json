@@ -1,0 +1,13 @@
+{
+  "task_id": "p1-timeline",
+  "run_id": "0491ff2f95f2",
+  "attempt": 1,
+  "model": "agent default",
+  "tokens": null,
+  "started_at": null,
+  "finished_at": "2026-09-22T16:45:40+08:00",
+  "inputs_sha256": {},
+  "artifact_versions": {
+    "story/story_timeline.json": "v1"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh099",
+  "group_id": "grp037",
+  "scene_no": "S10",
+  "duration_s": 7.0,
+  "size": "wide",
+  "movement": "track_follow",
+  "direction": "forward with her swim, southward down the flooded hall from the glass table legs toward the brightest water by the shore steps, lens staying on the surface",
+  "speed": "about 0.35 m/s, her swimming pace — roughly two and a half metres, two glass table legs passing like columns in the seven seconds",
+  "speed_curve": "linear",
+  "rig": "dolly",
+  "lens_mm": 28,
+  "camera_height_m": 0.05,
+  "angle": "level, lens on the water surface",
+  "rack_focus": "none",
+  "start_frame": "Lens on the water among the glass table legs: Alice starting to swim away down the flooded hall, the far south end already bright with crowded lamp reflections ahead of her.",
+  "end_frame": "The same surface-level framing further south: the table legs she set out among now behind her, door bases still rising like cliffs either side, the brightest water filling the frame ahead and her wake spreading back toward camera.",
+  "constraint_honoured": "'Her swim has a heading — toward the brightest water at the far south end… Dry wit, not distress: the last calm in the episode.'",
+  "movement_note": "Licensed move (a) applied to her swim, and shot_list's camera_position asks for it explicitly ('travelling with her at her own pace'). One move type, constant speed, lens never rising above the waterline — the S10 ban on any high, crane or drone view holds. LN-ep01-031 (5.6 s) sits inside the steady travel.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

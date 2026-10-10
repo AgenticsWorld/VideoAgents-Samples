@@ -1,0 +1,6 @@
+{
+  "scored": false,
+  "reason": "质量评委 = 0; evaluation is not dispatched in this project.",
+  "qa": "none — all eight QA review dimensions are 0.",
+  "acceptance_decision": "PASS. Accepted the station's split of the performance intent layer: dialogue shots carry `performance` with a dialogue-anchored trigger in the host-checked shape, silent acting shots carry the same intent fields under `performance_beat` triggered on a timestamped action beat. A dialogue-anchored trigger on a silent shot would make performance_bound report the word absent downstream, so the split is correct, not a shortfall. Both shapes carry host-canonical names plus the work order's aliases."
+}

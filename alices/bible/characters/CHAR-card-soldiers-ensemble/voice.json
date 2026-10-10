@@ -1,0 +1,32 @@
+{
+  "character_id": "CHAR-card-soldiers-ensemble",
+  "name": "Card soldiers (ensemble)",
+  "tier": "extra",
+  "card_type": "ensemble_group_voice",
+  "gender": "male",
+  "age_sense": "young men 20-35",
+  "timbre": "firm, clipped young men's voices shouting in drilled unison, parade-ground bark",
+  "pitch": "mid baritone, flat drilled delivery",
+  "pitch_range_hz": [100, 180],
+  "speed_wpm": [130, 150],
+  "speed_cpm": [494, 570],
+  "accent": "plain working-class southern English, drilled military diction",
+  "reference_style": "Ten soldiers answering the Queen as one: 'Their heads are gone, if it please your Majesty!' — a loud, slightly ragged unison report (a lie to save the gardeners, SUP-014).",
+  "group_voice": {
+    "mode": "unison shout, slight ragged edges",
+    "headcount": "10-12, all male",
+    "speaking_slots": []
+  },
+  "emotion_range": {
+    "unison_report": { "speed_delta": "0%", "pitch_delta": "+2semi", "volume": "shout", "note": "ch008-d0029" }
+  },
+  "age_variants": [],
+  "source_chapter": "ch008",
+  "sources": ["ch008", "ch008-p29", "ch008-d0029"],
+  "voice_evidence": [
+    { "para": "ch008-p29", "quote": "“Their heads are gone, if it please your Majesty!” the soldiers shouted in reply." }
+  ],
+  "inferred": true,
+  "inferred_fields": ["timbre", "pitch", "pitch_range_hz", "speed_wpm", "speed_cpm", "accent"],
+  "reason": "Unison shout sourced; voices designed for young 1862 soldiers (appearance.json)."
+}

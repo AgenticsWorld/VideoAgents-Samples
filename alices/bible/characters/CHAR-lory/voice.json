@@ -1,0 +1,28 @@
+{
+  "character_id": "CHAR-lory",
+  "name": "Lory",
+  "tier": "extra",
+  "card_type": "individual",
+  "gender": "female",
+  "age_sense": "young woman (appearance base_age_range 20-25)",
+  "timbre": "crisp, prim, bright young woman's voice with a sulky pout",
+  "pitch": "soprano, clipped, superior intonation",
+  "pitch_range_hz": [200, 330],
+  "speed_wpm": [145, 165],
+  "speed_cpm": [551, 627],
+  "accent": "prim upper-middle-class Received Pronunciation",
+  "reference_style": "Bossy older girl who ends every argument with 'I am older than you, and must know better', then turns sulky.",
+  "emotion_range": {
+    "sulky": { "speed_delta": "-10%", "pitch_delta": "-1semi", "note": "ch003-p02 'turned sulky'" },
+    "superior": { "speed_delta": "0%", "pitch_delta": "+1semi", "note": "baseline" }
+  },
+  "age_variants": [],
+  "source_chapter": "ch003",
+  "sources": ["ch003", "ch003-p02"],
+  "voice_evidence": [
+    { "para": "ch003-p02", "quote": "the Lory, who at last turned sulky, and would only say" }
+  ],
+  "inferred": true,
+  "inferred_fields": ["timbre", "pitch", "pitch_range_hz", "speed_wpm", "speed_cpm", "accent"],
+  "reason": "Sulky manner sourced; voice designed. Kept higher and brighter than Alice's sister and clearly adult against Alice."
+}

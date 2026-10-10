@@ -1,0 +1,96 @@
+{
+  "character_id": "CHAR-queen-of-hearts",
+  "name": "Queen of Hearts",
+  "source_language": "en",
+  "source_speaker_labels": ["Queen"],
+  "produced_by_task": "p3-dialogue-style-pb1",
+  "register": {
+    "level": "royal command register, clipped and shouted; no courtesy forms at all",
+    "summary": "Speaks almost only in orders, verdicts and curt questions. Her answer to any obstacle is the death formula. She never asks permission, never softens, never explains. Per SUP-014 the formula is bluster that is never carried out, so it is delivered as a reflex rather than a considered threat.",
+    "examples": [
+      { "ref": "ch008-d0019", "chapter": 8, "text": "Off with her head! Off—" },
+      { "ref": "ch009-d0029", "chapter": 9, "text": "Now, I give you fair warning, either you or your head must be off, and that in about half no time! Take your choice!" },
+      { "ref": "ch012-d0057", "chapter": 12, "text": "No, no! Sentence first—verdict afterwards." }
+    ]
+  },
+  "catchphrases": [
+    { "text": "Off with his/her/their head(s)!", "freq": "high", "count_in_source": 7, "example_refs": ["ch008-d0019", "ch008-d0041", "ch012-d0061"], "example_chapters": [8, 9, 11, 12] },
+    { "text": "Come on, then!", "freq": "low", "count_in_source": 2, "example_refs": ["ch008-d0032", "ch009-d0036"], "example_chapters": [8, 9] },
+    { "text": "Sentence first—verdict afterwards.", "freq": "low", "count_in_source": 1, "example_refs": ["ch012-d0057"], "example_chapters": [12] }
+  ],
+  "sentence_style": {
+    "length": "short and staccato (mean 7.3 words, median 6); strings of imperatives rather than clauses",
+    "mean_words": 7.3,
+    "patterns": [
+      {
+        "rule": "Bare imperatives, frequently stacked in a run with no connectives (Collar… Behead… Turn… out… Suppress… Pinch…).",
+        "examples": [
+          { "ref": "ch011-d0064", "chapter": 11, "text": "Collar that Dormouse, Behead that Dormouse! Turn that Dormouse out of court! Suppress him! Pinch him! Off with his whiskers!" },
+          { "ref": "ch008-d0040", "chapter": 8, "text": "Get to your places!" },
+          { "ref": "ch012-d0059", "chapter": 12, "text": "Hold your tongue!" }
+        ]
+      },
+      {
+        "rule": "Curt interrogations that demand identification or a report, never an opinion.",
+        "examples": [
+          { "ref": "ch008-d0013", "chapter": 8, "text": "Who is this?" },
+          { "ref": "ch008-d0028", "chapter": 8, "text": "Are their heads off?" },
+          { "ref": "ch012-d0024", "chapter": 12, "text": "What's in it?" }
+        ]
+      },
+      {
+        "rule": "Verdict before evidence: flat absolutes and one-word rejections (Never! That proves his guilt. That's right!).",
+        "examples": [
+          { "ref": "ch012-d0035", "chapter": 12, "text": "That proves his guilt," },
+          { "ref": "ch012-d0053", "chapter": 12, "text": "Never!" },
+          { "ref": "ch008-d0030", "chapter": 8, "text": "That's right! Can you play croquet?" }
+        ]
+      },
+      {
+        "rule": "Insulting forms of address for subordinates and for Alice (Idiot!, Up, lazy thing!, child).",
+        "examples": [
+          { "ref": "ch008-d0014", "chapter": 8, "text": "Idiot! What's your name, child?" },
+          { "ref": "ch009-d0039", "chapter": 9, "text": "Up, lazy thing! and take this young lady to see the Mock Turtle …" }
+        ]
+      }
+    ]
+  },
+  "vocabulary": {
+    "signature_words": ["off with", "head", "heads", "behead", "executions", "sentence", "verdict", "Idiot", "Get up", "fetch"],
+    "preferred_fields": ["execution and punishment (always verbal, SUP-014)", "croquet and court procedure as her personal property", "orders to servants"],
+    "examples": [
+      { "ref": "ch009-d0039", "chapter": 9, "text": "I must go back and see after some executions I have ordered;" },
+      { "ref": "ch011-d0056", "chapter": 11, "text": "—and just take his head off outside," }
+    ]
+  },
+  "address": {
+    "self": "I (never 'we'); refers to her decisions as orders already given ('some executions I have ordered')",
+    "to_alice": "child / this young lady (to others) / you",
+    "to_servants_and_court": "Idiot / lazy thing / bare imperative with no name",
+    "to_the_king": "no direct address in the source; inferred: she answers him with a bare contradiction ('No, no!') rather than a term of endearment",
+    "inferred": true,
+    "reason": "the source never shows the Queen naming the King; the rule is inferred from ch012-d0057 where she overrides his 'Let the jury consider their verdict' with 'No, no!'",
+    "examples": [
+      { "ref": "ch008-d0014", "chapter": 8, "text": "Idiot! What's your name, child?" },
+      { "ref": "ch012-d0057", "chapter": 12, "text": "No, no! Sentence first—verdict afterwards." }
+    ]
+  },
+  "interjections": ["Idiot!", "Never!", "No, no!", "Now,"],
+  "forbidden_words": [
+    { "domain": "post-1862 slang / modern chat register", "regex": "\\b(okay|ok|cool|guys?|awesome|yeah|yep|nope|gonna|wanna|gotta|kinda|sorta|totally|literally|dude)\\b", "reason": "period drama, 1862" },
+    { "domain": "courtesy, apology and hedging", "regex": "\\b(please|thank you|thanks|sorry|beg (your )?pardon|excuse me|I'm afraid|perhaps|I wonder|if you (don't |wouldn't )?mind|I think|I suppose|would you)\\b", "reason": "the Queen never asks, thanks or doubts: 0 of her 32 source lines contains a softener; a softened Queen is OOC" },
+    { "domain": "explanation and reasoning connectives", "regex": "\\b(because|therefore|you see|you know|in fact|after all)\\b", "reason": "she decrees, she does not justify (contrast the King, whose voice is built on 'you know' and 'must have')" }
+  ],
+  "drift": [
+    { "from_chapter": 8, "to_chapter": 12, "change": "Static by design: the same reflex from the croquet-ground to the trial. The only change is in the target, which moves from gardeners and players (ch008) to the court itself and finally Alice (ch012-d0061), whose defiance ends the dream.", "examples": ["ch008-d0026", "ch011-d0064", "ch012-d0061"] }
+  ],
+  "backtest_markers": [
+    { "id": "Q1", "rule_ref": "catchphrases[0] death formula", "weight": 4, "regex": "\\boff with\\b|\\bbehead|\\bhead(s)? (must be )?off\\b|\\bexecutions\\b|\\bor your head\\b" },
+    { "id": "Q2", "rule_ref": "sentence_style.patterns[0] bare imperatives", "weight": 3, "regex": "^(get|turn|leave off|come on|bring|collar|hold your tongue|up|let's go on|take)\\b|\\bfetch her\\b|\\btake your choice\\b" },
+    { "id": "Q3", "rule_ref": "sentence_style.patterns[1] curt interrogation", "weight": 1, "regex": "^(who|what|and who|are|can|have)\\b[^,;]{0,40}\\?\\s*$" },
+    { "id": "Q4", "rule_ref": "sentence_style.patterns[2] verdict absolutes", "weight": 3, "regex": "^(never|no, no|that proves|that's right|nearly|I see)\\b|\\bsentence first\\b" },
+    { "id": "Q5", "rule_ref": "sentence_style.patterns[3] insulting address", "weight": 3, "regex": "\\b(idiot|lazy thing)\\b" },
+    { "id": "Q6", "rule_ref": "vocabulary: croquet and the Mock Turtle as her property", "weight": 2, "regex": "\\b(Mock Turtle|croquet)\\b" }
+  ],
+  "backtest": {"method": "marker-claim back-test: a spoken source line hits when it matches >=1 backtest_markers regex and no forbidden_words regex; verse (recited text) excluded; full definition runs/p3-dialogue-style-pb1/result.json#backtest_method", "script": "code/p3-dialogue-style-pb1_backtest.py", "run_on": "2026-09-22", "threshold": 0.8, "hit_rate": 1.0, "sample_size": 32, "source_lines_total": 32, "coverage_of_spoken_lines": 1.0, "verse_excluded": 0, "forbidden_violations_in_source": 0, "cross_claim_rate": 0.049, "lift": 20.54, "attribution_top1_rate": 0.812, "misses": [], "pass": true}
+}

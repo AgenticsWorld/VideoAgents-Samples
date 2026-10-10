@@ -1,0 +1,59 @@
+{
+  "shot_id": "sh010",
+  "group_id": "grp006",
+  "scene_no": "S02",
+  "scene_id": "SCN-field-hedge-burrow",
+  "duration_s": 5.0,
+  "is_dialogue": false,
+  "group_position": "first shot of grp006 — Alice on her map start (run_start, the far side of the field), CRE-001 on his (mid_field, a few bounds ahead of her).",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "stand",
+      "start_pos": "running in from the far side of the field into the long grass, held at a fixed place on screen-left",
+      "space_fragment_en": "standing at a run out of the far side of the field, held on screen-left, facing screen-right into the long grass ahead",
+      "facing": "square down her line of travel, screen-left to screen-right, eyes on the white flicker ahead of her",
+      "path": [
+        { "t": 4.2, "to": "into the middle of the long grass, still on the same screen position" }
+      ],
+      "beats": [
+        { "t": 0.0, "action": "running, skirt bunched in one fist, breathing hard", "sync": "shot opens mid-stride" },
+        { "t": 2.4, "action": "loses the white tail in the seed-heads and finds it again", "sync": "the gap that will not close" }
+      ],
+      "performance_beat": {
+        "objective": "keep the white thing in sight long enough to prove it is real",
+        "goal": "keep the white thing in sight",
+        "emotional_arc": "from breathless excitement to a harder, more determined effort as the gap refuses to close",
+        "arc_from": "breathless excitement",
+        "arc_to": "set, determined effort",
+        "trigger": { "beat": "the white tail disappears into the seed-heads and reappears further off", "t": 2.4 },
+        "no_early_reaction": ["the jaw setting", "the head dropping", "slowing"],
+        "forbidden_early": ["the jaw setting", "the head dropping", "slowing"],
+        "end_state": "mouth open on the breath, eyes locked screen-right on the flicker, fist tight in her skirt"
+      }
+    }
+  ],
+  "creatures": [
+    {
+      "id": "CRE-001",
+      "label": "Wild White Rabbit",
+      "pose": "stand",
+      "start_pos": "bounding through the seed-heads in the middle of the long grass, a few bounds ahead of her, deep in frame on screen-right",
+      "space_fragment_en": "standing at a bound in the middle of the long grass, small and deep in frame on screen-right, running away toward the hedge",
+      "facing": "away from camera down his own line of travel; no look back",
+      "path": [],
+      "beats": [
+        { "t": 1.5, "action": "white tail flickers up above the seed-heads", "sync": "the only sighting in the shot" },
+        { "t": 3.8, "action": "drops out of sight into the grass and reappears further off", "sync": "the gap widening" }
+      ],
+      "animal_discipline": "Distance discipline holds: never more than a small white flicker deep in frame, true gait, no look to camera."
+    }
+  ],
+  "presence_check": {
+    "timeline_ok": true,
+    "violations": [],
+    "story_event": "ev0001 (real_frame, T0) — the chase across the field",
+    "note": "Alice and CRE-001 only. The sister is on the riverbank and out of this scene entirely."
+  }
+}

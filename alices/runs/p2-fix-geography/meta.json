@@ -1,0 +1,13 @@
+{
+  "task_id": "p2-fix-geography",
+  "run_id": "a577daac3448",
+  "attempt": 1,
+  "model": "agent default",
+  "tokens": null,
+  "started_at": null,
+  "finished_at": "2026-09-22T17:44:14+08:00",
+  "inputs_sha256": {},
+  "artifact_versions": {
+    "bible/geography.json": "v1.1"
+  }
+}

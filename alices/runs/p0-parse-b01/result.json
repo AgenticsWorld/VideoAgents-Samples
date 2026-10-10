@@ -1,0 +1,62 @@
+{
+  "task_id": "p0-parse-b01",
+  "agent": "01-story/novel-parser",
+  "attempt": 1,
+  "status": "done",
+  "date": "2026-09-22",
+  "batch": { "id": "b01", "chapters": ["ch001", "ch002", "ch003"], "source_file": "novel/Alices_Adventures_in_Wonderland_English.md", "line_range": [21, 645], "word_count": 5990 },
+  "outputs": [
+    "story/structured_story/ch001.json",
+    "story/structured_story/ch002.json",
+    "story/structured_story/ch003.json"
+  ],
+  "acceptance": {
+    "schema": "PASS",
+    "batch_chapter_coverage_100": "PASS - 3/3 chapters; every blank-line paragraph of each chapter range present verbatim (whitespace-normalized compare) with matching line ranges; word counts 2187/2100/1703 = manifest, batch 5990 = manifest",
+    "speaker_missing_lt_2pct": "PASS - 0 UNKNOWN of 156 quote entries (0.00%)",
+    "source_locators": "PASS - every dialogue/quoted_text text and every entity mention is a substring of the paragraph its source points to, and lies inside its own scene",
+    "quote_segment_coverage": "PASS - every curly-double-quoted segment in the batch maps to exactly one dialogue or quoted_text entry",
+    "id_uniqueness": "PASS - all scene/paragraph/dialogue/quote IDs chapter-prefixed and unique",
+    "check_script": "code/parse_check_b01.py (exit 0; full report runs/p0-parse-b01/parse_check_report.json)"
+  },
+  "stats": {
+    "ch001": { "paragraphs": 30, "scenes": 3, "quote_entries": 33, "dialogue": 25, "thought": 8, "verse": 0, "quoted_text": 6, "entity_mentions": 89, "unknown_speaker": 0 },
+    "ch002": { "paragraphs": 26, "scenes": 2, "quote_entries": 52, "dialogue": 36, "thought": 14, "verse": 2, "quoted_text": 1, "entity_mentions": 88, "unknown_speaker": 0 },
+    "ch003": { "paragraphs": 48, "scenes": 3, "quote_entries": 71, "dialogue": 70, "thought": 0, "verse": 1, "quoted_text": 1, "entity_mentions": 95, "unknown_speaker": 0 },
+    "total": { "scenes": 8, "quote_entries": 156, "unknown_speaker": 0, "unknown_ratio": 0.0, "low_confidence_lt_0_9": 1, "entity_mentions": 272 }
+  },
+  "conventions": {
+    "paragraph": "blank-line separated block within the manifest line range; p00 = the chapter heading (shard field `heading`), body paragraphs p01..pNN in source order; `lines` = 1-based inclusive source lines. Paragraph `text` is verbatim with line wraps joined by one space (verse / inset / separator paragraphs keep their original line breaks and indentation); `_underscores_` italics markup kept as in source.",
+    "kind": "prose | verse | inset (indented non-verse block, ch002-p03) | separator (the '* * *' lines; kept so word counts reconcile with `wc -w`)",
+    "source": "chNNN#pNN (a scene's source is a range chNNN#pAA-pBB)",
+    "ids": "scene chNNN-scNN; paragraph chNNN-pNN; quote entry chNNN-dNNNN (numbered through the chapter); non-speech quoted text chNNN-qNN",
+    "dialogues": "one entry per contiguous quoted segment, text verbatim without the enclosing curly quotes; a line interrupted by a narrator tag becomes consecutive entries (attribution says 'continues ...'). type = dialogue (spoken aloud, incl. talking to herself) | thought (tagged 'thought'/'she thought') | verse (recited poem / the Mouse's tale). Nested single-quoted material (recited history text, imagined lines) stays inside the entry, with a note.",
+    "speaker": "surface name as the source tags it (Alice, White Rabbit, Mouse, Lory, Duck, Dodo, Eaglet, old Crab, young Crab, Magpie, Canary); lines the source gives to a group are speaker 'the party (chorus)'. No canonical character IDs issued; alias unification is left to character-manager.",
+    "attribution": "the verbatim (or minimally quoted) tag from the source that justifies the speaker",
+    "quoted_text": "quoted material that is not speech in the scene: inscriptions (ORANGE MARMALADE, DRINK ME, EAT ME), narrator-quoted phrases (\"poison\", \"One, two, three, and away\"), a remembered book quote (the Latin Grammar declension). Kept so that nothing quoted is dropped, but excluded from the speaker statistics.",
+    "entities": "one entry per distinct surface form per paragraph (not per token); four types person/place/item/skill; `key` is a tentative lowercase slug for later merging, NOT a canonical ID. Scope: characters (incl. animals that speak or are named, e.g. Dinah), people named or referred to (Ada, Mabel, historical figures inside the recited history, figures inside the tale), concrete places and objects in the scene or in Alice's memories. Pronouns, similes/hypotheticals (telescope, candle, red-hot poker) and generic nouns (cats, bats, mice) are not tagged. 'person' is used for anthropomorphic animal characters too; realistic reinterpretation is decided in Phase 2/3.",
+    "skill": "the source has no techniques; the one skill entry is 'Caucus-race' (named activity/game), filed as the closest of the four types with a note - downstream may reclassify."
+  },
+  "decisions": [
+    "Scene cuts (8): ch001 bank/field | rabbit-hole & fall | passage & hall; ch002 hall (continues ch001-sc03) | pool of tears (Mouse enters); ch003 caucus-race on the bank | the Mouse's tale and the party leaving | Alice alone (cast change, hand-off to ch004). Each scene's boundary_reason records the basis.",
+    "ch003-d0046 (the Mouse's 'tail' poem): speaker Mouse at 0.85 with candidates (Mouse 0.85 / Alice 0.15), because the source frames it as 'her idea of the tale' while the Mouse was speaking. It is not UNKNOWN. This is the only entry below 0.9.",
+    "ch002-d0003: the source tags this segment 'thought Alice' even though it follows spoken exclamations. Kept as thought, per the text, with a note.",
+    "ch002-p02..p04: one open thought-quote runs across three paragraphs, including the indented imagined parcel address. Each paragraph got its own thought entry so every source points to exactly one paragraph.",
+    "ch002-p11/p12 'How doth the little crocodile' kept as two verse entries, one per stanza, spoken by Alice (the source says she began to repeat it). The French line 'Où est ma chatte?' kept verbatim."
+  ],
+  "cross_batch_notes": [
+    "The ch003 ending ('pattering of footsteps... half hoping that the Mouse had changed his mind') leads into ch004 (batch b02). Nothing in b01 depends on a later batch for speaker resolution.",
+    "Shared entity keys used here (alice, white_rabbit, mouse, dodo, lory, duck, eaglet, dinah, duchess, long_low_hall, golden_key, little_door, glass_table, lovely_garden, pool_of_tears, rabbits_fan, rabbits_white_kid_gloves) are tentative. Other batches may slug them differently; p0-merge must not treat key mismatches as conflicts."
+  ],
+  "conflicts": [],
+  "defects": [],
+  "skills": "none selected for this station; no skill registered",
+  "files_created": [
+    "story/structured_story/ch001.json",
+    "story/structured_story/ch002.json",
+    "story/structured_story/ch003.json",
+    "code/parse_check_b01.py",
+    "runs/p0-parse-b01/parse_check_report.json",
+    "runs/p0-parse-b01/result.json"
+  ]
+}

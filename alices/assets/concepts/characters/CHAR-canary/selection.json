@@ -1,0 +1,4 @@
+{"character_id":"CHAR-canary","sheet":"sheet.png","gender":"female","gender_word_in_prompt":true,"rendering":"photoreal CGI domestic canary (SUP-002)",
+"appearance_field_hits":{"clear_yellow":true,"tiny_round_fine_boned":true,"conical_pale_beak":true,"small_black_eyes":true,"damp_tail":"not visible","unclothed":true},
+"self_check":{"layout":"pass","appearance":"pass","style":"pass (photoreal)"},"defects":["Tail dampness is not visible. Minor."],
+"not_drawn_scoped":["brood of fledgling chicks (background CGI chicks, not registered characters)"],"rerolls":[]}

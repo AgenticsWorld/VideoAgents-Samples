@@ -1,0 +1,23 @@
+{
+  "task_id": "p4-cr-dialoguestyle",
+  "agent": "03-characters/dialogue-style",
+  "change_request": "BIB-0027",
+  "attempt": 1,
+  "status": "done",
+  "scope_note": "In all 9 files the only stale wording was the closing performer sentence of register.summary. That sentence is replaced with the photoreal-CGI reading (SUP-002 / SUP-010 as amended by BIB-0027). Nothing else changed: no lines, catchphrases, sentence_style, address, forbidden_words, drift, examples or backtest. Backtest results are still valid because the speech rules are unchanged.",
+  "changed_files": [
+    {"file": "bible/characters/CHAR-white-rabbit/dialogue_style.json", "field": "register.summary", "note": "Now a photoreal CGI rabbit in a period waistcoat instead of a human performer. His oaths 'my ears and whiskers' / 'my dear paws' now refer to his real anatomy instead of a costume tic."},
+    {"file": "bible/characters/CHAR-mouse/dialogue_style.json", "field": "register.summary", "note": "Now a photoreal CGI mouse instead of a human performer with rodent touches. The prim-gentleman speech rule stays; species sound is only a light tic (SUP-002 sound_signature)."},
+    {"file": "bible/characters/CHAR-dodo/dialogue_style.json", "field": "register.summary", "note": "Now a photoreal CGI dodo speaking with naturalistic beak movement instead of a stout human performer in a tailcoat."},
+    {"file": "bible/characters/CHAR-caterpillar/dialogue_style.json", "field": "register.summary", "note": "Now a photoreal CGI blue caterpillar with the mushroom and hookah instead of a human performer in a blue coat. The hookah-silence delivery note stays."},
+    {"file": "bible/characters/CHAR-bill-the-lizard/dialogue_style.json", "field": "register.summary", "note": "Now a photoreal CGI lizard instead of a lean human performer with reptile touches."},
+    {"file": "bible/characters/CHAR-pigeon/dialogue_style.json", "field": "register.summary", "note": "Now a photoreal CGI pigeon with real wing-beats instead of a human performer with a feather shawl and arm movements."},
+    {"file": "bible/characters/CHAR-cheshire-cat/dialogue_style.json", "field": "register.summary", "note": "Now a photoreal CGI cat instead of a human performer. The SUP-005 dissolve and the Dinah echo (ruling 5.3 B) stay."},
+    {"file": "bible/characters/CHAR-gryphon/dialogue_style.json", "field": "register.summary", "note": "Now a photoreal CGI griffin (SUP-010) instead of a human performer in a feathered mantle. 'Hjckrrh!' stays a spoken line and is not replaced by a sound effect."},
+    {"file": "bible/characters/CHAR-mock-turtle/dialogue_style.json", "field": "register.summary", "note": "Now a photoreal CGI calf-headed, hooved turtle (SUP-010) instead of a human performer in a shell cape. The 'flappers' are now his own flippers, not his hands; the vocal-sobbing note stays."}
+  ],
+  "pending_H2": "None raised here. None of my 9 characters is a Footman or a non-speaking animal, so the Frog/Fish-Footman anatomy and the non-speaking animals do not apply.",
+  "defects_opened": [],
+  "bible_write_path": "on_bible_access (memory-bible). The edits only replace stale wording; they do not conflict with cultivation.json SUP-002/SUP-010 as amended.",
+  "skills": "No project skills are checked for this station."
+}

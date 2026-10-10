@@ -1,0 +1,45 @@
+{
+  "character_id": "CHAR-court-officers-ensemble",
+  "card_type": "ensemble",
+  "tier": "extra",
+  "layer": "dream",
+  "headcount": {
+    "range": [2, 4],
+    "note": "Two officers perform the sack-and-hustle beat (CUL-007 visual: 'Two court officers'); up to two more stand at the court doors.",
+    "source_chapter": "ch011", "paragraph": "ch011-p53",
+    "quote": "Here one of the guinea-pigs cheered, and was immediately suppressed by the officers of the court."
+  },
+  "gender": "male",
+  "gender_note": { "inferred": true, "reason": "Source gives no pronouns; 1862 court ushers/tipstaffs were men; CUL-007 stages them as a pair of men." },
+  "gender_mix": { "male": 4, "female": 0 },
+  "hair": { "value": "short, grizzled or dark, neatly combed; one with a heavy moustache, one clean-shaven", "inferred": true, "reason": "Not described." },
+  "eyes": { "value": "natural mixed", "inferred": true, "reason": "Not described." },
+  "face": { "value": "brisk, deadpan, routine — the rest of the court barely looks up", "source_chapter": "ch011", "paragraph": "ch011-p53", "quote": "immediately suppressed by the officers of the court", "detail_inferred": true, "detail_reason": "Deadpan efficiency extracted from 'immediately' and CUL-007 visual." },
+  "build": {
+    "height_range_cm": [175, 185],
+    "body_type": "solid, square-shouldered, matched pair",
+    "scale_reference": "About 40-50 cm taller than Alice at base scale (135 cm, CHAR-alice scale anchor); relative size follows SUP-003.",
+    "inferred": true,
+    "reason": "Designed."
+  },
+  "base_age_range": "35-55",
+  "base_age_inferred": true,
+  "base_age_reason": "Seasoned court ushers.",
+  "marks": [ { "type": "none", "description": "No marks.", "inferred": true, "reason": "Not described." } ],
+  "signature_items": [
+    { "item": "large coarse canvas sack tied at the mouth with strings", "source_chapter": "ch011", "paragraph": "ch011-p53", "quote": "They had a large canvas bag, which tied up at the mouth with strings", "staging": "H1 ruling 5.4 B / CUL-007: over head and shoulders only, hustle out by the arms; never sit on anyone." },
+    { "item": "short white usher's wand of office (thin painted staff, 60 cm), held upright, never used on anyone", "inferred": true, "reason": "Period court-usher marker; not a weapon (SUP-014)." },
+    { "item": "card-face tabards: Eight and Nine of Hearts (extra officers: Six and Four of Hearts)", "inferred": true, "reason": "They belong to the House of Hearts' court and 'the whole pack of cards' is present at the trial (ch011-p01); numeral rank devices per FAC-house-of-hearts emblem_visual." }
+  ],
+  "default_outfit_tone": "Crimson House-of-Hearts court livery: ivory card-face tabard with crimson heart pips and indices over a crimson frock coat with white piping and brass buttons, black breeches, white stockings, black shoes; bare-headed indoors in court.",
+  "default_outfit_tone_source": { "inferred": true, "reason": "Index performer_concept 'crown livery, no animal coding'; FAC-house-of-hearts emblem_visual." },
+  "period_silhouette": { "value": "1862 court usher / tipstaff dress under a flat card tabard", "inferred": true, "reason": "Period design + SUP-004." },
+  "sup002_coding": { "animal_or_card": "card (Hearts, low numerals)", "forbidden": "no animal coding; no restraint holds, no sitting/kneeling on the sacked juror, no weapons", "rule": "bible/cultivation.json SUP-002, SUP-004, SUP-014; culture.json CUL-007; H1 ruling 5.4 B" },
+  "variation_rules": [
+    "Must read distinct from the club-suited card soldiers (CHAR-card-soldiers-ensemble): hearts not clubs, no caps, no batons — white wands instead.",
+    "The two active officers are a matched pair (same height band), one moustached, one clean-shaven, for easy blocking.",
+    "One officer also goes after the Hatter at the door (ch011-p62) — same performer as the moustached officer."
+  ],
+  "doubling": { "value": "none", "reason": "Not part of any H1 ruling 5.3 B doubling pair." },
+  "prompt_summary_en": "Two Victorian court officers in 1862, solid square-shouldered men about 45, one with a heavy moustache and one clean-shaven, short grizzled hair, deadpan faces, wearing flat ivory playing-card tabards with crimson heart pips (Eight and Nine of Hearts) over crimson frock coats with white piping and brass buttons, black breeches, white stockings, holding short white usher's wands and a coarse canvas sack with drawstrings, courtroom, realistic period comic drama, human actors"
+}

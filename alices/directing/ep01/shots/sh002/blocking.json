@@ -1,0 +1,66 @@
+{
+  "shot_id": "sh002",
+  "group_id": "grp002",
+  "scene_no": "S01",
+  "scene_id": "SCN-riverbank",
+  "duration_s": 8.0,
+  "is_dialogue": false,
+  "group_position": "first shot of grp002 — both girls at blocking_map start (sitting_shelf); neither has a path, so they hold this ground for the whole group.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "prone",
+      "start_pos": "on the grass a body's width downhill (south) of her sister at sitting_shelf",
+      "space_fragment_en": "lying face down on the grass at the sister's sitting place, a body's width downhill on screen-left, facing the still backwater",
+      "facing": "body along the slope, chin on her fists, eyes out over the water; her sister is at her screen-right shoulder",
+      "body_facing_target_id": null,
+      "path": [],
+      "beats": [
+        { "t": 1.0, "action": "shifts her weight from one elbow to the other", "sync": "the settled, bored opening" },
+        { "t": 5.5, "action": "plucks at a grass stem and lets it go", "sync": "under the far sheep-bells" }
+      ],
+      "performance_beat": {
+        "objective": "find something — anything — in this afternoon worth looking at",
+        "goal": "find something worth looking at in a hot empty afternoon",
+        "emotional_arc": "from flat boredom to boredom with an edge of restlessness",
+        "arc_from": "flat, heat-flattened boredom",
+        "arc_to": "restlessness beginning to show in the hands",
+        "trigger": { "beat": "she plucks the grass stem and lets it fall", "t": 5.5 },
+        "no_early_reaction": ["fidgeting with her hands", "sighing", "turning to her sister"],
+        "forbidden_early": ["fidgeting with her hands", "sighing", "turning to her sister"],
+        "end_state": "chin still on her fists, eyes flat on the water, one hand picking slowly at the turf"
+      }
+    },
+    {
+      "id": "CHAR-alice-sister",
+      "label": "Alice's Sister",
+      "pose": "sit",
+      "start_pos": "upright on the flat shelf under the northern elm at sitting_shelf",
+      "space_fragment_en": "sitting upright at the sister's sitting place under the northern elm, just screen-right of centre, facing down into the open book",
+      "facing": "square to the backwater, head bowed, eyes on the print; she never lifts them",
+      "path": [],
+      "beats": [
+        { "t": 3.0, "action": "turns a page with one finger", "sync": "the only movement in her half of the frame" }
+      ],
+      "performance_beat": {
+        "objective": "stay inside the book and let the afternoon look after itself",
+        "goal": "stay inside the book",
+        "emotional_arc": "from absorbed to absorbed — she is the fixed point of the scene",
+        "arc_from": "absorbed calm",
+        "arc_to": "absorbed calm, unbroken",
+        "trigger": { "beat": "she turns a page", "t": 3.0 },
+        "no_early_reaction": ["glancing at Alice", "smiling", "lifting her chin"],
+        "forbidden_early": ["glancing at Alice", "smiling", "lifting her chin"],
+        "end_state": "head bowed over the page, eyes on the print, thumb flat at the margin, no movement in the shoulders"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": {
+    "timeline_ok": true,
+    "violations": [],
+    "story_event": "ev0001 (real_frame, T0) — the bank beside her sister, a hot summer afternoon",
+    "note": "Alice and her sister are the only two legal presences on the bank. CRE-001 has not broken cover yet; CHAR-white-rabbit belongs to the dream layer and can never appear in the real frame (shot_list entity_note; realistic_adaptation_flags rn-02)."
+  }
+}

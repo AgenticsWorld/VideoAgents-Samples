@@ -1,0 +1,67 @@
+{
+  "character_id": "CHAR-mouse",
+  "name": "The Mouse",
+  "tier": "B",
+  "layer": "dream",
+  "revision": { "change_id": "BIB-0027", "task_id": "p4-cr-appearance", "date": "2026-09-23", "note": "Rewritten from the human-performer reading to a photoreal CGI animal." },
+  "rendering": {
+    "mode": "photoreal_cgi_animal",
+    "rule": "bible/cultivation.json SUP-002 (amended BIB-0027)",
+    "species": "house mouse (Mus musculus), grey-brown",
+    "limits": "Mouse anatomy throughout; speaks with naturalistic muzzle and whisker movement. No clothing, no cartoon face."
+  },
+  "gender": "male",
+  "gender_note": { "source_chapter": "ch002", "source_para": "ch002-p23", "quote": "cried the Mouse, who was trembling down to the end of his tail" },
+  "base_age_range": "58-66",
+  "base_age_note": { "inferred": true, "reason": "Persona age (a dry, pedantic elder, 'a person of authority', ch003-p03), kept for voice casting. As an animal: an old mouse with thinning fur at the muzzle and a slightly grizzled face." },
+  "hair": {
+    "coat": "fur",
+    "color": "mouse grey-brown on the back, paler grey belly, grizzled at the muzzle",
+    "style": "short and fine; bristles up all over when he is offended; soaked flat, spiky and dripping after the pool",
+    "source_chapter": "ch002",
+    "source_para": ["ch002-p22", "ch003-p01"],
+    "quote": "this time the Mouse was bristling all over / the animals with their fur clinging close to them",
+    "colour_inferred": true,
+    "reason": "Bristling and wet fur are sourced; grey-brown is the natural house-mouse colour."
+  },
+  "eyes": {
+    "color": "glossy black",
+    "shape": "small, bright, beady; seems to wink",
+    "source_chapter": "ch002",
+    "source_para": "ch002-p19",
+    "quote": "seemed to her to wink with one of its little eyes",
+    "colour_inferred": true,
+    "reason": "Little eyes are sourced; black is natural for the species."
+  },
+  "skin": { "tone": "pink nose, ears and feet; the thin ears go pale when he is in a passion", "source_chapter": "ch002", "source_para": "ch002-p25", "quote": "its face was quite pale (with passion, Alice thought)", "rendering_inferred": true, "reason": "Pallor is sourced; on a mouse it is carried by the ear and nose skin going pale and the ears flattening." },
+  "face": {
+    "shape": "narrow pointed mouse muzzle, large thin round ears",
+    "features": ["long fine whiskers that twitch when he lectures", "pink twitching nose", "ears flattened back when offended"],
+    "default_expression": "prickly, easily offended, lecturing; sits up stiffly to recite",
+    "expressiveness": "ear angle, whisker tension, bristled fur and a stiff sit-up posture; no human facial expressions",
+    "inferred": true,
+    "reason": "Not described; manner follows ch003-p40 'you’re so easily offended'."
+  },
+  "build": {
+    "height_range_cm": [7, 9],
+    "height_note": "Sitting-up height. Body 8-9 cm; tail about as long again.",
+    "body_type": "small, thin, wiry, trembling",
+    "posture": "sits up on his haunches to address the party; swims with his head held high",
+    "scale_reference": "Natural mouse size. In the pool and on the bank Alice is shrunk (SUP-003) and the Mouse is still small next to her: about the size of her forearm. He sits in the middle of the circle, the party gathered round.",
+    "inferred": true,
+    "reason": "Species-true size; relative scale follows the shrunken Alice of ch002-ch003."
+  },
+  "marks": [
+    { "type": "tail", "position": "back", "description": "a long, thin, scaly, pink-grey mouse tail, which Alice looks down at in wonder (the tale/tail pun)", "source_chapter": "ch003", "source_para": "ch003-p33", "quote": "“It _is_ a long tail, certainly,” said Alice, looking down with wonder at the Mouse’s tail" },
+    { "type": "condition", "position": "whole body", "description": "soaking wet from swimming the pool of tears, drying fluffier after the race", "source_chapter": "ch002", "source_para": "ch002-p25" }
+  ],
+  "default_outfit_tone": {
+    "summary": "none: he wears nothing; his look is the wet grey-brown coat",
+    "inferred": true,
+    "reason": "The text gives the Mouse no clothing or prop; per SUP-002 (BIB-0027) only text-given props are worn, so the old tailcoat is dropped."
+  },
+  "sound_tic": "a faint squeak or sniff under indignant lines",
+  "doubling": null,
+  "events": ["ev0009", "ev0010", "ev0011", "ev0012", "ev0013"],
+  "prompt_base_en": "photoreal old grey-brown house mouse, fur soaking wet and bristling, small glossy black beady eyes, large thin round ears, long twitching whiskers, long thin pink-grey tail, sitting up stiffly on a muddy pool bank, natural mouse anatomy, no clothing, live-action film plate"
+}

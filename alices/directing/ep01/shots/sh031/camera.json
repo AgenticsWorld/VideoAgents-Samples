@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh031",
+  "group_id": "grp012",
+  "scene_no": "S04",
+  "duration_s": 4.5,
+  "size": "medium-wide",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 28,
+  "camera_height_m": 1.3,
+  "angle": "level",
+  "rack_focus": "none",
+  "start_frame": "Past the pastel-and-gold mosaic dado to the right-angle corner glowing beyond it: the White Rabbit small in the frame, still up on his haunches, the lit corner waiting behind him.",
+  "end_frame": "The same frame as he drops back onto four legs, still muttering, and goes round the right-angle corner out of sight toward the hall opening.",
+  "constraint_honoured": "'The drop from haunches back onto four legs happens in shot… Clean single for the line' — a fixed frame guarantees the grammar is seen rather than cut around.",
+  "movement_note": "LN-ep01-007 (3.0 s) sits whole in 4.5 s. Holding the distance keeps the S04 rule that no shot ever closes on him.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

@@ -1,0 +1,48 @@
+{
+  "task_id": "p4-cr-appearance",
+  "agent": "03-characters/appearance",
+  "attempt": 1,
+  "status": "done",
+  "date": "2026-09-23",
+  "authority": "BIB-0027 (user ruling 2026-09-22): cultivation.json SUP-002, SUP-010, XA-magic-02; world.json WR-002, WR-010; h1_summary.md §6",
+  "bible_write_path": "Written in place under the BIB-0027 change request; memory-bible collects them through on_bible_access. IDs and top-level structure are unchanged, and dialogue and events are untouched.",
+  "shared_conventions": {
+    "rendering_block": "Each card gains a 'rendering' object (mode, rule, species, limits) and a 'revision' stamp. The machine-check keys hair / eyes / build / marks / base_age_range / default_outfit_tone are kept: 'hair' now describes the coat (fur, feathers, scales or shell).",
+    "base_age_range": "Kept as the persona age for voice casting; each card's note gives the animal's life stage.",
+    "scale": "Species-true sizes. The text's relative-size beats come from Alice's SUP-003 scale. Dream-scale exceptions: the two Footmen, sized to the four-foot house, and the Gryphon and Mock Turtle.",
+    "props": "Only text-given or text-implied props are kept. All invented period clothing from the human-performer reading is dropped.",
+    "removed_wording": "performer_coding / sup002_coding / performer_basis blocks with 'human performer', 'no CGI' and 'no prosthetic' limits; prompts ending 'realistic period drama, human actor(s)'. Every prompt_base_en / prompt_summary_en is rewritten as a photoreal CGI animal in a live-action plate."
+  },
+  "changed_files": [
+    { "file": "bible/characters/CHAR-white-rabbit/appearance.json", "note": "Small albino white rabbit (pink eyes echo CRE-001), 26-30 cm sitting up, so the tiptoe-to-ear beat of ch008 works. Wears only the checked waistcoat and watch; gloves, fan, reading spectacles (tint dropped), and the trial trumpet, scroll and tabard." },
+    { "file": "bible/characters/CHAR-mouse/appearance.json", "note": "Old grey-brown house mouse, natural size, wet and bristling; his real long tail replaces the coat-tail; no clothing." },
+    { "file": "bible/characters/CHAR-dodo/appearance.json", "note": "Scientifically reconstructed dodo, 65-75 cm; Shakespeare pose done with a wing-tip; thimble held in the beak; no clothing." },
+    { "file": "bible/characters/CHAR-duck/appearance.json", "note": "Mallard drake; sleek waterproof plumage sets him apart among the draggled party; no clothing." },
+    { "file": "bible/characters/CHAR-lory/appearance.json", "note": "Red lory parrot, scarlet with blue; perched at Alice's face height for the argument; no clothing." },
+    { "file": "bible/characters/CHAR-eaglet/appearance.json", "note": "Half-downy golden-eagle chick, about 6-7 weeks, 40-48 cm; eye colour corrected to dark brown for the life stage; no clothing." },
+    { "file": "bible/characters/CHAR-magpie/appearance.json", "note": "Old Eurasian magpie with frayed tail; the one prop is a dark grey muffler implied by 'wrapping itself up'." },
+    { "file": "bible/characters/CHAR-canary/appearance.json", "note": "Clear yellow hen canary; her unregistered chicks are background CGI fledglings." },
+    { "file": "bible/characters/CHAR-caucus-race-party-ensemble/appearance.json", "note": "All six slots are CGI animals, none human: moorhen, coot, water vole, wren, grey heron, sand martin. Species-true sizes, soaked state kept." },
+    { "file": "bible/characters/CHAR-caterpillar/appearance.json", "note": "Blue hawk-moth-type larva, three inches reared, matching three-inch Alice. True legs folded ('arms folded'); hookah and mushroom kept. Now consistent with style reference alice.jpeg." },
+    { "file": "bible/characters/CHAR-bill-the-lizard/appearance.json", "note": "Common lizard, natural size, soot-dusted; real tail waves when he is put in head-down; tiny slate at the trial; jersey and scarf dropped." },
+    { "file": "bible/characters/CHAR-pigeon/appearance.json", "note": "Wood pigeon, ruffled from sleeplessness; beats Alice with its wings; nest with two eggs; dress and bonnet dropped." },
+    { "file": "bible/characters/CHAR-cheshire-cat/appearance.json", "note": "Large brown classic tabby, green-gold eyes, long claws, real tail for the tail-first vanish (SUP-005). Grin is the one anatomical departure (pending_H2). Dinah echo is now the same animal look." },
+    { "file": "bible/characters/CHAR-march-hare/appearance.json", "note": "Wild brown hare with straw in its fur; sits up at the table beside the human Hatter; handles watch and butter knife with forepaws." },
+    { "file": "bible/characters/CHAR-dormouse/appearance.json", "note": "Hazel dormouse at natural size, so the elbow-cushion and teapot beats work literally; curled asleep." },
+    { "file": "bible/characters/CHAR-gryphon/appearance.json", "note": "Photoreal classical griffin (golden-eagle front, lion rear), 150-165 cm sitting; eagle forelegs are the text's 'paws'; labourer's dress and mantle dropped." },
+    { "file": "bible/characters/CHAR-mock-turtle/appearance.json", "note": "Photoreal turtle body with calf head, hooves and tail, sitting upright on the ledge; flippers used as hands; eyes corrected to calf dark brown; invented handkerchief dropped." },
+    { "file": "bible/characters/CHAR-old-crab/appearance.json", "note": "Large old edible crab, rust-brown and barnacled; cap and claw mitts dropped; pair rule rewritten as the same species, older and duller." },
+    { "file": "bible/characters/CHAR-young-crab/appearance.json", "note": "Young edible crab, bright coral and clean-shelled; snood and mitts dropped." },
+    { "file": "bible/characters/CHAR-frog-footman/appearance.json", "note": "CGI common frog at dream size (75-85 cm) in snuff-brown Duchess livery and powdered curled wig. Magnifying spectacles and shoes dropped. Anatomy options A/B/C, pending_H2." },
+    { "file": "bible/characters/CHAR-fish-footman/appearance.json", "note": "CGI cod-headed figure (80-90 cm, matched to the Frog-Footman) in crimson Hearts livery and powdered wig; silver scale facings dropped. Anatomy options A/B/C, pending_H2." },
+    { "file": "bible/characters/CHAR-jury-ensemble/appearance.json", "note": "All 11 jurors are CGI animals, none human (6 animals, 5 birds, species listed per slot). Court humans stay SUP-004. Slates sized to the animals; guinea-pig sack beat kept gentle." },
+    { "file": "bible/characters/CHAR-crowd-ensemble/appearance.json", "note": "All 10 crowd slots are CGI animals, none human; Pat (human, own card) is on location. Heavy ladder and barrow staging proposal pending_H2." },
+    { "file": "bible/characters/CHAR-duchess-baby/appearance.json", "note": "Infant stage unchanged. New stages block: slide (CGI drift option A vs handover option B) and pig end-state as a photoreal CGI piglet, both pending_H2; prompt_pig_en added." }
+  ],
+  "defects_opened": [
+    { "file": "qa/defects/DEF-p4-cr-appearance-001.json", "note": "Non-blocking H2 routing of the pending_H2 items (Footmen anatomy, pig-baby slide and end-state, Cheshire grin, crowd heavy-prop staging) and two design conventions (scale, props-only)." }
+  ],
+  "not_edited_out_of_scope": "bible/characters/index.json performer_concept (character-manager), bible/creatures/creature.json (creature), bible/style.json negatives (art-director), costumes.json (costume). All are already in BIB-0027 impacted_stale.",
+  "machine_check": { "json_valid": "24/24", "required_fields": "24/24", "gender_in_vocab": "24/24", "character_id_in_index": "24/24", "no_unknown_placeholder": "pass", "stale_wording_scan": "pass (only revision-history mentions remain)", "ascii_filenames": "pass" },
+  "skills": "none selected for this station"
+}

@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh020",
+  "group_id": "grp008",
+  "scene_no": "S03",
+  "duration_s": 2.0,
+  "size": "wide",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 40,
+  "camera_height_m": "on her axis at the middle of the shaft",
+  "angle": "straight down the open centre of the shaft",
+  "rack_focus": "none",
+  "start_frame": "Her POV straight down the shaft: the nearest wall bands just readable at the edges of frame running away to a point, the jar hanging in the top of frame in her hand, the depth below falling away into black.",
+  "end_frame": "The identical frame two seconds later — no floor has arrived, and the last lamp-coloured glint far below is dying out.",
+  "constraint_honoured": "'Set-up 2 of the licensed three. Flat, still, no move' — and it must be reproducible exactly at sh023, so nothing about it may drift.",
+  "movement_note": "POV 3 of 7 at 2.0 s: a single flat look with no time for, and no use for, a move.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

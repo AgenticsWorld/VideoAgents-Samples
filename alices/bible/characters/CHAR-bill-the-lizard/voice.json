@@ -1,0 +1,28 @@
+{
+  "character_id": "CHAR-bill-the-lizard",
+  "name": "Bill the Lizard",
+  "tier": "B",
+  "card_type": "individual",
+  "gender": "male",
+  "age_sense": "teenage lad (appearance base_age_range 15-17)",
+  "timbre": "feeble, thin, squeaky teenage boy's voice, recently broken and still cracking, breathless and dazed",
+  "pitch": "high light tenor, unstable, cracking upward",
+  "pitch_range_hz": [120, 250],
+  "speed_wpm": [150, 180],
+  "speed_cpm": [570, 684],
+  "accent": "rustic Oxfordshire country English, soft burr, 'thank ye'",
+  "reference_style": "Put-upon odd-job lad: his one speech comes in gasps, dash-broken, polite and bewildered after being shot out of the chimney. Silent at the trial (his 'voice' there is the squeak of his slate-pencil, a sound effect, not dialogue).",
+  "emotion_range": {
+    "gasping_dazed": { "speed_delta": "+10%", "pitch_delta": "+2semi", "volume": "soft", "note": "ch004-p28 'a little feeble, squeaking voice'" },
+    "calm": { "speed_delta": "0%", "pitch_delta": "0semi", "note": "willing, waiting to be told" }
+  },
+  "age_variants": [],
+  "source_chapter": "ch004",
+  "sources": ["ch004", "ch004-p24", "ch004-p28", "ch004-d0034", "ch012-p69"],
+  "voice_evidence": [
+    { "para": "ch004-p28", "quote": "Last came a little feeble, squeaking voice" }
+  ],
+  "inferred": true,
+  "inferred_fields": ["pitch", "pitch_range_hz", "speed_wpm", "speed_cpm", "accent"],
+  "reason": "'Feeble, squeaking voice' sourced; broken-voice lad follows appearance age 15-17 ('lad', ch004-p24); rustic accent from dialogue_style country grammar."
+}

@@ -1,0 +1,49 @@
+{
+  "character_id": "CHAR-gardener-two",
+  "card_type": "individual",
+  "tier": "extra",
+  "layer": "dream",
+  "gender": "male",
+  "gender_note": { "source_chapter": "ch008", "paragraph": "ch008-p25", "quote": "said Two, in a very humble tone, going down on one knee as he spoke", "reason": "Referred to as 'he'/'his business' (ch008-p07, ch008-p25)." },
+  "hair": {
+    "color": "sandy brown",
+    "style": "short, neatly cropped, side-parted and combed flat; plain workman's cut",
+    "inferred": true,
+    "reason": "No hair described; a tidy, conciliatory look suits the most humble and careful of the three (ch008-p10, ch008-p25). Kept distinct from Five (black) and Seven (red-brown) for instant identification."
+  },
+  "eyes": { "color": "light blue", "inferred": true, "reason": "Not described; common English colouring, chosen for contrast among the trio." },
+  "face": {
+    "shape": "long oval, mild features, slightly anxious raised brows, clean-shaven",
+    "expression_default": "apologetic, placating, speaks low",
+    "source_chapter": "ch008", "paragraph": "ch008-p10",
+    "quote": "Five and Seven said nothing, but looked at Two. Two began in a low voice, “Why the fact is, you see, Miss",
+    "detail_inferred": true,
+    "detail_reason": "Facial features designed from his low-voiced, humble spokesman role; source gives no physical face description."
+  },
+  "build": {
+    "height_range_cm": [170, 175],
+    "body_type": "slim, straight-backed, narrow-shouldered — fits the flat oblong card tabard with little bulk at the edges",
+    "scale_reference": "About 35-40 cm taller than Alice at base scale (135 cm, CHAR-alice scale anchor). In ch008 Alice is at garden size (she had nibbled to about a foot high before entering, ch007 end) — relative scale is handled by SUP-003 forced perspective, not by performer height.",
+    "card_shape": { "value": "oblong and flat, hands and feet at the corners", "source_chapter": "ch008", "paragraph": "ch008-p11", "quote": "these were all shaped like the three gardeners, oblong and flat, with their hands and feet at the corners" },
+    "inferred": true,
+    "reason": "Height/body type designed; card shape is sourced."
+  },
+  "base_age_range": "40-50",
+  "base_age_inferred": true,
+  "base_age_reason": "Eldest-seeming of the trio: he is the one the others defer to (ch008-p10). Source gives no age.",
+  "marks": [
+    { "type": "paint", "position": "hands, cuffs and card tabard edges", "description": "fresh red paint smears and spatter from painting white roses red", "source_chapter": "ch008", "paragraph": "ch008-p01", "quote": "the roses growing on it were white, but there were three gardeners at it, busily painting them red" }
+  ],
+  "signature_items": [
+    { "item": "card-face tabard showing the numeral TWO: two black spade pips and '2' corner indices", "source_chapter": "ch008", "paragraph": "ch008-p06", "quote": "“That’s none of _your_ business, Two!” said Seven.", "suit_inferred": true, "suit_reason": "Source gives the number only. The suit is SPADES. BIB-0029 (DEF-p4-char-301) moved the gardeners from clubs to spades. The source names the gardeners' numbers but never their suit, while ch008-p11 'ten soldiers carrying clubs' anchors the club suit to the soldiers; the club suit has only thirteen cards and ten soldiers plus the King and Queen of Clubs (CHAR-visiting-monarchs-ensemble M01/M02) already fill twelve of them, so no club rank was left for a gardener. Spades also fit garden staff. The numeral -- the only thing the source fixes and the only thing that identifies the figure on screen -- is unchanged. Sheet note: the H2-locked sheet draws club trefoils; under reroll budget 0 it was not regenerated, so costumes.json visual_en is the pip authority for prompts (runs/g4/gate.json DEF-p4-costume-sheet-901 waiver)." },
+    { "item": "card-back pattern on the back of the tabard, identical to the rest of the pack", "source_chapter": "ch008", "paragraph": "ch008-p16", "quote": "the pattern on their backs was the same as the rest of the pack" },
+    { "item": "flat house-painter's brush and a small pot of red paint", "source_chapter": "ch008", "paragraph": "ch008-p01", "quote": "busily painting them red" }
+  ],
+  "default_outfit_tone": "Stiff flat oblong card tabard (ivory card face with black spade pips and '2' corner indices on the front; the pack's shared back design — crimson-and-cream lattice with a small heart rosette — on the back) hanging front and back to the knee, over plain crimson House-of-Hearts working shirt-sleeves and crimson work breeches, cream stockings, sturdy brown lace-up boots.",
+  "default_outfit_tone_source": { "source_chapter": "ch008", "paragraph": "ch008-p11", "quote": "oblong and flat, with their hands and feet at the corners", "colour_inferred": true, "reason": "Card shape and back pattern are sourced; colours designed from FAC-house-of-hearts emblem_visual (crimson livery, numeral rank devices). Full costume detail belongs to 06-art/costume." },
+  "period_silhouette": { "value": "1862 estate gardener's working dress (shirt, waistcoat-length body, breeches, boots) flattened under a rigid rectangular card tabard; arms and legs emerge at the four corners", "inferred": true, "reason": "SUP-004 card-figure staging applied to an 1862 working-man base." },
+  "sup002_coding": { "animal_or_card": "card (Two of Spades)", "touches": ["rigid flat oblong tabard", "numeral pips/indices", "shared pack back-pattern", "moves flatly, lies face-down so only the card back shows"], "forbidden": "no CGI paper body; a real man in a costume", "rule": "bible/cultivation.json SUP-002, SUP-004" },
+  "trio_distinction": "Two = sandy hair, oldest, mild and apologetic; Five = black hair, sulky; Seven = red-brown hair and side-whiskers, hot-tempered. Same tabard cut for all three so that lying face-down they are indistinguishable (ch008-p16).",
+  "doubling": { "value": "none", "reason": "Not part of any H1 ruling 5.3 B doubling pair." },
+  "prompt_summary_en": "Man about 45 dressed as a living playing card, the Two of Spades: stiff flat oblong ivory card tabard front and back with two black spade pips and '2' corner indices, arms and legs emerging at the corners, crimson shirt-sleeves and breeches, brown boots, sandy brown short side-parted hair, light blue eyes, long mild anxious clean-shaven face, red paint smears on hands, holding a paintbrush beside a white rose-tree, 1862 period realistic drama, human actor"
+}

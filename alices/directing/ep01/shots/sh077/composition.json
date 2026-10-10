@@ -1,0 +1,34 @@
+{
+  "shot_id": "sh077",
+  "scene_id": "SCN-long-hall",
+  "size": "detail",
+  "subject": {
+    "id": "PROP-white-kid-gloves-and-fan",
+    "grid": "centre",
+    "anchor_xy": [0.48, 0.58],
+    "size_in_frame": "the gloves and the fan hitting the surface, together about 0.34 of frame height; the ripple rings they make spread to the frame edges within the two seconds"
+  },
+  "second_subject": {
+    "id": "CHAR-white-rabbit",
+    "grid": "top_right",
+    "anchor_xy": [0.76, 0.34],
+    "note": "a white shape going away up the hall behind them, already small and getting smaller. He leaves the episode in two seconds."
+  },
+  "headroom": "not applicable — an insert at 0.08 m. The water fills the lower two thirds and the dark hall the upper third; there is no sky in this frame and no ceiling either.",
+  "horizon_eyeline": "Waterline across at 0.42 of frame height. No eyeline: nothing in this frame is looking at anything.",
+  "layers": {
+    "fg": "the two white objects striking the surface, and the crossing ripple rings",
+    "mg": "the disturbed water between them and the receding animal",
+    "bg": "the dark up the hall, where he is going"
+  },
+  "gaze": {
+    "direction": "none",
+    "lead_room": "right",
+    "note": "the only direction in the frame is his departure, up and to the right; nothing looks after him."
+  },
+  "balance": "Bottom-centre weight (the dropped things), upper-right escape (the animal). Two events, two seconds, and the composition is already emptying.",
+  "leading_lines": "Two sets of expanding concentric rings crossing each other — the only circles in S08 — and his wake cutting away from them toward the upper right.",
+  "eye_first": "The impact rings, then the white shape leaving.",
+  "safe_area_ok": true,
+  "constraint_binding": "He is gone from the episode in two seconds — do not extend. The composition is built so there is nothing left to look at after the rings cross: no reaction, no held wake, no lingering object other than the gloves and fan, which the next group picks up."
+}

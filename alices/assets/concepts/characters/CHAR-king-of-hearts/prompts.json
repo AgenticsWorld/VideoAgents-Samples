@@ -1,0 +1,75 @@
+{
+  "character_id": "CHAR-king-of-hearts",
+  "task_id": "p4-char-concept-cb1",
+  "kind": "human",
+  "waking_addon": false,
+  "inputs": [
+    "bible/characters/CHAR-king-of-hearts/appearance.json",
+    "bible/characters/CHAR-king-of-hearts/personality.json",
+    "bible/costumes.json",
+    "bible/style.json",
+    "bible/characters/index.json"
+  ],
+  "user_refs": [
+    {
+      "path": "refs/style/alice.jpeg",
+      "use": "read; applied through style.json style_fragment_ui. Not injected as --ref."
+    }
+  ],
+  "sheets": [
+    {
+      "file": "sheet.png",
+      "costume_id": "COS-009",
+      "character_en": "The King of Hearts, a male adult: a short, round-shouldered, mild English king of about sixty, about 163 cm tall, a little pot-bellied, a human actor in costume. Thinning grey hair and a short, neatly trimmed grey beard; bareheaded. Small, deep-set pale blue eyes under heavy lids; a pale, slightly sallow, round, soft, jowly face with a mild worried brow and a small mouth. Anxious, melancholy, eager-to-please expression. He stands square-on and stiff like a court card, hands clasped in front.",
+      "prompt_final": "Four-panel character reference sheet following the reference layout: three full-body views (front / side / back) left to right, and one large head-and-shoulders close-up filling the right column; the exact same character, outfit and proportions in every panel; plain background. The sheet looks like four production photographs mounted side by side on one board: the image is divided by three thin vertical gaps into three narrow full-height panels on the left and one wide panel on the right. Panel 1: full-body front view, standing naturally, facing the camera. Panel 2: full-body side profile view facing right. Panel 3: full-body back view. Panel 4 (right column): large head-and-shoulders close-up, facing the camera or a slight three-quarter turn, the face sharp and clear. Each full-body view shows the whole figure from the top of the head to the soles of the shoes with clear space above and below, a small patch of floor and a soft contact shadow under the feet; any part cut off by a panel edge makes the sheet invalid. Plain seamless warm light-grey studio backdrop in every panel, soft even light, no scenery. Identity lock: one and the same person in all four panels, with the same face, hair, build and costume; exactly one figure per panel; no duplicated or extra figures. Character: The King of Hearts, a male adult: a short, round-shouldered, mild English king of about sixty, about 163 cm tall, a little pot-bellied, a human actor in costume. Thinning grey hair and a short, neatly trimmed grey beard; bareheaded. Small, deep-set pale blue eyes under heavy lids; a pale, slightly sallow, round, soft, jowly face with a mild worried brow and a small mouth. Anxious, melancholy, eager-to-please expression. He stands square-on and stiff like a court card, hands clasped in front. Costume: an 1862 court dress styled as the King of Hearts playing card: a flat, rigid, rectangular crimson tabard front and back, piped in white and edged in black, with a red heart on a white field and a small gold crown device at the breast, the back in a crimson-and-cream lattice card-back pattern with a small heart rosette, worn over a long crimson wool ceremonial robe edged with white fur, a black frock coat and narrow black trousers beneath, a white high collar and white cravat, black buckled shoes; bareheaded; rich, heavy and slightly too big for him. Style: Photorealistic live-action fantasy film rooted in England in 1862, shot on 35mm film with anamorphic lenses, 16:9 widescreen. Real sets, real locations and real costumed actors in 1862 dress. Wonderland spaces are real built sets and set extensions in an Alphonse Mucha-inspired Art Nouveau design: flowing organic lines, floral and vine ornament, circular halo roundels, mosaic and stained glass, aged pastel-and-gold surfaces with patina and moss; the waking 1862 meadow stays plain period realism. Talking animals and fantastical creatures are photoreal CGI animals with naturalistic anatomy, real fur, feathers, skin and scales, lit by the same light and grounded with real contact shadows. Natural and practical light: sunlight, candlelight and oil lamps, soft haze with volumetric light shafts and soft colour through stained glass. Restrained palette of verdigris teal, slate grey, dusty rose, soft sage and lilac pastels and tarnished-gold accents, warmed by amber sun and candle glow. Fine film grain, gentle halation, soft depth of field, grounded and quietly melancholy. Layout recap (highest priority): four separate photographic panels side by side on one sheet: front, side profile, back, head-and-shoulders close-up; plain studio backdrop; never one single full-bleed picture.",
+      "negative_final": "cartoon, anime, animation, illustration, flat poster illustration, outline graphics, concept-art painting, digital painting, digital matte painting look, stylised 3D animation render, video game graphics, Pixar style, Disney animation style, cartoon animal face, big cartoon eyes, plush toy, human in animal costume, full-head animal mask, mascot costume, full-body fur suit, plastic skin, airbrushed, oversaturated, HDR, neon colors, candy pastel colors, horror monster, glowing magic, magic sparkles, fairy dust, energy beams, electric light, light bulb, neon sign, modern clothing, zipper, plastic, sunglasses, wristwatch, eyeglasses with modern frames, car, bicycle, power lines, tarmac road, Art Deco, steampunk gears, poster lettering, decorative text, gore, blood, wound, severed head, decapitation, executioner's axe, chopping block, guillotine, noose, gallows, blade at neck, execution, corpse, skeleton, horror, animal being struck, sexualized, watermark, logo, subtitles, caption, UI overlay, deformed hands, extra fingers, distorted face, single full-bleed illustration, one single panel, scenery background, crowd, text labels",
+      "costume_visual_en_verbatim": "an 1862 court dress styled as the King of Hearts playing card: a flat, rigid, rectangular crimson tabard front and back, piped in white and edged in black, with a red heart on a white field and a small gold crown device at the breast, the back in a crimson-and-cream lattice card-back pattern with a small heart rosette, worn over a long crimson wool ceremonial robe edged with white fur, a black frock coat and narrow black trousers beneath, a white high collar and white cravat, black buckled shoes; bareheaded; rich, heavy and slightly too big for him",
+      "refs": [
+        "runs/p4-char-concept-cb1/work/character_sheet_template.jpg"
+      ],
+      "size": "2560x1440",
+      "n": 1,
+      "seed": null,
+      "genmedia": "image → volcengine model=doubao-seedream-5-0-pro-260628\nvideo → volcengine model=doubao-seedance-2-0-260128\nmusic → elevenlabs model=music_v2\ntts   → volcengine model=seed-audio-1.0",
+      "submitted_at": "2026-09-23T00:37:36+08:00",
+      "elapsed_s": 134.4,
+      "exit_code": 0,
+      "log": "runs/p4-char-concept-cb1/gen_logs/CHAR-king-of-hearts_sheet.png.log",
+      "error_raw": null
+    }
+  ],
+  "costume_sheets": [
+    {
+      "task_id": "p4-costume-sheet",
+      "agent": "06-art/costume-concept",
+      "file": "sheet_COS-010.png",
+      "costume_ref": "COS-010",
+      "genmedia": "image → volcengine model=doubao-seedream-5-0-pro-260628",
+      "size": "2560x1440",
+      "n": 1,
+      "seed": null,
+      "ref": [
+        "runs/p4-char-concept-cb1/work/character_sheet_template.jpg",
+        "assets/concepts/characters/CHAR-king-of-hearts/sheet.png"
+      ],
+      "ref_roles": [
+        "layout template (JPEG re-encode of agents/06-art/character-concept/templates/character_sheet_template.png)",
+        "identity anchor"
+      ],
+      "user_refs": [
+        {
+          "path": "refs/style/alice.jpeg",
+          "use": "read; applied through style_fragment_ui as style.json user_refs describes; not injected as --ref (full scene would pull scenery into a plain-backdrop sheet)"
+        }
+      ],
+      "prompt": "Four-panel character reference sheet following the reference layout: three full-body views (front / side / back) left to right, and one large head-and-shoulders close-up filling the right column; the exact same character as the second reference image — same face, hair, skin and build — wearing a different outfit; plain background. The sheet looks like four production photographs mounted side by side on one board: three thin vertical gaps divide the image into three narrow full-height panels on the left and one wide panel on the right. Panel 1: full-body front view. Panel 2: full-body side profile view facing right. Panel 3: full-body back view. Panel 4: large head-and-shoulders close-up, the face sharp and clear. Each full-body view shows the whole figure from the top of the head to the feet with clear space above and below, a small patch of floor and a soft contact shadow; any part cut off by a panel edge makes the sheet invalid. Plain seamless light-grey studio backdrop in every panel, soft even light, no scenery. Exactly one figure per panel, one and the same individual in all four panels. Reference roles: the first reference image sets only the panel layout. The second reference image sets only who this is - face, hair, skin, body build and age; its clothing is not taken, and the outfit comes only from the costume text below. Character: the King of Hearts, a male adult: a short, round-shouldered, mild English king of about sixty, a little pot-bellied, with a short neatly trimmed grey beard, small deep-set pale blue eyes under heavy lids and a round, soft, jowly face with a mild worried brow. He stands square-on and stiff like a court card, hands clasped in front. Costume: an 1862 court dress styled as the King of Hearts playing card, worn as a judge: a full-bottomed white horsehair judge's wig falling to the shoulders with a gold crown set with a red heart perched awkwardly on top of it, a flat rigid rectangular crimson tabard front and back piped in white and edged in black with a red heart on a white field and a small gold crown device, the back in a crimson-and-cream lattice card-back pattern with a small heart rosette, over a long crimson wool robe edged with white fur, a black frock coat and trousers, a white high collar and white cravat, black buckled shoes; the wig and crown sit uncomfortably and slightly askew. Condition: Crown slides on the wig; he adjusts it throughout the session (CUL-011). Changes from the second reference: his bare thinning grey hair is now entirely covered by a full-bottomed white judge's wig falling to the shoulders, and the gold crown sits on top of the wig; the card tabard, robe and under-dress stay as written below. Style: Photorealistic live-action fantasy film rooted in England in 1862, shot on 35mm film with anamorphic lenses, 16:9 widescreen. Real sets, real locations and real costumed actors in 1862 dress. Wonderland spaces are real built sets and set extensions in an Alphonse Mucha-inspired Art Nouveau design: flowing organic lines, floral and vine ornament, circular halo roundels, mosaic and stained glass, aged pastel-and-gold surfaces with patina and moss; the waking 1862 meadow stays plain period realism. Talking animals and fantastical creatures are photoreal CGI animals with naturalistic anatomy, real fur, feathers, skin and scales, lit by the same light and grounded with real contact shadows. Natural and practical light: sunlight, candlelight and oil lamps, soft haze with volumetric light shafts and soft colour through stained glass. Restrained palette of verdigris teal, slate grey, dusty rose, soft sage and lilac pastels and tarnished-gold accents, warmed by amber sun and candle glow. Fine film grain, gentle halation, soft depth of field, grounded and quietly melancholy.",
+      "negative": "cartoon, anime, animation, illustration, flat poster illustration, outline graphics, concept-art painting, digital painting, digital matte painting look, stylised 3D animation render, video game graphics, Pixar style, Disney animation style, cartoon animal face, big cartoon eyes, plush toy, human in animal costume, full-head animal mask, mascot costume, full-body fur suit, plastic skin, airbrushed, oversaturated, HDR, neon colors, candy pastel colors, horror monster, glowing magic, magic sparkles, fairy dust, energy beams, electric light, light bulb, neon sign, modern clothing, zipper, plastic, sunglasses, wristwatch, eyeglasses with modern frames, car, bicycle, power lines, tarmac road, Art Deco, steampunk gears, poster lettering, decorative text, gore, blood, wound, severed head, decapitation, executioner's axe, chopping block, guillotine, noose, gallows, blade at neck, execution, corpse, skeleton, horror, animal being struck, sexualized, watermark, logo, subtitles, caption, UI overlay, deformed hands, extra fingers, distorted face, single full-bleed illustration, one single panel, scenery background, crowd, text labels",
+      "visual_en_verbatim": "an 1862 court dress styled as the King of Hearts playing card, worn as a judge: a full-bottomed white horsehair judge's wig falling to the shoulders with a gold crown set with a red heart perched awkwardly on top of it, a flat rigid rectangular crimson tabard front and back piped in white and edged in black with a red heart on a white field and a small gold crown device, the back in a crimson-and-cream lattice card-back pattern with a small heart rosette, over a long crimson wool robe edged with white fur, a black frock coat and trousers, a white high collar and white cravat, black buckled shoes; the wig and crown sit uncomfortably and slightly askew",
+      "submitted_at": "2026-09-23T01:01:05+08:00",
+      "elapsed_s": 53.6,
+      "exit_code": 0,
+      "log": "runs/p4-costume-sheet/gen_logs/CHAR-king-of-hearts_sheet_COS-010.log",
+      "error_raw": null
+    }
+  ]
+}

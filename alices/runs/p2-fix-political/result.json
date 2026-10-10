@@ -1,0 +1,84 @@
+{
+  "task_id": "p2-fix-political",
+  "agent": "02-worldbuilding/political",
+  "project": "alices",
+  "phase": "Phase 2 defect fix",
+  "attempt": 1,
+  "status": "done",
+  "generated": "2026-09-22",
+  "defect_fixed": "DEF-p2-bible-004",
+  "ruling_applied": "5.5 A (runs/h1-ruling/ruling.json, signed 2026-09-22T17:33:21+08:00) — register households/groups characters belong to",
+  "output_file": "bible/politics.json",
+  "summary": "Registered 7 new FAC-* entries and mapped 1 proposal key to an existing faction, resolving all 8 previously-unregistered world.json faction_register proposals (fac_ref: null). Added layer:'dream' to the 2 pre-existing factions. No IDs deprecated. All existing IDs kept stable.",
+  "proposal_key_to_fac_mapping": [
+    { "world_json_proposal_key": "alice-family-household", "fac_ref": "FAC-alice-family", "action": "new FAC-* id" },
+    { "world_json_proposal_key": "neighbouring-farm", "fac_ref": "FAC-neighbouring-farm", "action": "new FAC-* id" },
+    { "world_json_proposal_key": "pack-of-cards", "fac_ref": "FAC-house-of-hearts", "action": "mapped as sub-unit to existing faction (per DEF-p2-bible-004 option A wording); no new id created. FAC-house-of-hearts.summary extended with explicit cross-reference; already covered structurally by OFF-005 (Royal Gardener), OFF-006 (Card-Suit Soldier), OFF-008 (Knave of Hearts)." },
+    { "world_json_proposal_key": "visiting-monarchs", "fac_ref": "FAC-visiting-monarchs", "action": "new FAC-* id (beyond the 4 explicitly-named groups; included after review per fix instruction's 'review the other world.json faction_register proposals')" },
+    { "world_json_proposal_key": "white-rabbit-household", "fac_ref": "FAC-white-rabbit-household", "action": "new FAC-* id" },
+    { "world_json_proposal_key": "mad-tea-party", "fac_ref": "FAC-mad-tea-party", "action": "new FAC-* id" },
+    { "world_json_proposal_key": "caucus-race-company", "fac_ref": "FAC-caucus-race-company", "action": "new FAC-* id (beyond the 4 explicitly-named groups; included after review)" },
+    { "world_json_proposal_key": "school-in-the-sea", "fac_ref": "FAC-school-in-the-sea", "action": "new FAC-* id (beyond the 4 explicitly-named groups; included after review); seat left null because the source and world.json both state this location is never shown" }
+  ],
+  "note_for_memory_bible": "world.json's faction_register[] entries for the 8 proposal_keys above still carry fac_ref: null and registration text saying 'pending 02-worldbuilding/political + user ruling at H1' — those are memory-bible's own fields to update (per the fix instruction: 'world.json's faction_register refs will be re-pointed by memory-bible at recheck'). This agent did not edit bible/world.json (out of scope: 'edit ONLY your own bible file'). Use the mapping table above to re-point each proposal_key's fac_ref and registration text, the same way p2-merge previously re-keyed court-of-hearts -> FAC-house-of-hearts and duchess-household -> FAC-duchess-household.",
+  "ids_added": [
+    "FAC-alice-family",
+    "FAC-neighbouring-farm",
+    "FAC-visiting-monarchs",
+    "FAC-white-rabbit-household",
+    "FAC-mad-tea-party",
+    "FAC-caucus-race-company",
+    "FAC-school-in-the-sea"
+  ],
+  "ids_changed": [
+    { "id": "FAC-house-of-hearts", "change": "added layer:'dream'; extended summary with an explicit pack-of-cards / OFF-005 / OFF-006 / OFF-008 cross-reference sentence. No other fields touched; existing offices/laws/relationships referencing this id are unaffected." },
+    { "id": "FAC-duchess-household", "change": "added layer:'dream'. No other fields touched." }
+  ],
+  "ids_deprecated": [],
+  "ids_used_dictionary_should_register": {
+    "note": "New proper nouns/terms introduced by this fix that bible/dictionary.json (owned by 02-worldbuilding/dictionary) should pick up, per the fix instruction ('dictionary needs them').",
+    "terms": [
+      { "term": "Alice's Family Household", "category": "institution", "entity_ref": "FAC-alice-family" },
+      { "term": "the Neighbouring Farm", "category": "institution", "entity_ref": "FAC-neighbouring-farm" },
+      { "term": "the Guest Kings and Queens", "category": "institution", "entity_ref": "FAC-visiting-monarchs" },
+      { "term": "the White Rabbit's Household", "category": "institution", "entity_ref": "FAC-white-rabbit-household" },
+      { "term": "the Mad Tea-Party", "category": "institution", "original_name": "the Mad Tea-Party (chapter title: 'A Mad Tea-Party')", "entity_ref": "FAC-mad-tea-party" },
+      { "term": "the Caucus-Race Company", "category": "institution", "entity_ref": "FAC-caucus-race-company" },
+      { "term": "the School in the Sea", "category": "institution", "original_name": "school in the sea / Tortoise", "entity_ref": "FAC-school-in-the-sea" },
+      { "term": "Mary Ann", "category": "person", "note": "housemaid mentioned (never seen) in FAC-white-rabbit-household and FAC-alice-family summaries; ch004" },
+      { "term": "Pat", "category": "person", "note": "gardener mentioned in FAC-white-rabbit-household summary; ch004" }
+    ]
+  },
+  "known_cross_ref_risks_for_merge": [
+    {
+      "field": "FAC-alice-family.seat / FAC-neighbouring-farm.seat",
+      "risk": "LOC-family-house and LOC-farmyard are best-guess slugs; bible/geography.json does not yet register the family house, farmyard or river backwater (h1_summary.md section 3 and DEF-p2-bible-003, owned by 02-worldbuilding/geography, not this agent). Same known-risk pattern as this file's original p2-political seat guesses (LOC-walled-garden, LOC-duchess-house), both of which the merge later confirmed/re-keyed successfully."
+    },
+    {
+      "field": "FAC-visiting-monarchs.seat, FAC-mad-tea-party.seat, FAC-caucus-race-company.seat, FAC-white-rabbit-household.seat",
+      "risk": "None — these reference LOC-walled-garden, LOC-tea-table-yard, LOC-pool-bank and LOC-rabbits-house, all of which are already registered in the current bible/geography.json (status: merged_v1) as of this fix, so they resolve now. Flagging only that geography.json's current location set reflects the pre-ruling 'layered estate' reading that user ruling 5.2 A rejected (DEF-p2-bible-001/002, assigned to geography, not this agent); if geography renames or restructures these LOC-* ids when it fixes its own defect, these seat references will need a matching re-key at the next merge, the same way LOC-walled-garden was re-keyed from this agent's original 'hearts-estate' guess."
+    },
+    {
+      "field": "leader_refs (CHAR-white-rabbit, CHAR-dodo, CHAR-tortoise)",
+      "risk": "CHAR-* is forward-reference whitelisted (WRITE_RULES.md section 4). bible/characters/index.json is still skeleton_empty (Phase 3 not yet run), so these remain unverified predictable-slug guesses, same status as the original p2-political CHAR-* guesses."
+    }
+  ],
+  "no_unknown_placeholder_self_check": "PASS - re-ran the same grep-equivalent check as p2-political for UNKNOWN/unknown/TBD/N/A across the full updated file; no hits outside the documented _meta.entry_schema placeholder tokens ('chNNN' etc.). FAC-school-in-the-sea.seat is JSON null (not the string 'UNKNOWN'/'TBD'), with inferred:true + reason explaining it as source-withheld ('never shown'), per the deliberately-unrevealed-in-source allowance.",
+  "cross_ref_self_check": "PASS (internal) - all 9 faction ids unique and slug-pattern-valid; all offices[].faction_ref, laws[].issued_by, relationships[].from/to still resolve after the edit; all chapter citations fall within ch001-ch012.",
+  "evaluation": "skipped per project settings (quality judge = 0)",
+  "qa": "skipped per project settings (all QA dimensions = 0)",
+  "inputs_used": [
+    "bible/h1_summary.md (sections 1, 3, 5.5)",
+    "runs/h1-ruling/ruling.json (5.5 A)",
+    "qa/defects/DEF-p2-bible-004.json",
+    "bible/world.json faction_register[] (all 10 proposals read in full)",
+    "bible/geography.json (current LOC-* registry, status merged_v1, used for seat values where already registered)",
+    "bible/WRITE_RULES.md (ID prefixes, no-placeholder rule, forward-reference whitelist)",
+    "bible/politics.json (own file, pre-fix state, status merged_v1)"
+  ],
+  "files_written": [
+    "bible/politics.json",
+    "qa/defects/DEF-p2-bible-004.json (status -> fixed, fix_note added)",
+    "runs/p2-fix-political/result.json"
+  ]
+}

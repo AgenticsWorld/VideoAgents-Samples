@@ -1,0 +1,27 @@
+{
+  "character_id": "CHAR-old-crab",
+  "name": "old Crab",
+  "tier": "extra",
+  "card_type": "individual",
+  "gender": "female",
+  "age_sense": "elderly woman (appearance base_age_range 60-70)",
+  "timbre": "grainy, dry, crabbed old woman's voice, sententious",
+  "pitch": "low-mid, slightly cracked with age",
+  "pitch_range_hz": [150, 240],
+  "speed_wpm": [125, 145],
+  "speed_cpm": [475, 551],
+  "accent": "provincial lower-middle-class English, prim",
+  "reference_style": "Moralising mother seizing the moment to lecture her daughter about temper.",
+  "emotion_range": {
+    "moralising": { "speed_delta": "-5%", "pitch_delta": "0semi", "note": "'Ah, my dear! Let this be a lesson to you'" }
+  },
+  "age_variants": [],
+  "source_chapter": "ch003",
+  "sources": ["ch003", "ch003-p43", "ch003-d0061"],
+  "voice_evidence": [
+    { "para": "ch003-p43", "quote": "an old Crab took the opportunity of saying to her daughter" }
+  ],
+  "inferred": true,
+  "inferred_fields": ["timbre", "pitch", "pitch_range_hz", "speed_wpm", "speed_cpm", "accent"],
+  "reason": "No voice description; designed for an elderly mother (appearance.json)."
+}

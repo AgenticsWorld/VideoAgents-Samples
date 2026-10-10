@@ -1,0 +1,65 @@
+{
+  "shot_id": "sh008",
+  "group_id": "grp004",
+  "scene_no": "S01",
+  "scene_id": "SCN-riverbank",
+  "duration_s": 7.0,
+  "is_dialogue": false,
+  "group_position": "last shot of grp004 — Alice holds her map start (sitting_shelf, no path). CRE-001 runs his whole map line inside this shot: start meadow -> path sitting_shelf (within arm's reach of her shoes) -> end field_way.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "lie",
+      "start_pos": "flat on her back at sitting_shelf; only her shoes and hem are in frame, in the near screen-left foreground",
+      "space_fragment_en": "lying on her back at the sister's sitting place, her shoes and hem filling the near foreground on screen-left, only her eyes moving",
+      "facing": "face up, unmoved; her eyes track the animal across her own feet",
+      "path": [],
+      "beats": [
+        { "t": 2.2, "action": "her eyes catch the white shape entering from screen-right", "sync": "the rabbit clears the long grass" },
+        { "t": 3.6, "action": "eyes swing left with him as he passes her shoes", "sync": "his closest pass" },
+        { "t": 5.4, "action": "eyes stay on the meadow after he has gone", "sync": "held to the cut" }
+      ],
+      "performance_beat": {
+        "objective": "work out whether she has actually seen what she has just seen",
+        "goal": "work out whether she has actually seen that",
+        "emotional_arc": "from blank waking to a held, unspoken disbelief that never becomes a reaction shot",
+        "arc_from": "blank, newly woken",
+        "arc_to": "held disbelief, still lying down",
+        "trigger": { "beat": "the rabbit crosses within arm's reach of her shoes", "t": 3.6 },
+        "no_early_reaction": ["sitting up", "the head lifting off the grass", "a gasp"],
+        "forbidden_early": ["sitting up", "the head lifting off the grass", "a gasp"],
+        "end_state": "still flat on her back, eyes fixed down the meadow where he went, one slow blink, lips parted"
+      }
+    }
+  ],
+  "creatures": [
+    {
+      "id": "CRE-001",
+      "label": "Wild White Rabbit",
+      "pose": "stand",
+      "start_pos": "breaking out of the long grass of the meadow, entering from screen-right in the middle distance",
+      "space_fragment_en": "standing on all fours out of the open meadow on screen-right, crossing the sister's sitting place toward the way across the field to the hedge",
+      "facing": "head down the line of travel throughout — right to left across the near ground, then away down the meadow; never toward Alice, never toward the lens",
+      "path": [
+        { "t": 3.4, "to": "within arm's reach of her shoes at the sitting place, at a flat gallop" },
+        { "t": 5.0, "to": "bounding away toward the way across the field to the hedge" }
+      ],
+      "beats": [
+        { "t": 2.2, "action": "breaks cover, quick and silent", "sync": "enters frame" },
+        { "t": 3.4, "action": "passes her shoes without checking his stride", "sync": "closest pass — no pause, no look" },
+        { "t": 5.0, "action": "turns away from camera and bounds off down the meadow", "sync": "exit" }
+      ],
+      "animal_discipline": "Filmed as a real animal: true gait, true scale, no clothing, no pause, no look to camera and no look at Alice. He is the only bright white moving in the frame."
+    }
+  ],
+  "offscreen_presence": [
+    { "id": "CHAR-alice-sister", "where": "at the sister's sitting place, still reading", "note": "In the space, out of frame." }
+  ],
+  "presence_check": {
+    "timeline_ok": true,
+    "violations": [],
+    "story_event": "ev0001 (real_frame, T0)",
+    "note": "CRE-001 is legal here and in grp006 only. The waistcoated CHAR-white-rabbit does not exist in the real frame."
+  }
+}

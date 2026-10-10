@@ -1,0 +1,28 @@
+{
+  "shot_id": "sh074",
+  "scene_id": "SCN-long-hall",
+  "size": "medium",
+  "subject": {
+    "id": "CHAR-white-rabbit",
+    "grid": "mid_left",
+    "anchor_xy": [0.38, 0.44],
+    "size_in_frame": "sitting back on his haunches, about 0.40 of frame height, with his reflection doubling him below to about 0.34 more"
+  },
+  "headroom": "about 0.30 of frame height of dark hall above his ears; the frame keeps him low in a tall dark space so he reads as a small animal in a large room even while he is the subject.",
+  "horizon_eyeline": "Lens at 0.10 m: the waterline runs dead level across at 0.58 of frame height and cuts him at the chest; his reflection runs down from it. His eyeline is at 0.46, aimed off frame left, up the hall — he is fretting about where he is going, not about where he is.",
+  "layers": {
+    "fg": "the still water running to the bottom edge, holding his inverted double",
+    "mg": "the Rabbit sitting back on his haunches, gloves and fan now in his forepaws",
+    "bg": "the dark hall and the wet stone, no fittings"
+  },
+  "gaze": {
+    "direction": "frame_left",
+    "lead_room": "left",
+    "note": "he speaks to frame left, up the hall and away from Alice; about 0.30 of frame width of open water sits on that side. He has not registered her and the composition makes that literal — he is not looking anywhere near where she is."
+  },
+  "balance": "Left of centre and mirrored: animal above the line, animal below it. The doubling is the frame's only ornament and it is made of water.",
+  "leading_lines": "The waterline is a hard level horizontal through the middle of the frame and the reflection makes the composition symmetrical about it — the one axis of symmetry in S08, and it is horizontal, not vertical.",
+  "eye_first": "His muzzle and ears, then down to his own reflection.",
+  "safe_area_ok": true,
+  "constraint_binding": "QUADRUPED RABBIT — he sits back on his haunches and the gloves and fan transfer to his forepaws; speech is muzzle, ears and the set of his shoulders, so the composition holds all three in frame at readable size and never crops to a mouth. No human gesture, no bipedal stance. ONE speaker in frame for the native dialogue take: Alice is entirely out of shot."
+}

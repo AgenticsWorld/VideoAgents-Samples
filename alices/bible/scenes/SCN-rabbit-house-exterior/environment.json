@@ -1,0 +1,87 @@
+{
+  "_meta": {
+    "file": "bible/scenes/SCN-rabbit-house-exterior/environment.json",
+    "owner": "05-scenes/environment",
+    "task_id": "p3-environment-sb1",
+    "attempt": 1,
+    "generated": "2026-09-22",
+    "amended": {"change_id": "BIB-0027", "task_id": "p4-cr-environment", "date": "2026-09-23", "fields": ["fixed.dream_design (new)"]},
+    "enum_set": "ENV-ENUM-v1 (defined once in runs/p3-environment-sb1/result.json)"
+  },
+  "scene_id": "SCN-rabbit-house-exterior",
+  "layer": "dream",
+  "fixed": {
+    "climate": "dream exterior at the wood's edge, under the same hot midsummer afternoon (geography.json LOC-rabbits-house 'as thick-wood')",
+    "indoor": false,
+    "daylight_access": "open_sky",
+    "dream_design": {
+      "rule": "WR-010 / XA-magic-08 (dream, full)",
+      "flora": "climbing roses and honeysuckle wreath the door and the upstairs window; sweet peas on canes beside the cucumber-frames; the trees behind the house have flowing, curving boughs",
+      "ornament_cues": "the brass plate 'W. RABBIT' sits inside a floral cartouche above the door, and the door has a round fanlight (form and material belong to architecture); the upstairs window is a rounded arch, framed by the climbers, where Alice's arm later bursts out",
+      "palette": "warm cream walls, rose and honeysuckle-cream flowers, sage leaves, polished brass gold, sun-baked honey earth",
+      "seasonal_guard": "roses, honeysuckle and sweet peas flower in July; cucumber-frames in summer use",
+      "inferred": true,
+      "reason": "The house, brass plate, window and cucumber-frames are explicit (ch004-p03, p15..p28). Climbers, cartouche and palette are designed to WR-010."
+    },
+    "ground_and_flora": "a small yard of dry, sun-baked earth and summer grass; glass cucumber-frames glinting in the sun; trees in full July leaf behind the house",
+    "dream_growth": "Grows from the family's own house and housemaid on a summer afternoon. The house stands in the same hot sunshine as the waking bank, so the yard, window and roof are seen as an ordinary sunny July afternoon at home.",
+    "source": {"chapter": "ch004", "quote": "she came upon a neat little house, on the door of which was a bright brass plate with the name “W. RABBIT,” engraved upon it"},
+    "inferred": true,
+    "reason": "The house, brass plate, window, cucumber-frames and chimney are in the source (ch004-p03, ch004-p15..p28). The source gives no weather here, so the afternoon state is carried from the continuous timeline and ruling 5.2 A."
+  },
+  "variable_dims": {
+    "season": ["summer"],
+    "time_of_day": ["afternoon"],
+    "weather": ["fair_hot"],
+    "wind": ["still"],
+    "temperature": ["hot"]
+  },
+  "states": [
+    {
+      "state_id": "SCN-rabbit-house-exterior-S01",
+      "chapter": 4,
+      "chapter_id": "ch004",
+      "story_scene": "ch004-sc01",
+      "paragraphs": "ch004-p03",
+      "timeline_ref": "ev0014",
+      "timeline_node": "TL-003",
+      "season": "summer",
+      "weather": "fair_hot",
+      "wind": "still",
+      "temperature": "hot",
+      "time_of_day": "afternoon",
+      "waking_clock": "15:36-15:38 GMT (Alice asleep on the bank)",
+      "sun": {"elevation_deg_approx": 41, "azimuth_deg_approx": 255, "note": "south-west to west; the lane (north) front and its polished brass plate are in bright open shade; the west gable and the south yard take the sun"},
+      "sky": "clear summer sky, a few fair-weather clouds",
+      "conditions": "hot, still, bright; Alice arrives at a run",
+      "source_chapter": "ch004",
+      "source": {"chapter": "ch004", "quote": "a bright brass plate with the name “W. RABBIT,” engraved upon it"},
+      "inferred": true,
+      "reason": "The source gives no weather; the afternoon values are carried from the continuous dream clock, just after ev0014 on SCN-pool-bank."
+    },
+    {
+      "state_id": "SCN-rabbit-house-exterior-S02",
+      "chapter": 4,
+      "chapter_id": "ch004",
+      "story_scene": "ch004-sc03..ch004-sc04",
+      "paragraphs": "ch004-p14..ch004-p34",
+      "timeline_ref": "ev0016",
+      "timeline_span": ["ev0016", "ev0017"],
+      "timeline_node": "TL-003",
+      "season": "summer",
+      "weather": "fair_hot",
+      "wind": "still",
+      "temperature": "hot",
+      "time_of_day": "afternoon",
+      "waking_clock": "15:49-15:56 GMT (Alice asleep on the bank)",
+      "sun": {"elevation_deg_approx": 39, "azimuth_deg_approx": 257, "note": "a little lower; the ladders and roof cast longer shadows across the yard than in S01"},
+      "sky": "clear summer sky",
+      "conditions": "hot, still, dusty yard during the siege; broken cucumber-frame glass glints on the ground; dry dust and pebbles thrown at the window",
+      "source_chapter": "ch004",
+      "source": {"chapter": "ch004", "quote": "a shower of little pebbles came rattling in at the window, and some of them hit her in the face"},
+      "also_seen": [{"chapter": "ch004", "refs": ["ch004-p34"], "quote": "she ran out of the house, and found quite a crowd of little animals and birds waiting outside"}],
+      "inferred": true,
+      "reason": "The siege business is explicit (ch004-p14..p34) but the source gives no weather. Values are carried from the continuous clock; dust and glass glints are designed to fit a hot, dry yard."
+    }
+  ]
+}

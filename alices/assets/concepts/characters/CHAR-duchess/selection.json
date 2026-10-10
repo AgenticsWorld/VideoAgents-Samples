@@ -1,0 +1,70 @@
+{
+  "character_id": "CHAR-duchess",
+  "task_id": "p4-char-concept-cb1",
+  "sheet": "sheet.png",
+  "variants": [],
+  "self_check": {
+    "sheet.png": {
+      "layout": "PASS",
+      "appearance_field_hits": {
+        "gender_female_about_sixty": true,
+        "iron_grey_hair_under_headdress": true,
+        "small_close_set_beady_eyes": true,
+        "eyes_muddy_hazel": "partial (reads brown)",
+        "sharp_small_jutting_chin_key_feature": false,
+        "heavy_jowls_bulbous_nose_thin_lips_deep_lines": "partial",
+        "sallow_blotchy_red_nose": true,
+        "short_stout_top_heavy_stooping": "partial",
+        "scowling": true
+      },
+      "costume_COS-013_hits": {
+        "dull_mulberry_silk_shiny_wear": true,
+        "over_trimmed_boned_bodice_frayed_ivory_lace_collar": true,
+        "tarnished_jet_buttons": true,
+        "limp_lace_cuffs": true,
+        "very_wide_outdated_crinoline": false,
+        "grease_marked_front": true,
+        "large_grubby_lace_headdress_with_lappets": true,
+        "pepper_dusting": true
+      },
+      "style": "PASS",
+      "defects": [
+        "MAJOR: the key feature 'sharp, small, jutting chin' is not readable (chin is ordinary/soft in profile).",
+        "Skirt is a moderate bell, not the 'outdated very wide crinoline'.",
+        "Head is not notably large/top-heavy on a short body; stoop is slight."
+      ]
+    }
+  },
+  "rerolls": [],
+  "costume_sheets": {
+    "sheet_COS-014.png": {
+      "task_id": "p4-costume-sheet",
+      "agent": "06-art/costume-concept",
+      "costume_ref": "COS-014",
+      "status": "final (kept; reroll budget 0)",
+      "self_check": {
+        "layout": "PASS",
+        "identity": "PASS (same face, scowl, build as sheet.png)",
+        "costume_hits": {
+          "mulberry_silk_gown_heavy_boned_bodice": true,
+          "very_wide_crinoline": "weak (moderate width, as in the base sheet)",
+          "three_deep_black_lace_flounces": "partial (two flounce tiers visible)",
+          "black_lace_mantle_with_large_tarnished_gilt_brooch": true,
+          "deep_black_silk_coal_scuttle_bonnet": "partial (front brim deep, but the side and back views show a flat-topped hat crown)",
+          "drooping_purple_ostrich_plumes": true,
+          "wide_mulberry_ribbons_tied_under_chin": true,
+          "black_lace_mittens": true,
+          "crushed_askew": "weak"
+        },
+        "style": "PASS"
+      },
+      "defects": [
+        "major: two black lace flounces instead of three",
+        "major: the coal-scuttle bonnet reads as a flat-topped hat in the side and back views",
+        "minor: the crinoline is not 'very wide' (inherited weakness of the base sheet)",
+        "minor: little visible crushing; the bonnet is barely askew"
+      ]
+    }
+  },
+  "costume_rerolls": []
+}

@@ -1,0 +1,24 @@
+=== episode_plan 机检 ===
+[CHECK] events_classified_once      : PASS
+[CHECK] treatments_complete         : PASS
+[CHECK] dramatize_within_cap        : PASS
+[CHECK] hook_points_dramatized      : PASS
+[CHECK] merge_target_valid          : PASS
+[CHECK] duration_in_budget          : PASS
+[CHECK] ids_valid                   : PASS
+[CHECK] cut_not_on_causal_chain     : PASS
+
+对账范围: 全量  范围内事件 54  归类条目 54
+
+集     预算   事件  演  带过  并入  删  上限  卡点
+ep01     540s    8    6     0     2    0    6  ev0001->ev0008
+ep02     360s    5    4     0     1    0    4  ev0009->ev0013
+ep03     450s    5    5     0     0    0    5  ev0014->ev0018
+ep04     540s   10    6     0     4    0    6  ev0019->ev0028
+ep05     450s    5    5     0     0    0    5  ev0029->ev0033
+ep06     420s    5    4     1     0    0    5  ev0034->ev0038
+ep07     450s    6    5     0     1    0    5  ev0039->ev0044
+ep08     330s    3    3     0     0    0    4  ev0045->ev0047
+ep09     450s    7    5     0     2    0    5  ev0048->ev0054
+
+全部机检: ALL PASS

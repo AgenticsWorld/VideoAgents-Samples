@@ -1,0 +1,28 @@
+{
+  "shot_id": "sh092",
+  "scene_id": "SCN-long-hall",
+  "size": "close",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "bottom_centre",
+    "anchor_xy": [0.46, 0.66],
+    "size_in_frame": "her boot and the standing water fill the lower half of frame, the boot about 0.30 of frame height; her face is just above, about 0.20 of frame height, near the top edge"
+  },
+  "headroom": "about 0.10 of frame height — tight, so the frame is mostly boot and puddle and the face is squeezed into the top of it. The proportion is the frustration.",
+  "horizon_eyeline": "Low close at 0.20 m: the standing water runs across at 0.58 of frame height. Her eyeline is at 0.26, down at her own foot, and comes up wet at the end.",
+  "layers": {
+    "fg": "the puddle, still and reflective, waiting",
+    "mg": "her boot coming down into it and the splash going up",
+    "bg": "her face above, and dark wet flagstone behind"
+  },
+  "gaze": {
+    "direction": "down_frame",
+    "lead_room": "none",
+    "note": "she is looking at her own foot. The composition gives her nothing to be angry at except the floor."
+  },
+  "balance": "Bottom-heavy with water and boot, with the face crowded into the top strip. A frame that puts a child's temper at the bottom of the picture, where it is small.",
+  "leading_lines": "The ripple rings spread from the stamp outward to the frame edges — the third set of rings in the episode, and the smallest.",
+  "eye_first": "The boot coming down, then the splash, then her face.",
+  "safe_area_ok": true,
+  "constraint_binding": "Land the stamp IN A PUDDLE — a small, tidy, absurd splash, deliberately the same sound family as the big one six seconds later. The composition therefore puts the puddle in the near foreground at readable size and keeps the whole splash inside the frame so it can be seen to be small; the frustration carries the unspoken line, so her face is held in shot but subordinate."
+}

@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh018",
+  "group_id": "grp008",
+  "scene_no": "S03",
+  "duration_s": 7.0,
+  "size": "wide",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked framing on her; the camera descends with her so she holds one place in frame and all visible motion belongs to the dressing)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 28,
+  "camera_height_m": "on her own axis, below her, no floor datum and no horizon",
+  "angle": "low, looking up the shaft past her",
+  "rack_focus": "none",
+  "start_frame": "Tight on her back as she drops through the tunnel mouth: the mouth still bright and close above her, the round earth walls just beginning to open out.",
+  "end_frame": "The same framing with the tunnel mouth shrunk to a far speck: the fall slowed to nothing, skirts billowing and hair pulled up, the first pass — glazed cupboards and rows of stoneware jars — sliding steadily upward past her.",
+  "constraint_honoured": "'No horizon, no Dutch, no spinning camera. All the movement belongs to the dressing' — the frame holds her still and the shaft travels.",
+  "movement_note": "Written for the model as a locked frame on her with the set moving: no camera-move term is given, which is the only stable way to generate an endless fall.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

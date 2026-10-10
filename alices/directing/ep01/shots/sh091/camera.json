@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh091",
+  "group_id": "grp033",
+  "scene_no": "S09",
+  "duration_s": 4.0,
+  "size": "medium",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 28,
+  "camera_height_m": 0.55,
+  "angle": "slightly up",
+  "rack_focus": "none",
+  "start_frame": "Along the curtain-to-table axis: Alice turning in the near frame to look back up the hall, the glass table standing away from her down the flooded floor.",
+  "end_frame": "The same frame held on the look: the 0.715 m tabletop now a high shelf far above her head with the golden key a spark on top of it — still the brightest thing in the hall — and her tiny reflection doubled in the wet flagstone below.",
+  "constraint_honoured": "'The one image of the scene. Still the brightest thing in the hall.'",
+  "movement_note": "The space lens and a held frame keep the table, the key and her all measurable in one image; a move would spend the distance the shot exists to state.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

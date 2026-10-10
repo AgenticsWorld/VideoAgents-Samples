@@ -1,0 +1,24 @@
+{
+  "task_id": "p3-architecture-sb1",
+  "run_id": "6b9ffa2b1ceb",
+  "attempt": 1,
+  "model": "agent default",
+  "tokens": null,
+  "started_at": null,
+  "finished_at": "2026-09-22T18:32:59+08:00",
+  "inputs_sha256": {},
+  "artifact_versions": {
+    "bible/scenes/SCN-riverbank/architecture.json": "v1",
+    "bible/scenes/SCN-field-hedge-burrow/architecture.json": "v1",
+    "bible/scenes/SCN-falling-dream/architecture.json": "v1",
+    "bible/scenes/SCN-shaft-landing-passage/architecture.json": "v1",
+    "bible/scenes/SCN-long-hall/architecture.json": "v1",
+    "bible/scenes/SCN-little-door-passage/architecture.json": "v1",
+    "bible/scenes/SCN-pool-of-tears/architecture.json": "v1",
+    "bible/scenes/SCN-pool-bank/architecture.json": "v1",
+    "bible/scenes/SCN-rabbit-house-exterior/architecture.json": "v1",
+    "bible/scenes/SCN-rabbit-house-upstairs-room/architecture.json": "v1",
+    "bible/scenes/SCN-wood-thistle-glade/architecture.json": "v1",
+    "bible/scenes/SCN-caterpillar-clearing/architecture.json": "v1"
+  }
+}

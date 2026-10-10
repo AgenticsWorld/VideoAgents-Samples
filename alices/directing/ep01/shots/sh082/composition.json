@@ -1,0 +1,35 @@
+{
+  "shot_id": "sh082",
+  "scene_id": "SCN-long-hall",
+  "size": "close",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "centre",
+    "anchor_xy": [0.46, 0.44],
+    "size_in_frame": "the sh078-sh080 frame returned to exactly — her face about 0.60 of frame height"
+  },
+  "second_subject": {
+    "id": "PROP-white-kid-gloves-and-fan",
+    "grid": "mid_right",
+    "anchor_xy": [0.74, 0.66],
+    "note": "still in her hand, still stopped, in the same place in frame as it was left in sh080."
+  },
+  "headroom": "about 0.14 of frame height — identical to sh079 and sh080 to the pixel. The return must be exact or the aria stops reading as one continuous thing.",
+  "horizon_eyeline": "Same axis, lens 0.60 m, waterline at 0.88 of frame height. Her eyeline is at 0.42, level, and for the first time in the aria it is sharp and outward — she is appalled, and looking at something.",
+  "layers": {
+    "fg": "the still fan",
+    "mg": "her face",
+    "bg": "near black"
+  },
+  "gaze": {
+    "direction": "frame_left",
+    "lead_room": "left",
+    "note": "the same left lead room, and now she is staring into it with focus. The space that has been empty for three shots is where she puts Mabel."
+  },
+  "balance": "The sustained frame, unchanged, carrying a changed face. All the movement in this shot is inside the composition rather than in it.",
+  "leading_lines": "The waterline. Nothing else, as before.",
+  "eye_first": "Her eyes — and the audience should recognise the frame before they read the expression, which is the same trick as sh001/sh022.",
+  "safe_area_ok": true,
+  "constraint_binding": "Returning to the identical frame is what makes the aria read as one continuous thing broken only for her hands, so subject placement, scale, headroom, eyeline height, waterline height and lighting are all reproduced from sh079/sh080 without adjustment. Static.",
+  "pairs_with": "sh078, sh079, sh080 — the sustained set-up, returned to exactly."
+}

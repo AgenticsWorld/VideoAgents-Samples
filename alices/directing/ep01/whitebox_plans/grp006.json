@@ -1,0 +1,387 @@
+{
+  "schema_version": "whitebox_plan.v1",
+  "group_id": "grp006",
+  "scene_id": "SCN-field-hedge-burrow",
+  "basis": "Alice runs her whole blocking_map line inside the group: run_start (X 2.65 / Z -13.42) -> mid_field (2.65 / -4.47) at t=4.2 -> spoil_fan (1.06 / 3.58), slowing to a walk from t=8.6 and standing still from t=10.5 so the arrival reads as an arrival and not a constant-speed glide. That is 17.2 m in 12 s; camera.json sh010 quotes 'thirteen metres in five seconds', but the map only offers 8.94 m between run_start and mid_field, so the map wins and her run sits at about 2.1 m/s, a real child's pace. CRE-001 starts on his own map anchor at mid_field a few bounds ahead of her, bounds and freezes twice (the 'drops out of sight and reappears further off' beat), crosses the pale spoil and goes head-first into the burrow at sh012 t=2.4 (group t=10.4), after which he is hidden. Their lines stay at least 0.75 m apart throughout.",
+  "actors": [
+    {
+      "id": "CHAR-alice",
+      "kind": "person",
+      "size_m": [
+        0.378,
+        1.35,
+        0.297
+      ],
+      "keyframes": [
+        {
+          "t": 0.0,
+          "position": [
+            2.65,
+            0.0,
+            -13.416
+          ],
+          "pose": "stand",
+          "yaw": 0.0
+        },
+        {
+          "t": 2.4,
+          "position": [
+            2.65,
+            0.0,
+            -8.3
+          ],
+          "pose": "stand",
+          "yaw": 0.0
+        },
+        {
+          "t": 4.2,
+          "position": [
+            2.65,
+            0.0,
+            -4.472
+          ],
+          "pose": "stand",
+          "yaw": 0.0
+        },
+        {
+          "t": 5.0,
+          "position": [
+            2.55,
+            0.0,
+            -3.9
+          ],
+          "pose": "stand",
+          "yaw": -0.1953
+        },
+        {
+          "t": 7.6,
+          "position": [
+            1.3,
+            0.0,
+            2.3
+          ],
+          "pose": "stand",
+          "yaw": -0.1953
+        },
+        {
+          "t": 8.6,
+          "position": [
+            1.22,
+            0.0,
+            2.85
+          ],
+          "pose": "stand",
+          "yaw": -0.1953
+        },
+        {
+          "t": 10.5,
+          "position": [
+            1.06,
+            0.0,
+            3.577
+          ],
+          "pose": "stand",
+          "yaw": -0.1953,
+          "head_pitch": 0.35
+        },
+        {
+          "t": 12.0,
+          "position": [
+            1.06,
+            0.0,
+            3.577
+          ],
+          "pose": "stand",
+          "yaw": -0.1953,
+          "head_pitch": 0.45
+        }
+      ]
+    },
+    {
+      "id": "CRE-001",
+      "kind": "creature",
+      "size_m": [
+        0.13,
+        0.22,
+        0.38
+      ],
+      "keyframes": [
+        {
+          "t": 0.0,
+          "position": [
+            2.65,
+            0.0,
+            -4.472
+          ],
+          "pose": "stand",
+          "yaw": -0.1687
+        },
+        {
+          "t": 1.5,
+          "position": [
+            2.4,
+            0.0,
+            -3.0
+          ],
+          "pose": "stand",
+          "yaw": -0.1687
+        },
+        {
+          "t": 3.8,
+          "position": [
+            2.2,
+            0.0,
+            -1.2
+          ],
+          "pose": "stand",
+          "yaw": -0.1104
+        },
+        {
+          "t": 5.0,
+          "position": [
+            2.0,
+            0.0,
+            -0.2
+          ],
+          "pose": "stand",
+          "yaw": -0.1974
+        },
+        {
+          "t": 6.5,
+          "position": [
+            1.0,
+            0.0,
+            1.2
+          ],
+          "pose": "stand",
+          "yaw": -0.6202
+        },
+        {
+          "t": 8.0,
+          "position": [
+            0.5,
+            0.0,
+            2.5
+          ],
+          "pose": "stand",
+          "yaw": -0.3672
+        },
+        {
+          "t": 9.0,
+          "position": [
+            0.35,
+            0.0,
+            2.6
+          ],
+          "pose": "stand",
+          "yaw": -0.9987
+        },
+        {
+          "t": 10.4,
+          "position": [
+            0.0,
+            0.0,
+            2.683
+          ],
+          "pose": "stand",
+          "yaw": -0.9987
+        },
+        {
+          "t": 10.6,
+          "position": [
+            0.0,
+            -0.15,
+            2.683
+          ],
+          "pose": "prone",
+          "yaw": 2.1429,
+          "visible": false
+        },
+        {
+          "t": 12.0,
+          "position": [
+            0.0,
+            -0.15,
+            2.683
+          ],
+          "pose": "prone",
+          "yaw": 2.1429,
+          "visible": false
+        }
+      ]
+    }
+  ],
+  "cameras": [
+    {
+      "shot_id": "sh010",
+      "start": 0,
+      "duration_s": 5.0,
+      "movement": "track_follow",
+      "keyframes": [
+        {
+          "t": 0.0,
+          "position": [
+            -0.38,
+            1.0,
+            -12.768
+          ],
+          "target": [
+            2.65,
+            1.0,
+            -12.768
+          ],
+          "fov": 33.3985
+        },
+        {
+          "t": 5.0,
+          "position": [
+            -0.48,
+            1.0,
+            -3.252
+          ],
+          "target": [
+            2.55,
+            1.0,
+            -3.252
+          ],
+          "fov": 33.3985
+        }
+      ]
+    },
+    {
+      "shot_id": "sh011",
+      "start": 5.0,
+      "duration_s": 3.0,
+      "movement": "static",
+      "keyframes": [
+        {
+          "t": 0.0,
+          "position": [
+            1.06,
+            0.9,
+            5.0
+          ],
+          "target": [
+            2.0,
+            0.9,
+            -5.0
+          ],
+          "fov": 46.3972
+        },
+        {
+          "t": 3.0,
+          "position": [
+            1.06,
+            0.9,
+            5.0
+          ],
+          "target": [
+            2.0,
+            0.9,
+            -5.0
+          ],
+          "fov": 46.3972
+        }
+      ]
+    },
+    {
+      "shot_id": "sh012",
+      "start": 8.0,
+      "duration_s": 4.0,
+      "movement": "static",
+      "keyframes": [
+        {
+          "t": 0.0,
+          "position": [
+            2.35,
+            0.9,
+            1.65
+          ],
+          "target": [
+            0.2,
+            0.55,
+            2.85
+          ],
+          "fov": 33.3985
+        },
+        {
+          "t": 4.0,
+          "position": [
+            2.35,
+            0.9,
+            1.65
+          ],
+          "target": [
+            0.2,
+            0.55,
+            2.85
+          ],
+          "fov": 33.3985
+        }
+      ]
+    }
+  ],
+  "continuity": {
+    "actors": "cut",
+    "camera": "cut"
+  },
+  "warnings": [
+    "sh010 is the abeam travelling shot: the rig runs parallel to her line 3.03 m off her -X flank at her own 2.1 m/s, screen-right opens toward +Z (the direction of travel and the rabbit ahead of her), and she holds a constant screen-left position - a translation only, no pan, no reframe.",
+    "sh011: the lens sits in the dry ditch 2.3 m beyond the burrow (Z 5.0, clear of the hedge bank at Z 5.36). That is the furthest a camera can stand back on the tile-2 axis without being inside the hedge, so she grows from about 0.17 to about 0.64 of frame height instead of composition's 0.30 to 0.75.",
+    "sh012: on the tile-3 axis (mid_field toward spoil_fan) screen-right is -X, and the modelled geometry puts Alice at larger X than the burrow, so her near-foreground shoulder falls on screen-LEFT of the rabbit, not the screen-right third that composition sh012 states. Geometry followed; the screen-side wording belongs to 07-directing/composition."
+  ],
+  "issues": [
+    {
+      "issue_id": "WBI-ep01-grp006-001",
+      "kind": "source_conflict",
+      "severity": "advisory",
+      "question": "sh010 is an abeam tracking shot (camera.json: 'abeam, travelling with her'), but the blocking_map puts CRE-001's start at mid_field, 8.94 m ahead of her run_start. A 40 mm frame 3.0 m off her flank is 3.2 m wide, so the rabbit composition wants 'in the open two thirds of frame' falls far outside it. Which gives - the abeam rig, or the 8.94 m gap?",
+      "provisional": "Keep the abeam rig camera.json specifies and let the rabbit stay out of frame in sh010; he is in frame from sh011 onward, where the camera looks down the travel axis.",
+      "options": [
+        {
+          "id": "abeam",
+          "label": "Keep the abeam rig; the rabbit is out of frame in sh010 (the default)",
+          "consequence": "sh010 shows only Alice running with empty grass ahead; the white flicker composition asks for has to come from the plate, not the whitebox.",
+          "cost": "none"
+        },
+        {
+          "id": "close",
+          "label": "Bring the rabbit back to a few bounds ahead of her (about 3 m) for sh010",
+          "consequence": "Both fit the abeam frame and the shot works as written, but it moves CRE-001 off his blocking_map start anchor.",
+          "cost": "blocking_map edit",
+          "rewrites": [
+            "directing/ep01/shot_list.json"
+          ]
+        },
+        {
+          "id": "angle",
+          "label": "Swing the rig to a forward three-quarter so it sees down the field",
+          "consequence": "The rabbit comes into frame but Alice is pushed to the frame edge and the shot is no longer the abeam travelling shot camera.json specifies.",
+          "cost": "contradicts camera.json"
+        }
+      ],
+      "recommended": "close",
+      "shots": [
+        "sh010"
+      ],
+      "actors": [
+        "CHAR-alice",
+        "CRE-001"
+      ],
+      "t_range_s": [
+        0,
+        5.0
+      ],
+      "sources": [
+        {
+          "file": "directing/ep01/shots/sh010/camera.json",
+          "quote": "abeam, travelling with her across the field toward the hedge"
+        },
+        {
+          "file": "directing/ep01/shot_list.json",
+          "quote": "blocking_map grp006: CRE-001 start mid_field, 'a few bounds ahead of her'"
+        }
+      ]
+    }
+  ]
+}

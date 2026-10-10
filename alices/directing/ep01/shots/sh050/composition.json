@@ -1,0 +1,34 @@
+{
+  "shot_id": "sh050",
+  "scene_id": "SCN-long-hall",
+  "size": "medium",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "centre",
+    "anchor_xy": [0.44, 0.54],
+    "size_in_frame": "about 0.56 of frame height — closer than sh049, but the bottle is still held beside her as the gauge"
+  },
+  "second_subject": {
+    "id": "PROP-drink-me-bottle",
+    "grid": "mid_right",
+    "anchor_xy": [0.62, 0.54],
+    "note": "still level with her crown, still sharp; the moment it leaves the frame the size stops being provable, so it does not leave."
+  },
+  "headroom": "about 0.20 of frame height, and her flat hand on top of her head reduces it visibly — the gesture is composed to eat the headroom, which is exactly what she is afraid of.",
+  "horizon_eyeline": "Lens at 0.20 m on the flags: flagstone joint across the bottom at 0.88 of frame height. Her eyeline is at 0.46 and goes nowhere — she is looking at nothing while she waits.",
+  "layers": {
+    "fg": "the flagstone surface and the mosaic dado border at her own scale",
+    "mg": "Alice with one hand flat on top of her head, and the bottle beside her",
+    "bg": "the glass legs and the lit tabletop plane above, soft-edged but sharp"
+  },
+  "gaze": {
+    "direction": "up_frame",
+    "lead_room": "above",
+    "note": "her eyes go up under her own hand — the smallest possible version of the sh049 look. The nervousness is in the waiting, so the lead room above her stays empty and nothing enters it."
+  },
+  "balance": "Two vertical objects of equal height in the lower half, a wide dark upper half. Almost the sh049 balance, tightened — the frame has moved closer without conceding the gauge.",
+  "leading_lines": "Her forearm bent over her own crown makes a small closed loop at the top of the figure; it is the only curve in a frame of verticals, and it is where the eye is meant to stop.",
+  "eye_first": "The flat hand on her head, then the bottle beside her for the comparison.",
+  "safe_area_ok": true,
+  "constraint_binding": "The hand flat on the head is the whole performance: the composition offers nothing else to watch — no reframe, no reaction cut, no second gesture — and the nervousness lives in the duration of an unchanging frame. Deep focus, both gauges sharp."
+}

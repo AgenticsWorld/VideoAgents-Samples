@@ -1,0 +1,13 @@
+{
+  "character_id": "CHAR-dormouse", "task_id": "p4-char-concept-cb1", "sheet": "sheet.png", "variants": [],
+  "tier_note": "index.json tier = B; produced because the work order names it explicitly.",
+  "self_check": {"sheet.png": {
+    "layout": "PASS: four panels (soft gutters, no drawn frames).",
+    "appearance_field_hits": {"gender_male": "not visually determinable", "tiny_round_plump": true, "golden_orange_brown_back_cream_belly": true, "rumpled_fur_one_side": "partial", "large_black_eyes_half_closed": "partial (half-closed in full-body views, open in close-up)", "small_pink_nose_pink_feet": true, "long_fine_whiskers_small_round_ears": true, "bushy_golden_tail_wrapped": true, "unclothed": true},
+    "costume_COS-018_hits": {"unclothed_unadorned": true},
+    "style": "PASS",
+    "defects": ["Close-up eyes are fully open, not drowsy/half-closed.", "Head and face read somewhat hamster-like (short muzzle) - minor."]
+  }},
+  "notes": ["Default expression on the card is 'asleep'; the sheet shows him awake-drowsy so the face is readable as an identity anchor."],
+  "rerolls": []
+}

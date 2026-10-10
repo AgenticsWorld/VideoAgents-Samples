@@ -1,0 +1,25 @@
+{
+  "id": "DEF-p4-envconcept-702",
+  "opened_by": "06-art/environment-concept",
+  "opened_on": "2026-09-23",
+  "task_id": "p4-env-concept-sb2",
+  "domain": "environment-concept",
+  "route_to_owner": "05-scenes/environment + 05-scenes/architecture (BIB-0027 follow-up)",
+  "status": "open",
+  "severity": "minor",
+  "summary": "SCN-duchess-house-front flora contradicts itself after BIB-0027. The environment card's dream_design has hollyhocks and climbing roses crowding the walls and a curling vine framing the door. The architecture card's negative list says 'no flowers or garden beds round the house; bare clearing only'.",
+  "findings": [
+    {
+      "id": "DEF-p4-envconcept-702-a",
+      "files": [
+        "bible/scenes/SCN-duchess-house-front/environment.json (fixed.dream_design.flora)",
+        "bible/scenes/SCN-duchess-house-front/architecture.json (negative)"
+      ],
+      "impact": "Low. Downstream shot-plates and prompts may show a flower-wreathed house in some groups and a bare sooted house in others.",
+      "how_the_layout_pack_resolves_it_for_now": "The top-down plan follows architecture: a bare clearing with no flower beds. Climbers against the walls would barely show from directly above either way.",
+      "proposed_fix": "Decide in one place. Either drop the 'no flowers' negative, which allows sooted climbers on the walls but no beds, or narrow the environment flora to the wood edge only.",
+      "inferred": false
+    }
+  ],
+  "not_self_fixed": "Per SOUL: Bible cards belong to their owners."
+}

@@ -1,0 +1,36 @@
+{
+  "shot_id": "sh087",
+  "scene_id": "SCN-long-hall",
+  "size": "close",
+  "subject": {
+    "id": "PROP-white-kid-gloves-and-fan",
+    "in_frame_characters": ["CHAR-alice"],
+    "grid": "mid_left",
+    "anchor_xy": [0.32, 0.56],
+    "size_in_frame": "the sh086 frame exactly, unbroken through the throw — the fan leaves her hand, crosses the frame and hits the water off to one side"
+  },
+  "second_subject": {
+    "id": "glass_table",
+    "grid": "mid_right",
+    "anchor_xy": [0.70, 0.56],
+    "note": "the climbing table edge halts where it is, inside this frame, in the same moment the fan leaves her hand."
+  },
+  "headroom": "stops changing. The headroom that had been closing since sh086 freezes at about 0.14 of frame height and stays there — the visible end of the effect.",
+  "horizon_eyeline": "Identical to sh086: lens 0.25 m, waterline at 0.78 of frame height. Still no face in frame.",
+  "layers": {
+    "fg": "the fan leaving her hand and travelling out of the lower right; the splash where it lands",
+    "mg": "her empty hand and the water",
+    "bg": "the table edge, arrested"
+  },
+  "gaze": {
+    "direction": "none",
+    "lead_room": "right",
+    "note": "the only direction in frame is the fan's trajectory, out to the lower right — and the composition follows it nowhere. What matters is what stops behind it."
+  },
+  "balance": "The near-left mass exits the frame and the far-right line stops moving; the composition arrives at rest in the same instant twice over. The stillness at the end is the narrow escape.",
+  "leading_lines": "The fan's flight is a single diagonal from centre-left to lower right; the table edge is the level horizontal it frees. One line leaves so the other can stop.",
+  "eye_first": "The fan flying, then straight back to the table edge — which is not moving any more.",
+  "safe_area_ok": true,
+  "constraint_binding": "Required shot (d) of movement 4. The fan stopping and the shrinking stopping happen IN THE SAME FRAME; without that the narrow escape means nothing — so the throw and the arrest of the table edge are both inside the picture, both sharp, with no cut, no reframe and no size change between them.",
+  "pairs_with": "sh086 — the same frame, unbroken."
+}

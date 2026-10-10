@@ -1,0 +1,77 @@
+{
+  "character_id": "CHAR-cheshire-cat",
+  "name": "Cheshire Cat",
+  "tier": "A",
+  "layer": "dream",
+  "revision": { "change_id": "BIB-0027", "task_id": "p4-cr-appearance", "date": "2026-09-23", "note": "Rewritten from the human-performer reading to a photoreal CGI animal." },
+  "rendering": {
+    "mode": "photoreal_cgi_animal",
+    "rule": "bible/cultivation.json SUP-002 (amended BIB-0027); vanish per SUP-005",
+    "species": "large domestic shorthair cat (Felis catus), brown classic tabby",
+    "limits": "Cat anatomy throughout; speech by naturalistic lip, jaw and whisker movement. The ear-to-ear grin is the one sourced feature pushed past a real cat's range (see face.grin); everything else stays feline. No clothing, no cartoon face.",
+    "grin_pending_H2": "The grin's width is the design point most likely to tip into cartoon; proposal in face.grin, to be confirmed with 04-creatures/creature and at H2."
+  },
+  "gender": "female",
+  "gender_note": { "inferred": true, "reason": "The source calls the Cat only 'it' (ch006-p50, ch006-p78). Under H1 ruling 5.3 B the Cat is the dream echo of Dinah, whom Alice calls 'she' ('She is such a dear quiet thing', ch002-p22). The bible index still lists 'unspecified' in one field; see DEF-p3-appearance-001." },
+  "base_age_range": "26-32",
+  "base_age_note": { "inferred": true, "reason": "Persona age kept for voice casting. As an animal: a prime adult cat, heavy and glossy." },
+  "hair": {
+    "coat": "fur",
+    "color": "brown classic tabby: warm dark-brown and black marbled swirls on a honey-gold ground, bullseye whorls on the flanks, ringed tail, cream-gold chin and chest",
+    "style": "dense, plush, glossy short coat",
+    "inferred": true,
+    "reason": "Not described; tabby colouring fixed as the Dinah echo."
+  },
+  "eyes": { "color": "green-gold", "shape": "large, round-almond, slow blink; pupils narrow to slits in daylight", "source_chapter": "ch008", "source_para": "ch008-p47", "quote": "Alice waited till the eyes appeared", "colour_inferred": true, "reason": "Eyes are a separate stage of her appearing (sourced); colour designed as the Dinah echo." },
+  "skin": { "tone": "brick-pink nose leather rimmed dark; dark paw pads", "inferred": true, "reason": "Species, brown tabby." },
+  "face": {
+    "shape": "broad-cheeked, round tabby face with the 'M' mark on the forehead",
+    "features": ["long white whiskers", "a great many sharp white teeth shown when she grins"],
+    "default_expression": "the fixed, good-natured, ear-to-ear grin; perfectly still",
+    "grin": {
+      "proposal": "Lips drawn back and up along the whole jaw line so the full natural set of cat teeth (canines, premolars, molars) shows from cheek to cheek, cheeks lifted, eyes softened to a contented half-close. Jaw, teeth and lip anatomy stay real; only the lip retraction goes past a real cat.",
+      "status": "pending_H2",
+      "inferred": true,
+      "reason": "Sourced grin is the character; no real cat can do it, so the smallest anatomical departure is chosen."
+    },
+    "source_chapter": "ch006",
+    "source_para": ["ch006-p21", "ch006-p50"],
+    "quote": "a large cat which was sitting on the hearth and grinning from ear to ear / It looked good-natured, she thought: still it had _very_ long claws and a great many teeth"
+  },
+  "build": {
+    "height_range_cm": [30, 34],
+    "height_note": "Shoulder height; body length nose-to-tail-base 58-62 cm, tail about 30 cm; about 7-8 kg.",
+    "body_type": "large, heavy-boned, supple",
+    "posture": "sits and lounges rather than stands; lies along a bough with paws dangling; sits upright on the hearth",
+    "scale_reference": "The source's 'large cat'. At Alice's true size (135 cm) a big cat at her knee; in the Duchess's kitchen Alice is nine inches high, so the Cat looms over her (SUP-003).",
+    "source_chapter": "ch006",
+    "source_para": "ch006-p21",
+    "quote": "a large cat which was sitting on the hearth",
+    "inferred": true,
+    "reason": "'Large' sourced; dimensions designed at the top of the domestic range."
+  },
+  "marks": [
+    { "type": "claws", "position": "paws", "description": "very long, sharp, curved claws, visibly unsheathed as she rests", "source_chapter": "ch006", "source_para": "ch006-p50", "quote": "it had _very_ long claws" },
+    { "type": "tail", "position": "tail", "description": "her own long ringed tabby tail, which she lets swing; it is the first thing to go in the vanish", "source_chapter": "ch006", "source_para": ["ch006-p66", "ch006-p78"], "quote": "beginning with the end of the tail, and ending with the grin" },
+    { "type": "vanish", "position": "whole figure", "description": "fades by a slow dissolve from tail to grin; the grin lingers last (SUP-005)", "source_chapter": "ch006", "source_para": "ch006-p78" }
+  ],
+  "default_outfit_tone": {
+    "summary": "none: she wears nothing; her look is the brown classic tabby coat",
+    "inferred": true,
+    "reason": "The text gives the Cat no clothing; per SUP-002 (BIB-0027) the old velvet dress and stole are dropped."
+  },
+  "sound_tic": "a low purr under her lines",
+  "doubling": {
+    "ruling": "H1 5.3 B — Dinah → Cheshire Cat",
+    "waking_form": "Dinah, Alice's real pet cat (TERM-0025); spoken of only, not registered in bible/creatures",
+    "carries_across": ["brown classic tabby colouring", "green-gold eyes", "the habit of sitting by the fire: the Cat is first seen on the kitchen hearth, as Alice says Dinah sits purring by the fire"],
+    "rule": "If Dinah is ever shown or pictured in the waking frame she must be the same brown-tabby, green-gold-eyed cat (a real cat, no grin), so the echo holds. With a CGI Cat the echo is now literal: same animal look.",
+    "source_chapter": "ch002",
+    "source_para": ["ch002-p22", "ch006-p21"],
+    "quote": "she sits purring so nicely by the fire / a large cat which was sitting on the hearth and grinning from ear to ear",
+    "colour_inferred": true,
+    "reason": "Dinah's colouring is never stated; the hearth link is sourced."
+  },
+  "events": ["ev0018", "ev0019", "ev0020", "ev0026", "ev0037", "ev0038"],
+  "prompt_base_en": "photoreal large brown classic tabby cat, plush glossy coat with dark brown and black marbled swirls on honey-gold, ringed tail, large green-gold eyes softened, a very wide grin from cheek to cheek showing a great many sharp white teeth, long white whiskers, long curved claws, lounging perfectly still along a tree bough, natural feline anatomy, live-action film plate"
+}

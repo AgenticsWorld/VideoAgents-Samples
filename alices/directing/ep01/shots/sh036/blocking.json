@@ -1,0 +1,40 @@
+{
+  "shot_id": "sh036",
+  "group_id": "grp014",
+  "scene_no": "S05",
+  "scene_id": "SCN-long-hall",
+  "duration_s": 5.0,
+  "is_dialogue": false,
+  "group_position": "first shot of grp014 — Alice on her map start (east_doors_mid) and away down the first leg of her east_doors_mid -> lamp_row_mid -> glass_table -> west_doors_north line.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "stand",
+      "start_pos": "leaving the locked doors of the east wall and walking out into the centre of the hall",
+      "space_fragment_en": "standing at the locked doors of the east wall, centred in frame, then walking down the middle of the hall under the lamps",
+      "facing": "down the hall on the lens axis, her look sweeping the side walls rather than settling",
+      "path": [
+        { "t": 3.6, "to": "in the middle of the hall under the lamps, close to the glass table" }
+      ],
+      "beats": [
+        { "t": 0.4, "action": "turns away from the east wall and walks", "sync": "the search changes shape" },
+        { "t": 2.2, "action": "her look sweeps both walls without landing", "sync": "she has no direction yet" },
+        { "t": 4.2, "action": "her eye drops and stops on the little three-legged glass table", "sync": "the find" }
+      ],
+      "performance_beat": {
+        "objective": "find any way out of a room with no windows",
+        "goal": "find any way out at all",
+        "emotional_arc": "from aimless searching to a sharp, single-pointed interest",
+        "arc_from": "aimless searching",
+        "arc_to": "sharp single-pointed interest",
+        "trigger": { "beat": "her look lands on the glass table and stops there", "t": 4.2 },
+        "no_early_reaction": ["the pace changing", "the head dropping", "a hand reaching out"],
+        "forbidden_early": ["the pace changing", "the head dropping", "a hand reaching out"],
+        "end_state": "stopped short of the table, eyes down on its top, both hands still at her sides"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0003 (dream) — the glass table and the tiny golden key", "note": "Alice alone." }
+}

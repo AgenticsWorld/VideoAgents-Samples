@@ -1,0 +1,187 @@
+{
+  "schema_version": "scene_layout.v1",
+  "scene_id": "SCN-mock-turtle-ledge",
+  "layout_top": "layout_top.png",
+  "status": "calibrated_to_render",
+  "orientation": {
+    "top_of_map": "north along the shore; the open sea is to the west (left) and the low sun sits over it; shingle bank to the east (right); the bathing machines lie far off the map to the north, the run toward the trial leaves to the south",
+    "extent_m": [
+      48,
+      27
+    ],
+    "note_en": "camera positions in views[] are described relative to these landmarks"
+  },
+  "landmarks": [
+    {
+      "id": "sea",
+      "name": "open sea",
+      "name_en": "the open sea",
+      "kind": "terrain",
+      "xy": [
+        0.12,
+        0.5
+      ]
+    },
+    {
+      "id": "waterline",
+      "name": "waterline",
+      "name_en": "the waterline",
+      "kind": "terrain",
+      "xy": [
+        0.3,
+        0.5
+      ]
+    },
+    {
+      "id": "quadrille_sand",
+      "name": "firm wet sand",
+      "name_en": "the firm wet sand",
+      "kind": "terrain",
+      "xy": [
+        0.44,
+        0.5
+      ]
+    },
+    {
+      "id": "ledge",
+      "name": "rock ledge",
+      "name_en": "the rock ledge",
+      "kind": "feature",
+      "xy": [
+        0.71,
+        0.525
+      ]
+    },
+    {
+      "id": "groyne",
+      "name": "timber groyne",
+      "name_en": "the timber groyne",
+      "kind": "feature",
+      "xy": [
+        0.6,
+        0.11
+      ]
+    },
+    {
+      "id": "spades",
+      "name": "two wooden spades",
+      "name_en": "the two wooden spades",
+      "kind": "prop_anchor",
+      "xy": [
+        0.39,
+        0.74
+      ]
+    },
+    {
+      "id": "lobster_pots",
+      "name": "lobster pots and rope",
+      "name_en": "the lobster pots and rope",
+      "kind": "prop_anchor",
+      "xy": [
+        0.82,
+        0.76
+      ]
+    },
+    {
+      "id": "bathing_machines",
+      "name": "distant bathing machines (off-map north)",
+      "name_en": "the distant bathing machines",
+      "kind": "offmap_direction",
+      "xy": [
+        0.4,
+        0.01
+      ]
+    },
+    {
+      "id": "shore_south",
+      "name": "shore running south",
+      "name_en": "the shore running south",
+      "kind": "exit",
+      "xy": [
+        0.45,
+        0.97
+      ]
+    }
+  ],
+  "views": [
+    {
+      "tile": 1,
+      "camera_from": "quadrille_sand",
+      "looking_at": "ledge",
+      "size": "medium",
+      "angle": "eye",
+      "desc_en": "eye-level medium shot from the firm wet sand up the beach to the rock ledge standing alone on the shingle"
+    },
+    {
+      "tile": 2,
+      "camera_from": "ledge",
+      "looking_at": "sea",
+      "size": "wide",
+      "angle": "eye",
+      "desc_en": "eye-level wide shot from the rock ledge down over the wet sand to the open sea and the low sun, figures in silhouette against the glare"
+    },
+    {
+      "tile": 3,
+      "camera_from": "shore_south",
+      "looking_at": "bathing_machines",
+      "size": "wide",
+      "angle": "low",
+      "desc_en": "low wide shot near the sand from the shore running south, looking north along the whole beach past the groyne to the tiny distant bathing machines and lodging houses in the haze"
+    },
+    {
+      "tile": 4,
+      "camera_from": "spades",
+      "looking_at": "ledge",
+      "size": "close",
+      "angle": "low",
+      "desc_en": "low-angle close shot from the sand looking up at the edge of the rock ledge with its curving strata and draped bladderwrack"
+    },
+    {
+      "tile": 5,
+      "camera_from": "groyne",
+      "looking_at": "quadrille_sand",
+      "size": "wide",
+      "angle": "high_oblique",
+      "desc_en": "high oblique wide shot from the timber groyne down the beach over the firm wet sand where the Quadrille is danced"
+    },
+    {
+      "tile": 6,
+      "camera_from": "lobster_pots",
+      "looking_at": "ledge",
+      "size": "detail",
+      "angle": "eye",
+      "desc_en": "eye-level detail from the shingle beside the lobster pots on the ledge top, sea-pinks in its crevices"
+    },
+    {
+      "tile": 7,
+      "camera_from": "ledge",
+      "looking_at": "spades",
+      "size": "medium",
+      "angle": "eye",
+      "desc_en": "eye-level medium shot from the rock ledge down to the two wooden spades stuck upright in the empty sand"
+    },
+    {
+      "tile": 8,
+      "camera_from": "quadrille_sand",
+      "looking_at": "groyne",
+      "size": "medium",
+      "angle": "eye",
+      "desc_en": "eye-level medium shot along the wet sand to the dark timber groyne and its verdigris wave-scroll finials running into the water"
+    },
+    {
+      "tile": 9,
+      "camera_from": "waterline",
+      "looking_at": "spades",
+      "size": "close",
+      "angle": "eye",
+      "desc_en": "eye-level close shot from the waterline on the two wooden spades, foam curling round the sand"
+    }
+  ],
+  "calibration_note_en": "Coordinates re-read from the rendered image 2026-09-23. The ledge came out about 9-10 m long, about three times the 3 m set in architecture, and sits at the foot of the shingle bank on the foam line. Wet sand spans x 0.30-0.58. bathing_machines is an off-map direction marker only (they lie far north, beyond the frame).",
+  "checklist": {
+    "architecture_match": false,
+    "lighting_match": true,
+    "style_match": true,
+    "camera_orthographic": "partly: moderate tilt; the groyne posts and spades show from the side"
+  }
+}

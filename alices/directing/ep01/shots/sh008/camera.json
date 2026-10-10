@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh008",
+  "group_id": "grp004",
+  "scene_no": "S01",
+  "duration_s": 7.0,
+  "size": "wide",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame; no pan and no reframe as the animal crosses)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 28,
+  "camera_height_m": 0.25,
+  "angle": "level, lens flat on the grass",
+  "rack_focus": "none",
+  "start_frame": "Lens flat on the grass looking down the meadow toward the way across the field: Alice's shoes and hem filling the near left foreground, empty deep-staged meadow beyond them.",
+  "end_frame": "The same unbroken frame: the white rabbit has run through it within arm's reach of her shoes and is bounding away small down the meadow, her shoes still in the near foreground exactly where they were.",
+  "constraint_honoured": "'One unbroken shot containing both her shoes and the whole crossing — no hero angle, no anticipatory framing, no cut inside': the camera never acknowledges him, so the audience half-doubts what it saw.",
+  "movement_note": "A pan or a reframe onto the animal would be exactly the emphasis CR-004 forbids; the wide lens holds both planes with no focus emphasis either.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

@@ -1,0 +1,72 @@
+{
+  "task_id": "p4-prop",
+  "attempt": 1,
+  "agent": "06-art/prop",
+  "status": "completed",
+  "finished": "2026-09-23",
+  "summary": "bible/props.json authored with 24 plot-prop cards, each with scale.canonical_size / relative_anchor / prompt_token. 9 cards are readable-face props, whose main_01 is a two-view FRONT/BACK sheet. 48 images were generated (main_01 + scale_ref_01 per prop), all provider calls exit 0, and no person or body part appears in any image. The self-check found 4 major and 11 minor/info image defects; all images are kept as generated (retry budget 0) and listed in DEF-p4-prop-502 for the user to decide at H2. 10 props lack a dictionary term (DEF-p4-prop-501).",
+  "channel": "image → volcengine model=doubao-seedream-5-0-pro-260628 (genmedia info); n=1 per call, no seed",
+  "user_refs": [
+    { "path": "refs/style/alice.jpeg", "use": "Look reference through style.json style_fragment_ui (verbatim in every prompt), and the hookah design (verdigris narghile, long hose). Not passed as --ref: the image contains a human figure, and the prop no-person rule allows only the prop's own images as refs." }
+  ],
+  "prompt_assembly": "English body + 'Overall visual style: ' + style_fragment_ui verbatim. --negative = negative_prompt_en verbatim + 'person, human, hand, arm, body, silhouette, face, fingers, people, figure'; PROP-sister-book (waking frame) also + negative_prompt_waking_addon_en. scale_ref_01 uses --ref main_01.png only.",
+  "acceptance": {
+    "plot_props_coverage_100": { "result": "PASS", "detail": "24/24 plot props carded; the coverage list matches the cards 1:1. structured_story has no entity tags, so props were extracted paragraph by paragraph from ch001-ch012 and cross-checked against the dictionary object terms and the ep01 screenplay. Items owned by other agents (set pieces, costume items, croquet animals) are listed in plot_prop_coverage.owned_elsewhere." },
+    "prop_scale_defined": { "result": "PASS", "detail": "All 24 cards have the three scale fields filled; all 24 scale_ref_01.png files are on disk. Scale accuracy faults in 7 images are logged in DEF-p4-prop-502 (e, f, g, h, i, n; plus c and d duplications)." },
+    "prop_image_no_person": { "result": "PASS", "detail": "All 48 images checked by eye: no person, face, hand, body part or silhouette. generation_refs only ever point to the prop's own main_01.png; no concepts/characters or concepts/costumes paths. Info note DEF-p4-prop-502-o: the relief portrait on the anchor penny in 7 scale images." },
+    "prop_readable_face_defined": { "result": "PASS", "detail": "9 readable-face props, each with face_desc/back_desc/back_ref -> main_01.png as a FRONT/BACK two-view sheet, labels present in all 9. Lettering faults: DEF-p4-prop-502-a (letter) and -b (note-book)." },
+    "no_unknown_placeholder": { "result": "PASS", "detail": "No UNKNOWN/TBD/待定/未知 strings or empty strings in props.json." },
+    "ids_unique_ascii": { "result": "PASS" },
+    "name_hits_dictionary": { "result": "PARTIAL", "detail": "14/24 names match a TERM. 10 names use source wording until they are registered (DEF-p4-prop-501, assigned to dictionary)." },
+    "main_dir_hygiene": { "result": "PASS", "detail": "Each <id>/ holds only main_01.png, scale_ref_01.png, prompts.json; no candidates were produced (n=1)." }
+  },
+  "items": [
+    { "id": "PROP-sister-book", "readable_face": true, "self_check": "ok" },
+    { "id": "PROP-orange-marmalade-jar", "readable_face": true, "self_check": "ok" },
+    { "id": "PROP-white-rabbit-pocket-watch", "self_check": "scale minor (502-g); penny portrait (502-o)" },
+    { "id": "PROP-golden-key", "self_check": "ok; penny portrait (502-o)" },
+    { "id": "PROP-drink-me-bottle", "readable_face": true, "self_check": "label on body not neck (502-j); penny portrait (502-o)" },
+    { "id": "PROP-eat-me-cake", "readable_face": true, "self_check": "scale_ref duplicated the sheet (502-d, major)" },
+    { "id": "PROP-white-kid-gloves-and-fan", "self_check": "ok" },
+    { "id": "PROP-box-of-comfits", "self_check": "ok; penny portrait (502-o)" },
+    { "id": "PROP-thimble", "self_check": "scale minor (502-i); penny portrait (502-o)" },
+    { "id": "PROP-rabbit-house-bottle", "self_check": "scale minor (502-e)" },
+    { "id": "PROP-pebbles-and-little-cakes", "self_check": "size mismatch pebbles vs cakes (502-h); penny portrait (502-o)" },
+    { "id": "PROP-mushroom", "self_check": "piece shape minor (502-k); penny portrait (502-o)" },
+    { "id": "PROP-hookah", "self_check": "scale minor (502-n)" },
+    { "id": "PROP-queens-invitation-letter", "readable_face": true, "self_check": "legible 'For the Duchess' (502-a, major)" },
+    { "id": "PROP-pepper-box", "self_check": "ok" },
+    { "id": "PROP-hatter-watch", "self_check": "scale + sub-dial minor (502-f)" },
+    { "id": "PROP-hatter-teacup-and-bread-and-butter", "self_check": "ok" },
+    { "id": "PROP-gardeners-paint-pot-and-brushes", "self_check": "blood-read caution (502-l)" },
+    { "id": "PROP-king-crown-and-cushion", "self_check": "ok" },
+    { "id": "PROP-white-rabbit-trumpet-and-scroll", "readable_face": true, "self_check": "scale_ref duplicated trumpet + FRONT label (502-c, major)" },
+    { "id": "PROP-tarts", "self_check": "Art Nouveau dish ornament (502-m)" },
+    { "id": "PROP-jurors-slates-and-pencils", "readable_face": true, "self_check": "ok" },
+    { "id": "PROP-king-note-book", "readable_face": true, "self_check": "legible text incl. 'CR-012' on open page (502-b, major)" },
+    { "id": "PROP-verses-paper", "readable_face": true, "self_check": "ok" }
+  ],
+  "image_paths_pattern": "assets/concepts/props/<PROP-ID>/{main_01.png, scale_ref_01.png, prompts.json}",
+  "pending_H2": [
+    { "point": "H2-non-speaking-animals", "effect_here": "Croquet balls and mallets (live hedgehogs, flamingoes) are not carded as props; they are routed to 04-creatures/creature. No prop image depends on this ruling.", "flag": "pending_H2 — for user decision at H2" },
+    { "point": "H2-mucha-scope-and-finish", "effect_here": "Dream-register scale images show Art Nouveau set backgrounds and all props are rendered as photographed objects. Props themselves stay 1862 (CR-002), except the tarts dish ornament (502-m).", "flag": "pending_H2 — for user decision at H2" }
+  ],
+  "decisions": [
+    "One card per dictionary term where the term bundles objects (gloves+fan, trumpet+scroll, crown+cushion); the tea-party teapot, rose-tree, glass table and the whole mushroom stay with 05-scenes as set pieces.",
+    "PROP-mushroom covers the hand-held pieces only and must match the SCN-caterpillar-clearing x9 mushroom build.",
+    "Hookah sized to the x9 caterpillar set (about 1.3 m on screen) and shaped after the user style reference.",
+    "Sizes are the prop's true size against its usual handler. Alice's size changes use duplicate builds of the same design (CR-005).",
+    "Readable faces other than the three whitelisted labels are specified as unreadable script (CR-012).",
+    "Soldiers' clubs, the thrown inkstand and kitchenware, and the guinea-pig bag are non-plot and never shown striking anyone (CR-010)."
+  ],
+  "defects_opened": [ "qa/defects/DEF-p4-prop-501.json", "qa/defects/DEF-p4-prop-502.json" ],
+  "files_created_or_modified": [
+    "bible/props.json (was an empty skeleton)",
+    "assets/concepts/props/<24 PROP ids>/main_01.png, scale_ref_01.png, prompts.json",
+    "code/gen_props_p4-prop.py",
+    "qa/defects/DEF-p4-prop-501.json",
+    "qa/defects/DEF-p4-prop-502.json",
+    "runs/p4-prop/result.json"
+  ],
+  "background_processes": "none; all 48 generation calls finished inside this run"
+}

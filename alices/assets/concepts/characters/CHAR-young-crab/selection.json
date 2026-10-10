@@ -1,0 +1,4 @@
+{"character_id":"CHAR-young-crab","sheet":"sheet.png","gender":"female","gender_word_in_prompt":true,"rendering":"photoreal CGI edible crab (SUP-002)",
+"appearance_field_hits":{"bright_coral_orange_carapace":true,"clean_glossy_wet":true,"black_tipped_tucked_claws":true,"eyes_on_stalks":true,"no_face_on_carapace":true,"unclothed":true},
+"self_check":{"layout":"pass","appearance":"pass with defect","style":"pass (photoreal)"},
+"defects":["The walking legs are far too long: the crab stands high like a spider crab, not low like an edible crab."],"pair_rule":"reads younger, brighter and cleaner than CHAR-old-crab","rerolls":[]}

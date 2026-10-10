@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh051",
+  "group_id": "grp020",
+  "scene_no": "S06",
+  "duration_s": 4.0,
+  "size": "medium",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame; she runs into it)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 28,
+  "camera_height_m": 0.2,
+  "angle": "slightly up",
+  "rack_focus": "none",
+  "start_frame": "Straight across the hall from the south-east doors to the low curtain, lens on the flagstones: the curtain hanging above her like a stage cloth, the fifteen-inch door beneath it, ten-inch Alice running in from the table side.",
+  "end_frame": "The same frame with both her hands hauling at the little door: at her size it is a proper door, shoulder-high and correctly proportioned to her — and it does not give at all.",
+  "constraint_honoured": "'At ten inches the fifteen-inch door is her own scale — the first door in the hall she could actually walk through, and it will not open': the frame holds door and girl together so the new proportion is plain.",
+  "movement_note": "Her run supplies the movement; the camera stays on the flagstones at her eye-line as the ten-inch state requires. Her face is never near enough to the 28 mm to stretch.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

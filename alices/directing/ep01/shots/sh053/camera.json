@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh053",
+  "group_id": "grp020",
+  "scene_no": "S06",
+  "duration_s": 9.0,
+  "size": "medium",
+  "movement": "pedestal_follow",
+  "direction": "vertical only — the frame rides up a little with each climbing attempt and drops back with her; no lateral, no tilt, no push",
+  "speed": "three short rises of about 0.10 m at roughly 0.12 m/s, each one shorter than the last, each dropping back to the 0.15 m base as she slides down",
+  "speed_curve": "three_beats_ease_out (rise, slip back, rest — repeated three times, each beat shorter than the last)",
+  "rig": "dolly",
+  "lens_mm": 28,
+  "camera_height_m": "0.15 base, riding to about 0.25 at the top of each attempt",
+  "angle": "slightly up",
+  "rack_focus": "none",
+  "start_frame": "One frame at the foot of the glass leg, lens on the flagstones: Alice wrapping both arms round the clear glass leg, the leg running up out of the top of frame, a flagstone joint crossing the near foreground.",
+  "end_frame": "The same frame back at its lowest after the third and shortest attempt: she has slid down onto the flags again, the leg still running out of frame above her and the joint still under her feet — nothing gained.",
+  "constraint_honoured": "'Three climbing attempts as written; contingency trim T8 is a screenplay change and is NOT taken. The failures are physical, not sad' — the camera only ever follows her body up and down, and never comments.",
+  "movement_note": "Single axis, single movement type; the amplitude is deliberately tiny (≈0.10 m) so the model reads one gentle vertical follow rather than a compound move. Written into shot_list's camera_position ('riding up a little with each attempt and dropping back with her') and honoured as the minimum move that satisfies it.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

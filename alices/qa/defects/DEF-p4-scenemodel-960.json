@@ -1,0 +1,22 @@
+{
+  "id": "DEF-p4-scenemodel-960",
+  "opened_by": "05-scenes/scene-modeling",
+  "opened_on": "2026-09-23",
+  "task_id": "p4-scene-model-sb1",
+  "assigned_to": "user (H2 gate g4); environment-concept if a re-draw is authorised",
+  "domain": "scene whitebox vs layout_top.png vs Bible dimensions",
+  "status": "open",
+  "severity": "major",
+  "related": ["DEF-p4-envconcept-603", "DEF-p4-envconcept-601"],
+  "summary": "The walls in the whitebox follow the drawn walls (hard rule: walls are measured from the image, and X:Z is locked to the image aspect). Where the drawn plan and the Bible disagree, the whitebox follows the image/layout.json and marks the item inferred:true. The resulting metric sizes differ from the Bible as listed below. No image or layout.json was edited.",
+  "findings": [
+    {"scene": "SCN-shaft-landing-passage", "issue": "At the layout.json scale (30 m image width), the passage is 2.7-3.1 m wide (Bible 1.4 m), the straight run is about 11.6 m (Bible 25 m), and the landing chamber is 6.75 m across (Bible 3 m; the shaft above it is 2.4 m in SCN-falling-dream). No single scale matches both width and length.", "whitebox": "Walls as drawn."},
+    {"scene": "SCN-long-hall", "issue": "The clear hall width is 6.8 m (Bible 5.5 m). The entrance passage is 2.8 m wide (Bible 1.4 m). The entrance is a side gap (Bible: NE corner). There are 10 + 9 doors (Bible 12 + 12). The table is drawn 2.5 m across (Bible 0.5 m).", "whitebox": "Walls and gap as drawn; door leaves and the table at Bible size, placed at the drawn positions."},
+    {"scene": "SCN-pool-of-tears", "issue": "The clear width is 7.2 m (Bible 5.5 m) and the entrance passage 4 m wide. This frame is separate from SCN-long-hall and has a different scale, so the same hall measures differently in the two assets.", "whitebox": "Walls as drawn."},
+    {"scene": "SCN-little-door-passage", "issue": "The passage is drawn 0.39 m wide (Bible 0.28 m). The hall doors 9/10 are not drawn on the hall wall, and the curtain is drawn inside the passage.", "whitebox": "Stone faces as drawn. Jambs keep the 0.26 m door width. The doors and curtain are placed per architecture/layout.json."},
+    {"scene": "SCN-falling-dream", "issue": "The shaft is drawn elliptical (about 2.43 x 2.15 m) because the depth is squashed. A true 2.4 m circle only just fits the 2.81 m frame depth, so the rim was thinned to 0.18 m and the tunnel stub is about 0.2 m long.", "whitebox": "Bible round shaft."},
+    {"scene": "SCN-field-hedge-burrow", "issue": "The burrow is drawn about 2.8 m out in the field, not at the hedge foot (603-a). The hedge is drawn about 4.4 m deep. The gate is 8 m from the burrow (Bible 12 m) and the gate gap is 5.3 m.", "whitebox": "As drawn/layout.json."},
+    {"scene": "SCN-pool-bank", "issue": "The race circle is about 8 m across (Bible 10 m).", "whitebox": "As drawn."}
+  ],
+  "decision_needed": "At H2, either accept the drawn proportions (the whitebox stands as delivered), or authorise environment-concept to re-draw the layout images. After a re-draw, scene-modeling re-measures the walls and reruns the check. The whitebox must not be forced to Bible sizes while the image differs, because the image is laid over the ground plane."
+}

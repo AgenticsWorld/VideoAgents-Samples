@@ -1,0 +1,235 @@
+{
+ "task_id": "p2-merge",
+ "agent": "00-orchestration/memory-bible",
+ "attempt": 1,
+ "status": "completed_with_escalations",
+ "finished": "2026-09-22",
+ "outputs": [
+  "bible/world.json",
+  "bible/timeline.json",
+  "bible/geography.json",
+  "bible/religion.json",
+  "bible/culture.json",
+  "bible/politics.json",
+  "bible/economy.json",
+  "bible/cultivation.json",
+  "bible/dictionary.json",
+  "bible/_index.json",
+  "bible/changelog.md",
+  "bible/WRITE_RULES.md",
+  "bible/h1_summary.md",
+  "qa/defects/DEF-p2-bible-001.json",
+  "qa/defects/DEF-p2-bible-002.json",
+  "qa/defects/DEF-p2-bible-003.json",
+  "qa/defects/DEF-p2-bible-004.json",
+  "qa/defects/DEF-p2-bible-005.json",
+  "qa/defects/DEF-p2-bible-006.json"
+ ],
+ "helper_scripts": [
+  "code/p2-merge_check.py (machine checks; re-runnable)",
+  "code/p2-merge_apply.py (mechanical merge edits; idempotent, verified by md5 on re-run)"
+ ],
+ "version": "Bible v1 marked in place (_meta.status merged_v1 / version v1 on every file; _index.json version v1). No bible/@v1 copy.",
+ "acceptance": {
+  "cross_refs_valid_all_namespaces": {
+   "result": "PASS",
+   "tokens_checked_by_namespace": {
+    "ch": 711,
+    "para": 145,
+    "ev": 215,
+    "slug": 352,
+    "num": 485,
+    "sg": 24
+   },
+   "namespaces": "ev*, chNNN, chNNN-pNN/#pNN/-dNNNN, story_graph (rn/fs/mo/sp/arc/ix), LOC, FAC, CHAR, SCN, CRE, PROP, COS, OFF, LAW, FREL, REL, CUR, TL, ERA, UTQ, SUP, TERM, CUL, WR, OQ, PK, CR, ECO-G/P/M",
+   "files_scanned": "9 worldbuilding files + style/props/costumes/color_script + characters/creatures/scenes index + _index.json",
+   "failures": [],
+   "forward_refs": "24 CHAR-* slugs (world, religion, culture, politics) pass through the registered ledger bible/_index.json forward_refs_pending (WRITE_RULES section 4 whitelist, precedent P-005). characters/index.json is still empty, so these are NOT resolved entities. 03-characters must register them in Phase 3, after which any unregistered one is a hard FAIL.",
+   "negative_test": "Injected 18 bogus refs (one per namespace, including CHAR/SCN/CRE and a paragraph id) into a temp copy; all 18 were reported. An injected 'UNKNOWN' value was also caught."
+  },
+  "no_unknown_placeholder": {
+   "result": "PASS",
+   "required_fields_checked": 84,
+   "failures": []
+  },
+  "dictionary_hit_100pct": {
+   "result": "FAIL",
+   "source_terms": "PASS: every source proper noun in the canon fields of the other 8 files resolves to a TERM (after adding TERM-0120 to TERM-0123 and the alias 'court of justice')",
+   "designed_terms_not_in_dictionary": {
+    "Oxford": [
+     "culture",
+     "world"
+    ],
+    "Thames": [
+     "world"
+    ],
+    "Oxfordshire": [
+     "world"
+    ],
+    "Victorian": [
+     "culture",
+     "economy",
+     "geography",
+     "religion",
+     "timeline",
+     "world"
+    ],
+    "Queen Victoria": [
+     "timeline",
+     "world"
+    ],
+    "United Kingdom": [
+     "world"
+    ],
+    "Kingdom of Hearts": [
+     "world"
+    ],
+    "Napoleon III": [
+     "world"
+    ],
+    "Norman Conquest": [
+     "timeline",
+     "world"
+    ],
+    "Britain": [
+     "timeline"
+    ],
+    "Anglo-Saxon": [
+     "timeline"
+    ],
+    "Georgian": [
+     "timeline"
+    ],
+    "Church of England": [
+     "religion"
+    ],
+    "Anglican": [
+     "religion"
+    ],
+    "St Frideswide": [
+     "culture"
+    ],
+    "Binsey": [
+     "culture"
+    ],
+    "House of Hearts": [
+     "politics"
+    ]
+   },
+   "why_not_fixed_here": "Work order: add only plain source terms and report the rest. These are designed or real-world names from the Oxford-1862 frame, which is itself pending H1. Routed as DEF-p2-bible-005 to 02-worldbuilding/dictionary.",
+   "scope": "lexicon of 88 surfaces checked in canon fields (rationale fields such as reason, note, cross_domain_assumptions and quotes are excluded); see LEXICON in code/p2-merge_check.py"
+  },
+  "quote_verification": {
+   "result": "PASS",
+   "quotes_checked": 518,
+   "not_verbatim": 0,
+   "note": "21 citations were paraphrased or pinned to the wrong chapter before the merge; all repaired (BIB-0009 plus parts of BIB-0007/0008)."
+  },
+  "ascii_filename": "PASS"
+ },
+ "sup_reconciliation": {
+  "registry": "bible/cultivation.json SUP-001 to SUP-014 (decision_status proposed_pending_h1); it covers all 5 events.json realistic_adaptation_flags and all 12 story_graph realism_notes (rn-01 to rn-12)",
+  "per_file": {
+   "world (XA-01..08)": "consistent with SUP on the dream frame, performers, practical effects and date. XA-04 partly aligned (FAC re-key; 8 unregistered groups -> DEF-004). XA-05 conflict -> DEF-001/002/003. XA-08 partly aligned -> DEF-005",
+   "timeline (run-record CDAs)": "aligned: TL-004 dream_internal, calendar_binding false; UTQ-003 resolved via SUP-001 (reopen if H1 rejects SUP-001)",
+   "geography (geo-xda-01..05)": "CONFLICT with SUP-001/007/008/010/013 and XA-magic-04 -> DEF-p2-bible-001, -002 (H1); coverage gap -> DEF-003",
+   "religion (OQ-religion-01..02)": "consistent",
+   "culture (CUL-ASM-01..02)": "CUL-ASM-01 presumes character doubling (open question XA-magic-03) -> DEF-006 (H1); CUL-ASM-02 consistent; CUL-007 sack staging vs SUP-014/SUP-002 -> DEF-006; CUL-013 given a SUP-011 staging note",
+   "politics (assume-01..05)": "assume-01 aligned (emblem wording to SUP-004, pre-authorised); the rest consistent; LAW-001 satisfies XA-magic-06",
+   "economy (XA-ECO-001..002)": "consistent; wording and year aligned",
+   "cultivation (XA-magic-01..07)": "01/02/05/06/07 consistent; 03 open (H1); 04 conflict (geography)",
+   "dictionary (_meta CDAs)": "consistent"
+  },
+  "method": "Each CDA item now carries a 'reconciliation' verdict field in its file."
+ },
+ "mechanical_alignments": [
+  "BIB-0003 politics seat re-key (unregistered hearts-estate -> LOC-walled-garden)",
+  "BIB-0004 world FAC re-key + OQ-004 typo + OQ-001 resolution",
+  "BIB-0005 timeline TL-004/UTQ-003",
+  "BIB-0006 politics emblem wording + FREL-001.period",
+  "BIB-0007 economy year/wording/ID ECO-M-003a->ECO-M-007",
+  "BIB-0008 dictionary source terms",
+  "BIB-0009 citation repairs",
+  "BIB-0010 CDA reconciliation fields, cross-links, h1_pending annotations",
+  "BIB-0011 forward-ref ledger, precedents, defects"
+ ],
+ "conflicts": [
+  {
+   "defect": "DEF-p2-bible-001",
+   "type": "creative",
+   "files": [
+    "geography",
+    "cultivation",
+    "world"
+   ],
+   "summary": "Wonderland mapped onto a real family estate/village (cellar shaft, second hatch, ground-level pool) vs SUP dream-space; the source puts the pool in the hall; estate vs clergyman household",
+   "escalation": "H1",
+   "recommendation": "A dream-space"
+  },
+  {
+   "defect": "DEF-p2-bible-002",
+   "type": "settled fact",
+   "files": [
+    "geography",
+    "world",
+    "cultivation"
+   ],
+   "summary": "tidal estuary shore 'a short walk downstream' incompatible with the Oxford/Thames setting and SUP-010",
+   "escalation": "H1",
+   "recommendation": "A dream shore"
+  },
+  {
+   "defect": "DEF-p2-bible-003",
+   "type": "coverage gap",
+   "files": [
+    "geography"
+   ],
+   "summary": "waking-world family house, farmyard and river backwater not registered",
+   "escalation": "re-dispatch geography after H1"
+  },
+  {
+   "defect": "DEF-p2-bible-004",
+   "type": "registry mismatch",
+   "files": [
+    "world",
+    "politics"
+   ],
+   "summary": "8 world-proposed factions not registered as FAC-*",
+   "escalation": "H1",
+   "recommendation": "A register the character-bearing households"
+  },
+  {
+   "defect": "DEF-p2-bible-005",
+   "type": "dictionary gap",
+   "files": [
+    "dictionary"
+   ],
+   "summary": "17 designed/real-world proper nouns not in the dictionary; two names for the Hearts polity",
+   "escalation": "re-dispatch dictionary after H1"
+  },
+  {
+   "defect": "DEF-p2-bible-006",
+   "type": "creative",
+   "files": [
+    "culture",
+    "cultivation"
+   ],
+   "summary": "character doubling presumed by culture; guinea-pig sack restraint vs SUP-014",
+   "escalation": "H1",
+   "recommendation": "B light doubling / B soften"
+  }
+ ],
+ "must_fix_review_items": "No 'must-fix' review comments exist in the source run records (evaluation disabled, QA levels 0; eval.json of every p2 task is skipped with only auto PASS). Nothing had to be closed before merging.",
+ "requests_to_orchestrator": [
+  "Present bible/h1_summary.md to the user at H1 (6 decisions).",
+  "After the H1 ruling: re-dispatch 02-worldbuilding/geography (DEF-001/002/003), political (DEF-004), dictionary (DEF-005), culture (DEF-006); then re-run code/p2-merge_check.py before marking the Bible controlled.",
+  "Phase 3: 03-characters/character-manager must register the 24 ledgered CHAR-* slugs (bible/_index.json forward_refs_pending.term_map)."
+ ],
+ "not_done_by_design": [
+  "No setting content authored or chosen (creative conflicts escalated, not resolved)",
+  "11-qa/world-consistency-qa and timeline-qa co-sign skipped: project QA levels are 0",
+  "evaluation skipped (quality judge = 0)"
+ ],
+ "skills": "none enabled for this station",
+ "notes": "No subprocesses left running. Pre-merge snapshot was kept only in /tmp, not in the project."
+}

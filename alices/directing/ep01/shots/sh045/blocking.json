@@ -1,0 +1,36 @@
+{
+  "shot_id": "sh045",
+  "group_id": "grp017",
+  "scene_no": "S06",
+  "scene_id": "SCN-long-hall",
+  "duration_s": 3.0,
+  "is_dialogue": false,
+  "group_position": "middle shot of grp017 — Alice at the map end (glass_table), lifting the bottle.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "stand",
+      "start_pos": "at the glass table, both hands closing round the little bottle",
+      "space_fragment_en": "standing at the glass table facing the bare glass top, centred in frame, lifting the little bottle in both hands",
+      "facing": "down onto the tabletop; only her hands are in frame",
+      "path": [],
+      "beats": [
+        { "t": 1.2, "action": "the bottle comes up off the glass and the paper label turns toward her", "sync": "DRINK ME reads" }
+      ],
+      "performance_beat": {
+        "objective": "find out what the thing is before deciding anything about it",
+        "goal": "find out what it is",
+        "emotional_arc": "from cautious handling to the small stillness of reading",
+        "arc_from": "cautious handling",
+        "arc_to": "the stillness of reading",
+        "trigger": { "beat": "the label comes round square to her", "t": 1.2 },
+        "no_early_reaction": ["the hands tightening", "the bottle tilting", "a thumb over the label"],
+        "forbidden_early": ["the hands tightening", "the bottle tilting", "a thumb over the label"],
+        "end_state": "bottle held level in both hands, fingers clear of the label, no movement"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0004 (dream)", "note": "Alice alone; no face in frame." }
+}

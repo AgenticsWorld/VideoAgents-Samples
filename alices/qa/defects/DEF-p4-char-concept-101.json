@@ -1,0 +1,15 @@
+{
+  "id": "DEF-p4-char-concept-101",
+  "opened_by": "06-art/character-concept",
+  "opened_on": "2026-09-23",
+  "task_id": "p4-char-concept-cb1",
+  "assigned_to": ["00-orchestration/memory-bible", "03-characters/appearance", "06-art/costume"],
+  "domain": "art",
+  "status": "open",
+  "severity": "minor",
+  "summary": "appearance.json prompt_base_en / feature lists carry scene-state or variant items that bible/costumes.json keeps off the default outfit. The sheets follow costumes.json (the default-costume rule). Nothing is blocked; the wording should be aligned so downstream prompts don't mix the two.",
+  "findings": [
+    {"id": "DEF-p4-char-concept-101-a", "files": ["bible/characters/CHAR-king-of-hearts/appearance.json (face.features, prompt_base_en)", "bible/costumes.json COS-009 / COS-010 variant 'spectacles on'"], "issue": "Appearance lists 'reading spectacles' as a face feature and in prompt_base_en. costumes.json puts spectacles on only as a COS-010 court variant (ev0045-ev0049).", "working_value": "Sheet rendered without spectacles (COS-009 default, bareheaded).", "requested_action": "appearance moves spectacles from face.features/prompt_base_en to marks (situational), or costume confirms they are always worn."},
+    {"id": "DEF-p4-char-concept-101-b", "files": ["bible/characters/CHAR-mouse/appearance.json prompt_base_en ('fur soaking wet')", "bible/characters/CHAR-bill-the-lizard/appearance.json prompt_base_en ('dusted with soot')", "bible/costumes.json COS-021 variant 'soaked', COS-031 variant 'sooted after the chimney'"], "issue": "prompt_base_en bakes a variant state (wet / sooted) into the base prompt that downstream agents may paste as the identity description.", "working_value": "Sheets rendered dry (Mouse) and clean (Bill) as the default-outfit anchors.", "requested_action": "appearance removes the state words from prompt_base_en (they stay in marks.condition and the costumes.json variants)."}
+  ]
+}

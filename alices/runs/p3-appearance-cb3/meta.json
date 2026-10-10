@@ -1,0 +1,26 @@
+{
+  "task_id": "p3-appearance-cb3",
+  "run_id": "98196ed5e267",
+  "attempt": 1,
+  "model": "agent default",
+  "tokens": null,
+  "started_at": null,
+  "finished_at": "2026-09-22T18:32:59+08:00",
+  "inputs_sha256": {},
+  "artifact_versions": {
+    "bible/characters/CHAR-frog-footman/appearance.json": "v1",
+    "bible/characters/CHAR-gardener-two/appearance.json": "v1",
+    "bible/characters/CHAR-gardener-five/appearance.json": "v1",
+    "bible/characters/CHAR-gardener-seven/appearance.json": "v1",
+    "bible/characters/CHAR-pat/appearance.json": "v1",
+    "bible/characters/CHAR-executioner/appearance.json": "v1",
+    "bible/characters/CHAR-jury-ensemble/appearance.json": "v1",
+    "bible/characters/CHAR-card-soldiers-ensemble/appearance.json": "v1",
+    "bible/characters/CHAR-royal-gardeners-ensemble/appearance.json": "v1",
+    "bible/characters/CHAR-caucus-race-party-ensemble/appearance.json": "v1",
+    "bible/characters/CHAR-visiting-monarchs-ensemble/appearance.json": "v1",
+    "bible/characters/CHAR-royal-procession-ensemble/appearance.json": "v1",
+    "bible/characters/CHAR-court-officers-ensemble/appearance.json": "v1",
+    "bible/characters/CHAR-crowd-ensemble/appearance.json": "v1"
+  }
+}

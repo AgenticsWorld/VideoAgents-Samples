@@ -1,0 +1,32 @@
+{
+  "_meta": {"file": "bible/scenes/SCN-croquet-ground/lighting.json", "owner": "05-scenes/lighting", "task_id": "p3-lighting-sb2", "attempt": 1, "generated": "2026-09-22", "enum_set": "LGT-ENUM-v1 (runs/p3-lighting-sb2/result.json)"},
+  "scene_id": "SCN-croquet-ground",
+  "layer": "dream",
+  "int_ext": "EXT",
+  "daylight_access": "open_sky",
+  "dream_light_growth": "The real late-afternoon sun dropping over the bank across the game's half hour; the cedar's shade where the guests rest is the tree shade the sister reads in (cp-court; environment fixed.dream_growth).",
+  "schemes": [
+    {
+      "scheme_id": "LGT-croquet-ground-01",
+      "condition": {"time_of_day": "late_afternoon", "weather": "fair_hot"},
+      "applies_to_states": ["SCN-croquet-ground-S01", "SCN-croquet-ground-S02", "SCN-croquet-ground-S03", "SCN-croquet-ground-S04", "SCN-croquet-ground-S05", "SCN-croquet-ground-S06"],
+      "key_source": "direct_sun",
+      "direction": "low_side",
+      "key_bearing": "sun west to west-north-west, elevation about 20 deg falling to 16 deg (S01-S06); in S03-S04 the Cat's head hangs with the sun behind it",
+      "fill": "open sky and bounce off the pale limestone terrace; the cedar of Lebanon throws a deep pool of shade at one corner",
+      "practicals": [],
+      "color_temp": "neutral (~4500K)",
+      "color_temp_k_approx": 4000,
+      "contrast": "hard",
+      "quality": "raking low sun that throws sharp shadows into the lawn's ridges and furrows, glare on the open ground, long shadows of the players; deep cool shade under the cedar",
+      "prompt_fragment_en": "hot lowering late-afternoon sun from the west raking across an uneven croquet lawn, hard side light throwing sharp shadows into the ridges and furrows and long shadows from every figure, glare on the open grass, bright sky and pale stone terrace for fill, a deep cool pool of shade under a great cedar at the edge",
+      "source_chapter": "ch008",
+      "source_refs": ["ch008-p41", "ch009-p35", "environment.json SCN-croquet-ground-S01..S06"],
+      "inferred": true,
+      "reason": "'All ridges and furrows' (ch008-p41) and 'resting in the shade' (ch009-p35) are explicit; the light is designed from the environment sun path. One scheme covers six states; the sun only lowers 4 deg across the game.",
+      "state_notes": {"SCN-croquet-ground-S05": "'Frowning like a thunderstorm' (ch009-p30) is a simile: no storm light, sky stays clear (environment decision).", "SCN-croquet-ground-S06": "Shade under the edge trees long and deep; same scheme."}
+    }
+  ],
+  "special": [],
+  "special_note": "The Cat's head in the air (ch008-p45) is a photographic dissolve (SUP-005), not a light effect; no special scheme."
+}

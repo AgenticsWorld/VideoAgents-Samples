@@ -1,0 +1,47 @@
+{
+  "_meta": {
+    "file": "bible/scenes/SCN-pool-bank/lighting.json",
+    "owner": "05-scenes/lighting",
+    "task_id": "p3-lighting-sb1",
+    "attempt": 1,
+    "generated": "2026-09-22",
+    "status": "draft_v1",
+    "enum_set": "LGT-ENUM-v1 (defined once in runs/p3-lighting-sb1/result.json)",
+    "inputs": ["bible/scenes/SCN-pool-bank/environment.json", "bible/scenes/SCN-pool-bank/architecture.json"]
+  },
+  "scene_id": "SCN-pool-bank",
+  "layer": "dream",
+  "int_ext": "EXT",
+  "daylight_access": "open_sky",
+  "dream_growth": {
+    "grows_from": "the waking sun at 15:08-15:35 GMT on the bank (the curve between LGT-riverbank-01 and -02) and the muddy rim of the backwater",
+    "how": "The dream's first open sky: the same high afternoon sun that is shining on the sleeping girl, a little lower than at 2 pm. It dries the party; it never dims toward evening, whatever the birds say (ch003-p47).",
+    "ruling": "runs/h1-ruling/ruling.json 5.2 A"
+  },
+  "schemes": [
+    {
+      "lighting_scheme_id": "LGT-pool-bank-01",
+      "condition": {"time_of_day": "afternoon", "weather": "fair_hot"},
+      "state_refs": ["SCN-pool-bank-S01", "SCN-pool-bank-S02"],
+      "waking_clock": "15:08-15:35 GMT (Alice asleep on the bank)",
+      "sun": {"elevation_deg_approx": 43, "azimuth_deg_approx": 252},
+      "key_source": "sun_direct",
+      "key": "high, unobstructed west-south-west sun over the shore",
+      "direction": "high_side",
+      "direction_note": "sun high on the WSW side of the set; shadows short and falling ENE; the wood edge behind is lit on its sun side; plan north is fixed by the layout pack, and continuity keeps the sun on the same screen side through the Caucus-race",
+      "fill": {"source": "sky_and_ground_bounce", "note": "clean blue-sky fill; sparkle and bounce off the still pool"},
+      "practicals": [],
+      "color_temp": "neutral (~4500K)",
+      "kelvin_approx": 5300,
+      "contrast": "hard",
+      "quality": "hard",
+      "atmosphere": "clear, dry, warm-to-hot still air; wet mud and wet clothes glisten at first, then dry matte",
+      "prompt_fragment_en": "Open afternoon sun on a dream shore: a high, hard sun from the west-south-west in a clear summer sky lights the muddy, reed-fringed shore in neutral white daylight, with crisp short shadows under the reeds, sparkle on the still pool, wet mud and dripping clothes glistening, and clean blue-sky fill in the shadows; bright, warm, dry full-afternoon mood, no hint of evening.",
+      "source_chapter": "ch003",
+      "sources": ["ch003-p01", "ch003-p19", "ch003-p47", "ch004-p01"],
+      "inferred": true,
+      "reason": "The shore and the drying are explicit (ch003-p01, ch003-p19); no light is described. The sun follows the waking clock (environment S01/S02); S01 and S02 share one condition, so one scheme. The 'night-air' line (ch003-p47) is an excuse, not a light change."
+    }
+  ],
+  "special": []
+}

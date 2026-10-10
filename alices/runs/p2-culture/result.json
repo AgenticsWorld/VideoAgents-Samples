@@ -1,0 +1,52 @@
+{
+  "task_id": "p2-culture",
+  "agent": "02-worldbuilding/culture",
+  "project": "alices",
+  "phase": "Phase 2 (world bible)",
+  "attempt": 1,
+  "status": "completed",
+  "output_file": "bible/culture.json",
+  "generated": "2026-09-22",
+  "summary": "Read all 12 chapters of the source novel directly (novel/Alices_Adventures_in_Wonderland_English.md) plus story/events.json, story/chapter_manifest.json and the bible/culture.json skeleton, and wrote 44 sourced culture entries covering etiquette (10), dress_code (3), game (4), festival (2), food_dining (6), education (7), language (3) and verse_song (9). All entries carry a chNNN source citation with a verbatim quote; 3 are additionally marked inferred:true with a reason (external/decoded facts not stated verbatim in the source). No UNKNOWN/TBD/empty placeholders used.",
+  "entry_count": 44,
+  "categories": { "etiquette": 10, "dress_code": 3, "game": 4, "festival": 2, "food_dining": 6, "education": 7, "language": 3, "verse_song": 9 },
+  "inferred_entries": [
+    { "id": "CUL-024", "name": "Treacle as everyday/medicinal staple food", "reason": "grounds the Dormouse's 'treacle-well' joke in the real Victorian food staple and the real Binsey holy well near Oxford, external facts not stated in-text" },
+    { "id": "CUL-025", "name": "The Mock Turtle's school curriculum", "reason": "the literal wordplay curriculum is fully sourced; the claim that each pun stands for a specific real school subject (Reading/Writing, the four arithmetic operations, History/Geography, Drawing/Sketching/oil-painting, Latin/Greek) is the standard plain-sense decoding, not stated outright in the text" },
+    { "id": "CUL-033", "name": "Recitation of moral verse: \"How doth the little busy bee\"", "reason": "identifies the garbled in-story poem as a parody of Isaac Watts's real didactic poem 'Against Idleness and Mischief', an external literary fact not named in the source text" }
+  ],
+  "cross_domain_assumptions": [
+    {
+      "id": "CUL-ASM-01",
+      "aspect": "dream frame + talking/anthropomorphic figures (story/events.json realistic_adaptation_flags)",
+      "one_line": "Wonderland customs are written as Alice's real Victorian social world (garden-party croquet, perpetual tea, courtroom procedure, schoolroom curriculum, nursery verse) seen through a drowsy child's imaginative recasting of real people/pets/tradesmen/playing cards as talking figures; almost no custom needed fantastical rewriting since the source already satirises real Victorian practice. Final SUP-* ruling owned by magic-cultivation + world, confirmed at H1.",
+      "blocking": false
+    },
+    {
+      "id": "CUL-ASM-02",
+      "aspect": "'Off with her head!' threats never carried out (ev0041 Gryphon reveal)",
+      "one_line": "Treated as already-realistic in the source itself: a theatrical, habitually empty threat from a hot-tempered aristocrat, never executed on-page. No SUP- reinterpretation needed for this element; politics.json may want a matching LAW-*/OFF-* entry for the legal mechanism, which culture.json does not own.",
+      "blocking": false
+    }
+  ],
+  "conflicts": [],
+  "dependencies_not_yet_available": {
+    "note": "geography.json, characters/index.json and politics.json were all still skeleton_empty at write time (parallel Phase 2 run), so bible/WRITE_RULES.md's LOC-* namespace (not forward-reference whitelisted) is left as empty arrays in every entry's 'locations' field to avoid unresolved cross-refs; location context is instead given in each entry's free-text summary/visual. CHAR-* references (whitelisted for forward reference) use predictable slug-cased character names (e.g. CHAR-hatter, CHAR-queen-of-hearts, CHAR-mock-turtle) for memory-bible/character-manager to reconcile at merge.",
+    "expects_reconciliation_by": "00-orchestration/memory-bible at p2-merge, in coordination with 02-worldbuilding/geography and 03-characters/character-manager"
+  },
+  "out_of_scope_flagged": [
+    "Costume/garment form and pattern detail for the identified dress-code occasions (white kid gloves, judge's wig, footman livery) is intentionally left to 06-art/costume; culture.json only states the occasion-based rule.",
+    "No religious/deity-directed ritual content included (none present in source customs extracted); if any surfaces later it belongs to 02-worldbuilding/religion.",
+    "The legal mechanism behind 'Off with her head!' (who may issue/stay a sentence) is flagged to 02-worldbuilding/political as a possible LAW-*/OFF-* entry; culture.json only records the social-etiquette layer (CUL-ASM-02)."
+  ],
+  "acceptance_self_check": {
+    "schema": "pass (kept skeleton _meta and entry_schema unchanged, added cross_domain_assumptions + entries)",
+    "source_refs_required": "pass (every entry has source.chapter+quote or inferred:true+reason)",
+    "no_unknown_placeholder": "pass (scripted scan found zero UNKNOWN/TBD/N/A/empty-required hits)",
+    "id_uniqueness": "pass (44/44 unique CUL- ids)",
+    "etiquette_four_elements": "pass (occasion/parties/action/consequence embedded in each etiquette summary, e.g. CUL-003, CUL-004, CUL-007)",
+    "evaluation": "skipped (quality judge = 0, project setting)",
+    "qa": "skipped (all QA dimensions = 0, project setting)"
+  },
+  "helper_scripts_written": []
+}

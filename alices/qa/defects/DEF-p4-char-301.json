@@ -1,0 +1,77 @@
+{
+  "defect_id": "DEF-p4-char-301",
+  "opened_by": "06-art/character-concept",
+  "task_id": "p4-char-concept-cb3",
+  "opened": "2026-09-23",
+  "severity": "minor",
+  "status": "closed",
+  "route_to": "00-orchestration/memory-bible -> 03-characters/appearance",
+  "title": "Club-suit rank collision: card soldiers Ace-Ten of Clubs vs gardeners 2/5/7 and royal gardeners 3/4/6/8/9/10",
+  "evidence": [
+    {
+      "file": "bible/characters/CHAR-card-soldiers-ensemble/appearance.json",
+      "field": "signature_items[0]",
+      "value": "club-suit pips with rank indices Ace to Ten of Clubs, one rank per soldier"
+    },
+    {
+      "file": "bible/characters/CHAR-gardener-two/appearance.json (and -five, -seven)",
+      "field": "signature_items[0]",
+      "value": "Two / Five / Seven of Clubs"
+    },
+    {
+      "file": "bible/characters/CHAR-royal-gardeners-ensemble/appearance.json",
+      "field": "signature_items[0] + variation_rules[0]",
+      "value": "ranks Three, Four, Six, Eight, Nine, Ten of Clubs; 'Never use numerals 2, 5 or 7'"
+    }
+  ],
+  "problem": "Every club rank from 2 to 10 is claimed twice: the ten soldiers take Ace to Ten, and the nine gardeners (three named plus six background) take 2 to 10. So a 'Five of Clubs' soldier and Gardener Five are both on the croquet ground in ch008. The royal-gardener card protects the named trio's numerals from the background gardeners but not from the soldiers. Caps and batons tell the soldiers apart in costume, but the card faces themselves collide, and the named trio are meant to be identifiable by numeral.",
+  "workaround_in_this_task": "The soldier representative sheet uses the Ace of Clubs, the only club rank not claimed by a gardener. No Bible file edited.",
+  "suggested_options": [
+    "A: soldiers take a different suit or an Ace-plus-court-card range (reading 'carrying clubs' as the baton, not the suit).",
+    "B: soldiers keep clubs, and the named trio are marked by something extra (paint, brush) rather than numeral alone. Accept the duplicate numerals.",
+    "C: fewer soldier ranks shown on camera (e.g. only Ace, Jack-style court numbers are not in the text)."
+  ],
+  "decision_owner": "03-characters/appearance (card content), user at H2 if the suit reading changes",
+  "resolution": {
+    "change_id": "BIB-0029",
+    "task_id": "p4-h2-bible",
+    "arbitrated_by": "00-orchestration/memory-bible",
+    "date": "2026-09-23",
+    "authority": "H2 art-style lock, gate G4, approval ba96732d (runs/g4/gate.json)",
+    "decision": "The card soldiers KEEP the club suit and ranks Ace-Ten. The gardeners (named trio and background ensemble) keep their numerals but move to the SPADE suit. No card in the ch008 procession, rose-tree yard or croquet ground is now worn twice.",
+    "why_the_work_order_mechanism_could_not_be_used": "The work order asked for the soldiers to be re-ranked instead. That is arithmetically impossible: a suit has 13 cards, and in the shared ch008 scene the claimants are 10 soldiers + 3 named gardeners + 6 background gardeners + the King and Queen of Clubs (CHAR-visiting-monarchs-ensemble M01/M02) = 19. Even ignoring the background gardeners it is 15 > 13, so no re-ranking of the soldiers alone can clear the collision; one group has to leave the suit.",
+    "which_group_moved_and_why": "Source precedence (SOUL arbitration rule: source text first, inferred:true yields to what is written). ch008-p11 'First came ten soldiers carrying clubs' - read in parallel with the diamond courtiers and the heart royal children - anchors the club suit to the soldiers, and ten soldiers need the suit's ten pip cards. The gardeners' suit is nowhere in the source (only their numbers Two, Five and Seven are), so it is the free variable; spades also suit garden staff and match the illustrated tradition. The work order's binding requirement - keep the named gardeners' numerals - is honoured exactly.",
+    "final_rank_table": {
+      "CLUBS": {
+        "CHAR-card-soldiers-ensemble": "S01 Ace, S02 Two, S03 Three, S04 Four, S05 Five, S06 Six, S07 Seven, S08 Eight, S09 Nine, S10 Ten (one card each, never doubled on camera; the two optional arch-coverage doubles repeat a soldier already in frame and are never framed with their original)",
+        "CHAR-visiting-monarchs-ensemble": "M01 King of Clubs, M02 Queen of Clubs",
+        "reserve": "Jack of Clubs - worn by nobody"
+      },
+      "SPADES": {
+        "CHAR-gardener-two": "Two of Spades",
+        "CHAR-gardener-five": "Five of Spades",
+        "CHAR-gardener-seven": "Seven of Spades",
+        "CHAR-royal-gardeners-ensemble": "Three, Four, Six, Eight, Nine, Ten of Spades",
+        "CHAR-visiting-monarchs-ensemble": "M05 King of Spades, M06 Queen of Spades, M07 Jack of Spades (optional)",
+        "reserve": "Ace of Spades - worn by nobody"
+      },
+      "DIAMONDS": {
+        "note": "unchanged, out of this defect's scope",
+        "value": "CHAR-royal-procession-ensemble courtiers Ace-Ten; M03 King, M04 Queen, M08 Jack of Diamonds"
+      },
+      "HEARTS": {
+        "note": "unchanged, out of this defect's scope",
+        "value": "King / Queen / Knave of Hearts; CHAR-royal-procession-ensemble royal children Ace-Ten; CHAR-court-officers-ensemble Eight and Nine (extras Six and Four)"
+      }
+    },
+    "sheet_deviation_disclosed": "The four H2-locked gardener sheets (CHAR-gardener-two/-five/-seven, CHAR-royal-gardeners-ensemble) draw club trefoils, not spade pips. Nothing was regenerated: the user's auto-reroll budget is 0. The numerals - the only identifying feature and the only thing the source fixes - are unaffected. For prompts, costumes.json visual_en is the pip authority (runs/g4/gate.json DEF-p4-costume-sheet-901 waiver already makes costumes.json, not the sheet image, the wardrobe authority). Re-rolling those four sheets needs an explicit user order or the preview page's Modify button. CHAR-gardener-two's sheet is in any case already non-conforming (it draws 3 pips instead of 2, logged in runs/p4-char-concept-cb3/result.json).",
+    "writes": [
+      "bible/characters/CHAR-gardener-two/appearance.json, CHAR-gardener-five, CHAR-gardener-seven: signature_items suit, default_outfit_tone, sup002_coding, prompt_summary_en -> spades (numerals untouched)",
+      "bible/characters/CHAR-royal-gardeners-ensemble/appearance.json: signature_items, default_outfit_tone, sup002_coding, variation_rules[0], prompt_summary_en -> spades; the 'never 2, 5 or 7' rule now also bars every club rank",
+      "bible/characters/CHAR-card-soldiers-ensemble/appearance.json: ranks confirmed unchanged; the full S01-S10 rank table and the no-double / no-Queen-or-King rule written into variation_rules",
+      "bible/characters/index.json: performer_concept for the three named gardeners and the background ensemble now names the spade suit",
+      "bible/costumes.json COS-040/041/042/043 -> spade pips (numerals untouched); COS-044 reason records the confirmation"
+    ],
+    "user_may_overturn": "If the user would rather keep the gardeners on clubs, the only alternative that fits 13 cards is to move the soldiers to spades (1 sheet glyph affected instead of 4) at the cost of the source's club-suit reading. Flagged to workflow-orchestrator in runs/p4-h2-bible/result.json."
+  }
+}

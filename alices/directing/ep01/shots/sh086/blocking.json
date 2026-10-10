@@ -1,0 +1,39 @@
+{
+  "shot_id": "sh086",
+  "group_id": "grp032",
+  "scene_no": "S08",
+  "scene_id": "SCN-long-hall",
+  "duration_s": 5.0,
+  "is_dialogue": false,
+  "group_position": "middle shot of grp032 — Alice on the map start ground (curtain), unmoved; only her size changes.",
+  "axis_note": "composition.json puts the glass table screen-right in this set-up and screen-left in sh085 — a deliberate change of camera position (cause in the near plane, effect in the far plane), not a change of anybody's ground. Her world position at the low curtain is identical in both shots; the fragment follows the frame the composition describes. Flagged for continuity-planning.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "sit",
+      "start_pos": "sitting in the water at the low curtain, still fanning, unaware",
+      "space_fragment_en": "sitting in the water at the low curtain on screen-left, facing the glass table on screen-right, still fanning",
+      "facing": "her hand and the fan hold the near screen-left plane; the table edge is behind her on screen-right and she is not looking at it",
+      "path": [],
+      "beats": [
+        { "t": 0.6, "action": "the fan keeps waving in her other hand", "sync": "she has not noticed" },
+        { "t": 2.4, "action": "behind it the edge of the glass tabletop climbs past the top of frame", "sync": "cause in the near plane, effect in the far plane" },
+        { "t": 4.4, "action": "she is shrinking, fast, and still fanning", "sync": "held to the cut" }
+      ],
+      "performance_beat": {
+        "objective": "cool herself down while she thinks — and nothing else, because she has not worked it out yet",
+        "goal": "cool herself down while she thinks",
+        "emotional_arc": "from distracted worry to distracted worry — the audience sees what she does not",
+        "arc_from": "distracted worry",
+        "arc_to": "distracted worry, unchanged",
+        "trigger": { "beat": "the table edge starts climbing behind the fan", "t": 2.4 },
+        "no_early_reaction": ["the fanning stopping", "a glance behind her", "the eyes dropping to her hand"],
+        "forbidden_early": ["the fanning stopping", "a glance behind her", "the eyes dropping to her hand"],
+        "end_state": "fan still moving in her hand, eyes down and unfocused, no sign at all that she has noticed"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0008 (dream)", "note": "Alice alone." }
+}

@@ -1,0 +1,81 @@
+{
+  "task_id": "p3-char-index",
+  "agent": "03-characters/character-manager",
+  "project": "alices",
+  "attempt": 1,
+  "status": "done",
+  "produced_on": "2026-09-22",
+  "output_file": "bible/characters/index.json",
+  "summary": "Registered 43 characters in bible/characters/index.json: all 25 CHAR-* slugs mandated by bible/_index.json forward_refs_pending (exact IDs honoured, including CHAR-tortoise, a told-only/mentioned-only figure kept per the mandate), plus 10 additional named individuals found in story/structured_story that were not on the forward-ref list (Cheshire Cat, Caterpillar, Pigeon, Pat, Canary, Magpie, old Crab, young Crab, the Royal Executioner, and the family housemaid / 'Mary Ann'), plus 8 extra-tier group/crowd ensemble entries (jury, card soldiers, royal gardeners, Caucus-race party, visiting monarchs, royal procession retinue, court officers, and a catch-all unnamed-crowd-voices entry for the structured_story 'CROWD'/'CHORUS' speaker tags).",
+  "tiering": {
+    "S": ["CHAR-alice"],
+    "A": [
+      "CHAR-alice-sister",
+      "CHAR-white-rabbit",
+      "CHAR-queen-of-hearts",
+      "CHAR-king-of-hearts",
+      "CHAR-duchess",
+      "CHAR-hatter",
+      "CHAR-cheshire-cat"
+    ],
+    "B": [
+      "CHAR-march-hare",
+      "CHAR-dormouse",
+      "CHAR-mouse",
+      "CHAR-cook",
+      "CHAR-bill-the-lizard",
+      "CHAR-knave-of-hearts",
+      "CHAR-gryphon",
+      "CHAR-mock-turtle",
+      "CHAR-caterpillar",
+      "CHAR-pigeon",
+      "CHAR-dodo"
+    ],
+    "extra_count": 24,
+    "total": 43
+  },
+  "fan_out_drivers": {
+    "note": "S/A/B ids above (19 total) are the set that should drive per-character fan-out to appearance/personality/relationship/voiceprint/dialogue-style; the 24 extra-tier entries (16 named background + 8 ensembles) are registered for ID legality and blocking/crowd reference only, per WORKFLOW.md's tier-gates-card-building convention noted in this SOUL."
+  },
+  "acceptance_checks": {
+    "check_script": "code/p3-char-index_check.py",
+    "run_command": "python3 code/p3-char-index_check.py",
+    "results": {
+      "ids_unique": "PASS (43 ids, all match ^CHAR-[a-z0-9]+(-[a-z0-9]+)*$)",
+      "forward_refs_pending_coverage": "PASS (25/25 mandated ids registered under their exact slugs)",
+      "alias_unambiguous": "PASS (13 distinct alias strings checked, none maps to more than one CHAR id)",
+      "no_unknown_placeholder": "PASS (no UNKNOWN/TBD/N/A/empty values in any character entry field)",
+      "tier_and_layer_enum_valid": "PASS (all 43 entries have tier in {S,A,B,extra} and layer in {waking,dream,both,both-echo})",
+      "first_appearance_and_appearance_chapters_present": "PASS (all 43 entries)"
+    },
+    "overall": "PASS"
+  },
+  "speaker_coverage_crosscheck": {
+    "method": "Extracted every 'speaker' field across story/structured_story/ch001.json..ch012.json and confirmed each resolves to a registered character's name/original_name/alias, allowing for compound tags (e.g. 'Hatter + March Hare') and case/article variants (e.g. 'King' -> CHAR-king-of-hearts alias 'the King').",
+    "result": "All speaker tags accounted for. Remaining loose/compound tags after exact-string matching ('Alice's sister', 'CHORUS', 'CROWD', 'Cook', 'Duchess + cook + baby', 'King', 'Knave', 'Mouse', 'Queen', 'White Rabbit (acting as herald of the court, ch011)', 'another of the jurymen', 'another unnamed helper', 'cook + baby only', 'one of the jury', 'one of the jurymen', 'soldiers', 'the party (chorus)', 'unnamed crier/voice at the court', 'unnamed helpers') were manually verified to each resolve to an existing registered entry (CHAR-alice-sister, CHAR-crowd-ensemble, CHAR-cook, CHAR-duchess/CHAR-cook, CHAR-king-of-hearts, CHAR-knave-of-hearts, CHAR-mouse, CHAR-queen-of-hearts, CHAR-white-rabbit, CHAR-jury-ensemble, CHAR-crowd-ensemble, CHAR-card-soldiers-ensemble, CHAR-caucus-race-party-ensemble, CHAR-court-officers-ensemble); none is an unregistered character. 'the baby' (TERM-0039, the Duchess's baby that turns into a pig) is intentionally NOT registered here: it is a creature-transformation element (SUP-006) belonging to 04-creatures/creature's boundary, not a human-performer CHAR-*.",
+    "novel_parser_note": "story/structured_story ch007.json and ch010.json carry a small number of 'UNKNOWN' speaker tags. These read as speaker-attribution gaps in 01-story/novel-parser's output rather than an actual unregistered character (the surrounding dialogue is clearly Hatter/March Hare/Dormouse tea-party banter and Gryphon/Mock Turtle/White-Rabbit-herald courtroom-approach banter respectively). Not registered as a character; flagged here for 01-story/novel-parser to review, per SOUL's rule that upstream speaker-attribution defects are reported, not silently patched downstream."
+  },
+  "scope_decisions": [
+    {
+      "decision": "Excluded from the character registry: Mabel, Ada, William the Conqueror, Edwin and Morcar, Stigand, Edgar Atheling, Shakespeare, Father William, Elsie/Lacie/Tillie, Queen Victoria, Napoleon III, St Frideswide.",
+      "reason": "These are real-world/recitation/comparison names Alice or others mention in passing; none is ever depicted as an on-screen dream-figure or waking participant (each is explicitly noted in bible/dictionary.json as 'never appears on stage' / 'never appear outside the telling'). They remain adequately covered as plain terms in bible/dictionary.json. The one told-only exception, CHAR-tortoise, was registered anyway because bible/_index.json forward_refs_pending explicitly mandates that exact slug."
+    },
+    {
+      "decision": "Dinah (Alice's real cat) is NOT registered in this file.",
+      "reason": "Per H1 SUP-002 and the WRITE_RULES.md prefix table, CHAR-* is for human-performer dream-figures and waking humans; Dinah is a real, on-screen animal and belongs to 04-creatures/creature's CRE-* namespace. CHAR-cheshire-cat carries a 'doubling' cross-reference note pointing at her (H1 ruling 5.3 B) without owning her registration."
+    },
+    {
+      "decision": "The Duchess's baby (TERM-0039, later 'the pig-baby') is NOT registered in this file.",
+      "reason": "SUP-006 treats the baby-to-pig shift as a continuous-shot creature transformation, not a human-performer dream-figure; ownership sits with 04-creatures/creature. Flagged here only as a boundary note, not a defect, since no CHAR-* forward-ref for it exists in bible/_index.json."
+    }
+  ],
+  "defects_filed": [
+    {
+      "id": "DEF-p3-dictionary-001",
+      "file": "qa/defects/DEF-p3-dictionary-001.json",
+      "assigned_to": "00-orchestration/memory-bible",
+      "summary": "Two minor internal inconsistencies in the locked bible/dictionary.json: (a) TERM-0001 still calls Alice 'seven-year-old', pre-dating the H1-confirmed age of 'about ten' now recorded on CHAR-alice; (b) TERM-0025 (Dinah) cites 'the Cheshire Cat (TERM-0041)' but TERM-0041 is actually 'March Hare' (the correct Cheshire Cat term is TERM-0040). Neither affects the correctness of bible/characters/index.json, which used the correct H1-ruling values and the correct term id."
+    }
+  ],
+  "downstream_note": "bible/characters/index.json is now populated (_meta.status: controlled) and ready for 03-characters/appearance, personality, relationship, voiceprint, dialogue-style and 05/07 blocking/screenplay consumers to build per-ID files under bible/characters/<CHAR-id>/. Per-character detail folders themselves were not created by this task (out of scope for character-manager)."
+}

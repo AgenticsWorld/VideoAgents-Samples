@@ -1,0 +1,67 @@
+{
+  "character_id": "CHAR-royal-procession-ensemble",
+  "card_type": "ensemble",
+  "tier": "extra",
+  "layer": "dream",
+  "headcount": {
+    "range": [20, 20],
+    "note": "Exactly ten courtiers (diamonds) + ten royal children (hearts). Soldiers, guests, Knave, King and Queen have their own cards.",
+    "source_chapter": "ch008", "paragraph": "ch008-p11",
+    "quote": "next the ten courtiers; these were ornamented all over with diamonds, and walked two and two, as the soldiers did. After these came the royal children; there were ten of them, and the little dears came jumping merrily along hand in hand, in couples: they were all ornamented with hearts."
+  },
+  "gender": "female",
+  "gender_note": { "inferred": true, "reason": "Mixed group, not stated in source. Designed: courtiers 5 men + 5 women (ladies and gentlemen of the court walking two and two as couples); royal children 5 girls + 5 boys (walking hand in hand in couples). Female 10 / male 10 — 'female' is recorded as the nominal value only because the field requires one; use gender_mix and subgroup split." },
+  "gender_mix": { "female": 10, "male": 10 },
+  "subgroups": [
+    {
+      "subgroup": "courtiers",
+      "count": 10,
+      "gender_mix": { "male": 5, "female": 5 },
+      "age": "25-50",
+      "look": "elegant, poised, slightly supercilious ladies and gentlemen; hair: women in smooth centre-parted bands and low chignons, men with side-whiskers and pomaded side-parts",
+      "outfit": "card-face panels (Two to Ten of Diamonds plus one Ace) in ivory with red diamond pips, worn over 1862 court dress in scarlet and gold; small red diamond-shaped paste ornaments stitched all over sleeves, skirts and coat-tails",
+      "source_chapter": "ch008", "paragraph": "ch008-p11", "quote": "these were ornamented all over with diamonds, and walked two and two"
+    },
+    {
+      "subgroup": "royal children",
+      "count": 10,
+      "gender_mix": { "male": 5, "female": 5 },
+      "age": "5-9",
+      "look": "rosy, lively small children, all younger and smaller than Alice; girls with ringlets and heart-shaped hair bows, boys with short curls",
+      "outfit": "small card-face tunics/pinafores (Ace to Ten of Hearts) in ivory with crimson heart pips, over crimson-and-white 1862 children's dress (girls: short full skirts with pantalettes; boys: tunic suits); many little crimson heart appliqués",
+      "source_chapter": "ch008", "paragraph": "ch008-p11", "quote": "the little dears came jumping merrily along hand in hand, in couples: they were all ornamented with hearts"
+    }
+  ],
+  "hair": { "value": "per subgroup (see subgroups); natural 1862 styles, no powder", "inferred": true, "reason": "Not described." },
+  "eyes": { "value": "natural mixed", "inferred": true, "reason": "Not described." },
+  "face": { "value": "courtiers composed and stiff; children merry, jumping", "source_chapter": "ch008", "paragraph": "ch008-p11", "quote": "came jumping merrily along", "detail_inferred": true, "detail_reason": "Courtier demeanour designed." },
+  "build": {
+    "height_range_cm": [105, 185],
+    "body_type": "courtiers 160-185 cm, slender adults; royal children 105-130 cm, all shorter than Alice",
+    "card_shape": { "value": "flat card silhouette front and back; children's tunics short and rigid", "inferred": true, "reason": "SUP-004; courtiers/children are 'the pack' (ch008-p16)." },
+    "scale_reference": "Children are 5-30 cm shorter than Alice at base scale (135 cm, CHAR-alice scale anchor) — she must look older than every royal child; courtiers 25-50 cm taller. Relative size on screen follows SUP-003.",
+    "inferred": true,
+    "reason": "Designed; the children being 'little dears' supports making them younger than Alice."
+  },
+  "base_age_range": "5-50 (children 5-9; courtiers 25-50)",
+  "base_age_inferred": true,
+  "base_age_reason": "Designed; children 'little dears' (ch008-p11).",
+  "marks": [ { "type": "none", "description": "No marks.", "inferred": true, "reason": "Not described." } ],
+  "signature_items": [
+    { "item": "red diamond ornaments all over (courtiers)", "source_chapter": "ch008", "paragraph": "ch008-p11", "quote": "ornamented all over with diamonds" },
+    { "item": "crimson heart ornaments (royal children)", "source_chapter": "ch008", "paragraph": "ch008-p11", "quote": "they were all ornamented with hearts" },
+    { "item": "shared pack back-pattern on every panel", "source_chapter": "ch008", "paragraph": "ch008-p16", "quote": "the pattern on their backs was the same as the rest of the pack" }
+  ],
+  "default_outfit_tone": "Courtiers: ivory card panels with red diamond pips over scarlet-and-gold court dress, jewel-like red diamond ornaments everywhere. Children: ivory card tunics with crimson heart pips over crimson-and-white children's dress with heart appliqués. Both share the crimson-and-cream lattice card-back.",
+  "default_outfit_tone_source": { "inferred": true, "reason": "Ornament motifs sourced (ch008-p11); colours and cuts designed; details owned by 06-art/costume." },
+  "period_silhouette": { "value": "Courtiers: 1862 court dress (crinolines, tail coats) flattened by card panels. Children: 1862 children's dress (short crinolined skirts with pantalettes; boys' tunic suits).", "inferred": true, "reason": "Period design." },
+  "sup002_coding": { "animal_or_card": "card (Diamonds courtiers; Hearts children)", "forbidden": "no CGI", "rule": "bible/cultivation.json SUP-002, SUP-004" },
+  "variation_rules": [
+    "Courtiers walk two and two; children skip hand in hand in couples (boy-girl pairs).",
+    "No royal child may be as tall as or resemble Alice (no blue dress, no long fair loose hair on any girl).",
+    "Children's hearts are crimson; courtiers' diamonds are brighter scarlet — the two reds must not merge in a wide shot.",
+    "Procession order fixed by ch008-p11: soldiers, courtiers, children, guests, Knave, King and Queen."
+  ],
+  "doubling": { "value": "none", "reason": "Not part of any H1 ruling 5.3 B doubling pair." },
+  "prompt_summary_en": "Victorian 1862 royal procession: ten elegant courtiers, men and women walking two by two in scarlet-and-gold court dress with flat ivory playing-card panels covered in red diamond pips and red diamond ornaments, followed by ten small children aged 5 to 9 skipping hand in hand in pairs, wearing ivory card tunics with crimson heart pips over crimson-and-white dresses and tunic suits with heart appliqués, garden lawn, realistic period drama, human actors"
+}

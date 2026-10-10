@@ -1,0 +1,28 @@
+{
+  "shot_id": "sh068",
+  "scene_id": "SCN-long-hall",
+  "size": "close",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "top_right",
+    "anchor_xy": [0.66, 0.26],
+    "size_in_frame": "her face high in frame and only half in it — the top of her head and one cheek are cropped by the top edge; her knee and a wall of blue cotton take the rest of the picture"
+  },
+  "headroom": "none, and deliberately negative: she is too tall for her own close-up. The frame's top edge cuts her, which is the shot's first statement.",
+  "horizon_eyeline": "Lens on the flagstones at 0.35 m straight across the hall. The dry flagstone line runs across at 0.88 of frame height. Her eyeline is at 0.28 and drops through the shot as she hunches — the highest eyeline in the second half of the episode and the last time it is up there.",
+  "layers": {
+    "fg": "her knee and shin coming up from the bottom of frame, a mass of blue cotton",
+    "mg": "her face, high and half-cropped, hunched under the vault",
+    "bg": "the dark hall, dry stone still, and the vault pressing down behind her — and from this frame to the end of the episode, no lamp fitting anywhere"
+  },
+  "gaze": {
+    "direction": "down_frame",
+    "lead_room": "none",
+    "note": "she sits up, sees the door is still impossible, and her look drops. No lead room; every direction in this frame is blocked by her own body or by stone."
+  },
+  "balance": "Crowded to the upper right and lower left by the same person, with no empty quadrant anywhere. The frame has run out of room, which is the subject.",
+  "leading_lines": "The line of her shin and the line of her forearm make a closed acute angle across the frame; the vault curve closes the top. Everything is a wedge, and she is inside it.",
+  "eye_first": "Her face at the top of frame, half out of it, then her knee — the two things that prove she does not fit.",
+  "safe_area_ok": true,
+  "constraint_binding": "From this frame to the end of the episode the camera stays below 1.0 m and NO lamp fixture appears in frame. The composition observes both: the lens is on the flagstones, the top edge is set below the 2.30 m lamp line, and no fitting, halo, shade or chain enters the picture. Dry stone still — no water anywhere in frame yet."
+}

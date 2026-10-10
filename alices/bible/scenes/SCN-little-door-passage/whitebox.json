@@ -1,0 +1,41 @@
+{
+  "schema_version": "whitebox_scene.v1",
+  "scene_id": "SCN-little-door-passage",
+  "task_id": "p4-scene-model-sb1",
+  "dimensions_m": [5.0, 2.8, 2.8125],
+  "inferred": true,
+  "scale_basis": "True units. The passage is about 3 m long (architecture.json): the drawn masonry mass it runs through spans image x 0.16-0.7475, so 0.5875 x 5.0 m = 2.94 m, and the image width is 5.0 m (= layout.json map_extent_m). Z = 5.0 x 9/16 = 2.8125 m. Y = 2.8 m, the hall wall height.",
+  "orientation_note": "North at top; the long hall is at the right (east) edge, the garden at the left (west) edge.",
+  "objects": [
+    {"id": "masonry_wall_n", "shape": "box", "size_m": [2.9375, 2.8, 1.24875], "xy": [0.45375, 0.222], "collision_role": "wall"},
+    {"id": "masonry_wall_s", "shape": "box", "size_m": [2.9375, 2.8, 1.1756], "xy": [0.45375, 0.791], "collision_role": "wall"},
+    {"id": "passage_vault_head", "shape": "box", "size_m": [2.9375, 2.44, 0.388], "xy": [0.45375, 0.513], "elevation_m": 1.58, "collision_role": "wall"},
+    {"id": "little_door_jamb_n", "shape": "box", "size_m": [0.1, 0.38, 0.0557], "xy": [0.7375, 0.4539], "elevation_m": 0.19, "collision_role": "wall"},
+    {"id": "little_door_jamb_s", "shape": "box", "size_m": [0.1, 0.38, 0.0726], "xy": [0.7375, 0.5691], "elevation_m": 0.19, "collision_role": "wall"},
+    {"id": "curtain", "shape": "box", "size_m": [0.05, 0.6, 1.8], "xy": [0.7525, 0.51], "elevation_m": 0.3, "color": "#9e2a2b"},
+    {"id": "hall_door_9_leaf", "shape": "box", "size_m": [0.1, 1.95, 0.565], "xy": [0.7575, 0.1005], "color": "#6b4a2f"},
+    {"id": "hall_door_10_leaf", "shape": "box", "size_m": [0.1, 1.95, 0.565], "xy": [0.7575, 0.8995], "color": "#6b4a2f"},
+    {"id": "rose_bed", "shape": "box", "size_m": [0.375, 1.2, 1.209], "xy": [0.1225, 0.215], "color": "#5f7f4a"},
+    {"id": "lily_bed", "shape": "box", "size_m": [0.375, 1.0, 1.153], "xy": [0.1225, 0.795], "color": "#5f7f4a"}
+  ],
+  "walkable": {
+    "passage": "x 0.16-0.7475, y 0.444-0.582: 2.94 m long, 0.39 m between the stone faces (0.33 m between the iron ribs), 0.36 m clear height under passage_vault_head.",
+    "little_door": "0.26 m clear width (between the jambs) x 0.38 m high at the hall face, x 0.7475. The leaf is not modelled (it is locked in ch001 and open in ch007).",
+    "garden_arch": "Open, west end x 0.16. The gravel path leads west between rose_bed and lily_bed (about 0.45 m gap at true scale).",
+    "hall_floor": "x 0.7475-1.0: open hall floor; the curtain hangs on the hall face in front of the little door."
+  },
+  "inferred_items": [
+    "The little door jambs narrow the drawn 0.39 m passage to the Bible 0.26 m door width at the hall face.",
+    "Curtain placed on the hall side of the little door (Bible), 1.8 m x 0.6 m.",
+    "hall_door_9 / hall_door_10: 0.1 m leaves on the hall face at the layout.json positions (architecture, not drawn). A 0.85 m door centred at y 0.05 / 0.95 runs off the frame, so only the 0.565 m in frame is modelled.",
+    "Garden beds: 1.0-1.2 m high blocks for the rose and lily beds; the garden itself is outside this plan."
+  ],
+  "landmarks_covered": ["rose_bushes", "lily_clump", "garden_arch", "petals", "passage_mid", "little_door", "hall_door_9", "hall_door_10", "hall_floor"],
+  "workflow_notes": [
+    "Image vs Bible (DEF-p4-envconcept-603-d): the image draws the two hall doors as oak slabs inside the masonry, and the crimson curtain inside the passage. The model follows layout.json/architecture: doors on the hall wall line and the curtain on the hall side. The drawn slabs are not modelled. inferred:true.",
+    "Passage width: drawn 0.39 m vs Bible 0.28 m. The stone faces follow the drawing; the Bible door width is kept at the hall face by the jambs.",
+    "Build scale: ch007 (Alice about 30 cm) is shot on the x4.5 oversized build. Use the same xy and multiply metres by 4.5 (passage 13.2 m x 1.76 m, clear height 1.62 m). Record the factor in whitebox_plans and do not rescale this asset.",
+    "Anti-clip handover: at true scale no human performer fits. At x4.5, a 1.35 m performer (about 0.4 m shoulder width) in the 1.17 m door (0.26 x 4.5) leaves about 0.38 m each side, so walk through on the centre line."
+  ],
+  "downstream": "No storyboard yet. Hand over to whitebox-staging. No reference video was rendered."
+}

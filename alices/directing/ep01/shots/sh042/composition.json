@@ -1,0 +1,28 @@
+{
+  "shot_id": "sh042",
+  "scene_id": "SCN-little-door-passage",
+  "size": "close",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "centre",
+    "anchor_xy": [0.44, 0.44],
+    "size_in_frame": "her face held whole, about 0.52 of frame height, just left of centre"
+  },
+  "headroom": "about 0.16 of frame height of dark hall above her — generous for a close-up, because the held wonder needs air around it and because nothing above her is lit.",
+  "horizon_eyeline": "The reverse of the tile-1 axis: lens at the little door's threshold looking up at her. The flagstone plane cuts the bottom 0.12 of frame. Her eyeline comes down toward the lens at about 0.44, so she is looking very slightly down the passage and almost into it.",
+  "layers": {
+    "fg": "the out-of-focus edge of the open door leaf and the arch cheek at the bottom of frame, a dark sill she is looking over",
+    "mg": "her face, lit by that green",
+    "bg": "the hall behind her in lamp amber, the mosaic dado and one door base just readable, soft"
+  },
+  "gaze": {
+    "direction": "to_camera",
+    "lead_room": "left",
+    "note": "she looks down the passage, which is the lens axis, so the look passes just beside camera; about 0.22 of frame width is left open on the screen-left side — the side her body leans toward and the side the open leaf is on — so the look has a direction without becoming a stare at the audience."
+  },
+  "balance": "A single face, off-centre left, in a dark frame, with a hard green-gold bar of garden light across her screen-left cheek and eye and the rest of her in lamp amber. Two light registers on one face, the frame's whole argument in a single head.",
+  "leading_lines": "The arch cheek at the bottom of frame is a low curved line under her chin; otherwise the composition has no lines at all. It is the stillest frame in the first half.",
+  "eye_first": "The lit eye — the one that has the garden in it.",
+  "safe_area_ok": true,
+  "constraint_binding": "The wonder peak of the first half: static and HELD to the end of the shot, so the composition is settled from the first frame and never improves. Garden light is a hard green-gold edge across one cheek and one eye and the rest of her stays in lamp amber — the bar is placed on the screen-left side, matching the side the open leaf sits on in sh040/sh043, so the geography of the light is consistent across the reverse."
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": "scene_layout.v1",
+  "scene_id": "SCN-caterpillar-clearing",
+  "layout_top": "layout_top.png",
+  "orientation": {
+    "top_of_map": "north (the ring of trees on the far side)",
+    "note_en": "Clearing about 8 m across in true units (set built at x9). The round mushroom stands in the centre; the tall buttercup Alice leans on is south-west of it; Alice wanders in through the south gap. Sun from the west-south-west. Camera positions in views[] are described relative to these landmarks."
+  },
+  "extent_m": {"x": 16.0, "y": 9.0},
+  "landmarks": [
+    {"id": "mushroom", "name": "mushroom", "name_en": "the great mushroom", "kind": "feature", "xy": [0.50, 0.50]},
+    {"id": "buttercup", "name": "buttercup", "name_en": "the tall buttercup", "kind": "flora", "xy": [0.24, 0.70]},
+    {"id": "daisy_clump", "name": "daisies", "name_en": "the ox-eye daisies", "kind": "flora", "xy": [0.70, 0.75]},
+    {"id": "clover_patch", "name": "clover patch", "name_en": "the clover patch", "kind": "flora", "xy": [0.36, 0.25]},
+    {"id": "tree_ring_north", "name": "north trees", "name_en": "the trees on the north side", "kind": "tree", "xy": [0.42, 0.05]},
+    {"id": "tree_ring_east", "name": "east trees", "name_en": "the trees on the east side", "kind": "tree", "xy": [0.92, 0.35]},
+    {"id": "tree_ring_west", "name": "west trees", "name_en": "the trees on the west side", "kind": "tree", "xy": [0.06, 0.52]},
+    {"id": "wood_gap_south", "name": "south gap", "name_en": "the gap into the clearing from the south", "kind": "path", "xy": [0.47, 0.95]}
+  ],
+  "views": [
+    {"tile": 1, "camera_from": "wood_gap_south", "looking_at": "mushroom", "size": "wide", "angle": "eye", "desc_en": "eye-level wide shot from the south gap through towering grass stems to the great mushroom under the round open patch of sky"},
+    {"tile": 2, "camera_from": "buttercup", "looking_at": "mushroom", "size": "close", "angle": "low", "desc_en": "low-angle close shot from the foot of the buttercup up at the rim of the mushroom cap, as if peeping over it on tiptoe"},
+    {"tile": 3, "camera_from": "mushroom", "looking_at": "buttercup", "size": "medium", "angle": "high_oblique", "desc_en": "high oblique medium shot from the top of the mushroom cap down to the buttercup and the grass below"},
+    {"tile": 4, "camera_from": "tree_ring_east", "looking_at": "tree_ring_west", "size": "wide", "angle": "eye", "desc_en": "eye-level wide shot across the whole clearing into the west-south-west sun, grass and petals backlit, the mushroom in the middle ground"},
+    {"tile": 5, "camera_from": "tree_ring_west", "looking_at": "daisy_clump", "size": "wide", "angle": "low", "desc_en": "low-angle wide shot from the western trees along the ground through a nave of grass stems toward the daisies"},
+    {"tile": 6, "camera_from": "clover_patch", "looking_at": "daisy_clump", "size": "medium", "angle": "eye", "desc_en": "eye-level medium shot from the clover patch past the mushroom stalk to the ox-eye daisies"},
+    {"tile": 7, "camera_from": "daisy_clump", "looking_at": "mushroom", "size": "close", "angle": "eye", "desc_en": "eye-level close shot from the daisies to the pale mushroom cap edge and its pink-brown gills"},
+    {"tile": 8, "camera_from": "tree_ring_north", "looking_at": "buttercup", "size": "medium", "angle": "eye", "desc_en": "eye-level medium shot from the northern trees across the clearing to the buttercup in the sun"},
+    {"tile": 9, "camera_from": "clover_patch", "looking_at": "buttercup", "size": "detail", "angle": "low", "desc_en": "low-angle detail shot of the buttercup stem and glowing petals, clover leaves in the foreground"}
+  ],
+  "checklist": {"architecture_match": false, "lighting_match": true, "style_match": true, "plan_view_clean": true, "note_en": "ring of trees drawn as sawn-off stumps; mushroom, buttercup, daisies, clover and south gap correct; kept for H2"}
+}

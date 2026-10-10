@@ -1,0 +1,47 @@
+{
+  "gate": "G6S",
+  "episode": "ep01",
+  "checkpoint": "H3S-故事板确认",
+  "decision": "PASS",
+  "opened_at": "2026-09-23T09:00:00+08:00",
+  "decided_at": "2026-09-23T10:48:25+08:00",
+  "checks": {
+    "dep_p6-storyboard-ep01": "PASS",
+    "scene_coverage_100": "PASS (S01-S10, plus the hook head S00)",
+    "blocking_map_present": "PASS — orchestrator re-ran code/blocking_map_check.py --source storyboard with the app runtime: 0 violations, 0 WARN",
+    "pose_present": "PASS — code/storyboard_pose_check.py --strict: 101 shots, 0 violations",
+    "transition_ok": "PASS — 6 transitions from directing_plan, renderable 1.4s <= 5.4s",
+    "group_caps": "PASS — 37 groups, max 30.0s, max cast 2 (cap 4)",
+    "dialogue_fit_x0.7": "PASS",
+    "defect_clearance_open_blocker": "PASS — 0 open blocker in G6S scope",
+    "defect_clearance_open_major": "PASS — the 7 open majors are the G4 waivers (runs/g4/gate.json), none storyboard-scope",
+    "due_gate_defects": "PASS — no defect carries due_gate G6S",
+    "qa_hold_advice": "N/A — all eight QA review dimensions are 0, none dispatched at this gate",
+    "evaluation": "OFF — 质量评委 = 0",
+    "human_checklist": "DONE — user reviewed the storyboard and signed"
+  },
+  "signature_request": {
+    "raised_at": "2026-09-23T09:00:00+08:00",
+    "result_first_round": "暂缓 (Hold) — no notes left",
+    "re_raised_at": "2026-09-23T10:46:00+08:00",
+    "kind": "sign",
+    "result": "签字",
+    "via": "dispatch.py --confirm --sign --project alices",
+    "question_disclosed": "Card stated the deliverable scale (10 scenes / 101 shots / 37 groups / 537.0s vs 540s budget) and all machine checks, then disclosed the two open items verbatim: (1) hooks.json is still awaiting_selection and signing accepts the recommended pair oh-1 (3s well-fall flash-forward) + ec-2 (7s V-wake ending), with the oh-2 alternative and its 534s consequence spelled out; (2) the S08 White Rabbit staging deviation (gloves + fan carried in the mouth because the quadruped gait is locked). Release effect stated: unlocks the ep01 directing chain and freezes shot durations and group boundaries."
+  },
+  "user_decisions_recorded": [
+    {
+      "item": "ep01 hook pair",
+      "ruling": "oh-1 (opening, 3s flash-forward of the slow well-fall) + ec-2 (ending, 7s approaching V-wake) — the hook Agent's recommended pair",
+      "effect": "All elements the storyboard tagged provisional are now confirmed: scene block S00 and its shot/group, transitions TR-01 and TR-02, and the S10 shot 8 V-wake insert. Episode stays at 537.0s. story/episodes/ep01/hooks.json must move from awaiting_selection to selected — routed to 01-story/hook.",
+      "follow_up": "p5-hooks-ep01 update work order"
+    },
+    {
+      "item": "S08 White Rabbit props while trotting",
+      "ruling": "Accepted as directed around — he carries the kid gloves and the fan in his mouth; the quadruped gait stays locked per CR-003 / CR-015 and the G4 char-sheet waiver. screenplay.md unchanged (frozen at H3).",
+      "effect": "No rework. Carried into shot-planning and blocking as staged."
+    }
+  ],
+  "waivers": [],
+  "effect": "p6-shots-ep01 released; shot durations and group boundaries are frozen at the storyboard values. Downstream ep01 directing chain unlocked: shot-planning -> dialogue-fit -> camera / composition / blocking -> continuity -> whitebox staging -> H3W (g6w-ep01)."
+}

@@ -1,0 +1,49 @@
+{
+  "character_id": "CHAR-duck",
+  "name": "Duck",
+  "tier": "extra",
+  "layer": "dream",
+  "revision": { "change_id": "BIB-0027", "task_id": "p4-cr-appearance", "date": "2026-09-23", "note": "Rewritten from the human-performer reading to a photoreal CGI animal." },
+  "rendering": {
+    "mode": "photoreal_cgi_animal",
+    "rule": "bible/cultivation.json SUP-002 (amended BIB-0027); member of FAC-caucus-race-company (no uniform)",
+    "species": "mallard drake (Anas platyrhynchos)",
+    "limits": "Duck anatomy throughout; speech by bill movement. No clothing, no cartoon face."
+  },
+  "gender": "male",
+  "gender_note": { "inferred": true, "reason": "The source calls the Duck 'it'. His one intervention is a pedantic question about what the Archbishop 'found' (ch003); male is kept, and the drake plumage now carries it." },
+  "base_age_range": "30-38",
+  "base_age_note": { "inferred": true, "reason": "Persona age (young-middle-aged, earnest), kept for voice casting. As an animal: an adult drake in full breeding plumage." },
+  "hair": {
+    "coat": "feathers",
+    "color": "glossy bottle-green head, thin white neck ring, chestnut-brown breast, grey-brown flanks, black tail with one upcurled drake's curl, blue-violet wing speculum",
+    "style": "sleek and waterproof; beads of water roll off (the only party member not draggled)",
+    "inferred": true,
+    "reason": "Species plumage; the old card's green-cravat / white-collar cues were taken from these same markings."
+  },
+  "eyes": { "color": "dark brown", "expression": "earnest, blinking, literal-minded; head tilted to one side to ask", "inferred": true, "reason": "Species colour; manner designed." },
+  "skin": { "tone": "yellow-olive bill, orange webbed feet", "inferred": true, "reason": "Species." },
+  "face": { "shape": "rounded green head, broad flat bill", "features": ["broad yellow-olive bill", "white neck ring", "leans forward when asking questions"], "inferred": true, "reason": "Species." },
+  "build": {
+    "height_range_cm": [30, 35],
+    "height_note": "Standing height; body length 55-60 cm, species-true.",
+    "body_type": "boat-shaped, plump",
+    "posture": "waddles with feet turned out; swims easily in the pool",
+    "scale_reference": "Shares the pool and the bank with the shrunken Alice (SUP-003); a little shorter than the Dodo.",
+    "source_chapter": "ch002",
+    "source_para": "ch002-p26",
+    "inferred": true,
+    "reason": "Species-true size; relative scale designed."
+  },
+  "entry_state": { "state": "on the bank with the party; wet but sleek", "source_chapter": "ch003", "source_para": "ch003-p01", "quote": "all dripping wet, cross, and uncomfortable", "inferred": true, "reason": "Sourced wet state; a duck's waterproof plumage keeps him sleek, which sets him apart in the circle." },
+  "marks": [
+    { "type": "plumage", "description": "the upcurled black drake's curl at the tail", "position": "tail", "inferred": true, "reason": "Species identifier readable in a wide shot." }
+  ],
+  "default_outfit_tone": {
+    "summary": "none: he wears nothing; his look is the mallard drake plumage",
+    "inferred": true,
+    "reason": "The text gives the Duck no clothing; per SUP-002 (BIB-0027) the old morning coat and webbed gloves are dropped."
+  },
+  "doubling": null,
+  "prompt_base_en": "photoreal mallard drake, glossy bottle-green head, thin white neck ring, chestnut breast, grey-brown flanks, upcurled black tail curl, yellow-olive bill, orange webbed feet, water beading on sleek feathers, standing on a muddy pool bank with its head tilted inquisitively, natural bird anatomy, live-action film plate"
+}

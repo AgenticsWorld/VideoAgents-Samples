@@ -1,0 +1,5 @@
+{"character_id":"CHAR-fish-footman","sheet":"sheet.png","gender":"male","gender_word_in_prompt":true,"rendering":"CGI cod-headed footman in livery","pending_H2":"H2-footmen-anatomy (rendered per Option A, the current proposal)",
+"appearance_field_hits":{"cod_head_green_grey_spotted":true,"chin_barbel":true,"gill_covers":true,"side_set_glassy_eyes":true,"jutting_upper_jaw":"weak","powdered_curled_wig_on_fish_head":true,"crimson_tail_coat_cream_piping":true,"red_heart_badge_numeral":true,"cream_waistcoat":true,"crimson_knee_breeches":true,"fin_edged_hands":true,"tail_fin_below_coat":true,"scaled_lower_legs":true,"great_sealed_letter":true,"skin_continuous_into_collar":true},
+"self_check":{"layout":"pass","appearance":"pass","style":"pass (photoreal CGI, no mask look)"},
+"defects":["The feet are webbed and frog-like. Needs the H2 anatomy ruling.","The upper jaw does not jut much. Minor."],
+"bible_conflict":"DEF-p4-char-concept-201-b (stockings/pumps in appearance vs bare scaled lower legs in COS-035; drawn per COS-035)","rerolls":[]}

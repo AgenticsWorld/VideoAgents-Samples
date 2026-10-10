@@ -1,0 +1,38 @@
+{
+  "shot_id": "sh080",
+  "group_id": "grp030",
+  "scene_no": "S08",
+  "scene_id": "SCN-long-hall",
+  "duration_s": 6.0,
+  "is_dialogue": true,
+  "group_position": "last shot of grp030 — Alice on the map start/end ground (curtain), fan lowered as the map's facing_end requires.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "sit",
+      "start_pos": "sitting in the water at the low curtain, the fan lying stopped in her hand",
+      "space_fragment_en": "sitting in the water at the low curtain, centred in frame, facing screen-left into the dark, completely still",
+      "facing": "unchanged — an unmoving look into an unoccupied screen-left space",
+      "path": [],
+      "beats": [
+        { "t": 0.5, "action": "a silent beat while the question settles", "sync": "with narration off, this space is where the thought lives" },
+        { "t": 3.2, "action": "she says it aloud", "sync": "LN-ep01-023 begins" },
+        { "t": 4.4, "action": "her eyes come back into focus on the word", "sync": "LN-ep01-023 on 'puzzle'" }
+      ],
+      "performance": {
+        "objective": "give the question a name so that it can be worked on",
+        "goal": "give the question a name so it can be worked on",
+        "emotional_arc": "from blank held stillness to a small return of method",
+        "arc_from": "blank held stillness",
+        "arc_to": "a small return of method",
+        "trigger": { "line_ref": "LN-ep01-023", "word": "puzzle" },
+        "no_early_reaction": ["the eyes refocusing", "the head straightening", "the hands moving"],
+        "forbidden_early": ["the eyes refocusing", "the head straightening", "the hands moving"],
+        "end_state": "eyes come back into focus screen-left, mouth closed, chin coming up a little, fan still lying unused"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0007 result (dream)", "note": "Alice alone." }
+}

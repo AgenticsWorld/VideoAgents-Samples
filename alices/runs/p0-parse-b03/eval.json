@@ -1,0 +1,11 @@
+{
+  "task_id": "p0-parse-b03",
+  "skipped": true,
+  "reason": "quality judge=0; extraction_v1 rubric not scored",
+  "auto": {
+    "schema": "PASS",
+    "batch_chapter_coverage_100": "PASS",
+    "speaker_missing_lt_2pct": "PASS"
+  },
+  "orchestrator_note": "cross-batch scene key aliases (location/location_cue/setting, cast_present/present, key/tentative_key) — not a shard defect; unified mechanically in p0-merge"
+}

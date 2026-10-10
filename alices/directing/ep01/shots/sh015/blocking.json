@@ -1,0 +1,41 @@
+{
+  "shot_id": "sh015",
+  "group_id": "grp007",
+  "scene_no": "S02",
+  "scene_id": "SCN-field-hedge-burrow",
+  "duration_s": 4.0,
+  "is_dialogue": false,
+  "group_position": "middle shot of grp007 — Alice crosses the last of the spoil_fan -> burrow line and reaches the map end inside this shot.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "prone",
+      "start_pos": "flat on the fan of pale spoil, arm then head and shoulders into the hole",
+      "space_fragment_en": "lying face down on the fan of pale spoil in the centre of frame, wriggling head-first into the rabbit burrow",
+      "facing": "travelling away from camera on the lens axis; no last look back is offered",
+      "path": [
+        { "t": 2.4, "to": "head and shoulders inside the rabbit burrow" },
+        { "t": 3.6, "to": "gone under the hedge, boots last" }
+      ],
+      "beats": [
+        { "t": 0.6, "action": "reaches one arm into the dark", "sync": "the first commitment" },
+        { "t": 2.4, "action": "head and shoulders go in; the mouth is somehow wide enough to take her", "sync": "the impossible detail, played without comment" },
+        { "t": 3.5, "action": "her boots kick once and vanish", "sync": "the last image of her in the real world" }
+      ],
+      "performance_beat": {
+        "objective": "get in after it before she has time to think better of it",
+        "goal": "get in after it before she can think better of it",
+        "emotional_arc": "from fascination to headlong commitment, with no beat of doubt anywhere in the shot",
+        "arc_from": "fascination",
+        "arc_to": "headlong commitment",
+        "trigger": { "beat": "her head and shoulders go into the burrow mouth", "t": 2.4 },
+        "no_early_reaction": ["hesitating at the lip", "a glance back over her shoulder", "the hand withdrawing"],
+        "forbidden_early": ["hesitating at the lip", "a glance back over her shoulder", "the hand withdrawing"],
+        "end_state": "out of sight in the hole — the last visible state is one boot kicking and gone"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0001 -> ev0002 handover (real_frame into dream)", "note": "Alice alone." }
+}

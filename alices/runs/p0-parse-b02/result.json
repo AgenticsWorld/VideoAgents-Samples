@@ -1,0 +1,92 @@
+{
+  "task_id": "p0-parse-b02",
+  "agent": "01-story/novel-parser",
+  "attempt": 1,
+  "status": "done",
+  "completed": "2026-09-22",
+  "batch": "b02",
+  "chapters": ["ch004", "ch005", "ch006"],
+  "inputs": [
+    "story/chapter_manifest.json (batches[b02])",
+    "novel/Alices_Adventures_in_Wonderland_English.md lines 646-1526 (bytes 33310-74705) only",
+    "bible/WRITE_RULES.md",
+    "brief.md"
+  ],
+  "outputs": [
+    "story/structured_story/ch004.json",
+    "story/structured_story/ch005.json",
+    "story/structured_story/ch006.json"
+  ],
+  "helper_scripts": ["code/parse_check_b02.py (machine check only; shards were written directly, not generated)"],
+  "conventions": {
+    "paragraph": "one blank-line-separated block of the source (hard-wrapped lines joined); chapter heading line excluded; numbered 1-based within the chapter. id = chNNN-pNN, locator (source) = chNNN#pNN, plus lines [first,last] (1-based source-file line numbers). 2-digit width to match batches b01/b03 (all b02 chapters have < 100 paragraphs).",
+    "paragraph_text": "verbatim source text (curly quotes, em dashes and _underscore_ italics markers kept). Prose: wrapped lines joined with a single space. Verse / stage-direction blocks (format: verse | stage_direction): lines joined with \\n, leading indentation removed. Section-break asterisk rows kept as paragraphs with format: section_break.",
+    "scene": "id = chNNN-scNN; source = chNNN#pNN-pNN (inclusive range); scenes cut on location / time / cast change, never inside a paragraph; boundary_reason gives the basis; location_cue / present / time_cue are surface cues taken from the text (not bible IDs).",
+    "dialogue": "id = chNNN-dNNNN, sequential per chapter; one entry per utterance. text = the quoted words without the outer quote marks; when an utterance is interrupted by a narrative tag, the verbatim quoted pieces are listed in segments[] and text = the segments joined with one space. type: dialogue (spoken, incl. mode self_talk = 'said to herself'), thought ('thought Alice' etc.), verse (recited or sung stanza; the text is the whole stanza, with the poem's own quotation marks). mode also marks whisper_overheard / sung / sung_chorus / self_talk_then_aloud. speaker = readable surface-based label, speaker_key = tentative lowercase slug (NOT a canonical CHAR id), speaker_basis = explicit tag or inference reason; candidates[] given whenever the attribution is inferred rather than explicitly tagged.",
+    "group_speakers": "speaker 'CROWD' (ch004, speaker_key crowd-rabbit-helpers) is used only where the text itself assigns the words to a group ('a good many voices', 'a general chorus', 'the others'); 'CHORUS' (ch006) follows the source label 'CHORUS. (In which the cook and the baby joined)'. These count as attributed, not UNKNOWN; individual voices inside them are not assigned.",
+    "entities": "one entry per (paragraph, surface form): type person|place|item|skill, mention = exact surface string as written (checked as a substring of the paragraph), tentative_key = provisional slug for later unification by character-manager / worldbuilding. Talking animals are typed person (they speak/act as characters). Named or clearly nominal mentions only; pronouns and passing figures of speech (e.g. 'like a cart-horse', 'Jack-in-the-box') are not tagged. No 'skill' mentions occur in this batch.",
+    "inscriptions": "written text visible in the scene (sign / label) is listed per scene in inscriptions[], not as dialogue."
+  },
+  "coverage": {
+    "batch_chapter_coverage_100": true,
+    "per_chapter": [
+      { "id": "ch004", "manifest_word_count": 2617, "source_wc_w": 2617, "shard_word_count": 2617, "reconciles": true, "paragraphs": 42, "source_blocks": 42, "scenes": 5, "dialogues": 46, "entities": 144 },
+      { "id": "ch005", "manifest_word_count": 2187, "source_wc_w": 2187, "shard_word_count": 2187, "reconciles": true, "paragraphs": 78, "source_blocks": 78, "scenes": 4, "dialogues": 67, "entities": 108 },
+      { "id": "ch006", "manifest_word_count": 2594, "source_wc_w": 2594, "shard_word_count": 2594, "reconciles": true, "paragraphs": 80, "source_blocks": 80, "scenes": 6, "dialogues": 72, "entities": 164 }
+    ],
+    "batch_word_count": { "manifest": 7398, "shards": 7398 },
+    "method": "shard_word_count = heading tokens + whitespace tokens of every paragraph text; each paragraph text compared (whitespace-normalised) with its source block; all 200 paragraphs identical to source."
+  },
+  "speaker_stats": {
+    "dialogues_total": 185,
+    "by_type": { "dialogue": 156, "thought": 17, "verse": 12 },
+    "unknown_total": 0,
+    "unknown_ratio": 0.0,
+    "speaker_missing_lt_2pct": true,
+    "inferred_attributions_below_0.95": [
+      { "id": "ch004-d0020", "speaker": "White Rabbit", "confidence": 0.94, "basis": "untagged, Rabbit/Pat alternation" },
+      { "id": "ch004-d0022", "speaker": "White Rabbit", "confidence": 0.93, "basis": "untagged, Rabbit/Pat alternation" },
+      { "id": "ch004-d0023", "speaker": "Pat", "confidence": 0.9, "basis": "overheard whisper; 'Sure' / 'yer honour' markers" },
+      { "id": "ch004-d0024", "speaker": "White Rabbit", "confidence": 0.9, "basis": "overheard whisper; reply to Pat" },
+      { "id": "ch006-d0030", "speaker": "CHORUS", "confidence": 0.9, "basis": "source label names cook + baby joining; Duchess implied" },
+      { "id": "ch006-d0032", "speaker": "CHORUS", "confidence": 0.9, "basis": "second 'CHORUS.' label, membership carried over" }
+    ],
+    "cross_batch_references": "none needed a cross-batch speaker; ch005-d0021 quotes the title of 'How doth the little busy bee' (recited in ch002, batch b01), which is recorded as an item mention only."
+  },
+  "machine_check": {
+    "command": "python3 code/parse_check_b02.py",
+    "exit_code": 0,
+    "pass": true,
+    "errors": [],
+    "checks": [
+      "schema keys present (chapter / scene / dialogue / entity)",
+      "paragraph count = source block count; ids and locators sequential; line ranges match",
+      "paragraph text verbatim vs source (whitespace-normalised)",
+      "word counts reconcile with manifest and wc -w of the chapter range",
+      "scene source ranges match their paragraphs; boundary_reason present",
+      "every dialogue segment, entity mention and inscription is a substring of its cited paragraph and lies inside its scene",
+      "IDs unique and chapter-prefixed",
+      "UNKNOWN ratio < 2% and every UNKNOWN has candidates",
+      "quote coverage: every “…” span in the text is covered by a dialogue or inscription entry"
+    ],
+    "uncovered_quotes_intentional": [
+      { "source": "ch004#p05", "quote": "DRINK ME,", "reason": "the text says this bottle has NO such label ('There was no label this time with the words “DRINK ME,”'); it is not present in the scene, so it is neither an inscription nor dialogue" },
+      { "source": "ch004#p19", "quote": "arrum.", "reason": "narrator's note on how Pat said 'arm' ('He pronounced it “arrum.”'), not a separate utterance; kept in the paragraph text" }
+    ]
+  },
+  "decisions": [
+    "Scene cuts (15 total): ch004 outside→Rabbit's room→siege (Rabbit arrives)→escape/puppy→mushroom; ch005 Caterpillar→alone with mushroom (+ asterisk section break)→Pigeon above the treetops→little house; ch006 footmen→Frog-Footman at the door→kitchen→baby/pig→Cheshire Cat→March Hare's house.",
+    "'the Footman' in ch006 p06-p17 is attributed to Frog-Footman (0.97): p04 states the Fish-Footman was gone and 'the other' sat by the door.",
+    "ch004 p24/p27/p29 crowd lines are kept as group utterances (CROWD) instead of being split to guessed individuals.",
+    "'You are old, Father William' is logged as 8 verse entries spoken by Alice (the reciter) with in_verse_speaker per stanza; the Duchess's lullaby is 2 sung stanzas + 2 CHORUS entries.",
+    "Inner-debate ambiguity: ch004-d0011 ('she answered herself') is typed dialogue/self_talk by its verb, with type_note; ch006-d0035 is typed thought, with a note that its last words were said out loud. Downstream can reclassify both."
+  ],
+  "notes_for_p0_merge": [
+    "Scene-level field names differ across the parallel batches because no shared shard schema was given: b01 uses location/time/cast_present/paragraph_range/quoted_text; b02 uses location_cue/time_cue/present/inscriptions; b03 uses setting/present. The shared keys (chapter id/title/word_count/scenes; scene id/boundary_reason/source/paragraphs/dialogues/entities; dialogue id/type/speaker/speaker_confidence/text/source; entity type/mention/source) line up. p0-merge assembles shards without rewriting them, so if a single scene schema is wanted, orchestrator should rule on one and send it back to the batches.",
+    "b02 chapter shards carry _meta (b03 uses _shard); chapter file/line range is under source{} (b01 has top-level file/line_start/line_end)."
+  ],
+  "conflicts": [],
+  "defects": [],
+  "skills": { "auto_activated": [], "note": "no skills are checked for this agent in this project" },
+  "evaluation": "skipped (quality judge = 0 for this project)"
+}

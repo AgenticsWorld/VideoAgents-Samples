@@ -1,0 +1,28 @@
+{
+  "shot_id": "sh030",
+  "scene_id": "SCN-shaft-landing-passage",
+  "size": "wide",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "centre",
+    "anchor_xy": [0.50, 0.50],
+    "size_in_frame": "comes out of the black at about 0.25 of frame height and grows to fill and overflow the frame as she clears past the lens"
+  },
+  "headroom": "starts at about 0.40 of frame height of brick vault above her and is eaten to nothing; she exits low and close past the lens with the top of frame cropping her.",
+  "horizon_eyeline": "The brick vault arcs and floor lines converge on the dark landing chamber at [0.50, 0.48]. Her eyeline begins high and far, drops as she nears, and never comes to the lens.",
+  "layers": {
+    "fg": "leaves flying off her skirt through the near frame in the last second, and the wet brick floor passing",
+    "mg": "Alice running toward camera down the middle of the passage",
+    "bg": "the dark landing chamber and the root curtain she has just left, black at the vanishing point"
+  },
+  "gaze": {
+    "direction": "into_depth",
+    "lead_room": "none",
+    "note": "she runs on the lens axis past camera; her look goes past the lens to the corner ahead, which is behind camera. No lead room is given because the frame is being abandoned."
+  },
+  "balance": "Symmetrical corridor, centred figure, and then the balance is destroyed by scale — one body arriving until it is larger than the architecture. The only composition in the scene that is allowed to be violent.",
+  "leading_lines": "The vault arcs run from the frame edges into the black behind her, so everything in the picture points the way she has come from while she comes the other way.",
+  "eye_first": "The pale shape appearing out of the black at centre, then nothing but her.",
+  "safe_area_ok": true,
+  "constraint_binding": "The only fast shot in the scene: the composition carries the speed by scale change through a static frame, not by a camera move — she is composed small at the vanishing point and allowed to overflow the frame, which is all the acceleration this scene gets."
+}

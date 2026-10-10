@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh096",
+  "group_id": "grp036",
+  "scene_no": "S10",
+  "duration_s": 3.5,
+  "size": "wide",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 28,
+  "camera_height_m": 0.05,
+  "angle": "level, lens on the water surface",
+  "rack_focus": "none",
+  "start_frame": "Her POV from among the glass table legs down the flooded hall toward the far shore steps: door bases rising out of the water like cliffs in their curling iron frames, glass table legs standing like columns, the pastel-and-gold vine mosaic shimmering just under the surface.",
+  "end_frame": "The same frame held: the brightest water crowding with lamp reflections at the far south end — the way out, and the direction of ep02 — with no shaft of daylight anywhere in it.",
+  "constraint_honoured": "'The brightest water is at the far end where the reflections crowd… NO shaft of daylight anywhere.'",
+  "movement_note": "POV 7 of 7. Taken on the 28 mm space lens per the flooded_canyon_wide rule rather than the 40 mm the generic POV rule suggests — the canyon is a scale statement and the surface itself is its near-foreground gauge. Flagged in the run result as a conflict inside cinematography.json.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

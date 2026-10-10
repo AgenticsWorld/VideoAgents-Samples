@@ -1,0 +1,13 @@
+{
+  "task_id": "p2-fix-political",
+  "run_id": "6c256404301a",
+  "attempt": 1,
+  "model": "agent default",
+  "tokens": null,
+  "started_at": null,
+  "finished_at": "2026-09-22T17:44:14+08:00",
+  "inputs_sha256": {},
+  "artifact_versions": {
+    "bible/politics.json": "v1.1"
+  }
+}

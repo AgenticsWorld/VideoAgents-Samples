@@ -1,0 +1,16 @@
+{
+  "character_id": "CHAR-duchess",
+  "task_id": "p4-costume-sheet",
+  "agent": "06-art/costume-concept",
+  "identity_anchor": "sheet.png",
+  "sheets": [
+    {"costume_ref": "COS-013", "file": "sheet.png", "default": true, "reuse": true,
+     "label": "Faded mulberry house gown (kitchen)", "occasion": "daily", "period": "PER-dream",
+     "scenes": ["SCN-duchess-kitchen"], "chapters": ["ch006"], "episodes": ["ep04"],
+     "identity_refs": ["sheet.png"]},
+    {"costume_ref": "COS-014", "file": "sheet_COS-014.png", "default": false,
+     "label": "Outdated visiting dress for the croquet party", "occasion": "formal", "period": "PER-dream",
+     "scenes": ["SCN-croquet-ground"], "chapters": ["ch008", "ch009"], "episodes": ["ep06", "ep07"],
+     "identity_refs": ["sheet.png"], "visual_en_hit": true}
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "shot_id": "sh038",
+  "group_id": "grp014",
+  "scene_no": "S05",
+  "scene_id": "SCN-long-hall",
+  "duration_s": 6.0,
+  "is_dialogue": false,
+  "group_position": "last shot of grp014 — Alice at her map end (west_doors_north), carrying the key back the opposite way to sh034.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "stand",
+      "start_pos": "at the locked doors of the west wall with the golden key in her fingers, working screen-right to screen-left",
+      "space_fragment_en": "standing at the locked doors of the west wall on screen-right, facing screen-left, trying the golden key in an iron keyhole",
+      "facing": "into the wall, then along it screen-left to the next door; the reverse of her sh034 direction of travel",
+      "path": [
+        { "t": 3.4, "to": "one door further along the locked doors of the west wall, screen-left" }
+      ],
+      "beats": [
+        { "t": 1.0, "action": "offers the key to the first iron keyhole — swallowed, four times too big", "sync": "first try" },
+        { "t": 3.4, "action": "moves screen-left and tries a second", "sync": "second try, and it is plain" },
+        { "t": 5.0, "action": "her hand drops with the key still pinched in it", "sync": "the key is useless" }
+      ],
+      "performance_beat": {
+        "objective": "prove the key belongs to one of these doors",
+        "goal": "prove the key belongs to one of these doors",
+        "emotional_arc": "from confident expectation to the flat recognition that the key is for something else entirely",
+        "arc_from": "confident expectation",
+        "arc_to": "flat recognition",
+        "trigger": { "beat": "the key disappears into the second keyhole without touching the wards", "t": 3.4 },
+        "no_early_reaction": ["the hand dropping", "the shoulders sagging", "a shake of the head"],
+        "forbidden_early": ["the hand dropping", "the shoulders sagging", "a shake of the head"],
+        "end_state": "hand lowered with the key pinched between finger and thumb, eyes still on the oversized keyhole"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0003 (dream)", "note": "Alice alone." }
+}

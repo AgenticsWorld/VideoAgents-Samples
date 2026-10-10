@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh076",
+  "group_id": "grp029",
+  "scene_no": "S08",
+  "duration_s": 3.5,
+  "size": "medium",
+  "movement": "tilt_up",
+  "direction": "up only, from his face on the water toward where her head would be — two steps, and it never gets there",
+  "speed": "about +18° in 0.5 s, hold 0.7 s, then a second +20° in 0.5 s, and the last 1.3 s held short of her; roughly 38° of tilt in total, no pan and no height change",
+  "speed_curve": "two_step (step, hold, step, hold)",
+  "rig": "tripod_head",
+  "lens_mm": 40,
+  "camera_height_m": 0.1,
+  "angle": "starts level on his face, ends about 38° up and still short of her face",
+  "rack_focus": "none",
+  "start_frame": "Water level on his face: the White Rabbit sitting back on his haunches, the waterline cutting the bottom of frame, his reflection doubled beneath him.",
+  "end_frame": "The frame stopped far short of her: nothing in it but the wall of her skirt and shoulder running out of the top of frame, his exact eyeline aimed past the top edge at a head the camera never reaches — and because her bulk fills the whole upper frame, no vault and no lamp fitting is anywhere in shot.",
+  "constraint_honoured": "'The episode's ONE two-step camera move… runs out of room before it ever finds her face' — and the cinematography handoff's rule that the tilt must run out before any lamp fixture enters frame, which her own body guarantees here.",
+  "movement_note": "Licensed move (c). One movement type only — a tilt; the two steps are a speed curve, not a second move. The 3.5 s duration (up from 3.0 s at shot-planning) exists precisely to give the stop-and-go its room.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

@@ -1,0 +1,323 @@
+{
+  "schema_version": "whitebox_plan.v1",
+  "group_id": "grp002",
+  "scene_id": "SCN-riverbank",
+  "basis": "Both girls hold the blocking_map sitting_shelf anchors for the whole group (Alice [0.41,0.53] = X -3.60 / Z +0.675, prone with her head downhill toward the backwater; the Sister [0.43,0.47] = X -2.80 / Z -0.675, seated square to the water with the book on her knee). sh002 is the meadow-side wide (layout view tile 1, camera looking -X) where screen-right is -Z, so the Sister reads screen-right and Alice screen-left; sh003 crosses to the water-side axis (tile 3, camera looking +X) where screen-right is +Z, so Alice reads screen-right and the Sister's forearm screen-left - AX-01 in continuity_plan.json, waived, staged as waived. sh004 is the page insert from Alice's eye-line over her sister's shoulder; no figure is framed.",
+  "actors": [
+    {
+      "id": "CHAR-alice",
+      "kind": "person",
+      "size_m": [
+        0.378,
+        1.35,
+        0.297
+      ],
+      "keyframes": [
+        {
+          "t": 0.0,
+          "position": [
+            -3.6,
+            0.0,
+            0.675
+          ],
+          "pose": "prone",
+          "yaw": 1.5708,
+          "head_pitch": -0.35
+        },
+        {
+          "t": 1.0,
+          "position": [
+            -3.6,
+            0.0,
+            0.675
+          ],
+          "pose": "prone",
+          "yaw": 1.5708,
+          "head_pitch": -0.35,
+          "body_roll": 0.15
+        },
+        {
+          "t": 5.5,
+          "position": [
+            -3.6,
+            0.0,
+            0.675
+          ],
+          "pose": "prone",
+          "yaw": 1.5708,
+          "head_pitch": -0.35,
+          "body_roll": 0.0
+        },
+        {
+          "t": 8.0,
+          "position": [
+            -3.55,
+            0.0,
+            0.62
+          ],
+          "pose": "prone",
+          "yaw": -0.5355,
+          "head_pitch": -0.35
+        },
+        {
+          "t": 8.6,
+          "position": [
+            -3.55,
+            0.0,
+            0.62
+          ],
+          "pose": "prone",
+          "yaw": -0.5355,
+          "head_pitch": -0.5
+        },
+        {
+          "t": 9.4,
+          "position": [
+            -3.55,
+            0.0,
+            0.62
+          ],
+          "pose": "prone",
+          "yaw": -0.5355,
+          "head_pitch": -0.5
+        },
+        {
+          "t": 11.4,
+          "position": [
+            -3.55,
+            0.0,
+            0.62
+          ],
+          "pose": "prone",
+          "yaw": -0.5355,
+          "head_pitch": -0.5
+        },
+        {
+          "t": 14.0,
+          "position": [
+            -3.55,
+            0.0,
+            0.62
+          ],
+          "pose": "prone",
+          "yaw": -0.5355,
+          "head_pitch": -0.5
+        },
+        {
+          "t": 17.0,
+          "position": [
+            -3.55,
+            0.0,
+            0.62
+          ],
+          "pose": "prone",
+          "yaw": -0.5355,
+          "head_pitch": -0.5
+        }
+      ]
+    },
+    {
+      "id": "CHAR-alice-sister",
+      "kind": "person",
+      "size_m": [
+        0.448,
+        1.6,
+        0.352
+      ],
+      "keyframes": [
+        {
+          "t": 0.0,
+          "position": [
+            -2.8,
+            0.0,
+            -0.675
+          ],
+          "pose": "sit",
+          "yaw": -1.5708,
+          "head_pitch": 0.5
+        },
+        {
+          "t": 3.0,
+          "position": [
+            -2.8,
+            0.0,
+            -0.675
+          ],
+          "pose": "sit",
+          "yaw": -1.5708,
+          "head_pitch": 0.5
+        },
+        {
+          "t": 10.0,
+          "position": [
+            -2.8,
+            0.0,
+            -0.675
+          ],
+          "pose": "sit",
+          "yaw": -1.5708,
+          "head_pitch": 0.5
+        },
+        {
+          "t": 15.6,
+          "position": [
+            -2.8,
+            0.0,
+            -0.675
+          ],
+          "pose": "sit",
+          "yaw": -1.5708,
+          "head_pitch": 0.5
+        },
+        {
+          "t": 17.0,
+          "position": [
+            -2.8,
+            0.0,
+            -0.675
+          ],
+          "pose": "sit",
+          "yaw": -1.5708,
+          "head_pitch": 0.5
+        }
+      ]
+    }
+  ],
+  "cameras": [
+    {
+      "shot_id": "sh002",
+      "start": 0,
+      "duration_s": 8.0,
+      "movement": "static",
+      "keyframes": [
+        {
+          "t": 0.0,
+          "position": [
+            -0.12,
+            0.35,
+            0.0
+          ],
+          "target": [
+            -3.2,
+            0.35,
+            0.0
+          ],
+          "fov": 46.3972
+        },
+        {
+          "t": 8.0,
+          "position": [
+            -0.12,
+            0.35,
+            0.0
+          ],
+          "target": [
+            -3.2,
+            0.35,
+            0.0
+          ],
+          "fov": 46.3972
+        }
+      ]
+    },
+    {
+      "shot_id": "sh003",
+      "start": 8.0,
+      "duration_s": 6.0,
+      "movement": "static",
+      "keyframes": [
+        {
+          "t": 0.0,
+          "position": [
+            -4.557,
+            0.3,
+            -0.446
+          ],
+          "target": [
+            -2.873,
+            0.35,
+            -0.773
+          ],
+          "fov": 26.9915
+        },
+        {
+          "t": 6.0,
+          "position": [
+            -4.557,
+            0.3,
+            -0.446
+          ],
+          "target": [
+            -2.873,
+            0.35,
+            -0.773
+          ],
+          "fov": 26.9915
+        }
+      ]
+    },
+    {
+      "shot_id": "sh004",
+      "start": 14.0,
+      "duration_s": 3.0,
+      "movement": "static",
+      "keyframes": [
+        {
+          "t": 0.0,
+          "position": [
+            -3.45,
+            0.85,
+            -0.45
+          ],
+          "target": [
+            -3.05,
+            0.55,
+            -0.675
+          ],
+          "fov": 33.3985
+        },
+        {
+          "t": 3.0,
+          "position": [
+            -3.45,
+            0.85,
+            -0.45
+          ],
+          "target": [
+            -3.05,
+            0.55,
+            -0.675
+          ],
+          "fov": 33.3985
+        }
+      ]
+    }
+  ],
+  "continuity": {
+    "actors": "cut",
+    "camera": "cut"
+  },
+  "warnings": [
+    "grp001 -> grp002 is the declared flash-forward exit (TR-02); actors and camera are cut, not inherited, across the S00/S01 boundary.",
+    "sh002 -> sh003 crosses the Alice/Sister line by design (continuity_plan AX-01, waived). The whitebox stages the waived crossing rather than correcting it.",
+    "Alice completes her turn uphill at the sh002 -> sh003 cut (t=8.0) rather than 0.6 s into sh003, so sh003 opens on the frame composition describes; the elbows-up beat still lands at t=8.6.",
+    "PROP-sister-book is staged flat on the Sister's knee so sh004 has the page it inserts on; without it the frame is only her torso."
+  ],
+  "props": [
+    {
+      "id": "PROP-sister-book",
+      "shape": "box",
+      "size_m": [
+        0.22,
+        0.03,
+        0.3
+      ],
+      "position": [
+        -3.05,
+        0.55,
+        -0.675
+      ],
+      "yaw": -1.5708
+    }
+  ]
+}

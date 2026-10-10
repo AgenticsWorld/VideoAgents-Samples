@@ -1,0 +1,61 @@
+{
+  "character_id": "CHAR-alice-sister",
+  "name": "Alice's Sister",
+  "tier": "A",
+  "layer": "both-echo",
+  "gender": "female",
+  "gender_note": { "source_chapter": "ch001", "source_para": "ch001-p01", "quote": "the book her sister was reading" },
+  "base_age_range": "15-16",
+  "base_age_note": { "inferred": true, "reason": "Source never states her age; H1 ruling 5.6 A fixes 'mid-teens'." },
+  "hair": {
+    "color": "warm mid-brown, a shade darker than Alice's",
+    "style": "centre parting, smoothed over the ears and gathered into a low chignon at the nape in a fine dark hairnet — the grown-up style that separates her from loose-haired Alice",
+    "length": "long (worn up)",
+    "inferred": true,
+    "reason": "Not described; family resemblance to CHAR-alice plus the 1862 convention that a girl of fifteen or sixteen begins to wear her hair up."
+  },
+  "eyes": { "color": "grey-blue", "shape": "calm, slightly heavy-lidded, often lowered to her book", "inferred": true, "reason": "Not described; shared family trait with CHAR-alice. Lowered gaze follows her reading (ch001-p01) and closed-eyed reverie (ch012-p70)." },
+  "skin": { "tone": "fair, kept pale under a hat brim", "inferred": true, "reason": "Not described; a young lady of the period shading her face outdoors." },
+  "face": {
+    "shape": "longer oval than Alice's — the same face grown up",
+    "features": ["same straight nose and brows as Alice", "composed mouth", "gentle, slightly dreamy look"],
+    "default_expression": "quiet and absorbed; tender and amused when she wakes Alice",
+    "source_chapter": "ch012",
+    "source_para": ["ch012-p66", "ch012-p67"],
+    "quote": "her sister kissed her / leaning her head on her hand, watching the setting sun",
+    "shape_inferred": true,
+    "reason": "Manner is sourced; facial structure designed to read as Alice's elder sister at a glance."
+  },
+  "build": {
+    "height_range_cm": [158, 163],
+    "body_type": "slender, graceful, sits still for long periods",
+    "scale_reference": "about 1.2x Alice's true size (135 cm); seated on the bank Alice's head fits in her lap",
+    "source_chapter": "ch012",
+    "source_para": "ch012-p64",
+    "quote": "with her head in the lap of her sister",
+    "height_inferred": true,
+    "reason": "Height not stated; typical mid-teen girl of her class in 1862."
+  },
+  "marks": [
+    { "type": "habit", "position": "head/hand", "description": "rests her head on one hand while thinking", "source_chapter": "ch012", "source_para": "ch012-p67" },
+    { "type": "signature_item", "position": "in hand / lap", "description": "a small cloth-bound book with no pictures", "source_chapter": "ch001", "source_para": "ch001-p01" }
+  ],
+  "default_outfit_tone": {
+    "summary": "soft lilac-grey summer muslin day dress, long sleeves, skirt to the ankle, a small white collar, wide-brimmed straw hat with a plain ribbon set beside her on the bank",
+    "silhouette_1862": "young lady's day dress over a modest cage crinoline, fitted bodice, ankle-length skirt — visibly more grown-up than Alice's knee-length child's dress",
+    "inferred": true,
+    "reason": "Dress not described; 1862 clergyman-scholar family, summer afternoon on the bank. Full costume by 06-art/costume."
+  },
+  "performer_coding": null,
+  "doubling": {
+    "ruling": "H1 5.3 B — sister glimpsed at the trial",
+    "dream_form": "a spectator glimpsed in the courtroom gallery (ch011-ch012), played by the same actress",
+    "carries_across": ["face", "hair colour and low chignon", "grey-blue eyes", "height and slender build", "the lilac-grey dress tone"],
+    "changes": ["a dark shawl over the shoulders and a small plain bonnet over the chignon so she blends into the gallery crowd", "no card or animal coding — she is the one person in the court who is not a dream-figure"],
+    "limits": "only glimpsed (background or brief insert), never speaks in the dream; she must be recognisable on the wake-up cut back to the bank",
+    "inferred": true,
+    "reason": "Staging beat designed to realise ruling 5.3 B; not stated in the source text."
+  },
+  "events": ["ev0001", "ev0053", "ev0054"],
+  "prompt_base_en": "a fifteen-year-old English young lady in 1862, warm-brown hair parted in the centre and gathered in a low chignon in a fine hairnet, calm grey-blue eyes, fair skin, slender, lilac-grey ankle-length summer muslin day dress with a small white collar, holding a small cloth-bound book"
+}

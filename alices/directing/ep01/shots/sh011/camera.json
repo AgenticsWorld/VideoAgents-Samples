@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh011",
+  "group_id": "grp006",
+  "scene_no": "S02",
+  "duration_s": 3.0,
+  "size": "wide",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 28,
+  "camera_height_m": 0.9,
+  "angle": "level",
+  "rack_focus": "none",
+  "start_frame": "Low reverse from the burrow mouth out across the field, hawthorn stems making a dark frame at the edges: Alice small, coming out of the long grass straight toward camera, the S01 elm pinned small and clear in the background centre.",
+  "end_frame": "The same frame with her much larger in it, still coming on and still not looking back at the elm behind her.",
+  "constraint_honoured": "'Static — the first check in the acceleration': after the handheld travelling shot the cut lands on a nailed-down frame, which is what makes the chase feel like it is gaining.",
+  "movement_note": "3.0 s is too short to develop any move, and a move would soften the deliberate rhythmic check this shot exists to make.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

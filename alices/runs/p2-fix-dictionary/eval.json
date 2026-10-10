@@ -1,0 +1,9 @@
+{
+  "task_id": "p2-fix-dictionary",
+  "skipped": true,
+  "reason": "quality judge=0",
+  "auto": {
+    "terms_unique": "PASS"
+  },
+  "verify": "memory-bible p2-merge-recheck"
+}

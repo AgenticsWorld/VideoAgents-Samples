@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh095",
+  "group_id": "grp035",
+  "scene_no": "S10",
+  "duration_s": 7.0,
+  "size": "close",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 50,
+  "camera_height_m": 0.05,
+  "angle": "level, lens just above the water surface",
+  "rack_focus": "none",
+  "start_frame": "Water-level close, her chin almost in the water: her face held whole, broken warm reflections crossing the dark behind her.",
+  "end_frame": "The same frame through the whole deduction — the sea, and therefore the railway home — played as a child's practical arithmetic with no dread in it yet.",
+  "constraint_honoured": "'Played as a child's practical arithmetic, not as fear — the dread has not arrived yet.'",
+  "movement_note": "LN-ep01-029 (5.5 s) lands whole in 7.0 s with no camera event and no focus change while she speaks.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

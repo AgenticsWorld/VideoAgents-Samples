@@ -1,0 +1,63 @@
+{
+  "task_id": "p3-appearance-cb3",
+  "agent": "03-characters/appearance",
+  "attempt": 1,
+  "status": "done",
+  "finished_on": "2026-09-22",
+  "outputs": [
+    "bible/characters/CHAR-frog-footman/appearance.json",
+    "bible/characters/CHAR-gardener-two/appearance.json",
+    "bible/characters/CHAR-gardener-five/appearance.json",
+    "bible/characters/CHAR-gardener-seven/appearance.json",
+    "bible/characters/CHAR-pat/appearance.json",
+    "bible/characters/CHAR-executioner/appearance.json",
+    "bible/characters/CHAR-jury-ensemble/appearance.json",
+    "bible/characters/CHAR-card-soldiers-ensemble/appearance.json",
+    "bible/characters/CHAR-royal-gardeners-ensemble/appearance.json",
+    "bible/characters/CHAR-caucus-race-party-ensemble/appearance.json",
+    "bible/characters/CHAR-visiting-monarchs-ensemble/appearance.json",
+    "bible/characters/CHAR-royal-procession-ensemble/appearance.json",
+    "bible/characters/CHAR-court-officers-ensemble/appearance.json",
+    "bible/characters/CHAR-crowd-ensemble/appearance.json"
+  ],
+  "defects_opened": [
+    "qa/defects/DEF-p3-appearance-301.json",
+    "qa/defects/DEF-p3-appearance-302.json",
+    "qa/defects/DEF-p3-appearance-303.json"
+  ],
+  "shared_conventions": {
+    "inputs_read": ["bible/h1_summary.md", "bible/cultivation.json (SUP-002, SUP-004, SUP-011, SUP-014)", "runs/h1-ruling/ruling.json (via h1_summary)", "bible/characters/index.json", "bible/_index.json", "bible/politics.json (FAC-house-of-hearts, FAC-visiting-monarchs, FAC-caucus-race-company, FAC-white-rabbit-household, FAC-duchess-household, OFF-003/005/006/007)", "bible/culture.json (CUL-006, CUL-007, CUL-012, CUL-013, CUL-016, CUL-017)", "bible/dictionary.json", "story/structured_story/ch002-ch012.json", "story/events.json", "novel source", "refs/style/alice.jpeg", "sibling appearance cards CHAR-alice, CHAR-fish-footman, CHAR-king-of-hearts, CHAR-knave-of-hearts, CHAR-bill-the-lizard, CHAR-alice-sister, CHAR-white-rabbit (for cross-batch consistency)"],
+    "citation_format": "Sourced values carry source_chapter + paragraph (structured_story chNNN-pNN) + a verbatim quote. Designed values carry inferred:true + reason. Sub-field inference uses *_inferred / *_reason keys (e.g. color_inferred on an otherwise sourced eyes object).",
+    "gender": "Every card has gender = male|female. Ensemble cards also carry gender_mix (counts) and, where mixed, per-slot gender. For a mixed ensemble, the top-level gender is the majority value (or the nominal value when the split is even) and is explained in gender_note. No presented_gender is needed in this batch: no cross-dressing or cross-gender performer is involved.",
+    "scale_anchor": "All scale_reference values use CHAR-alice's true size of 135 cm (the anchor set in CHAR-alice/appearance.json). Every change in Alice's size is SUP-003 forced perspective. Performer heights never change.",
+    "card_figures": "The House of Hearts pack (gardeners, soldiers, courtiers, royal children, court officers) shares one construction: a stiff, flat, oblong ivory card-face tabard with suit pips and corner indices, arms and legs at the corners (ch008-p11), and a single shared pack back-design on the back (ch008-p16). That back-design is designed here as a crimson-and-cream lattice with a small heart rosette. It is worn over 1862 crimson Hearts livery (FAC-house-of-hearts emblem_visual). Suit per group: gardeners and soldiers are clubs, courtiers diamonds, royal children and court officers hearts, and the guest monarchs clubs, diamonds and spades in their own colours. Numerals are unique within a suit: the named gardeners are 2, 5 and 7; background gardeners use 3/4/6/8/9/10.",
+    "animal_coding": "SUP-002: every animal cue comes from casting, grooming, hair shape, spectacles, or waistcoat and cravat colour and pattern. There are no masks, fur, feathers, beaks, ears, tails or CGI anywhere.",
+    "sup014": "No weapons or execution devices on any card. Soldiers' 'clubs' are short ceremonial batons that never touch anyone. Officers carry white usher's wands. The executioner has no axe (see DEF-p3-appearance-301).",
+    "doubling_5_3_B": "None of the 14 characters in this batch belongs to a ruling 5.3 B doubling pair. Housemaid -> Mary Ann is covered by CHAR-family-housemaid, Dinah -> Cheshire Cat by CHAR-cheshire-cat and the creature registry, and the sister glimpsed at the trial by CHAR-alice-sister, whose card says what carries across. This batch adds guard rules: the sister is not a juror and no juror resembles her (CHAR-jury-ensemble); no royal child resembles Alice (CHAR-royal-procession-ensemble); no crowd member has white hair or a white coat, which is reserved for the White Rabbit (CHAR-crowd-ensemble). It also adds one designed dream recurrence: the two guinea-pigs of ch004 are the same performers as jurors J01 and J02 (TERM-0036 treats them as one pair).",
+    "style_ref_note": "refs/style/alice.jpeg shows a literal giant caterpillar creature in a fantasy hall. Only its mood is taken here: candle-and-shaft light and weathered, muted period textures. Its literal creature treatment conflicts with SUP-002, so it is not followed. The ruling on this belongs to 06-art/art-director (style.json is still skeleton_empty) and is noted here for their attention.",
+    "costume_boundary": "default_outfit_tone gives only the base look and colour tone. Cut, fabric and changes of outfit belong to 06-art/costume (Phase 4)."
+  },
+  "key_decisions": [
+    "Executioner: aged 58-65, taken from the source's 'at his time of life' (ch008-p66). SUP-014 overrides the axe/block in the index's performer concept (DEF-p3-appearance-301).",
+    "Jury: all 11 unnamed jurors are male, sourced from 'jury-men' (ch011-p04). Split into 6 animal-coded and 5 bird-coded jurors ('some were animals, and some were birds'), with exactly two guinea-pigs. Species already used for named characters are avoided.",
+    "Caucus remainder: coded as Thames-backwater species (moorhen, coot, water-vole, wren, heron, sand-martin). This ties the pool to the waking backwater under ruling 5.2 A and SUP-007. All of them are soaked, per ch003-p01.",
+    "Royal procession: exactly 10 diamond courtiers and 10 heart children. The children are aged 5-9 and all shorter than Alice.",
+    "Crowd ensemble: appears on screen in ch004 only. The ch006 chorus is sung by the cook and the baby (DEF-p3-appearance-302).",
+    "Frog-Footman: follows the index (crimson Hearts livery, matched with CHAR-fish-footman). The frog touch is large grey-green eyes behind magnifying spectacles plus a mottled green waistcoat. The Duchess-household reading is filed for arbitration (DEF-p3-appearance-303-a).",
+    "Gardener trio: told apart by hair (sandy, black, auburn with side-whiskers), age and height. Seven is capped below the Knave's height so the Knave card's statement that he is taller than the gardeners' card figures still holds.",
+    "Pat: heard, not seen, in the source. He is designed as a plain labourer with no stage-Irish caricature; his idiom carries his identity."
+  ],
+  "checks": {
+    "required_fields": "PASS: all 14 cards have gender, hair, eyes, build, marks, base_age_range and default_outfit_tone, with no empty values",
+    "gender_vocab": "PASS: all values are male or female",
+    "no_unknown_placeholder": "PASS: no UNKNOWN/TBD/N/A in any card",
+    "character_id_in_index": "PASS: all 14 IDs are in bible/characters/index.json",
+    "quotes_verbatim": "PASS: 98 of 98 quoted excerpts match the novel source exactly (whitespace-normalised) across the 14 cards and 3 defects",
+    "json_valid": "PASS",
+    "ascii_filenames": "PASS",
+    "method": "inline python3 checks, no script file written"
+  },
+  "skills": "No project skills are enabled for this position; none were applied.",
+  "evaluation": "skipped: quality judge = 0",
+  "bible_files_modified": "none other than the 14 own outputs"
+}

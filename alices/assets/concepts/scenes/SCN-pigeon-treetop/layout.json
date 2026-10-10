@@ -1,0 +1,32 @@
+{
+  "schema_version": "scene_layout.v1",
+  "scene_id": "SCN-pigeon-treetop",
+  "layout_top": "layout_top.png",
+  "orientation": {
+    "top_of_map": "north",
+    "note_en": "The tall oak crown is in the centre with the twig nest in its top fork; its west and east upper limbs splay either side; the torn gap where Alice's neck rises through the leaves is just south of the nest; the sea of treetops runs to every edge. Sun high in the west. Camera positions in views[] are described relative to these landmarks (cameras are in the air at crown height)."
+  },
+  "extent_m": {"x": 48.0, "y": 27.0},
+  "landmarks": [
+    {"id": "nest", "name": "nest", "name_en": "the pigeon's nest in the top fork", "kind": "feature", "xy": [0.50, 0.48]},
+    {"id": "west_limb", "name": "west limb", "name_en": "the west upper limb", "kind": "tree", "xy": [0.40, 0.30]},
+    {"id": "east_limb", "name": "east limb", "name_en": "the east upper limb", "kind": "tree", "xy": [0.61, 0.32]},
+    {"id": "neck_gap", "name": "neck gap", "name_en": "the torn gap in the leaves", "kind": "feature", "xy": [0.53, 0.62]},
+    {"id": "canopy_north", "name": "north canopy", "name_en": "the treetops to the north", "kind": "canopy", "xy": [0.50, 0.08]},
+    {"id": "canopy_south", "name": "south canopy", "name_en": "the treetops to the south", "kind": "canopy", "xy": [0.50, 0.92]},
+    {"id": "canopy_west", "name": "west canopy", "name_en": "the treetops to the west", "kind": "canopy", "xy": [0.12, 0.50]},
+    {"id": "canopy_east", "name": "east canopy", "name_en": "the treetops to the east", "kind": "canopy", "xy": [0.88, 0.55]}
+  ],
+  "views": [
+    {"tile": 1, "camera_from": "canopy_south", "looking_at": "nest", "size": "wide", "angle": "eye", "desc_en": "eye-level wide shot skimming the sea of green treetops toward the one tall oak crown rising above them with the nest in its fork"},
+    {"tile": 2, "camera_from": "nest", "looking_at": "neck_gap", "size": "medium", "angle": "eye", "desc_en": "eye-level medium shot from the nest toward the torn gap in the leaves where the head rises out of the canopy"},
+    {"tile": 3, "camera_from": "neck_gap", "looking_at": "nest", "size": "close", "angle": "eye", "desc_en": "eye-level close shot from the torn gap straight at the loose twig nest in the fork, grey lichened bark around it"},
+    {"tile": 4, "camera_from": "west_limb", "looking_at": "canopy_east", "size": "wide", "angle": "high_oblique", "desc_en": "high oblique wide shot from the west limb out over the rolling leaf-sea to the eastern horizon, the sun behind camera"},
+    {"tile": 5, "camera_from": "canopy_east", "looking_at": "canopy_west", "size": "wide", "angle": "eye", "desc_en": "eye-level wide shot across the swelling treetops into the western sun, leaf edges gold, nothing man-made anywhere"},
+    {"tile": 6, "camera_from": "east_limb", "looking_at": "nest", "size": "detail", "angle": "low", "desc_en": "low-angle detail shot from below the fork up at the rim of the twig nest and a few soft feathers against the sky roundel"},
+    {"tile": 7, "camera_from": "neck_gap", "looking_at": "canopy_north", "size": "wide", "angle": "high_oblique", "desc_en": "high oblique wide shot from above the torn gap over the canopy northward, a ripple running through the leaves"},
+    {"tile": 8, "camera_from": "canopy_west", "looking_at": "west_limb", "size": "medium", "angle": "eye", "desc_en": "eye-level medium shot from the western treetops toward the tall oak's west limb curving up in an S line"},
+    {"tile": 9, "camera_from": "nest", "looking_at": "canopy_west", "size": "close", "angle": "low", "desc_en": "low-angle close shot from just below the nest fork across its twig rim toward the western treetops, leaves backlit by the sun"}
+  ],
+  "checklist": {"architecture_match": false, "lighting_match": true, "style_match": true, "plan_view_clean": true, "note_en": "the two upper limbs are drawn bare and leafless (card negative: no bare branches); faint lens-flare rings over the canopy; kept for H2"}
+}

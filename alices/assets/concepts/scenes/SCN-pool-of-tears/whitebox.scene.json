@@ -1,0 +1,1001 @@
+{
+  "schema_version": "whitebox_scene.v1",
+  "scene_id": "SCN-pool-of-tears",
+  "name": "SCN-pool-of-tears",
+  "units": "meters",
+  "dimensions_m": [
+    33.0,
+    2.8,
+    18.5625
+  ],
+  "objects": [
+    {
+      "id": "wall_west",
+      "shape": "box",
+      "size_m": [
+        33.0,
+        2.8,
+        1.815
+      ],
+      "xy": [
+        0.5,
+        0.2578
+      ],
+      "collision_role": "wall",
+      "position": [
+        0.0,
+        1.4,
+        -4.4958375
+      ]
+    },
+    {
+      "id": "wall_east_north",
+      "shape": "box",
+      "size_m": [
+        9.1575,
+        2.8,
+        1.815
+      ],
+      "xy": [
+        0.13875,
+        0.7422
+      ],
+      "collision_role": "wall",
+      "position": [
+        -11.921249999999999,
+        1.4,
+        4.4958374999999995
+      ]
+    },
+    {
+      "id": "wall_east_south",
+      "shape": "box",
+      "size_m": [
+        19.8825,
+        2.8,
+        1.815
+      ],
+      "xy": [
+        0.69875,
+        0.7422
+      ],
+      "collision_role": "wall",
+      "position": [
+        6.55875,
+        1.4,
+        4.4958374999999995
+      ]
+    },
+    {
+      "id": "entrance_lintel",
+      "shape": "box",
+      "size_m": [
+        3.96,
+        0.7,
+        1.815
+      ],
+      "xy": [
+        0.3375,
+        0.7422
+      ],
+      "elevation_m": 2.45,
+      "collision_role": "wall",
+      "position": [
+        -5.362499999999999,
+        2.45,
+        4.4958374999999995
+      ]
+    },
+    {
+      "id": "passage_wall_w",
+      "shape": "box",
+      "size_m": [
+        2.31,
+        2.1,
+        3.87
+      ],
+      "xy": [
+        0.2425,
+        0.8956
+      ],
+      "collision_role": "wall",
+      "position": [
+        -8.4975,
+        1.05,
+        7.343324999999999
+      ]
+    },
+    {
+      "id": "passage_wall_e",
+      "shape": "box",
+      "size_m": [
+        1.4025,
+        2.1,
+        3.87
+      ],
+      "xy": [
+        0.41875,
+        0.8956
+      ],
+      "collision_role": "wall",
+      "position": [
+        -2.6812499999999995,
+        1.05,
+        7.343324999999999
+      ]
+    },
+    {
+      "id": "door_w01",
+      "shape": "box",
+      "size_m": [
+        0.85,
+        1.95,
+        0.1
+      ],
+      "xy": [
+        0.025,
+        0.304
+      ],
+      "color": "#6b4a2f",
+      "position": [
+        -15.674999999999999,
+        0.975,
+        -3.63825
+      ]
+    },
+    {
+      "id": "door_w02",
+      "shape": "box",
+      "size_m": [
+        0.85,
+        1.95,
+        0.1
+      ],
+      "xy": [
+        0.11,
+        0.304
+      ],
+      "color": "#6b4a2f",
+      "position": [
+        -12.870000000000001,
+        0.975,
+        -3.63825
+      ]
+    },
+    {
+      "id": "door_w03",
+      "shape": "box",
+      "size_m": [
+        0.85,
+        1.95,
+        0.1
+      ],
+      "xy": [
+        0.2215,
+        0.304
+      ],
+      "color": "#6b4a2f",
+      "position": [
+        -9.190499999999998,
+        0.975,
+        -3.63825
+      ]
+    },
+    {
+      "id": "door_w04",
+      "shape": "box",
+      "size_m": [
+        0.85,
+        1.95,
+        0.1
+      ],
+      "xy": [
+        0.3315,
+        0.304
+      ],
+      "color": "#6b4a2f",
+      "position": [
+        -5.560499999999999,
+        0.975,
+        -3.63825
+      ]
+    },
+    {
+      "id": "door_w05",
+      "shape": "box",
+      "size_m": [
+        0.85,
+        1.95,
+        0.1
+      ],
+      "xy": [
+        0.4415,
+        0.304
+      ],
+      "color": "#6b4a2f",
+      "position": [
+        -1.9304999999999999,
+        0.975,
+        -3.63825
+      ]
+    },
+    {
+      "id": "door_w06",
+      "shape": "box",
+      "size_m": [
+        0.85,
+        1.95,
+        0.1
+      ],
+      "xy": [
+        0.5525,
+        0.304
+      ],
+      "color": "#6b4a2f",
+      "position": [
+        1.7324999999999997,
+        0.975,
+        -3.63825
+      ]
+    },
+    {
+      "id": "door_w07",
+      "shape": "box",
+      "size_m": [
+        0.85,
+        1.95,
+        0.1
+      ],
+      "xy": [
+        0.665,
+        0.304
+      ],
+      "color": "#6b4a2f",
+      "position": [
+        5.445000000000001,
+        0.975,
+        -3.63825
+      ]
+    },
+    {
+      "id": "door_w08",
+      "shape": "box",
+      "size_m": [
+        0.85,
+        1.95,
+        0.1
+      ],
+      "xy": [
+        0.7765,
+        0.304
+      ],
+      "color": "#6b4a2f",
+      "position": [
+        9.1245,
+        0.975,
+        -3.63825
+      ]
+    },
+    {
+      "id": "door_w09",
+      "shape": "box",
+      "size_m": [
+        0.85,
+        1.95,
+        0.1
+      ],
+      "xy": [
+        0.876,
+        0.304
+      ],
+      "color": "#6b4a2f",
+      "position": [
+        12.408,
+        0.975,
+        -3.63825
+      ]
+    },
+    {
+      "id": "door_e01",
+      "shape": "box",
+      "size_m": [
+        0.85,
+        1.95,
+        0.1
+      ],
+      "xy": [
+        0.0225,
+        0.696
+      ],
+      "color": "#6b4a2f",
+      "position": [
+        -15.757499999999999,
+        0.975,
+        3.6382499999999993
+      ]
+    },
+    {
+      "id": "door_e02",
+      "shape": "box",
+      "size_m": [
+        0.85,
+        1.95,
+        0.1
+      ],
+      "xy": [
+        0.104,
+        0.696
+      ],
+      "color": "#6b4a2f",
+      "position": [
+        -13.068000000000001,
+        0.975,
+        3.6382499999999993
+      ]
+    },
+    {
+      "id": "door_e03",
+      "shape": "box",
+      "size_m": [
+        0.85,
+        1.95,
+        0.1
+      ],
+      "xy": [
+        0.215,
+        0.696
+      ],
+      "color": "#6b4a2f",
+      "position": [
+        -9.405000000000001,
+        0.975,
+        3.6382499999999993
+      ]
+    },
+    {
+      "id": "door_e04",
+      "shape": "box",
+      "size_m": [
+        0.85,
+        1.95,
+        0.1
+      ],
+      "xy": [
+        0.44,
+        0.696
+      ],
+      "color": "#6b4a2f",
+      "position": [
+        -1.98,
+        0.975,
+        3.6382499999999993
+      ]
+    },
+    {
+      "id": "door_e05",
+      "shape": "box",
+      "size_m": [
+        0.85,
+        1.95,
+        0.1
+      ],
+      "xy": [
+        0.5525,
+        0.696
+      ],
+      "color": "#6b4a2f",
+      "position": [
+        1.7324999999999997,
+        0.975,
+        3.6382499999999993
+      ]
+    },
+    {
+      "id": "door_e06",
+      "shape": "box",
+      "size_m": [
+        0.85,
+        1.95,
+        0.1
+      ],
+      "xy": [
+        0.665,
+        0.696
+      ],
+      "color": "#6b4a2f",
+      "position": [
+        5.445000000000001,
+        0.975,
+        3.6382499999999993
+      ]
+    },
+    {
+      "id": "door_e07",
+      "shape": "box",
+      "size_m": [
+        0.85,
+        1.95,
+        0.1
+      ],
+      "xy": [
+        0.7765,
+        0.696
+      ],
+      "color": "#6b4a2f",
+      "position": [
+        9.1245,
+        0.975,
+        3.6382499999999993
+      ]
+    },
+    {
+      "id": "door_e08",
+      "shape": "box",
+      "size_m": [
+        0.85,
+        1.95,
+        0.1
+      ],
+      "xy": [
+        0.8875,
+        0.696
+      ],
+      "color": "#6b4a2f",
+      "position": [
+        12.787499999999998,
+        0.975,
+        3.6382499999999993
+      ]
+    },
+    {
+      "id": "water_hall",
+      "shape": "box",
+      "size_m": [
+        28.05,
+        0.1,
+        7.176
+      ],
+      "xy": [
+        0.425,
+        0.5
+      ],
+      "color": "#8fc7bd",
+      "collision": "none (swim volume, surface at y 0.1)",
+      "position": [
+        -2.4750000000000005,
+        0.05,
+        0.0
+      ]
+    },
+    {
+      "id": "water_passage",
+      "shape": "box",
+      "size_m": [
+        3.96,
+        0.1,
+        5.68
+      ],
+      "xy": [
+        0.3375,
+        0.8467
+      ],
+      "color": "#8fc7bd",
+      "collision": "none (swim volume)",
+      "position": [
+        -5.362499999999999,
+        0.05,
+        6.43561875
+      ]
+    },
+    {
+      "id": "shore_step_1",
+      "shape": "box",
+      "size_m": [
+        1.155,
+        0.1,
+        7.176
+      ],
+      "xy": [
+        0.8675,
+        0.5
+      ],
+      "color": "#cdbf9c",
+      "position": [
+        12.127500000000001,
+        0.05,
+        0.0
+      ]
+    },
+    {
+      "id": "shore_step_2",
+      "shape": "box",
+      "size_m": [
+        1.155,
+        0.2,
+        7.176
+      ],
+      "xy": [
+        0.9025,
+        0.5
+      ],
+      "color": "#cdbf9c",
+      "position": [
+        13.282499999999999,
+        0.1,
+        0.0
+      ]
+    },
+    {
+      "id": "shore_step_3",
+      "shape": "box",
+      "size_m": [
+        2.64,
+        0.3,
+        7.176
+      ],
+      "xy": [
+        0.96,
+        0.5
+      ],
+      "color": "#cdbf9c",
+      "position": [
+        15.18,
+        0.15,
+        0.0
+      ]
+    },
+    {
+      "id": "reeds",
+      "shape": "box",
+      "size_m": [
+        2.805,
+        0.4,
+        1.726
+      ],
+      "xy": [
+        0.8075,
+        0.3532
+      ],
+      "color": "#6f8a4e",
+      "position": [
+        10.147499999999999,
+        0.2,
+        -2.7249749999999997
+      ]
+    },
+    {
+      "id": "glass_table_top",
+      "shape": "cylinder",
+      "size_m": [
+        0.5,
+        0.03,
+        0.5
+      ],
+      "xy": [
+        0.5,
+        0.5
+      ],
+      "elevation_m": 0.715,
+      "color": "#cfe8ee",
+      "position": [
+        0.0,
+        0.715,
+        0.0
+      ]
+    },
+    {
+      "id": "glass_table_leg_1",
+      "shape": "cylinder",
+      "size_m": [
+        0.04,
+        0.7,
+        0.04
+      ],
+      "xy": [
+        0.5,
+        0.4892
+      ],
+      "color": "#cfe8ee",
+      "position": [
+        0.0,
+        0.35,
+        -0.20047499999999957
+      ]
+    },
+    {
+      "id": "glass_table_leg_2",
+      "shape": "cylinder",
+      "size_m": [
+        0.04,
+        0.7,
+        0.04
+      ],
+      "xy": [
+        0.4948,
+        0.5054
+      ],
+      "color": "#cfe8ee",
+      "position": [
+        -0.17159999999999942,
+        0.35,
+        0.10023749999999926
+      ]
+    },
+    {
+      "id": "glass_table_leg_3",
+      "shape": "cylinder",
+      "size_m": [
+        0.04,
+        0.7,
+        0.04
+      ],
+      "xy": [
+        0.5052,
+        0.5054
+      ],
+      "color": "#cfe8ee",
+      "position": [
+        0.17159999999999942,
+        0.35,
+        0.10023749999999926
+      ]
+    },
+    {
+      "id": "lamp_01",
+      "shape": "sphere",
+      "size_m": [
+        0.35,
+        0.35,
+        0.35
+      ],
+      "xy": [
+        0.0375,
+        0.5
+      ],
+      "elevation_m": 2.3,
+      "color": "#ffd98a",
+      "position": [
+        -15.262500000000001,
+        2.3,
+        0.0
+      ]
+    },
+    {
+      "id": "lamp_02",
+      "shape": "sphere",
+      "size_m": [
+        0.35,
+        0.35,
+        0.35
+      ],
+      "xy": [
+        0.155,
+        0.5
+      ],
+      "elevation_m": 2.3,
+      "color": "#ffd98a",
+      "position": [
+        -11.385,
+        2.3,
+        0.0
+      ]
+    },
+    {
+      "id": "lamp_03",
+      "shape": "sphere",
+      "size_m": [
+        0.35,
+        0.35,
+        0.35
+      ],
+      "xy": [
+        0.2725,
+        0.5
+      ],
+      "elevation_m": 2.3,
+      "color": "#ffd98a",
+      "position": [
+        -7.507499999999999,
+        2.3,
+        0.0
+      ]
+    },
+    {
+      "id": "lamp_04",
+      "shape": "sphere",
+      "size_m": [
+        0.35,
+        0.35,
+        0.35
+      ],
+      "xy": [
+        0.411,
+        0.5
+      ],
+      "elevation_m": 2.3,
+      "color": "#ffd98a",
+      "position": [
+        -2.9370000000000007,
+        2.3,
+        0.0
+      ]
+    },
+    {
+      "id": "lamp_05",
+      "shape": "sphere",
+      "size_m": [
+        0.35,
+        0.35,
+        0.35
+      ],
+      "xy": [
+        0.5,
+        0.5
+      ],
+      "elevation_m": 2.3,
+      "color": "#ffd98a",
+      "position": [
+        0.0,
+        2.3,
+        0.0
+      ]
+    },
+    {
+      "id": "lamp_06",
+      "shape": "sphere",
+      "size_m": [
+        0.35,
+        0.35,
+        0.35
+      ],
+      "xy": [
+        0.5775,
+        0.5
+      ],
+      "elevation_m": 2.3,
+      "color": "#ffd98a",
+      "position": [
+        2.5575000000000006,
+        2.3,
+        0.0
+      ]
+    },
+    {
+      "id": "lamp_07",
+      "shape": "sphere",
+      "size_m": [
+        0.35,
+        0.35,
+        0.35
+      ],
+      "xy": [
+        0.7025,
+        0.5
+      ],
+      "elevation_m": 2.3,
+      "color": "#ffd98a",
+      "position": [
+        6.6825,
+        2.3,
+        0.0
+      ]
+    },
+    {
+      "id": "lamp_08",
+      "shape": "sphere",
+      "size_m": [
+        0.35,
+        0.35,
+        0.35
+      ],
+      "xy": [
+        0.8075,
+        0.5
+      ],
+      "elevation_m": 2.3,
+      "color": "#ffd98a",
+      "position": [
+        10.147499999999999,
+        2.3,
+        0.0
+      ]
+    }
+  ],
+  "render": {
+    "aspect_ratio": "16:9",
+    "width": 960,
+    "height": 540
+  },
+  "landmarks": [
+    {
+      "id": "ne_entrance",
+      "name": "the flooded corner entrance",
+      "name_en": "the flooded corner entrance",
+      "kind": "entrance",
+      "xy": [
+        0.34,
+        0.74
+      ],
+      "xy_m": [
+        11.22,
+        13.76
+      ]
+    },
+    {
+      "id": "west_doors",
+      "name": "the door bases of the west wall",
+      "name_en": "the door bases of the west wall",
+      "kind": "door",
+      "xy": [
+        0.22,
+        0.28
+      ],
+      "xy_m": [
+        7.26,
+        5.21
+      ]
+    },
+    {
+      "id": "floating_fan",
+      "name": "the floating fan",
+      "name_en": "the floating fan",
+      "kind": "prop",
+      "xy": [
+        0.375,
+        0.45
+      ],
+      "xy_m": [
+        12.38,
+        8.37
+      ]
+    },
+    {
+      "id": "east_doors",
+      "name": "the door bases of the east wall",
+      "name_en": "the door bases of the east wall",
+      "kind": "door",
+      "xy": [
+        0.55,
+        0.72
+      ],
+      "xy_m": [
+        18.15,
+        13.39
+      ]
+    },
+    {
+      "id": "floating_gloves",
+      "name": "the floating gloves",
+      "name_en": "the floating gloves",
+      "kind": "prop",
+      "xy": [
+        0.38,
+        0.555
+      ],
+      "xy_m": [
+        12.54,
+        10.32
+      ]
+    },
+    {
+      "id": "glass_table_legs",
+      "name": "the glass table legs",
+      "name_en": "the glass table legs",
+      "kind": "furniture",
+      "xy": [
+        0.5,
+        0.5
+      ],
+      "xy_m": [
+        16.5,
+        9.3
+      ]
+    },
+    {
+      "id": "reeds",
+      "name": "the reeds by the shore steps",
+      "name_en": "the reeds by the shore steps",
+      "kind": "flora",
+      "xy": [
+        0.805,
+        0.35
+      ],
+      "xy_m": [
+        26.57,
+        6.51
+      ]
+    },
+    {
+      "id": "shore_steps",
+      "name": "the shore steps",
+      "name_en": "the shore steps",
+      "kind": "exit",
+      "xy": [
+        0.92,
+        0.5
+      ],
+      "xy_m": [
+        30.36,
+        9.3
+      ]
+    }
+  ],
+  "views": [
+    {
+      "tile": 1,
+      "camera_from": "glass_table_legs",
+      "looking_at": "shore_steps",
+      "size": "wide",
+      "angle": "low",
+      "desc_en": "water-level wide shot from among the glass table legs down the flooded hall to the broken stone steps climbing out of the water into reeds and grass"
+    },
+    {
+      "tile": 2,
+      "camera_from": "floating_fan",
+      "looking_at": "glass_table_legs",
+      "size": "medium",
+      "angle": "low",
+      "desc_en": "water-level medium shot from beside the floating fan toward the clear glass table legs rising out of the water like columns, gold lamp reflections trembling around them"
+    },
+    {
+      "tile": 3,
+      "camera_from": "shore_steps",
+      "looking_at": "ne_entrance",
+      "size": "wide",
+      "angle": "high_oblique",
+      "desc_en": "high oblique wide shot from above the shore steps back over the whole sheet of water to the flooded corner entrance, the swimmers' wakes spreading in rings"
+    },
+    {
+      "tile": 4,
+      "camera_from": "ne_entrance",
+      "looking_at": "floating_gloves",
+      "size": "close",
+      "angle": "low",
+      "desc_en": "water-level close shot from the flooded entrance gap to the floating white kid gloves, the wet door bases and whiplash iron frames rising like cliffs beyond"
+    },
+    {
+      "tile": 5,
+      "camera_from": "glass_table_legs",
+      "looking_at": "floating_fan",
+      "size": "medium",
+      "angle": "eye",
+      "desc_en": "eye-level medium shot at swimmer height from the glass table legs back toward the floating fan drifting on the still water"
+    },
+    {
+      "tile": 6,
+      "camera_from": "east_doors",
+      "looking_at": "west_doors",
+      "size": "medium",
+      "angle": "eye",
+      "desc_en": "eye-level medium shot at swimmer height straight across the flooded hall to the door bases of the west wall, mosaic reflections rippling between"
+    },
+    {
+      "tile": 7,
+      "camera_from": "reeds",
+      "looking_at": "shore_steps",
+      "size": "close",
+      "angle": "eye",
+      "desc_en": "eye-level close shot through the reeds to the first broken stone step, grass growing through its joints, water lapping at its edge"
+    },
+    {
+      "tile": 8,
+      "camera_from": "ne_entrance",
+      "looking_at": "west_doors",
+      "size": "wide",
+      "angle": "eye",
+      "desc_en": "eye-level wide shot at swimmer height from the flooded corner entrance diagonally across the water to the door bases of the west wall, lamp reflections trailing away down the hall"
+    },
+    {
+      "tile": 9,
+      "camera_from": "floating_fan",
+      "looking_at": "floating_gloves",
+      "size": "detail",
+      "angle": "high_oblique",
+      "desc_en": "high oblique detail shot down from the drifting fan onto the white kid gloves floating on the clear salt water, gold lamp reflections around them"
+    }
+  ],
+  "layout_top": "assets/concepts/scenes/SCN-pool-of-tears/layout_top.png",
+  "inferred": true,
+  "scale_basis": "Plan in true hall units. The image width is set to 33.0 m, kept from layout.json map_extent_m. Z = 33 x 9/16 = 18.5625 m. Checks against the Bible: glass table 0.5 m, door leaves 0.85 x 1.95 m, water 0.1 m deep (four inches). The drawn clear width between the walls is 7.2 m (Bible hall 5.5 m). Y = 2.8 m vault crown.",
+  "warnings": []
+}

@@ -1,0 +1,28 @@
+{
+  "shot_id": "sh054",
+  "scene_id": "SCN-long-hall",
+  "size": "wide",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "bottom_left",
+    "anchor_xy": [0.30, 0.76],
+    "size_in_frame": "a small figure at the foot of the leg, about 0.16 of frame height and falling to 0.13 as she sinks down"
+  },
+  "headroom": "about 0.66 of frame height of empty hall above her. The excess is the point: this is the largest headroom given to any shot in the episode.",
+  "horizon_eyeline": "Lens at 0.20 m: the flagstone plane runs away from the bottom of frame and the lamp pools lie on it at intervals, receding to the right. Her eyeline is down at 0.80 and stays there.",
+  "layers": {
+    "fg": "the flagstone joints and one glass leg at the left, at her scale",
+    "mg": "Alice, sitting down against the leg, crying",
+    "bg": "the enormous empty hall, the lamp pools running away behind her into darkness and haze"
+  },
+  "gaze": {
+    "direction": "down_frame",
+    "lead_room": "none",
+    "note": "she looks at the floor. The frame's whole open right side and its whole upper two thirds are left unused, which is what makes the crying small instead of operatic."
+  },
+  "balance": "Radically unbalanced and deliberately unhelpful: one small mass in the lower left corner against an immense empty diagonal of hall. Nothing counterweights her.",
+  "leading_lines": "The receding lamp pools and the flagstone joints rake away to the upper right and lead the eye away from her, not to her — the only shot in the episode where the leading lines abandon the subject.",
+  "eye_first": "The hall — the size of the room registers before the girl does, which is precisely the order that makes her cry read as small.",
+  "safe_area_ok": true,
+  "constraint_binding": "The first cry is SMALL: no close-up here, and the frame is what makes it small. The composition therefore withholds every device that would enlarge the emotion — no push-in, no isolation, no light on her face, and she is given the smallest subject-to-frame ratio of any figure shot in the episode."
+}

@@ -1,0 +1,13 @@
+{
+  "task_id": "p2-merge",
+  "run_id": "4f3e037bbdce",
+  "attempt": 1,
+  "model": "agent default",
+  "tokens": null,
+  "started_at": null,
+  "finished_at": "2026-09-22T17:20:54+08:00",
+  "inputs_sha256": {},
+  "artifact_versions": {
+    "bible/": "v1 (merged, not locked)"
+  }
+}

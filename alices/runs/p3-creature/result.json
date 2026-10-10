@@ -1,0 +1,74 @@
+{
+  "task_id": "p3-creature",
+  "agent": "04-creatures/creature",
+  "status": "completed",
+  "attempt": 1,
+  "completed_at": "2026-09-22",
+  "summary": "Catalogued the real, on-screen, non-speaking animals for the realistic Alice adaptation. Per SUP-002 (cultivation.json, approved H1 5.1 A) and WRITE_RULES.md precedent P-007, every talking animal/card figure is a human-performed dream-figure and registers as CHAR-*, not here. Registered 4 CRE-* entries for the animals the source text itself keeps mute and un-costumed: the silent white rabbit in the waking frame, and three real (never-speaking) animals inside the dream — the puppy (ch004), and the flamingo and hedgehog used as live croquet equipment (ch008).",
+  "outputs": [
+    "bible/creatures/creature.json",
+    "bible/creatures/index.json",
+    "code/p3-creature_check.py"
+  ],
+  "entries_registered": [
+    {
+      "id": "CRE-001",
+      "name": "The White Rabbit (waking-world, real animal)",
+      "note": "Real, silent rabbit in the ch001 waking-world bracket only; deliberately distinct from CHAR-white-rabbit, the talking dream-figure herald."
+    },
+    {
+      "id": "CRE-002",
+      "name": "The Puppy",
+      "note": "ch004 dream sequence; never speaks; 'enormous' reads purely from Alice's own SUP-003 scale, not the puppy's real size."
+    },
+    {
+      "id": "CRE-003",
+      "name": "The Flamingo",
+      "note": "ch008 croquet-ground; live mallet; per SUP-011 never shown being struck."
+    },
+    {
+      "id": "CRE-004",
+      "name": "The Hedgehog",
+      "note": "ch008 croquet-ground; live ball; per SUP-011 never shown being struck."
+    }
+  ],
+  "excluded_candidates": [
+    {
+      "candidate": "Dinah (the family cat)",
+      "reason": "Never physically appears on screen anywhere in the source (ch001/ch002/ch003/ch004 mentions are all Alice speaking/thinking of her). Per H1 ruling 5.3 B she is echoed only as light doubling into the Cheshire Cat performer (CHAR-*, owned by 03-characters). No CRE entry created."
+    },
+    {
+      "candidate": "waking-frame farm animals (sheep, cattle) from the sister's closing reverie, ch012-p70",
+      "reason": "The paragraph is explicit that the sister sits 'with closed eyes' and only imagines what the sounds would become 'though she knew she had but to open them again' — a counterfactual hearing, not a witnessed sight. SUP-001's own sound_signature already renders this as ambient audio bleed, not a visual cutaway. No drawable on-screen appearance is committed to by the locked Bible, so no CRE entry was created; flagged in creature.json _meta for 07-directing to return here if a visible farmyard cutaway is later staged."
+    },
+    {
+      "candidate": "goldfish / cart-horse / bats / oyster",
+      "reason": "All verbal similes or drowsy word-play (ch012-p01/02, ch004-p38, ch001-p10, ch003-p43), never accompanied by an on-screen scene."
+    },
+    {
+      "candidate": "Magpie, Canary, and the rest of the ch002-ch003 pool/Caucus-race cast beyond the already CHAR-forward-referenced Mouse/Dodo/Duck/Lory/Eaglet",
+      "reason": "Magpie and Canary have direct quoted dialogue (ch003-d0068/d0069); per SUP-002 all speaking animals are CHAR-* human performers, owned by 03-characters/character-manager, not this agent."
+    },
+    {
+      "candidate": "the guinea-pig juror (H1 ruling 5.4 B: sack over head/shoulders, hustled out)",
+      "reason": "Part of the court's speaking jury (SUP-002 source_element explicitly lists 'jurors'); a CHAR-*, not a creature."
+    }
+  ],
+  "cross_domain_notes": [
+    "bible/_index.json forward_refs_pending.ids lists CHAR-white-rabbit as a pending character registration (the dream-figure herald). CRE-001 in this file is a separate entity (the real, mute, waking-world rabbit) and does not duplicate or conflict with that pending CHAR id; creature.json CRE-001.distinct_from documents the split explicitly so downstream prompt/image-gen agents do not merge the two (e.g. give the real rabbit a waistcoat and watch).",
+    "No conflicts found with the locked Bible (cultivation.json SUP-001/002/003/011, world.json wonderland_real_counterparts, WRITE_RULES.md P-007). No qa/defects/ filed."
+  ],
+  "checks": {
+    "script": "code/p3-creature_check.py",
+    "result": "PASS: 4 CRE entries, all required fields present, IDs unique, cross-refs resolve (dictionary_ref/term_ref into dictionary.json, habitat_refs into geography.json), no UNKNOWN/TBD/N/A placeholders."
+  },
+  "acceptance_self_check": {
+    "schema": "PASS — id/category/forms[].appearance(size,surface,head,eyes)/source present on all 4 entries",
+    "id_uniqueness": "PASS — CRE-001..004, consistent between creature.json and index.json",
+    "cross_refs": "PASS — dictionary_ref TERM-0026/0050/0051/0052 resolve; habitat_refs LOC-meadow-field/LOC-rabbit-hole-entrance/LOC-thick-wood/LOC-croquet-lawn resolve",
+    "no_unknown_placeholder": "PASS (see code/p3-creature_check.py)",
+    "faithfulness_to_source": "Every appearance/behaviour claim cites a verbatim source quote in source.citations[]; designed-only details (exact sizes, fur/plumage colour where unstated, diet) are covered by the entry-level inferred:true + reason",
+    "evaluation_and_qa": "Quality judge and all QA dimensions are set to 0 for this project (disabled); no evaluation/QA scoring was requested or performed, per current project settings."
+  },
+  "run_record_dir": "runs/p3-creature/"
+}

@@ -1,0 +1,46 @@
+{
+  "shot_id": "sh072",
+  "group_id": "grp028",
+  "scene_no": "S08",
+  "scene_id": "SCN-long-hall",
+  "duration_s": 2.0,
+  "is_dialogue": false,
+  "group_position": "first shot of grp028 — Alice on her map start (curtain); no path in this group. The White Rabbit is on his map start (ne_entrance), out of frame.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "sit",
+      "start_pos": "sitting hunched at the low curtain, drying her eyes with the backs of her hands",
+      "space_fragment_en": "sitting hunched at the low curtain on screen-right, drying her eyes, facing screen-left up the hall toward a sound",
+      "facing": "screen-left up the hall — her first outward look in four shots",
+      "path": [],
+      "beats": [
+        { "t": 0.3, "action": "a pattering of feet in the distance, and splashing", "sync": "the sound arrives first" },
+        { "t": 0.8, "action": "she dries her eyes hastily", "sync": "manners before curiosity" },
+        { "t": 1.5, "action": "her eyes go screen-left up the hall", "sync": "hands the cut to sh073" }
+      ],
+      "performance_beat": {
+        "objective": "make herself presentable before whatever is coming gets here",
+        "goal": "make herself presentable before it arrives",
+        "emotional_arc": "from private crying to alert, embarrassed attention",
+        "arc_from": "private crying",
+        "arc_to": "alert embarrassed attention",
+        "trigger": { "beat": "the pattering and splashing reach her", "t": 0.3 },
+        "no_early_reaction": ["the head coming up", "the hands going to her face", "the breath catching"],
+        "forbidden_early": ["the head coming up", "the hands going to her face", "the breath catching"],
+        "end_state": "hands lowered from her wet face, head up, eyes fixed screen-left up the hall, listening"
+      }
+    }
+  ],
+  "creatures": [],
+  "offscreen_presence": [
+    { "id": "CHAR-white-rabbit", "where": "coming out of the dark corner entrance at the far end of the hall, in the shallow water", "note": "grp028 blocking_map start. In the space, out of frame — the sound is his." }
+  ],
+  "presence_check": {
+    "timeline_ok": true,
+    "violations": [],
+    "story_event": "ev0007 (dream) — the White Rabbit returns, splendidly dressed",
+    "note": "This is CHAR-white-rabbit, the same dream-layer character last seen leaving S04; CRE-001 is a different entity and is not legal here."
+  }
+}

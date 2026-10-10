@@ -1,0 +1,29 @@
+{
+  "shot_id": "sh029",
+  "scene_id": "SCN-shaft-landing-passage",
+  "size": "detail",
+  "subject": {
+    "id": "PROP-white-rabbit-pocket-watch",
+    "in_frame_characters": ["CHAR-white-rabbit"],
+    "grid": "centre",
+    "anchor_xy": [0.46, 0.50],
+    "size_in_frame": "the enamel dial about 0.42 of frame height, filling the middle of frame; the paw closed round its edge takes another 0.25 of frame width"
+  },
+  "headroom": "not applicable — an insert. The dial is centred with an even margin of dark chest fur all round it, about 0.18 of frame height top and bottom.",
+  "horizon_eyeline": "The dial's own twelve-six axis is held upright and level, so the hands can be read at a glance; the chain falls away as a diagonal to the lower right. No face and no eyeline in frame.",
+  "layers": {
+    "fg": "the fur and claws of a real rabbit's forepaw closed round the case, and the chain looping out of the bottom right",
+    "mg": "the enamel dial, lit by passage lamplight from frame left",
+    "bg": "the dark of his chest fur and, beyond it, unlit brick — soft and falling away"
+  },
+  "gaze": {
+    "direction": "none",
+    "lead_room": "none",
+    "note": "no face in shot by instruction; the watch is read on the dial, not off a reaction."
+  },
+  "balance": "A bright disc just left of centre with the dark organic mass of the paw wrapped round its right side — the one circular composition in S04, and the only one in the episode that is a clock.",
+  "leading_lines": "The chain runs out of the lower right corner and back to the case, and the claw tips point inward at the dial from three sides — a closed, gripping shape.",
+  "eye_first": "The dial, and specifically the hands, which say two o'clock is long past.",
+  "safe_area_ok": true,
+  "constraint_binding": "The watch is read in ONE insert of the watch face and the paw, not on his face: no part of his head or muzzle is permitted in frame. The one image of the scene, so the dial and the real fur and claws share the frame with nothing else — this is where CR-015's 'period prop sitting on real anatomy' is proved."
+}

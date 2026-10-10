@@ -1,0 +1,76 @@
+{
+  "character_id": "CHAR-white-rabbit",
+  "name": "White Rabbit",
+  "tier": "A",
+  "layer": "dream",
+  "revision": { "change_id": "BIB-0027", "task_id": "p4-cr-appearance", "date": "2026-09-23", "note": "Rewritten from the human-performer reading to a photoreal CGI animal." },
+  "rendering": {
+    "mode": "photoreal_cgi_animal",
+    "rule": "bible/cultivation.json SUP-002 (amended BIB-0027); XA-magic-02",
+    "species": "domestic rabbit (Oryctolagus cuniculus), albino white, small compact build",
+    "limits": "Rabbit anatomy throughout (leporine skull, split upper lip, long ears, hind-leg-driven gait). No cartoon face, no human hands, no human in costume. Dialogue carried by naturalistic mouth, nose and whisker movement."
+  },
+  "gender": "male",
+  "gender_note": { "source_chapter": "ch002", "source_para": "ch002-p08", "quote": "he came trotting along in a great hurry, muttering to himself" },
+  "base_age_range": "55-62",
+  "base_age_note": { "inferred": true, "reason": "Persona age (anxious senior household functionary and court herald), kept for voice casting. As an animal he is a fully mature adult rabbit: slightly coarser guard hair at the cheeks, no kitten softness." },
+  "hair": {
+    "coat": "fur",
+    "color": "pure snow white all over, no markings",
+    "style": "dense, soft, short body fur lying smooth; finer and fluffier at the cheeks and chest ruff; long white whiskers",
+    "source_chapter": "ch001",
+    "source_para": ["ch001-p02", "ch001-p11", "ch004-p01"],
+    "quote": "a White Rabbit with pink eyes / Oh my ears and whiskers, how late it’s getting! / Oh my fur and whiskers!"
+  },
+  "eyes": {
+    "color": "pink-red (albino), clear and bright",
+    "shape": "large, round, set on the sides of the head; blinks and widens when anxious",
+    "source_chapter": "ch001",
+    "source_para": "ch001-p02",
+    "quote": "a White Rabbit with pink eyes",
+    "echo": "Same colouring as the real waking-frame rabbit CRE-001, so the dream figure reads as that rabbit."
+  },
+  "skin": { "tone": "pink skin showing through at the nose leather, the inner ears and the eyelid rims", "inferred": true, "reason": "Albino rabbit (ch001-p02 'pink eyes')." },
+  "face": {
+    "shape": "rabbit head: short rounded muzzle, split upper lip, long upright ears that flatten back when he is frightened",
+    "features": ["constantly twitching pink nose", "whiskers that flick with every nervous sniff", "front incisors just visible when he speaks"],
+    "default_expression": "flustered and hurried; at court a nervous, eager ear-forward attentiveness; flattened ears and a stiff crouch when the Queen is near",
+    "expressiveness": "kept inside real rabbit behaviour: ear angle, nose rate, eye widening, body crouch. No human smile or eyebrow.",
+    "source_chapter": "ch008",
+    "source_para": ["ch008-p11", "ch012-p10"],
+    "quote": "talking in a hurried nervous manner, smiling at everything that was said / frowning and making faces at him as he spoke",
+    "features_inferred": true,
+    "reason": "Manner is sourced; the 'smiling' and 'making faces' are translated into rabbit ear, nose and lip movement."
+  },
+  "build": {
+    "height_range_cm": [26, 30],
+    "height_note": "Sitting-up height, head top without ears; ears add about 8 cm. Body length nose-to-tail about 32-36 cm.",
+    "body_type": "small, compact, light-boned, quick",
+    "posture": "Runs on all fours at speed. Sits up and rears on his hind legs to stand, look at the watch and carry things; carrying the gloves and fan he takes short upright hops on his hind legs (the one dream licence in his movement).",
+    "scale_reference": "At Alice's true size (135 cm, CHAR-alice anchor) he runs past below her knee (ch001). In the garden (ch008) Alice is about a foot high, and he rises on tiptoe to put his mouth to her ear: at that beat his reared height is just below her ear. In his house giant Alice is 'about a thousand times as large' (ch004-p13). All Alice size beats stay SUP-003.",
+    "source_chapter": "ch008",
+    "source_para": "ch008-p36",
+    "quote": "then raised himself upon tiptoe, put his mouth close to her ear",
+    "height_inferred": true,
+    "reason": "A small breed is chosen so the sourced tiptoe-to-ear beat works against a foot-high Alice at natural rabbit size."
+  },
+  "marks": [
+    { "type": "signature_item", "position": "worn on the body", "description": "a small fitted 1862 waistcoat (buff-and-brown check) cut to the rabbit's body, with a watch pocket; the only garment he wears", "source_chapter": "ch001", "source_para": "ch001-p03", "quote": "took a watch out of its waistcoat-pocket" },
+    { "type": "signature_item", "position": "waistcoat pocket", "description": "large gold pocket-watch on a chain, pulled out and held in both forepaws to check", "source_chapter": "ch001", "source_para": "ch001-p03" },
+    { "type": "signature_item", "position": "forepaws / mouth", "description": "a pair of white kid gloves and a large fan (dropped in the hall), scaled to him", "source_chapter": "ch002", "source_para": "ch002-p08" },
+    { "type": "signature_item", "position": "face (reading only)", "description": "small round wire spectacles, put on to read", "source_chapter": "ch012", "source_para": "ch012-p38", "note": "Plain lenses; the old pink tint is dropped because his own eyes are now pink." },
+    { "type": "signature_item", "position": "trial only", "description": "a small herald's trumpet and a parchment scroll", "source_chapter": "ch011", "source_para": "ch011-p01" }
+  ],
+  "default_outfit_tone": {
+    "summary": "Bare white rabbit wearing only the small checked waistcoat with the gold watch chain; at the trial a small crimson herald's tabard with a white-piped heart badge is added over the waistcoat.",
+    "source_chapter": "ch002",
+    "source_para": ["ch002-p08", "ch001-p03"],
+    "quote": "splendidly dressed / took a watch out of its waistcoat-pocket",
+    "colours_inferred": true,
+    "reason": "Waistcoat and 'splendidly dressed' are sourced; per SUP-002 (BIB-0027) he wears only the text's props, so the frock coat, trousers and collar of the old card are dropped. Colours designed; tabard follows FAC-house-of-hearts livery. Garment cut and pattern belong to 06-art/costume."
+  },
+  "sound_tic": "a light sniff or nose-flutter under his hurried speech (SUP-002 sound_signature)",
+  "doubling": null,
+  "events": ["ev0003", "ev0007", "ev0014", "ev0034", "ev0046", "ev0049", "ev0051"],
+  "prompt_base_en": "photoreal small albino white rabbit, pure snow-white fur, pink-red eyes, pink nose and inner ears, long white whiskers, sitting up on its hind legs, wearing only a small fitted buff-and-brown checked waistcoat with a gold watch chain, holding a large gold pocket watch in its forepaws, anxious twitching nose, natural rabbit anatomy, live-action film plate, realistic lighting"
+}

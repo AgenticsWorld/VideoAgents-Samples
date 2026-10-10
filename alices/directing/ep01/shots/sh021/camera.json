@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh021",
+  "group_id": "grp008",
+  "scene_no": "S03",
+  "duration_s": 5.0,
+  "size": "medium",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame beside her; the cupboard doors travel up through the background)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 40,
+  "camera_height_m": "beside her at her own height on her axis",
+  "angle": "level",
+  "rack_focus": "none",
+  "start_frame": "Eye-level from the middle of the shaft toward the glazed cupboards: her whole body in frame, upright and drifting, the jar still held out, a cupboard door sliding up behind her.",
+  "end_frame": "The same frame with the jar posted tidily into a passing cupboard and her hands free, looking about her as she falls and beginning the line about the miles.",
+  "constraint_honoured": "'Her whole body in frame so the impossible calm reads. No move.' — a fixed medium on a whole child falling politely is the joke; a move would perform the calm instead of showing it.",
+  "movement_note": "LN-ep01-003 (3.7 s) lands whole inside 5.0 s with silence at each end and no camera event across it.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

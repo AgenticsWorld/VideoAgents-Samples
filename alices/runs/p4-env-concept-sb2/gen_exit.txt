@@ -1,0 +1,8 @@
+SCN-wood-thistle-glade exit=0
+SCN-caterpillar-clearing exit=0
+SCN-duchess-house-front exit=0
+SCN-pigeon-treetop exit=0
+SCN-rabbit-house-upstairs-room exit=0
+SCN-duchess-kitchen exit=0
+SCN-wood-tree-door exit=0
+SCN-rabbit-house-exterior exit=0

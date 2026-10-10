@@ -1,0 +1,35 @@
+{
+  "shot_id": "sh037",
+  "scene_id": "SCN-long-hall",
+  "size": "close",
+  "subject": {
+    "id": "PROP-golden-key",
+    "in_frame_characters": ["CHAR-alice"],
+    "grid": "centre",
+    "anchor_xy": [0.50, 0.46],
+    "size_in_frame": "tiny — about 0.06 of frame height — alone in the middle of a bare glass sheet that fills the width of frame"
+  },
+  "second_subject": {
+    "id": "CHAR-alice",
+    "grid": "top_centre",
+    "anchor_xy": [0.52, 0.18],
+    "note": "her face a soft shape above the glass, above and behind the tabletop plane, secondary to the key."
+  },
+  "headroom": "her face is cropped by the top edge; the key, not the person, is given the clean margins — about 0.36 of frame height of empty glass below it and 0.30 above.",
+  "horizon_eyeline": "Lens at 0.50 m from the floor at the curtain: the glass tabletop reads as a lit horizontal plane running across at 0.50 of frame height, dead level and edge to edge. Her eyeline comes down over that plane onto the key.",
+  "layers": {
+    "fg": "the three clear glass legs rising through the lower frame, catching lamplight along their edges",
+    "mg": "the lit tabletop plane and the tiny key alone on it",
+    "bg": "her face above the glass, and beyond her the far lamps of the hall, soft"
+  },
+  "gaze": {
+    "direction": "down_frame",
+    "lead_room": "none",
+    "note": "she looks down through the top of frame onto the key; her hand then comes in from the upper right to take it, crossing the lit plane."
+  },
+  "balance": "A wide, empty, level plane with one very small bright object at its exact centre — the emptiest centred composition in the hall, and the most valuable object in the episode sitting in it.",
+  "leading_lines": "The three glass legs are vertical rails converging slightly upward; the tabletop is one long horizontal. The key sits at the single point where nothing else is — the frame isolates it by subtraction, not by light.",
+  "eye_first": "The key. It is the brightest and smallest thing in a low-key frame, and everything else is bare.",
+  "safe_area_ok": true,
+  "constraint_binding": "The key is the brightest object in the frame, and the hall is established here as holding it that way for the whole size sequence: from this shot to sh091 the key keeps the highest specular value in any frame it appears in, and no other object is allowed to outshine it."
+}

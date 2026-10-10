@@ -1,0 +1,66 @@
+{
+  "task_id": "p2-timeline",
+  "agent": "02-worldbuilding/timeline",
+  "attempt": 1,
+  "status": "completed",
+  "output": "bible/timeline.json",
+  "content_language": "English (project setting, 2026-09-22)",
+  "inputs_used": [
+    "story/structured_story.json + story/structured_story/ch001..ch012.json (paragraph-level quotes)",
+    "story/events.json (ev0001, ev0010, ev0030, ev0053, ev0054; realistic_adaptation_flags)",
+    "story/story_timeline.json (dream_frame, story_time reality_layer -- used to cross-check TL-003/TL-004 against real_frame vs dream layer)",
+    "story/story_graph.json (read for context; no direct citations needed)",
+    "story/chapter_manifest.json (chapter id validation)",
+    "bible/WRITE_RULES.md (citation format, cross-ref namespaces, §7.1 realistic-adaptation stance)",
+    "bible/timeline.json skeleton (p0-bible-init; _meta and entry_schema kept as-is)"
+  ],
+  "summary": "Filled bible/timeline.json per its existing skeleton schema (single calendar object + eras[] + nodes[] + unresolved[]). Domain content: (1) one real-world Gregorian calendar anchored to the story's single present day (day-of-month 'the fourth' is textual, ch007#p21-p22; month/year designed as 4 July 1862); (2) 3 eras spanning Anglo-Saxon England -> Norman Conquest/Georgian bridge -> Victorian era (present); (3) 4 timeline nodes: TL-001 Norman Conquest 1066 (the Mouse's history recitation, ch002-ch003), TL-002 Victoria's accession 1837 (self-designed era boundary, supported by the source's railway/seaside/formal-trial texture), TL-003 the story's present day (4 July 1862), TL-004 the Queen's concert / Hatter's quarrel with Time ('last March', ch007#p48, corroborated and date-disputed at the trial, ch011#p18-p21 and p35); (4) 3 unresolved temporal questions (nap duration left unquantified by source; the three-way March-date dispute deliberately unresolved by the source; and the cross-domain dream-frame dependency).",
+  "inferred_entries_count": {
+    "calendar": 1,
+    "eras_inferred_true": 2,
+    "eras_not_inferred": 1,
+    "nodes_inferred_true": 4,
+    "nodes_not_inferred": 0,
+    "note": "All 4 nodes carry inferred:true because each mixes an explicit textual anchor (a day-of-month, a named historical event, a relative 'last March') with a self-designed numeric year/month not stated by the source; none are pure invention without a source anchor."
+  },
+  "cross_domain_assumptions": [
+    {
+      "assumption": "The story's real-world setting register is mid-Victorian England, anchored to the real-world year 1862 (calendar.anchor_year, TL-002 Victoria's accession 1837, ERA-003 Victorian Era).",
+      "basis": "Source's own period texture: railway station + seaside bathing-machine resort (ch002#p16), formal judge-and-jury criminal trial (ch011-ch012); no exact year stated in text.",
+      "depends_on": "02-worldbuilding/world (setting.era, world_rules) and 02-worldbuilding/geography, both writing bible/world.json and bible/geography.json in parallel -- currently skeleton_empty.",
+      "reconciliation_note": "If world.json/geography.json independently choose a different setting register (e.g. a different decade, or a non-Victorian/contemporary realistic register), memory-bible must reconcile against calendar.anchor_year=1862 and ERA-003 here; flag to user at H1 if they conflict rather than silently picking one."
+    },
+    {
+      "assumption": "TL-004 (the Queen's concert / Hatter's quarrel with Time, dated 'last March') is placed on the real-world calendar on the working assumption that Wonderland's internal relative-time statements remain meaningful real-world time offsets, regardless of how the dream frame (source element 'dream frame', events.json realistic_adaptation_flags, events ev0001/ev0053/ev0054) is ultimately treated.",
+      "basis": "bible/WRITE_RULES.md §7.1: whether/how the dream frame and Wonderland's talking-animal cast are reinterpreted for the realistic register is decided by 02-worldbuilding/magic-cultivation with world, confirmed at H1; not decided here.",
+      "depends_on": "02-worldbuilding/magic-cultivation (bible/cultivation.json SUP-* entries) -- currently skeleton_empty, decision_status pending_phase2.",
+      "reconciliation_note": "If magic-cultivation's eventual SUP decision renders Wonderland content as an achronic dreamscape with no real-calendar mapping at all, TL-004's calendar placement should be treated as decorative/non-binding rather than a hard production fact; memory-bible should re-open UTQ-003 at that point rather than silently keep or drop TL-004."
+    }
+  ],
+  "self_consistency_check": {
+    "script": "code/p2-timeline_check.py",
+    "result": "PASS",
+    "checks": [
+      "no forbidden UNKNOWN/TBD/empty placeholders in calendar/eras/nodes/unresolved",
+      "era start/end reference existing TL- node ids or null",
+      "node.relative_to references existing TL- node id or null",
+      "node.event_refs all resolve against story/events.json",
+      "node.chapters all resolve against story/chapter_manifest.json",
+      "every era/node has source.quote OR inferred:true+reason (source_refs_required)",
+      "TL-/ERA-/UTQ- id uniqueness and format",
+      "chronological ordering: TL-001 (1066) < TL-002 (1837) < TL-004 (Mar 1862) < TL-003 (4 Jul 1862), no event precedes its own cause"
+    ]
+  },
+  "alignment_with_story_timeline": {
+    "checked_against": "story/story_timeline.json",
+    "result": "consistent",
+    "notes": [
+      "TL-003's event_refs (ev0001, ev0053, ev0054) are all tagged reality_layer=real_frame in story_timeline.json's story_time[], matching TL-003 being the real-world frame day.",
+      "TL-001's and TL-004's event_refs (ev0010, ev0030) are tagged reality_layer=dream, consistent with both being recited/recounted within the dream (Mouse's recitation, Hatter's backstory); TL-001's real-world historical fact (the Conquest) does not depend on the dream's reality status, unlike TL-004 (see cross_domain_assumptions and UTQ-003).",
+      "This file does not duplicate story_timeline.json's 54-event narrative/story-time sequencing; it only anchors the single frame day and two historically/relatively dated references to a real-world calendar, per SOUL.md's division of labor (01-story/timeline-story owns narrative time; 02-worldbuilding/timeline owns world/calendar chronology)."
+    ]
+  },
+  "conflicts": [],
+  "defects_filed": [],
+  "notes": "No qa/defects entries filed: the three-way March-date discrepancy (UTQ-002) is the source's own deliberate comic device (jury tallies all three dates 'to shillings and pence', ch011#p21), not an authorial continuity error or a conflict between my own settings and an established Bible fact, so it is recorded in unresolved[] rather than escalated as a defect."
+}

@@ -1,0 +1,31 @@
+{
+  "_meta": {"file": "bible/scenes/SCN-mock-turtle-ledge/lighting.json", "owner": "05-scenes/lighting", "task_id": "p3-lighting-sb2", "attempt": 1, "generated": "2026-09-22", "enum_set": "LGT-ENUM-v1 (runs/p3-lighting-sb2/result.json)", "amended": "2026-09-23 p4-cr-lighting (BIB-0027): the Gryphon and Mock Turtle are photoreal CGI creatures (SUP-010), so rim-light wording now covers feathers, hide and shell as well as Alice's hair and dress; sun setup unchanged"},
+  "scene_id": "SCN-mock-turtle-ledge",
+  "layer": "dream",
+  "int_ext": "EXT",
+  "daylight_access": "open_sky",
+  "dream_light_growth": "The Thames backwater beside the sleeping Alice becomes a sea, and the golden-hour light is the real evening sun that now comes in low under the trees onto her face; first golden light of the film's dream (cp-lessons, SUP-010; environment fixed.dream_growth).",
+  "schemes": [
+    {
+      "scheme_id": "LGT-mock-turtle-ledge-01",
+      "condition": {"time_of_day": "golden_hour", "weather": "fair_evening"},
+      "applies_to_states": ["SCN-mock-turtle-ledge-S01", "SCN-mock-turtle-ledge-S02", "SCN-mock-turtle-ledge-S03"],
+      "key_source": "direct_sun",
+      "direction": "side_backlight",
+      "key_bearing": "sun west-north-west over the sea, elevation about 14 deg falling to 11 deg (S01-S03); facing the sea is into the light",
+      "fill": "glitter and reflected light off the sea and wet sand; pale warm evening sky",
+      "practicals": [],
+      "color_temp": "warm (~2700K)",
+      "color_temp_k_approx": 3300,
+      "contrast": "hard",
+      "quality": "low golden evening sun behind and beside the figures, bright rim light on Alice's hair and dress and on the photoreal CGI Gryphon's feathers and the Mock Turtle's hide and shell (SUP-010, BIB-0027), silhouettes against the sea glare, long shadows across wet shingle and sand, gentle melancholy warmth",
+      "prompt_fragment_en": "low golden evening sun over a calm sea behind and beside the figures, warm golden rim light on hair, dress, feathers and shell, sparkling glare on the water and wet sand, long shadows stretching across the shingle, pale warm evening sky as soft fill, gentle melancholy seaside light",
+      "source_chapter": "ch010",
+      "source_refs": ["ch009-p48", "ch010-p76", "ch010-p80", "environment.json SCN-mock-turtle-ledge-S01..S03"],
+      "inferred": true,
+      "reason": "No light is described; 'Soup of the evening' (ch010-p76) and the evening breeze (ch010-p80) support golden hour (environment decision). Direction and colour follow the environment sun over the sea."
+    }
+  ],
+  "special": [],
+  "special_note": "The source writes no plot light for this scene."
+}

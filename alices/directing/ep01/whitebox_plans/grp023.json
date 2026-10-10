@@ -1,0 +1,56 @@
+{
+  "schema_version": "whitebox_plan.v1",
+  "group_id": "grp023",
+  "scene_id": "SCN-long-hall",
+  "basis": "Alice does not move from the glass box at (5.68, -0.26). She takes a bite at t=0.4, claps a hand flat on her head at t=1.0 and her eyes flick up under it - the sh050 gesture repeated in miniature - then nothing happens, and in sh061 she stays exactly the same size, eats the whole cake and brushes the crumbs off her pinafore. She is turned out into the hall (yaw 2.5214) for both shots so the 50 mm close sits in front of her; sh061 reproduces the sh060 set-up exactly, same position, target and lens.",
+  "actors": [
+    {
+      "id": "CHAR-alice",
+      "kind": "person",
+      "size_m": [0.0711, 0.254, 0.0559],
+      "keyframes": [
+        {"t": 0.0, "position": [5.68, 0.0, -0.26], "pose": "stand", "yaw": 2.5214, "head_pitch": 0.15},
+        {"t": 0.4, "position": [5.68, 0.0, -0.26], "pose": "stand", "yaw": 2.5214, "head_pitch": 0.2},
+        {"t": 1.0, "position": [5.68, 0.0, -0.26], "pose": "stand", "yaw": 2.5214, "head_pitch": 0.1},
+        {"t": 1.3, "position": [5.68, 0.0, -0.26], "pose": "stand", "yaw": 2.5214, "head_pitch": 0.0},
+        {"t": 2.0, "position": [5.68, 0.0, -0.26], "pose": "stand", "yaw": 2.5214, "head_pitch": -0.5},
+        {"t": 3.0, "position": [5.68, 0.0, -0.26], "pose": "stand", "yaw": 2.5214, "head_pitch": -0.5},
+        {"t": 3.5, "position": [5.68, 0.0, -0.26], "pose": "stand", "yaw": 2.5214, "head_pitch": -0.4},
+        {"t": 4.0, "position": [5.68, 0.0, -0.26], "pose": "stand", "yaw": 2.5214, "head_pitch": 0.0},
+        {"t": 6.4, "position": [5.68, 0.0, -0.26], "pose": "stand", "yaw": 2.5214, "head_pitch": 0.25},
+        {"t": 9.2, "position": [5.68, 0.0, -0.26], "pose": "stand", "yaw": 2.5214, "bend": 0.3, "head_pitch": 0.4},
+        {"t": 10.0, "position": [5.68, 0.0, -0.26], "pose": "stand", "yaw": 2.5214, "bend": 0.15, "head_pitch": 0.3}
+      ]
+    }
+  ],
+  "props": [
+    {"id": "PROP-glass-box", "shape": "box", "size_m": [0.09, 0.05, 0.07], "position": [5.55, 0.025, -0.22], "yaw": -1.273}
+  ],
+  "cameras": [
+    {
+      "shot_id": "sh060",
+      "start": 0,
+      "duration_s": 3.0,
+      "movement": "static",
+      "keyframes": [
+        {"t": 0.0, "position": [5.76, 0.18, -0.372], "target": [5.68, 0.184, -0.26], "fov": 26.9915},
+        {"t": 3.0, "position": [5.76, 0.18, -0.372], "target": [5.68, 0.184, -0.26], "fov": 26.9915}
+      ]
+    },
+    {
+      "shot_id": "sh061",
+      "start": 3.0,
+      "duration_s": 7.0,
+      "movement": "static",
+      "keyframes": [
+        {"t": 0.0, "position": [5.76, 0.18, -0.372], "target": [5.68, 0.184, -0.26], "fov": 26.9915},
+        {"t": 7.0, "position": [5.76, 0.18, -0.372], "target": [5.68, 0.184, -0.26], "fov": 26.9915}
+      ]
+    }
+  ],
+  "continuity": {"actors": "inherit", "camera": "cut"},
+  "warnings": [
+    "sh061 is the sh060 frame exactly: identical lens position, target and fov, so the cut is a pure hold and nothing reframes across it.",
+    "Her size does not change anywhere in this group - the whole point of sh061's two-second hold - so no morph channel is authored here."
+  ]
+}

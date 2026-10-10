@@ -1,0 +1,34 @@
+{
+  "shot_id": "sh060",
+  "scene_id": "SCN-long-hall",
+  "size": "close",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "centre",
+    "anchor_xy": [0.46, 0.48],
+    "size_in_frame": "head and hands, face about 0.50 of frame height"
+  },
+  "second_subject": {
+    "id": "PROP-eat-me-cake",
+    "grid": "bottom_left",
+    "anchor_xy": [0.28, 0.78],
+    "note": "the bitten corner held at the bottom of frame — evidence, not a hero object."
+  },
+  "headroom": "about 0.16 of frame height, and her hand clapping flat on top of her head fills it inside the shot. The gesture and the frame's ceiling meet.",
+  "horizon_eyeline": "Low close at 0.18 m, so the lens looks slightly up at her. No architecture in frame. Her eyeline is at 0.44, flicking up and sideways — looking for a change she cannot see.",
+  "layers": {
+    "fg": "the cake in her lower hand",
+    "mg": "her face and the hand clapped on her head",
+    "bg": "dark hall, one soft amber smear far behind"
+  },
+  "gaze": {
+    "direction": "up_frame",
+    "lead_room": "above",
+    "note": "her eyes go up under her own palm — the sh050 gesture repeated in miniature and at speed. The lead room above her is the answer she is waiting for."
+  },
+  "balance": "A tight vertical stack — cake at the bottom, face in the middle, hand on top — filling the centre of frame with no space on either side. The frame is as anxious as she is.",
+  "leading_lines": "Her two forearms come up from the bottom corners and close over her head, making a loop around the whole figure. There is no way out of the shape.",
+  "eye_first": "The hand slapping onto her head, then her eyes underneath it.",
+  "safe_area_ok": true,
+  "constraint_binding": "The bite and the hand happen inside one frame so the anxiety is a single gesture: both hands and her whole head are in shot throughout, no cut and no reframe between the bite and the clap. Two words, fast — the frame is composed tight so the shot can be three seconds and still feel complete."
+}

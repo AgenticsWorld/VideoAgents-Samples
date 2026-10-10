@@ -1,0 +1,71 @@
+{
+  "scene_id": "SCN-courtroom",
+  "inherits": null,
+  "layer": "dream",
+  "int_ext": "INT",
+  "form": "A single tall Art Nouveau courtroom built after Mucha, oak-panelled in flowing carved curves under an open timber roof of curved gilded braces: a raised royal bench and double throne at one end under a canopy, a raised jury-box of two tiers down one side, the dock opposite, a table with a dish of tarts in the very middle of the floor, the crowd standing on the floor and in a shallow gallery at the back",
+  "stories": 1,
+  "source_chapter": "ch011",
+  "culture_ref": "geography.json#LOC-courtroom, LOC-courthouse; world.json#wonderland_real_counterparts cp-court; culture.json CUL-006, CUL-007, CUL-011, CUL-016, CUL-040",
+  "amendment": "BIB-0027 (user ruling 2026-09-22), applied p4-cr-architecture 2026-09-23",
+  "period": "Dream-image of an 1860s English assize court as a well-read child pictures it from books and newspaper engravings (wig and bench, jury-box, herald; the royal arms swapped for the arms of Hearts), its architecture redrawn in the dream's licensed Art Nouveau language (WR-010); costumes and hand props stay 1862",
+  "grows_from": {
+    "loc": null,
+    "waking_detail": "a court of justice Alice has only read about in books: judge's wig, jury-box, herald",
+    "design_growth": "The courtroom of a book illustration and of the Oxford county courts in their castle-style Gothic Revival hall (built 1841; the waking source only, its architecture redrawn in the dream's Art Nouveau), assembled from the names Alice is proud to know: 'judge', 'jury-box', 'jurors'. Each named thing is slightly too large and too prominent, as if labelled; the judge's bench has become a throne, and the court's floor comes out as a mosaic in the court's own colours, red, black and buff, softened with cream and gold"
+  },
+  "dream_design_language": "Solemn authority redrawn as a Mucha poster built in oak, glass and iron: dark oak panels carved in flowing whiplash lines, tall round-headed stained-glass windows, the throne set against a great circular stained-glass halo roundel so the King and Queen sit like figures in a Mucha panel. Floor mosaic, canopy and carved panels repeat hearts, diamonds, clubs and spades entwined with rose and vine ornament. Cast-iron gallery front of organic whiplash scrolls with verdigris and traces of gilding. Palette: dark oak and crimson grounded, pastel glass and gold above",
+  "mucha_design_language": {"item": "Mucha / Art Nouveau: flowing organic line in all joinery and ironwork, rose-and-vine ornament wound through the card-suit motifs, circular halo roundel behind the throne, mosaic floor, stained glass in every window, pastel-and-gold light over dark oak", "inferred": true, "culture_ref": "world.json#WR-010 (the court listed); cultivation.json#XA-magic-08; refs/style/alice.jpeg (ironwork, stained glass)", "why": "Replaces the former 1850s-60s Gothic Revival translation; built as a photographed physical set"},
+  "structure": [
+    {"item": "one hall about 20 m long by 13 m wide, walls panelled in oak to 3 m, plastered above, open oak roof on curved, gilded Art Nouveau braces with the ridge about 11 m high", "inferred": true, "culture_ref": "world.json#wonderland_real_counterparts cp-court; geography.json#LOC-courthouse.settlement.architecture_style", "why": "Period assize-court proportions; room for 'a great crowd'"},
+    {"item": "at the north end, a raised royal bench on a dais of three steps (about 1.2 m high) with a double throne where the King and Queen of Hearts sit, under a crimson canopy", "src": "ch011-p01", "note": "'seated on their throne'; dais and canopy inferred from a judge's bench"},
+    {"item": "the jury-box down the east wall: an oak enclosure with two tiers of six seats, its floor raised about 1.2 m above the court floor so the crowd stands below it; each seat carries a raised cushioned perch-block so the small CGI animal jurors (SUP-002 as amended BIB-0027) sit with heads above the ledge", "src": "ch011-p04", "note": "twelve jurors; the raised floor follows ch012-p01 'upsetting all the jurymen on to the heads of the crowd below'; perch-block height to match 04-creatures juror sizes"},
+    {"item": "the dock opposite on the west side: a low oak enclosure with an iron rail where the Knave stands in chains between two soldiers", "src": "ch011-p01"},
+    {"item": "in the very middle of the floor a table with a large dish of tarts on it", "src": "ch011-p01"},
+    {"item": "a witness stand beside the table on the jury side, a small raised oak box with a rail", "src": "ch011-p16", "note": "the Hatter as first witness; stand inferred from court procedure (culture.json CUL-006)"},
+    {"item": "the herald's place just below and beside the King's end of the bench, where the White Rabbit (photoreal CGI rabbit) stands on a low oak step with trumpet and scroll", "src": "ch011-p01"},
+    {"item": "the open floor of the court filled by the standing crowd (little CGI birds and beasts among the card figures), and a shallow raised public gallery across the south end over the entrance", "src": "ch011-p01", "note": "'a great crowd assembled about them'; gallery inferred from period courts"},
+    {"item": "the main entrance door in the south wall under the gallery, where the crowd sneezes as the cook arrives and the Hatter escapes", "src": "ch011-p64", "note": "also ch011-p62"}
+  ],
+  "materials": [
+    {"item": "dark varnished oak for panelling, bench, jury-box, dock, stand and roof timbers, carved in flowing Art Nouveau curves", "inferred": true, "culture_ref": "geography.json#LOC-courthouse.settlement.architecture_style; world.json#WR-010", "why": "Court joinery kept dark and heavy; its line is the dream's Art Nouveau"},
+    {"item": "mosaic floor of small stone and glass tesserae: flowing rose-and-vine borders in cream and gold framing fields of red, black and buff, with inset heart, diamond, club and spade roundels", "inferred": true, "culture_ref": "culture.json CUL-016 (court organised as a deck of cards); world.json#WR-010 (mosaic)", "why": "Mosaic is a WR-010 accent; keeps the card court's colours"},
+    {"item": "cream lime plaster above the panelling", "inferred": true, "culture_ref": "geography.json#LOC-courthouse", "why": "Lets the windows and roof read"},
+    {"item": "crimson wool damask for the throne canopy and the bench front hangings, with a gold fringe", "inferred": true, "culture_ref": "culture.json CUL-016", "why": "The court's colour at the focal end"},
+    {"item": "cast-iron gallery front of organic whiplash scrolls and lily stems, dark green with verdigris and traces of old gilding", "inferred": true, "culture_ref": "refs/style/alice.jpeg (ironwork, followed literally); world.json#WR-010", "why": "The style reference's aged Art Nouveau ironwork, now licensed in the dream"}
+  ],
+  "details": [
+    {"item": "the arms of Hearts carved and painted above the throne canopy: a shield with a single red heart, crowned", "inferred": true, "culture_ref": "culture.json CUL-016; world.json#wonderland_real_counterparts cp-court", "why": "Replaces the royal arms that hang over every real English bench"},
+    {"item": "twelve small slates and slate-pencils on the jury-box ledge (props owned by 06-art/prop)", "src": "ch011-p05"},
+    {"item": "oak panels carved with the four card suits in low relief, each suit caught in a flowing frame of rose stems and vine tendrils", "inferred": true, "culture_ref": "culture.json CUL-016; world.json#WR-010", "why": "Carries the card motif into the Art Nouveau ornament"},
+    {"item": "a brass rail along the jury-box front and a hinged oak door at its end", "inferred": true, "culture_ref": "culture.json CUL-006", "why": "Period jury-box fittings; the rail is what Alice's skirt catches"},
+    {"item": "a great circular stained-glass halo roundel in the north wall above the throne canopy: one red heart at the centre, radiating petals of pastel rose, lilac and gold glass in lead came", "inferred": true, "culture_ref": "culture.json CUL-016; world.json#WR-010 (halo roundel, stained glass)", "why": "Mucha's halo behind the enthroned figures, carrying the court's emblem"}
+  ],
+  "interior": {
+    "layout": "Rectangle 20 x 13 m, long axis north-south. North end: dais and double throne under canopy, herald's place at its east corner, stained-glass halo roundel above. East wall: raised two-tier jury-box (floor +1.2 m), witness stand just south of it. West wall: dock with rail. Centre of the floor: the table with the dish of tarts. South end: shallow public gallery over the main door. Crowd stands on the open floor between the table, the dock and the jury-box",
+    "openings": [
+      "east wall: three tall round-headed stained-glass windows above the panelling (pale pastel floral glass, mostly clear-toned so daylight passes), sills at 4 m, over the jury-box",
+      "west wall: three matching tall round-headed stained-glass windows above the panelling, sills at 4 m, over the dock",
+      "north wall: one circular stained-glass halo roundel, about 3.5 m across, above the throne canopy (red heart centre)",
+      "south wall: main double doors under the gallery, 2.8 m high, opening inward",
+      "north-east corner: a small door behind the dais for officers of the court"
+    ],
+    "furniture_tone": "Solemn, heavy, dark oak and crimson below; pastel glass and gold above; everything built to impress a child with the weight of adult procedure"
+  },
+  "scale_notes": {
+    "rule": "Alice grows during the trial (ch011-p29 to ch012-p63) as she stops deferring to the court. Main set at 1:1 for the opening (Alice 135 cm among the crowd, looking up at the throne and the raised jury-box). For the grown shots build a second 2/3-scale version of the jury-box corner and dais (jury-box rail at 70 cm instead of 1.05 m, throne dais 80 cm) with scaled doubles for the card figures and the CGI animal jurors re-scaled to match, so Alice at true height towers over it. The tipping of the jury-box (ch012-p01) uses a lightweight breakaway jury-box on its raised platform; the CGI jurors tumble onto the crowd below (card-figure performers on padding, CGI small animals). Final beat (ch012-p63, 'grown to her full size') is shot on the 2/3 set so the whole pack is below her eye line before it rises and flies at her",
+    "feeling": "Size tracks authority: small and awed on entering, towering and fearless at 'You're nothing but a pack of cards!'",
+    "sources": ["cultivation.json#SUP-003", "cultivation.json#SUP-004", "cultivation.json#SUP-014", "ch011-p29", "ch012-p01", "ch012-p63"],
+    "inferred": true,
+    "why": "The text gives growth without figures; a two-thirds build keeps the card-figure performers human-sized (SUP-004) while making the growth legible"
+  },
+  "negative": [
+    "no modern courtroom: no microphones, no electric lights, no strip lighting, no modern flags",
+    "no gallows, block, axe or any execution apparatus anywhere in the room",
+    "no fantasy throne room, no palace columns, no castle hall",
+    "no cartoon animals, no humans in animal costume; animal jurors and crowd animals are photoreal CGI animals, card figures are human performers",
+    "no Art Deco, no Gothic pointed lancets or tracery; no flat poster illustration, outline graphics or matte-painting finish",
+    "no playing-card graphics printed flat on walls; suit motifs only carved, in mosaic or in glass"
+  ],
+  "prompt_ready_en": "a tall Art Nouveau courtroom in the style of Alphonse Mucha built as a real set, dark oak panelling carved in flowing whiplash curves with card suits entwined in rose and vine ornament, an open timber roof on curved gilded braces, tall round-headed pastel stained-glass windows, at the far end a double throne on a raised dais under a crimson damask canopy with a crowned red-heart shield, backed by a great circular stained-glass halo roundel with a red heart at its centre, a raised two-tier oak jury-box along one side with slates on its ledge, an oak dock with an iron rail opposite, a table with a large dish of tarts in the middle of a mosaic floor of red black and buff with cream and gold vine borders, a verdigris cast-iron gallery of organic scrolls over the entrance"
+}

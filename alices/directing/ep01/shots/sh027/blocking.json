@@ -1,0 +1,64 @@
+{
+  "shot_id": "sh027",
+  "group_id": "grp011",
+  "scene_no": "S04",
+  "scene_id": "SCN-shaft-landing-passage",
+  "duration_s": 4.0,
+  "is_dialogue": false,
+  "group_position": "middle shot of grp011 — Alice holds the map start (leaf_heap); the White Rabbit is part way along his root_tunnel -> brick_mid line, still on the root-laced earth stretch.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "stand",
+      "start_pos": "on the heap of sticks and dry leaves at the near edge of frame, back to camera",
+      "space_fragment_en": "standing on the heap of sticks and dry leaves at the screen-left edge, seen from behind, facing down the long passage",
+      "facing": "squarely down the passage on the lens axis; the Rabbit is far ahead of her and never turns to meet her look",
+      "body_facing_target_id": "CHAR-white-rabbit",
+      "path": [],
+      "beats": [
+        { "t": 1.4, "action": "she registers the waistcoat before she registers the animal", "sync": "distance discipline: the frame never closes on him" }
+      ],
+      "performance_beat": {
+        "objective": "make sense of a rabbit in a waistcoat without letting it out of her sight",
+        "goal": "make sense of what she is looking at",
+        "emotional_arc": "from post-landing orientation to a fixed, silent astonishment held entirely in the back of her head and shoulders",
+        "arc_from": "post-landing orientation",
+        "arc_to": "fixed silent astonishment",
+        "trigger": { "beat": "the checked silk waistcoat resolves out of the far lamplight", "t": 1.4 },
+        "no_early_reaction": ["the shoulders lifting", "a step forward", "the head turning"],
+        "forbidden_early": ["the shoulders lifting", "a step forward", "the head turning"],
+        "end_state": "unmoving silhouette at the frame edge, head level, shoulders squared down the passage"
+      }
+    },
+    {
+      "id": "CHAR-white-rabbit",
+      "label": "White Rabbit",
+      "pose": "stand",
+      "start_pos": "far down the root-laced earth stretch, in profile, hurrying away from her",
+      "space_fragment_en": "standing on four legs far down the root-laced earth stretch, centred in frame, side-on and hurrying away from Alice",
+      "facing": "side-on to the lens, travelling away down the passage; he never looks back at Alice and is given no return look",
+      "path": [
+        { "t": 3.4, "to": "further down the root-laced earth stretch, nearing the brick-vaulted passage" }
+      ],
+      "beats": [
+        { "t": 0.0, "action": "hurrying on four legs, the pair of white kid gloves carried in his mouth", "sync": "gait and props locked per the H3S ruling" },
+        { "t": 2.6, "action": "one ear flicks at nothing; no look back", "sync": "the refusal to acknowledge her" }
+      ],
+      "staging_lock": "Quadruped gait and mouth-carry are locked (CR-003 / CR-015 and the G4 char-sheet waiver, ratified by the user at H3S). He is never given hands to carry with while trotting.",
+      "performance_beat": {
+        "objective": "get down the passage before whatever is waiting for him notices he is late",
+        "goal": "get down the passage before he is missed",
+        "emotional_arc": "from hurry to greater hurry — no arc of discovery, because he has not discovered her",
+        "arc_from": "hurry",
+        "arc_to": "sharper hurry",
+        "trigger": { "beat": "he clears the last of the root curtain and the passage opens ahead of him", "t": 2.6 },
+        "no_early_reaction": ["a glance back", "a pause in the stride", "the ears turning to her"],
+        "forbidden_early": ["a glance back", "a pause in the stride", "the ears turning to her"],
+        "end_state": "still in profile, still going away, gloves gripped in his mouth, ears laid back along his skull"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0003 (dream)", "note": "Alice and the dream-layer White Rabbit; nobody else in the passage." }
+}

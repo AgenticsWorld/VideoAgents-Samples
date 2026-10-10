@@ -1,0 +1,116 @@
+{
+  "_meta": {
+    "file": "bible/characters/CHAR-white-rabbit/personality.json",
+    "owner": "03-characters/personality",
+    "produced_by_task": "p3-personality-pb1",
+    "produced_on": "2026-09-22",
+    "content_language": "en",
+    "status": "draft_v1"
+  },
+  "character_id": "CHAR-white-rabbit",
+  "name": "White Rabbit",
+  "tier": "A",
+  "layer": "dream",
+  "temperament": "A nervous, fussy functionary who lives by the clock and by his superiors' moods. He grovels upward and snaps downward, is always hurrying, always afraid of being late, and always afraid of blame.",
+  "traits": [
+    {
+      "trait": "Anxious about time and punctuality",
+      "description": "Lives in dread of being late. Lateness means punishment from his superiors.",
+      "evidence": [
+        { "chapter": "ch001", "chapter_no": 1, "ref": "ch001-p03", "event": "ev0001", "quote": "Oh dear! Oh dear! I shall be late!", "note": "His first line, checking a pocket-watch." },
+        { "chapter": "ch002", "chapter_no": 2, "ref": "ch002-p08", "event": "ev0007", "quote": "won’t she be savage if I’ve kept her waiting!", "note": "Fears the Duchess's temper." }
+      ]
+    },
+    {
+      "trait": "Timid, easily startled",
+      "description": "Bolts at an unexpected voice and trembles at the thought of execution.",
+      "evidence": [
+        { "chapter": "ch002", "chapter_no": 2, "ref": "ch002-p08", "event": "ev0007", "quote": "The Rabbit started violently, dropped the white kid gloves and the fan", "note": "Alice's polite 'If you please, sir' is enough to make him run." },
+        { "chapter": "ch004", "chapter_no": 4, "ref": "ch004-p01", "event": "ev0014", "quote": "She’ll get me executed, as sure as ferrets are ferrets!", "note": "Expects the worst." }
+      ]
+    },
+    {
+      "trait": "Bossy to those beneath him",
+      "description": "The same timid figure barks orders at a 'housemaid' and at his workmen.",
+      "evidence": [
+        { "chapter": "ch004", "chapter_no": 4, "ref": "ch004-p02", "event": "ev0014", "quote": "called out to her in an angry tone", "note": "Orders the supposed Mary Ann home." },
+        { "chapter": "ch004", "chapter_no": 4, "ref": "ch004-p13", "event": "ev0016", "quote": "Fetch me my gloves this moment!", "note": "Master-of-the-house tone." },
+        { "chapter": "ch004", "chapter_no": 4, "ref": "ch004-p31", "event": "ev0016", "quote": "A barrowful will do, to begin with.", "note": "Casually directs his men to pelt the house." }
+      ]
+    },
+    {
+      "trait": "Obsequious to those above him",
+      "description": "At court he smiles at everything and speaks with great respect, while quietly steering the King.",
+      "evidence": [
+        { "chapter": "ch008", "chapter_no": 8, "ref": "ch008-p11", "event": "ev0034", "quote": "smiling at everything that was said", "note": "Among the royal guests." },
+        { "chapter": "ch012", "chapter_no": 12, "ref": "ch012-p10", "event": "ev0049", "quote": "he said in a very respectful tone, but frowning and making faces at him as he spoke", "note": "He corrects the King while seeming to defer." }
+      ]
+    },
+    {
+      "trait": "Procedural and conscientious",
+      "description": "As herald he knows how a trial is supposed to go and keeps trying to hold to the correct order.",
+      "evidence": [
+        { "chapter": "ch011", "chapter_no": 11, "ref": "ch011-p14", "event": "ev0045", "quote": "“Not yet, not yet!” the Rabbit hastily interrupted.", "note": "Stops the King from going straight to a verdict." },
+        { "chapter": "ch011", "chapter_no": 11, "ref": "ch011-p67", "event": "ev0047", "quote": "Your Majesty must cross-examine _this_ witness.", "note": "Prompts proper procedure." }
+      ]
+    },
+    {
+      "trait": "A gossip who gives things away",
+      "description": "Can't resist whispering court scandal, then panics that someone will overhear.",
+      "evidence": [
+        { "chapter": "ch008", "chapter_no": 8, "ref": "ch008-p36", "event": "ev0035", "quote": "whispered “She’s under sentence of execution.”", "note": "Tells Alice about the Duchess." },
+        { "chapter": "ch008", "chapter_no": 8, "ref": "ch008-p40", "event": "ev0035", "quote": "“Oh, hush!” the Rabbit whispered in a frightened tone. “The Queen will hear you!", "note": "Scared the moment Alice laughs." }
+      ]
+    }
+  ],
+  "motivation": {
+    "core": "To keep his place: be on time, keep his superiors pleased, and above all avoid blame and punishment.",
+    "want": "To be where he is expected, when he is expected, with the right gloves and fan; to keep the court's business running correctly.",
+    "fear": "Being late, being blamed, being 'executed', losing standing before the Duchess and the Queen.",
+    "evidence": [
+      { "chapter": "ch004", "chapter_no": 4, "ref": "ch004-p01", "event": "ev0014", "quote": "She’ll get me executed, as sure as ferrets are ferrets!", "note": "Fear of punishment drives the errand." }
+    ],
+    "shifts": [
+      { "chapter": "ch008", "chapter_no": 8, "event": "ev0034", "from": "a private errand-runner, late for the Duchess", "to": "a court insider among the royal guests who knows the scandal", "evidence_ref": "ch008-p11" },
+      { "chapter": "ch011", "chapter_no": 11, "event": "ev0045", "from": "fearful courtier", "to": "herald of the court, whose anxiety now serves procedure (keeping order, steering the King)", "evidence_ref": "ch011-p11" }
+    ]
+  },
+  "habits": [
+    { "habit": "Pulls out his pocket-watch, checks it and hurries on", "evidence_ref": "ch001-p03", "event": "ev0001" },
+    { "habit": "Mutters to himself as he trots along", "evidence_ref": "ch002-p08", "event": "ev0007" },
+    { "habit": "Looks over his shoulder before speaking, rises on tiptoe and whispers into the listener's ear", "evidence_ref": "ch008-p36", "event": "ev0035" },
+    { "habit": "Keeps losing his gloves and fan and hunts about for them", "evidence_ref": "ch004-p01", "event": "ev0014" },
+    { "habit": "Puts on spectacles before reading an official document", "evidence_ref": "ch012-p38", "event": "ev0051" },
+    { "habit": "Blows three trumpet blasts before any announcement", "evidence_ref": "ch011-p11", "event": "ev0045" }
+  ],
+  "decision_pattern": "He reacts rather than plans: he runs from any surprise and obeys whoever ranks highest in the room. When he is in charge he delegates to underlings (Pat, Bill, the 'housemaid'). At court he sticks to procedure, because procedure protects him.",
+  "taboos": [
+    { "taboo": "Never openly contradicts a superior", "rationale": "Even when correcting the King he makes it sound as if the King meant it ('your Majesty means, of course').", "evidence_ref": "ch012-p10", "event": "ev0049", "qa_check": "No line where he flatly tells the King or Queen they are wrong." },
+    { "taboo": "Never does rough work himself", "rationale": "He orders Pat and Bill up ladders and down chimneys but never goes himself.", "evidence_ref": "ch004-p24", "event": "ev0016", "qa_check": "He must not be staged climbing or doing the chimney job." },
+    { "taboo": "Never stands up to the Queen for anyone, not even the Duchess he serves", "rationale": "He only whispers the Duchess's sentence; he never pleads for her.", "evidence_ref": "ch008-p36", "event": "ev0035", "qa_check": "No intercession beat for the Rabbit." }
+  ],
+  "facade": {
+    "applies": true,
+    "surface": "Deferential, smiling, respectful servant of the court",
+    "true_self": "A frightened, status-anxious little official who bullies downward and steers his betters from behind",
+    "reveal_chapter": "ch004",
+    "reveal_event": "ev0014",
+    "note": "The audience meets his bossy side (ch004) before his courtly face (ch008, ch011). There is no plot secret to protect; the value is the contrast. Keep the two registers distinct: to inferiors he is sharp and clipped, to royalty he is simpering."
+  },
+  "waking_life_embodiment": {
+    "applies": true,
+    "adult_trait": "The adult tyranny of the clock and of rank: the hurried, punctual grown-up who is always 'late' for someone more important, and treats servants and children as errand-runners.",
+    "waking_source": "The real white rabbit that runs past Alice on the bank (SUP-002; world.json cp-rabbit-hole), fused with the household's fixed tea-time ('it's getting late') and the way a well-to-do household orders its housemaid about. He mistakes Alice for Mary Ann, the dream echo of the family housemaid (ruling 5.3 B).",
+    "evidence": [
+      { "chapter": "ch012", "chapter_no": 12, "ref": "ch012-p66", "event": "ev0053", "quote": "it’s getting late", "note": "The sister's waking line echoes his 'I shall be late!'." },
+      { "chapter": "ch004", "chapter_no": 4, "ref": "ch004-p02", "event": "ev0014", "quote": "Why, Mary Ann, what _are_ you doing out here?", "note": "Treats Alice as the housemaid." }
+    ],
+    "inferred": true,
+    "reason": "The rabbit trigger and the housemaid echo are H1-locked (SUP-002, ruling 5.3 B). Reading him as punctuality and rank from Alice's household is a design reading (story_graph motif mo-time-lateness). He is not an official doubling of any waking person."
+  },
+  "performance_keynote": "Photoreal CGI white rabbit (SUP-002, BIB-0027); acting through rabbit body language: rapid nose-twitch and whisker flicks, ears swivelling towards every sound and slicking flat when frightened, sudden freeze-then-bolt on the hind legs, forepaws clutching the pocket watch. Two registers of body: upright, chest out, ears high and stiff at home; ears pressed back, hunched and trembling, forepaws fussing with gloves and fan at court. Props only as the text gives them (waistcoat, watch, white kid gloves, fan).",
+  "consistency_flags": [],
+  "inferred_fields": ["waking_life_embodiment", "facade"],
+  "inferred": true,
+  "reason": "Traits, habits and taboos are sourced. The embodiment and the facade framing are design readings for the realistic frame."
+}

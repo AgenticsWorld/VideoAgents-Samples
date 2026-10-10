@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh060",
+  "group_id": "grp023",
+  "scene_no": "S07",
+  "duration_s": 3.0,
+  "size": "close",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 50,
+  "camera_height_m": 0.18,
+  "angle": "level, camera on the flagstones",
+  "rack_focus": "none",
+  "start_frame": "Low close at flagstone level: Alice biting a corner off the cake, her face held whole and undistorted, the hall soft and dark behind her.",
+  "end_frame": "The same frame as her free hand claps flat on top of her head, anxiously feeling for which way she is going — bite and hand inside the one frame.",
+  "constraint_honoured": "'The bite and the hand happen inside one frame so the anxiety is a single gesture. Two words, fast.'",
+  "movement_note": "3.0 s and two words; a move would split a gesture the constraint requires to be single. 50 mm because her face is close at ten-inch scale.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

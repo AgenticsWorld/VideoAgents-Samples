@@ -1,0 +1,52 @@
+{
+  "scene_id": "SCN-mock-turtle-ledge",
+  "inherits": null,
+  "layer": "dream",
+  "int_ext": "EXT",
+  "form": "An English shingle beach facing open sea, with a low flat ledge of grey rock rising from the shingle where the Mock Turtle sits; below the shingle a strip of firm wet sand where the Quadrille is danced; far along the shore, empty bathing machines and a row of seaside lodging houses dissolving in haze",
+  "stories": 0,
+  "source_chapter": "ch009",
+  "culture_ref": "geography.json#LOC-rock-ledge, LOC-estuary-shore, LOC-seaside-town; world.json#wonderland_real_counterparts cp-lessons; culture.json CUL-015, CUL-025",
+  "period": "Dream-image of an 1860s English seaside resort remembered from one trip: bathing machines, timber groynes, stucco lodging houses; everything emptied of people",
+  "grows_from": {
+    "loc": "LOC-seaside-town",
+    "waking_detail": "Alice's one seaside trip (bathing machines, children digging, lodging houses) mixed with her schoolroom lessons",
+    "design_growth": "Alice's own summary of the English coast (ch002-p16) built as a set but emptied: bathing machines drawn up and shuttered, the children's wooden spades left stuck in the sand, the lodging houses far off and blank. The schoolroom creeps in: the rock ledge is flat and square-edged like a school bench, and the tide-line is chalky white like a wiped slate"
+  },
+  "amendment": "BIB-0027 (user ruling 2026-09-22), applied p4-cr-architecture 2026-09-23",
+  "dream_design_language": "A remembered seaside with the people taken out and the lessons left in: bright, bleached, melancholy; every man-made thing is distant and small, the ledge and the sobbing creature the only thing close. An Art Nouveau-inflected dream shore (SUP-010, XA-magic-08)",
+  "mucha_design_language": {"item": "Mucha / Art Nouveau on the shore: the ledge rock's strata run in long flowing curves like Mucha's hair lines, with shells and bladderwrack draped in garland loops; the groyne posts are capped with wrought-iron whiplash wave-scroll finials, verdigris and worn gilt; the bathing machines are painted in faded pastels (sea-green, lilac, cream) with a gilt roundel medallion on each door; the distant lodging houses carry mosaic friezes and round stained-glass fanlights; the wet sand's foam and tide-line lie in whiplash curves; pastel-and-gold sea light", "inferred": true, "culture_ref": "world.json#WR-010 (the shore listed); cultivation.json#SUP-010, XA-magic-08", "why": "Dream shore carries the language on its real period elements without adding structures to the layout"},
+  "structure": [
+    {"item": "a little ledge of rock: a low flat-topped shelf of grey stone about 3 m long, 1.5 m deep, its top about 90 cm above the shingle, sitting apart on the upper beach", "src": "ch009-p48"},
+    {"item": "a steep bank of rounded grey and fawn flint shingle running the length of the shore behind the ledge", "src": "ch010-p24", "note": "'They are waiting on the shingle'; flint inferred as the south-English beach material"},
+    {"item": "below the shingle, a broad strip of firm wet sand about 15 m wide to the waterline, flat enough for the Quadrille's two lines and the dancers' advance and retreat", "src": "ch010-p04", "note": "'you first form into a line along the sea-shore'; width inferred"},
+    {"item": "a line of dark weathered timber groynes running down the beach into the water at intervals of about 40 m", "inferred": true, "culture_ref": "geography.json#LOC-seaside-town (1860s English resort)", "why": "Real Victorian resort beach structure; gives depth and rhythm for the run along the shore"},
+    {"item": "background at the far end of the shore: three or four bathing machines at the water's edge, and beyond them a terrace of cream stucco lodging houses with bow windows, small and hazy", "src": "ch002-p16", "note": "Alice's seaside summary; placement inferred per grows_from (geography.json#LOC-seaside-town.visual_identifiers)"}
+  ],
+  "materials": [
+    {"item": "grey weathered rock of the ledge, flat-bedded with square edges, patched with barnacles and a fringe of brown bladderwrack at its foot", "inferred": true, "culture_ref": "geography.json#LOC-estuary-shore.physical.flora ('seaweed')", "why": "A readable 'ledge' that doubles as a bench for the seated CGI Mock Turtle"},
+    {"item": "rounded flint shingle, grey, fawn and white", "src": "ch010-p24"},
+    {"item": "firm pale wet sand reflecting the sky", "inferred": true, "culture_ref": "geography.json#LOC-estuary-shore.visual_identifiers", "why": "Dance floor for the Quadrille"},
+    {"item": "bathing machines: wooden huts on four large spoked wheels, white-painted boards, faded blue-striped canvas hoods, shutters closed", "src": "ch002-p16", "note": "construction inferred from 1860s bathing-machine design"}
+  ],
+  "details": [
+    {"item": "a tide-line of dried white foam and shell grit along the top of the sand, chalk-white like a slate wiped clean", "inferred": true, "culture_ref": "world.json#wonderland_real_counterparts cp-lessons", "why": "The schoolroom seeping into the seaside, per grows_from"},
+    {"item": "two children's wooden spades stuck upright in the sand near the waterline, nobody with them", "src": "ch002-p16", "note": "'some children digging in the sand with wooden spades'; emptied per dream_design_language"},
+    {"item": "a few stranded lobster pots and a coil of old rope on the shingle", "inferred": true, "culture_ref": "culture.json CUL-015 (Lobster Quadrille)", "why": "Real fishing-beach clutter that seeds the lobster talk without any animal on screen"}
+  ],
+  "scale_notes": {
+    "rule": "True 1:1 (Alice 135 cm; the Gryphon and the Mock Turtle are photoreal CGI creatures per SUP-010 as amended BIB-0027, sizes set by 04-creatures). The ledge height (90 cm) seats the CGI Mock Turtle with its calf's head just above standing Alice's eye line; the wet-sand strip (15 m) takes the two creatures' Quadrille. The bathing machines and lodging houses are distant background only; if built, use 1:4 miniatures placed 60 m or more back in forced perspective",
+    "sources": ["cultivation.json#SUP-003", "cultivation.json#SUP-010", "ch009-p48"]
+  },
+  "negative": [
+    "no underwater scenes, no other sea creatures, no real turtle, lobster or seal (only the CGI Mock Turtle and Gryphon)",
+    "no cartoon creatures, no humans in partial creature costume",
+    "no flat poster illustration, outline graphics or matte-painting finish",
+    "no tropical beach, no palm trees, no turquoise water, no white coral sand",
+    "no pier, promenade crowd, Ferris wheel or later seaside amusements",
+    "no people on the distant beach or at the lodging-house windows",
+    "no lighthouse, no ships with funnels close in shore",
+    "no cliffs with caves or fantasy rock arches"
+  ],
+  "prompt_ready_en": "a bright melancholy English shingle beach in the 1860s facing open sea, a low flat-topped grey rock ledge with long flowing curved strata, barnacles and bladderwrack draped in garland loops, standing alone on the upper beach, a bank of grey and fawn flint shingle, a broad strip of firm wet sand below with foam lying in whiplash curves, dark timber groynes capped with verdigris wrought-iron wave-scroll finials running into the water, far along the shore empty shuttered pastel bathing machines on wheels with gilt roundel medallions and a terrace of cream stucco bow-windowed lodging houses with mosaic friezes fading into pastel-and-gold haze, two wooden spades stuck in the sand, Art Nouveau accents in the style of Mucha, photographed live-action"
+}

@@ -1,0 +1,30 @@
+{
+  "task_id": "p5-episode-plan",
+  "agent": "01-story/episode-planner",
+  "attempt": 1,
+  "status": "done",
+  "finished": "2026-09-22",
+  "outputs": ["story/episode_plan.json"],
+  "machine_check": {
+    "command": "python3 code/verify_episode_plan.py --project alices",
+    "exit_code": 0,
+    "result": "ALL PASS",
+    "checks": ["events_classified_once", "treatments_complete", "dramatize_within_cap", "hook_points_dramatized", "merge_target_valid", "duration_in_budget", "ids_valid", "cut_not_on_causal_chain"],
+    "log": "runs/p5-episode-plan/verify_episode_plan.log"
+  },
+  "decisions": {
+    "episodes": 9,
+    "budgets_s": {"ep01": 540, "ep02": 360, "ep03": 450, "ep04": 540, "ep05": 450, "ep06": 420, "ep07": 450, "ep08": 330, "ep09": 450},
+    "total_s": 3990,
+    "treatments": {"dramatize": 43, "mention": 1, "merge": 10, "cut": 0},
+    "no_cut_rationale": "events.json is one linear caused_by chain; any cut would break causality, so compression uses merge/mention only",
+    "mention_under_narration_off": "ev0035 only: one whispered line of the White Rabbit on screen",
+    "dream_frame": "waking open ep01/ev0001 (fall ev0002 merged = falling asleep); waking close ep09 ev0052 cards→leaves match-cut, ev0053 wake in sister's lap, ev0054 sister's reverie without voice-over"
+  },
+  "open_constraints_honoured": [
+    "DEF-p3-char-index-902 noted on ep06 ev0038 (no axe/block/execution device)",
+    "DEF-p3-char-index-903 noted on ep04 ev0026 (lullaby chorus = Duchess + cook + baby; UNKNOWN speaker tags left to screenplay/voice)"
+  ],
+  "skills": "none selected for this station",
+  "notify_orchestrator": "episode_plan v1: 9 episodes ep01-ep09; after G5 expand the per-episode DAG nodes for ep01-ep09"
+}

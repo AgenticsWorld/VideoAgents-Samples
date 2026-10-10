@@ -1,0 +1,28 @@
+{
+  "shot_id": "sh024",
+  "scene_id": "SCN-falling-dream",
+  "size": "close",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "mid_left",
+    "anchor_xy": [0.38, 0.52],
+    "size_in_frame": "profile, face about 0.46 of frame height, hair floating up out of the top of frame"
+  },
+  "headroom": "none in the ordinary sense — her floating hair breaks the top edge. What would be headroom is instead filled by hair travelling upward, which is the only cue that she is still falling.",
+  "horizon_eyeline": "No horizon; the peg rail behind her runs across at about 0.34 of frame height and travels steadily up through frame. Her eyeline is level at 0.46, looking out to frame right.",
+  "layers": {
+    "fg": "strands of her floating hair crossing the upper frame, soft",
+    "mg": "her profile, screen left of centre, drifting settled back with ankles crossed below frame",
+    "bg": "the third pass travelling up behind her cheek — pictures on pegs, then bare empty pegs; each peg passing is a rung of the countdown"
+  },
+  "gaze": {
+    "direction": "frame_right",
+    "lead_room": "right",
+    "note": "she faces frame right with about 0.30 of frame width of open shaft ahead of her — a large, quiet lead room that the whisper is spoken into. Her eyes are unfocused rather than aimed; the look is inward."
+  },
+  "balance": "Profile left, empty right — the classic held profile, deliberately conventional so the strangeness sits entirely in the background travelling upward.",
+  "leading_lines": "The peg rail is a single travelling horizontal at cheek height; her hair is the opposing vertical. Nothing converges — the frame has no perspective at all, which is why it feels suspended.",
+  "eye_first": "Her mouth and eye in profile, then the pegs going past behind her — and the pegs should be noticed as they run out.",
+  "safe_area_ok": true,
+  "constraint_binding": "Set-up 3 of the licensed three, and pass 3 only: pictures on pegs thinning to bare empty pegs, no cupboard, jar, bookshelf or map in frame. The thinning is the only warning that the fall is nearly over, so the empty pegs are placed to cross her cheek at eye height where they cannot be missed. No move."
+}

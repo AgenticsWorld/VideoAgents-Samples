@@ -1,0 +1,157 @@
+{
+  "schema_version": "scene_layout.v1",
+  "scene_id": "SCN-gryphon-sunning-spot",
+  "layout_top": "layout_top.png",
+  "status": "calibrated_to_render",
+  "orientation": {
+    "top_of_map": "north: the clipped yew hedge with the arch back to the croquet-ground; the ha-ha runs along the south, the land falling away beyond it toward the shore; the sun is to the west-north-west",
+    "extent_m": [
+      26,
+      14.6
+    ],
+    "note_en": "camera positions in views[] are described relative to these landmarks"
+  },
+  "landmarks": [
+    {
+      "id": "yew_arch",
+      "name": "arch in the yew hedge",
+      "name_en": "the arch in the yew hedge",
+      "kind": "entrance",
+      "xy": [
+        0.705,
+        0.21
+      ]
+    },
+    {
+      "id": "gryphon_spot",
+      "name": "pressed hollow in the long grass",
+      "name_en": "the pressed hollow in the long grass",
+      "kind": "terrain",
+      "xy": [
+        0.515,
+        0.46
+      ]
+    },
+    {
+      "id": "gate_pier",
+      "name": "gate-pier with the stone griffin",
+      "name_en": "the gate-pier with the stone griffin",
+      "kind": "feature",
+      "xy": [
+        0.17,
+        0.66
+      ]
+    },
+    {
+      "id": "haha_mid",
+      "name": "ha-ha wall",
+      "name_en": "the ha-ha wall",
+      "kind": "wall",
+      "xy": [
+        0.5,
+        0.64
+      ]
+    },
+    {
+      "id": "haha_east_end",
+      "name": "east end of the ha-ha",
+      "name_en": "the east end of the ha-ha",
+      "kind": "wall",
+      "xy": [
+        0.95,
+        0.64
+      ]
+    },
+    {
+      "id": "lower_ground",
+      "name": "hazy lower ground beyond the ha-ha",
+      "name_en": "the hazy lower ground beyond the ha-ha",
+      "kind": "terrain",
+      "xy": [
+        0.5,
+        0.9
+      ]
+    }
+  ],
+  "views": [
+    {
+      "tile": 1,
+      "camera_from": "yew_arch",
+      "looking_at": "gryphon_spot",
+      "size": "wide",
+      "angle": "eye",
+      "desc_en": "eye-level wide shot from the arch in the yew hedge onto the sunlit strip of long grass and the pressed hollow where the Gryphon lies"
+    },
+    {
+      "tile": 2,
+      "camera_from": "gate_pier",
+      "looking_at": "gryphon_spot",
+      "size": "medium",
+      "angle": "low",
+      "desc_en": "low medium shot through the grass heads from beside the gate-pier toward the pressed hollow in the long grass"
+    },
+    {
+      "tile": 3,
+      "camera_from": "gryphon_spot",
+      "looking_at": "gate_pier",
+      "size": "close",
+      "angle": "low",
+      "desc_en": "low-angle close shot from the grass looking up at the small weathered stone griffin on its carved halo cap"
+    },
+    {
+      "tile": 4,
+      "camera_from": "gryphon_spot",
+      "looking_at": "lower_ground",
+      "size": "wide",
+      "angle": "eye",
+      "desc_en": "eye-level wide shot from the long grass over the ha-ha coping into the bright pale haze and the faint line of sea-light"
+    },
+    {
+      "tile": 5,
+      "camera_from": "haha_east_end",
+      "looking_at": "gate_pier",
+      "size": "wide",
+      "angle": "eye",
+      "desc_en": "eye-level wide shot along the top of the ha-ha from its east end to the gate-pier, the grass strip on the right and the haze on the left"
+    },
+    {
+      "tile": 6,
+      "camera_from": "haha_mid",
+      "looking_at": "gryphon_spot",
+      "size": "detail",
+      "angle": "eye",
+      "desc_en": "eye-level detail from the ha-ha coping on the sun-warmed flattened grass, poppies and cornflowers in the hollow"
+    },
+    {
+      "tile": 7,
+      "camera_from": "lower_ground",
+      "looking_at": "gate_pier",
+      "size": "medium",
+      "angle": "low",
+      "desc_en": "low medium shot from the lower ground below the ha-ha looking up the dry-stone wall face to the gate-pier"
+    },
+    {
+      "tile": 8,
+      "camera_from": "gryphon_spot",
+      "looking_at": "yew_arch",
+      "size": "medium",
+      "angle": "high_oblique",
+      "desc_en": "high oblique medium shot from above the long grass toward the arch in the yew hedge, the way back to the croquet-ground"
+    },
+    {
+      "tile": 9,
+      "camera_from": "haha_east_end",
+      "looking_at": "yew_arch",
+      "size": "medium",
+      "angle": "eye",
+      "desc_en": "eye-level medium shot from the east end of the ha-ha across the grass to the arch in the yew hedge"
+    }
+  ],
+  "calibration_note_en": "Coordinates re-read from the rendered image 2026-09-23 (ground-contact points). The ha-ha coping line is at y=0.64.",
+  "checklist": {
+    "architecture_match": true,
+    "lighting_match": true,
+    "style_match": true,
+    "camera_orthographic": "NO: the camera is tilted about 35-45 deg; the yew hedge face, the arch opening and the ha-ha wall face show as elevations; the griffin statue shows in side view"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "character_id": "CHAR-dodo",
+  "name": "Dodo",
+  "tier": "B",
+  "card_type": "individual",
+  "gender": "male",
+  "age_sense": "older man (appearance base_age_range 50-60)",
+  "timbre": "full, fruity, orotund older man's voice, rich and slightly pompous, resonant chest",
+  "pitch": "mid-low baritone, stately measured intonation with rising pauses for applause",
+  "pitch_range_hz": [90, 165],
+  "speed_wpm": [115, 135],
+  "speed_cpm": [437, 513],
+  "accent": "educated, orotund Received Pronunciation of a committee chairman",
+  "reference_style": "Solemn self-appointed chairman: formal openers, long Latinate words delivered slowly and gravely, then short confident rulings ('Everybody has won, and all must have prizes'). Offended rather than angry when cut short.",
+  "emotion_range": {
+    "solemn": { "speed_delta": "-5%", "pitch_delta": "-1semi", "note": "ch003-p14/p25 'solemnly', 'very gravely'" },
+    "offended": { "speed_delta": "+5%", "pitch_delta": "+2semi", "note": "ch003-p16 'in an offended tone'" },
+    "ceremonial": { "speed_delta": "-15%", "pitch_delta": "0semi", "volume": "loud", "note": "presentation of the thimble" }
+  },
+  "age_variants": [],
+  "source_chapter": "ch003",
+  "sources": ["ch003", "ch003-p14", "ch003-p16", "ch003-p25", "ch003-p29"],
+  "voice_evidence": [
+    { "para": "ch003-p16", "quote": "said the Dodo in an offended tone" }
+  ],
+  "inferred": true,
+  "inferred_fields": ["timbre", "pitch", "pitch_range_hz", "speed_wpm", "speed_cpm", "accent"],
+  "reason": "Solemn/offended manner sourced; timbre designed for a stout, pompous chairman (appearance.json, dialogue_style)."
+}

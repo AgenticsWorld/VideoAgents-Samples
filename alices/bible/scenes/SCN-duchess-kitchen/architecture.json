@@ -1,0 +1,67 @@
+{
+  "scene_id": "SCN-duchess-kitchen",
+  "inherits": "SCN-duchess-house-front",
+  "inherits_note": "Same house: polychrome brick, carved Art Nouveau Bath-stone dressings, horseshoe-arched oak door and slate roof are inherited unchanged (parent amended BIB-0027). Only the interior differences are written here",
+  "layer": "dream",
+  "int_ext": "INT",
+  "form": "A single large, low below-stairs kitchen filling the whole ground floor of the house, bigger inside than the house is outside; the front door opens straight into it. Smoke fills it from end to end",
+  "stories": 1,
+  "source_chapter": "ch006",
+  "culture_ref": "geography.json#LOC-duchess-kitchen; world.json#wonderland_real_counterparts cp-cat; culture.json CUL-023, CUL-036",
+  "period": "An 1860s English service kitchen dreamed backwards: the family's modern closed cast-iron range becomes an old open hearth with a crane-hung cauldron",
+  "grows_from": {
+    "loc": "LOC-family-house",
+    "waking_detail": "Dinah on the hearth and the family kitchen below stairs",
+    "design_growth": "The family kitchen Alice glimpses from the service stairs: the scrubbed deal table, the dresser of plates, the copper pans, the servants' bell-board and Dinah's place on the hearth rug are all here, but the orderly range has turned into a roaring open fire, the plates are weapons and the cat on the hearth is grinning"
+  },
+  "amendment": "BIB-0027 (user ruling 2026-09-22), applied p4-cr-architecture 2026-09-23",
+  "dream_design_language": "A working Victorian kitchen, but inside-out: bigger inside than outside, the smoke erasing the far walls so the room seems to have no end, every surface dusted with pepper. Its fixed fabric carries the dream's Art Nouveau under the soot",
+  "mucha_design_language": {"item": "Mucha / Art Nouveau in the fixed fabric only: the hearth arch a flowing horseshoe curve of brick with a carved oak bressumer of lily-and-vine relief; a band of glazed pastel tiles with a whiplash vine pattern round the hearth opening, cracked and sooted; the brass bell-board mounted on a wrought-iron whiplash scroll; a round halo-shaped copper smoke hood over the fire; gold of copper and brass glinting through grey-brown smoke. Movable kitchen things (table, dresser, pans, crockery, stool) stay plain 1862 pieces", "inferred": true, "culture_ref": "world.json#WR-010 (Duchess's house listed; costume and hand props stay 1862); cultivation.json#XA-magic-08", "why": "Carries the dream language into a grimy service room without prettifying it"},
+  "structure": [
+    {"item": "one room about 11 m long by 7 m wide, ceiling about 3.2 m, with the front door in the middle of one long wall, so the door opens directly into the kitchen with no hall", "src": "ch006-p19", "note": "'The door led right into a large kitchen'; dimensions inferred for the layout plan"},
+    {"item": "a wide open hearth in the end wall opposite the door, about 2.6 m wide under a brick arch with a heavy oak bressumer beam, an iron crane swinging a large black cauldron over the fire", "src": "ch006-p19", "note": "'the cook was leaning over the fire, stirring a large cauldron'; open hearth and crane inferred"},
+    {"item": "a three-legged wooden stool in the exact middle of the floor where the Duchess sits nursing the baby", "src": "ch006-p19"},
+    {"item": "a raised flagstone hearth-slab in front of the fire where the Cheshire Cat (photoreal CGI cat) sits grinning", "src": "ch006-p21"},
+    {"item": "exposed ceiling joists and one heavy cross-beam blackened by smoke, iron hooks with hanging bunches of dried herbs and a ham", "inferred": true, "culture_ref": "geography.json#LOC-family-house.visual_identifiers (kitchen)", "why": "Period below-stairs ceiling; gives depth layers through the smoke"}
+  ],
+  "materials": [
+    {"item": "worn, uneven York-stone flag floor, grey with pepper dust and scattered broken crockery", "inferred": true, "culture_ref": "geography.json#LOC-duchess-kitchen.visual_identifiers (thrown pans and fire-irons)", "why": "Standard service-kitchen floor; takes thrown dishes"},
+    {"item": "limewashed brick walls, yellowed and soot-streaked, no wallpaper", "inferred": true, "culture_ref": "geography.json#LOC-family-house.settlement.architecture_style", "why": "Below-stairs finish of a professional-class 1860s house"},
+    {"item": "black iron: cauldron, crane, fire-dogs, pot-hooks and fire-irons", "src": "ch006-p19"},
+    {"item": "scrubbed pale deal (pine) table and a tall painted dresser", "inferred": true, "culture_ref": "geography.json#LOC-family-house.visual_identifiers (kitchen)", "why": "The two defining pieces of an 1860s kitchen"},
+    {"item": "copper saucepans on a wall rail, dulled by smoke", "inferred": true, "culture_ref": "culture.json CUL-023", "why": "Supplies the pans the cook throws"}
+  ],
+  "details": [
+    {"item": "a tall dresser against the long wall, racks of white and blue-and-white plates, several missing and shattered below it", "src": "ch006-p29", "note": "cook throwing 'saucepans, plates, and dishes'; dresser inferred"},
+    {"item": "pepper everywhere: a large pepper-box and open pepper sacks on the table, a haze of fine grey-brown dust in the air", "src": "ch006-p20"},
+    {"item": "a servants' bell-board high on the wall by the door: a row of brass bells on coiled springs with painted room labels", "inferred": true, "culture_ref": "geography.json#LOC-family-house (housemaid, household staff)", "why": "The one piece of the family's below-stairs world a child would remember; it rings unanswered in the din"},
+    {"item": "a rag hearth-rug in front of the hearth slab (Dinah's place at home)", "inferred": true, "culture_ref": "world.json#wonderland_real_counterparts cp-cat", "why": "Makes the Dinah-to-Cheshire-Cat doubling readable (H1 ruling 5.3 B)"},
+    {"item": "fire-irons and a frying-pan lying on the floor where they landed", "src": "ch006-p29", "note": "frying-pan also ch006-p43"}
+  ],
+  "interior": {
+    "layout": "Rectangle 11 x 7 m. Door centred on the south long wall (from SCN-duchess-house-front). Open hearth centred on the west end wall with the hearth slab in front of it. Stool dead centre of the room. Deal table along the north wall, dresser on the north wall east of the table, bell-board on the south wall beside the door, copper-pan rail on the east end wall. Smoke is densest near the hearth and thins toward the door",
+    "openings": [
+      "south wall: the front door (single, 2.1 m, opens inward), the only entrance",
+      "south wall: two small leaded windows either side of the door, glass smoked grey (match the exterior windows)",
+      "west wall: the hearth opening 2.6 m wide, 1.8 m high, flue rising behind",
+      "north wall: one small high window over the table, shutters half open"
+    ],
+    "furniture_tone": "Hard-used working kitchen, scrubbed wood and blackened iron, everything knocked askew; the three-legged stool is the only seat in the middle"
+  },
+  "scale_notes": {
+    "rule": "True 1:1 set. Alice plays at her usual height here (135 cm). The Duchess, cook and baby are human performers at normal size; the Cheshire Cat is a photoreal CGI cat at real-cat scale on the hearth slab (SUP-002 as amended BIB-0027). The text stops mentioning Alice's size once she is inside, and the kitchen's menace is played through smoke, noise and flying objects, not scale",
+    "sources": ["cultivation.json#SUP-003", "cultivation.json#SUP-006", "ch006-p19"],
+    "inferred": true,
+    "why": "Carrying the doorstep's forced perspective through a smoke-filled interior would be unreadable; the doorstep scale change resolves at the threshold"
+  },
+  "negative": [
+    "no closed cast-iron kitchen range, no gas cooker, no sink taps or plumbing",
+    "no aristocratic decor: no chandeliers, no panelling, no paintings",
+    "no clean modern kitchen, no fully tiled walls (tiles only as the sooted hearth band), no stainless steel",
+    "no fantasy cauldron glow, no green or coloured smoke; smoke is grey-brown and natural",
+    "no cartoon cat or cartoon grin, no human in cat costume; the Cheshire Cat is a photoreal CGI cat",
+    "no bright clean Art Nouveau ornament; everything sooted and hard-used; no flat illustration finish",
+    "no pig in this room (the baby is still a baby here)"
+  ],
+  "prompt_ready_en": "a large low Victorian below-stairs kitchen thick with grey-brown pepper smoke, a wide horseshoe-arched brick hearth framed by sooted pastel whiplash-vine tiles and a carved lily-and-vine oak beam, a round copper hood, a roaring fire and a black iron cauldron on a crane, a three-legged wooden stool in the middle of a worn stone-flag floor, a tall dresser of blue-and-white plates with broken crockery beneath, copper pans on the wall, a row of brass servants' bells on a wrought-iron scroll by the door, smoke-blackened beams with hanging herbs, photographed live-action set"
+}

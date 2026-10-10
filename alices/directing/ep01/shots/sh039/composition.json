@@ -1,0 +1,34 @@
+{
+  "shot_id": "sh039",
+  "scene_id": "SCN-little-door-passage",
+  "size": "medium",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "mid_right",
+    "anchor_xy": [0.72, 0.48],
+    "size_in_frame": "standing then crouching, about 0.90 of frame height falling to 0.60 as she goes down; she is cropped by the right edge at full height"
+  },
+  "second_subject": {
+    "id": "little_door",
+    "grid": "bottom_centre",
+    "anchor_xy": [0.50, 0.72],
+    "note": "the fifteen-inch horseshoe-arched door on the exact vertical centre line, its stained-glass roundel directly above it at [0.50, 0.44] — arch and roundel share one axis."
+  },
+  "headroom": "the wall above the roundel runs to the top edge with about 0.30 of frame height of honey limestone over it, so the halo has room to be a halo. Alice's own headroom closes from 0.06 to 0.28 as she crouches out of the top of the frame's attention.",
+  "horizon_eyeline": "Lens dropping 1.3 m to 0.9 m with her. The flagstone line runs level across at 0.86 of frame height. Her eyeline drops from 0.18 to 0.50 and comes to rest exactly level with the roundel — the one moment in the episode where a Mucha halo and a human eye share a line.",
+  "layers": {
+    "fg": "the low curtain, lifted, hanging as a soft dark diagonal from her raised hand at the top right down toward the arch",
+    "mg": "the little door in the base of the wall and the roundel above it, both dead centre and square-on",
+    "bg": "the honey limestone wall and the mosaic dado band running away to either side, the hall's lamp pools out of focus at the left edge"
+  },
+  "gaze": {
+    "direction": "down_frame",
+    "lead_room": "none",
+    "note": "she looks down and inward at the arch she has uncovered; the look travels down the frame's own centre line, which is the axis the whole composition is built on."
+  },
+  "balance": "The episode's single symmetrical halo-roundel framing: the arch and the roundel are centred on the vertical axis with the wall bilaterally even either side, and Alice's crouching mass at the right third is the one deliberate break in that symmetry — the composition is ordered, and she is what is out of place in it.",
+  "leading_lines": "The lifted curtain edge is a single long diagonal from the upper right corner to the arch; the dado band is the level horizontal it crosses. The roundel's circle sits on the same axis as the arch's, so the two circles read as one vertical spine.",
+  "eye_first": "The roundel — it is the only circle in the hall lit for itself — then straight down the axis to the tiny arch under it.",
+  "safe_area_ok": true,
+  "constraint_binding": "The episode's SINGLE Mucha halo-roundel composition (CR-011 'sparingly'), spent here and nowhere else. This requires the camera to come square-on to the west wall base as she lifts the curtain rather than staying on the oblique along-the-wall line — the symmetry IS the shot, so the axis is squared and the arch and roundel are held on the exact vertical centre line. No other frame in the episode may repeat this figure."
+}

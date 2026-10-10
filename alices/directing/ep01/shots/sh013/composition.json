@@ -1,0 +1,28 @@
+{
+  "shot_id": "sh013",
+  "scene_id": "SCN-field-hedge-burrow",
+  "size": "medium",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "mid_right",
+    "anchor_xy": [0.64, 0.50],
+    "size_in_frame": "arriving at full height about 0.85 of frame height, dropping to about 0.55 as she goes to her knees"
+  },
+  "headroom": "about 0.10 of frame height at arrival, opening to 0.34 as she kneels — the frame is composed so that the air above her grows when she goes down, which is how the hole gets bigger without a lens change.",
+  "horizon_eyeline": "The hedge bank base runs across at 0.62 of frame height. Her eyeline drops from 0.22 to 0.44 as she kneels and comes to rest level with the burrow mouth — the two meet at the end of the shot.",
+  "layers": {
+    "fg": "hawthorn roots arching across the lower left of frame over the opening, and the loose crumb of the spoil fan",
+    "mg": "Alice dropping to her knees in the pale spoil, breathless",
+    "bg": "the laid hedge running away along the foot, the five-bar gate side of it dark, farmland glare beyond the stems"
+  },
+  "gaze": {
+    "direction": "frame_left",
+    "lead_room": "left",
+    "note": "she kneels facing frame left and down into the black oval; about 0.22 of frame width of open ground is left between her face and the hole so the look has distance to cross."
+  },
+  "balance": "Figure right, hole left, pale spoil spanning the bottom between them — a two-object frame with the whole weight of the shot in the gap.",
+  "leading_lines": "The spoil fan spreads from the mouth toward the bottom right corner and points back up it; the hawthorn roots arch over the opening like a low lintel, already the shape of a tunnel entrance.",
+  "eye_first": "Alice arriving, then the flat black oval — the only pure black in a sunlit frame.",
+  "safe_area_ok": true,
+  "constraint_binding": "Already framed to rhyme with the earth tunnel of S03: the root arch over the opening, the pale ring of spoil round it and the flat lightless black inside are placed to prefigure the S03 tunnel lip, so the match cut three shots later has a grammar and not just an alignment."
+}

@@ -1,0 +1,40 @@
+{
+  "shot_id": "sh099",
+  "group_id": "grp037",
+  "scene_no": "S10",
+  "scene_id": "SCN-pool-of-tears",
+  "duration_s": 7.0,
+  "is_dialogue": true,
+  "group_position": "first shot of grp037 — Alice on her map start (glass_table_legs) and away along her glass_table_legs -> floating_fan -> reeds line.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "prone",
+      "start_pos": "swimming flat out from the glass table legs toward the brightest water at the far south end",
+      "space_fragment_en": "lying face down swimming from the glass table legs, held screen-left, facing screen-right toward the reeds by the shore steps",
+      "facing": "screen-right the way she swims, toward the crowding lamp reflections; the largest and most hopeful lead room of the second half",
+      "path": [
+        { "t": 5.6, "to": "out past the floating fan, in open water" }
+      ],
+      "beats": [
+        { "t": 0.6, "action": "starts to swim", "sync": "the heading is set" },
+        { "t": 1.6, "action": "talks herself round as she goes", "sync": "LN-ep01-031 begins" },
+        { "t": 4.8, "action": "the shrug arrives in her voice", "sync": "LN-ep01-031 on 'However'" }
+      ],
+      "performance": {
+        "objective": "get to the light, and make the day's strangeness into something she can live with on the way",
+        "goal": "get to the light, and make today liveable on the way",
+        "emotional_arc": "from resigned dread to a working, serviceable cheerfulness",
+        "arc_from": "resigned dread",
+        "arc_to": "serviceable cheerfulness",
+        "trigger": { "line_ref": "LN-ep01-031", "word": "However" },
+        "no_early_reaction": ["the stroke lengthening", "the chin lifting", "the voice brightening"],
+        "forbidden_early": ["the stroke lengthening", "the chin lifting", "the voice brightening"],
+        "end_state": "swimming steadily screen-right, chin clear of the water, eyes on the bright water ahead, mouth closed"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0008 result -> ev0009 approach (dream)", "note": "Alice alone; the other swimmer is not yet in the scene and is never shown in ep01." }
+}

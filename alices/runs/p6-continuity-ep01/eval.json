@@ -1,0 +1,6 @@
+{
+  "scored": false,
+  "reason": "质量评委 = 0; evaluation is not dispatched in this project.",
+  "qa": "none — 11-qa/timeline-qa is listed in workflow.yaml but timeline-qa is set to 0 by the user.",
+  "acceptance_decision": "PASS on all three auto checks. The station raised two major defects against upstream composition/blocking rather than patching them, which is the correct routing; they are escalated to the user because the auto-rerun budget is 0."
+}

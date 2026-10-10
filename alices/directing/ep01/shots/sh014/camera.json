@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh014",
+  "group_id": "grp007",
+  "scene_no": "S02",
+  "duration_s": 4.0,
+  "size": "close",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 50,
+  "camera_height_m": 0.25,
+  "angle": "level, lens on the earth of the spoil fan",
+  "rack_focus": "none",
+  "start_frame": "Low from the spoil fan into the burrow mouth: her flushed cheek and one eye filling screen-left as she comes down flat, the black oval holding screen-right, hawthorn roots across the top.",
+  "end_frame": "The same frame settled: her cheek to the cool air, her breathing visibly slowed, the black oval unchanged beside her face.",
+  "constraint_honoured": "'The one image of the scene' — it is held absolutely still so it can be that image; the 50 mm keeps her face off the frame edge and undistorted beside the oval.",
+  "movement_note": "The scene's whole acceleration stops here; a move would keep the chase running when the point is that it has stopped.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

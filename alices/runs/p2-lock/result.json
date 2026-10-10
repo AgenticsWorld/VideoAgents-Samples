@@ -1,0 +1,62 @@
+{
+  "task_id": "p2-lock",
+  "agent": "00-orchestration/memory-bible",
+  "status": "done",
+  "date": "2026-09-22",
+  "summary": "H1 signed (G2 PASS). Bible v1 frozen as the controlled version: _meta.status locked_v1 on bible/_index.json and all nine worldbuilding files; changelog BIB-0023; h1_summary.md marked signed. No setting content changed.",
+  "sign_record": {
+    "gate": "runs/g2/gate.json",
+    "decision": "PASS",
+    "signed_by": "user",
+    "signed_at": "2026-09-22T17:59:52+08:00",
+    "pre_ruling": "runs/h1-ruling/ruling.json"
+  },
+  "locked_files": [
+    "bible/_index.json",
+    "bible/world.json",
+    "bible/timeline.json",
+    "bible/geography.json",
+    "bible/religion.json",
+    "bible/culture.json",
+    "bible/politics.json",
+    "bible/economy.json",
+    "bible/cultivation.json",
+    "bible/dictionary.json"
+  ],
+  "meta_fields_set": {
+    "status": "locked_v1 (was merged_v1)",
+    "version": "v1",
+    "h1_status": "signed (was pre_ruling_applied_pending_lock)",
+    "locked_at": "2026-09-22T17:59:52+08:00",
+    "locked_by": "H1 user signature (G2 PASS), recorded by memory-bible task p2-lock",
+    "lock_record": "runs/g2/gate.json",
+    "lock_changelog": "BIB-0023",
+    "controlled": "Writes only via memory-bible controlled change (WRITE_RULES.md section 5)."
+  },
+  "other_edits": [
+    "bible/_index.json pending_decisions 'H1 lock signature' -> signed; h1_preruling.lock -> locked (bookkeeping only)",
+    "bible/h1_summary.md title and Status line -> SIGNED / locked",
+    "bible/WRITE_RULES.md section 6 status progression now names locked_v1 as the controlled state (was 'controlled'; aligns rule text with the lock value)",
+    "bible/changelog.md appended BIB-0023 (existing ids BIB-0002..BIB-0022 checked; no duplicate change_id)"
+  ],
+  "content_integrity": "For every locked file, a hash of everything outside _meta was compared before and after the write: unchanged in all 10 files. JSON re-serialisation was verified byte-identical beforehand (indent 2, UTF-8).",
+  "not_touched": [
+    "bible/characters/, bible/creatures/, bible/scenes/ (Phase 3 agents writing in parallel)",
+    "bible/style.json, props.json, costumes.json, color_script.json (Phase 4 skeletons, still skeleton_empty)"
+  ],
+  "checks": {
+    "script": "code/p2-merge_check.py (rerun after lock)",
+    "cross_refs_valid_all_namespaces": "PASS",
+    "dictionary_hit_100pct": "PASS",
+    "no_unknown_placeholder": "PASS",
+    "quote_verification": "0/560 mismatches",
+    "changelog_change_id_unique": "PASS"
+  },
+  "changelog": ["BIB-0023"],
+  "notify": {
+    "to": "00-orchestration/workflow-orchestrator",
+    "message": "Bible v1 locked (locked_v1, BIB-0023). Controlled-change process in force: all bible/ writes via memory-bible. Nothing marked dirty (status-only change). Reminder: 25 CHAR ids in _index.json forward_refs_pending must be registered by 03-characters/character-manager before G3."
+  },
+  "conflicts": [],
+  "skills": "none selected for this station"
+}

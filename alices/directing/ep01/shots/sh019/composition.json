@@ -1,0 +1,35 @@
+{
+  "shot_id": "sh019",
+  "scene_id": "SCN-falling-dream",
+  "size": "close",
+  "subject": {
+    "id": "PROP-orange-marmalade-jar",
+    "in_frame_characters": ["CHAR-alice"],
+    "grid": "centre",
+    "anchor_xy": [0.48, 0.56],
+    "size_in_frame": "the jar and her two hands hold the middle band of frame; the label plane is square-on to the lens and about 0.26 of frame height"
+  },
+  "second_subject": {
+    "id": "CHAR-alice",
+    "grid": "top_centre",
+    "anchor_xy": [0.50, 0.26],
+    "note": "her face just above the jar, close enough to read disappointment, not so close that it competes with the label."
+  },
+  "headroom": "about 0.10 of frame height above her crown; the frame is cropped deliberately close at the top so the jar keeps the larger share of the picture.",
+  "horizon_eyeline": "The pantry shelf edge runs across the background at 0.40 of frame height and travels steadily up through it. Her eyeline drops from the label to the empty inside of the jar — the only downward look in the sequence.",
+  "layers": {
+    "fg": "her hands and the jar, the label square-on and sharp across its whole width",
+    "mg": "her face above the jar, and the open drop between camera and the shelf",
+    "bg": "the pantry shelf with its stoneware jars, falling away soft behind the lettering plane"
+  },
+  "gaze": {
+    "direction": "down_frame",
+    "lead_room": "none",
+    "note": "she looks down into the jar, not out of frame — a domestic, unastonished look. Then the jar goes out to arm's length toward frame right, and her look follows it there rather than down the drop."
+  },
+  "balance": "Centred and frontal, weighted low by the jar and the hands. Nothing about the picture treats the object as a wonder: it is composed like a pantry inventory.",
+  "leading_lines": "Her two forearms make a shallow V rising to the jar; the shelf line behind runs horizontally through the frame, cutting just above her hands and giving the lettering a level to sit on.",
+  "eye_first": "The lettering, deliberately — this is its one legible read — then up to her face for the disappointment.",
+  "safe_area_ok": true,
+  "constraint_binding": "ORANGE MARMALADE gets exactly one clean legible read here: the label plane is dead square-on to the lens, unbroken by fingers, sharp corner to corner, and sits wholly inside title-safe (x 0.35-0.65, y 0.44-0.68) so no part of the whitelisted lettering can be clipped by a platform crop. Comedy of manners, not wonder — no low angle, no halo, no emphasis lighting."
+}

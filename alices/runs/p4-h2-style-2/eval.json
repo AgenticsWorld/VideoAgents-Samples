@@ -1,0 +1,10 @@
+{
+ "task_id": "p4-h2-style-2",
+ "skipped": true,
+ "reason": "quality judge=0 (user setting); QA dimensions all 0",
+ "auto": {
+  "DEF-p4-style-003_closed": "PASS (CR-012 named exception for the Hatter 10/6 ticket)",
+  "accent_rules_item": "N/A — reported as already clean in v1.2.0, not silently skipped",
+  "prompt_fragments_unchanged": "PASS (self-diffed)"
+ }
+}

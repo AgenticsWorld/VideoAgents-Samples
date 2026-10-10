@@ -1,0 +1,32 @@
+{
+  "schema_version": "scene_layout.v1",
+  "scene_id": "SCN-duchess-kitchen",
+  "layout_top": "layout_top.png",
+  "orientation": {
+    "top_of_map": "north wall (the table and dresser wall)",
+    "note_en": "Room 11 x 7 m, per the kitchen architecture card's interior layout. The only door is centred in the south (bottom) wall with the bell-board beside it; the open hearth with cauldron is centred in the west (left) end wall with the hearth slab in front; the three-legged stool is dead centre; the deal table and the dresser stand against the north wall; the copper-pan rail is on the east (right) end wall. Camera positions in views[] are described relative to these landmarks."
+  },
+  "extent_m": {"x": 14.5, "y": 8.16},
+  "landmarks": [
+    {"id": "front_door", "name": "front door", "name_en": "the kitchen door", "kind": "entrance", "xy": [0.52, 0.82]},
+    {"id": "hearth", "name": "hearth", "name_en": "the open hearth and cauldron", "kind": "feature", "xy": [0.19, 0.52]},
+    {"id": "hearth_slab", "name": "hearth slab", "name_en": "the hearth slab", "kind": "floor", "xy": [0.29, 0.52]},
+    {"id": "stool", "name": "stool", "name_en": "the three-legged stool", "kind": "furniture", "xy": [0.50, 0.53]},
+    {"id": "deal_table", "name": "table", "name_en": "the deal table", "kind": "furniture", "xy": [0.42, 0.29]},
+    {"id": "dresser", "name": "dresser", "name_en": "the plate dresser", "kind": "furniture", "xy": [0.67, 0.26]},
+    {"id": "bell_board", "name": "bell-board", "name_en": "the row of servants' bells", "kind": "feature", "xy": [0.60, 0.80]},
+    {"id": "copper_pan_rail", "name": "copper pans", "name_en": "the copper pans on the east wall", "kind": "feature", "xy": [0.83, 0.47]}
+  ],
+  "views": [
+    {"tile": 1, "camera_from": "front_door", "looking_at": "hearth", "size": "wide", "angle": "eye", "desc_en": "eye-level wide shot from the doorway into the smoke-filled kitchen toward the roaring hearth and the cauldron, the stool in the middle ground"},
+    {"tile": 2, "camera_from": "hearth_slab", "looking_at": "front_door", "size": "wide", "angle": "low", "desc_en": "low-angle wide shot from the hearth slab across the flagstones to the pale gold rectangle of the open door"},
+    {"tile": 3, "camera_from": "copper_pan_rail", "looking_at": "hearth", "size": "wide", "angle": "eye", "desc_en": "eye-level wide shot down the whole length of the kitchen from the copper pans to the firelit hearth through layers of pepper smoke"},
+    {"tile": 4, "camera_from": "hearth", "looking_at": "stool", "size": "medium", "angle": "eye", "desc_en": "eye-level medium shot from beside the cauldron toward the three-legged stool in the middle of the floor"},
+    {"tile": 5, "camera_from": "front_door", "looking_at": "stool", "size": "medium", "angle": "eye", "desc_en": "eye-level medium shot from just inside the door straight to the stool, the dresser wall beyond in smoke"},
+    {"tile": 6, "camera_from": "dresser", "looking_at": "stool", "size": "close", "angle": "high_oblique", "desc_en": "high oblique close shot from above the dresser down onto the stool and the pepper-dusted flagstones round it"},
+    {"tile": 7, "camera_from": "stool", "looking_at": "hearth_slab", "size": "close", "angle": "low", "desc_en": "low-angle close shot from stool height to the hearth slab and rag rug in the firelight"},
+    {"tile": 8, "camera_from": "deal_table", "looking_at": "bell_board", "size": "medium", "angle": "eye", "desc_en": "eye-level medium shot from the deal table across the room to the brass servants' bells on their iron scroll by the door"},
+    {"tile": 9, "camera_from": "stool", "looking_at": "dresser", "size": "detail", "angle": "eye", "desc_en": "eye-level detail shot of the blue-and-white plates racked on the dresser, gaps and broken crockery below"}
+  ],
+  "checklist": {"architecture_match": true, "lighting_match": true, "style_match": true, "plan_view_clean": true, "note_en": "bell-board not drawn (wall-mounted, correct for a plan); north high window over the table present"}
+}

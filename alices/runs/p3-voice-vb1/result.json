@@ -1,0 +1,126 @@
+{
+  "task_id": "p3-voice-vb1",
+  "agent": "03-characters/voiceprint",
+  "attempt": 1,
+  "status": "done",
+  "completed_on": "2026-09-22",
+  "inputs_read": [
+    "bible/h1_summary.md",
+    "bible/cultivation.json (SUP-002/003/005/006/014)",
+    "runs/h1-ruling/ruling.json (5.3 B, 5.4 B)",
+    "bible/characters/index.json",
+    "bible/characters/*/appearance.json (gender/age source of truth)",
+    "bible/characters/*/personality.json",
+    "bible/characters/*/dialogue_style.json",
+    "story/structured_story/ch001-ch012.json (dialogues[].speaker, voice-describing paragraphs)",
+    "bible/world.json, bible/dictionary.json (Oxfordshire setting, Pat's Irish idiom TERM)",
+    "code/check_dialogue_fit.py (eff_chars definition), modules/genmedia.py (_seedaudio_char_desc: gender/pitch/timbre/accent go into the TTS prompt)",
+    "bible/characters/CHAR-alice/age_versions.json + runs/p3-growth-all/result.json (landed mid-task)"
+  ],
+  "outputs": {
+    "count": 38,
+    "individual": [
+      "CHAR-alice",
+      "CHAR-alice-sister",
+      "CHAR-white-rabbit",
+      "CHAR-queen-of-hearts",
+      "CHAR-king-of-hearts",
+      "CHAR-duchess",
+      "CHAR-hatter",
+      "CHAR-march-hare",
+      "CHAR-dormouse",
+      "CHAR-cheshire-cat",
+      "CHAR-caterpillar",
+      "CHAR-mouse",
+      "CHAR-gryphon",
+      "CHAR-mock-turtle",
+      "CHAR-dodo",
+      "CHAR-pigeon",
+      "CHAR-cook",
+      "CHAR-bill-the-lizard",
+      "CHAR-knave-of-hearts",
+      "CHAR-frog-footman",
+      "CHAR-fish-footman",
+      "CHAR-executioner",
+      "CHAR-pat",
+      "CHAR-gardener-two",
+      "CHAR-gardener-five",
+      "CHAR-gardener-seven",
+      "CHAR-duck",
+      "CHAR-lory",
+      "CHAR-eaglet",
+      "CHAR-canary",
+      "CHAR-magpie",
+      "CHAR-old-crab",
+      "CHAR-young-crab"
+    ],
+    "ensemble_group_voice": [
+      "CHAR-crowd-ensemble",
+      "CHAR-caucus-race-party-ensemble",
+      "CHAR-jury-ensemble",
+      "CHAR-card-soldiers-ensemble",
+      "CHAR-court-officers-ensemble"
+    ],
+    "path_pattern": "bible/characters/<CHAR-id>/voice.json"
+  },
+  "not_carded": {
+    "reason": "no dialogue lines in structured_story and no reported speech",
+    "ids": [
+      "CHAR-family-housemaid (never depicted, mentioned only as Mary Ann)",
+      "CHAR-tortoise (told-only, no detail dir)",
+      "CHAR-royal-gardeners-ensemble",
+      "CHAR-royal-procession-ensemble",
+      "CHAR-visiting-monarchs-ensemble"
+    ]
+  },
+  "shared_conventions": {
+    "speed": "speed_wpm = natural English words per minute (designed per character). speed_cpm = the pipeline field used by code/check_dialogue_fit.py (est_s = eff_chars / (speed_cpm_mid/60), eff_chars = letters+digits only, no spaces/punctuation). Conversion: speed_cpm = round(speed_wpm x 3.8), where 3.8 = measured mean letters+digits per word over all 10,739 dialogue words (40,974 eff chars) in structured_story ch001-ch012. Example: 150 wpm -> 570 cpm.",
+    "acoustic_fields": "gender / pitch / timbre / accent are pure acoustic descriptions (English) because genmedia seed-audio-1.0 concatenates them verbatim into the voice-design prompt. Story context, sources and staging notes live only in reference_style / emotion_range notes / voice_evidence / reason.",
+    "gender": "copied verbatim from each appearance.json (male/female). Ensembles copy the appearance majority gender; mixed-gender members are specified per slot in group_voice.speaking_slots (voice-generation: sample the card's lead voice; per-slot voices are text descriptions for prompt/TTS library).",
+    "pitch_range_hz": "indicative F0 band for the voice at rest-to-peak; pitch_delta values in emotion_range are semitones relative to baseline.",
+    "accent_policy": "1862 England near Oxford: Alice, her sister and the educated/court figures in Received Pronunciation (upper/upper-middle class); tradesmen and servants in class/regional accents — Pat rural Irish brogue (source: 'arrum', 'yer honour', ch004-p19); Gryphon London Cockney (sourced dialect grammar); Hatter light London tradesman; gardeners, cook, Bill and the ch004 crowd rural Oxfordshire working-class burr.",
+    "SUP-002": "all dream figures are human performers: no animal noises, no pitch-shifting or creature processing. Animal-coding shows only as human vocal colour (Frog-Footman croak, Cat purr-soft delivery). SUP-003: Alice's voice is never processed for size changes.",
+    "native_audio": "dialogue is native video-model audio (no TTS in the final film); these cards feed voice-generation voiceprint samples (3-5s reference_audio anchors) and the dialogue TTS library for animatics only."
+  },
+  "age_variants": {
+    "result": "CHAR-alice only: age_variants CHAR-alice-age01 (base girl 9-10, ev0001 ch001#p01 -> ev0054 ch012#p70) and CHAR-alice-age02 (grown woman 28-32, ev0054 ch012#p71 only, imagined inset an-06); timeline_range copied verbatim from bible/characters/CHAR-alice/age_versions.json. All other 37 cards: age_variants [].",
+    "basis": "p3-growth-all ran in parallel and completed during this task; its result.json registers age versions only for CHAR-alice (all others skipped: one afternoon, size changes are SUP-003 staging, not ageing). Re-checked after it landed; check age_variants_match PASS.",
+    "note_for_voice_generation": "age02 has no source lines and growth staged the insert as silent; its sample is for timeline completeness (genmedia tts --character CHAR-alice --variant age02, auto-anchored on the age01 sample). Base form = age01 (same values as the top-level card)."
+  },
+  "speaker_map": {
+    "note": "structured_story speaker labels -> voice cards (used by code/p3-voice-vb1_check.py coverage)",
+    "CROWD (ch004)": "CHAR-crowd-ensemble",
+    "the party (chorus) (ch003)": "CHAR-caucus-race-party-ensemble",
+    "soldiers (ch008)": "CHAR-card-soldiers-ensemble",
+    "one of the jury / one of the jurymen / another of the jurymen": "CHAR-jury-ensemble (slots J03/J07/J05 suggested)",
+    "CHORUS (ch006 lullaby)": "CHAR-duchess + CHAR-cook (source ch006-p37: 'the cook and the baby joined'; the pig-baby is non-speaking) — conflicts with index catch-all, DEF-p3-voice-002",
+    "UNKNOWN ch007-d0002 'No room!'": "CHAR-hatter + CHAR-march-hare + CHAR-dormouse ('they cried out', ch007-p02)",
+    "UNKNOWN ch010-d0084 'The trial's beginning!'": "CHAR-court-officers-ensemble (designed attribution, inferred)",
+    "March Hare + Hatter / Hatter + March Hare (ch007)": "both cards",
+    "executioner": "reported speech only (ch008-p66); card provided as a precaution because narration is off and the argument must be spoken if staged"
+  },
+  "voice_collision_design": "Same-scene speakers were separated by pitch band + texture + tempo: Hatter (quick reedy tenor, London) vs March Hare (slower breathy baritone) vs Dormouse (slow husky murmur); Queen (brassy alto->shrill) vs King (soft fussy light baritone) vs White Rabbit (thin reedy high tenor) vs Knave (smooth level baritone); Gryphon (hoarse Cockney bass-baritone) vs Mock Turtle (hollow genteel sobbing bass); Duchess (hoarse growling contralto) vs Cook (flat monotone low alto); Frog-Footman (croaky low monotone) vs Fish-Footman (dry thin tenor-baritone); Alice (clear ~10yo girl, RP) vs Eaglet (thinner scratchier 8-9yo) vs sister (warm mezzo, slower); gardeners Two/Five/Seven stepped low/mid/high.",
+  "checks": {
+    "script": "code/p3-voice-vb1_check.py",
+    "result": "PASS — 38 cards; required fields present; gender_match vs appearance.json 38/38; all CHAR ids in index.json (G3); speed_cpm = round(wpm x 3.8) 38/38 (+2 Alice variants); age_variants_match vs age_versions.json PASS; no UNKNOWN/TBD/empty/null values; every structured_story speaker label (41 labels incl. UNKNOWN) mapped to an existing voice.json; all voice_evidence quotes verified verbatim against structured_story paragraphs"
+  },
+  "skills": "No auto-activated skills are checked for this station; none applied.",
+  "conflicts": [
+    {
+      "defect": "qa/defects/DEF-p3-voice-001.json",
+      "summary": "Cheshire Cat gender: appearance.json female vs dialogue_style.json he/his; voice follows appearance.json."
+    },
+    {
+      "defect": "qa/defects/DEF-p3-voice-002.json",
+      "summary": "index.json assigns ch006 CHORUS to CHAR-crowd-ensemble, source says cook + baby; two UNKNOWN speaker tags attributed here by design."
+    }
+  ],
+  "downstream": "09-audio/voice-generation can start casting.json + voiceprint samples: one default form per card, plus CHAR-alice age01/age02. Ensembles: sample the card's lead voice; tier-extra cards may be described in text only per voice-generation SOUL §3.",
+  "files_created": [
+    "bible/characters/<38 ids above>/voice.json",
+    "qa/defects/DEF-p3-voice-001.json",
+    "qa/defects/DEF-p3-voice-002.json",
+    "code/p3-voice-vb1_check.py",
+    "runs/p3-voice-vb1/result.json"
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "task_id": "p3-lighting-sb2",
+  "agent": "05-scenes/lighting",
+  "project": "alices",
+  "attempt": 1,
+  "status": "done",
+  "completed_at": "2026-09-22",
+  "outputs": [
+    "bible/scenes/SCN-pigeon-treetop/lighting.json",
+    "bible/scenes/SCN-duchess-house-front/lighting.json",
+    "bible/scenes/SCN-duchess-kitchen/lighting.json",
+    "bible/scenes/SCN-cheshire-cat-path/lighting.json",
+    "bible/scenes/SCN-mad-tea-party/lighting.json",
+    "bible/scenes/SCN-wood-tree-door/lighting.json",
+    "bible/scenes/SCN-rose-tree-yard/lighting.json",
+    "bible/scenes/SCN-croquet-ground/lighting.json",
+    "bible/scenes/SCN-gryphon-sunning-spot/lighting.json",
+    "bible/scenes/SCN-mock-turtle-ledge/lighting.json",
+    "bible/scenes/SCN-courtroom/lighting.json"
+  ],
+  "defects_opened": [],
+  "helper_scripts": ["code/p3-lighting-sb2_check.py"],
+  "inputs_read": [
+    "bible/h1_summary.md; runs/h1-ruling/ruling.json (5.2 A)",
+    "bible/scenes/index.json",
+    "bible/scenes/<11 ids>/environment.json and architecture.json (interior.openings for the kitchen and courtroom; negatives on lamps and glow)",
+    "runs/p3-environment-sb1/result.json and runs/p3-environment-sb2/result.json (ENV-ENUM-v1, waking-clock mapping, sun positions)",
+    "bible/style.json and bible/color_script.json (both still skeleton_empty; nothing to align with yet)",
+    "refs/style/alice.jpeg (volumetric shafts in haze, warm practicals against cool ambient)"
+  ],
+  "shared_conventions": {
+    "LGT-ENUM-v1": {
+      "condition": "time_of_day and weather take the ENV-ENUM-v1 values exactly as they appear in each scene's environment.json states. Wind, temperature and atmosphere are not condition keys.",
+      "key_source": ["direct_sun", "dappled_sun", "window_sun", "open_shade_skylight", "hearth_fire", "candle", "oil_lamp", "moonlight"],
+      "direction": {"top": "sun or source overhead", "high_side": "from the side, about 30-60 deg up", "side": "from the side, about 20-30 deg up", "low_side": "from the side, below about 20 deg", "side_backlight": "from behind and to one side", "backlight": "from directly behind the subject", "front": "from the camera side", "low_front": "from below and in front"},
+      "color_temp": {"warm (~2700K)": "below about 3500K", "neutral (~4500K)": "about 3500-5500K", "cool (~6500K)": "above about 5500K"},
+      "contrast": ["soft", "medium", "hard"],
+      "extra_fields": "color_temp_k_approx is a designed value within its bin. key_bearing gives the world-space direction (west = sun side) for continuity-planning. Screen direction depends on the shot and is set by 07-directing."
+    },
+    "scheme_ids": "LGT-<scene slug>-NN. Every scene here has a single condition, so there is one scheme per scene (-01). Shot-planning binds lighting_scheme_id per group; under time_anchor_ok, groups in the same scene and time of day share the scheme.",
+    "fragments": "prompt_fragment_en is in English, the project UI language, and contains light only: no characters and no camera. There is one unique wording per scheme. 08-video-gen/prompt pastes it in verbatim.",
+    "state_notes": "Changes within a scheme (a lower sun, a draught, an exposure transition) go in state_notes. They do not change the fragment. This follows SOUL rule 7: there are no sub-variants."
+  },
+  "decisions": [
+    "Dream growth (ruling 5.2 A): each card has dream_light_growth. Exteriors take the real sun of their waking-clock slot, which lowers scene by scene: 34 deg at the treetop, 16 deg at croquet, 15 deg at the Gryphon's spot, golden hour on the shore (11-14 deg) and about 6 deg at the end of the trial, which hands over to the golden-hour waking on the bank.",
+    "Colour-temperature arc across the batch: neutral 5000K at the treetop, 4000-4600K through the wood, garden and croquet, 3700K at the Gryphon sun-trap (still neutral, as environment says 'not yet golden hour'), then warm from the Mock Turtle's shore (3300K) to the courtroom (3000K).",
+    "Duchess kitchen: the hearth fire is the key (warm, low side from the west end wall). Per the architecture openings the door is in the south wall and the sun is due west, so no direct sun beam enters. Daylight is a pale smoky glow at the door and windows only, so the enclosed room has no daylight-level exposure.",
+    "Courtroom: the key is window_sun through the three high west lancets (sills at 4 m), angled down across the room onto the jury-box. The east lancets give cool sky fill, a warm/cool split that matches the style reference. No lamps are lit. The grazing sun gives the stained-glass heart a faint glow. No sky is visible, which respects geography 'sky: none'.",
+    "Cheshire path and croquet: the dissolves (SUP-005) are photographic, not lighting effects, and the dapple is kept steady. The Queen's 'thunderstorm' (ch009-p30) is a simile, so there is no storm light.",
+    "Tea-party: one scheme held identical across S01-S04 for the frozen tea-time.",
+    "special[] is empty in all 11 cards. The source (ch005-ch012) writes no explicit plot light for these scenes, and each card says so in special_note.",
+    "inferred: the Gryphon's spot is inferred:false ('lying fast asleep in the sun', ch009-p43), with its designed fields listed. The other 10 are inferred:true, each with a reason."
+  ],
+  "auto_check": {
+    "command": "python3 code/p3-lighting-sb2_check.py",
+    "exit_code": 0,
+    "results": {"scene_id_valid": "PASS", "conditions_cover_environment_states (no missing, no extra)": "PASS", "every_state_bound_to_one_scheme": "PASS", "enum": "PASS", "prompt_fragment_en_nonempty_ascii_unique": "PASS", "source_chapter_present": "PASS", "no_unknown_placeholder": "PASS", "ascii_filename": "PASS"},
+    "schemes": 11
+  },
+  "handoff": {
+    "07-directing/shot-planning": "lighting_scheme_id = LGT-<slug>-01 for every group in these 11 scenes.",
+    "08-video-gen/prompt": "Paste prompt_fragment_en in verbatim; do not add your own day or night light prose.",
+    "07-directing/continuity-planning": "Use key_bearing as the single light-direction reference: the sun is always from the west side of the world, in the kitchen the key is the west-end hearth, and in the court it comes through the west lancets.",
+    "06-art/environment-concept": "Kitchen and courtroom: see natural_light_logic in each card.",
+    "p3-lighting-sb1": "If sb1 ran in parallel under a different enum wording, please align on LGT-ENUM-v1 above (or report the difference to the orchestrator)."
+  },
+  "skills": "No auto-activated skills are enabled for this station; none applied.",
+  "qa": "visual-qa level 0: skipped",
+  "evaluation": "skipped (quality judge = 0)"
+}

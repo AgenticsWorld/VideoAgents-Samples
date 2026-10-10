@@ -1,0 +1,30 @@
+{
+  "id": "DEF-p3-char-index-903",
+  "opened_by": "03-characters/character-manager",
+  "opened_on": "2026-09-22",
+  "task_id": "p3-char-defects",
+  "assigned_to": [
+    "01-story/screenplay",
+    "09-audio/voice"
+  ],
+  "domain": "characters",
+  "status": "open",
+  "severity": "minor",
+  "summary": "The ch006 kitchen lullaby CHORUS is sung by the Duchess with the cook and baby joining, not by CHAR-crowd-ensemble background performers.",
+  "findings": [
+    {
+      "id": "DEF-p3-char-index-903-a",
+      "issue": "bible/characters/index.json previously listed ch006 under CHAR-crowd-ensemble's appearances/appearance_chapters, implying extra crowd performers in the Duchess's kitchen. Fixed per DEF-p3-appearance-302: the source (ch006-p37, 'CHORUS. (In which the cook and the baby joined):') and the fact that only the Duchess, cook, baby and a cat are in the kitchen mean the 'CHORUS' structured_story speaker tag is a song-structure label, not a separate crowd. CHAR-crowd-ensemble is now ch004 only.",
+      "quote_ref": {
+        "chapter": "ch006",
+        "paragraph": "ch006-p37",
+        "quote": "CHORUS. (In which the cook and the baby joined):"
+      },
+      "requested_action": "01-story/screenplay: attribute the ch006-p38/p42 chorus lines to the Duchess, CHAR-cook and CHAR-duchess-baby (new id, see DEF-p3-char-index-901), not to a crowd/ensemble speaker tag. 09-audio/voice: cast and mix those chorus lines from the Duchess/cook/baby voice models, not a crowd-ensemble group voice."
+    }
+  ],
+  "impact": "Affects dialogue attribution, casting, and voice mixing for the ch006 kitchen scene.",
+  "opened_via": "Fix-out of DEF-p3-appearance-302, routed through 00-orchestration/memory-bible task p3-bible-defects.",
+  "due_gate": "G5",
+  "routing_note": "downstream-phase constraint; routed by orchestrator to be enforced in the owning phase work orders"
+}

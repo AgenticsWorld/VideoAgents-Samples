@@ -1,0 +1,33 @@
+{
+  "shot_id": "sh023",
+  "scene_id": "SCN-falling-dream",
+  "size": "wide",
+  "subject": {
+    "id": null,
+    "id_note": "POV — no character in frame. shot_list registers CHAR-alice with a poses_note; she is behind the lens.",
+    "pov_of": "CHAR-alice",
+    "kind": "environment",
+    "what": "the open centre of the shaft, straight down",
+    "grid": "centre",
+    "anchor_xy": [0.50, 0.52],
+    "size_in_frame": "the black now occupies the middle 0.62 of frame height and 0.66 of frame width — slightly more than in sh020, because the walls have fallen further back"
+  },
+  "headroom": "not applicable, and this time the top edge is empty: the jar that hung there in sh020 is gone, posted away in sh021. The absence at the top of frame is the first half of the measurement.",
+  "horizon_eyeline": "No horizon. The wall bands converge on the same vanishing point as sh020, [0.50, 0.55], held exactly so the two frames can be compared.",
+  "layers": {
+    "fg": "nothing — the near edge of frame is bare shaft wall",
+    "mg": "bookshelf edges and map pegs running away to the point, in place of sh020's cupboard tops and pantry shelf",
+    "bg": "black, and nothing in it: the last glint of sh020 is gone"
+  },
+  "gaze": {
+    "direction": "down_frame",
+    "lead_room": "below",
+    "note": "her look again, into more of the same. Nothing looks back and this time nothing shines back either."
+  },
+  "balance": "The sh020 frame with both of its incidents removed — no jar at the top, no glint at the bottom. A near-empty picture whose composition is entirely a comparison with a picture three shots earlier.",
+  "leading_lines": "The same converging funnel, now made of bookshelves; it leads to a point with nothing at it.",
+  "eye_first": "The centre, immediately, and it stays there for the whole two seconds because there is nothing else in frame.",
+  "safe_area_ok": true,
+  "constraint_binding": "The repetition is the measurement: same lens, same axis, same vanishing point, same duration as sh020. The only permitted differences are the dressing on the walls and the two removals (the jar, the glint). Nothing may be added to compensate for the emptiness.",
+  "pairs_with": "sh020 — repeated exactly."
+}

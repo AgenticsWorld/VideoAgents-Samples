@@ -1,0 +1,3672 @@
+{
+  "project": "alices",
+  "workflow_version": 1,
+  "generated_by": "00-orchestration/workflow-orchestrator",
+  "generated_at": "2026-09-22T15:46:25+08:00",
+  "settings_snapshot": {
+    "aspect": "16:9",
+    "language": "en",
+    "episode_minutes": "auto",
+    "shot_s": "0.5-15",
+    "group_max_s": 30,
+    "ref_caps": {
+      "images": 30,
+      "videos": 10,
+      "audios": 10
+    },
+    "long_take": false,
+    "narration_enabled": false,
+    "caption_enabled": false,
+    "subtitle_burn_in": false,
+    "dialogue_voice": "native",
+    "dialogue_tts": true,
+    "spatial_blocking": true,
+    "intro_enabled": false,
+    "outro_enabled": false,
+    "teaser_enabled": false,
+    "evaluation_level": 0,
+    "qa_levels_all_zero": true,
+    "max_retries_override": 0,
+    "platforms": [
+      "youtube"
+    ],
+    "draft_resolution": "480p",
+    "final_resolution": "1080p"
+  },
+  "changelog": [
+    {
+      "at": "2026-09-22T15:46:25+08:00",
+      "by": "workflow-orchestrator",
+      "change": "p0-init 立项:补齐目录;按 workflow.yaml 生成模板级 DAG;条件关闭节点(p5-narration/p8-narrator/p7-dub/p9-caption*/p6-scene-plates)置 skipped 并从下游依赖移除;QA 力度 0 的 p10-* 置 skipped;p0-bible-init/p0-scan 置 blocked 等待小说原文与参考图确认;逐集阶段闸门 g6s/g6w/g6/g7/g8/g9p/g9/g10 置 template 随集展开"
+    },
+    {
+      "at": "2026-09-22T15:47:48+08:00",
+      "by": "workflow-orchestrator",
+      "change": "settings output.language 中文→English:尚无已派/已交付任务与内容产物,无受影响节点、无需重做;后续全部工单(剧本/台词/字幕/发布物料等)按最新配置 English 输出,派单时在 instruction 注明以最新配置为准"
+    },
+    {
+      "at": "2026-09-22T15:48:32+08:00",
+      "by": "workflow-orchestrator",
+      "change": "用户确认继续:解除 p0-bible-init/p0-scan blocked 并派发"
+    },
+    {
+      "at": "2026-09-22T15:51:24+08:00",
+      "by": "workflow-orchestrator",
+      "change": "关单 p0-bible-init/p0-scan;展开 p0-parse-b01..b04,p0-merge 依赖改为 4 个批实例"
+    },
+    {
+      "at": "2026-09-22T16:14:17+08:00",
+      "by": "workflow-orchestrator",
+      "change": "关单 p0-parse-b01..b04(机检全过,ID 全局唯一 0 重复);跨批场景字段名别名差异交 p0-merge 在总表机械统一"
+    },
+    {
+      "at": "2026-09-22T16:17:09+08:00",
+      "by": "workflow-orchestrator",
+      "change": "关单 p0-merge;G0 PASS;派发 p1-structure/p1-events"
+    },
+    {
+      "at": "2026-09-22T16:45:40+08:00",
+      "by": "workflow-orchestrator",
+      "change": "关单 p1-timeline;新增 p1-structure-eventrefs(G1 互查回填 event_refs),g1 依赖追加"
+    },
+    {
+      "at": "2026-09-22T16:52:40+08:00",
+      "by": "workflow-orchestrator",
+      "change": "关单 p1-structure-eventrefs;G1 PASS;派发 Phase 2 九个世界圣经工位"
+    },
+    {
+      "at": "2026-09-22T17:06:59+08:00",
+      "by": "workflow-orchestrator",
+      "change": "关单 p2 九个领域文件;派发 p2-merge"
+    },
+    {
+      "at": "2026-09-22T17:20:54+08:00",
+      "by": "workflow-orchestrator",
+      "change": "p2-merge 回执 completed_with_escalations:置 blocked 等用户裁决;DEF-p2-bible-001..006 补 assigned_to/due_gate=G2"
+    },
+    {
+      "at": "2026-09-22T17:33:21+08:00",
+      "by": "workflow-orchestrator",
+      "change": "H1 前置裁决用户签字(全采纳推荐);新增 p2-merge-ruling/p2-fix-geography/political/culture/dictionary/p2-merge-recheck,g2 改依赖 p2-merge-recheck"
+    },
+    {
+      "at": "2026-09-22T17:59:52+08:00",
+      "by": "workflow-orchestrator",
+      "change": "G2/H1 用户签字 PASS;派发 Bible 锁定 + Phase 3 首批 p3-char-index/p3-creature/p3-scene-index"
+    },
+    {
+      "at": "2026-09-22T18:12:44+08:00",
+      "by": "workflow-orchestrator",
+      "change": "关单 p3-char-index/creature/scene-index/p2-lock;Phase 3 按角色批 cb1-3/pb1-2 与场景批 sb1-2 展开;新增 p3-dict-fix"
+    },
+    {
+      "at": "2026-09-22T18:32:59+08:00",
+      "by": "workflow-orchestrator",
+      "change": "关单 Phase 3 扇出 14 单;新增 p3-bible-defects 处理 8 张 minor 缺陷;派发 growth/voice/lighting"
+    },
+    {
+      "at": "2026-09-22T21:47:45+08:00",
+      "by": "workflow-orchestrator",
+      "change": "补记 G3/H1A 签字与 p3-voice-cast 节点(先前命令被 hook 拦截未落盘);关单 p4-style/p4-aspect/p5-episode-plan/p3-voice-cast"
+    },
+    {
+      "at": "2026-09-22T21:48:09+08:00",
+      "by": "workflow-orchestrator",
+      "change": "按试点集策略展开 p5 ep01 链 + g5-ep01;派发 p4-costume/p4-color-script/p5-screenplay-ep01"
+    },
+    {
+      "at": "2026-09-22T22:11:27+08:00",
+      "by": "workflow-orchestrator",
+      "change": "风格冲突/音色样本裁决:用户暂缓;出图类 p4 节点挂起,文本类任务继续"
+    },
+    {
+      "at": "2026-09-22T23:53:30+08:00",
+      "by": "workflow-orchestrator",
+      "change": "H3(ep01)用户暂缓;p4-prop 等出图节点随风格裁决暂缓置 blocked;全线等待用户意见"
+    },
+    {
+      "at": "2026-09-22T23:58:00+08:00",
+      "by": "workflow-orchestrator",
+      "change": "创作定调 brief.md 更新(主要构想: Realistic fantasy film adapted from a fairy tale)。影响评估:无在飞子任务;bible/style.json 现行为写实真人实拍风格,与定调一致,已产出/已过审产物不重做;后续派单工单注明以最新 brief.md 为准。排队中的用户风格意见(会说话角色用CGI动物、环境加穆夏风格)另行处理。"
+    },
+    {
+      "at": "2026-09-23T00:30:00+08:00",
+      "by": "workflow-orchestrator",
+      "change": "用户裁决 DEF-p4-style-001:会说话角色用 CGI 动物、环境加穆夏风格。memory-bible 落 BIB-0027;派 18 张 p4-cr-* 变更单(只改受影响字段),color-script 待 style 完成后派;g4/g5-ep01 追加依赖"
+    },
+    {
+      "at": "2026-09-23T01:20:00+08:00",
+      "by": "workflow-orchestrator",
+      "change": "BIB-0027 变更单全部关单(21 单);DEF-p4-costume-001 a/d 以 BIB-0027 作废;pending_H2 提案(Footmen 形体/非说话动物 CGI/穆夏梦境全量-现实轻度/成片仍实拍质感)待 H2 签字页确认;ep01 剧本已改,重发 H3 签字"
+    },
+    {
+      "at": "2026-09-23T01:30:00+08:00",
+      "by": "workflow-orchestrator",
+      "change": "H3(ep01) 用户签字,g5-ep01 passed"
+    },
+    {
+      "at": "2026-09-23T01:40:00+08:00",
+      "by": "workflow-orchestrator",
+      "change": "用户「签字通过，继续执行」:解除 p4 出图 HOLD;展开并派发 p4-char-concept-cb1..3、p4-creature-concept-all、p4-env-concept-sb1..3、p4-prop;g4 依赖改指实例;costume-sheet/scene-model 待上游出图后展开"
+    },
+    {
+      "at": "2026-09-23T02:45:00+08:00",
+      "by": "workflow-orchestrator",
+      "change": "p4 出图 8 单关单(自检缺陷全部保留交 H2);派 p4-costume-sheet、p4-scene-model-sb1..3"
+    },
+    {
+      "at": "2026-09-23T01:17:49+08:00",
+      "by": "workflow-orchestrator",
+      "change": "p4-costume-sheet、p4-scene-model-sb1..3 关单;g4 依赖齐,发起 H2 签字"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "p0-init",
+      "agent": "00-orchestration/workflow-orchestrator",
+      "state": "passed",
+      "depends_on": [],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "runs/dag.json"
+      ],
+      "gate": null,
+      "note": "立项:目录结构补齐 + 模板级 DAG 落盘,dagcheck --strict 通过;novel/ 暂空,待用户导入原文并确认参考图就绪(或明确跳过)后再启动 p0-bible-init / p0-scan"
+    },
+    {
+      "id": "p0-bible-init",
+      "agent": "00-orchestration/memory-bible",
+      "state": "passed",
+      "depends_on": [
+        "p0-init"
+      ],
+      "human": false,
+      "run_id": "866c233a2d82",
+      "outputs": [
+        "bible/"
+      ],
+      "gate": null,
+      "note": "Bible 骨架 + WRITE_RULES.md;cultivation.json 为 pending_phase2 stub(写实改编下超自然元素处理留待 Phase 2 与 H1)"
+    },
+    {
+      "id": "p0-scan",
+      "agent": "01-story/novel-parser",
+      "state": "passed",
+      "depends_on": [
+        "p0-init"
+      ],
+      "human": false,
+      "run_id": "4253886dcae8",
+      "outputs": [
+        "story/chapter_manifest.json"
+      ],
+      "gate": null,
+      "note": "12 章 / 4 批(b01..b04,每批 3 章);英文按词计,换算 6000-9000 词/批;b01 5990 词差 10 词,orchestrator 判例外放行"
+    },
+    {
+      "id": "p0-parse",
+      "agent": "01-story/novel-parser",
+      "state": "passed",
+      "depends_on": [
+        "p0-scan"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "story/structured_story/"
+      ],
+      "gate": null,
+      "note": "for_each: chapter_batch —— 已按 chapter_manifest.json 展开为 p0-parse-b01..b04"
+    },
+    {
+      "id": "p0-parse-b01",
+      "agent": "01-story/novel-parser",
+      "state": "passed",
+      "depends_on": [
+        "p0-scan"
+      ],
+      "human": false,
+      "run_id": "8e919de1c8e4",
+      "outputs": [
+        "story/structured_story/ch001.json",
+        "story/structured_story/ch002.json",
+        "story/structured_story/ch003.json"
+      ],
+      "gate": null,
+      "note": "chapters ch001,ch002,ch003; 机检全过;UNKNOWN<2%"
+    },
+    {
+      "id": "p0-parse-b02",
+      "agent": "01-story/novel-parser",
+      "state": "passed",
+      "depends_on": [
+        "p0-scan"
+      ],
+      "human": false,
+      "run_id": "f5c743fc812c",
+      "outputs": [
+        "story/structured_story/ch004.json",
+        "story/structured_story/ch005.json",
+        "story/structured_story/ch006.json"
+      ],
+      "gate": null,
+      "note": "chapters ch004,ch005,ch006; 机检全过;UNKNOWN<2%"
+    },
+    {
+      "id": "p0-parse-b03",
+      "agent": "01-story/novel-parser",
+      "state": "passed",
+      "depends_on": [
+        "p0-scan"
+      ],
+      "human": false,
+      "run_id": "e393c73047bf",
+      "outputs": [
+        "story/structured_story/ch007.json",
+        "story/structured_story/ch008.json",
+        "story/structured_story/ch009.json"
+      ],
+      "gate": null,
+      "note": "chapters ch007,ch008,ch009; 机检全过;UNKNOWN<2%"
+    },
+    {
+      "id": "p0-parse-b04",
+      "agent": "01-story/novel-parser",
+      "state": "passed",
+      "depends_on": [
+        "p0-scan"
+      ],
+      "human": false,
+      "run_id": "8861009a613f",
+      "outputs": [
+        "story/structured_story/ch010.json",
+        "story/structured_story/ch011.json",
+        "story/structured_story/ch012.json"
+      ],
+      "gate": null,
+      "note": "chapters ch010,ch011,ch012; 机检全过;UNKNOWN<2%"
+    },
+    {
+      "id": "p0-merge",
+      "agent": "01-story/novel-parser",
+      "state": "passed",
+      "depends_on": [
+        "p0-parse-b01",
+        "p0-parse-b02",
+        "p0-parse-b03",
+        "p0-parse-b04"
+      ],
+      "human": false,
+      "run_id": "beacfc76e939",
+      "outputs": [
+        "story/structured_story.json"
+      ],
+      "gate": null,
+      "note": "12 章/46 场/799 段/817 引语(723 对白/58 心理/36 诗歌);UNKNOWN 0.24%;跨批字段名按 b03/b04 规范机械统一,分片未改"
+    },
+    {
+      "id": "g0",
+      "agent": null,
+      "state": "passed",
+      "depends_on": [
+        "p0-merge",
+        "p0-bible-init"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [],
+      "gate": "G0",
+      "note": "G0 PASS:机检全过,0 缺陷;gate JSON: runs/g0/gate.json"
+    },
+    {
+      "id": "p1-structure",
+      "agent": "01-story/story-structure",
+      "state": "passed",
+      "depends_on": [
+        "g0"
+      ],
+      "human": false,
+      "run_id": "a929754ff587",
+      "outputs": [
+        "story/story_graph.json"
+      ],
+      "gate": null,
+      "note": "4 幕/18 关键节点/15 线索/38 伏笔(9 未回收已标注);event_refs 待 G1 互查回填"
+    },
+    {
+      "id": "p1-events",
+      "agent": "01-story/event",
+      "state": "passed",
+      "depends_on": [
+        "g0"
+      ],
+      "human": false,
+      "run_id": "c67a176536ae",
+      "outputs": [
+        "story/events.json"
+      ],
+      "gate": null,
+      "note": "首派 6e8ee7369bda 网络中断快速失败(不计 attempt),原指令原引擎重派;54 事件卡,4 处因果断裂已列 broken_chains,5 条写实改编待决标记"
+    },
+    {
+      "id": "p1-timeline",
+      "agent": "01-story/timeline-story",
+      "state": "passed",
+      "depends_on": [
+        "p1-events"
+      ],
+      "human": false,
+      "run_id": "0491ff2f95f2",
+      "outputs": [
+        "story/story_timeline.json"
+      ],
+      "gate": null,
+      "note": "叙事序=故事序;6 处嵌套叙述;dream_frame 已标;0 冲突"
+    },
+    {
+      "id": "p1-structure-eventrefs",
+      "agent": "01-story/story-structure",
+      "state": "passed",
+      "depends_on": [
+        "p1-structure",
+        "p1-events",
+        "p1-timeline"
+      ],
+      "human": false,
+      "run_id": "0611d67297c2",
+      "outputs": [
+        "story/story_graph.json"
+      ],
+      "gate": null,
+      "note": "54/54 事件已挂结构图,0 悬空引用"
+    },
+    {
+      "id": "g1",
+      "agent": null,
+      "state": "passed",
+      "depends_on": [
+        "p1-structure",
+        "p1-events",
+        "p1-timeline",
+        "p1-structure-eventrefs"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [],
+      "gate": "G1",
+      "note": "G1 PASS:三者互查通过;gate JSON runs/g1/gate.json"
+    },
+    {
+      "id": "p2-world",
+      "agent": "02-worldbuilding/world",
+      "state": "passed",
+      "depends_on": [
+        "g1"
+      ],
+      "human": false,
+      "run_id": "0d0ccadd321a",
+      "outputs": [
+        "bible/world.json"
+      ],
+      "gate": null,
+      "note": ""
+    },
+    {
+      "id": "p2-timeline",
+      "agent": "02-worldbuilding/timeline",
+      "state": "passed",
+      "depends_on": [
+        "g1"
+      ],
+      "human": false,
+      "run_id": "08f96ef4c2cb",
+      "outputs": [
+        "bible/timeline.json"
+      ],
+      "gate": null,
+      "note": ""
+    },
+    {
+      "id": "p2-geography",
+      "agent": "02-worldbuilding/geography",
+      "state": "passed",
+      "depends_on": [
+        "g1"
+      ],
+      "human": false,
+      "run_id": "8fc034670cea",
+      "outputs": [
+        "bible/geography.json"
+      ],
+      "gate": null,
+      "note": ""
+    },
+    {
+      "id": "p2-religion",
+      "agent": "02-worldbuilding/religion",
+      "state": "passed",
+      "depends_on": [
+        "g1"
+      ],
+      "human": false,
+      "run_id": "bdb39e1ec143",
+      "outputs": [
+        "bible/religion.json"
+      ],
+      "gate": null,
+      "note": ""
+    },
+    {
+      "id": "p2-culture",
+      "agent": "02-worldbuilding/culture",
+      "state": "passed",
+      "depends_on": [
+        "g1"
+      ],
+      "human": false,
+      "run_id": "e4c48eab1842",
+      "outputs": [
+        "bible/culture.json"
+      ],
+      "gate": null,
+      "note": ""
+    },
+    {
+      "id": "p2-political",
+      "agent": "02-worldbuilding/political",
+      "state": "passed",
+      "depends_on": [
+        "g1"
+      ],
+      "human": false,
+      "run_id": "9093d5ef3f77",
+      "outputs": [
+        "bible/politics.json"
+      ],
+      "gate": null,
+      "note": ""
+    },
+    {
+      "id": "p2-economy",
+      "agent": "02-worldbuilding/economy",
+      "state": "passed",
+      "depends_on": [
+        "g1"
+      ],
+      "human": false,
+      "run_id": "a9ebe92997ed",
+      "outputs": [
+        "bible/economy.json"
+      ],
+      "gate": null,
+      "note": ""
+    },
+    {
+      "id": "p2-magic",
+      "agent": "02-worldbuilding/magic-cultivation",
+      "state": "passed",
+      "depends_on": [
+        "g1"
+      ],
+      "human": false,
+      "run_id": "fb11e9d1fae5",
+      "outputs": [
+        "bible/cultivation.json"
+      ],
+      "gate": null,
+      "note": ""
+    },
+    {
+      "id": "p2-dictionary",
+      "agent": "02-worldbuilding/dictionary",
+      "state": "passed",
+      "depends_on": [
+        "g1"
+      ],
+      "human": false,
+      "run_id": "41d264683617",
+      "outputs": [
+        "bible/dictionary.json"
+      ],
+      "gate": null,
+      "note": ""
+    },
+    {
+      "id": "p2-merge",
+      "agent": "00-orchestration/memory-bible",
+      "state": "passed",
+      "depends_on": [
+        "p2-world",
+        "p2-timeline",
+        "p2-geography",
+        "p2-religion",
+        "p2-culture",
+        "p2-political",
+        "p2-economy",
+        "p2-magic",
+        "p2-dictionary"
+      ],
+      "human": false,
+      "run_id": "4f3e037bbdce",
+      "outputs": [
+        "bible/@v1"
+      ],
+      "gate": null,
+      "note": "Bible v1 已合并;遗留问题经用户裁决转 p2-fix-* 修复链"
+    },
+    {
+      "id": "p2-merge-ruling",
+      "agent": null,
+      "state": "passed",
+      "depends_on": [
+        "p2-merge"
+      ],
+      "human": true,
+      "run_id": null,
+      "outputs": [
+        "runs/h1-ruling/ruling.json"
+      ],
+      "gate": null,
+      "note": "用户签字 2026-09-22T17:33:21+08:00:采纳 5.1A/5.2A/5.3B/5.4B/5.5A/5.6A"
+    },
+    {
+      "id": "p2-fix-geography",
+      "agent": "02-worldbuilding/geography",
+      "state": "passed",
+      "depends_on": [
+        "p2-merge-ruling"
+      ],
+      "human": false,
+      "run_id": "a577daac3448",
+      "outputs": [
+        "bible/geography.json"
+      ],
+      "gate": null,
+      "note": "DEF-p2-bible-001/002/003"
+    },
+    {
+      "id": "p2-fix-political",
+      "agent": "02-worldbuilding/political",
+      "state": "passed",
+      "depends_on": [
+        "p2-merge-ruling"
+      ],
+      "human": false,
+      "run_id": "6c256404301a",
+      "outputs": [
+        "bible/politics.json"
+      ],
+      "gate": null,
+      "note": "DEF-p2-bible-004"
+    },
+    {
+      "id": "p2-fix-culture",
+      "agent": "02-worldbuilding/culture",
+      "state": "passed",
+      "depends_on": [
+        "p2-merge-ruling"
+      ],
+      "human": false,
+      "run_id": "7c5caf22f2e8",
+      "outputs": [
+        "bible/culture.json"
+      ],
+      "gate": null,
+      "note": "DEF-p2-bible-006"
+    },
+    {
+      "id": "p2-fix-dictionary",
+      "agent": "02-worldbuilding/dictionary",
+      "state": "passed",
+      "depends_on": [
+        "p2-fix-geography",
+        "p2-fix-political",
+        "p2-fix-culture"
+      ],
+      "human": false,
+      "run_id": "90eeb38a8152",
+      "outputs": [
+        "bible/dictionary.json"
+      ],
+      "gate": null,
+      "note": "TERM-0124..0151 新增 28 条;LEXICON 映射表交 memory-bible 复检"
+    },
+    {
+      "id": "p2-merge-recheck",
+      "agent": "00-orchestration/memory-bible",
+      "state": "passed",
+      "depends_on": [
+        "p2-fix-dictionary"
+      ],
+      "human": false,
+      "run_id": "d97bf2481925",
+      "outputs": [
+        "bible/"
+      ],
+      "gate": null,
+      "note": "三项机检全 PASS(orchestrator 复跑确认);DEF-p2-bible-001..006 全部 closed"
+    },
+    {
+      "id": "g2",
+      "agent": null,
+      "state": "passed",
+      "depends_on": [
+        "p2-merge-recheck"
+      ],
+      "human": true,
+      "run_id": null,
+      "outputs": [],
+      "gate": "G2",
+      "note": "H1 用户签字 2026-09-22T17:59:52+08:00;gate JSON runs/g2/gate.json;Bible v1 受控"
+    },
+    {
+      "id": "p2-lock",
+      "agent": "00-orchestration/memory-bible",
+      "state": "passed",
+      "depends_on": [
+        "g2"
+      ],
+      "human": false,
+      "run_id": "86827ce33831",
+      "outputs": [
+        "bible/_index.json"
+      ],
+      "gate": null,
+      "note": "Bible v1 locked_v1(BIB-0023)"
+    },
+    {
+      "id": "p3-char-index",
+      "agent": "03-characters/character-manager",
+      "state": "passed",
+      "depends_on": [
+        "g2"
+      ],
+      "human": false,
+      "run_id": "e20e242ac1cc",
+      "outputs": [
+        "bible/characters/index.json"
+      ],
+      "gate": null,
+      "note": "43 角色(S1/A7/B11/extra24);25 前向引用 slug 全部登记"
+    },
+    {
+      "id": "p3-appearance",
+      "agent": "03-characters/appearance",
+      "state": "passed",
+      "depends_on": [
+        "p3-char-index"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "bible/characters/{id}/appearance.json"
+      ],
+      "gate": null,
+      "note": "for_each 已按批展开为 p3-appearance-cb1, p3-appearance-cb2, p3-appearance-cb3"
+    },
+    {
+      "id": "p3-growth",
+      "agent": "03-characters/character-growth",
+      "state": "passed",
+      "depends_on": [
+        "p3-appearance"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "bible/characters/{id}/age_versions.json"
+      ],
+      "gate": null,
+      "note": "展开为 p3-growth-all"
+    },
+    {
+      "id": "p3-personality",
+      "agent": "03-characters/personality",
+      "state": "passed",
+      "depends_on": [
+        "p3-char-index"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "bible/characters/{id}/personality.json"
+      ],
+      "gate": null,
+      "note": "for_each 已按批展开为 p3-personality-pb1, p3-personality-pb2"
+    },
+    {
+      "id": "p3-relationship",
+      "agent": "03-characters/relationship",
+      "state": "passed",
+      "depends_on": [
+        "p3-char-index"
+      ],
+      "human": false,
+      "run_id": "490771151d06",
+      "outputs": [
+        "bible/characters/relationship.json"
+      ],
+      "gate": null,
+      "note": ""
+    },
+    {
+      "id": "p3-voice",
+      "agent": "03-characters/voiceprint",
+      "state": "passed",
+      "depends_on": [
+        "p3-personality",
+        "p3-appearance"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "bible/characters/{id}/voice.json"
+      ],
+      "gate": null,
+      "note": "展开为 p3-voice-vb1"
+    },
+    {
+      "id": "p3-dialogue-style",
+      "agent": "03-characters/dialogue-style",
+      "state": "passed",
+      "depends_on": [
+        "p3-char-index"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "bible/characters/{id}/dialogue_style.json"
+      ],
+      "gate": null,
+      "note": "for_each 已按批展开为 p3-dialogue-style-pb1, p3-dialogue-style-pb2"
+    },
+    {
+      "id": "p3-creature",
+      "agent": "04-creatures/creature",
+      "state": "passed",
+      "depends_on": [
+        "g2"
+      ],
+      "human": false,
+      "run_id": "99f96d471cf6",
+      "outputs": [
+        "bible/creatures/creature.json"
+      ],
+      "gate": null,
+      "note": "4 条 CRE(白兔/小狗/火烈鸟/刺猬),会说话动物按 SUP-002 归角色"
+    },
+    {
+      "id": "p3-mount",
+      "agent": "04-creatures/mount",
+      "state": "passed",
+      "depends_on": [
+        "p3-creature"
+      ],
+      "human": false,
+      "run_id": "87617f23109b",
+      "outputs": [
+        "bible/creatures/mount.json"
+      ],
+      "gate": null,
+      "note": ""
+    },
+    {
+      "id": "p3-scene-index",
+      "agent": "05-scenes/scene",
+      "state": "passed",
+      "depends_on": [
+        "g2"
+      ],
+      "human": false,
+      "run_id": "d581a37b87e6",
+      "outputs": [
+        "bible/scenes/index.json"
+      ],
+      "gate": null,
+      "note": "26 条(3 分组 + 23 实体空间;8 INT/18 EXT);check_scene_int_ext PASS"
+    },
+    {
+      "id": "p3-environment",
+      "agent": "05-scenes/environment",
+      "state": "passed",
+      "depends_on": [
+        "p3-scene-index"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "bible/scenes/{id}/environment.json"
+      ],
+      "gate": null,
+      "note": "for_each 已按批展开为 p3-environment-sb1, p3-environment-sb2"
+    },
+    {
+      "id": "p3-architecture",
+      "agent": "05-scenes/architecture",
+      "state": "passed",
+      "depends_on": [
+        "p3-scene-index"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "bible/scenes/{id}/architecture.json"
+      ],
+      "gate": null,
+      "note": "for_each 已按批展开为 p3-architecture-sb1, p3-architecture-sb2"
+    },
+    {
+      "id": "p3-lighting",
+      "agent": "05-scenes/lighting",
+      "state": "passed",
+      "depends_on": [
+        "p3-environment"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "bible/scenes/{id}/lighting.json"
+      ],
+      "gate": null,
+      "note": "展开为 p3-lighting-sb1/sb2"
+    },
+    {
+      "id": "p3-appearance-cb1",
+      "agent": "03-characters/appearance",
+      "state": "passed",
+      "depends_on": [
+        "p3-char-index"
+      ],
+      "human": false,
+      "run_id": "9adc6fda9e15",
+      "outputs": [
+        "bible/characters/CHAR-alice/appearance.json",
+        "bible/characters/CHAR-alice-sister/appearance.json",
+        "bible/characters/CHAR-family-housemaid/appearance.json",
+        "bible/characters/CHAR-white-rabbit/appearance.json",
+        "bible/characters/CHAR-queen-of-hearts/appearance.json",
+        "bible/characters/CHAR-king-of-hearts/appearance.json",
+        "bible/characters/CHAR-duchess/appearance.json",
+        "bible/characters/CHAR-hatter/appearance.json",
+        "bible/characters/CHAR-cheshire-cat/appearance.json",
+        "bible/characters/CHAR-march-hare/appearance.json",
+        "bible/characters/CHAR-dormouse/appearance.json",
+        "bible/characters/CHAR-mouse/appearance.json",
+        "bible/characters/CHAR-cook/appearance.json",
+        "bible/characters/CHAR-bill-the-lizard/appearance.json"
+      ],
+      "gate": null,
+      "note": "batch: CHAR-alice CHAR-alice-sister CHAR-family-housemaid CHAR-white-rabbit CHAR-queen-of-hearts CHAR-king-of-hearts CHAR-duchess CHAR-hatter CHAR-cheshire-cat CHAR-march-hare CHAR-dormouse CHAR-mouse CHAR-cook CHAR-bill-the-lizard"
+    },
+    {
+      "id": "p3-appearance-cb2",
+      "agent": "03-characters/appearance",
+      "state": "passed",
+      "depends_on": [
+        "p3-char-index"
+      ],
+      "human": false,
+      "run_id": "5d685b6a0754",
+      "outputs": [
+        "bible/characters/CHAR-knave-of-hearts/appearance.json",
+        "bible/characters/CHAR-gryphon/appearance.json",
+        "bible/characters/CHAR-mock-turtle/appearance.json",
+        "bible/characters/CHAR-caterpillar/appearance.json",
+        "bible/characters/CHAR-pigeon/appearance.json",
+        "bible/characters/CHAR-duck/appearance.json",
+        "bible/characters/CHAR-lory/appearance.json",
+        "bible/characters/CHAR-eaglet/appearance.json",
+        "bible/characters/CHAR-dodo/appearance.json",
+        "bible/characters/CHAR-canary/appearance.json",
+        "bible/characters/CHAR-magpie/appearance.json",
+        "bible/characters/CHAR-old-crab/appearance.json",
+        "bible/characters/CHAR-young-crab/appearance.json",
+        "bible/characters/CHAR-fish-footman/appearance.json"
+      ],
+      "gate": null,
+      "note": "batch: CHAR-knave-of-hearts CHAR-gryphon CHAR-mock-turtle CHAR-caterpillar CHAR-pigeon CHAR-duck CHAR-lory CHAR-eaglet CHAR-dodo CHAR-canary CHAR-magpie CHAR-old-crab CHAR-young-crab CHAR-fish-footman"
+    },
+    {
+      "id": "p3-appearance-cb3",
+      "agent": "03-characters/appearance",
+      "state": "passed",
+      "depends_on": [
+        "p3-char-index"
+      ],
+      "human": false,
+      "run_id": "98196ed5e267",
+      "outputs": [
+        "bible/characters/CHAR-frog-footman/appearance.json",
+        "bible/characters/CHAR-gardener-two/appearance.json",
+        "bible/characters/CHAR-gardener-five/appearance.json",
+        "bible/characters/CHAR-gardener-seven/appearance.json",
+        "bible/characters/CHAR-pat/appearance.json",
+        "bible/characters/CHAR-executioner/appearance.json",
+        "bible/characters/CHAR-jury-ensemble/appearance.json",
+        "bible/characters/CHAR-card-soldiers-ensemble/appearance.json",
+        "bible/characters/CHAR-royal-gardeners-ensemble/appearance.json",
+        "bible/characters/CHAR-caucus-race-party-ensemble/appearance.json",
+        "bible/characters/CHAR-visiting-monarchs-ensemble/appearance.json",
+        "bible/characters/CHAR-royal-procession-ensemble/appearance.json",
+        "bible/characters/CHAR-court-officers-ensemble/appearance.json",
+        "bible/characters/CHAR-crowd-ensemble/appearance.json"
+      ],
+      "gate": null,
+      "note": "batch: CHAR-frog-footman CHAR-gardener-two CHAR-gardener-five CHAR-gardener-seven CHAR-pat CHAR-executioner CHAR-jury-ensemble CHAR-card-soldiers-ensemble CHAR-royal-gardeners-ensemble CHAR-caucus-race-party-ensemble CHAR-visiting-monarchs-ensemble CHAR-royal-procession-ensemble CHAR-court-officers-ensemble CHAR-crowd-ensemble"
+    },
+    {
+      "id": "p3-personality-pb1",
+      "agent": "03-characters/personality",
+      "state": "passed",
+      "depends_on": [
+        "p3-char-index"
+      ],
+      "human": false,
+      "run_id": "d0d3ff5fc6dd",
+      "outputs": [
+        "bible/characters/CHAR-alice/personality.json",
+        "bible/characters/CHAR-alice-sister/personality.json",
+        "bible/characters/CHAR-white-rabbit/personality.json",
+        "bible/characters/CHAR-queen-of-hearts/personality.json",
+        "bible/characters/CHAR-king-of-hearts/personality.json",
+        "bible/characters/CHAR-duchess/personality.json",
+        "bible/characters/CHAR-hatter/personality.json",
+        "bible/characters/CHAR-cheshire-cat/personality.json",
+        "bible/characters/CHAR-march-hare/personality.json",
+        "bible/characters/CHAR-dormouse/personality.json"
+      ],
+      "gate": null,
+      "note": "batch: CHAR-alice CHAR-alice-sister CHAR-white-rabbit CHAR-queen-of-hearts CHAR-king-of-hearts CHAR-duchess CHAR-hatter CHAR-cheshire-cat CHAR-march-hare CHAR-dormouse"
+    },
+    {
+      "id": "p3-personality-pb2",
+      "agent": "03-characters/personality",
+      "state": "passed",
+      "depends_on": [
+        "p3-char-index"
+      ],
+      "human": false,
+      "run_id": "204dd2f4eebd",
+      "outputs": [
+        "bible/characters/CHAR-mouse/personality.json",
+        "bible/characters/CHAR-cook/personality.json",
+        "bible/characters/CHAR-bill-the-lizard/personality.json",
+        "bible/characters/CHAR-knave-of-hearts/personality.json",
+        "bible/characters/CHAR-gryphon/personality.json",
+        "bible/characters/CHAR-mock-turtle/personality.json",
+        "bible/characters/CHAR-caterpillar/personality.json",
+        "bible/characters/CHAR-pigeon/personality.json",
+        "bible/characters/CHAR-dodo/personality.json"
+      ],
+      "gate": null,
+      "note": "batch: CHAR-mouse CHAR-cook CHAR-bill-the-lizard CHAR-knave-of-hearts CHAR-gryphon CHAR-mock-turtle CHAR-caterpillar CHAR-pigeon CHAR-dodo"
+    },
+    {
+      "id": "p3-dialogue-style-pb1",
+      "agent": "03-characters/dialogue-style",
+      "state": "passed",
+      "depends_on": [
+        "p3-char-index"
+      ],
+      "human": false,
+      "run_id": "e9999f5f5d61",
+      "outputs": [
+        "bible/characters/CHAR-alice/dialogue_style.json",
+        "bible/characters/CHAR-alice-sister/dialogue_style.json",
+        "bible/characters/CHAR-white-rabbit/dialogue_style.json",
+        "bible/characters/CHAR-queen-of-hearts/dialogue_style.json",
+        "bible/characters/CHAR-king-of-hearts/dialogue_style.json",
+        "bible/characters/CHAR-duchess/dialogue_style.json",
+        "bible/characters/CHAR-hatter/dialogue_style.json",
+        "bible/characters/CHAR-cheshire-cat/dialogue_style.json",
+        "bible/characters/CHAR-march-hare/dialogue_style.json",
+        "bible/characters/CHAR-dormouse/dialogue_style.json"
+      ],
+      "gate": null,
+      "note": "batch: CHAR-alice CHAR-alice-sister CHAR-white-rabbit CHAR-queen-of-hearts CHAR-king-of-hearts CHAR-duchess CHAR-hatter CHAR-cheshire-cat CHAR-march-hare CHAR-dormouse"
+    },
+    {
+      "id": "p3-dialogue-style-pb2",
+      "agent": "03-characters/dialogue-style",
+      "state": "passed",
+      "depends_on": [
+        "p3-char-index"
+      ],
+      "human": false,
+      "run_id": "ac03e823f200",
+      "outputs": [
+        "bible/characters/CHAR-mouse/dialogue_style.json",
+        "bible/characters/CHAR-cook/dialogue_style.json",
+        "bible/characters/CHAR-bill-the-lizard/dialogue_style.json",
+        "bible/characters/CHAR-knave-of-hearts/dialogue_style.json",
+        "bible/characters/CHAR-gryphon/dialogue_style.json",
+        "bible/characters/CHAR-mock-turtle/dialogue_style.json",
+        "bible/characters/CHAR-caterpillar/dialogue_style.json",
+        "bible/characters/CHAR-pigeon/dialogue_style.json",
+        "bible/characters/CHAR-dodo/dialogue_style.json"
+      ],
+      "gate": null,
+      "note": "batch: CHAR-mouse CHAR-cook CHAR-bill-the-lizard CHAR-knave-of-hearts CHAR-gryphon CHAR-mock-turtle CHAR-caterpillar CHAR-pigeon CHAR-dodo"
+    },
+    {
+      "id": "p3-environment-sb1",
+      "agent": "05-scenes/environment",
+      "state": "passed",
+      "depends_on": [
+        "p3-scene-index"
+      ],
+      "human": false,
+      "run_id": "5aa4c4bc5ce5",
+      "outputs": [
+        "bible/scenes/SCN-riverbank/environment.json",
+        "bible/scenes/SCN-field-hedge-burrow/environment.json",
+        "bible/scenes/SCN-falling-dream/environment.json",
+        "bible/scenes/SCN-shaft-landing-passage/environment.json",
+        "bible/scenes/SCN-long-hall/environment.json",
+        "bible/scenes/SCN-little-door-passage/environment.json",
+        "bible/scenes/SCN-pool-of-tears/environment.json",
+        "bible/scenes/SCN-pool-bank/environment.json",
+        "bible/scenes/SCN-rabbit-house-exterior/environment.json",
+        "bible/scenes/SCN-rabbit-house-upstairs-room/environment.json",
+        "bible/scenes/SCN-wood-thistle-glade/environment.json",
+        "bible/scenes/SCN-caterpillar-clearing/environment.json"
+      ],
+      "gate": null,
+      "note": "batch: SCN-riverbank SCN-field-hedge-burrow SCN-falling-dream SCN-shaft-landing-passage SCN-long-hall SCN-little-door-passage SCN-pool-of-tears SCN-pool-bank SCN-rabbit-house-exterior SCN-rabbit-house-upstairs-room SCN-wood-thistle-glade SCN-caterpillar-clearing"
+    },
+    {
+      "id": "p3-environment-sb2",
+      "agent": "05-scenes/environment",
+      "state": "passed",
+      "depends_on": [
+        "p3-scene-index"
+      ],
+      "human": false,
+      "run_id": "2ea395afbc4d",
+      "outputs": [
+        "bible/scenes/SCN-pigeon-treetop/environment.json",
+        "bible/scenes/SCN-duchess-house-front/environment.json",
+        "bible/scenes/SCN-duchess-kitchen/environment.json",
+        "bible/scenes/SCN-cheshire-cat-path/environment.json",
+        "bible/scenes/SCN-mad-tea-party/environment.json",
+        "bible/scenes/SCN-wood-tree-door/environment.json",
+        "bible/scenes/SCN-rose-tree-yard/environment.json",
+        "bible/scenes/SCN-croquet-ground/environment.json",
+        "bible/scenes/SCN-gryphon-sunning-spot/environment.json",
+        "bible/scenes/SCN-mock-turtle-ledge/environment.json",
+        "bible/scenes/SCN-courtroom/environment.json"
+      ],
+      "gate": null,
+      "note": "batch: SCN-pigeon-treetop SCN-duchess-house-front SCN-duchess-kitchen SCN-cheshire-cat-path SCN-mad-tea-party SCN-wood-tree-door SCN-rose-tree-yard SCN-croquet-ground SCN-gryphon-sunning-spot SCN-mock-turtle-ledge SCN-courtroom"
+    },
+    {
+      "id": "p3-architecture-sb1",
+      "agent": "05-scenes/architecture",
+      "state": "passed",
+      "depends_on": [
+        "p3-scene-index"
+      ],
+      "human": false,
+      "run_id": "6b9ffa2b1ceb",
+      "outputs": [
+        "bible/scenes/SCN-riverbank/architecture.json",
+        "bible/scenes/SCN-field-hedge-burrow/architecture.json",
+        "bible/scenes/SCN-falling-dream/architecture.json",
+        "bible/scenes/SCN-shaft-landing-passage/architecture.json",
+        "bible/scenes/SCN-long-hall/architecture.json",
+        "bible/scenes/SCN-little-door-passage/architecture.json",
+        "bible/scenes/SCN-pool-of-tears/architecture.json",
+        "bible/scenes/SCN-pool-bank/architecture.json",
+        "bible/scenes/SCN-rabbit-house-exterior/architecture.json",
+        "bible/scenes/SCN-rabbit-house-upstairs-room/architecture.json",
+        "bible/scenes/SCN-wood-thistle-glade/architecture.json",
+        "bible/scenes/SCN-caterpillar-clearing/architecture.json"
+      ],
+      "gate": null,
+      "note": "batch: SCN-riverbank SCN-field-hedge-burrow SCN-falling-dream SCN-shaft-landing-passage SCN-long-hall SCN-little-door-passage SCN-pool-of-tears SCN-pool-bank SCN-rabbit-house-exterior SCN-rabbit-house-upstairs-room SCN-wood-thistle-glade SCN-caterpillar-clearing"
+    },
+    {
+      "id": "p3-architecture-sb2",
+      "agent": "05-scenes/architecture",
+      "state": "passed",
+      "depends_on": [
+        "p3-scene-index"
+      ],
+      "human": false,
+      "run_id": "e35ac5f1e7ef",
+      "outputs": [
+        "bible/scenes/SCN-pigeon-treetop/architecture.json",
+        "bible/scenes/SCN-duchess-house-front/architecture.json",
+        "bible/scenes/SCN-duchess-kitchen/architecture.json",
+        "bible/scenes/SCN-cheshire-cat-path/architecture.json",
+        "bible/scenes/SCN-mad-tea-party/architecture.json",
+        "bible/scenes/SCN-wood-tree-door/architecture.json",
+        "bible/scenes/SCN-rose-tree-yard/architecture.json",
+        "bible/scenes/SCN-croquet-ground/architecture.json",
+        "bible/scenes/SCN-gryphon-sunning-spot/architecture.json",
+        "bible/scenes/SCN-mock-turtle-ledge/architecture.json",
+        "bible/scenes/SCN-courtroom/architecture.json"
+      ],
+      "gate": null,
+      "note": "batch: SCN-pigeon-treetop SCN-duchess-house-front SCN-duchess-kitchen SCN-cheshire-cat-path SCN-mad-tea-party SCN-wood-tree-door SCN-rose-tree-yard SCN-croquet-ground SCN-gryphon-sunning-spot SCN-mock-turtle-ledge SCN-courtroom"
+    },
+    {
+      "id": "p3-growth-all",
+      "agent": "03-characters/character-growth",
+      "state": "passed",
+      "depends_on": [
+        "p3-appearance-cb1",
+        "p3-appearance-cb2",
+        "p3-appearance-cb3"
+      ],
+      "human": false,
+      "run_id": "a2e37d5c7082",
+      "outputs": [
+        "bible/characters/{id}/age_versions.json"
+      ],
+      "gate": null,
+      "note": "全体角色一单:仅有年龄跨度/分龄形象需求者出文件;仅 CHAR-alice 需分龄"
+    },
+    {
+      "id": "p3-voice-vb1",
+      "agent": "03-characters/voiceprint",
+      "state": "passed",
+      "depends_on": [
+        "p3-personality-pb1",
+        "p3-personality-pb2",
+        "p3-appearance-cb1",
+        "p3-appearance-cb2",
+        "p3-appearance-cb3"
+      ],
+      "human": false,
+      "run_id": "c703f0c227c5",
+      "outputs": [
+        "bible/characters/{id}/voice.json"
+      ],
+      "gate": null,
+      "note": "所有有台词角色;38 张声线卡"
+    },
+    {
+      "id": "p3-lighting-sb1",
+      "agent": "05-scenes/lighting",
+      "state": "passed",
+      "depends_on": [
+        "p3-environment-sb1"
+      ],
+      "human": false,
+      "run_id": "3726745169dc",
+      "outputs": [
+        "bible/scenes/SCN-riverbank/lighting.json",
+        "bible/scenes/SCN-field-hedge-burrow/lighting.json",
+        "bible/scenes/SCN-falling-dream/lighting.json",
+        "bible/scenes/SCN-shaft-landing-passage/lighting.json",
+        "bible/scenes/SCN-long-hall/lighting.json",
+        "bible/scenes/SCN-little-door-passage/lighting.json",
+        "bible/scenes/SCN-pool-of-tears/lighting.json",
+        "bible/scenes/SCN-pool-bank/lighting.json",
+        "bible/scenes/SCN-rabbit-house-exterior/lighting.json",
+        "bible/scenes/SCN-rabbit-house-upstairs-room/lighting.json",
+        "bible/scenes/SCN-wood-thistle-glade/lighting.json",
+        "bible/scenes/SCN-caterpillar-clearing/lighting.json"
+      ],
+      "gate": null,
+      "note": "batch: SCN-riverbank SCN-field-hedge-burrow SCN-falling-dream SCN-shaft-landing-passage SCN-long-hall SCN-little-door-passage SCN-pool-of-tears SCN-pool-bank SCN-rabbit-house-exterior SCN-rabbit-house-upstairs-room SCN-wood-thistle-glade SCN-caterpillar-clearing"
+    },
+    {
+      "id": "p3-lighting-sb2",
+      "agent": "05-scenes/lighting",
+      "state": "passed",
+      "depends_on": [
+        "p3-environment-sb2"
+      ],
+      "human": false,
+      "run_id": "729219ac970e",
+      "outputs": [
+        "bible/scenes/SCN-pigeon-treetop/lighting.json",
+        "bible/scenes/SCN-duchess-house-front/lighting.json",
+        "bible/scenes/SCN-duchess-kitchen/lighting.json",
+        "bible/scenes/SCN-cheshire-cat-path/lighting.json",
+        "bible/scenes/SCN-mad-tea-party/lighting.json",
+        "bible/scenes/SCN-wood-tree-door/lighting.json",
+        "bible/scenes/SCN-rose-tree-yard/lighting.json",
+        "bible/scenes/SCN-croquet-ground/lighting.json",
+        "bible/scenes/SCN-gryphon-sunning-spot/lighting.json",
+        "bible/scenes/SCN-mock-turtle-ledge/lighting.json",
+        "bible/scenes/SCN-courtroom/lighting.json"
+      ],
+      "gate": null,
+      "note": "batch: SCN-pigeon-treetop SCN-duchess-house-front SCN-duchess-kitchen SCN-cheshire-cat-path SCN-mad-tea-party SCN-wood-tree-door SCN-rose-tree-yard SCN-croquet-ground SCN-gryphon-sunning-spot SCN-mock-turtle-ledge SCN-courtroom"
+    },
+    {
+      "id": "p3-dict-fix",
+      "agent": "00-orchestration/memory-bible",
+      "state": "passed",
+      "depends_on": [
+        "p2-lock"
+      ],
+      "human": false,
+      "run_id": "82b42d35914b",
+      "outputs": [
+        "bible/dictionary.json"
+      ],
+      "gate": null,
+      "note": "DEF-p3-dictionary-001(minor)"
+    },
+    {
+      "id": "p3-bible-defects",
+      "agent": "00-orchestration/memory-bible",
+      "state": "passed",
+      "depends_on": [
+        "p3-dict-fix"
+      ],
+      "human": false,
+      "run_id": "70372d773a08",
+      "outputs": [
+        "bible/"
+      ],
+      "gate": null,
+      "note": "DEF-p3-appearance-001/201/301/302/303, DEF-p3-dictionary-002, DEF-p3-environment-101, DEF-p3-relationship-001(minor)"
+    },
+    {
+      "id": "p3-bible-defects-2",
+      "agent": "00-orchestration/memory-bible",
+      "state": "passed",
+      "depends_on": [
+        "p3-bible-defects",
+        "p3-voice-vb1",
+        "p3-lighting-sb1",
+        "p3-lighting-sb2"
+      ],
+      "human": false,
+      "run_id": "1dc7989c6f38",
+      "outputs": [
+        "bible/"
+      ],
+      "gate": null,
+      "note": "DEF-p3-lighting-101, DEF-p3-voice-001/002"
+    },
+    {
+      "id": "p3-char-defects",
+      "agent": "03-characters/character-manager",
+      "state": "passed",
+      "depends_on": [
+        "p3-bible-defects",
+        "p3-voice-vb1",
+        "p3-lighting-sb1",
+        "p3-lighting-sb2"
+      ],
+      "human": false,
+      "run_id": "9448e9bc7350",
+      "outputs": [
+        "bible/"
+      ],
+      "gate": null,
+      "note": "DEF-p3-appearance-001/201/301/302/303, DEF-p3-relationship-001"
+    },
+    {
+      "id": "p3-defects-round3",
+      "agent": null,
+      "state": "passed",
+      "depends_on": [
+        "p3-char-defects",
+        "p3-bible-defects-2"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [],
+      "gate": null,
+      "note": "6 张 minor 缺陷回派 appearance/relationship/creature/environment/dialogue-style/character-manager(运行 id 见 note): 9d2ae08a0b1f 68ee1c034a5d 3137aea50fa6 c31178362d99 d65530b125cf 93b6b8caa145; + p3-fix-arch-001 b6d591632ad5;全部关闭"
+    },
+    {
+      "id": "g3",
+      "agent": null,
+      "state": "passed",
+      "depends_on": [
+        "p3-appearance-cb1",
+        "p3-appearance-cb2",
+        "p3-appearance-cb3",
+        "p3-personality-pb1",
+        "p3-personality-pb2",
+        "p3-dialogue-style-pb1",
+        "p3-dialogue-style-pb2",
+        "p3-environment-sb1",
+        "p3-environment-sb2",
+        "p3-architecture-sb1",
+        "p3-architecture-sb2",
+        "p3-growth-all",
+        "p3-voice-vb1",
+        "p3-lighting-sb1",
+        "p3-lighting-sb2",
+        "p3-relationship",
+        "p3-mount",
+        "p3-dict-fix",
+        "p3-bible-defects",
+        "p3-char-defects",
+        "p3-bible-defects-2",
+        "p3-defects-round3"
+      ],
+      "human": true,
+      "run_id": null,
+      "outputs": [],
+      "gate": "G3",
+      "note": "H1A 用户签字;runs/g3/gate.json"
+    },
+    {
+      "id": "p3-voice-cast",
+      "agent": "09-audio/voice-generation",
+      "state": "passed",
+      "depends_on": [
+        "g3"
+      ],
+      "human": false,
+      "run_id": "c4807442e3b0",
+      "outputs": [
+        "assets/audio/voice/casting.json",
+        "assets/audio/voice/refs/"
+      ],
+      "gate": null,
+      "note": "§8A 选角落地:39 条 casting(seed-audio-1.0 描述定制);27/39 样本超 5s 上限,重跑上限 0 → 升级用户裁决"
+    },
+    {
+      "id": "p4-style",
+      "agent": "06-art/art-director",
+      "state": "passed",
+      "depends_on": [
+        "g3"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "bible/style.json"
+      ],
+      "gate": null,
+      "note": "style.json 已出;DEF-p4-style-001(参考图与 H1 规则 3 处冲突,due G4)待用户裁决"
+    },
+    {
+      "id": "p4-char-concept",
+      "agent": "06-art/character-concept",
+      "state": "passed",
+      "depends_on": [
+        "p4-style",
+        "p4-costume"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "assets/concepts/characters/{id}/"
+      ],
+      "gate": null,
+      "note": "for_each 已按批展开为 p4-char-concept-cb1, p4-char-concept-cb2, p4-char-concept-cb3; 2026-09-23 用户「签字通过，继续执行」解除出图 HOLD"
+    },
+    {
+      "id": "p4-costume-sheet",
+      "agent": "06-art/costume-concept",
+      "state": "passed",
+      "depends_on": [
+        "p4-char-concept-cb1",
+        "p4-char-concept-cb2",
+        "p4-char-concept-cb3",
+        "p4-costume"
+      ],
+      "human": false,
+      "run_id": "bd767b64419e",
+      "outputs": [
+        "assets/concepts/characters/{id}/costume_sheets.json"
+      ],
+      "gate": null,
+      "note": "44 台账/52 套;新出 6 张服装 sheet;COS-032/COS-050 跳过有因;DEF-p4-costume-sheet-901(major)交 H2"
+    },
+    {
+      "id": "p4-env-concept",
+      "agent": "06-art/environment-concept",
+      "state": "passed",
+      "depends_on": [
+        "p4-style"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "assets/concepts/scenes/{id}/"
+      ],
+      "gate": null,
+      "note": "for_each 已按批展开为 p4-env-concept-sb1, p4-env-concept-sb2, p4-env-concept-sb3; 2026-09-23 用户「签字通过，继续执行」解除出图 HOLD"
+    },
+    {
+      "id": "p4-scene-model",
+      "agent": "05-scenes/scene-modeling",
+      "state": "passed",
+      "depends_on": [
+        "p4-env-concept"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "bible/scenes/{id}/whitebox.json"
+      ],
+      "gate": null,
+      "note": "for_each 已按批展开为 p4-scene-model-sb1..sb3"
+    },
+    {
+      "id": "p4-scene-model-sb1",
+      "agent": "05-scenes/scene-modeling",
+      "state": "passed",
+      "depends_on": [
+        "p4-env-concept-sb1"
+      ],
+      "human": false,
+      "run_id": "84dce809ea33",
+      "outputs": [
+        "bible/scenes/{id}/whitebox.json"
+      ],
+      "gate": null,
+      "note": "8 whitebox.json;whitebox_layout_ok PASS x8;DEF-p4-scenemodel-960"
+    },
+    {
+      "id": "p4-scene-model-sb2",
+      "agent": "05-scenes/scene-modeling",
+      "state": "passed",
+      "depends_on": [
+        "p4-env-concept-sb2"
+      ],
+      "human": false,
+      "run_id": "1840e61eb4bc",
+      "outputs": [
+        "bible/scenes/{id}/whitebox.json"
+      ],
+      "gate": null,
+      "note": "8 whitebox.json;PASS 8/8;DEF-p4-scenemodel-970..973"
+    },
+    {
+      "id": "p4-scene-model-sb3",
+      "agent": "05-scenes/scene-modeling",
+      "state": "passed",
+      "depends_on": [
+        "p4-env-concept-sb3"
+      ],
+      "human": false,
+      "run_id": "57723d0b8f9d",
+      "outputs": [
+        "bible/scenes/{id}/whitebox.json"
+      ],
+      "gate": null,
+      "note": "7 whitebox.json;PASS;DEF-p4-scenemodel-980"
+    },
+    {
+      "id": "p4-prop",
+      "agent": "06-art/prop",
+      "state": "passed",
+      "depends_on": [
+        "p4-style"
+      ],
+      "human": false,
+      "run_id": "14c8c2fe8bb0",
+      "outputs": [
+        "bible/props.json"
+      ],
+      "gate": null,
+      "note": "props.json 24 卡+48 图;无人物;4 major/11 minor 图像缺陷保留交 H2"
+    },
+    {
+      "id": "p4-creature-concept",
+      "agent": "06-art/creature-concept",
+      "state": "passed",
+      "depends_on": [
+        "p4-style"
+      ],
+      "human": false,
+      "run_id": "46e15d49be29",
+      "outputs": [
+        "assets/concepts/creatures/{id}/"
+      ],
+      "gate": null,
+      "note": "7 sheets 交付(单批,runs/p4-creature-concept);回执 escalated:CRE-005/006 自检 FAIL 保留,DEF-p4-creature-401/402/403 交 H2 裁决"
+    },
+    {
+      "id": "p4-char-concept-cb1",
+      "agent": "06-art/character-concept",
+      "state": "passed",
+      "depends_on": [
+        "p4-style",
+        "p4-costume"
+      ],
+      "human": false,
+      "run_id": "2d9a53dcb663",
+      "outputs": [
+        "assets/concepts/characters/{id}/"
+      ],
+      "gate": null,
+      "note": "14 角色+Alice age02 sheet;机检全过;自检缺陷保留交 H2(Bill 直立等 3 major)"
+    },
+    {
+      "id": "p4-char-concept-cb2",
+      "agent": "06-art/character-concept",
+      "state": "passed",
+      "depends_on": [
+        "p4-style",
+        "p4-costume"
+      ],
+      "human": false,
+      "run_id": "0a66fd57068f",
+      "outputs": [
+        "assets/concepts/characters/{id}/"
+      ],
+      "gate": null,
+      "note": "15 sheets;机检全过;9 张自检缺陷保留交 H2"
+    },
+    {
+      "id": "p4-char-concept-cb3",
+      "agent": "06-art/character-concept",
+      "state": "passed",
+      "depends_on": [
+        "p4-style",
+        "p4-costume"
+      ],
+      "human": false,
+      "run_id": "44320b1f7a19",
+      "outputs": [
+        "assets/concepts/characters/{id}/"
+      ],
+      "gate": null,
+      "note": "16 sheets/14 角色;机检全过;10 张自检缺陷+2 Bible 冲突缺陷交 H2"
+    },
+    {
+      "id": "p4-env-concept-sb1",
+      "agent": "06-art/environment-concept",
+      "state": "passed",
+      "depends_on": [
+        "p4-style"
+      ],
+      "human": false,
+      "run_id": "b910cc9b0058",
+      "outputs": [
+        "assets/concepts/scenes/{id}/"
+      ],
+      "gate": null,
+      "note": "8 布局包 scene_layout_pack_ok PASS;4 张 major 偏差交 H2"
+    },
+    {
+      "id": "p4-env-concept-sb2",
+      "agent": "06-art/environment-concept",
+      "state": "passed",
+      "depends_on": [
+        "p4-style"
+      ],
+      "human": false,
+      "run_id": "ba14d5cfcd30",
+      "outputs": [
+        "assets/concepts/scenes/{id}/"
+      ],
+      "gate": null,
+      "note": "8 布局包 PASS;4 major(树桩化/俯角倾斜)交 H2,DEF-p4-envconcept-701..703"
+    },
+    {
+      "id": "p4-env-concept-sb3",
+      "agent": "06-art/environment-concept",
+      "state": "passed",
+      "depends_on": [
+        "p4-style"
+      ],
+      "human": false,
+      "run_id": "ea5321e8a1d1",
+      "outputs": [
+        "assets/concepts/scenes/{id}/"
+      ],
+      "gate": null,
+      "note": "7 布局包 PASS;4 张偏差交 H2,DEF-p4-envconcept-801"
+    },
+    {
+      "id": "p4-costume",
+      "agent": "06-art/costume",
+      "state": "passed",
+      "depends_on": [
+        "p4-style"
+      ],
+      "human": false,
+      "run_id": "fe77339fd464",
+      "outputs": [
+        "bible/costumes.json"
+      ],
+      "gate": null,
+      "note": "44 角色 52 套(COS-001..052),10 个换装点"
+    },
+    {
+      "id": "p4-color-script",
+      "agent": "06-art/color-script",
+      "state": "passed",
+      "depends_on": [
+        "p4-style",
+        "p5-episode-plan"
+      ],
+      "human": false,
+      "run_id": "4756b34690c1",
+      "outputs": [
+        "bible/color_script.json"
+      ],
+      "gate": null,
+      "note": "9 集 44 幕;check_color_script --strict OK"
+    },
+    {
+      "id": "p4-aspect",
+      "agent": "06-art/aspect-ratio",
+      "state": "passed",
+      "depends_on": [
+        "g3"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "bible/aspect_ratio.json"
+      ],
+      "gate": null,
+      "note": "16:9 母版;YouTube 单平台"
+    },
+    {
+      "id": "g4",
+      "agent": null,
+      "state": "passed",
+      "depends_on": [
+        "p4-char-concept-cb1",
+        "p4-char-concept-cb2",
+        "p4-char-concept-cb3",
+        "p4-costume-sheet",
+        "p4-env-concept-sb1",
+        "p4-env-concept-sb2",
+        "p4-env-concept-sb3",
+        "p4-prop",
+        "p4-creature-concept",
+        "p4-costume",
+        "p4-color-script",
+        "p4-aspect",
+        "p4-cr-style",
+        "p4-cr-charindex",
+        "p4-cr-appearance",
+        "p4-cr-personality",
+        "p4-cr-dialoguestyle",
+        "p4-cr-voice",
+        "p4-cr-creature",
+        "p4-cr-mount",
+        "p4-cr-costume",
+        "p4-cr-architecture",
+        "p4-cr-environment",
+        "p4-cr-lighting",
+        "p4-cr-dictionary",
+        "p4-cr-colorscript",
+        "p4-cr-lighting-2"
+      ],
+      "human": true,
+      "run_id": null,
+      "outputs": [],
+      "gate": "G4",
+      "note": "checkpoint: H2-美术风格锁定; 2026-09-23 用户签字(approval ba96732d) → PASS_WITH_WAIVER,7 项 major 全部逐条豁免+follow_up;runs/g4/gate.json"
+    },
+    {
+      "id": "p5-episode-plan",
+      "agent": "01-story/episode-planner",
+      "state": "passed",
+      "depends_on": [
+        "g3"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "story/episode_plan.json"
+      ],
+      "gate": null,
+      "note": "9 集约 66.5 分钟;verify_episode_plan ALL PASS;43 dramatize/10 merge/1 mention/0 cut"
+    },
+    {
+      "id": "p5-screenplay",
+      "agent": "01-story/screenplay",
+      "state": "template",
+      "depends_on": [
+        "p5-episode-plan"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "story/episodes/{ep}/screenplay.md"
+      ],
+      "gate": null,
+      "note": "for_each: episode —— 试点集 ep01 已展开;ep02-ep09 待 ep01 过 G5/H3 后批量展开"
+    },
+    {
+      "id": "p5-dialogue",
+      "agent": "01-story/dialogue-rewrite",
+      "state": "template",
+      "depends_on": [
+        "p5-screenplay"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [],
+      "gate": null,
+      "note": "for_each: episode —— 试点集 ep01 已展开;ep02-ep09 待 ep01 过 G5/H3 后批量展开"
+    },
+    {
+      "id": "p5-narration",
+      "agent": "01-story/narration",
+      "state": "skipped",
+      "depends_on": [
+        "p5-dialogue"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "story/episodes/{ep}/narration.md"
+      ],
+      "gate": null,
+      "note": "skip_reason: 旁白关闭(用户设定全片无旁白)"
+    },
+    {
+      "id": "p5-hooks",
+      "agent": "01-story/hook",
+      "state": "template",
+      "depends_on": [
+        "p5-dialogue"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "story/episodes/{ep}/hooks.json"
+      ],
+      "gate": null,
+      "note": "for_each: episode —— 试点集 ep01 已展开;ep02-ep09 待 ep01 过 G5/H3 后批量展开"
+    },
+    {
+      "id": "p5-pacing",
+      "agent": "01-story/pacing",
+      "state": "template",
+      "depends_on": [
+        "p5-hooks"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "story/episodes/{ep}/pacing.json"
+      ],
+      "gate": null,
+      "note": "for_each: episode —— 试点集 ep01 已展开;ep02-ep09 待 ep01 过 G5/H3 后批量展开"
+    },
+    {
+      "id": "p5-breakdown",
+      "agent": "01-story/timeline-story",
+      "state": "template",
+      "depends_on": [
+        "p5-pacing"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "story/episodes/{ep}/script_breakdown.json"
+      ],
+      "gate": null,
+      "note": "for_each: episode —— 试点集 ep01 已展开;ep02-ep09 待 ep01 过 G5/H3 后批量展开"
+    },
+    {
+      "id": "p5-screenplay-ep01",
+      "agent": "01-story/screenplay",
+      "state": "passed",
+      "depends_on": [
+        "p5-episode-plan"
+      ],
+      "human": false,
+      "run_id": "b363bbbe0939",
+      "outputs": [
+        "story/episodes/ep01/screenplay.md"
+      ],
+      "gate": null,
+      "note": "10 场 550s/540s;两项机检 PASS;2 处待 H3 裁决"
+    },
+    {
+      "id": "p5-dialogue-ep01",
+      "agent": "01-story/dialogue-rewrite",
+      "state": "passed",
+      "depends_on": [
+        "p5-screenplay-ep01"
+      ],
+      "human": false,
+      "run_id": "b8f6da483a34",
+      "outputs": [
+        "story/episodes/ep01/screenplay.md"
+      ],
+      "gate": null,
+      "note": "34 句;命中率≥96.7%;dialogue_fit 剧本层 PASS"
+    },
+    {
+      "id": "p5-hooks-ep01",
+      "agent": "01-story/hook",
+      "state": "passed",
+      "depends_on": [
+        "p5-dialogue-ep01"
+      ],
+      "human": false,
+      "run_id": "1379c17dbeec",
+      "outputs": [
+        "story/episodes/ep01/hooks.json"
+      ],
+      "gate": null,
+      "note": "开场 3 选(推荐 oh-1 坠落闪前)/结尾 3 选(推荐 ec-2 水中尾迹);待 H3 挑选"
+    },
+    {
+      "id": "p5-pacing-ep01",
+      "agent": "01-story/pacing",
+      "state": "passed",
+      "depends_on": [
+        "p5-hooks-ep01",
+        "p4-color-script"
+      ],
+      "human": false,
+      "run_id": "6aae82e0a5e9",
+      "outputs": [
+        "story/episodes/ep01/pacing.json"
+      ],
+      "gate": null,
+      "note": "537s/540s;S08 扇子-缩小因果须画面呈现(交 shot-planning);LN-029 转 DEF-p5-dialogue-ep01-001"
+    },
+    {
+      "id": "p5-colorscript-fix-ep01",
+      "agent": "06-art/color-script",
+      "state": "passed",
+      "depends_on": [
+        "p5-pacing-ep01"
+      ],
+      "human": false,
+      "run_id": "3dccecb48b7f",
+      "outputs": [
+        "bible/color_script.json"
+      ],
+      "gate": null,
+      "note": "方案(a):act5 允许水面烛光反光,--strict OK"
+    },
+    {
+      "id": "p5-dialogue-ep01-fix",
+      "agent": "01-story/dialogue-rewrite",
+      "state": "passed",
+      "depends_on": [
+        "p5-pacing-ep01"
+      ],
+      "human": false,
+      "run_id": "083b3fdc8ba4",
+      "outputs": [
+        "story/episodes/ep01/screenplay.md"
+      ],
+      "gate": null,
+      "note": "LN-029 加原著引子;剧本 v3;fit PASS"
+    },
+    {
+      "id": "p5-breakdown-ep01",
+      "agent": "01-story/timeline-story",
+      "state": "passed",
+      "depends_on": [
+        "p5-pacing-ep01",
+        "p5-dialogue-ep01-fix"
+      ],
+      "human": false,
+      "run_id": "7e0b570f8085",
+      "outputs": [
+        "story/episodes/ep01/script_breakdown.json"
+      ],
+      "gate": null,
+      "note": "script_breakdown_ok PASS;注:pacing S10 对白估时 16.4→18.8s 过时(总时长仍在预算内)"
+    },
+    {
+      "id": "g5",
+      "agent": null,
+      "state": "pending",
+      "depends_on": [
+        "p5-breakdown"
+      ],
+      "human": true,
+      "run_id": null,
+      "outputs": [],
+      "gate": "G5",
+      "note": "checkpoint: H3-第1集剧本确认; ep01 实例 g5-ep01 已展开"
+    },
+    {
+      "id": "g5-ep01",
+      "agent": null,
+      "state": "passed",
+      "depends_on": [
+        "p5-breakdown-ep01",
+        "p4-cr-screenplay-ep01",
+        "p4-cr-hooks-ep01",
+        "p4-cr-pacing-ep01",
+        "p4-cr-breakdown-ep01",
+        "p4-cr-epplan",
+        "p4-cr-screenplay-ep01-2",
+        "p4-cr-breakdown-ep01-2"
+      ],
+      "human": true,
+      "run_id": null,
+      "outputs": [],
+      "gate": "G5",
+      "note": "checkpoint: H3-剧本确认(试点集 ep01); 2026-09-22T23:53 H3 签字单用户点「暂缓」,待剧本预览页/聊天意见; 2026-09-23 用户签字 H3(ep01)"
+    },
+    {
+      "id": "p6-plan",
+      "agent": "07-directing/director",
+      "state": "template",
+      "depends_on": [
+        "g4",
+        "g5"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "directing/{ep}/directing_plan.md"
+      ],
+      "gate": null,
+      "note": "for_each: episode —— 待上游清单产出后展开为实例节点"
+    },
+    {
+      "id": "p6-storyboard",
+      "agent": "07-directing/storyboard",
+      "state": "template",
+      "depends_on": [
+        "p6-plan"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "directing/{ep}/storyboard.json"
+      ],
+      "gate": null,
+      "note": "for_each: episode —— 待上游清单产出后展开为实例节点"
+    },
+    {
+      "id": "g6s",
+      "agent": null,
+      "state": "template",
+      "depends_on": [
+        "p6-storyboard"
+      ],
+      "human": true,
+      "run_id": null,
+      "outputs": [],
+      "gate": "G6S",
+      "note": "checkpoint: H3S-故事板确认; 逐集闸门模板 —— 随所在阶段按 episode/group 展开为 gX-epNN 实例"
+    },
+    {
+      "id": "p6-shots",
+      "agent": "07-directing/shot-planning",
+      "state": "template",
+      "depends_on": [
+        "g6s"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "directing/{ep}/shot_list.json"
+      ],
+      "gate": null,
+      "note": "for_each: episode —— 待上游清单产出后展开为实例节点"
+    },
+    {
+      "id": "p6-dialogue-fit",
+      "agent": "01-story/dialogue-rewrite",
+      "state": "template",
+      "depends_on": [
+        "p6-shots"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "directing/{ep}/dialogue_fit.json",
+        "story/episodes/{ep}/screenplay.md",
+        "story/episodes/{ep}/dialogue.md",
+        "directing/{ep}/shot_list.json"
+      ],
+      "gate": null,
+      "note": "for_each: episode —— 待上游清单产出后展开为实例节点"
+    },
+    {
+      "id": "p6-camera",
+      "agent": "07-directing/camera-movement",
+      "state": "template",
+      "depends_on": [
+        "p6-shots"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "directing/{ep}/shots/{shot}/camera.json"
+      ],
+      "gate": null,
+      "note": "for_each: shot —— 待上游清单产出后展开为实例节点"
+    },
+    {
+      "id": "p6-composition",
+      "agent": "07-directing/composition",
+      "state": "template",
+      "depends_on": [
+        "p6-shots"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "directing/{ep}/shots/{shot}/composition.json"
+      ],
+      "gate": null,
+      "note": "for_each: shot —— 待上游清单产出后展开为实例节点"
+    },
+    {
+      "id": "p6-cinematography",
+      "agent": "07-directing/cinematography",
+      "state": "template",
+      "depends_on": [
+        "p6-plan"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "directing/{ep}/cinematography.json"
+      ],
+      "gate": null,
+      "note": "for_each: episode —— 待上游清单产出后展开为实例节点"
+    },
+    {
+      "id": "p6-blocking",
+      "agent": "07-directing/blocking",
+      "state": "template",
+      "depends_on": [
+        "p6-shots",
+        "p6-dialogue-fit"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "directing/{ep}/shots/{shot}/blocking.json"
+      ],
+      "gate": null,
+      "note": "for_each: shot —— 待上游清单产出后展开为实例节点"
+    },
+    {
+      "id": "p6-continuity",
+      "agent": "07-directing/continuity-planning",
+      "state": "template",
+      "depends_on": [
+        "p6-camera",
+        "p6-composition",
+        "p6-blocking"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "directing/{ep}/continuity_plan.json"
+      ],
+      "gate": null,
+      "note": "for_each: episode —— 待上游清单产出后展开为实例节点"
+    },
+    {
+      "id": "p6-whitebox",
+      "agent": "07-directing/whitebox-staging",
+      "state": "template",
+      "depends_on": [
+        "p4-scene-model",
+        "p6-shots",
+        "p6-camera",
+        "p6-blocking",
+        "p6-continuity"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "directing/{ep}/whitebox_plans/",
+        "directing/{ep}/whitebox/episode.json"
+      ],
+      "gate": null,
+      "note": "for_each: episode —— 待上游清单产出后展开为实例节点; condition: whitebox_requested=true(人物精确空间位置开启)"
+    },
+    {
+      "id": "g6w",
+      "agent": null,
+      "state": "template",
+      "depends_on": [
+        "p6-whitebox"
+      ],
+      "human": true,
+      "run_id": null,
+      "outputs": [],
+      "gate": "G6W",
+      "note": "checkpoint: H3W-白模确认; condition: whitebox_requested=true(人物精确空间位置开启); 逐集闸门模板 —— 随所在阶段按 episode/group 展开为 gX-epNN 实例"
+    },
+    {
+      "id": "p6-whitebox-export",
+      "agent": "07-directing/whitebox-staging",
+      "state": "template",
+      "depends_on": [
+        "g6w"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "assets/whitebox/{ep}/"
+      ],
+      "gate": null,
+      "note": "for_each: episode —— 待上游清单产出后展开为实例节点; condition: whitebox_requested=true(人物精确空间位置开启)"
+    },
+    {
+      "id": "p6-shot-plates",
+      "agent": "08-video-gen/shot-plates",
+      "state": "template",
+      "depends_on": [
+        "p6-whitebox-export"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "directing/{ep}/shot_plates.json"
+      ],
+      "gate": null,
+      "note": "for_each: episode —— 待上游清单产出后展开为实例节点; condition: whitebox_requested=true(人物精确空间位置开启)"
+    },
+    {
+      "id": "p6-scene-plates",
+      "agent": "06-art/environment-concept",
+      "state": "skipped",
+      "depends_on": [
+        "p6-shots",
+        "p6-camera"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "assets/concepts/scenes/{id}/scene_plates.json"
+      ],
+      "gate": null,
+      "note": "skip_reason: 白模开启(spatial_blocking=true),场景正反向图 A 方案不实例化"
+    },
+    {
+      "id": "p6-concept-audit",
+      "agent": "06-art/art-director",
+      "state": "template",
+      "depends_on": [
+        "p6-shots"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "directing/{ep}/concept_coverage.json"
+      ],
+      "gate": null,
+      "note": "for_each: episode —— 待上游清单产出后展开为实例节点"
+    },
+    {
+      "id": "g6",
+      "agent": null,
+      "state": "template",
+      "depends_on": [
+        "p6-continuity",
+        "p6-cinematography",
+        "p6-concept-audit",
+        "p6-dialogue-fit",
+        "p6-shot-plates"
+      ],
+      "human": true,
+      "run_id": null,
+      "outputs": [],
+      "gate": "G6",
+      "note": "checkpoint: H3A-分镜确认; 逐集闸门模板 —— 随所在阶段按 episode/group 展开为 gX-epNN 实例"
+    },
+    {
+      "id": "p7-prompt",
+      "agent": "08-video-gen/prompt",
+      "state": "template",
+      "depends_on": [
+        "p8-sfx-cues",
+        "p8-ambience-cues"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "assets/prompts/{ep}/{group}.json"
+      ],
+      "gate": null,
+      "note": "for_each: group —— 待上游清单产出后展开为实例节点 | 2026-09-23 设置变更:项目技能 08-video-gen/prompt/performance-direction 已勾选(override=true)。展开实例并派单时,instruction 必须同时写明两项生效技能:sd20-pe(settings.json#prompt_skill.effective,H3A 冻结)+ performance-direction(仅对 audio_plan=dialogue 组或 director/pacing 标记的情绪峰值场适用,不适用的组登记 skipped 并写原因),并要求用 skill_report.py 逐组登记 running/completed。"
+    },
+    {
+      "id": "p7-image",
+      "agent": "08-video-gen/image-generation",
+      "state": "template",
+      "depends_on": [
+        "p7-prompt"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "assets/keyframes/{ep}/{group}/"
+      ],
+      "gate": null,
+      "note": "for_each: group —— 待上游清单产出后展开为实例节点"
+    },
+    {
+      "id": "p7-consistency",
+      "agent": "08-video-gen/character-consistency",
+      "state": "template",
+      "depends_on": [
+        "p7-image"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [],
+      "gate": null,
+      "note": "for_each: group —— 待上游清单产出后展开为实例节点"
+    },
+    {
+      "id": "p7-video",
+      "agent": "08-video-gen/video-generation",
+      "state": "template",
+      "depends_on": [
+        "p7-consistency",
+        "p8-voiceprints"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "assets/clips/{ep}/{group}.mp4",
+        "assets/clips/{ep}/{group}.meta.json"
+      ],
+      "gate": null,
+      "note": "for_each: group —— 待上游清单产出后展开为实例节点; 长镜头关闭:去掉 p7-video@prev_group 组间依赖"
+    },
+    {
+      "id": "p7-dub",
+      "agent": "09-audio/voice-generation",
+      "state": "skipped",
+      "depends_on": [
+        "p7-video"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "assets/audio/voice/{ep}/dub/{group}/dub_manifest.json",
+        "assets/clips/{ep}/{group}.mp4"
+      ],
+      "gate": null,
+      "note": "skip_reason: 对白配音=视频原声(native),不派 p7-dub"
+    },
+    {
+      "id": "p7-lipsync",
+      "agent": "08-video-gen/lip-sync",
+      "state": "template",
+      "depends_on": [
+        "p7-video"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [],
+      "gate": null,
+      "note": "for_each: group —— 待上游清单产出后展开为实例节点"
+    },
+    {
+      "id": "p7-animation",
+      "agent": "08-video-gen/animation",
+      "state": "template",
+      "depends_on": [
+        "p7-video"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [],
+      "gate": null,
+      "note": "for_each: group —— 待上游清单产出后展开为实例节点"
+    },
+    {
+      "id": "p7-upscale",
+      "agent": "08-video-gen/upscale",
+      "state": "template",
+      "depends_on": [
+        "p7-lipsync",
+        "p7-animation"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [],
+      "gate": null,
+      "note": "for_each: group —— 待上游清单产出后展开为实例节点"
+    },
+    {
+      "id": "g7",
+      "agent": null,
+      "state": "template",
+      "depends_on": [
+        "p7-upscale"
+      ],
+      "human": true,
+      "run_id": null,
+      "outputs": [],
+      "gate": "G7",
+      "note": "checkpoint: H3B-视觉生成确认; 逐集闸门模板 —— 随所在阶段按 episode/group 展开为 gX-epNN 实例"
+    },
+    {
+      "id": "p8-sfx-cues",
+      "agent": "09-audio/sound-effect",
+      "state": "template",
+      "depends_on": [
+        "g5",
+        "g6"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "assets/audio/sfx/{ep}/audio_cues.json"
+      ],
+      "gate": null,
+      "note": "for_each: episode —— 待上游清单产出后展开为实例节点"
+    },
+    {
+      "id": "p8-ambience-cues",
+      "agent": "09-audio/ambience",
+      "state": "template",
+      "depends_on": [
+        "g5",
+        "g6"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "assets/audio/ambience/{ep}/ambience_cues.json"
+      ],
+      "gate": null,
+      "note": "for_each: episode —— 待上游清单产出后展开为实例节点"
+    },
+    {
+      "id": "p8-voiceprints",
+      "agent": "09-audio/voice-generation",
+      "state": "template",
+      "depends_on": [
+        "g5",
+        "g6"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "assets/audio/voice/{ep}/lines/",
+        "assets/audio/voice/{ep}/refs/manifest.json"
+      ],
+      "gate": null,
+      "note": "for_each: episode —— 待上游清单产出后展开为实例节点; 项目级选角与样本已由 p3-voice-cast 完成"
+    },
+    {
+      "id": "p8-narrator",
+      "agent": "09-audio/narrator",
+      "state": "skipped",
+      "depends_on": [
+        "g5",
+        "g6"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "assets/audio/narration/{ep}/"
+      ],
+      "gate": null,
+      "note": "skip_reason: 旁白关闭(用户设定全片无旁白)"
+    },
+    {
+      "id": "p8-music",
+      "agent": "09-audio/music",
+      "state": "template",
+      "depends_on": [
+        "g5",
+        "g6"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "assets/audio/bgm/{ep}/"
+      ],
+      "gate": null,
+      "note": "for_each: episode —— 待上游清单产出后展开为实例节点"
+    },
+    {
+      "id": "p8-mix",
+      "agent": "09-audio/audio-mixing",
+      "state": "template",
+      "depends_on": [
+        "p7-video",
+        "p8-music"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "assets/audio/final/{ep}.wav"
+      ],
+      "gate": null,
+      "note": "for_each: episode —— 待上游清单产出后展开为实例节点"
+    },
+    {
+      "id": "g8",
+      "agent": null,
+      "state": "template",
+      "depends_on": [
+        "p8-mix"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [],
+      "gate": "G8",
+      "note": "逐集闸门模板 —— 随所在阶段按 episode/group 展开为 gX-epNN 实例"
+    },
+    {
+      "id": "p9-edit",
+      "agent": "10-editing/edit",
+      "state": "template",
+      "depends_on": [
+        "g7",
+        "g8"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "edit/{ep}/timeline.json",
+        "edit/{ep}/cut_v1.mp4"
+      ],
+      "gate": null,
+      "note": "for_each: episode —— 待上游清单产出后展开为实例节点"
+    },
+    {
+      "id": "p9-transition",
+      "agent": "10-editing/transition",
+      "state": "template",
+      "depends_on": [
+        "p9-edit"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "edit/{ep}/transitions_render.json"
+      ],
+      "gate": null,
+      "note": "for_each: episode —— 待上游清单产出后展开为实例节点"
+    },
+    {
+      "id": "p9-subtitle",
+      "agent": "10-editing/subtitle",
+      "state": "template",
+      "depends_on": [
+        "p9-transition"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "edit/{ep}/subtitles.srt"
+      ],
+      "gate": null,
+      "note": "for_each: episode —— 待上游清单产出后展开为实例节点"
+    },
+    {
+      "id": "p9-caption",
+      "agent": "10-editing/caption",
+      "state": "skipped",
+      "depends_on": [
+        "p9-transition",
+        "p9-subtitle"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "edit/{ep}/captions.json"
+      ],
+      "gate": null,
+      "note": "skip_reason: 花字关闭"
+    },
+    {
+      "id": "p9-caption-render",
+      "agent": "10-editing/caption",
+      "state": "skipped",
+      "depends_on": [],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "assets/clips_caption/{ep}/"
+      ],
+      "gate": null,
+      "note": "skip_reason: 花字关闭"
+    },
+    {
+      "id": "p9-caption-final",
+      "agent": "10-editing/edit",
+      "state": "skipped",
+      "depends_on": [
+        "p9-title"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "edit/{ep}/final_caption.mp4",
+        "edit/{ep}/caption_sfx.m4a"
+      ],
+      "gate": null,
+      "note": "skip_reason: 花字关闭"
+    },
+    {
+      "id": "p9-title",
+      "agent": "10-editing/title",
+      "state": "template",
+      "depends_on": [
+        "p9-edit"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "edit/{ep}/intro_outro/"
+      ],
+      "gate": null,
+      "note": "for_each: episode —— 待上游清单产出后展开为实例节点"
+    },
+    {
+      "id": "p9-thumbnail",
+      "agent": "10-editing/thumbnail",
+      "state": "template",
+      "depends_on": [
+        "p9-edit"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "edit/{ep}/thumbnail_A.png",
+        "edit/{ep}/thumbnail_B.png"
+      ],
+      "gate": null,
+      "note": "for_each: episode —— 待上游清单产出后展开为实例节点"
+    },
+    {
+      "id": "p9-grade-plan",
+      "agent": "10-editing/grade-planner",
+      "state": "template",
+      "depends_on": [
+        "p9-transition"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "edit/{ep}/post_plan.json"
+      ],
+      "gate": null,
+      "note": "for_each: episode —— 待上游清单产出后展开为实例节点"
+    },
+    {
+      "id": "g9p",
+      "agent": null,
+      "state": "template",
+      "depends_on": [
+        "p9-subtitle",
+        "p9-grade-plan"
+      ],
+      "human": true,
+      "run_id": null,
+      "outputs": [],
+      "gate": "G9P",
+      "note": "checkpoint: H3P-后期确认; 逐集闸门模板 —— 随所在阶段按 episode/group 展开为 gX-epNN 实例"
+    },
+    {
+      "id": "p9-post",
+      "agent": "10-editing/post-finishing",
+      "state": "template",
+      "depends_on": [
+        "g9p"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "edit/{ep}/cut_post.mp4",
+        "edit/{ep}/final.mp4",
+        "edit/{ep}/post_check.json"
+      ],
+      "gate": null,
+      "note": "for_each: episode —— 待上游清单产出后展开为实例节点"
+    },
+    {
+      "id": "g9",
+      "agent": null,
+      "state": "template",
+      "depends_on": [
+        "p9-subtitle",
+        "p9-title",
+        "p9-thumbnail",
+        "g9p",
+        "p9-post"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [],
+      "gate": "G9",
+      "note": "checkpoint: H4-首集成片确认; 逐集闸门模板 —— 随所在阶段按 episode/group 展开为 gX-epNN 实例"
+    },
+    {
+      "id": "p10-logic",
+      "agent": "11-qa/logic-qa",
+      "state": "skipped",
+      "depends_on": [
+        "g9"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "qa/reports/{ep}/logic.json"
+      ],
+      "gate": null,
+      "note": "skip_reason: 该维度审核力度=0,不派 QA 单(闸门按通过处理)"
+    },
+    {
+      "id": "p10-consistency",
+      "agent": "11-qa/character-consistency-qa",
+      "state": "skipped",
+      "depends_on": [
+        "g9"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "qa/reports/{ep}/consistency.json"
+      ],
+      "gate": null,
+      "note": "skip_reason: 该维度审核力度=0,不派 QA 单(闸门按通过处理)"
+    },
+    {
+      "id": "p10-timeline",
+      "agent": "11-qa/timeline-qa",
+      "state": "skipped",
+      "depends_on": [
+        "g9"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "qa/reports/{ep}/timeline.json"
+      ],
+      "gate": null,
+      "note": "skip_reason: 该维度审核力度=0,不派 QA 单(闸门按通过处理)"
+    },
+    {
+      "id": "p10-world",
+      "agent": "11-qa/world-consistency-qa",
+      "state": "skipped",
+      "depends_on": [
+        "g9"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "qa/reports/{ep}/world.json"
+      ],
+      "gate": null,
+      "note": "skip_reason: 该维度审核力度=0,不派 QA 单(闸门按通过处理)"
+    },
+    {
+      "id": "p10-visual",
+      "agent": "11-qa/visual-qa",
+      "state": "skipped",
+      "depends_on": [
+        "g9"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "qa/reports/{ep}/visual.json"
+      ],
+      "gate": null,
+      "note": "skip_reason: 该维度审核力度=0,不派 QA 单(闸门按通过处理)"
+    },
+    {
+      "id": "p10-audio",
+      "agent": "11-qa/audio-qa",
+      "state": "skipped",
+      "depends_on": [
+        "g9"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "qa/reports/{ep}/audio.json"
+      ],
+      "gate": null,
+      "note": "skip_reason: 该维度审核力度=0,不派 QA 单(闸门按通过处理)"
+    },
+    {
+      "id": "p10-safety",
+      "agent": "11-qa/content-safety",
+      "state": "skipped",
+      "depends_on": [
+        "g9"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "qa/reports/{ep}/safety.json"
+      ],
+      "gate": null,
+      "note": "skip_reason: 该维度审核力度=0,不派 QA 单(闸门按通过处理)"
+    },
+    {
+      "id": "p10-copyright",
+      "agent": "11-qa/copyright",
+      "state": "skipped",
+      "depends_on": [
+        "g9"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "qa/reports/{ep}/copyright.json"
+      ],
+      "gate": null,
+      "note": "skip_reason: 该维度审核力度=0,不派 QA 单(闸门按通过处理)"
+    },
+    {
+      "id": "g10",
+      "agent": null,
+      "state": "template",
+      "depends_on": [
+        "p10-logic",
+        "p10-consistency",
+        "p10-timeline",
+        "p10-world",
+        "p10-visual",
+        "p10-audio",
+        "p10-safety",
+        "p10-copyright"
+      ],
+      "human": true,
+      "run_id": null,
+      "outputs": [],
+      "gate": "G10",
+      "note": "checkpoint: H5-发布签字; 逐集闸门模板 —— 随所在阶段按 episode/group 展开为 gX-epNN 实例"
+    },
+    {
+      "id": "p11-adapt",
+      "agent": "12-publishing/platform-adapter",
+      "state": "template",
+      "depends_on": [
+        "g10"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "publish/{platform}/"
+      ],
+      "gate": null,
+      "note": "for_each: platform —— 待上游清单产出后展开为实例节点"
+    },
+    {
+      "id": "p11-seo",
+      "agent": "12-publishing/seo",
+      "state": "pending",
+      "depends_on": [
+        "p11-adapt"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "publish/seo.json"
+      ],
+      "gate": null,
+      "note": ""
+    },
+    {
+      "id": "p11-meta",
+      "agent": "12-publishing/metadata",
+      "state": "pending",
+      "depends_on": [
+        "p11-adapt"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "publish/metadata.json"
+      ],
+      "gate": null,
+      "note": ""
+    },
+    {
+      "id": "p11-publish",
+      "agent": "12-publishing/publisher",
+      "state": "pending",
+      "depends_on": [
+        "p11-seo",
+        "p11-meta"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "publish/receipts/"
+      ],
+      "gate": null,
+      "note": ""
+    },
+    {
+      "id": "p4-cr-cgi-mucha-bible",
+      "agent": "00-orchestration/memory-bible",
+      "state": "passed",
+      "depends_on": [
+        "p4-style"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "bible/"
+      ],
+      "gate": null,
+      "note": "BIB-0027 用户裁决:会说话角色用CGI动物、环境加穆夏风格(DEF-p4-style-001)"
+    },
+    {
+      "id": "p4-cr-style",
+      "agent": "06-art/art-director",
+      "state": "passed",
+      "depends_on": [
+        "p4-cr-cgi-mucha-bible"
+      ],
+      "human": false,
+      "run_id": "38526e35406d",
+      "outputs": [
+        "bible/style.json"
+      ],
+      "gate": null,
+      "note": "BIB-0027 变更单,只改受影响字段"
+    },
+    {
+      "id": "p4-cr-charindex",
+      "agent": "03-characters/character-manager",
+      "state": "passed",
+      "depends_on": [
+        "p4-cr-cgi-mucha-bible"
+      ],
+      "human": false,
+      "run_id": "687e0f4148f3",
+      "outputs": [
+        "bible/characters/index.json",
+        "bible/characters/relationship.json"
+      ],
+      "gate": null,
+      "note": "BIB-0027 变更单,只改受影响字段"
+    },
+    {
+      "id": "p4-cr-appearance",
+      "agent": "03-characters/appearance",
+      "state": "passed",
+      "depends_on": [
+        "p4-cr-cgi-mucha-bible"
+      ],
+      "human": false,
+      "run_id": "07aefbc3e932",
+      "outputs": [
+        "bible/characters/CHAR-white-rabbit/appearance.json",
+        "bible/characters/CHAR-mouse/appearance.json",
+        "bible/characters/CHAR-dodo/appearance.json",
+        "bible/characters/CHAR-duck/appearance.json",
+        "bible/characters/CHAR-lory/appearance.json",
+        "bible/characters/CHAR-eaglet/appearance.json",
+        "bible/characters/CHAR-magpie/appearance.json",
+        "bible/characters/CHAR-canary/appearance.json",
+        "bible/characters/CHAR-caucus-race-party-ensemble/appearance.json",
+        "bible/characters/CHAR-caterpillar/appearance.json",
+        "bible/characters/CHAR-bill-the-lizard/appearance.json",
+        "bible/characters/CHAR-pigeon/appearance.json",
+        "bible/characters/CHAR-cheshire-cat/appearance.json",
+        "bible/characters/CHAR-march-hare/appearance.json",
+        "bible/characters/CHAR-dormouse/appearance.json",
+        "bible/characters/CHAR-gryphon/appearance.json",
+        "bible/characters/CHAR-mock-turtle/appearance.json",
+        "bible/characters/CHAR-old-crab/appearance.json",
+        "bible/characters/CHAR-young-crab/appearance.json",
+        "bible/characters/CHAR-frog-footman/appearance.json",
+        "bible/characters/CHAR-fish-footman/appearance.json",
+        "bible/characters/CHAR-jury-ensemble/appearance.json",
+        "bible/characters/CHAR-crowd-ensemble/appearance.json",
+        "bible/characters/CHAR-duchess-baby/appearance.json"
+      ],
+      "gate": null,
+      "note": "BIB-0027 变更单,只改受影响字段"
+    },
+    {
+      "id": "p4-cr-personality",
+      "agent": "03-characters/personality",
+      "state": "passed",
+      "depends_on": [
+        "p4-cr-cgi-mucha-bible"
+      ],
+      "human": false,
+      "run_id": "89b57e20aafa",
+      "outputs": [
+        "bible/characters/CHAR-white-rabbit/personality.json",
+        "bible/characters/CHAR-mouse/personality.json",
+        "bible/characters/CHAR-dodo/personality.json",
+        "bible/characters/CHAR-bill-the-lizard/personality.json",
+        "bible/characters/CHAR-pigeon/personality.json",
+        "bible/characters/CHAR-cheshire-cat/personality.json",
+        "bible/characters/CHAR-march-hare/personality.json",
+        "bible/characters/CHAR-dormouse/personality.json",
+        "bible/characters/CHAR-gryphon/personality.json",
+        "bible/characters/CHAR-mock-turtle/personality.json"
+      ],
+      "gate": null,
+      "note": "BIB-0027 变更单,只改受影响字段"
+    },
+    {
+      "id": "p4-cr-dialoguestyle",
+      "agent": "03-characters/dialogue-style",
+      "state": "passed",
+      "depends_on": [
+        "p4-cr-cgi-mucha-bible"
+      ],
+      "human": false,
+      "run_id": "9844ca83049f",
+      "outputs": [
+        "bible/characters/CHAR-white-rabbit/dialogue_style.json",
+        "bible/characters/CHAR-mouse/dialogue_style.json",
+        "bible/characters/CHAR-dodo/dialogue_style.json",
+        "bible/characters/CHAR-caterpillar/dialogue_style.json",
+        "bible/characters/CHAR-bill-the-lizard/dialogue_style.json",
+        "bible/characters/CHAR-pigeon/dialogue_style.json",
+        "bible/characters/CHAR-cheshire-cat/dialogue_style.json",
+        "bible/characters/CHAR-gryphon/dialogue_style.json",
+        "bible/characters/CHAR-mock-turtle/dialogue_style.json"
+      ],
+      "gate": null,
+      "note": "BIB-0027 变更单,只改受影响字段"
+    },
+    {
+      "id": "p4-cr-voice",
+      "agent": "03-characters/voiceprint",
+      "state": "passed",
+      "depends_on": [
+        "p4-cr-cgi-mucha-bible"
+      ],
+      "human": false,
+      "run_id": "704f721e1cee",
+      "outputs": [
+        "bible/characters/CHAR-frog-footman/voice.json"
+      ],
+      "gate": null,
+      "note": "BIB-0027 变更单,只改受影响字段"
+    },
+    {
+      "id": "p4-cr-creature",
+      "agent": "04-creatures/creature",
+      "state": "passed",
+      "depends_on": [
+        "p4-cr-cgi-mucha-bible"
+      ],
+      "human": false,
+      "run_id": "1cc6a51f4292",
+      "outputs": [
+        "bible/creatures/creature.json",
+        "bible/creatures/index.json"
+      ],
+      "gate": null,
+      "note": "BIB-0027 变更单,只改受影响字段"
+    },
+    {
+      "id": "p4-cr-mount",
+      "agent": "04-creatures/mount",
+      "state": "passed",
+      "depends_on": [
+        "p4-cr-cgi-mucha-bible"
+      ],
+      "human": false,
+      "run_id": "2a32663dd9f4",
+      "outputs": [
+        "bible/creatures/mount.json"
+      ],
+      "gate": null,
+      "note": "BIB-0027 变更单,只改受影响字段"
+    },
+    {
+      "id": "p4-cr-costume",
+      "agent": "06-art/costume",
+      "state": "passed",
+      "depends_on": [
+        "p4-cr-cgi-mucha-bible"
+      ],
+      "human": false,
+      "run_id": "77ce45a9ba5a",
+      "outputs": [
+        "bible/costumes.json"
+      ],
+      "gate": null,
+      "note": "BIB-0027 变更单,只改受影响字段"
+    },
+    {
+      "id": "p4-cr-architecture",
+      "agent": "05-scenes/architecture",
+      "state": "passed",
+      "depends_on": [
+        "p4-cr-cgi-mucha-bible"
+      ],
+      "human": false,
+      "run_id": "b33439cad3d3",
+      "outputs": [
+        "bible/scenes/SCN-caterpillar-clearing/architecture.json",
+        "bible/scenes/SCN-cheshire-cat-path/architecture.json",
+        "bible/scenes/SCN-courtroom/architecture.json",
+        "bible/scenes/SCN-croquet-ground/architecture.json",
+        "bible/scenes/SCN-duchess-house-front/architecture.json",
+        "bible/scenes/SCN-duchess-kitchen/architecture.json",
+        "bible/scenes/SCN-falling-dream/architecture.json",
+        "bible/scenes/SCN-gryphon-sunning-spot/architecture.json",
+        "bible/scenes/SCN-little-door-passage/architecture.json",
+        "bible/scenes/SCN-long-hall/architecture.json",
+        "bible/scenes/SCN-mad-tea-party/architecture.json",
+        "bible/scenes/SCN-mock-turtle-ledge/architecture.json",
+        "bible/scenes/SCN-pigeon-treetop/architecture.json",
+        "bible/scenes/SCN-pool-bank/architecture.json",
+        "bible/scenes/SCN-pool-of-tears/architecture.json",
+        "bible/scenes/SCN-rabbit-house-exterior/architecture.json",
+        "bible/scenes/SCN-rabbit-house-upstairs-room/architecture.json",
+        "bible/scenes/SCN-rose-tree-yard/architecture.json",
+        "bible/scenes/SCN-shaft-landing-passage/architecture.json",
+        "bible/scenes/SCN-wood-thistle-glade/architecture.json",
+        "bible/scenes/SCN-wood-tree-door/architecture.json"
+      ],
+      "gate": null,
+      "note": "BIB-0027 变更单,只改受影响字段"
+    },
+    {
+      "id": "p4-cr-environment",
+      "agent": "05-scenes/environment",
+      "state": "passed",
+      "depends_on": [
+        "p4-cr-cgi-mucha-bible"
+      ],
+      "human": false,
+      "run_id": "883cda2e7780",
+      "outputs": [
+        "bible/scenes/SCN-caterpillar-clearing/environment.json",
+        "bible/scenes/SCN-cheshire-cat-path/environment.json",
+        "bible/scenes/SCN-courtroom/environment.json",
+        "bible/scenes/SCN-croquet-ground/environment.json",
+        "bible/scenes/SCN-duchess-house-front/environment.json",
+        "bible/scenes/SCN-duchess-kitchen/environment.json",
+        "bible/scenes/SCN-falling-dream/environment.json",
+        "bible/scenes/SCN-gryphon-sunning-spot/environment.json",
+        "bible/scenes/SCN-little-door-passage/environment.json",
+        "bible/scenes/SCN-long-hall/environment.json",
+        "bible/scenes/SCN-mad-tea-party/environment.json",
+        "bible/scenes/SCN-mock-turtle-ledge/environment.json",
+        "bible/scenes/SCN-pigeon-treetop/environment.json",
+        "bible/scenes/SCN-pool-bank/environment.json",
+        "bible/scenes/SCN-pool-of-tears/environment.json",
+        "bible/scenes/SCN-rabbit-house-exterior/environment.json",
+        "bible/scenes/SCN-rabbit-house-upstairs-room/environment.json",
+        "bible/scenes/SCN-rose-tree-yard/environment.json",
+        "bible/scenes/SCN-shaft-landing-passage/environment.json",
+        "bible/scenes/SCN-wood-thistle-glade/environment.json",
+        "bible/scenes/SCN-wood-tree-door/environment.json"
+      ],
+      "gate": null,
+      "note": "BIB-0027 变更单,只改受影响字段"
+    },
+    {
+      "id": "p4-cr-lighting",
+      "agent": "05-scenes/lighting",
+      "state": "passed",
+      "depends_on": [
+        "p4-cr-cgi-mucha-bible"
+      ],
+      "human": false,
+      "run_id": "5f5e82252e42",
+      "outputs": [
+        "bible/scenes/SCN-caterpillar-clearing/lighting.json",
+        "bible/scenes/SCN-mock-turtle-ledge/lighting.json"
+      ],
+      "gate": null,
+      "note": "BIB-0027 变更单,只改受影响字段"
+    },
+    {
+      "id": "p4-cr-dictionary",
+      "agent": "02-worldbuilding/dictionary",
+      "state": "passed",
+      "depends_on": [
+        "p4-cr-cgi-mucha-bible"
+      ],
+      "human": false,
+      "run_id": "e8186bb8c9ff",
+      "outputs": [
+        "bible/dictionary.json"
+      ],
+      "gate": null,
+      "note": "BIB-0027 变更单,只改受影响字段"
+    },
+    {
+      "id": "p4-cr-epplan",
+      "agent": "01-story/episode-planner",
+      "state": "passed",
+      "depends_on": [
+        "p4-cr-cgi-mucha-bible"
+      ],
+      "human": false,
+      "run_id": "0470f9c1af76",
+      "outputs": [
+        "story/episode_plan.json"
+      ],
+      "gate": null,
+      "note": "BIB-0027 变更单,只改受影响字段"
+    },
+    {
+      "id": "p4-cr-screenplay-ep01",
+      "agent": "01-story/screenplay",
+      "state": "passed",
+      "depends_on": [
+        "p4-cr-cgi-mucha-bible"
+      ],
+      "human": false,
+      "run_id": "af4e172303e0",
+      "outputs": [
+        "story/episodes/ep01/screenplay.md"
+      ],
+      "gate": null,
+      "note": "BIB-0027 变更单,只改受影响字段"
+    },
+    {
+      "id": "p4-cr-hooks-ep01",
+      "agent": "01-story/hook",
+      "state": "passed",
+      "depends_on": [
+        "p4-cr-cgi-mucha-bible"
+      ],
+      "human": false,
+      "run_id": "3101c230ee56",
+      "outputs": [
+        "story/episodes/ep01/hooks.json"
+      ],
+      "gate": null,
+      "note": "BIB-0027 变更单,只改受影响字段"
+    },
+    {
+      "id": "p4-cr-pacing-ep01",
+      "agent": "01-story/pacing",
+      "state": "passed",
+      "depends_on": [
+        "p4-cr-cgi-mucha-bible"
+      ],
+      "human": false,
+      "run_id": "cca5767b012a",
+      "outputs": [
+        "story/episodes/ep01/pacing.json"
+      ],
+      "gate": null,
+      "note": "BIB-0027 变更单,只改受影响字段"
+    },
+    {
+      "id": "p4-cr-breakdown-ep01",
+      "agent": "01-story/timeline-story",
+      "state": "passed",
+      "depends_on": [
+        "p4-cr-cgi-mucha-bible"
+      ],
+      "human": false,
+      "run_id": "0e0e64fac3c8",
+      "outputs": [
+        "story/episodes/ep01/script_breakdown.json"
+      ],
+      "gate": null,
+      "note": "BIB-0027 变更单,只改受影响字段"
+    },
+    {
+      "id": "p4-cr-colorscript",
+      "agent": "06-art/color-script",
+      "state": "passed",
+      "depends_on": [
+        "p4-cr-style"
+      ],
+      "human": false,
+      "run_id": "4f6a9e136fb1",
+      "outputs": [
+        "bible/color_script.json"
+      ],
+      "gate": null,
+      "note": "BIB-0027:梦境调色吸收粉彩+金、去 performer 措辞"
+    },
+    {
+      "id": "p4-cr-lighting-2",
+      "agent": "05-scenes/lighting",
+      "state": "passed",
+      "depends_on": [
+        "p4-cr-architecture"
+      ],
+      "human": false,
+      "run_id": "10bfca0810a6",
+      "outputs": [
+        "bible/scenes/SCN-courtroom/lighting.json",
+        "bible/scenes/SCN-long-hall/lighting.json"
+      ],
+      "gate": null,
+      "note": "DEF-p4-cr-architecture-001 a/b"
+    },
+    {
+      "id": "p4-cr-screenplay-ep01-2",
+      "agent": "01-story/screenplay",
+      "state": "passed",
+      "depends_on": [
+        "p4-cr-screenplay-ep01",
+        "p4-cr-architecture",
+        "p4-cr-environment"
+      ],
+      "human": false,
+      "run_id": "687facfc9219",
+      "outputs": [
+        "story/episodes/ep01/screenplay.md"
+      ],
+      "gate": null,
+      "note": "DEF-p4-cr-screenplay-001 a/b"
+    },
+    {
+      "id": "p4-cr-breakdown-ep01-2",
+      "agent": "01-story/timeline-story",
+      "state": "passed",
+      "depends_on": [
+        "p4-cr-screenplay-ep01-2"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "story/episodes/ep01/script_breakdown.json"
+      ],
+      "gate": null,
+      "note": "S04/S05 动作文本逐字同步"
+    },
+    {
+      "id": "p6-plan-ep01",
+      "agent": "07-directing/director",
+      "state": "passed",
+      "depends_on": [
+        "g4",
+        "g5-ep01"
+      ],
+      "human": false,
+      "run_id": "b6c901c605ad",
+      "outputs": [
+        "directing/ep01/directing_plan.md"
+      ],
+      "gate": null,
+      "note": "directing_plan.md v1;转场清单 6 条(可渲染 1.4s);hooks oh-1/ec-2 标 PROVISIONAL,待 H3S 用户选定",
+      "attempt": 1
+    },
+    {
+      "id": "p6-storyboard-ep01",
+      "agent": "07-directing/storyboard",
+      "state": "passed",
+      "depends_on": [
+        "p6-plan-ep01"
+      ],
+      "human": false,
+      "run_id": "c6bc689f3d10",
+      "outputs": [
+        "directing/ep01/storyboard.json"
+      ],
+      "gate": null,
+      "note": "101 镜/37 组/537.0s;两项宿主机检总制片复跑 PASS;hooks oh-1+ec-2 标 provisional 待 H3S;开 DEF-p6-directing-ep01-001(长厅日光 vs 无窗,major,due G6)",
+      "attempt": 1
+    },
+    {
+      "id": "g6s-ep01",
+      "agent": null,
+      "state": "passed",
+      "depends_on": [
+        "p6-storyboard-ep01"
+      ],
+      "human": true,
+      "run_id": null,
+      "outputs": [],
+      "gate": "G6S",
+      "note": "H3S signed by user 2026-09-23T10:48+08:00; hook pair oh-1 + ec-2 confirmed; S08 rabbit-props staging accepted. See runs/g6s-ep01/gate.json"
+    },
+    {
+      "id": "p5-hooks-ep01-select",
+      "agent": "01-story/hook",
+      "state": "passed",
+      "depends_on": [
+        "g6s-ep01"
+      ],
+      "human": false,
+      "run_id": "b11256e26456",
+      "outputs": [
+        "story/episodes/ep01/hooks.json"
+      ],
+      "gate": null,
+      "note": "hooks.json status=selected, oh-1 + ec-2 recorded"
+    },
+    {
+      "id": "p6-shots-ep01",
+      "agent": "07-directing/shot-planning",
+      "state": "passed",
+      "depends_on": [
+        "g6s-ep01"
+      ],
+      "human": false,
+      "run_id": "7580b5ec2265",
+      "outputs": [
+        "directing/ep01/shot_list.json"
+      ],
+      "gate": null,
+      "note": "101 shots / 37 groups / 542.0s vs 540s budget (+0.37%). All 4 host checks re-verified by orchestrator. DEV-1 open for user disclosure: hook grp001 runs 4.0s not the 3s named at H3S (4s is the model floor MIN_GROUP_S) - carry into H3A card."
+    },
+    {
+      "id": "p6-dialogue-fit-ep01",
+      "agent": "01-story/dialogue-rewrite",
+      "state": "passed",
+      "depends_on": [
+        "p6-shots-ep01"
+      ],
+      "human": false,
+      "run_id": "9ca3eb48b730",
+      "outputs": [
+        "directing/ep01/dialogue_fit.json"
+      ],
+      "gate": null,
+      "note": "PASS no-op: 24 dialogue groups, 0 over, 0 tight, 34 lines 142.0s est vs 266.0s capacity. No text edited. Gate clear for blocking and H3A."
+    },
+    {
+      "id": "p6-camera-ep01",
+      "agent": "07-directing/camera-movement",
+      "state": "passed",
+      "depends_on": [
+        "p6-shots-ep01"
+      ],
+      "human": false,
+      "run_id": "910b71b8d7e6",
+      "outputs": [
+        "directing/ep01/shots/*/camera.json"
+      ],
+      "gate": null,
+      "note": "101/101 camera.json, check_camera_ep01.py PASS. DEV-CAM-1 disclosure: static/moving ratio 87/13 vs the plan note of ~70/30, resolved in favour of the plan licence list + locked per-shot constraints; carry into H3A card."
+    },
+    {
+      "id": "p6-composition-ep01",
+      "agent": "07-directing/composition",
+      "state": "passed",
+      "depends_on": [
+        "p6-shots-ep01"
+      ],
+      "human": false,
+      "run_id": "97a37600c4b4",
+      "outputs": [
+        "directing/ep01/shots/*/composition.json"
+      ],
+      "gate": null,
+      "note": "101/101 composition.json, 16:9, anchors in range, TR-03 match cut agreed on both sides."
+    },
+    {
+      "id": "p6-cinematography-ep01",
+      "agent": "07-directing/cinematography",
+      "state": "passed",
+      "depends_on": [
+        "p6-plan-ep01"
+      ],
+      "human": false,
+      "run_id": "1872a5945316",
+      "outputs": [
+        "directing/ep01/cinematography.json"
+      ],
+      "gate": null,
+      "note": "镜头语言规范 v1(封闭镜头组 28/40/50 + 24/100 限额;scale_lens_map 四种体型;梦境无日光);开 DEF-p6-cinematography-ep01-001(minor,due G6)",
+      "attempt": 1
+    },
+    {
+      "id": "p6-blocking-ep01",
+      "agent": "07-directing/blocking",
+      "state": "passed",
+      "depends_on": [
+        "p6-shots-ep01",
+        "p6-dialogue-fit-ep01"
+      ],
+      "human": false,
+      "run_id": "47ec25203f55",
+      "outputs": [
+        "directing/ep01/shots/*/blocking.json"
+      ],
+      "gate": null,
+      "note": "101/101 blocking.json; blocking_map_check strict PASS; 33 dialogue-anchored performance blocks + 67 performance_beat, all trigger words verbatim in frozen lines."
+    },
+    {
+      "id": "p6-continuity-ep01",
+      "agent": "07-directing/continuity-planning",
+      "state": "passed",
+      "depends_on": [
+        "p6-camera-ep01",
+        "p6-composition-ep01",
+        "p6-blocking-ep01"
+      ],
+      "human": false,
+      "run_id": "909e0dca5a1c",
+      "outputs": [
+        "directing/ep01/continuity_plan.json"
+      ],
+      "gate": null,
+      "note": "36/36 adjacent pairs, all anchors none, 7 axis jumps (5 waived / 2 routed), TR-03 match cut verified. Opened DEF-p6-continuity-ep01-001 (sh009/sh085 screen direction) and -002 (sh049/sh050/sh067 scale) against composition; both escalated to user (rerun budget 0). Neither blocks whitebox."
+    },
+    {
+      "id": "p6-whitebox-ep01",
+      "agent": "07-directing/whitebox-staging",
+      "state": "dispatched",
+      "depends_on": [
+        "p4-scene-model-sb1",
+        "p4-scene-model-sb2",
+        "p4-scene-model-sb3",
+        "p6-shots-ep01",
+        "p6-camera-ep01",
+        "p6-blocking-ep01",
+        "p6-continuity-ep01"
+      ],
+      "human": false,
+      "run_id": "e93d11814331",
+      "outputs": [
+        "directing/ep01/whitebox_plans/",
+        "directing/ep01/whitebox/episode.json"
+      ],
+      "gate": null,
+      "note": "dispatched in parallel with the open defect decision; defects are composition text, not routes/camera, so whitebox renders identically either way"
+    },
+    {
+      "id": "g6w-ep01",
+      "agent": null,
+      "state": "pending",
+      "depends_on": [
+        "p6-whitebox-ep01"
+      ],
+      "human": true,
+      "run_id": null,
+      "outputs": [],
+      "gate": "G6W",
+      "note": "checkpoint: H3W-白模确认; condition: whitebox_requested=true(人物精确空间位置开启); 逐集闸门模板 —— 随所在阶段按 episode/group 展开为 gX-epNN 实例"
+    },
+    {
+      "id": "p6-whitebox-export-ep01",
+      "agent": "07-directing/whitebox-staging",
+      "state": "pending",
+      "depends_on": [
+        "g6w-ep01"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "assets/whitebox/ep01/"
+      ],
+      "gate": null,
+      "note": "for_each: episode —— 待上游清单产出后展开为实例节点; condition: whitebox_requested=true(人物精确空间位置开启)"
+    },
+    {
+      "id": "p6-shot-plates-ep01",
+      "agent": "08-video-gen/shot-plates",
+      "state": "pending",
+      "depends_on": [
+        "p6-whitebox-export-ep01"
+      ],
+      "human": false,
+      "run_id": null,
+      "outputs": [
+        "directing/ep01/shot_plates.json"
+      ],
+      "gate": null,
+      "note": "for_each: episode —— 待上游清单产出后展开为实例节点; condition: whitebox_requested=true(人物精确空间位置开启)"
+    },
+    {
+      "id": "p6-concept-audit-ep01",
+      "agent": "06-art/art-director",
+      "state": "passed",
+      "depends_on": [
+        "p6-shots-ep01"
+      ],
+      "human": false,
+      "run_id": "177e141b5004",
+      "outputs": [
+        "directing/ep01/concept_coverage.json"
+      ],
+      "gate": null,
+      "note": "concept_coverage_ok=true, 39/39 views, 0 gaps; all claimed paths re-verified on disk by orchestrator. H3A precondition satisfied; p7-* unblocked from the art side."
+    },
+    {
+      "id": "g6-ep01",
+      "agent": null,
+      "state": "pending",
+      "depends_on": [
+        "p6-continuity-ep01",
+        "p6-cinematography-ep01",
+        "p6-concept-audit-ep01",
+        "p6-dialogue-fit-ep01",
+        "p6-shot-plates-ep01",
+        "p6-bible-light-ep01"
+      ],
+      "human": true,
+      "run_id": null,
+      "outputs": [],
+      "gate": "G6",
+      "note": "checkpoint: H3A-分镜确认; 逐集闸门模板 —— 随所在阶段按 episode/group 展开为 gX-epNN 实例"
+    },
+    {
+      "id": "p4-h2-style",
+      "agent": "06-art/art-director",
+      "state": "passed",
+      "depends_on": [
+        "g4"
+      ],
+      "human": false,
+      "run_id": "4cbdbbb7fa82",
+      "outputs": [
+        "bible/style.json",
+        "bible/changelog.md"
+      ],
+      "gate": null,
+      "note": "style.json open_points 全部 approved_H2(ba96732d);prompt 片段零改动;DEF-p4-style-001 closed",
+      "attempt": 1
+    },
+    {
+      "id": "p4-h2-creature",
+      "agent": "04-creatures/creature",
+      "state": "passed",
+      "depends_on": [
+        "g4"
+      ],
+      "human": false,
+      "run_id": "6ff6f589a6f3",
+      "outputs": [
+        "bible/creatures/creature.json"
+      ],
+      "gate": null,
+      "note": "BIB-0029:CRE-007 保留襁褓一镜到底;CRE-001 去除 BIB-0027 残留;DEF-401/402 closed,-403 挂豁免注记",
+      "attempt": 1
+    },
+    {
+      "id": "p4-h2-bible",
+      "agent": "00-orchestration/memory-bible",
+      "state": "passed",
+      "depends_on": [
+        "g4"
+      ],
+      "human": false,
+      "run_id": "30dbe8d5f80a",
+      "outputs": [
+        "bible/characters/",
+        "bible/costumes.json",
+        "bible/changelog.md"
+      ],
+      "gate": null,
+      "note": "6 张 G4 到期 minor 关单;新开 DEF-p4-style-003(CR-012 帽匠价签例外,交 art-director);园丁改黑桃=4 张已锁 sheet 与文字层不一致,已上报用户",
+      "attempt": 1
+    },
+    {
+      "id": "p4-h2-style-2",
+      "agent": "06-art/art-director",
+      "state": "passed",
+      "depends_on": [
+        "p4-h2-bible"
+      ],
+      "human": false,
+      "run_id": "0bcc6a502539",
+      "outputs": [
+        "bible/style.json"
+      ],
+      "gate": null,
+      "note": "BIB-0030:CR-012 帽匠 10/6 价签例外;DEF-p4-style-003 closed;prompt 片段零改动",
+      "attempt": 1
+    },
+    {
+      "id": "p4-h2-creature-2",
+      "agent": "04-creatures/creature",
+      "state": "passed",
+      "depends_on": [
+        "p4-h2-creature"
+      ],
+      "human": false,
+      "run_id": "498b51e3b604",
+      "outputs": [
+        "bible/creatures/creature.json"
+      ],
+      "gate": null,
+      "note": "BIB-0031:CRE-005/006 对齐 appearance;DEF-p4-char-concept-202 closed;新开 DEF-p4-creature-404(BIB 重号)",
+      "attempt": 1
+    },
+    {
+      "id": "p6-bible-light-ep01",
+      "agent": "00-orchestration/memory-bible",
+      "state": "passed",
+      "depends_on": [
+        "p6-plan-ep01",
+        "p6-storyboard-ep01"
+      ],
+      "human": false,
+      "run_id": "5654f69696b6",
+      "attempt": 1,
+      "outputs": [
+        "bible/color_script.json",
+        "bible/scenes/"
+      ],
+      "gate": null,
+      "note": "裁定(a):长厅维持无窗,color_script 让步(源文本「dark hall」+ BIB-0027 后裁 + 白模/布局包已锁);ep01 无需灯光重跑;DEF-p6-directing-ep01-001 与 DEF-p4-creature-404 closed"
+    },
+    {
+      "id": "p6-cs-fix-ep01",
+      "agent": "06-art/color-script",
+      "state": "passed",
+      "depends_on": [
+        "p6-cinematography-ep01"
+      ],
+      "human": false,
+      "run_id": "ff02f7a08465",
+      "attempt": 1,
+      "outputs": [
+        "bible/color_script.json"
+      ],
+      "gate": null,
+      "note": "act4 圆窗改『前打光』并全文清理日光/彩光地面池;color_script_ok PASS;数值零改动"
+    },
+    {
+      "id": "p6-plan-fix-ep01",
+      "agent": "07-directing/director",
+      "state": "passed",
+      "depends_on": [
+        "p6-cinematography-ep01"
+      ],
+      "human": false,
+      "run_id": "c34ddb33204a",
+      "attempt": 1,
+      "outputs": [
+        "directing/ep01/directing_plan.md"
+      ],
+      "gate": null,
+      "note": "导演阐述 v2:S06 比例标记从地面彩光池改为墙面圆窗,S10 改引修订后 scene_curves;转场清单字节一致"
+    }
+  ]
+}

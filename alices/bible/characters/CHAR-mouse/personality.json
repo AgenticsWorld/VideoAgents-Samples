@@ -1,0 +1,101 @@
+{
+  "character_id": "CHAR-mouse",
+  "name": "The Mouse",
+  "tier": "B",
+  "layer": "dream",
+  "temperament": {
+    "summary": "Thin-skinned, self-important and easily frightened; nervous energy that it covers with a lecturing, dignified manner. Its pride and its fear feed each other: every slight feels like a threat.",
+    "baseline": "Stiff, formal, holding itself upright to look important.",
+    "under_pressure": "Trembles, goes pale, then either snaps sharply or walks away rather than argue it out.",
+    "inferred": false
+  },
+  "traits": [
+    {
+      "trait": "Easily offended",
+      "description": "Reads innocent chatter as insult. It leaves twice in one afternoon over things Alice did not mean as rudeness.",
+      "evidence": [
+        { "chapter": "ch002", "ref": "ch002-p23", "event": "ev0009", "note": "Alice's praise of her cat sets it trembling and ordering her never to say the name again.", "quote": "Don’t let me hear the name again!" },
+        { "chapter": "ch003", "ref": "ch003-p39", "event": "ev0011", "note": "Alice's 'knot' mishearing makes it get up and walk away.", "quote": "You insult me by talking such nonsense!" },
+        { "chapter": "ch003", "ref": "ch003-p40", "note": "Alice herself names the trait: 'you’re so easily offended'." }
+      ],
+      "inferred": false
+    },
+    {
+      "trait": "Self-important, claims authority",
+      "description": "Takes charge of the wet company and demands silence before its lecture. The text calls it 'a person of authority among them'.",
+      "evidence": [
+        { "chapter": "ch003", "ref": "ch003-p03", "event": "ev0010", "note": "Orders everyone to sit in a ring round it and listen." },
+        { "chapter": "ch003", "ref": "ch003-p04", "event": "ev0010", "note": "Clears its throat 'with an important air' and calls for silence all round." }
+      ],
+      "inferred": false
+    },
+    {
+      "trait": "Pedantic but outwardly polite",
+      "description": "Keeps to the forms of good manners while correcting others crossly. It frowns 'but very politely' and then goes straight on with its dry text.",
+      "evidence": [
+        { "chapter": "ch003", "ref": "ch003-p06", "note": "Asks 'I beg your pardon! Did you speak?' while frowning at the Duck's interruption." },
+        { "chapter": "ch003", "ref": "ch003-p10", "note": "Snaps 'Found it' at the Duck's question about what 'it' means, then carries on." }
+      ],
+      "inferred": false
+    },
+    {
+      "trait": "Fearful at heart",
+      "description": "The dignity sits over real terror of cats and dogs. Its body gives it away (trembling to the tail, pale face) before its words do.",
+      "evidence": [
+        { "chapter": "ch002", "ref": "ch002-p23", "note": "'trembling down to the end of his tail' at the mention of Dinah." },
+        { "chapter": "ch002", "ref": "ch002-p25", "note": "Swims back pale, and speaks 'in a low trembling voice'." },
+        { "chapter": "ch012", "ref": "ch012-p69", "event": "ev0054", "note": "The sister's reverie remembers it as 'the frightened Mouse'." }
+      ],
+      "inferred": false
+    },
+    {
+      "trait": "Can be won back by a sincere promise",
+      "description": "Its offence is not a grudge. When Alice apologises gently and promises to drop the subject, it comes back and offers to explain itself.",
+      "evidence": [
+        { "chapter": "ch002", "ref": "ch002-p25", "event": "ev0009", "note": "Turns round and swims slowly back when Alice promises not to talk about cats or dogs; proposes going ashore to tell its history." },
+        { "chapter": "ch003", "ref": "ch003-p12", "note": "Checks kindly on Alice mid-lecture: 'How are you getting on now, my dear?'" }
+      ],
+      "inferred": false
+    }
+  ],
+  "motivation": {
+    "core": "To be taken seriously and listened to, keeping hold of its dignity and its sad history in front of others.",
+    "fear": "Predators (cats and dogs) and, just as much, being laughed at or not attended to.",
+    "wants_from_alice": "Her full, respectful attention and her silence about Dinah.",
+    "shifts": [
+      { "chapter": "ch002", "ref": "ch002-p25", "event": "ev0009", "from": "flee the girl who talks about cats", "to": "reach the shore and explain why it hates cats and dogs", "trigger": "Alice's soft apology and promise" },
+      { "chapter": "ch003", "ref": "ch003-p03", "event": "ev0010", "from": "survive the pool", "to": "take command of the wet company with its 'driest' lecture", "trigger": "being ashore among a group that needs a leader" },
+      { "chapter": "ch003", "ref": "ch003-p39", "event": "ev0011", "from": "tell its long, sad tale", "to": "walk away, refusing to finish", "trigger": "Alice's inattentive 'knot' remark, taken as mockery" }
+    ]
+  },
+  "habits": [
+    { "habit": "Clears its throat and draws itself up before speaking to a group", "evidence": [ { "chapter": "ch003", "ref": "ch003-p04" } ], "inferred": false },
+    { "habit": "Physically recoils or swims off at a trigger word, then waits to be coaxed back rather than returning on its own", "evidence": [ { "chapter": "ch002", "ref": "ch002-p24" }, { "chapter": "ch002", "ref": "ch002-p25" } ], "inferred": false },
+    { "habit": "Settles a quarrel by leaving: gets up and walks off, shaking its head, and does not look back when called", "evidence": [ { "chapter": "ch003", "ref": "ch003-p39" }, { "chapter": "ch003", "ref": "ch003-p42" } ], "inferred": false },
+    { "habit": "Startled bristle: fur puffs, whiskers flare and the tail trembles to its tip, then the body freezes low before it darts", "evidence": [ { "chapter": "ch002", "ref": "ch002-p23" } ], "inferred": true, "reason": "Direct species rendering of 'trembling down to the end of his tail' for the photoreal CGI mouse (SUP-002 as amended by BIB-0027)." }
+  ],
+  "decision_pattern": "Acts on its dignity first. It decides whether to stay or go by whether it feels respected. It will lead when others are passive, and it withdraws rather than argue when it feels mocked.",
+  "taboos": [
+    { "taboo": "Never tolerates talk of cats or dogs, even friendly talk; it leaves rather than hear it", "basis": [ { "chapter": "ch002", "ref": "ch002-p23" }, { "chapter": "ch002", "ref": "ch002-p24" }, { "note": "bible/culture.json CUL-044" } ], "inferred": false },
+    { "taboo": "Never stays where it thinks it is being laughed at; it does not trade insults back", "basis": [ { "chapter": "ch003", "ref": "ch003-p39" }, { "chapter": "ch003", "ref": "ch003-p41" } ], "inferred": false },
+    { "taboo": "Never uses force or threat; all its power is talk, rank and walking out", "basis": [ { "chapter": "ch003", "ref": "ch003-p03" }, { "chapter": "ch003", "ref": "ch003-p42" } ], "inferred": true, "reason": "Nowhere in ch002-ch003 does it touch or threaten anyone. The film keeps this so it reads as fragile, not menacing." }
+  ],
+  "facade": {
+    "applies": true,
+    "surface": "A dignified, authoritative lecturer who takes charge of the company",
+    "true_self": "A frightened, touchy creature whose authority is a shield against fear and slight",
+    "reveal_chapter": "ch002",
+    "reveal_note": "The audience sees the fear first (ch002-p23, pool) and the pomp second (ch003-p04). There is no plot secret to protect: play both layers openly and let the tremble show through the pomp.",
+    "inferred": false
+  },
+  "waking_life_embodiment": {
+    "embodies": "The touchy schoolroom history tutor: the adult who makes a child sit still for a dry lesson and takes her wandering attention as a personal insult.",
+    "waking_source": "Alice's schoolroom history lessons (William the Conqueror, the earls Edwin and Morcar), recited word for word, plus the family cat Dinah whom she cannot stop mentioning.",
+    "authority_trait": "Demanding attention as a matter of dignity; offence taken at a child's honest chatter.",
+    "coming_of_age_reading": "Alice's first lesson in the dream: grown-ups' feelings are fragile, and what she loves (Dinah) can hurt someone else. She learns to check her words, and when the whole company leaves she learns what it is like to be alone for saying the wrong thing (ch003-p48).",
+    "grounding": [ "ch003-p04", "ch003-p48", "bible/world.json wonderland_real_counterparts cp-lessons", "cp-cat" ],
+    "inferred": true,
+    "reason": "Source gives the lecture text (cp-lessons, inferred:false) and the cat link. Casting the Mouse as the tutor figure is a design reading for the realistic coming-of-age frame."
+  },
+  "performance_baseline": "Photoreal CGI mouse (SUP-002, BIB-0027): a tiny body holding a big voice. Wet, spiky fur from the pool. Dignity reads as sitting up tall on the haunches, forepaws folded, nose lifted while it lectures; fear reads as fur on end, ears flattened, tail-tip trembling, a crouch-and-freeze before a dart for the water."
+}

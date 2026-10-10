@@ -1,0 +1,143 @@
+{
+  "_meta": {
+    "file": "bible/characters/CHAR-alice/personality.json",
+    "owner": "03-characters/personality",
+    "produced_by_task": "p3-personality-pb1",
+    "produced_on": "2026-09-22",
+    "content_language": "en",
+    "status": "draft_v1"
+  },
+  "character_id": "CHAR-alice",
+  "name": "Alice",
+  "tier": "S",
+  "layer": "both",
+  "temperament": "A quick, restless, well-drilled ten-year-old whose good manners sit on top of a fierce curiosity and a stubborn sense of fairness. Easily bored, easily frightened, quick to tears and just as quick to scold herself out of them. Across the dream she moves from anxious deference to adults toward plain, full-sized self-possession.",
+  "traits": [
+    {
+      "trait": "Curious to the point of recklessness",
+      "description": "Acts on curiosity before thinking of consequences. This is what starts the whole dream.",
+      "evidence": [
+        { "chapter": "ch001", "chapter_no": 1, "ref": "ch001-p03", "event": "ev0001", "quote": "burning with curiosity", "note": "Runs after the Rabbit across the field the moment it takes out a watch." },
+        { "chapter": "ch001", "chapter_no": 1, "ref": "ch001-p04", "event": "ev0001", "quote": "never once considering how in the world she was to get out again", "note": "Follows it down the hole without a thought for the way back." },
+        { "chapter": "ch002", "chapter_no": 2, "ref": "ch002-p01", "event": "ev0006", "quote": "Curiouser and curiouser", "note": "Her own signature response to the strange." }
+      ]
+    },
+    {
+      "trait": "Well-drilled good manners, used as armour",
+      "description": "Reaches for curtseys, 'Sir' and 'your Majesty' by reflex, especially when frightened. Politeness is how she was taught to survive adults.",
+      "evidence": [
+        { "chapter": "ch001", "chapter_no": 1, "ref": "ch001-p09", "event": "ev0002", "quote": "she tried to curtsey as she spoke", "note": "Curtseys while falling through the air." },
+        { "chapter": "ch002", "chapter_no": 2, "ref": "ch002-p08", "event": "ev0007", "quote": "in a low, timid voice, “If you please, sir—”", "note": "Asks the Rabbit for help with a deferential formula." },
+        { "chapter": "ch008", "chapter_no": 8, "ref": "ch008-p15", "event": "ev0034", "quote": "“My name is Alice, so please your Majesty,” said Alice very politely", "note": "Formal courtesy aloud, private defiance inside." }
+      ]
+    },
+    {
+      "trait": "Sense of fairness and logic, stronger than her fear",
+      "description": "Cannot let nonsense or unfairness pass. She corrects, objects and reasons, even when it offends people or puts her at risk.",
+      "evidence": [
+        { "chapter": "ch007", "chapter_no": 7, "ref": "ch007-p02", "event": "ev0029", "quote": "“There’s _plenty_ of room!” said Alice indignantly", "note": "Rejects the tea-party's false 'No room!'." },
+        { "chapter": "ch008", "chapter_no": 8, "ref": "ch008-p48", "event": "ev0037", "quote": "“I don’t think they play at all fairly,”", "note": "Her complaint about the croquet game is about rules and fairness." },
+        { "chapter": "ch012", "chapter_no": 12, "ref": "ch012-p19", "event": "ev0050", "quote": "that’s not a regular rule: you invented it just now", "note": "Exposes Rule Forty-two as made up on the spot." },
+        { "chapter": "ch012", "chapter_no": 12, "ref": "ch012-p59", "event": "ev0052", "quote": "“The idea of having the sentence first!”", "note": "Rejects 'sentence first'." }
+      ]
+    },
+    {
+      "trait": "Unsure of who she is; identity easily shaken",
+      "description": "Every change in size or recited fact makes her doubt who she is. Her sense of self is still borrowed from lessons and other people's judgement.",
+      "evidence": [
+        { "chapter": "ch002", "chapter_no": 2, "ref": "ch002-p09", "event": "ev0007", "quote": "Who in the world am I?", "note": "The core question of her inner arc (arc-alice-identity)." },
+        { "chapter": "ch002", "chapter_no": 2, "ref": "ch002-p13", "event": "ev0007", "quote": "I must be Mabel after all", "note": "Fears she has become a poorer, duller girl." },
+        { "chapter": "ch005", "chapter_no": 5, "ref": "ch005-p71", "event": "ev0022", "quote": "“I—I’m a little girl,” said Alice, rather doubtfully", "note": "She can't even say this with confidence to the Pigeon." }
+      ]
+    },
+    {
+      "trait": "Self-scolding, self-divided",
+      "description": "Talks to herself as if she were two people: she gives herself stern advice and even punishes herself. She has taken in the grown-ups' voice of correction.",
+      "evidence": [
+        { "chapter": "ch001", "chapter_no": 1, "ref": "ch001-p24", "event": "ev0004", "quote": "She generally gave herself very good advice, (though she very seldom followed it)", "note": "Self-advice she seldom follows." },
+        { "chapter": "ch001", "chapter_no": 1, "ref": "ch001-p24", "event": "ev0004", "quote": "trying to box her own ears for having cheated herself in a game of croquet", "note": "Punishes herself with the same ear-boxing the dream later gives the Duchess and Queen." }
+      ]
+    },
+    {
+      "trait": "Truthful, though tact can win when she is afraid",
+      "description": "Will not deny a fact about herself even when a lie would help her, but under direct threat she will soften an opinion.",
+      "evidence": [
+        { "chapter": "ch005", "chapter_no": 5, "ref": "ch005-p73", "event": "ev0022", "quote": "said Alice, who was a very truthful child", "note": "Admits she eats eggs, which damages her case with the Pigeon." },
+        { "chapter": "ch008", "chapter_no": 8, "ref": "ch008-p50", "event": "ev0037", "quote": "likely to win, that it’s hardly worth while finishing the game", "note": "Changes her sentence about the Queen mid-word when she sees her listening." }
+      ]
+    },
+    {
+      "trait": "Quick to tears, quick to recover",
+      "description": "Cries when alone and helpless, then pulls herself together and makes a new plan.",
+      "evidence": [
+        { "chapter": "ch001", "chapter_no": 1, "ref": "ch001-p24", "event": "ev0004", "quote": "“Come, there’s no use in crying like that!” said Alice to herself, rather sharply", "note": "Orders herself to stop crying." },
+        { "chapter": "ch002", "chapter_no": 2, "ref": "ch002-p17", "event": "ev0008", "quote": "I wish I hadn’t cried so much", "note": "Swims in the consequence of her own tears (SUP-007)." }
+      ]
+    },
+    {
+      "trait": "Kind-hearted but tactless",
+      "description": "Means well and hurries to help, but keeps blurting out the wrong thing, like praising Dinah to mice and birds.",
+      "evidence": [
+        { "chapter": "ch002", "chapter_no": 2, "ref": "ch002-p20", "event": "ev0009", "quote": "“Oh, I beg your pardon!” cried Alice hastily", "note": "Apologises after frightening the Mouse with talk of cats." },
+        { "chapter": "ch004", "chapter_no": 4, "ref": "ch004-p01", "event": "ev0014", "quote": "she very good-naturedly began hunting about for them", "note": "Helps look for the Rabbit's lost gloves without being asked." },
+        { "chapter": "ch012", "chapter_no": 12, "ref": "ch012-p02", "event": "ev0048", "quote": "“Oh, I _beg_ your pardon!” she exclaimed in a tone of great dismay", "note": "Rushes to put back the jurors she knocked over." }
+      ]
+    }
+  ],
+  "motivation": {
+    "core": "To be let into the lovely garden, and underneath that, to be treated as a real person whose view counts rather than a child to be ordered about, sent away or scolded.",
+    "want": "Entry to the garden (arc-alice-garden-quest); to have things make sense; to be taken seriously by the grown-ups.",
+    "fear": "Losing herself: being turned into someone else (Mabel), shrinking to nothing, being punished or 'executed' by grown-ups who make up the rules as they go.",
+    "evidence": [
+      { "chapter": "ch001", "chapter_no": 1, "ref": "ch001-p14", "event": "ev0003", "quote": "I wish I could shut up like a telescope", "note": "Wants to fit through the door into the garden." },
+      { "chapter": "ch001", "chapter_no": 1, "ref": "ch001-p01", "event": "ev0001", "quote": "without pictures or conversations", "note": "Boredom with a grown-up book: her waking life doesn't take her tastes into account." },
+      { "chapter": "ch002", "chapter_no": 2, "ref": "ch002-p13", "event": "ev0007", "quote": "I’ll stay down here till I’m somebody else", "note": "Her fear of being the wrong self, and her half-wish to choose who to be." }
+    ],
+    "shifts": [
+      { "chapter": "ch001", "chapter_no": 1, "event": "ev0001", "from": "idle boredom on the bank", "to": "curiosity-driven pursuit (the Rabbit, then the garden)", "evidence_ref": "ch001-p03" },
+      { "chapter": "ch002", "chapter_no": 2, "event": "ev0007", "from": "getting into the garden", "to": "working out who she is at all", "evidence_ref": "ch002-p09" },
+      { "chapter": "ch007", "chapter_no": 7, "event": "ev0031", "from": "tolerating adult rudeness for the sake of manners", "to": "walking out on it; her first refusal to stay where she is insulted", "evidence_ref": "ch007-p102" },
+      { "chapter": "ch007", "chapter_no": 7, "event": "ev0032", "from": "size happening to her", "to": "managing her size herself: key first, then the mushroom, and so into the garden", "evidence_ref": "ch007-p105" },
+      { "chapter": "ch008", "chapter_no": 8, "event": "ev0034", "from": "fear of the court", "to": "the first open defiance ('Nonsense!'), though she still flatters the Queen under threat", "evidence_ref": "ch008-p19" },
+      { "chapter": "ch012", "chapter_no": 12, "event": "ev0052", "from": "winning adult approval", "to": "seeing adult authority for what it is ('nothing but a pack of cards'), which breaks the dream", "evidence_ref": "ch012-p63" }
+    ]
+  },
+  "habits": [
+    { "habit": "Talks aloud to herself, often scolding or advising herself as a second person", "evidence_ref": "ch001-p24", "event": "ev0004" },
+    { "habit": "Curtseys or reaches for a polite formula ('If you please, sir', 'your Majesty') when frightened", "evidence_ref": "ch001-p09", "event": "ev0002" },
+    { "habit": "Recites lessons and poems to test whether she is still herself, and they come out wrong (motif mo-failed-recitation)", "evidence_ref": "ch002-p13", "event": "ev0007" },
+    { "habit": "Checks a label before drinking, following the nursery-book rules she has been taught", "evidence_ref": "ch001-p16", "event": "ev0004" },
+    { "habit": "Brings Dinah into conversation without thinking, whoever she is talking to", "evidence_ref": "ch001-p10", "event": "ev0002" },
+    { "habit": "Tosses her head to keep her wandering hair out of her eyes (seen by her sister; a physical tic usable in both layers)", "evidence_ref": "ch012-p68", "event": "ev0054" },
+    { "habit": "Shows off a scrap of schoolroom knowledge when she gets the chance", "evidence_ref": "ch006-p32", "event": "ev0026" }
+  ],
+  "decision_pattern": "Acts first on curiosity, then reasons out loud. When the reasoning fails she cries, scolds herself and makes a practical plan, usually a small test. With adults she opens with politeness, puts up with rudeness, and then objects once she sees something is plainly unfair. Her confidence rises with her physical size (SUP-003), and at full size she says what she thinks without softening it.",
+  "taboos": [
+    { "taboo": "Never drinks or eats from something marked 'poison'; she will check first", "rationale": "The one rule of caution she keeps, straight from her nursery reading.", "evidence_ref": "ch001-p16", "event": "ev0004", "qa_check": "Must not be shown gulping an unlabelled or marked bottle without the look-first beat." },
+    { "taboo": "Never denies a fact about herself to get out of trouble", "rationale": "A 'very truthful child'. She may soften an opinion under threat (ch008-p50), but she never lies about facts.", "evidence_ref": "ch005-p73", "event": "ev0022", "qa_check": "Tact is allowed; a factual lie told to save herself is a defect." },
+    { "taboo": "Never harms anyone out of malice or for sport", "rationale": "Her rough moments (the snatch that tips the Rabbit into the cucumber-frame, the kick that sends Bill up the chimney) are panic defence while she is trapped. When she does hurt someone by accident she is dismayed and puts it right.", "evidence_ref": "ch004-p26", "event": "ev0016", "qa_check": "Stage the snatch and the kick as frightened reflexes, never gleeful. Accidental harm must get a remorse beat (see ch012-p02)." },
+    { "taboo": "Never lets a sentence come before a verdict: once she sees plain injustice, she will not agree to it", "rationale": "Her fairness finally outweighs her fear, and this is what ends the dream.", "evidence_ref": "ch012-p59", "event": "ev0052", "qa_check": "In the court (ch011-ch012) she must not quietly go along with an obviously rigged procedure." },
+    { "taboo": "Never drops her manners first", "rationale": "She is rude only in reply to rudeness. She starts every encounter politely, and walks out rather than trading insults for long.", "evidence_ref": "ch007-p102", "event": "ev0031", "qa_check": "No scene may open with Alice being rude to a stranger unprovoked." }
+  ],
+  "facade": {
+    "applies": true,
+    "surface": "The polite, curtseying, well-brought-up little girl who defers to adults",
+    "true_self": "Sharp, argumentative, fair-minded, and ready to face down grown-ups once she trusts her own judgement",
+    "reveal_chapter": "ch008",
+    "reveal_event": "ev0034",
+    "full_reveal_chapter": "ch012",
+    "note": "This is not a disguise. It is the coming-of-age arc (arc-alice-authority). Screenplay should let the surface crack in steps: ch007 walking out, ch008 'Nonsense!', ch009 'I've a right to think', ch012 'Who cares for you?'. It should not break earlier."
+  },
+  "waking_life_embodiment": {
+    "applies": true,
+    "summary": "Alice is the waking girl herself. What she carries into the dream is her upbringing: schoolroom lessons, recitation pieces, curtseying, the grown-ups' voice of correction she uses on herself, tea-time, Dinah, and the family housemaid. The dream figures act these out back at her.",
+    "evidence_ref": "ch001-p24",
+    "inferred": true,
+    "reason": "Reading grounded in world.json wonderland_real_counterparts and the frame.social_class entry. The source says she was 'very fond of pretending to be two people'. Treating the dream figures as outward versions of that inner second voice is a design reading for the realistic coming-of-age frame (brief.md)."
+  },
+  "performance_keynote": "Play her as a real ten-year-old, not a doll: fidgety, frowning and thinking aloud. Her politeness is a visible effort, and her boldness should show in her posture as her size (and confidence) grows. Tears are short and real, and she cuts them off herself.",
+  "consistency_flags": [],
+  "inferred_fields": ["waking_life_embodiment", "motivation.core (the 'to be taken seriously' layer)"],
+  "inferred": true,
+  "reason": "The traits, habits and taboos come directly from the source. The deeper motive (being taken seriously by grown-ups) is an interpretive reading of arc-alice-authority and arc-alice-identity in story_graph.json, made for the coming-of-age frame in brief.md."
+}

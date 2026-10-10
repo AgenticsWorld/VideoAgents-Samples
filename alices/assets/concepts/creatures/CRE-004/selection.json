@@ -1,0 +1,29 @@
+{
+  "id": "CRE-004",
+  "name": "The Hedgehog",
+  "detail_source": "bible/creatures/creature.json#CRE-004 forms[0] (stage adult)",
+  "register": "dream world",
+  "sheet": "sheet.png",
+  "sheet_stage": "adult (uncurled, walking)",
+  "variants": [],
+  "variants_waiver": "creature.json lists a single form (adult, ch008 only). The rolled-up ball is a defensive posture of the same animal, and the spines, colour and size stay the same, so no separate sheet is drawn. p7 can describe the curl in prompt text: 'curled into a tight spiny ball about 10-12 cm across'. mount.json has no entry.",
+  "scale": { "prompt_token": "a real European hedgehog about 20-25 cm long, curling into a spiny ball about 10-12 cm across" },
+  "selection": {
+    "layout_check": "pass: four panels, one hedgehog per panel, same individual",
+    "identifier_hits": {
+      "size: 20-25 cm adult hedgehog": true,
+      "surface: brown-and-cream banded spines on back/sides/head, greyish-brown face and legs, pale underside": true,
+      "head: pointed mobile snout, small rounded ears": true,
+      "eyes: small round black beady eyes": true,
+      "marks: banded brown/cream spine pattern clearly legible": true
+    },
+    "no_rider_check": true,
+    "no_person_check": true,
+    "style_check": "pass: photoreal, slate/sage backdrop, film grain",
+    "self_check_defects": [
+      { "severity": "minor", "issue": "Panel 2 (side): the rear of the body is cropped by the right panel edge." }
+    ],
+    "rerolls": []
+  },
+  "pending_H2": "H2-non-speaking-animals: rendered as photoreal CGI per the proposal (real/trained hedgehog is the fallback)"
+}

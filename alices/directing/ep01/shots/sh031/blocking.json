@@ -1,0 +1,45 @@
+{
+  "shot_id": "sh031",
+  "group_id": "grp012",
+  "scene_no": "S04",
+  "scene_id": "SCN-shaft-landing-passage",
+  "duration_s": 4.5,
+  "is_dialogue": true,
+  "group_position": "middle shot of grp012 — the White Rabbit is at the mosaic dado point of his brick_mid -> mosaic_dado -> corner -> hall_opening line, taking the corner. Alice is behind him on the root-laced stretch, out of frame.",
+  "characters": [
+    {
+      "id": "CHAR-white-rabbit",
+      "label": "White Rabbit",
+      "pose": "sit",
+      "start_pos": "sitting back at the mosaic dado near the corner, then down on four legs and round the corner",
+      "space_fragment_en": "sitting back at the mosaic dado near the corner, then dropping onto four legs and running round the right-angle corner to screen-right",
+      "facing": "away and round to screen-right into the lit corner; no look back at Alice",
+      "path": [
+        { "t": 2.4, "to": "down on four legs, past the mosaic dado" },
+        { "t": 4.0, "to": "round the right-angle corner, out of the frame to screen-right" }
+      ],
+      "beats": [
+        { "t": 0.4, "action": "still muttering about the time", "sync": "LN-ep01-007 begins" },
+        { "t": 2.0, "action": "the mutter breaks into a scramble", "sync": "LN-ep01-007 on 'whiskers'" },
+        { "t": 2.4, "action": "drops from his haunches back onto four legs", "sync": "gait lock reasserted" },
+        { "t": 4.0, "action": "takes the right-angle corner at a run", "sync": "exit to screen-right" }
+      ],
+      "performance": {
+        "objective": "stop wasting time on his own complaining and get round the corner",
+        "goal": "stop complaining and get round the corner",
+        "emotional_arc": "from self-pitying fuss to pure flight",
+        "arc_from": "self-pitying fuss",
+        "arc_to": "pure flight",
+        "trigger": { "line_ref": "LN-ep01-007", "word": "whiskers" },
+        "no_early_reaction": ["the haunches dropping", "the forepaws going down", "the head ducking"],
+        "forbidden_early": ["the haunches dropping", "the forepaws going down", "the head ducking"],
+        "end_state": "down on four legs going away, ears flat, hindquarters clearing the corner, no look back"
+      }
+    }
+  ],
+  "creatures": [],
+  "offscreen_presence": [
+    { "id": "CHAR-alice", "where": "behind him on the root-laced earth stretch, running", "note": "On her grp012 line between leaf_heap and brick_mid; out of frame." }
+  ],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0003 (dream) — 'Oh my ears and whiskers'", "note": "He leaves S04 here; his next legal appearance is grp028 in S08." }
+}

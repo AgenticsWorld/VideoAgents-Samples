@@ -1,0 +1,54 @@
+{
+  "schema_version": "whitebox_plan.v1",
+  "group_id": "grp018",
+  "scene_id": "SCN-long-hall",
+  "basis": "Alice never moves off the glass_table anchor (6.14, -0.38); she turns to face down the hall toward the low curtain (yaw 2.2554) so sh047's lens sits in front of her at her own eye height, and she shrinks on that exact spot with her feet fixed. The size chain in continuity_plan.json puts the change inside sh048: it starts at sh048 t=4.8 (group t=8.8) and completes by group t=15.0, carrying her from 1.35 m to 0.254 m. It is staged as a scale morph on a fixed foot anchor with her identity colour unchanged, so nothing about her body reads as an effect - the change is legible only against the 0.715 m tabletop, the 1.95 m doors and the 2.30 m lamp row, which is exactly what CR-005 requires. sh048's frame is set so her crown sits at 0.25 of frame height at the top of the shot and 0.75 at the bottom, matching composition's 0.24 -> 0.74.",
+  "actors": [
+    {
+      "id": "CHAR-alice",
+      "kind": "person",
+      "size_m": [0.378, 1.35, 0.297],
+      "morph_target": {"size_m": [0.0711, 0.254, 0.0559], "color": "#e63946"},
+      "keyframes": [
+        {"t": 0.0, "position": [6.14, 0.0, -0.38], "pose": "stand", "yaw": 2.2554, "head_yaw": 0.2, "morph": 0.0},
+        {"t": 0.6, "position": [6.14, 0.0, -0.38], "pose": "stand", "yaw": 2.2554, "head_yaw": 0.2, "morph": 0.0},
+        {"t": 1.8, "position": [6.14, 0.0, -0.38], "pose": "stand", "yaw": 2.2554, "head_yaw": 0.15, "morph": 0.0},
+        {"t": 2.8, "position": [6.14, 0.0, -0.38], "pose": "stand", "yaw": 2.2554, "head_yaw": 0.25, "morph": 0.0},
+        {"t": 3.4, "position": [6.14, 0.0, -0.38], "pose": "stand", "yaw": 2.2554, "head_yaw": 0.2, "morph": 0.0},
+        {"t": 4.8, "position": [6.14, 0.0, -0.38], "pose": "stand", "yaw": 2.2554, "head_pitch": 0.1, "morph": 0.0},
+        {"t": 6.0, "position": [6.14, 0.0, -0.38], "pose": "stand", "yaw": 2.2554, "head_pitch": 0.15, "morph": 0.0},
+        {"t": 8.8, "position": [6.14, 0.0, -0.38], "pose": "stand", "yaw": 2.2554, "head_pitch": 0.0, "morph": 0.0},
+        {"t": 11.5, "position": [6.14, 0.0, -0.38], "pose": "stand", "yaw": 2.2554, "head_pitch": -0.35, "morph": 0.44},
+        {"t": 15.0, "position": [6.14, 0.0, -0.38], "pose": "stand", "yaw": 2.2554, "head_pitch": -0.85, "morph": 1.0},
+        {"t": 16.0, "position": [6.14, 0.0, -0.38], "pose": "stand", "yaw": 2.2554, "head_pitch": -0.85, "morph": 1.0}
+      ]
+    }
+  ],
+  "cameras": [
+    {
+      "shot_id": "sh047",
+      "start": 0,
+      "duration_s": 4.0,
+      "movement": "static",
+      "keyframes": [
+        {"t": 0.0, "position": [6.659, 1.3, -0.803], "target": [6.14, 1.22, -0.38], "fov": 26.9915},
+        {"t": 4.0, "position": [6.659, 1.3, -0.803], "target": [6.14, 1.22, -0.38], "fov": 26.9915}
+      ]
+    },
+    {
+      "shot_id": "sh048",
+      "start": 4.0,
+      "duration_s": 12.0,
+      "movement": "static",
+      "keyframes": [
+        {"t": 0.0, "position": [3.676, 1.3, 0.236], "target": [6.14, 0.8, -0.38], "fov": 46.3972},
+        {"t": 12.0, "position": [3.676, 1.3, 0.236], "target": [6.14, 0.8, -0.38], "fov": 46.3972}
+      ]
+    }
+  ],
+  "continuity": {"actors": "inherit", "camera": "cut"},
+  "warnings": [
+    "sh048 does not move for twelve seconds: one locked position, one target, one lens. The whole change is read off the set, never off a reframe.",
+    "Her foot anchor is identical before, during and after the shrink, so the 0.715 m tabletop, the 1.95 m doors and the 2.30 m lamps stay at their true sizes and only the ratio to her changes (continuity_plan size_chain rule: props never change size with her)."
+  ]
+}

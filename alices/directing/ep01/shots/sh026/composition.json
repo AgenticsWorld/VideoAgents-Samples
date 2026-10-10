@@ -1,0 +1,28 @@
+{
+  "shot_id": "sh026",
+  "scene_id": "SCN-shaft-landing-passage",
+  "size": "medium",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "centre",
+    "anchor_xy": [0.48, 0.62],
+    "size_in_frame": "landed flat, about 0.30 of frame height across the lower band; rising to about 0.80 of frame height standing"
+  },
+  "headroom": "starts enormous — about 0.55 of frame height of black above her — and closes to about 0.10 as she jumps up. The frame is built to be emptied above her and then filled by her, without a reframe.",
+  "horizon_eyeline": "The leaf heap surface is the only horizontal, running across at 0.70 of frame height. Her eyeline starts flat on her back at 0.66 and ends at 0.22, thrown up into the dark overhead — the biggest single eyeline travel in the episode.",
+  "layers": {
+    "fg": "sticks and dry leaves thrown up by the landing, settling back down through the lower frame inside the shot",
+    "mg": "Alice on the heap, landing and jumping straight to her feet",
+    "bg": "the root curtain hanging across the top of frame, and above it nothing but black"
+  },
+  "gaze": {
+    "direction": "up_frame",
+    "lead_room": "above",
+    "note": "she looks straight up the way she came; the lead room is the black over the root curtain, which is composed to contain nothing at all — no shaft, no light, no way back."
+  },
+  "balance": "Bottom-loaded and then vertical: a low horizontal mass of debris that stands up into a single off-centre upright. The black above never gains weight, which is what makes the way back feel closed.",
+  "leading_lines": "The root curtain is a ragged horizontal bar across the top; the scattered sticks radiate outward from where she hit. Her standing body is the one vertical, and it points at the black.",
+  "eye_first": "The burst of leaves, then Alice inside it, then up with her look into the dark.",
+  "safe_area_ok": true,
+  "constraint_binding": "Landing and 'jumps to her feet' in ONE shot, low enough that the leaves settle inside the frame: the bottom edge is set below the heap surface and the lens is kept at 0.6 m rising to 1.3 m so no thrown leaf exits the bottom of frame before it lands. The dream grade reaches full strength inside this composition and holds."
+}

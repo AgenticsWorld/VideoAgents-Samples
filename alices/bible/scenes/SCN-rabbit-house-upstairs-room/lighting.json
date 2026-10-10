@@ -1,0 +1,60 @@
+{
+  "_meta": {
+    "file": "bible/scenes/SCN-rabbit-house-upstairs-room/lighting.json",
+    "owner": "05-scenes/lighting",
+    "task_id": "p3-lighting-sb1",
+    "attempt": 1,
+    "generated": "2026-09-22",
+    "status": "draft_v1",
+    "enum_set": "LGT-ENUM-v1 (defined once in runs/p3-lighting-sb1/result.json)",
+    "inputs": ["bible/scenes/SCN-rabbit-house-upstairs-room/environment.json", "bible/scenes/SCN-rabbit-house-upstairs-room/architecture.json"]
+  },
+  "scene_id": "SCN-rabbit-house-upstairs-room",
+  "layer": "dream",
+  "int_ext": "INT",
+  "daylight_access": "window_daylight",
+  "dream_growth": {
+    "grows_from": "the waking sun at about 15:40-15:56 GMT and an upstairs room of the family house",
+    "how": "Real afternoon sun through the one south window, as in the housemaid-kept room at home. When Alice grows and her arm fills the window, the room's only daylight is shut off by her own body: the panic reads as light being taken away.",
+    "ruling": "runs/h1-ruling/ruling.json 5.2 A"
+  },
+  "schemes": [
+    {
+      "lighting_scheme_id": "LGT-rabbit-house-upstairs-room-01",
+      "condition": {"time_of_day": "afternoon", "weather": "fair_hot"},
+      "state_refs": ["SCN-rabbit-house-upstairs-room-S01", "SCN-rabbit-house-upstairs-room-S02"],
+      "waking_clock": "15:40-15:56 GMT (Alice asleep on the bank)",
+      "sun": {"elevation_deg_approx": 40, "azimuth_deg_approx": 256},
+      "key_source": "window_sun",
+      "key": "the single south sash window (0.75 x 1.1 m, sill 0.75 m); the WSW sun enters it obliquely from its west side",
+      "direction": "high_side",
+      "direction_note": "the beam slants down and eastward: a narrow bright patch across the window table (fan, gloves) and a slanted band on the floorboards toward the fireplace (east wall); the door (north wall, west corner) and the looking-glass (west wall) stay in soft shade",
+      "fill": {"source": "bounce", "note": "warm soft bounce off the cream wallpaper, white ceiling and scrubbed floor; corners dim"},
+      "practicals": ["cast-iron grate unlit (July)"],
+      "color_temp": "neutral (~4500K)",
+      "kelvin_approx": 4800,
+      "contrast": "medium",
+      "quality": "mixed",
+      "atmosphere": "warm, stuffy, still indoor air; dust floating in the sunbeam",
+      "prompt_fragment_en": "Afternoon sun in a small upstairs room: warm-white sunlight slants steeply and obliquely in through the single sash window, laying a narrow bright patch across the little table with the fan and white gloves and a slanted band on the floorboards, dust motes glowing in the beam; the rest of the room is lit softly by warm bounce off the cream wallpaper, the corners dim; medium contrast, close, stuffy, still indoor warmth.",
+      "source_chapter": "ch004",
+      "sources": ["ch004-p04", "ch004-p05"],
+      "inferred": true,
+      "reason": "The window and table are explicit (ch004-p05) but no light is described. The sun follows the waking clock (environment S01) and enters by the south window per architecture interior.openings. S02 shares the condition; its blocked window is SPC-rabbit-house-upstairs-room-01."
+    }
+  ],
+  "special": [
+    {
+      "special_id": "SPC-rabbit-house-upstairs-room-01",
+      "applies_to": ["LGT-rabbit-house-upstairs-room-01"],
+      "chapters": ["ch004"],
+      "paragraphs": ["ch004-p07..ch004-p34"],
+      "note": "Window blocked by Alice's arm (from 'she put one arm out of the window' until she shrinks, ch004-p34): only slivers of hard sunlight squeeze in round the arm; the room drops to warm brown gloom lit mainly by bounce from those slivers. Soot drifting from the chimney after Bill is kicked up it catches the slivers. Full LGT-rabbit-house-upstairs-room-01 light returns once she has shrunk and before she runs out.",
+      "prompt_fragment_en": "The window is blocked: an arm fills the sash window, leaving only thin slivers of hard sunlight squeezing in round its edges, and the cramped room falls into warm brown gloom, drifting soot glinting in the slivers; hard contrast, airless, panicky mood.",
+      "source_chapter": "ch004",
+      "source": {"chapter": "ch004", "quote": "she put one arm out of the window, and one foot up the chimney"},
+      "inferred": true,
+      "reason": "The arm in the window and the pebbles through it are explicit (ch004-p07, ch004-p32); the loss of light is the designed physical consequence."
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "schema_version": "whitebox_plan.v1",
+  "group_id": "grp003",
+  "scene_id": "SCN-riverbank",
+  "basis": "Same ground as grp002 - neither girl has a blocking_map path, so both hold the sitting_shelf anchors. The only staged change is Alice rolling from prone onto her back at sh005 t=3.5 (group t=3.5), head still downhill toward the backwater, and her eyes closing at sh006 t=4.0 (group t=15.0). Both shots keep the water-side axis established by sh003 (Alice screen-right, the Sister screen-left), per continuity_plan AX-01 binding_on_generation.",
+  "actors": [
+    {
+      "id": "CHAR-alice",
+      "kind": "person",
+      "size_m": [0.378, 1.35, 0.297],
+      "keyframes": [
+        {"t": 0.0, "position": [-3.55, 0.0, 0.62], "pose": "prone", "yaw": -0.5355, "head_pitch": -0.5},
+        {"t": 1.0, "position": [-3.55, 0.0, 0.62], "pose": "prone", "yaw": -0.5355, "head_pitch": -0.5},
+        {"t": 1.4, "position": [-3.55, 0.0, 0.62], "pose": "prone", "yaw": -0.5355, "head_pitch": -0.2},
+        {"t": 3.5, "position": [-3.6, 0.0, 0.675], "pose": "lie", "yaw": 1.5708, "head_pitch": 0.0},
+        {"t": 7.0, "position": [-3.6, 0.0, 0.675], "pose": "lie", "yaw": 1.5708, "head_pitch": 0.0},
+        {"t": 9.5, "position": [-3.6, 0.0, 0.675], "pose": "lie", "yaw": 1.5708, "head_pitch": 0.0},
+        {"t": 11.0, "position": [-3.6, 0.0, 0.675], "pose": "lie", "yaw": 1.5708, "head_pitch": 0.0},
+        {"t": 12.2, "position": [-3.6, 0.0, 0.675], "pose": "lie", "yaw": 1.5708, "head_yaw": 0.3},
+        {"t": 14.4, "position": [-3.6, 0.0, 0.675], "pose": "lie", "yaw": 1.5708, "head_yaw": 0.1},
+        {"t": 15.0, "position": [-3.6, 0.0, 0.675], "pose": "lie", "yaw": 1.5708, "head_yaw": 0.0},
+        {"t": 17.0, "position": [-3.6, 0.0, 0.675], "pose": "lie", "yaw": 1.5708, "head_yaw": 0.0}
+      ]
+    },
+    {
+      "id": "CHAR-alice-sister",
+      "kind": "person",
+      "size_m": [0.448, 1.6, 0.352],
+      "keyframes": [
+        {"t": 0.0, "position": [-2.8, 0.0, -0.675], "pose": "sit", "yaw": -1.5708, "head_pitch": 0.5},
+        {"t": 1.0, "position": [-2.8, 0.0, -0.675], "pose": "sit", "yaw": -1.5708, "head_pitch": 0.5},
+        {"t": 2.5, "position": [-2.8, 0.0, -0.675], "pose": "sit", "yaw": -1.5708, "head_pitch": 0.5},
+        {"t": 11.0, "position": [-2.8, 0.0, -0.675], "pose": "sit", "yaw": -1.5708, "head_pitch": 0.5},
+        {"t": 17.0, "position": [-2.8, 0.0, -0.675], "pose": "sit", "yaw": -1.5708, "head_pitch": 0.5}
+      ]
+    }
+  ],
+  "cameras": [
+    {
+      "shot_id": "sh005",
+      "start": 0,
+      "duration_s": 11.0,
+      "movement": "static",
+      "keyframes": [
+        {"t": 0.0, "position": [-6.213, 0.3, 0.752], "target": [-4.823, 0.3, 0.532], "fov": 26.9915},
+        {"t": 11.0, "position": [-6.213, 0.3, 0.752], "target": [-4.823, 0.3, 0.532], "fov": 26.9915}
+      ]
+    },
+    {
+      "shot_id": "sh006",
+      "start": 11.0,
+      "duration_s": 6.0,
+      "movement": "static",
+      "keyframes": [
+        {"t": 0.0, "position": [-4.8, 0.3, 1.5], "target": [-4.815, 0.26, 0.675], "fov": 26.9915},
+        {"t": 6.0, "position": [-4.8, 0.3, 1.5], "target": [-4.815, 0.26, 0.675], "fov": 26.9915}
+      ]
+    }
+  ],
+  "continuity": {"actors": "inherit", "camera": "cut"},
+  "warnings": [
+    "sh006 is a close PROFILE of a face-up girl, so the lens sits beside her head on the grass at her eye-line rather than on the layout tile-1 sight line; the tile axis would look down on the top of her head. Screen-right still opens toward her feet and the meadow, as composition requires."
+  ]
+}

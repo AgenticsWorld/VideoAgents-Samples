@@ -1,0 +1,106 @@
+{
+  "character_id": "CHAR-mock-turtle",
+  "name": "The Mock Turtle",
+  "tier": "B",
+  "layer": "dream",
+  "temperament": {
+    "summary": "Melancholy, sentimental and self-pitying, with sudden bursts of wild delight when he remembers the good old days. He is touchy about his dignity and about his schooling.",
+    "baseline": "Heavy sighs, slow tearful speech, sitting alone.",
+    "under_pressure": "Takes offence and snaps at the listener, or chokes up entirely.",
+    "inferred": false
+  },
+  "traits": [
+    {
+      "trait": "Melancholy, self-pitying",
+      "description": "His whole identity is loss: 'Once I was a real Turtle.' He sobs through his history and sings his song choked with tears.",
+      "evidence": [
+        { "chapter": "ch009", "ref": "ch009-p48", "event": "ev0042", "note": "Sits sad and lonely on a ledge, sighing as if his heart would break." },
+        { "chapter": "ch009", "ref": "ch009-p53", "event": "ev0042", "quote": "“Once,” said the Mock Turtle at last, with a deep sigh, “I was a real Turtle.”" },
+        { "chapter": "ch010", "ref": "ch010-p75", "event": "ev0043", "note": "Sings in a voice 'sometimes choked with sobs'." }
+      ],
+      "inferred": false
+    },
+    {
+      "trait": "Nostalgic, proud of his schooling",
+      "description": "He treasures his school and measures others by it. He is relieved that Alice's school had no 'washing' extra, and lists his subjects with pride.",
+      "evidence": [
+        { "chapter": "ch009", "ref": "ch009-p69", "event": "ev0042", "note": "'then yours wasn’t a really good school'; said 'in a tone of great relief'." },
+        { "chapter": "ch009", "ref": "ch009-p79", "event": "ev0042", "note": "Counts off the subjects on his flappers." }
+      ],
+      "inferred": false
+    },
+    {
+      "trait": "Touchy and imperious with listeners",
+      "description": "He demands total silence while he speaks and calls Alice dull for a natural question.",
+      "evidence": [
+        { "chapter": "ch009", "ref": "ch009-p51", "note": "'sit down, both of you, and don’t speak a word till I’ve finished.'" },
+        { "chapter": "ch009", "ref": "ch009-p57", "note": "'really you are very dull!'" },
+        { "chapter": "ch010", "ref": "ch010-p49", "note": "Replies 'in an offended tone'." }
+      ],
+      "inferred": false
+    },
+    {
+      "trait": "Status-anxious",
+      "description": "He worries about 'extras' and admits, sighing, that he could not afford them and took only the regular course.",
+      "evidence": [
+        { "chapter": "ch009", "ref": "ch009-p65", "note": "Asks 'a little anxiously' whether Alice's school had extras." },
+        { "chapter": "ch009", "ref": "ch009-p71", "note": "'I couldn’t afford to learn it... I only took the regular course.'" }
+      ],
+      "inferred": false
+    },
+    {
+      "trait": "Swings from grief to wild joy",
+      "description": "Remembering the Quadrille, he capers wildly, then drops his voice and sits down sadly again in a moment.",
+      "evidence": [
+        { "chapter": "ch010", "ref": "ch010-p15", "event": "ev0043", "note": "Capers wildly about." },
+        { "chapter": "ch010", "ref": "ch010-p17", "event": "ev0043", "note": "Suddenly drops his voice; the two sit down again very sadly and quietly." }
+      ],
+      "inferred": false
+    },
+    {
+      "trait": "Wants things explained",
+      "description": "The same impatience with nonsense the other characters show: he keeps demanding that Alice explain her garbled verses.",
+      "evidence": [
+        { "chapter": "ch010", "ref": "ch010-p63", "note": "'I should like to have it explained'." },
+        { "chapter": "ch010", "ref": "ch010-p71", "note": "Interrupts: what is the use of repeating it without explaining?" }
+      ],
+      "inferred": false
+    }
+  ],
+  "motivation": {
+    "core": "To have his history heard and his sorrow honoured, and to relive his lost golden days in the telling.",
+    "fear": "Being thought ordinary or not a 'real' anything: his identity as a mock thing, a soup ingredient.",
+    "wants_from_alice": "A silent, sympathetic audience, and later an explanation of her own curious story.",
+    "shifts": [
+      { "chapter": "ch010", "ref": "ch010-p19", "event": "ev0043", "from": "mourning the past", "to": "re-enacting it: dancing the Quadrille for Alice", "trigger": "Alice's interest in the dance" },
+      { "chapter": "ch010", "ref": "ch010-p53", "event": "ev0043", "from": "the one telling the history", "to": "an attentive, curious listener to Alice's adventures", "trigger": "the Gryphon asks for Alice's story; the 'words all coming different' detail catches him" }
+    ]
+  },
+  "habits": [
+    { "habit": "Draws the back of his hand across his eyes; sighs deeply before speaking", "evidence": [ { "chapter": "ch010", "ref": "ch010-p01" }, { "chapter": "ch010", "ref": "ch010-p75" } ], "inferred": false },
+    { "habit": "Counts items off on his fingers (flappers) as he lists them", "evidence": [ { "chapter": "ch009", "ref": "ch009-p79" } ], "inferred": false },
+    { "habit": "Long silences broken only by heavy sobbing", "evidence": [ { "chapter": "ch009", "ref": "ch009-p54" } ], "inferred": false },
+    { "habit": "Hides his face in his hands with the Gryphon at a sad memory", "evidence": [ { "chapter": "ch009", "ref": "ch009-p84" } ], "inferred": false },
+    { "habit": "Moves stiffly, hunched under the weight of his shell, too stiff to demonstrate the old lessons", "evidence": [ { "chapter": "ch009", "ref": "ch009-p81" } ], "inferred": true, "reason": "'I’m too stiff' (ch009-p81) rendered as a hunched, shell-weighted posture for the photoreal CGI creature (SUP-010 as amended by BIB-0027)." }
+  ],
+  "decision_pattern": "Governed by mood. He will do anything that lets him relive or display his past (tell, dance, sing), and stops dead when he feels slighted.",
+  "taboos": [
+    { "taboo": "Never lets his history be interrupted or hurried", "basis": [ { "chapter": "ch009", "ref": "ch009-p51" } ], "inferred": false },
+    { "taboo": "Never admits his school was anything but superior", "basis": [ { "chapter": "ch009", "ref": "ch009-p69" } ], "inferred": false },
+    { "taboo": "Never holds back tears for the sake of appearances", "basis": [ { "chapter": "ch009", "ref": "ch009-p54" }, { "chapter": "ch010", "ref": "ch010-p01" } ], "inferred": false }
+  ],
+  "facade": {
+    "applies": false,
+    "reason": "His grief is on the surface; nothing is concealed or revealed later."
+  },
+  "waking_life_embodiment": {
+    "embodies": "The sentimental grown-up who weeps for his schooldays: the old boy who romanticises a school he half misremembers, fusses over fees and 'extras', and needs children to listen to the tale.",
+    "waking_source": "Alice's own schoolroom (French and music as extras, cp-lessons) and her one seaside trip, from which the shore grows (SUP-010). The sister's reverie links his sobs to the lowing cattle and farm sounds (ch012-p70).",
+    "authority_trait": "Nostalgic, status-conscious adulthood: grown-ups who talk about education as rank, and about childhood as a paradise lost.",
+    "coming_of_age_reading": "Alice meets an adult grieving for a childhood he has turned into a legend, and hears from the Gryphon that his great sorrow has no real content ('he hasn’t got no sorrow', ch009-p48). It is a gentle warning about the adult she might become, and part of why she values her own curious dream at the end.",
+    "grounding": [ "ch009-p53", "ch009-p69", "ch009-p71", "ch012-p70", "bible/world.json wonderland_real_counterparts cp-lessons", "cp-sounds", "bible/cultivation.json SUP-010" ],
+    "inferred": true,
+    "reason": "The curriculum, extras and sobbing are sourced. The nostalgic old-boy reading is a design interpretation for the coming-of-age frame."
+  },
+  "performance_baseline": "Photoreal CGI mock turtle (SUP-010, BIB-0027): hunched, damp-eyed, weighty; long pauses. Grief reads as the calf's head sinking into the shell and heaving sobs through the whole carapace; the Quadrille burst is a lumbering caper on hooves and flippers, an old creature briefly young. Pathos and comedy in equal measure; never mock his grief on camera."
+}

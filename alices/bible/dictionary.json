@@ -1,0 +1,2597 @@
+{
+  "_meta": {
+    "file": "bible/dictionary.json",
+    "status": "locked_v1",
+    "owner": "02-worldbuilding/dictionary",
+    "write_via": "00-orchestration/memory-bible (on_bible_access)",
+    "scope": "Canonical terminology: person/creature/place/object/institution/verse_song/idiom names. Canonical spelling follows the project source novel/Alices_Adventures_in_Wonderland_English.md; realistic-adaptation renames go to adapted_name with the source spelling kept in original_name/aliases. All other 8 worldbuilding files must hit this dictionary 100% (dictionary_hit_100pct).",
+    "id_prefixes": {
+      "TERM-": "term (numeric, TERM-0001)"
+    },
+    "entry_schema": {
+      "terms[]": {
+        "id": "TERM-0001",
+        "term": "",
+        "category": "person|creature|place|object|institution|verse_song|idiom|other",
+        "original_name": "",
+        "adapted_name": null,
+        "aliases": [
+          {
+            "name": "",
+            "source_chapter": "chNNN"
+          }
+        ],
+        "definition": "",
+        "entity_ref": "<CHAR-*/CRE-*/LOC-*/FAC-*/PROP-*|null>",
+        "first_seen": {
+          "chapter": "chNNN",
+          "quote": ""
+        },
+        "inferred": false,
+        "reason": null
+      }
+    },
+    "cross_domain_assumptions": [
+      "Talking-animal and living-playing-card characters (White Rabbit, Mouse, Duchess's household, Cheshire Cat, King/Queen/Knave of Hearts, Gryphon, Mock Turtle, etc.) are categorized here as 'creature' or 'person' strictly per their literal in-source depiction. This dictionary does NOT decide how the realistic adaptation renders them on screen (human actor, costume/role-play, hallucination, metaphor, or removed) -- that reinterpretation decision belongs to bible/cultivation.json SUP-* entries (owned by 02-worldbuilding/magic-cultivation with world), which was still status: skeleton_empty / decision_status: pending_phase2 at the time this file was written.",
+      "Alice's physical size changes and the two object transformations (pebbles into cakes, the crying baby into a pig) are recorded in term definitions as the literal source events, with no assumption about whether the realistic register stages them as literal, metaphorical, or psychological -- deferred to SUP-*.",
+      "The Wonderland narrative's dream frame (opened implicitly at TERM-0001 'Alice', closed explicitly in ch012) is noted factually in the 'Wonderland' entry (TERM-0054) without asserting whether the adaptation keeps the frame explicit, ambiguous, or removes it -- deferred to world/magic-cultivation and to be confirmed at H1.",
+      "adapted_name is left null on every entry in this pass: no realistic-register renames are invented by this agent. Once SUP-* reinterpretation decisions and character/creature realistic designs land in later phases, memory-bible may register renames here via controlled change (WRITE_RULES.md section 5); this dictionary does not preempt that call.",
+      "Where two entries risk being confused as the same term (e.g. Dinah vs. the Cheshire Cat, both cats; Alice vs. Mary Ann; Mock Turtle vs. Mock Turtle Soup vs. the song 'Turtle Soup'), the disambiguating clause is folded into each entry's 'definition' text (cross-referencing the other TERM id) rather than a separate field, since the project skeleton's entry_schema for this file has no dedicated disambiguation field."
+    ],
+    "version": "v1",
+    "merged_by": "p2-merge (00-orchestration/memory-bible)",
+    "merged_on": "2026-09-22",
+    "h1_status": "signed",
+    "cross_domain_reconciliation": "p2-merge: all five assumptions are CONSISTENT with the SUP registry (the dictionary records literal source depiction; on-screen rendering is SUP-002/SUP-004/SUP-010). Source terms added at merge: TERM-0120 to TERM-0123, plus the alias 'court of justice' on TERM-0064 (BIB-0008). Designed/real-world proper nouns used by other files are not added; they are listed in DEF-p2-bible-005 for registration after H1.",
+    "defect_fix_log": [
+      "DEF-p2-bible-005 (fixed): after user H1 ruling 5.6 A confirmed the Oxford/Thames-valley, 4 July 1862, clergyman-scholar-family frame, registered TERM-0124 to TERM-0151 -- the 17 designed/real-world proper nouns named in the ticket (folded to 16 new terms because 'Kingdom of Hearts' and 'House of Hearts' are registered as one canonical term with an alias, not two), plus the follow-on proper nouns introduced by the same-day geography and political fixes (7 new waking-world places from runs/p2-fix-geography/result.json, 5 new institutions from runs/p2-fix-political/result.json; 'Mary Ann', 'Pat' and 'the Mad Tea-Party' from the political fix were already registered and only needed an entity_ref backfill on TERM-0089). TERM-0054 (Wonderland) and TERM-0089 (the Mad Tea-Party) were updated in place (entity_ref backfilled, definitions extended) rather than duplicated, per WRITE_RULES.md section 5 (IDs kept stable, no recycling). code/p2-merge_check.py was run read-only to verify cross-refs/placeholders/quotes; its dictionary_hit_100pct check uses its own hardcoded LEXICON dict (surface -> TERM id, with 17 of these surfaces still hardcoded to None), which this agent cannot edit per its own file-ownership scope -- memory-bible needs to re-point those 17 LEXICON entries (and add the ~15 new surfaces) to the new/updated TERM ids at the next merge run, the same way it wired TERM-0120..0123 in previously. See runs/p2-fix-dictionary/result.json for the full old-surface -> TERM-id mapping table.",
+      "DEF-p3-dictionary-001 (fixed, BIB-0024, task p3-dict-fix): TERM-0001 age wording aligned to H1 5.6 A (about ten, points to CHAR-alice); TERM-0025 cross-reference to the Cheshire Cat corrected from TERM-0041 (March Hare) to TERM-0040.",
+      "DEF-p3-dictionary-002 (fixed, BIB-0026, task p3-bible-defects): _meta.cross_domain_assumptions[2] pointed 'Alice' at TERM-0002 (her sister); corrected to TERM-0001. _meta prose only; no terms[] entry changed."
+    ],
+    "rechecked_by": "p2-merge-recheck (00-orchestration/memory-bible)",
+    "rechecked_on": "2026-09-22",
+    "locked_at": "2026-09-22T17:59:52+08:00",
+    "locked_by": "H1 user signature (G2 PASS), recorded by 00-orchestration/memory-bible task p2-lock",
+    "lock_record": "runs/g2/gate.json",
+    "lock_changelog": "BIB-0023",
+    "controlled": "Writes only via memory-bible controlled change (WRITE_RULES.md section 5)."
+  },
+  "terms": [
+    {
+      "id": "TERM-0001",
+      "term": "Alice",
+      "category": "person",
+      "original_name": "Alice",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "The protagonist, a girl of about ten (H1 ruling 5.6 A; the confirmed age is recorded on CHAR-alice); the entire Wonderland narrative is framed as her dream while sitting on the riverbank with her sister (see TERM-0054 Wonderland).",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch001",
+        "quote": "Alice was beginning to get very tired of sitting by her sister on the bank"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0002",
+      "term": "her sister",
+      "category": "person",
+      "original_name": "her sister",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "Alice's unnamed elder sister, reading on the riverbank at the story's start; she wakes Alice at the end and has a closing reverie of her own (ch012).",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch001",
+        "quote": "sitting by her sister on the bank, and of having nothing to do"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0003",
+      "term": "Ada",
+      "category": "person",
+      "original_name": "Ada",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "A girl Alice knows in waking life, ruled out as who she might have been changed into because Ada's hair goes in long ringlets; never appears on stage.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch002",
+        "quote": "I'm sure I'm not Ada"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0004",
+      "term": "Mabel",
+      "category": "person",
+      "original_name": "Mabel",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "A girl Alice knows in waking life who \"knows such a very little\"; Alice fears she has been changed into Mabel when her lessons come out wrong. Never appears on stage.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch002",
+        "quote": "I can't be Mabel, for I know all sorts of things"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0005",
+      "term": "William the Conqueror",
+      "category": "person",
+      "original_name": "William the Conqueror",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "Real historical figure; referenced first as a joke (a French mouse \"come over with William the Conqueror\") and then quoted from the Mouse's dry history recitation.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch002",
+        "quote": "I daresay it's a French mouse, come over with William the Conqueror"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0006",
+      "term": "Edwin and Morcar",
+      "category": "person",
+      "original_name": "Edwin and Morcar",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "Real historical earls of Mercia and Northumbria, named in the passage the Mouse recites as \"the driest thing I know\" to dry the party off.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch003",
+        "quote": "Edwin and Morcar, the earls of Mercia and Northumbria"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0007",
+      "term": "Stigand",
+      "category": "person",
+      "original_name": "Stigand",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "Real historical archbishop of Canterbury, named in the same dry history passage the Mouse recites.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch003",
+        "quote": "the patriotic archbishop of Canterbury, found it advisable"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0008",
+      "term": "Edgar Atheling",
+      "category": "person",
+      "original_name": "Edgar Atheling",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "Real historical figure named in the Mouse's dry history passage as the one Edwin and Morcar went to meet William the Conqueror with.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch003",
+        "quote": "found it advisable to go with Edgar Atheling to meet William"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0009",
+      "term": "Shakespeare",
+      "category": "person",
+      "original_name": "Shakespeare",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "Referenced only as a visual comparison: the Dodo pauses to think in the pose usually shown in pictures of Shakespeare.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch003",
+        "quote": "the position in which you usually see Shakespeare, in the pictures of him"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0010",
+      "term": "Mary Ann",
+      "category": "person",
+      "original_name": "Mary Ann",
+      "aliases": [],
+      "adapted_name": null,
+      "definition": "The White Rabbit's real housemaid; she never appears on stage. The Rabbit mistakes Alice for her and sends her to fetch gloves and a fan. Distinct from Alice (TERM-0001), who is not actually Mary Ann.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch004",
+        "quote": "Why, Mary Ann, what _are_ you doing out here?"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0011",
+      "term": "Duchess",
+      "category": "person",
+      "original_name": "Duchess",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "Owns the kitchen where a baby (later a pig, see TERM-0040) is nursed amid pepper and chaos; later walks the croquet ground with Alice, moralizing over everything, and is at one point under sentence of execution for boxing the Queen's ears.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch006",
+        "quote": "the Duchess was sitting on a three-legged stool in the middle, nursing a baby"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0012",
+      "term": "the cook",
+      "category": "person",
+      "original_name": "the cook",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "The Duchess's cook, who over-peppers the soup, hurls pots and pans, and later gives evidence at the trial while carrying her pepper-box; refuses to answer the King's question.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch006",
+        "quote": "the cook was leaning over the fire, stirring a large cauldron"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0013",
+      "term": "Fish-Footman",
+      "category": "person",
+      "original_name": "Fish-Footman",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "A footman with a fish-like face who delivers the Queen's croquet invitation to the Frog-Footman at the Duchess's door; appears only in this one exchange.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch006",
+        "quote": "a footman in livery came running out of the wood"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0014",
+      "term": "Frog-Footman",
+      "category": "person",
+      "original_name": "Frog-Footman",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "A footman with a round frog-like face who receives the croquet invitation and then sits uselessly by the door, telling Alice there is no use knocking.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch006",
+        "quote": "another footman in livery, with a round face, and large eyes like a frog"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0015",
+      "term": "Hatter",
+      "category": "person",
+      "original_name": "Hatter",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "Host of the never-ending tea party with the March Hare and Dormouse; stuck at six o'clock ever since he \"murdered the time\" singing before the Queen. Asks Alice the unanswered riddle \"Why is a raven like a writing-desk?\" (TERM-0119) and later gives flustered evidence at the trial.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch006",
+        "quote": "In _that_ direction,” the Cat said, waving its right paw round, “lives a Hatter"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0016",
+      "term": "Queen of Hearts",
+      "category": "person",
+      "original_name": "Queen of Hearts",
+      "adapted_name": null,
+      "aliases": [
+        {
+          "name": "the Queen",
+          "source_chapter": "ch008"
+        }
+      ],
+      "definition": "Playing-card monarch obsessed with beheading; repeatedly shouts \"Off with his/her head!\" (TERM-0116) at the croquet ground and presides over the trial in ch011-012.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch008",
+        "quote": "last of all this grand procession, came THE KING AND QUEEN OF HEARTS"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0017",
+      "term": "King of Hearts",
+      "category": "person",
+      "original_name": "King of Hearts",
+      "adapted_name": null,
+      "aliases": [
+        {
+          "name": "the King",
+          "source_chapter": "ch008"
+        }
+      ],
+      "definition": "Playing-card monarch who quietly pardons the Queen's death sentences; acts as judge at the trial of the Knave in ch011-012, reading out the invented Rule Forty-two (TERM-0091).",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch008",
+        "quote": "last of all this grand procession, came THE KING AND QUEEN OF HEARTS"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0018",
+      "term": "Knave of Hearts",
+      "category": "person",
+      "original_name": "Knave of Hearts",
+      "adapted_name": null,
+      "aliases": [
+        {
+          "name": "the Knave",
+          "source_chapter": "ch008"
+        }
+      ],
+      "definition": "Carries the King's crown in the royal procession; stands trial in ch011-012 accused, per the nursery rhyme (TERM-0113), of stealing the Queen's tarts (TERM-0086).",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch008",
+        "quote": "Then followed the Knave of Hearts, carrying the King’s crown on a crimson velvet cushion"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0019",
+      "term": "Five",
+      "category": "person",
+      "original_name": "Five",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "One of three playing-card gardeners painting the white rose-tree red; blames Seven for jogging his elbow and accuses Two of past misdeeds.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch008",
+        "quote": "“I couldn’t help it,” said Five, in a sulky tone; “Seven jogged my elbow.”"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0020",
+      "term": "Seven",
+      "category": "person",
+      "original_name": "Seven",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "One of three playing-card gardeners painting the rose-tree; blamed by Five for jogging his elbow while accused of always deserving beheading.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch008",
+        "quote": "On which Seven looked up and said, “That’s right, Five!"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0021",
+      "term": "Two",
+      "category": "person",
+      "original_name": "Two",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "One of three playing-card gardeners; explains to Alice that a white rose-tree was planted by mistake where a red one should have been, risking all their heads.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch008",
+        "quote": "Two began in a low voice, “Why the fact is, you see, Miss"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0022",
+      "term": "the executioner",
+      "category": "person",
+      "original_name": "the executioner",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "Unnamed royal executioner who argues at the croquet ground that a head cannot be cut off without a body attached, in a three-way dispute with the King and Queen over beheading the Cheshire Cat.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch008",
+        "quote": "there was a dispute going on between the executioner, the King, and the Queen"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0023",
+      "term": "Father William",
+      "category": "person",
+      "original_name": "Father William",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "Character in the nonsense poem \"You are old, Father William\" (TERM-0106) that the Caterpillar makes Alice recite; an old man who stands on his head and balances eels on his nose.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch005",
+        "quote": "“You are old, Father William,” the young man said"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0024",
+      "term": "Pat",
+      "category": "person",
+      "original_name": "Pat",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "One of the White Rabbit's outdoor helpers, addressed as \"Pat\" and speaking with an Irish idiom (\"yer honour\"); species is not specified in the text.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch004",
+        "quote": "Sure then I’m here! Digging for apples, yer honour!"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0025",
+      "term": "Dinah",
+      "category": "creature",
+      "original_name": "Dinah",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "Alice's pet cat back home, mentioned throughout as an object of homesickness and a running threat (\"I'll set Dinah at you!\"). Never appears in Wonderland; distinct from the Cheshire Cat (TERM-0040), the grinning cat Alice meets in Wonderland.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch001",
+        "quote": "(Dinah was the cat.)"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0026",
+      "term": "White Rabbit",
+      "category": "creature",
+      "original_name": "White Rabbit",
+      "adapted_name": null,
+      "aliases": [
+        {
+          "name": "the Rabbit",
+          "source_chapter": "ch001"
+        },
+        {
+          "name": "W. RABBIT",
+          "source_chapter": "ch004"
+        }
+      ],
+      "definition": "A pink-eyed, waistcoat-and-watch-carrying rabbit whom Alice follows down the rabbit-hole; later mistakes her for his housemaid Mary Ann (TERM-0010) and serves as herald at the trial.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch001",
+        "quote": "suddenly a White Rabbit with pink eyes ran close by her"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0027",
+      "term": "the Mouse",
+      "category": "creature",
+      "original_name": "the Mouse",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "A mouse Alice meets swimming in the Pool of Tears; leads the Caucus-race (TERM-0087) and begins to tell its sad \"tale\" (the shape-poem, TERM-0109) before storming off, offended by talk of cats and dogs.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch002",
+        "quote": "she soon made out that it was only a mouse that had slipped in like herself"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0028",
+      "term": "Lory",
+      "category": "creature",
+      "original_name": "Lory",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "A parrot among the birds soaked in the Pool of Tears; argues with Alice about age and later asks who Dinah is.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch002",
+        "quote": "there were a Duck and a Dodo, a Lory and an Eaglet"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0029",
+      "term": "Duck",
+      "category": "creature",
+      "original_name": "Duck",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "One of the pool creatures; interrupts the Mouse's dry history recitation to ask what the archbishop \"found.\"",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch002",
+        "quote": "there were a Duck and a Dodo, a Lory and an Eaglet"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0030",
+      "term": "Dodo",
+      "category": "creature",
+      "original_name": "Dodo",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "Proposes and organizes the Caucus-race (TERM-0087) to dry everyone off, then declares \"everybody has won\" and awards Alice a thimble as her own prize.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch002",
+        "quote": "there were a Duck and a Dodo, a Lory and an Eaglet"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0031",
+      "term": "Eaglet",
+      "category": "creature",
+      "original_name": "Eaglet",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "One of the pool creatures; tells the Dodo to \"speak English\" when its long words go unexplained.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch002",
+        "quote": "there were a Duck and a Dodo, a Lory and an Eaglet"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0032",
+      "term": "the Crab and her daughter",
+      "category": "creature",
+      "original_name": "the Crab and her daughter",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "An old crab who moralizes to her young daughter about losing one's temper as the Mouse storms off from the Caucus-race gathering; the daughter snaps back at her.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch003",
+        "quote": "an old Crab took the opportunity of saying to her daughter"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0033",
+      "term": "Magpie",
+      "category": "creature",
+      "original_name": "Magpie",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "One of the birds who hastily leaves after Alice praises Dinah's skill at catching birds, citing the night air.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch003",
+        "quote": "one old Magpie began wrapping itself up very carefully"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0034",
+      "term": "Canary",
+      "category": "creature",
+      "original_name": "Canary",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "One of the birds who calls its children away to bed after Alice's remark about Dinah eating birds.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch003",
+        "quote": "a Canary called out in a trembling voice to its children"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0035",
+      "term": "Bill",
+      "category": "creature",
+      "original_name": "Bill",
+      "adapted_name": null,
+      "aliases": [
+        {
+          "name": "the Lizard",
+          "source_chapter": "ch004"
+        }
+      ],
+      "definition": "A lizard sent down the chimney of the White Rabbit's house and kicked back out by giant Alice; reappears as a juror at the trial, where Alice steals his squeaking pencil and he is made to write with ink after his fingers.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch004",
+        "quote": "“This is Bill,” she gave one sharp kick"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0036",
+      "term": "guinea-pigs",
+      "category": "creature",
+      "original_name": "guinea-pigs",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "Two guinea-pigs who tend the fallen Bill outside the White Rabbit's house; later cheer during the trial and are each suppressed by being tied head-first into a canvas bag.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch004",
+        "quote": "being held up by two guinea-pigs, who were giving it something out of a bottle"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0037",
+      "term": "Caterpillar",
+      "category": "creature",
+      "original_name": "Caterpillar",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "A large blue caterpillar smoking a hookah (TERM-0079) atop a mushroom (TERM-0078); questions Alice's identity, tells her to \"keep your temper,\" and reveals that the mushroom's two sides make her grow taller or shorter.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch004",
+        "quote": "her eyes immediately met those of a large blue caterpillar"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0038",
+      "term": "Pigeon",
+      "category": "creature",
+      "original_name": "Pigeon",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "A mother bird who attacks Alice's elongated neck, convinced she is a serpent come to eat her eggs; unconvinced even when Alice claims to be a little girl.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch005",
+        "quote": "a large pigeon had flown into her face"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0039",
+      "term": "the baby",
+      "category": "creature",
+      "original_name": "the baby",
+      "adapted_name": null,
+      "aliases": [
+        {
+          "name": "the pig-baby",
+          "source_chapter": "ch006"
+        }
+      ],
+      "definition": "The Duchess's sneezing, star-fish-shaped infant, flung to Alice to nurse; turns into a pig in Alice's arms and trots off into the wood.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch006",
+        "quote": "the Duchess was sitting on a three-legged stool in the middle, nursing a baby"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0040",
+      "term": "Cheshire Cat",
+      "category": "creature",
+      "original_name": "Cheshire Cat",
+      "adapted_name": null,
+      "aliases": [
+        {
+          "name": "Cheshire Puss",
+          "source_chapter": "ch006"
+        },
+        {
+          "name": "the Cat",
+          "source_chapter": "ch006"
+        }
+      ],
+      "definition": "A perpetually grinning cat, first seen in a tree near the Duchess's house, who can fade in and out of visibility (once leaving only the grin behind); directs Alice to the Hatter and March Hare, is nearly beheaded at the croquet ground, and vanishes before the executioner can act. Distinct from Dinah (TERM-0025), Alice's pet cat at home.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch006",
+        "quote": "she was a little startled by seeing the Cheshire Cat sitting on a bough of a tree"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0041",
+      "term": "March Hare",
+      "category": "creature",
+      "original_name": "March Hare",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "Co-host with the Hatter of the never-ending tea party at his own house (chimneys shaped like ears, roof thatched with fur); described by the Cheshire Cat as mad, having gone mad the previous March.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch006",
+        "quote": "in _that_ direction,” waving the other paw, “lives a March Hare"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0042",
+      "term": "Dormouse",
+      "category": "creature",
+      "original_name": "Dormouse",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "A perpetually sleepy mouse used as a cushion between the Hatter and March Hare at tea; tells the treacle-well story of Elsie, Lacie, and Tillie (TERM-0044) and reappears asleep at the trial.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch007",
+        "quote": "a Dormouse was sitting between them, fast asleep"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0043",
+      "term": "Time",
+      "category": "idiom",
+      "original_name": "Time",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "The Hatter's personification of time itself as a person (\"him,\" not \"it\") whom he quarrelled with at a concert, freezing the tea party at six o'clock forever; a figure of speech, not a character who appears on stage.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch007",
+        "quote": "If you knew Time as well as I do,” said the Hatter, “you wouldn’t talk about wasting _it_. It’s _him_."
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0044",
+      "term": "Elsie, Lacie, and Tillie",
+      "category": "person",
+      "original_name": "Elsie, Lacie, and Tillie",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "Three little sisters in the Dormouse's story who live at the bottom of a treacle-well and learn to draw things beginning with M; they never appear outside the Dormouse's telling.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch007",
+        "quote": "their names were Elsie, Lacie, and Tillie; and they lived at the bottom of a well"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0045",
+      "term": "Gryphon",
+      "category": "creature",
+      "original_name": "Gryphon",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "A sleepy creature woken by the Queen to escort Alice to the Mock Turtle; explains that the Queen never actually executes anyone (\"it's all her fancy\") and joins the Mock Turtle in describing the Lobster Quadrille (TERM-0088).",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch009",
+        "quote": "They very soon came upon a Gryphon, lying fast asleep in the sun"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0046",
+      "term": "Mock Turtle",
+      "category": "creature",
+      "original_name": "Mock Turtle",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "A sobbing, sighing creature who was \"a real Turtle\" once; tells Alice of his undersea school under the Tortoise (TERM-0047) and sings \"Turtle Soup\" (TERM-0112). The animal that mock turtle soup (TERM-0104) is imagined to be made from, per the Queen's explanation; not itself a dish.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch009",
+        "quote": "“It’s the thing Mock Turtle Soup is made from,” said the Queen"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0047",
+      "term": "the Tortoise",
+      "category": "creature",
+      "original_name": "the Tortoise",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "The Mock Turtle's old schoolmaster, an actual Turtle nicknamed \"Tortoise\" by his pupils because, as the Mock Turtle explains, \"he taught us.\"",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch009",
+        "quote": "The master was an old Turtle—we used to call him Tortoise"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0048",
+      "term": "the Classics master",
+      "category": "creature",
+      "original_name": "the Classics master",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "An old crab who taught \"Laughing and Grief\" (TERM-0102) at the undersea school; the Gryphon attended his lessons, the Mock Turtle did not.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch009",
+        "quote": "I went to the Classics master, though. He was an old crab"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0049",
+      "term": "the Drawling-master",
+      "category": "creature",
+      "original_name": "the Drawling-master",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "An old conger-eel who came once a week to the undersea school to teach Drawling, Stretching, and Fainting in Coils (TERM-0098, TERM-0099, TERM-0100).",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch009",
+        "quote": "the Drawling-master was an old conger-eel, that used to come once a week"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0050",
+      "term": "the puppy",
+      "category": "creature",
+      "original_name": "the puppy",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "An enormous puppy Alice encounters in the wood after escaping the White Rabbit's house; she throws it a stick to distract it and escapes while it is not looking, before resuming her search for the mushroom.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch004",
+        "quote": "An enormous puppy was looking down at her with large round eyes"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0051",
+      "term": "the flamingo",
+      "category": "creature",
+      "original_name": "the flamingo",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "A live flamingo Alice uses as a croquet mallet on the Queen's Croquet-Ground; keeps twisting its neck to look at her, ruining her swing.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch008",
+        "quote": "the mallets live flamingoes"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0052",
+      "term": "the hedgehog",
+      "category": "creature",
+      "original_name": "the hedgehog",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "Live hedgehogs used as croquet balls on the Queen's Croquet-Ground; they unroll and crawl away mid-game, adding to the chaos.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch008",
+        "quote": "the balls were live hedgehogs"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0053",
+      "term": "the ten soldiers, ten courtiers, and royal children",
+      "category": "creature",
+      "original_name": "the ten soldiers, ten courtiers, and royal children",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "The playing-card figures of the royal procession -- oblong club-shaped soldiers, diamond-covered courtiers, and heart-covered royal children -- who later double up as the croquet ground's arches. Part of the pack of cards (TERM-0090).",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch008",
+        "quote": "First came ten soldiers carrying clubs… next the ten courtiers"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0054",
+      "term": "Wonderland",
+      "category": "place",
+      "original_name": "Wonderland",
+      "adapted_name": null,
+      "aliases": [
+        {
+          "name": "Wonderland (Alice's Dream)",
+          "source_chapter": "ch012"
+        }
+      ],
+      "definition": "The overall dream-world Alice visits after following the White Rabbit down the rabbit-hole; the source text frames the entire adventure (chs. 1-11 and most of 12) as her dream, closed when her sister wakes her and reopened briefly in her sister's own closing reverie. Per user H1 ruling 5.2 A, Wonderland is dream-only space: every dream place is linked to a real waking-world detail it grows from (bible/geography.json grows_from pointers), and the waking world itself stays small and real (see TERM-0140 The Thames Valley Near Oxford). 'Wonderland (Alice's Dream)' is bible/geography.json's own name for its dream-layer root entry, not book wording.",
+      "entity_ref": "LOC-wonderland-dream",
+      "first_seen": {
+        "chapter": "ch012",
+        "quote": "half believed herself in Wonderland"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0055",
+      "term": "the rabbit-hole",
+      "category": "place",
+      "original_name": "the rabbit-hole",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "The hole under the hedge that the White Rabbit pops down and Alice follows; it drops straight, then plunges into a long, slow fall past shelves and cupboards.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch001",
+        "quote": "fortunately was just in time to see it pop down a large rabbit-hole under the hedge"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0056",
+      "term": "the long hall",
+      "category": "place",
+      "original_name": "the long hall",
+      "adapted_name": null,
+      "aliases": [
+        {
+          "name": "the hall of doors",
+          "source_chapter": "ch001"
+        }
+      ],
+      "definition": "A low hall lit by hanging lamps, lined with locked doors, holding the glass table with the golden key (TERM-0072); the little door behind a curtain leads to the beautiful garden (TERM-0062). It vanishes without explanation after Alice's swim in the Pool of Tears (ch004) and reappears in ch007.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch001",
+        "quote": "she found herself in a long, low hall, which was lit up by a row of lamps"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0057",
+      "term": "the Pool of Tears",
+      "category": "place",
+      "original_name": "the Pool of Tears",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "The salt-water pool formed by Alice's own tears when she was nine feet high; she and the animals she meets there swim to shore together.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch002",
+        "quote": "she was in the pool of tears which she had wept when she was nine feet high"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0058",
+      "term": "the wood",
+      "category": "place",
+      "original_name": "the wood",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "The thick wood Alice escapes into after fleeing the White Rabbit's house (meeting the puppy and the Caterpillar's mushroom clearing) and, later, the wood in front of which the March Hare's house stands.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch004",
+        "quote": "she ran off as hard as she could, and soon found herself safe in a thick wood"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0059",
+      "term": "the White Rabbit's house",
+      "category": "place",
+      "original_name": "the White Rabbit's house",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "A neat little house with a brass door-plate reading \"W. RABBIT\"; Alice grows too large inside it while fetching the Rabbit's gloves and fan, then escapes by shrinking after eating a pebble-turned-cake.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch004",
+        "quote": "a bright brass plate with the name “W. RABBIT,” engraved upon it"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0060",
+      "term": "the Duchess's house",
+      "category": "place",
+      "original_name": "the Duchess's house",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "A house about four feet high whose smoke-filled kitchen holds the pepper-soup, the sneezing baby, the cook, and the grinning cat on the hearth; entered by Alice via the Fish- and Frog-Footmen's door.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch005",
+        "quote": "she came suddenly upon an open place, with a little house in it about four feet high"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0061",
+      "term": "the March Hare's house",
+      "category": "place",
+      "original_name": "the March Hare's house",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "A large house with chimneys shaped like ears and a roof thatched with fur, where the endless tea party takes place under a tree out front.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch006",
+        "quote": "the chimneys were shaped like ears and the roof was thatched with fur"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0062",
+      "term": "the beautiful garden",
+      "category": "place",
+      "original_name": "the beautiful garden",
+      "adapted_name": null,
+      "aliases": [
+        {
+          "name": "the lovely garden",
+          "source_chapter": "ch001"
+        }
+      ],
+      "definition": "The bright flower-bedded, fountain-cooled garden Alice glimpses through the little door off the long hall (TERM-0056) throughout the story; she finally reaches it at the end of ch007, and it opens into the Queen's Croquet-Ground.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch001",
+        "quote": "he loveliest garden you ever saw"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0063",
+      "term": "the Queen's Croquet-Ground",
+      "category": "place",
+      "original_name": "the Queen's Croquet-Ground",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "A ridged and furrowed lawn beyond the garden where the Queen's court plays croquet with live flamingoes (TERM-0051) and hedgehogs (TERM-0052) and soldiers as arches; the rose-tree (TERM-0083) stands near its entrance.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch008",
+        "quote": "Alice thought she had never seen such a curious croquet-ground in her life"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0064",
+      "term": "the court",
+      "category": "place",
+      "original_name": "the court of justice",
+      "adapted_name": null,
+      "aliases": [
+        {
+          "name": "court of justice",
+          "source_chapter": "ch011"
+        }
+      ],
+      "definition": "The royal court of justice where the King (as judge, wig under crown) tries the Knave of Hearts for stealing the tarts, with a jury of twelve creatures, culminating in Alice's own testimony.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch011",
+        "quote": "Alice had never been in a court of justice before"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0065",
+      "term": "England",
+      "category": "place",
+      "original_name": "England",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "Real country; referenced in Alice's own reasoning about bathing machines on \"the English coast,\" and in the Mouse's history recitation (William the Conqueror \"soon submitted to by the English\").",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch002",
+        "quote": "wherever you go to on the English coast you find a number of bathing machines"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0066",
+      "term": "New Zealand",
+      "category": "place",
+      "original_name": "New Zealand",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "Real country Alice guesses she might fall through to the other side of the earth and arrive at, while falling down the rabbit-hole.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch001",
+        "quote": "is this New Zealand or Australia?"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0067",
+      "term": "Australia",
+      "category": "place",
+      "original_name": "Australia",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "Real country named alongside New Zealand as Alice's guess for where she might emerge if she fell through the earth.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch001",
+        "quote": "is this New Zealand or Australia?"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0068",
+      "term": "London",
+      "category": "place",
+      "original_name": "London",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "Real city Alice mangles into her muddled underground Geography recitation (\"London is the capital of Paris\").",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch002",
+        "quote": "London is the capital of Paris, and Paris is the capital of Rome"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0069",
+      "term": "Paris",
+      "category": "place",
+      "original_name": "Paris",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "Real city named in the same jumbled Geography recitation as London and Rome.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch002",
+        "quote": "London is the capital of Paris, and Paris is the capital of Rome"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0070",
+      "term": "Rome",
+      "category": "place",
+      "original_name": "Rome",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "Real city named in the same jumbled Geography recitation, after which Alice concludes she must have turned into Mabel.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch002",
+        "quote": "London is the capital of Paris, and Paris is the capital of Rome"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0071",
+      "term": "France",
+      "category": "place",
+      "original_name": "France",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "Real country named in the Lobster Quadrille song (TERM-0111) as the far shore that makes the far-off dance worthwhile: \"the nearer is to France.\"",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch010",
+        "quote": "The further off from England the nearer is to France"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0072",
+      "term": "the golden key",
+      "category": "object",
+      "original_name": "the golden key",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "A tiny golden key found on the glass table in the long hall (TERM-0056); it unlocks the little door to the beautiful garden but is repeatedly left out of Alice's reach by her own size changes.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch001",
+        "quote": "there was nothing on it except a tiny golden key"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0073",
+      "term": "the \"DRINK ME\" bottle",
+      "category": "object",
+      "original_name": "the \"DRINK ME\" bottle",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "A little bottle found on the glass table with a paper label reading \"DRINK ME\"; drinking it shrinks Alice to ten inches high.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch001",
+        "quote": "with the words “DRINK ME,” beautifully printed on it in large letters"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0074",
+      "term": "the \"EAT ME\" cake",
+      "category": "object",
+      "original_name": "the \"EAT ME\" cake",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "A small cake found under the glass table, with \"EAT ME\" marked in currants; eating it, Alice expects (wrongly, at first) to change size.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch001",
+        "quote": "the words “EAT ME” were beautifully marked in currants"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0075",
+      "term": "the \"ORANGE MARMALADE\" jar",
+      "category": "object",
+      "original_name": "the \"ORANGE MARMALADE\" jar",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "An empty jar labelled \"ORANGE MARMALADE\" that Alice takes from a shelf while falling down the rabbit-hole and tucks into a cupboard as she passes.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch001",
+        "quote": "it was labelled “ORANGE MARMALADE”, but to her great disappointment it was empty"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0076",
+      "term": "the White Rabbit's pocket watch",
+      "category": "object",
+      "original_name": "the White Rabbit's watch",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "The watch the White Rabbit takes from his waistcoat-pocket at the very start of the story, the detail that first pulls Alice's curiosity toward him. Distinct from the Hatter's malfunctioning watch (TERM-0077).",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch001",
+        "quote": "the Rabbit actually _took a watch out of its waistcoat-pocket_"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0077",
+      "term": "the Hatter's watch",
+      "category": "object",
+      "original_name": "the Hatter's watch",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "A watch that tells the day of the month but not the time, ruined (the Hatter claims) by buttering it with a bread-knife; central prop of the tea-party riddle scene. Distinct from the White Rabbit's watch (TERM-0076).",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch007",
+        "quote": "he had taken his watch out of his pocket, and was looking at it uneasily"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0078",
+      "term": "the white kid gloves and fan",
+      "category": "object",
+      "original_name": "the white kid gloves and fan",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "Items the White Rabbit drops in fright when Alice first addresses him; she picks them up, and later the fan she absent-mindedly holds shrinks her rapidly until she drops it.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch002",
+        "quote": "with a pair of white kid gloves in one hand and a large fan in the other"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0079",
+      "term": "the mushroom",
+      "category": "object",
+      "original_name": "the mushroom",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "The large mushroom the Caterpillar sits on; one side makes Alice grow taller, the other shorter, and she carries pieces of it in her pocket for the rest of the story to control her size.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch004",
+        "quote": "There was a large mushroom growing near her, about the same height as herself"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0080",
+      "term": "the hookah",
+      "category": "object",
+      "original_name": "the hookah",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "The long pipe the Caterpillar smokes throughout its conversation with Alice, taking it out of its mouth to speak and putting it back to signal the conversation is over.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch004",
+        "quote": "quietly smoking a long hookah"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0081",
+      "term": "the thimble",
+      "category": "object",
+      "original_name": "the thimble",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "The only other item in Alice's pocket besides a box of comfits; the Dodo solemnly presents it back to her as her own prize for the Caucus-race (TERM-0087).",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch003",
+        "quote": "“Only a thimble,” said Alice sadly."
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0082",
+      "term": "the rose-tree",
+      "category": "object",
+      "original_name": "the rose-tree",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "A rose-tree near the garden entrance that should bear red roses but was planted white by mistake; three card gardeners (TERM-0019, TERM-0020, TERM-0021) are caught painting the white roses red to avoid execution.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch008",
+        "quote": "A large rose-tree stood near the entrance of the garden: the roses growing on it were white"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0083",
+      "term": "the pepper-box",
+      "category": "object",
+      "original_name": "the pepper-box",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "The cook's pepper container, source of the sneezing fit in the Duchess's kitchen; she still carries it when called as a witness at the trial, making the courtroom sneeze before she even enters.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch006",
+        "quote": "“There’s certainly too much pepper in that soup!”"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0084",
+      "term": "the King's crown",
+      "category": "object",
+      "original_name": "the King's crown",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "Carried on a crimson velvet cushion by the Knave of Hearts in the royal procession; the King later wears it over his judge's wig at the trial, looking uncomfortable.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch008",
+        "quote": "the Knave of Hearts, carrying the King’s crown on a crimson velvet cushion"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0085",
+      "term": "the White Rabbit's trumpet and scroll",
+      "category": "object",
+      "original_name": "the White Rabbit's trumpet and scroll",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "The trumpet the White Rabbit blows to open the trial and the parchment scroll he reads the accusation from, in his role as court herald.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch011",
+        "quote": "near the King was the White Rabbit, with a trumpet in one hand, and a scroll of parchment in the other"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0086",
+      "term": "the tarts",
+      "category": "object",
+      "original_name": "the tarts",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "The Queen of Hearts's tarts, displayed on the courtroom table and the subject of the entire trial (see TERM-0018, TERM-0113); the King reasons from the trial verses that they explain a mysterious \"one\" and \"two.\"",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch011",
+        "quote": "a table, with a large dish of tarts upon it"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0087",
+      "term": "Caucus-race",
+      "category": "other",
+      "original_name": "Caucus-race",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "A race invented by the Dodo to dry the party off: everyone runs in a circle in no particular pattern, starting and stopping whenever they like, until the Dodo declares \"everybody has won\" and all get prizes.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch003",
+        "quote": "the best thing to get us dry would be a Caucus-race"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0088",
+      "term": "the Lobster Quadrille",
+      "category": "other",
+      "original_name": "the Lobster Quadrille",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "An undersea dance described and demonstrated by the Mock Turtle and Gryphon: seals, turtles, and salmon line up, advance with lobster partners, then throw the lobsters out to sea and dive in after them. See also the accompanying song, TERM-0111.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch010",
+        "quote": "what a delightful thing a Lobster Quadrille is!"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0089",
+      "term": "the Mad Tea-Party",
+      "category": "institution",
+      "original_name": "A Mad Tea-Party",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "The endless tea party held by the Hatter and March Hare (with the Dormouse as cushion) outside the March Hare's house, stuck permanently at tea-time because the Hatter's watch (TERM-0077) is broken and Time (TERM-0043) will no longer cooperate. Registered as faction FAC-mad-tea-party per user H1 ruling 5.5 A.",
+      "entity_ref": "FAC-mad-tea-party",
+      "first_seen": {
+        "chapter": "ch007",
+        "quote": "it's always tea-time, and we've no time to wash the things between whiles"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0090",
+      "term": "the pack of cards",
+      "category": "institution",
+      "original_name": "a pack of cards",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "Alice's own description of the King, Queen, Knave, soldiers, courtiers, and royal children as a royal court made up entirely of playing cards; she realizes this and loses her fear of them just before the trial ends. The same household is registered as faction FAC-house-of-hearts (see TERM-0139 House of Hearts) under world.json's 'pack-of-cards' proposal.",
+      "entity_ref": "FAC-house-of-hearts",
+      "first_seen": {
+        "chapter": "ch008",
+        "quote": "they're only a pack of cards, after all. I needn't be afraid of them!"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0091",
+      "term": "Rule Forty-two",
+      "category": "other",
+      "original_name": "Rule Forty-two",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "A courtroom rule the King reads from his note-book at the trial -- \"All persons more than a mile high to leave the court\" -- which Alice points out he invented on the spot.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch012",
+        "quote": "“Rule Forty-two. _All persons more than a mile high to leave the court_.”"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0092",
+      "term": "Uglification",
+      "category": "other",
+      "original_name": "Uglification",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "One of the \"different branches of Arithmetic\" taught at the Mock Turtle's undersea school, a nonsense parody of \"Multiplication\"; the Gryphon is scandalized Alice has never heard of it.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch009",
+        "quote": "the different branches of Arithmetic—Ambition, Distraction, Uglification, and Derision"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0093",
+      "term": "Ambition",
+      "category": "other",
+      "original_name": "Ambition",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "One of the four nonsense \"branches of Arithmetic\" taught undersea, parodying \"Addition.\"",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch009",
+        "quote": "Ambition, Distraction, Uglification, and Derision"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0094",
+      "term": "Distraction",
+      "category": "other",
+      "original_name": "Distraction",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "One of the four nonsense \"branches of Arithmetic\" taught undersea, parodying \"Subtraction.\"",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch009",
+        "quote": "Ambition, Distraction, Uglification, and Derision"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0095",
+      "term": "Derision",
+      "category": "other",
+      "original_name": "Derision",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "One of the four nonsense \"branches of Arithmetic\" taught undersea, parodying \"Division.\"",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch009",
+        "quote": "Ambition, Distraction, Uglification, and Derision"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0096",
+      "term": "Reeling and Writhing",
+      "category": "other",
+      "original_name": "Reeling and Writhing",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "The \"regular course\" the Mock Turtle took at his undersea school, a nonsense parody of \"Reading and Writing.\"",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch009",
+        "quote": "Reeling and Writhing, of course, to begin with"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0097",
+      "term": "Mystery",
+      "category": "other",
+      "original_name": "Mystery, ancient and modern",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "A subject taught at the undersea school alongside Seaography (TERM-0098), a nonsense parody of \"History, ancient and modern.\"",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch009",
+        "quote": "Mystery, ancient and modern, with Seaography"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0098",
+      "term": "Seaography",
+      "category": "other",
+      "original_name": "Seaography",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "A subject taught at the undersea school alongside Mystery (TERM-0097), a nonsense parody of \"Geography.\"",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch009",
+        "quote": "Mystery, ancient and modern, with Seaography"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0099",
+      "term": "Drawling",
+      "category": "other",
+      "original_name": "Drawling",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "One of three subjects taught by the Drawling-master (TERM-0049), a nonsense parody of \"Drawing.\"",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch009",
+        "quote": "_he_ taught us Drawling, Stretching, and Fainting in Coils"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0100",
+      "term": "Stretching",
+      "category": "other",
+      "original_name": "Stretching",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "One of three subjects taught by the Drawling-master, a nonsense parody of \"Sketching.\"",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch009",
+        "quote": "_he_ taught us Drawling, Stretching, and Fainting in Coils"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0101",
+      "term": "Fainting in Coils",
+      "category": "other",
+      "original_name": "Fainting in Coils",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "One of three subjects taught by the Drawling-master, a nonsense parody of \"Painting in Oils.\"",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch009",
+        "quote": "_he_ taught us Drawling, Stretching, and Fainting in Coils"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0102",
+      "term": "Laughing and Grief",
+      "category": "other",
+      "original_name": "Laughing and Grief",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "The subject taught by the Classics master (TERM-0048), a nonsense parody of \"Latin and Greek.\"",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch009",
+        "quote": "he taught Laughing and Grief, they used to say"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0103",
+      "term": "the Antipathies",
+      "category": "other",
+      "original_name": "the Antipathies",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "Alice's mistaken word, while falling down the rabbit-hole, for the people who live on the other side of the earth with their heads pointing downward (properly \"Antipodes\").",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch001",
+        "quote": "How funny it’ll seem to come out among the people that walk with their heads downward! The Antipathies, I think"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0104",
+      "term": "Mock Turtle Soup",
+      "category": "object",
+      "original_name": "Mock Turtle Soup",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "A real Victorian soup made to imitate turtle soup; the Queen explains it is \"the thing Mock Turtle Soup is made from,\" which is the joke basis for the Mock Turtle's existence (TERM-0046). Distinct from \"Turtle Soup,\" the song the Mock Turtle sings (TERM-0112).",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch009",
+        "quote": "“It’s the thing Mock Turtle Soup is made from,” said the Queen"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0105",
+      "term": "How doth the little crocodile",
+      "category": "verse_song",
+      "original_name": "How doth the little crocodile",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "The poem Alice tries and fails to recite correctly in the Pool of Tears, about a smiling, grinning crocodile that welcomes little fishes into its jaws; a parody of Isaac Watts's \"Against Idleness and Mischief.\"",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch002",
+        "quote": "How doth the little crocodile\n    Improve his shining tail"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0106",
+      "term": "You are old, Father William",
+      "category": "verse_song",
+      "original_name": "You are old, Father William",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "The poem the Caterpillar makes Alice recite, about an old man who stands on his head, turns somersaults, and balances an eel on his nose; a parody of Robert Southey's \"The Old Man's Comforts.\" Features Father William (TERM-0023).",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch005",
+        "quote": "“You are old, Father William,” the young man said"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0107",
+      "term": "Twinkle, twinkle, little bat!",
+      "category": "verse_song",
+      "original_name": "Twinkle, twinkle, little bat!",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "The song the Hatter sang at the Queen's concert just before their quarrel over \"murdering the time\"; a parody of \"Twinkle, Twinkle, Little Star.\"",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch007",
+        "quote": "Twinkle, twinkle, little bat!\nHow I wonder what you’re at!"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0108",
+      "term": "Speak roughly to your little boy",
+      "category": "verse_song",
+      "original_name": "Speak roughly to your little boy",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "The Duchess's lullaby, sung to the baby (TERM-0039) while shaking it violently, ending each verse with a \"Wow! wow! wow!\" chorus from the cook and baby.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch006",
+        "quote": "Speak roughly to your little boy,\n    And beat him when he sneezes"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0109",
+      "term": "Fury said to a mouse",
+      "category": "verse_song",
+      "original_name": "Fury said to a mouse",
+      "adapted_name": null,
+      "aliases": [
+        {
+          "name": "the Mouse's Tale",
+          "source_chapter": "ch003"
+        }
+      ],
+      "definition": "The Mouse's \"long and sad tale,\" printed on the page in a shape that tapers like a mouse's tail (a visual tail/tale pun); a dog named Fury insists on trying and condemning a mouse.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch003",
+        "quote": "Fury said to a mouse, That he met in the house"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0110",
+      "term": "'Tis the voice of the Lobster",
+      "category": "verse_song",
+      "original_name": "'Tis the voice of the Lobster",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "The garbled poem Alice recites at the Gryphon's request (meant to be \"'Tis the voice of the sluggard\"), continuing into \"I passed by his garden\" about an Owl and a Panther sharing a pie; a parody of Isaac Watts's \"The Sluggard.\"",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch010",
+        "quote": "’Tis the voice of the Lobster; I heard him declare"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0111",
+      "term": "Will you walk a little faster?",
+      "category": "verse_song",
+      "original_name": "Will you walk a little faster?",
+      "adapted_name": null,
+      "aliases": [
+        {
+          "name": "the Whiting song",
+          "source_chapter": "ch010"
+        }
+      ],
+      "definition": "The song the Mock Turtle sings while demonstrating the Lobster Quadrille (TERM-0088) with the Gryphon, about a whiting inviting a snail to join the dance.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch010",
+        "quote": "“Will you walk a little faster?” said a whiting to a snail."
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0112",
+      "term": "Turtle Soup",
+      "category": "verse_song",
+      "original_name": "Turtle Soup",
+      "adapted_name": null,
+      "aliases": [
+        {
+          "name": "Beautiful Soup",
+          "source_chapter": "ch010"
+        }
+      ],
+      "definition": "The song the Mock Turtle sings at the Gryphon's request, explicitly named \"Turtle Soup\" in the text though its lyrics begin \"Beautiful Soup\"; interrupted by news that the trial is beginning. Distinct from Mock Turtle Soup (TERM-0104), the dish.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch010",
+        "quote": "Sing her ‘_Turtle Soup_,’ will you, old fellow?"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0113",
+      "term": "The Queen of Hearts, she made some tarts",
+      "category": "verse_song",
+      "original_name": "The Queen of Hearts, she made some tarts",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "The nursery rhyme the White Rabbit reads as the formal accusation opening the trial, alleging the Knave of Hearts stole the Queen's tarts and took them away.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch011",
+        "quote": "The Queen of Hearts, she made some tarts"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0114",
+      "term": "They told me you had been to her",
+      "category": "verse_song",
+      "original_name": "They told me you had been to her",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "The unsigned, deliberately cryptic verses found as evidence at the trial and read aloud by the White Rabbit; the King claims to find meaning in them, but the poem's sense is left deliberately unresolved in the source.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch012",
+        "quote": "They told me you had been to her,\n    And mentioned me to him"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0115",
+      "term": "Curiouser and curiouser!",
+      "category": "idiom",
+      "original_name": "Curiouser and curiouser!",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "Alice's exclamation, in her own surprise-flustered ungrammatical English, as she begins growing rapidly after eating the cake in the White Rabbit's house.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch002",
+        "quote": "“Curiouser and curiouser!” cried Alice"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0116",
+      "term": "Off with his head!",
+      "category": "idiom",
+      "original_name": "Off with his head!",
+      "adapted_name": null,
+      "aliases": [
+        {
+          "name": "Off with her head!",
+          "source_chapter": "ch008"
+        }
+      ],
+      "definition": "The Queen of Hearts's catchphrase death sentence, shouted at almost anyone who displeases her throughout chs. 8-12, though the Gryphon reveals she never actually has anyone executed.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch008",
+        "quote": "went stamping about, and shouting “Off with his head!” or “Off with her head!”"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0117",
+      "term": "We're all mad here",
+      "category": "idiom",
+      "original_name": "We're all mad here",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "The Cheshire Cat's line explaining Wonderland's population to Alice: \"we're all mad here. I'm mad. You're mad.\"",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch006",
+        "quote": "“Oh, you can’t help that,” said the Cat: “we’re all mad here. I’m mad. You’re mad.”"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0118",
+      "term": "Sentence first -- verdict afterwards!",
+      "category": "idiom",
+      "original_name": "Sentence first -- verdict afterwards!",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "The Queen's demand at the climax of the trial, reversing normal legal order; Alice's loud refusal (\"Stuff and nonsense!\") triggers the Queen's final \"Off with her head!\" and the cards' attack that wakes Alice.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch012",
+        "quote": "“No, no!” said the Queen. “Sentence first—verdict afterwards.”"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0119",
+      "term": "Why is a raven like a writing-desk?",
+      "category": "idiom",
+      "original_name": "Why is a raven like a writing-desk?",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "The Hatter's opening riddle to Alice at the tea party; neither the Hatter nor the March Hare has an answer, and none is given in the source -- a deliberately unrevealed answer.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch007",
+        "quote": "“Why is a raven like a writing-desk?”"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0120",
+      "term": "Christmas",
+      "category": "other",
+      "original_name": "Christmas",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "The Christian winter feast. Named once, in Alice's joke about sending her own feet a new pair of boots every Christmas while she grows (ch002). No Christmas scene occurs. See religion.json REL-002.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch002",
+        "quote": "I’ll give them a new pair of boots every Christmas."
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0121",
+      "term": "Mercia",
+      "category": "place",
+      "original_name": "Mercia",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "Anglo-Saxon earldom named in the Mouse's dry history recitation ('Edwin and Morcar, the earls of Mercia and Northumbria'). Mentioned only, never shown.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch003",
+        "quote": "Edwin and Morcar, the earls of Mercia and Northumbria"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0122",
+      "term": "Northumbria",
+      "category": "place",
+      "original_name": "Northumbria",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "Anglo-Saxon earldom named with Mercia in the Mouse's history recitation. Mentioned only, never shown.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch003",
+        "quote": "Edwin and Morcar, the earls of Mercia and Northumbria"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0123",
+      "term": "How doth the little busy bee",
+      "category": "verse_song",
+      "original_name": "How doth the little busy bee",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "The moral recitation poem Alice means to recite. It comes out as 'How doth the little crocodile' (TERM-0105); Alice names the intended title to the Caterpillar (ch005).",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch005",
+        "quote": "I’ve tried to say “How doth the little busy bee,” but it all came different!"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "TERM-0124",
+      "term": "Oxford",
+      "category": "place",
+      "original_name": "Oxford",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "Real English university city. Per user H1 ruling 5.6 A, the waking-world frame (the bank, the field, the family house) is designed as a riverside meadow in the Thames valley near Oxford; the source itself names no city or county.",
+      "entity_ref": "LOC-riverside-region",
+      "first_seen": {
+        "chapter": "ch001",
+        "quote": "Alice was beginning to get very tired of sitting by her sister on the bank"
+      },
+      "inferred": true,
+      "reason": "Fixes DEF-p2-bible-005. Confirmed by user H1 ruling 5.6 A (runs/h1-ruling/ruling.json); never named in Carroll's source text. Used in bible/world.json (setting.value, place_summary) and bible/geography.json (LOC-riverside-region name/terrain)."
+    },
+    {
+      "id": "TERM-0125",
+      "term": "Oxfordshire",
+      "category": "place",
+      "original_name": "Oxfordshire",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "Real English county containing Oxford; the designed county for the waking-world frame's riverside meadow, per user H1 ruling 5.6 A.",
+      "entity_ref": "LOC-riverside-region",
+      "first_seen": {
+        "chapter": "ch001",
+        "quote": "Alice was beginning to get very tired of sitting by her sister on the bank"
+      },
+      "inferred": true,
+      "reason": "Fixes DEF-p2-bible-005. Confirmed by user H1 ruling 5.6 A; never named in the source. Used in bible/world.json setting.value and cross_domain_assumptions."
+    },
+    {
+      "id": "TERM-0126",
+      "term": "Thames",
+      "category": "place",
+      "original_name": "Thames",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "Real English river. Designed as the river whose reedy backwater borders the waking-world bank (TERM-0144 The Reedy River Backwater), per user H1 ruling 5.6 A; explicitly non-tidal at Oxford, which is why geography.json grounds no tidal estuary in the waking world (DEF-p2-bible-002).",
+      "entity_ref": "LOC-river-backwater",
+      "first_seen": {
+        "chapter": "ch012",
+        "quote": "the pool rippling to the waving of the reeds"
+      },
+      "inferred": true,
+      "reason": "Fixes DEF-p2-bible-005. Confirmed by user H1 ruling 5.6 A; the source never names a river, only reeds and a pool (ch012) and a hedge-lined field and bank (ch001). Used in bible/world.json and bible/geography.json (region name, terrain, visual_identifiers)."
+    },
+    {
+      "id": "TERM-0127",
+      "term": "Victorian",
+      "category": "other",
+      "original_name": "Victorian",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "Era label for the reign of Queen Victoria (TERM-0128), 1837-1901. Designed as the waking-world's real-world period (mid-Victorian, 1862) matching the source's own period texture (railway travel, seaside bathing machines, formal courtroom trial, croquet, schoolroom lessons); the word itself is never used in Carroll's text.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch002",
+        "quote": "wherever you go to on the English coast you find a number of bathing machines"
+      },
+      "inferred": true,
+      "reason": "Fixes DEF-p2-bible-005. Confirmed by user H1 ruling 5.6 A. Used across bible/world.json, timeline.json, geography.json, religion.json, culture.json and economy.json as the shared period label."
+    },
+    {
+      "id": "TERM-0128",
+      "term": "Queen Victoria",
+      "category": "person",
+      "original_name": "Queen Victoria",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "Real historical monarch (reigned 1837-1901) whose accession is used only to date the timeline's era boundary; never named in the source and never appears on screen.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch002",
+        "quote": "wherever you go to on the English coast you find a number of bathing machines"
+      },
+      "inferred": true,
+      "reason": "Fixes DEF-p2-bible-005. Designed real-world calendar anchor for timeline.json TL-002/ERA-003 and world.json's ruler_title, consistent with the H1-confirmed mid-Victorian setting; not named or shown in the source."
+    },
+    {
+      "id": "TERM-0129",
+      "term": "United Kingdom",
+      "category": "place",
+      "original_name": "United Kingdom",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "Real sovereign state; named once in world.json only as part of Queen Victoria's full title ('Sovereign of the United Kingdom'), explicitly flagged there as never named in the source and never on screen.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch002",
+        "quote": "wherever you go to on the English coast you find a number of bathing machines"
+      },
+      "inferred": true,
+      "reason": "Fixes DEF-p2-bible-005. Background-fact-only designed detail in bible/world.json's ruler_title field, consistent with the H1-confirmed mid-Victorian England setting."
+    },
+    {
+      "id": "TERM-0130",
+      "term": "Britain",
+      "category": "place",
+      "original_name": "Britain",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "Real country/island; used once in timeline.json's calendar system label ('mid-Victorian Britain') as a synonym for the setting's real-world nation, alongside England (TERM-0065) and the United Kingdom (TERM-0129).",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch002",
+        "quote": "wherever you go to on the English coast you find a number of bathing machines"
+      },
+      "inferred": true,
+      "reason": "Fixes DEF-p2-bible-005. Designed calendar-system label in bible/timeline.json, consistent with the H1-confirmed mid-Victorian England setting; not named in the source."
+    },
+    {
+      "id": "TERM-0131",
+      "term": "Napoleon III",
+      "category": "person",
+      "original_name": "Napoleon III",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "Real historical Emperor of the French in 1862, named once in world.json purely as a background-fact ruler_title for France (TERM-0071), explicitly flagged there as never mentioned in the source.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch010",
+        "quote": "The further off from England the nearer is to France"
+      },
+      "inferred": true,
+      "reason": "Fixes DEF-p2-bible-005. Background-fact-only designed detail in bible/world.json's ruler_title field for France, the one real foreign country the source itself names (Lobster Quadrille song, ch010)."
+    },
+    {
+      "id": "TERM-0132",
+      "term": "Norman Conquest",
+      "category": "other",
+      "original_name": "Norman Conquest",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "Real historical event (1066): William the Conqueror's (TERM-0005) invasion of England, the only piece of real history the source quotes, via the Mouse's dry recitation naming Edwin and Morcar (TERM-0006), Stigand (TERM-0007) and Edgar Atheling (TERM-0008). The event itself is not named in the source, only narrated.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch003",
+        "quote": "William’s conduct at first was moderate. But the insolence of his Normans"
+      },
+      "inferred": true,
+      "reason": "Fixes DEF-p2-bible-005. The naming label 'Norman Conquest' (used in bible/timeline.json TL-001 and bible/world.json) identifies real history the Mouse's recitation narrates verbatim (ch003) but never names as such."
+    },
+    {
+      "id": "TERM-0133",
+      "term": "Anglo-Saxon",
+      "category": "other",
+      "original_name": "Anglo-Saxon",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "Real historical era/ethnonym label for pre-Conquest England, used in timeline.json to name the period the Mouse's recitation's nobles (Edwin, Morcar, Edgar Atheling) belong to. The word itself is not used in the source.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch003",
+        "quote": "Edwin and Morcar, the earls of Mercia and Northumbria"
+      },
+      "inferred": true,
+      "reason": "Fixes DEF-p2-bible-005. Designed era label in bible/timeline.json (ERA-001 'Anglo-Saxon England') for the pre-Conquest nobles the Mouse names verbatim; not itself in the source."
+    },
+    {
+      "id": "TERM-0134",
+      "term": "Georgian",
+      "category": "other",
+      "original_name": "Georgian",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "Real historical era label (reigns of George I-IV, 1714-1830) used only as a calendar-bridging boundary name in timeline.json, spanning the centuries between the Norman Conquest (TERM-0132) and Queen Victoria's accession (TERM-0128); no events of this era are named in the source.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch003",
+        "quote": "William’s conduct at first was moderate. But the insolence of his Normans"
+      },
+      "inferred": true,
+      "reason": "Fixes DEF-p2-bible-005. Purely a calendar-continuity label in bible/timeline.json ERA-002 ('Post-Conquest to Georgian England'); the source names no events in this span."
+    },
+    {
+      "id": "TERM-0135",
+      "term": "Church of England",
+      "category": "institution",
+      "original_name": "Church of England",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "Real established church of England, designed as the waking world's unremarked ambient religion (background only; never shown on screen, per user H1 ruling and religion.json REL-001). Anchored to the story's one calendar/holiday word, 'Christmas' (TERM-0120).",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch002",
+        "quote": "I’ll give them a new pair of boots every Christmas."
+      },
+      "inferred": true,
+      "reason": "Fixes DEF-p2-bible-005. The source never names a church or clergy; designed per religion.json REL-001 as the real historical religious default for mid-Victorian rural England, consistent with the H1-confirmed clergyman-scholar family frame."
+    },
+    {
+      "id": "TERM-0136",
+      "term": "Anglican",
+      "category": "other",
+      "original_name": "Anglican",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "Adjective form used once in religion.json to describe Church of England (TERM-0135) Christianity as the waking world's unremarked social default.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch002",
+        "quote": "I’ll give them a new pair of boots every Christmas."
+      },
+      "inferred": true,
+      "reason": "Fixes DEF-p2-bible-005. Same design basis as Church of England (TERM-0135); the word itself is not in the source."
+    },
+    {
+      "id": "TERM-0137",
+      "term": "St Frideswide",
+      "category": "person",
+      "original_name": "St Frideswide",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "Real historical/legendary Anglo-Saxon saint associated with a real holy well at Binsey (TERM-0138) near Oxford, locally nicknamed a 'treacle well' in Carroll's own period and place. Used in culture.json only as real-world grounding for the Dormouse's treacle-well joke, not as an in-story character.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch007",
+        "quote": "It was a treacle-well."
+      },
+      "inferred": true,
+      "reason": "Fixes DEF-p2-bible-005. External historical/period fact (not stated in the source) cited by bible/culture.json CUL-023 to ground the Dormouse's 'treacle-well' as real period food/local culture rather than pure invention, per the brief's realistic-drama premise."
+    },
+    {
+      "id": "TERM-0138",
+      "term": "Binsey",
+      "category": "place",
+      "original_name": "Binsey",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "Real village near Oxford, site of the real holy well associated with St Frideswide (TERM-0137) that was locally nicknamed a 'treacle well'. Used in culture.json only as real-world grounding for the Dormouse's treacle-well story, not as a location that appears in the adaptation.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch007",
+        "quote": "It was a treacle-well."
+      },
+      "inferred": true,
+      "reason": "Fixes DEF-p2-bible-005. Same design basis as St Frideswide (TERM-0137); external historical fact used by bible/culture.json CUL-023, not a location shown on screen."
+    },
+    {
+      "id": "TERM-0139",
+      "term": "House of Hearts",
+      "category": "institution",
+      "original_name": "House of Hearts",
+      "adapted_name": null,
+      "aliases": [
+        {
+          "name": "Kingdom of Hearts",
+          "source_chapter": "ch008"
+        }
+      ],
+      "definition": "The ruling household of the King and Queen of Hearts (TERM-0016, TERM-0017), their court of justice, guard, gardeners and jury (see also TERM-0090 the pack of cards). Registered in bible/politics.json as FAC-house-of-hearts, the canonical name for this polity. 'Kingdom of Hearts' is bible/world.json's own earlier working label for the same realm (world.json name_note: 'the dictionary term is owned by 02-worldbuilding/dictionary') and is recorded here as an alias rather than a second entry, resolving DEF-p2-bible-005's extra_note about two designed names for one polity.",
+      "entity_ref": "FAC-house-of-hearts",
+      "first_seen": {
+        "chapter": "ch008",
+        "quote": "last of all this grand procession, came THE KING AND QUEEN OF HEARTS"
+      },
+      "inferred": true,
+      "reason": "Fixes DEF-p2-bible-005. Neither 'House of Hearts' nor 'Kingdom of Hearts' is stated in the source (the King and Queen of Hearts and the Knave of Hearts are named individually, ch008 onward, but the realm itself is never named); both are designed labels. 'House of Hearts' is chosen as canonical because it is the name actually registered as a faction (bible/politics.json FAC-house-of-hearts), the more specific and structurally load-bearing of the two designed names."
+    },
+    {
+      "id": "TERM-0140",
+      "term": "The Thames Valley Near Oxford",
+      "category": "place",
+      "original_name": "The Thames Valley Near Oxford",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "bible/geography.json's name (LOC-riverside-region) for the waking-world region: water-meadows, a hedge-lined field, a reedy river backwater and a working farm, all within a few minutes' walk of the family house. The real, small, waking-world frame that opens and closes the film, per user H1 ruling 5.2 A.",
+      "entity_ref": "LOC-riverside-region",
+      "first_seen": {
+        "chapter": "ch001",
+        "quote": "Alice was beginning to get very tired of sitting by her sister on the bank"
+      },
+      "inferred": true,
+      "reason": "Fixes DEF-p2-bible-005 (geography follow-on, runs/p2-fix-geography/result.json). The source gives only the bank, field, hedge, trees, pool and reeds (ch001, ch012); the region's designed proper-noun name is bible/geography.json's own, adopted after user H1 ruling 5.6 A confirmed the Oxford/Thames frame."
+    },
+    {
+      "id": "TERM-0141",
+      "term": "The Family House",
+      "category": "place",
+      "original_name": "The Family House",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "bible/geography.json's name (LOC-family-house) for Alice's home, a short run from the bank; the source never shows or describes the building, only that Alice runs home to tea at the end. Seat of Alice's Family Household (TERM-0147).",
+      "entity_ref": "LOC-family-house",
+      "first_seen": {
+        "chapter": "ch012",
+        "quote": "So Alice got up and ran off"
+      },
+      "inferred": true,
+      "reason": "Fixes DEF-p2-bible-005 (geography follow-on). The source implies but never shows or names the house (ch012's 'run in to your tea'); the proper-noun label and building are bible/geography.json's own design, registered per DEF-p2-bible-003."
+    },
+    {
+      "id": "TERM-0142",
+      "term": "The Neighbouring Farm",
+      "category": "place",
+      "original_name": "The Neighbouring Farm",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "bible/geography.json's name (LOC-farmyard is its outdoor site; LOC-neighbouring-farm is the building) for the working farm within earshot of the bank, whose sounds (sheep-bells, a shepherd's voice, lowing cattle) the sister's closing reverie remaps onto the dream (ch012). Also registered as a household, faction FAC-neighbouring-farm (bible/politics.json): a farmer who owns a valuable terrier (ch002) and a shepherd boy (ch012), neither named.",
+      "entity_ref": "LOC-neighbouring-farm",
+      "first_seen": {
+        "chapter": "ch002",
+        "quote": "it belongs to a farmer, you know, and he says it’s so useful, it’s worth a hundred pounds!"
+      },
+      "inferred": true,
+      "reason": "Fixes DEF-p2-bible-005 (geography and political follow-on, both runs/p2-fix-geography and runs/p2-fix-political name this identical string). One term covers both the LOC-neighbouring-farm place and the FAC-neighbouring-farm household to keep terms_unique (both files use the exact same designed name). The farmer and his terrier (ch002) and the shepherd boy (ch012) are sourced; the farm's proper-noun name and formal household status are designed."
+    },
+    {
+      "id": "TERM-0143",
+      "term": "The Farmyard",
+      "category": "place",
+      "original_name": "The Farmyard",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "bible/geography.json's name (LOC-farmyard) for the working farm's outdoor yard within earshot of the bank; source of the 'busy farm-yard' clamour and lowing cattle the sister's closing reverie remaps from the dream's noises.",
+      "entity_ref": "LOC-farmyard",
+      "first_seen": {
+        "chapter": "ch012",
+        "quote": "the confused clamour of the busy farm-yard"
+      },
+      "inferred": true,
+      "reason": "Fixes DEF-p2-bible-005 (geography follow-on). The 'busy farm-yard' phrase is verbatim from the source (ch012); the formal proper-noun place name and its registration as a distinct LOC-* entry are bible/geography.json's own design, per DEF-p2-bible-003."
+    },
+    {
+      "id": "TERM-0144",
+      "term": "The Reedy River Backwater",
+      "category": "place",
+      "original_name": "The Reedy River Backwater",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "bible/geography.json's name (LOC-river-backwater) for the still, reed-lined stretch of the Thames (TERM-0126) beside the bank; the real waking-world place the dream's Pool of Tears (TERM-0057) grows from (SUP-007). Explicitly a backwater, not a tidal estuary, since the Thames is non-tidal at Oxford.",
+      "entity_ref": "LOC-river-backwater",
+      "first_seen": {
+        "chapter": "ch012",
+        "quote": "the pool rippling to the waving of the reeds"
+      },
+      "inferred": true,
+      "reason": "Fixes DEF-p2-bible-005 (geography follow-on, DEF-p2-bible-003). The reeds and pool are sourced verbatim (ch012); the formal name, and the 'backwater not estuary' reading, are bible/geography.json's own design, required by the Oxford setting's real (non-tidal) hydrology (DEF-p2-bible-002)."
+    },
+    {
+      "id": "TERM-0145",
+      "term": "The Seaside Town (Remembered)",
+      "category": "place",
+      "original_name": "The Seaside Town (Remembered)",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "bible/geography.json's name (LOC-seaside-town) for the English coastal resort Alice visited once before the story's single afternoon, remembered for its bathing machines, children digging in the sand, lodging houses and a railway station. Not part of today's Thames-valley frame; the real waking-world place the dream's shore/estuary scene (TERM-0057-adjacent) grows from.",
+      "entity_ref": "LOC-seaside-town",
+      "first_seen": {
+        "chapter": "ch002",
+        "quote": "Alice had been to the seaside once in her life"
+      },
+      "inferred": true,
+      "reason": "Fixes DEF-p2-bible-005 (geography follow-on, DEF-p2-bible-002 recommendation A). Alice's one remembered seaside visit, with its bathing machines and railway, is sourced verbatim (ch002); the formal place name and its registration as a distinct, non-local LOC-* entry are bible/geography.json's own design."
+    },
+    {
+      "id": "TERM-0146",
+      "term": "A Distant Parish Church Spire",
+      "category": "place",
+      "original_name": "A Distant Parish Church Spire",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "bible/geography.json's name (LOC-church-spire) for an optional, unobtrusive background landmark in establishing shots of the waking-world frame, consistent with the Church of England (TERM-0135) as ambient, undramatized background only.",
+      "entity_ref": "LOC-church-spire",
+      "first_seen": {
+        "chapter": "ch012",
+        "quote": "the confused clamour of the busy farm-yard"
+      },
+      "inferred": true,
+      "reason": "Fixes DEF-p2-bible-005 (geography follow-on). No church or spire is named anywhere in the source; this is a purely designed, optional background landmark bible/geography.json registered for establishing-shot texture, borrowing the same farmyard-reverie citation (ch012) as its nearest ambient anchor since no more specific textual peg exists."
+    },
+    {
+      "id": "TERM-0147",
+      "term": "Alice's Family Household",
+      "category": "institution",
+      "original_name": "Alice's Family Household",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "bible/politics.json's name (FAC-alice-family) for the waking-world household Alice and her sister belong to: Alice, her sister, Dinah the cat (TERM-0025), and at least one housemaid, implied by 'Dinah', tea-time and 'our house' but never shown as a building within Wonderland itself. Seated at The Family House (TERM-0141). Under user H1 ruling 5.3 B, this household's housemaid is the light-doubling source for Mary Ann (TERM-0010).",
+      "entity_ref": "FAC-alice-family",
+      "first_seen": {
+        "chapter": "ch001",
+        "quote": "Dinah’ll miss me very much to-night, I should think!"
+      },
+      "inferred": true,
+      "reason": "Fixes DEF-p2-bible-005 (political follow-on, runs/p2-fix-political/result.json, DEF-p2-bible-004, user ruling 5.5 A). Dinah, the sister and tea-time routine are sourced; formal registration of 'the family' as a named household/faction is bible/politics.json's own design."
+    },
+    {
+      "id": "TERM-0148",
+      "term": "the Guest Kings and Queens",
+      "category": "institution",
+      "original_name": "the Guest Kings and Queens",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "bible/politics.json's name (FAC-visiting-monarchs) for the unnamed guests in the royal procession described only as 'mostly Kings and Queens'; read as the monarchs of the other three card suits, attending the House of Hearts (TERM-0139) as visiting dignitaries. None is named or given dialogue; they appear once, in the procession, and are not seen again.",
+      "entity_ref": "FAC-visiting-monarchs",
+      "first_seen": {
+        "chapter": "ch008",
+        "quote": "Next came the guests, mostly Kings and Queens"
+      },
+      "inferred": true,
+      "reason": "Fixes DEF-p2-bible-005 (political follow-on, DEF-p2-bible-004, user ruling 5.5 A). The guests themselves and the phrase 'mostly Kings and Queens' are sourced verbatim (ch008); reading them specifically as the other three suits' monarchs and registering them as a named faction is bible/politics.json's own design choice."
+    },
+    {
+      "id": "TERM-0149",
+      "term": "the White Rabbit's Household",
+      "category": "institution",
+      "original_name": "the White Rabbit's Household",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "bible/politics.json's name (FAC-white-rabbit-household) for the White Rabbit's own home and staff, separate from though in service to the House of Hearts (TERM-0139): the Rabbit as master and court herald, Mary Ann (TERM-0010) the never-seen housemaid, Pat (TERM-0024) the gardener, and Bill the Lizard (TERM-0035). Seated at TERM-0059 the White Rabbit's house.",
+      "entity_ref": "FAC-white-rabbit-household",
+      "first_seen": {
+        "chapter": "ch004",
+        "quote": "a bright brass plate with the name “W. RABBIT,” engraved upon it"
+      },
+      "inferred": true,
+      "reason": "Fixes DEF-p2-bible-005 (political follow-on, DEF-p2-bible-004, user ruling 5.5 A). The house, its residents (Mary Ann, Pat, Bill) and the White Rabbit's role are sourced (ch004 onward); formal registration as a named household/faction distinct from the crown is bible/politics.json's own design."
+    },
+    {
+      "id": "TERM-0150",
+      "term": "the Caucus-Race Company",
+      "category": "institution",
+      "original_name": "the Caucus-Race Company",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "bible/politics.json's name (FAC-caucus-race-company) for the company of creatures who swam ashore with Alice from the Pool of Tears (TERM-0057) and ran the Caucus-race (TERM-0087): the Mouse, Dodo, Duck, Lory, Eaglet and other 'curious creatures'. No ruler; not allied to the House of Hearts (TERM-0139).",
+      "entity_ref": "FAC-caucus-race-company",
+      "first_seen": {
+        "chapter": "ch003",
+        "quote": "Silence all round, if you please!"
+      },
+      "inferred": true,
+      "reason": "Fixes DEF-p2-bible-005 (political follow-on, DEF-p2-bible-004, user ruling 5.5 A). The company and its members are sourced (ch002-ch003); formal registration as a named faction distinct from the crown is bible/politics.json's own design."
+    },
+    {
+      "id": "TERM-0151",
+      "term": "the School in the Sea",
+      "category": "institution",
+      "original_name": "the School in the Sea",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "bible/politics.json's name (FAC-school-in-the-sea) for the undersea school attended by the young Mock Turtle (TERM-0046) and Gryphon (TERM-0045), taught by the Tortoise (TERM-0047), the Drawling-master (TERM-0049) and the Classics master (TERM-0048). Narrated entirely in retrospect (ch009-ch010); no scene is ever set there, so its seat is null.",
+      "entity_ref": "FAC-school-in-the-sea",
+      "first_seen": {
+        "chapter": "ch009",
+        "quote": "we went to school in the sea. The master was an old Turtle—we used to call him Tortoise"
+      },
+      "inferred": true,
+      "reason": "Fixes DEF-p2-bible-005 (political follow-on, DEF-p2-bible-004, user ruling 5.5 A). The school and its retrospective description are sourced verbatim (ch009); formal registration as a named faction is bible/politics.json's own design, with seat left null because the source states the location is never shown."
+    },
+    {
+      "id": "TERM-0152",
+      "term": "Art Nouveau",
+      "category": "other",
+      "original_name": "Art Nouveau",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "Real-world decorative-arts movement (flowing organic lines, floral and vine ornament, circular halo/roundel motifs, mosaic and stained-glass accents, a soft pastel-and-gold palette). Per BIB-0027 (user ruling 2026-09-22) and bible/world.json WR-010 / bible/cultivation.json XA-magic-08, Wonderland's dream environments are designed fully in this language, built as photographed physical sets and set extensions -- never flat illustration or a digital matte-painting finish. The waking 1862 frame (bank, meadow, hedge, farm, family house) carries at most a subtle influence, in composition, palette and wildflowers only; costume and hand props stay 1862-based even inside the dream spaces (WR-009). The style is licensed for dream environments only, not for costume, props, creature design or the waking world.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch001",
+        "quote": "the loveliest garden you ever saw"
+      },
+      "inferred": true,
+      "reason": "Fixes DEF-p4-cr-cgi-mucha-dict-001 / BIB-0027. Never named in Carroll's source text; a real-world design-movement name the user's 2026-09-22 ruling (\"另外环境加入穆夏绘画的风格\") applied to the dream's environment surface design, formalised as bible/world.json WR-010 and bible/cultivation.json XA-magic-08. Source citation reuses WR-010's own textual anchor -- the goal-image the dream's design grows toward (ch001) -- since Art Nouveau itself has no source-text mention."
+    },
+    {
+      "id": "TERM-0153",
+      "term": "Alphonse Mucha",
+      "category": "person",
+      "original_name": "Alphonse Mucha",
+      "adapted_name": null,
+      "aliases": [],
+      "definition": "Real Czech Art Nouveau (TERM-0152) painter (1860-1939), named in the user's 2026-09-22 ruling as the visual reference for Wonderland's dream-environment design language (BIB-0027; bible/world.json WR-010, bible/cultivation.json XA-magic-08): flowing organic lines, floral and vine ornament, halo/roundel motifs, mosaic and stained-glass accents, a soft pastel-and-gold palette. A style reference only -- Mucha himself is never depicted, mentioned, or named on screen; he appears in no canon field of any other bible file, only in reason/cross_domain_assumptions text.",
+      "entity_ref": null,
+      "first_seen": {
+        "chapter": "ch001",
+        "quote": "the loveliest garden you ever saw"
+      },
+      "inferred": true,
+      "reason": "Fixes DEF-p4-cr-cgi-mucha-dict-001 / BIB-0027. Never named in Carroll's source text or in any canon field; registered per the defect ticket's explicit request ('Alphonse Mucha' as a real-world style reference, never on screen) so the name is at least resolvable if a future canon field ever cites it, even though today it lives only in reason/cross_domain_assumptions fields (non-canon, per code/p2-merge_check.py NON_CANON_KEYS) and so does not itself block dictionary_hit_100pct."
+    }
+  ]
+}

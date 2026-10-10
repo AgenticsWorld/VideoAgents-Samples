@@ -1,0 +1,63 @@
+{
+  "task_id": "p6-dialogue-fit-ep01",
+  "agent": "01-story/dialogue-rewrite",
+  "project": "alices",
+  "ep": "ep01",
+  "attempt": 1,
+  "status": "done",
+  "date": "2026-09-23",
+  "node": "p6-dialogue-fit (WORKFLOW.md §7D ①', fixed node after shot-planning freezes the shot list)",
+  "verdict": "PASS",
+  "files_edited": "none (clean no-op PASS; no dialogue text, no shot_list, no screenplay change)",
+  "command": {
+    "cwd": "/Applications/VideoAgents.app/Contents/Resources/backend",
+    "python": "/Users/dolores/Library/Application Support/@videoagents/desktop/python-runtimes/versions/1.0.33/py/bin/python3",
+    "cmd": "python3 code/check_dialogue_fit.py --project alices --ep ep01",
+    "exit_code": 0,
+    "stdout_verbatim": [
+      "报告 → /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/directing/ep01/dialogue_fit.json",
+      "dialogue_fit: 对白组 24 组已查,超限 0 组,镜级超限 0 / 紧 0 镜,台词 34 句 Σ估时 142.0s / 承载 266.0s;0 FAIL / 0 WARN"
+    ]
+  },
+  "report": {
+    "path": "directing/ep01/dialogue_fit.json",
+    "generated_at": "2026-09-23T03:13:33Z",
+    "pass": true,
+    "mode": "full (shot_list.json present, so group and shot level were both checked)",
+    "ratio": 0.7,
+    "shot_ratio": 1.0,
+    "line_cap_s": 10.5,
+    "checks": {
+      "dialogue_fit_group": "PASS",
+      "dialogue_fit_shot": "PASS",
+      "line_le_cap": "PASS",
+      "line_est_consistent": "PASS",
+      "lines_text_match_source": "PASS",
+      "source_lines_covered": "PASS",
+      "speaker_speed_unknown": "PASS"
+    },
+    "summary": {
+      "groups_total": 37,
+      "dialogue_groups_checked": 24,
+      "groups_over": 0,
+      "shots_over": 0,
+      "shots_tight": 0,
+      "lines_total": 34,
+      "est_total_s": 142.0,
+      "capacity_total_s": 266.0
+    },
+    "trim_targets": [],
+    "errors": [],
+    "warnings": [],
+    "tightest_group": {"group_id": "grp031", "est_s": 19.8, "capacity_s": 21.0, "ratio": 0.66}
+  },
+  "confirms_orchestrator_readonly_run": "Yes. My own run reproduces the orchestrator's read-only figures exactly: 24 dialogue groups, 0 over, 0 tight, 34 lines, 142.0 s of estimate against 266.0 s of capacity, 0 FAIL / 0 WARN.",
+  "notes": [
+    "Estimate basis unchanged: eff_chars / (voice.json speed_cpm midpoint / 60). Alice 617.5, Sister 551, White Rabbit 722 cpm.",
+    "lines_text_match_source PASS means the 34 line texts in shot_list dialogue_lines are letter for letter identical to the screenplay dialogue layer, including the LN-ep01-029 lead-in added under DEF-p5-dialogue-ep01-001 (p5-dialogue-ep01-fix).",
+    "No trim happened, so style_hit_rate_gte_80 and non_dialogue_layer_diff_zero do not apply. The Phase 5 rates stand: Alice 0.967, Sister 1.0, White Rabbit 1.0.",
+    "Gate effect: this node is PASS, so p6-blocking may be dispatched and the H3A signature may be started."
+  ],
+  "skills": "No auto-activated skills are checked for this station; none run, none registered.",
+  "retries": 0
+}

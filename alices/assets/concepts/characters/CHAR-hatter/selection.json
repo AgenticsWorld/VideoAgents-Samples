@@ -1,0 +1,12 @@
+{
+  "character_id": "CHAR-hatter", "task_id": "p4-char-concept-cb1", "sheet": "sheet.png", "variants": [],
+  "self_check": {"sheet.png": {
+    "layout": "PASS: four framed panels.",
+    "appearance_field_hits": {"gender_male_about_35": true, "shaggy_dark_brown_hair_tufts_sideburns": true, "large_light_grey_staring_eyes": true, "pallid_long_narrow_face_long_nose_hollow_cheeks": true, "tall_thin_gangly": true, "tall_hat_with_10_6_ticket_mark": true, "pocket_watch_mark": true},
+    "costume_COS-015_hits": {"worn_too_short_bottle_green_frock_coat_shiny_elbows_short_sleeves": true, "stained_mustard_waistcoat": true, "loud_yellow_brown_check_trousers": true, "crumpled_shirt_limp_collar": true, "plum_mustard_paisley_cravat_loose_bow": true, "scuffed_black_boots": true, "oversized_grey_beaver_top_hat_ticket_10_6": true},
+    "style": "PASS",
+    "defects": ["Watch drawn in two different hands between front and side views (minor continuity)."]
+  }},
+  "notes": ["The '10/6' ticket lettering is required by costumes.json but not on the style.json CR-012 whitelist (already raised as DEF-p4-costume-001-b)."],
+  "rerolls": []
+}

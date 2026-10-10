@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh059",
+  "group_id": "grp022",
+  "scene_no": "S07",
+  "duration_s": 6.5,
+  "size": "medium",
+  "movement": "track_lateral",
+  "direction": "abeam on the sh058 axis reversed, travelling back with her toward the glass box at the foot of the table",
+  "speed": "about 0.20 m/s matched to sh058, easing to a stop as she arrives over the open box",
+  "speed_curve": "ease_out",
+  "rig": "dolly",
+  "lens_mm": 28,
+  "camera_height_m": 0.2,
+  "angle": "slightly up",
+  "rack_focus": "none",
+  "start_frame": "The same low abeam axis reversed as she turns on her heel: open flagstones ahead of her, the glass table legs standing up in the background, the dado overhead.",
+  "end_frame": "Camera settled and stopped: Alice arrived and standing over the open glass box with the cake in it, the box at her chest height in the near frame, back at exactly the place she set out from.",
+  "constraint_honoured": "'The crossing lands exactly where it started, which is what makes the decision feel taken rather than talked about.'",
+  "movement_note": "Licensed move (a). Same lens, height and rate as sh058 so the return reads as the same walk reversed; the ease-out puts the stop under the end of LN-ep01-014 (5.2 s) rather than under the words.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

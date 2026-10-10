@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh071",
+  "group_id": "grp027",
+  "scene_no": "S08",
+  "duration_s": 6.0,
+  "size": "wide",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame; the water does the travelling)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 28,
+  "camera_height_m": 0.12,
+  "angle": "level, lens flat on the flagstones",
+  "rack_focus": "none",
+  "start_frame": "Lens flat on the flagstones at the curtain looking up the hall past the glass table legs: her hem and one knee anchoring the near edge, her face out of frame entirely, the first tears striking the stone like splashes from a jug.",
+  "end_frame": "The same frame with four inches of water spread round her and running away down the hall toward the far end, lamplight trembling on the surface only in the far third of frame — never under her, never on the walls or vault.",
+  "constraint_honoured": "'Lamplight trembles on the water only in the far third of frame… Warm, slow and absurd — not drowning menace.'",
+  "movement_note": "The flood's spread is the movement in the shot; a camera move would dramatise a beat the director wants played as absurd plumbing.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

@@ -1,0 +1,62 @@
+{
+  "character_id": "CHAR-bill-the-lizard",
+  "name": "Bill",
+  "tier": "B",
+  "layer": "dream",
+  "revision": { "change_id": "BIB-0027", "task_id": "p4-cr-appearance", "date": "2026-09-23", "note": "Rewritten from the human-performer reading to a photoreal CGI animal." },
+  "rendering": {
+    "mode": "photoreal_cgi_animal",
+    "rule": "bible/cultivation.json SUP-002 (amended BIB-0027)",
+    "species": "common (viviparous) lizard (Zootoca vivipara), the British native lizard",
+    "limits": "Lizard anatomy throughout; speech by jaw and throat movement with an occasional tongue-flick. No clothing, no cartoon face. The kick up the chimney is a comic tumble with no injury."
+  },
+  "gender": "male",
+  "gender_note": { "source_chapter": "ch004", "source_para": "ch004-p24", "quote": "Bill! fetch it here, lad!" },
+  "base_age_range": "15-17",
+  "base_age_note": { "source_chapter": "ch004", "source_para": "ch004-p24", "quote": "Bill! fetch it here, lad!", "inferred": true, "reason": "'lad' and 'poor little Lizard' (ch004-p34) point to a youth; persona band kept for voice casting. As an animal: a young adult lizard, slim, clean-scaled." },
+  "hair": {
+    "coat": "scales",
+    "color": "dull olive-brown with a darker brown stripe down the spine and flecked pale spots along the flanks; yellowish-cream belly",
+    "style": "fine granular scales, dry and matte; soot-dusted after the chimney",
+    "inferred": true,
+    "reason": "Not described; species colouring; soot from the chimney (ch004-p26)."
+  },
+  "eyes": { "color": "dark amber-brown", "shape": "small, round, bright, rarely blinking, darting", "inferred": true, "reason": "Species." },
+  "skin": { "tone": "see hair; paler throat that pulses when he is nervous", "inferred": true, "reason": "Species." },
+  "face": {
+    "shape": "small blunt lizard head",
+    "features": ["wide thin mouth line", "quick tongue-flick when nervous", "throat pulsing"],
+    "default_expression": "dazed and flustered, anxious to please",
+    "expressiveness": "head bobs, blinking, freezing and throat pulse; no human expressions",
+    "source_chapter": "ch004",
+    "source_para": "ch004-p28",
+    "quote": "I’m a deal too flustered to tell you",
+    "features_inferred": true,
+    "reason": "Flustered manner sourced; face is species-true."
+  },
+  "build": {
+    "height_range_cm": [2, 3],
+    "height_note": "Standing height off the ground; total length 12-15 cm, about half of it tail.",
+    "body_type": "small, slim, sinuous, flexible; can wriggle up a chimney",
+    "scale_reference": "Natural lizard size. Giant Alice in the White Rabbit's house kicks him out of the chimney (ch004) and at the trial picks him up in her fingers and puts him back in the jury-box (SUP-003). Next to the guinea-pig jurors he is about their body length.",
+    "source_chapter": "ch012",
+    "source_para": "ch012-p04",
+    "quote": "she had put the Lizard in head downwards, and the poor little thing was waving its tail about",
+    "inferred": true,
+    "reason": "'little' sourced; species-true size."
+  },
+  "marks": [
+    { "type": "tail", "position": "back", "description": "his own long tapering lizard tail, which waves when he is put in head downwards", "source_chapter": "ch012", "source_para": "ch012-p04" },
+    { "type": "stain", "position": "face (trial, late)", "description": "ink trickling down his head after the Queen throws the inkstand", "source_chapter": "ch012", "source_para": "ch012-p55" },
+    { "type": "signature_item", "position": "forefeet (trial)", "description": "a tiny juror's slate; his squeaking slate-pencil (taken by Alice), then writing with one toe", "source_chapter": "ch011", "source_para": "ch011-p09", "rendering_inferred": true, "reason": "The source's 'one finger' becomes a toe on the lizard's forefoot." },
+    { "type": "condition", "position": "whole body", "description": "soot-dusted after the chimney (ch004)", "source_chapter": "ch004", "source_para": "ch004-p26", "inferred": true, "reason": "Consequence of the sourced chimney beat." }
+  ],
+  "default_outfit_tone": {
+    "summary": "none: he wears nothing; his look is the olive-brown common lizard",
+    "inferred": true,
+    "reason": "The text gives Bill only the slate and pencil; per SUP-002 (BIB-0027) the old jersey, breeches and scarf-tail are dropped."
+  },
+  "doubling": null,
+  "events": ["ev0016", "ev0017", "ev0045", "ev0048"],
+  "prompt_base_en": "photoreal small common lizard, dull olive-brown granular scales with a darker spine stripe and pale flank flecks, cream belly, small bright amber-brown eyes, long tapering tail, dusted with soot, flustered with throat pulsing, natural reptile anatomy, macro live-action film plate"
+}

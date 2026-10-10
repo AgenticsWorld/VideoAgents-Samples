@@ -1,0 +1,32 @@
+{
+  "id": "DEF-p4-char-concept-202",
+  "opened_by": "06-art/character-concept",
+  "opened_on": "2026-09-23",
+  "task_id": "p4-char-concept-cb2",
+  "assigned_to": ["00-orchestration/memory-bible", "04-creatures/creature", "03-characters/appearance"],
+  "domain": "character-concept",
+  "status": "closed",
+  "closed_on": "2026-09-23",
+  "closed_by": "04-creatures/creature",
+  "severity": "minor",
+  "summary": "The CGI rendering-spec entries in bible/creatures/creature.json (CRE-005 Gryphon, CRE-006 Mock Turtle) disagree with the character appearance cards on a few visible details. The sheets follow appearance.json (this station's authority for colour and marks). The rendering-spec layer is still honoured: photoreal CGI, feather-to-fur blend, no costume.",
+  "resolution": "Resolved under task p4-h2-creature-2 (bible/changelog.md BIB-0031). Arbitration rule: the H2-locked sheet is the reference, so bible/creatures/creature.json is realigned to the appearance cards for every visible field (colour, hide-vs-scale, eye colour); for the measurements a plain-backdrop sheet cannot show either way, creature.json now adopts the appearance-card figures rather than its own, since 03-characters/appearance's numbers are what the downstream character-consistency check reads and the whitebox/staging chain needs one figure per creature. (a) CRE-006: surface rewritten to grey-olive scaled turtle skin on the front flippers and most of the neck, blending into dun-brown-and-white calf hide only at the head; carapace rewritten to olive-brown with faded amber-and-dark hexagonal scutes and a few barnacles; carapace length changed 70-90cm -> 110-120cm; head-sitting height clarified as 110-125cm; head field gained the brown-and-white patching/white blaze/floppy ears from the appearance card; eyes field gained 'dark brown' (uncoloured before, brought into line under the same rule though the defect didn't flag it). (b) CRE-005: eyes changed pale amber-gold -> amber-hazel; shoulder height changed 90-110cm -> 110-120cm; wingspan changed 2.5-3m -> ~4m; head-sitting height ~150-165cm added. bible/characters/CHAR-gryphon/appearance.json and CHAR-mock-turtle/appearance.json were read but NOT edited (owned by memory-bible, which had just finished its own pass there); no field was found that instead argues the appearance-card number should change. No image was regenerated or re-rolled (budget 0) — both sheets already match the wording now adopted. Full per-field reasoning: runs/p4-h2-creature-2/result.json.",
+  "findings": [
+    {
+      "id": "DEF-p4-char-concept-202-a",
+      "character": "CHAR-mock-turtle / CRE-006",
+      "appearance": "grey-olive scaled front flippers; neck blends from turtle skin into calf hide; olive-brown shell; carapace length about 110-120 cm, head height 110-125 cm sitting.",
+      "creature_json": "head, neck and flippers covered in short dun-brown calf hide rather than turtle skin or scale; weathered ridged brown-green carapace; shell length about 70-90 cm.",
+      "sheet_handling": "Drawn per appearance.json: scaled grey-olive flippers, calf hide from the neck up."
+    },
+    {
+      "id": "DEF-p4-char-concept-202-b",
+      "character": "CHAR-gryphon / CRE-005",
+      "appearance": "amber-hazel eyes; shoulder height about 110-120 cm; wingspan about 4 m.",
+      "creature_json": "pale amber-gold eyes; 90-110 cm at the shoulder; wingspan 2.5-3 m.",
+      "sheet_handling": "Drawn per appearance.json (amber-hazel). Scale is not measurable on a plain-backdrop sheet."
+    }
+  ],
+  "decision_needed": "Reconcile the two layers so p7 prompts and character-consistency use one description.",
+  "due_gate": "G4"
+}

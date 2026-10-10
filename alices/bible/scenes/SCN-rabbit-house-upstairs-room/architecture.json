@@ -1,0 +1,55 @@
+{
+  "scene_id": "SCN-rabbit-house-upstairs-room",
+  "inherits": "SCN-rabbit-house-exterior",
+  "diff_only": true,
+  "layer": "dream",
+  "int_ext": "INT",
+  "form": "A tidy little upstairs room of the cottage under a low plastered ceiling: a table in the sash window, a looking-glass, a small cast-iron fireplace on the gable wall and an inward-opening door to the landing",
+  "stories": 1,
+  "source_chapter": "ch004",
+  "culture_ref": "world.json#wonderland_real_counterparts.cp-housemaid; world.json#frame.social_class",
+  "grows_from": {"loc": "LOC-family-house", "waking_detail": "an upstairs room of the family house as the housemaid keeps it"},
+  "amendment": "BIB-0027 (user ruling 2026-09-22), applied p4-cr-architecture 2026-09-23",
+  "mucha_design_language": {"item": "Diff from SCN-rabbit-house-exterior: the room's fixed surfaces carry the Art Nouveau (wallpaper, cornice, mantel, window head, door panels); fan, gloves, bottle, looking-glass and furniture stay plain 1862 pieces", "inferred": true, "culture_ref": "world.json#WR-010 (hand props stay 1862); cultivation.json#XA-magic-08", "why": "Keeps the room modest and servant-kept while in the dream's language"},
+  "structure": [
+    {"item": "room 3.0 m wide (window wall) x 2.7 m deep, ceiling 2.2 m", "inferred": true, "culture_ref": "SCN-rabbit-house-exterior structure", "why": "Fits the cottage footprint; low enough that a growing Alice soon presses against it (ch004-p06)"},
+    {"item": "window: south wall, centred, one white two-over-two sash 0.75 m wide x 1.1 m high, sill at 0.75 m, looking down on the cucumber-frame", "src": "ch004-p05"},
+    {"item": "fireplace: east gable wall, a narrow cast-iron bedroom grate 55 cm wide x 65 cm high with a whiplash-scroll cast front, under a painted timber mantel with a flowing carved lily-and-vine edge, the flue running up to the gable stack", "src": "ch004-p25", "note": "'this fireplace is narrow'; size inferred"},
+    {"item": "door: north wall near the west corner, four-panel pine door 0.76 x 1.9 m, hinged to open inwards into the room, onto the landing and stair", "src": "ch004-p14"}
+  ],
+  "materials": [
+    {"item": "Mucha-style wallpaper, cream ground with faded rose-pink and sage flowing vine stems and small gold roundels in a repeat", "inferred": true, "culture_ref": "world.json#WR-010", "why": "Dream Art Nouveau in a modest pattern; neat not grand"},
+    {"item": "scrubbed deal floorboards with a rag rug", "inferred": true, "culture_ref": "world.json#wonderland_real_counterparts.cp-housemaid", "why": "A room a housemaid keeps tidy"},
+    {"item": "white plaster ceiling with a shallow cornice of flowing vine moulding and a small round plaster ceiling rose; painted pine skirting and door with curved Art Nouveau panel mouldings", "inferred": true, "culture_ref": "world.json#WR-010", "why": "The dream's line on standard fittings"}
+  ],
+  "details": [
+    {"item": "a small table in the window with a fan and two or three pairs of tiny white kid gloves laid on it", "src": "ch004-p05", "note": "custom culture.json#CUL-010"},
+    {"item": "a looking-glass in a mahogany frame hanging on the west wall above a washstand, a little unlabelled bottle standing near it", "src": "ch004-p05", "note": "position and furniture inferred"},
+    {"item": "a rush-seated chair and a small chest of drawers", "inferred": true, "culture_ref": "world.json#frame.social_class", "why": "Minimum furniture to read as a tidy servant-kept room; keeps floor clear for the growing Alice"}
+  ],
+  "interior": {
+    "layout": "window centred in the south wall with the table under it; fireplace centred in the east wall; door at the west end of the north wall opening inward; looking-glass and washstand on the west wall; chest of drawers against the north wall east of the door",
+    "openings": ["south sash window 0.75 x 1.1 m, sill 0.75 m (the only window; daylight source and the opening the giant arm fills)", "east fireplace and flue (foot up the chimney)", "north door to the landing, inward-opening"],
+    "ceiling_height_m": 2.2,
+    "furniture_tone": "neat, modest, well-kept Victorian servant-tidied room; nothing grand"
+  },
+  "scale_notes": {
+    "anchor": "Alice true size 135 cm (CHAR-alice).",
+    "builds": [
+      {"beat": "Alice arrives, takes fan and gloves, finds the bottle", "events": ["ev0015"], "build": "1:1 room"},
+      {"beat": "Alice grows until she fills the room: head against the ceiling, lying down with elbow against the door, arm out of the window, foot up the chimney; kicking Bill; pebbles rattle in and turn to cakes", "events": ["ev0015", "ev0016", "ev0017"], "src": "ch004-p07", "build": "1:3 miniature room (1.0 x 0.9 m, ceiling 0.73 m, window 25 x 37 cm, grate 18 x 22 cm, door 25 x 63 cm) dressed identically, true-size Alice curled inside, with breakaway walls for camera"},
+      {"beat": "Alice shrinks and runs out through the door", "events": ["ev0017"], "src": "ch004-p34", "build": "back to the 1:1 room"}
+    ],
+    "rule": "Wallpaper repeat, floorboard width and window divisions are scaled exactly across 1:1 and 1:3 so the growth reads as the same room.",
+    "sources": ["cultivation.json#SUP-003", "cultivation.json#SUP-009"]
+  },
+  "negative": [
+    "no four-poster bed, no grand furniture, no gilt",
+    "no rabbit-themed decoration",
+    "no gas brackets or electric light",
+    "no second window",
+    "no door opening outward",
+    "no furniture or props later than 1862 (Art Nouveau only in wallpaper, mouldings, mantel and grate); no flat illustration finish"
+  ],
+  "prompt_ready_en": "a tidy little upstairs room with a low white ceiling with a vine cornice, cream Art Nouveau wallpaper of faded pink and sage flowing vines with small gold roundels in the style of Mucha, scrubbed deal floorboards and a rag rug, a small table in a white sash window holding a fan and pairs of tiny white kid gloves, a mahogany-framed looking-glass over a washstand with a small unlabelled bottle, a narrow whiplash-scroll cast-iron fireplace with a carved painted mantel, and a four-panel pine door, photographed live-action set"
+}

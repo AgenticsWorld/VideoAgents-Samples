@@ -1,0 +1,1998 @@
+{
+  "generated_by": "code/check_dialogue_fit.py",
+  "generated_at": "2026-09-23T03:13:33Z",
+  "episode": "ep01",
+  "ratio": 0.7,
+  "shot_ratio": 1.0,
+  "shot_tight_ratio": 0.85,
+  "line_cap_s": 10.5,
+  "shot_max_s": 15.0,
+  "est_formula": "eff_chars / (speed_cpm_mid / 60); eff_chars = CJK + [A-Za-z0-9]",
+  "speed_source": "bible/characters/<CHAR>/voice.json#speed_cpm midpoint",
+  "fallback_cpm": 551.0,
+  "dialogue_source": "screenplay.md",
+  "source_lines_total": 34,
+  "mode": "full",
+  "groups": [
+    {
+      "group_id": "grp001",
+      "audio_plan": "ambient_only",
+      "total_duration_s": 4.0,
+      "capacity_s": 2.8,
+      "est_s": 0.0,
+      "over_s": 0.0,
+      "ratio": 0.0,
+      "status": "skipped",
+      "shots": [
+        {
+          "shot_id": "sh001",
+          "duration_s": 4.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        }
+      ],
+      "lines": []
+    },
+    {
+      "group_id": "grp002",
+      "audio_plan": "dialogue",
+      "total_duration_s": 17.0,
+      "capacity_s": 11.9,
+      "est_s": 4.8,
+      "over_s": 0.0,
+      "ratio": 0.282,
+      "status": "ok",
+      "shots": [
+        {
+          "shot_id": "sh002",
+          "duration_s": 8.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        },
+        {
+          "shot_id": "sh003",
+          "duration_s": 6.0,
+          "est_s": 4.8,
+          "ratio": 0.8,
+          "status": "ok",
+          "lines": [
+            {
+              "shot_id": "sh003",
+              "speaker": "CHAR-alice",
+              "text": "What is the use of a book without pictures or conversations?",
+              "chars": 49,
+              "cpm": 617.5,
+              "est_s": 4.8,
+              "est_recorded_s": 4.8
+            }
+          ]
+        },
+        {
+          "shot_id": "sh004",
+          "duration_s": 3.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        }
+      ],
+      "lines": [
+        {
+          "shot_id": "sh003",
+          "speaker": "CHAR-alice",
+          "text": "What is the use of a book without pictures or conversations?",
+          "chars": 49,
+          "cpm": 617.5,
+          "est_s": 4.8,
+          "est_recorded_s": 4.8
+        }
+      ]
+    },
+    {
+      "group_id": "grp003",
+      "audio_plan": "dialogue",
+      "total_duration_s": 17.0,
+      "capacity_s": 11.9,
+      "est_s": 1.4,
+      "over_s": 0.0,
+      "ratio": 0.082,
+      "status": "ok",
+      "shots": [
+        {
+          "shot_id": "sh005",
+          "duration_s": 11.0,
+          "est_s": 1.4,
+          "ratio": 0.127,
+          "status": "ok",
+          "lines": [
+            {
+              "shot_id": "sh005",
+              "speaker": "CHAR-alice-sister",
+              "text": "Hush, Alice dear.",
+              "chars": 13,
+              "cpm": 551.0,
+              "est_s": 1.4,
+              "est_recorded_s": 1.4
+            }
+          ]
+        },
+        {
+          "shot_id": "sh006",
+          "duration_s": 6.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        }
+      ],
+      "lines": [
+        {
+          "shot_id": "sh005",
+          "speaker": "CHAR-alice-sister",
+          "text": "Hush, Alice dear.",
+          "chars": 13,
+          "cpm": 551.0,
+          "est_s": 1.4,
+          "est_recorded_s": 1.4
+        }
+      ]
+    },
+    {
+      "group_id": "grp004",
+      "audio_plan": "ambient_only",
+      "total_duration_s": 15.0,
+      "capacity_s": 10.5,
+      "est_s": 0.0,
+      "over_s": 0.0,
+      "ratio": 0.0,
+      "status": "skipped",
+      "shots": [
+        {
+          "shot_id": "sh007",
+          "duration_s": 8.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        },
+        {
+          "shot_id": "sh008",
+          "duration_s": 7.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        }
+      ],
+      "lines": []
+    },
+    {
+      "group_id": "grp005",
+      "audio_plan": "ambient_only",
+      "total_duration_s": 8.0,
+      "capacity_s": 5.6,
+      "est_s": 0.0,
+      "over_s": 0.0,
+      "ratio": 0.0,
+      "status": "skipped",
+      "shots": [
+        {
+          "shot_id": "sh009",
+          "duration_s": 8.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        }
+      ],
+      "lines": []
+    },
+    {
+      "group_id": "grp006",
+      "audio_plan": "ambient_only",
+      "total_duration_s": 12.0,
+      "capacity_s": 8.4,
+      "est_s": 0.0,
+      "over_s": 0.0,
+      "ratio": 0.0,
+      "status": "skipped",
+      "shots": [
+        {
+          "shot_id": "sh010",
+          "duration_s": 5.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        },
+        {
+          "shot_id": "sh011",
+          "duration_s": 3.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        },
+        {
+          "shot_id": "sh012",
+          "duration_s": 4.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        }
+      ],
+      "lines": []
+    },
+    {
+      "group_id": "grp007",
+      "audio_plan": "ambient_only",
+      "total_duration_s": 14.0,
+      "capacity_s": 9.8,
+      "est_s": 0.0,
+      "over_s": 0.0,
+      "ratio": 0.0,
+      "status": "skipped",
+      "shots": [
+        {
+          "shot_id": "sh013",
+          "duration_s": 3.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        },
+        {
+          "shot_id": "sh014",
+          "duration_s": 4.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        },
+        {
+          "shot_id": "sh015",
+          "duration_s": 4.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        },
+        {
+          "shot_id": "sh016",
+          "duration_s": 3.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        }
+      ],
+      "lines": []
+    },
+    {
+      "group_id": "grp008",
+      "audio_plan": "dialogue",
+      "total_duration_s": 25.0,
+      "capacity_s": 17.5,
+      "est_s": 3.7,
+      "over_s": 0.0,
+      "ratio": 0.148,
+      "status": "ok",
+      "shots": [
+        {
+          "shot_id": "sh017",
+          "duration_s": 5.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        },
+        {
+          "shot_id": "sh018",
+          "duration_s": 7.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        },
+        {
+          "shot_id": "sh019",
+          "duration_s": 6.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        },
+        {
+          "shot_id": "sh020",
+          "duration_s": 2.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        },
+        {
+          "shot_id": "sh021",
+          "duration_s": 5.0,
+          "est_s": 3.7,
+          "ratio": 0.74,
+          "status": "ok",
+          "lines": [
+            {
+              "shot_id": "sh021",
+              "speaker": "CHAR-alice",
+              "text": "I wonder how many miles I've fallen by this time?",
+              "chars": 38,
+              "cpm": 617.5,
+              "est_s": 3.7,
+              "est_recorded_s": 3.7
+            }
+          ]
+        }
+      ],
+      "lines": [
+        {
+          "shot_id": "sh021",
+          "speaker": "CHAR-alice",
+          "text": "I wonder how many miles I've fallen by this time?",
+          "chars": 38,
+          "cpm": 617.5,
+          "est_s": 3.7,
+          "est_recorded_s": 3.7
+        }
+      ]
+    },
+    {
+      "group_id": "grp009",
+      "audio_plan": "dialogue",
+      "total_duration_s": 14.0,
+      "capacity_s": 9.8,
+      "est_s": 7.7,
+      "over_s": 0.0,
+      "ratio": 0.55,
+      "status": "ok",
+      "shots": [
+        {
+          "shot_id": "sh022",
+          "duration_s": 6.0,
+          "est_s": 3.9,
+          "ratio": 0.65,
+          "status": "ok",
+          "lines": [
+            {
+              "shot_id": "sh022",
+              "speaker": "CHAR-alice",
+              "text": "Dinah'll miss me very much to-night, I should think!",
+              "chars": 40,
+              "cpm": 617.5,
+              "est_s": 3.9,
+              "est_recorded_s": 3.9
+            }
+          ]
+        },
+        {
+          "shot_id": "sh023",
+          "duration_s": 2.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        },
+        {
+          "shot_id": "sh024",
+          "duration_s": 6.0,
+          "est_s": 3.8,
+          "ratio": 0.633,
+          "status": "ok",
+          "lines": [
+            {
+              "shot_id": "sh024",
+              "speaker": "CHAR-alice",
+              "text": "Do cats eat bats? Do cats eat bats?… Do bats eat cats?",
+              "chars": 39,
+              "cpm": 617.5,
+              "est_s": 3.8,
+              "est_recorded_s": 3.8
+            }
+          ]
+        }
+      ],
+      "lines": [
+        {
+          "shot_id": "sh022",
+          "speaker": "CHAR-alice",
+          "text": "Dinah'll miss me very much to-night, I should think!",
+          "chars": 40,
+          "cpm": 617.5,
+          "est_s": 3.9,
+          "est_recorded_s": 3.9
+        },
+        {
+          "shot_id": "sh024",
+          "speaker": "CHAR-alice",
+          "text": "Do cats eat bats? Do cats eat bats?… Do bats eat cats?",
+          "chars": 39,
+          "cpm": 617.5,
+          "est_s": 3.8,
+          "est_recorded_s": 3.8
+        }
+      ]
+    },
+    {
+      "group_id": "grp010",
+      "audio_plan": "ambient_only",
+      "total_duration_s": 9.0,
+      "capacity_s": 6.3,
+      "est_s": 0.0,
+      "over_s": 0.0,
+      "ratio": 0.0,
+      "status": "skipped",
+      "shots": [
+        {
+          "shot_id": "sh025",
+          "duration_s": 9.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        }
+      ],
+      "lines": []
+    },
+    {
+      "group_id": "grp011",
+      "audio_plan": "dialogue",
+      "total_duration_s": 16.0,
+      "capacity_s": 11.2,
+      "est_s": 2.0,
+      "over_s": 0.0,
+      "ratio": 0.125,
+      "status": "ok",
+      "shots": [
+        {
+          "shot_id": "sh026",
+          "duration_s": 5.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        },
+        {
+          "shot_id": "sh027",
+          "duration_s": 4.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        },
+        {
+          "shot_id": "sh028",
+          "duration_s": 4.0,
+          "est_s": 2.0,
+          "ratio": 0.5,
+          "status": "ok",
+          "lines": [
+            {
+              "shot_id": "sh028",
+              "speaker": "CHAR-white-rabbit",
+              "text": "Oh dear! Oh dear! I shall be late!",
+              "chars": 24,
+              "cpm": 722.0,
+              "est_s": 2.0,
+              "est_recorded_s": 2.0
+            }
+          ]
+        },
+        {
+          "shot_id": "sh029",
+          "duration_s": 3.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        }
+      ],
+      "lines": [
+        {
+          "shot_id": "sh028",
+          "speaker": "CHAR-white-rabbit",
+          "text": "Oh dear! Oh dear! I shall be late!",
+          "chars": 24,
+          "cpm": 722.0,
+          "est_s": 2.0,
+          "est_recorded_s": 2.0
+        }
+      ]
+    },
+    {
+      "group_id": "grp012",
+      "audio_plan": "dialogue",
+      "total_duration_s": 12.0,
+      "capacity_s": 8.4,
+      "est_s": 3.0,
+      "over_s": 0.0,
+      "ratio": 0.25,
+      "status": "ok",
+      "shots": [
+        {
+          "shot_id": "sh030",
+          "duration_s": 4.5,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        },
+        {
+          "shot_id": "sh031",
+          "duration_s": 4.5,
+          "est_s": 3.0,
+          "ratio": 0.667,
+          "status": "ok",
+          "lines": [
+            {
+              "shot_id": "sh031",
+              "speaker": "CHAR-white-rabbit",
+              "text": "Oh my ears and whiskers, how late it's getting!",
+              "chars": 36,
+              "cpm": 722.0,
+              "est_s": 3.0,
+              "est_recorded_s": 3.0
+            }
+          ]
+        },
+        {
+          "shot_id": "sh032",
+          "duration_s": 3.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        }
+      ],
+      "lines": [
+        {
+          "shot_id": "sh031",
+          "speaker": "CHAR-white-rabbit",
+          "text": "Oh my ears and whiskers, how late it's getting!",
+          "chars": 36,
+          "cpm": 722.0,
+          "est_s": 3.0,
+          "est_recorded_s": 3.0
+        }
+      ]
+    },
+    {
+      "group_id": "grp013",
+      "audio_plan": "ambient_only",
+      "total_duration_s": 18.0,
+      "capacity_s": 12.6,
+      "est_s": 0.0,
+      "over_s": 0.0,
+      "ratio": 0.0,
+      "status": "skipped",
+      "shots": [
+        {
+          "shot_id": "sh033",
+          "duration_s": 8.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        },
+        {
+          "shot_id": "sh034",
+          "duration_s": 6.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        },
+        {
+          "shot_id": "sh035",
+          "duration_s": 4.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        }
+      ],
+      "lines": []
+    },
+    {
+      "group_id": "grp014",
+      "audio_plan": "ambient_only",
+      "total_duration_s": 15.0,
+      "capacity_s": 10.5,
+      "est_s": 0.0,
+      "over_s": 0.0,
+      "ratio": 0.0,
+      "status": "skipped",
+      "shots": [
+        {
+          "shot_id": "sh036",
+          "duration_s": 5.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        },
+        {
+          "shot_id": "sh037",
+          "duration_s": 4.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        },
+        {
+          "shot_id": "sh038",
+          "duration_s": 6.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        }
+      ],
+      "lines": []
+    },
+    {
+      "group_id": "grp015",
+      "audio_plan": "ambient_only",
+      "total_duration_s": 11.0,
+      "capacity_s": 7.7,
+      "est_s": 0.0,
+      "over_s": 0.0,
+      "ratio": 0.0,
+      "status": "skipped",
+      "shots": [
+        {
+          "shot_id": "sh039",
+          "duration_s": 7.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        },
+        {
+          "shot_id": "sh040",
+          "duration_s": 4.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        }
+      ],
+      "lines": []
+    },
+    {
+      "group_id": "grp016",
+      "audio_plan": "ambient_only",
+      "total_duration_s": 18.0,
+      "capacity_s": 12.6,
+      "est_s": 0.0,
+      "over_s": 0.0,
+      "ratio": 0.0,
+      "status": "skipped",
+      "shots": [
+        {
+          "shot_id": "sh041",
+          "duration_s": 5.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        },
+        {
+          "shot_id": "sh042",
+          "duration_s": 5.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        },
+        {
+          "shot_id": "sh043",
+          "duration_s": 8.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        }
+      ],
+      "lines": []
+    },
+    {
+      "group_id": "grp017",
+      "audio_plan": "dialogue",
+      "total_duration_s": 15.0,
+      "capacity_s": 10.5,
+      "est_s": 7.4,
+      "over_s": 0.0,
+      "ratio": 0.493,
+      "status": "ok",
+      "shots": [
+        {
+          "shot_id": "sh044",
+          "duration_s": 6.0,
+          "est_s": 2.8,
+          "ratio": 0.467,
+          "status": "ok",
+          "lines": [
+            {
+              "shot_id": "sh044",
+              "speaker": "CHAR-alice",
+              "text": "That certainly was not here before.",
+              "chars": 29,
+              "cpm": 617.5,
+              "est_s": 2.8,
+              "est_recorded_s": 2.8
+            }
+          ]
+        },
+        {
+          "shot_id": "sh045",
+          "duration_s": 3.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        },
+        {
+          "shot_id": "sh046",
+          "duration_s": 6.0,
+          "est_s": 4.6,
+          "ratio": 0.767,
+          "status": "ok",
+          "lines": [
+            {
+              "shot_id": "sh046",
+              "speaker": "CHAR-alice",
+              "text": "No, I'll look first, and see whether it's marked 'poison' or not.",
+              "chars": 47,
+              "cpm": 617.5,
+              "est_s": 4.6,
+              "est_recorded_s": 4.6
+            }
+          ]
+        }
+      ],
+      "lines": [
+        {
+          "shot_id": "sh044",
+          "speaker": "CHAR-alice",
+          "text": "That certainly was not here before.",
+          "chars": 29,
+          "cpm": 617.5,
+          "est_s": 2.8,
+          "est_recorded_s": 2.8
+        },
+        {
+          "shot_id": "sh046",
+          "speaker": "CHAR-alice",
+          "text": "No, I'll look first, and see whether it's marked 'poison' or not.",
+          "chars": 47,
+          "cpm": 617.5,
+          "est_s": 4.6,
+          "est_recorded_s": 4.6
+        }
+      ]
+    },
+    {
+      "group_id": "grp018",
+      "audio_plan": "dialogue",
+      "total_duration_s": 16.0,
+      "capacity_s": 11.2,
+      "est_s": 4.9,
+      "over_s": 0.0,
+      "ratio": 0.306,
+      "status": "ok",
+      "shots": [
+        {
+          "shot_id": "sh047",
+          "duration_s": 4.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        },
+        {
+          "shot_id": "sh048",
+          "duration_s": 12.0,
+          "est_s": 4.9,
+          "ratio": 0.408,
+          "status": "ok",
+          "lines": [
+            {
+              "shot_id": "sh048",
+              "speaker": "CHAR-alice",
+              "text": "What a curious feeling! I must be shutting up like a telescope.",
+              "chars": 50,
+              "cpm": 617.5,
+              "est_s": 4.9,
+              "est_recorded_s": 4.9
+            }
+          ]
+        }
+      ],
+      "lines": [
+        {
+          "shot_id": "sh048",
+          "speaker": "CHAR-alice",
+          "text": "What a curious feeling! I must be shutting up like a telescope.",
+          "chars": 50,
+          "cpm": 617.5,
+          "est_s": 4.9,
+          "est_recorded_s": 4.9
+        }
+      ]
+    },
+    {
+      "group_id": "grp019",
+      "audio_plan": "dialogue",
+      "total_duration_s": 11.0,
+      "capacity_s": 7.7,
+      "est_s": 5.1,
+      "over_s": 0.0,
+      "ratio": 0.464,
+      "status": "ok",
+      "shots": [
+        {
+          "shot_id": "sh049",
+          "duration_s": 4.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        },
+        {
+          "shot_id": "sh050",
+          "duration_s": 7.0,
+          "est_s": 5.1,
+          "ratio": 0.729,
+          "status": "ok",
+          "lines": [
+            {
+              "shot_id": "sh050",
+              "speaker": "CHAR-alice",
+              "text": "For it might end, you know, in my going out altogether, like a candle.",
+              "chars": 53,
+              "cpm": 617.5,
+              "est_s": 5.1,
+              "est_recorded_s": 5.1
+            }
+          ]
+        }
+      ],
+      "lines": [
+        {
+          "shot_id": "sh050",
+          "speaker": "CHAR-alice",
+          "text": "For it might end, you know, in my going out altogether, like a candle.",
+          "chars": 53,
+          "cpm": 617.5,
+          "est_s": 5.1,
+          "est_recorded_s": 5.1
+        }
+      ]
+    },
+    {
+      "group_id": "grp020",
+      "audio_plan": "ambient_only",
+      "total_duration_s": 17.0,
+      "capacity_s": 11.9,
+      "est_s": 0.0,
+      "over_s": 0.0,
+      "ratio": 0.0,
+      "status": "skipped",
+      "shots": [
+        {
+          "shot_id": "sh051",
+          "duration_s": 4.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        },
+        {
+          "shot_id": "sh052",
+          "duration_s": 4.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        },
+        {
+          "shot_id": "sh053",
+          "duration_s": 9.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        }
+      ],
+      "lines": []
+    },
+    {
+      "group_id": "grp021",
+      "audio_plan": "dialogue",
+      "total_duration_s": 17.0,
+      "capacity_s": 11.9,
+      "est_s": 5.9,
+      "over_s": 0.0,
+      "ratio": 0.347,
+      "status": "ok",
+      "shots": [
+        {
+          "shot_id": "sh054",
+          "duration_s": 8.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        },
+        {
+          "shot_id": "sh055",
+          "duration_s": 9.0,
+          "est_s": 5.9,
+          "ratio": 0.656,
+          "status": "ok",
+          "lines": [
+            {
+              "shot_id": "sh055",
+              "speaker": "CHAR-alice",
+              "text": "Come, there's no use in crying like that! I advise you to leave off this minute!",
+              "chars": 61,
+              "cpm": 617.5,
+              "est_s": 5.9,
+              "est_recorded_s": 5.9
+            }
+          ]
+        }
+      ],
+      "lines": [
+        {
+          "shot_id": "sh055",
+          "speaker": "CHAR-alice",
+          "text": "Come, there's no use in crying like that! I advise you to leave off this minute!",
+          "chars": 61,
+          "cpm": 617.5,
+          "est_s": 5.9,
+          "est_recorded_s": 5.9
+        }
+      ]
+    },
+    {
+      "group_id": "grp022",
+      "audio_plan": "dialogue",
+      "total_duration_s": 25.0,
+      "capacity_s": 17.5,
+      "est_s": 14.7,
+      "over_s": 0.0,
+      "ratio": 0.588,
+      "status": "ok",
+      "shots": [
+        {
+          "shot_id": "sh056",
+          "duration_s": 4.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        },
+        {
+          "shot_id": "sh057",
+          "duration_s": 3.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        },
+        {
+          "shot_id": "sh058",
+          "duration_s": 11.5,
+          "est_s": 9.5,
+          "ratio": 0.826,
+          "status": "ok",
+          "lines": [
+            {
+              "shot_id": "sh058",
+              "speaker": "CHAR-alice",
+              "text": "Well, I'll eat it. And if it makes me grow larger, I can reach the key;",
+              "chars": 51,
+              "cpm": 617.5,
+              "est_s": 5.0,
+              "est_recorded_s": 5.0
+            },
+            {
+              "shot_id": "sh058",
+              "speaker": "CHAR-alice",
+              "text": "and if it makes me grow smaller, I can creep under the door.",
+              "chars": 46,
+              "cpm": 617.5,
+              "est_s": 4.5,
+              "est_recorded_s": 4.5
+            }
+          ]
+        },
+        {
+          "shot_id": "sh059",
+          "duration_s": 6.5,
+          "est_s": 5.2,
+          "ratio": 0.8,
+          "status": "ok",
+          "lines": [
+            {
+              "shot_id": "sh059",
+              "speaker": "CHAR-alice",
+              "text": "So either way I'll get into the garden, and I don't care which happens!",
+              "chars": 54,
+              "cpm": 617.5,
+              "est_s": 5.2,
+              "est_recorded_s": 5.2
+            }
+          ]
+        }
+      ],
+      "lines": [
+        {
+          "shot_id": "sh058",
+          "speaker": "CHAR-alice",
+          "text": "Well, I'll eat it. And if it makes me grow larger, I can reach the key;",
+          "chars": 51,
+          "cpm": 617.5,
+          "est_s": 5.0,
+          "est_recorded_s": 5.0
+        },
+        {
+          "shot_id": "sh058",
+          "speaker": "CHAR-alice",
+          "text": "and if it makes me grow smaller, I can creep under the door.",
+          "chars": 46,
+          "cpm": 617.5,
+          "est_s": 4.5,
+          "est_recorded_s": 4.5
+        },
+        {
+          "shot_id": "sh059",
+          "speaker": "CHAR-alice",
+          "text": "So either way I'll get into the garden, and I don't care which happens!",
+          "chars": 54,
+          "cpm": 617.5,
+          "est_s": 5.2,
+          "est_recorded_s": 5.2
+        }
+      ]
+    },
+    {
+      "group_id": "grp023",
+      "audio_plan": "dialogue",
+      "total_duration_s": 10.0,
+      "capacity_s": 7.0,
+      "est_s": 1.6,
+      "over_s": 0.0,
+      "ratio": 0.16,
+      "status": "ok",
+      "shots": [
+        {
+          "shot_id": "sh060",
+          "duration_s": 3.0,
+          "est_s": 1.6,
+          "ratio": 0.533,
+          "status": "ok",
+          "lines": [
+            {
+              "shot_id": "sh060",
+              "speaker": "CHAR-alice",
+              "text": "Which way? Which way?",
+              "chars": 16,
+              "cpm": 617.5,
+              "est_s": 1.6,
+              "est_recorded_s": 1.6
+            }
+          ]
+        },
+        {
+          "shot_id": "sh061",
+          "duration_s": 7.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        }
+      ],
+      "lines": [
+        {
+          "shot_id": "sh060",
+          "speaker": "CHAR-alice",
+          "text": "Which way? Which way?",
+          "chars": 16,
+          "cpm": 617.5,
+          "est_s": 1.6,
+          "est_recorded_s": 1.6
+        }
+      ]
+    },
+    {
+      "group_id": "grp024",
+      "audio_plan": "dialogue",
+      "total_duration_s": 10.0,
+      "capacity_s": 7.0,
+      "est_s": 2.0,
+      "over_s": 0.0,
+      "ratio": 0.2,
+      "status": "ok",
+      "shots": [
+        {
+          "shot_id": "sh062",
+          "duration_s": 6.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        },
+        {
+          "shot_id": "sh063",
+          "duration_s": 4.0,
+          "est_s": 2.0,
+          "ratio": 0.5,
+          "status": "ok",
+          "lines": [
+            {
+              "shot_id": "sh063",
+              "speaker": "CHAR-alice",
+              "text": "Curiouser and curiouser!",
+              "chars": 21,
+              "cpm": 617.5,
+              "est_s": 2.0,
+              "est_recorded_s": 2.0
+            }
+          ]
+        }
+      ],
+      "lines": [
+        {
+          "shot_id": "sh063",
+          "speaker": "CHAR-alice",
+          "text": "Curiouser and curiouser!",
+          "chars": 21,
+          "cpm": 617.5,
+          "est_s": 2.0,
+          "est_recorded_s": 2.0
+        }
+      ]
+    },
+    {
+      "group_id": "grp025",
+      "audio_plan": "dialogue",
+      "total_duration_s": 12.0,
+      "capacity_s": 8.4,
+      "est_s": 5.8,
+      "over_s": 0.0,
+      "ratio": 0.483,
+      "status": "ok",
+      "shots": [
+        {
+          "shot_id": "sh064",
+          "duration_s": 7.0,
+          "est_s": 5.8,
+          "ratio": 0.829,
+          "status": "ok",
+          "lines": [
+            {
+              "shot_id": "sh064",
+              "speaker": "CHAR-alice",
+              "text": "Now I'm opening out like the largest telescope that ever was! Good-bye, feet!",
+              "chars": 60,
+              "cpm": 617.5,
+              "est_s": 5.8,
+              "est_recorded_s": 5.8
+            }
+          ]
+        },
+        {
+          "shot_id": "sh065",
+          "duration_s": 5.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        }
+      ],
+      "lines": [
+        {
+          "shot_id": "sh064",
+          "speaker": "CHAR-alice",
+          "text": "Now I'm opening out like the largest telescope that ever was! Good-bye, feet!",
+          "chars": 60,
+          "cpm": 617.5,
+          "est_s": 5.8,
+          "est_recorded_s": 5.8
+        }
+      ]
+    },
+    {
+      "group_id": "grp026",
+      "audio_plan": "ambient_only",
+      "total_duration_s": 12.0,
+      "capacity_s": 8.4,
+      "est_s": 0.0,
+      "over_s": 0.0,
+      "ratio": 0.0,
+      "status": "skipped",
+      "shots": [
+        {
+          "shot_id": "sh066",
+          "duration_s": 5.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        },
+        {
+          "shot_id": "sh067",
+          "duration_s": 7.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        }
+      ],
+      "lines": []
+    },
+    {
+      "group_id": "grp027",
+      "audio_plan": "dialogue",
+      "total_duration_s": 22.0,
+      "capacity_s": 15.4,
+      "est_s": 8.6,
+      "over_s": 0.0,
+      "ratio": 0.391,
+      "status": "ok",
+      "shots": [
+        {
+          "shot_id": "sh068",
+          "duration_s": 4.5,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        },
+        {
+          "shot_id": "sh069",
+          "duration_s": 8.0,
+          "est_s": 6.5,
+          "ratio": 0.812,
+          "status": "ok",
+          "lines": [
+            {
+              "shot_id": "sh069",
+              "speaker": "CHAR-alice",
+              "text": "You ought to be ashamed of yourself, a great girl like you, to go on crying in this way!",
+              "chars": 67,
+              "cpm": 617.5,
+              "est_s": 6.5,
+              "est_recorded_s": 6.5
+            }
+          ]
+        },
+        {
+          "shot_id": "sh070",
+          "duration_s": 3.5,
+          "est_s": 2.1,
+          "ratio": 0.6,
+          "status": "ok",
+          "lines": [
+            {
+              "shot_id": "sh070",
+              "speaker": "CHAR-alice",
+              "text": "Stop this moment, I tell you!",
+              "chars": 22,
+              "cpm": 617.5,
+              "est_s": 2.1,
+              "est_recorded_s": 2.1
+            }
+          ]
+        },
+        {
+          "shot_id": "sh071",
+          "duration_s": 6.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        }
+      ],
+      "lines": [
+        {
+          "shot_id": "sh069",
+          "speaker": "CHAR-alice",
+          "text": "You ought to be ashamed of yourself, a great girl like you, to go on crying in this way!",
+          "chars": 67,
+          "cpm": 617.5,
+          "est_s": 6.5,
+          "est_recorded_s": 6.5
+        },
+        {
+          "shot_id": "sh070",
+          "speaker": "CHAR-alice",
+          "text": "Stop this moment, I tell you!",
+          "chars": 22,
+          "cpm": 617.5,
+          "est_s": 2.1,
+          "est_recorded_s": 2.1
+        }
+      ]
+    },
+    {
+      "group_id": "grp028",
+      "audio_plan": "dialogue",
+      "total_duration_s": 11.0,
+      "capacity_s": 7.7,
+      "est_s": 4.8,
+      "over_s": 0.0,
+      "ratio": 0.436,
+      "status": "ok",
+      "shots": [
+        {
+          "shot_id": "sh072",
+          "duration_s": 2.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        },
+        {
+          "shot_id": "sh073",
+          "duration_s": 3.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        },
+        {
+          "shot_id": "sh074",
+          "duration_s": 6.0,
+          "est_s": 4.8,
+          "ratio": 0.8,
+          "status": "ok",
+          "lines": [
+            {
+              "shot_id": "sh074",
+              "speaker": "CHAR-white-rabbit",
+              "text": "Oh! the Duchess, the Duchess! Oh! won't she be savage if I've kept her waiting!",
+              "chars": 58,
+              "cpm": 722.0,
+              "est_s": 4.8,
+              "est_recorded_s": 4.8
+            }
+          ]
+        }
+      ],
+      "lines": [
+        {
+          "shot_id": "sh074",
+          "speaker": "CHAR-white-rabbit",
+          "text": "Oh! the Duchess, the Duchess! Oh! won't she be savage if I've kept her waiting!",
+          "chars": 58,
+          "cpm": 722.0,
+          "est_s": 4.8,
+          "est_recorded_s": 4.8
+        }
+      ]
+    },
+    {
+      "group_id": "grp029",
+      "audio_plan": "dialogue",
+      "total_duration_s": 8.0,
+      "capacity_s": 5.6,
+      "est_s": 1.4,
+      "over_s": 0.0,
+      "ratio": 0.175,
+      "status": "ok",
+      "shots": [
+        {
+          "shot_id": "sh075",
+          "duration_s": 2.5,
+          "est_s": 1.4,
+          "ratio": 0.56,
+          "status": "ok",
+          "lines": [
+            {
+              "shot_id": "sh075",
+              "speaker": "CHAR-alice",
+              "text": "If you please, sir—",
+              "chars": 14,
+              "cpm": 617.5,
+              "est_s": 1.4,
+              "est_recorded_s": 1.4
+            }
+          ]
+        },
+        {
+          "shot_id": "sh076",
+          "duration_s": 3.5,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        },
+        {
+          "shot_id": "sh077",
+          "duration_s": 2.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        }
+      ],
+      "lines": [
+        {
+          "shot_id": "sh075",
+          "speaker": "CHAR-alice",
+          "text": "If you please, sir—",
+          "chars": 14,
+          "cpm": 617.5,
+          "est_s": 1.4,
+          "est_recorded_s": 1.4
+        }
+      ]
+    },
+    {
+      "group_id": "grp030",
+      "audio_plan": "dialogue",
+      "total_duration_s": 23.0,
+      "capacity_s": 16.1,
+      "est_s": 15.0,
+      "over_s": 0.0,
+      "ratio": 0.652,
+      "status": "ok",
+      "shots": [
+        {
+          "shot_id": "sh078",
+          "duration_s": 8.5,
+          "est_s": 6.6,
+          "ratio": 0.776,
+          "status": "ok",
+          "lines": [
+            {
+              "shot_id": "sh078",
+              "speaker": "CHAR-alice",
+              "text": "Dear, dear! How queer everything is to-day! And yesterday things went on just as usual.",
+              "chars": 68,
+              "cpm": 617.5,
+              "est_s": 6.6,
+              "est_recorded_s": 6.6
+            }
+          ]
+        },
+        {
+          "shot_id": "sh079",
+          "duration_s": 8.5,
+          "est_s": 6.4,
+          "ratio": 0.753,
+          "status": "ok",
+          "lines": [
+            {
+              "shot_id": "sh079",
+              "speaker": "CHAR-alice",
+              "text": "I wonder if I've been changed in the night? But if I'm not the same, who in the world am I?",
+              "chars": 66,
+              "cpm": 617.5,
+              "est_s": 6.4,
+              "est_recorded_s": 6.4
+            }
+          ]
+        },
+        {
+          "shot_id": "sh080",
+          "duration_s": 6.0,
+          "est_s": 2.0,
+          "ratio": 0.333,
+          "status": "ok",
+          "lines": [
+            {
+              "shot_id": "sh080",
+              "speaker": "CHAR-alice",
+              "text": "Ah, that's the great puzzle!",
+              "chars": 21,
+              "cpm": 617.5,
+              "est_s": 2.0,
+              "est_recorded_s": 2.0
+            }
+          ]
+        }
+      ],
+      "lines": [
+        {
+          "shot_id": "sh078",
+          "speaker": "CHAR-alice",
+          "text": "Dear, dear! How queer everything is to-day! And yesterday things went on just as usual.",
+          "chars": 68,
+          "cpm": 617.5,
+          "est_s": 6.6,
+          "est_recorded_s": 6.6
+        },
+        {
+          "shot_id": "sh079",
+          "speaker": "CHAR-alice",
+          "text": "I wonder if I've been changed in the night? But if I'm not the same, who in the world am I?",
+          "chars": 66,
+          "cpm": 617.5,
+          "est_s": 6.4,
+          "est_recorded_s": 6.4
+        },
+        {
+          "shot_id": "sh080",
+          "speaker": "CHAR-alice",
+          "text": "Ah, that's the great puzzle!",
+          "chars": 21,
+          "cpm": 617.5,
+          "est_s": 2.0,
+          "est_recorded_s": 2.0
+        }
+      ]
+    },
+    {
+      "group_id": "grp031",
+      "audio_plan": "dialogue",
+      "total_duration_s": 30.0,
+      "capacity_s": 21.0,
+      "est_s": 19.8,
+      "over_s": 0.0,
+      "ratio": 0.66,
+      "status": "ok",
+      "shots": [
+        {
+          "shot_id": "sh081",
+          "duration_s": 9.5,
+          "est_s": 7.7,
+          "ratio": 0.811,
+          "status": "ok",
+          "lines": [
+            {
+              "shot_id": "sh081",
+              "speaker": "CHAR-alice",
+              "text": "Let me see: four times five is twelve, and four times six is thirteen… London is the capital of Paris—",
+              "chars": 79,
+              "cpm": 617.5,
+              "est_s": 7.7,
+              "est_recorded_s": 7.7
+            }
+          ]
+        },
+        {
+          "shot_id": "sh082",
+          "duration_s": 6.5,
+          "est_s": 5.1,
+          "ratio": 0.785,
+          "status": "ok",
+          "lines": [
+            {
+              "shot_id": "sh082",
+              "speaker": "CHAR-alice",
+              "text": "No, that's all wrong, I'm certain! I must have been changed for Mabel!",
+              "chars": 52,
+              "cpm": 617.5,
+              "est_s": 5.1,
+              "est_recorded_s": 5.1
+            }
+          ]
+        },
+        {
+          "shot_id": "sh083",
+          "duration_s": 9.5,
+          "est_s": 7.0,
+          "ratio": 0.737,
+          "status": "ok",
+          "lines": [
+            {
+              "shot_id": "sh083",
+              "speaker": "CHAR-alice",
+              "text": "Oh dear, I do wish they would put their heads down! I am so very tired of being all alone here!",
+              "chars": 72,
+              "cpm": 617.5,
+              "est_s": 7.0,
+              "est_recorded_s": 7.0
+            }
+          ]
+        },
+        {
+          "shot_id": "sh084",
+          "duration_s": 4.5,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        }
+      ],
+      "lines": [
+        {
+          "shot_id": "sh081",
+          "speaker": "CHAR-alice",
+          "text": "Let me see: four times five is twelve, and four times six is thirteen… London is the capital of Paris—",
+          "chars": 79,
+          "cpm": 617.5,
+          "est_s": 7.7,
+          "est_recorded_s": 7.7
+        },
+        {
+          "shot_id": "sh082",
+          "speaker": "CHAR-alice",
+          "text": "No, that's all wrong, I'm certain! I must have been changed for Mabel!",
+          "chars": 52,
+          "cpm": 617.5,
+          "est_s": 5.1,
+          "est_recorded_s": 5.1
+        },
+        {
+          "shot_id": "sh083",
+          "speaker": "CHAR-alice",
+          "text": "Oh dear, I do wish they would put their heads down! I am so very tired of being all alone here!",
+          "chars": 72,
+          "cpm": 617.5,
+          "est_s": 7.0,
+          "est_recorded_s": 7.0
+        }
+      ]
+    },
+    {
+      "group_id": "grp032",
+      "audio_plan": "dialogue",
+      "total_duration_s": 17.0,
+      "capacity_s": 11.9,
+      "est_s": 1.9,
+      "over_s": 0.0,
+      "ratio": 0.112,
+      "status": "ok",
+      "shots": [
+        {
+          "shot_id": "sh085",
+          "duration_s": 2.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        },
+        {
+          "shot_id": "sh086",
+          "duration_s": 5.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        },
+        {
+          "shot_id": "sh087",
+          "duration_s": 5.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        },
+        {
+          "shot_id": "sh088",
+          "duration_s": 5.0,
+          "est_s": 1.9,
+          "ratio": 0.38,
+          "status": "ok",
+          "lines": [
+            {
+              "shot_id": "sh088",
+              "speaker": "CHAR-alice",
+              "text": "That was a narrow escape!",
+              "chars": 20,
+              "cpm": 617.5,
+              "est_s": 1.9,
+              "est_recorded_s": 1.9
+            }
+          ]
+        }
+      ],
+      "lines": [
+        {
+          "shot_id": "sh088",
+          "speaker": "CHAR-alice",
+          "text": "That was a narrow escape!",
+          "chars": 20,
+          "cpm": 617.5,
+          "est_s": 1.9,
+          "est_recorded_s": 1.9
+        }
+      ]
+    },
+    {
+      "group_id": "grp033",
+      "audio_plan": "dialogue",
+      "total_duration_s": 13.0,
+      "capacity_s": 9.1,
+      "est_s": 1.7,
+      "over_s": 0.0,
+      "ratio": 0.131,
+      "status": "ok",
+      "shots": [
+        {
+          "shot_id": "sh089",
+          "duration_s": 5.0,
+          "est_s": 1.7,
+          "ratio": 0.34,
+          "status": "ok",
+          "lines": [
+            {
+              "shot_id": "sh089",
+              "speaker": "CHAR-alice",
+              "text": "And now for the garden!",
+              "chars": 18,
+              "cpm": 617.5,
+              "est_s": 1.7,
+              "est_recorded_s": 1.7
+            }
+          ]
+        },
+        {
+          "shot_id": "sh090",
+          "duration_s": 4.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        },
+        {
+          "shot_id": "sh091",
+          "duration_s": 4.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        }
+      ],
+      "lines": [
+        {
+          "shot_id": "sh089",
+          "speaker": "CHAR-alice",
+          "text": "And now for the garden!",
+          "chars": 18,
+          "cpm": 617.5,
+          "est_s": 1.7,
+          "est_recorded_s": 1.7
+        }
+      ]
+    },
+    {
+      "group_id": "grp034",
+      "audio_plan": "ambient_only",
+      "total_duration_s": 9.0,
+      "capacity_s": 6.3,
+      "est_s": 0.0,
+      "over_s": 0.0,
+      "ratio": 0.0,
+      "status": "skipped",
+      "shots": [
+        {
+          "shot_id": "sh092",
+          "duration_s": 4.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        },
+        {
+          "shot_id": "sh093",
+          "duration_s": 5.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        }
+      ],
+      "lines": []
+    },
+    {
+      "group_id": "grp035",
+      "audio_plan": "dialogue",
+      "total_duration_s": 12.0,
+      "capacity_s": 8.4,
+      "est_s": 5.5,
+      "over_s": 0.0,
+      "ratio": 0.458,
+      "status": "ok",
+      "shots": [
+        {
+          "shot_id": "sh094",
+          "duration_s": 5.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        },
+        {
+          "shot_id": "sh095",
+          "duration_s": 7.0,
+          "est_s": 5.5,
+          "ratio": 0.786,
+          "status": "ok",
+          "lines": [
+            {
+              "shot_id": "sh095",
+              "speaker": "CHAR-alice",
+              "text": "I must have fallen into the sea! And in that case I can go back by railway.",
+              "chars": 57,
+              "cpm": 617.5,
+              "est_s": 5.5,
+              "est_recorded_s": 5.5
+            }
+          ]
+        }
+      ],
+      "lines": [
+        {
+          "shot_id": "sh095",
+          "speaker": "CHAR-alice",
+          "text": "I must have fallen into the sea! And in that case I can go back by railway.",
+          "chars": 57,
+          "cpm": 617.5,
+          "est_s": 5.5,
+          "est_recorded_s": 5.5
+        }
+      ]
+    },
+    {
+      "group_id": "grp036",
+      "audio_plan": "dialogue",
+      "total_duration_s": 16.0,
+      "capacity_s": 11.2,
+      "est_s": 7.7,
+      "over_s": 0.0,
+      "ratio": 0.481,
+      "status": "ok",
+      "shots": [
+        {
+          "shot_id": "sh096",
+          "duration_s": 3.5,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        },
+        {
+          "shot_id": "sh097",
+          "duration_s": 3.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        },
+        {
+          "shot_id": "sh098",
+          "duration_s": 9.5,
+          "est_s": 7.7,
+          "ratio": 0.811,
+          "status": "ok",
+          "lines": [
+            {
+              "shot_id": "sh098",
+              "speaker": "CHAR-alice",
+              "text": "I wish I hadn't cried so much!",
+              "chars": 22,
+              "cpm": 617.5,
+              "est_s": 2.1,
+              "est_recorded_s": 2.1
+            },
+            {
+              "shot_id": "sh098",
+              "speaker": "CHAR-alice",
+              "text": "I shall be punished for it now, I suppose, by being drowned in my own tears!",
+              "chars": 58,
+              "cpm": 617.5,
+              "est_s": 5.6,
+              "est_recorded_s": 5.6
+            }
+          ]
+        }
+      ],
+      "lines": [
+        {
+          "shot_id": "sh098",
+          "speaker": "CHAR-alice",
+          "text": "I wish I hadn't cried so much!",
+          "chars": 22,
+          "cpm": 617.5,
+          "est_s": 2.1,
+          "est_recorded_s": 2.1
+        },
+        {
+          "shot_id": "sh098",
+          "speaker": "CHAR-alice",
+          "text": "I shall be punished for it now, I suppose, by being drowned in my own tears!",
+          "chars": 58,
+          "cpm": 617.5,
+          "est_s": 5.6,
+          "est_recorded_s": 5.6
+        }
+      ]
+    },
+    {
+      "group_id": "grp037",
+      "audio_plan": "dialogue",
+      "total_duration_s": 11.0,
+      "capacity_s": 7.7,
+      "est_s": 5.6,
+      "over_s": 0.0,
+      "ratio": 0.509,
+      "status": "ok",
+      "shots": [
+        {
+          "shot_id": "sh099",
+          "duration_s": 7.0,
+          "est_s": 5.6,
+          "ratio": 0.8,
+          "status": "ok",
+          "lines": [
+            {
+              "shot_id": "sh099",
+              "speaker": "CHAR-alice",
+              "text": "That will be a queer thing, to be sure! However, everything is queer to-day.",
+              "chars": 58,
+              "cpm": 617.5,
+              "est_s": 5.6,
+              "est_recorded_s": 5.6
+            }
+          ]
+        },
+        {
+          "shot_id": "sh100",
+          "duration_s": 2.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        },
+        {
+          "shot_id": "sh101",
+          "duration_s": 2.0,
+          "est_s": 0.0,
+          "ratio": 0.0,
+          "status": "ok",
+          "lines": []
+        }
+      ],
+      "lines": [
+        {
+          "shot_id": "sh099",
+          "speaker": "CHAR-alice",
+          "text": "That will be a queer thing, to be sure! However, everything is queer to-day.",
+          "chars": 58,
+          "cpm": 617.5,
+          "est_s": 5.6,
+          "est_recorded_s": 5.6
+        }
+      ]
+    }
+  ],
+  "trim_targets": [],
+  "checks": {
+    "dialogue_fit_group": "PASS",
+    "dialogue_fit_shot": "PASS",
+    "line_le_cap": "PASS",
+    "line_est_consistent": "PASS",
+    "lines_text_match_source": "PASS",
+    "source_lines_covered": "PASS",
+    "speaker_speed_unknown": "PASS"
+  },
+  "summary": {
+    "groups_total": 37,
+    "dialogue_groups_checked": 24,
+    "groups_over": 0,
+    "shots_over": 0,
+    "shots_tight": 0,
+    "lines_total": 34,
+    "est_total_s": 142.0,
+    "capacity_total_s": 266.0
+  },
+  "pass": true,
+  "errors": [],
+  "warnings": []
+}

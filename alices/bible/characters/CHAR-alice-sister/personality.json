@@ -1,0 +1,97 @@
+{
+  "_meta": {
+    "file": "bible/characters/CHAR-alice-sister/personality.json",
+    "owner": "03-characters/personality",
+    "produced_by_task": "p3-personality-pb1",
+    "produced_on": "2026-09-22",
+    "content_language": "en",
+    "status": "draft_v1"
+  },
+  "character_id": "CHAR-alice-sister",
+  "name": "Alice's Sister",
+  "tier": "A",
+  "layer": "both-echo",
+  "temperament": "A calm, bookish teenager standing on the threshold of adulthood. She is absorbed in her reading, gentle with Alice, and firm about household time. She is also inwardly dreamy: she can half-believe in Wonderland while knowing it is 'dull reality'.",
+  "traits": [
+    {
+      "trait": "Bookish and self-contained",
+      "description": "Reads an 'adult' book with no pictures and doesn't entertain her little sister. She is content in her own quiet.",
+      "evidence": [
+        { "chapter": "ch001", "chapter_no": 1, "ref": "ch001-p01", "event": "ev0001", "quote": "once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it", "note": "She is already reading like a grown-up, which is exactly what bores Alice." }
+      ]
+    },
+    {
+      "trait": "Tender and protective",
+      "description": "Lets the sleeping Alice rest in her lap, brushes the leaves off her face and wakes her with an endearment and a kiss.",
+      "evidence": [
+        { "chapter": "ch012", "chapter_no": 12, "ref": "ch012-p64", "event": "ev0053", "quote": "who was gently brushing away some dead leaves that had fluttered down from the trees upon her face", "note": "Her gentle touch is the real-world version of the flying cards." },
+        { "chapter": "ch012", "chapter_no": 12, "ref": "ch012-p65", "event": "ev0053", "quote": "“Wake up, Alice dear!”", "note": "Wakes her affectionately." },
+        { "chapter": "ch012", "chapter_no": 12, "ref": "ch012-p66", "event": "ev0053", "quote": "her sister kissed her", "note": "Listens to the whole dream before sending her in." }
+      ]
+    },
+    {
+      "trait": "Gently authoritative, keeper of household time",
+      "description": "She is the nearest grown-up voice. She listens, then sends Alice in to tea because it is getting late: kind authority, not bluster.",
+      "evidence": [
+        { "chapter": "ch012", "chapter_no": 12, "ref": "ch012-p66", "event": "ev0053", "quote": "but now run in to your tea; it’s getting late", "note": "The waking echo of the Rabbit's 'late' and the stuck tea-time." }
+      ]
+    },
+    {
+      "trait": "Imaginative, but clear about reality",
+      "description": "Drifts into her own half-dream of Wonderland, yet knows exactly which farm sounds each fancy comes from. She holds wonder and reality together.",
+      "evidence": [
+        { "chapter": "ch012", "chapter_no": 12, "ref": "ch012-p67", "event": "ev0054", "quote": "leaning her head on her hand, watching the setting sun", "note": "A still, reflective posture." },
+        { "chapter": "ch012", "chapter_no": 12, "ref": "ch012-p70", "event": "ev0054", "quote": "dull reality", "note": "She knows it is fancy." }
+      ]
+    },
+    {
+      "trait": "Wistful about childhood",
+      "description": "Imagines Alice grown up and hopes she keeps her child's heart, which shows she feels her own childhood ending.",
+      "evidence": [
+        { "chapter": "ch012", "chapter_no": 12, "ref": "ch012-p71", "event": "ev0054", "quote": "simple and loving heart", "note": "Her hope for Alice's future." }
+      ]
+    }
+  ],
+  "motivation": {
+    "core": "To keep a little of childhood's wonder alive, in Alice and in herself, while taking on the duties of a young woman of the house.",
+    "want": "Quiet time to read and think; Alice safe and on time for tea; Alice to grow up without losing her 'simple and loving heart'.",
+    "fear": "That growing up means exchanging wonder for 'dull reality'. The source only hints at this.",
+    "evidence": [
+      { "chapter": "ch012", "chapter_no": 12, "ref": "ch012-p71", "event": "ev0054", "quote": "simple and loving heart", "note": "Her closing wish for Alice." },
+      { "chapter": "ch012", "chapter_no": 12, "ref": "ch012-p70", "event": "ev0054", "quote": "dull reality", "note": "What she knows waits when she opens her eyes." }
+    ],
+    "inferred": true,
+    "reason": "The source gives her no stated motive. The core is drawn from her reverie (ch012-p67-p71) and from her position in the household (world.json frame.social_class: 'an older sister free to read on a weekday afternoon'; mid-teens per ruling 5.6 A).",
+    "shifts": [
+      { "chapter": "ch012", "chapter_no": 12, "event": "ev0054", "from": "reading her own book, detached from Alice's childish world", "to": "entering that world in her own half-dream and wishing it for Alice's future", "evidence_ref": "ch012-p67" }
+    ]
+  },
+  "habits": [
+    { "habit": "Reads with full absorption and doesn't look up when Alice fidgets", "evidence_ref": "ch001-p01", "event": "ev0001" },
+    { "habit": "Rests her head on her hand when thinking", "evidence_ref": "ch012-p67", "event": "ev0054" },
+    { "habit": "Uses soft endearments ('Alice dear', 'dear') even when giving an instruction", "evidence_ref": "ch012-p66", "event": "ev0053" },
+    { "habit": "At the trial (dream glimpse): stands still and silent among the spectators, watching Alice, never taking part", "evidence_ref": "ch012-p63", "event": "ev0052", "inferred": true, "reason": "The trial glimpse is a designed staging beat realising H1 ruling 5.3 B (index.json doubling). Her stillness there is designed to match her waking calm." }
+  ],
+  "decision_pattern": "Unhurried and observant. She lets things take their course (Alice's nap, Alice's story) and steps in only when it matters (time for tea). She chooses kindness over correction.",
+  "taboos": [
+    { "taboo": "Never scolds, mocks or dismisses Alice's dream", "rationale": "She listens to all of it and says 'It _was_ a curious dream, dear, certainly'. She stands in deliberate contrast to the dream's bullying adults.", "evidence_ref": "ch012-p66", "event": "ev0053", "qa_check": "No sharp or sarcastic line from her in the wake-up scene." },
+    { "taboo": "Never uses force or raised-voice authority", "rationale": "Her only authority is gentle (she brushes, kisses and reminds). She is the adult model the dream's Queen is not.", "evidence_ref": "ch012-p64", "event": "ev0053", "qa_check": "Blocking must not show her shaking or pulling Alice awake." },
+    { "taboo": "At the trial glimpse: never speaks, intervenes or rescues Alice", "rationale": "The glimpse is a light echo only (ruling 5.3 B). If she acted, the dream would be resolved by an adult, when Alice must resolve it herself.", "evidence_ref": "ch012-p63", "event": "ev0052", "inferred": true, "reason": "A designed constraint that protects arc-alice-authority.", "qa_check": "The sister has no dialogue in ch011-ch012 dream scenes." }
+  ],
+  "facade": {
+    "applies": false,
+    "note": "No disguise. Her detached reading at the start and her tender reverie at the end are the same person seen first from Alice's bored point of view and then from her own."
+  },
+  "waking_life_embodiment": {
+    "applies": true,
+    "summary": "She is a waking-world person. In Alice's life she is the nearest and kindest 'grown-up': the one authority figure who listens. In the dream she is only glimpsed as a silent face at the trial (H1 5.3 B), the steady real presence behind the chaos, just before the cards turn to leaves in her hand.",
+    "evidence_ref": "ch012-p64",
+    "inferred": true,
+    "reason": "The trial glimpse is designed (index.json CHAR-alice-sister doubling, ruling 5.3 B). Reading her as the benign counterpart to the dream's adult tyrants is a design interpretation for the coming-of-age frame."
+  },
+  "performance_keynote": "Quiet, composed and warm. Most of her acting is in her eyes and hands (turning pages, brushing leaves, resting her head on her hand). A faint smile of adult amusement mixed with a little longing.",
+  "consistency_flags": [],
+  "inferred_fields": ["motivation.core", "motivation.fear", "habits[3]", "taboos[2]", "waking_life_embodiment"],
+  "inferred": true,
+  "reason": "The source gives her only two scenes and no stated inner life beyond the ch012 reverie. Her motive, fear and trial-glimpse behaviour are designed from that reverie, her household role and H1 ruling 5.3 B."
+}

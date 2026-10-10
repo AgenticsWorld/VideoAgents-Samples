@@ -1,0 +1,30 @@
+{
+  "character_id": "CHAR-court-officers-ensemble",
+  "task_id": "p4-char-concept-cb3",
+  "sheet": "sheet.png",
+  "representative_member": "Eight of Hearts officer (moustached)",
+  "variants": [],
+  "status": "delivered_for_H2_review",
+  "layout_check": { "four_panels": true, "one_view_per_panel": true, "same_individual_all_panels": true, "size": "2560x1440 (JPEG payload)" },
+  "appearance_field_hits": {
+    "gender_male": true,
+    "age_35_55": true,
+    "short_grizzled_hair_heavy_moustache": true,
+    "face_deadpan": true,
+    "build_solid_square_shouldered": true,
+    "card_front_eight_heart_pips_8_indices": true,
+    "card_back_crimson_cream_lattice": true,
+    "crimson_frock_coat_white_piping_brass_buttons": true,
+    "black_knee_breeches_white_stockings_buckled_shoes": true,
+    "bareheaded": true,
+    "white_usher_wand": "partial (reads as a thick white rod/roll, not a thin painted staff)"
+  },
+  "style_check": { "photoreal_live_action": true, "palette_within_style": true },
+  "self_check_defects": [
+    "Card tabard is chest-sized, not a tabard hanging front and back; the back card sits high on the shoulders.",
+    "The wand reads as a thick white rod or rolled paper rather than a thin 60 cm painted staff; in the side panel it is held horizontally.",
+    "No heart rosette is visible on the card back (a floral roundel instead)."
+  ],
+  "rerolls": [],
+  "reroll_budget_note": "User rerun setting = 0."
+}

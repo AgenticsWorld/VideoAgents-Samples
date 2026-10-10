@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh090",
+  "group_id": "grp033",
+  "scene_no": "S09",
+  "duration_s": 4.0,
+  "size": "medium",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 40,
+  "camera_height_m": 0.5,
+  "angle": "level",
+  "rack_focus": "none",
+  "start_frame": "The sh089 axis, now nailed down: Alice arriving at the little door with the low curtain hanging above her like a proscenium, both hands going to the leaf.",
+  "end_frame": "The same frame as she hauls at it: shut again, shoulder-high to her at two feet, and not giving at all — discovery and defeat inside one frame.",
+  "constraint_honoured": "'Run and discovery of the shut door in one move, no second look back: discovery and defeat land in the same frame.'",
+  "movement_note": "The travelling shot stops here rather than continuing into the door, so the cut from movement to stillness is what states the failure.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

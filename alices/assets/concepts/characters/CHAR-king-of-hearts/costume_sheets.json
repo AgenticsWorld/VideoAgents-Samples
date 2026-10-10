@@ -1,0 +1,17 @@
+{
+  "character_id": "CHAR-king-of-hearts",
+  "task_id": "p4-costume-sheet",
+  "agent": "06-art/costume-concept",
+  "identity_anchor": "sheet.png",
+  "sheets": [
+    {"costume_ref": "COS-009", "file": "sheet.png", "default": true, "reuse": true,
+     "label": "King of Hearts card court dress (bareheaded)", "occasion": "court", "period": "PER-dream",
+     "scenes": ["SCN-rose-tree-yard", "SCN-croquet-ground"], "chapters": ["ch008", "ch009"], "episodes": ["ep06", "ep07"],
+     "identity_refs": ["sheet.png"]},
+    {"costume_ref": "COS-010", "file": "sheet_COS-010.png", "default": false,
+     "label": "King as judge: crown over a full wig", "occasion": "court", "period": "PER-dream-court",
+     "scenes": ["SCN-courtroom"], "chapters": ["ch011", "ch012"], "episodes": ["ep08", "ep09"],
+     "cross_ref": "COS-009", "identity_refs": ["sheet.png"], "visual_en_hit": true,
+     "note": "variant 'spectacles on' (ev0045-ev0049) is carried by a continuity state phrase, no separate sheet"}
+  ]
+}

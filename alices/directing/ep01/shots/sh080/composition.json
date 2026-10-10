@@ -1,0 +1,35 @@
+{
+  "shot_id": "sh080",
+  "scene_id": "SCN-long-hall",
+  "size": "close",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "centre",
+    "anchor_xy": [0.46, 0.44],
+    "size_in_frame": "the sustained set-up, held — her face about 0.60 of frame height, unchanged from sh079"
+  },
+  "second_subject": {
+    "id": "PROP-white-kid-gloves-and-fan",
+    "grid": "mid_right",
+    "anchor_xy": [0.74, 0.66],
+    "note": "still stopped, lying in her hand. No business is invented for it."
+  },
+  "headroom": "about 0.14 of frame height, identical to sh079. Nothing in the frame changes across six seconds except her thinking.",
+  "horizon_eyeline": "Same axis and same values as sh079. Her eyeline is inward and unfixed through the silent beat, then comes back into focus for the line.",
+  "layers": {
+    "fg": "the still fan",
+    "mg": "her face",
+    "bg": "near black"
+  },
+  "gaze": {
+    "direction": "frame_left",
+    "lead_room": "left",
+    "note": "unchanged. The pause is carried by an unmoving look into an unoccupied lead room — with narration off, this empty space is the only place the un-narrated thought can live."
+  },
+  "balance": "Absolutely static and identical to sh079. The composition's refusal to develop is what makes the pause legible as thinking rather than as a gap.",
+  "leading_lines": "None. By this point in the aria the frame has been reduced to a face and a horizon.",
+  "eye_first": "Her eyes, and nothing else for six seconds.",
+  "safe_area_ok": true,
+  "constraint_binding": "The pause carries the un-narrated thought and is not filled with business: no gesture, no fan movement, no water event and no reframe is placed anywhere in the shot. Dry — no music yet, and no lit element is introduced that would function as one.",
+  "pairs_with": "sh078, sh079 — the same sustained set-up."
+}

@@ -1,0 +1,34 @@
+{
+  "shot_id": "sh002",
+  "scene_id": "SCN-riverbank",
+  "size": "wide",
+  "subject": {
+    "id": "CHAR-alice-sister",
+    "grid": "centre",
+    "anchor_xy": [0.54, 0.47],
+    "size_in_frame": "seated upright, about one third of frame height; Alice prone beside her reads as a low horizontal bar about one eighth of frame height"
+  },
+  "second_subject": {
+    "id": "CHAR-alice",
+    "grid": "centre",
+    "anchor_xy": [0.44, 0.55],
+    "note": "screen-left of and below her sister — the map has Alice a body's width downhill (south) of the sitting place, and the meadow-side camera puts south on the left."
+  },
+  "headroom": "the elm canopy closes the top 0.18 of frame, so the sister's head sits about 0.12 below the leaf line — shaded, roofed, not airy.",
+  "horizon_eyeline": "The far bank and waterline run across at 0.40 of frame height, dead level. The sister's eyeline drops to the book in her lap; Alice's runs flat along the grass, barely above the lens at 0.35 m.",
+  "layers": {
+    "fg": "out-of-focus grass blades and seed-heads across the bottom 0.15 of frame, a few crossing as high as the girls' waists",
+    "mg": "the flat bank shelf with the two girls small and central, the open book the one bright rectangle, daisies in the turf around them",
+    "bg": "the still reed-edged backwater flat as glass beyond the bank lip, the reed bed off screen left, the pollarded willow leaning in from screen right, heat haze over the far bank"
+  },
+  "gaze": {
+    "direction": "down_frame",
+    "lead_room": "none",
+    "note": "both eyelines are closed into the pair — the sister down to the page, Alice up at the page. Nothing in the frame looks out of it, which is what makes the shot feel becalmed."
+  },
+  "balance": "Symmetrical and settled: the two figures form a low triangle just right of centre, counterweighted by the willow mass at the right edge and the reed bed at the left. The frame is wider and emptier than the action needs — the boredom is the composition.",
+  "leading_lines": "The bank lip runs from the lower left corner up to the right into depth; the elm trunks are the only strong verticals, bracketing the pair. The waterline behind them is a flat horizontal that stops the eye and holds it on the shelf.",
+  "eye_first": "The sister's white page — the highest-value object in a frame of greens — then down-left along her forearm to Alice's face on her fists.",
+  "safe_area_ok": true,
+  "unresolved": "shot_list content places 'far across the meadow, a parish spire in the heat' in this frame, but this is the meadow-side camera looking west at the bank: SCN-riverbank/architecture.json registers the spire beyond the FAR HEDGE on the east skyline, which is behind this lens. Composed here without the spire (the far background is the backwater, far bank and heat haze); the spire is carried by sh007, which does look east. Routed — see qa/defects/DEF-p6-composition-ep01-001.json."
+}

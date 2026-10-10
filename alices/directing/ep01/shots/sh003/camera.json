@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh003",
+  "group_id": "grp002",
+  "scene_no": "S01",
+  "duration_s": 6.0,
+  "size": "medium-close",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 50,
+  "camera_height_m": 0.30,
+  "angle": "level",
+  "rack_focus": "none",
+  "start_frame": "From the water side, lens lying on the grass: the open book filling the near foreground bottom-left, the sister's forearm cutting across the frame, Alice's face behind it upper right, still flat in the grass.",
+  "end_frame": "Same frame, Alice wriggled up onto her elbows so her face has risen clear of the sister's arm for the line; the sister stays an arm and a shoulder throughout.",
+  "constraint_honoured": "'Only Alice's face gets a clean read': the frame is fixed so her small move up onto her elbows is what changes the composition — no reframe helps her.",
+  "movement_note": "LN-ep01-001 (4.8 s) sits inside 6.0 s with silent head and tail; a locked frame keeps the line clear of any camera event.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

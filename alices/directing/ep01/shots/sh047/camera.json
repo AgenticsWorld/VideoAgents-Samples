@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh047",
+  "group_id": "grp018",
+  "scene_no": "S06",
+  "duration_s": 4.0,
+  "size": "close",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 50,
+  "camera_height_m": 1.3,
+  "angle": "level, at her own eye height",
+  "rack_focus": "none",
+  "start_frame": "Close on her face from the curtain side: the bottle rising into the bottom of frame for the first cautious sip, the dim hall soft behind her.",
+  "end_frame": "The same frame after three distinct tastings — sweet, then something savoury and wrong that stops her dead, then the laugh at herself — and the bottle coming down empty.",
+  "constraint_honoured": "'THREE distinct tastings in one shot without a cut' — one locked close, so all three reactions are carried by her face inside a single unbroken frame.",
+  "movement_note": "Four seconds holding three separate beats leaves no room for a move, and the 50 mm is the only lens allowed this near a face.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

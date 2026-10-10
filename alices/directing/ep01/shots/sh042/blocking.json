@@ -1,0 +1,37 @@
+{
+  "shot_id": "sh042",
+  "group_id": "grp016",
+  "scene_no": "S05",
+  "scene_id": "SCN-little-door-passage",
+  "duration_s": 5.0,
+  "is_dialogue": false,
+  "group_position": "middle shot of grp016 — Alice on the map start (hall_floor), unmoved; the map gives her no path in this group.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "kneel",
+      "start_pos": "kneeling on the flagstones at the open little door, face in the doorway light",
+      "space_fragment_en": "kneeling on the flagstones in front of the little door, centred in frame, facing down the passage with the garden light on her face",
+      "facing": "down the passage on the lens axis, leaning toward the open leaf on her screen-left",
+      "path": [],
+      "beats": [
+        { "t": 1.0, "action": "the green light settles on her face", "sync": "the wonder peak" },
+        { "t": 3.4, "action": "she does not move at all", "sync": "held" }
+      ],
+      "performance_beat": {
+        "objective": "take in a thing she has no intention of looking away from",
+        "goal": "take it in without looking away",
+        "emotional_arc": "from delight to something quieter and more wanting than delight",
+        "arc_from": "delight",
+        "arc_to": "open, undefended longing",
+        "trigger": { "beat": "the garden light reaches her face and she stops moving", "t": 1.0 },
+        "no_early_reaction": ["the lips parting", "the head tilting", "leaning in"],
+        "forbidden_early": ["the lips parting", "the head tilting", "leaning in"],
+        "end_state": "kneeling absolutely still, lips parted, eyes wide on the far end of the passage, no blink"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0003 (dream)", "note": "Alice alone." }
+}

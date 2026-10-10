@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh052",
+  "group_id": "grp020",
+  "scene_no": "S06",
+  "duration_s": 4.0,
+  "size": "wide",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 24,
+  "camera_height_m": 0.15,
+  "angle": "straight up the glass table leg",
+  "rack_focus": "none",
+  "start_frame": "Lens on the flagstones looking straight up a tall clear glass table leg: the leg running up the middle of the image, the glass tabletop overhead reading as a ceiling, ten-inch Alice turning at its foot in the near frame.",
+  "end_frame": "The same frame held on the look: the tiny gold key glinting through the glass ceiling high above her, lit from the lamp row beyond — goal and obstacle in one unbroken set-up.",
+  "constraint_honoured": "'Goal and obstacle in one frame — the episode's thesis in a single set-up. Static.'",
+  "movement_note": "One of the two rationed 24 mm shots in the episode, spent on this vertical axis. The near-to-far exaggeration is the whole image, so the camera must not travel along the axis and spend it.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

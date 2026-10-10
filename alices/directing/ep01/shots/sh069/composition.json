@@ -1,0 +1,28 @@
+{
+  "shot_id": "sh069",
+  "scene_id": "SCN-long-hall",
+  "size": "close",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "top_right",
+    "anchor_xy": [0.64, 0.30],
+    "size_in_frame": "the frame finds her mouth and jaw rather than her eyes — her eyes are above the top edge or lost in shadow for most of the shot; the jaw and mouth are about 0.26 of frame height"
+  },
+  "headroom": "none. The crop is higher on the face than sh068, so what little of her head was in frame is now mostly gone; the long take plays on a mouth.",
+  "horizon_eyeline": "Same water-level axis, lens on the flagstones at 0.35 m, static. Her eyeline is out of frame by design — she is speaking down into her own knees, so the geometry of the shot makes eye contact impossible.",
+  "layers": {
+    "fg": "her knees filling the lower left, and the first tears striking the stone below the bottom edge — heard, not seen",
+    "mg": "her mouth and jaw",
+    "bg": "the dark hall, no fittings, the vault a faint curve"
+  },
+  "gaze": {
+    "direction": "down_frame",
+    "lead_room": "none",
+    "note": "the self-address is spoken to her knees, not to camera — the frame is composed so that there is no one to say it to and no direction in which it could be said. That is what makes it two people talking."
+  },
+  "balance": "Heavy and dark across the whole bottom and left, with a single lit mouth in the upper right. The most reduced composition in the aria's approach.",
+  "leading_lines": "The line of her jaw and the line of her knee run roughly parallel down to the left; the space between them is the only light in frame, and it narrows as she folds.",
+  "eye_first": "Her mouth, because it is the only thing in frame doing anything.",
+  "safe_area_ok": true,
+  "constraint_binding": "The self-address is spoken to her knees, not to camera — so the composition denies her both a lens and a listener. Long take: no reframe over eight seconds. The first tears are already striking stone below frame, which is where they stay; the water is not shown until sh071."
+}

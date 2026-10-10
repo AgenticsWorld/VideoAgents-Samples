@@ -1,0 +1,426 @@
+{
+  "CHAR-alice": {
+    "sheets": {
+      "sheet.png": {
+        "exists": true,
+        "container": "jpeg",
+        "size": "2560x1440",
+        "size_ge_2560x1440": true,
+        "costume_id": "COS-001",
+        "costume_is_default": true,
+        "default_costume_in_prompt": true,
+        "gender": "female",
+        "gender_word_in_prompt": true,
+        "style_fragment_ui_verbatim": true,
+        "negative_prompt_en_verbatim": true,
+        "waking_addon_in_negative": true,
+        "layout_sentence_in_prompt": true,
+        "n_equals_1": true,
+        "exit_code": 0
+      },
+      "sheet_age02.png": {
+        "exists": true,
+        "container": "jpeg",
+        "size": "2560x1440",
+        "size_ge_2560x1440": true,
+        "costume_id": "COS-002",
+        "costume_is_default": false,
+        "default_costume_in_prompt": true,
+        "gender": "female",
+        "gender_word_in_prompt": true,
+        "style_fragment_ui_verbatim": true,
+        "negative_prompt_en_verbatim": true,
+        "waking_addon_in_negative": true,
+        "layout_sentence_in_prompt": true,
+        "n_equals_1": true,
+        "exit_code": 0
+      }
+    },
+    "main_dir": [
+      "prompts.json",
+      "selection.json",
+      "sheet.png",
+      "sheet_age02.png",
+      "usage_ledger.jsonl"
+    ],
+    "main_dir_hygiene": true,
+    "ascii_filename": true
+  },
+  "CHAR-alice-sister": {
+    "sheets": {
+      "sheet.png": {
+        "exists": true,
+        "container": "jpeg",
+        "size": "2560x1440",
+        "size_ge_2560x1440": true,
+        "costume_id": "COS-003",
+        "costume_is_default": true,
+        "default_costume_in_prompt": true,
+        "gender": "female",
+        "gender_word_in_prompt": true,
+        "style_fragment_ui_verbatim": true,
+        "negative_prompt_en_verbatim": true,
+        "waking_addon_in_negative": true,
+        "layout_sentence_in_prompt": true,
+        "n_equals_1": true,
+        "exit_code": 0
+      }
+    },
+    "main_dir": [
+      "prompts.json",
+      "selection.json",
+      "sheet.png",
+      "usage_ledger.jsonl"
+    ],
+    "main_dir_hygiene": true,
+    "ascii_filename": true
+  },
+  "CHAR-family-housemaid": {
+    "sheets": {
+      "sheet.png": {
+        "exists": true,
+        "container": "jpeg",
+        "size": "2560x1440",
+        "size_ge_2560x1440": true,
+        "costume_id": "COS-005",
+        "costume_is_default": true,
+        "default_costume_in_prompt": true,
+        "gender": "female",
+        "gender_word_in_prompt": true,
+        "style_fragment_ui_verbatim": true,
+        "negative_prompt_en_verbatim": true,
+        "waking_addon_in_negative": true,
+        "layout_sentence_in_prompt": true,
+        "n_equals_1": true,
+        "exit_code": 0
+      }
+    },
+    "main_dir": [
+      "prompts.json",
+      "selection.json",
+      "sheet.png",
+      "usage_ledger.jsonl"
+    ],
+    "main_dir_hygiene": true,
+    "ascii_filename": true
+  },
+  "CHAR-white-rabbit": {
+    "sheets": {
+      "sheet.png": {
+        "exists": true,
+        "container": "jpeg",
+        "size": "2560x1440",
+        "size_ge_2560x1440": true,
+        "costume_id": "COS-006",
+        "costume_is_default": true,
+        "default_costume_in_prompt": true,
+        "gender": "male",
+        "gender_word_in_prompt": true,
+        "style_fragment_ui_verbatim": true,
+        "negative_prompt_en_verbatim": true,
+        "waking_addon_in_negative": false,
+        "layout_sentence_in_prompt": true,
+        "n_equals_1": true,
+        "exit_code": 0
+      }
+    },
+    "main_dir": [
+      "prompts.json",
+      "selection.json",
+      "sheet.png",
+      "usage_ledger.jsonl"
+    ],
+    "main_dir_hygiene": true,
+    "ascii_filename": true
+  },
+  "CHAR-queen-of-hearts": {
+    "sheets": {
+      "sheet.png": {
+        "exists": true,
+        "container": "jpeg",
+        "size": "2560x1440",
+        "size_ge_2560x1440": true,
+        "costume_id": "COS-008",
+        "costume_is_default": true,
+        "default_costume_in_prompt": true,
+        "gender": "female",
+        "gender_word_in_prompt": true,
+        "style_fragment_ui_verbatim": true,
+        "negative_prompt_en_verbatim": true,
+        "waking_addon_in_negative": false,
+        "layout_sentence_in_prompt": true,
+        "n_equals_1": true,
+        "exit_code": 0
+      }
+    },
+    "main_dir": [
+      "prompts.json",
+      "selection.json",
+      "sheet.png",
+      "usage_ledger.jsonl"
+    ],
+    "main_dir_hygiene": true,
+    "ascii_filename": true
+  },
+  "CHAR-king-of-hearts": {
+    "sheets": {
+      "sheet.png": {
+        "exists": true,
+        "container": "jpeg",
+        "size": "2560x1440",
+        "size_ge_2560x1440": true,
+        "costume_id": "COS-009",
+        "costume_is_default": true,
+        "default_costume_in_prompt": true,
+        "gender": "male",
+        "gender_word_in_prompt": true,
+        "style_fragment_ui_verbatim": true,
+        "negative_prompt_en_verbatim": true,
+        "waking_addon_in_negative": false,
+        "layout_sentence_in_prompt": true,
+        "n_equals_1": true,
+        "exit_code": 0
+      }
+    },
+    "main_dir": [
+      "prompts.json",
+      "selection.json",
+      "sheet.png",
+      "usage_ledger.jsonl"
+    ],
+    "main_dir_hygiene": true,
+    "ascii_filename": true
+  },
+  "CHAR-duchess": {
+    "sheets": {
+      "sheet.png": {
+        "exists": true,
+        "container": "jpeg",
+        "size": "2560x1440",
+        "size_ge_2560x1440": true,
+        "costume_id": "COS-013",
+        "costume_is_default": true,
+        "default_costume_in_prompt": true,
+        "gender": "female",
+        "gender_word_in_prompt": true,
+        "style_fragment_ui_verbatim": true,
+        "negative_prompt_en_verbatim": true,
+        "waking_addon_in_negative": false,
+        "layout_sentence_in_prompt": true,
+        "n_equals_1": true,
+        "exit_code": 0
+      }
+    },
+    "main_dir": [
+      "prompts.json",
+      "selection.json",
+      "sheet.png",
+      "usage_ledger.jsonl"
+    ],
+    "main_dir_hygiene": true,
+    "ascii_filename": true
+  },
+  "CHAR-hatter": {
+    "sheets": {
+      "sheet.png": {
+        "exists": true,
+        "container": "jpeg",
+        "size": "2560x1440",
+        "size_ge_2560x1440": true,
+        "costume_id": "COS-015",
+        "costume_is_default": true,
+        "default_costume_in_prompt": true,
+        "gender": "male",
+        "gender_word_in_prompt": true,
+        "style_fragment_ui_verbatim": true,
+        "negative_prompt_en_verbatim": true,
+        "waking_addon_in_negative": false,
+        "layout_sentence_in_prompt": true,
+        "n_equals_1": true,
+        "exit_code": 0
+      }
+    },
+    "main_dir": [
+      "prompts.json",
+      "selection.json",
+      "sheet.png",
+      "usage_ledger.jsonl"
+    ],
+    "main_dir_hygiene": true,
+    "ascii_filename": true
+  },
+  "CHAR-cheshire-cat": {
+    "sheets": {
+      "sheet.png": {
+        "exists": true,
+        "container": "jpeg",
+        "size": "2560x1440",
+        "size_ge_2560x1440": true,
+        "costume_id": "COS-016",
+        "costume_is_default": true,
+        "default_costume_in_prompt": true,
+        "gender": "female",
+        "gender_word_in_prompt": true,
+        "style_fragment_ui_verbatim": true,
+        "negative_prompt_en_verbatim": true,
+        "waking_addon_in_negative": false,
+        "layout_sentence_in_prompt": true,
+        "n_equals_1": true,
+        "exit_code": 0
+      }
+    },
+    "main_dir": [
+      "prompts.json",
+      "selection.json",
+      "sheet.png",
+      "usage_ledger.jsonl"
+    ],
+    "main_dir_hygiene": true,
+    "ascii_filename": true
+  },
+  "CHAR-march-hare": {
+    "sheets": {
+      "sheet.png": {
+        "exists": true,
+        "container": "jpeg",
+        "size": "2560x1440",
+        "size_ge_2560x1440": true,
+        "costume_id": "COS-017",
+        "costume_is_default": true,
+        "default_costume_in_prompt": true,
+        "gender": "male",
+        "gender_word_in_prompt": true,
+        "style_fragment_ui_verbatim": true,
+        "negative_prompt_en_verbatim": true,
+        "waking_addon_in_negative": false,
+        "layout_sentence_in_prompt": true,
+        "n_equals_1": true,
+        "exit_code": 0
+      }
+    },
+    "main_dir": [
+      "prompts.json",
+      "selection.json",
+      "sheet.png",
+      "usage_ledger.jsonl"
+    ],
+    "main_dir_hygiene": true,
+    "ascii_filename": true
+  },
+  "CHAR-dormouse": {
+    "sheets": {
+      "sheet.png": {
+        "exists": true,
+        "container": "jpeg",
+        "size": "2560x1440",
+        "size_ge_2560x1440": true,
+        "costume_id": "COS-018",
+        "costume_is_default": true,
+        "default_costume_in_prompt": true,
+        "gender": "male",
+        "gender_word_in_prompt": true,
+        "style_fragment_ui_verbatim": true,
+        "negative_prompt_en_verbatim": true,
+        "waking_addon_in_negative": false,
+        "layout_sentence_in_prompt": true,
+        "n_equals_1": true,
+        "exit_code": 0
+      }
+    },
+    "main_dir": [
+      "prompts.json",
+      "selection.json",
+      "sheet.png",
+      "usage_ledger.jsonl"
+    ],
+    "main_dir_hygiene": true,
+    "ascii_filename": true
+  },
+  "CHAR-mouse": {
+    "sheets": {
+      "sheet.png": {
+        "exists": true,
+        "container": "jpeg",
+        "size": "2560x1440",
+        "size_ge_2560x1440": true,
+        "costume_id": "COS-021",
+        "costume_is_default": true,
+        "default_costume_in_prompt": true,
+        "gender": "male",
+        "gender_word_in_prompt": true,
+        "style_fragment_ui_verbatim": true,
+        "negative_prompt_en_verbatim": true,
+        "waking_addon_in_negative": false,
+        "layout_sentence_in_prompt": true,
+        "n_equals_1": true,
+        "exit_code": 0
+      }
+    },
+    "main_dir": [
+      "prompts.json",
+      "selection.json",
+      "sheet.png",
+      "usage_ledger.jsonl"
+    ],
+    "main_dir_hygiene": true,
+    "ascii_filename": true
+  },
+  "CHAR-cook": {
+    "sheets": {
+      "sheet.png": {
+        "exists": true,
+        "container": "jpeg",
+        "size": "2560x1440",
+        "size_ge_2560x1440": true,
+        "costume_id": "COS-038",
+        "costume_is_default": true,
+        "default_costume_in_prompt": true,
+        "gender": "female",
+        "gender_word_in_prompt": true,
+        "style_fragment_ui_verbatim": true,
+        "negative_prompt_en_verbatim": true,
+        "waking_addon_in_negative": false,
+        "layout_sentence_in_prompt": true,
+        "n_equals_1": true,
+        "exit_code": 0
+      }
+    },
+    "main_dir": [
+      "prompts.json",
+      "selection.json",
+      "sheet.png",
+      "usage_ledger.jsonl"
+    ],
+    "main_dir_hygiene": true,
+    "ascii_filename": true
+  },
+  "CHAR-bill-the-lizard": {
+    "sheets": {
+      "sheet.png": {
+        "exists": true,
+        "container": "jpeg",
+        "size": "2560x1440",
+        "size_ge_2560x1440": true,
+        "costume_id": "COS-031",
+        "costume_is_default": true,
+        "default_costume_in_prompt": true,
+        "gender": "male",
+        "gender_word_in_prompt": true,
+        "style_fragment_ui_verbatim": true,
+        "negative_prompt_en_verbatim": true,
+        "waking_addon_in_negative": false,
+        "layout_sentence_in_prompt": true,
+        "n_equals_1": true,
+        "exit_code": 0
+      }
+    },
+    "main_dir": [
+      "prompts.json",
+      "selection.json",
+      "sheet.png",
+      "usage_ledger.jsonl"
+    ],
+    "main_dir_hygiene": true,
+    "ascii_filename": true
+  }
+}

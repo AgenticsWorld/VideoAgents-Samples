@@ -1,0 +1,161 @@
+{
+  "character_id": "CHAR-alice",
+  "name": "Alice",
+  "source_language": "en",
+  "source_speaker_labels": ["Alice"],
+  "produced_by_task": "p3-dialogue-style-pb1",
+  "register": {
+    "level": "educated nursery-schoolroom English of a clergyman-scholar's daughter, about ten (bible h1_summary §1)",
+    "summary": "Polite, earnest and lesson-proud: she hedges ('I think', 'I'm afraid'), wonders aloud, scolds herself in the second person, and argues from schoolroom facts. Under pressure the politeness thins into flat contradiction, and at the trial it breaks into open defiance.",
+    "examples": [
+      { "ref": "ch005-d0004", "chapter": 5, "text": "I can't explain myself, I'm afraid, sir, because I'm not myself, you see." },
+      { "ref": "ch006-d0025", "chapter": 6, "text": "You see the earth takes twenty-four hours to turn round on its axis—" },
+      { "ref": "ch012-d0062", "chapter": 12, "text": "Who cares for you? You're nothing but a pack of cards!" }
+    ]
+  },
+  "catchphrases": [
+    { "text": "curious / curiouser and curiouser", "freq": "high", "count_in_source": 8, "example_refs": ["ch002-d0001", "ch006-d0071", "ch012-d0064"], "example_chapters": [1, 2, 4, 6, 7, 9, 10, 12] },
+    { "text": "queer (How queer everything is / everything is queer to-day)", "freq": "medium", "count_in_source": 5, "example_refs": ["ch002-d0014", "ch002-d0030", "ch004-d0004"], "example_chapters": [2, 4, 5] },
+    { "text": "I wonder …", "freq": "high", "count_in_source": 11, "example_refs": ["ch001-d0006", "ch002-d0014", "ch004-d0038"], "example_chapters": [1, 2, 3, 4, 5] },
+    { "text": "I'm afraid …", "freq": "medium", "count_in_source": 7, "example_refs": ["ch002-d0050", "ch005-d0019", "ch007-d0066"], "example_chapters": [1, 2, 5, 7] },
+    { "text": "Dinah (our cat)", "freq": "medium", "count_in_source": 11, "example_refs": ["ch001-d0012", "ch003-d0067", "ch004-d0037"], "example_chapters": [1, 2, 3, 4] },
+    { "text": "I beg your pardon", "freq": "medium", "count_in_source": 4, "example_refs": ["ch002-d0037", "ch003-d0049", "ch012-d0002"], "example_chapters": [2, 3, 12] }
+  ],
+  "sentence_style": {
+    "length": "mixed: short reactive replies (median 9 words) alternating with long run-on musings chained by dashes, colons and 'and'/'but then' (mean 14.1 words; longest monologues 60+ words)",
+    "mean_words": 14.1,
+    "patterns": [
+      {
+        "rule": "Politeness formulae and softeners when addressing anyone older or grander: please, sir, Ma'am, your Majesty, I beg your pardon, I'm afraid, would you tell me.",
+        "examples": [
+          { "ref": "ch006-d0044", "chapter": 6, "text": "Would you tell me, please, which way I ought to go from here?" },
+          { "ref": "ch005-d0038", "chapter": 5, "text": "Well, I should like to be a little larger, sir, if you wouldn't mind, three inches is such a wretched height to be." },
+          { "ref": "ch008-d0015", "chapter": 8, "text": "My name is Alice, so please your Majesty," }
+        ]
+      },
+      {
+        "rule": "Hedged opinion: statements wrapped in 'I think', 'I suppose', 'I should think', 'I dare say', 'I'm sure', 'at any rate', 'you know'.",
+        "examples": [
+          { "ref": "ch001-d0007", "chapter": 1, "text": "I must be getting somewhere near the centre of the earth. Let me see: that would be four thousand miles down, I think—" },
+          { "ref": "ch009-d0016", "chapter": 9, "text": "It's a mineral, I think," },
+          { "ref": "ch007-d0088", "chapter": 7, "text": "No, please go on! I won't interrupt again. I dare say there may be one." }
+        ]
+      },
+      {
+        "rule": "Wondering aloud and thinking aloud: rhetorical self-questions and exclamations of strangeness (I wonder, curious, queer, funny, what nonsense).",
+        "examples": [
+          { "ref": "ch002-d0014", "chapter": 2, "text": "Dear, dear! How queer everything is to-day! … I wonder if I've been changed in the night?" },
+          { "ref": "ch001-d0009", "chapter": 1, "text": "I wonder if I shall fall right through the earth! How funny it'll seem …" },
+          { "ref": "ch006-d0071", "chapter": 6, "text": "Well! I've often seen a cat without a grin, but a grin without a cat! It's the most curious thing I ever saw in my life!" }
+        ]
+      },
+      {
+        "rule": "Self-scolding in the second person, like a governess to herself ('you foolish Alice', 'you ought to be ashamed of yourself').",
+        "examples": [
+          { "ref": "ch002-d0009", "chapter": 2, "text": "You ought to be ashamed of yourself, … a great girl like you, … to go on crying in this way! Stop this moment, I tell you!" },
+          { "ref": "ch004-d0011", "chapter": 4, "text": "Oh, you foolish Alice! How can you learn lessons in here?" },
+          { "ref": "ch001-d0027", "chapter": 1, "text": "Come, there's no use in crying like that!" }
+        ]
+      },
+      {
+        "rule": "Lesson-book knowledge and home references used as evidence (geography, Latitude, French, lessons, Dinah, the nurse, Mabel and Ada).",
+        "examples": [
+          { "ref": "ch001-d0008", "chapter": 1, "text": "—but then I wonder what Latitude or Longitude I've got to?" },
+          { "ref": "ch009-d0064", "chapter": 9, "text": "Yes, we learned French and music." },
+          { "ref": "ch002-d0016", "chapter": 2, "text": "I'm sure I can't be Mabel, for I know all sorts of things, and she, oh! she knows such a very little!" }
+        ]
+      },
+      {
+        "rule": "Direct questions that press for sense (What is…? Why did…? How do you know…?), often repeated when unanswered.",
+        "examples": [
+          { "ref": "ch007-d0077", "chapter": 7, "text": "But why did they live at the bottom of a well?" },
+          { "ref": "ch006-d0054", "chapter": 6, "text": "How do you know I'm mad?" },
+          { "ref": "ch003-d0025", "chapter": 3, "text": "What is a Caucus-race?" }
+        ]
+      },
+      {
+        "rule": "Flat contradiction that grows sharper through the dream: 'Nonsense!', 'I'm not…', 'Certainly not!', 'Stuff and nonsense!'.",
+        "examples": [
+          { "ref": "ch005-d0050", "chapter": 5, "text": "I'm not a serpent! Let me alone!" },
+          { "ref": "ch008-d0020", "chapter": 8, "text": "Nonsense!" },
+          { "ref": "ch012-d0058", "chapter": 12, "text": "Stuff and nonsense! The idea of having the sentence first!" }
+        ]
+      },
+      {
+        "rule": "Standing on manners and fair play: she judges others by nursery etiquette (civil, rude, personal remarks, a right to) and pushes back with 'you'd better' / 'I'll put a stop to this'.",
+        "examples": [
+          { "ref": "ch007-d0007", "chapter": 7, "text": "Then it wasn't very civil of you to offer it," },
+          { "ref": "ch009-d0026", "chapter": 9, "text": "I've a right to think," },
+          { "ref": "ch004-d0042", "chapter": 4, "text": "You'd better not do that again!" }
+        ]
+      },
+      {
+        "rule": "Honest admission of not understanding, and asking what is meant ('I don't quite understand you', 'Don't you mean…?').",
+        "examples": [
+          { "ref": "ch007-d0033", "chapter": 7, "text": "I don't quite understand you," },
+          { "ref": "ch010-d0053", "chapter": 10, "text": "Don't you mean 'purpose'?" },
+          { "ref": "ch009-d0020", "chapter": 9, "text": "I think I should understand that better, if I had it written down: but I can't quite follow it as you say it." }
+        ]
+      },
+      {
+        "rule": "Run-on musing: a thought continues across pauses, the next phrase opening with 'and', 'but', 'for' or a dash, and practical 'what is the use of…' reasoning.",
+        "examples": [
+          { "ref": "ch001-d0001", "chapter": 1, "text": "and what is the use of a book," },
+          { "ref": "ch001-d0025", "chapter": 1, "text": "for it might end, you know," },
+          { "ref": "ch002-d0031", "chapter": 2, "text": "Would it be of any use, now," }
+        ]
+      }
+    ]
+  },
+  "vocabulary": {
+    "signature_words": ["curious", "curiouser", "queer", "funny", "I wonder", "I'm afraid", "I dare say", "certainly", "dreadfully", "nonsense", "Dinah", "lessons", "size"],
+    "preferred_fields": ["schoolroom facts (geography, arithmetic, French, history)", "home and pets (Dinah, the terrier, the nurse, tea-time)", "body and size (grow, larger, smaller, telescope, shoulders)", "manners (civil, rude, personal remarks, proper way of expressing yourself)"],
+    "intensifiers": ["so very", "quite", "dreadfully", "such a", "ever so"],
+    "examples": [
+      { "ref": "ch007-d0011", "chapter": 7, "text": "You should learn not to make personal remarks, it's very rude." },
+      { "ref": "ch006-d0036", "chapter": 6, "text": "Don't grunt, that's not at all a proper way of expressing yourself." }
+    ]
+  },
+  "address": {
+    "self": "I; when scolding herself, 'Alice' / 'you foolish Alice' (second person)",
+    "to_royalty": "your Majesty / so please your Majesty",
+    "to_adult_male_stranger": "sir",
+    "to_adult_female_stranger": "Ma'am",
+    "to_dream_figures_informally": "O Mouse / Mouse dear / Cheshire Puss",
+    "to_her_cat": "Dinah my dear / my dear Dinah",
+    "examples": [
+      { "ref": "ch002-d0033", "chapter": 2, "text": "O Mouse, do you know the way out of this pool? I am very tired of swimming about here, O Mouse!" },
+      { "ref": "ch006-d0042", "chapter": 6, "text": "Cheshire Puss," },
+      { "ref": "ch001-d0010", "chapter": 1, "text": "Please, Ma'am, is this New Zealand or Australia?" }
+    ]
+  },
+  "interjections": ["Oh!", "Oh dear", "Dear, dear!", "Well!", "Come,", "Why,"],
+  "forbidden_words": [
+    { "domain": "post-1862 slang / modern chat register", "regex": "\\b(okay|ok|cool|guys?|awesome|yeah|yep|nope|gonna|wanna|gotta|kinda|sorta|totally|literally|dude)\\b", "reason": "period drama, 1862 (bible world.json / h1_summary §1); any modern filler is out of character for every speaker" },
+    { "domain": "oaths and coarse language", "regex": "\\b(damn|damned|hell|bloody|blast|devil|confound|by god)\\b", "reason": "a well-brought-up clergyman's daughter of ten; her strongest words are 'Stuff and nonsense' and 'stupid'" },
+    { "domain": "servant-bossing insults and the court's death formula", "regex": "\\b(idiot|you goose|you coward|lazy thing)\\b|off with (his|her|their|its) head", "reason": "these belong to the Queen and the White Rabbit; Alice objects to executions, she never orders them" }
+  ],
+  "drift": [
+    { "from_chapter": 1, "to_chapter": 4, "change": "Alone and anxious: long self-directed musings, wondering, self-scolding; the politeness is automatic.", "examples": ["ch001-d0005", "ch002-d0014", "ch004-d0011"] },
+    { "from_chapter": 5, "to_chapter": 10, "change": "In company: polite formulae remain but she starts correcting others ('You should learn not to make personal remarks'), asks pointed questions and loses patience ('It's the stupidest tea-party I ever was at').", "examples": ["ch005-d0012", "ch007-d0011", "ch007-d0103"] },
+    { "from_chapter": 11, "to_chapter": 12, "change": "At the trial, as she grows, the hedges drop away: short declaratives and open defiance of the court ('It proves nothing of the sort!', 'I won't!', 'Who cares for you?'). On waking she returns at once to a child's delight ('Oh, I've had such a curious dream!').", "examples": ["ch012-d0036", "ch012-d0060", "ch012-d0064"] }
+  ],
+  "recitation_repertoire": {
+    "note": "type=verse lines are her garbled schoolroom recitations (How doth the little crocodile, You are old Father William, 'Tis the voice of the Lobster). They are quoted text, so they are excluded from the hit-rate denominator and listed here for dialogue-rewrite.",
+    "refs": ["ch002-d0017", "ch002-d0018", "ch005-d0023", "ch010-d0059", "ch010-d0065", "ch010-d0074"]
+  },
+  "backtest_markers": [
+    { "id": "A1", "rule_ref": "sentence_style.patterns[0] politeness", "weight": 3, "regex": "\\b(please|pray|beg (your )?pardon|I'm afraid|sir|ma'am|thank you|if you wouldn't mind|would you tell me)\\b" },
+    { "id": "A2", "rule_ref": "sentence_style.patterns[2] wondering", "weight": 3, "regex": "\\b(I wonder|curious(er)?|queer|funny|odd|nonsense|puzzling|confusing|dreadful(ly)?|I declare|glad|tired|narrow escape|poor little|so very|very pretty|very sorry|such a|plenty of)\\b" },
+    { "id": "A3", "rule_ref": "sentence_style.patterns[1] hedging", "weight": 1, "regex": "\\b(I think|I suppose|I should think|I dare ?say|I believe|I know|I wish|I hope|I'm sure|perhaps|at any rate|at least|certainly|let me see)\\b" },
+    { "id": "A4", "rule_ref": "sentence_style.patterns[3] self-scolding", "weight": 3, "regex": "\\b(Alice|foolish|ashamed of yourself|leave off this minute|no use (in )?(crying|talking|speaking)|I tell you)\\b|^(Come|Dear, dear)\\b" },
+    { "id": "A5", "rule_ref": "sentence_style.patterns[4] lesson-book and home", "weight": 2, "regex": "\\b(Dinah|home|lessons?|school|day-school|French|music|Mabel|Ada|nurse|garden|size|grow(ing)?|larger|smaller|telescope|railway|little girl|cats?|dogs?|mice|puppy|latitude|longitude|earth|sixpence|shoulders|feet|beheaded|dream)\\b" },
+    { "id": "A6", "rule_ref": "sentence_style.patterns[5] pressing questions", "weight": 1, "regex": "^(what|why|how|which|where|is|do|does|did|would|and (how|what|why|now)|but (what|why)|one side)\\b.*\\?\\s*$|\\bof what\\?" },
+    { "id": "A7", "rule_ref": "sentence_style.patterns[6] flat contradiction", "weight": 2, "regex": "^(no|nonsense|stuff and nonsense|certainly not|not at all|I won't|I didn't|I haven't|I never|I'm not|I'm a)\\b|\\b(I'm not|I didn't mean|isn't a regular rule|of the sort)\\b" },
+    { "id": "A9", "rule_ref": "sentence_style.patterns[7] manners and fair play", "weight": 2, "regex": "\\b(civil|rude|personal remarks|proper way|your opinion|a right to|ordered about|you'd better|put a stop|easily offended|that you won't|no such thing|ought to be)\\b" },
+    { "id": "A10", "rule_ref": "sentence_style.patterns[8] admitting incomprehension", "weight": 2, "regex": "\\b(understand|I don't know|don't you mean|I don't see|I don't think|I don't much care|I don't want|now you ask|it doesn't matter|I call it)\\b" },
+    { "id": "A11", "rule_ref": "sentence_style.patterns[9] run-on musing", "weight": 1, "regex": "^—?(and|but|for|besides|or|so long|if one|just like|without|to pretend|when I'm|a great girl)\\b|\\b(use|a (cheap|nice) \\w+)\\b" },
+    { "id": "A8", "rule_ref": "interjections / short reactive replies", "weight": 1, "regex": "^(oh,? (I|my|please|you|there|a)|well, (I|perhaps)|why, (there|they|she|I)|yes|here|very|only|as wet)\\b|\\b(a knot|a thimble|the fourth|nothing)\\b" }
+  ],
+  "backtest": {"method": "marker-claim back-test: a spoken source line hits when it matches >=1 backtest_markers regex and no forbidden_words regex; verse (recited text) excluded; full definition runs/p3-dialogue-style-pb1/result.json#backtest_method", "script": "code/p3-dialogue-style-pb1_backtest.py", "run_on": "2026-09-22", "threshold": 0.8, "hit_rate": 0.897, "sample_size": 331, "source_lines_total": 346, "coverage_of_spoken_lines": 1.0, "verse_excluded": 15, "forbidden_violations_in_source": 0, "cross_claim_rate": 0.294, "lift": 3.06, "attribution_top1_rate": 0.662, "misses": ["ch001-d0004", "ch002-d0005", "ch002-d0036", "ch002-d0044", "ch003-d0018", "ch003-d0041", "ch003-d0053", "ch003-d0065", "ch004-d0003", "ch004-d0008", "ch004-d0029", "ch004-d0033", "ch006-d0035", "ch006-d0042", "ch006-d0062", "ch006-d0065", "ch006-d0072", "ch007-d0016", "ch007-d0053", "ch007-d0075", "ch007-d0105", "ch009-d0006", "ch009-d0008", "ch009-d0010", "ch009-d0012", "ch009-d0068", "ch009-d0087", "ch010-d0005", "ch010-d0043", "ch010-d0051", "ch010-d0072", "ch011-d0002", "ch011-d0004", "ch011-d0006"], "pass": true}
+}

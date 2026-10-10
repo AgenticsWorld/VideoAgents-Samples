@@ -1,0 +1,10 @@
+{
+ "task_id": "p6-bible-light-ep01",
+ "skipped": true,
+ "reason": "quality judge=0; QA dimensions all 0",
+ "auto": {
+  "DEF-p6-directing-ep01-001_closed": "PASS — ruled (a) hall stays windowless; color_script moved",
+  "DEF-p4-creature-404_closed": "PASS — BIB numbering collision resolved",
+  "ep01_lighting_repass_needed": "NO — storyboard already implements the ruling"
+ }
+}

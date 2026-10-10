@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh048",
+  "group_id": "grp018",
+  "scene_no": "S06",
+  "duration_s": 12.0,
+  "size": "wide",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a — the frame does not move for twelve seconds; the change is read off the set",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 28,
+  "camera_height_m": 1.3,
+  "angle": "level",
+  "rack_focus": "none",
+  "start_frame": "The locked wide of the hall with the whole glass table, the west door line and the lamp row all inside the frame: Alice at the table edge at 1.35 m, setting the empty bottle down, the tabletop at her waist and the doors a little taller than she is.",
+  "end_frame": "The same frame, not a millimetre moved: the glass table has risen past her into a tower, the oak doors have soared into cliffs under their iron arches and the lamps swing far overhead — she is ten inches high on the spot where she stood, her feet never having moved.",
+  "constraint_honoured": "'MUST NOT BE CUT INSIDE. The frame DOES NOT MOVE for twelve seconds: the change is read off the set, never off the lens' — no move, no morph, no glow; the permitted hidden-cut substitution to the oversized build happens inside a frame that is optically identical before and after.",
+  "movement_note": "The episode's longest take. Any camera movement at all would give the audience an optical event to blame the size change on, which is the one thing CR-005 forbids.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

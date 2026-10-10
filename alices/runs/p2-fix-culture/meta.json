@@ -1,0 +1,13 @@
+{
+  "task_id": "p2-fix-culture",
+  "run_id": "7c5caf22f2e8",
+  "attempt": 1,
+  "model": "agent default",
+  "tokens": null,
+  "started_at": null,
+  "finished_at": "2026-09-22T17:44:14+08:00",
+  "inputs_sha256": {},
+  "artifact_versions": {
+    "bible/culture.json": "v1.1"
+  }
+}

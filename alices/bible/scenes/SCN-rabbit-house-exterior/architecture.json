@@ -1,0 +1,52 @@
+{
+  "scene_id": "SCN-rabbit-house-exterior",
+  "inherits": null,
+  "layer": "dream",
+  "int_ext": "EXT",
+  "form": "A neat little two-storey brick cottage at the edge of the wood, a small copy of the family's north-Oxford villa redrawn in the dream's Art Nouveau: steep slate roof, one broad gable chimney stack, brass-plated front door on the lane side, a kitchen-garden yard with a cucumber-frame under the upstairs window at the back",
+  "stories": 2,
+  "source_chapter": "ch004",
+  "culture_ref": "geography.json#LOC-family-house.settlement.architecture_style; geography.json#LOC-rabbits-house.settlement; world.json#wonderland_real_counterparts.cp-housemaid",
+  "grows_from": {"loc": "LOC-family-house", "waking_detail": "the family's own house and housemaid; the dream shrinks the villa Alice sees from the bank into a servant-sized house where she is taken for the maid"},
+  "amendment": "BIB-0027 (user ruling 2026-09-22), applied p4-cr-architecture 2026-09-23",
+  "mucha_design_language": {"item": "Mucha / Art Nouveau on a neat villa-cottage: window heads and door head in flowing horseshoe curves of pale yellow brick with carved stone lily-and-vine hood moulds; a round stained-glass halo roundel in the gable plaque (pastel roses and gold); a narrow mosaic frieze of pastel-and-gold vine tesserae under the eaves; the brass door plate framed by a whiplash border; wrought-iron whiplash gutter brackets and a gilded iron finial on the gable; the paling fence of the yard with flowing tops. Clean and well kept (Mary Ann's house), unlike the Duchess's sooted house", "inferred": true, "culture_ref": "world.json#WR-010 (the White Rabbit's house listed); cultivation.json#XA-magic-08", "why": "Replaces the Gothic Revival trim; the brick and slate of the waking villa stay so the grows_from link reads"},
+  "structure": [
+    {"item": "footprint about 6.0 m wide x 5.0 m deep, two storeys, eaves at 5.2 m, ridge at 8.0 m", "inferred": true, "culture_ref": "geography.json#LOC-rabbits-house.physical", "why": "'a neat little house'; small enough to fill with a grown Alice, tall enough for ladders tied together"},
+    {"item": "front (north, lane side): central front door with a bright brass plate engraved W. RABBIT, one ground-floor sash window each side", "src": "ch004-p03"},
+    {"item": "back (south, yard side): one upstairs sash window of the upstairs room, directly above a glazed cucumber-frame", "src": "ch004-p15", "note": "window on a different side from the door: the Rabbit must 'go round' to reach it (ch004-p14)"},
+    {"item": "east gable end: one broad brick chimney stack rising 1.5 m above the ridge with two clay pots; the flue at the top about 45 x 45 cm", "src": "ch004-p24", "note": "flue size inferred so Bill (photoreal CGI lizard) is lowered and kicked out through it; size kept for the layout"},
+    {"item": "south-east corner of the yard: firm level ground where the ladders are put up and tied together", "src": "ch004-p24"},
+    {"item": "yard: a small kitchen garden with a dug patch under an old apple tree (Pat 'digging for apples'), a low paling fence, the wood behind", "src": "ch004-p16", "note": "apple tree and fence inferred"}
+  ],
+  "materials": [
+    {"item": "red brick with bands and horseshoe-curved window heads of pale yellow brick", "inferred": true, "culture_ref": "geography.json#LOC-family-house.settlement.architecture_style; world.json#WR-010", "why": "The waking villa's polychrome brick ties the dream house to the waking house; the arch line is the dream's Art Nouveau"},
+    {"item": "blue-grey Welsh slate roof with a few loose and slipped slates near the chimney", "src": "ch004-p24", "note": "'Mind that loose slate'"},
+    {"item": "white-painted timber two-over-two sash windows", "inferred": true, "culture_ref": "world.json#frame.period", "why": "Period standard, and pebbles can rattle in at an opened sash"},
+    {"item": "front door painted dark bottle green, four-panel, with a polished brass plate, brass knocker and brass knob", "src": "ch004-p03", "note": "colour inferred"},
+    {"item": "cucumber-frame: low wooden box frame with sloping glass lights", "src": "ch004-p15"}
+  ],
+  "details": [
+    {"item": "carved stone hood moulds of flowing lily-and-vine relief over the windows and a round stained-glass halo roundel in the gable plaque", "inferred": true, "culture_ref": "SCN-long-hall design_language; world.json#WR-010", "why": "Same Art Nouveau vocabulary as the dream's hall"},
+    {"item": "a broken glass light in the cucumber-frame after the Rabbit's fall", "src": "ch004-p15", "note": "state change for later shots"},
+    {"item": "a boot scraper and a swept stone step at the front door", "inferred": true, "culture_ref": "world.json#wonderland_real_counterparts.cp-housemaid", "why": "Marks a house a housemaid keeps (Mary Ann)"}
+  ],
+  "scale_notes": {
+    "anchor": "The house stays human-scale, the scale of the dream household Alice is taken into (Pat is a human performer; the White Rabbit, Bill and the crowd of little animals are photoreal CGI animals per SUP-002 as amended BIB-0027, at sizes set by 04-creatures); Alice arrives at a size that lets her be taken for the housemaid.",
+    "builds": [
+      {"beat": "arrival, the siege, ladders, Bill down the chimney and kicked out, pebbles thrown, Alice runs out", "events": ["ev0014", "ev0016", "ev0017"], "build": "1:1 full exterior with a working roof section and chimney stack rig"},
+      {"beat": "Alice's giant arm out of the upstairs window, snatching at the Rabbit; the whole window filled by an arm", "events": ["ev0016"], "src": "ch004-p20", "build": "1:3 miniature south wall and window (window about 25 x 37 cm) in forced perspective near camera, with the true-size Alice's arm through it; Pat and the CGI White Rabbit placed deep in the yard"}
+    ],
+    "rule": "The same brick bonds, window divisions and slate colour on the 1:1 and 1:3 builds so the cut is invisible.",
+    "sources": ["cultivation.json#SUP-003"]
+  },
+  "negative": [
+    "no thatch, no half-timbered Tudor cottage, no storybook crooked walls",
+    "no rabbit-shaped or carrot decoration, no cartoon motifs",
+    "no stone Cotswold cottage; this is brick",
+    "no gamekeeper's cottage or estate lodge styling",
+    "no plate-glass windows, no porch conservatory, no gas or electric lamps outside",
+    "no fittings or props later than 1862 apart from the licensed Art Nouveau ornament (WR-010); no Gothic pointed arches",
+    "no cartoon rabbit, no human in rabbit costume; no flat poster illustration or matte-painting finish"
+  ],
+  "prompt_ready_en": "a neat little two-storey red brick cottage with pale yellow brick bands and horseshoe-curved window heads under carved lily-and-vine hood moulds, Art Nouveau details in the style of Mucha, a round stained-glass roundel in the gable and a pastel-and-gold mosaic vine frieze under the eaves, steep blue-grey slate roof with a few loose slates, a broad brick chimney stack at the gable with clay pots, a bottle-green front door with a bright brass plate engraved W. RABBIT in a whiplash border, white sash windows, and at the back a kitchen-garden yard with a wooden cucumber-frame under the upstairs window and an old apple tree, at the edge of a wood, photographed live-action set"
+}

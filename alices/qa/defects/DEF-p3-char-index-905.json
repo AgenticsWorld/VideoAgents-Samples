@@ -1,0 +1,26 @@
+{
+  "id": "DEF-p3-char-index-905",
+  "opened_by": "03-characters/character-manager",
+  "opened_on": "2026-09-22",
+  "task_id": "p3-char-defects",
+  "assigned_to": "04-creatures/creature",
+  "domain": "characters",
+  "status": "closed",
+  "severity": "minor",
+  "summary": "Confirm whether the ch006-p49 pig trot-off needs a linked CRE-* entry for CHAR-duchess-baby.",
+  "findings": [
+    {
+      "id": "DEF-p3-char-index-905-a",
+      "issue": "CHAR-duchess-baby is registered in bible/characters/index.json as a human infant performer per SUP-006 (perceptual slide, no practical creature swap). The source's closing beat has the baby 'trot away quietly into the wood' as a pig (ch006-p49).",
+      "quote_ref": { "chapter": "ch006", "paragraph": "ch006-p49", "quote": "So she set the little creature down, and felt quite relieved to see it trot away quietly into the wood." },
+      "requested_action": "Decide whether that closing shot is realized as a real on-screen piglet (in which case register a CRE-* entry and link it back to CHAR-duchess-baby in your creature.json) or stays with the same human performer/practical effect throughout (in which case no CRE entry is needed and this can be closed as not-applicable). Report the decision back so CHAR-duchess-baby.disambiguation can be updated if a CRE id is added."
+    }
+  ],
+  "impact": "Resolves the open human/creature boundary call on SUP-006's final beat before 06-art/prop and video-generation need a concrete plan for that shot.",
+  "opened_via": "Fix-out of DEF-p3-relationship-001-c, routed through 00-orchestration/memory-bible task p3-bible-defects.",
+  "resolved_by": "04-creatures/creature",
+  "resolved_on": "2026-09-22",
+  "task_id_fix": "p3-fix-905",
+  "decision": "no_creature_entry",
+  "fix_note": "No CRE-* entry is registered for the ch006-p49 trot-off. bible/creatures/creature.json and bible/creatures/index.json are unchanged. Reasoning: (1) CHAR-duchess-baby's own performer_concept, already registered by 03-characters/character-manager, is explicit and unqualified: 'Human infant performer per SUP-006: no costume or prosthetic transformation is applied; the pig perception is built through continuous handheld coverage, sound design and gradual framing drift ... not a practical creature swap.' That statement covers the whole scene, not just the carrying portion. (2) structured_story confirms there is no scene break between the pig-realisation beat and the trot-off: both ch006-p48 and ch006-p49 sit inside the same continuous scene ch006-sc04 ('cast change: the Duchess has left; Alice nurses the baby, carries it out into the open air ... it turns into a pig and trots into the wood; ends as she sights the Cheshire Cat'), with no cast/location cut recorded at p49. (3) cultivation.json SUP-006's own visual_signature calls for 'continuous handheld/held-in-arms coverage across the change with no visible cut or effects transition' — a hidden-cut swap to a real piglet at the exact moment the creature is set down would introduce the one cut SUP-006 was written to avoid, and would contradict the already-locked CHAR record rather than merely extend it. Per WRITE_RULES.md section 1 arbitration order (explicit source/peer-registered decision outranks a new inferred design choice), the already-registered CHAR-duchess-baby.performer_concept is treated as authoritative and is not overridden here. Production reading for the trot-off: the same continuous shot/illusion techniques used for the transformation (framing that keeps the departing 'creature' small, soft-focus/silhouette, motion and trotting sound design, camera holding on Alice's reaction rather than a clean full-body reveal of the departing animal) carry through to it disappearing into the wood — still the human-infant performer's scene, never a real piglet on screen. No downstream action needed for 06-art/prop or 08-video-gen beyond treating this as the tail of the same SUP-006 shot, not a new creature asset. CHAR-duchess-baby.disambiguation is left as-is (out of this task's edit scope, owned by 03-characters/character-manager); it already correctly states creature.json confirmation was pending and this fix_note now supplies that confirmation for character-manager to fold in if it revisits the field."
+}

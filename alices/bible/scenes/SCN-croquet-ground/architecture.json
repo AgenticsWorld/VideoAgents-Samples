@@ -1,0 +1,55 @@
+{
+  "scene_id": "SCN-croquet-ground",
+  "inherits": null,
+  "inherits_note": "Parent SCN-queens-garden is a container node with no card; garden stone, gravel and box are repeated by value from SCN-rose-tree-yard so the garden stays one look",
+  "layer": "dream",
+  "int_ext": "EXT",
+  "form": "A large oblong croquet lawn enclosed by tall clipped yew hedges, its whole surface heaved into long parallel ridges and furrows; a stone terrace with a balustrade and steps along one long side for the royal party, and a great cedar of Lebanon at one corner casting the shade where guests rest",
+  "stories": 0,
+  "source_chapter": "ch008",
+  "culture_ref": "geography.json#LOC-croquet-lawn; world.json#wonderland_real_counterparts cp-court; culture.json CUL-013, CUL-016, CUL-017",
+  "period": "Dream-image of the fashionable 1860s croquet party on a college or great-house lawn, the lawn itself replaced by old ridge-and-furrow pasture",
+  "grows_from": {
+    "loc": null,
+    "waking_detail": "the fashionable 1860s croquet party of the grown-up world",
+    "design_growth": "A grown-ups' croquet lawn, the smoothest ground a child knows, laid over the ridge-and-furrow of the old ploughland pastures around the family's meadow (the humps every Oxfordshire field walk crosses). The adult game's order and the country's rough ground collide, so the lawn is immaculate close-mown grass that is impossible to play on"
+  },
+  "amendment": "BIB-0027 (user ruling 2026-09-22), applied p4-cr-architecture 2026-09-23",
+  "dream_design_language": "Formal frame, unplayable floor: clipped yew walls, a stone terrace and a cedar frame the ground, while the lawn inside rolls in regular waves like a ploughed field under a green cloth; the ridges read as the long flowing parallel lines of an Art Nouveau panel. The court's colours (red, white, black) appear only in costumes, the striped stakes and the terrace hangings",
+  "mucha_design_language": {"item": "Mucha / Art Nouveau: terrace balustrade of carved limestone balusters swelling like lily stems, linked by a frieze of carved roses and vine; the arched hedge openings trimmed in smooth horseshoe curves with wrought-iron whiplash gates (open); a carved circular halo roundel of stone set in the terrace wall behind the royal chairs; gilded wrought-iron awning frame; the green-and-gold iron bench under the cedar in organic scrolls; pastel-and-gold palette over the deep greens", "inferred": true, "culture_ref": "world.json#WR-010 (Queen's garden and croquet-ground listed); cultivation.json#XA-magic-08; SCN-rose-tree-yard mucha_design_language", "why": "Same garden language as SCN-rose-tree-yard, realised in built stone, iron and clipped planting"},
+  "structure": [
+    {"item": "an oblong lawn about 60 m by 35 m, close-mown", "inferred": true, "culture_ref": "culture.json CUL-017 (the Queen's croquet party)", "why": "Room for a crowd playing all at once, the procession and the Cat-dispute crowd"},
+    {"item": "the whole lawn heaved into parallel ridges and furrows running the length of the ground: crests about 6 m apart, about 60 cm from furrow bottom to crest, smoothly rounded", "src": "ch008-p41", "note": "'it was all ridges and furrows'; dimensions from real medieval ridge-and-furrow, inferred, culture_ref geography.json#LOC-neighbouring-farm"},
+    {"item": "tall clipped yew hedges about 3 m high enclosing the ground on three sides, with arched openings cut through at the corners", "inferred": true, "culture_ref": "world.json#wonderland_real_counterparts cp-garden", "why": "Formal enclosure of a great-house lawn; the openings give exits for arrests and for the walk toward the Gryphon"},
+    {"item": "a raised honey-limestone terrace along the fourth long side, about 1 m above the lawn, with a balustrade and a central flight of steps down to the ground; the procession files in along it", "src": "ch008-p34", "note": "Alice walking by the White Rabbit as the procession arrives; terrace inferred as the procession route and the King and Queen's vantage"},
+    {"item": "a great cedar of Lebanon at one corner of the ground, its flat layered branches making a deep pool of shade on the grass", "src": "ch009-p35", "note": "'resting in the shade'; cedar inferred as the classic Oxford college lawn tree"},
+    {"item": "open ground at the lawn's far edge where the crowd gathers round the Cat's head", "src": "ch008-p64"}
+  ],
+  "materials": [
+    {"item": "close-mown deep green lawn grass with light and dark mowing stripes following the ridges", "inferred": true, "culture_ref": "geography.json#LOC-croquet-lawn.physical.flora", "why": "'close-cropped lawn grass'; the stripes make the ridges read in wide shots"},
+    {"item": "dark green clipped yew", "inferred": true, "culture_ref": "world.json#wonderland_real_counterparts cp-garden", "why": "Period formal hedge"},
+    {"item": "honey-coloured oolitic limestone terrace, balustrade and steps, lichened (same stone as SCN-rose-tree-yard)", "inferred": true, "culture_ref": "SCN-rose-tree-yard architecture materials", "why": "One garden, one stone"},
+    {"item": "cedar of Lebanon: blue-green flat foliage plates, ridged grey-brown trunk", "inferred": true, "culture_ref": "world.json#wonderland_real_counterparts cp-garden", "why": "See structure"}
+  ],
+  "details": [
+    {"item": "two wooden croquet winning-stakes at the ends of the ground, painted in rings of red, white and black", "inferred": true, "culture_ref": "culture.json CUL-013 (croquet the Queen's way)", "why": "The only period croquet hardware on the ground; the arches are the bent-over soldiers (ch008-p41), so there are no wire hoops"},
+    {"item": "no hoops set in the lawn; arches are formed by bent-double card-soldier performers", "src": "ch008-p41"},
+    {"item": "crimson canvas awning over the centre of the terrace with two gilt chairs for the King and Queen", "inferred": true, "culture_ref": "culture.json CUL-017", "why": "1860s croquet parties set seating on the terrace; gives the Queen a place to stamp from"},
+    {"item": "a cast-iron garden bench under the cedar, painted dark green with gilt highlights, its back a flowing whiplash of lily stems and leaves", "inferred": true, "culture_ref": "world.json#WR-010; refs/style/alice.jpeg (ironwork)", "why": "Where guests rest in the shade; the dream's Art Nouveau ironwork"},
+    {"item": "the live flamingo mallets and hedgehog balls are photoreal CGI animals (proposal, pending_H2): no hoop or ball hardware is built; ground contact marks only", "src": "ch008-p41", "note": "BIB-0027 extends the photoreal-animal register to non-speaking dream animals (cultivation.json#SUP-002), flagged for H2; SUP-011: no animal ever shown being struck"}
+  ],
+  "scale_notes": {
+    "rule": "True 1:1 throughout (Alice 135 cm). No size change is written in ch008-ch009. The ridges are real built earthwork under turf so players stumble for real; the furrow depth (60 cm) must hide a crouching performer's legs, not whole bodies",
+    "sources": ["cultivation.json#SUP-003", "cultivation.json#SUP-011", "ch008-p41"]
+  },
+  "negative": [
+    "no flat billiard-table lawn; the ground must visibly roll in ridges and furrows",
+    "no modern croquet hoops, no plastic or coloured modern balls",
+    "no hedgehog or flamingo ever shown being struck (SUP-011); no cartoon animals; flamingoes and hedgehogs are photoreal CGI animals (pending_H2)",
+    "no castle battlements, no fantasy palace in the background",
+    "no flat poster illustration, outline graphics or matte-painting finish; photographed built garden",
+    "no marquee tents of later style, no bunting, no deck chairs",
+    "no playing-card graphics painted on the lawn"
+  ],
+  "prompt_ready_en": "a large 1860s English croquet lawn enclosed by tall clipped dark yew hedges, the close-mown green grass heaved into long regular parallel ridges and furrows, a raised honey-coloured limestone terrace with an Art Nouveau balustrade of lily-stem balusters and a carved rose-and-vine frieze, central steps, a crimson awning on a gilded wrought-iron frame over two gilt chairs before a carved stone halo roundel, horseshoe-arched openings in the yew with whiplash iron gates, a great cedar of Lebanon casting deep shade at one corner with a green-and-gold cast-iron bench of flowing lily stems beneath it, red white and black striped croquet stakes at each end, Mucha-inspired pastel-and-gold accents, photographed live-action set"
+}

@@ -1,0 +1,55 @@
+{
+  "task_id": "p3-relationship",
+  "agent": "03-characters/relationship",
+  "project": "alices",
+  "attempt": 1,
+  "status": "done",
+  "produced_on": "2026-09-22",
+  "output_file": "bible/characters/relationship.json",
+  "summary": "Whole-cast relationship graph with 80 edges covering all 43 CHAR ids plus CRE-001 (the real waking-frame rabbit). 17 key edges, 4 dream_echo doubling edges, 13-value controlled type enum, strength 1-5, a chronological state sequence per edge anchored to events.json ids and chapters, secret or knowledge-scope blocks with reveal points, an alice_authority_map covering 11 authority figures, a doublings_summary and an isolation review.",
+  "key_decisions": [
+    "Doubling (ruling 5.3 B) as dream_echo edges: housemaid -> Alice (the Rabbit's 'Mary Ann' role, TERM-0010, no separate character); sister <-> Alice (the sister is glimpsed at the trial, a designed beat at ev0048 marked inferred, and in return the sister's own reverie at ev0054 replays Alice's dream); Alice -> Cheshire Cat for the Dinah echo. Dinah has no registry id and is never on screen, so the echo is anchored on her owner.",
+    "Added CRE-001 -> CHAR-white-rabbit dream_echo and CRE-001 -> CHAR-alice guide, the SUP-002 bridge. CRE is used only for this real animal, as the acceptance rule allows.",
+    "Alice's relation to each authority figure is a directed authority_subject, mentor_pupil or guide edge with a state sequence: the Queen (strength 5, ending in defiance at ev0052), the King, the Duchess, the Caterpillar, the White Rabbit, the Gryphon, the Dodo, the Frog-Footman, the Hatter and the Pigeon, plus the sister as the benign waking authority. They are summarised in alice_authority_map.",
+    "Source gaps are left as gaps: the Duchess's reprieve between ev0035 and ev0039, the Cat's fate, and the Knave's verdict are noted on the edges and not invented.",
+    "The secret the Queen's edge carries is that her executions are never carried out (SUP-014). It is hidden from Alice until the Gryphon's line at ev0041 (ch9). The King's pardon, the Gryphon's contempt and the gardeners' survival stay hidden from the Queen and are never revealed. The Rabbit never learns that Alice is not Mary Ann.",
+    "No edge-id prefix is minted because WRITE_RULES.md section 4 requires new prefixes to be registered first and the file is locked. Edges are keyed by (from, to, type). If downstream needs edge ids, memory-bible should register a prefix."
+  ],
+  "upstream_reports": {
+    "defect": "qa/defects/DEF-p3-relationship-001.json (assigned to memory-bible)",
+    "items": [
+      "a: CHAR-frog-footman is filed under House of Hearts, but the source puts him at the Duchess's door",
+      "b: the CHAR-cheshire-cat doubling note calls Dinah an on-screen CRE, which contradicts creature.json's exclusion",
+      "c: the Duchess's baby (TERM-0039) is on screen in ev0026-ev0027 but has no CHAR or CRE id, so its two edges are held until one exists"
+    ]
+  },
+  "acceptance_checks": {
+    "check_script": "code/p3-relationship_check.py",
+    "run_command": "python3 code/p3-relationship_check.py",
+    "results": {
+      "edge_ids_valid": "PASS (every endpoint is a CHAR id in characters/index.json or CRE-001 in creatures/index.json)",
+      "event_ids_exist": "PASS",
+      "from_chapter_matches_event": "PASS",
+      "states_chronological": "PASS",
+      "type_in_enum": "PASS",
+      "strength_1_5": "PASS",
+      "no_duplicate_edges": "PASS",
+      "no_self_edges": "PASS",
+      "secret_refs_valid": "PASS",
+      "secret_has_reveal": "PASS",
+      "no_isolated_S_A": "PASS (0 isolated; all 43 ids connected)",
+      "no_unknown_placeholder": "PASS",
+      "inferred_has_reason": "PASS",
+      "cited_bible_ids": "PASS (all FAC/OFF/LAW/SUP/TERM/CUL/FREL ids cited resolve in the locked bible)"
+    },
+    "overall": "PASS"
+  },
+  "skills": "No auto-activated skills are checked for this station; none applied.",
+  "evaluation": "skipped (quality judge = 0)",
+  "files_created": [
+    "bible/characters/relationship.json",
+    "qa/defects/DEF-p3-relationship-001.json",
+    "code/p3-relationship_check.py",
+    "runs/p3-relationship/result.json"
+  ]
+}

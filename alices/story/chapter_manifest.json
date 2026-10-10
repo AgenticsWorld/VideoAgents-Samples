@@ -1,0 +1,108 @@
+{
+  "project": "alices",
+  "task_id": "p0-scan",
+  "generated": "2026-09-22",
+  "source_files": [
+    {
+      "file": "novel/Alices_Adventures_in_Wonderland_English.md",
+      "format": "markdown",
+      "encoding": "utf-8",
+      "lines": 3338,
+      "bytes": 151036,
+      "words": 26545,
+      "chapter_heading_pattern": "^## CHAPTER <roman>. <title>"
+    }
+  ],
+  "excluded_ranges": [
+    {
+      "file": "novel/Alices_Adventures_in_Wonderland_English.md",
+      "line_start": 1,
+      "line_end": 20,
+      "byte_start": 0,
+      "byte_end": 518,
+      "words": 92,
+      "reason": "front matter: book title (line 1) + '## Contents' list (lines 5-20); not narrative"
+    }
+  ],
+  "measurement": {
+    "language": "en",
+    "word_count_method": "whitespace-delimited tokens over the chapter range including its heading line (same as `wc -w`); body_word_count excludes the heading line",
+    "char_count_method": "unicode characters over the chapter range including heading and newlines",
+    "line_range_convention": "1-based, inclusive; each chapter runs from its heading line to the line before the next chapter heading (last chapter to EOF)",
+    "byte_range_convention": "0-based byte offsets into the UTF-8 file, [byte_start, byte_end) half-open",
+    "batch_target_conversion": "SOUL target is 10,000-15,000 Chinese characters per batch (a parse-load/context budget). Using the standard zh->en translation ratio of ~0.6 English words per Chinese character, the English equivalent is 6,000-9,000 words per batch. Raw English character counts are NOT used, because 10-15k English characters (~1.9-2.9k words) would make nearly every chapter its own batch (12 batches) for the same parse load.",
+    "batch_target_words": { "min": 6000, "max": 9000 }
+  },
+  "chapters": [
+    { "id": "ch001", "order": 1,  "file": "novel/Alices_Adventures_in_Wonderland_English.md", "heading": "## CHAPTER I. Down the Rabbit-Hole",                "title": "Down the Rabbit-Hole",                "line_start": 21,   "line_end": 236,  "byte_start": 518,    "byte_end": 12301,  "word_count": 2187, "body_word_count": 2181, "char_count": 11556 },
+    { "id": "ch002", "order": 2,  "file": "novel/Alices_Adventures_in_Wonderland_English.md", "heading": "## CHAPTER II. The Pool of Tears",                  "title": "The Pool of Tears",                   "line_start": 237,  "line_end": 438,  "byte_start": 12301,  "byte_end": 23643,  "word_count": 2100, "body_word_count": 2093, "char_count": 10958 },
+    { "id": "ch003", "order": 3,  "file": "novel/Alices_Adventures_in_Wonderland_English.md", "heading": "## CHAPTER III. A Caucus-Race and a Long Tale",     "title": "A Caucus-Race and a Long Tale",       "line_start": 439,  "line_end": 645,  "byte_start": 23643,  "byte_end": 33310,  "word_count": 1703, "body_word_count": 1694, "char_count": 9266 },
+    { "id": "ch004", "order": 4,  "file": "novel/Alices_Adventures_in_Wonderland_English.md", "heading": "## CHAPTER IV. The Rabbit Sends in a Little Bill",  "title": "The Rabbit Sends in a Little Bill",   "line_start": 646,  "line_end": 906,  "byte_start": 33310,  "byte_end": 47690,  "word_count": 2617, "body_word_count": 2607, "char_count": 13889 },
+    { "id": "ch005", "order": 5,  "file": "novel/Alices_Adventures_in_Wonderland_English.md", "heading": "## CHAPTER V. Advice from a Caterpillar",           "title": "Advice from a Caterpillar",           "line_start": 907,  "line_end": 1202, "byte_start": 47690,  "byte_end": 60277,  "word_count": 2187, "body_word_count": 2180, "char_count": 12016 },
+    { "id": "ch006", "order": 6,  "file": "novel/Alices_Adventures_in_Wonderland_English.md", "heading": "## CHAPTER VI. Pig and Pepper",                     "title": "Pig and Pepper",                      "line_start": 1203, "line_end": 1526, "byte_start": 60277,  "byte_end": 74705,  "word_count": 2594, "body_word_count": 2588, "char_count": 13849 },
+    { "id": "ch007", "order": 7,  "file": "novel/Alices_Adventures_in_Wonderland_English.md", "heading": "## CHAPTER VII. A Mad Tea-Party",                   "title": "A Mad Tea-Party",                     "line_start": 1527, "line_end": 1868, "byte_start": 74705,  "byte_end": 88226,  "word_count": 2288, "body_word_count": 2282, "char_count": 12708 },
+    { "id": "ch008", "order": 8,  "file": "novel/Alices_Adventures_in_Wonderland_English.md", "heading": "## CHAPTER VIII. The Queen’s Croquet-Ground",       "title": "The Queen’s Croquet-Ground",          "line_start": 1869, "line_end": 2173, "byte_start": 88226,  "byte_end": 102418, "word_count": 2488, "body_word_count": 2482, "char_count": 13675 },
+    { "id": "ch009", "order": 9,  "file": "novel/Alices_Adventures_in_Wonderland_English.md", "heading": "## CHAPTER IX. The Mock Turtle’s Story",            "title": "The Mock Turtle’s Story",             "line_start": 2174, "line_end": 2492, "byte_start": 102418, "byte_end": 115825, "word_count": 2273, "body_word_count": 2266, "char_count": 12636 },
+    { "id": "ch010", "order": 10, "file": "novel/Alices_Adventures_in_Wonderland_English.md", "heading": "## CHAPTER X. The Lobster Quadrille",               "title": "The Lobster Quadrille",               "line_start": 2493, "line_end": 2790, "byte_start": 115825, "byte_end": 127948, "word_count": 2031, "body_word_count": 2025, "char_count": 11416 },
+    { "id": "ch011", "order": 11, "file": "novel/Alices_Adventures_in_Wonderland_English.md", "heading": "## CHAPTER XI. Who Stole the Tarts?",               "title": "Who Stole the Tarts?",                "line_start": 2791, "line_end": 3049, "byte_start": 127948, "byte_end": 138857, "word_count": 1879, "body_word_count": 1872, "char_count": 10392 },
+    { "id": "ch012", "order": 12, "file": "novel/Alices_Adventures_in_Wonderland_English.md", "heading": "## CHAPTER XII. Alice’s Evidence",                  "title": "Alice’s Evidence",                    "line_start": 3050, "line_end": 3338, "byte_start": 138857, "byte_end": 151036, "word_count": 2106, "body_word_count": 2101, "char_count": 11658 }
+  ],
+  "batches": [
+    {
+      "id": "b01",
+      "chapters": [
+        { "id": "ch001", "file": "novel/Alices_Adventures_in_Wonderland_English.md", "title": "Down the Rabbit-Hole", "word_count": 2187, "line_start": 21, "line_end": 236 },
+        { "id": "ch002", "file": "novel/Alices_Adventures_in_Wonderland_English.md", "title": "The Pool of Tears", "word_count": 2100, "line_start": 237, "line_end": 438 },
+        { "id": "ch003", "file": "novel/Alices_Adventures_in_Wonderland_English.md", "title": "A Caucus-Race and a Long Tale", "word_count": 1703, "line_start": 439, "line_end": 645 }
+      ],
+      "line_start": 21, "line_end": 645, "byte_start": 518, "byte_end": 33310,
+      "word_count": 5990,
+      "in_target_range": false,
+      "exception": "10 words (0.17%) below the 6,000-word floor. Justified: adding ch004 gives 8,607 but forces the remaining 9 chapters into a worse split (a trailing batch of ~4k words, 33% under). The 4 x 3-chapter grouping is the most balanced whole-chapter partition (5,990 / 7,398 / 7,049 / 6,016)."
+    },
+    {
+      "id": "b02",
+      "chapters": [
+        { "id": "ch004", "file": "novel/Alices_Adventures_in_Wonderland_English.md", "title": "The Rabbit Sends in a Little Bill", "word_count": 2617, "line_start": 646, "line_end": 906 },
+        { "id": "ch005", "file": "novel/Alices_Adventures_in_Wonderland_English.md", "title": "Advice from a Caterpillar", "word_count": 2187, "line_start": 907, "line_end": 1202 },
+        { "id": "ch006", "file": "novel/Alices_Adventures_in_Wonderland_English.md", "title": "Pig and Pepper", "word_count": 2594, "line_start": 1203, "line_end": 1526 }
+      ],
+      "line_start": 646, "line_end": 1526, "byte_start": 33310, "byte_end": 74705,
+      "word_count": 7398,
+      "in_target_range": true
+    },
+    {
+      "id": "b03",
+      "chapters": [
+        { "id": "ch007", "file": "novel/Alices_Adventures_in_Wonderland_English.md", "title": "A Mad Tea-Party", "word_count": 2288, "line_start": 1527, "line_end": 1868 },
+        { "id": "ch008", "file": "novel/Alices_Adventures_in_Wonderland_English.md", "title": "The Queen’s Croquet-Ground", "word_count": 2488, "line_start": 1869, "line_end": 2173 },
+        { "id": "ch009", "file": "novel/Alices_Adventures_in_Wonderland_English.md", "title": "The Mock Turtle’s Story", "word_count": 2273, "line_start": 2174, "line_end": 2492 }
+      ],
+      "line_start": 1527, "line_end": 2492, "byte_start": 74705, "byte_end": 115825,
+      "word_count": 7049,
+      "in_target_range": true
+    },
+    {
+      "id": "b04",
+      "chapters": [
+        { "id": "ch010", "file": "novel/Alices_Adventures_in_Wonderland_English.md", "title": "The Lobster Quadrille", "word_count": 2031, "line_start": 2493, "line_end": 2790 },
+        { "id": "ch011", "file": "novel/Alices_Adventures_in_Wonderland_English.md", "title": "Who Stole the Tarts?", "word_count": 1879, "line_start": 2791, "line_end": 3049 },
+        { "id": "ch012", "file": "novel/Alices_Adventures_in_Wonderland_English.md", "title": "Alice’s Evidence", "word_count": 2106, "line_start": 3050, "line_end": 3338 }
+      ],
+      "line_start": 2493, "line_end": 3338, "byte_start": 115825, "byte_end": 151036,
+      "word_count": 6016,
+      "in_target_range": true
+    }
+  ],
+  "reconciliation": {
+    "contents_list_entries": 12,
+    "chapter_headings_found": 12,
+    "chapters_in_batches": 12,
+    "chapter_word_total": 26453,
+    "excluded_front_matter_words": 92,
+    "file_word_total_wc": 26545,
+    "reconciles": "26453 + 92 = 26545 (matches wc -w)",
+    "chapter_byte_ranges_contiguous": "518 -> 151036 with no gaps/overlaps; 0-518 is excluded front matter",
+    "batch_word_total": 26453
+  }
+}

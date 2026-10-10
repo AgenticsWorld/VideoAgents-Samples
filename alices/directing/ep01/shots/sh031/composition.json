@@ -1,0 +1,28 @@
+{
+  "shot_id": "sh031",
+  "scene_id": "SCN-shaft-landing-passage",
+  "size": "medium-wide",
+  "subject": {
+    "id": "CHAR-white-rabbit",
+    "grid": "centre",
+    "anchor_xy": [0.54, 0.60],
+    "size_in_frame": "small and going away, about 0.14 of frame height, dropping to 0.10 as he reaches the corner"
+  },
+  "headroom": "about 0.24 of frame height of brick vault and glowing corner wall above him; the vault stays over him through the drop from haunches to four legs, so the change of posture happens under a ceiling, at animal height.",
+  "horizon_eyeline": "Floor line running to the corner at [0.56, 0.54]. His eyeline is low and forward, aimed round the corner; it never turns back along the passage.",
+  "layers": {
+    "fg": "the pastel-and-gold mosaic dado passing close along the left edge of frame, its vine ornament large and soft",
+    "mg": "the Rabbit dropping onto four legs and running",
+    "bg": "the right-angle corner glowing with warm lamplight from the hall beyond"
+  },
+  "gaze": {
+    "direction": "frame_right",
+    "lead_room": "right",
+    "note": "he goes away and round to frame right, into the glow; about 0.20 of frame width of lit corner is left ahead of him, and he uses all of it and leaves."
+  },
+  "balance": "Left-loaded by the near mosaic, with the small moving subject drifting right into the light — the frame hands him off rather than holding him.",
+  "leading_lines": "The mosaic dado band runs from the near left edge into depth and turns at the corner; the floor edge does the same. Both deliver him round the turn, and the audience with him.",
+  "eye_first": "The lit corner, then the small white shape crossing into it.",
+  "safe_area_ok": true,
+  "constraint_binding": "QUADRUPED RABBIT — the drop from haunches back onto four legs happens in shot: the whole body is in frame, uncropped, for the whole transition, so the grammar is established once and can never be contradicted. Clean single for the line: Alice is not in this frame."
+}

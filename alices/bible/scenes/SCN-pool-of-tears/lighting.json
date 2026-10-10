@@ -1,0 +1,63 @@
+{
+  "_meta": {
+    "file": "bible/scenes/SCN-pool-of-tears/lighting.json",
+    "owner": "05-scenes/lighting",
+    "task_id": "p3-lighting-sb1",
+    "attempt": 1,
+    "generated": "2026-09-22",
+    "status": "draft_v1",
+    "enum_set": "LGT-ENUM-v1 (defined once in runs/p3-lighting-sb1/result.json)",
+    "inputs": ["bible/scenes/SCN-pool-of-tears/environment.json", "bible/scenes/SCN-pool-of-tears/architecture.json"],
+    "amended": [
+      {
+        "date": "2026-09-23",
+        "task_id": "p6-bible-light-ep01",
+        "change_request": "BIB-0033",
+        "fixes": "DEF-p6-directing-ep01-001 (finding -b)",
+        "note": "ARBITRATION RECORD ONLY - no lighting value changed. bible/color_script.json described a single daylight shaft falling through one high roundel as the light Alice swims toward. memory-bible ruled for this card: the flooded hall is SCN-long-hall, which is windowless (daylight_access lamplit_no_sky, key_source oil_lamp_row), so there is no shaft; the way-out heading is the field of lamp reflections at the south end that dream_growth already names, and color_script was amended to that reading. Grounds and impact list: bible/changelog.md BIB-0033. Written by 00-orchestration/memory-bible under on_bible_access; 05-scenes/lighting to countersign at its next open."
+      }
+    ]
+  },
+  "scene_id": "SCN-pool-of-tears",
+  "layer": "dream",
+  "int_ext": "INT",
+  "daylight_access": "lamplit_no_sky",
+  "way_out_heading": {
+    "decision": "south_end_lamp_reflection_field",
+    "rule": "The brightest water in the scene is the south end, where the off-frame lamps crowd their reflections and the shore steps lie: that field, not any shaft, is the motivated heading for Alice's swim and the last lit element before the ep01 cliffhanger. No opening, no beam and no coloured pool exists anywhere in this space.",
+    "authority": "dream_growth (this file) 'at the south end the light on the shore steps is the first hint of the open afternoon of SCN-pool-bank'; SCN-long-hall/architecture.json interior.openings; BIB-0033",
+    "arbitration": "UPHELD 2026-09-23 against bible/color_script.json by memory-bible (BIB-0033, closing qa/defects/DEF-p6-directing-ep01-001). Recorded, not newly designed: it names the existing dream_growth clause as the heading. Do not re-open it from the colour side.",
+    "inferred": true
+  },
+  "dream_growth": {
+    "grows_from": "LGT-long-hall-01 (same lamps) and the still backwater beside the bank",
+    "how": "Still the hall's amber lamps, now far overhead at a swimmer's scale, so the light behaves like sun on the backwater: glints and ripple-light on stone. No sky and no sea horizon; at the south end the light on the shore steps is the first hint of the open afternoon of SCN-pool-bank.",
+    "ruling": "runs/h1-ruling/ruling.json 5.2 A; cultivation.json SUP-007"
+  },
+  "schemes": [
+    {
+      "lighting_scheme_id": "LGT-pool-of-tears-01",
+      "condition": {"time_of_day": "early_afternoon", "weather": "none_enclosed"},
+      "state_refs": ["SCN-pool-of-tears-S01"],
+      "waking_clock": "14:55-15:05 GMT (Alice asleep on the bank)",
+      "sun": null,
+      "key_source": "oil_lamp_row",
+      "key": "the hall's oil lamps, far overhead and out of frame at this scale",
+      "direction": "top",
+      "direction_note": "steep top light onto the water; reflections and ripple-caustics thrown up onto the door bases and wall reveals on both sides",
+      "fill": {"source": "water_bounce", "note": "moving amber-green bounce off the water surface lights swimmers' faces from below"},
+      "practicals": ["brass oil lamps x11 (off-frame overhead; seen only as reflections on the water)"],
+      "color_temp": "warm (~2700K)",
+      "kelvin_approx": 2400,
+      "contrast": "medium",
+      "quality": "soft",
+      "atmosphere": "hot, humid haze over cool, still salt water; splashes and wakes catch the light",
+      "prompt_fragment_en": "Flooded-hall lamplight at water level: the brass oil lamps hang far overhead and out of sight, their warm amber light falling from high above onto the clear salt water, breaking into trembling gold reflections along the swimmers' wakes, with shimmering ripple-light dancing on the pale limestone walls and door bases that rise like cliffs; deep brown shadow in the reveals, a faint humid haze; medium contrast, strange, hot, swimming-dream mood.",
+      "source_chapter": "ch002",
+      "sources": ["ch002-p16", "ch002-p26"],
+      "inferred": true,
+      "reason": "The pool in the hall is explicit (ch002-p16) but no light is described. The lamps are carried from the hall (ch001-p11); reflections and caustics are the designed consequence at water level (architecture: lamps far above, out of frame)."
+    }
+  ],
+  "special": []
+}

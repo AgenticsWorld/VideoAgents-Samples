@@ -1,0 +1,29 @@
+{
+  "character_id": "CHAR-pat",
+  "name": "Pat",
+  "tier": "extra",
+  "card_type": "individual",
+  "gender": "male",
+  "age_sense": "adult man (appearance base_age_range 30-40)",
+  "timbre": "warm, rough, outdoor labourer's voice, slightly hoarse, easygoing",
+  "pitch": "mid baritone, lilting sing-song intonation",
+  "pitch_range_hz": [95, 175],
+  "speed_wpm": [150, 175],
+  "speed_cpm": [570, 665],
+  "accent": "rural Irish brogue: rolled and rhotic r, 'yer honour', 'arrum' for arm, lilting rise at phrase ends",
+  "reference_style": "Good-natured Irish labourer answering the White Rabbit from the garden: cheerful, deferential, stubbornly literal ('Sure, it's an arm, yer honour!'), then uneasy. Irishness carried by speech alone, never stage-Irish caricature (appearance.json).",
+  "emotion_range": {
+    "cheerful": { "speed_delta": "0%", "pitch_delta": "0semi", "note": "'Sure then I'm here!'" },
+    "uneasy": { "speed_delta": "-10%", "pitch_delta": "+1semi", "volume": "soft", "note": "'Sure, I don't like it, yer honour, at all, at all!'" }
+  },
+  "age_variants": [],
+  "source_chapter": "ch004",
+  "sources": ["ch004", "ch004-p16", "ch004-p19", "ch004-d0016", "ch004-d0019", "ch004-d0021", "ch004-d0023"],
+  "voice_evidence": [
+    { "para": "ch004-p19", "quote": "“Sure, it’s an arm, yer honour!” (He pronounced it “arrum.”)" },
+    { "para": "ch004-p16", "quote": "And then a voice she had never heard before" }
+  ],
+  "inferred": true,
+  "inferred_fields": ["timbre", "pitch", "pitch_range_hz", "speed_wpm", "speed_cpm"],
+  "reason": "Irish pronunciation and idiom sourced ('arrum', 'yer honour'); timbre designed for a wiry outdoor labourer (appearance.json)."
+}

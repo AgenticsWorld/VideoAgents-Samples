@@ -1,0 +1,38 @@
+{
+  "task_id": "p4-cr-breakdown-ep01",
+  "agent": "01-story/timeline-story",
+  "project": "alices",
+  "attempt": 1,
+  "status": "done",
+  "date": "2026-09-23",
+  "change_request": "BIB-0027",
+  "authority_read": [
+    "bible/changelog.md BIB-0027 (full entry)",
+    "bible/cultivation.json _meta.amendments, cross_domain_assumptions XA-magic-02 / XA-magic-08, reinterpretations SUP-002 (amended, full text) and SUP-010 (amended, full text)",
+    "bible/world.json (not directly quoted; scope confirmed via cultivation.json's amendment text, which cross-references WR-001/WR-002/WR-010)",
+    "bible/h1_summary.md §6 pointer (context)",
+    "runs/p4-cr-cgi-mucha-bible/result.json (stale_files -- confirmed story/episodes/ep01/script_breakdown.json is listed; stale_notes -- 'story/*: Constraint and notes lines that say human performer or no hint of CGI (SUP-002/SUP-010)')",
+    "qa/defects/DEF-p4-style-001.json (user ruling a=B, b=B extended, verbatim)",
+    "runs/p4-cr-screenplay-ep01/result.json (sibling CR on the upstream screenplay.md -- read to confirm scope boundary; see notes below)"
+  ],
+  "changed_files": [
+    {
+      "file": "story/episodes/ep01/script_breakdown.json",
+      "change_note": "5 edits, all in this agent's own editorial fields (notes[]/purpose/role/added _meta.amendments); no scene/event/dialogue/beat/timing content touched. (1) _meta: added an amendments[] entry recording BIB-0027 and the 4 fields it changed here. (2) cast[] CHAR-white-rabbit.role: appended a render note -- photoreal CGI animal in the dream (S04, S08) wearing only waistcoat/watch/gloves props (SUP-002, amended BIB-0027); clarified the silent waking rabbit of S01-S02 is the separate, unaffected CRE-001. (3) scenes[S04 'The Landing Heap and the Long Passage'].purpose: 'Establishes the dream White Rabbit (distinct from the real CRE-001 of S01-S02, per SUP-002)' -> now states explicitly the dream Rabbit is a photoreal CGI animal per the amended SUP-002. (4) scenes[S04].notes[0]: replaced the stale clause 'the talking, clothed Rabbit exists only inside the dream (SUP-002, CRE-001 distinct_from)' with 'the talking Rabbit -- a photoreal CGI animal wearing only its waistcoat, watch and gloves (SUP-002, amended BIB-0027; no human-in-costume, no cartoon face) -- exists only inside the dream, distinct from the real, mute CRE-001'. (5) scenes[S01 'The Bank'].notes[0]: not stale (this note describes CRE-001, the waking rabbit, which BIB-0027 explicitly leaves unchanged) but tightened for consistency with the S04 edit -- now states plainly that CRE-001 is 'unaffected by BIB-0027's CGI-animal reading (that reading covers only the talking dream Rabbit of S04/S08)'."
+    }
+  ],
+  "not_changed_by_design": [
+    "scenes[S04].action and scenes[S04].blocks[] action text -- these are a verbatim mirror of story/episodes/ep01/screenplay.md's own action lines (e.g. 'a small, fussy man in a smart waistcoat, pink-tinted spectacles'), which are still literally stale under BIB-0027 but are screenplay.md's content, not mine to rewrite (docs/script_breakdown.md: the breakdown is a read-only structural view and must not diverge from the screenplay it decomposes). This is already tracked by the screenplay agent's own sibling change: runs/p4-cr-screenplay-ep01/result.json opened qa/defects/DEF-p4-cr-screenplay-001.json for exactly this (S04 action-line descriptors still stale, due H3) rather than editing the frozen action lines outside its own note-only scope. No duplicate ticket opened here -- would collide with DEF-p4-cr-screenplay-001.",
+    "hooks{}.opening[oh-1].intent 'no hint of CGI (rigged slow fall, SUP-008)': checked and left untouched -- this is about the S03 falling shot's practical-rig VFX technique (SUP-008, unrelated cultivation.json entry, not touched by BIB-0027), not about animal-character rendering (SUP-002/SUP-010). False-positive match on a 'CGI' grep, not an instance of the stale pattern flagged in runs/p4-cr-cgi-mucha-bible/result.json.stale_notes.",
+    "events[], plan{}, structure{}, trim_suggestions[], emotion_curve[], scenes[].dialogue/blocks[dialogue]: no 'human performer'/'no CGI'/costume wording found in these sections (checked by full-file grep before and after editing); no story events, dialogue text or timing changed, per task instruction.",
+    "Alphonse Mucha / Art Nouveau design language: not added anywhere in this file -- it governs dream-environment visual design (bible/world.json WR-010, cultivation.json XA-magic-08, and downstream 06-art/environment/lighting files), which script_breakdown.json has no field for (no set/environment-design column in schema script_breakdown/1.0); out of this file's scope by content, not merely by task assignment."
+  ],
+  "machine_checks": {
+    "json_valid": "PASS (python3 json.load)",
+    "check_script_breakdown_ok": "PASS (python3 code/check_script_breakdown.py --project alices --ep ep01 --json: pass=true, 0 errors, 0 warnings, scenes=10, derived_scenes=10, stale_inputs=[])"
+  },
+  "pending_H2": "None newly raised from this file -- the two H2-flagged open points (Frog/Fish-Footman anatomy; non-speaking dream animals) do not appear in ep01's cast (CHAR-alice, CHAR-alice-sister, CHAR-white-rabbit only).",
+  "conflicts_found": "None. No new qa/defects/ ticket opened by this task.",
+  "evaluation": "skipped (quality judge = 0 per project settings)",
+  "qa_pre_review": "skipped (all QA dimensions = 0 per project settings)"
+}

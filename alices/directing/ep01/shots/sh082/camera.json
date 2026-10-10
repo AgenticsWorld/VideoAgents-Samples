@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh082",
+  "group_id": "grp031",
+  "scene_no": "S08",
+  "duration_s": 6.5,
+  "size": "close",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 50,
+  "camera_height_m": 0.6,
+  "angle": "level, water level",
+  "rack_focus": "none",
+  "start_frame": "The sh078-sh080 close returned to exactly — same lens, same height, same axis, same framing: her face whole, lit only by broken reflections, stopping dead as she hears her own answers.",
+  "end_frame": "The identical frame as she names Mabel, appalled and certain; nothing in the set-up has changed since the hands insert, so the aria closes back up as one continuous thing.",
+  "constraint_honoured": "'Returning to the identical frame is what makes the aria read as one continuous thing broken only for her hands.'",
+  "movement_note": "Exact reproduction is the point, so the shot can have no move and no new framing at all. LN-ep01-025 (5.1 s) sits whole in 6.5 s.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

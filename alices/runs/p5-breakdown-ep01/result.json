@@ -1,0 +1,43 @@
+{
+  "task_id": "p5-breakdown-ep01",
+  "agent": "01-story/timeline-story",
+  "project": "alices",
+  "attempt": 1,
+  "status": "done",
+  "generated": "2026-09-22",
+  "inputs_read": [
+    "docs/script_breakdown.md (schema script_breakdown/1.0, repo docs)",
+    "code/check_script_breakdown.py + modules/script_breakdown.py (host validator/deriver, read to match schema and field conventions exactly)",
+    "story/episodes/ep01/screenplay.md (v3, task p5-dialogue-ep01-fix; S01-S10)",
+    "story/episodes/ep01/hooks.json (v1, status awaiting_selection)",
+    "story/episodes/ep01/pacing.json (v1, based_on screenplay v2)",
+    "story/episode_plan.json (ep01 entry)",
+    "story/events.json (ev0001-ev0008)",
+    "story/story_graph.json (acts act1-act3, structure_points, foreshadowing)",
+    "bible/characters/index.json, bible/scenes/index.json, bible/creatures/index.json",
+    "bible/h1_summary.md, bible/cultivation.json SUP-001..014 (context only)",
+    "qa/defects/DEF-p3-char-index-902.json, DEF-p3-char-index-903.json (checked applicability)"
+  ],
+  "outputs": ["story/episodes/ep01/script_breakdown.json"],
+  "helper_scripts": [],
+  "read_only_confirmation": "No screenplay/dialogue/hooks/pacing file was written or modified. Only story/episodes/ep01/script_breakdown.json (new file) and this run record were created.",
+  "summary": "Built the ep01 script breakdown table (schema script_breakdown/1.0) by hand-decomposing the current screenplay.md (v3) into 10 scenes (S01-S10), each split into ordered blocks[] (action/sound/dialogue/transition -- no narration blocks, narration is off project-wide) plus a flat dialogue[] array, scene-level timing/emotion/tempo/beat/purpose, and per-scene hook candidates. Pulled alloc_s/start_s/end_s/emotion/color from pacing.json (verified the per-scene beats_s sums equal alloc_s and the scene-to-scene start/end chain is contiguous 3-537s), event cards from events.json (ev0001-ev0008), episode plan/carry-over/hook_point from episode_plan.json, and act structure from story_graph.json. Hooks are reported as candidates (hooks.json selected.opening/ending are both null -- not yet chosen by the user) rather than as a finalized selection.",
+  "acceptance_auto": {
+    "check_script_breakdown_ok": "PASS (0 errors, 0 warnings, --strict also PASS): `python3 code/check_script_breakdown.py --project alices --ep ep01 --json` and `--strict --json` both returned pass:true, scenes:10, derived_scenes:10, stale_inputs:[]."
+  },
+  "cross_checks_performed": [
+    "Every scenes[].no is unique (S01-S10) and every scenes[].summary/emotion.intensity/tempo/dialogue[].speaker+text is present and valid per modules/script_breakdown.validate().",
+    "scenes[].cast CHAR- ids all resolve in bible/characters/index.json (CHAR-alice, CHAR-alice-sister, CHAR-white-rabbit); scenes[].scene_id all resolve in bible/scenes/index.json.",
+    "Per-scene alloc_s/start_s/end_s form a contiguous chain (3, 60, 86, 134, 162, 224, 299, 367, 477, 499 -> 537) matching pacing.json's timecode_in_s fields exactly; Sigma alloc_s = 534 + HOOK-OPEN 3 = 537, matching pacing.json total_s.",
+    "Per-line dialogue est_duration_s values were re-summed from the current screenplay.md v3 text (not copied blind from pacing.json) and cross-checked against pacing.json's dialogue_est_s per scene: matched exactly for S01/S03/S04/S06/S07/S08/S09 (6.2/11.4/5.0/23.3/24.1/51.5/1.7); S10 differs (18.8 here vs pacing's stale 16.4) because screenplay v3 added a dialogue-rewrite fix (DEF-p5-dialogue-ep01-001) after pacing.json v1 was authored against v2 -- reported transparently in issues[], not silently reconciled, and pacing.json was not edited.",
+    "DEF-p3-char-index-902 (executioner device) and DEF-p3-char-index-903 (ch006 lullaby chorus) checked against ep01's actual cast/scenes: neither applies (no executioner, no lullaby scene in ep01; both belong to later episodes per episode_plan.json) -- recorded in issues[] as informational confirmation, matching pacing.json's own constraints_honoured note."
+  ],
+  "notes": [
+    "hooks{} in the output lists all 3 opening and 3 ending candidates from hooks.json with full copy/visual/risk fields, but hooks.selected.opening/ending are both null (unchanged from hooks.json) since the user has not yet picked one; total_est_s (537) and the scene-level hooks arrays reflect the pacing-recommended-but-unselected pair (oh-1 + ec-2) with that assumption stated in issues[].",
+    "No 'HOOK-OPEN' pseudo-scene was added to scenes[] since it is not a scene in screenplay.md; its 3s offset is reflected in S01.start_s=3 and in total_est_s, matching pacing.json's own opening_segment accounting.",
+    "tempo (slow/medium/fast) per scene is this agent's own directorial read (grounded in pacing.json's explicit notes, e.g. S03's 'keep it slow, don't cut it faster' instruction, and each scene's beats_s density/emotion arc) since pacing.json does not carry a machine tempo field for this project; flagged as editorial judgment, not a sourced fact, and routes to 01-story/pacing for confirmation via the page's small-edit button per docs/script_breakdown.md.",
+    "keypoints.json does not yet exist for ep01 (no user key-point marks made yet); not referenced in the breakdown, per docs/script_breakdown.md (keypoints are independent of the breakdown and not overwritten by re-analysis anyway)."
+  ],
+  "evaluation": "skipped (quality judge = 0 per project settings)",
+  "qa_pre_review": "skipped (all QA dimensions = 0 per project settings)"
+}

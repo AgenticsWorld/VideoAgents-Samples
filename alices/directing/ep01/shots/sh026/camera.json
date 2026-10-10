@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh026",
+  "group_id": "grp011",
+  "scene_no": "S04",
+  "duration_s": 5.0,
+  "size": "medium",
+  "movement": "pedestal_up",
+  "direction": "straight up with her, 0.60 m to 1.30 m, no lateral or rotational component",
+  "speed": "held 1.4 s at 0.60, then 0.70 m of rise in about 1.6 s (≈0.44 m/s), then held at 1.30 for the last 2.0 s",
+  "speed_curve": "ease_in_out",
+  "rig": "dolly",
+  "lens_mm": 40,
+  "camera_height_m": "0.60 rising to 1.30",
+  "angle": "level throughout (the frame rises, it does not tilt)",
+  "rack_focus": "none",
+  "start_frame": "Low on the heap of sticks and dry leaves, back at the leaf heap from the root-laced earth stretch: Alice flat on her back where she landed, leaves still in the air above her, the root curtain across the top of frame and nothing above it but black.",
+  "end_frame": "Child height on the same axis: Alice on her feet on the leaf heap looking up into the dark overhead, the last thrown leaves settling inside the frame, the long low passage opening away behind her.",
+  "constraint_honoured": "'Landing and jumps to her feet in ONE shot, low enough that the leaves settle inside the frame' — the rise is bound to her getting up, and stops at the 1.20–1.35 m child height the dream is shot at.",
+  "movement_note": "Follows her, not an emotion; one axis, finished inside 3.0 s of a 5.0 s shot, ending on the frame the sh027 passage wide has to answer.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

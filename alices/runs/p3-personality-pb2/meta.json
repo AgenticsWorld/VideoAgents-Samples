@@ -1,0 +1,21 @@
+{
+  "task_id": "p3-personality-pb2",
+  "run_id": "204dd2f4eebd",
+  "attempt": 1,
+  "model": "agent default",
+  "tokens": null,
+  "started_at": null,
+  "finished_at": "2026-09-22T18:32:59+08:00",
+  "inputs_sha256": {},
+  "artifact_versions": {
+    "bible/characters/CHAR-mouse/personality.json": "v1",
+    "bible/characters/CHAR-cook/personality.json": "v1",
+    "bible/characters/CHAR-bill-the-lizard/personality.json": "v1",
+    "bible/characters/CHAR-knave-of-hearts/personality.json": "v1",
+    "bible/characters/CHAR-gryphon/personality.json": "v1",
+    "bible/characters/CHAR-mock-turtle/personality.json": "v1",
+    "bible/characters/CHAR-caterpillar/personality.json": "v1",
+    "bible/characters/CHAR-pigeon/personality.json": "v1",
+    "bible/characters/CHAR-dodo/personality.json": "v1"
+  }
+}

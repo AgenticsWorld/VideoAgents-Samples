@@ -1,0 +1,65 @@
+{
+  "task_id": "p0-parse-b03",
+  "agent": "01-story/novel-parser",
+  "attempt": 1,
+  "status": "completed",
+  "batch": "b03",
+  "chapters": ["ch007", "ch008", "ch009"],
+  "input": "novel/Alices_Adventures_in_Wonderland_English.md lines 1527-2492 (manifest batches[b03]); only this range was read",
+  "outputs": [
+    "story/structured_story/ch007.json",
+    "story/structured_story/ch008.json",
+    "story/structured_story/ch009.json"
+  ],
+  "helper_scripts": ["code/parse_check_b03.py (paragraph listing + shard machine check only; shards were hand-written, not generated)"],
+  "machine_check": "runs/p0-parse-b03/machine_check.json",
+  "acceptance": {
+    "schema": "PASS — every scene has id/boundary_reason/source/paragraphs/dialogues/entities; every paragraph, dialogue and entity entry carries source chNNN#pNN",
+    "batch_chapter_coverage_100": "PASS",
+    "speaker_missing_lt_2pct": "PASS (1/255 = 0.39%)",
+    "ids_prefixed_by_chapter": "PASS (no duplicate IDs across the batch)",
+    "ascii_filename": "PASS"
+  },
+  "coverage": [
+    {"chapter": "ch007", "title": "A Mad Tea-Party", "paragraphs": "105/105", "body_words": 2282, "manifest_body_words": 2282, "word_count_with_heading": 2288, "scenes": 3, "dialogues": 105, "unknown": 1, "entity_mentions": 182},
+    {"chapter": "ch008", "title": "The Queen’s Croquet-Ground", "paragraphs": "71/71", "body_words": 2482, "manifest_body_words": 2482, "word_count_with_heading": 2488, "scenes": 7, "dialogues": 60, "unknown": 0, "entity_mentions": 178},
+    {"chapter": "ch009", "title": "The Mock Turtle’s Story", "paragraphs": "92/92", "body_words": 2266, "manifest_body_words": 2266, "word_count_with_heading": 2273, "scenes": 5, "dialogues": 90, "unknown": 0, "entity_mentions": 172}
+  ],
+  "totals": {
+    "chapters": 3, "paragraphs": 268, "scenes": 15, "body_words": 7030, "manifest_batch_words_incl_headings": 7049,
+    "dialogue_entries": 255, "by_type": {"dialogue": 240, "thought": 12, "verse": 3}, "group_attributed": 3,
+    "unknown_speaker": 1, "unknown_pct": 0.39,
+    "quoted_spans_in_source_checked": 373, "quoted_spans_uncovered": 0,
+    "entity_mentions": 532
+  },
+  "unknown_speakers": [
+    {"id": "ch007-d0002", "text": "No room! No room!", "source": "ch007#p02", "reason": "attributed to 'they' (the three); the Dormouse is stated to be fast asleep in p01, so group membership cannot be determined", "candidates": [{"speaker": "March Hare + Hatter", "confidence": 0.6}, {"speaker": "March Hare + Hatter + Dormouse", "confidence": 0.4}]}
+  ],
+  "inferred_speakers_below_0_95": [
+    {"id": "ch008-d0001", "speaker": "Two", "confidence": 0.9, "basis": "'one of them'; p05 'the one who had spoken first' is addressed as 'Two' in p06"},
+    {"id": "ch008-d0005", "speaker": "Two", "confidence": 0.93, "basis": "same chain as ch008-d0001"},
+    {"id": "ch008-d0033", "speaker": "White Rabbit", "confidence": 0.92, "basis": "'a timid voice at her side' + 'She was walking by the White Rabbit'"},
+    {"id": "ch009-d0006", "speaker": "Alice", "confidence": 0.93, "basis": "'she said' with Alice as preceding subject; answered by the Duchess"}
+  ],
+  "conventions": {
+    "shard_shape": "each shard is one chapter object (same shape as an element of structured_story.json chapters[]) plus a '_shard' header; p0-merge should drop '_shard' when assembling",
+    "paragraph": "maximal block of non-blank lines after the chapter heading; numbered pNN (p100+ where needed) in source order; id = <chapter>-pNN; 'lines' = 1-based inclusive line range in the novel file; text = source lines joined with single spaces (verse paragraphs keep line breaks as \\n and carry kind: 'verse'); underscores (_italic_) and curly quotes kept verbatim",
+    "source_locator": "chNNN#pNN (scenes: chNNN#pNN-pMM)",
+    "dialogue_text": "verbatim content inside the quotation marks, without the outer quote marks; when one utterance is split by narration (e.g. '“…,” said Alice; “…”'), the quoted segments are joined with ' [...] ' in order; every segment is a verbatim substring of the source paragraph",
+    "dialogue_type": "dialogue = spoken aloud (including 'said to herself/itself' self-talk, marked delivery: self_talk); thought = introduced by 'thought' or explicitly unspoken; verse = sung/recited verse",
+    "group_speakers": "lines explicitly attributed to several speakers ('they both cried', 'the Hatter and the March Hare went') use speaker 'A + B' with group: true; not counted as UNKNOWN",
+    "embedded_quotes": "reported/quoted speech inside a character's line (e.g. the Queen's words quoted by the Hatter, ch007-d0057) stays inside that character's entry and is flagged in a note, not split out",
+    "indirect_speech": "reported speech without quotation marks (ch008 p66-p68) creates no dialogue entries",
+    "speaker_names": "surface names used consistently within this batch: Alice, March Hare, Hatter, Dormouse, Two, Five, Seven, Queen, King, Knave of Hearts, White Rabbit, Cheshire Cat, soldiers, Duchess, Gryphon, Mock Turtle — not canonical IDs",
+    "entities": "one entry per (surface mention, paragraph) with count = whole-token occurrences of the mention in that paragraph (possessive ’s counted; hyphenated compounds such as tea-things / treacle-well are separate mentions); key = tentative lowercase slug for later unification by character-manager / Phase 2 — not a CHAR-/LOC-/PROP- id; pronouns are not tagged; no definitions or alias merging",
+    "entity_type_notes": "live hedgehogs/flamingoes used as croquet equipment are typed item (provisional); school subjects in ch009 and 'croquet' are typed skill (provisional, the source has no techniques); personified 'Time' (ch007) is typed person (provisional). Type rules to be confirmed with memory-bible"
+  },
+  "cross_batch_notes": [
+    "ch007 'the house' (p01), the Duchess's 'kitchen' (ch009 p02), 'the long hall' / 'little golden key' / 'mushroom' (ch007 p105) refer back to earlier chapters; left as tentative keys, not resolved here",
+    "ch009 ends mid-conversation (the Gryphon: 'tell her something about the games now'); ch009-sc05 continues into ch010 (batch b04)"
+  ],
+  "skills": "none auto-activated for this post (none checked by the project)",
+  "conflicts": [],
+  "defects": [],
+  "notes": "Extraction only — no rewriting, adaptation or interpretation. The realistic-drama reinterpretation belongs to later phases."
+}

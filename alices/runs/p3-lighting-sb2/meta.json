@@ -1,0 +1,23 @@
+{
+  "task_id": "p3-lighting-sb2",
+  "run_id": "729219ac970e",
+  "attempt": 1,
+  "model": "agent default",
+  "tokens": null,
+  "started_at": null,
+  "finished_at": "2026-09-22T19:42:46+08:00",
+  "inputs_sha256": {},
+  "artifact_versions": {
+    "bible/scenes/SCN-pigeon-treetop/lighting.json": "v1",
+    "bible/scenes/SCN-duchess-house-front/lighting.json": "v1",
+    "bible/scenes/SCN-duchess-kitchen/lighting.json": "v1",
+    "bible/scenes/SCN-cheshire-cat-path/lighting.json": "v1",
+    "bible/scenes/SCN-mad-tea-party/lighting.json": "v1",
+    "bible/scenes/SCN-wood-tree-door/lighting.json": "v1",
+    "bible/scenes/SCN-rose-tree-yard/lighting.json": "v1",
+    "bible/scenes/SCN-croquet-ground/lighting.json": "v1",
+    "bible/scenes/SCN-gryphon-sunning-spot/lighting.json": "v1",
+    "bible/scenes/SCN-mock-turtle-ledge/lighting.json": "v1",
+    "bible/scenes/SCN-courtroom/lighting.json": "v1"
+  }
+}

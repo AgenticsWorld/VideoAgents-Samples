@@ -1,0 +1,34 @@
+{
+  "shot_id": "sh035",
+  "scene_id": "SCN-long-hall",
+  "size": "close",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "mid_right",
+    "anchor_xy": [0.62, 0.54],
+    "size_in_frame": "her hand and forearm on the iron, about 0.30 of frame height; her face is out of frame above"
+  },
+  "second_subject": {
+    "id": "east_wall_door_handle",
+    "grid": "centre",
+    "anchor_xy": [0.48, 0.52],
+    "note": "the large black iron handle and its whiplash escutcheon, the heaviest black in the frame."
+  },
+  "headroom": "no face, so no conventional headroom; the door head and one blind roundel occupy the top 0.22 of frame, giving the hand a weight of architecture above it.",
+  "horizon_eyeline": "Lens at 1.25 m, square to the east wall. The mosaic dado runs level across at 0.74 of frame height. No eyeline in frame — the shot is a hand and an object.",
+  "layers": {
+    "fg": "her hand and forearm, hauling, the tendons doing the work",
+    "mg": "the iron handle, lock plate and the oak of the door",
+    "bg": "the mosaic dado below and one blind roundel above, catching a faint jewel glint of lamplight and nothing more"
+  },
+  "gaze": {
+    "direction": "none",
+    "lead_room": "none",
+    "note": "deliberately faceless: we join the second pass already defeated, so no expression is offered and none is needed."
+  },
+  "balance": "Compressed and frontal — iron centre-left, hand centre-right, dado under, roundel over. Four elements stacked with no air between them; the frame is as locked as the door.",
+  "leading_lines": "The whiplash iron scrolls curl in on the handle from both sides, and the dado band runs flat under everything — organic lines contained by a straight one. Nothing leads out of frame.",
+  "eye_first": "The handle, then the hand that cannot move it.",
+  "safe_area_ok": true,
+  "constraint_binding": "Static — the first still frame since the reveal. After the travelling sh034 the composition deliberately stops dead, and it is a fragment rather than a figure, so the audience arrives mid-defeat with no re-establishment."
+}

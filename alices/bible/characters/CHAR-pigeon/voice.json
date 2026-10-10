@@ -1,0 +1,31 @@
+{
+  "character_id": "CHAR-pigeon",
+  "name": "Pigeon",
+  "tier": "B",
+  "card_type": "individual",
+  "gender": "female",
+  "age_sense": "middle-aged woman (appearance base_age_range 40-50)",
+  "timbre": "frayed, sleepless woman's voice, cooing at rest but cracking into a piercing shriek, catching with sobs",
+  "pitch": "mezzo-soprano, erratic, jumps to a high shriek then sinks to a sulky low",
+  "pitch_range_hz": [175, 380],
+  "speed_wpm": [160, 190],
+  "speed_cpm": [608, 722],
+  "accent": "lower-middle-class Home Counties English, a little flattened and common",
+  "reference_style": "Harried mother guarding her eggs: long, repetitive grievance litanies, shrieked 'Serpent!', contemptuous dismissal, then sulky settling. She talks at Alice, not to her.",
+  "emotion_range": {
+    "shriek": { "speed_delta": "+15%", "pitch_delta": "+6semi", "volume": "shout", "note": "ch005-p68 'raising its voice to a shriek'" },
+    "sobbing_litany": { "speed_delta": "-5%", "pitch_delta": "+1semi", "note": "ch005-p62 'in a more subdued tone, and added with a kind of sob'" },
+    "contempt": { "speed_delta": "-10%", "pitch_delta": "-2semi", "note": "ch005-p72 'in a tone of the deepest contempt'" },
+    "sulky": { "speed_delta": "-15%", "pitch_delta": "-2semi", "volume": "soft", "note": "ch005-p77 'in a sulky tone'" }
+  },
+  "age_variants": [],
+  "source_chapter": "ch005",
+  "sources": ["ch005", "ch005-p62", "ch005-p68", "ch005-p72", "ch005-p77"],
+  "voice_evidence": [
+    { "para": "ch005-p68", "quote": "continued the Pigeon, raising its voice to a shriek" },
+    { "para": "ch005-p62", "quote": "added with a kind of sob" }
+  ],
+  "inferred": true,
+  "inferred_fields": ["timbre", "pitch_range_hz", "speed_wpm", "speed_cpm", "accent"],
+  "reason": "Shriek, sob, contempt and sulk sourced; timbre and accent designed."
+}

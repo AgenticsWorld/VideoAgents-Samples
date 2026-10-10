@@ -1,0 +1,34 @@
+{
+  "shot_id": "sh078",
+  "scene_id": "SCN-long-hall",
+  "size": "close",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "centre",
+    "anchor_xy": [0.46, 0.44],
+    "size_in_frame": "her face at last held whole in frame, about 0.52 of frame height — the first time since sh055 that her head is inside all four edges"
+  },
+  "second_subject": {
+    "id": "PROP-white-kid-gloves-and-fan",
+    "grid": "mid_right",
+    "anchor_xy": [0.72, 0.62],
+    "note": "doll-sized in her enormous hand; the fan is the only moving thing in the composition."
+  },
+  "headroom": "about 0.16 of frame height — deliberately normal. After twelve shots of cropping her, the aria begins by giving her a whole head and a proper margin, and that alone changes the register.",
+  "horizon_eyeline": "Water-level close from the south-east doors, lens 0.60 m: the waterline runs across at 0.86 of frame height, low in frame. Her eyeline is at 0.42, level, mostly out to frame left. The lamp row is above the top edge and stays there for the rest of the episode.",
+  "layers": {
+    "fg": "the fan moving slowly in and out of the lower right of frame, and the water surface along the bottom edge",
+    "mg": "her face, lit only by broken reflections off the water",
+    "bg": "almost black — enough tone to read as a room, no more"
+  },
+  "gaze": {
+    "direction": "frame_left",
+    "lead_room": "left",
+    "note": "she talks out to frame left, into about 0.24 of frame width of near-black. Her look never comes to the lens and never finds anything; the lead room is open and unoccupied for the whole of movement 3."
+  },
+  "balance": "A single lit face just left of centre with the fan as a small rhythmic counterweight on the right. Deliberately classical and calm — it is the frame the next four shots will return to.",
+  "leading_lines": "The waterline is the one horizontal, low; the fan's arc is the one curve. Nothing else. The composition is stripped so the face carries everything.",
+  "eye_first": "Her eyes, and then the fan, which is what tells you she is still only half attending to what she is saying.",
+  "safe_area_ok": true,
+  "constraint_binding": "ONE sustained set-up for movement 3, broken exactly twice (sh081 for her hands, sh083 for the look up). Nothing moves but the fan and the water, so the composition contains no other animate element. Her face is lit only by broken reflections, and the lamp row sits above the top edge and is never shown."
+}

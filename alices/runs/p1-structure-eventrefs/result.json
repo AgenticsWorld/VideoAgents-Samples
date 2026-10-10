@@ -1,0 +1,52 @@
+{
+  "task_id": "p1-structure-eventrefs",
+  "agent": "01-story/story-structure",
+  "attempt": 1,
+  "status": "completed",
+  "generated": "2026-09-22",
+  "follow_up_of": "p1-structure",
+  "inputs": ["story/story_graph.json", "story/events.json (ev0001-ev0054)", "story/story_timeline.json (read-only)", "story/structured_story.json"],
+  "outputs": ["story/story_graph.json"],
+  "helper_scripts": ["code/p1-structure-eventrefs_check.py", "code/check_refs_p1-structure.py (updated: ev ids now validated against events.json instead of forbidden)"],
+  "coverage": {
+    "events_total": 54,
+    "events_referenced": 54,
+    "events_referenced_ratio": "54/54",
+    "dangling_refs": 0,
+    "event_ref_occurrences": 760,
+    "nodes_with_empty_event_refs": 0
+  },
+  "self_check": {
+    "command": "python3 code/p1-structure-eventrefs_check.py <project_dir> --before=<pre-edit copy>",
+    "exit_code": 0,
+    "events_mapped_to_graph_and_timeline": "PASS (54/54 events referenced by >=1 graph node; placement matches story_timeline.json narrative[] scene filing)",
+    "no_dangling_event_refs": "PASS (0)",
+    "chapter_refs_valid": "PASS (240 distinct chNNN / scene / paragraph ids, 0 invalid)",
+    "edges_resolve": "PASS",
+    "structure_unchanged_vs_before": "PASS (graph compared with the pre-edit copy after removing event_refs* keys; _meta and open_questions_for_g1 excluded as they are updated by this task)",
+    "paragraph_overlap_consistency": "PASS (every event whose source range overlaps a node's cited paragraphs is in that node's event_refs; arc/foreshadowing/motif node lists include the union of their parts)",
+    "legacy_check_refs_p1-structure": "PASS (exit 0)"
+  },
+  "what_changed": [
+    "event_refs filled on acts (+ act evidence items), structure_points, arcs and every arc beat, intersections, foreshadowing (setup_ref / payoff_ref / via[] + node-level union), motifs (+ occurrences), edges, summary.frame anchors, episode_planner_hints (cliffhangers, self-contained units, load_bearing_event_refs) and realism_notes items.",
+    "Mapping rule (recorded in _meta.event_refs_policy): an event is referenced where its events.json source paragraph range overlaps the paragraphs the node cites; acts take every event in their chapter span.",
+    "A handful of nodes also carry closely linked events beyond the plain overlap, stated here for transparency: fs-020 +ev0038 (Duchess fetched from prison at ch008-p70), fs-025 +ev0051/ev0052 (verses and the verdict that never comes), fs-035 +ev0041, mo-beheading +ev0038/ev0041, mo-madness +ev0029, mo-alone-and-crying +ev0007, mo-failed-recitation +ev0042, arc-duchess-household +ev0025 (with event_refs_note).",
+    "_meta: event_refs_policy rewritten and revisions[] added. open_questions_for_g1 changed from plain strings to statused entries.",
+    "No node id, chapter/scene/paragraph citation, foreshadowing flag or structural judgement changed (verified by the structural diff)."
+  ],
+  "open_questions_for_g1": {
+    "resolved": [
+      "g1q-01 event mapping: done, 54/54 events mapped.",
+      "g1q-02 embedded retellings: timeline-story anachrony an-01..an-06 file each one under the same framing scene as the graph does."
+    ],
+    "still_open": [
+      "g1q-03 (for 01-story/event): the broken_chains entry 'ev0039 missing cause' is partly answered by the source itself (ch008-p70 'She's in prison ... fetch her here'); suggest narrowing it. events.json not edited.",
+      "g1q-04: information only; the three files agree on what the source leaves open (ev0038 = fs-021, ev0052 = fs-025, ev0014 = a setting discontinuity with no graph node)."
+    ]
+  },
+  "conflicts": [],
+  "defects_filed": [],
+  "evaluation": "skipped (quality judge = 0)",
+  "qa": "skipped (all QA dimensions = 0)",
+  "skills": "none selected for this station"
+}

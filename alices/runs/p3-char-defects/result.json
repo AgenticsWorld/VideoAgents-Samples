@@ -1,0 +1,60 @@
+{
+  "task_id": "p3-char-defects",
+  "agent": "03-characters/character-manager",
+  "run_on": "2026-09-22",
+  "status": "done",
+  "summary": "Fixed the six minor defects memory-bible re-assigned to character-manager, all in bible/characters/index.json. All fixes are inside this file's write scope; none required editing appearance.json or relationship.json (those stay owned by 03-characters/appearance and 03-characters/relationship). One new character id was registered (CHAR-duchess-baby). Five downstream handoff tickets were opened for the agents whose files now need a follow-up edit. code/p3-char-index_check.py re-run after all edits: PASS (44 ids, all unique; 14 aliases, all unambiguous; no placeholder values).",
+  "dispositions": [
+    {
+      "ticket": "DEF-p3-appearance-001",
+      "disposition": "fixed_in_index",
+      "action": "CHAR-dormouse gender -> male (reason cites ch007-p66, not inferred). CHAR-mouse gender -> male (reason cites ch002-p23, not inferred). CHAR-cheshire-cat gender -> female, 'gender' added to inferred_fields, reason set to the ruling's exact text; doubling.note and disambiguation also corrected (see DEF-p3-relationship-001 disposition, same underlying error)."
+    },
+    {
+      "ticket": "DEF-p3-appearance-201",
+      "disposition": "fixed_in_index",
+      "action": "CHAR-old-crab and CHAR-young-crab: gender -> female, 'gender' removed from inferred_fields, reason replaced with the ch003-p43 citation. CHAR-duck: gender -> male, 'gender' added to inferred_fields (was missing), reason copied from appearance.json. CHAR-lory/CHAR-eaglet/CHAR-canary/CHAR-magpie: gender set to female/female/female/male, reason text replaced with the matching appearance.json gender_note.reason."
+    },
+    {
+      "ticket": "DEF-p3-appearance-301",
+      "disposition": "fixed_in_index",
+      "action": "CHAR-executioner.performer_concept: axe/block clause replaced with the ruling's livery-and-hood text. 06-art/prop and 06-art/costume notified not to design an axe/block (qa/defects/DEF-p3-char-index-902.json)."
+    },
+    {
+      "ticket": "DEF-p3-appearance-302",
+      "disposition": "fixed_in_index",
+      "action": "CHAR-crowd-ensemble: ch006 dropped from appearances/appearance_chapters (ch004 only now); performer_concept, disambiguation and notes rewritten to state the ch006 chorus belongs to the Duchess/cook/baby, not this ensemble; gender + gender_mix set per DEF-p3-appearance-303-b. 01-story/screenplay and 09-audio/voice notified (qa/defects/DEF-p3-char-index-903.json)."
+    },
+    {
+      "ticket": "DEF-p3-appearance-303",
+      "disposition": "fixed_in_index",
+      "action": "(a) CHAR-frog-footman.factions re-pointed FAC-house-of-hearts -> FAC-duchess-household; performer_concept livery text updated; 'factions' added to inferred_fields with a cited reason. Appearance-card handoff opened (qa/defects/DEF-p3-char-index-901.json) since the coat-colour/badge change is appearance's field, not index's. (b) gender + gender_mix set on CHAR-jury-ensemble, CHAR-card-soldiers-ensemble, CHAR-royal-gardeners-ensemble, CHAR-caucus-race-party-ensemble, CHAR-visiting-monarchs-ensemble, CHAR-royal-procession-ensemble, CHAR-court-officers-ensemble, CHAR-crowd-ensemble, each from its own appearance.json; 'gender' added to inferred_fields on all but jury-ensemble (sourced, not inferred)."
+    },
+    {
+      "ticket": "DEF-p3-relationship-001",
+      "disposition": "fixed_in_index",
+      "action": "(a) Same frog-footman faction fix as DEF-p3-appearance-303-a; relationship.json's existing CHAR-duchess -> CHAR-frog-footman edge already matches, no relationship.json change needed (noted in handoff ticket for their own closure). (b) CHAR-cheshire-cat.doubling.note and disambiguation corrected to drop the stale 'Dinah has a CRE-* id' claim; the same claim in _meta.layer_enum.both-echo was also corrected for file-wide consistency (not explicitly requested but the same substantive error, inside this file, so folded in). (c) New id CHAR-duchess-baby registered per the ruling (human infant performer, SUP-006, FAC-duchess-household, tier extra, layer dream, first_appearance ch006-p19); gender left 'unspecified' with inferred_fields=['gender'] and a reason explaining it is pending 03-characters/appearance's concrete value, matching how every other now-fixed entry in this batch originally worked. _meta.counts updated (total 43->44, extra 24->25). Handoffs opened for appearance (card), creature (CRE-id question on the p49 pig trot-off), and relationship (the two new edges) — qa/defects/DEF-p3-char-index-901.json, -904.json, -905.json."
+    }
+  ],
+  "new_registration": {
+    "id": "CHAR-duchess-baby",
+    "reason": "DEF-p3-relationship-001-c: on-screen for a full scene (ch006-p19..p49), handled by Alice, needed a valid CHAR-* anchor before relationship.json could add its two edges. Registered as a human performer per precedent P-007 cited in the ruling, not as a creature (see also DEF-p3-char-index-905.json for the open p49 pig-trot-off CRE-id question)."
+  },
+  "handoff_tickets_opened": [
+    { "id": "DEF-p3-char-index-901", "assigned_to": "03-characters/appearance", "about": "CHAR-duchess-baby appearance card (new); CHAR-frog-footman livery recolour" },
+    { "id": "DEF-p3-char-index-902", "assigned_to": ["06-art/prop", "06-art/costume"], "about": "no axe/block for CHAR-executioner" },
+    { "id": "DEF-p3-char-index-903", "assigned_to": ["01-story/screenplay", "09-audio/voice"], "about": "ch006 chorus reattribution (Duchess + cook + baby, not crowd-ensemble)" },
+    { "id": "DEF-p3-char-index-904", "assigned_to": "03-characters/relationship", "about": "add CHAR-duchess -> CHAR-duchess-baby and CHAR-alice -> CHAR-duchess-baby edges" },
+    { "id": "DEF-p3-char-index-905", "assigned_to": "04-creatures/creature", "about": "confirm whether the ch006-p49 pig trot-off needs a linked CRE-* id" }
+  ],
+  "out_of_scope_not_edited": [
+    "bible/characters/*/appearance.json (03-characters/appearance's file — read only, to source exact gender values/reasons/wordings to mirror)",
+    "bible/characters/relationship.json (03-characters/relationship's file)",
+    "bible/dictionary.json TERM-0039 category label ('creature') — flagged in the new CHAR-duchess-baby entry's notes, not corrected here"
+  ],
+  "machine_check": {
+    "script": "code/p3-char-index_check.py",
+    "result": "PASS",
+    "details": "ids_unique (44 ids); forward_refs_pending coverage (25 ids); alias_unambiguous (14 aliases); no_unknown_placeholder"
+  }
+}

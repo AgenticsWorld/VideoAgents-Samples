@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh038",
+  "group_id": "grp014",
+  "scene_no": "S05",
+  "duration_s": 6.0,
+  "size": "medium",
+  "movement": "track_lateral",
+  "direction": "abeam, travelling with her back northward along the locked doors of the west wall — the sh034 axis reversed",
+  "speed": "about 0.5 m/s, her walk from one lock to the next; two attempts inside the move",
+  "speed_curve": "linear",
+  "rig": "dolly",
+  "lens_mm": 40,
+  "camera_height_m": 1.3,
+  "angle": "level",
+  "rack_focus": "none",
+  "start_frame": "Travelling medium abeam on the sh034 axis: the golden key pinched between her finger and thumb, lifting toward the first great iron keyhole, the horseshoe arch behind her.",
+  "end_frame": "The same framing two door bays on: the key hopelessly small in a keyhole four times its size, her hand dropping away, the next identical lock already entering frame.",
+  "constraint_honoured": "'Two attempts inside the move and then out. The scale joke is in the frame, not in the number of tries' — and 'on the same axis as sh034 so the failure rhymes with the first pass'.",
+  "movement_note": "Licensed move (a). Same lens, height and rate as sh034 so the two passes read as one continuous defeat rather than two different shots.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

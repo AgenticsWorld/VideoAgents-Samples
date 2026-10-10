@@ -1,0 +1,10 @@
+{
+  "task_id": "p2-merge",
+  "skipped": true,
+  "reason": "quality judge=0",
+  "auto": {
+    "cross_refs_valid_all_namespaces": "PASS",
+    "no_unknown_placeholder": "PASS",
+    "dictionary_hit_100pct": "FAIL (17 designed real-world names pending H1 frame ruling, DEF-p2-bible-005)"
+  }
+}

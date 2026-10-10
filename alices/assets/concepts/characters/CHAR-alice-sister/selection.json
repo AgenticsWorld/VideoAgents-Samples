@@ -1,0 +1,65 @@
+{
+  "character_id": "CHAR-alice-sister",
+  "task_id": "p4-char-concept-cb1",
+  "sheet": "sheet.png",
+  "variants": [],
+  "self_check": {
+    "sheet.png": {
+      "layout": "PASS: four panels, one figure each, plain backdrop.",
+      "appearance_field_hits": {
+        "gender_female_teen": true,
+        "hair_darker_brown_centre_parting_low_chignon_hairnet": true,
+        "eyes_grey_blue_calm_heavy_lidded": true,
+        "longer_oval_face_straight_nose_brows": true,
+        "fair_pale_skin": true,
+        "slender_graceful": true,
+        "cloth_bound_book_mark": true
+      },
+      "costume_COS-003_hits": {
+        "lilac_grey_muslin_white_sprig": true,
+        "small_round_white_collar": true,
+        "narrow_white_cuffs_long_coat_sleeves": "partial",
+        "narrow_matching_belt": true,
+        "ankle_length_skirt_over_modest_crinoline": true,
+        "white_stockings_black_kid_ankle_boots": true,
+        "bare_headed": true
+      },
+      "style": "PASS",
+      "defects": [
+        "Sleeves are three-quarter open (pagoda) sleeves over white undersleeves rather than long close coat sleeves with narrow white cuffs (minor).",
+        "Book shown only in the front view (acceptable: hand prop)."
+      ]
+    }
+  },
+  "rerolls": [],
+  "costume_sheets": {
+    "sheet_COS-004.png": {
+      "task_id": "p4-costume-sheet",
+      "agent": "06-art/costume-concept",
+      "costume_ref": "COS-004",
+      "status": "final (kept; reroll budget 0)",
+      "self_check": {
+        "layout": "PASS",
+        "identity": "PASS (same face, hair, build as sheet.png)",
+        "costume_hits": {
+          "lilac_grey_sprigged_muslin_dress": true,
+          "small_round_white_collar": true,
+          "long_coat_sleeves": true,
+          "ankle_length_skirt": true,
+          "modest_cage_crinoline": "partial (skirt full but little crinoline spread)",
+          "charcoal_wool_shawl_over_shoulders": true,
+          "shawl_pinned_at_breast": "partial (shawl is knotted/gathered at the breast, no visible pin)",
+          "small_dark_grey_silk_bonnet_tied_under_chin": true,
+          "black_kid_gloves": true,
+          "black_kid_ankle_boots": true
+        },
+        "style": "PASS"
+      },
+      "defects": [
+        "minor: crinoline spread is slight rather than a modest cage crinoline",
+        "minor: the shawl is gathered in a knot at the breast rather than pinned"
+      ]
+    }
+  },
+  "costume_rerolls": []
+}

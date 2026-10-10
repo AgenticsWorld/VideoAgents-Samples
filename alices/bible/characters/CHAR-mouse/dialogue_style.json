@@ -1,0 +1,106 @@
+{
+  "character_id": "CHAR-mouse",
+  "name": "The Mouse",
+  "source_language": "en",
+  "source_speaker_labels": ["Mouse"],
+  "produced_by_task": "p3-dialogue-style-pb2",
+  "register": {
+    "level": "touchy, self-important schoolroom pedant: the 'person of authority' at the pool's bank who treats a dry history primer as a remedy and any slip as a personal insult",
+    "summary": "Two gears only. When he holds the floor he talks like a lecturing usher (Ahem!, Silence all round, if you please!, I proceed) and reads out textbook history. When crossed he flares into short, shrill, offended exclamations and stalks off. Cats and dogs are an unspeakable subject. Per SUP-002 (amended BIB-0027) he is a photoreal CGI mouse; the words stay those of a prim little gentleman, never a squeaking animal (species vocalisation at most a light tic under normal speech).",
+    "examples": [
+      { "ref": "ch003-d0004", "chapter": 3, "text": "are you all ready? This is the driest thing I know. Silence all round, if you please!" },
+      { "ref": "ch002-d0046", "chapter": 2, "text": "As if I would talk on such a subject! Our family always hated cats: nasty, low, vulgar things! Don't let me hear the name again!" },
+      { "ref": "ch003-d0055", "chapter": 3, "text": "You insult me by talking such nonsense!" }
+    ]
+  },
+  "catchphrases": [
+    { "text": "I beg your pardon! / Did you speak? (icy politeness that is really a rebuke)", "freq": "medium", "count_in_source": 3, "example_refs": ["ch003-d0006", "ch003-d0007", "ch003-d0009"], "example_chapters": [3] },
+    { "text": "cats (and dogs) as a family-honour taboo", "freq": "high", "count_in_source": 4, "example_refs": ["ch002-d0039", "ch002-d0046", "ch002-d0052"], "example_chapters": [2] },
+    { "text": "my history / a long and a sad tale", "freq": "medium", "count_in_source": 2, "example_refs": ["ch002-d0052", "ch003-d0043"], "example_chapters": [2, 3] },
+    { "text": "Ahem! … I proceed.", "freq": "medium", "count_in_source": 2, "example_refs": ["ch003-d0003", "ch003-d0010"], "example_chapters": [3] }
+  ],
+  "sentence_style": {
+    "length": "bimodal: clipped rebukes of 1-6 words (Ahem! / Did you speak? / I had not!) against long quoted primer passages of 30-40 words; mean 11.9 words (median 7) over 22 spoken lines",
+    "mean_words": 11.9,
+    "patterns": [
+      {
+        "rule": "Lecturer's command of the room: calls to order and procedural phrases (Sit down, listen to me, Silence all round, if you please, are you all ready, I proceed).",
+        "examples": [
+          { "ref": "ch003-d0002", "chapter": 3, "text": "Sit down, all of you, and listen to me! I'll soon make you dry enough!" },
+          { "ref": "ch003-d0004", "chapter": 3, "text": "are you all ready? This is the driest thing I know. Silence all round, if you please!" },
+          { "ref": "ch003-d0010", "chapter": 3, "text": "—I proceed. 'Edwin and Morcar, the earls of Mercia and Northumbria, declared for him…'" }
+        ]
+      },
+      {
+        "rule": "Quotes schoolbook English history (the Norman Conquest) word for word as if it were a treatment; the matter is dry, formal, full of earls, archbishops, crowns and usurpation.",
+        "examples": [
+          { "ref": "ch003-d0004", "chapter": 3, "text": "'William the Conqueror, whose cause was favoured by the pope, was soon submitted to by the English…'" },
+          { "ref": "ch003-d0016", "chapter": 3, "text": "'—found it advisable to go with Edgar Atheling to meet William and offer him the crown…'" }
+        ]
+      },
+      {
+        "rule": "Offence taken at once and stated as an exclamation: flat contradiction, accusation of inattention or insult, then withdrawal (You are not attending! / I had not! / You insult me…).",
+        "examples": [
+          { "ref": "ch003-d0047", "chapter": 3, "text": "You are not attending!" },
+          { "ref": "ch003-d0051", "chapter": 3, "text": "I had not!" },
+          { "ref": "ch003-d0054", "chapter": 3, "text": "I shall do nothing of the sort," }
+        ]
+      },
+      {
+        "rule": "Pedantic echo: throws the challenger's own word back, then lectures them on its meaning (Found it, … of course you know what 'it' means).",
+        "examples": [
+          { "ref": "ch003-d0012", "chapter": 3, "text": "Found it," },
+          { "ref": "ch003-d0013", "chapter": 3, "text": "of course you know what 'it' means." }
+        ]
+      },
+      {
+        "rule": "Points of order raised with 'But … must …' when a procedure is being settled.",
+        "examples": [
+          { "ref": "ch003-d0035", "chapter": 3, "text": "But she must have a prize herself, you know," }
+        ]
+      }
+    ]
+  },
+  "vocabulary": {
+    "signature_words": ["Ahem", "if you please", "I proceed", "I beg your pardon", "attending", "insult", "nonsense", "history", "our family", "nasty, low, vulgar"],
+    "preferred_fields": ["English history primer (William the Conqueror, earls, archbishop, crown)", "classroom discipline", "family honour and offence", "(recited) law-court words: law, trial, jury, judge, prosecute, condemn — only inside his tale"],
+    "examples": [
+      { "ref": "ch003-d0043", "chapter": 3, "text": "Mine is a long and a sad tale!" },
+      { "ref": "ch003-d0046", "chapter": 3, "text": "Fury said to a mouse… 'Let us both go to law: I will prosecute you.' (recited tale, verse)" }
+    ]
+  },
+  "address": {
+    "self": "I; 'our family' when honour is at stake; stressed I (As if I would…)",
+    "to_alice": "you, and once the condescending 'my dear' while lecturing (How are you getting on now, my dear?)",
+    "to_group": "all of you / if you please (a master to a class)",
+    "examples": [
+      { "ref": "ch003-d0016", "chapter": 3, "text": "…How are you getting on now, my dear?" },
+      { "ref": "ch003-d0002", "chapter": 3, "text": "Sit down, all of you, and listen to me!" }
+    ]
+  },
+  "interjections": ["Ahem!", "We indeed!", "Not like cats!"],
+  "recitation_repertoire": [
+    { "ref": "ch003-d0046", "chapter": 3, "title": "the tale of Fury and the mouse (shaped like a tail in the source)", "note": "type verse: excluded from the back-test denominator; staged as spoken tale, no narration" }
+  ],
+  "forbidden_words": [
+    { "domain": "post-1862 slang / modern chat register", "regex": "\\b(okay|ok|cool|guys?|awesome|yeah|yep|nope|gonna|wanna|gotta|kinda|sorta|totally|literally|dude)\\b", "reason": "period drama, 1862" },
+    { "domain": "low or rustic speech", "regex": "\\b(ain't|yer|ye|'em|summat|reckon|me old)\\b", "reason": "he despises what is 'low, vulgar' (ch002-d0046); his English is prim and bookish, the opposite of Bill's or the Gryphon's dialect" },
+    { "domain": "fond or neutral talk of cats and dogs", "regex": "\\b(nice|dear|lovely|sweet|pretty|good) (cats?|kitt(y|ens?)|pussy|dogs?|terriers?)\\b|\\b(pussy|kitty|puppy|doggie)\\b", "reason": "the subject is taboo; he only ever names cats/dogs with loathing (ch002-d0039, d0046, d0052)" }
+  ],
+  "drift": [
+    { "from_chapter": 2, "to_chapter": 2, "change": "In the pool: shrill, passionate and trembling; short exclamations and a hostile rhetorical question.", "examples": ["ch002-d0039", "ch002-d0040", "ch002-d0046"] },
+    { "from_chapter": 2, "to_chapter": 3, "change": "Reaching the bank (from ch002-d0052 on) he recovers his dignity and takes the chair: long, formal, lecturing lines and calls to order.", "examples": ["ch002-d0052", "ch003-d0002", "ch003-d0004"] },
+    { "from_chapter": 3, "to_chapter": 3, "change": "From the tale onward (ch003-d0043) the pompous lecturer collapses back into offended one-liners and he walks off; he is never heard again (only glimpsed splashing in the sister's reverie, ch012-p69).", "examples": ["ch003-d0047", "ch003-d0051", "ch003-d0055"] }
+  ],
+  "backtest_markers": [
+    { "id": "M1", "rule_ref": "sentence_style.patterns[0] calls to order", "weight": 3, "regex": "\\b(ahem|sit down|listen to me|silence all round|if you please|are you all ready|I proceed|driest thing|dry enough)\\b" },
+    { "id": "M2", "rule_ref": "sentence_style.patterns[1] history primer", "weight": 4, "regex": "\\b(william|conqueror|mercia|northumbria|archbishop|earls|normans|stigand|atheling|usurpation)\\b" },
+    { "id": "M3", "rule_ref": "catchphrases cats and dogs", "weight": 4, "regex": "\\b(cats?|dogs?)\\b" },
+    { "id": "M4", "rule_ref": "catchphrases icy politeness", "weight": 3, "regex": "^(I beg your pardon|did you speak|I thought you did)\\b" },
+    { "id": "M5", "rule_ref": "sentence_style.patterns[2] offence", "weight": 3, "regex": "\\b(not attending|what are you thinking of|insult|nonsense|nothing of the sort|we indeed|as if I would|hated|vulgar)\\b|\\bnot!$" },
+    { "id": "M6", "rule_ref": "catchphrases my history / tale", "weight": 3, "regex": "\\b(my history|sad tale|our family)\\b" },
+    { "id": "M7", "rule_ref": "sentence_style.patterns[3] pedantic echo", "weight": 3, "regex": "^found it\\b|what 'it' means" },
+    { "id": "M8", "rule_ref": "sentence_style.patterns[4] points of order", "weight": 2, "regex": "^but\\b.*\\bmust\\b" }
+  ],
+  "backtest": {"method": "marker-claim back-test (shared yardstick with pb1 and 01-story/dialogue-rewrite): a spoken source line hits when it matches >=1 backtest_markers regex and no forbidden_words regex; verse excluded; full definition runs/p3-dialogue-style-pb2/result.json#backtest_method", "script": "code/p3-dialogue-style-pb1_backtest.py", "run_on": "2026-09-22", "threshold": 0.8, "hit_rate": 1.0, "sample_size": 22, "source_lines_total": 23, "coverage_of_spoken_lines": 1.0, "verse_excluded": 1, "forbidden_violations_in_source": 0, "cross_claim_rate": 0.048, "lift": 20.68, "attribution_top1_rate": 0.727, "misses": [], "pass": true}
+}

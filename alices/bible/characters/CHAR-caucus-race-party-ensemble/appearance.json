@@ -1,0 +1,58 @@
+{
+  "character_id": "CHAR-caucus-race-party-ensemble",
+  "card_type": "ensemble",
+  "tier": "extra",
+  "layer": "dream",
+  "revision": { "change_id": "BIB-0027", "task_id": "p4-cr-appearance", "date": "2026-09-23", "note": "Slots rewritten from animal-coded human performers to photoreal CGI animals." },
+  "rendering": {
+    "mode": "photoreal_cgi_animal",
+    "rule": "bible/cultivation.json SUP-002 (amended BIB-0027)",
+    "composition": { "cgi_animals": 6, "human_performers": 0 },
+    "limits": "Every member is a real species in natural anatomy, with no clothing or props apart from the comfit prize. There are no humans in this group."
+  },
+  "headcount": {
+    "range": [4, 6],
+    "note": "Only the unnamed remainder: the named Mouse, Dodo, Duck, Lory, Eaglet, Canary, Magpie, old Crab and young Crab have their own cards. 'Several' is kept small so the named members stay readable in the circle.",
+    "source_chapter": "ch002", "paragraph": "ch002-p26",
+    "quote": "there were a Duck and a Dodo, a Lory and an Eaglet, and several other curious creatures"
+  },
+  "gender": "female",
+  "gender_note": { "inferred": true, "reason": "Source gives no genders. The unnamed remainder is designed majority-female (4 of 6 slots) to balance the party. The group is mixed; use gender_mix per slot. Gender matters for voice only (plumage follows the slot's sex where the species differs)." },
+  "gender_mix": { "female": 4, "male": 2 },
+  "slots": [
+    { "slot": "C01", "type": "cgi_animal", "species": "moorhen (Gallinula chloropus)", "gender": "female", "persona_age": "40-50", "look": "plump sooty-black and dark olive bird, red frontal shield and yellow-tipped bill, white flank stripe, long green legs, nervous tail-flicking bob", "size_cm": "about 33 long" },
+    { "slot": "C02", "type": "cgi_animal", "species": "coot (Fulica atra)", "gender": "male", "persona_age": "55-65", "look": "slate-black bird with a white bill and bald-looking white frontal shield, lobed grey-green feet, red eye", "size_cm": "about 38 long" },
+    { "slot": "C03", "type": "cgi_animal", "species": "water vole (Arvicola amphibius)", "gender": "female", "persona_age": "18-25", "look": "round, blunt-nosed rodent with glossy chestnut-brown fur, small ears hidden in fur, furry tail", "size_cm": "about 20 body" },
+    { "slot": "C04", "type": "cgi_animal", "species": "wren (Troglodytes troglodytes)", "gender": "female", "persona_age": "10-14", "look": "tiny round brown bird with fine dark barring and a cocked-up tail", "size_cm": "about 10 long" },
+    { "slot": "C05", "type": "cgi_animal", "species": "grey heron (Ardea cinerea)", "gender": "male", "persona_age": "50-60", "look": "very tall grey bird, black streak over the eye into a crest plume, long patient S-necked stance, dagger yellow bill", "size_cm": "about 90 standing" },
+    { "slot": "C06", "type": "cgi_animal", "species": "sand martin (Riparia riparia)", "gender": "female", "persona_age": "25-35", "look": "slim brown-backed swallow with white underparts and a brown breast band", "size_cm": "about 12 long" }
+  ],
+  "slots_inferred": true,
+  "slots_reason": "Source names no species for the rest. All are Thames-backwater birds and animals because the pool of tears echoes the reedy river backwater of the waking frame (SUP-007, ruling 5.2 A). No species already cast as a named character is used.",
+  "hair": { "coat": "feathers or fur per slot", "value": "shared state: soaked, plumage draggled and fur clinging close, dripping", "source_chapter": "ch003", "paragraph": "ch003-p01", "quote": "the birds with draggled feathers, the animals with their fur clinging close to them, and all dripping wet, cross, and uncomfortable" },
+  "eyes": { "value": "species-natural per slot (red in moorhen and coot, dark in the rest)", "inferred": true, "reason": "Species." },
+  "face": { "value": "wet, cold, cross; ruffled and shaking water off; later fluffed and dry after running", "source_chapter": "ch003", "paragraph": "ch003-p01", "quote": "all dripping wet, cross, and uncomfortable" },
+  "build": {
+    "height_range_cm": [8, 95],
+    "body_type": "species-true per slot (wren and sand martin tiny; heron towering)",
+    "scale_reference": "Alice is shrunk at the pool (SUP-003). At species-true size the heron is the one member taller than her; the wren and sand martin are tiny at her feet.",
+    "inferred": true,
+    "reason": "Species-true sizes."
+  },
+  "base_age_range": "10-65 (persona age per slot)",
+  "base_age_inferred": true,
+  "base_age_reason": "Persona ages for voice casting only; every animal is an adult of its species except the wren's slot, which has no visible juvenile marker.",
+  "marks": [ { "type": "wet state", "position": "whole figure", "description": "sodden plumage and fur, water dripping, until the race dries them", "source_chapter": "ch003", "paragraph": "ch003-p01", "quote": "all dripping wet" } ],
+  "signature_items": [
+    { "item": "one comfit each (prize from Alice's box), taken in beak or forepaws", "source_chapter": "ch003", "paragraph": "ch003-p23", "quote": "and handed them round as prizes. There was exactly one a-piece, all round." }
+  ],
+  "default_outfit_tone": "none: no clothing on any member; the palette is their natural river colours (sooty black, slate, reed brown, chestnut, grey, white)",
+  "default_outfit_tone_source": { "inferred": true, "reason": "Per SUP-002 (BIB-0027) the old 1862 day-dress reading is dropped; the text gives them no clothes." },
+  "variation_rules": [
+    "Palette stays cooler and duller than the named members so the Dodo, Lory, Duck, Eaglet etc. stand out in the circle.",
+    "All wet at arrival (ev0010/ev0011); progressively drier after the race.",
+    "They scatter together when Alice mentions Dinah (ev0013): birds take off, the vole dives into the water."
+  ],
+  "doubling": { "value": "none", "reason": "Not part of any H1 ruling 5.3 B doubling pair." },
+  "prompt_summary_en": "A small bedraggled group of photoreal wild river animals on a muddy pool bank, all soaking wet: a sooty moorhen with a red bill shield, a slate-black coot with a white bill shield, a glossy chestnut water vole, a tiny barred brown wren with cocked tail, a tall grey heron with black eye-stripe and crest plume, a slim brown-and-white sand martin, feathers draggled and fur clinging, natural animal anatomy, live-action film plate"
+}

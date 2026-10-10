@@ -1,0 +1,44 @@
+{
+  "defect_id": "DEF-p4-char-302",
+  "opened_by": "06-art/character-concept",
+  "task_id": "p4-char-concept-cb3",
+  "opened": "2026-09-23",
+  "severity": "minor",
+  "status": "closed",
+  "route_to": "00-orchestration/memory-bible -> 03-characters/appearance / 06-art/costume",
+  "title": "CHAR-frog-footman waistcoat: appearance.json says mottled olive-green satin, costumes.json COS-036 says plain buff wool",
+  "evidence": [
+    {
+      "file": "bible/characters/CHAR-frog-footman/appearance.json",
+      "field": "default_outfit_tone",
+      "value": "... over a mottled olive-and-moss-green satin waistcoat and cream knee-breeches ..."
+    },
+    {
+      "file": "bible/characters/CHAR-frog-footman/appearance.json",
+      "field": "prompt_summary_en",
+      "value": "... a mottled olive-green satin waistcoat ..."
+    },
+    {
+      "file": "bible/costumes.json",
+      "field": "CHAR-frog-footman COS-036 visual_en",
+      "value": "... a plain buff wool waistcoat, cream knee breeches ..."
+    }
+  ],
+  "problem": "The two Bible sources give the default waistcoat different colours and fabrics. Downstream prompts that quote appearance.prompt_summary_en would put a green waistcoat on a figure whose sheet shows buff.",
+  "workaround_in_this_task": "The sheet follows costumes.json COS-036 visual_en verbatim (SOUL: sheet outfit = costumes.json default outfit). The sheet shows a buff wool waistcoat. No Bible file edited.",
+  "suggested_fix": "Align appearance.json default_outfit_tone and prompt_summary_en to COS-036 (buff wool), or have costume change COS-036 if green satin is intended; then this sheet would need a rerun at user discretion.",
+  "decision_owner": "03-characters/appearance with 06-art/costume",
+  "resolution": {
+    "change_id": "BIB-0029",
+    "task_id": "p4-h2-bible",
+    "arbitrated_by": "00-orchestration/memory-bible",
+    "date": "2026-09-23",
+    "authority": "H2 art-style lock, gate G4, approval ba96732d (runs/g4/gate.json)",
+    "decision": "Align appearance.json to costumes.json COS-036 and the H2-locked sheet: a plain buff wool waistcoat.",
+    "reasoning": "The sheet was drawn from COS-036 visual_en as the order requires, and buff keeps the waistcoat from merging into the olive-green frog skin. costumes.json stays the wardrobe authority for prompts (runs/g4/gate.json DEF-p4-costume-sheet-901 waiver). The mottled olive-and-moss-green satin reading is superseded, not carried as a variant: it was an inferred colour with no source anchor.",
+    "writes": [
+      "bible/characters/CHAR-frog-footman/appearance.json: default_outfit_tone, prompt_summary_en, signature_items[0], default_outfit_tone_source.reason; anatomy_proposal.status pending_H2 -> approved_H2 (Option A)",
+      "bible/costumes.json COS-036: pending_H2 -> resolved_H2"
+    ]
+  }
+}

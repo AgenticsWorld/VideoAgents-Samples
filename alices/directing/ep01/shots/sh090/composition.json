@@ -1,0 +1,34 @@
+{
+  "shot_id": "sh090",
+  "scene_id": "SCN-long-hall",
+  "size": "medium",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "centre",
+    "anchor_xy": [0.44, 0.56],
+    "size_in_frame": "about 0.60 of frame height, arriving and stopping inside the frame"
+  },
+  "second_subject": {
+    "id": "little_door",
+    "grid": "mid_right",
+    "anchor_xy": [0.62, 0.50],
+    "note": "shoulder-high to her now, about 0.34 of frame height. At 0.61 m the fifteen-inch door is once again a thing she has to reach up to."
+  },
+  "headroom": "about 0.12 of frame height for her, with the low curtain hanging above like a proscenium to the top edge — the same device as sh051, but she is smaller under it now and the curtain reads as taller.",
+  "horizon_eyeline": "Same axis as sh089, static now, lens 0.50 m. The waterline runs across at 0.82 of frame height, thinning as she splashes clear of it. Her eyeline is at 0.50, level with the door's lock.",
+  "layers": {
+    "fg": "the last of the shallow water and wet flagstone at the bottom edge",
+    "mg": "Alice hauling at the little door with both hands",
+    "bg": "the low curtain hanging above and the honey limestone wall"
+  },
+  "gaze": {
+    "direction": "frame_right",
+    "lead_room": "none",
+    "note": "she looks at the door, which is immediately in front of her, and there is nothing beyond it in frame. Discovery and defeat land in the same composition because the frame offers nowhere else to look."
+  },
+  "balance": "Figure left of centre, door right of centre, curtain above both — a closed triangle with no opening in it.",
+  "leading_lines": "The curtain folds fall as verticals to the door head; the arch curves under them. Everything points down at a door that does not give.",
+  "eye_first": "Her hands on the door, then the door, unmoved.",
+  "safe_area_ok": true,
+  "constraint_binding": "Run and discovery of the shut door in one move, no second look back: the shot's end frame is the failure, so the composition settles on it and no reaction angle or reframe is provided."
+}

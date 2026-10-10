@@ -1,0 +1,26 @@
+{
+  "id": "DEF-p4-creature-401",
+  "opened_by": "06-art/creature-concept",
+  "opened_on": "2026-09-23",
+  "task_id": "p4-creature-concept",
+  "domain": "creature",
+  "severity": "minor",
+  "status": "closed",
+  "closed_on": "2026-09-23",
+  "closed_by": "04-creatures/creature",
+  "resolution": "Resolved by the H2 signature at G4 (approval ba96732d, runs/g4/gate.json approved_design_proposals[id=style.json open_points_pending_H2 #3]): 'The Duchess's baby is a human infant performer; in the pig end-state it becomes a photoreal CGI piglet IN THE SAME SWADDLING, revealed inside one continuous held shot (hidden cut or cloth-and-framing change, no morph), then trotting off naturally into the wood.' Option B adopted. bible/creatures/creature.json CRE-007 amended (change_id BIB-0032, renumbered from BIB-0029 by BIB-0033 / DEF-p4-creature-404) to match verbatim in meaning: rendering.status confirmed_by_H2, forms[0].appearance.surface/head/marks now describe the retained swaddling cloth through the reveal, design_proposal rewritten to the hidden-cut/cloth-and-framing model (no gradual drift, no morph). assets/concepts/creatures/CRE-007/sheet.png is unchanged (no re-roll — reroll budget 0); a future re-roll or any p7-prompt use of this card must carry the amended wording.",
+  "assigned_to": ["user (H2 ruling at G4)", "04-creatures/creature", "06-art/art-director", "03-characters/appearance (CHAR-duchess-baby)"],
+  "summary": "CRE-007 pig end-state: the H2 proposal and the creature card disagree on whether the piglet still wears the infant's swaddling.",
+  "evidence": [
+    { "file": "bible/style.json", "path": "open_points_pending_H2[id=H2-non-speaking-animals].proposal", "text": "in its pig end-state it becomes a photoreal CGI piglet in the same swaddling, revealed within the one continuous held shot of SUP-006 (hidden-cut or cloth-and-framing change, no morph)" },
+    { "file": "bible/creatures/creature.json", "path": "CRE-007.forms[0].appearance.marks[1]", "text": "no clothing or swaddling carries over: whatever wrap or gown the infant wore is understood to fall away within the same continuous shot" },
+    { "file": "bible/creatures/creature.json", "path": "CRE-007.design_proposal", "text": "the CGI take-over begins subtly in the shot's final section ... (gradual drift, SUP-006)" }
+  ],
+  "secondary_mismatch": "The transition method also differs: style.json says 'hidden-cut or cloth-and-framing change, no morph', while creature.json describes a gradual CGI take-over and drift of features.",
+  "current_handling": "assets/concepts/creatures/CRE-007/sheet.png follows the creature card, since form is owned by creature.json per the creature-concept SOUL: an unclothed piglet with no swaddling. The Bible was not edited.",
+  "options": [
+    "A: keep the creature card (unclothed piglet, gradual drift). art-director aligns the style.json proposal text.",
+    "B: adopt the style.json proposal (piglet in the same swaddling, hidden-cut reveal). 04-creatures/creature amends CRE-007, and creature-concept redraws the sheet or adds a swaddled variant."
+  ],
+  "due_gate": "G4 (H2)"
+}

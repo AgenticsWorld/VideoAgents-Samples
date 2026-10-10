@@ -1,0 +1,72 @@
+{
+  "id": "DEF-p4-cr-costume-001",
+  "opened_by": "06-art/costume",
+  "opened_on": "2026-09-23",
+  "task_id": "p4-cr-costume",
+  "change_request": "BIB-0027",
+  "assigned_to": [
+    "00-orchestration/orchestrator",
+    "00-orchestration/memory-bible",
+    "03-characters/appearance",
+    "04-creatures/creature",
+    "06-art/art-director"
+  ],
+  "domain": "art",
+  "status": "closed",
+  "severity": "minor",
+  "summary": "bible/costumes.json has been brought in line with BIB-0027. Three cross-file points were found and left alone because they are outside the costume scope.",
+  "findings": [
+    {
+      "id": "DEF-p4-cr-costume-001-a",
+      "files": [
+        "qa/defects/DEF-p4-costume-001.json findings a and d"
+      ],
+      "issue": "Finding a (Caterpillar gown in cornflower) and finding d (J09 juror's white coat) are about garments that no longer exist: COS-019 and COS-052 are now unclothed CGI animals.",
+      "requested_action": "orchestrator closes a and d as superseded by BIB-0027. If the Caterpillar's body colour should stay clear of Alice's cornflower accent, appearance and creature need to decide that.",
+      "status": "closed",
+      "closed_note": "orchestrator closed DEF-p4-costume-001 a/d as superseded"
+    },
+    {
+      "id": "DEF-p4-cr-costume-001-b",
+      "files": [
+        "bible/characters/CHAR-*/appearance.json for the animal-bodied characters (already listed stale in BIB-0027)",
+        "bible/style.json palette_logic.accent_rules"
+      ],
+      "issue": "Until the appearance cards are redone, they still describe human performers whose species cues come from costume (such as the White Rabbit's plum frock coat and the jurors' species waistcoats). costumes.json no longer carries those cues. style.json accent_rules also still name the Lory and the crabs as scarlet or coral costume wearers.",
+      "requested_action": "03-characters/appearance and 04-creatures/creature redo the cards in the CGI register, and the costume anatomy fit (waistcoat, tabard, livery) should be checked against their anatomy. art-director drops the Lory and crab costume mentions from accent_rules.",
+      "status": "closed_verified",
+      "closed_note": "p4-cr-appearance redid the animal appearance cards in parallel (CGI readings, old costume cues dropped)",
+      "verification": {
+        "by": "00-orchestration/memory-bible (BIB-0029, p4-h2-bible)",
+        "date": "2026-09-23",
+        "appearance_side": "VERIFIED CLEAN. Swept every animal-bodied CHAR-*/appearance.json. The p4-cr-appearance redo (BIB-0027) had already removed the human-performer and costume-cue wording: the White Rabbit's plum frock coat is gone (only the sourced waistcoat, collar/bow and the herald tabard remain), the jurors have no species waistcoats ('none: no clothing on any juror'), and the caucus, crowd, Cheshire Cat, March Hare, Dormouse, Mouse, Dodo, Lory, Duck, Eaglet, Gryphon and Mock Turtle cards all read 'no clothing' with the old garment named only in the historical reason field. The two residues found were the Magpie's exit muffler and the Fish-Footman's stockings/pumps, both fixed under DEF-p4-char-concept-201 in this same change.",
+        "style_side": "ALSO CLEAN, no hand-off needed. style.json v1.2.0 palette_logic.accent_rules no longer names the Lory or the crabs as scarlet/coral costume wearers (the four rules now cover Alice's cornflower, Hearts crimson, the fall bridge and the waking match-cut); the Lory appears only in CR-003 as a photoreal CGI animal. memory-bible read style.json but did not edit it."
+      }
+    },
+    {
+      "id": "DEF-p4-cr-costume-001-c",
+      "files": [
+        "bible/costumes.json COS-006, COS-007, COS-035, COS-036, COS-037, COS-050"
+      ],
+      "issue": "These are pending_H2 design proposals: the White Rabbit's garment set beyond the waistcoat, the Footmen's livery cut (which depends on their anatomy), the pig end-state gown, and the Tortoise's CGI register.",
+      "requested_action": "orchestrator raises them at H2 together with the Footmen anatomy and non-speaking-animal questions. costume re-cuts after the ruling.",
+      "status": "closed",
+      "resolved_at_H2": {
+        "COS-035 / COS-036": "Approved as proposed: upright livery figures with real fish / frog heads (runs/g4/gate.json proposal #1). No re-cut needed; the working visual_en stands. pending_H2 replaced by resolved_H2 in costumes.json, appearance cards aligned.",
+        "COS-037": "Approved as proposed (proposal #3): the piglet keeps the same swaddling gown, revealed inside one continuous held shot, and leaves it behind. pending_H2 replaced by resolved_H2. CRE-007 wording is 04-creatures/creature's to align (DEF-p4-creature-401).",
+        "COS-006 / COS-007 White Rabbit garment set": "NOT ruled at H2 - the signature card did not itemise it, so BIB-0029 left the entries untouched and re-flagged the item as STILL OPEN in costumes.json _meta.pending_H2. 06-art/costume to close it with 06-art/art-director or ask the user; the delivered sheet shows the waistcoat-plus-collar-and-bow reading, so nothing is blocked.",
+        "COS-050 Tortoise": "Still open and costless: only decidable if an insert is ever staged."
+      }
+    }
+  ],
+  "impact": "Nothing is blocked. Each point has a working value in costumes.json.",
+  "due_gate": "H2",
+  "resolution": {
+    "change_id": "BIB-0029",
+    "task_id": "p4-h2-bible",
+    "arbitrated_by": "00-orchestration/memory-bible",
+    "date": "2026-09-23",
+    "authority": "H2 art-style lock, gate G4, approval ba96732d (runs/g4/gate.json)",
+    "summary": "a and b verified closed (appearance sweep clean, style accent_rules already fixed - no hand-off required); c resolved by the H2 signature and folded into costumes.json, with the White Rabbit garment set re-flagged as the one item H2 did not itemise."
+  }
+}

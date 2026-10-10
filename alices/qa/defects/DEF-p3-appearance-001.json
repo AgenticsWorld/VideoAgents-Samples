@@ -1,0 +1,49 @@
+{
+  "id": "DEF-p3-appearance-001",
+  "opened_by": "03-characters/appearance",
+  "opened_on": "2026-09-22",
+  "task_id": "p3-appearance-cb1",
+  "assigned_to": "03-characters/character-manager",
+  "route_to_owner": "03-characters/character-manager",
+  "domain": "characters",
+  "status": "closed",
+  "severity": "minor",
+  "summary": "bible/characters/index.json lists gender 'unspecified' for three characters; gender must be male or female (it anchors voice casting and image generation). The appearance cards set a value; the index should match.",
+  "findings": [
+    {
+      "id": "DEF-p3-appearance-001-a",
+      "character": "CHAR-dormouse",
+      "index_value": "unspecified",
+      "appearance_value": "male",
+      "basis": "Source text: ch007-p66 'The Dormouse slowly opened his eyes. “I wasn’t asleep,” he said'; ch011-p71 'Suppress him! Pinch him! Off with his whiskers!'",
+      "inferred": false
+    },
+    {
+      "id": "DEF-p3-appearance-001-b",
+      "character": "CHAR-mouse",
+      "index_value": "unspecified",
+      "appearance_value": "male",
+      "basis": "Source text: ch002-p23 'trembling down to the end of his tail'; ch012-p69 'the frightened Mouse splashed his way through the neighbouring pool'",
+      "inferred": false
+    },
+    {
+      "id": "DEF-p3-appearance-001-c",
+      "character": "CHAR-cheshire-cat",
+      "index_value": "unspecified",
+      "appearance_value": "female",
+      "basis": "The source only ever says 'it'. Inferred from H1 ruling 5.3 B: the Cat is the dream echo of Dinah, whom Alice calls 'she' (ch002-p22).",
+      "inferred": true
+    }
+  ],
+  "impact": "voiceprint/voice casting and 06-art/character-concept read gender from both files; a mismatch lets one of them fall back to a default.",
+  "requested_action": "character-manager updates the three index.json gender values through memory-bible (WRITE_RULES.md §5 controlled change). Not edited here: index.json is outside 03-characters/appearance's write scope.",
+  "triaged_by": "00-orchestration/memory-bible",
+  "triage_task_id": "p3-bible-defects",
+  "triaged_on": "2026-09-22",
+  "routed_from": "00-orchestration/memory-bible",
+  "ruling": "Accepted. Dormouse = male (source 'his', ch007-p66; not inferred). Mouse = male (source 'his tail', ch002-p23; not inferred). Cheshire Cat = female (inferred: the source only says 'it'; derived from H1 5.3 B, where the Cat echoes Dinah, whom Alice calls 'she', ch002-p22). This follows directly from a signed ruling, so no new creative ruling is needed.",
+  "fix_instruction": "In bible/characters/index.json (your file, Phase 3, not locked): set gender 'male' on CHAR-dormouse and CHAR-mouse, cite ch007-p66 and ch002-p23, and remove 'gender' from inferred_fields if present. Set gender 'female' on CHAR-cheshire-cat, add 'gender' to inferred_fields, and set reason to 'Source uses \"it\"; female follows H1 5.3 B doubling with Dinah (\"she\", ch002-p22).' Keep values identical to the appearance cards. Then close this ticket in your result.json.",
+  "fixed_by": "03-characters/character-manager",
+  "fixed_on": "2026-09-22",
+  "fix_note": "bible/characters/index.json updated: CHAR-dormouse gender -> male (reason cites ch007-p66, not inferred); CHAR-mouse gender -> male (reason cites ch002-p23, not inferred); CHAR-cheshire-cat gender -> female, 'gender' added to inferred_fields, reason set verbatim to the ruling's text, disambiguation and doubling.note also corrected to drop the stale 'Dinah has a CRE-* id' claim (see DEF-p3-relationship-001-b). code/p3-char-index_check.py re-run: PASS (ids_unique, alias_unambiguous, no_unknown_placeholder)."
+}

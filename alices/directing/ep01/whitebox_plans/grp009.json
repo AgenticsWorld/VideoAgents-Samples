@@ -1,0 +1,313 @@
+{
+  "schema_version": "whitebox_plan.v1",
+  "group_id": "grp009",
+  "scene_id": "SCN-falling-dream",
+  "basis": "Alice holds the shaft_centre anchor and goes on drifting down at about 0.087 m/s (y 3.28 -> 2.06). sh022 is the deliberate answer to sh001: the identical camera set-up on the layout tile-8 axis with the same 1.50 m standoff and the same 0.35 m down-axis bias, and the one difference is her facing - here she turns to the bookshelf wall on screen-right (yaw -1.519) where sh001 gave her the cupboards on screen-left. sh023 repeats the sh020 straight-down POV exactly. She settles back and crosses her ankles through sh022 and is seated in mid-air from sh024, turned to the pegged wall on screen-right.",
+  "actors": [
+    {
+      "id": "CHAR-alice",
+      "kind": "person",
+      "size_m": [
+        0.378,
+        1.35,
+        0.297
+      ],
+      "keyframes": [
+        {
+          "t": 0.0,
+          "position": [
+            0.0,
+            3.28,
+            0.0
+          ],
+          "pose": "stand",
+          "yaw": -1.3438
+        },
+        {
+          "t": 1.0,
+          "position": [
+            0.322,
+            3.19,
+            0.136
+          ],
+          "pose": "stand",
+          "yaw": -1.519
+        },
+        {
+          "t": 1.8,
+          "position": [
+            0.322,
+            3.12,
+            0.136
+          ],
+          "pose": "stand",
+          "yaw": -1.519
+        },
+        {
+          "t": 2.6,
+          "position": [
+            0.322,
+            3.05,
+            0.136
+          ],
+          "pose": "stand",
+          "yaw": -1.519
+        },
+        {
+          "t": 4.4,
+          "position": [
+            0.322,
+            2.89,
+            0.136
+          ],
+          "pose": "stand",
+          "yaw": -1.519,
+          "head_pitch": -0.2
+        },
+        {
+          "t": 6.0,
+          "position": [
+            0.322,
+            2.76,
+            0.136
+          ],
+          "pose": "stand",
+          "yaw": -1.519,
+          "head_pitch": 0.0
+        },
+        {
+          "t": 7.0,
+          "position": [
+            0.26,
+            2.67,
+            0.11
+          ],
+          "pose": "stand",
+          "yaw": -1.519,
+          "head_pitch": 0.85
+        },
+        {
+          "t": 8.0,
+          "position": [
+            0.2,
+            2.58,
+            0.08
+          ],
+          "pose": "sit",
+          "yaw": 2.716,
+          "head_pitch": 0.2
+        },
+        {
+          "t": 9.0,
+          "position": [
+            0.16,
+            2.49,
+            0.06
+          ],
+          "pose": "sit",
+          "yaw": 2.716,
+          "head_pitch": 0.2
+        },
+        {
+          "t": 11.2,
+          "position": [
+            0.12,
+            2.3,
+            0.04
+          ],
+          "pose": "sit",
+          "yaw": 2.716,
+          "head_pitch": 0.1
+        },
+        {
+          "t": 12.6,
+          "position": [
+            0.1,
+            2.18,
+            0.03
+          ],
+          "pose": "sit",
+          "yaw": 2.716,
+          "head_pitch": 0.05
+        },
+        {
+          "t": 14.0,
+          "position": [
+            0.08,
+            2.06,
+            0.02
+          ],
+          "pose": "sit",
+          "yaw": 2.716,
+          "head_pitch": 0.0
+        }
+      ]
+    }
+  ],
+  "cameras": [
+    {
+      "shot_id": "sh022",
+      "start": 0,
+      "duration_s": 6.0,
+      "movement": "static",
+      "keyframes": [
+        {
+          "t": 0.0,
+          "position": [
+            -1.06,
+            3.98,
+            -0.448
+          ],
+          "target": [
+            0.322,
+            3.98,
+            0.136
+          ],
+          "fov": 46.3972
+        },
+        {
+          "t": 6.0,
+          "position": [
+            -1.06,
+            3.46,
+            -0.448
+          ],
+          "target": [
+            0.322,
+            3.46,
+            0.136
+          ],
+          "fov": 46.3972
+        }
+      ]
+    },
+    {
+      "shot_id": "sh023",
+      "start": 6.0,
+      "duration_s": 2.0,
+      "movement": "static",
+      "keyframes": [
+        {
+          "t": 0.0,
+          "position": [
+            0.572,
+            3.86,
+            0.136
+          ],
+          "target": [
+            0.572,
+            0.76,
+            0.136
+          ],
+          "fov": 33.3985
+        },
+        {
+          "t": 2.0,
+          "position": [
+            0.45,
+            3.68,
+            0.08
+          ],
+          "target": [
+            0.45,
+            0.58,
+            0.08
+          ],
+          "fov": 33.3985
+        }
+      ]
+    },
+    {
+      "shot_id": "sh024",
+      "start": 8.0,
+      "duration_s": 6.0,
+      "movement": "static",
+      "keyframes": [
+        {
+          "t": 0.0,
+          "position": [
+            0.943,
+            3.559,
+            0.415
+          ],
+          "target": [
+            0.2,
+            3.559,
+            0.08
+          ],
+          "fov": 26.9915
+        },
+        {
+          "t": 6.0,
+          "position": [
+            0.823,
+            3.039,
+            0.355
+          ],
+          "target": [
+            0.08,
+            3.039,
+            0.02
+          ],
+          "fov": 26.9915
+        }
+      ]
+    }
+  ],
+  "continuity": {
+    "actors": "inherit",
+    "camera": "cut"
+  },
+  "warnings": [
+    "sh022 reproduces the sh001 set-up: same tile-8 axis, same 28 mm, same 1.50 m standoff, same lateral offset; only the altitude band and her facing differ. No whitebox_contract match is registered because both rigs descend with the subject, which the host's static contract test cannot express.",
+    "sh023 reproduces sh020's straight-down POV offset exactly (0.25 m ahead of her on her own axis, lens 1.10 m above her feet).",
+    "Rig descends with Alice on all three shots; no pan, tilt or lens change."
+  ],
+  "issues": [
+    {
+      "issue_id": "WBI-ep01-grp009-001",
+      "kind": "model_gap",
+      "severity": "advisory",
+      "question": "Same root cause as WBI-ep01-grp001-001: sh022 is a 28 mm wide with Alice at 0.20 of frame height, which needs 7.88 m of standoff, but the modelled 2.4 m shaft allows 1.50 m, so the whitebox shows a near-full-figure frame. Ship the tighter in-model frame, or re-model the shaft first?",
+      "provisional": "Hold the tile-8 axis, the 28 mm and the 1.50 m in-model standoff - identical to sh001 so the two set-ups still read as the same image - and accept the tighter field of view.",
+      "options": [
+        {
+          "id": "remodel",
+          "label": "Re-model SCN-falling-dream at the dream shaft scale and re-stage S00/S03",
+          "consequence": "grp001/grp008/grp009/grp010 re-staged after a scene-model pass.",
+          "cost": "one scene-model re-issue",
+          "rewrites": [
+            "bible/scenes/SCN-falling-dream/whitebox.json"
+          ]
+        },
+        {
+          "id": "tight",
+          "label": "Ship the in-model frame (the default)",
+          "consequence": "sh022's camera reference is tighter than its size code, as is sh001's.",
+          "cost": "none"
+        }
+      ],
+      "recommended": "remodel",
+      "shots": [
+        "sh022"
+      ],
+      "actors": [
+        "CHAR-alice"
+      ],
+      "t_range_s": [
+        0,
+        6.0
+      ],
+      "sources": [
+        {
+          "file": "bible/scenes/SCN-falling-dream/whitebox.json",
+          "quote": "scale_basis"
+        },
+        {
+          "file": "directing/ep01/shots/sh022/composition.json",
+          "quote": "subject.size_in_frame"
+        }
+      ]
+    }
+  ]
+}

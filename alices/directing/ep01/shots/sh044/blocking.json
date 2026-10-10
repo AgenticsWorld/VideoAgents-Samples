@@ -1,0 +1,46 @@
+{
+  "shot_id": "sh044",
+  "group_id": "grp017",
+  "scene_no": "S06",
+  "scene_id": "SCN-long-hall",
+  "duration_s": 6.0,
+  "is_dialogue": true,
+  "group_position": "first shot of grp017 — Alice on her map start (curtain) and across her curtain -> glass_table line inside this shot.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "stand",
+      "start_pos": "getting up from the little door at the low curtain and walking back up the hall",
+      "space_fragment_en": "standing up from the low curtain, centred in frame, walking to the glass table and stopping at its edge facing it",
+      "facing": "down the hall toward the lens as she walks; her look drops onto the tabletop at the end of the move",
+      "path": [
+        { "t": 3.2, "to": "at the edge of the glass table, stopped" }
+      ],
+      "beats": [
+        { "t": 0.4, "action": "comes away from the curtain, half hoping for another key", "sync": "the walk" },
+        { "t": 3.2, "action": "stops short at the table", "sync": "the bottle is there" },
+        { "t": 3.8, "action": "speaks", "sync": "LN-ep01-008 begins" },
+        { "t": 5.2, "action": "her eyes narrow slightly on the bottle", "sync": "LN-ep01-008 on 'before'" }
+      ],
+      "performance": {
+        "objective": "check the table for a second key, and account for something that has no business being there",
+        "goal": "account for something that has no business being there",
+        "emotional_arc": "from tired hoping to a prim, rather affronted certainty about the facts",
+        "arc_from": "tired hoping",
+        "arc_to": "prim, affronted certainty",
+        "trigger": { "line_ref": "LN-ep01-008", "word": "before" },
+        "no_early_reaction": ["the eyes narrowing", "the chin coming up", "a hand reaching out"],
+        "forbidden_early": ["the eyes narrowing", "the chin coming up", "a hand reaching out"],
+        "end_state": "stopped at the table edge, chin slightly raised, eyes fixed down on the bottle, hands not yet moving"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": {
+    "timeline_ok": true,
+    "violations": [],
+    "story_event": "ev0004 (dream) — the DRINK ME bottle on the glass table",
+    "note": "Alice alone in the hall for the whole of S06."
+  }
+}

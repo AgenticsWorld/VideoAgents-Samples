@@ -1,0 +1,13 @@
+{
+  "task_id": "p3-relationship",
+  "run_id": "490771151d06",
+  "attempt": 1,
+  "model": "agent default",
+  "tokens": null,
+  "started_at": null,
+  "finished_at": "2026-09-22T18:32:59+08:00",
+  "inputs_sha256": {},
+  "artifact_versions": {
+    "bible/characters/relationship.json": "v1"
+  }
+}

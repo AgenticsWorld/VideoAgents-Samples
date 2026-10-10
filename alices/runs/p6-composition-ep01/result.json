@@ -1,0 +1,207 @@
+{
+  "task_id": "p6-composition-ep01",
+  "agent": "07-directing/composition",
+  "project": "alices",
+  "ep": "ep01",
+  "attempt": 1,
+  "status": "completed",
+  "finished": "2026-09-23",
+  "product": "directing/ep01/shots/<shot_id>/composition.json x 101 (sh001-sh101)",
+  "summary": "Frame composition designed for all 101 finalised ep01 shots, one file per shot, written directly in one pass. Each file states subject placement on the nine-grid plus a normalised anchor_xy, subject size in frame, headroom, horizon/eyeline level, three-plane depth layering, gaze direction and lead room, balance, leading lines and where the viewer's eye lands first, all expressed as fractions of the 16:9 frame. Both sides of match cut TR-03 (sh016 out, sh017 in) carry an explicit match_cut block. Nothing frozen was relitigated.",
+  "shared_conventions": {
+    "note": "Stated once here and deliberately NOT copied into the 101 files (SOUL.md delivery rule). Each file carries only its own shot's values.",
+    "aspect": "16:9 for every shot (bible/aspect_ratio.json master; 854x480 generation, 1920x1080 by upscale). No shot deviates.",
+    "coordinate_system": "anchor_xy and every '<n> of frame height/width' figure are fractions of the 16:9 frame with origin at top-left: x 0.0 = left edge, y 0.0 = top edge. 'grid' is the nine-cell name the anchor falls in.",
+    "grid_vocabulary": [
+      "top_left",
+      "top_centre",
+      "top_right",
+      "mid_left",
+      "centre",
+      "mid_right",
+      "bottom_left",
+      "bottom_centre",
+      "bottom_right"
+    ],
+    "gaze_direction_vocabulary": [
+      "frame_left",
+      "frame_right",
+      "to_camera",
+      "up_frame",
+      "down_frame",
+      "into_depth",
+      "none"
+    ],
+    "safe_area": "bible/aspect_ratio.json master.safe_area — action-safe 5 percent, title-safe 10 percent, top 8 / bottom 12 / left 5 / right 5 for the YouTube player UI. safe_area_ok is true on all 101 and was checked per shot; the three whitelisted lettering inserts (sh019 ORANGE MARMALADE, sh045 DRINK ME, sh057 EAT ME) state their title-safe boxes explicitly because they are the only frames in the episode carrying text that must read.",
+    "subject_id_convention": "subject.id is an entity id present in that shot's shot_list entry (CHAR-/CRE-/PROP-). For an insert whose subject is an object, the prop id is used and the people visible in frame are listed in in_frame_characters. For the six frames that legitimately contain no character (sh016 empty hedge; POVs sh020, sh023, sh041, sh096, sh101) subject.id is null and carries id_note plus, where applicable, pov_of: CHAR-alice, matching shot_list's own poses_note on those shots.",
+    "second_subject": "Optional. Its id is an entity id where the second element is an entity, a SCN layout.json landmark id where it is a scene landmark (glass_table, little_door, burrow, lamp_row is descriptive), or a short descriptive slug for a set feature that is not a registered landmark (east_wall_door_handle, vault_rib, alice_boots, the_water).",
+    "screen_direction_derivation": "Left/right calls are derived from each scene's layout.json landmark xy and the shot's camera_from/looking_at (shot_list camera_position plus the scene's views[] tile), not invented. Worked results used throughout: SCN-riverbank tile 1 (meadow to sitting_shelf, facing west) puts Alice screen-left of her sister and the willow screen-right; tile 3 (backwater to sitting_shelf, facing east) reverses it, sister screen-left. SCN-long-hall tile 1 puts the west wall and curtain screen-left, east doors screen-right; tile 5 (facing the west wall) puts the hall's north end screen-left and the glass table / curtain / south end screen-right; tile 9 (south-east doors to curtain) puts the glass table screen-left. SCN-falling-dream tile 8 (roundel wall across the shaft) puts the glazed cupboards screen-left and the bookshelves, map pegs and pantry shelf screen-right. SCN-pool-of-tears tile 1 (table legs to shore steps) puts the east doors screen-right; tile 5 puts the east doors screen-left.",
+    "authority_followed": "bible/style.json (CR-011 deep staging, layered foreground framing, centre-or-third placement, halo roundel sparingly, no Dutch, no fisheye; CR-005 size by set not effect; CR-012 lettering whitelist) > bible/scenes/<sid>/{architecture,layout}.json > bible/color_script.json (act 5 lamps out of frame and the five-percent reflection_allowance; act 3 garden green confined to the little door) > directing/ep01/directing_plan.md > directing/ep01/cinematography.json > this station."
+  },
+  "counts": {
+    "files_written": 101,
+    "shots_covered": "sh001-sh101, complete",
+    "aspect_16_9": 101,
+    "safe_area_ok_true": 101,
+    "files_with_constraint_binding": 100,
+    "files_with_match_cut_block": 2,
+    "files_with_pairs_with": 13,
+    "shots_with_no_character_in_frame": 6,
+    "defects_opened": 1,
+    "files_with_second_subject": 49
+  },
+  "match_cut_TR_03": {
+    "transition": "grp008.transition_in — match_cut, 0 s, intent dream_in, source directing_plan#TR-03",
+    "outgoing": "sh016 (S02, last frame of the waking frame)",
+    "incoming": "sh017 (S03, first frame of the dream)",
+    "matched_quantities": {
+      "element": "a dark oval — the burrow mouth in sh016, the mouth of the earth tunnel in sh017",
+      "centre_xy": [
+        0.5,
+        0.5
+      ],
+      "height_frac": 0.3,
+      "axis": "long axis horizontal and level in both",
+      "surround": "an identical pale ring in both — dug earth below and to the sides, arching hawthorn roots above",
+      "interior_value": "flat, lightless and depthless in both; sh017's oval only acquires depth after the floor tips, which is after the cut has landed"
+    },
+    "how_the_two_sides_were_composed": "sh016 was composed as the episode's one perfectly centred, perfectly static frame: the oval dead centre with equal margins above and below, every line in frame (spoil fan, root arch) terminating on it, and nothing else in the picture — so the audience's eye is parked on the oval when the cut arrives. sh015 was adjusted to hand that frame over cleanly: the widening from sh014 (where the oval is screen-right against her cheek screen-left) recentres the oval, so sh015 ends on exactly the frame sh016 then holds. sh017 was then composed to put Alice OUTSIDE the matched shape at the moment of the cut — its first frames reproduce the centred oval, ring and value with no figure in them, and she crawls up into the oval from below. The matched shape therefore never changes place or size; only its surround changes, from hot bleached grass to cold tunnel wall. No optical, no dissolve and no grade move is carried by either side: per color_script act 2 the dream grade ramps in across the fall and the register change lands about twenty seconds later, so both compositions are photographically identical in contrast and key.",
+    "carried_forward": "sh013's constraint ('already framed to rhyme with the earth tunnel of S03') was honoured three shots early by giving the burrow the root-arch lintel, pale spoil ring and flat black interior that sh017 then repeats, so the cut has a grammar and not merely an alignment."
+  },
+  "shots_where_the_constraint_field_dictated_the_frame": {
+    "note": "100 of 101 files carry a constraint_binding field (sh002 is the exception: it has no constraint in shot_list and carries an 'unresolved' field instead). These are the cases where the director's locked instruction determined a compositional decision that would otherwise have gone the other way.",
+    "locked_and_repeated_frames": [
+      "sh001 / sh022 — 'Locked, no camera move' plus 'must read as a later moment of the same descent'. Composed as one reproduced frame: identical anchor_xy [0.50, 0.27], identical subject scale and headroom. The only licensed differences are the dressing and her gaze, which is frame_left to the cupboards in sh001 and frame_right to the bookshelves in sh022 — derived from the layout, since those two walls sit on opposite sides of the tile-8 axis.",
+      "sh020 / sh023 — 'the repetition is the measurement'. Same vanishing point [0.50, 0.55], held deliberately off dead centre so the frame reads as a measurement rather than a stock POV; sh023 is sh020 with both incidents removed (the jar at the top, the glint at the bottom) and nothing added to compensate.",
+      "sh034 / sh038 — 'the failure rhymes with the first pass'. Same axis and same framing values; travel direction reversed, so she moves screen-left-to-right down the west wall in sh034 and screen-right-to-left back along it in sh038. That reversal is what makes the second pass a return rather than a new attempt.",
+      "sh078 / sh079 / sh080 / sh082 — 'returning to the identical frame is what makes the aria read as one continuous thing'. Subject placement, scale, headroom, eyeline height, waterline height and lighting reproduced across all four.",
+      "sh086 / sh087 — 'must stay in one group and be readable as the same continuous frame'. Identical axis, scale and placement; only the fan leaving and the table edge stopping differ.",
+      "sh089 — 'the same wall now takes three times as long to pass'. The sh034 composition reproduced with ONLY the lens height changed (1.30 m to 0.55 m), so the difference the audience reads is scale and nothing else."
+    ],
+    "unbroken_takes": [
+      "sh025 — 'MUST NOT BE CUT INSIDE'. The composition is built so an internal cut is visibly impossible: one profile, no second element, no alternate size, no reframe, and the background empties to black around an unchanged face.",
+      "sh048 — 'the frame DOES NOT MOVE for twelve seconds; the change is read off the set'. This dictated the placement: she is positioned so that at 1.35 m her crown is well inside the top of frame and at 0.254 m she is still inside action-safe (crown at y 0.74) and still legible, by silhouetting her against the lit glass table leg rather than against flagstone. Her hem/crown travel is specified (crown 0.24 to 0.74) because the growing headroom IS the effect.",
+      "sh062 — 'MUST NOT BE CUT INSIDE' plus the three gauges in order. All five reference lines (flagstone, tabletop, dado, door heads, lamp row) are nailed at fixed frame heights for the whole shot, so the body changes length against a static ruler.",
+      "sh079 — 'must LAND AND END inside this shot with clear silence after it'. The fan stopping inside the frame was made the shot's visible punctuation so the edit has something to hold on, and nothing else is placed in frame that could tempt a cut.",
+      "sh047, sh061 — three tastings in one shot, and the two-second cheated hold. Both compositions deliberately provide no second element, no insert and no alternate size, so the beats must land on the face."
+    ],
+    "the_single_up_angle": "sh083 — 'the ONLY up-angle in the whole episode'. Composed as the inversion of sh054: her face low at y 0.72 with about 0.56 of frame height of completely empty black above it, her tipped throat the only line in frame and nothing to answer it. The act-5 rule that no lamp fixture may appear was the binding constraint on the geometry: the tilt is staged between two lamp positions so that even at the top of the up-angle no fitting, halo, shade or chain enters frame.",
+    "white_rabbit_distance_discipline": [
+      "sh027 — 'never closer than a medium-wide in this scene; he never looks at Alice in S04'. He is composed at 0.09 of frame height at the vanishing point with the whole passage between them, delivered by perspective rather than by any camera emphasis, and the frame is laid out so a look back would be geometrically visible and is simply never given.",
+      "sh028 — the same axis with Alice simply out of frame rather than the camera moving closer; the vault is kept over his head in every frame so he never reads as free-standing or human-scaled.",
+      "sh029 — 'read in ONE insert of the watch face and the paw, not on his face'. No part of his head is permitted in frame.",
+      "sh031 — the drop from haunches to four legs happens whole and uncropped in frame, so the quadruped grammar is established once and cannot be contradicted.",
+      "sh073 / sh074 — contact evidence is mandatory, so the lens sits at 0.10 m to put his footfalls at eye level and the surface is kept otherwise unbroken, making the rings he makes the only disturbance in frame.",
+      "sh076 — the two-step tilt must run out of room before a lamp could enter; composed to end with him small at the bottom edge under an unreadable blue mass and black, with the eyeline to her face deliberately never reached.",
+      "sh008 — CRE-001 in the waking frame: 'no hero angle, no anticipatory framing'. He is not centred, not given a clean background and not separated in depth from her shoes; both planes stay equally readable so the audience half-doubts what they saw."
+    ],
+    "other_constraint_led_decisions": [
+      "sh039 — 'the episode's SINGLE Mucha halo-roundel composition, one clean symmetrical framing'. The constraint required the camera to come square-on to the west wall base rather than stay on layout tile 7's oblique along-the-wall line, because the symmetry IS the shot: arch and roundel are held on the exact vertical centre line with Alice at the right third as the one deliberate break in it. This figure is spent here and is not repeated anywhere else in the episode.",
+      "sh041 — 'the dream's one long lens, spent here and deliberately flat'. The garden is kept to a 0.22 x 0.14 frame-fraction plate, centred, planar, with no foreground element that would give it depth, so it cannot read as somewhere we could walk into.",
+      "sh049 — 'the free scale anchor for everything downstream'. Alice and the bottle are placed side by side at the same distance from the lens on the same flagstone, with no perspective advantage to either, so the identical height is a fact of the picture.",
+      "sh054 — 'the first cry is SMALL; the frame is what makes it small'. She is given the smallest subject-to-frame ratio of any figure shot in the episode (0.16 of frame height), the largest unused area, and leading lines that rake away from her instead of to her.",
+      "sh065 — 'at 2.74 m she can never be framed standing'. Negative headroom: her crown is in contact with the vault rib and the rib is the top edge of the frame.",
+      "sh067 — 'green-gold garden light laid across the one eye in a hard bar'. The bar is the only value above mid-grey in the frame and no green touches the flagstones, the arch or her body.",
+      "sh068 — 'from this frame the camera stays below 1.0 m and NO lamp fixture appears'. Every composition from sh068 to sh101 sets its top edge below the 2.30 m lamp line; no fitting, halo, shade or chain appears in any of the 34 files.",
+      "sh071 — the act-5 reflection_allowance. Lamplight on the water is confined to x > 0.66 (the far third), kept under about five percent of frame area and below Alice's cornflower in visual weight.",
+      "sh084 — 'lowering her eyes from the vault to her hands is one continuous movement'. sh083 and sh084 are composed as a single eyeline: sh083 ends looking up out of frame, sh084 is framed as the arrival of that look, with nothing else in the picture.",
+      "sh093 / sh094 — 'her exit position is matched to her surfacing'. She goes in at the bottom of frame screen-left in sh093 and comes up at the bottom of frame screen-left in sh094, across the S09/S10 scene cut.",
+      "sh096 — the director's interim ruling on DEF-p6-directing-ep01-001. The far end is bright by crowded reflection only; no beam, no opening, no sky and no visible source is placed anywhere in frame.",
+      "sh101 — 'the LAST picture of the episode; do not cut back to her reaction'. The composition has no partner shot and is not built to hand off to one: the V-wake opens toward the lens and arrives at the bottom edge on the cut to black.",
+      "sh019 / sh045 / sh057 — the three whitelisted lettering reads. Each label plane is square-on, unbroken, sharp across its whole width and placed wholly inside title-safe with the box stated, so no platform crop can clip it; everywhere else these props are dressed and not hero-lit.",
+      "sh052 / sh064 — the two rationed 24 mm verticals. Both are composed as single-axis funnels with no horizon; no third vertical of this kind exists in the episode."
+    ]
+  },
+  "cross_station_alignment": {
+    "cinematography": "The one constraint handed to this station was the depth-of-field policy: at every size beat both gauges must be sharp, which means both gauges must be IN the frame. Honoured explicitly in sh049, sh050, sh052, sh053, sh056, sh062, sh063, sh064, sh065, sh085, sh086, sh088 and sh091 — in each the two gauges are named in the layers and stated as sharp at the same focal plane. The miniature-look ban is served compositionally by keeping ordinary perspective and a near-foreground gauge of known size in every tiny-scale frame rather than by any close-range isolation.",
+    "camera_movement": "camera.json for sh001-sh020 was already on disk when this order ran and was read for the shots where a move decides the start and end framing. No disagreement found: sh001, sh008, sh016, sh017 and sh020 agree element for element (sh016's 'black oval dead centre' and sh015's 'the sh015 frame exactly' match this station's independent reading). Shots with a move carry a start_end_framing field (sh034, sh076) or state the travel inside gaze/leading_lines; the speed curve is not this station's to set.",
+    "blocking": "Every subject placement was checked against its group's blocking_map start/end landmark, offset_en and facing_end_en, and against the scene's layout.json landmark xy, before a screen side was chosen. Where blocking gives a facing, the composition's gaze direction is the screen-space translation of it (e.g. grp009 'facing the bookshelves' becomes gaze frame_right in sh022, because the bookshelves sit screen-right of the tile-8 axis). No composition places a character on a side the blocking does not support.",
+    "downstream": "08-video-gen/prompt can lift subject.grid, subject.anchor_xy, layers.fg/mg/bg, gaze.direction and eye_first straight into a prompt; image-generation's visual-qa 'composition match' dimension should score against anchor_xy and the stated frame fractions."
+  },
+  "qa_and_evaluation": {
+    "visual_qa": "11-qa/visual-qa is listed in workflow.yaml for this node but the user has set visual-qa strength to 0, so it was NOT dispatched and this node did not wait on it (per the work order).",
+    "evaluation": "Quality judge = 0. No eval_rubric run and none requested.",
+    "self_run_machine_checks": [
+      {
+        "check": "all 101 files present and valid JSON",
+        "result": "PASS",
+        "detail": "101/101 parse"
+      },
+      {
+        "check": "shot_id matches the directory and the shot_list entry",
+        "result": "PASS",
+        "detail": "101/101"
+      },
+      {
+        "check": "scene_id and size echo the frozen shot_list values",
+        "result": "PASS",
+        "detail": "101/101, no mismatches"
+      },
+      {
+        "check": "required fields present (subject, headroom, horizon_eyeline, layers.fg/mg/bg, gaze.direction, gaze.lead_room, balance, leading_lines, eye_first, safe_area_ok)",
+        "result": "PASS",
+        "detail": "101/101, no empty layer strings"
+      },
+      {
+        "check": "subject.id is an entity id legal for that shot, or null with an id_note",
+        "result": "PASS",
+        "detail": "95 entity ids all present in the shot's characters/creatures/props; 6 nulls (sh016, sh020, sh023, sh041, sh096, sh101) all carry id_note and, where applicable, pov_of"
+      },
+      {
+        "check": "subject.grid is one of the nine cell names and anchor_xy is in [0,1]",
+        "result": "PASS",
+        "detail": "101/101"
+      },
+      {
+        "check": "safe_area_ok true and consistent with bible/aspect_ratio.json safe_area",
+        "result": "PASS",
+        "detail": "101/101 true; the three lettering inserts state their title-safe boxes"
+      },
+      {
+        "check": "16:9 throughout",
+        "result": "PASS",
+        "detail": "every figure in every file is expressed as a fraction of the 16:9 frame; no other aspect appears"
+      },
+      {
+        "check": "act-5 rule: no lamp fixture in frame from sh068 to sh101",
+        "result": "PASS",
+        "detail": "34/34 files; sh063 and sh065 are the last two to contain a fitting, as required"
+      },
+      {
+        "check": "TR-03 both sides carry matching match_cut blocks",
+        "result": "PASS",
+        "detail": "sh016 outgoing and sh017 incoming agree on centre_xy, height_frac, axis, surround and interior value"
+      }
+    ]
+  },
+  "deviations": [],
+  "problems_found_not_fixed": [
+    {
+      "id": "DEF-p6-composition-ep01-001",
+      "shot": "sh002",
+      "severity": "minor",
+      "blocking": false,
+      "summary": "sh002's frozen content line puts the parish spire in a frame whose camera axis points away from it. sh002 is view_tile 1 of SCN-riverbank (meadow to sitting_shelf, facing west); architecture.json registers the spire beyond the FAR HEDGE, which is east and behind that lens. sh007 (tile 4, facing east at the far hedge) already carries the spire on the correct axis.",
+      "composed_as": "sh002 delivered with the far background as backwater, far bank and heat haze, and no spire; the omission is stated in that file's 'unresolved' field so nothing is hidden downstream.",
+      "routed_to": "07-directing/shot-planning (cc environment-concept, prompt) — recommendation is to strike the spire clause from sh002's content, since sh007 already delivers that image. Not self-resolved because shot_list is frozen and bible/scenes is H2-locked."
+    }
+  ],
+  "not_done_and_why": [
+    "No camera speed curves, no move design, no blocking beats and no shot sizes were written — camera-movement, blocking and shot-planning own those and shot_list is frozen.",
+    "No keyframes generated; 08-video-gen/image-generation owns that and scores against these parameters.",
+    "No evaluation score and no visual-qa pre-check, per the user's review settings (quality judge 0, visual-qa 0)."
+  ],
+  "skills": [
+    {
+      "id": "performance-control",
+      "status": "skipped",
+      "reason": "The project's performance-control contract assigns the intent layer to blocking, the evidence layer to prompt and the performance_bound check to video-generation/QA. This station produces frame geometry, not performance intent, and no acting beat is specified in any of the 101 files; where a shot's performance is compositionally binding (sh047's three tastings, sh061's two-second hold, sh083's up-angle) the frame is what is specified, not the performance. No registration made because the skill's own routing does not place this station in the chain."
+    }
+  ],
+  "files_written": [
+    "directing/ep01/shots/sh001/composition.json ... directing/ep01/shots/sh101/composition.json (101 files, one per shot, sh001-sh101 contiguous)",
+    "qa/defects/DEF-p6-composition-ep01-001.json",
+    "runs/p6-composition-ep01/result.json"
+  ],
+  "next": "08-video-gen/prompt injects subject.grid / anchor_xy, the three depth layers, gaze direction and eye_first into the group video prompts; 08-video-gen/image-generation generates keyframes to these parameters. shot-planning to close DEF-p6-composition-ep01-001 at its next open."
+}

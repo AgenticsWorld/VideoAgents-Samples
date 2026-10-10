@@ -1,0 +1,28 @@
+{
+  "shot_id": "sh018",
+  "scene_id": "SCN-falling-dream",
+  "size": "wide",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "centre",
+    "anchor_xy": [0.50, 0.54],
+    "size_in_frame": "seen from below and behind, about 0.45 of frame height at the start, settling to 0.38 as the walls open out"
+  },
+  "headroom": "she is held central with about 0.30 of frame height of receding shaft above her — occupied entirely by the shrinking tunnel mouth, which is the measure of how far she has already come.",
+  "horizon_eyeline": "No horizon and no level reference of any kind: the frame contains only the shaft's converging walls and the circle above. Her face is away from camera, so there is no eyeline in frame at all.",
+  "layers": {
+    "fg": "glazed cupboard doors and the near shelf edges sliding up past the bottom and side edges, closest and fastest",
+    "mg": "Alice's back, skirts billowing, hair pulling up toward the top of frame",
+    "bg": "the tunnel mouth shrinking away above her at frame centre, a small ring of daylight, and the first pass of rows of stoneware jars with honey-gold still surviving on the topmost shelves"
+  },
+  "gaze": {
+    "direction": "up_frame",
+    "lead_room": "above",
+    "note": "the audience's attention, not hers, is sent upward: she is tight on her back and the only thing to look at above her is the closing circle she came from."
+  },
+  "balance": "Radially symmetrical around the vertical centre line — figure centred, shaft centred, receding circle centred. Locked and calm, so that the only unease available is the rate at which the circle gets smaller.",
+  "leading_lines": "Every wall line, shelf edge and cupboard rail converges on the tunnel mouth at centre; the shaft is a single perspective funnel. Her floating hair points along the same axis.",
+  "eye_first": "Her lit back at centre, then up the converging shelves to the shrinking mouth of daylight.",
+  "safe_area_ok": true,
+  "constraint_binding": "No horizon, no Dutch, no spinning camera — the frame is held square and level for all seven seconds and every scrap of movement in the composition belongs to the dressing. Pass 1 only: glazed cupboards and stoneware jars, no bookshelf, map or picture peg is allowed into frame."
+}

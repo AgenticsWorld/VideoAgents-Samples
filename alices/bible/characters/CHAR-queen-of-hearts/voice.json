@@ -1,0 +1,31 @@
+{
+  "character_id": "CHAR-queen-of-hearts",
+  "name": "Queen of Hearts",
+  "tier": "A",
+  "card_type": "individual",
+  "gender": "female",
+  "age_sense": "mature woman (appearance base_age_range 45-52)",
+  "timbre": "powerful, brassy, cutting woman's voice with a hard chest resonance that turns shrill and piercing at full volume",
+  "pitch": "low-medium alto at rest, leaping to a strident high register when shouting",
+  "pitch_range_hz": [165, 330],
+  "speed_wpm": [150, 180],
+  "speed_cpm": [570, 684],
+  "accent": "clipped aristocratic Received Pronunciation, hard consonants, commanding",
+  "reference_style": "Royal command register: orders and verdicts only, no courtesy forms. Sudden eruptions from stillness to full-volume fury, then instant calm. 'Off with her head!' is a reflex bark, bluster never carried out (SUP-014) — loud, not sinister.",
+  "emotion_range": {
+    "calm": { "speed_delta": "-5%", "pitch_delta": "0semi", "note": "icy, curt questions ('What's your name, child?')" },
+    "fury": { "speed_delta": "+15%", "pitch_delta": "+5semi", "volume": "shout", "note": "ch008-p41 'in a voice of thunder'; ch012-p62 'at the top of her voice'; ch012-p69 'the shrill voice of the Queen'" },
+    "commanding": { "speed_delta": "+5%", "pitch_delta": "+2semi", "volume": "loud", "note": "ch008-p23 'in a shrill, loud voice'" }
+  },
+  "age_variants": [],
+  "source_chapter": "ch008",
+  "sources": ["ch008", "ch009", "ch011", "ch012", "ch008-p23", "ch008-p41", "ch008-p61", "ch012-p62", "ch012-p69"],
+  "voice_evidence": [
+    { "para": "ch008-p23", "quote": "said the Queen, in a shrill, loud voice" },
+    { "para": "ch008-p41", "quote": "shouted the Queen in a voice of thunder" },
+    { "para": "ch012-p69", "quote": "the shrill voice of the Queen ordering off her unfortunate guests to execution" }
+  ],
+  "inferred": true,
+  "inferred_fields": ["pitch_range_hz", "speed_wpm", "speed_cpm", "accent"],
+  "reason": "Shrill/thunderous volume is sourced; resting alto, rate and accent designed for a tall, imposing 45-52-year-old monarch (appearance.json)."
+}

@@ -1,0 +1,46 @@
+{
+  "task_id": "p4-h2-style",
+  "agent": "06-art/art-director",
+  "project": "alices",
+  "status": "completed",
+  "finished_at": "2026-09-23",
+  "summary": "Text-only fold-in of the user's H2 signature (gate G4, approval ba96732d, decision PASS_WITH_WAIVER, record runs/g4/gate.json) into bible/style.json. All four open_points_pending_H2 entries resolved, style.json frozen at v1.2.0 with locked_by = H2, DEF-p4-style-001 closed, BIB-0028 appended to the changelog. No image generation, no re-roll (auto-retry budget 0).",
+  "changelog_id": "BIB-0028",
+  "changed_files": [
+    { "path": "bible/style.json", "note": "open_points_pending_H2 all resolved (3x approved_H2, 1x approved_H2_by_extension) with approval_id ba96732d; _meta.status -> locked_h2, version 1.1.0 -> 1.2.0, new _meta.lock block and v1.2.0 amendment; locked_by null -> 'H2' at both _meta and top level, plus locked_at / lock_record. Six prompt-consumed fields left byte-identical." },
+    { "path": "qa/defects/DEF-p4-style-001.json", "note": "status resolved_by_user_ruling_pending_redo -> closed; closed_on 2026-09-23, closed_by 06-art/art-director, resolution set; per-finding outcome (a/b/c) recorded in a new closure block." },
+    { "path": "bible/changelog.md", "note": "appended section 'p4-h2-style -- H2 art-style lock folded in' with BIB-0028 recording what was approved, the approval id, the unchanged fragment fields and the pointer to runs/g4/gate.json for the waiver list." },
+    { "path": "runs/p4-h2-style/result.json", "note": "this receipt." }
+  ],
+  "rulings_applied": [
+    { "id": "H2-footmen-anatomy", "status": "approved_H2", "source": "runs/g4/gate.json approved_design_proposals[0]", "reworded": false },
+    { "id": "H2-non-speaking-animals", "status": "approved_H2", "source": "runs/g4/gate.json approved_design_proposals[1] + [2] (baby -> photoreal CGI piglet in the same swaddling, one continuous held shot, no morph)", "reworded": false },
+    { "id": "H2-caterpillar-face", "status": "approved_H2_by_extension", "source": "runs/g4/gate.json approved_design_proposals[4]", "reworded": false, "note": "not individually itemised in the signature card; adopted as the design of record because it follows the approved photoreal-CGI anatomy line; user may revise via the preview page's Modify button" },
+    { "id": "H2-mucha-scope-and-finish", "status": "approved_H2", "source": "runs/g4/gate.json approved_design_proposals[3]", "reworded": false }
+  ],
+  "acceptance": {
+    "style_json_valid_json": "PASS -- json.load succeeds after every edit.",
+    "all_open_points_resolved_with_approval_id": "PASS -- 4/4 entries: H2-footmen-anatomy (approved_H2), H2-non-speaking-animals (approved_H2), H2-caterpillar-face (approved_H2_by_extension), H2-mucha-scope-and-finish (approved_H2); all carry approval_id ba96732d, approved_by user, approved_on 2026-09-23, gate G4. All four proposal texts asserted identical to the pre-edit file.",
+    "protected_fields_byte_identical": "PASS -- diffed against a pre-edit copy of bible/style.json. style_fragment_ui, style_fragment_en, style_string_en, negative_prompt_en, negative_prompt_waking_addon_en and palette_logic are byte-identical (sha256-16 of each: style_fragment_ui/en 9b2b7629c15bee1a, style_string_en d582caaed7ecc411, negative_prompt_en dffde171c2a49d8f, negative_prompt_waking_addon_en 5ecf016b33cc405e, palette_logic 54dc0606cc4fc94e -- same before and after). Only _meta, open_points_pending_H2 and locked_by changed; locked_at and lock_record are the only new top-level keys.",
+    "def_p4_style_001_closed": "PASS -- status = closed.",
+    "ascii_filenames": "PASS -- no new or renamed files; all touched paths are ASCII.",
+    "no_generator_script": "PASS -- JSON written by direct targeted edits to the existing files; no generator script created. Nothing written to code/.",
+    "evaluation_and_qa": "N/A -- 质量评委 = 0 and all eight QA dimensions = 0, so no evaluation scoring and no QA co-sign this run."
+  },
+  "defects_opened": [],
+  "contradiction_check_step3": "None found. The six protected fields were read in full and checked against the ruling: style_fragment_ui/en and style_string_en already say 'photoreal CGI animals ... naturalistic anatomy' and 'Mucha-inspired Art Nouveau (dream only)' with a photographed 35mm finish; negative_prompt_en still bans 'digital matte painting look' and 'stylised 3D animation render' (which the ruling requires) while no longer banning CGI creatures or Art Nouveau; negative_prompt_waking_addon_en bans 'CGI creature' and 'Art Nouveau ornament' only for the three waking SCN, which is exactly the approved dream-full / waking-light scope; palette_logic carries the dream_mucha_accents family. No defect DEF-p4-style-002 was needed.",
+  "out_of_scope_untouched": [
+    "bible/creatures/creature.json",
+    "bible/costumes.json",
+    "bible/characters/**",
+    "bible/dictionary.json"
+  ],
+  "handoffs": [
+    "04-creatures/creature: align CRE-007 to the approved H2-non-speaking-animals wording (piglet in the SAME swaddling, one continuous held shot) and close DEF-p4-creature-401. style.json records the ruling; art-director did not edit the creature card.",
+    "03-characters/appearance: CHAR-frog-footman, CHAR-fish-footman, CHAR-caterpillar and CHAR-duchess-baby now have an approved design of record to execute against.",
+    "07-directing / 08-video-gen: prompt fragments did not change at this lock, so nothing written against style.json v1.1.0 is stale. Cite the open-point ids when writing the Footmen, the piglet reveal and the Caterpillar head.",
+    "workflow-orchestrator: bible/style.json is frozen at v1.2.0. Any further style change needs a change request plus a redo-cost assessment from 06-art/art-director and a new user ruling; single images can still be repaired via the preview page's Modify button without re-opening the lock."
+  ],
+  "skills": [],
+  "skills_note": "This work position has no auto-activated project skills."
+}

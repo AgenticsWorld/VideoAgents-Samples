@@ -1,0 +1,12 @@
+{
+ "auto": {
+  "sections_present": "PASS (5/5)",
+  "scene_refs_exist": "PASS (self-check)",
+  "peak_scenes_covered": "PASS",
+  "transition_enum_and_sum": "PASS (renderable 1.4s <= 5.4s)",
+  "narration_absent": "PASS"
+ },
+ "task_id": "p6-plan-ep01",
+ "skipped": true,
+ "reason": "quality judge=0 (user setting); QA dimensions all 0"
+}

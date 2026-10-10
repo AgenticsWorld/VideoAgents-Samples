@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh065",
+  "group_id": "grp025",
+  "scene_no": "S07",
+  "duration_s": 5.0,
+  "size": "medium",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 28,
+  "camera_height_m": 0.9,
+  "angle": "slightly up",
+  "rack_focus": "none",
+  "start_frame": "From the centre of the hall toward the west doors, camera low: the frame cannot contain her standing, so it holds her bent neck and shoulder against a verdigris iron whiplash rib of the vault, the last tulip shades still in frame.",
+  "end_frame": "The same frame as GAUGE THREE lands: her head knocks the rib at 2.80 m, flakes of old gilding sift down through the lamplight and she stoops under the roof — more than nine feet high in a room that cannot hold her.",
+  "constraint_honoured": "'GAUGE THREE, last of the three in sequence… THE LAST LAMP FIXTURE the film will ever show.'",
+  "movement_note": "Fragmentary framing on a held camera is the only way to shoot a 2.74 m girl in a 2.80 m room; from the next shot on, the lens is below 1.00 m and no lamp fitting enters any frame again.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

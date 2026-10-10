@@ -1,0 +1,44 @@
+{
+  "id": "DEF-p6-whitebox-ep01-001",
+  "opened_by": "07-directing/whitebox-staging",
+  "opened_on": "2026-09-23",
+  "task_id": "p6-whitebox-ep01 (director batch B-0001)",
+  "assigned_to": "05-scenes/scene-modeling",
+  "cc": [
+    "00-orchestration/orchestrator",
+    "04-environment/environment-concept",
+    "07-directing/director"
+  ],
+  "domain": "scene_model_scale_vs_shot_framing",
+  "status": "open_user_ruled",
+  "severity": "major",
+  "blocking": true,
+  "blocks_prompting_of": ["grp001", "grp008", "grp009", "grp010"],
+  "due_gate": "before g6w H3W-白模确认 for ep01",
+  "summary": "User ruling on whitebox pending item WBI-ep01-grp001-001 (directing/ep01/whitebox/decisions.json, choice 'remodel', by user:page, 2026-09-23T14:07:09+08:00): SCN-falling-dream is to be re-modelled at the dream shaft diameter the S00/S03 wides imply, about 16 m across. bible/scenes/SCN-falling-dream/whitebox.json is owned by 05-scenes/scene-modeling (task p4-scene-model-sb1), so whitebox-staging cannot apply the ruling itself; the decision stays 'decided, not applied' until the new model lands.",
+  "findings": [
+    {
+      "id": "finding-a",
+      "issue": "The model is built at the Bible's waking-world dimension: dimensions_m [5.0, 6.0, 2.8125], a 2.4 m round brick shaft (0.485 of the layout_top image width) with a 1.7 m clear fall column and the wall inner face at radius 1.20 m.",
+      "consequence": "No lateral set-up in S00/S03 can be framed at true scale. sh001/sh022 (28 mm, composition puts Alice at 0.20 of frame height) need 7.88 m of standoff; sh021 (40 mm, 0.72 of frame height) needs 3.13 m. The widest camera that stays inside the modelled ring is about 1.5 m, so the whitebox camera reference shows a near-full-figure frame where the shot is a wide."
+    },
+    {
+      "id": "finding-b",
+      "issue": "The 6.0 m Y is documented as ONE repeating rig wall section carrying a single static instance of each fitting (cupboards y 0.4-2.6, bookshelves 1.2-3.6, pantry shelf 4.9-5.2, map pegs 3.5-4.5, picture pegs 4.15-4.65, roundel 5.275-5.325).",
+      "consequence": "The 48 s of falling in grp008/grp009/grp010 cannot put the fitting each shot names level with Alice. This is the other half of WBI-ep01-grp008-001 / -grp009-001 / -grp010-001 and the re-model is the natural place to settle it."
+    }
+  ],
+  "requested_change": {
+    "target_shaft_inner_diameter_m": 16.0,
+    "derivation": "Scale factor 16.0 / 2.4 = 6.667. The inner brick circle is 0.485 of the layout_top.png width, so the map extent becomes 16.0 / 0.485 = 33.0 m. whitebox_layout_check requires dimensions_m X:Z to match the image aspect, and the present model is 16:9, so Z = 33.0 x 9/16 = 18.5625 m.",
+    "proposed_dimensions_m": [33.0, "see y_question", 18.5625],
+    "framing_proof": "Wall inner radius 8.0 m. A lens standing 0.6 m clear of the wall sits at radius 7.4 m; Alice biased 0.35 m down-axis away from it (her present staging) gives 7.75 m of standoff. A 28 mm frame is 7.75 x 24/28 = 6.64 m tall there, so Alice at 1.35 m reads 0.203 of frame height against composition's 0.20. sh021 needs 3.13 m and the closes (sh019, sh024, sh025) need 0.25-0.92 m, all comfortably inside.",
+    "y_question": "Y is currently 6.0 m for one repeating section. Please state whether it scales with the shaft (40.0 m proportional) and whether the fitting bands repeat down that height. If they repeat, WBI-ep01-grp008-001 / -grp009-001 / -grp010-001 are resolved with this same re-model; if a single instance is kept, they stay open.",
+    "new_risk_to_resolve": "At radius 8.0 m the wall furniture is 8 m from the shaft centre. Today Alice reaches the pantry shelf to take the ORANGE MARMALADE jar (sh019) and posts it into a glazed cupboard (sh021) while drifting near the centre line. In a 16 m shaft neither is reachable from the centre. Either keep a reachable ledge or furniture band near the fall column, or confirm that staging may drift her to within about 0.35 m of the wall face for sh019 and sh021 - which changes what those frames show and puts the lens near the far wall.",
+    "machine_check": "python code/whitebox_layout_check.py --project alices --scene SCN-falling-dream must pass (whitebox_layout_ok: aspect deviation <= 2%, geometry inside the image frame).",
+    "not_a_redraw": "assets/concepts/scenes/SCN-falling-dream/layout_top.png does not need re-drawing: this is a re-interpretation of the same plan at a different metric scale. layout.json landmark xy are normalised and stay as they are; only the metric scale_basis changes. Wall thickness, furniture depth and the tunnel stub are NOT a uniform 6.667x scale - bricks stay bricks - so the object table has to be re-derived, which is why this is a scene-modeling pass and not a number edit."
+  },
+  "impact_if_not_fixed": "grp001, grp008, grp009 and grp010 (10 shots, 52 s, including the episode's opening hook) ship a camera reference whose field of view contradicts the shot's size code, and 08-video-gen would read a close-up where the storyboard specifies a wide. The decision is already recorded, so the host no longer counts WBI-ep01-grp001-001 as blocking_open; g6w must not be signed on that basis alone.",
+  "downstream_after_fix": "Per WORKFLOW.md, a scene-modeling geometry change is followed by render_whitebox.py --scene SCN-falling-dream. That is not sufficient here: grp001/grp008/grp009/grp010 plans carry absolute metric keyframes and camera positions derived from the present dimensions_m, and every landmark world position moves with the re-model. Re-dispatch p6-whitebox to re-stage those four groups, then set WBI-ep01-grp001-001 status=applied.",
+  "whitebox_staging_note": "This station does not write bible/ content (SOUL: do not amend confirmed Bible material; route out-of-scope work to the owning agent). The plan file keeps issues[].status = open so the compiled effective status stays 'decided' - the host's own stop-sign against exporting video with an unapplied decision."
+}

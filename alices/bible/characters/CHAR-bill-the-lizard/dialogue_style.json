@@ -1,0 +1,92 @@
+{
+  "character_id": "CHAR-bill-the-lizard",
+  "name": "Bill",
+  "source_language": "en",
+  "source_speaker_labels": ["Bill"],
+  "produced_by_task": "p3-dialogue-style-pb2",
+  "sample_note": "Bill has exactly one spoken line in the source (ch004-d0034). Every rule below is drawn from that line plus the way others talk to and about him (ch004-p24, p27, p29) and his silent jury-box business (ch011-p09, ch012-p05, p55). Rules that extend beyond the single line are tagged inferred:true.",
+  "register": {
+    "level": "the put-upon odd-job lad of the White Rabbit's household: humble, breathless, rustic working-class English",
+    "summary": "A willing underling everything is 'put upon' (ch004-p25). His one speech comes in gasps: dash-broken clauses, a polite 'thank ye', country grammar (up I goes), homely similes from the nursery toy box and the fireworks night (Jack-in-the-box, sky-rocket). He cannot explain what happened to him. At the trial he is silent — his voice is the squeak of his slate-pencil. Per SUP-002 (amended BIB-0027) a photoreal CGI lizard.",
+    "examples": [
+      { "ref": "ch004-d0034", "chapter": 4, "text": "Well, I hardly know—No more, thank ye; I'm better now—but I'm a deal too flustered to tell you—all I know is, something comes at me like a Jack-in-the-box, and up I goes like a sky-rocket!" }
+    ]
+  },
+  "catchphrases": [
+    { "text": "I hardly know … / all I know is …", "freq": "medium", "count_in_source": 2, "example_refs": ["ch004-d0034"], "example_chapters": [4] },
+    { "text": "thank ye", "freq": "low", "count_in_source": 1, "example_refs": ["ch004-d0034"], "example_chapters": [4] },
+    { "text": "like a … (homely simile)", "freq": "medium", "count_in_source": 2, "example_refs": ["ch004-d0034"], "example_chapters": [4] }
+  ],
+  "sentence_style": {
+    "length": "one long, breathless run-on chopped by dashes into 3-9-word gasps (the single line is 42 words); new lines for Bill should stay in gasps of under ten words",
+    "mean_words": 42,
+    "patterns": [
+      {
+        "rule": "Breathless dash-broken clauses: starts, stops, restarts; the thought is never finished cleanly.",
+        "examples": [
+          { "ref": "ch004-d0034", "chapter": 4, "text": "Well, I hardly know—No more, thank ye; I'm better now—but I'm a deal too flustered to tell you—" }
+        ]
+      },
+      {
+        "rule": "Country grammar and dialect forms: 'ye' for you, 'a deal' for a great deal, historic present with -s on the first person (something comes at me … up I goes).",
+        "examples": [
+          { "ref": "ch004-d0034", "chapter": 4, "text": "…something comes at me like a Jack-in-the-box, and up I goes like a sky-rocket!" }
+        ]
+      },
+      {
+        "rule": "Humble deference and self-deprecation: disclaims knowledge (I hardly know), declines what he is offered politely (No more, thank ye), reassures (I'm better now).",
+        "examples": [
+          { "ref": "ch004-d0034", "chapter": 4, "text": "Well, I hardly know—No more, thank ye; I'm better now" }
+        ]
+      },
+      {
+        "rule": "Explains the world through homely, concrete similes from toys and fireworks, never abstract words.",
+        "examples": [
+          { "ref": "ch004-d0034", "chapter": 4, "text": "like a Jack-in-the-box, … like a sky-rocket!" }
+        ]
+      },
+      {
+        "rule": "In the trial (ch011-ch012) he does not speak at all: his presence is sound business (squeaking slate-pencil, writing with one finger, ink trickling down his face). If a screenplay gives him a word there, it must be a mumbled, one-to-three-word apology or 'Yes, sir' — never an opinion.",
+        "inferred": true,
+        "reason": "The source gives him no trial line (ch011-p09, ch012-p05, ch012-p55); a minimal-deference rule keeps any added line consistent with his only speech.",
+        "examples": [
+          { "ref": "ch011-p09", "chapter": 11, "text": "(narrative) One of the jurors had a pencil that squeaked… (it was Bill, the Lizard)" },
+          { "ref": "ch012-p55", "chapter": 12, "text": "(narrative) he now hastily began again, using the ink, that was trickling down his face" }
+        ]
+      }
+    ]
+  },
+  "vocabulary": {
+    "signature_words": ["hardly know", "thank ye", "a deal", "flustered", "all I know is", "up I goes", "Jack-in-the-box", "sky-rocket"],
+    "preferred_fields": ["household chores (ladders, roofs, chimneys)", "toys and fireworks as similes", "simple bodily reports (better now, flustered)"],
+    "examples": [
+      { "ref": "ch004-d0034", "chapter": 4, "text": "…I'm a deal too flustered to tell you…" }
+    ]
+  },
+  "address": {
+    "self": "I (and the dialect 'up I goes')",
+    "to_superiors_and_fellows": "ye (thank ye); he is addressed as 'lad' and 'old fellow' by the others (ch004-p24, p27) and answers in kind, never commanding",
+    "to_alice": "never addresses her (they never meet face to face)",
+    "inferred": true,
+    "reason": "Only one line; the address set is taken from that line and from how the Rabbit's workmen speak to him in ch004-p24/p27.",
+    "examples": [
+      { "ref": "ch004-d0034", "chapter": 4, "text": "No more, thank ye;" }
+    ]
+  },
+  "interjections": ["Well,"],
+  "forbidden_words": [
+    { "domain": "post-1862 slang / modern chat register", "regex": "\\b(okay|ok|cool|guys?|awesome|yeah|yep|nope|gonna|wanna|gotta|kinda|sorta|totally|literally|dude)\\b", "reason": "period drama, 1862" },
+    { "domain": "educated Latinate or official diction", "regex": "\\b(furthermore|consequently|moreover|notwithstanding|hereby|adjourn|remedies|proceed|accordingly|I assure you)\\b", "reason": "a household odd-job lad; bookish words are the Dodo's and the Mouse's, never his" },
+    { "domain": "commands, threats or boasting", "regex": "\\b(I order|I command|off with|you must|I insist|I'll soon)\\b", "reason": "everything is 'put upon' Bill (ch004-p25); he never gives orders" }
+  ],
+  "drift": [
+    { "from_chapter": 4, "to_chapter": 4, "change": "At the Rabbit's house: flustered, breathless, grateful speech after the chimney kick.", "examples": ["ch004-d0034"] },
+    { "from_chapter": 11, "to_chapter": 12, "change": "In the jury-box: speech drops to nothing; he is conveyed by the squeak of his pencil and his dazed, open-mouthed stare (ch012-p05). Any added line stays a mumbled monosyllable.", "inferred": true, "reason": "No trial dialogue in the source; the silence is itself the drift.", "examples": ["ch011-p09", "ch012-p05", "ch012-p55"] }
+  ],
+  "backtest_markers": [
+    { "id": "B1", "rule_ref": "sentence_style.patterns[1] dialect forms", "weight": 4, "regex": "\\b(ye|a deal|up I goes|I goes|I comes|I says|comes at me)\\b" },
+    { "id": "B2", "rule_ref": "sentence_style.patterns[2] humble disclaimers", "weight": 4, "regex": "\\b(I hardly know|all I know is|thank ye|I'm better now|flustered)\\b" },
+    { "id": "B3", "rule_ref": "sentence_style.patterns[3] homely similes", "weight": 3, "regex": "\\blike a (jack-in-the-box|sky-rocket|\\w+)\\b" }
+  ],
+  "backtest": {"method": "marker-claim back-test (shared yardstick with pb1 and 01-story/dialogue-rewrite): a spoken source line hits when it matches >=1 backtest_markers regex and no forbidden_words regex; verse excluded; full definition runs/p3-dialogue-style-pb2/result.json#backtest_method", "script": "code/p3-dialogue-style-pb1_backtest.py", "run_on": "2026-09-22", "threshold": 0.8, "hit_rate": 1.0, "sample_size": 1, "source_lines_total": 1, "coverage_of_spoken_lines": 1.0, "verse_excluded": 0, "forbidden_violations_in_source": 0, "cross_claim_rate": 0.012, "lift": 80.44, "attribution_top1_rate": 1.0, "misses": [], "pass": true, "small_sample_warning": "only 1 spoken source line(s); the hit rate is not statistically meaningful - rules tagged inferred:true carry the card beyond the source"}
+}

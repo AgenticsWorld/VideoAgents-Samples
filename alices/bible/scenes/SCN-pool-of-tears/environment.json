@@ -1,0 +1,64 @@
+{
+  "_meta": {
+    "file": "bible/scenes/SCN-pool-of-tears/environment.json",
+    "owner": "05-scenes/environment",
+    "task_id": "p3-environment-sb1",
+    "attempt": 1,
+    "generated": "2026-09-22",
+    "amended": {"change_id": "BIB-0027", "task_id": "p4-cr-environment", "date": "2026-09-23", "fields": ["fixed.dream_design (new)"]},
+    "enum_set": "ENV-ENUM-v1 (defined once in runs/p3-environment-sb1/result.json)"
+  },
+  "scene_id": "SCN-pool-of-tears",
+  "layer": "dream",
+  "fixed": {
+    "climate": "the same hot, lamp-lit dream hall, now flooded; hot, humid air above cool, still salt water (geography.json LOC-ornamental-pool 'cool, still dream-water')",
+    "indoor": true,
+    "daylight_access": "lamplit_no_sky",
+    "dream_design": {
+      "rule": "WR-010 / XA-magic-08 (dream, full; the same hall as SCN-long-hall)",
+      "flora": "the hall's carved lily and iris stems rise out of the water; floating petals drift from the carved garlands",
+      "ornament_cues": "the gilt lamp roundels are doubled as gold halo discs reflected on the water; the vine-band mosaic floor shows through the clear shallow water at the edges (form and material belong to architecture); the swimmers' wakes spread in curving ripple rings",
+      "palette": "pale aqua-jade tear-water, amber-gold lamp reflections, ivory and faded rose walls; a cool pastel set against the warm hall",
+      "seasonal_guard": "enclosed and seasonless; carved flora only",
+      "inferred": true,
+      "reason": "The flooded, lamp-lit hall is explicit (ch002-p16, SUP-007). It inherits SCN-long-hall's dream_design; the reflections and ripple rings are designed to WR-010."
+    },
+    "water": "salt tear-water, cool, still apart from the swimmers' wakes, deep enough at Alice's small scale that she is up to her chin; lamp reflections on the surface",
+    "dream_growth": "Grows from the reedy backwater beside the bank: still, cool water under the hot summer air. Its only light is the hall's warm lamps. Alice's own seaside memory (bathing-machines, ch002-p16) colours what she first thinks the water is, but the space stays the flooded hall (no open sky, no sea horizon).",
+    "source": {"chapter": "ch002", "quote": "splash! she was up to her chin in salt water"},
+    "inferred": true,
+    "reason": "Salt water and the flooded hall are explicit (ch002-p16, SUP-007). Water temperature follows geography.json; the humid hot air is carried from the hall (ch002-p09). The link to the backwater follows ruling 5.2 A and world.json cp-pool."
+  },
+  "variable_dims": {
+    "season": ["summer"],
+    "time_of_day": ["early_afternoon"],
+    "weather": ["none_enclosed"],
+    "wind": ["still"],
+    "temperature": ["hot"]
+  },
+  "states": [
+    {
+      "state_id": "SCN-pool-of-tears-S01",
+      "chapter": 2,
+      "chapter_id": "ch002",
+      "story_scene": "ch002-sc02",
+      "paragraphs": "ch002-p16..ch002-p26",
+      "timeline_ref": "ev0008",
+      "timeline_span": ["ev0008", "ev0009"],
+      "timeline_node": "TL-003",
+      "season": "summer",
+      "weather": "none_enclosed",
+      "wind": "still",
+      "temperature": "hot",
+      "time_of_day": "early_afternoon",
+      "waking_clock": "14:55-15:05 GMT (Alice asleep on the bank)",
+      "diegetic_daylight": "none; warm lamp-light from above, glinting on the water",
+      "conditions": "hot, damp air over cool salt water; ripples and splashes from Alice, the Mouse and the growing crowd of swimmers",
+      "source_chapter": "ch002",
+      "source": {"chapter": "ch002", "quote": "However, she soon made out that she was in the pool of tears which she had wept when she was nine feet high."},
+      "also_seen": [{"chapter": "ch002", "refs": ["ch002-p26"], "quote": "the pool was getting quite crowded with the birds and animals that had fallen into it"}],
+      "inferred": true,
+      "reason": "The pool of tears in the hall is explicit (ch002-p16). Air temperature, lamp-light and clock are designed or carried over (see fixed.reason). The whole state is held as one early_afternoon phase so the scene does not switch phase mid-scene at 15:00."
+    }
+  ]
+}

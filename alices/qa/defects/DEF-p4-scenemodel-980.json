@@ -1,0 +1,34 @@
+{
+  "id": "DEF-p4-scenemodel-980",
+  "opened_by": "05-scenes/scene-modeling",
+  "opened_on": "2026-09-23",
+  "task_id": "p4-scene-model-sb3",
+  "assigned_to": ["06-art/environment-concept", "05-scenes/architecture"],
+  "domain": "scenes",
+  "status": "open",
+  "severity": "minor",
+  "summary": "SCN-courtroom layout_top.png: the hall is drawn at ~70% of the Bible size relative to its furniture, and the officers' door, herald's step and public gallery are not drawn.",
+  "findings": [
+    {
+      "id": "DEF-p4-scenemodel-980-a",
+      "files": ["assets/concepts/scenes/SCN-courtroom/layout_top.png", "bible/scenes/SCN-courtroom/architecture.json#structure[0]"],
+      "issue": "At the layout.json extent (25 m), which keeps furniture and doors metric-true (tarts table 2.4 m, jury-box 5.6 m for six seats, main doors 1.75 m), the hall floor between the walls measures ~14.1 x 8.2 m. architecture.json gives about 20 x 13 m. Rescaling the whole map to 20 m makes every piece of furniture ~40% oversize, so the whitebox keeps 25 m.",
+      "requested_action": "environment-concept redraws the hall larger relative to its furniture, or architecture accepts the smaller hall. Whitebox follows the image until then (bible/scenes/SCN-courtroom/whitebox.json).",
+      "status": "open"
+    },
+    {
+      "id": "DEF-p4-scenemodel-980-b",
+      "files": ["assets/concepts/scenes/SCN-courtroom/layout_top.png", "assets/concepts/scenes/SCN-courtroom/layout.json#landmarks.officers_door"],
+      "issue": "Layout gap: the officers' door behind the dais is not drawn. layout.json places it at [0.86, 0.14], which is on the outer wall coping. The whitebox opens a 1.0 x 2.2 m door by function in the east wall at x 0.76.",
+      "requested_action": "environment-concept draws the officers' door and re-reads its xy; scene-modeling then re-aligns the opening.",
+      "status": "open"
+    },
+    {
+      "id": "DEF-p4-scenemodel-980-c",
+      "files": ["assets/concepts/scenes/SCN-courtroom/layout_top.png"],
+      "issue": "The shallow raised public gallery over the south entrance and the herald's step are not drawn (only a curved verdigris screen in the south-west corner). The whitebox has no gallery floor; the herald's step sits at the Bible position.",
+      "requested_action": "environment-concept adds the gallery and herald's step, or architecture drops the gallery. Until then, staging must not put crowd figures in a gallery.",
+      "status": "open"
+    }
+  ]
+}

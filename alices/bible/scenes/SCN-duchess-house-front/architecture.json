@@ -1,0 +1,57 @@
+{
+  "scene_id": "SCN-duchess-house-front",
+  "inherits": null,
+  "layer": "dream",
+  "int_ext": "EXT",
+  "form": "A small, steep-gabled two-storey brick house (the family villa's shape redrawn in the dream's Art Nouveau language) standing alone in an open earth-and-grass clearing at the edge of the wood, front door facing the wood; a tall kitchen chimney stack pours pepper-smoke. Exterior only",
+  "stories": 2,
+  "source_chapter": "ch005",
+  "culture_ref": "geography.json#LOC-duchess-house; world.json#wonderland_real_counterparts cp-cat; SCN-riverbank architecture (family villa: gabled polychrome-brick Gothic Revival); culture.json CUL-008, CUL-012",
+  "amendment": "BIB-0027 (user ruling 2026-09-22), applied p4-cr-architecture 2026-09-23",
+  "period": "Dream-image of an 1860s north-Oxford villa, reduced to its service end (brick, a kitchen chimney and a door for tradesmen and staff), its trim redrawn in the dream's licensed Art Nouveau (WR-010); props and costumes stay 1862",
+  "grows_from": {
+    "loc": "LOC-family-house",
+    "waking_detail": "the family house's service door, where below-stairs life a child knows only at second hand spills out",
+    "design_growth": "The family villa's service wing detached and set down alone in the wood: same polychrome brick banding, same steep slate roof as the villa glimpsed from the bank, its door-head now a flowing horseshoe arch, but squeezed into a narrow two-bay house whose only face is its tradesmen's door. The noise and smoke of the kitchen, which a child upstairs only hears, are here the whole building"
+  },
+  "dream_design_language": "Familiar villa vocabulary made cramped and slightly wrong: the gable too steep, the front door too tall for the facade, the chimney too big for the house; windows smoked grey from inside so the house looks blind. The Art Nouveau ornament is there but sooted and neglected, gold showing through grime",
+  "mucha_design_language": {"item": "Mucha / Art Nouveau on a small service house: a flowing horseshoe-arched door surround of carved Bath stone with lily-and-vine relief; a round stained-glass halo roundel in the gable (glass smoked grey-amber from inside); a mosaic frieze band of pastel and gold tesserae under the eaves, cracked and sooted; wrought-iron whiplash brackets on the gutter and a whiplash-scroll boot-scraper; pastel-and-gold showing through soot", "inferred": true, "culture_ref": "world.json#WR-010 (the Duchess's house listed); cultivation.json#XA-magic-08", "why": "Dream environments carry the language fully; soot keeps the house's grim, noisy character"},
+  "structure": [
+    {"item": "free-standing house in an open place, two bays wide, gable end facing the clearing, ridge about 7.2 m at hero scale (see scale_notes)", "src": "ch005-p78", "note": "'a little house in it about four feet high'; form, bays and height ratio inferred from the family villa, culture_ref SCN-riverbank architecture structure (villa)"},
+    {"item": "one front door, the only entrance, reached by a single worn stone step; the Frog-Footman (CGI frog-bodied figure in livery) sits on the ground beside it", "src": "ch006-p04"},
+    {"item": "a tall square brick chimney stack on the rear gable with grey smoke rolling from it", "inferred": true, "culture_ref": "geography.json#LOC-duchess-house.visual_identifiers ('pepper-smoke visible from outside')", "why": "The kitchen's smoke must be readable from the doorstep scenes"},
+    {"item": "two small ground-floor windows either side of the door and one upper window in the gable (a round halo roundel), all with small leaded panes smoked grey from inside", "inferred": true, "culture_ref": "geography.json#LOC-duchess-house.physical ('the interior is smoky')", "why": "Gives the kitchen noise a visible source without showing the interior"},
+    {"item": "open place in front: an irregular clearing about 14 m across of trodden earth and patchy grass, the wood closing in on three sides; Alice hides and peeps from the tree line opposite the door", "src": "ch006-p01"},
+    {"item": "a path of beaten earth running from the clearing into the wood on the far side (the way the pig trots off, and on to the Cheshire Cat's path)", "src": "ch006-p49"}
+  ],
+  "materials": [
+    {"item": "soft red hand-made brick with two bands of dark blue-black brick (the waking villa's polychrome brick)", "inferred": true, "culture_ref": "SCN-riverbank architecture (family villa polychrome brick); geography.json#LOC-family-house.settlement.architecture_style", "why": "Carries the waking villa's material into the dream so the grows_from link is visible"},
+    {"item": "Bath-stone dressings carved in flowing Art Nouveau relief: horseshoe door arch with lily-and-vine carving, window sills and kneelers, sooted grey", "inferred": true, "culture_ref": "world.json#WR-010; geography.json#LOC-family-house.settlement.architecture_style", "why": "The villa's trim redrawn in the dream's language; soot ties it to the smoke"},
+    {"item": "grey-blue Welsh slate roof, steep pitch, a line of moss along the eaves", "inferred": true, "culture_ref": "SCN-riverbank architecture (villa roofline)", "why": "Railway-era slate was the ordinary 1860s roof in Oxford villas"},
+    {"item": "front door of vertical oak boards under the horseshoe arch, dark-stained, black iron strap hinges and a plain iron latch, no knocker", "src": "ch006-p01", "note": "the Fish-Footman raps 'with his knuckles', so no knocker; boards and hinges inferred"}
+  ],
+  "details": [
+    {"item": "broken crockery on the ground around the step: shards of white plates and a dented tin kettle lid, thrown out through the doorway", "src": "ch006-p10", "note": "'a large plate came skimming out... and broke to pieces against one of the trees'; ch006-p06 sound of 'a dish or kettle... broken to pieces'; also geography.json#LOC-duchess-house.visual_identifiers ('plates thrown out through the doorway')"},
+    {"item": "a cast-iron boot-scraper set into the step and a bell-pull wire hanging beside the door with its handle missing", "inferred": true, "culture_ref": "culture.json CUL-008 (doorstep service taken to the letter)", "why": "Period service-door furniture; the useless bell-pull echoes 'no sort of use in knocking'"},
+    {"item": "the nearest tree trunk opposite the door is chipped pale where the plate shattered, shards at its foot", "src": "ch006-p10"},
+    {"item": "thin grey smoke leaking round the door frame and window edges", "inferred": true, "culture_ref": "culture.json CUL-023 (over-peppered kitchen cooking)", "why": "Links outside to the pepper-filled kitchen"},
+    {"item": "a great letter on the step after the delivery, nearly as large as the Fish-Footman (prop owned by 06-art/prop)", "src": "ch006-p02"}
+  ],
+  "scale_notes": {
+    "rule": "Two scales. (1) Arrival, ch005-p78, Alice at her usual height (135 cm): a 1:6 miniature of the same house, ridge about 1.2 m ('about four feet high'), placed in forced perspective in the clearing so the house comes up to Alice's chin. (2) After she nibbles down 'to nine inches high': the hero set is the full-size house (ridge 7.2 m, door 2.1 m) with the two footmen as CGI frog-bodied and fish-bodied figures in livery. Proposal (pending_H2, anatomy owned by 04-creatures/creature with 03-characters/appearance): both stand upright at about adult-servant height (about 1.6 m) so the 2.1 m door and step fit them as a real service door; Alice is staged in forced perspective at about the Frog-Footman's knee height (apparent 50 cm), a child among grown-up servants at the tradesmen's door; the text's nine inches is expressed by low camera and oversized door and step, not by literal ratio. The baby-to-pig exit (ch006-p45..p49) uses the same full-size hero set with Alice at her usual height (1:1, 135 cm), since she has played the kitchen at 1:1 (SCN-duchess-kitchen); the house then reads as an ordinary small house.",
+    "feeling": "Shrinking herself before entering a stranger's house: politeness makes Alice small",
+    "sources": ["cultivation.json#SUP-003", "ch005-p78", "ch006-p05"],
+    "inferred": true,
+    "why": "The source gives only 'four feet high' and 'nine inches'; the two-build split keeps both beats shootable with the CGI footmen at a fixed servant scale (SUP-002 as amended BIB-0027)"
+  },
+  "negative": [
+    "no thatched fairy-tale cottage, no Tudor half-timbering, no mushroom house",
+    "no grand manor, no porch columns, no lodge gates or estate walls",
+    "no door knocker, no house number, no nameplate",
+    "no plate glass, no gas or electric lamps outside; no clean bright new ornament (it is sooted)",
+    "no flowers or garden beds round the house; bare clearing only",
+    "no cartoon frog or fish faces, no humans in frog or fish costume; the footmen are CGI frog- and fish-bodied figures (anatomy pending_H2)",
+    "no flat poster illustration, outline graphics or matte-painting finish"
+  ],
+  "prompt_ready_en": "a small steep-gabled red brick house with dark blue brick bands in a sooted Art Nouveau style after Mucha, standing alone in a bare earthen clearing at the edge of a dense English wood, grey slate roof, a tall brick chimney pouring grey smoke, a horseshoe-arched door surround of carved stone lilies and vines around an oak plank door with black iron strap hinges above one worn stone step, a round stained-glass roundel in the gable and a cracked pastel-and-gold mosaic frieze under the eaves, small leaded windows smoked grey from inside, white plate shards scattered on the ground, photographed live-action set"
+}

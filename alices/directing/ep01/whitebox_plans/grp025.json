@@ -1,0 +1,53 @@
+{
+  "schema_version": "whitebox_plan.v1",
+  "group_id": "grp025",
+  "scene_id": "SCN-long-hall",
+  "basis": "Alice is 2.74 m and still on the spot where she grew. sh064 is her own look straight down the length of herself, so the lens sits at her eye height (2.46 m) on her own axis pointing at the flagstones - the last set-up in which she can be framed standing. In sh065 her head is against the 2.80 m vault at t=1.0, gilding sifts down at t=2.0 and she stoops under the roof from t=3.4 (bend rising to 0.95 rad), which is the framing_law in continuity_plan size_chain: at 2.74 m every giant frame is a hunch, a lie-down or a fragment.",
+  "actors": [
+    {
+      "id": "CHAR-alice",
+      "kind": "person",
+      "size_m": [0.7672, 2.74, 0.6028],
+      "keyframes": [
+        {"t": 0.0, "position": [5.68, 0.0, -0.26], "pose": "stand", "yaw": 2.5214, "head_pitch": 0.2},
+        {"t": 0.8, "position": [5.68, 0.0, -0.26], "pose": "stand", "yaw": 2.5214, "head_pitch": 0.9},
+        {"t": 1.8, "position": [5.68, 0.0, -0.26], "pose": "stand", "yaw": 2.5214, "head_pitch": 1.0},
+        {"t": 2.6, "position": [5.68, 0.0, -0.26], "pose": "stand", "yaw": 2.5214, "head_pitch": 1.0},
+        {"t": 6.0, "position": [5.68, 0.0, -0.26], "pose": "stand", "yaw": 2.5214, "head_pitch": 1.0},
+        {"t": 7.0, "position": [5.68, 0.0, -0.26], "pose": "stand", "yaw": 2.5214, "head_pitch": 0.3},
+        {"t": 8.0, "position": [5.68, 0.0, -0.26], "pose": "stand", "yaw": 2.5214, "head_pitch": -0.3},
+        {"t": 9.0, "position": [5.68, 0.0, -0.26], "pose": "stand", "yaw": 2.5214, "head_pitch": 0.1},
+        {"t": 10.4, "position": [5.68, 0.0, -0.26], "pose": "stand", "yaw": 2.5214, "bend": 0.55, "head_pitch": 0.4},
+        {"t": 12.0, "position": [5.68, 0.0, -0.26], "pose": "stand", "yaw": 2.5214, "bend": 0.95, "head_pitch": 0.5}
+      ]
+    }
+  ],
+  "cameras": [
+    {
+      "shot_id": "sh064",
+      "start": 0,
+      "duration_s": 7.0,
+      "movement": "static",
+      "keyframes": [
+        {"t": 0.0, "position": [5.68, 2.46, -0.1], "target": [5.68, 0.0, -0.16], "fov": 53.1301},
+        {"t": 7.0, "position": [5.68, 2.46, -0.1], "target": [5.68, 0.0, -0.16], "fov": 53.1301}
+      ]
+    },
+    {
+      "shot_id": "sh065",
+      "start": 7.0,
+      "duration_s": 5.0,
+      "movement": "static",
+      "keyframes": [
+        {"t": 0.0, "position": [7.301, 0.9, 0.815], "target": [5.428, 2.45, 0.119], "fov": 46.3972},
+        {"t": 5.0, "position": [7.301, 0.9, 0.815], "target": [5.428, 2.45, 0.119], "fov": 46.3972}
+      ]
+    }
+  ],
+  "continuity": {"actors": "inherit", "camera": "cut"},
+  "warnings": [
+    "At 2.74 m her crown is 0.06 m under the 2.80 m vault, so the head knock at sh065 t=1.0 is real geometry, not a staged effect; the lamp row at 2.125 m (shade underside) is level with her shoulder.",
+    "sh064's lens is on her own body axis 0.16 m in front of her chest looking straight down, so her body fills the frame end-on and her feet are at the far end of it, as composition asks.",
+    "sh065 holds the sh063 lens position and only re-aims; the up-angle is again set by a 0.90 m lens under a 2.74 m subject."
+  ]
+}

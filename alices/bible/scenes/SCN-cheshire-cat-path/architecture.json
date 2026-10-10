@@ -1,0 +1,51 @@
+{
+  "scene_id": "SCN-cheshire-cat-path",
+  "inherits": null,
+  "layer": "dream",
+  "int_ext": "EXT",
+  "form": "A narrow woodland path of beaten earth running about 40 m through mixed English woodland between the Duchess's clearing and the March Hare's house, passing under two trees with low horizontal boughs where the Cheshire Cat sits. No built structure",
+  "stories": 0,
+  "source_chapter": "ch006",
+  "culture_ref": "geography.json#LOC-thick-wood (visual_identifiers: low bough where the Cat sits); world.json#wonderland_real_counterparts cp-cat",
+  "period": "Dream-space grown from an 1862 Oxfordshire copse and a family garden tree; no man-made objects except the old signpost",
+  "grows_from": {
+    "loc": "LOC-family-house",
+    "waking_detail": "Dinah watching from a garden bough near the family house",
+    "design_growth": "The low apple bough in the family garden where Dinah likes to sit, repeated twice along a wood path and grown into two great old trees: the first an ancient crab-apple with a low, almost horizontal limb at a child's head height, the second an old oak further on whose branch overhangs the path at the fork"
+  },
+  "amendment": "BIB-0027 (user ruling 2026-09-22), applied p4-cr-architecture 2026-09-23",
+  "dream_design_language": "The wood arranged like a stage: the path is swept clean, the two boughs sit exactly where the eye goes, and the background trunks rise in soft, even ranks that curve gently together overhead like the flowing ribs of an Art Nouveau arcade, so the Cat's appearances read as entrances",
+  "mucha_design_language": {"item": "Mucha / Art Nouveau language carried by the living wood: each bough the Cat uses is backed by a round gap in the canopy that frames the sitter as a halo roundel; ivy and honeysuckle hang from the boughs in long whiplash tendrils and garland loops; the path edge is a flowing S-curve bordered with foxgloves and dog-roses like a Mucha floral frame; the fingerpost arms are carved as tapering vine-scroll whiplash forms; pastel-and-gold palette (sage, lilac, cream, dappled gold)", "inferred": true, "culture_ref": "world.json#WR-010; cultivation.json#XA-magic-08", "why": "WR-010 dream environments carry the language fully, realised as living and sculpted flora and carved wood; no building is added to the text's woodland path"},
+  "structure": [
+    {"item": "a single-file beaten-earth path about 1.2 m wide, gently curving, with leaf litter at its edges; enters from the Duchess's clearing at one end", "src": "ch006-p49"},
+    {"item": "Tree A, 'a few yards off' from where Alice sets the pig down: an old crab-apple with a thick low limb running out almost level at about 1.8 m above the path, broad enough for the CGI Cat to lie along it", "src": "ch006-p49", "note": "species and height inferred from the waking garden bough, culture_ref world.json cp-cat"},
+    {"item": "a fork in the path about 25 m on from Tree A: one branch toward the Hatter, one toward the March Hare", "src": "ch006-p58", "note": "the Cat's directions: 'In that direction lives a Hatter: and in that direction lives a March Hare'; fork inferred as the physical form of the directions"},
+    {"item": "Tree B at the fork: an old oak with a horizontal branch overhanging the path at about 2.4 m, where the Cat reappears and finally vanishes to a grin", "src": "ch006-p75", "note": "reappearance on a branch and the slow vanish (ch006-p78); species inferred"},
+    {"item": "background: straight grey trunks of beech and ash in loose ranks, undergrowth of bracken and bramble at knee height", "inferred": true, "culture_ref": "geography.json#LOC-thick-wood.physical.flora", "why": "Plain woodland depth with a clean silhouette behind the Cat"}
+  ],
+  "materials": [
+    {"item": "packed brown earth with last year's leaf litter at the edges", "inferred": true, "culture_ref": "geography.json#LOC-thick-wood.physical.terrain", "why": "Ordinary English woodland floor"},
+    {"item": "crab-apple bark, dark grey and scaly, the limb's upper surface worn smooth", "inferred": true, "culture_ref": "world.json#wonderland_real_counterparts cp-cat", "why": "A favourite sitting place worn smooth, as a cat's bough would be"},
+    {"item": "oak bark grey and furrowed, ivy climbing the trunk of Tree B", "inferred": true, "culture_ref": "geography.json#LOC-thick-wood.physical.flora", "why": "Ivy gives the second tree a distinct silhouette from the first"}
+  ],
+  "details": [
+    {"item": "at the fork, a leaning weathered wooden fingerpost with two arms, the painted lettering long faded to nothing", "inferred": true, "culture_ref": "geography.json#LOC-riverside-region (Thames-valley country lanes)", "why": "Grows from the country fingerposts on family walks; blank arms make 'it doesn't much matter which way you go' visible without text"},
+    {"item": "where Alice sets the pig down and it trots off into the wood: the pig-baby end state is proposed as a photoreal CGI piglet (pending_H2; SUP-006 transition itself unchanged); leaf-litter gap under Tree A left clear for its exit", "src": "ch006-p49", "note": "BIB-0027 non-speaking dream animals, flagged for H2"},
+    {"item": "small hard green crab-apples on Tree A", "inferred": true, "culture_ref": "geography.json#LOC-riverside-region.physical.climate (midsummer)", "why": "Midsummer fruit stage; identifies the tree as an apple"},
+    {"item": "the bough areas left plain and uncluttered, with no leaves in front of the sitter, so the Cat's slow vanish reads cleanly against sky and background trunks", "src": "ch006-p78", "note": "staging requirement for the dissolve (SUP-005)"}
+  ],
+  "scale_notes": {
+    "rule": "True 1:1 set. Alice at her usual height (135 cm, after the Duchess's kitchen). The first bough's height of 1.8 m puts the CGI Cat's face (a photoreal cat, SUP-002 as amended BIB-0027; light doubling of Dinah) just above Alice's eye line, so she looks up at the grin. The vanish is a dream dissolve (SUP-005): both boughs must be buildable as locked-off plates, empty and with a stand-in/reference object for the CGI cat's contact and shadow",
+    "sources": ["cultivation.json#SUP-003", "cultivation.json#SUP-005", "ch006-p49", "ch006-p78"]
+  },
+  "negative": [
+    "no gnarled horror-fantasy trees (curves are smooth and flowing), no glowing eyes in the dark, no neon or striped foliage",
+    "no giant mushrooms, no oversized flowers",
+    "no cartoon cat, no oversized cartoon grin graphic, no human in cat costume; the Cat is a photoreal CGI cat",
+    "no flat poster illustration, outline graphics or matte-painting finish; photographed live-action wood",
+    "no legible signpost text, no modern waymarkers or fences",
+    "no dark gothic horror forest; the wood is shaded but friendly midsummer woodland",
+    "no autumn colours"
+  ],
+  "prompt_ready_en": "a narrow beaten-earth path curving through a shaded midsummer English wood, grey beech trunks rising in soft ranks that curve together overhead like an Art Nouveau arcade, an old crab-apple tree with a thick low horizontal bough framed by a round halo-like gap in the canopy, ivy and honeysuckle hanging in long whiplash tendrils, further on an ivy-clad oak with a branch overhanging a fork in the path, a leaning weathered wooden fingerpost with blank vine-scroll carved arms at the fork, foxgloves and dog-roses bordering the path, soft pastel-and-gold light, photographed live-action set"
+}

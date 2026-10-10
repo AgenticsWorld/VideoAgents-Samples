@@ -1,0 +1,60 @@
+{
+  "character_id": "CHAR-gryphon",
+  "name": "The Gryphon",
+  "tier": "B",
+  "layer": "dream",
+  "revision": { "change_id": "BIB-0027", "task_id": "p4-cr-appearance", "date": "2026-09-23", "note": "Rewritten from the human-in-partial-costume reading to a photoreal CGI fantastical creature." },
+  "rendering": {
+    "mode": "photoreal_cgi_creature",
+    "rule": "bible/cultivation.json SUP-010 (amended BIB-0027); anatomy detail owned by 04-creatures/creature",
+    "species": "classical griffin: golden-eagle head, neck, wings and forelegs; African-lion hindquarters and tail",
+    "limits": "Built as if a real animal: real feather, fur and scale texture, weight and light; the eagle-to-lion join is a natural feather-to-fur blend at the ribs. Speech by beak and tongue movement. No clothing, no cartoon face, no human in costume."
+  },
+  "gender": "male",
+  "gender_note": { "source_chapter": "ch009", "paragraph": "ch009-p84", "quote": "“So he did, so he did,” said the Gryphon, sighing in his turn" },
+  "base_age_range": "35-45",
+  "base_age_note": { "inferred": true, "reason": "Persona age (he went to the sea-school with the Mock Turtle as boys, ch009-p82), kept for voice casting. As a creature: a big mature adult, slightly paunchy and lazy." },
+  "hair": {
+    "coat": "feathers (front) and fur (rear)",
+    "color": "golden-eagle dark brown feathers with a golden-tawny nape and crown; tawny lion fur on the hindquarters; dark tuft at the tail tip",
+    "style": "head and neck hackles raise when he is excited; fur short and sun-warmed; a little dusty from lying in the sun",
+    "inferred": true,
+    "reason": "Species-derived per SUP-010."
+  },
+  "eyes": { "color": "amber-hazel", "expression": "sharp raptor stare under heavy, sun-drowsy lids; opens very wide when listening", "source_chapter": "ch010", "paragraph": "ch010-p53", "quote": "opened their eyes and mouths so very wide", "colour_inferred": true, "reason": "Adult golden-eagle eye colour; the wide eyes and sleepy lids are sourced (ch009-p44 'rubbed its eyes')." },
+  "skin": { "tone": "yellow cere and yellow scaled eagle feet with black talons; dark lion paw pads on the hind feet", "inferred": true, "reason": "Species-derived." },
+  "face": {
+    "shape": "eagle head with a heavy hooked beak",
+    "features": ["dark hooked beak with a yellow cere", "heavy brow ridge", "beak gapes wide for a chuckle or a harsh shriek"],
+    "default_expression": "lazy, amused, blustering",
+    "expressiveness": "head tilts, hackle raising, beak gape and eye-lid play; the chuckle is a raptor chitter under speech",
+    "source_chapter": "ch009",
+    "paragraph": "ch009-p44",
+    "quote": "then it chuckled. “What fun!”",
+    "inferred": true,
+    "reason": "Grin and shriek (ch012-p69) are sourced; delivered through eagle anatomy."
+  },
+  "build": {
+    "height_range_cm": [150, 165],
+    "height_note": "Head height when sitting up on his haunches; shoulder height about 110-120 cm, body length about 2.2-2.5 m without tail, wingspan about 4 m.",
+    "body_type": "big, broad-chested, heavy, a little paunchy",
+    "posture": "sprawls asleep in the sun; lumbering, rolling four-legged walk with wings folded; takes Alice by the hand in one feathered foreleg-foot and hurries her along",
+    "source_chapter": "ch010",
+    "paragraph": "ch010-p79",
+    "quote": "taking Alice by the hand, it hurried off",
+    "inferred": true,
+    "reason": "Size designed so the escort feels imposing and physical (he thumps the Mock Turtle's back, ch010-p01)."
+  },
+  "scale_reference": { "in_scene": "Alice is at her normal height here (about 135 cm, CHAR-alice anchor); sitting up he stands a little above her head, and on all fours his back is at her chest.", "inferred": true, "reason": "Relative scale designed." },
+  "marks": [
+    { "type": "anatomy", "description": "eagle forelegs with yellow scaled feet and black talons, used as hands (the text's 'paws'): hiding his face, lifting them in surprise, thumping the Mock Turtle's back", "position": "forelegs", "source_chapter": "ch009", "paragraph": "ch009-p75", "quote": "The Gryphon lifted up both its paws in surprise." },
+    { "type": "anatomy", "description": "large folded eagle wings over lion hindquarters; lion tail with dark tuft", "position": "back", "inferred": true, "reason": "Classical griffin per SUP-010." }
+  ],
+  "default_outfit_tone": {
+    "summary": "none: he wears nothing; his look is the eagle-and-lion body",
+    "inferred": true,
+    "reason": "The text gives him no clothing; per SUP-010 (BIB-0027) the old labourer's dress, feather mantle and paw gauntlets are dropped."
+  },
+  "doubling": null,
+  "prompt_base_en": "photoreal griffin creature lying in the sun on a rocky shore, golden eagle head and neck with dark brown feathers and golden-tawny nape, heavy dark hooked beak with yellow cere, amber-hazel eyes under drowsy lids, folded eagle wings, eagle forelegs with yellow scaled feet and black talons, tawny lion hindquarters and tufted tail, natural feather-to-fur blend at the ribs, naturalistic anatomy and weight, live-action film plate"
+}

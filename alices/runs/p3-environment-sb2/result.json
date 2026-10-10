@@ -1,0 +1,101 @@
+{
+  "task_id": "p3-environment-sb2",
+  "agent": "05-scenes/environment",
+  "project": "alices",
+  "attempt": 1,
+  "status": "done",
+  "completed_at": "2026-09-22",
+  "outputs": [
+    "bible/scenes/SCN-pigeon-treetop/environment.json",
+    "bible/scenes/SCN-duchess-house-front/environment.json",
+    "bible/scenes/SCN-duchess-kitchen/environment.json",
+    "bible/scenes/SCN-cheshire-cat-path/environment.json",
+    "bible/scenes/SCN-mad-tea-party/environment.json",
+    "bible/scenes/SCN-wood-tree-door/environment.json",
+    "bible/scenes/SCN-rose-tree-yard/environment.json",
+    "bible/scenes/SCN-croquet-ground/environment.json",
+    "bible/scenes/SCN-gryphon-sunning-spot/environment.json",
+    "bible/scenes/SCN-mock-turtle-ledge/environment.json",
+    "bible/scenes/SCN-courtroom/environment.json"
+  ],
+  "defects_opened": [],
+  "helper_scripts": ["code/p3-environment-sb2_check.py"],
+  "inputs_read": [
+    "bible/h1_summary.md",
+    "bible/scenes/index.json (11 target scenes: chapters, story_spans, event_refs, grows_from)",
+    "story/story_timeline.json (story_time ev0022-ev0052, all reality_layer dream, T0 continuous)",
+    "bible/timeline.json (TL-003 = 4 July 1862; TL-004 / UTQ-003 dream-internal 'last March')",
+    "bible/geography.json (physical.sky/climate of each LOC)",
+    "bible/world.json (counterparts cp-tea, cp-cat, cp-garden, cp-court, cp-lessons, cp-cards-leaves, cp-sounds)",
+    "story/structured_story/ch005..ch012.json (paragraph text; every quote verified verbatim)",
+    "runs/p3-environment-sb1/result.json + sb1 cards (shared ENV-ENUM-v1 and waking-clock anchors)"
+  ],
+  "shared_conventions": {
+    "follows": "The sb1 conventions in runs/p3-environment-sb1/result.json.shared_conventions are adopted unchanged: timeline_ref = story_time event id (story_timeline has no T-* ids); timeline_node = TL-003; waking_clock = real GMT time on the bank while the dream plays (not dream-internal time); a state is inferred:false only when its key values are stated in the source, and designed extras are listed in designed_fields.",
+    "enum_extensions_sb2": {
+      "wind": {"breeze": "a steady, noticeable wind stronger than light_breeze; used only for the open treetop (geography LOC-pigeon-nest-treetop 'open and breezy') and the shore run (ch010-p80 'the breeze that followed them')"},
+      "daylight_access (fixed per scene)": {
+        "smoke_filled_interior": "interior filled with smoke; daylight only as a hazy shaft from the door or a small window (SCN-duchess-kitchen)",
+        "high_windows": "interior lit by tall windows set high in the walls; light shafts only, no sky view (SCN-courtroom). This respects geography.json LOC-courtroom 'sky: none'. The window form itself is for 05-scenes/architecture to confirm."
+      },
+      "atmosphere (optional scene dim)": {
+        "pepper_smoke": "hazy pepper-smoke filling the room (ch006-p19)",
+        "stuffy_crowded": "warm, close, crowded air with dust in the sunbeams"
+      },
+      "alignment": "05-scenes/lighting uses time_of_day and weather as condition keys (ENV-ENUM-v1 values). The sb2 additions are wind and daylight_access values only. No new time_of_day or weather value was introduced."
+    },
+    "waking_clock_mapping_sb2": {
+      "anchors_from_sb1": "ev0021 ends 16:25 (SCN-caterpillar-clearing S02); ev0032 hall at 17:36 (SCN-long-hall S03) and passage 17:36-17:38 (SCN-little-door-passage S02); waking ev0053 at 19:35 (SCN-riverbank S02).",
+      "method": "ev0022-ev0052 are spread over 16:25-19:35 in event order, at about 6-7 minutes per event, fitted to the sb1 anchors. The sb1 rule '14:15 + (n-2) x 6.7 min' would put ev0052 at 19:50, after the 19:35 waking, so the tail is compressed to end exactly at 19:35. sb1's own anchors are kept as they are.",
+      "result": "ev0022 treetop 16:25-16:30 (afternoon); Duchess house, kitchen, Cat's path, tea-party, wood and rose-tree 16:30-17:52 (late_afternoon); croquet 17:52-18:28 (late_afternoon); Gryphon 18:28-18:32 (late_afternoon); Mock Turtle's shore 18:32-18:56 (golden_hour); courtroom 18:56-19:35 (golden_hour), handing straight on to the waking at 19:35.",
+      "sun": "Sun elevation and azimuth are computed for Oxford (51.75 N, 1.26 W) on 4 July (declination +22.9 deg, solar noon about 12:09 GMT)."
+    },
+    "dream_growth_rule": "Ruling 5.2 A: every card has fixed.dream_growth, which names the waking detail (the index grows_from / world.json counterpart) and how the dream's light and air grow from the real afternoon. Dream exteriors take the waking sun of their clock slot; interiors state how daylight gets in (or doesn't)."
+  },
+  "decisions": [
+    "Every state is summer (35 of 35); weather is fair throughout. fair_hot runs to 18:32; fair_evening from the Mock Turtle's shore on; interiors are none_enclosed. There is no season or day-phase conflict with story_timeline (ev0022-ev0052 are all continuous T0, dream layer).",
+    "Tea-party: the Hatter's 'always six o'clock' (ch007-p57) is kept as the dream clock. The waking clock here is 17:14-17:33, so on 4 July both readings are late-afternoon light. The light is held steady across the four states to support the frozen tea-time.",
+    "Croquet's 'half an hour or so' (ch009-p36) is dream time; the waking clock gives the game about 32 minutes, which agrees.",
+    "The Queen 'frowning like a thunderstorm' (ch009-p30) is a simile: the sky stays clear. This is flagged in the card so video prompts do not add storm weather.",
+    "Golden hour starts at the Mock Turtle's shore (18:32). This fits 'Soup of the evening' (song lyric, ch010-p76) and the explicit following breeze (ch010-p80).",
+    "Courtroom S08 (ev0052): a draught through the windows lifts the flying pack. It is the dream form of the waking light_breeze that brings the dry leaves down in SCN-riverbank S02 (cp-cards-leaves, SUP-004). Wind steps from still to light_breeze only at this last state.",
+    "Seasonal guards (July): the rose-tree is in full bloom (peak season); old leaf-litter in the wood is normal but the canopy is fully green with no falling leaves before the waking; no spring blossom and no autumn colour anywhere.",
+    "The pepper in the courtroom (cook's pepper-box, ch011-p64) is a prop effect, not a room atmosphere change."
+  ],
+  "checked_not_conflicts": [
+    "ch007-p48 / TL-004 'last March' (Hatter's quarrel): dream-internal backstory (UTQ-003 resolved). It is told, not staged, and does not touch the present season.",
+    "ch011-p12 'All on a summer day' (the accusation verse) agrees with the season.",
+    "geography.json LOC-courtroom 'sky: none -- an enclosed room' against the designed high windows: the windows show light shafts only, with no sky in view, so this is compatible. Flagged to architecture, not a defect.",
+    "geography.json LOC-rock-ledge 'warm, in full sun' against golden_hour: the sun is still up at 11-14 deg, so the ledge stays in direct sun. Compatible."
+  ],
+  "auto_check": {
+    "command": "python3 code/p3-environment-sb2_check.py",
+    "exit_code": 0,
+    "scenes": 11,
+    "states": 35,
+    "results": {
+      "scene_id_valid": "PASS",
+      "timeline_ref_exists": "PASS",
+      "timeline_node_exists": "PASS",
+      "layer_match (all dream)": "PASS",
+      "chapters_covered": "PASS",
+      "event_refs_covered": "PASS",
+      "season_time_consistent": "PASS",
+      "enum": "PASS",
+      "dims_cover_states": "PASS",
+      "indoor_weather_consistent": "PASS",
+      "source_or_inferred": "PASS",
+      "quote_verbatim": "PASS",
+      "no_unknown_placeholder": "PASS",
+      "clock_monotonic (incl. all sb1 dream states, 60 entries)": "PASS",
+      "dream_ends_by_waking_19:35": "PASS"
+    }
+  },
+  "handoff": {
+    "05-scenes/lighting": "Key per state on time_of_day + weather (+ wind, daylight_access). Sun elevation/azimuth are given per exterior state. The kitchen and courtroom give diegetic_daylight descriptions only; setting the light itself is lighting's job.",
+    "06-art/environment-concept": "Use fixed.ground_and_flora and seasonal_guard; the tea-party light is held steady across its states.",
+    "09-audio/ambience": "Wind states: treetop breeze; shore light_breeze then breeze (song carried on it); courtroom draught at S08 only; everywhere else still."
+  },
+  "skills": "No auto-activated skills are enabled for this station; none applied.",
+  "evaluation": "skipped (quality judge = 0)"
+}

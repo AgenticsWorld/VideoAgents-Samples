@@ -1,0 +1,13 @@
+{
+  "id": "DEF-p4-scenemodel-971",
+  "opened_by": "05-scenes/scene-modeling",
+  "opened_on": "2026-09-23",
+  "task_id": "p4-scene-model-sb2",
+  "domain": "scenemodel",
+  "assigned_to": ["05-scenes/architecture", "06-art/environment-concept", "user (H2 decision at G4)"],
+  "status": "open",
+  "severity": "minor",
+  "summary": "SCN-rabbit-house-exterior: the plan and layout.json give a 9.0 x 5.0 m house; architecture.json structure says about 6.0 x 5.0 m (inferred).",
+  "findings": [{"scene": "SCN-rabbit-house-exterior", "issue": "Drawn walls run x 0.315-0.675 of the 25 m extent (9.0 m). The layout.json landmarks west_gable (0.31) and chimney_stack (0.69) confirm this. Depth 5.03 m matches the Bible.", "whitebox_handling": "Follows the plan and layout.json at 9.0 m; inferred:true."}],
+  "options": ["A: accept 9.0 m and amend the architecture card", "B: redraw the plan at 6.0 m, recalibrate layout.json, then re-model"]
+}

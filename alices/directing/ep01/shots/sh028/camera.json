@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh028",
+  "group_id": "grp011",
+  "scene_no": "S04",
+  "duration_s": 4.0,
+  "size": "medium-wide",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 28,
+  "camera_height_m": 1.3,
+  "angle": "level",
+  "rack_focus": "none",
+  "start_frame": "The same medium-wide down the passage, no closer: he pulls up and sits back on his haunches, a small clear silhouette against the lamplight, the gloves dropped between his forefeet.",
+  "end_frame": "The same frame as he braces the watch in a paw against his chest and frets at it; performance carried by muzzle, ears and the set of his back, with him still small in the vault.",
+  "constraint_honoured": "'Clean single so the native dialogue take has one speaker in frame' and 'no closer' — a fixed medium-wide holds both rules at once.",
+  "movement_note": "LN-ep01-006 (2.0 s) lands whole in 4.0 s. Any move on a talking animal reads as emphasis and would push the shot toward the uncanny.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

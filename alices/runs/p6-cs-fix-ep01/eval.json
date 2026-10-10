@@ -1,0 +1,10 @@
+{
+ "task_id": "p6-cs-fix-ep01",
+ "skipped": true,
+ "reason": "quality judge=0; QA dimensions all 0",
+ "auto": {
+  "color_script_ok": "PASS (code/check_color_script.py --strict)",
+  "DEF-...-001-a": "fixed",
+  "numeric_fields_unchanged": "PASS"
+ }
+}

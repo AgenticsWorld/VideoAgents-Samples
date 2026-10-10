@@ -1,0 +1,30 @@
+{
+  "character_id": "CHAR-knave-of-hearts",
+  "name": "Knave of Hearts",
+  "tier": "B",
+  "layer": "dream",
+  "performer_basis": { "rule": "SUP-002 + SUP-004: human performer, card-coded as a flat Jack-of-Hearts figure; FAC-house-of-hearts livery (emblem_visual: crimson coat/tabard piped cream, red heart badge, stylised Jack device)", "source_chapter": "ch008", "paragraph": "ch008-p11" },
+  "gender": "male",
+  "gender_note": { "source_chapter": "ch012", "paragraph": "ch012-p51", "quote": "The Knave shook his head sadly. “Do I look like it?” he said." },
+  "hair": { "color": "chestnut brown", "style": "shoulder-length, evenly rolled under at the ends in the face-card Jack manner, centre-parted, worn under a flat black cap", "inferred": true, "reason": "Source gives no hair; the rolled shoulder-length coif of the English-pattern Jack face card makes the card reading legible on a human performer (SUP-004)." },
+  "eyes": { "color": "hazel", "expression": "sidelong, watchful, quick to lower in a bow", "inferred": true, "reason": "Not described; hazel sits naturally with chestnut hair for an English performer; the sidelong look follows his answering the Queen only with a bow and smile (ch008-p13)." },
+  "skin": { "tone": "fair English complexion, lightly flushed at the cheeks", "inferred": true, "reason": "Not described; fits a young English courtier-page and the face-card's rosy cheeks." },
+  "face": { "shape": "oval, smooth planes", "features": ["thin neatly trimmed moustache (face-card Jack)", "clean-shaven chin", "practised courtier's close-lipped smile", "straight nose"], "source_chapter": "ch008", "paragraph": "ch008-p13", "quote": "the Knave of Hearts, who only bowed and smiled in reply", "inferred_parts": ["moustache", "nose", "face shape"], "reason": "Only the bow-and-smile is in the source; moustache taken from the Jack face-card convention." },
+  "build": { "height_range_cm": [178, 184], "body_type": "slim, straight-backed", "posture": "rigidly frontal and flat — turns the whole torso rather than the neck, like a card being turned", "source_chapter": "ch012", "paragraph": "ch012-p51", "quote": "being made entirely of cardboard", "inferred_parts": ["height_range_cm"], "reason": "Flatness is sourced; height designed to read as a young man of the court, taller than the gardeners' card figures." },
+  "scale_reference": { "performer_true_height_cm": [178, 184], "in_scene": "On screen he is always a grown man over Alice at her normal height (about 135-140 cm, a ten-year-old); at the trial Alice grows past everyone (ch012) so late shots show him shrinking relative to her — handled by SUP-003 forced perspective, not by a different performer.", "inferred": true, "reason": "Alice's height is designed on her own card; relative scale follows SUP-003." },
+  "base_age_range": "25-30",
+  "base_age_source": { "inferred": true, "reason": "Source gives no age; 'knave' (a page/servant) and his role carrying the crown point to a young man of the household rather than a youth or elder." },
+  "default_outfit_tone": "crimson and cream Hearts livery worn as a flat Jack-of-Hearts card: stiff card-tabard front and back over an 1862 footman's cut-away coat, knee breeches, white stockings",
+  "default_outfit_tone_source": { "source_chapter": "ch008", "paragraph": "ch008-p11", "quote": "Then followed the Knave of Hearts, carrying the King’s crown on a crimson velvet cushion", "inferred": true, "reason": "Colours and livery cut follow FAC-house-of-hearts emblem_visual; the card-tabard is the SUP-004 flat-card reading. Full costume design belongs to 06-art/costume." },
+  "period_silhouette_1862": { "silhouette": "upright rectangle: the stiff tabard flattens the torso into a card outline from shoulders to mid-thigh; below it slim breeches, white stockings, low black buckled shoes", "headwear": "flat black cap (small, face-card style)", "inferred": true, "reason": "1860s household livery base with the card shape laid over it per SUP-004." },
+  "sup002_coding": { "touches": ["flat card-tabard with a single large red heart and a stylised Jack device at the breast", "rolled Jack coif and thin moustache", "flat, frontal card-like movement"], "restraint": "No painted-paper skin, no cardboard prosthetic on the face; the face stays a real human face.", "source_chapter": "ch012", "paragraph": "ch012-p51" },
+  "marks": [
+    { "type": "insignia", "item": "stylised Jack device beside a red heart badge at the breast of the tabard", "position": "chest", "inferred": true, "reason": "FAC-house-of-hearts emblem_visual assigns the Knave a Jack device." },
+    { "type": "restraint (state)", "item": "iron chains at the wrists, a soldier either side", "position": "wrists", "scope": "trial only (ch011-ch012)", "source_chapter": "ch011", "paragraph": "ch011-p01", "quote": "the Knave was standing before them, in chains, with a soldier on each side to guard him" }
+  ],
+  "signature_items": [
+    { "item": "the King's crown carried on a crimson velvet cushion", "scope": "procession (ch008)", "source_chapter": "ch008", "paragraph": "ch008-p11" }
+  ],
+  "prompt_base_en": "a slim young English man of about 27, chestnut shoulder-length hair rolled under at the ends beneath a small flat black cap, thin trimmed moustache, hazel eyes, fair skin, a close-lipped courtier's smile, wearing a stiff flat crimson-and-cream card tabard with a large red heart and a Jack device over an 1862 footman's cut-away coat, knee breeches and white stockings, standing rigidly frontal like a playing card",
+  "doubling": null
+}

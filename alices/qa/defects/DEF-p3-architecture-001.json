@@ -1,0 +1,16 @@
+{
+ "id": "DEF-p3-architecture-001",
+ "raised_by": "00-orchestration/workflow-orchestrator",
+ "raised_on": "2026-09-22",
+ "task_id": "p3-architecture-sb1",
+ "severity": "minor",
+ "status": "closed",
+ "assigned_to": "05-scenes/architecture",
+ "due_gate": "G3",
+ "summary": "bible/scenes/SCN-pool-bank/architecture.json references SCN-wood, which is not registered in bible/scenes/index.json (G3 all_refs_resolve).",
+ "fix": "Replace SCN-wood with the registered ID intended (likely SCN-wonderland-wood, or the specific wood sub-space) — change nothing else.",
+ "closed_on": "2026-09-22",
+ "closed_by": "05-scenes/architecture",
+ "fix_task_id": "p3-fix-arch-001",
+ "fix_note": "Replaced dangling ref SCN-wood with registered SCN-wonderland-wood (root 'The Wood' in bible/scenes/index.json) in bible/scenes/SCN-pool-bank/architecture.json details item (src ch004-p34). The line refers to the wood as a whole (geography LOC-thick-wood near the pool-bank), not a sub-space, so the root wood scene is the correct target. No other changes."
+}

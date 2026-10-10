@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh002",
+  "group_id": "grp002",
+  "scene_no": "S01",
+  "duration_s": 8.0,
+  "size": "wide",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 28,
+  "camera_height_m": 0.35,
+  "angle": "level",
+  "rack_focus": "none",
+  "start_frame": "Lens down in the long meadow grass on the meadow side of the sitting shelf: seed-heads crossing the bottom of frame, the two girls small and central under the elm canopy, the flat backwater and the far parish spire readable through the heat haze.",
+  "end_frame": "The same frame held to the end: nothing has changed but the sister turning her page and the heat shimmer over the far field — the stillness is the shot.",
+  "constraint_honoured": "'Static, deep staging, no move' — locked off, with the deep stage (grass / girls / water / spire) doing the work instead of a move.",
+  "movement_note": "The episode's opening waking frame sets the 70/30 static default; 8.0 s of held frame is also the slowest ASL in the episode, as S01 asks for.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

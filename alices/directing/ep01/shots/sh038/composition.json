@@ -1,0 +1,29 @@
+{
+  "shot_id": "sh038",
+  "scene_id": "SCN-long-hall",
+  "size": "medium",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "mid_right",
+    "anchor_xy": [0.66, 0.52],
+    "size_in_frame": "three-quarter figure, about 0.72 of frame height — the sh034 scale exactly, mirrored across the frame"
+  },
+  "headroom": "about 0.12 of frame height, lamp row underside cutting the top corner — reproduced from sh034 so the two passes are the same picture.",
+  "horizon_eyeline": "The sh034 axis: dado level at 0.66 of frame height, door heads at 0.20, her eyeline at 0.44. Identical.",
+  "layers": {
+    "fg": "the near edge of each horseshoe arch sweeping through the left of frame now, the mirror of sh034",
+    "mg": "Alice walking the same wall the other way, the key held small between finger and thumb",
+    "bg": "honey limestone, iron lily-stems, a blind roundel over each passing door head"
+  },
+  "gaze": {
+    "direction": "frame_left",
+    "lead_room": "left",
+    "note": "the deliberate reversal: in sh034 she travelled screen left to right; here she carries the key back the other way, screen right to left, with about 0.34 of frame width of wall ahead of her. Same wall, same axis, opposite heading — which is what makes this read as a return rather than a new attempt."
+  },
+  "balance": "The mirror image of sh034's balance: figure in the right third, repeating arch rhythm filling the left two thirds. The failure rhymes because the frame rhymes.",
+  "leading_lines": "The same two long parallel horizontals and the same arch beat, running the other way; her arm crossing them to the keyhole.",
+  "eye_first": "The key in her fingers, then the iron keyhole it is offered to — the scale joke is decided in that one comparison, so the two are composed adjacent, at the same depth, both sharp.",
+  "safe_area_ok": true,
+  "constraint_binding": "Two attempts inside the move and then out, and the scale joke is in the frame, not in the number of tries: the key and a keyhole four times its size are held in the same frame at the same focal plane, large enough to compare without an insert. No third attempt and no cutaway to the lock.",
+  "pairs_with": "sh034 — same axis and same framing values, travel direction reversed."
+}

@@ -1,0 +1,11 @@
+{
+ "auto": {
+  "creature_json_valid": "PASS",
+  "ids_preserved": "PASS",
+  "DEF-401/402_closed": "PASS",
+  "DEF-403_waiver_annotated": "PASS"
+ },
+ "task_id": "p4-h2-creature",
+ "skipped": true,
+ "reason": "quality judge=0 (user setting); QA dimensions all 0"
+}

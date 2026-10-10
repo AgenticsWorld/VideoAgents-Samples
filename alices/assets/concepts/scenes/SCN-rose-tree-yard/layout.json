@@ -1,0 +1,197 @@
+{
+  "schema_version": "scene_layout.v1",
+  "scene_id": "SCN-rose-tree-yard",
+  "layout_top": "layout_top.png",
+  "status": "calibrated_to_render",
+  "orientation": {
+    "top_of_map": "north; the high garden wall with the little door runs along the bottom (south) edge; the broad walk runs west (left, where the procession comes from) to east (right, the arbour arch toward the croquet-ground)",
+    "extent_m": [
+      40,
+      22.5
+    ],
+    "note_en": "camera positions in views[] are described relative to these landmarks"
+  },
+  "landmarks": [
+    {
+      "id": "little_door",
+      "name": "tiny door in the garden wall",
+      "name_en": "the tiny door in the garden wall",
+      "kind": "entrance",
+      "xy": [
+        0.28,
+        0.92
+      ]
+    },
+    {
+      "id": "rose_tree",
+      "name": "white rose-tree",
+      "name_en": "the white rose-tree",
+      "kind": "feature",
+      "xy": [
+        0.435,
+        0.6
+      ]
+    },
+    {
+      "id": "wheelbarrow",
+      "name": "gardeners' wheelbarrow",
+      "name_en": "the gardeners' wheelbarrow",
+      "kind": "prop_anchor",
+      "xy": [
+        0.065,
+        0.76
+      ]
+    },
+    {
+      "id": "flower_pot",
+      "name": "huge terracotta flower-pot",
+      "name_en": "the huge terracotta flower-pot",
+      "kind": "prop_anchor",
+      "xy": [
+        0.63,
+        0.64
+      ]
+    },
+    {
+      "id": "walk_west",
+      "name": "west end of the broad walk",
+      "name_en": "the west end of the broad walk",
+      "kind": "entrance",
+      "xy": [
+        0.02,
+        0.42
+      ]
+    },
+    {
+      "id": "mosaic_roundel",
+      "name": "mosaic roundel at the walk crossing",
+      "name_en": "the mosaic roundel at the walk crossing",
+      "kind": "feature",
+      "xy": [
+        0.61,
+        0.31
+      ]
+    },
+    {
+      "id": "fountain",
+      "name": "lily fountain",
+      "name_en": "the lily fountain",
+      "kind": "feature",
+      "xy": [
+        0.605,
+        0.11
+      ]
+    },
+    {
+      "id": "heart_bed",
+      "name": "heart-shaped flower-bed",
+      "name_en": "the heart-shaped flower-bed",
+      "kind": "planting",
+      "xy": [
+        0.225,
+        0.12
+      ]
+    },
+    {
+      "id": "spade_bed",
+      "name": "spade-shaped flower-bed",
+      "name_en": "the spade-shaped flower-bed",
+      "kind": "planting",
+      "xy": [
+        0.81,
+        0.68
+      ]
+    },
+    {
+      "id": "arbour_arch",
+      "name": "gilded arbour arch",
+      "name_en": "the gilded arbour arch",
+      "kind": "exit",
+      "xy": [
+        0.94,
+        0.35
+      ]
+    }
+  ],
+  "views": [
+    {
+      "tile": 1,
+      "camera_from": "little_door",
+      "looking_at": "rose_tree",
+      "size": "wide",
+      "angle": "low",
+      "desc_en": "low wide shot at flower height from just inside the tiny door, oversized box edging and pelargoniums in the foreground, the white rose-tree and the garden rising beyond"
+    },
+    {
+      "tile": 2,
+      "camera_from": "flower_pot",
+      "looking_at": "rose_tree",
+      "size": "medium",
+      "angle": "eye",
+      "desc_en": "eye-level medium shot from beside the huge terracotta flower-pot on the white rose-tree and the gardeners' paint-pots at its bed"
+    },
+    {
+      "tile": 3,
+      "camera_from": "arbour_arch",
+      "looking_at": "walk_west",
+      "size": "wide",
+      "angle": "eye",
+      "desc_en": "eye-level wide shot from under the gilded arbour arch looking west along the broad walk into the low sun, the way the procession comes"
+    },
+    {
+      "tile": 4,
+      "camera_from": "rose_tree",
+      "looking_at": "mosaic_roundel",
+      "size": "medium",
+      "angle": "eye",
+      "desc_en": "eye-level medium shot from the rose-tree bed across the broad walk to the mosaic roundel where the procession halts opposite"
+    },
+    {
+      "tile": 5,
+      "camera_from": "fountain",
+      "looking_at": "spade_bed",
+      "size": "wide",
+      "angle": "high_oblique",
+      "desc_en": "high oblique wide shot from above the lily fountain across the broad walk and the card-suit carpet beds toward the spade-shaped flower-bed and the garden wall"
+    },
+    {
+      "tile": 6,
+      "camera_from": "mosaic_roundel",
+      "looking_at": "fountain",
+      "size": "medium",
+      "angle": "eye",
+      "desc_en": "eye-level medium shot from the mosaic roundel up the cross walk to the lily fountain and its single jet"
+    },
+    {
+      "tile": 7,
+      "camera_from": "wheelbarrow",
+      "looking_at": "rose_tree",
+      "size": "detail",
+      "angle": "eye",
+      "desc_en": "eye-level detail from beside the wheelbarrow on white roses wet with fresh red paint, drips on leaves and gravel"
+    },
+    {
+      "tile": 8,
+      "camera_from": "rose_tree",
+      "looking_at": "little_door",
+      "size": "close",
+      "angle": "eye",
+      "desc_en": "eye-level close shot from the rose-tree bed on the tiny door in the garden wall under its carved halo roundel"
+    },
+    {
+      "tile": 9,
+      "camera_from": "spade_bed",
+      "looking_at": "flower_pot",
+      "size": "close",
+      "angle": "low",
+      "desc_en": "low close shot from the edge of the spade-shaped flower-bed on the huge terracotta flower-pot where the gardeners hide"
+    }
+  ],
+  "calibration_note_en": "Coordinates re-read from the rendered image 2026-09-23 (ground-contact points). The tiny door is the gap between two piers in the south wall. Broad walk centre line y=0.42. A fourth, diamond-shaped bed sits at about [0.43, 0.12]; the club-shaped bed sits at about [0.77, 0.14].",
+  "checklist": {
+    "architecture_match": true,
+    "lighting_match": true,
+    "style_match": true,
+    "camera_orthographic": "NO: the camera is tilted about 30-40 deg from vertical; the south wall shows its face and gate piers; the arbour arch shows in side view"
+  }
+}

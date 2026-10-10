@@ -1,0 +1,35 @@
+{
+  "shot_id": "sh052",
+  "scene_id": "SCN-long-hall",
+  "size": "wide",
+  "subject": {
+    "id": "PROP-golden-key",
+    "in_frame_characters": ["CHAR-alice"],
+    "grid": "top_centre",
+    "anchor_xy": [0.50, 0.20],
+    "size_in_frame": "seen from below through the glass tabletop, about 0.06 of frame height — a bright fleck suspended in a transparent ceiling"
+  },
+  "second_subject": {
+    "id": "CHAR-alice",
+    "grid": "bottom_centre",
+    "anchor_xy": [0.50, 0.90],
+    "note": "at the foot of the leg, tiny and cropped at the bottom edge, looking straight up the axis."
+  },
+  "headroom": "none — the shot is all headroom. The entire frame above her is the vertical distance she has to cross.",
+  "horizon_eyeline": "No horizon at all: this is the first of the episode's two rationed 24 mm verticals. The flagstones are a small patch at the bottom edge; the glass tabletop is a plane across the top third at 0.26 of frame height; the lamp row glows beyond it. Her eyeline runs straight up the vertical centre line, the steepest in the episode so far.",
+  "layers": {
+    "fg": "the flagstone surface and the base of one glass leg at the bottom of frame, hugely foreshortened",
+    "mg": "the three clear glass legs soaring up the frame and converging",
+    "bg": "the underside of the glass tabletop as a transparent ceiling, the key lying on it, and the lamp row glowing beyond the glass"
+  },
+  "gaze": {
+    "direction": "up_frame",
+    "lead_room": "above",
+    "note": "one look, straight up the centre of frame, from the bottom edge to the key. The lead room is the entire picture."
+  },
+  "balance": "A single vertical axis: obstacle stacked on subject with the goal at the top. Perfectly symmetrical and perfectly unattainable — the episode's thesis in one set-up.",
+  "leading_lines": "The three glass legs converge steeply upward and meet at the tabletop; every line in frame is a rail going where she cannot follow. The key sits exactly where they converge.",
+  "eye_first": "The key, because it is the only bright point in a dark vertical, and the eye arrives at it by climbing the legs — which is the journey she is about to fail at.",
+  "safe_area_ok": true,
+  "constraint_binding": "Goal and obstacle in one frame — the episode's thesis in a single set-up, and static. Deep focus (size beat): the flagstone at her feet, the leg surface and the key on the glass are all sharp in the same frame. One of the two rationed 24 mm shots in the episode; the other is sh064, and no third vertical of this kind exists."
+}

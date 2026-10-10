@@ -1,0 +1,37 @@
+{
+  "shot_id": "sh037",
+  "group_id": "grp014",
+  "scene_no": "S05",
+  "scene_id": "SCN-long-hall",
+  "duration_s": 4.0,
+  "is_dialogue": false,
+  "group_position": "middle shot of grp014 — Alice at the map path point (glass_table), taking the key.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "stand",
+      "start_pos": "at the edge of the glass table, leaning over the bare tabletop",
+      "space_fragment_en": "standing over the glass table, centred high in frame, facing down at the tiny golden key on the bare glass",
+      "facing": "bent over the tabletop, eyes straight down onto the key; her hand comes in from her own right",
+      "path": [],
+      "beats": [
+        { "t": 0.8, "action": "her face lights up", "sync": "a key is a way out" },
+        { "t": 2.4, "action": "her hand comes in across the lit glass and takes the key", "sync": "the crossing of the bright plane" }
+      ],
+      "performance_beat": {
+        "objective": "get hold of the thing that will open one of those doors",
+        "goal": "get hold of the key",
+        "emotional_arc": "from careful interest to open delight",
+        "arc_from": "careful interest",
+        "arc_to": "open delight",
+        "trigger": { "beat": "her fingers close on the key", "t": 2.4 },
+        "no_early_reaction": ["a smile", "the eyebrows lifting", "the hand darting"],
+        "forbidden_early": ["a smile", "the eyebrows lifting", "the hand darting"],
+        "end_state": "key closed in her fist above the glass, face still lowered to the table, eyes bright and steady"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0003 (dream)", "note": "Alice alone." }
+}

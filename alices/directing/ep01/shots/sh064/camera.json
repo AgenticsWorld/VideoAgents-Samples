@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh064",
+  "group_id": "grp025",
+  "scene_no": "S07",
+  "duration_s": 7.0,
+  "size": "wide",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 24,
+  "camera_height_m": "about 2.45, at her own eye height near the lamp line — the last set-up in the episode allowed to sit this high",
+  "angle": "straight down, along the axis of her own body",
+  "rack_focus": "none",
+  "start_frame": "Looking straight down the length of her own body from her eye height: her front running away steeply down the middle of the image, her boots small and absurdly distant at the bottom of the frame on the flagstones by the glass table.",
+  "end_frame": "The same frame held through the line and the wave: the boots — the same black ankle-strap boots that kicked once and vanished under the hedge — still tiny and far below, and no nearer at the end than at the start.",
+  "constraint_honoured": "'Played absolutely straight — the one piece of pure comedy in the dream half' — no move anywhere near the joke, which is entirely optical.",
+  "movement_note": "The second and last rationed 24 mm shot. A camera move along this axis would unwind the near-to-far stretch that is the whole gag. LN-ep01-017 (5.8 s) lands whole in 7.0 s.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

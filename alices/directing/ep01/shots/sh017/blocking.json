@@ -1,0 +1,45 @@
+{
+  "shot_id": "sh017",
+  "group_id": "grp008",
+  "scene_no": "S03",
+  "scene_id": "SCN-falling-dream",
+  "duration_s": 5.0,
+  "is_dialogue": false,
+  "group_position": "first shot of grp008 — Alice on her map start (entry_tunnel).",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "prone",
+      "start_pos": "on her front in the low earth tunnel, crawling toward the lip at the entry tunnel mouth",
+      "space_fragment_en": "lying face down at the entry tunnel mouth, centred low in frame, crawling forward into the dark ahead of her",
+      "facing": "straight down the tunnel on the lens axis, away from the light behind her",
+      "path": [
+        { "t": 3.6, "to": "over the lip where the floor tips away, dropping out of the bottom of frame" }
+      ],
+      "beats": [
+        { "t": 0.0, "action": "crawling on her front, hawthorn roots brushing her back", "sync": "shot opens in the dark" },
+        { "t": 3.6, "action": "the floor tips away under her hands", "sync": "no moment to stop herself" },
+        { "t": 4.2, "action": "she drops out of the bottom of frame", "sync": "handover to sh018" }
+      ],
+      "performance_beat": {
+        "objective": "keep after it down a tunnel that is getting darker",
+        "goal": "keep after it down the tunnel",
+        "emotional_arc": "from determined crawling to a single unguarded instant of falling, with no scream",
+        "arc_from": "determined, slightly laboured crawling",
+        "arc_to": "one unguarded instant of falling",
+        "trigger": { "beat": "the floor tips away under her hands", "t": 3.6 },
+        "no_early_reaction": ["hands bracing", "the head coming up", "the body checking"],
+        "forbidden_early": ["hands bracing", "the head coming up", "the body checking"],
+        "end_state": "gone from frame — the last visible state is both hands still reaching forward as the ground leaves them"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": {
+    "timeline_ok": true,
+    "violations": [],
+    "story_event": "ev0002 (dream) — 'the rabbit-hole went straight on, then dipped suddenly down'",
+    "note": "Alice alone. CHAR-white-rabbit is not legal in the shaft; he is first seen in S04."
+  }
+}

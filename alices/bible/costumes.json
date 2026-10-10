@@ -1,0 +1,2050 @@
+{
+  "_meta": {
+    "file": "bible/costumes.json",
+    "status": "authored_v1_pending_h2",
+    "owner": "06-art/costume",
+    "task_id": "p4-costume",
+    "generated": "2026-09-22",
+    "version": "1.2.0",
+    "amendments": [
+      {
+        "change_request": "BIB-0027",
+        "task_id": "p4-cr-costume",
+        "date": "2026-09-23",
+        "authority": "User ruling 2026-09-22 (bible/changelog.md BIB-0027; cultivation.json SUP-002, SUP-010, XA-magic-02, XA-magic-08; world.json WR-001, WR-002, WR-010; h1_summary.md §6)",
+        "summary": "Talking animals, the Gryphon and the Mock Turtle are now photoreal CGI animals and creatures. Their animal-coded human costumes are removed: 22 characters are unclothed, the White Rabbit keeps only the text's waistcoat (plus collar and bow, and the herald tabard at the trial), and the Frog- and Fish-Footmen keep the sourced livery and powdered hair re-cut for frog- and fish-bodied figures. The Duchess's baby gains a pig end-state variant. Human and card-figure costumes, all IDs, change points and counts are unchanged."
+      },
+      {
+        "change_request": "BIB-0029",
+        "task_id": "p4-h2-bible",
+        "date": "2026-09-23",
+        "authority": "H2 art-style lock signed by the user at gate G4 (approval ba96732d, decision PASS_WITH_WAIVER, record runs/g4/gate.json); arbitration by 00-orchestration/memory-bible",
+        "summary": "Text-only arbitration after the H2 lock; no image was generated or re-rolled (reroll budget 0). (1) COS-040/041/042/043 gardener tabards re-suited from clubs to SPADES, numerals unchanged, so the club suit is free for the ten soldiers (COS-044, Ace-Ten, confirmed unchanged) and the visiting Clubs monarchs (COS-046) -- DEF-p4-char-301. (2) COS-027 is confirmed as the Magpie's default look; the rejected exit muffler and the sourced wrapping-up beat are both recorded on the entry -- DEF-p4-char-concept-201-a. (3) COS-035 / COS-036 / COS-037 pending_H2 flags replaced by resolved_H2 rulings. (4) COS-012 carries the costume-vs-prop ownership ruling and the two glove variants now cross-reference PROP-white-kid-gloves-and-fan -- DEF-p4-costume-001-c. (5) COS-015 carries the Hatter 10/6 lettering ruling and its hand-off to 06-art/art-director (qa/defects/DEF-p4-style-003) -- DEF-p4-costume-001-b. All COS ids, change points, variant points and counts are unchanged; no entry added or deleted."
+      }
+    ],
+    "pending_H2": [
+      "RESOLVED at G4 by BIB-0029 -- COS-035 Fish-Footman and COS-036 Frog-Footman: upright livery figures with real fish / frog heads approved as proposed; the livery cut written here stands, nothing below the knee (see each outfit's resolved_H2)",
+      "RESOLVED at G4 by BIB-0029 -- COS-037 Duchess's baby: the piglet keeps the same swaddling gown, revealed in one continuous held shot, and leaves it behind when it trots off (see COS-037 resolved_H2)",
+      "STILL OPEN -- COS-006/COS-007 White Rabbit: garment set beyond the waistcoat (collar and bow proposed; optional plum cut-away jacket; herald tabard kept). The H2 signature card did not itemise it, so BIB-0029 left it untouched; the delivered H2-locked sheet shows the waistcoat-plus-collar-and-bow reading. 06-art/costume to close it with 06-art/art-director, or ask the user.",
+      "STILL OPEN (no cost) -- COS-050 Tortoise: CGI register for a told-only animal; only decidable if an insert is ever staged",
+      "Non-speaking dream animals (puppy, hedgehogs, flamingoes) have no costume entries: they are not CHAR-* characters and wear nothing"
+    ],
+    "write_via": "00-orchestration/memory-bible (on_bible_access)",
+    "content_language": "English (UI language English; visual_en is English and is injected verbatim by character-concept, costume-concept and 08-video-gen/prompt; never translate or paraphrase)",
+    "scope": "Film-wide costume system: character x occasion x period matrix, one default costume per character, explicit costume-change points hung on story_timeline events. Covers every character in bible/characters/index.json (44 entries incl. told-only CHAR-tortoise).",
+    "schema_note": "Platform convention characters[].outfits[] (read by services/runtime/core.py _costume_entries). Outfit ids use the skeleton's COS-NNN prefix, so costume sheets are named sheet_<COS-id>.png. The skeleton's flat costumes[] list is replaced by this nested form; do not add a parallel flat list (the parser would read both).",
+    "inputs_read": [
+      "bible/characters/index.json + every characters/<id>/appearance.json (CHAR-tortoise has no card: told-only)",
+      "bible/characters/CHAR-alice/age_versions.json (age01 base, age02 reverie-only)",
+      "bible/style.json (CR-002 period lock, CR-010 no execution imagery, CR-012 lettering, palette accent_rules; CR-003 performer coding is superseded by BIB-0027 and style.json is listed stale)",
+      "bible/changelog.md BIB-0027; bible/cultivation.json SUP-002, SUP-006, SUP-010, XA-magic-02, XA-magic-08; bible/world.json WR-001, WR-002, WR-010; bible/h1_summary.md §6; runs/p4-cr-cgi-mucha-bible/result.json; qa/defects/DEF-p4-style-001.json (read for p4-cr-costume)",
+      "bible/culture.json (CUL-006 court, CUL-010 white kid gloves and fan, CUL-011 judge's wig under crown, CUL-012 footmen's powdered hair and livery)",
+      "bible/politics.json (FAC-* emblem_visual)",
+      "bible/cultivation.json SUP-001..014 via bible/h1_summary.md; runs/h1-ruling/ruling.json (5.3 B doubling, 5.4 B)",
+      "story/story_timeline.json, story/events.json, story/episode_plan.json (ep01-ep09), bible/scenes/index.json",
+      "qa/defects/DEF-p3-char-index-902.json, DEF-p3-char-index-903.json",
+      "refs/style/alice.jpeg (refs/NOTES.md, refs/annotations.json absent; refs/props/costumes/ and refs/characters/ empty)"
+    ],
+    "user_refs": [
+      {
+        "path": "refs/style/alice.jpeg",
+        "annotation": "none (no NOTES.md / annotations.json)",
+        "used_for": [
+          "COS-001 Alice: blue knee-length dress with white pinafore, white legs, dark flat shoes (the small standing figure in the reference)",
+          "COS-019 Caterpillar: since BIB-0027 the reference's giant CGI caterpillar matches the approved rendering; its slate-blue and moss-green palette now belongs to the body (appearance/creature), and COS-019 is unclothed"
+        ]
+      }
+    ],
+    "periods": [
+      { "id": "PER-waking-afternoon", "events": ["ev0001"], "label": "waking frame, hot afternoon on the bank before the doze (Friday 4 July 1862)" },
+      { "id": "PER-dream", "events": ["ev0002", "ev0044"], "label": "Alice's dream from the fall to the Mock Turtle's shore (ev0002-ev0044)" },
+      { "id": "PER-dream-court", "events": ["ev0045", "ev0052"], "label": "Alice's dream, the trial (arrival at the court to the pack flying up)" },
+      { "id": "PER-waking-close", "events": ["ev0053", "ev0054"], "label": "waking on the bank, later afternoon to sunset" },
+      { "id": "PER-reverie-after-time", "events": ["ev0054"], "paragraph": "ch012#p71", "label": "the sister's imagined 'after-time' (grown Alice); insert only" }
+    ],
+    "episode_map": { "ep01": "ev0001-ev0008", "ep02": "ev0009-ev0013", "ep03": "ev0014-ev0018", "ep04": "ev0019-ev0028", "ep05": "ev0029-ev0033", "ep06": "ev0034-ev0038", "ep07": "ev0039-ev0044", "ep08": "ev0045-ev0047", "ep09": "ev0048-ev0054" },
+    "occasion_enum": ["daily", "formal", "court", "work", "livery", "special"],
+    "change_point_rule": "Every outfit switch is listed in its character's change_points: after_event = last event in the old outfit's range; effective_from_event = first event the new outfit is on screen. All costume switches in this film happen off screen between scenes, so storyboard/shot-planning never needs a switch inside a generation group. Wet, sooty, leaf-strewn or accessory states are NOT outfit changes: they are variants listed under the outfit and their on/off events are in the character's variant_points for 07-directing/continuity-planning.",
+    "global_rules": [
+      "Period lock 1862 (style CR-002): natural fabrics only (cotton, muslin, wool, silk, velvet, linen, leather, straw); hooks, buttons, laces and ties only; no zips, plastics, synthetic sheen or post-1862 cuts.",
+      "SUP-002 / SUP-010 / XA-magic-02 (amended BIB-0027): talking animals, the Gryphon and the Mock Turtle are photoreal CGI animals and creatures. They wear only the garments the text gives them, made to 1862 pattern and tailored to the animal's anatomy: the White Rabbit's waistcoat (with collar and bow, and the herald tabard at the trial), and the Footmen's livery and powdered hair. Every other animal outfit is 'unclothed' (visual_en states it plainly; there is no separate costume sheet, only the character sheet.png). Species is carried by the CGI anatomy (04-creatures/creature, 03-characters/appearance), never by costume cues. There are no humans in animal costume, no masks and no cartoon faces. Human dream-figures and the card figures (SUP-004) remain human performers in the costumes below, which are unchanged.",
+      "WR-010 / XA-magic-08: the Art Nouveau / Mucha design language belongs to the dream environments only. Every costume, including those worn inside Art Nouveau sets, stays 1862-based: no Art Nouveau ornament, whiplash embroidery, halo collars or Mucha-style drapery on any garment.",
+      "SUP-004 card figures: the House of Hearts pack shares one card-back design, 'crimson-and-cream lattice card-back pattern with a small heart rosette', on the back of every tabard or panel (ch008-p16).",
+      "Palette accents (style.json palette_logic.accent_rules): cornflower blue is Alice's alone; Hearts crimson belongs only to the House of Hearts household (Queen, King, Knave, gardeners, soldiers, officers, executioner, Fish-Footman, royal children, the White Rabbit's herald tabard). Visiting monarchs and courtiers of Diamonds use scarlet, brick or coral, never Hearts crimson.",
+      "CR-010 / DEF-p3-char-index-902 / SUP-014: no axe, block, sword, noose or any execution device is part of any costume, and none is named in any visual_en (negation words are also kept out of visual_en; bans live in prohibited_in_prompt).",
+      "Size changes (SUP-003) never change a costume: forced-perspective scaled sets carry the size; production builds matching duplicate costumes for any scaled double.",
+      "Negation discipline for unclothed outfits: their visual_en uses only the positive phrase 'unclothed and unadorned: the bare natural <animal>, wearing nothing'. Specific bans (clothing, human in costume, masks, cartoon faces) live in prohibited_in_prompt.",
+      "Weapons and hand props (pocket watch, fan, trumpet, scroll, hookah, paintbrush, slates, sack, batons, wands, teacup, pepper-box) belong to 06-art/prop and are not part of any visual_en."
+    ],
+    "counts": { "characters": 44, "outfits": 52, "change_points": 10 }
+  },
+
+  "characters": [
+    {
+      "character_id": "CHAR-alice",
+      "name": "Alice",
+      "tier": "S",
+      "layer": "both",
+      "default_outfit_id": "COS-001",
+      "occasion_matrix": [
+        { "period": "PER-waking-afternoon", "daily": "COS-001" },
+        { "period": "PER-dream", "daily": "COS-001", "note": "she wears the dress she fell asleep in through the whole dream; the White Rabbit mistakes her pinafore for his housemaid's apron (ruling 5.3 B)" },
+        { "period": "PER-dream-court", "daily": "COS-001", "note": "no court dress: she is a child witness in her own clothes" },
+        { "period": "PER-waking-close", "daily": "COS-001" },
+        { "period": "PER-reverie-after-time", "daily": "COS-002", "note": "age version CHAR-alice-age02 only" }
+      ],
+      "outfits": [
+        {
+          "id": "COS-001",
+          "label": "Blue summer frock and white pinafore",
+          "occasion": "daily",
+          "period": "PER-waking-afternoon, PER-dream, PER-dream-court, PER-waking-close",
+          "period_range": { "from_event": "ev0001", "to_event": "ev0054", "excluding": "ch012#p71 reverie insert" },
+          "age_version": "CHAR-alice-age01",
+          "default": true,
+          "visual": "Child's 1862 summer day dress in pale cornflower-blue cotton: rounded neckline, short puffed sleeves, fitted bodice, full bell skirt to just below the knee over starched white petticoats (no hoop). White cotton pinafore over it with bib, frilled shoulder straps, back sash bow and one deep front patch pocket (comfits and thimble live there). White stockings, black flat ankle-strap shoes, bare-headed.",
+          "visual_en": "a pale cornflower-blue cotton summer frock of 1862 with a wide rounded neckline, short puffed sleeves and a fitted bodice, the full bell skirt ending just below the knee over starched white cotton petticoats without a hoop; over it a crisp white cotton pinafore with a bib front, frilled shoulder straps, a sash tied in a bow at the back and one deep patch pocket at the front; white cotton stockings; black leather flat ankle-strap shoes; bare-headed; soft matte cotton weave, clean and lightly creased",
+          "components": ["pale cornflower-blue cotton frock (short puffed sleeves, rounded neckline, knee-length bell skirt)", "starched white cotton petticoats, no hoop", "white cotton bib pinafore with frilled straps, back sash bow, front patch pocket", "white cotton stockings", "black leather flat ankle-strap shoes"],
+          "materials": "cotton lawn frock, cotton pinafore, cotton stockings, leather shoes",
+          "palette": ["cornflower blue #6F8FC0 (Alice's exclusive accent, style.json)", "white"],
+          "condition_and_wear": "Clean and lightly creased at the start (sitting on the grass). Picks up wet and drying states in the pool sequence and a few dead leaves at waking (see variants). Otherwise stays neat throughout: the dream never tears or stains it.",
+          "variants": [
+            { "name": "one white kid glove", "events": ["ev0007"], "visual_delta": "one of the White Rabbit's small white kid gloves pulled onto one hand", "prop_ref": "PROP-white-kid-gloves-and-fan (the glove is a PROP: it changes hands and drives the shrink beat; this variant only records how it is worn - BIB-0029, DEF-p4-costume-001-c)", "source": { "chapter": "ch002", "para": "ch002-p14", "quote": "she had put on one of the Rabbit’s little white kid gloves while she was talking" } },
+            { "name": "soaked", "events": ["ev0008", "ev0009", "ev0010"], "visual_delta": "frock and pinafore soaked dark and clinging, skirt hem dripping, stockings wet; hair belongs to appearance", "note": "fully wet ev0008-ev0009; damp and drying during the Caucus-race (ev0010); dry again from ev0011 ('all dry again', ch003-p19)", "source": { "chapter": "ch003", "para": "ch003-p01", "quote": "all dripping wet, cross, and uncomfortable" } },
+            { "name": "dead leaves", "events": ["ev0053"], "visual_delta": "a few dry amber and brown leaves on the pinafore and skirt, brushed off by her sister", "source": { "chapter": "ch012", "para": "ch012-p64", "quote": "some dead leaves that had fluttered down from the trees upon her face" } }
+          ],
+          "scale_note": "SUP-003: giant or tiny moments are staged with scaled sets and doubles; any double wears an identical duplicate of this costume, never a transformed one.",
+          "chapters": ["ch001", "ch002", "ch003", "ch004", "ch005", "ch006", "ch007", "ch008", "ch009", "ch010", "ch011", "ch012"],
+          "episodes": ["ep01", "ep02", "ep03", "ep04", "ep05", "ep06", "ep07", "ep08", "ep09"],
+          "scenes": ["all Alice scenes: SCN-thames-riverside, SCN-riverbank, SCN-field-hedge-burrow and every dream SCN"],
+          "source": { "chapter": "ch012", "para": ["ch012-p01", "ch003-p23"], "quote": "she tipped over the jury-box with the edge of her skirt / she put her hand in her pocket" },
+          "inferred": true,
+          "reason": "Skirt and pocket are sourced; colour and pinafore follow the user style reference refs/style/alice.jpeg and appearance.json default_outfit_tone; knee-length skirt, petticoats, stockings and ankle-strap shoes are standard for a girl of about ten in 1862.",
+          "user_refs": ["refs/style/alice.jpeg"]
+        },
+        {
+          "id": "COS-002",
+          "label": "Grown Alice's day dress (sister's reverie)",
+          "occasion": "daily",
+          "period": "PER-reverie-after-time",
+          "period_range": { "from_event": "ev0054", "to_event": "ev0054", "from_paragraph": "ch012#p71", "to_paragraph": "ch012#p71" },
+          "age_version": "CHAR-alice-age02",
+          "default": false,
+          "visual": "A young married lady's early-1860s day dress in deeper cornflower-blue cotton lawn: front-buttoned fitted bodice, high narrow white collar and white cuffs, long coat sleeves, floor-length bell skirt over a moderate cage crinoline, small gold brooch. No pinafore. Deliberately 1862 fashion because the sister can only imagine the future in clothes she knows (age_versions.json).",
+          "visual_en": "an 1862 young lady's day dress in deeper cornflower-blue cotton lawn, a fitted bodice closing down the front with small covered buttons, a narrow high white linen collar pinned with a small gold brooch, white linen cuffs, long coat sleeves, a narrow self-fabric belt at the natural waist, the full floor-length bell skirt worn over a moderate cage crinoline and white petticoats, black kid ankle boots; bare-headed; smooth fine cotton, fresh and well kept",
+          "components": ["deeper cornflower-blue cotton lawn day dress", "white linen collar and cuffs", "small gold brooch", "moderate cage crinoline and petticoats", "black kid ankle boots"],
+          "materials": "cotton lawn, linen, kid leather",
+          "palette": ["deeper cornflower blue (Alice's accent carried into adulthood)", "white"],
+          "condition_and_wear": "Pristine, domestic; an indoor or garden storytelling picture at sunset.",
+          "variants": [],
+          "chapters": ["ch012"],
+          "episodes": ["ep09"],
+          "scenes": ["the sister's imagined storytelling insert, cut from SCN-riverbank"],
+          "source": { "chapter": "ch012", "para": "ch012-p71", "quote": "this same little sister of hers would, in the after-time, be herself a grown woman" },
+          "inferred": true,
+          "reason": "The source gives no costume for grown Alice; design follows CHAR-alice age_versions.json default_outfit_tone (deeper cornflower blue, long sleeves, high white collar, no pinafore, 1862 cut).",
+          "blocked_on_note": "costume-concept needs the age02 identity base sheet_<tag>.png from character-concept before drawing this sheet."
+        }
+      ],
+      "change_points": [
+        { "id": "CP-001", "after_event": "ev0054", "at_paragraph": "ch012#p70", "effective_from_event": "ev0054", "effective_from_paragraph": "ch012#p71", "from": "COS-001", "to": "COS-002", "staging": "hard cut into the sister's closed-eyed reverie insert; age version switches with the costume", "source": { "chapter": "ch012", "para": "ch012-p71" } },
+        { "id": "CP-002", "after_event": "ev0054", "at_paragraph": "ch012#p71", "effective_from_event": "ev0054", "effective_from_paragraph": "ch012#p72", "from": "COS-002", "to": "COS-001", "staging": "insert ends; any further Alice image (memory of little Alice) is the child in COS-001", "source": { "chapter": "ch012", "para": "ch012-p72" } }
+      ],
+      "variant_points": [
+        { "outfit": "COS-001", "variant": "one white kid glove", "on_event": "ev0007", "off_after_event": "ev0007", "note": "on at ch002-p14; gone by the fall into the pool (ev0008)" },
+        { "outfit": "COS-001", "variant": "soaked", "on_event": "ev0008", "off_after_event": "ev0010" },
+        { "outfit": "COS-001", "variant": "dead leaves", "on_event": "ev0053", "off_after_event": "ev0053" }
+      ]
+    },
+
+    {
+      "character_id": "CHAR-alice-sister",
+      "name": "Alice's sister",
+      "tier": "A",
+      "layer": "both-echo",
+      "default_outfit_id": "COS-003",
+      "occasion_matrix": [
+        { "period": "PER-waking-afternoon", "daily": "COS-003" },
+        { "period": "PER-dream", "note": "not present (outside the dream)" },
+        { "period": "PER-dream-court", "special": "COS-004", "note": "ruling 5.3 B glimpse in the courtroom gallery, same actress" },
+        { "period": "PER-waking-close", "daily": "COS-003" }
+      ],
+      "outfits": [
+        {
+          "id": "COS-003",
+          "label": "Lilac-grey muslin reading dress",
+          "occasion": "daily",
+          "period": "PER-waking-afternoon, PER-waking-close",
+          "period_range": { "from_event": "ev0001", "to_event": "ev0054", "excluding": "ev0002-ev0052 (dream)" },
+          "default": true,
+          "visual": "Young lady's 1862 summer day dress, soft lilac-grey muslin with a faint white sprig, fitted bodice, small round white collar and cuffs, long coat sleeves, ankle-length skirt over a modest cage crinoline. Visibly more grown-up than Alice's knee-length frock. Straw hat set down on the bank (off-body).",
+          "visual_en": "an 1862 young lady's summer day dress of soft lilac-grey cotton muslin with a faint white sprig, a fitted bodice with a small round white collar and narrow white cuffs, long coat sleeves, a narrow matching belt at the natural waist, the full skirt reaching the ankle over a modest cage crinoline and white petticoats, white cotton stockings and plain black kid ankle boots; bare-headed; light airy muslin, neat and smooth",
+          "components": ["lilac-grey sprigged muslin day dress", "white round collar and cuffs", "modest cage crinoline, petticoats", "white stockings", "black kid ankle boots"],
+          "accessories_offbody": ["wide-brimmed straw hat with a plain lilac ribbon, set down beside her on the bank (set dressing; she does not wear it on screen)"],
+          "materials": "cotton muslin, cotton, kid leather",
+          "palette": ["lilac-grey", "white"],
+          "condition_and_wear": "Immaculate; slight creasing at the lap where Alice's head rests at waking.",
+          "variants": [],
+          "chapters": ["ch001", "ch012"],
+          "episodes": ["ep01", "ep09"],
+          "scenes": ["SCN-riverbank", "SCN-thames-riverside"],
+          "source": { "chapter": "ch001", "para": "ch001-p01", "quote": "sitting by her sister on the bank" },
+          "inferred": true,
+          "reason": "Dress not described; design follows appearance.json default_outfit_tone (1862 clergyman-scholar family, mid-teens, summer afternoon)."
+        },
+        {
+          "id": "COS-004",
+          "label": "Court-gallery glimpse (dream echo)",
+          "occasion": "special",
+          "period": "PER-dream-court",
+          "period_range": { "from_event": "ev0045", "to_event": "ev0052" },
+          "default": false,
+          "cross_ref": "COS-003",
+          "cross_ref_note": "Same physical dress as COS-003 with shawl and bonnet added; sheet must be drawn separately because shawl and bonnet change the silhouette.",
+          "visual": "Same lilac-grey sprigged muslin dress, under a dark charcoal wool shawl folded over the shoulders and pinned at the breast, and a small plain dark grey silk bonnet over the chignon. No card or animal coding: she is the one real person in the court.",
+          "visual_en": "an 1862 young lady's lilac-grey sprigged cotton muslin day dress with a small round white collar, long coat sleeves and an ankle-length skirt over a modest cage crinoline, worn under a dark charcoal wool shawl folded over the shoulders and pinned at the breast, a small plain dark grey silk bonnet tied under the chin with narrow grey ribbons, black kid gloves, plain black kid ankle boots; quiet, sober and unadorned",
+          "components": ["COS-003 dress", "dark charcoal wool shawl", "small plain dark grey silk bonnet", "black kid gloves"],
+          "materials": "cotton muslin, wool, silk, kid leather",
+          "palette": ["lilac-grey (carried across for recognition)", "charcoal", "dark grey"],
+          "condition_and_wear": "Neat; only glimpsed in the gallery, never speaks.",
+          "variants": [],
+          "chapters": ["ch011", "ch012"],
+          "episodes": ["ep08", "ep09"],
+          "scenes": ["SCN-courtroom"],
+          "source": { "chapter": "ch012", "para": "ch012-p64", "quote": "found herself lying on the bank, with her head in the lap of her sister" },
+          "inferred": true,
+          "reason": "Ruling 5.3 B (sister glimpsed at the trial) and appearance.json doubling: dark shawl and small plain bonnet so she blends into the gallery while staying recognisable on the wake-up cut."
+        }
+      ],
+      "change_points": [
+        { "id": "CP-003", "after_event": "ev0001", "effective_from_event": "ev0045", "from": "COS-003", "to": "COS-004", "staging": "cross-layer echo: she leaves the screen when Alice dozes; the gallery glimpse appears only in the trial (ev0045-ev0052) and only where the storyboard stages it" },
+        { "id": "CP-004", "after_event": "ev0052", "effective_from_event": "ev0053", "from": "COS-004", "to": "COS-003", "staging": "the match cut from flying cards to falling leaves returns her to the bank in her reading dress" }
+      ],
+      "variant_points": []
+    },
+
+    {
+      "character_id": "CHAR-family-housemaid",
+      "name": "The family's housemaid (echoed as 'Mary Ann')",
+      "tier": "extra",
+      "layer": "both-echo",
+      "default_outfit_id": "COS-005",
+      "occasion_matrix": [
+        { "period": "PER-waking-afternoon", "work": "COS-005", "note": "only if a family-house glimpse is staged" },
+        { "period": "PER-dream", "note": "never seen: echoed by name only (TERM-0010); Alice's white pinafore carries the apron motif" }
+      ],
+      "outfits": [
+        {
+          "id": "COS-005",
+          "label": "Housemaid's morning print dress and bib apron",
+          "occasion": "work",
+          "period": "PER-waking-afternoon",
+          "period_range": { "from_event": "ev0001", "to_event": "ev0001", "note": "waking-frame glimpse only, if staged by screenplay" },
+          "default": true,
+          "visual": "1862 housemaid's morning uniform: lilac-and-white small-print cotton dress, sleeves rolled to the elbow, ankle-length skirt without crinoline, long white bib apron, white cap.",
+          "visual_en": "an 1862 housemaid's morning dress of lilac-and-white small-print cotton, a plain fitted bodice buttoned to a small plain collar, long sleeves rolled to the elbow, a full ankle-length skirt without crinoline over one plain petticoat, a long white cotton bib apron pinned at the chest and tied at the back, a plain white cotton cap covering the pinned hair, black stockings and sturdy black laced boots; washed, starched and practical",
+          "components": ["lilac-and-white print cotton dress", "long white bib apron", "white cotton cap", "black stockings", "black laced boots"],
+          "materials": "printed cotton, starched cotton, leather",
+          "palette": ["lilac", "white", "black"],
+          "condition_and_wear": "Clean working order.",
+          "variants": [],
+          "chapters": ["ch004"],
+          "episodes": ["ep03"],
+          "scenes": ["family house (waking) insert only, if staged"],
+          "events": ["ev0014"],
+          "screen_presence": "referenced by name in ev0014; on screen only as an optional waking-frame glimpse",
+          "source": { "chapter": "ch004", "para": "ch004-p02", "quote": "Why, Mary Ann, what are you doing out here?" },
+          "inferred": true,
+          "reason": "1862 housemaid's morning uniform per appearance.json and FAC-alice-family emblem_visual; the white bib apron is the visual hinge of the ruling 5.3 B echo with Alice's pinafore."
+        }
+      ],
+      "change_points": [],
+      "variant_points": []
+    },
+
+    {
+      "character_id": "CHAR-white-rabbit",
+      "name": "White Rabbit",
+      "tier": "A",
+      "layer": "dream",
+      "rendering": "photoreal CGI white rabbit composited into live-action plates (SUP-002, XA-magic-02, BIB-0027); garments tailored to rabbit anatomy",
+      "default_outfit_id": "COS-006",
+      "occasion_matrix": [
+        { "period": "PER-dream", "formal": "COS-006", "note": "'splendidly dressed' for the Duchess and the Queen: the same waistcoat and collar at the hall, his house, the procession and the croquet-ground" },
+        { "period": "PER-dream-court", "court": "COS-007", "note": "herald" }
+      ],
+      "outfits": [
+        {
+          "id": "COS-006",
+          "label": "Checked silk waistcoat with watch chain",
+          "occasion": "formal",
+          "period": "PER-dream",
+          "period_range": { "from_event": "ev0003", "to_event": "ev0038" },
+          "default": true,
+          "visual": "The text's one garment made to 1862 pattern and tailored to a real rabbit's body: a short buff-and-brown checked silk waistcoat with a gold watch chain (watch = prop), plus a small white stand collar with a black silk bow at the throat for 'splendidly dressed'. Fur shows everywhere else: bare forelegs, hind legs, feet, ears and scut.",
+          "visual_en": "a small 1862 gentleman's waistcoat tailored to a rabbit's body: a short buff-and-brown checked silk waistcoat cut close over the chest and belly and buttoned down the front with small brass buttons, a waistcoat pocket at one side, a gold watch chain looped across it, a narrow crisp white linen stand collar with a small neat black silk bow at the throat; the forelegs, hind legs, feet, ears and tail left in natural fur; immaculately brushed and pressed, a little over-dressed",
+          "components": ["buff-and-brown checked silk waistcoat cut to rabbit anatomy, brass buttons, waistcoat pocket", "gold watch chain (the watch itself is a prop)", "white linen stand collar with small black silk bow"],
+          "materials": "silk, linen, brass, gilt chain",
+          "palette": ["buff", "brown", "white", "black", "gold"],
+          "condition_and_wear": "Immaculate; flustered but never dishevelled. The waistcoat rides with the rabbit's hunched and upright postures without wrinkling across the fur.",
+          "variants": [
+            { "name": "carrying gloves and fan", "events": ["ev0007"], "visual_delta": "a pair of white kid gloves held in one forepaw and a large fan in the other (props, CUL-010)", "prop_ref": "PROP-white-kid-gloves-and-fan (prop-owned; BIB-0029, DEF-p4-costume-001-c)", "source": { "chapter": "ch002", "para": "ch002-p08", "quote": "splendidly dressed, with a pair of white kid gloves in one hand and a large fan in the other" } }
+          ],
+          "chapters": ["ch001", "ch002", "ch004", "ch008"],
+          "episodes": ["ep01", "ep03", "ep06"],
+          "scenes": ["SCN-shaft-landing-passage", "SCN-long-hall", "SCN-rabbit-house-exterior", "SCN-rabbit-house-upstairs-room", "SCN-rose-tree-yard", "SCN-croquet-ground"],
+          "source": { "chapter": "ch001", "para": "ch001-p03", "quote": "took a watch out of its waistcoat-pocket" },
+          "also_source": { "chapter": "ch002", "para": "ch002-p08", "quote": "It was the White Rabbit returning, splendidly dressed" },
+          "inferred": true,
+          "reason": "Amended BIB-0027: the White Rabbit is a photoreal CGI rabbit, so the former plum frock-coat gentleman's outfit is removed. The waistcoat is sourced (ch001-p03) and is the garment SUP-002 names; checked buff-and-brown silk keeps the earlier palette. The small collar and bow are a production addition for 'splendidly dressed' (ch002-p08). Proposed for H2: whether to add a short dark plum cut-away jacket over the waistcoat (the classic illustrated look); not in visual_en until confirmed.",
+          "pending_H2": "exact garment set beyond the waistcoat (collar and bow proposed; plum cut-away jacket optional)",
+          "prohibited_in_prompt": ["trousers, shoes or boots on the rabbit", "human body in a rabbit costume, rabbit mask, cartoon face"]
+        },
+        {
+          "id": "COS-007",
+          "label": "Court herald's tabard over the waistcoat",
+          "occasion": "court",
+          "period": "PER-dream-court",
+          "period_range": { "from_event": "ev0045", "to_event": "ev0052" },
+          "default": false,
+          "visual": "COS-006 waistcoat and collar with a small crimson Hearts herald's tabard over the rabbit's chest and back, piped in white, white-edged red heart badge. Trumpet and parchment scroll are props.",
+          "visual_en": "an 1862 court herald's dress tailored to a rabbit's body: a small crimson wool herald's tabard hanging over the chest and down the back to the haunches, open at the sides and piped in white, with a red heart badge edged in white at the breast, worn over a short buff-and-brown checked silk waistcoat with small brass buttons and a gold watch chain, a narrow crisp white linen stand collar with a small black silk bow at the throat; the forelegs, hind legs, feet, ears and tail left in natural fur; crisp, ceremonial, freshly brushed",
+          "components": ["small crimson wool herald's tabard cut to rabbit anatomy, white piping, heart badge", "COS-006 waistcoat and collar beneath"],
+          "materials": "wool, silk, linen, brass",
+          "palette": ["Hearts crimson", "white", "buff", "brown"],
+          "condition_and_wear": "Crisp; ceremonial.",
+          "variants": [
+            { "name": "spectacles on", "events": ["ev0050"], "visual_delta": "small round steel-rimmed reading spectacles with faintly pink-tinted lenses perched on the rabbit's muzzle", "source": { "chapter": "ch012", "para": "ch012-p38", "quote": "The White Rabbit put on his spectacles." } }
+          ],
+          "chapters": ["ch011", "ch012"],
+          "episodes": ["ep08", "ep09"],
+          "scenes": ["SCN-courtroom"],
+          "source": { "chapter": "ch011", "para": "ch011-p01", "quote": "Near the King was the White Rabbit, with a trumpet in one hand, and a scroll of parchment in the other" },
+          "inferred": true,
+          "reason": "His herald office at the trial is sourced (trumpet, scroll, ch011-p01, p11, p15). Amended BIB-0027: the tabard is kept but re-cut for the CGI rabbit and now covers the waistcoat instead of the removed frock coat. It follows FAC-house-of-hearts livery so the office reads at a glance (CUL-006).",
+          "pending_H2": "tabard kept as the herald marker; confirm with the CGI anatomy from 04-creatures/creature",
+          "prohibited_in_prompt": ["trousers, shoes or boots on the rabbit", "human body in a rabbit costume, rabbit mask, cartoon face"]
+        }
+      ],
+      "change_points": [
+        { "id": "CP-005", "after_event": "ev0038", "effective_from_event": "ev0045", "from": "COS-006", "to": "COS-007", "staging": "off screen between the croquet-ground and the court; he is first seen at the court already tabarded beside the King" }
+      ],
+      "variant_points": [
+        { "outfit": "COS-007", "variant": "spectacles on", "on_event": "ev0050", "off_after_event": "ev0050" }
+      ]
+    },
+
+    {
+      "character_id": "CHAR-queen-of-hearts",
+      "name": "Queen of Hearts",
+      "tier": "A",
+      "layer": "dream",
+      "default_outfit_id": "COS-008",
+      "occasion_matrix": [
+        { "period": "PER-dream", "court": "COS-008", "note": "procession and croquet in one court gown" },
+        { "period": "PER-dream-court", "court": "COS-008", "note": "same gown on the throne; only spectacles added (ch011-p26); no separate state robe, which keeps her read flat and card-like" }
+      ],
+      "outfits": [
+        {
+          "id": "COS-008",
+          "label": "Queen of Hearts card court gown",
+          "occasion": "court",
+          "period": "PER-dream, PER-dream-court",
+          "period_range": { "from_event": "ev0034", "to_event": "ev0052" },
+          "default": true,
+          "visual": "1862 court crinoline gown worn as a playing card: stiff flat rectangular crimson front panel piped in white with a large red heart on a white oval and small crown devices, back in the pack's card-back pattern, full crimson silk skirt over a wide cage crinoline, squared shoulders, gold crown with a red heart.",
+          "visual_en": "an 1862 court crinoline gown styled as the Queen of Hearts playing card: a stiff, flat, rectangular crimson front panel from shoulders to hem, piped in white and edged in black, with a large red heart on a white oval at the chest and small gold crown devices at the corners, the back panel in a crimson-and-cream lattice card-back pattern with a small heart rosette, over a full crimson silk skirt spread on a wide cage crinoline, squared stiffened shoulders, long close crimson silk sleeves with white cuffs, and a gold crown set with a red heart at the front; heavy rich silk, rigidly boned, flawless",
+          "components": ["rigid flat crimson front panel with heart and crown devices", "card-back panel at the back", "crimson silk skirt on a wide cage crinoline", "crimson silk sleeves, white cuffs", "gold crown with a red heart"],
+          "materials": "silk, buckram-stiffened panels, gilt metal crown",
+          "palette": ["Hearts crimson #8E1F2A", "white", "gold", "black"],
+          "condition_and_wear": "Flawless and rigid in every scene.",
+          "variants": [
+            { "name": "spectacles on", "events": ["ev0046"], "visual_delta": "small oval steel-rimmed spectacles, put on to stare at the Hatter", "source": { "chapter": "ch011", "para": "ch011-p26", "quote": "Here the Queen put on her spectacles" } }
+          ],
+          "prohibited_in_prompt": ["any weapon or execution device (SUP-014, CR-010)"],
+          "chapters": ["ch008", "ch009", "ch011", "ch012"],
+          "episodes": ["ep06", "ep07", "ep08", "ep09"],
+          "scenes": ["SCN-rose-tree-yard", "SCN-croquet-ground", "SCN-courtroom"],
+          "source": { "chapter": "ch008", "para": "ch008-p11", "quote": "THE KING AND QUEEN OF HEARTS" },
+          "inferred": true,
+          "reason": "Hearts suit sourced; flat card styling per SUP-004, FAC-house-of-hearts emblem_visual and appearance.json default_outfit_tone."
+        }
+      ],
+      "change_points": [],
+      "variant_points": [
+        { "outfit": "COS-008", "variant": "spectacles on", "on_event": "ev0046", "off_after_event": "ev0046" }
+      ]
+    },
+
+    {
+      "character_id": "CHAR-king-of-hearts",
+      "name": "King of Hearts",
+      "tier": "A",
+      "layer": "dream",
+      "default_outfit_id": "COS-009",
+      "occasion_matrix": [
+        { "period": "PER-dream", "court": "COS-009", "note": "bareheaded: the Knave carries his crown on a cushion in the procession" },
+        { "period": "PER-dream-court", "court": "COS-010", "note": "judge: crown over a full wig" }
+      ],
+      "outfits": [
+        {
+          "id": "COS-009",
+          "label": "King of Hearts card court dress (bareheaded)",
+          "occasion": "court",
+          "period": "PER-dream",
+          "period_range": { "from_event": "ev0034", "to_event": "ev0040" },
+          "default": true,
+          "visual": "Flat rigid rectangular crimson card tabard piped in white with a red heart and a small gold crown device, card-back pattern behind, over a long crimson ceremonial robe edged with white fur, black frock coat and trousers beneath. Bareheaded (crown carried by the Knave).",
+          "visual_en": "an 1862 court dress styled as the King of Hearts playing card: a flat, rigid, rectangular crimson tabard front and back, piped in white and edged in black, with a red heart on a white field and a small gold crown device at the breast, the back in a crimson-and-cream lattice card-back pattern with a small heart rosette, worn over a long crimson wool ceremonial robe edged with white fur, a black frock coat and narrow black trousers beneath, a white high collar and white cravat, black buckled shoes; bareheaded; rich, heavy and slightly too big for him",
+          "components": ["flat crimson card tabard with heart and crown device", "card-back panel", "long crimson robe edged with white fur", "black frock coat and trousers", "white collar and cravat", "black buckled shoes"],
+          "materials": "wool, silk, fur trim, buckram-stiffened tabard",
+          "palette": ["Hearts crimson", "white", "gold", "black"],
+          "condition_and_wear": "Rich and correct but sits awkwardly on a mild, round-shouldered man.",
+          "variants": [],
+          "chapters": ["ch008", "ch009"],
+          "episodes": ["ep06", "ep07"],
+          "scenes": ["SCN-rose-tree-yard", "SCN-croquet-ground"],
+          "source": { "chapter": "ch008", "para": "ch008-p11", "quote": "the Knave of Hearts, carrying the King’s crown on a crimson velvet cushion; and, last of all this grand procession, came THE KING AND QUEEN OF HEARTS" },
+          "inferred": true,
+          "reason": "Bareheadedness follows from the sourced crown-on-cushion; tabard and robe follow appearance.json and FAC-house-of-hearts emblem_visual."
+        },
+        {
+          "id": "COS-010",
+          "label": "King as judge: crown over a full wig",
+          "occasion": "court",
+          "period": "PER-dream-court",
+          "period_range": { "from_event": "ev0045", "to_event": "ev0052" },
+          "default": false,
+          "cross_ref": "COS-009",
+          "cross_ref_note": "Same tabard and robe; the wig and crown change the silhouette, so a separate sheet is drawn.",
+          "visual": "COS-009 tabard and robe plus a full-bottomed white judge's wig with the gold crown perched awkwardly on top.",
+          "visual_en": "an 1862 court dress styled as the King of Hearts playing card, worn as a judge: a full-bottomed white horsehair judge's wig falling to the shoulders with a gold crown set with a red heart perched awkwardly on top of it, a flat rigid rectangular crimson tabard front and back piped in white and edged in black with a red heart on a white field and a small gold crown device, the back in a crimson-and-cream lattice card-back pattern with a small heart rosette, over a long crimson wool robe edged with white fur, a black frock coat and trousers, a white high collar and white cravat, black buckled shoes; the wig and crown sit uncomfortably and slightly askew",
+          "components": ["full-bottomed white judge's wig", "gold crown with red heart worn on top of the wig", "COS-009 tabard, robe and under-dress"],
+          "materials": "horsehair wig, gilt metal, wool, silk, fur trim",
+          "palette": ["Hearts crimson", "white", "gold", "black"],
+          "condition_and_wear": "Crown slides on the wig; he adjusts it throughout the session (CUL-011).",
+          "variants": [
+            { "name": "spectacles on", "events": ["ev0045", "ev0049"], "visual_delta": "small oval steel-rimmed reading spectacles", "source": { "chapter": "ch011", "para": "ch011-p07", "quote": "the King put on his spectacles" } }
+          ],
+          "chapters": ["ch011", "ch012"],
+          "episodes": ["ep08", "ep09"],
+          "scenes": ["SCN-courtroom"],
+          "source": { "chapter": "ch011", "para": "ch011-p03", "quote": "The judge, by the way, was the King; and as he wore his crown over the wig" },
+          "inferred": false,
+          "reason": "Wig under crown is sourced (ch011-p02, p03; CUL-011)."
+        }
+      ],
+      "change_points": [
+        { "id": "CP-006", "after_event": "ev0040", "effective_from_event": "ev0045", "from": "COS-009", "to": "COS-010", "staging": "off screen; he is first seen in court already seated in wig and crown" }
+      ],
+      "variant_points": [
+        { "outfit": "COS-010", "variant": "spectacles on", "on_event": "ev0045", "off_after_event": "ev0049" }
+      ]
+    },
+
+    {
+      "character_id": "CHAR-knave-of-hearts",
+      "name": "Knave of Hearts",
+      "tier": "B",
+      "layer": "dream",
+      "default_outfit_id": "COS-011",
+      "occasion_matrix": [
+        { "period": "PER-dream", "livery": "COS-011", "note": "procession, carries the crown cushion (prop)" },
+        { "period": "PER-dream-court", "livery": "COS-012", "note": "defendant in chains" }
+      ],
+      "outfits": [
+        {
+          "id": "COS-011",
+          "label": "Jack of Hearts card livery",
+          "occasion": "livery",
+          "period": "PER-dream",
+          "period_range": { "from_event": "ev0034", "to_event": "ev0036" },
+          "default": true,
+          "visual": "1862 footman's crimson cut-away coat, cream waistcoat, crimson knee breeches, white stockings, buckled shoes, under a stiff flat card tabard (ivory front with a large red heart and a Jack device; card-back behind). Small flat black cap.",
+          "visual_en": "an 1862 household livery worn as the Jack of Hearts playing card: a stiff, flat, rectangular card tabard from shoulders to mid-thigh, the front ivory with a large red heart and a stylised gold-and-black Jack device at the breast, the back in a crimson-and-cream lattice card-back pattern with a small heart rosette, over a crimson wool footman's cut-away coat with cream facings and brass buttons, a cream waistcoat, crimson knee breeches, white stockings and low black buckled shoes, a small flat black velvet cap; crisp, correct and rigid",
+          "components": ["flat ivory card tabard with red heart and Jack device", "card-back panel", "crimson cut-away coat with cream facings", "cream waistcoat", "crimson knee breeches", "white stockings", "black buckled shoes", "small flat black velvet cap"],
+          "materials": "wool, silk, buckram-stiffened tabard, velvet",
+          "palette": ["Hearts crimson", "cream", "ivory", "black", "gold"],
+          "condition_and_wear": "Immaculate.",
+          "variants": [],
+          "chapters": ["ch008"],
+          "episodes": ["ep06"],
+          "scenes": ["SCN-rose-tree-yard", "SCN-croquet-ground"],
+          "source": { "chapter": "ch008", "para": "ch008-p11", "quote": "Then followed the Knave of Hearts, carrying the King’s crown on a crimson velvet cushion" },
+          "inferred": true,
+          "reason": "Office and procession sourced; card styling per appearance.json and FAC-house-of-hearts (Jack device)."
+        },
+        {
+          "id": "COS-012",
+          "label": "Knave as defendant, in chains",
+          "occasion": "livery",
+          "period": "PER-dream-court",
+          "period_range": { "from_event": "ev0045", "to_event": "ev0052" },
+          "default": false,
+          "cross_ref": "COS-011",
+          "cross_ref_note": "Same livery; cap removed, tabard rumpled, light wrist chain added.",
+          "visual": "COS-011 livery without the cap, tabard slightly rumpled, light iron wrist cuffs joined by a short chain.",
+          "visual_en": "an 1862 household livery worn as the Jack of Hearts playing card, a little rumpled: a stiff flat rectangular card tabard from shoulders to mid-thigh, the front ivory with a large red heart and a stylised gold-and-black Jack device, the back in a crimson-and-cream lattice card-back pattern with a small heart rosette, over a crimson wool footman's cut-away coat with cream facings and brass buttons, a cream waistcoat, crimson knee breeches, white stockings and low black buckled shoes; bareheaded; light plain iron wrist cuffs joined by a short thin chain hanging in front of him",
+          "components": ["COS-011 livery", "cap removed", "light iron wrist cuffs with a short chain"],
+          "materials": "wool, silk, buckram, light iron",
+          "palette": ["Hearts crimson", "cream", "ivory", "black", "gold", "dull iron"],
+          "condition_and_wear": "Tabard slightly creased; stockings wrinkled; composed, close-lipped.",
+          "variants": [],
+          "prop_boundary_note": "The wrist chain is worn and therefore listed here; if 06-art/prop claims it as a prop, orchestrator decides ownership (see qa/defects/DEF-p4-costume-001 finding c). It is a restraint, not an execution device, and no one handles him roughly (guards stand beside him, hands at their sides).",
+          "chapters": ["ch011", "ch012"],
+          "episodes": ["ep08", "ep09"],
+          "scenes": ["SCN-courtroom"],
+          "source": { "chapter": "ch011", "para": "ch011-p01", "quote": "The Knave was standing before them, in chains, with a soldier on each side to guard him" },
+          "inferred": false,
+          "reason": "Chains sourced (ch011-p01); cap removal and rumpling are designed to mark the defendant.",
+          "costume_vs_prop_ruling": { "decided_by": "BIB-0029 (DEF-p4-costume-001-c)", "owner": "costume", "rule": "An item that stays on one wearer for its whole life on screen is costume, even when it is put on or taken off as business; an item that changes hands, is consumed, or drives a plot beat is a prop (bible/props.json). The wrist cuffs and chain never leave the Knave, are never handled by anyone else and have no plot function, so they stay here and are deliberately NOT registered in props.json. They stay light and slack per SUP-014 (no restraint holds, no grip on arms). The King's, Queen's and White Rabbit's spectacles are costume for the same reason and stay as outfit variants (COS-010, COS-008, COS-007); the White Rabbit's white kid gloves and fan are the opposite case and stay props (PROP-white-kid-gloves-and-fan)." }
+        }
+      ],
+      "change_points": [
+        { "id": "CP-007", "after_event": "ev0036", "effective_from_event": "ev0045", "from": "COS-011", "to": "COS-012", "staging": "off screen; he is first seen in court already chained between two soldiers" }
+      ],
+      "variant_points": []
+    },
+
+    {
+      "character_id": "CHAR-duchess",
+      "name": "The Duchess",
+      "tier": "A",
+      "layer": "dream",
+      "default_outfit_id": "COS-013",
+      "occasion_matrix": [
+        { "period": "PER-dream", "daily": "COS-013", "note": "at home in the kitchen (ch006)" },
+        { "period": "PER-dream", "formal": "COS-014", "note": "dressed for the Queen's croquet invitation (ch006-p02); seen on the croquet-ground (ch009)" },
+        { "period": "PER-dream-court", "note": "not present" }
+      ],
+      "outfits": [
+        {
+          "id": "COS-013",
+          "label": "Faded mulberry house gown (kitchen)",
+          "occasion": "daily",
+          "period": "PER-dream",
+          "period_range": { "from_event": "ev0026", "to_event": "ev0027" },
+          "default": true,
+          "visual": "Faded once-grand gentry gown of dull mulberry silk gone shiny with wear, heavy over-trimmed bodice, frayed ivory lace collar, outdated wide crinoline, large grubby lace headdress with lappets; dusted with pepper.",
+          "visual_en": "a faded, once-grand gentry house gown of dull mulberry silk worn shiny at the seams, a heavy over-trimmed boned bodice with a frayed ivory lace collar and tarnished jet buttons, long sleeves with limp lace cuffs, an outdated very wide crinoline skirt with a grease-marked front, and a large old-fashioned grubby ivory lace headdress with long lappets; a fine dusting of pepper over the lace and skirt; shabby, crumpled and smoke-dulled",
+          "components": ["dull mulberry silk gown", "over-trimmed boned bodice, jet buttons", "frayed ivory lace collar and cuffs", "outdated wide crinoline", "grubby lace headdress with lappets"],
+          "materials": "worn silk, cotton lace, jet buttons",
+          "palette": ["dull mulberry", "grubby ivory", "black jet"],
+          "condition_and_wear": "Worn shiny, grease marks, pepper dust (kitchen only).",
+          "variants": [],
+          "chapters": ["ch006"],
+          "episodes": ["ep04"],
+          "scenes": ["SCN-duchess-kitchen"],
+          "source": { "chapter": "ch006", "para": "ch006-p19", "quote": "the Duchess was sitting on a three-legged stool in the middle, nursing a baby" },
+          "inferred": true,
+          "reason": "Dress not described; FAC-duchess-household 'visibly poorer and less formal than the House of Hearts'; appearance.json default_outfit_tone."
+        },
+        {
+          "id": "COS-014",
+          "label": "Outdated visiting dress for the croquet party",
+          "occasion": "formal",
+          "period": "PER-dream",
+          "period_range": { "from_event": "ev0038", "to_event": "ev0039" },
+          "default": false,
+          "visual": "Her best and most outdated visiting finery for the Queen's invitation: mulberry silk gown with three deep black lace flounces on a very wide crinoline, black lace mantle with a large tarnished brooch, deep coal-scuttle bonnet with drooping purple plumes and wide mulberry ribbons, black lace mittens. Rich but shabby.",
+          "visual_en": "an outdated grand 1840s-style visiting ensemble in faded mulberry and black: a mulberry silk gown with a heavy boned bodice and a very wide crinoline skirt trimmed with three deep black lace flounces, a black lace mantle draped over the shoulders and fastened with a large tarnished gilt brooch, a deep-brimmed black silk coal-scuttle bonnet with drooping dyed purple ostrich plumes tied under the chin with wide mulberry ribbons, black lace mittens; rich but shabby, crushed and slightly askew",
+          "components": ["mulberry silk gown with three black lace flounces", "very wide crinoline", "black lace mantle, tarnished gilt brooch", "black silk coal-scuttle bonnet with purple ostrich plumes", "black lace mittens"],
+          "materials": "silk, cotton and silk lace, ostrich plumes, gilt metal",
+          "palette": ["faded mulberry", "black", "dull purple", "tarnished gold"],
+          "condition_and_wear": "Crushed from her confinement (she is fetched out of prison, ch008), bonnet askew.",
+          "variants": [],
+          "chapters": ["ch008", "ch009"],
+          "episodes": ["ep06", "ep07"],
+          "scenes": ["SCN-croquet-ground"],
+          "source": { "chapter": "ch006", "para": "ch006-p02", "quote": "For the Duchess. An invitation from the Queen to play croquet." },
+          "inferred": true,
+          "reason": "The croquet invitation is sourced, and she appears on the croquet-ground in ch009; dressing for a royal invitation in her best, most outdated finery is designed, keeping the 'poorer, less formal' household read against the Hearts court."
+        }
+      ],
+      "change_points": [
+        { "id": "CP-008", "after_event": "ev0027", "effective_from_event": "ev0038", "from": "COS-013", "to": "COS-014", "staging": "off screen: she leaves the kitchen for the Queen's croquet party; she is first seen again when fetched from prison at the end of ev0038 (only if staged) or arm-in-arm with Alice in ev0039" }
+      ],
+      "variant_points": []
+    },
+
+    {
+      "character_id": "CHAR-hatter",
+      "name": "The Hatter",
+      "tier": "A",
+      "layer": "dream",
+      "default_outfit_id": "COS-015",
+      "occasion_matrix": [
+        { "period": "PER-dream", "daily": "COS-015" },
+        { "period": "PER-dream-court", "daily": "COS-015", "note": "sent for mid-tea: comes to court as he is, teacup and bread-and-butter in hand (ch011-p16)" }
+      ],
+      "outfits": [
+        {
+          "id": "COS-015",
+          "label": "Shabby Sunday best with the 10/6 hat",
+          "occasion": "daily",
+          "period": "PER-dream, PER-dream-court",
+          "period_range": { "from_event": "ev0029", "to_event": "ev0047" },
+          "default": true,
+          "visual": "Tradesman's Sunday best gone shabby: too-short faded bottle-green frock coat, stained waistcoat, loud yellow-and-brown check trousers, floppy cravat, and the oversized tall hat with its paper price ticket '10/6'.",
+          "visual_en": "a shabby 1862 tradesman's Sunday best: a worn, too-short faded bottle-green wool frock coat with shiny elbows and sleeves that stop short of his bony wrists, a stained mustard-brown waistcoat with mismatched buttons, loud yellow-and-brown large-check trousers, a crumpled white shirt with a limp collar, a large floppy plum-and-mustard paisley silk cravat tied in a loose bow, scuffed black boots, and an oversized tall grey beaver-felt top hat with a small paper price ticket marked 10/6 tucked in its band; threadbare and tea-stained",
+          "components": ["faded bottle-green frock coat, too short", "stained mustard-brown waistcoat", "yellow-and-brown large-check trousers", "limp white shirt", "plum-and-mustard paisley cravat", "scuffed black boots", "oversized tall grey felt top hat with '10/6' price ticket"],
+          "materials": "wool, cotton, silk, beaver felt, paper ticket",
+          "palette": ["faded bottle green", "mustard", "yellow-and-brown check", "grey"],
+          "condition_and_wear": "Threadbare, tea-stained, crumbs.",
+          "variants": [
+            { "name": "shoes off", "events": ["ev0047"], "visual_delta": "in stockinged feet, boots left behind, as he rushes out of court", "source": { "chapter": "ch011", "para": "ch011-p61", "quote": "the Hatter hurriedly left the court, without even waiting to put his shoes on" } }
+          ],
+          "chapters": ["ch007", "ch011"],
+          "episodes": ["ep05", "ep08"],
+          "scenes": ["SCN-mad-tea-party", "SCN-courtroom"],
+          "source": { "chapter": "ch011", "para": "ch011-p37", "quote": "I’m a poor man, your Majesty" },
+          "inferred": true,
+          "reason": "Poverty and the price-ticketed hat are sourced (ch011-p37; FAC-mad-tea-party); colours and cut follow appearance.json. The cravat avoids Hearts crimson (palette rule). The '10/6' ticket lettering is Bible-required but missing from style CR-012's whitelist (qa/defects/DEF-p4-costume-001 finding b).",
+          "lettering_ruling": { "decided_by": "BIB-0029 (DEF-p4-costume-001-b)", "ruling": "KEEP the ticket. In this style 10/6 is a canon detail of the Hatter's hat, so it is granted a named exception to style.json CR-012's closed lettering list rather than being dropped from the costume. The ticket reads as the short price mark 10/6 in period hand-lettering; the full phrase is not required and must never be set as poster or decorative lettering (CR-012's Art Nouveau clause still holds).", "required_amendment": "style.json CR-012 must add the Hatter's hat price ticket, marked 10/6, to its allowed list. style.json is owned by 06-art/art-director and is frozen at H2, so memory-bible did not edit it: handed off as qa/defects/DEF-p4-style-003.json.", "status": "costume side final; style.json amendment pending art-director" }
+        }
+      ],
+      "change_points": [],
+      "variant_points": [
+        { "outfit": "COS-015", "variant": "shoes off", "on_event": "ev0047", "off_after_event": "ev0047", "note": "exit beat at ch011-p61 only" }
+      ]
+    },
+
+    {
+      "character_id": "CHAR-cheshire-cat",
+      "name": "Cheshire Cat",
+      "tier": "A",
+      "layer": "dream",
+      "rendering": "photoreal CGI cat composited into live-action plates (SUP-002, BIB-0027); Dinah echo (ruling 5.3 B) carried by the brown-tabby coat on the appearance card",
+      "default_outfit_id": "COS-016",
+      "occasion_matrix": [
+        { "period": "PER-dream", "daily": "COS-016", "note": "kitchen hearth, the tree on the path, the croquet-ground (head only)" }
+      ],
+      "outfits": [
+        {
+          "id": "COS-016",
+          "label": "Unclothed (natural cat)",
+          "occasion": "daily",
+          "period": "PER-dream",
+          "period_range": { "from_event": "ev0026", "to_event": "ev0038" },
+          "default": true,
+          "visual": "No costume: the text gives the Cat no garment or accessory. The brown-tabby coat, grin and eyes belong to the appearance card and 04-creatures anatomy.",
+          "visual_en": "unclothed and unadorned: the bare natural cat, wearing nothing",
+          "components": [],
+          "materials": "none",
+          "palette": [],
+          "condition_and_wear": "Glossy, well-groomed coat. The vanish-to-grin is a photographic dissolve (SUP-005), not a costume effect.",
+          "variants": [],
+          "chapters": ["ch006", "ch008"],
+          "episodes": ["ep04", "ep06"],
+          "scenes": ["SCN-duchess-kitchen", "SCN-cheshire-cat-path", "SCN-croquet-ground"],
+          "source": { "chapter": "ch006", "para": "ch006-p21", "quote": "a large cat which was sitting on the hearth and grinning from ear to ear" },
+          "inferred": false,
+          "reason": "Amended BIB-0027: the Cheshire Cat is a photoreal CGI cat. The text gives it no garment, so the former brown-tabby velvet dress with tail stole (animal-coded human costume) is removed.",
+          "costume_sheet": "none: the character sheet.png is the only reference",
+          "prohibited_in_prompt": ["clothing, collar or ribbon on the cat", "human body in a cat costume, cat-ear headband, cartoon face"]
+        }
+      ],
+      "change_points": [],
+      "variant_points": []
+    },
+
+    {
+      "character_id": "CHAR-march-hare",
+      "name": "March Hare",
+      "tier": "B",
+      "layer": "dream",
+      "rendering": "photoreal CGI brown hare composited into live-action plates (SUP-002, BIB-0027)",
+      "default_outfit_id": "COS-017",
+      "occasion_matrix": [
+        { "period": "PER-dream", "daily": "COS-017" },
+        { "period": "PER-dream-court", "daily": "COS-017", "note": "arrives arm-in-arm with the Dormouse" }
+      ],
+      "outfits": [
+        {
+          "id": "COS-017",
+          "label": "Unclothed (natural hare)",
+          "occasion": "daily",
+          "period": "PER-dream, PER-dream-court",
+          "period_range": { "from_event": "ev0029", "to_event": "ev0047" },
+          "default": true,
+          "visual": "No costume: the text gives the March Hare no garment. His wild, rumpled look is carried by the fur (appearance card).",
+          "visual_en": "unclothed and unadorned: the bare natural hare, wearing nothing",
+          "components": [],
+          "materials": "none",
+          "palette": [],
+          "condition_and_wear": "Fur rumpled, a few wisps of straw caught in it, crumbs and tea drips on the chest.",
+          "variants": [],
+          "chapters": ["ch007", "ch011"],
+          "episodes": ["ep05", "ep08"],
+          "scenes": ["SCN-mad-tea-party", "SCN-courtroom"],
+          "source": { "chapter": "ch007", "para": "ch007-p01", "quote": "the March Hare and the Hatter were having tea at it" },
+          "inferred": false,
+          "reason": "Amended BIB-0027: photoreal CGI hare; the text gives him no garment, so the former tweed sack coat with fur collar (animal-coded human costume) is removed. The straw wisps nod to his fur-thatched house (ch006-p80) as a fur condition, not a garment.",
+          "costume_sheet": "none: the character sheet.png is the only reference",
+          "prohibited_in_prompt": ["clothing on the hare", "human body in a hare costume, rabbit mask, cartoon face"]
+        }
+      ],
+      "change_points": [],
+      "variant_points": []
+    },
+
+    {
+      "character_id": "CHAR-dormouse",
+      "name": "Dormouse",
+      "tier": "B",
+      "layer": "dream",
+      "rendering": "photoreal CGI hazel dormouse composited into live-action plates (SUP-002, BIB-0027)",
+      "default_outfit_id": "COS-018",
+      "occasion_matrix": [
+        { "period": "PER-dream", "daily": "COS-018" },
+        { "period": "PER-dream-court", "daily": "COS-018" }
+      ],
+      "outfits": [
+        {
+          "id": "COS-018",
+          "label": "Unclothed (natural dormouse)",
+          "occasion": "daily",
+          "period": "PER-dream, PER-dream-court",
+          "period_range": { "from_event": "ev0029", "to_event": "ev0047" },
+          "default": true,
+          "visual": "No costume: the text gives the Dormouse no garment. His sleepy, curled-up look is carried by posture and fur.",
+          "visual_en": "unclothed and unadorned: the bare natural dormouse, wearing nothing",
+          "components": [],
+          "materials": "none",
+          "palette": [],
+          "condition_and_wear": "Fur sleep-flattened on one side, a few crumbs.",
+          "variants": [
+            { "name": "tea-splashed", "events": ["ev0031"], "visual_delta": "the fur on the nose and chest wet and darkened with a splash of tea", "source": { "chapter": "ch007", "para": "ch007-p32", "quote": "poured a little hot tea upon its nose" } }
+          ],
+          "chapters": ["ch007", "ch011"],
+          "episodes": ["ep05", "ep08"],
+          "scenes": ["SCN-mad-tea-party", "SCN-courtroom"],
+          "source": { "chapter": "ch007", "para": "ch007-p01", "quote": "a Dormouse was sitting between them, fast asleep" },
+          "inferred": false,
+          "reason": "Amended BIB-0027: photoreal CGI dormouse; the text gives it no garment, so the former quilted nap-wear (animal-coded human costume) is removed. The tea splash stays as a fur-condition variant for continuity.",
+          "costume_sheet": "none: the character sheet.png is the only reference",
+          "prohibited_in_prompt": ["clothing on the dormouse", "human body in a mouse costume, cartoon face"]
+        }
+      ],
+      "change_points": [],
+      "variant_points": [
+        { "outfit": "COS-018", "variant": "tea-splashed", "on_event": "ev0031", "off_after_event": "ev0031" }
+      ]
+    },
+
+    {
+      "character_id": "CHAR-caterpillar",
+      "name": "Caterpillar",
+      "tier": "B",
+      "layer": "dream",
+      "rendering": "photoreal CGI giant blue caterpillar composited into live-action plates (SUP-002, BIB-0027; matches the user reference refs/style/alice.jpeg)",
+      "default_outfit_id": "COS-019",
+      "occasion_matrix": [
+        { "period": "PER-dream", "daily": "COS-019" }
+      ],
+      "outfits": [
+        {
+          "id": "COS-019",
+          "label": "Unclothed (natural caterpillar)",
+          "occasion": "daily",
+          "period": "PER-dream",
+          "period_range": { "from_event": "ev0018", "to_event": "ev0021" },
+          "default": true,
+          "visual": "No costume: the text gives the Caterpillar only the hookah (prop). Its blue colouring belongs to the body (appearance card and 04-creatures).",
+          "visual_en": "unclothed and unadorned: the bare natural caterpillar, wearing nothing",
+          "components": [],
+          "materials": "none",
+          "palette": [],
+          "condition_and_wear": "A faint haze of hookah smoke about it.",
+          "variants": [],
+          "chapters": ["ch004", "ch005"],
+          "episodes": ["ep03", "ep04"],
+          "scenes": ["SCN-caterpillar-clearing"],
+          "source": { "chapter": "ch004", "para": "ch004-p42", "quote": "a large blue caterpillar, that was sitting on the top with its arms folded, quietly smoking a long hookah" },
+          "inferred": false,
+          "reason": "Amended BIB-0027: photoreal CGI caterpillar, which now matches the giant caterpillar in the user reference. The former banded slate-blue smoking gown and cap (insect-coded human costume) are removed. The hookah belongs to 06-art/prop. The slate-blue and moss-green palette in the reference now applies to the body, which is owned by 03-characters/appearance and 04-creatures.",
+          "user_refs": ["refs/style/alice.jpeg"],
+          "costume_sheet": "none: the character sheet.png is the only reference",
+          "prohibited_in_prompt": ["smoking cap or gown on the caterpillar", "human body in an insect costume, cartoon face"]
+        }
+      ],
+      "change_points": [],
+      "variant_points": []
+    },
+
+    {
+      "character_id": "CHAR-pigeon",
+      "name": "Pigeon",
+      "tier": "B",
+      "layer": "dream",
+      "rendering": "photoreal CGI wood pigeon composited into live-action plates (SUP-002, BIB-0027)",
+      "default_outfit_id": "COS-020",
+      "occasion_matrix": [
+        { "period": "PER-dream", "daily": "COS-020" }
+      ],
+      "outfits": [
+        {
+          "id": "COS-020",
+          "label": "Unclothed (natural pigeon)",
+          "occasion": "daily",
+          "period": "PER-dream",
+          "period_range": { "from_event": "ev0022", "to_event": "ev0022" },
+          "default": true,
+          "visual": "No costume: the text gives the Pigeon no garment. The wing-beating is done with real wings now.",
+          "visual_en": "unclothed and unadorned: the bare natural pigeon, wearing nothing",
+          "components": [],
+          "materials": "none",
+          "palette": [],
+          "condition_and_wear": "Feathers ruffled from sleepless nest-guarding, a twig caught in the wing coverts.",
+          "variants": [],
+          "chapters": ["ch005"],
+          "episodes": ["ep04"],
+          "scenes": ["SCN-pigeon-treetop"],
+          "source": { "chapter": "ch005", "para": "ch005-p59", "quote": "a large pigeon had flown into her face, and was beating her violently with its wings" },
+          "inferred": false,
+          "reason": "Amended BIB-0027: photoreal CGI pigeon; the former shot-silk matron's dress with winged shawl and bonnet (bird-coded human costume) is removed.",
+          "costume_sheet": "none: the character sheet.png is the only reference",
+          "prohibited_in_prompt": ["clothing or bonnet on the pigeon", "human body in a bird costume, cartoon face"]
+        }
+      ],
+      "change_points": [],
+      "variant_points": []
+    },
+
+    {
+      "character_id": "CHAR-mouse",
+      "name": "The Mouse",
+      "tier": "B",
+      "layer": "dream",
+      "rendering": "photoreal CGI mouse composited into live-action plates (SUP-002, BIB-0027)",
+      "default_outfit_id": "COS-021",
+      "occasion_matrix": [
+        { "period": "PER-dream", "daily": "COS-021", "note": "soaked in the pool (variant), dry after the Caucus-race" }
+      ],
+      "outfits": [
+        {
+          "id": "COS-021",
+          "label": "Unclothed (natural mouse)",
+          "occasion": "daily",
+          "period": "PER-dream",
+          "period_range": { "from_event": "ev0009", "to_event": "ev0013" },
+          "default": true,
+          "visual": "No costume: the text gives the Mouse no garment. Default is the dry look; wet is a variant.",
+          "visual_en": "unclothed and unadorned: the bare natural mouse, wearing nothing",
+          "components": [],
+          "materials": "none",
+          "palette": [],
+          "condition_and_wear": "Dry, neat fur by default.",
+          "variants": [
+            { "name": "soaked", "events": ["ev0009", "ev0010"], "visual_delta": "fur soaked, dark and clinging close to the body, tail trailing water", "source": { "chapter": "ch003", "para": "ch003-p01", "quote": "the animals with their fur clinging close to them, and all dripping wet" } }
+          ],
+          "chapters": ["ch002", "ch003"],
+          "episodes": ["ep02"],
+          "scenes": ["SCN-pool-of-tears", "SCN-pool-bank"],
+          "source": { "chapter": "ch002", "para": "ch002-p18", "quote": "she soon made out that it was only a mouse that had slipped in like herself" },
+          "inferred": false,
+          "reason": "Amended BIB-0027: photoreal CGI mouse; the former schoolmaster's long-tailed tailcoat (animal-coded human costume) is removed. The wet state stays a variant because the text dries the party in ev0010.",
+          "costume_sheet": "none: the character sheet.png is the only reference",
+          "prohibited_in_prompt": ["clothing on the mouse", "human body in a mouse costume, cartoon face"]
+        }
+      ],
+      "change_points": [],
+      "variant_points": [
+        { "outfit": "COS-021", "variant": "soaked", "on_event": "ev0009", "off_after_event": "ev0010" }
+      ]
+    },
+
+    {
+      "character_id": "CHAR-dodo",
+      "name": "Dodo",
+      "tier": "B",
+      "layer": "dream",
+      "rendering": "photoreal CGI dodo composited into live-action plates (SUP-002, BIB-0027)",
+      "default_outfit_id": "COS-022",
+      "occasion_matrix": [
+        { "period": "PER-dream", "daily": "COS-022", "note": "soaked (variant) until dried by the Caucus-race" }
+      ],
+      "outfits": [
+        {
+          "id": "COS-022",
+          "label": "Unclothed (natural dodo)",
+          "occasion": "daily",
+          "period": "PER-dream",
+          "period_range": { "from_event": "ev0009", "to_event": "ev0013" },
+          "default": true,
+          "visual": "No costume: the text gives the Dodo no garment. The thimble he presents is a prop.",
+          "visual_en": "unclothed and unadorned: the bare natural dodo, wearing nothing",
+          "components": [],
+          "materials": "none",
+          "palette": [],
+          "condition_and_wear": "Dry plumage by default, slightly dusty.",
+          "variants": [
+            { "name": "soaked", "events": ["ev0009", "ev0010"], "visual_delta": "plumage soaked, draggled and plastered flat, dripping", "source": { "chapter": "ch003", "para": "ch003-p01", "quote": "the birds with draggled feathers" } }
+          ],
+          "chapters": ["ch002", "ch003"],
+          "episodes": ["ep02"],
+          "scenes": ["SCN-pool-of-tears", "SCN-pool-bank"],
+          "source": { "chapter": "ch003", "para": "ch003-p28", "quote": "the Dodo solemnly presented the thimble" },
+          "inferred": false,
+          "reason": "Amended BIB-0027: photoreal CGI dodo; the former short-tailed frock coat (bird-coded human costume) is removed.",
+          "costume_sheet": "none: the character sheet.png is the only reference",
+          "prohibited_in_prompt": ["clothing on the dodo", "human body in a bird costume, cartoon face"]
+        }
+      ],
+      "change_points": [],
+      "variant_points": [
+        { "outfit": "COS-022", "variant": "soaked", "on_event": "ev0009", "off_after_event": "ev0010" }
+      ]
+    },
+
+    {
+      "character_id": "CHAR-duck",
+      "name": "Duck",
+      "tier": "extra",
+      "layer": "dream",
+      "rendering": "photoreal CGI mallard drake composited into live-action plates (SUP-002, BIB-0027)",
+      "default_outfit_id": "COS-023",
+      "occasion_matrix": [
+        { "period": "PER-dream", "daily": "COS-023" }
+      ],
+      "outfits": [
+        {
+          "id": "COS-023",
+          "label": "Unclothed (natural duck)",
+          "occasion": "daily",
+          "period": "PER-dream",
+          "period_range": { "from_event": "ev0009", "to_event": "ev0013" },
+          "default": true,
+          "visual": "No costume: the text gives the Duck no garment.",
+          "visual_en": "unclothed and unadorned: the bare natural duck, wearing nothing",
+          "components": [],
+          "materials": "none",
+          "palette": [],
+          "condition_and_wear": "Glossy dry plumage by default.",
+          "variants": [
+            { "name": "soaked", "events": ["ev0009", "ev0010"], "visual_delta": "plumage wet and dripping, head feathers slicked", "source": { "chapter": "ch003", "para": "ch003-p01", "quote": "all dripping wet" } }
+          ],
+          "chapters": ["ch002", "ch003"],
+          "episodes": ["ep02"],
+          "scenes": ["SCN-pool-of-tears", "SCN-pool-bank"],
+          "source": { "chapter": "ch002", "para": "ch002-p26", "quote": "there were a Duck and a Dodo, a Lory and an Eaglet" },
+          "inferred": false,
+          "reason": "Amended BIB-0027: photoreal CGI duck; the former mallard-coloured morning coat and webbed gloves (bird-coded human costume) are removed.",
+          "costume_sheet": "none: the character sheet.png is the only reference",
+          "prohibited_in_prompt": ["clothing on the duck", "human body in a bird costume, cartoon face"]
+        }
+      ],
+      "change_points": [],
+      "variant_points": [
+        { "outfit": "COS-023", "variant": "soaked", "on_event": "ev0009", "off_after_event": "ev0010" }
+      ]
+    },
+
+    {
+      "character_id": "CHAR-lory",
+      "name": "Lory",
+      "tier": "extra",
+      "layer": "dream",
+      "rendering": "photoreal CGI lory parrot composited into live-action plates (SUP-002, BIB-0027)",
+      "default_outfit_id": "COS-024",
+      "occasion_matrix": [
+        { "period": "PER-dream", "daily": "COS-024" }
+      ],
+      "outfits": [
+        {
+          "id": "COS-024",
+          "label": "Unclothed (natural lory)",
+          "occasion": "daily",
+          "period": "PER-dream",
+          "period_range": { "from_event": "ev0009", "to_event": "ev0013" },
+          "default": true,
+          "visual": "No costume: the text gives the Lory no garment.",
+          "visual_en": "unclothed and unadorned: the bare natural lory parrot, wearing nothing",
+          "components": [],
+          "materials": "none",
+          "palette": [],
+          "condition_and_wear": "Crisp dry plumage by default.",
+          "variants": [
+            { "name": "soaked", "events": ["ev0009", "ev0010"], "visual_delta": "plumage wet, draggled and darkened, dripping", "source": { "chapter": "ch003", "para": "ch003-p01", "quote": "the birds with draggled feathers" } }
+          ],
+          "chapters": ["ch002", "ch003"],
+          "episodes": ["ep02"],
+          "scenes": ["SCN-pool-of-tears", "SCN-pool-bank"],
+          "source": { "chapter": "ch003", "para": "ch003-p02", "quote": "she had quite a long argument with the Lory" },
+          "inferred": false,
+          "reason": "Amended BIB-0027: photoreal CGI lory; the former scarlet parrot-trimmed day dress (bird-coded human costume) is removed.",
+          "costume_sheet": "none: the character sheet.png is the only reference",
+          "prohibited_in_prompt": ["clothing on the parrot", "human body in a bird costume, cartoon face"]
+        }
+      ],
+      "change_points": [],
+      "variant_points": [
+        { "outfit": "COS-024", "variant": "soaked", "on_event": "ev0009", "off_after_event": "ev0010" }
+      ]
+    },
+
+    {
+      "character_id": "CHAR-eaglet",
+      "name": "Eaglet",
+      "tier": "extra",
+      "layer": "dream",
+      "rendering": "photoreal CGI eaglet composited into live-action plates (SUP-002, BIB-0027)",
+      "default_outfit_id": "COS-025",
+      "occasion_matrix": [
+        { "period": "PER-dream", "daily": "COS-025" }
+      ],
+      "outfits": [
+        {
+          "id": "COS-025",
+          "label": "Unclothed (natural eaglet)",
+          "occasion": "daily",
+          "period": "PER-dream",
+          "period_range": { "from_event": "ev0009", "to_event": "ev0013" },
+          "default": true,
+          "visual": "No costume: the text gives the Eaglet no garment.",
+          "visual_en": "unclothed and unadorned: the bare natural eaglet, wearing nothing",
+          "components": [],
+          "materials": "none",
+          "palette": [],
+          "condition_and_wear": "Fluffy dry down by default.",
+          "variants": [
+            { "name": "soaked", "events": ["ev0009", "ev0010"], "visual_delta": "down and feathers soaked and plastered flat, dripping", "source": { "chapter": "ch003", "para": "ch003-p01", "quote": "the birds with draggled feathers" } }
+          ],
+          "chapters": ["ch002", "ch003"],
+          "episodes": ["ep02"],
+          "scenes": ["SCN-pool-of-tears", "SCN-pool-bank"],
+          "source": { "chapter": "ch003", "para": "ch003-p15", "quote": "Speak English!” said the Eaglet" },
+          "inferred": false,
+          "reason": "Amended BIB-0027: photoreal CGI eaglet; the former girl's buff frock with downy collar (bird-coded human costume) is removed.",
+          "costume_sheet": "none: the character sheet.png is the only reference",
+          "prohibited_in_prompt": ["clothing on the eaglet", "human body in a bird costume, cartoon face"]
+        }
+      ],
+      "change_points": [],
+      "variant_points": [
+        { "outfit": "COS-025", "variant": "soaked", "on_event": "ev0009", "off_after_event": "ev0010" }
+      ]
+    },
+
+    {
+      "character_id": "CHAR-canary",
+      "name": "Canary",
+      "tier": "extra",
+      "layer": "dream",
+      "rendering": "photoreal CGI canary composited into live-action plates (SUP-002, BIB-0027)",
+      "default_outfit_id": "COS-026",
+      "occasion_matrix": [
+        { "period": "PER-dream", "daily": "COS-026" }
+      ],
+      "outfits": [
+        {
+          "id": "COS-026",
+          "label": "Unclothed (natural canary)",
+          "occasion": "daily",
+          "period": "PER-dream",
+          "period_range": { "from_event": "ev0013", "to_event": "ev0013" },
+          "default": true,
+          "visual": "No costume: the text gives the Canary no garment.",
+          "visual_en": "unclothed and unadorned: the bare natural canary, wearing nothing",
+          "components": [],
+          "materials": "none",
+          "palette": [],
+          "condition_and_wear": "Tail feathers still a little damp.",
+          "variants": [],
+          "chapters": ["ch003"],
+          "episodes": ["ep02"],
+          "scenes": ["SCN-pool-bank"],
+          "source": { "chapter": "ch003", "para": "ch003-p47", "quote": "a Canary called out in a trembling voice to its children" },
+          "inferred": false,
+          "reason": "Amended BIB-0027: photoreal CGI canary; the former canary-yellow day dress (bird-coded human costume) is removed.",
+          "costume_sheet": "none: the character sheet.png is the only reference",
+          "prohibited_in_prompt": ["clothing on the canary", "human body in a bird costume, cartoon face"]
+        }
+      ],
+      "change_points": [],
+      "variant_points": []
+    },
+
+    {
+      "character_id": "CHAR-magpie",
+      "name": "Magpie",
+      "tier": "extra",
+      "layer": "dream",
+      "rendering": "photoreal CGI magpie composited into live-action plates (SUP-002, BIB-0027)",
+      "default_outfit_id": "COS-027",
+      "occasion_matrix": [
+        { "period": "PER-dream", "daily": "COS-027" }
+      ],
+      "outfits": [
+        {
+          "id": "COS-027",
+          "label": "Unclothed (natural magpie)",
+          "occasion": "daily",
+          "period": "PER-dream",
+          "period_range": { "from_event": "ev0013", "to_event": "ev0013" },
+          "default": true,
+          "visual": "No costume: the text gives the Magpie no garment; its line about wrapping up against the night-air is played as a fluffed-up throat, not a muffler.",
+          "visual_en": "unclothed and unadorned: the bare natural magpie, wearing nothing",
+          "components": [],
+          "materials": "none",
+          "palette": [],
+          "condition_and_wear": "Fastidiously preened plumage, throat feathers fluffed up.",
+          "variants": [],
+          "chapters": ["ch003"],
+          "episodes": ["ep02"],
+          "scenes": ["SCN-pool-bank"],
+          "source": { "chapter": "ch003", "para": "ch003-p47", "quote": "the night-air doesn’t suit my throat!" },
+          "inferred": false,
+          "reason": "Amended BIB-0027: photoreal CGI magpie; the former long-tailed frock coat and striped muffler (bird-coded human costume) are removed. Confirmed by BIB-0029 (DEF-p4-char-concept-201-a): this entry, not the old appearance mark, is the default look; bible/characters/CHAR-magpie/appearance.json has been aligned to it and no longer carries a muffler in its marks or prompt_base_en.",
+          "canon_action_kept": { "beat": "ch003-p47 exit: he wraps himself up very carefully against the night air", "played_as": "throat feathers fluffed out into a thick ruff, head drawn down into them, shoulder plumage hunched up round the throat - no garment", "source": { "chapter": "ch003", "para": "ch003-p47", "quote": "began wrapping itself up very carefully" } },
+          "rejected_design": { "id": "COS-027-rejected-muffler", "design": "a small dark grey knitted wool muffler wound round the throat with beak and feet at his exit", "source_anchor": { "chapter": "ch003", "para": "ch003-p47", "quote": "began wrapping itself up very carefully, remarking, \u201cI really must be getting home; the night-air doesn\u2019t suit my throat!\u201d" }, "rejected_by": "BIB-0029 (DEF-p4-char-concept-201-a)", "reason": "The wrapping-up is sourced but the muffler itself was inferred; SUP-002 as amended by BIB-0027 gives a talking animal only the garments the text names, and the H2-locked sheet draws a bare fluffed throat. Recorded, not deleted: restoring it needs a user ruling plus a controlled change here and on the appearance card, and the sheet would have to be re-rolled (reroll budget 0)." },
+          "costume_sheet": "none: the character sheet.png is the only reference",
+          "prohibited_in_prompt": ["clothing or scarf on the magpie (the exit muffler is a rejected design, COS-027-rejected-muffler)", "human body in a bird costume, cartoon face"]
+        }
+      ],
+      "change_points": [],
+      "variant_points": []
+    },
+
+    {
+      "character_id": "CHAR-old-crab",
+      "name": "Old Crab",
+      "tier": "extra",
+      "layer": "dream",
+      "rendering": "photoreal CGI crab composited into live-action plates (SUP-002, BIB-0027)",
+      "default_outfit_id": "COS-028",
+      "occasion_matrix": [
+        { "period": "PER-dream", "daily": "COS-028" }
+      ],
+      "outfits": [
+        {
+          "id": "COS-028",
+          "label": "Unclothed (natural crab)",
+          "occasion": "daily",
+          "period": "PER-dream",
+          "period_range": { "from_event": "ev0013", "to_event": "ev0013" },
+          "default": true,
+          "visual": "No costume: the text gives the old Crab no garment. Age reads through the body (appearance card and 04-creatures).",
+          "visual_en": "unclothed and unadorned: the bare natural crab, wearing nothing",
+          "components": [],
+          "materials": "none",
+          "palette": [],
+          "condition_and_wear": "Damp shell.",
+          "variants": [],
+          "chapters": ["ch003"],
+          "episodes": ["ep02"],
+          "scenes": ["SCN-pool-bank"],
+          "source": { "chapter": "ch003", "para": "ch003-p43", "quote": "an old Crab took the opportunity of saying to her daughter" },
+          "inferred": false,
+          "reason": "Amended BIB-0027: photoreal CGI crab; the former brick-red shell-bodiced matron's dress and cap (crustacean-coded human costume) are removed.",
+          "costume_sheet": "none: the character sheet.png is the only reference",
+          "prohibited_in_prompt": ["clothing or cap on the crab", "human body in a crab costume, cartoon face"]
+        }
+      ],
+      "change_points": [],
+      "variant_points": []
+    },
+
+    {
+      "character_id": "CHAR-young-crab",
+      "name": "Young Crab",
+      "tier": "extra",
+      "layer": "dream",
+      "rendering": "photoreal CGI crab composited into live-action plates (SUP-002, BIB-0027)",
+      "default_outfit_id": "COS-029",
+      "occasion_matrix": [
+        { "period": "PER-dream", "daily": "COS-029" }
+      ],
+      "outfits": [
+        {
+          "id": "COS-029",
+          "label": "Unclothed (natural crab)",
+          "occasion": "daily",
+          "period": "PER-dream",
+          "period_range": { "from_event": "ev0013", "to_event": "ev0013" },
+          "default": true,
+          "visual": "No costume: the text gives the young Crab no garment. Youth reads through the body (appearance card and 04-creatures).",
+          "visual_en": "unclothed and unadorned: the bare natural crab, wearing nothing",
+          "components": [],
+          "materials": "none",
+          "palette": [],
+          "condition_and_wear": "Damp, glossy shell.",
+          "variants": [],
+          "chapters": ["ch003"],
+          "episodes": ["ep02"],
+          "scenes": ["SCN-pool-bank"],
+          "source": { "chapter": "ch003", "para": "ch003-p43", "quote": "said the young Crab, a little snappishly" },
+          "inferred": false,
+          "reason": "Amended BIB-0027: photoreal CGI crab; the former coral shell-bodiced day dress and snood (crustacean-coded human costume) are removed.",
+          "costume_sheet": "none: the character sheet.png is the only reference",
+          "prohibited_in_prompt": ["clothing on the crab", "human body in a crab costume, cartoon face"]
+        }
+      ],
+      "change_points": [],
+      "variant_points": []
+    },
+
+    {
+      "character_id": "CHAR-caucus-race-party-ensemble",
+      "name": "Caucus-race party (unnamed members)",
+      "tier": "extra",
+      "layer": "dream",
+      "rendering": "photoreal CGI animals and birds composited into live-action plates (SUP-002, BIB-0027); species per slot are owned by the appearance card",
+      "default_outfit_id": "COS-030",
+      "occasion_matrix": [
+        { "period": "PER-dream", "daily": "COS-030" }
+      ],
+      "outfits": [
+        {
+          "id": "COS-030",
+          "label": "Unclothed (natural animals and birds, ensemble)",
+          "occasion": "daily",
+          "period": "PER-dream",
+          "period_range": { "from_event": "ev0009", "to_event": "ev0013" },
+          "default": true,
+          "visual": "No costume for any member: the text calls them 'curious creatures' and gives them no garments. The slots C01-C06 (moorhen, coot, water-vole, wren, heron, sand-martin in the earlier card) keep their species, but these are now defined by the appearance card, not by costume cues.",
+          "visual_en": "unclothed and unadorned: a small group of bare natural riverbank animals and birds, wearing nothing",
+          "components": [],
+          "materials": "none",
+          "palette": [],
+          "condition_and_wear": "Soaked on arrival (variant), drier and fluffed after the race.",
+          "variants": [
+            { "name": "soaked", "events": ["ev0009", "ev0010"], "visual_delta": "all dripping wet, fur clinging close and feathers draggled", "source": { "chapter": "ch003", "para": "ch003-p01", "quote": "the animals with their fur clinging close to them, and all dripping wet" } }
+          ],
+          "chapters": ["ch002", "ch003"],
+          "episodes": ["ep02"],
+          "scenes": ["SCN-pool-of-tears", "SCN-pool-bank"],
+          "source": { "chapter": "ch002", "para": "ch002-p26", "quote": "and several other curious creatures" },
+          "inferred": false,
+          "reason": "Amended BIB-0027: the party are photoreal CGI animals and birds; the former townspeople's day dress with one species cue per slot is removed.",
+          "costume_sheet": "none: the ensemble card sheet is the only reference",
+          "prohibited_in_prompt": ["clothing on the animals", "humans in animal costume, cartoon faces"]
+        }
+      ],
+      "change_points": [],
+      "variant_points": [
+        { "outfit": "COS-030", "variant": "soaked", "on_event": "ev0009", "off_after_event": "ev0010" }
+      ]
+    },
+
+    {
+      "character_id": "CHAR-bill-the-lizard",
+      "name": "Bill the Lizard",
+      "tier": "B",
+      "layer": "dream",
+      "rendering": "photoreal CGI green lizard composited into live-action plates (SUP-002, BIB-0027)",
+      "default_outfit_id": "COS-031",
+      "occasion_matrix": [
+        { "period": "PER-dream", "work": "COS-031", "note": "chimney work at the White Rabbit's house" },
+        { "period": "PER-dream-court", "formal": "COS-032", "note": "juror" }
+      ],
+      "outfits": [
+        {
+          "id": "COS-031",
+          "label": "Unclothed (natural lizard), chimney episode",
+          "occasion": "work",
+          "period": "PER-dream",
+          "period_range": { "from_event": "ev0016", "to_event": "ev0018" },
+          "default": true,
+          "visual": "No costume: the text gives Bill no garment. The sooty state after the chimney is a variant.",
+          "visual_en": "unclothed and unadorned: the bare natural lizard, wearing nothing",
+          "components": [],
+          "materials": "none",
+          "palette": [],
+          "condition_and_wear": "Clean scales at the start; sooted after the chimney (variant).",
+          "variants": [
+            { "name": "sooted after the chimney", "events": ["ev0017", "ev0018"], "visual_delta": "scales blackened and dusted with soot, soot caked in the skin folds", "source": { "chapter": "ch004", "para": "ch004-p27", "quote": "There goes Bill!" } }
+          ],
+          "chapters": ["ch004"],
+          "episodes": ["ep03"],
+          "scenes": ["SCN-rabbit-house-exterior", "SCN-rabbit-house-upstairs-room"],
+          "source": { "chapter": "ch004", "para": "ch004-p24", "quote": "Here, Bill! catch hold of this rope" },
+          "inferred": false,
+          "reason": "Amended BIB-0027: photoreal CGI lizard; the former chimney lad's scale-rib jersey and tail scarf (reptile-coded human costume) are removed.",
+          "costume_sheet": "none: the character sheet.png is the only reference",
+          "prohibited_in_prompt": ["clothing on the lizard", "human body in a lizard costume, cartoon face"]
+        },
+        {
+          "id": "COS-032",
+          "label": "Unclothed (natural lizard), juror at the trial",
+          "occasion": "formal",
+          "period": "PER-dream-court",
+          "period_range": { "from_event": "ev0045", "to_event": "ev0052" },
+          "default": false,
+          "visual": "No costume at the trial either. Kept as a separate entry for ID stability and so the court period has its own row: the soot of COS-031 is gone and he is clean for the jury-box.",
+          "visual_en": "unclothed and unadorned: the bare natural lizard, clean scales, wearing nothing",
+          "components": [],
+          "materials": "none",
+          "palette": [],
+          "condition_and_wear": "Clean; dishevelled and dusty after the jury-box is upset (ev0048, he is put back head downwards).",
+          "variants": [
+            { "name": "upset from the jury-box", "events": ["ev0048"], "visual_delta": "dust on the scales, sprawled and twisted after being tipped out", "source": { "chapter": "ch012", "para": "ch012-p04", "quote": "she had put the Lizard in head downwards" } }
+          ],
+          "chapters": ["ch011", "ch012"],
+          "episodes": ["ep08", "ep09"],
+          "scenes": ["SCN-courtroom"],
+          "source": { "chapter": "ch011", "para": "ch011-p09", "quote": "One of the jurors had a pencil that squeaked." },
+          "inferred": true,
+          "reason": "Amended BIB-0027: the former borrowed juror's frock coat is removed. Clean scales at the trial are inferred (a long gap of dream time since the chimney). CP-009 is kept so continuity-planning reads 'soot off' at the court.",
+          "costume_sheet": "none: the character sheet.png is the only reference",
+          "prohibited_in_prompt": ["clothing on the lizard", "human body in a lizard costume, cartoon face"]
+        }
+      ],
+      "change_points": [
+        { "id": "CP-009", "after_event": "ev0018", "effective_from_event": "ev0045", "from": "COS-031", "to": "COS-032", "staging": "off screen; first seen seated clean in the jury-box. There is no garment change, only the chimney soot gone." }
+      ],
+      "variant_points": [
+        { "outfit": "COS-031", "variant": "sooted after the chimney", "on_event": "ev0017", "off_after_event": "ev0018" },
+        { "outfit": "COS-032", "variant": "upset from the jury-box", "on_event": "ev0048", "off_after_event": "ev0052" }
+      ]
+    },
+
+    {
+      "character_id": "CHAR-pat",
+      "name": "Pat",
+      "tier": "extra",
+      "layer": "dream",
+      "default_outfit_id": "COS-033",
+      "occasion_matrix": [ { "period": "PER-dream", "work": "COS-033" } ],
+      "outfits": [
+        {
+          "id": "COS-033",
+          "label": "Irish labourer's working dress",
+          "occasion": "work",
+          "period": "PER-dream",
+          "period_range": { "from_event": "ev0015", "to_event": "ev0017" },
+          "default": true,
+          "visual": "Plain 1862 Irish farm-labourer's dress: collarless unbleached linen shirt with rolled sleeves, brown frieze waistcoat, patched corduroys tied below the knee with string, hobnailed boots, battered brown felt hat. No livery, no coding.",
+          "visual_en": "a plain 1862 Irish farm labourer's working dress in earth tones: a collarless unbleached linen shirt with sleeves rolled up, a brown frieze wool waistcoat, patched brown corduroy trousers tied below the knee with string, heavy hobnailed boots and a battered brown soft felt hat; soil on the knees, worn and patched",
+          "components": ["collarless unbleached linen shirt", "brown frieze waistcoat", "patched corduroys tied below the knee", "hobnailed boots", "battered brown felt hat"],
+          "materials": "linen, frieze wool, corduroy, felt, leather",
+          "palette": ["unbleached linen", "earth brown"],
+          "condition_and_wear": "Soil on knees and hands.",
+          "variants": [],
+          "chapters": ["ch004"],
+          "episodes": ["ep03"],
+          "scenes": ["SCN-rabbit-house-exterior"],
+          "source": { "chapter": "ch004", "para": "ch004-p16", "quote": "Digging for apples, yer honour!" },
+          "inferred": true,
+          "reason": "Per appearance.json; source names no species, so no animal coding."
+        }
+      ],
+      "change_points": [],
+      "variant_points": []
+    },
+
+    {
+      "character_id": "CHAR-crowd-ensemble",
+      "name": "Crowd outside the White Rabbit's house",
+      "tier": "extra",
+      "layer": "dream",
+      "rendering": "photoreal CGI little animals and birds composited into live-action plates (SUP-002, BIB-0027); species per slot are owned by the appearance card",
+      "default_outfit_id": "COS-034",
+      "occasion_matrix": [
+        { "period": "PER-dream", "work": "COS-034" }
+      ],
+      "outfits": [
+        {
+          "id": "COS-034",
+          "label": "Unclothed (natural little animals and birds, ensemble)",
+          "occasion": "work",
+          "period": "PER-dream",
+          "period_range": { "from_event": "ev0017", "to_event": "ev0018" },
+          "default": true,
+          "visual": "No costume for any member: the text gives 'a crowd of little animals and birds' no garments. Slots X01-X10 (including the two guinea-pigs X01/X02, the same animals as jurors J01/J02) keep their species through the appearance card, not through costume cues.",
+          "visual_en": "unclothed and unadorned: a crowd of bare natural little animals and birds, wearing nothing",
+          "components": [],
+          "materials": "none",
+          "palette": [],
+          "condition_and_wear": "Muddy paws and feet, rumpled from the commotion.",
+          "variants": [],
+          "chapters": ["ch004"],
+          "episodes": ["ep03"],
+          "scenes": ["SCN-rabbit-house-exterior"],
+          "source": { "chapter": "ch004", "para": "ch004-p34", "quote": "found quite a crowd of little animals and birds waiting outside" },
+          "inferred": false,
+          "reason": "Amended BIB-0027: the crowd are photoreal CGI animals and birds; the former village working dress with one species cue per slot is removed.",
+          "costume_sheet": "none: the ensemble card sheet is the only reference",
+          "prohibited_in_prompt": ["clothing on the animals", "humans in animal costume, cartoon faces"]
+        }
+      ],
+      "change_points": [],
+      "variant_points": []
+    },
+
+    {
+      "character_id": "CHAR-fish-footman",
+      "name": "Fish-Footman",
+      "tier": "extra",
+      "layer": "dream",
+      "rendering": "CGI fish-bodied figure in livery composited into live-action plates (SUP-002, XA-magic-02, BIB-0027); degree of humanisation pending_H2 (04-creatures/creature with 03-characters/appearance)",
+      "default_outfit_id": "COS-035",
+      "occasion_matrix": [
+        { "period": "PER-dream", "livery": "COS-035" }
+      ],
+      "outfits": [
+        {
+          "id": "COS-035",
+          "label": "Crown state livery fitted to a fish-bodied footman",
+          "occasion": "livery",
+          "period": "PER-dream",
+          "period_range": { "from_event": "ev0024", "to_event": "ev0024" },
+          "default": true,
+          "visual": "Working proposal (pending_H2): the figure stands upright on two legs (the text has him run, bow and hand over a letter), with a real fish's head and scaled skin. He wears the sourced livery and powdered hair, made to 1862 pattern and cut for that body: a crimson Hearts cut-away tail coat piped in cream with a red heart badge, a cream waistcoat, crimson knee breeches, and a powdered wig of tight curls set on the fish head. His fins, hands and legs below the knee stay in natural scaled skin.",
+          "visual_en": "an 1862 crown state livery cut for a fish-bodied footman: a crimson wool cut-away tail coat with deep cuffs, piped in cream, with a red heart badge and a small numeral device at the breast, a cream silk waistcoat, crimson knee breeches, and a powdered white wig of small tight curls set on the fish's head; the fins, hands and lower legs left in natural wet-sheened scaled skin; immaculate and formal",
+          "components": ["crimson cut-away tail coat, cream piping, deep cuffs", "red heart badge with numeral device", "cream silk waistcoat", "crimson knee breeches", "powdered white wig of tight curls"],
+          "materials": "wool, silk, horsehair wig",
+          "palette": ["Hearts crimson", "cream", "white"],
+          "condition_and_wear": "Immaculate; the wig tangles with the Frog-Footman's at the bow (CUL-012).",
+          "variants": [],
+          "chapters": ["ch006"],
+          "episodes": ["ep04"],
+          "scenes": ["SCN-duchess-house-front"],
+          "source": { "chapter": "ch006", "para": "ch006-p01", "quote": "a footman in livery came running out of the wood" },
+          "also_source": { "chapter": "ch006", "para": "ch006-p01", "quote": "both footmen, Alice noticed, had powdered hair that curled all over their heads" },
+          "inferred": true,
+          "reason": "Amended BIB-0027: livery and powdered hair are sourced and kept (ch006-p01, CUL-012). The fish-scale jacquard facings, white stockings and buckled pumps were fish-coding and dress for a human body, so they are removed; the fish anatomy now carries the species. The great letter he carries is a prop.",
+          "resolved_H2": { "gate": "G4", "approval_id": "ba96732d", "approved_on": "2026-09-23", "ruling": "Approved as proposed (runs/g4/gate.json approved_design_proposals #1): an upright livery figure with a real fish head, photoreal CGI. The livery cut above therefore stands as written, and the legwear ruling is now final - crimson knee breeches, nothing below the knee, lower legs and feet bare in wet-sheened scaled skin.", "folded_in_by": "BIB-0029 (DEF-p4-char-concept-201-b, DEF-p4-cr-costume-001-c); bible/characters/CHAR-fish-footman/appearance.json aligned in the same change" },
+          "prohibited_in_prompt": ["human face or human skin on the footman", "human in a fish mask or fish costume, cartoon face"]
+        }
+      ],
+      "change_points": [],
+      "variant_points": []
+    },
+
+    {
+      "character_id": "CHAR-frog-footman",
+      "name": "Frog-Footman",
+      "tier": "extra",
+      "layer": "dream",
+      "rendering": "CGI frog-bodied figure in livery composited into live-action plates (SUP-002, XA-magic-02, BIB-0027); degree of humanisation pending_H2 (04-creatures/creature with 03-characters/appearance)",
+      "default_outfit_id": "COS-036",
+      "occasion_matrix": [
+        { "period": "PER-dream", "livery": "COS-036" }
+      ],
+      "outfits": [
+        {
+          "id": "COS-036",
+          "label": "Faded Duchess-household livery fitted to a frog-bodied footman",
+          "occasion": "livery",
+          "period": "PER-dream",
+          "period_range": { "from_event": "ev0024", "to_event": "ev0025" },
+          "default": true,
+          "visual": "Working proposal (pending_H2): the figure stands and sits upright (the text has him bow and sit on the ground by the door), with a real frog's head, large eyes and moist skin. He wears the sourced livery and powdered hair, made to 1862 pattern and cut for that body: a faded snuff-brown Duchess-household tail coat with tarnished brass buttons and no crest, a plain buff waistcoat, cream knee breeches, and a slightly dishevelled powdered wig of sausage curls. His webbed hands, legs and feet stay in natural frog skin.",
+          "visual_en": "a faded 1862 household footman's livery cut for a frog-bodied footman: a snuff-brown wool tail coat worn thin and much-brushed at the cuffs with plain tarnished brass buttons and no crest or badge, a plain buff wool waistcoat, cream knee breeches, and a slightly dishevelled powdered white wig of tight sausage curls set on the frog's head; the webbed hands, lower legs and webbed feet left in natural moist frog skin; rumpled from sitting on the ground",
+          "components": ["snuff-brown livery tail coat, tarnished brass buttons, no crest", "plain buff waistcoat", "cream knee breeches", "powdered wig of sausage curls"],
+          "materials": "wool, horsehair wig, brass",
+          "palette": ["snuff brown", "buff", "cream", "white"],
+          "condition_and_wear": "Worn thin, rumpled; wig tangled after the bow (CUL-012).",
+          "variants": [],
+          "chapters": ["ch006"],
+          "episodes": ["ep04"],
+          "scenes": ["SCN-duchess-house-front"],
+          "source": { "chapter": "ch006", "para": "ch006-p01", "quote": "another footman in livery, with a round face, and large eyes like a frog" },
+          "also_source": { "chapter": "ch006", "para": "ch006-p01", "quote": "both footmen, Alice noticed, had powdered hair that curled all over their heads" },
+          "inferred": true,
+          "reason": "Amended BIB-0027: livery and powdered hair are sourced and kept, and so is the poorer FAC-duchess-household livery against the Hearts livery of COS-035. The mottled olive-and-moss waistcoat (frog colour coding) becomes plain buff, so it does not merge with the green frog skin. The round spectacles (a human-eye cue for 'large eyes') are dropped, as are the white stockings and buckled shoes; the frog anatomy now carries the species.",
+          "resolved_H2": { "gate": "G4", "approval_id": "ba96732d", "approved_on": "2026-09-23", "ruling": "Approved as proposed (runs/g4/gate.json approved_design_proposals #1): an upright livery figure with a real frog head, photoreal CGI. The livery cut above stands as written, including the plain buff wool waistcoat, and nothing is worn on the webbed hands, lower legs or feet.", "folded_in_by": "BIB-0029 (DEF-p4-char-302, DEF-p4-cr-costume-001-c); bible/characters/CHAR-frog-footman/appearance.json aligned to the buff waistcoat in the same change" },
+          "prohibited_in_prompt": ["human face or human skin on the footman", "human in a frog mask or frog costume, cartoon face"]
+        }
+      ],
+      "change_points": [],
+      "variant_points": []
+    },
+
+    {
+      "character_id": "CHAR-duchess-baby",
+      "name": "The Duchess's baby",
+      "tier": "extra",
+      "layer": "dream",
+      "rendering": "human infant at first; pig end-state is a photoreal CGI piglet (SUP-002 non-speaking-animal extension, BIB-0027; pending_H2). The gradual perceptual slide itself is SUP-006 and is not a costume matter.",
+      "default_outfit_id": "COS-037",
+      "occasion_matrix": [
+        { "period": "PER-dream", "daily": "COS-037" }
+      ],
+      "outfits": [
+        {
+          "id": "COS-037",
+          "label": "Grubby long infant gown",
+          "occasion": "daily",
+          "period": "PER-dream",
+          "period_range": { "from_event": "ev0026", "to_event": "ev0027" },
+          "default": true,
+          "visual": "Long grubby once-white cotton infant gown, frayed plain hem, loosely tied, pepper-dusted; no bonnet. The same gown is the one continuity carrier across the SUP-006 slide: at the pig end-state it hangs loose around the piglet (variant).",
+          "visual_en": "a long plain 1862 infant gown of once-white cotton gone greyish and grubby, reaching well past the feet, loosely tied at the neck, with a frayed plain hem and no lace or embroidery, rumpled and dusted with pepper; no bonnet",
+          "components": ["long greyish cotton infant gown", "loosely tied neck", "frayed hem"],
+          "materials": "cotton",
+          "palette": ["greyish white"],
+          "condition_and_wear": "Rumpled; the gown bunches up during the held-in-arms shot (SUP-006).",
+          "variants": [
+            { "name": "pig end-state (pending_H2)", "events": ["ev0027"], "visual_delta": "the same grubby gown hanging loose and slipping off a small photoreal pink-grey piglet; when set down it trots off into the wood with the gown left behind or trailing", "source": { "chapter": "ch006", "para": "ch006-p48", "quote": "it was neither more nor less than a pig" } }
+          ],
+          "chapters": ["ch006"],
+          "episodes": ["ep04"],
+          "scenes": ["SCN-duchess-kitchen", "SCN-cheshire-cat-path"],
+          "source": { "chapter": "ch006", "para": "ch006-p19", "quote": "nursing a baby" },
+          "inferred": true,
+          "reason": "Per appearance.json; 1862 long infant frock of a poorer household. Amended BIB-0027: the pig end-state is now a photoreal CGI piglet (non-speaking-animal extension, flagged for H2), so a variant records how the gown sits on it. Whether the gown stays on the piglet or is left behind when it trots off is proposed here and confirmed at H2.",
+          "resolved_H2": { "gate": "G4", "approval_id": "ba96732d", "approved_on": "2026-09-23", "ruling": "Approved as proposed (runs/g4/gate.json approved_design_proposals #3): the piglet keeps the SAME swaddling gown, revealed inside one continuous held shot (hidden cut / cloth-and-framing change, no morph), and leaves the gown behind when it trots off. This also answers DEF-p4-creature-401.", "folded_in_by": "BIB-0029 (DEF-p4-cr-costume-001-c); CRE-007 wording is 04-creatures/creature's to align" },
+          "prohibited_in_prompt": [
+            "pig mask, prosthetic snout, pink body paint on a human infant (SUP-006)",
+            "cartoon piglet, piglet with a human face"
+          ]
+        }
+      ],
+      "change_points": [],
+      "variant_points": [
+        { "outfit": "COS-037", "variant": "pig end-state (pending_H2)", "on_event": "ev0027", "off_after_event": "ev0027" }
+      ]
+    },
+
+    {
+      "character_id": "CHAR-cook",
+      "name": "The Duchess's cook",
+      "tier": "B",
+      "layer": "dream",
+      "default_outfit_id": "COS-038",
+      "occasion_matrix": [
+        { "period": "PER-dream", "work": "COS-038" },
+        { "period": "PER-dream-court", "formal": "COS-039", "note": "going out as a witness" }
+      ],
+      "outfits": [
+        {
+          "id": "COS-038",
+          "label": "Pepper-dusted kitchen working dress",
+          "occasion": "work",
+          "period": "PER-dream",
+          "period_range": { "from_event": "ev0026", "to_event": "ev0027" },
+          "default": true,
+          "visual": "Faded brown cotton working dress, sleeves rolled above the elbow, large stained coarse-linen apron dusted with pepper, crumpled white mob cap, sturdy boots; no crinoline.",
+          "visual_en": "an 1862 kitchen servant's working dress: a faded brown cotton dress with a plain full skirt and no crinoline, sleeves rolled above the elbow, a large stained coarse-linen apron dusted with pepper, a crumpled white cotton mob cap pushed askew, and sturdy black boots; greasy, smoke-dulled and pepper-dusted",
+          "components": ["faded brown cotton working dress", "large coarse-linen apron", "white mob cap", "sturdy black boots"],
+          "materials": "cotton, coarse linen, leather",
+          "palette": ["faded brown", "stained off-white"],
+          "condition_and_wear": "Greasy, pepper-dusted, smoke-dulled.",
+          "variants": [],
+          "chapters": ["ch006"],
+          "episodes": ["ep04"],
+          "scenes": ["SCN-duchess-kitchen"],
+          "source": { "chapter": "ch006", "para": "ch006-p19", "quote": "the cook was leaning over the fire, stirring a large cauldron" },
+          "inferred": true,
+          "reason": "'Plain kitchen dress' per index performer_concept and appearance.json."
+        },
+        {
+          "id": "COS-039",
+          "label": "Witness: working dress with shawl and bonnet",
+          "occasion": "formal",
+          "period": "PER-dream-court",
+          "period_range": { "from_event": "ev0045", "to_event": "ev0047" },
+          "default": false,
+          "cross_ref": "COS-038",
+          "cross_ref_note": "Same dress under a going-out shawl and bonnet; separate sheet because the silhouette changes.",
+          "visual": "Her brown working dress with a clean apron, under a coarse brown wool shawl and a black straw bonnet tied over the mob cap; pepper-box in hand is a prop.",
+          "visual_en": "an 1862 kitchen servant dressed to go out: a faded brown cotton dress with a plain full skirt and no crinoline, sleeves pulled down, a clean coarse-linen apron, a coarse brown wool shawl crossed over the chest, a plain black straw bonnet tied over a crumpled white mob cap, and sturdy black boots; still faintly dusted with pepper",
+          "components": ["COS-038 brown working dress", "clean coarse-linen apron", "coarse brown wool shawl", "black straw bonnet over the mob cap", "sturdy black boots"],
+          "materials": "cotton, linen, wool, straw, leather",
+          "palette": ["faded brown", "black", "off-white"],
+          "condition_and_wear": "Tidied for court; pepper still clings (people sneeze as she enters).",
+          "variants": [],
+          "chapters": ["ch011"],
+          "episodes": ["ep08"],
+          "scenes": ["SCN-courtroom"],
+          "source": { "chapter": "ch011", "para": "ch011-p64", "quote": "The next witness was the Duchess’s cook. She carried the pepper-box in her hand" },
+          "inferred": true,
+          "reason": "A servant summoned out of doors in 1862 would put on a shawl and bonnet; designed so the witness entrance reads as a different occasion while keeping her kitchen identity."
+        }
+      ],
+      "change_points": [
+        { "id": "CP-010", "after_event": "ev0027", "effective_from_event": "ev0047", "from": "COS-038", "to": "COS-039", "staging": "off screen; she enters the court already in shawl and bonnet" }
+      ],
+      "variant_points": []
+    },
+
+    {
+      "character_id": "CHAR-gardener-two",
+      "name": "Two (gardener)",
+      "tier": "extra",
+      "layer": "dream",
+      "default_outfit_id": "COS-040",
+      "occasion_matrix": [ { "period": "PER-dream", "livery": "COS-040" } ],
+      "outfits": [
+        {
+          "id": "COS-040",
+          "label": "Two of Clubs gardener's card tabard",
+          "occasion": "livery",
+          "period": "PER-dream",
+          "period_range": { "from_event": "ev0033", "to_event": "ev0035" },
+          "default": true,
+          "visual": "Stiff flat oblong card tabard to the knee (ivory face, two black spade pips and '2' indices; card-back behind) over crimson Hearts working shirt-sleeves and breeches, cream stockings, brown lace-up boots.",
+          "visual_en": "an 1862 estate gardener's working dress under a playing card: a stiff flat oblong card tabard hanging front and back to the knee, the ivory front with two black spade pips and 2 in the corner indices, the back in a crimson-and-cream lattice card-back pattern with a small heart rosette, over plain crimson wool working shirt-sleeves and crimson work breeches, cream stockings and sturdy brown lace-up boots; red paint smears on the hands and tabard edge",
+          "components": ["flat ivory card tabard, Two of Spades", "card-back panel", "crimson working shirt-sleeves", "crimson work breeches", "cream stockings", "brown lace-up boots"],
+          "materials": "buckram-stiffened canvas tabard, wool, cotton, leather",
+          "palette": ["ivory", "black", "Hearts crimson", "cream"],
+          "condition_and_wear": "Red paint smears (they are painting white roses red).",
+          "variants": [],
+          "chapters": ["ch008"],
+          "episodes": ["ep05", "ep06"],
+          "scenes": ["SCN-rose-tree-yard"],
+          "source": { "chapter": "ch008", "para": "ch008-p06", "quote": "That’s none of your business, Two!" },
+          "inferred": true,
+          "reason": "Number sourced; SPADE suit and livery per appearance.json and FAC-house-of-hearts. Re-suited from clubs by BIB-0029 (DEF-p4-char-301): the club suit is fully taken by the ten card soldiers (Ace-Ten) and the visiting King and Queen of Clubs, so no club rank was free for a gardener; the numeral is unchanged. The H2-locked sheet still draws club trefoils (reroll budget 0) - this visual_en is the pip authority for prompts."
+        }
+      ],
+      "change_points": [],
+      "variant_points": []
+    },
+
+    {
+      "character_id": "CHAR-gardener-five",
+      "name": "Five (gardener)",
+      "tier": "extra",
+      "layer": "dream",
+      "default_outfit_id": "COS-041",
+      "occasion_matrix": [ { "period": "PER-dream", "livery": "COS-041" } ],
+      "outfits": [
+        {
+          "id": "COS-041",
+          "label": "Five of Clubs gardener's card tabard",
+          "occasion": "livery",
+          "period": "PER-dream",
+          "period_range": { "from_event": "ev0033", "to_event": "ev0035" },
+          "default": true,
+          "visual": "Same tabard cut with five black spade pips and '5' indices; the most paint-splattered of the three; sleeves rolled.",
+          "visual_en": "an 1862 estate gardener's working dress under a playing card: a stiff flat oblong card tabard hanging front and back to the knee, the ivory front with five black spade pips and 5 in the corner indices, the back in a crimson-and-cream lattice card-back pattern with a small heart rosette, over crimson wool working shirt-sleeves rolled to the elbow, crimson work breeches, cream stockings and brown boots; heavily splashed with red paint on the forearms and tabard",
+          "components": ["flat ivory card tabard, Five of Spades", "card-back panel", "crimson shirt-sleeves rolled up", "crimson breeches", "cream stockings", "brown boots"],
+          "materials": "buckram-stiffened canvas tabard, wool, cotton, leather",
+          "palette": ["ivory", "black", "Hearts crimson", "cream"],
+          "condition_and_wear": "Heavy red paint splashes.",
+          "variants": [],
+          "chapters": ["ch008"],
+          "episodes": ["ep05", "ep06"],
+          "scenes": ["SCN-rose-tree-yard"],
+          "source": { "chapter": "ch008", "para": "ch008-p01", "quote": "Don’t go splashing paint over me like that!" },
+          "inferred": true,
+          "reason": "Per appearance.json trio distinction; spade suit per BIB-0029 (DEF-p4-char-301)."
+        }
+      ],
+      "change_points": [],
+      "variant_points": []
+    },
+
+    {
+      "character_id": "CHAR-gardener-seven",
+      "name": "Seven (gardener)",
+      "tier": "extra",
+      "layer": "dream",
+      "default_outfit_id": "COS-042",
+      "occasion_matrix": [ { "period": "PER-dream", "livery": "COS-042" } ],
+      "outfits": [
+        {
+          "id": "COS-042",
+          "label": "Seven of Clubs gardener's card tabard",
+          "occasion": "livery",
+          "period": "PER-dream",
+          "period_range": { "from_event": "ev0033", "to_event": "ev0035" },
+          "default": true,
+          "visual": "Same tabard cut with seven black spade pips and '7' indices; a few paint spots on the right cuff.",
+          "visual_en": "an 1862 estate gardener's working dress under a playing card: a stiff flat oblong card tabard hanging front and back to the knee, the ivory front with seven black spade pips and 7 in the corner indices, the back in a crimson-and-cream lattice card-back pattern with a small heart rosette, over crimson wool working shirt-sleeves and crimson work breeches, cream stockings and brown boots; a few red paint spots on the right cuff",
+          "components": ["flat ivory card tabard, Seven of Spades", "card-back panel", "crimson shirt-sleeves", "crimson breeches", "cream stockings", "brown boots"],
+          "materials": "buckram-stiffened canvas tabard, wool, cotton, leather",
+          "palette": ["ivory", "black", "Hearts crimson", "cream"],
+          "condition_and_wear": "Light paint spots.",
+          "variants": [],
+          "chapters": ["ch008"],
+          "episodes": ["ep05", "ep06"],
+          "scenes": ["SCN-rose-tree-yard"],
+          "source": { "chapter": "ch008", "para": "ch008-p08", "quote": "Seven flung down his brush" },
+          "inferred": true,
+          "reason": "Per appearance.json trio distinction; spade suit per BIB-0029 (DEF-p4-char-301)."
+        }
+      ],
+      "change_points": [],
+      "variant_points": []
+    },
+
+    {
+      "character_id": "CHAR-royal-gardeners-ensemble",
+      "name": "Royal gardeners (background)",
+      "tier": "extra",
+      "layer": "dream",
+      "default_outfit_id": "COS-043",
+      "occasion_matrix": [ { "period": "PER-dream", "livery": "COS-043" } ],
+      "outfits": [
+        {
+          "id": "COS-043",
+          "label": "Spade-suit gardeners' card tabards (ensemble)",
+          "occasion": "livery",
+          "period": "PER-dream",
+          "period_range": { "from_event": "ev0033", "to_event": "ev0036" },
+          "default": true,
+          "visual": "Identical cut to the named trio, ranks Three, Four, Six, Eight, Nine, Ten of Spades only (never a club rank); flat brown cloth caps; no brass buttons, badges or batons (must not read as soldiers).",
+          "visual_en": "background 1862 estate gardeners dressed as playing cards of the spade suit: stiff flat oblong card tabards hanging front and back to the knee, ivory fronts with black spade pips and corner rank indices, backs in a crimson-and-cream lattice card-back pattern with a small heart rosette, over crimson wool working shirt-sleeves and crimson breeches, cream stockings, brown boots and flat brown cloth caps; working-worn, a little earth and paint",
+          "components": ["spade-suit card tabards, ranks 3, 4, 6, 8, 9, 10", "card-back panels", "crimson shirt-sleeves and breeches", "cream stockings", "brown boots", "flat brown cloth caps"],
+          "materials": "buckram-stiffened canvas, wool, cotton, leather",
+          "palette": ["ivory", "black", "Hearts crimson", "cream", "brown"],
+          "condition_and_wear": "Working-worn.",
+          "variants": [],
+          "chapters": ["ch008"],
+          "episodes": ["ep05", "ep06"],
+          "scenes": ["SCN-rose-tree-yard", "SCN-croquet-ground"],
+          "source": { "chapter": "ch008", "para": "ch008-p16", "quote": "the pattern on their backs was the same as the rest of the pack" },
+          "inferred": true,
+          "reason": "Per appearance.json variation_rules (never 2, 5 or 7, and never a club rank). Re-suited from clubs to spades by BIB-0029 (DEF-p4-char-301); numerals unchanged."
+        }
+      ],
+      "change_points": [],
+      "variant_points": []
+    },
+
+    {
+      "character_id": "CHAR-card-soldiers-ensemble",
+      "name": "Card soldiers (Clubs)",
+      "tier": "extra",
+      "layer": "dream",
+      "default_outfit_id": "COS-044",
+      "occasion_matrix": [
+        { "period": "PER-dream", "livery": "COS-044", "note": "procession, croquet arches, custody escort" },
+        { "period": "PER-dream-court", "livery": "COS-044", "note": "two flank the Knave; same uniform" }
+      ],
+      "outfits": [
+        {
+          "id": "COS-044",
+          "label": "Club-suit soldiers' card tabards over crimson undress (ensemble)",
+          "occasion": "livery",
+          "period": "PER-dream, PER-dream-court",
+          "period_range": { "from_event": "ev0034", "to_event": "ev0052" },
+          "default": true,
+          "visual": "1860s line-infantry undress in Hearts crimson under a stiff flat oblong card tabard to the knee (ivory, black club pips and rank indices Ace to Ten; card-back behind); crimson shell-jacket sleeves with brass cuff buttons, crimson trousers with black stripe, black boots, black pillbox cap with club badge. Batons are props.",
+          "visual_en": "1862 soldiers dressed as living playing cards of the club suit: stiff flat oblong ivory card tabards hanging front and back to the knee, the fronts with black club pips and matching corner rank indices, the backs in a crimson-and-cream lattice card-back pattern with a small heart rosette, over crimson wool shell-jacket sleeves with brass cuff buttons, crimson trousers with a narrow black side stripe, black ankle boots and small black pillbox caps with a brass club badge; rigid, matched and identical",
+          "components": ["ivory club-suit card tabards, ranks Ace to Ten", "card-back panels", "crimson shell-jacket sleeves, brass cuff buttons", "crimson trousers, black side stripe", "black ankle boots", "black pillbox caps with club badge"],
+          "materials": "buckram-stiffened canvas, wool, brass, leather",
+          "palette": ["ivory", "black", "Hearts crimson", "brass"],
+          "condition_and_wear": "Rigid and matched; tabards hang down both sides in the arch pose.",
+          "variants": [],
+          "chapters": ["ch008", "ch009", "ch011", "ch012"],
+          "episodes": ["ep06", "ep07", "ep08", "ep09"],
+          "scenes": ["SCN-rose-tree-yard", "SCN-croquet-ground", "SCN-courtroom"],
+          "source": { "chapter": "ch008", "para": "ch008-p11", "quote": "First came ten soldiers carrying clubs; these were all shaped like the three gardeners, oblong and flat, with their hands and feet at the corners" },
+          "inferred": true,
+          "reason": "Shape sourced; uniform per appearance.json (no bayonets, rifles or swords, SUP-014). Ranks CONFIRMED UNCHANGED by BIB-0029 (DEF-p4-char-301): Ace to Ten of Clubs, one card per soldier, never doubled on camera; the Jack of Clubs is reserve and the Queen and King of Clubs belong to COS-046 M02/M01."
+        }
+      ],
+      "change_points": [],
+      "variant_points": []
+    },
+
+    {
+      "character_id": "CHAR-royal-procession-ensemble",
+      "name": "Royal procession: courtiers and royal children",
+      "tier": "extra",
+      "layer": "dream",
+      "default_outfit_id": "COS-045",
+      "occasion_matrix": [ { "period": "PER-dream", "court": "COS-045" } ],
+      "outfits": [
+        {
+          "id": "COS-045",
+          "label": "Diamond courtiers and Heart children (ensemble)",
+          "occasion": "court",
+          "period": "PER-dream",
+          "period_range": { "from_event": "ev0034", "to_event": "ev0036" },
+          "default": true,
+          "visual": "Ten courtiers: ivory card panels with red diamond pips over scarlet-and-gold 1862 court dress, red diamond paste ornaments everywhere. Ten royal children (5-9): ivory card tunics with crimson heart pips over crimson-and-white children's dress with heart appliques. All share the card-back.",
+          "visual_en": "an 1862 royal procession in card costume: ten elegant courtiers, ladies and gentlemen, in scarlet-and-gold court dress, crinoline gowns and tail coats, covered by flat ivory playing-card panels with bright red diamond pips and stitched all over with small red diamond-shaped paste ornaments; and ten small children in ivory card tunics and pinafores with crimson heart pips over crimson-and-white children's dress, girls in short full skirts with white pantalettes, boys in tunic suits, with many little crimson heart appliques; the backs of all panels in a crimson-and-cream lattice card-back pattern with a small heart rosette; festive and immaculate",
+          "components": ["courtiers: Diamonds panels Ace, Two to Ten over scarlet-and-gold court dress, red diamond paste ornaments", "royal children: Hearts tunics Ace to Ten over crimson-and-white children's dress, heart appliques", "shared card-back"],
+          "materials": "silk, satin, buckram-stiffened panels, paste ornaments, cotton",
+          "palette": ["ivory", "bright scarlet (Diamonds)", "gold", "Hearts crimson (children)", "white"],
+          "condition_and_wear": "Immaculate.",
+          "variants": [],
+          "prohibited_in_prompt": ["blue dress or long loose fair hair on any royal child (must not echo Alice)"],
+          "chapters": ["ch008"],
+          "episodes": ["ep06"],
+          "scenes": ["SCN-rose-tree-yard", "SCN-croquet-ground"],
+          "source": { "chapter": "ch008", "para": "ch008-p11", "quote": "ornamented all over with diamonds ... they were all ornamented with hearts" },
+          "inferred": true,
+          "reason": "Ornament sourced; subgroups per appearance.json."
+        }
+      ],
+      "change_points": [],
+      "variant_points": []
+    },
+
+    {
+      "character_id": "CHAR-visiting-monarchs-ensemble",
+      "name": "Visiting Kings and Queens",
+      "tier": "extra",
+      "layer": "dream",
+      "default_outfit_id": "COS-046",
+      "occasion_matrix": [ { "period": "PER-dream", "court": "COS-046" } ],
+      "outfits": [
+        {
+          "id": "COS-046",
+          "label": "Clubs, Diamonds and Spades court regalia (ensemble)",
+          "occasion": "court",
+          "period": "PER-dream",
+          "period_range": { "from_event": "ev0034", "to_event": "ev0036" },
+          "default": true,
+          "visual": "Card-court regalia in their own suits (Clubs black and ivory; Spades black and slate; Diamonds scarlet and gold); ermine-edged capes cut flat; 1862 court under-dress; crowns and coronets with suit symbols. No hearts anywhere.",
+          "visual_en": "visiting 1862 playing-card monarchs in their own suit colours: the King and Queen of Clubs in black and ivory, the King and Queen of Diamonds in scarlet and gold, the King and Queen of Spades in black and slate grey, each robe cut as a stiff flat rectangular card panel bearing its suit symbol and edged with ermine, over 1862 court dress, crinoline gowns for the queens and knee breeches with tail coats for the kings, gilt openwork crowns and small coronets each with its suit symbol at the front, the backs of the robes in a crimson-and-cream lattice card-back pattern with a small heart rosette; stately and rich",
+          "components": ["M01/M02 Clubs: black and ivory", "M03/M04 Diamonds: scarlet and gold", "M05/M06 Spades: black and slate", "optional M07 Jack of Spades, M08 Jack of Diamonds page tabards", "ermine-edged flat card robes", "suit crowns and coronets"],
+          "materials": "silk, velvet, ermine trim, gilt metal",
+          "palette": ["black", "ivory", "scarlet", "gold", "slate grey"],
+          "condition_and_wear": "Stately.",
+          "variants": [],
+          "chapters": ["ch008"],
+          "episodes": ["ep06"],
+          "scenes": ["SCN-rose-tree-yard", "SCN-croquet-ground"],
+          "source": { "chapter": "ch008", "para": "ch008-p11", "quote": "Next came the guests, mostly Kings and Queens" },
+          "inferred": true,
+          "reason": "Per appearance.json and FAC-visiting-monarchs; the shared card-back is the pack's one back design (only the rosette motif appears, never a front heart pip)."
+        }
+      ],
+      "change_points": [],
+      "variant_points": []
+    },
+
+    {
+      "character_id": "CHAR-executioner",
+      "name": "The Executioner",
+      "tier": "extra",
+      "layer": "dream",
+      "default_outfit_id": "COS-047",
+      "occasion_matrix": [ { "period": "PER-dream", "livery": "COS-047" } ],
+      "outfits": [
+        {
+          "id": "COS-047",
+          "label": "Senior household livery with pushed-back black hood",
+          "occasion": "livery",
+          "period": "PER-dream",
+          "period_range": { "from_event": "ev0038", "to_event": "ev0038" },
+          "default": true,
+          "visual": "Dark crimson Hearts livery: long slightly too-tight coat with black facings and a black-edged heart badge plus black rank bar, black waistcoat over the paunch, black knee-breeches and stockings, heavy buckled shoes, black cloth hood pushed back onto the shoulders, face visible, empty hands.",
+          "visual_en": "an old-fashioned 1862 senior household servant's livery in dark crimson and black: a long, slightly too-tight dark crimson wool coat with black facings, a black-edged red heart badge and a plain black rank bar at the breast, a black waistcoat straining over a paunch, black knee breeches, black stockings and heavy buckled black shoes, and a black cloth hood worn pushed right back off the head so it lies on his shoulders like a cowl; empty-handed; well-worn and a little shiny at the seams",
+          "components": ["long dark crimson livery coat, black facings", "black-edged heart badge and black rank bar", "black waistcoat", "black knee breeches and stockings", "heavy buckled black shoes", "black cloth hood pushed back onto the shoulders"],
+          "materials": "wool, cotton, leather",
+          "palette": ["dark Hearts crimson", "black"],
+          "condition_and_wear": "Well-worn; face always visible.",
+          "variants": [],
+          "prohibited_in_prompt": ["axe, block, sword, noose or any execution device; hood pulled over the face (DEF-p3-char-index-902, SUP-014, CR-010). These words are kept out of visual_en on purpose; they go to the negative list only."],
+          "chapters": ["ch008"],
+          "episodes": ["ep06"],
+          "scenes": ["SCN-croquet-ground"],
+          "source": { "chapter": "ch008", "para": "ch008-p66", "quote": "The executioner’s argument was, that you couldn’t cut off a head unless there was a body to cut it off from" },
+          "inferred": true,
+          "reason": "Office reads from livery and the pushed-back hood only, per appearance.json and DEF-p3-char-index-902 (honoured: no device of any kind is designed)."
+        }
+      ],
+      "change_points": [],
+      "variant_points": []
+    },
+
+    {
+      "character_id": "CHAR-gryphon",
+      "name": "Gryphon",
+      "tier": "B",
+      "layer": "dream",
+      "rendering": "photoreal CGI fantastical creature, classical griffin (eagle head, wings and forelegs; lion hindquarters and tail), composited into live-action plates (SUP-010, BIB-0027)",
+      "default_outfit_id": "COS-048",
+      "occasion_matrix": [
+        { "period": "PER-dream", "daily": "COS-048" },
+        { "period": "PER-dream-court", "daily": "COS-048", "note": "brings Alice to the trial" }
+      ],
+      "outfits": [
+        {
+          "id": "COS-048",
+          "label": "Unclothed (natural griffin)",
+          "occasion": "daily",
+          "period": "PER-dream, PER-dream-court",
+          "period_range": { "from_event": "ev0040", "to_event": "ev0045" },
+          "default": true,
+          "visual": "No costume: the text gives the Gryphon no garment. Eagle and lion anatomy is owned by 04-creatures/creature.",
+          "visual_en": "unclothed and unadorned: the bare natural griffin, wearing nothing",
+          "components": [],
+          "materials": "none",
+          "palette": [],
+          "condition_and_wear": "Sun-warmed, a little weathered plumage and hide from lying in the sun.",
+          "variants": [],
+          "chapters": ["ch009", "ch010", "ch011"],
+          "episodes": ["ep07", "ep08"],
+          "scenes": ["SCN-gryphon-sunning-spot", "SCN-mock-turtle-ledge", "SCN-courtroom"],
+          "source": { "chapter": "ch009", "para": "ch009-p75", "quote": "The Gryphon lifted up both its paws in surprise." },
+          "inferred": false,
+          "reason": "Amended BIB-0027: photoreal CGI griffin (SUP-010); the former labourer's dress under an eagle-feather mantle with gauntlet paws and tail-cord (creature-coded human costume) is removed. Occasion changed from 'work' to 'daily' because the labourer framing went with the human costume.",
+          "costume_sheet": "none: the character sheet.png is the only reference",
+          "prohibited_in_prompt": ["clothing on the griffin", "human in a feathered costume, beak mask, cartoon face"]
+        }
+      ],
+      "change_points": [],
+      "variant_points": []
+    },
+
+    {
+      "character_id": "CHAR-mock-turtle",
+      "name": "Mock Turtle",
+      "tier": "B",
+      "layer": "dream",
+      "rendering": "photoreal CGI fantastical creature, turtle-bodied with calf's head, hind hooves and tail, composited into live-action plates (SUP-010, BIB-0027)",
+      "default_outfit_id": "COS-049",
+      "occasion_matrix": [
+        { "period": "PER-dream", "daily": "COS-049" }
+      ],
+      "outfits": [
+        {
+          "id": "COS-049",
+          "label": "Unclothed (natural mock turtle)",
+          "occasion": "daily",
+          "period": "PER-dream",
+          "period_range": { "from_event": "ev0041", "to_event": "ev0044" },
+          "default": true,
+          "visual": "No costume: the text gives the Mock Turtle no garment. Shell, flappers, calf's head, hooves and tail are anatomy owned by 04-creatures/creature.",
+          "visual_en": "unclothed and unadorned: the bare natural mock turtle, wearing nothing",
+          "components": [],
+          "materials": "none",
+          "palette": [],
+          "condition_and_wear": "Damp shell and hide, tear-wet face.",
+          "variants": [],
+          "chapters": ["ch009", "ch010"],
+          "episodes": ["ep07"],
+          "scenes": ["SCN-mock-turtle-ledge"],
+          "source": { "chapter": "ch009", "para": "ch009-p79", "quote": "counting off the subjects on his flappers" },
+          "inferred": false,
+          "reason": "Amended BIB-0027: photoreal CGI creature (SUP-010); the former sea-green frock coat, tortoiseshell cape, calf-hide cap and waistcoat, hoof spats and tail (creature-coded human costume) are removed. The calf and turtle features now belong to the creature's anatomy.",
+          "costume_sheet": "none: the character sheet.png is the only reference",
+          "prohibited_in_prompt": ["clothing on the mock turtle", "human in a shell costume, calf mask, cartoon face"]
+        }
+      ],
+      "change_points": [],
+      "variant_points": []
+    },
+
+    {
+      "character_id": "CHAR-tortoise",
+      "name": "The Tortoise (Mock Turtle's old master)",
+      "tier": "extra",
+      "layer": "dream",
+      "rendering": "told only; if an insert is ever staged, a photoreal CGI old sea turtle (SUP-002/SUP-010 register, BIB-0027; pending_H2)",
+      "default_outfit_id": "COS-050",
+      "occasion_matrix": [
+        { "period": "PER-dream", "daily": "COS-050", "note": "told only; used only if a stylised insert is ever staged" }
+      ],
+      "outfits": [
+        {
+          "id": "COS-050",
+          "label": "Unclothed (natural old turtle)",
+          "occasion": "daily",
+          "period": "PER-dream",
+          "period_range": { "from_event": "ev0042", "to_event": "ev0042", "note": "inside the Mock Turtle's told recollection (anachrony an-04)" },
+          "default": true,
+          "visual": "No costume: the text only names him. If an insert is ever staged he is a bare, very old sea turtle, darker and more barnacled than the Mock Turtle so the two never read as one creature.",
+          "visual_en": "unclothed and unadorned: the bare natural old sea turtle, wearing nothing",
+          "components": [],
+          "materials": "none",
+          "palette": [],
+          "condition_and_wear": "Very old, barnacled, slow.",
+          "variants": [],
+          "chapters": ["ch009"],
+          "episodes": ["ep07"],
+          "scenes": ["no set: told only (FAC-school-in-the-sea is never shown)"],
+          "screen_presence": "told only; no costume sheet is needed unless screenplay adds an insert",
+          "source": { "chapter": "ch009", "para": "ch009-p57", "quote": "We called him Tortoise because he taught us" },
+          "inferred": true,
+          "reason": "Amended BIB-0027: the former schoolmaster's gown with shell-pattern cape (human performer reading) is removed. There is no appearance card; the CGI register for this told-only figure is an inference, flagged for H2 with the other non-speaking animals. The occasion changed from 'work' to 'daily' because the schoolmaster framing went with the gown.",
+          "pending_H2": "CGI register for a told-only animal, only relevant if an insert is staged",
+          "costume_sheet": "none",
+          "prohibited_in_prompt": ["academic gown or clothing on the turtle", "human in a shell costume, cartoon face"]
+        }
+      ],
+      "change_points": [],
+      "variant_points": []
+    },
+
+    {
+      "character_id": "CHAR-court-officers-ensemble",
+      "name": "Officers of the court",
+      "tier": "extra",
+      "layer": "dream",
+      "default_outfit_id": "COS-051",
+      "occasion_matrix": [ { "period": "PER-dream-court", "livery": "COS-051" } ],
+      "outfits": [
+        {
+          "id": "COS-051",
+          "label": "Hearts court-usher livery (ensemble)",
+          "occasion": "livery",
+          "period": "PER-dream-court",
+          "period_range": { "from_event": "ev0045", "to_event": "ev0052" },
+          "default": true,
+          "visual": "Crimson Hearts court livery: ivory card-face tabard with crimson heart pips and indices (Eight and Nine of Hearts; extras Four and Six) over a crimson frock coat with white piping and brass buttons, black breeches, white stockings, black shoes; bareheaded. Wands and sack are props.",
+          "visual_en": "1862 court ushers in Hearts livery: flat ivory playing-card tabards with crimson heart pips and corner rank indices, the backs in a crimson-and-cream lattice card-back pattern with a small heart rosette, worn over crimson wool frock coats with white piping and brass buttons, black knee breeches, white stockings and black buckled shoes; bareheaded; neat and official",
+          "components": ["ivory Hearts card tabards: Eight and Nine (extras Four and Six)", "card-back panels", "crimson frock coats, white piping, brass buttons", "black knee breeches", "white stockings", "black buckled shoes"],
+          "materials": "buckram-stiffened canvas, wool, brass, leather",
+          "palette": ["ivory", "Hearts crimson", "white", "black"],
+          "condition_and_wear": "Neat and official; distinct from the club-suited soldiers (hearts, no caps).",
+          "variants": [],
+          "chapters": ["ch011"],
+          "episodes": ["ep08"],
+          "scenes": ["SCN-courtroom"],
+          "source": { "chapter": "ch011", "para": "ch011-p53", "quote": "was immediately suppressed by the officers of the court" },
+          "inferred": true,
+          "reason": "Per appearance.json; staging of the sack beat follows ruling 5.4 B (not a costume matter)."
+        }
+      ],
+      "change_points": [],
+      "variant_points": []
+    },
+
+    {
+      "character_id": "CHAR-jury-ensemble",
+      "name": "The jury (eleven unnamed jurors)",
+      "tier": "extra",
+      "layer": "dream",
+      "rendering": "photoreal CGI animals and birds composited into live-action plates (SUP-002, BIB-0027); species per slot J01-J11 are owned by the appearance card",
+      "default_outfit_id": "COS-052",
+      "occasion_matrix": [ { "period": "PER-dream-court", "formal": "COS-052" } ],
+      "outfits": [
+        {
+          "id": "COS-052",
+          "label": "Unclothed (natural animals and birds, ensemble)",
+          "occasion": "formal",
+          "period": "PER-dream-court",
+          "period_range": { "from_event": "ev0045", "to_event": "ev0052" },
+          "default": true,
+          "visual": "No costume for any juror: the text gives the 'creatures' in the jury-box no garments. Slots J01-J11 (guinea-pigs, mole, squirrel, ferret, badger, owl, stork, cockatoo, sparrow, pheasant in the earlier card) keep their species through the appearance card. Slates and pencils are props.",
+          "visual_en": "unclothed and unadorned: eleven bare natural animals and birds as jurors, wearing nothing",
+          "components": [],
+          "materials": "none",
+          "palette": [],
+          "condition_and_wear": "Groomed; ruffled and dusty after the jury-box is upset (ev0048).",
+          "variants": [
+            { "name": "upset from the jury-box", "events": ["ev0048", "ev0049"], "visual_delta": "fur and feathers ruffled, dust on the coats and plumage", "source": { "chapter": "ch012", "para": "ch012-p01", "quote": "she tipped over the jury-box with the edge of her skirt" } },
+            { "name": "sacked guinea-pigs", "events": ["ev0047"], "visual_delta": "J01 and J02 bundled head first into a coarse canvas sack tied at the mouth (prop, ruling 5.4 B)", "source": { "chapter": "ch011", "para": "ch011-p53", "quote": "They had a large canvas bag, which tied up at the mouth with strings" } }
+          ],
+          "chapters": ["ch011", "ch012"],
+          "episodes": ["ep08", "ep09"],
+          "scenes": ["SCN-courtroom"],
+          "source": { "chapter": "ch011", "para": "ch011-p05", "quote": "The twelve jurors were all writing very busily on slates." },
+          "inferred": false,
+          "reason": "Amended BIB-0027: the jurors are photoreal CGI animals and birds; the former townsmen's day dress with one species cue per slot is removed. This also makes qa/defects/DEF-p4-costume-001 finding d (J09's white coat) moot.",
+          "costume_sheet": "none: the ensemble card sheet is the only reference",
+          "prohibited_in_prompt": ["clothing on the animals", "humans in animal costume, cartoon faces"]
+        }
+      ],
+      "change_points": [],
+      "variant_points": [
+        { "outfit": "COS-052", "variant": "sacked guinea-pigs", "on_event": "ev0047", "off_after_event": "ev0047" },
+        { "outfit": "COS-052", "variant": "upset from the jury-box", "on_event": "ev0048", "off_after_event": "ev0052" }
+      ]
+    }
+  ],
+
+  "change_point_summary": [
+    { "id": "CP-001", "character_id": "CHAR-alice", "after_event": "ev0054", "effective_from_event": "ev0054", "effective_from_paragraph": "ch012#p71", "from": "COS-001", "to": "COS-002" },
+    { "id": "CP-002", "character_id": "CHAR-alice", "after_event": "ev0054", "effective_from_event": "ev0054", "effective_from_paragraph": "ch012#p72", "from": "COS-002", "to": "COS-001" },
+    { "id": "CP-003", "character_id": "CHAR-alice-sister", "after_event": "ev0001", "effective_from_event": "ev0045", "from": "COS-003", "to": "COS-004" },
+    { "id": "CP-004", "character_id": "CHAR-alice-sister", "after_event": "ev0052", "effective_from_event": "ev0053", "from": "COS-004", "to": "COS-003" },
+    { "id": "CP-005", "character_id": "CHAR-white-rabbit", "after_event": "ev0038", "effective_from_event": "ev0045", "from": "COS-006", "to": "COS-007" },
+    { "id": "CP-006", "character_id": "CHAR-king-of-hearts", "after_event": "ev0040", "effective_from_event": "ev0045", "from": "COS-009", "to": "COS-010" },
+    { "id": "CP-007", "character_id": "CHAR-knave-of-hearts", "after_event": "ev0036", "effective_from_event": "ev0045", "from": "COS-011", "to": "COS-012" },
+    { "id": "CP-008", "character_id": "CHAR-duchess", "after_event": "ev0027", "effective_from_event": "ev0038", "from": "COS-013", "to": "COS-014" },
+    { "id": "CP-009", "character_id": "CHAR-bill-the-lizard", "after_event": "ev0018", "effective_from_event": "ev0045", "from": "COS-031", "to": "COS-032" },
+    { "id": "CP-010", "character_id": "CHAR-cook", "after_event": "ev0027", "effective_from_event": "ev0047", "from": "COS-038", "to": "COS-039" }
+  ]
+}

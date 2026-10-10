@@ -1,0 +1,227 @@
+{
+  "schema_version": "scene_layout.v1",
+  "scene_id": "SCN-long-hall",
+  "task_id": "p4-env-concept-sb1",
+  "layout_top": "layout_top.png",
+  "orientation": {
+    "top_of_map": "west wall (the wall with the low curtain and the little door); the hall's north end is at the left edge, the south end at the right edge",
+    "map_extent_m": [
+      40.5,
+      22.8
+    ],
+    "note_en": "camera positions in views[] are described relative to these landmarks; xy_m = xy x map_extent_m (origin top-left). As drawn, the hall floor spans about x 0.11-0.90, y 0.35-0.64; everything outside the wall lines is solid masonry. SCN-pool-of-tears has its own frame and coordinates (its image is framed differently)."
+  },
+  "landmarks": [
+    {
+      "id": "ne_entrance",
+      "name": "the corner entrance",
+      "name_en": "the corner entrance",
+      "kind": "entrance",
+      "xy": [
+        0.28,
+        0.66
+      ],
+      "xy_m": [
+        11.34,
+        15.05
+      ]
+    },
+    {
+      "id": "north_end_wall",
+      "name": "the blind north end wall",
+      "name_en": "the blind north end wall",
+      "kind": "wall",
+      "xy": [
+        0.1,
+        0.5
+      ],
+      "xy_m": [
+        4.05,
+        11.4
+      ]
+    },
+    {
+      "id": "west_doors_north",
+      "name": "the locked doors of the west wall",
+      "name_en": "the locked doors of the west wall",
+      "kind": "door",
+      "xy": [
+        0.29,
+        0.335
+      ],
+      "xy_m": [
+        11.74,
+        7.64
+      ]
+    },
+    {
+      "id": "lamp_row_mid",
+      "name": "the middle of the hall under the lamps",
+      "name_en": "the middle of the hall under the lamps",
+      "kind": "zone",
+      "xy": [
+        0.43,
+        0.5
+      ],
+      "xy_m": [
+        17.41,
+        11.4
+      ]
+    },
+    {
+      "id": "east_doors_mid",
+      "name": "the locked doors of the east wall",
+      "name_en": "the locked doors of the east wall",
+      "kind": "door",
+      "xy": [
+        0.455,
+        0.67
+      ],
+      "xy_m": [
+        18.43,
+        15.28
+      ]
+    },
+    {
+      "id": "glass_table",
+      "name": "the glass table",
+      "name_en": "the glass table",
+      "kind": "furniture",
+      "xy": [
+        0.64,
+        0.5
+      ],
+      "xy_m": [
+        25.92,
+        11.4
+      ]
+    },
+    {
+      "id": "curtain",
+      "name": "the low curtain",
+      "name_en": "the low curtain",
+      "kind": "feature",
+      "xy": [
+        0.74,
+        0.355
+      ],
+      "xy_m": [
+        29.97,
+        8.09
+      ]
+    },
+    {
+      "id": "east_doors_south",
+      "name": "the south-east doors",
+      "name_en": "the south-east doors",
+      "kind": "door",
+      "xy": [
+        0.78,
+        0.67
+      ],
+      "xy_m": [
+        31.59,
+        15.28
+      ]
+    },
+    {
+      "id": "south_door",
+      "name": "the far south door",
+      "name_en": "the far south door",
+      "kind": "door",
+      "xy": [
+        0.905,
+        0.49
+      ],
+      "xy_m": [
+        36.65,
+        11.17
+      ]
+    }
+  ],
+  "views": [
+    {
+      "tile": 1,
+      "camera_from": "ne_entrance",
+      "looking_at": "glass_table",
+      "size": "wide",
+      "angle": "eye",
+      "desc_en": "eye-level wide establishing shot from just inside the corner entrance down the long low hall, the row of hanging lamps leading to the small glass table far down the centre line, locked doors on both walls"
+    },
+    {
+      "tile": 2,
+      "camera_from": "glass_table",
+      "looking_at": "curtain",
+      "size": "medium",
+      "angle": "eye",
+      "desc_en": "eye-level medium shot from beside the glass table across to the low crimson curtain at the base of the west wall, between two locked horseshoe-arched doors"
+    },
+    {
+      "tile": 3,
+      "camera_from": "curtain",
+      "looking_at": "glass_table",
+      "size": "close",
+      "angle": "low",
+      "desc_en": "low close shot from the floor at the curtain back toward the glass table, its three clear legs and the golden key glinting on the top far above"
+    },
+    {
+      "tile": 4,
+      "camera_from": "south_door",
+      "looking_at": "ne_entrance",
+      "size": "wide",
+      "angle": "high_oblique",
+      "desc_en": "high oblique wide shot from above the far south door looking back the whole length of the hall to the dark corner entrance, the lamp pools stepping away along the flag floor"
+    },
+    {
+      "tile": 5,
+      "camera_from": "lamp_row_mid",
+      "looking_at": "west_doors_north",
+      "size": "medium",
+      "angle": "eye",
+      "desc_en": "eye-level medium shot from the centre of the hall under the lamps toward the locked oak doors of the west wall, their iron locks and the stained-glass roundels above them"
+    },
+    {
+      "tile": 6,
+      "camera_from": "lamp_row_mid",
+      "looking_at": "east_doors_mid",
+      "size": "close",
+      "angle": "eye",
+      "desc_en": "eye-level close shot toward one locked door of the east wall: the large black iron lock and keyhole, the whiplash iron frame and mosaic dado"
+    },
+    {
+      "tile": 7,
+      "camera_from": "glass_table",
+      "looking_at": "south_door",
+      "size": "medium",
+      "angle": "eye",
+      "desc_en": "eye-level medium shot from the glass table on down the hall toward the far south door and the last lamps"
+    },
+    {
+      "tile": 8,
+      "camera_from": "east_doors_south",
+      "looking_at": "north_end_wall",
+      "size": "wide",
+      "angle": "high_oblique",
+      "desc_en": "high oblique wide shot from above the south-east doors diagonally back up the hall toward the blind north end wall, the full rhythm of doors and vault ribs visible"
+    },
+    {
+      "tile": 9,
+      "camera_from": "east_doors_south",
+      "looking_at": "curtain",
+      "size": "close",
+      "angle": "eye",
+      "desc_en": "eye-level close shot straight across the hall from the south-east doors to the low curtain on the opposite wall, hinting at the little door hidden behind it"
+    }
+  ],
+  "checklist": {
+    "architecture_match": false,
+    "lighting_match": true,
+    "style_match": true,
+    "deviation_ref": "DEF-p4-envconcept-603-b"
+  },
+  "calibration": {
+    "status": "calibrated_to_image",
+    "date": "2026-09-23",
+    "method": "landmark xy re-measured on the delivered layout_top.png (door/opening landmarks read at the gap in the wall line)"
+  }
+}

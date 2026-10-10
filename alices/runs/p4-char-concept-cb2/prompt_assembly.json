@@ -1,0 +1,35 @@
+{
+  "task_id": "p4-char-concept-cb2",
+  "note": "Shared prompt assembly for all 15 sheets of this order. Each character's assets/concepts/characters/<id>/prompts.json points here and to its own full_prompt/negative files.",
+  "provider": "volcengine",
+  "model": "doubao-seedream-5-0-pro-260628",
+  "genmedia_info": "image → volcengine model=doubao-seedream-5-0-pro-260628",
+  "command": "python3 modules/genmedia.py image --prompt <full_prompt> --negative <negative> --ref runs/p4-char-concept-cb2/inputs/character_sheet_template.jpg [--ref refs/style/alice.jpeg (Caterpillar only)] --output assets/concepts/characters/<id>/sheet.png --size 2560x1440 --n 1",
+  "helper": "code/p4-char-concept-cb2_gen.sh",
+  "prompt_order": [
+    "layout part: prompts/_layout_figure.txt (Knave, Fish-Footman, Duchess's baby) or prompts/_layout_animal.txt (all CGI animals: 'four photographs side by side' phrasing against the low-wide-body layout failure)",
+    "subject part: prompts/<id>.txt (gender word + appearance fields + marks + 'Costume: ' + bible/costumes.json default outfit visual_en verbatim + panel poses)",
+    "'Overall visual style: ' + bible/style.json style_fragment_ui verbatim",
+    "prompts/_restate.txt (layout restated, plain backdrop, no text)"
+  ],
+  "negative_order": [
+    "bible/style.json negative_prompt_en verbatim",
+    "prompts/_neg_layout.txt (layout negatives)",
+    "bible/costumes.json default outfit prohibited_in_prompt items"
+  ],
+  "negative_waking_addon": "not applied: all 15 characters are dream-layer",
+  "layout_template": {
+    "source": "agents/06-art/character-concept/templates/character_sheet_template.png",
+    "used_as_ref": "runs/p4-char-concept-cb2/inputs/character_sheet_template.jpg",
+    "why_jpeg": "Same pixels converted to JPEG (sips, q95). A true-PNG --ref triggers TLS resets on this channel."
+  },
+  "user_refs": [
+    {
+      "path": "refs/style/alice.jpeg",
+      "annotation": "none (refs/NOTES.md absent)",
+      "use": "Read. Applied to all 15 through style_fragment_ui, which style.json derives from this image. Injected as --ref [Image 2] only for CHAR-caterpillar, the creature it depicts: colour, segmented body and moss patina only, with its pug face excluded per H2-caterpillar-face. Not injected for the other 14 because its cathedral set and caterpillar would leak into plain-backdrop sheets."
+    }
+  ],
+  "refs_characters_dir": "refs/characters/ is empty: no user character refs",
+  "rerolls": "none (user retry budget = 0); no probes; every item was generated once and succeeded first time"
+}

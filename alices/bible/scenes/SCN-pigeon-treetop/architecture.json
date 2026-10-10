@@ -1,0 +1,50 @@
+{
+  "scene_id": "SCN-pigeon-treetop",
+  "inherits": null,
+  "layer": "dream",
+  "int_ext": "EXT",
+  "form": "The crown of the tallest oak in the dream-wood, standing clear above an unbroken sea of treetops; a wood-pigeon's twig nest sits in a fork of the uppermost limbs. No built structure",
+  "stories": 0,
+  "source_chapter": "ch005",
+  "culture_ref": "geography.json#LOC-pigeon-nest-treetop, LOC-thick-wood; world.json#wonderland_real_counterparts cp-rabbit-hole",
+  "period": "Dream-space grown from an 1862 Thames-valley copse; only natural materials, no human-made object in frame",
+  "grows_from": {
+    "loc": "LOC-riverside-region",
+    "waking_detail": "the tallest tree of the copse near home, with a wood-pigeon's nest in its crown",
+    "design_growth": "The same English oak Alice can see from the bank, dreamed from above: the copse canopy becomes a seamless rolling 'sea of green leaves' with no field, hedge or house visible between the crowns, and one crown rises higher than the rest"
+  },
+  "dream_design_language": "Canopy read as a green sea: rounded oak and beech crowns packed edge to edge in soft swells to every horizon; the one tall oak crown breaks the surface like a rock. Nothing man-made anywhere, which is what makes the view uncanny for a child who always sees houses and a spire from the bank",
+  "amendment": "BIB-0027 (user ruling 2026-09-22), applied p4-cr-architecture 2026-09-23",
+  "mucha_design_language": {"item": "Mucha / Art Nouveau carried by the canopy alone: the leaf-sea's swells run in long flowing whiplash curves to the horizon; the oak's three upper limbs splay in organic S-curves; the nest sits against a round bright gap of sky that frames the Pigeon as a halo roundel; the wood-pigeon's soft grey, lilac and green-gold sheen set the scene's pastel-and-gold palette; no built ornament (the scene stays free of man-made objects)", "inferred": true, "culture_ref": "world.json#WR-010 (the wood listed); cultivation.json#XA-magic-08", "why": "The text forbids man-made things here, so the language lives in line, halo framing and palette"},
+  "structure": [
+    {"item": "one mature English oak crown rising about 4 m above the surrounding canopy, three thick upper limbs splaying from a single fork", "src": "ch005-p59", "note": "'the tops of the trees under which she had been wandering'; species and height inferred, culture_ref geography.json#LOC-riverside-region.physical.flora"},
+    {"item": "a continuous canopy surface of rounded oak, beech and ash crowns spreading to the horizon in every direction", "src": "ch005-p57"},
+    {"item": "a wood-pigeon nest: a flat, loose platform of crossed dry twigs about 60 cm across built into the main fork, where the Pigeon (photoreal CGI wood-pigeon, SUP-002 as amended BIB-0027) crouches, rises and beats its wings", "src": "ch005-p77", "note": "platform size kept for the layout; the CGI Pigeon's size against it is set by 04-creatures (a real wood-pigeon nest is about 25 cm, so the enlarged platform reads as dream exaggeration); a real wood-pigeon nest is a flimsy twig platform, kept in that character"},
+    {"item": "gaps in the canopy where Alice's neck passes down through the leaves: a narrow shaft of torn foliage and snapped twigs", "src": "ch005-p77"}
+  ],
+  "materials": [
+    {"item": "grey furrowed oak bark on the upper limbs, patched with pale green lichen", "inferred": true, "culture_ref": "geography.json#LOC-thick-wood.physical.flora", "why": "Oak is the dominant English copse tree; lichen gives texture at close range where the Pigeon beats at Alice"},
+    {"item": "full midsummer oak leaves, dark glossy green on top, paler underneath", "src": "ch005-p57"},
+    {"item": "dry grey-brown twigs and a few soft pale feathers in the nest", "src": "ch005-p77", "note": "feathers inferred as a readable nest cue"}
+  ],
+  "details": [
+    {"item": "the leaf-sea shivers in a small local ripple where Alice's hidden hands move far below", "src": "ch005-p58"},
+    {"item": "no eggs visible in the nest; the Pigeon's fear for eggs is spoken, not shown", "src": "ch005-p76", "note": "inferred staging choice to keep the nest clean and readable"},
+    {"item": "a few individual twig ends snapping and leaves falling as the neck untangles", "src": "ch005-p77"}
+  ],
+  "scale_notes": {
+    "rule": "Alice's head and neck are 'giant' against a canopy shot at miniature scale. Two builds: (1) hero nest set at true 1:1 human scale (oak limbs, nest platform; the CGI Pigeon composited on it) where Alice's real head is framed level with the nest from a camera on a crane rig; (2) a miniature canopy table at 1:10 (crowns about 1.2 to 1.8 m across instead of 12 to 18 m) for the downward POV and the wide shots of the 'immense length of neck'. The neck is suggested by framing, costume fabric and shadow on the miniature canopy, never shown as a VFX stretch; Alice's shoulders stay out of frame. The return to her usual height (ch005-p77) is played in cuts between the two builds, ending at 1:1 on the wood floor (Alice = 135 cm per SCN-riverbank reference).",
+    "feeling": "Alice is out of control of her own body; the one tall tree is the only thing at her eye level",
+    "sources": ["cultivation.json#SUP-003", "cultivation.json#SUP-002", "ch005-p57", "ch005-p77"]
+  },
+  "negative": [
+    "no houses, roofs, church spire, fields or hedges visible anywhere in the canopy view",
+    "no fantasy or giant trees, no glowing leaves, no mushrooms",
+    "no snake or serpent imagery; no cartoon bird, no human in bird costume; the Pigeon is a photoreal CGI wood-pigeon",
+    "no flat poster illustration, outline graphics or matte-painting finish",
+    "no stretched-neck VFX or rubber-limb distortion",
+    "no autumn colours, no bare branches, no conifers or palms",
+    "no man-made object of any kind (no ladder, rope, platform boards or nails in the nest)"
+  ],
+  "prompt_ready_en": "the crown of a tall English oak rising above an endless sea of rounded green midsummer treetops swelling in long flowing Art Nouveau curves, three upper limbs splaying in organic S-curves, a loose flat wood-pigeon nest of dry twigs in the uppermost fork framed by a round bright halo of sky, grey lichened bark, soft pastel-and-gold light, no buildings or fields anywhere, only rolling leaves to the horizon, photographed live-action"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "DEF-p3-lighting-101",
+  "opened_by": "05-scenes/lighting",
+  "opened_on": "2026-09-22",
+  "task_id": "p3-lighting-sb1",
+  "assigned_to": "05-scenes/environment",
+  "route_to_owner": "05-scenes/environment",
+  "domain": "lighting",
+  "status": "closed",
+  "severity": "minor",
+  "summary": "SCN-rabbit-house-exterior environment S01 sun note says 'the brass plate catches the sun', but architecture puts the brass-plated front door on the north (lane) front while the sun is in the west-south-west (az ~255 deg, el ~41 deg). A north-facing door cannot take direct sun at that hour.",
+  "findings": [
+    {
+      "id": "DEF-p3-lighting-101-a",
+      "files": [
+        "bible/scenes/SCN-rabbit-house-exterior/environment.json (states[0].sun.note)",
+        "bible/scenes/SCN-rabbit-house-exterior/architecture.json (structure: 'front (north, lane side): central front door with a bright brass plate')"
+      ],
+      "source_evidence": {
+        "chapter": "ch004",
+        "paragraph": "ch004-p03",
+        "quote": "a bright brass plate with the name “W. RABBIT,” engraved upon it"
+      },
+      "lighting_card_value": "LGT-rabbit-house-exterior-01 puts the lane front in bright open shade and reads 'bright' as polished brass gleaming, not direct sun.",
+      "impact": "Low. Environment-concept could paint the door in direct sun while continuity-planning uses the lighting card, giving the front a different light in plates and prompts.",
+      "proposed_fix": "Change the environment S01 sun note to 'the polished brass plate gleams in the bright open shade of the north front'. Alternatively, if the door must be sunlit, architecture turns the lane front to the west.",
+      "inferred": false
+    }
+  ],
+  "not_self_fixed": "Per SOUL: environment and architecture cards belong to their owners; the lighting card follows the architecture orientation and records the clash here.",
+  "triaged_by": "00-orchestration/memory-bible",
+  "triage_task_id": "p3-bible-defects-2",
+  "triaged_on": "2026-09-22",
+  "routed_from": "00-orchestration/memory-bible",
+  "route_fix_to": "05-scenes/environment",
+  "disposition": "routed_open",
+  "ruling": "Architecture governs orientation: the front door is on the north (lane) front (architecture.json), and the WSW sun (az ~255, el ~41) cannot hit it. The source only calls the plate 'bright' (ch004-p03). It does not say the plate is sunlit, so the plate is read as polished brass gleaming in open shade. LGT-rabbit-house-exterior-01 already says this. Architecture stays unchanged. The lane front is not turned west.",
+  "fix_instruction": "bible/scenes/SCN-rabbit-house-exterior/environment.json states[0].sun.note: change 'south-west to west; the brass plate catches the sun' to 'south-west to west; the lane (north) front and its polished brass plate are in bright open shade; the west gable and the south yard take the sun'. If any S02 sun note or visual field says the door or plate is sunlit, fix it the same way. Do not touch architecture.json or lighting.json. After the fix, 05-scenes/lighting can remove the DEF-p3-lighting-101 pointer from lighting.json at its next pass (optional).",
+  "closed_on": "2026-09-22",
+  "closed_by": "05-scenes/environment",
+  "fix_task_id": "p3-fix-lighting-101",
+  "fix_note": "environment.json states[0].sun.note changed verbatim per fix_instruction to 'south-west to west; the lane (north) front and its polished brass plate are in bright open shade; the west gable and the south yard take the sun'. S02 sun note and all other visual fields checked: none says the door or plate is sunlit, no change. architecture.json and lighting.json untouched; lighting.json does not repeat the error (it already reads open shade), only its reason field keeps a DEF-p3-lighting-101 pointer that 05-scenes/lighting may drop at its next pass (optional)."
+}

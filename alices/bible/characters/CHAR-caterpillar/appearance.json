@@ -1,0 +1,72 @@
+{
+  "character_id": "CHAR-caterpillar",
+  "name": "The Caterpillar",
+  "tier": "B",
+  "layer": "dream",
+  "revision": { "change_id": "BIB-0027", "task_id": "p4-cr-appearance", "date": "2026-09-23", "note": "Rewritten from the human-performer reading to a photoreal CGI animal." },
+  "rendering": {
+    "mode": "photoreal_cgi_animal",
+    "rule": "bible/cultivation.json SUP-002 (amended BIB-0027)",
+    "species": "a large hawk-moth-type larva (Sphingidae body plan: smooth segmented body, thoracic eyespots, tail horn), coloured blue; no single real species is blue, so the colour is the one sourced departure",
+    "limits": "True larval anatomy: head capsule with mandibles, three pairs of jointed true legs on the thorax, four pairs of fleshy prolegs plus claspers. Speech by mandible and labium movement; the thoracic eyespots give readable 'eyes' for performance. No human face, no cartoon eyes, no arms beyond the true legs."
+  },
+  "gender": "male",
+  "gender_note": { "source_chapter": "ch005", "paragraph": "ch005-p44", "quote": "“Well, I should like to be a little larger, sir, if you wouldn’t mind,” said Alice" },
+  "base_age_range": "55-65",
+  "base_age_note": { "inferred": true, "reason": "Persona age (the cool elder who sets Alice 'You are old, Father William', ch005-p25), kept for voice casting. As an animal: a final-instar larva, fully grown, about to pupate (he will 'turn into a chrysalis', ch005)." },
+  "hair": {
+    "coat": "smooth larval skin (no hair)",
+    "color": "deep cornflower-to-slate blue, with faint moss-green patina in the segment folds and paler blue-grey underside",
+    "style": "smooth, slightly waxy, finely wrinkled at the segment joints; a small curved tail horn",
+    "source_chapter": "ch004",
+    "paragraph": "ch004-p42",
+    "quote": "a large blue caterpillar",
+    "texture_inferred": true,
+    "reason": "Blue is sourced; the moss-green patina keeps the palette of the user style reference refs/style/alice.jpeg."
+  },
+  "eyes": {
+    "color": "black simple eyes (stemmata) on the head capsule; two large dark eyespots ringed pale blue on the swollen thorax",
+    "expression": "heavy, unhurried; the head sways slowly, and he 'yawns' by opening the mandibles wide",
+    "source_chapter": "ch005",
+    "paragraph": "ch005-p48",
+    "quote": "took the hookah out of its mouth and yawned once or twice",
+    "inferred": true,
+    "reason": "Languor is sourced (ch005-p01 'languid, sleepy voice'); eye structure follows hawk-moth larvae."
+  },
+  "skin": { "tone": "see hair; the head capsule is a harder, glossier slate blue", "inferred": true, "reason": "Larval anatomy." },
+  "face": {
+    "shape": "rounded head capsule tucked under a swollen thorax",
+    "features": ["small working mandibles around the hookah mouthpiece", "short antennae", "thoracic eyespots"],
+    "default_expression": "cool, curt, superior; long pauses",
+    "expressiveness": "carried by head sway, body rearing, the rhythm of smoke puffs and slow ripples along the segments",
+    "inferred": true,
+    "reason": "Designed for 'very short remarks' (ch005-p13)."
+  },
+  "build": {
+    "height_range_cm": [7, 8],
+    "height_note": "Reared-up height, matching Alice at 'exactly three inches high'. Body length when stretched out about 12-14 cm.",
+    "body_type": "long, plump, segmented larva",
+    "posture": "sits upright on the mushroom top on his prolegs with the true legs folded across the thorax ('arms folded'); rears bolt upright when angry; crawls down and away through the grass",
+    "scale_reference": "He and Alice are both three inches high in this scene, so they are the same scale; the mushroom cap is about level with Alice's eyes and the grass towers over both (SUP-003 scaled set).",
+    "source_chapter": "ch005",
+    "paragraph": "ch005-p45",
+    "quote": "it was exactly three inches high",
+    "also": [
+      { "source_chapter": "ch004", "paragraph": "ch004-p42", "quote": "sitting on the top with its arms folded, quietly smoking a long hookah" },
+      { "source_chapter": "ch005", "paragraph": "ch005-p45", "quote": "rearing itself upright as it spoke" }
+    ]
+  },
+  "marks": [
+    { "type": "anatomy", "description": "three pairs of true legs folded across the thorax (the sourced 'arms folded')", "position": "thorax", "source_chapter": "ch004", "paragraph": "ch004-p42" },
+    { "type": "signature_item", "description": "a long hookah with a coiled blue-grey hose, smoke curling", "position": "beside him on the mushroom", "source_chapter": "ch004", "paragraph": "ch004-p42" },
+    { "type": "signature_item", "description": "his seat on top of a large mushroom (set/prop)", "position": "mushroom top", "source_chapter": "ch004", "paragraph": "ch004-p42" }
+  ],
+  "default_outfit_tone": {
+    "summary": "none: he wears nothing; his look is the blue larval body with the hookah",
+    "inferred": true,
+    "reason": "The text gives him only the hookah; per SUP-002 (BIB-0027) the old smoking gown and cap are dropped."
+  },
+  "style_ref_note": "The user style reference refs/style/alice.jpeg shows a literal giant blue caterpillar. After BIB-0027 this card agrees with it in kind; scale stays the text's 'three inches' next to a three-inch Alice.",
+  "doubling": null,
+  "prompt_base_en": "photoreal large blue caterpillar, hawk-moth larva body plan, smooth deep cornflower-to-slate blue segmented body with faint moss-green patina in the folds, two dark eyespots ringed pale blue on the swollen thorax, small glossy head capsule, true legs folded across its front, sitting upright on top of a huge mushroom smoking a long hookah with a coiled hose, smoke curling, towering grass stems around, natural insect anatomy, macro live-action film plate"
+}

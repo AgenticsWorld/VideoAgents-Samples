@@ -1,0 +1,77 @@
+{
+  "schema_version": "whitebox_plan.v1",
+  "group_id": "grp028",
+  "scene_id": "SCN-long-hall",
+  "basis": "Alice holds the curtain anchor and dries her eyes; at t=1.5 her look goes screen-left up the hall, her first outward look in four shots. The White Rabbit runs his ne_entrance -> lamp_row_mid -> glass_table -> curtain line: he comes out of the dark corner entrance on four legs with the gloves and fan in his mouth, is level with the middle of the hall at t=2.0, passes the glass table at t=4.6 and pulls up on his haunches at (7.60, -1.80) at t=5.4 - 1.59 m short of the giant girl, 'a few feet short' as the map says. He is staged as kind=creature throughout, per the H3S ruling: four legs, things carried in the mouth, never upright and never given hands, and his gaze never goes to Alice or to the lens.",
+  "actors": [
+    {
+      "id": "CHAR-alice",
+      "kind": "person",
+      "size_m": [0.7672, 2.74, 0.6028],
+      "keyframes": [
+        {"t": 0.0, "position": [9.0, 0.0, -2.55], "pose": "sit", "yaw": -1.2, "head_pitch": 1.1},
+        {"t": 0.3, "position": [9.0, 0.0, -2.55], "pose": "sit", "yaw": -1.2, "head_pitch": 1.0},
+        {"t": 0.8, "position": [9.0, 0.0, -2.55], "pose": "sit", "yaw": -1.2, "head_pitch": 0.7},
+        {"t": 1.5, "position": [9.0, 0.0, -2.55], "pose": "sit", "yaw": -1.35, "head_pitch": 0.2, "head_yaw": -0.3},
+        {"t": 3.0, "position": [9.0, 0.0, -2.55], "pose": "sit", "yaw": -1.35, "head_pitch": 0.2, "head_yaw": -0.3},
+        {"t": 5.4, "position": [9.0, 0.0, -2.55], "pose": "sit", "yaw": -1.35, "head_pitch": 0.3, "head_yaw": -0.2},
+        {"t": 8.0, "position": [9.0, 0.0, -2.55], "pose": "sit", "yaw": -1.35, "head_pitch": 0.3, "head_yaw": -0.2},
+        {"t": 11.0, "position": [9.0, 0.0, -2.55], "pose": "sit", "yaw": -1.35, "head_pitch": 0.3, "head_yaw": -0.2}
+      ]
+    },
+    {
+      "id": "CHAR-white-rabbit",
+      "kind": "creature",
+      "size_m": [0.15, 0.3, 0.36],
+      "keyframes": [
+        {"t": 0.0, "position": [-8.91, 0.0, 3.645], "pose": "stand", "yaw": 2.111},
+        {"t": 2.0, "position": [-2.835, 0.0, 0.0], "pose": "stand", "yaw": 1.5708},
+        {"t": 4.6, "position": [5.67, 0.0, 0.0], "pose": "stand", "yaw": 1.5708},
+        {"t": 5.4, "position": [7.6, 0.0, -1.8], "pose": "sit", "yaw": -1.5708},
+        {"t": 6.0, "position": [7.6, 0.0, -1.8], "pose": "sit", "yaw": -1.5708, "head_pitch": 0.3},
+        {"t": 7.6, "position": [7.6, 0.0, -1.8], "pose": "sit", "yaw": -1.5708, "head_pitch": 0.1},
+        {"t": 9.0, "position": [7.6, 0.0, -1.8], "pose": "sit", "yaw": -1.5708, "head_pitch": 0.15},
+        {"t": 11.0, "position": [7.6, 0.0, -1.8], "pose": "sit", "yaw": -1.5708, "head_pitch": 0.15}
+      ]
+    }
+  ],
+  "cameras": [
+    {
+      "shot_id": "sh072",
+      "start": 0,
+      "duration_s": 2.0,
+      "movement": "static",
+      "keyframes": [
+        {"t": 0.0, "position": [9.287, 0.35, -1.28], "target": [9.05, 1.7, -2.35], "fov": 26.9915},
+        {"t": 2.0, "position": [9.287, 0.35, -1.28], "target": [9.05, 1.7, -2.35], "fov": 26.9915}
+      ]
+    },
+    {
+      "shot_id": "sh073",
+      "start": 2.0,
+      "duration_s": 3.0,
+      "movement": "static",
+      "keyframes": [
+        {"t": 0.0, "position": [8.6, 0.1, -1.4], "target": [-2.0, 0.2, 0.0], "fov": 33.3985},
+        {"t": 3.0, "position": [8.6, 0.1, -1.4], "target": [-2.0, 0.2, 0.0], "fov": 33.3985}
+      ]
+    },
+    {
+      "shot_id": "sh074",
+      "start": 5.0,
+      "duration_s": 6.0,
+      "movement": "static",
+      "keyframes": [
+        {"t": 0.0, "position": [7.6, 0.1, -0.55], "target": [7.76, 0.15, -1.8], "fov": 33.3985},
+        {"t": 6.0, "position": [7.6, 0.1, -0.55], "target": [7.76, 0.15, -1.8], "fov": 33.3985}
+      ]
+    }
+  ],
+  "continuity": {"actors": "inherit", "camera": "cut"},
+  "warnings": [
+    "sh072 reproduces the sh069 set-up exactly (same position, target, lens) - camera.json calls it 'back to the sh068 close across the hall', but sh068 is a 28 mm and sh072 a 50 mm, so the 50 mm frame is the one that matches.",
+    "sh073: the Rabbit reads about 0.04 of frame height at the top of the shot instead of composition's 0.14, because he is 11.6 m up the hall at that instant and a 40 mm cannot make him larger from there. He grows to about 0.20 as he comes on.",
+    "He covers the 17 m from the corner entrance in 5.4 s (peak 3.3 m/s) to hit the written beats - fast for a rabbit wading four inches of water, but the beats are frozen.",
+    "Closest approach Alice/Rabbit is 1.59 m at t=5.4 (her 0.38 m seated half-depth against his 0.18 m), well clear of the 0.20 m reference separation."
+  ]
+}

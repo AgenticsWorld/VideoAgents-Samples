@@ -1,0 +1,34 @@
+{
+  "shot_id": "sh043",
+  "scene_id": "SCN-little-door-passage",
+  "size": "medium",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "mid_right",
+    "anchor_xy": [0.66, 0.50],
+    "size_in_frame": "kneeling then sitting back on her heels, about 0.85 of frame height dropping to 0.70; her shoulders span about 0.34 of frame width"
+  },
+  "second_subject": {
+    "id": "little_door",
+    "grid": "mid_left",
+    "anchor_xy": [0.26, 0.66],
+    "note": "the 0.38 m opening, unchanged in place and scale from sh040 — the constant against which her body is measured."
+  },
+  "headroom": "she is cropped near the crown when she leans in and gains about 0.20 of frame height when she sits back onto her heels; that recovered air is the retreat, and it is the only thing in the frame that changes.",
+  "horizon_eyeline": "Low from the hall floor at kneeling height, lens 0.40 m: flagstone line at 0.82 of frame height. Her eyeline drops from the doorway to her own shoulders and back — the whole performance is an eyeline travelling between two things that are both in frame.",
+  "layers": {
+    "fg": "her knee, skirt and the flagstones she is sitting back onto, right and bottom",
+    "mg": "her forehead pressed to the door frame, then her whole upper body withdrawing",
+    "bg": "the open doorway with the passage green beyond it, small and unchanged throughout"
+  },
+  "gaze": {
+    "direction": "frame_left",
+    "lead_room": "left",
+    "note": "her look goes left into the opening, then down to her own shoulders, then left again. The lead room is the doorway, and the shot is the discovery that her body will not fit into her own lead room."
+  },
+  "balance": "A large soft body mass filling two thirds of frame against a small hard rectangle of light in the remaining third. The comparison of those two areas is the entire content; nothing else is in the picture.",
+  "leading_lines": "The mosaic dado runs horizontally behind her from the door across to the right edge and physically links the two masses; her curved back is the counter-line. When she sits back, the curve of her spine opens and the horizontal survives.",
+  "eye_first": "The green rectangle, then across the dado to the width of her shoulders — the frame makes that comparison in one saccade.",
+  "safe_area_ok": true,
+  "constraint_binding": "Longing is played with her body, not with tears — forehead to the frame, the shoulders plainly too wide, the retreat onto her heels. The composition therefore keeps the full width of her shoulders and the full width of the opening in the same frame at all times and gives her face no close-up; nothing is pre-spent, because the frame has no room in it for a tear to be read."
+}

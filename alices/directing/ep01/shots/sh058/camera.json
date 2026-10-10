@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh058",
+  "group_id": "grp022",
+  "scene_no": "S07",
+  "duration_s": 11.5,
+  "size": "medium",
+  "movement": "track_lateral",
+  "direction": "abeam, keeping pace with her out from the foot of the glass table toward the middle of the hall; the glass legs pass through frame behind her",
+  "speed": "about 0.20 m/s — a ten-inch girl's walking pace, roughly 2.3 m of flagstones in the eleven and a half seconds",
+  "speed_curve": "linear",
+  "rig": "dolly",
+  "lens_mm": 28,
+  "camera_height_m": 0.2,
+  "angle": "slightly up",
+  "rack_focus": "none",
+  "start_frame": "Low abeam of her at flagstone level as she steps back from the open glass box: the box and one enormous clear table leg still in the near frame, the pastel-and-gold mosaic dado running past high above her.",
+  "end_frame": "The same low abeam framing out on open flagstones: the box and its leg well behind her, fresh flag joints crossing the near foreground, the dado still running past overhead — she is still exactly as small against all of it as when she set off.",
+  "constraint_honoured": "'The reasoning MOVES — it is given a body and a direction, never a static talking head. Both lines land whole inside this shot with clear silence at each end.'",
+  "movement_note": "Licensed move (a), following her walk. Constant speed with no acceleration anywhere near LN-ep01-013 (5.0 s) or LN-013b (4.5 s), so neither line meets a camera event. The dado and the joints stay in frame as the two gauges, deep focus throughout.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

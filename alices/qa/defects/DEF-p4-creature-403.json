@@ -1,0 +1,25 @@
+{
+  "id": "DEF-p4-creature-403",
+  "opened_by": "06-art/creature-concept",
+  "opened_on": "2026-09-23",
+  "task_id": "p4-creature-concept",
+  "domain": "creature",
+  "severity": "major",
+  "status": "open",
+  "assigned_to": ["user (H2 ruling at G4)"],
+  "summary": "Self-check failures on two creature sheets. Both are kept because the user's auto-retry budget is 0; the user decides at H2 whether to regenerate one image each.",
+  "findings": [
+    { "id": "DEF-p4-creature-403-a", "file": "assets/concepts/creatures/CRE-005/sheet.png", "issue": "The Gryphon's foreparts are carried upright like a perched eagle rather than on a level, lion-like body. The side-profile panel is cropped at mid-body, so the lion hindquarters, hind legs and tail do not show in profile." },
+    { "id": "DEF-p4-creature-403-b", "file": "assets/concepts/creatures/CRE-006/sheet.png", "issue": "The Mock Turtle stands upright on its two hind calf legs, with its flippers hanging like arms and the shell worn like a pack, and the neck is elongated. The card describes a turtle-shell body resting low, with the calf head rising from the front of the shell. The calf head, tears, flippers, hooves and shell texture are all correct." }
+  ],
+  "suggested_fix_if_regenerated": "One targeted image each, with no candidate race. CRE-005: describe a lion body with a horizontal spine, and have the side panel show the full body length, nose to tail. CRE-006: describe a sea turtle resting belly-low on the ground, with the calf head at shell height and both hind hooves tucked beside the rear of the shell; add 'standing upright, bipedal' to the negative prompt.",
+  "due_gate": "G4 (H2)",
+  "waived_at_gate": "G4",
+  "waiver_ref": "runs/g4/gate.json#waivers[defect_id=DEF-p4-creature-403]",
+  "waiver_note": "User signed PASS_WITH_WAIVER (approval ba96732d, 2026-09-23). Auto-retry/re-roll budget is 0, so neither assets/concepts/creatures/CRE-005/sheet.png nor CRE-006/sheet.png was regenerated; this defect stays OPEN as a waived major, not a blocker for storyboarding (runs/g4/gate.json 'effect'). bible/creatures/creature.json CRE-005/CRE-006 text cards were left unchanged by 04-creatures/creature (p4-h2-creature) — the cards already describe the correct anatomy (level lion body, low-resting turtle-shell body); only the two sheet images diverge from the cards.",
+  "corrective_wording_for_future_use": {
+    "purpose": "This is the wording 08-video-gen/prompt must inline (verbatim or in close paraphrase) whenever the Gryphon (CRE-005) or the Mock Turtle (CRE-006) appears in a generation-group prompt, per runs/g4/gate.json waiver follow_up, until an explicit user-ordered re-roll fixes the sheets themselves.",
+    "CRE-005_gryphon": "Quadruped, crouched-to-standing Gryphon: a level, lion-like body carried on a horizontal spine (not perched upright like an eagle); eagle head, neck, wings and forelegs at the front grading into lion hindquarters, hind legs and long tufted tail at the back. If a profile/side view is framed, keep the full body length in frame, nose to tail — do not crop at mid-body.",
+    "CRE-006_mock_turtle": "Mock Turtle rests on all four legs / belly-low on the ground, turtle-shell body close to the surface, with the calf head and neck rising from the front of the shell at roughly shell height — not standing upright on its two hind legs. Both hind hooves stay tucked beside the rear of the shell; flippers stay at the front, functioning as forelimbs, not hanging like arms. Negative prompt should include 'standing upright, bipedal, elongated neck'."
+  }
+}

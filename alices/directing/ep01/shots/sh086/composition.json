@@ -1,0 +1,35 @@
+{
+  "shot_id": "sh086",
+  "scene_id": "SCN-long-hall",
+  "size": "close",
+  "subject": {
+    "id": "PROP-white-kid-gloves-and-fan",
+    "in_frame_characters": ["CHAR-alice"],
+    "grid": "mid_left",
+    "anchor_xy": [0.32, 0.56],
+    "size_in_frame": "the fan still waving in her other hand, large in the near foreground, about 0.50 of frame height"
+  },
+  "second_subject": {
+    "id": "glass_table",
+    "grid": "mid_right",
+    "anchor_xy": [0.70, 0.62],
+    "note": "the edge of the glass tabletop in the background, climbing visibly past the top of frame across the shot. Cause in the near plane, effect in the far plane, one frame."
+  },
+  "headroom": "starts at about 0.26 of frame height and is consumed as the table edge rises through it and out of the top. The headroom is where the effect is read.",
+  "horizon_eyeline": "Lens 0.25 m at the curtain; waterline across at 0.78 of frame height. No face — her eyes are not in frame, because she has not noticed yet and a face would give it away.",
+  "layers": {
+    "fg": "the fan, moving, in her hand — the cause, sharp",
+    "mg": "her forearm and the water",
+    "bg": "the edge of the glass tabletop, sharp, rising"
+  },
+  "gaze": {
+    "direction": "none",
+    "lead_room": "none",
+    "note": "no eyeline by design: the audience sees what she does not. The shot's tension is entirely a matter of two planes in one frame."
+  },
+  "balance": "Near-left mass against far-right rising line. The frame is balanced at the start and is pulled apart by the background moving — the only composition in the episode where the background is the actor.",
+  "leading_lines": "The fan's ribs radiate in the near plane; the table edge is a level horizontal in the far plane, and it climbs. Two geometries at two depths, both sharp.",
+  "eye_first": "The fan, because it is moving and near — and then the eye should catch the table edge moving too, which is the discovery the shot exists for.",
+  "safe_area_ok": true,
+  "constraint_binding": "Required shot (c) of movement 4; sh086-sh087 MUST STAY IN ONE GROUP and be readable as the same continuous frame, so their compositions are identical in axis, scale, subject placement and lighting. Cause and effect in one unbroken frame — this is the shot the dof_policy names explicitly: the fan in the near foreground and the table edge behind it must BOTH be sharp, or the causal link is not made."
+}

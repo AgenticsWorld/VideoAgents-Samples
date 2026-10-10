@@ -1,0 +1,45 @@
+{
+  "scene_id": "SCN-caterpillar-clearing",
+  "inherits": null,
+  "layer": "dream",
+  "int_ext": "EXT",
+  "form": "A sunny clearing in the wood seen at tiny scale: flowers and grass taller than Alice, dominated by one large, perfectly round field mushroom as tall as she is, with the Caterpillar seated on its flat cap; no built structure",
+  "stories": 0,
+  "source_chapter": "ch004",
+  "culture_ref": "geography.json#LOC-mushroom-clearing; world.json#wonderland_real_counterparts.cp-lessons",
+  "grows_from": {"loc": "LOC-riverside-region", "waking_detail": "a patch of flowers, grass and field mushrooms in a copse near home, where the schoolroom recitations come back to her"},
+  "amendment": "BIB-0027 (user ruling 2026-09-22), applied p4-cr-architecture 2026-09-23",
+  "mucha_design_language": {"item": "Mucha / Art Nouveau language carried by living flora, not buildings: the trees round the clearing lean in long flowing curves, bindweed and honeysuckle trail in garland loops between the grass stems, and the open patch of sky sits directly behind the mushroom cap as a round halo roundel framing the Caterpillar; buttercup and daisy heads at x9 read as the stylised flower rosettes of a Mucha border; soft pastel-and-gold palette of cream cap, butter-yellow petals and pale sky", "inferred": true, "culture_ref": "world.json#WR-010; cultivation.json#XA-magic-08; refs/style/alice.jpeg (mushroom and caterpillar staging)", "why": "WR-010 puts every dream environment in the Art Nouveau language, built physically; the text gives an open wood clearing, so the language is expressed in composition, growth lines and palette rather than architecture"},
+  "structure": [
+    {"item": "clearing about 8 m across (true units), open to a patch of sky, ringed by the wood", "src": "ch004-p41", "note": "size inferred; geography.json LOC-mushroom-clearing 'open patch of sky'"},
+    {"item": "one large mushroom at the centre, about Alice's own height, cap perfectly round", "src": "ch004-p41", "also": "ch005-p51"},
+    {"item": "a tall buttercup near the mushroom that Alice leans against", "src": "ch004-p40"}
+  ],
+  "materials": [
+    {"item": "the mushroom: a pale cream-white field mushroom (Agaricus campestris type), smooth slightly scuffed cap, pink-brown gills underneath, thick white stalk", "src": "ch004-p41", "note": "species inferred from English meadow fungi; culture_ref geography.json#LOC-mushroom-clearing"},
+    {"item": "meadow grass, buttercups, clover, speedwell and daisies", "src": "ch004-p41", "note": "'the flowers and the blades of grass'; species inferred to match SCN-riverbank"},
+    {"item": "soft moss and short turf at the mushroom foot", "inferred": true, "culture_ref": "geography.json#LOC-thick-wood.physical", "why": "Ground plane under a woodland mushroom"}
+  ],
+  "details": [
+    {"item": "the cap top flat enough for a seated figure, with a slight rim Alice can peep over on tiptoe", "src": "ch004-p42"},
+    {"item": "the broken-off edge bites left in the cap rim after Alice takes a piece from each side", "src": "ch005-p51", "note": "state change for later shots"}
+  ],
+  "scale_notes": {
+    "anchor": "Alice's effective height about 15 cm (x9 factor); the mushroom equals her height (ch004-p41). The Caterpillar is a photoreal CGI caterpillar (SUP-002 as amended BIB-0027, CHAR-caterpillar) resting on the built cap, which is its physical contact surface and hookah stand; its size against the cap is set by 04-creatures/creature.",
+    "builds": [
+      {"beat": "Alice rests on the buttercup, peeps over the mushroom, the whole conversation, breaks off two pieces", "events": ["ev0018", "ev0019", "ev0020", "ev0021"], "build": "oversized x9 set: mushroom stalk and cap top at 1.35 m, cap 2.2 m across so the CGI Caterpillar and its hookah sit on it with room to spare; buttercup stem 4 m with a flower head about 1.5 m across; grass blades 2.7 m; clover and daisy heads at x9"},
+      {"beat": "Alice shrinks until her chin strikes her foot", "events": ["ev0021"], "src": "ch005-p52", "build": "insert against a further x3 build of the mushroom foot and turf (x27 overall), true-size Alice curled"}
+    ],
+    "rule": "Same x9 factor and ground dressing as SCN-wood-thistle-glade so both wood scenes cut together.",
+    "sources": ["cultivation.json#SUP-003"]
+  },
+  "negative": [
+    "no indoor hall, no walls, arches or built architecture; the scene stays an open wood clearing (the reference's interior staging is carried only as flora, halo and palette)",
+    "no red-with-white-spots toadstool, no fantasy fungi, no glowing mushrooms",
+    "no cartoon caterpillar face, no human in a caterpillar costume; the Caterpillar is a photoreal CGI animal",
+    "no flat poster illustration, outline graphics or matte-painting finish; everything photographed as a built set",
+    "no candles or lanterns in the clearing",
+    "no buildings, paths or fences"
+  ],
+  "prompt_ready_en": "a sunny woodland clearing at tiny scale, towering meadow grass, buttercups, clover and daisies, and in the centre one large pale cream field mushroom with a perfectly round flat cap and pink-brown gills, as tall as a child, under a round open patch of summer sky that frames the cap like a halo, ringed by trees leaning in long flowing Art Nouveau curves with bindweed and honeysuckle trailing in garland loops, soft pastel-and-gold palette, photographed live-action set"
+}

@@ -1,0 +1,13 @@
+{
+  "task_id": "p3-bible-defects",
+  "run_id": "70372d773a08",
+  "attempt": 1,
+  "model": "agent default",
+  "tokens": null,
+  "started_at": null,
+  "finished_at": "2026-09-22T19:42:46+08:00",
+  "inputs_sha256": {},
+  "artifact_versions": {
+    "bible/": "v1"
+  }
+}

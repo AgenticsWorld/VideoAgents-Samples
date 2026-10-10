@@ -1,0 +1,16 @@
+{
+  "task_id": "p5-hooks-ep01-select",
+  "agent": "01-story/hook",
+  "run_id": "b11256e26456",
+  "parent_run_id": "1f5ab5bd58b7",
+  "attempt": 1,
+  "engine_model": "per-agent console configuration (not overridden by orchestrator)",
+  "started_at": "2026-09-23T10:49:12+08:00",
+  "finished_at": "2026-09-23T10:50:09+08:00",
+  "duration_s": 57,
+  "tokens": "not reported by dispatch --status",
+  "inputs_sha256": { "runs/g6s-ep01/gate.json": "d4e5cbb2ff31d6f315e86e519740a5bb0e8443d769887c70bda92bac7e15b06f" },
+  "outputs_sha256": { "story/episodes/ep01/hooks.json": "c4a5cb2715713e74d4dfccba9d74f3fc26469d870461e11570d2845ef4a0c55d" },
+  "product_version": "hooks.json v2, status selected",
+  "note": "Bookkeeping update recording the user's H3S hook ruling (oh-1 + ec-2). Orchestrator verified selected/status and that the six hook options are unchanged."
+}

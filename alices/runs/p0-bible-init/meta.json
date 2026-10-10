@@ -1,0 +1,16 @@
+{
+  "task_id": "p0-bible-init",
+  "run_id": "866c233a2d82",
+  "attempt": 1,
+  "model": "agent default",
+  "tokens": null,
+  "started_at": null,
+  "finished_at": "2026-09-22T15:51:24+08:00",
+  "inputs_sha256": {
+    "novel/Alices_Adventures_in_Wonderland_English.md": "b12b03c2f9f0e8ba50c7bbcd6b3e57ce3b59c40b8f77c107cc4e68b635583593",
+    "brief.md": "c412b89c6d5ce41dae3d007dc9e10afeeb21959ed48ab9faa0953f6f87d41154"
+  },
+  "artifact_versions": {
+    "bible/": "v1"
+  }
+}

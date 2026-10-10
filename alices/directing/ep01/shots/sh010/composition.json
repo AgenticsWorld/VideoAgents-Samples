@@ -1,0 +1,34 @@
+{
+  "shot_id": "sh010",
+  "scene_id": "SCN-field-hedge-burrow",
+  "size": "wide",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "mid_left",
+    "anchor_xy": [0.30, 0.52],
+    "size_in_frame": "three-quarter figure running, about 0.55 of frame height, held at a fixed screen position while the grass streams past"
+  },
+  "second_subject": {
+    "id": "CRE-001",
+    "grid": "centre",
+    "anchor_xy": [0.58, 0.44],
+    "note": "a flicker of white deep in frame ahead of her, no more than 0.05 of frame height — the distance discipline holds even in the chase."
+  },
+  "headroom": "about 0.12 of frame height above her head, breaking up as grass whips through the top-left corner; the mild handheld is allowed to eat into it but never to lose her crown.",
+  "horizon_eyeline": "Hip-height lens at 1.0 m puts the grass-top line across at about 0.38 of frame height. Her eyeline is level at 0.36, aimed forward at the white flicker — the two sit on the same line, which is what ties her to him without a cut.",
+  "layers": {
+    "fg": "long meadow grass and seed-heads whipping through the near frame, left edge and bottom, soft",
+    "mg": "Alice running screen left, skirt bunched in one fist",
+    "bg": "the sunlit field running away to the dark-green hawthorn hedge, heat haze; the white tail flickering through the seed-heads"
+  },
+  "gaze": {
+    "direction": "frame_right",
+    "lead_room": "right",
+    "note": "she holds screen left and looks right into the open two thirds of frame where the rabbit is — an unusually large lead room, kept open for the whole shot so the chase has somewhere to go."
+  },
+  "balance": "Strongly left-weighted and unresolved on purpose: figure left, target far right, and a wide gap of streaming grass between them that neither closes.",
+  "leading_lines": "The grass lie and the run of the hedge both rake from lower left to upper right, straight from her shoulder to the flicker of white; the whipping foreground stems cross them as fast verticals.",
+  "eye_first": "Alice's face and the bunched skirt at screen left, then along the grass rake to the white flicker ahead.",
+  "safe_area_ok": true,
+  "constraint_binding": "Mild handheld is licensed here and only here, and no long lens: the wide field of view is what keeps her, the grass and the far hedge in one frame, so the rabbit can never be pulled forward or isolated by focal length."
+}

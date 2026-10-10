@@ -1,0 +1,44 @@
+{
+  "shot_id": "sh078",
+  "group_id": "grp030",
+  "scene_no": "S08",
+  "scene_id": "SCN-long-hall",
+  "duration_s": 8.5,
+  "is_dialogue": true,
+  "group_position": "first shot of grp030 — Alice on her map start (curtain, sitting in the water at the little door); no path in this group.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "sit",
+      "start_pos": "sitting in the water at the low curtain, the fan and gloves picked up out of the water in front of her",
+      "space_fragment_en": "sitting in the water at the low curtain, centred in frame, facing screen-left into the dark, fanning herself slowly",
+      "facing": "screen-left into near-black; her look never comes to the lens and never finds anything",
+      "path": [],
+      "beats": [
+        { "t": 0.6, "action": "picks the fan and the gloves out of the water, doll-sized in her enormous hand", "sync": "the props change hands" },
+        { "t": 2.0, "action": "fans herself; the hall is very hot", "sync": "the fan starts, and becomes the clock of the movement" },
+        { "t": 3.2, "action": "talks about how queer everything has been", "sync": "LN-ep01-021 begins" },
+        { "t": 6.4, "action": "the fanning slows on the word", "sync": "LN-ep01-021 on 'yesterday'" }
+      ],
+      "performance": {
+        "objective": "talk herself back into an ordinary afternoon",
+        "goal": "talk herself back into an ordinary afternoon",
+        "emotional_arc": "from bewildered chattiness to the first serious suspicion that yesterday and today are not about the same person",
+        "arc_from": "bewildered chattiness",
+        "arc_to": "first serious suspicion",
+        "trigger": { "line_ref": "LN-ep01-021", "word": "yesterday" },
+        "no_early_reaction": ["the fanning slowing", "the eyes losing focus", "the voice dropping"],
+        "forbidden_early": ["the fanning slowing", "the eyes losing focus", "the voice dropping"],
+        "end_state": "fan still moving but slower, eyes out to screen-left on nothing, mouth closed, shoulders down"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": {
+    "timeline_ok": true,
+    "violations": [],
+    "story_event": "ev0007 result (dream) — Alice picks up the fan and gloves",
+    "note": "Alice alone; the White Rabbit has gone and must not be staged in the dark screen-left of frame."
+  }
+}

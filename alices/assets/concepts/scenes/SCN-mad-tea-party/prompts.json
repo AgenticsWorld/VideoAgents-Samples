@@ -1,0 +1,45 @@
+{
+  "scene_id": "SCN-mad-tea-party",
+  "task_id": "p4-env-concept-sb3",
+  "generated": "2026-09-23",
+  "tool": "python3 modules/genmedia.py image",
+  "provider": {
+    "image": "volcengine",
+    "model": "doubao-seedream-5-0-pro-260628"
+  },
+  "items": [
+    {
+      "output": "layout_top.png",
+      "size": "2560x1440",
+      "n": 1,
+      "seed": null,
+      "refs": [],
+      "prompt": "Orthographic top-down architectural plan photograph of a real built film set, taken straight down from high above: camera axis exactly perpendicular to the ground; no wall face, no elevation, no side of any building, wall, hedge or tree trunk is visible; only the ground plane, the top edges of walls and hedges and the tops of trees, furniture and objects are seen. The top of the image is north. Plan of a 32 by 18 metre yard in front of a large farmhouse at the edge of an English wood, an Art Nouveau dream after Alphonse Mucha. Along the top of the image, across the middle half of the top edge, lies the roof of the long two-storey house: a very thick shaggy grey-brown long-straw thatch combed in flowing curves like fur, with two small round brick chimney tops close together on the centre of the ridge. The house's front wall line runs along the bottom edge of the thatch eave; the front of the house faces south toward the table. In front of the centre of the house front a stone doorstep, and just right of it a small square top of a tall-case clock standing on the grass. In the middle of the image, running left to right parallel to the house front, a very long mahogany dining table about 7 metres long, covered with a stained white damask cloth crowded along its whole length with Victorian teacups, saucers, teapots, milk-jugs and plates of bread-and-butter; mismatched chairs along both long sides, one big upholstered arm-chair at the left end, and three chairs pushed together at the right end. The trunk of a great horse-chestnut stands just above-left of the table's left end; its great curving boughs arch out over the table like open ribs with wide gaps of dappled light between them, so the whole table and chairs remain clearly visible from above. Grass worn to bare earth along the chair lines. Near the lower right a small round stone well-head in the grass. A worn footpath comes in from the lower left corner through dry sunlit summer grass toward the doorstep. The crowns of wood trees fill the left edge. Late-afternoon sun from the west (left), soft shadows toward the east. The set is empty: no people, no animals, no creatures, no text, no labels, no arrows, no symbols, no map legend. A clean, sharp, evenly exposed photographic plan in which every feature named above is clearly readable in its stated position. Photorealistic live-action fantasy film rooted in England in 1862, shot on 35mm film with anamorphic lenses, 16:9 widescreen. Real sets, real locations and real costumed actors in 1862 dress. Wonderland spaces are real built sets and set extensions in an Alphonse Mucha-inspired Art Nouveau design: flowing organic lines, floral and vine ornament, circular halo roundels, mosaic and stained glass, aged pastel-and-gold surfaces with patina and moss; the waking 1862 meadow stays plain period realism. Talking animals and fantastical creatures are photoreal CGI animals with naturalistic anatomy, real fur, feathers, skin and scales, lit by the same light and grounded with real contact shadows. Natural and practical light: sunlight, candlelight and oil lamps, soft haze with volumetric light shafts and soft colour through stained glass. Restrained palette of verdigris teal, slate grey, dusty rose, soft sage and lilac pastels and tarnished-gold accents, warmed by amber sun and candle glow. Fine film grain, gentle halation, soft depth of field, grounded and quietly melancholy.",
+      "negative": "cartoon, anime, animation, illustration, flat poster illustration, outline graphics, concept-art painting, digital painting, digital matte painting look, stylised 3D animation render, video game graphics, Pixar style, Disney animation style, cartoon animal face, big cartoon eyes, plush toy, human in animal costume, full-head animal mask, mascot costume, full-body fur suit, plastic skin, airbrushed, oversaturated, HDR, neon colors, candy pastel colors, horror monster, glowing magic, magic sparkles, fairy dust, energy beams, electric light, light bulb, neon sign, modern clothing, zipper, plastic, sunglasses, wristwatch, eyeglasses with modern frames, car, bicycle, power lines, tarmac road, Art Deco, steampunk gears, poster lettering, decorative text, gore, blood, wound, severed head, decapitation, executioner's axe, chopping block, guillotine, noose, gallows, blade at neck, execution, corpse, skeleton, horror, animal being struck, sexualized, watermark, logo, subtitles, caption, UI overlay, deformed hands, extra fingers, distorted face, people, person, human figure, crowd, animal, bird, cat, creature, letters, text labels, arrows, map legend, compass rose, grid lines, perspective view, horizon, door lying on the floor, window lying on the floor, door bar on the floor, wall elements projected onto the floor, elevation view of a door or window, missing wall, open side, dollhouse cutaway, tilted camera, oblique aerial view",
+      "prompt_parts": {
+        "camera": "runs/p4-env-concept-sb3/prompts/cam.txt",
+        "body": "runs/p4-env-concept-sb3/prompts/body_SCN-mad-tea-party.txt",
+        "closing": "runs/p4-env-concept-sb3/prompts/end.txt",
+        "style": "bible/style.json#style_fragment_ui (verbatim)"
+      },
+      "negative_source": "bible/style.json#negative_prompt_en (verbatim) + plan-view negatives (SOUL duty 3 rule 4 + no people/animals/labels); dream scene, so the waking addon is not used",
+      "result": "generated first attempt; no provider error"
+    }
+  ],
+  "user_refs": [
+    {
+      "path": "refs/style/alice.jpeg",
+      "mode": "read as look reference, not injected via --ref",
+      "why": "It is an oblique interior perspective with a creature. Injecting it into a nadir plan view risks importing its camera angle, its interior and its creature (known seedream plan-view elevation prior). Its look reaches the image through style_fragment_ui, which was written from it (style.json user_refs)."
+    }
+  ],
+  "bible_inputs": [
+    "bible/scenes/index.json#SCN-mad-tea-party",
+    "bible/scenes/SCN-mad-tea-party/architecture.json",
+    "bible/scenes/SCN-mad-tea-party/lighting.json",
+    "bible/scenes/SCN-mad-tea-party/environment.json",
+    "bible/style.json"
+  ],
+  "bible_comparison_en": "architecture: fur-like combed thatch, long table with crowded 1862 tea-things, arm-chair at one end, doorstep, tall-case clock, well-head, worn path from the wood all present; the great spreading horse-chestnut is rendered small and the table is not in its shade; two ear-chimneys read as one stack with two pots. lighting LGT-mad-tea-party-01 expects dappled shade on the table: mismatch (table in full sun). style OK.",
+  "auto_retries_used": 0
+}

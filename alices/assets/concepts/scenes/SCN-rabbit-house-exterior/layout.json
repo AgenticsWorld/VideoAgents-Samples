@@ -1,0 +1,33 @@
+{
+  "schema_version": "scene_layout.v1",
+  "scene_id": "SCN-rabbit-house-exterior",
+  "layout_top": "layout_top.png",
+  "orientation": {
+    "top_of_map": "north (the lane in front of the house)",
+    "note_en": "The lane runs along the top edge; the brass-plated front door faces north onto it; the back yard with the cucumber-frame, ladder corner and apple tree lies below the house (south); the chimney stack is on the east (right) gable. Camera positions in views[] are described relative to these landmarks."
+  },
+  "extent_m": {"x": 25.0, "y": 14.06},
+  "landmarks": [
+    {"id": "lane", "name": "the lane", "name_en": "the lane in front of the house", "kind": "path", "xy": [0.50, 0.08]},
+    {"id": "front_door", "name": "front door", "name_en": "the green front door with the brass plate", "kind": "entrance", "xy": [0.50, 0.19]},
+    {"id": "west_gable", "name": "west gable", "name_en": "the sunlit west gable end", "kind": "wall", "xy": [0.31, 0.38]},
+    {"id": "chimney_stack", "name": "chimney stack", "name_en": "the chimney stack on the east gable", "kind": "feature", "xy": [0.69, 0.33]},
+    {"id": "upstairs_window", "name": "upstairs window", "name_en": "the upstairs back window", "kind": "window", "xy": [0.50, 0.56]},
+    {"id": "cucumber_frame", "name": "cucumber-frame", "name_en": "the cucumber-frame under the window", "kind": "feature", "xy": [0.52, 0.70]},
+    {"id": "ladder_corner", "name": "ladder corner", "name_en": "the ladder corner of the yard", "kind": "ground", "xy": [0.72, 0.68]},
+    {"id": "apple_tree", "name": "apple tree", "name_en": "the old apple tree and dug patch", "kind": "tree", "xy": [0.21, 0.75]},
+    {"id": "wood_edge", "name": "wood edge", "name_en": "the paling fence at the wood's edge", "kind": "boundary", "xy": [0.50, 0.82]}
+  ],
+  "views": [
+    {"tile": 1, "camera_from": "lane", "looking_at": "front_door", "size": "wide", "angle": "eye", "desc_en": "eye-level wide shot from the lane toward the neat brick cottage, the green front door with its bright brass plate centred between two sash windows, slate roof and chimney above"},
+    {"tile": 2, "camera_from": "front_door", "looking_at": "lane", "size": "medium", "angle": "eye", "desc_en": "eye-level medium shot from the swept front step looking out along the lane, the wood's edge beyond"},
+    {"tile": 3, "camera_from": "apple_tree", "looking_at": "upstairs_window", "size": "wide", "angle": "eye", "desc_en": "eye-level wide shot from under the old apple tree across the yard to the back of the house, the upstairs window above the glinting cucumber-frame"},
+    {"tile": 4, "camera_from": "cucumber_frame", "looking_at": "upstairs_window", "size": "close", "angle": "low", "desc_en": "low-angle close shot from beside the cucumber-frame looking straight up the back wall at the upstairs window framed by roses"},
+    {"tile": 5, "camera_from": "ladder_corner", "looking_at": "chimney_stack", "size": "medium", "angle": "high_oblique", "desc_en": "high oblique medium shot from the top of the tied ladders at the yard corner across loose slates to the broad chimney stack and its clay pots"},
+    {"tile": 6, "camera_from": "wood_edge", "looking_at": "apple_tree", "size": "wide", "angle": "eye", "desc_en": "eye-level wide shot from the paling fence at the wood's edge across the kitchen-garden yard, the old apple tree in front and the cottage behind"},
+    {"tile": 7, "camera_from": "upstairs_window", "looking_at": "cucumber_frame", "size": "detail", "angle": "high_oblique", "desc_en": "high oblique detail shot from the upstairs window sill down onto the sloping glass lights of the cucumber-frame"},
+    {"tile": 8, "camera_from": "west_gable", "looking_at": "ladder_corner", "size": "wide", "angle": "eye", "desc_en": "eye-level wide shot from the sunlit west gable along the back of the house to the far yard corner where the ladders go up"},
+    {"tile": 9, "camera_from": "ladder_corner", "looking_at": "cucumber_frame", "size": "close", "angle": "low", "desc_en": "low-angle close shot from the foot of the ladders along the dusty yard ground to the cucumber-frame and its broken glass"}
+  ],
+  "checklist": {"architecture_match": true, "lighting_match": true, "style_match": true, "plan_view_clean": true, "note_en": "chimney stack drawn attached just outside the east gable end; accepted"}
+}

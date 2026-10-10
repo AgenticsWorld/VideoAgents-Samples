@@ -1,0 +1,58 @@
+{
+  "task_id": "p4-cr-dictionary",
+  "agent": "02-worldbuilding/dictionary",
+  "project": "alices",
+  "phase": "Phase 4 change request",
+  "attempt": 1,
+  "status": "completed",
+  "change_request": "BIB-0027",
+  "defect_fixed": "DEF-p4-cr-cgi-mucha-dict-001",
+  "defect_ticket_status_after": "fixed_pending_verify",
+  "authority": [
+    "bible/changelog.md BIB-0027",
+    "bible/cultivation.json SUP-002, SUP-010, XA-magic-02, XA-magic-08",
+    "bible/world.json WR-001, WR-002, WR-010",
+    "bible/h1_summary.md section 6",
+    "runs/p4-cr-cgi-mucha-bible/result.json (stale_files, stale_notes)",
+    "qa/defects/DEF-p4-style-001.json",
+    "qa/defects/DEF-p4-cr-cgi-mucha-dict-001.json"
+  ],
+  "user_ruling_verbatim": "会说话的角色可以用CGI动物，因为影片应该是写实奇幻风格；另外环境加入穆夏绘画的风格 (talking characters may be CGI animals, because the film should be realistic fantasy; also add Alphonse Mucha's painting style to the environments)",
+  "summary": "Registered the two TERM entries requested by DEF-p4-cr-cgi-mucha-dict-001: 'Art Nouveau' (real-world decorative style, licensed for Wonderland's dream environments only, per world.json WR-010 / cultivation.json XA-magic-08) and 'Alphonse Mucha' (real-world artist, style reference only, never on screen). No other file was touched -- this task's scope is bible/dictionary.json only. dictionary.json term count: 151 -> 153.",
+  "ids_added": [
+    { "id": "TERM-0152", "term": "Art Nouveau", "category": "other", "entity_ref": null },
+    { "id": "TERM-0153", "term": "Alphonse Mucha", "category": "person", "entity_ref": null }
+  ],
+  "ids_changed": [],
+  "ids_deprecated": [],
+  "files_changed": [
+    {
+      "file": "bible/dictionary.json",
+      "change_note": "Added TERM-0152 'Art Nouveau' and TERM-0153 'Alphonse Mucha', both inferred:true with reasons citing BIB-0027 / DEF-p4-cr-cgi-mucha-dict-001 and the specific WR-010 / XA-magic-08 fields that license them; both cite WR-010's own ch001 textual anchor ('the loveliest garden you ever saw') since neither term has a source-text mention of its own. No existing entries edited or removed; term count 151 -> 153."
+    },
+    {
+      "file": "qa/defects/DEF-p4-cr-cgi-mucha-dict-001.json",
+      "change_note": "status: open -> fixed_pending_verify, per the work order's explicit instruction (not plain 'fixed'); fix_note added describing the two new terms and the dictionary_hit_100pct check result."
+    }
+  ],
+  "scope_note": "This task's YOUR FILES list names only bible/dictionary.json. No conflicts with another Bible file were found for this specific fix (a clean, additive registration with no stale wording to correct in this file), so no new DEF-p4-cr-dictionary-NNN ticket was opened.",
+  "open_points_for_h2": "None raised by this task specifically (the Footman-anatomy and non-speaking-animal open points belong to 04-creatures/creature and 03-characters/appearance, not to dictionary registration).",
+  "acceptance_self_check": {
+    "json_valid": "pass (python3 json.load on both changed files)",
+    "terms_unique": "pass -- scripted check: 153/153 unique ids (TERM-\\d{4} format), 153/153 unique term strings, zero term/alias cross-collisions",
+    "no_unknown_placeholder": "pass -- scripted scan of id/term/category/original_name/definition/first_seen.chapter/first_seen.quote across all 153 entries found zero UNKNOWN/TBD/N/A/empty-string hits; both new inferred:true entries carry a non-null reason",
+    "category_enum_conformance": "pass -- both new entries use only person|other from the person|creature|place|object|institution|verse_song|idiom|other enum",
+    "source_refs_required": "pass -- both new entries carry first_seen.chapter (ch001) + first_seen.quote (verbatim novel excerpt, reused from WR-010's own citation) and inferred:true + reason",
+    "ids_stable": "pass -- no existing TERM-* id removed, renumbered, or recycled; only two new ids appended",
+    "defect_ticket_updated": "pass -- qa/defects/DEF-p4-cr-cgi-mucha-dict-001.json status open -> fixed_pending_verify, fix_note added"
+  },
+  "p2_merge_check_readonly_run": {
+    "note": "Ran code/p2-merge_check.py read-only per instructions ('do not modify it'). Full output saved to /tmp/p4-merge-recheck.json during this session (not a project artifact).",
+    "cross_refs_valid_all_namespaces": "FAIL -- pre-existing, unrelated to this fix: costumes.json duplicate CP-001..CP-010 ids and forward-ref gaps (COS-id, CHAR-alice-age01/02), color_script.json 'sp-pinch' ref. Phase 4 costume/color files this agent does not own; unchanged by this task.",
+    "no_unknown_placeholder": "PASS",
+    "dictionary_hit_100pct": "PASS -- unchanged by this fix in practice: neither 'Art Nouveau' nor 'Alphonse Mucha' is a key in the checker's hardcoded LEXICON dict, so they were never scanned either before or after registration (the parent defect DEF-p4-cr-cgi-mucha-dict-001's own summary flagged this: 'the p2-merge checker LEXICON does not list them, so dictionary_hit_100pct still reports PASS, but that PASS is only as good as the lexicon'). memory-bible still needs to add both surfaces to LEXICON (script out of this agent's edit scope) for the PASS to be a verified check rather than an accidental omission.",
+    "quote_verification_warn": "WARN 0/563 -- clean; both new entries' quotes verified verbatim against ch001."
+  },
+  "evaluation": "skipped per project settings (quality judge = 0)",
+  "qa": "skipped per project settings (all QA dimensions = 0)"
+}

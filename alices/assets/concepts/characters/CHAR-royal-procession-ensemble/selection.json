@@ -1,0 +1,44 @@
+{
+  "character_id": "CHAR-royal-procession-ensemble",
+  "task_id": "p4-char-concept-cb3",
+  "sheet": "sheet.png",
+  "variants": ["sheet_royal-child.png"],
+  "representative_members": { "sheet.png": "courtier: lady, Three of Diamonds", "sheet_royal-child.png": "royal child: boy about 7, Three of Hearts" },
+  "status": "delivered_for_H2_review",
+  "layout_check": {
+    "sheet.png": { "four_panels": true, "one_view_per_panel": true, "same_individual_all_panels": true, "size": "2560x1440 (JPEG payload)" },
+    "sheet_royal-child.png": { "four_panels": true, "one_view_per_panel": true, "same_individual_all_panels": true, "size": "2560x1440 (JPEG payload)" }
+  },
+  "appearance_field_hits": {
+    "sheet.png": {
+      "gender_female": true,
+      "age_25_50": true,
+      "hair_centre_parted_bands_low_chignon": true,
+      "expression_poised": true,
+      "scarlet_and_gold_crinoline_court_gown": true,
+      "flat_ivory_card_panel_red_diamond_pips": true,
+      "three_of_diamonds_pips_and_indices": "partial (skirt panel has 3 pips and '3'; a second bodice panel also marked '3' has 1 pip)",
+      "red_diamond_paste_ornaments_all_over": true,
+      "back_crimson_cream_lattice_heart_rosette": false
+    },
+    "sheet_royal-child.png": {
+      "gender_male": true,
+      "age_5_9_younger_and_smaller_than_Alice": true,
+      "short_brown_curls_rosy": true,
+      "expression_merry": true,
+      "ivory_card_tunic_three_crimson_heart_pips_3_indices": true,
+      "crimson_and_white_tunic_suit": true,
+      "many_crimson_heart_appliques": true,
+      "back_crimson_cream_lattice_heart_rosette": true,
+      "no_blue_dress_not_Alice_like": true
+    }
+  },
+  "style_check": { "photoreal_live_action": true, "palette_within_style": true },
+  "self_check_defects": [
+    "Courtier: two separate card panels on the front (bodice and skirt), both indexed '3'; the costume specifies one flat card panel front and back.",
+    "Courtier: the back is a crimson-and-cream harlequin check with red hearts, not the pack's lattice card back with a small heart rosette. Hearts on a diamond courtier also blur the courtier/children colour rule.",
+    "Courtier: off-the-shoulder neckline (period-correct for 1862 evening dress; prompt asked modest)."
+  ],
+  "rerolls": [],
+  "reroll_budget_note": "User rerun setting = 0."
+}

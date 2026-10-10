@@ -1,0 +1,82 @@
+{
+  "id": "DEF-p4-costume-001",
+  "opened_by": "06-art/costume",
+  "opened_on": "2026-09-22",
+  "task_id": "p4-costume",
+  "assigned_to": [
+    "00-orchestration/memory-bible",
+    "06-art/art-director",
+    "03-characters/appearance",
+    "00-orchestration/orchestrator"
+  ],
+  "domain": "art",
+  "status": "closed",
+  "severity": "minor",
+  "summary": "Four small setting conflicts found while building bible/costumes.json. Each has a working value in costumes.json so nothing is blocked; each needs a ruling or a wording fix upstream.",
+  "findings": [
+    {
+      "id": "DEF-p4-costume-001-a",
+      "files": [
+        "bible/characters/CHAR-caterpillar/appearance.json",
+        "bible/style.json palette_logic.accent_rules"
+      ],
+      "issue": "The Caterpillar card gives his gown as 'deep cornflower-to-slate blue'. style.json says cornflower blue is Alice's alone and no other character wears it.",
+      "working_value": "COS-019 uses slate blue with a moss-green sheen (the Caterpillar palette in style.json user_refs). No cornflower.",
+      "requested_action": "appearance owner (via memory-bible) changes the card wording to 'slate blue', or art-director confirms an exception.",
+      "status": "superseded",
+      "closed_by": "workflow-orchestrator",
+      "closed_note": "2026-09-23 superseded by BIB-0027: COS-019/COS-052 are now unclothed CGI animals (DEF-p4-cr-costume-001-a)"
+    },
+    {
+      "id": "DEF-p4-costume-001-b",
+      "files": [
+        "bible/style.json CR-012",
+        "bible/politics.json FAC-mad-tea-party",
+        "bible/characters/index.json CHAR-hatter"
+      ],
+      "issue": "CR-012 allows in-world lettering only for DRINK ME, EAT ME, W. RABBIT and ORANGE MARMALADE. The Hatter's hat price ticket ('In this style 10/6') is required by the Bible but is not on that list.",
+      "working_value": "COS-015 keeps a small paper ticket 'marked 10/6' on the hat.",
+      "requested_action": "art-director adds the Hatter's '10/6' price ticket to the CR-012 whitelist.",
+      "status": "ruled_costume_side_closed_style_amendment_handed_off",
+      "ruling": "KEEP the ticket as a named exception to CR-012. 'In this style 10/6' is a canon detail of the Hatter's hat, so under this order's rule (never silently drop a source-text detail) the lettering stays and the closed list grows by one named item. COS-015 is unchanged and now carries the ruling in a lettering_ruling block.",
+      "required_style_amendment": "bible/style.json CR-012 must add \"the Hatter's hat price ticket, marked 10/6\" to its allowed in-world lettering list, in period hand-lettering, with the Art Nouveau no-poster-lettering clause untouched.",
+      "handed_off_to": "06-art/art-director via qa/defects/DEF-p4-style-003.json (style.json is that agent's file and is frozen at H2; memory-bible did not edit it)",
+      "closed_by": "00-orchestration/memory-bible (BIB-0029)"
+    },
+    {
+      "id": "DEF-p4-costume-001-c",
+      "files": [
+        "bible/costumes.json COS-012, COS-001 variants, COS-007/008/010 variants",
+        "bible/props.json"
+      ],
+      "issue": "Some worn items could belong to either costume or prop: the Knave's wrist chain at the trial (ch011-p01), the White Rabbit's kid glove that Alice puts on (ch002-p14), and the spectacles worn by the King, Queen and White Rabbit.",
+      "working_value": "The Knave's chain is written into COS-012 visual_en as a worn item. The glove and spectacles are outfit variants only, and so are not in any default visual_en.",
+      "requested_action": "orchestrator decides who owns these items; if prop takes the chain, costume will drop it from COS-012 visual_en and cross-reference the prop.",
+      "status": "closed",
+      "ruling": "Ownership rule of record: an item that stays on one wearer for its whole screen life is COSTUME, even when it is put on or taken off as business; an item that changes hands, is consumed, or drives a plot beat is a PROP. Therefore -- the Knave's wrist cuffs and chain stay in COS-012 and are deliberately not registered in props.json; the King's, Queen's and White Rabbit's spectacles stay costume outfit variants (COS-010, COS-008, COS-007); the White Rabbit's white kid gloves and fan stay a prop (PROP-white-kid-gloves-and-fan) and the two costume variants that show them now carry a prop_ref. Nothing moved file, so no downstream artefact is stale.",
+      "closed_by": "00-orchestration/memory-bible (BIB-0029)"
+    },
+    {
+      "id": "DEF-p4-costume-001-d",
+      "files": [
+        "bible/characters/CHAR-jury-ensemble/appearance.json composition.slots J09"
+      ],
+      "issue": "J09 (cockatoo juror) has a 'white coat'. The crowd card keeps white coats off ensembles so the White Rabbit keeps the white read, and he stands near the jury-box as herald.",
+      "working_value": "COS-052 dresses J09 in a pale cream coat; the white crest hair is left to the appearance card.",
+      "requested_action": "appearance owner confirms the change or asks for white to be restored.",
+      "status": "superseded",
+      "closed_by": "workflow-orchestrator",
+      "closed_note": "2026-09-23 superseded by BIB-0027: COS-019/COS-052 are now unclothed CGI animals (DEF-p4-cr-costume-001-a)"
+    }
+  ],
+  "impact": "None of these blocks p4-char-concept or p4-costume-sheet. Rulings only affect wording.",
+  "due_gate": "G4",
+  "resolution": {
+    "change_id": "BIB-0029",
+    "task_id": "p4-h2-bible",
+    "arbitrated_by": "00-orchestration/memory-bible",
+    "date": "2026-09-23",
+    "authority": "H2 art-style lock, gate G4, approval ba96732d (runs/g4/gate.json)",
+    "summary": "a and d were already superseded by BIB-0027; b is ruled in costume's favour with the style.json amendment handed to 06-art/art-director (DEF-p4-style-003); c is ruled with an explicit costume-vs-prop ownership rule. Nothing left open on this ticket for costume or memory-bible."
+  }
+}

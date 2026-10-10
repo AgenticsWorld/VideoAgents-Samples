@@ -1,0 +1,31 @@
+{
+  "_meta": {"file": "bible/scenes/SCN-cheshire-cat-path/lighting.json", "owner": "05-scenes/lighting", "task_id": "p3-lighting-sb2", "attempt": 1, "generated": "2026-09-22", "enum_set": "LGT-ENUM-v1 (runs/p3-lighting-sb2/result.json)"},
+  "scene_id": "SCN-cheshire-cat-path",
+  "layer": "dream",
+  "int_ext": "EXT",
+  "daylight_access": "canopy_dappled",
+  "dream_light_growth": "The real afternoon sun broken by the trees over the sleeping Alice. A patch of sun that comes and goes on a bough is the in-world seed of the Cat's grin appearing and fading (SUP-005; environment fixed.dream_growth).",
+  "schemes": [
+    {
+      "scheme_id": "LGT-cheshire-cat-path-01",
+      "condition": {"time_of_day": "late_afternoon", "weather": "fair_hot"},
+      "applies_to_states": ["SCN-cheshire-cat-path-S01", "SCN-cheshire-cat-path-S02"],
+      "key_source": "dappled_sun",
+      "direction": "side_backlight",
+      "key_bearing": "sun from the west at about 28 deg, low enough to shine through the leaves along the path",
+      "fill": "soft green skylight filtered through the canopy; warm bounce from the dry beaten path",
+      "practicals": [],
+      "color_temp": "neutral (~4500K)",
+      "color_temp_k_approx": 4300,
+      "contrast": "medium",
+      "quality": "pools and coins of hard sunlight inside a soft, friendly green shade; backlit translucent leaves; the Cat's bough sits in a steady sun patch so the dissolve reads cleanly (still air, no moving dapple)",
+      "prompt_fragment_en": "friendly midsummer woodland shade in late afternoon, warm sunlight from the west slanting through the canopy behind the trees, dappled patches and coins of light on the path and boughs, backlit glowing green leaves, soft green fill in the shade, still air with steady unmoving light",
+      "source_chapter": "ch006",
+      "source_refs": ["ch006-p49", "ch006-p50", "ch006-p70", "ch006-p79", "environment.json SCN-cheshire-cat-path-S01..S02"],
+      "inferred": true,
+      "reason": "Trees and boughs are explicit (ch006-p49, ch006-p70) but no light is described. Dappled sun follows environment daylight_access canopy_dappled and the sun path; the still, steady dapple keeps the photographic dissolve clean (SUP-005). Architecture negative: no dark gothic forest, no glowing eyes."
+    }
+  ],
+  "special": [],
+  "special_note": "The Cat's vanishing (ch006-p79) is a photographic dissolve (SUP-005), not a light effect; no special light scheme."
+}

@@ -1,0 +1,51 @@
+{
+  "scene_id": "SCN-pool-of-tears",
+  "inherits": "SCN-long-hall",
+  "diff_only": true,
+  "layer": "dream",
+  "int_ext": "INT",
+  "form": "The long hall flooded with clear salt water and seen from a tiny swimmer's height: the bases of doors, stone reveals and the glass table legs rise out of the water like cliffs and columns; at the far end the floor flags climb out of the water as a step bank into grass",
+  "stories": 1,
+  "source_chapter": "ch002",
+  "culture_ref": "world.json#wonderland_real_counterparts.cp-pool; cultivation.json#SUP-007",
+  "grows_from": {"loc": "LOC-river-backwater", "waking_detail": "the reedy river backwater beside the bank"},
+  "amendment": "BIB-0027 (user ruling 2026-09-22), applied p4-cr-architecture 2026-09-23: follows the parent's Art Nouveau redesign; swimmers other than Alice are photoreal CGI animals",
+  "mucha_design_language": {"item": "Diff from SCN-long-hall at swimmer's height: the pastel-and-gold vine mosaic dado and the base of the cast-iron whiplash door frames and lily-stem columns fill the frame, their gilding shimmering in the water; stained-glass roundels are out of frame above; reflections of the mosaic ripple on the surface", "inferred": true, "culture_ref": "SCN-long-hall mucha_design_language; world.json#WR-010 (the pool listed)", "why": "At x12 the only visible band of the hall is its dado and door bases, so these carry the language"},
+  "structure": [
+    {"item": "the same hall, with water about four inches deep (true units) reaching half down the hall from the table end", "src": "ch002-p07"},
+    {"item": "the shore: at the south end the stone flags rise as three shallow broken steps out of the water, grass and reeds growing through their joints (the dream seam to SCN-pool-bank)", "src": "ch002-p26", "note": "step-bank design inferred; culture_ref geography.json#LOC-ornamental-pool adjacent LOC-pool-bank"}
+  ],
+  "materials": [
+    {"item": "clear salt water, faintly green over the limestone floor, lamp reflections on the surface", "src": "ch002-p16", "note": "tint inferred from the backwater (cp-pool)"},
+    {"item": "a few reeds already standing in the water near the shore steps, and duckweed at the water edge along the wall bases", "inferred": true, "culture_ref": "geography.json#LOC-river-backwater.visual_identifiers", "why": "The waking backwater bleeds into the flooded hall"}
+  ],
+  "details": [
+    {"item": "the white kid gloves and large fan the White Rabbit dropped, floating", "src": "ch002-p08", "note": "prop scale belongs to 06-art/prop"},
+    {"item": "door bottoms, iron hinge ends, the feet of the whiplash iron door frames and wet dark tide-lines across the mosaic dado at water level", "inferred": true, "culture_ref": "SCN-long-hall materials", "why": "What a swimmer at this height sees of the hall"},
+    {"item": "the glass table legs rising from the water like clear columns", "src": "ch002-p07", "note": "table position from SCN-long-hall; the pool forms round the table end"}
+  ],
+  "interior": {
+    "layout": "north half of the hall under water; swimmers move south toward the shore steps at the far end; walls and doors frame both sides",
+    "openings": ["the 25 hall doors (closed, their lower thirds above the waterline)", "no windows; the lamps overhead are far above and out of frame at this scale"],
+    "ceiling_height_m": 2.8,
+    "furniture_tone": "the glass table only"
+  },
+  "scale_notes": {
+    "anchor": "Alice's effective height about 11 cm, so four inches of water reaches her chin (ch002-p16). Scale factor x12.",
+    "builds": [
+      {"beat": "Alice swimming with the Mouse and the other creatures (photoreal CGI animals composited into the tank plates, SUP-002 as amended BIB-0027; their sizes relative to Alice set by 04-creatures)", "events": ["ev0008", "ev0009"], "build": "water tank 1.4 m deep with an oversized x12 band of the hall: flags 7.2 m, door bottoms, iron frames and the mosaic dado built up to 2 m above water, glass table legs 60 cm thick; everything above that band lost in darkness"},
+      {"beat": "shore steps", "build": "x12: each step about 1.2 m rise, built as a real stone-faced ramp the performers climb out on"}
+    ],
+    "rule": "Alice and the set share one scale; the hall shows her smallness (no VFX shrinking of Alice). The CGI animals are placed at their creature-sheet sizes against the x12 set.",
+    "sources": ["cultivation.json#SUP-003", "cultivation.json#SUP-007"]
+  },
+  "negative": [
+    "no open sea, no waves, no beach, no estuary",
+    "no daylight or sky above the water",
+    "no murky brown flood water; the water is clear",
+    "no cartoon animals, no humans in animal costume; the swimming animals are photoreal CGI animals",
+    "no underwater creatures",
+    "no Gothic pointed arches; no flat illustration finish"
+  ],
+  "prompt_ready_en": "a flooded Art Nouveau hall in the style of Mucha seen from water level, clear salt water with lamp reflections and rippling gold reflections of a pastel vine mosaic dado, the bases of horseshoe-arched oak doors in verdigris whiplash iron frames and pale limestone walls rising like cliffs on both sides, the legs of a solid glass table standing out of the water like columns, a white fan and white kid gloves floating, and at the far end broken stone steps climbing out of the water into reeds and grass"
+}

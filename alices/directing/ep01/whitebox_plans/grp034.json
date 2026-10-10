@@ -1,0 +1,52 @@
+{
+  "schema_version": "whitebox_plan.v1",
+  "group_id": "grp034",
+  "scene_id": "SCN-long-hall",
+  "basis": "Alice runs curtain -> glass_table. She stamps her foot into a puddle at the little door at t=1.4 and stares down at the splash, then at t=4.4 runs back along the water's edge toward the glass table at about 1.24 m/s, slips on the wet stone at t=7.2 and goes in at t=7.8, dropping below the surface screen-left at the bottom of frame. She ends at (6.45, -0.75), 1.06 m short of the glass table legs - the blocking_map end, 'at the water's edge short of the table legs'. The camera does not follow her down, per camera.json.",
+  "actors": [
+    {
+      "id": "CHAR-alice",
+      "kind": "person",
+      "size_m": [0.1708, 0.61, 0.1342],
+      "keyframes": [
+        {"t": 0.0, "position": [9.9, 0.0, -3.05], "pose": "stand", "yaw": -0.9463, "head_pitch": 0.9},
+        {"t": 1.4, "position": [9.9, 0.0, -3.05], "pose": "stand", "yaw": -0.9463, "head_pitch": 1.0},
+        {"t": 1.7, "position": [9.9, 0.0, -3.05], "pose": "stand", "yaw": -0.9463, "head_pitch": 1.0},
+        {"t": 3.0, "position": [9.9, 0.0, -3.05], "pose": "stand", "yaw": -0.9463, "head_pitch": 1.05},
+        {"t": 4.0, "position": [9.9, 0.0, -3.05], "pose": "stand", "yaw": -0.9463, "head_pitch": 0.8},
+        {"t": 4.4, "position": [9.75, 0.0, -2.95], "pose": "stand", "yaw": -0.9463, "head_pitch": 0.0},
+        {"t": 7.0, "position": [7.2, 0.0, -1.3], "pose": "stand", "yaw": -0.9463},
+        {"t": 7.2, "position": [7.05, 0.0, -1.2], "pose": "stand", "yaw": -0.9463, "body_roll": 0.2},
+        {"t": 7.8, "position": [6.7, -0.12, -0.95], "pose": "stand", "yaw": -0.9463, "body_roll": 0.5},
+        {"t": 9.0, "position": [6.45, -0.25, -0.75], "pose": "stand", "yaw": -0.9463, "body_roll": 0.3}
+      ]
+    }
+  ],
+  "cameras": [
+    {
+      "shot_id": "sh092",
+      "start": 0,
+      "duration_s": 4.0,
+      "movement": "static",
+      "keyframes": [
+        {"t": 0.0, "position": [10.05, 0.2, -2.37], "target": [9.9, 0.12, -3.05], "fov": 26.9915},
+        {"t": 4.0, "position": [10.05, 0.2, -2.37], "target": [9.9, 0.12, -3.05], "fov": 26.9915}
+      ]
+    },
+    {
+      "shot_id": "sh093",
+      "start": 4.0,
+      "duration_s": 5.0,
+      "movement": "static",
+      "keyframes": [
+        {"t": 0.0, "position": [8.0, 0.15, -0.185], "target": [8.387, 0.3, -2.0], "fov": 33.3985},
+        {"t": 5.0, "position": [8.0, 0.15, -0.185], "target": [8.387, 0.3, -2.0], "fov": 33.3985}
+      ]
+    }
+  ],
+  "continuity": {"actors": "inherit", "camera": "cut"},
+  "warnings": [
+    "sh093 is locked: she runs screen-left across a fixed frame and drops out of the bottom of it when she goes in, which is why the fall reads as a fall and not a move.",
+    "Her root drops to -0.25 m as she goes into the water; the long-hall model has no water volume, so the drop is carried by her anchor height alone."
+  ]
+}

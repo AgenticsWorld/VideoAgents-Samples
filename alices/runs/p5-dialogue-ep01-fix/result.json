@@ -1,0 +1,49 @@
+{
+  "task_id": "p5-dialogue-ep01-fix",
+  "agent": "01-story/dialogue-rewrite",
+  "project": "alices",
+  "attempt": 1,
+  "status": "done",
+  "date": "2026-09-22",
+  "defect": "qa/defects/DEF-p5-dialogue-ep01-001.json (now closed)",
+  "outputs": [
+    "story/episodes/ep01/screenplay.md (version 2 -> 3: one dialogue row plus the front-matter provenance line)",
+    "directing/ep01/dialogue_fit.json (host CLI report, pass: true)",
+    "qa/defects/DEF-p5-dialogue-ep01-001.json (status closed, resolution recorded)",
+    "runs/p5-dialogue-ep01-fix/screenplay_v2_before.md (v2 snapshot)",
+    "runs/p5-dialogue-ep01-fix/lines_ep01.json, style_backtest.json"
+  ],
+  "change": {
+    "line": "LN-ep01-029",
+    "speaker": "CHAR-alice",
+    "from": "And in that case I can go back by railway.",
+    "to": "I must have fallen into the sea! And in that case I can go back by railway.",
+    "emotion": "calm -> agitated (she has just come up spluttering)",
+    "est_duration_s": "3.1 -> 5.5 (written by the host CLI --write-est)",
+    "source": "ch002-p16, Carroll's reported thought 'she had somehow fallen into the sea', voiced as a lead-in. The railway half is his spoken line, unchanged."
+  },
+  "decision": "I added the lead-in and did not cut the line. Cutting LN-029 would save about 4 s but leave the salt beat without a spoken payoff. It would also drop the 'sea' mistake that the following action (she realises these are her own tears) corrects, and this is the episode's cliffhanger scene. The lead-in costs +2.4 s and stays well inside S10's dialogue ceiling and the episode tolerance.",
+  "machine_checks": {
+    "check_dialogue_fit": {"cmd": ["python3 code/check_dialogue_fit.py --project alices --ep ep01 --write-est", "python3 code/check_dialogue_fit.py --project alices --ep ep01"], "exit_write_est_run": 1, "exit_write_est_run_note": "This run found the 0.0 placeholder on LN-029 and then wrote back 5.5 s.", "exit_final": 0, "mode": "source_only (shot_list not yet produced; WARN shot_list_missing expected)", "line_cap_s": 10.5, "lines_parsed": 34, "pass": true},
+    "style_hit_rate_gte_80": {"CHAR-alice": 0.967, "CHAR-alice-sister": 1.0, "CHAR-white-rabbit": 1.0, "forbidden_violations": 0, "pass": true},
+    "non_dialogue_diff": "0. Only the LN-029 row and the front-matter version/provenance lines differ from v2 (diff against runs/p5-dialogue-ep01-fix/screenplay_v2_before.md)."
+  },
+  "pacing_impact": {
+    "S10_dialogue_est_s": "16.4 -> 18.8 (0.7 x alloc 38 s = 26.6 s ceiling)",
+    "episode_total_s": "537 -> about 539.4 (tolerance 486-594)",
+    "beat": "pacing.json S10 beats_s 'LN-029': 4 is now about 5.5 s spoken. Suggest taking 1.5 s from the silent 'surfaces, salt' 5 s beat so S10 stays at 38 s. This is for 01-story/pacing to confirm; pacing.json was not edited."
+  },
+  "handoffs": [
+    "01-story/screenplay: the S10 adaptation_note ('carried by the railway line alone') and the conventions bullet ('she speaks only lines Carroll has her say aloud, plus one opening line') are now out of date. This is a second voiced thought (after S01). Both are non-dialogue text, so I left them unchanged for the screenplay owner to update.",
+    "01-story/pacing: rebalance the S10 beat as described above if needed."
+  ],
+  "open_items_for_H3": [
+    "S01 (from screenplay): is it acceptable to turn the book thought into a spoken line to the sister? If not, the fallback is to play it silently.",
+    "Dream frame continuity (from screenplay): confirm that the S01 doze plants the dream onset, or rule that the dream starts on the bank.",
+    "S01 (dialogue-rewrite): confirm the Sister's warmer 'Hush, Alice dear.'",
+    "S10 (this fix): LN-029 now voices Alice's sea thought, a second spoken thought after the S01 book line. Please confirm."
+  ],
+  "defect_tickets_honoured": {"DEF-p3-char-index-902": "n/a to ep01", "DEF-p3-char-index-903": "n/a to ep01"},
+  "skills": "No auto-activated skills are checked for this station; none run, none registered.",
+  "retries": 0
+}

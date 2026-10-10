@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh057",
+  "group_id": "grp022",
+  "scene_no": "S07",
+  "duration_s": 3.0,
+  "size": "detail",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 50,
+  "camera_height_m": 0.15,
+  "angle": "level, square-on to the cake",
+  "rack_focus": "none",
+  "start_frame": "Low at the glass box, square-on: her hands and forearms heaving the heavy glass lid up, the very small cake below coming into view.",
+  "end_frame": "The same square-on frame with the lid up and held: the words EAT ME beautifully marked in currants, sharp across their whole width, the cake reading as a tabletop at her size.",
+  "constraint_honoured": "'EAT ME gets exactly one clean legible read here; the currants are the only lettering in the shot.'",
+  "movement_note": "Same discipline as the other two whitelisted lettering inserts: square-on, still, one clean read, no move to smear the currants.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

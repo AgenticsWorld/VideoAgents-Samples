@@ -1,0 +1,32 @@
+{
+  "character_id": "CHAR-mock-turtle",
+  "name": "Mock Turtle",
+  "tier": "B",
+  "card_type": "individual",
+  "gender": "male",
+  "age_sense": "middle-aged man (appearance base_age_range 45-55)",
+  "timbre": "deep, hollow, mournful man's voice, wet and tremulous, breaking with sighs and sobs",
+  "pitch": "low bass, slow sliding cadence, lurching up into a quavering tenor when he gets excited",
+  "pitch_range_hz": [80, 200],
+  "speed_wpm": [100, 125],
+  "speed_cpm": [380, 475],
+  "accent": "genteel, old-fashioned upper-middle-class English, plummy and careful",
+  "reference_style": "Melancholy old boy of a genteel school: slow tearful speech broken by sighs, sudden wild delight over the Lobster Quadrille, touchy snaps when his schooling is slighted. Sings 'Beautiful Soup' in a voice sometimes choked with sobs. The 'distant sobs' of ch012-p69 are his.",
+  "emotion_range": {
+    "mournful": { "speed_delta": "0%", "pitch_delta": "0semi", "volume": "soft", "note": "ch009-p51 'in a deep, hollow tone'" },
+    "choked_sobbing": { "speed_delta": "-20%", "pitch_delta": "+1semi", "note": "ch010-p01 'sobs choked his voice'; ch010-p75 'a voice sometimes choked with sobs'" },
+    "wild_delight": { "speed_delta": "+25%", "pitch_delta": "+4semi", "volume": "loud", "note": "Lobster Quadrille enthusiasm" },
+    "offended": { "speed_delta": "+10%", "pitch_delta": "+1semi", "note": "ch010-p49 'in an offended tone'" },
+    "dropped_low": { "speed_delta": "-10%", "pitch_delta": "-2semi", "volume": "whisper", "note": "ch010-p17 'suddenly dropping his voice'" }
+  },
+  "age_variants": [],
+  "source_chapter": "ch009",
+  "sources": ["ch009", "ch010", "ch009-p48", "ch009-p51", "ch010-p01", "ch010-p17", "ch010-p75", "ch012-p69"],
+  "voice_evidence": [
+    { "para": "ch009-p51", "quote": "said the Mock Turtle in a deep, hollow tone" },
+    { "para": "ch010-p75", "quote": "began, in a voice sometimes choked with sobs, to sing this" }
+  ],
+  "inferred": true,
+  "inferred_fields": ["pitch_range_hz", "speed_wpm", "speed_cpm", "accent"],
+  "reason": "Deep, hollow, sob-choked voice sourced; genteel accent follows dialogue_style ('the Mock Turtle's English is genteel')."
+}

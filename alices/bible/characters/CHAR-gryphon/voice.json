@@ -1,0 +1,32 @@
+{
+  "character_id": "CHAR-gryphon",
+  "name": "Gryphon",
+  "tier": "B",
+  "card_type": "individual",
+  "gender": "male",
+  "age_sense": "adult man (appearance base_age_range 35-45)",
+  "timbre": "big, rough, hoarse man's voice, hearty and gravelly, with a raucous cracking shriek when excited",
+  "pitch": "bass-baritone, booming, jumping to a hoarse falsetto yell at peaks",
+  "pitch_range_hz": [85, 260],
+  "speed_wpm": [155, 180],
+  "speed_cpm": [589, 684],
+  "accent": "working-class London Cockney: dropped h's, broad vowels, glottal stops",
+  "reference_style": "Bluff, bossy minder: brisk hurry-ups ('Come on!'), non-standard grammar ('they never executes nobody'), scornful laughter at his betters, sudden leaps and yells at the Lobster Quadrille. Must contrast sharply with the Mock Turtle's genteel, sobbing bass.",
+  "emotion_range": {
+    "hearty": { "speed_delta": "0%", "pitch_delta": "0semi", "note": "bossy, amused" },
+    "impatient": { "speed_delta": "+15%", "pitch_delta": "+1semi", "volume": "loud", "note": "ch009-p92 'in a very decided tone'; ch010-p52 'in an impatient tone'" },
+    "yell": { "speed_delta": "+10%", "pitch_delta": "+6semi", "volume": "shout", "note": "ch010-p16 'yelled the Gryphon at the top of its voice'; ch012-p69 'the shriek of the Gryphon'" },
+    "deep_telling": { "speed_delta": "-10%", "pitch_delta": "-2semi", "note": "ch010-p41 'went on in a deep voice'" }
+  },
+  "age_variants": [],
+  "source_chapter": "ch010",
+  "sources": ["ch009", "ch010", "ch011", "ch009-p84", "ch009-p92", "ch010-p16", "ch010-p41", "ch012-p69"],
+  "voice_evidence": [
+    { "para": "ch010-p16", "quote": "yelled the Gryphon at the top of its voice" },
+    { "para": "ch010-p41", "quote": "the Gryphon went on in a deep voice" },
+    { "para": "ch012-p69", "quote": "once more the shriek of the Gryphon" }
+  ],
+  "inferred": true,
+  "inferred_fields": ["timbre", "pitch_range_hz", "speed_wpm", "speed_cpm", "accent"],
+  "reason": "Deep voice, yells and shriek sourced; Cockney accent follows dialogue_style ('working-class (Cockney-leaning)') and his sourced dialect grammar (ch010)."
+}

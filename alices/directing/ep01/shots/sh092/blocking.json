@@ -1,0 +1,38 @@
+{
+  "shot_id": "sh092",
+  "group_id": "grp034",
+  "scene_no": "S09",
+  "scene_id": "SCN-long-hall",
+  "duration_s": 4.0,
+  "is_dialogue": false,
+  "group_position": "first shot of grp034 — Alice on her map start (curtain, two feet high at the little door), before the run back down her curtain -> glass_table line.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "stand",
+      "start_pos": "two feet high at the low curtain, stamping her foot into a puddle",
+      "space_fragment_en": "standing two feet high at the low curtain, centred low in frame, facing down and stamping into a puddle",
+      "facing": "down at her own foot; the composition gives her nothing else to be angry at",
+      "path": [],
+      "beats": [
+        { "t": 1.4, "action": "she stamps her foot, near tears of pure frustration", "sync": "the stamp" },
+        { "t": 1.7, "action": "the stamp lands in a puddle; a small splash", "sync": "the anger is answered by water" },
+        { "t": 3.0, "action": "she stares down at the splash", "sync": "held to the cut" }
+      ],
+      "performance_beat": {
+        "objective": "have the tantrum she has been refusing herself since the hall began",
+        "goal": "have the tantrum she has been refusing herself",
+        "emotional_arc": "from held-in frustration to a single furious act that immediately looks small",
+        "arc_from": "held-in frustration",
+        "arc_to": "frustration that has just been made to look small",
+        "trigger": { "beat": "the stamp lands in the puddle and splashes", "t": 1.7 },
+        "no_early_reaction": ["the fists clenching", "the foot lifting", "the face screwing up"],
+        "forbidden_early": ["the fists clenching", "the foot lifting", "the face screwing up"],
+        "end_state": "one foot still planted in the puddle, both fists at her sides, eyes down on the water, jaw tight"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0008 (dream)", "note": "Alice alone." }
+}

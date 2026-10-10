@@ -1,0 +1,39 @@
+{
+  "schema_version": "whitebox_scene.v1",
+  "scene_id": "SCN-gryphon-sunning-spot",
+  "units": "meters",
+  "_meta": {"owner": "05-scenes/scene-modeling", "task_id": "p4-scene-model-sb3", "attempt": 1, "date": "2026-09-23",
+            "inputs": ["assets/concepts/scenes/SCN-gryphon-sunning-spot/layout_top.png", "assets/concepts/scenes/SCN-gryphon-sunning-spot/layout.json", "bible/scenes/SCN-gryphon-sunning-spot/architecture.json", "bible/scenes/SCN-gryphon-sunning-spot/environment.json"]},
+  "dimensions_m": [26, 6, 14.625],
+  "inferred": true,
+  "scale_basis": {
+    "anchor": "layout.json orientation.extent_m X = 26 m across the full image (architecture: grass strip about 20 m long, drawn edge to edge); Z = 26 x 1440/2560 = 14.625 m (image aspect; layout.json rounds to 14.6)",
+    "cross_checks": ["yew arch opening reads 1.8 m wide", "grass strip between hedge foot and ha-ha coping reads ~4.4 m deep vs 8 m in architecture (compressed by the ~40 deg camera tilt)"],
+    "inferred": true
+  },
+  "walkable": "The upper grass strip at ground level (y=0) between the yew hedge foot (image y 0.267) and the ha-ha coping (y 0.605), full width; through the yew arch north to the croquet-ground. Beyond the coping the land drops 1.5 m to the lower ground, which is NOT stageable in this asset (see notes).",
+  "doorways": [
+    {"id": "yew_arch", "centre_xy": [0.705, 0.2154], "clear_width_m": 1.82, "clear_height_m": 2.4, "inferred": true}
+  ],
+  "objects": [
+    {"id": "hedge_n_west", "shape": "box", "size_m": [17.42, 3, 1.5], "xy": [0.335, 0.2154], "collision_role": "wall", "color": "#3f5f3a", "note": "clipped yew; south face on the drawn hedge foot y=0.267, 1.5 m thick northward"},
+    {"id": "hedge_n_east", "shape": "box", "size_m": [6.76, 3, 1.5], "xy": [0.87, 0.2154], "collision_role": "wall", "color": "#3f5f3a"},
+    {"id": "hedge_n_arch_lintel", "shape": "box", "size_m": [1.82, 1.0, 1.5], "xy": [0.705, 0.2154], "elevation_m": 2.9, "landmark": "yew_arch", "collision_role": "wall", "color": "#3f5f3a", "note": "arched yew crown over the 1.8 m opening, rising to 3.4 m"},
+    {"id": "haha_wall_coping", "shape": "box", "size_m": [26, 0.3, 0.85], "xy": [0.5, 0.634], "landmark": "haha_mid", "collision_role": "wall", "color": "#cfc8b4", "note": "coping of the dry-stone ha-ha, inner edge on the drawn grass edge y=0.605 (band to 0.662 as drawn), 0.3 m proud of the grass; the 1.5 m face drops on its south side"},
+    {"id": "haha_wall_gate_pier", "shape": "box", "size_m": [0.9, 2.8, 0.9], "xy": [0.17, 0.645], "landmark": "gate_pier", "collision_role": "wall", "color": "#d8d0bc", "note": "square limestone pier 2.8 m (architecture); drawn wider by the tilt"},
+    {"id": "griffin_statue", "shape": "box", "size_m": [0.45, 0.6, 0.6], "xy": [0.17, 0.645], "elevation_m": 3.1, "landmark": "gate_pier", "collision_role": "overhead", "color": "#b8b2a0", "note": "small 60 cm stone griffin crouched on the cap"}
+  ],
+  "landmarks_covered": {
+    "modelled": ["yew_arch", "gate_pier", "haha_mid", "haha_east_end"],
+    "open_ground_kept_clear": ["gryphon_spot"],
+    "not_stageable": ["lower_ground"]
+  },
+  "workflow_notes": [
+    "The render is tilted ~35-45 deg (p4-env-concept-sb3): the hedge face and ha-ha face show as elevations. Hedge and coping are placed on their ground-contact lines (hedge foot y=0.267, coping inner edge y=0.605 where the drawn grass ends; layout.json haha_mid y=0.64 lies on the coping band); the hedge top and the ha-ha face bands in the image lie outside the modelled footprints; inferred:true.",
+    "The grass strip reads ~4.4 m deep vs 8 m in architecture because of the tilt. Kept image/layout geometry so the ground plate is not distorted; the Gryphon's full wingspan may overlap the hedge foot or coping in wide shots, whitebox-staging should check the CGI griffin bounds against the 4.4 m depth.",
+    "Ha-ha drop: the whitebox ground is flat, so the lower ground (1.5 m below, south of the coping) is not modelled. Routes must stay north of the coping (image y < 0.605). layout.json view 7 (camera from lower_ground up the wall face) cannot be staged in this asset; if a shot needs it, request a separate lower-level scene asset from the director rather than lowering this one.",
+    "The ha-ha is drawn running the full width, so the coping spans the whole map; haha_east_end (x 0.95) is a point on it, not a wall end.",
+    "Anti-clipping: the yew arch clears 1.8 m wide x 2.4 m high — Alice (1.35 m) passes freely; the CGI Gryphon must fold its wings and pass low or be staged entering from out of frame. The gate pier stands on the coping line; the grass strip is otherwise open.",
+    "No storyboard yet — hand over to whitebox-staging (no shot_list.json exists for any episode; no video rendered)."
+  ]
+}

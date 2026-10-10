@@ -1,0 +1,44 @@
+{
+  "shot_id": "sh089",
+  "group_id": "grp033",
+  "scene_no": "S09",
+  "scene_id": "SCN-long-hall",
+  "duration_s": 5.0,
+  "is_dialogue": true,
+  "group_position": "first shot of grp033 — Alice on her map start (curtain, two feet high in the shallow water at the little door); the map gives her no path, so the whole group is played on this ground.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "stand",
+      "start_pos": "two feet high splashing out of the shallow water at the low curtain and running the last stretch to the little door",
+      "space_fragment_en": "standing two feet high out of the water at the low curtain, held screen-left, facing screen-right and running for the little door",
+      "facing": "the way she runs, screen-right toward the little door, with a great deal of wall ahead of her",
+      "path": [],
+      "beats": [
+        { "t": 0.4, "action": "splashes out of the shallow water", "sync": "before the line" },
+        { "t": 1.0, "action": "speaks", "sync": "LN-ep01-028 begins" },
+        { "t": 2.0, "action": "she is off at full speed on the word", "sync": "LN-ep01-028 on 'garden'" },
+        { "t": 4.4, "action": "still running; the stretch takes three times as long as it used to", "sync": "held to the cut" }
+      ],
+      "performance": {
+        "objective": "get to the garden now, while she is the right size for it",
+        "goal": "get to the garden now, while she is the right size",
+        "emotional_arc": "from relief to headlong, delighted purpose",
+        "arc_from": "relief",
+        "arc_to": "headlong delighted purpose",
+        "trigger": { "line_ref": "LN-ep01-028", "word": "garden" },
+        "no_early_reaction": ["breaking into a run", "the arms pumping", "a grin"],
+        "forbidden_early": ["breaking into a run", "the arms pumping", "a grin"],
+        "end_state": "running flat out to screen-right, one gloved hand out ahead of her, mouth open, eyes on the door"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": {
+    "timeline_ok": true,
+    "violations": [],
+    "story_event": "ev0008 (dream) — shrunk small again, she rushes for the door",
+    "note": "Alice alone in the hall for the whole of S09; the Rabbit is long gone."
+  }
+}

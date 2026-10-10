@@ -1,0 +1,33 @@
+{
+  "task_id": "p3-bible-defects",
+  "agent": "00-orchestration/memory-bible",
+  "status": "done",
+  "date": "2026-09-22",
+  "summary": "Triaged 8 open minor defects. 2 were locked-bible inconsistencies and are fixed under controlled change (BIB-0025, BIB-0026) and closed. 6 need edits to bible/characters/index.json, which is a Phase 3 file owned by character-manager, not locked v1. Each has a memory-bible ruling and an exact fix instruction, and is reassigned to 03-characters/character-manager and left open. None needs a user creative ruling: every point is decided by source text, signed H1 rulings or locked SUP/FAC entries.",
+  "dispositions": [
+    {"ticket": "DEF-p3-dictionary-002", "disposition": "fixed_closed", "change_id": "BIB-0026", "file": "bible/dictionary.json", "action": "_meta.cross_domain_assumptions[2] TERM-0002 -> TERM-0001 'Alice'"},
+    {"ticket": "DEF-p3-environment-101", "disposition": "fixed_closed", "change_id": "BIB-0025", "file": "bible/geography.json", "action": "LOC-hall-of-doors physical.climate 'cool dream-air' -> 'hot, close, still dream-air (ch002-p09)'; source first"},
+    {"ticket": "DEF-p3-appearance-001", "disposition": "routed_open", "assigned_to": "03-characters/character-manager", "ruling": "Dormouse male and Mouse male (source-stated); Cheshire Cat female (inferred, from H1 5.3 B via Dinah)"},
+    {"ticket": "DEF-p3-appearance-201", "disposition": "routed_open", "assigned_to": "03-characters/character-manager", "ruling": "Old/Young Crab female, source ch003-p43, not inferred; Duck/Lory/Eaglet/Canary/Magpie mirror the cards' inferred values"},
+    {"ticket": "DEF-p3-appearance-301", "disposition": "routed_open", "assigned_to": "03-characters/character-manager", "ruling": "SUP-014 governs: remove the axe/block from the executioner's performer_concept; office shown by livery plus a pushed-back black hood"},
+    {"ticket": "DEF-p3-appearance-302", "disposition": "routed_open", "assigned_to": "03-characters/character-manager", "ruling": "Drop ch006 from CHAR-crowd-ensemble; the kitchen chorus is the Duchess, the cook and the baby (ch006-p37)"},
+    {"ticket": "DEF-p3-appearance-303", "disposition": "routed_open", "assigned_to": "03-characters/character-manager", "ruling": "Frog-Footman re-pointed to FAC-duchess-household with plain faded livery (ch006-p01/p02, FREL-001); ensemble genders mirror the cards"},
+    {"ticket": "DEF-p3-relationship-001", "disposition": "routed_open", "assigned_to": "03-characters/character-manager", "ruling": "(a) as 303-a; (b) the Cheshire Cat doubling note must say Dinah has no CRE id (spoken of only); (c) register CHAR-duchess-baby (TERM-0039, human infant per SUP-006 and P-007); creature decides whether a CRE piglet is needed for the ch006-p49 trot-off"}
+  ],
+  "needs_user_ruling": [],
+  "checks": {"code/p2-merge_check.py": {"cross_refs_valid_all_namespaces": "PASS", "no_unknown_placeholder": "PASS", "dictionary_hit_100pct": "PASS", "quote_verification_warn": "WARN 0/560"}, "report": "runs/p3-bible-defects/p2-merge_check.json"},
+  "notify_orchestrator": {
+    "bible_changes": ["BIB-0025", "BIB-0026"],
+    "mark_dirty": [],
+    "note": "No downstream artefacts consume the changed facts yet (no Phase 4+ outputs for SCN-long-hall). Tell 05-scenes/lighting (writing SCN-long-hall/lighting.json in parallel) that the hall air is hot. Dispatch 03-characters/character-manager to apply the six routed index.json fixes before G3. Follow-on hand-offs are named in the tickets: appearance for the Frog-Footman livery and the new baby card, relationship for the baby edges, creature for the piglet question, screenplay/voice for the ch006 chorus reattribution."
+  },
+  "not_touched": ["bible/characters/**", "bible/scenes/**", "bible/creatures/**", "age_versions.json / voice.json / lighting.json (parallel writers)"],
+  "skills": "none selected for this station",
+  "files_modified": [
+    "bible/geography.json", "bible/dictionary.json", "bible/changelog.md",
+    "qa/defects/DEF-p3-appearance-001.json", "qa/defects/DEF-p3-appearance-201.json", "qa/defects/DEF-p3-appearance-301.json",
+    "qa/defects/DEF-p3-appearance-302.json", "qa/defects/DEF-p3-appearance-303.json", "qa/defects/DEF-p3-dictionary-002.json",
+    "qa/defects/DEF-p3-environment-101.json", "qa/defects/DEF-p3-relationship-001.json"
+  ],
+  "files_created": ["runs/p3-bible-defects/result.json", "runs/p3-bible-defects/p2-merge_check.json"]
+}

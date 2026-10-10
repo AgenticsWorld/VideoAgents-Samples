@@ -1,0 +1,41 @@
+{
+  "shot_id": "sh059",
+  "group_id": "grp022",
+  "scene_no": "S07",
+  "scene_id": "SCN-long-hall",
+  "duration_s": 6.5,
+  "is_dialogue": true,
+  "group_position": "last shot of grp022 — Alice comes back to her map end (glass_table, at the open glass box).",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "stand",
+      "start_pos": "ten inches high turning on her heel and walking back to the open glass box",
+      "space_fragment_en": "standing ten inches high walking back to the little glass box at the foot of the glass table, held screen-right, facing screen-left",
+      "facing": "screen-left, the exact reversal of sh058; she walks into her own lead room and the box is where she arrives",
+      "path": [
+        { "t": 5.4, "to": "at the little glass box at the foot of the glass table" }
+      ],
+      "beats": [
+        { "t": 0.4, "action": "turns on her heel", "sync": "the decision is taken" },
+        { "t": 1.0, "action": "speaks as she walks", "sync": "LN-ep01-014 begins" },
+        { "t": 3.4, "action": "her stride lengthens on the phrase", "sync": "LN-ep01-014 on 'either way'" },
+        { "t": 5.4, "action": "arrives at the box", "sync": "the frame closes the loop it opened" }
+      ],
+      "performance": {
+        "objective": "commit, and stop debating with herself",
+        "goal": "commit and stop debating",
+        "emotional_arc": "from argument to cheerful recklessness",
+        "arc_from": "argument",
+        "arc_to": "cheerful recklessness",
+        "trigger": { "line_ref": "LN-ep01-014", "word": "either way" },
+        "no_early_reaction": ["the stride lengthening", "a grin", "the hands dropping to her sides"],
+        "forbidden_early": ["the stride lengthening", "a grin", "the hands dropping to her sides"],
+        "end_state": "arrived at the box, both hands going down to it, chin up, a small tight smile, eyes on the cake"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0005 (dream)", "note": "Alice alone." }
+}

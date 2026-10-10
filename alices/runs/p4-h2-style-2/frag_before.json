@@ -1,0 +1,22 @@
+{
+  "style_fragment_ui": {
+    "len": 1081,
+    "sha256": "183982d5e974b138f7de57e54f2793d412a7598b72c99cc13ae069cb2497fe75"
+  },
+  "style_fragment_en": {
+    "len": 1081,
+    "sha256": "183982d5e974b138f7de57e54f2793d412a7598b72c99cc13ae069cb2497fe75"
+  },
+  "style_string_en": {
+    "len": 299,
+    "sha256": "3d5bc8b85ef4590da3c715f3d2ea8a9fb05616f5aec7be8e5ed4cb29f32d9b02"
+  },
+  "negative_prompt_en": {
+    "len": 1049,
+    "sha256": "9f109db92b1030074891789a9667d6d7fad7a65ff2d83601aae58ba8e88c9d4e"
+  },
+  "negative_prompt_waking_addon_en": {
+    "len": 126,
+    "sha256": "60596a9a034e5fabcad3fb3df2f1226b1de0aaa5e7ccaf83472b653ca90bed60"
+  }
+}

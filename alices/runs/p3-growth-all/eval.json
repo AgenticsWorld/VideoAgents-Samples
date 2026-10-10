@@ -1,0 +1,9 @@
+{
+  "task_id": "p3-growth-all",
+  "skipped": true,
+  "reason": "quality judge=0; QA levels 0",
+  "auto": {
+    "files_present": "PASS",
+    "no_unknown_placeholder": "PASS"
+  }
+}

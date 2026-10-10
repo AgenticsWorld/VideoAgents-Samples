@@ -1,0 +1,55 @@
+{
+  "task_id": "p4-scene-model-sb2",
+  "agent": "05-scenes/scene-modeling",
+  "attempt": 1,
+  "date": "2026-09-23",
+  "status": "completed",
+  "status_note": "8 whitebox.json files written; the host check whitebox_layout_ok passes 8/8 and every overlay was checked by eye. The room-size and hero-object-size differences between the plans and the Bible are recorded as defects DEF-p4-scenemodel-970 to -973 for the user's decision at H2. No shot lists exist, so no videos were rendered.",
+  "shared": {
+    "inputs": "docs/whitebox.md is not shipped in this build, so SOUL rules plus the host loader (modules/whitebox.py load_scene) were followed. Per scene: layout_top.png, layout.json, bible/scenes/<id>/architecture.json and environment.json, runs/p4-env-concept-sb2/result.json (image defects).",
+    "coordinate_convention": "dimensions_m [X, Y, Z] with X = layout.json extent_m.x and Z = X*9/16 (the plan aspect is 2560x1440), so the plan covers the whole floor. Object xy = normalised plan position (same frame as the layout.json landmarks, top = north = -Z); elevation_m = centre height (host loader convention). The landmarks are inherited unchanged from layout.json.",
+    "modelling_rule": "Interior walls: inner face on the drawn floor edge, thickness outward; doors and windows at the drawn gaps with Bible widths, and lintel/head blocks closing the wall to the ceiling above each opening. Exterior buildings: solid bodies (their interiors are separate scene assets). Trees drawn as stumps are modelled as living trunks. Where the plan misdraws an object's own size against a Bible hard size (thistle, mushroom, nest, sticks, oak bole), the Bible size is used at the landmark point and marked inferred.",
+    "collision_roles": "wall | solid | soft (foliage/flora, walk-through or brush-past) | ground (flat markers) | decor (wall-face items) | boundary (fences)",
+    "user_refs": [{"path": "refs/style/alice.jpeg", "used": false, "why": "The whitebox is untextured primitive geometry; the style reference has no bearing on metric layout. No image was generated in this task."}],
+    "style_and_prompts": "not applicable: no image generation in this task",
+    "host_check_runtime": "code/whitebox_layout_check.py was run with the app python runtime (python-runtimes/versions/1.0.33/py/bin/python3.12, which includes Pillow). The system python3 lacks PIL and cannot run the check.",
+    "host_check_log": "runs/p4-scene-model-sb2/whitebox_layout_check.txt",
+    "storyboard_handover": "no storyboard yet — hand over to whitebox-staging. No directing/*/shot_list.json exists for any episode, so render_whitebox.py was not run and no camera.mp4 was produced."
+  },
+  "acceptance": {
+    "whitebox_layout_ok": "PASS 8/8 (exit 0). First run: SCN-duchess-house-front FAILED because the wood_crowns_west footprint touched x = -0.000; fixed by trimming its width 5.4 to 5.3 m, and the rerun passed 8/8. Aspect deviations 0.00-0.05%.",
+    "overlay_visual_check": "PASS 8/8. Red wall boxes sit on the drawn wall bands, door and window gaps align with the drawn gaps, and blue boxes sit on the drawn furniture and trees. Intended mismatches: Bible-size hero objects (mushroom, thistle, sticks, nest) show as small boxes on large drawn objects. The overlay draws limb footprints unrotated, so the yawed pigeon limbs show as horizontal bars.",
+    "primitives_only": "PASS (box/sphere/cylinder only; the loader accepted all 8)",
+    "no_actors_in_scene_assets": "PASS",
+    "walkable_and_doorways_declared": "PASS (walkable zones, clearance checks and doorway clear widths in every file)",
+    "evaluation": "skipped (quality judge = 0)",
+    "qa": "none ordered (all review dimensions = 0)"
+  },
+  "items": [
+    {"scene_id": "SCN-rabbit-house-exterior", "product": "bible/scenes/SCN-rabbit-house-exterior/whitebox.json", "overlay": "assets/concepts/scenes/SCN-rabbit-house-exterior/whitebox_overlay.png", "dimensions_m": [25.0, 10.0, 14.06], "scale_anchor": "house depth 5.03 m drawn = Bible 5.0 m; stone path, cucumber-frame", "inferred": ["house length 9.0 m vs Bible 6.0 m", "stepped roof boxes", "wood crown blocks"], "landmarks_covered": "9/9", "check": "PASS", "defects": ["DEF-p4-scenemodel-971"], "pending_H2": []},
+    {"scene_id": "SCN-rabbit-house-upstairs-room", "product": "bible/scenes/SCN-rabbit-house-upstairs-room/whitebox.json", "overlay": "assets/concepts/scenes/SCN-rabbit-house-upstairs-room/whitebox_overlay.png", "dimensions_m": [7.5, 2.2, 4.22], "scale_anchor": "floor width 3.04 m drawn = Bible 3.0 m; door 0.76 m; ceiling 2.2 m", "inferred": ["room depth 2.07 m vs Bible 2.7 m", "furniture sizes", "wall thickness 0.2 m"], "landmarks_covered": "7/7", "check": "PASS", "defects": ["DEF-p4-scenemodel-970"], "pending_H2": []},
+    {"scene_id": "SCN-wood-tree-door", "product": "bible/scenes/SCN-wood-tree-door/whitebox.json", "overlay": "assets/concepts/scenes/SCN-wood-tree-door/whitebox_overlay.png", "dimensions_m": [16.0, 14.0, 9.0], "scale_anchor": "oak bole (Bible 3 m), door 0.8 x 1.5 m, threshold stone", "inferred": ["living oak and trunks in place of drawn stumps", "root spurs", "path strips"], "landmarks_covered": "8/8", "check": "PASS", "defects": [], "pending_H2": []},
+    {"scene_id": "SCN-wood-thistle-glade", "product": "bible/scenes/SCN-wood-thistle-glade/whitebox.json", "overlay": "assets/concepts/scenes/SCN-wood-thistle-glade/whitebox_overlay.png", "dimensions_m": [24.0, 15.0, 13.5], "scale_anchor": "true units; glade about 12-15 m across; Alice effective 0.15 m", "inferred": ["thistle and sticks at Bible true size", "root bank 0.5 m", "oak_nw / oak_se ring trunks"], "landmarks_covered": "7/7", "check": "PASS", "defects": ["DEF-p4-scenemodel-972"], "pending_H2": ["puppy CRE-002 as a photoreal CGI puppy on the root bank (style.json open_points_pending_H2) — for user decision at H2; it is an actor and not in the scene asset"]},
+    {"scene_id": "SCN-caterpillar-clearing", "product": "bible/scenes/SCN-caterpillar-clearing/whitebox.json", "overlay": "assets/concepts/scenes/SCN-caterpillar-clearing/whitebox_overlay.png", "dimensions_m": [16.0, 15.0, 9.0], "scale_anchor": "true units; ring opening about 11 x 8 m (Bible 8 m); mushroom = Alice height 0.15 m", "inferred": ["mushroom and buttercup at Bible true size", "patch footprints from the plan", "living trunks in place of stumps"], "landmarks_covered": "8/8", "check": "PASS", "defects": ["DEF-p4-scenemodel-972"], "pending_H2": []},
+    {"scene_id": "SCN-pigeon-treetop", "product": "bible/scenes/SCN-pigeon-treetop/whitebox.json", "overlay": "assets/concepts/scenes/SCN-pigeon-treetop/whitebox_overlay.png", "dimensions_m": [48.0, 6.0, 27.0], "scale_anchor": "hero crown about 16 m; y = 0 at the canopy top (ground about 20 m below, off-asset)", "inferred": ["nest 0.6 m (Bible) vs drawn 3.5 m", "two limbs as yawed boxes", "crown as a soft ellipsoid"], "landmarks_covered": "8/8", "check": "PASS", "defects": ["DEF-p4-scenemodel-972"], "pending_H2": []},
+    {"scene_id": "SCN-duchess-house-front", "product": "bible/scenes/SCN-duchess-house-front/whitebox.json", "overlay": "assets/concepts/scenes/SCN-duchess-house-front/whitebox_overlay.png", "dimensions_m": [28.0, 10.0, 15.75], "scale_anchor": "clearing about 14 m (Bible); door 2.1 m; ridge 7.2 m", "inferred": ["footprint 3.64 x 5.73 m from the oblique plan", "chimney base vs projected landmark", "wood crown blocks"], "landmarks_covered": "9/9", "check": "PASS (after one bounds fix)", "defects": ["DEF-p4-scenemodel-973"], "pending_H2": ["Frog-/Fish-Footman anatomy and size (proposal: upright, about 1.6 m) — for user decision at H2; actors, not scene geometry. Door and step clearances were checked against the 1.6 m proposal"]},
+    {"scene_id": "SCN-duchess-kitchen", "product": "bible/scenes/SCN-duchess-kitchen/whitebox.json", "overlay": "assets/concepts/scenes/SCN-duchess-kitchen/whitebox_overlay.png", "dimensions_m": [14.5, 3.2, 8.16], "scale_anchor": "floor-level furniture (table 2.7 m, dresser 3.0 m, stool 0.45 m); ceiling 3.2 m", "inferred": ["room 7.87 x 3.99 m vs Bible 11 x 7 m", "hearth recess construction", "door and window widths"], "landmarks_covered": "8/8", "check": "PASS", "defects": ["DEF-p4-scenemodel-970"], "pending_H2": ["baby-to-piglet end state (style.json open_points_pending_H2) — for user decision at H2; actor, not scene geometry"]}
+  ],
+  "defects_opened": ["qa/defects/DEF-p4-scenemodel-970.json", "qa/defects/DEF-p4-scenemodel-971.json", "qa/defects/DEF-p4-scenemodel-972.json", "qa/defects/DEF-p4-scenemodel-973.json"],
+  "skills": "none selected for this station",
+  "affected_storyboard_videos": [],
+  "files_created": [
+    "bible/scenes/SCN-rabbit-house-exterior/whitebox.json",
+    "bible/scenes/SCN-rabbit-house-upstairs-room/whitebox.json",
+    "bible/scenes/SCN-wood-tree-door/whitebox.json",
+    "bible/scenes/SCN-wood-thistle-glade/whitebox.json",
+    "bible/scenes/SCN-caterpillar-clearing/whitebox.json",
+    "bible/scenes/SCN-pigeon-treetop/whitebox.json",
+    "bible/scenes/SCN-duchess-house-front/whitebox.json",
+    "bible/scenes/SCN-duchess-kitchen/whitebox.json",
+    "assets/concepts/scenes/<8 scenes>/whitebox_overlay.png (written by the host check)",
+    "qa/defects/DEF-p4-scenemodel-970..973.json",
+    "runs/p4-scene-model-sb2/whitebox_layout_check.txt",
+    "runs/p4-scene-model-sb2/result.json"
+  ]
+}

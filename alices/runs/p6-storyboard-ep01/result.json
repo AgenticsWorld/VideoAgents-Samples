@@ -1,0 +1,175 @@
+{
+  "task_id": "p6-storyboard-ep01",
+  "agent": "07-directing/storyboard",
+  "project": "alices",
+  "ep": "ep01",
+  "status": "completed",
+  "finished": "2026-09-23",
+  "product": "directing/ep01/storyboard.json",
+  "summary": "ep01 storyboard draft: 10 screenplay scenes (100% coverage) plus one provisional hook head segment, 101 shot drafts in 37 generation groups, 537.0 s against the 540 s budget. Every shot carries content, sketch, size, duration suggestion, the screenplay action/dialogue line it realises, view_tile and poses. Every group carries characters / creatures / costumes / scene_refs / blocking_map, and the six transitions of the director's 转场清单 are attached to the groups they enter.",
+  "machine_checks": {
+    "note": "Host scripts only, run from /Applications/VideoAgents.app/Contents/Resources/backend. Nothing was copied or rewritten into the project code/. The system python3 has no PIL, so blocking_map_check could not read the layout_top.png dimensions and emitted 7 WARNs; re-run with the app's bundled runtime (python-runtimes/versions/1.0.33/py/bin/python3) it is clean. Both outputs are reproduced verbatim.",
+    "blocking_map_check": {
+      "command": "python3 code/blocking_map_check.py --project alices --ep ep01 --source storyboard",
+      "output_system_python3": [
+        "WARN SCN-falling-dream: 无法读取 layout_top.png(No module named 'PIL')",
+        "WARN SCN-riverbank: 无法读取 layout_top.png(No module named 'PIL')",
+        "WARN SCN-field-hedge-burrow: 无法读取 layout_top.png(No module named 'PIL')",
+        "WARN SCN-shaft-landing-passage: 无法读取 layout_top.png(No module named 'PIL')",
+        "WARN SCN-long-hall: 无法读取 layout_top.png(No module named 'PIL')",
+        "WARN SCN-little-door-passage: 无法读取 layout_top.png(No module named 'PIL')",
+        "WARN SCN-pool-of-tears: 无法读取 layout_top.png(No module named 'PIL')",
+        "[blocking_map] alices/ep01: 违规 0 条, WARN 7 条 -> PASS",
+        "exit=0"
+      ],
+      "output_app_runtime": [
+        "[blocking_map] alices/ep01: 违规 0 条, WARN 0 条 -> PASS",
+        "exit=0"
+      ],
+      "verdict": "PASS (blocking_map_present, label_ok, creature_blocking_ok, scene_layout_pack_ok, cross-group continuity)"
+    },
+    "storyboard_pose_check": {
+      "command": "python3 code/storyboard_pose_check.py --project alices --ep ep01 --strict",
+      "first_run_output": [
+        "FAIL S02-07: 缺 poses(出场 CHAR-alice 的体位/动作未登记)",
+        "FAIL S03-04: 缺 poses(出场 CHAR-alice 的体位/动作未登记)",
+        "FAIL S03-07: 缺 poses(出场 CHAR-alice 的体位/动作未登记)",
+        "FAIL S05-09: 缺 poses(出场 CHAR-alice 的体位/动作未登记)",
+        "FAIL S10-03: 缺 poses(出场 CHAR-alice 的体位/动作未登记)",
+        "FAIL S10-08: 缺 poses(出场 CHAR-alice 的体位/动作未登记)",
+        "FAIL pose_present storyboard ep01:101 镜,6 违规,0 提醒",
+        "exit=1"
+      ],
+      "first_run_cause_and_fix": "Those six shots are POVs or frames Alice has left (the empty hedge, the two straight-down shaft POVs, the garden POV, the flooded-canyon POV, the V-wake). I had written cast: [] on them, but modules/storyboard_board.load_board falls back to the GROUP's characters when a shot's cast is empty, so the checker still expected a pose entry. Fixed by registering the body state she is actually in while off camera, plus in_frame: false and a poses_note on each of the six, which is also what blocking and the whitebox want.",
+      "final_output": [
+        "OK pose_present storyboard ep01:101 镜,0 违规,0 提醒",
+        "exit=0"
+      ],
+      "verdict": "PASS"
+    }
+  },
+  "acceptance_self_run": {
+    "scene_coverage_100": "PASS — S01..S10 all present, coverage.table lists each with its screenplay_ref; S00 is the provisional hook segment and is excluded from the count.",
+    "every_shot_in_group": "PASS — groups_draft covers all 101 shot orders exactly once per scene, orders contiguous inside every group.",
+    "blocking_map_present": "PASS — see host check above.",
+    "creature_refs_valid": "PASS — the only creature used is CRE-001 (S01 g03, S02 g01), registered in bible/creatures/index.json; every other group carries creatures: []. See the CRE-001 / CHAR-white-rabbit note below.",
+    "costume_refs_valid": "PASS — every group's costumes covers exactly its characters: CHAR-alice COS-001, CHAR-alice-sister COS-003, CHAR-white-rabbit COS-006, each verified against bible/costumes.json ownership. No change_point falls inside ep01, so no group boundary is forced by wardrobe and no adjacent-group costume change occurs.",
+    "transition_ok": "PASS — 6 transitions, all types in the enum, dissolves 0.6 s and 0.8 s both inside 0.25-1.0 s, non-hard-cut all carry intent + reason + source, Σ renderable = 1.4 s ≤ 5.4 s (1% of 540). narrative_block FF-ep01-open is a single-group flashforward whose entry group carries TR-01 and whose following group carries TR-02. All six directing_plan 转场清单 items are landed; no others invented.",
+    "pose_present": "PASS — see host check above.",
+    "duration_range": "PASS — all 101 duration_hint_s inside 0.5-15 s (min 2.0, max 12.0).",
+    "group_caps": "PASS — max group 30.0 s (S08 g05), min 3.0 s; max group cast 2 characters (cap 4).",
+    "dialogue_fit_x0_7": "PASS — see dialogue_groups below; every dialogue group is within 0.7 × group length, and additionally every line sits whole in a shot at least 1.0 s longer than the line (≥0.5 s silent head and tail).",
+    "no_narration": "PASS — zero occurrences of narration_ref in the file, no shot depends on voice-over, storyboard_narration_check not run (narration is off project-wide and story/episodes/ep01/narration.md does not exist).",
+    "no_plate_view": "PASS — zero occurrences; the whitebox/spatial switch is on, so scene_refs + blocking_map + view_tile are used instead.",
+    "qa_and_evaluation": "Not run — user review settings are all 0 and the quality-judge setting is 0."
+  },
+  "groups": {
+    "count": 37,
+    "total_s": 537.0,
+    "per_scene": [
+      { "scene": "S00", "groups": 1, "durations_s": [3.0], "cast_sizes": [1] },
+      { "scene": "S01", "groups": 4, "durations_s": [17.0, 17.0, 15.0, 8.0], "cast_sizes": [2, 2, 1, 2] },
+      { "scene": "S02", "groups": 2, "durations_s": [12.0, 14.0], "cast_sizes": [1, 1] },
+      { "scene": "S03", "groups": 3, "durations_s": [25.0, 14.0, 9.0], "cast_sizes": [1, 1, 1] },
+      { "scene": "S04", "groups": 2, "durations_s": [15.5, 12.5], "cast_sizes": [2, 2] },
+      { "scene": "S05", "groups": 4, "durations_s": [18.0, 15.0, 11.0, 18.0], "cast_sizes": [1, 1, 1, 1] },
+      { "scene": "S06", "groups": 5, "durations_s": [14.5, 15.5, 11.0, 17.0, 17.0], "cast_sizes": [1, 1, 1, 1, 1] },
+      { "scene": "S07", "groups": 5, "durations_s": [24.5, 10.0, 10.0, 12.0, 11.5], "cast_sizes": [1, 1, 1, 1, 1] },
+      { "scene": "S08", "groups": 6, "durations_s": [22.0, 10.5, 7.5, 22.5, 30.0, 17.5], "cast_sizes": [1, 2, 2, 1, 1, 1] },
+      { "scene": "S09", "groups": 2, "durations_s": [13.0, 9.0], "cast_sizes": [1, 1] },
+      { "scene": "S10", "groups": 3, "durations_s": [11.5, 15.5, 11.0], "cast_sizes": [1, 1, 1] }
+    ]
+  },
+  "dialogue_groups": [
+    { "group": "S01_g01", "lines": ["LN-ep01-001"], "sum_est_s": 4.8, "group_s": 17.0, "cap_s": 11.9, "pass": true },
+    { "group": "S01_g02", "lines": ["LN-ep01-002"], "sum_est_s": 1.4, "group_s": 17.0, "cap_s": 11.9, "pass": true },
+    { "group": "S03_g01", "lines": ["LN-ep01-003"], "sum_est_s": 3.7, "group_s": 25.0, "cap_s": 17.5, "pass": true },
+    { "group": "S03_g02", "lines": ["LN-ep01-004", "LN-ep01-005"], "sum_est_s": 7.7, "group_s": 14.0, "cap_s": 9.8, "pass": true },
+    { "group": "S04_g01", "lines": ["LN-ep01-006"], "sum_est_s": 2.0, "group_s": 15.5, "cap_s": 10.85, "pass": true },
+    { "group": "S04_g02", "lines": ["LN-ep01-007"], "sum_est_s": 3.0, "group_s": 12.5, "cap_s": 8.75, "pass": true },
+    { "group": "S06_g01", "lines": ["LN-ep01-008", "LN-ep01-009"], "sum_est_s": 7.4, "group_s": 14.5, "cap_s": 10.15, "pass": true },
+    { "group": "S06_g02", "lines": ["LN-ep01-010"], "sum_est_s": 4.9, "group_s": 15.5, "cap_s": 10.85, "pass": true },
+    { "group": "S06_g03", "lines": ["LN-ep01-011"], "sum_est_s": 5.1, "group_s": 11.0, "cap_s": 7.7, "pass": true },
+    { "group": "S06_g05", "lines": ["LN-ep01-012"], "sum_est_s": 5.9, "group_s": 17.0, "cap_s": 11.9, "pass": true },
+    { "group": "S07_g01", "lines": ["LN-ep01-013", "LN-ep01-013b", "LN-ep01-014"], "sum_est_s": 14.7, "group_s": 24.5, "cap_s": 17.15, "pass": true },
+    { "group": "S07_g02", "lines": ["LN-ep01-015"], "sum_est_s": 1.6, "group_s": 10.0, "cap_s": 7.0, "pass": true },
+    { "group": "S07_g03", "lines": ["LN-ep01-016"], "sum_est_s": 2.0, "group_s": 10.0, "cap_s": 7.0, "pass": true },
+    { "group": "S07_g04", "lines": ["LN-ep01-017"], "sum_est_s": 5.8, "group_s": 12.0, "cap_s": 8.4, "pass": true },
+    { "group": "S08_g01", "lines": ["LN-ep01-018", "LN-ep01-018b"], "sum_est_s": 8.6, "group_s": 22.0, "cap_s": 15.4, "pass": true },
+    { "group": "S08_g02", "lines": ["LN-ep01-019"], "sum_est_s": 4.8, "group_s": 10.5, "cap_s": 7.35, "pass": true },
+    { "group": "S08_g03", "lines": ["LN-ep01-020"], "sum_est_s": 1.4, "group_s": 7.5, "cap_s": 5.25, "pass": true },
+    { "group": "S08_g04", "lines": ["LN-ep01-021", "LN-ep01-022", "LN-ep01-023"], "sum_est_s": 15.0, "group_s": 22.5, "cap_s": 15.75, "pass": true },
+    { "group": "S08_g05", "lines": ["LN-ep01-024", "LN-ep01-025", "LN-ep01-026"], "sum_est_s": 19.8, "group_s": 30.0, "cap_s": 21.0, "pass": true },
+    { "group": "S08_g06", "lines": ["LN-ep01-027"], "sum_est_s": 1.9, "group_s": 17.5, "cap_s": 12.25, "pass": true },
+    { "group": "S09_g01", "lines": ["LN-ep01-028"], "sum_est_s": 1.7, "group_s": 13.0, "cap_s": 9.1, "pass": true },
+    { "group": "S10_g01", "lines": ["LN-ep01-029"], "sum_est_s": 5.5, "group_s": 11.5, "cap_s": 8.05, "pass": true },
+    { "group": "S10_g02", "lines": ["LN-ep01-030", "LN-ep01-030b"], "sum_est_s": 7.7, "group_s": 15.5, "cap_s": 10.85, "pass": true },
+    { "group": "S10_g03", "lines": ["LN-ep01-031"], "sum_est_s": 5.6, "group_s": 11.0, "cap_s": 7.7, "pass": true }
+  ],
+  "dialogue_fit_shaped_the_grouping": [
+    "S07 g01 holds shots 1-4 (24.5 s) rather than splitting the box business off the reasoning: LN-013 + LN-013b + LN-014 = 14.7 s needs a group of at least 21.0 s, and the two silent glass-box shots supply it. This also matches the director's instruction to stage the reasoning as one continuous crossing that ends at the box.",
+    "S08 g05 pulls shot 17 (the glove that fits, 4.5 s, silent) into the aria group: LN-024 + LN-025 + LN-026 = 19.8 s needs ≥28.3 s and the aria alone is 25.5 s. It is also the right beat boundary — lowering her eyes from the vault to her hands is one continuous movement.",
+    "No overflow was pushed to p6-dialogue-fit; that node stays a backstop."
+  ],
+  "provisional_hooks": {
+    "status": "hooks.json is awaiting_selection; drafted on the recommended pair oh-1 + ec-2 and every hook-dependent element is tagged so H3S can see exactly what moves.",
+    "marked_provisional_hook_oh_1": [
+      "scene block S00 (whole block)",
+      "S00 shot 1",
+      "S00 group 1",
+      "S00 group 1 transition_in TR-01",
+      "S01 group 1 transition_in TR-02"
+    ],
+    "marked_provisional_hook_ec_2": [
+      "S10 shot 8 (the V-wake insert)"
+    ],
+    "if_oh_2": "S00 and TR-01/TR-02 drop out, S01 group 1 becomes the episode head with a plain hard_cut. Nothing else in the storyboard changes. Episode runs 534 s.",
+    "if_oh_3": "S00 stays as a group but its shot becomes a lift of S08 shot 12; that is why LN-ep01-022 is kept whole with a clean line-end inside one shot and why S08 g04's boundary leaves air on both sides of it.",
+    "if_ec_1": "S10 shot 8 drops out and S10 group 3 becomes shots 6-7 with shot 7 held longer. Episode runs 535 s.",
+    "if_ec_3_CONFLICT": "Carried through from the director and repeated in the storyboard's hooks_provisional block: ec-3 wants a rising high wide over the pool, which contradicts the S10 viewpoint rule this whole scene is built on (camera in the water at Alice's 0.61 m scale for the entire scene; no high or crane view anywhere in ep01, and the POV inventory has no shot that knows more than Alice knows). Choosing ec-3 needs S10 re-planned at the director's desk — it cannot be patched at the storyboard layer."
+  },
+  "script_problems_found": [
+    {
+      "id": "script-note-ep01-s08-rabbit-hands",
+      "severity": "minor / staging",
+      "routed_to": "orchestrator → director (NOT edited; screenplay.md is frozen at H3 and no word of it was changed)",
+      "scene": "S08",
+      "problem": "The action line gives the White Rabbit 'a pair of white kid gloves in one hand and a large fan in the other' while he is trotting through the water. A quadruped cannot carry two objects in two hands and run, and CR-003/CR-015 plus the G4 char-sheet waiver make the quadruped gait non-negotiable in ep01.",
+      "directed_around": "He carries both in his mouth while running on four legs (S08 shot 6) and transfers them to his forepaws when he sits back on his haunches to speak (shot 7); the drop in shot 10 then plays exactly as written. Same grammar as S04, where he sits back on his haunches to read the watch. Recorded in storyboard.json open_issues and in the S08 staging_decision field. If the director would rather the line changed, that is a screenplay change through orchestrator, not mine."
+    },
+    {
+      "id": "DEF-p6-directing-ep01-001",
+      "severity": "carried, not re-raised",
+      "routed_to": "already open, raised by the director and routed to memory-bible",
+      "problem": "color_script's scene_curves describe daylight through high halo-roundel windows in the hall and a daylight shaft in the pool; architecture.json says the hall is windowless with 25 blind roundels and lighting.json rules roundel_glow: reflected_lamplight_only.",
+      "handled": "The director's interim direction is followed literally in every S05-S10 shot: no daylight, no roundel shaft, no coloured cast light in the hall except the garden green through the little door, and in S10 the way-out light is the brightest reflection field at the south end. If memory-bible rules the other way, S05/S06/S10 need a lighting re-pass but no re-cut."
+    }
+  ],
+  "notes_for_downstream": {
+    "CRE-001_vs_CHAR-white-rabbit": "Two different entities and they are kept apart everywhere. CRE-001 (label 'Wild White Rabbit') is the real, mute, unclothed animal and appears only in S01 g03 and S02 g01, registered in those groups' creatures[]. CHAR-white-rabbit (label 'White Rabbit') is the dream character in a waistcoat and appears only in S04 g01/g02 and S08 g02/g03, registered in those groups' characters[] with COS-006. A name-based creature audit will see 'White Rabbit' inside S04/S08 shot content — that is the character, not the creature, and the split follows CRE-001 distinct_from and screenplay [出场].",
+    "scene_id_split_in_S05": "S05 shots 1-6 are staged on SCN-long-hall and shots 7-11 on SCN-little-door-passage (whose hall_floor landmark is the flagstones in front of the little door), so no group straddles two layout packs and the garden POV gets a real tile. shot-planning should keep that split when it re-cuts.",
+    "cross_group_continuity": "Alice's plan position is continuous across the whole long-hall chain S06 g01 → S09 g02 (the host check verifies S07 g01 against S06 g05 and S08 g01 against S07 g05, since all of them share scene_id SCN-long-hall). Scene changes at S05→little-door and S09→pool reset the chain, and the narrative hand-off is still exact: she ends S05 at the little door and starts S06 at the curtain; she goes into the water at the glass table in S09 and surfaces beside the glass table legs in S10.",
+    "characters_array_order": "characters[] is the whitebox colour order and must never be reordered: Alice is always index 0, the White Rabbit index 1, the Sister index 1 where he is absent.",
+    "must_not_be_cut_inside": [
+      "S03 shot 9 — the unbroken fall-asleep take (the frame where the dream starts)",
+      "S06 shot 5 — the 12 s locked wide the shrink happens inside",
+      "S07 shots 7-8 — the three gauges in sequence",
+      "S08 shot 12 — '…who in the world am I?' must land and end inside one shot with a clean line-end",
+      "S08 shots 19-20 — the fan stopping and the shrinking stopping in the same frame"
+    ],
+    "quadruped_prompt_wording_required_in": ["S04 g01", "S04 g02", "S08 g02", "S08 g03"],
+    "time_of_day": "All ten scenes are early_afternoon. bible/scenes/index.json carries no time_variants array; the project's controlled vocabulary lives in each scene's lighting.json condition.time_of_day, and the dream is Alice's 14:22-14:55 nap (SCN-long-hall LGT-long-hall-01 waking_clock). SCN-long-hall's late_afternoon scheme LGT-long-hall-02 is the ch007 return and belongs to ep06.",
+    "asl_deviation": "S03 is 9 shots / ASL 5.3 s against the plan's ~6 / ~8 s. Drivers are the two required POV-down inserts, the three visibly distinct dressing passes and the TR-04/TR-05 boundaries. Recorded in storyboard.json open_issues; shot-planning owns the final numbers. Every other scene is within one shot of the plan's table."
+  },
+  "not_done_and_why": {
+    "pencil_sketches": "Not produced — sketches are not this station's product and are not a prerequisite for the H3S signature (assets/storyboard/ep01/ is untouched).",
+    "storyboard_narration_check": "Not run — narration is off project-wide and there is no narration.md.",
+    "evaluation_and_qa": "Not requested this run; all user review settings are 0.",
+    "storyboard_notes": "directing/ep01/storyboard_notes.json does not exist, so there were no user notes to apply this round."
+  },
+  "files_written": [
+    "directing/ep01/storyboard.json",
+    "runs/p6-storyboard-ep01/result.json"
+  ],
+  "next": "Human gate g6s (H3S — 故事板确认) on /preview/board. shot-planning is not dispatched until the user signs."
+}

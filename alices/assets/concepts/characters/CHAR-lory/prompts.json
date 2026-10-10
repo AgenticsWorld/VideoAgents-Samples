@@ -1,0 +1,26 @@
+{
+  "character_id": "CHAR-lory",
+  "task_id": "p4-char-concept-cb2",
+  "shared_assembly": "runs/p4-char-concept-cb2/prompt_assembly.json",
+  "sheets": [
+    {
+      "file": "sheet.png",
+      "kind": "default costume base sheet (four-panel: front / side / back + head close-up)",
+      "provider": "volcengine",
+      "model": "doubao-seedream-5-0-pro-260628",
+      "size": "2560x1440",
+      "n": 1,
+      "seed": null,
+      "layout_part": "runs/p4-char-concept-cb2/prompts/_layout_animal.txt",
+      "subject_part": "runs/p4-char-concept-cb2/prompts/CHAR-lory.txt",
+      "full_prompt_file": "runs/p4-char-concept-cb2/prompts/CHAR-lory.full_prompt.txt",
+      "negative_file": "runs/p4-char-concept-cb2/prompts/CHAR-lory.negative.txt",
+      "default_costume": {"source": "bible/costumes.json", "outfit_id": "COS-024", "visual_en_verbatim_in_prompt": true},
+      "style_fragment": "bible/style.json style_fragment_ui (verbatim)",
+      "refs": ["runs/p4-char-concept-cb2/inputs/character_sheet_template.jpg"],
+      "user_refs": [],
+      "generated_at": "2026-09-23",
+      "attempt": 1
+    }
+  ]
+}

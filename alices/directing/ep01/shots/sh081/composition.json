@@ -1,0 +1,34 @@
+{
+  "shot_id": "sh081",
+  "scene_id": "SCN-long-hall",
+  "size": "close",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "centre",
+    "anchor_xy": [0.48, 0.52],
+    "size_in_frame": "her two open hands fill the middle of frame, palms up, fingers about 0.44 of frame height; her face is out of the top of frame entirely"
+  },
+  "second_subject": {
+    "id": "PROP-white-kid-gloves-and-fan",
+    "grid": "centre",
+    "anchor_xy": [0.54, 0.58],
+    "note": "the doll-sized fan and one white glove lying in her palm — her fingers are as long as the fan is. The gauge is inside the hand it measures."
+  },
+  "headroom": "none: the crop is at the wrist-to-chin band, so the frame has no head in it. Breaking the sustained set-up by removing her face is the shot's whole structural function.",
+  "horizon_eyeline": "Water-level onto her open hands at 0.55 m; the waterline runs across the bottom 0.10 of frame. No eyeline in frame — she is reciting to her own fingers.",
+  "layers": {
+    "fg": "her palms and counting fingers",
+    "mg": "the fan and the glove lying across them",
+    "bg": "near black, and the dark water below"
+  },
+  "gaze": {
+    "direction": "down_frame",
+    "lead_room": "none",
+    "note": "the look is implied from above the top edge, coming down onto the hands. The audience is put where her eyes are and given exactly what she is looking at."
+  },
+  "balance": "Two symmetrical masses meeting at the centre — a pupil's hands, held up like a lesson. The symmetry is schoolroom-tidy, which is what makes the wrong answers land.",
+  "leading_lines": "The fingers are ten parallel lines converging slightly inward, counting; the fan's ribs repeat them at a tenth of the size. The rhyme between finger and rib is the frame's one quiet joke.",
+  "eye_first": "The fingers being counted off, then the fan lying among them at doll scale.",
+  "safe_area_ok": true,
+  "constraint_binding": "The first break in the sustained set-up, and it is a break of SIZE AND SUBJECT, not of axis — same water-level line, same lighting, face removed. The recitation stays dry and absolutely straight, so the composition offers no reaction and no comic emphasis: the wrongness must be the audience's discovery, not hers yet, and there is no face in frame to give it away."
+}

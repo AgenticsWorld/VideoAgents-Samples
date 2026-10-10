@@ -1,0 +1,554 @@
+{
+  "schema_version": "script_breakdown/1.0",
+  "ep": "ep01",
+  "source": "agent",
+  "_meta": {
+    "project": "alices",
+    "task_id": "p5-breakdown-ep01",
+    "agent": "01-story/timeline-story",
+    "generated": "2026-09-22",
+    "attempt": 1,
+    "content_language": "English (project output-language setting, 2026-09-22)",
+    "read_only": true,
+    "inputs": [
+      "story/episodes/ep01/screenplay.md (v3, task p5-dialogue-ep01-fix)",
+      "story/episodes/ep01/hooks.json (v1, status awaiting_selection)",
+      "story/episodes/ep01/pacing.json (v1, based_on screenplay v2 -- see issues[] for the one scene where v3 drifted)",
+      "story/episode_plan.json (ep01 entry)",
+      "story/events.json (ev0001-ev0008)",
+      "story/story_graph.json (acts, structure_points, foreshadowing)",
+      "bible/characters/index.json, bible/scenes/index.json, bible/creatures/index.json",
+      "bible/h1_summary.md, bible/cultivation.json SUP-001..014 (read for context; no design decision made here)",
+      "qa/defects/DEF-p3-char-index-902.json, DEF-p3-char-index-903.json (checked for applicability; see issues[])"
+    ],
+    "scope": "Read-only structural decomposition of ep01's existing story-layer products for the console Screenplay Preview page, per docs/script_breakdown.md. No screenplay, dialogue, hooks or pacing file was modified by this task.",
+    "amendments": [
+      {
+        "change_id": "BIB-0027", "task_id": "p4-cr-breakdown-ep01", "date": "2026-09-23",
+        "reason": "USER-DIRECTED controlled change (user ruling 2026-09-22, overrides H1 5.1 A): talking dream animals -- including the dream White Rabbit of this episode -- are now photoreal CGI animals composited into live-action plates (naturalistic anatomy, only iconic period props: waistcoat, watch, gloves), not human performers in animal-coded dress. The real, mute, unclothed waking-frame rabbit (CRE-001, S01-S02) is unchanged.",
+        "fields_changed": ["cast[] CHAR-white-rabbit.role", "scenes[S04].purpose", "scenes[S04].notes[0]", "scenes[S01].notes[0] (clarified only, not stale)"]
+      }
+    ]
+  },
+
+  "title": "Down the Rabbit-Hole",
+  "logline": "A bored girl follows a white rabbit into a dream where DRINK ME and EAT ME keep changing her size, and just as she starts to wonder who she even is, she slips and plunges into a pool of her own tears.",
+  "pov": "Third person, no narrator (narration is off project-wide; Alice's inner life is played through action and performance).",
+  "narration_enabled": false,
+  "duration_budget_s": 540,
+  "total_est_s": 537,
+
+  "totals": { "scenes": 10, "lines": 34, "dialogue_s": 142.0, "narration_items": 0, "narration_s": 0, "cast": 3, "hooks": 6 },
+
+  "cast": [
+    {
+      "id": "CHAR-alice",
+      "name": "Alice",
+      "role": "Protagonist (tier S)",
+      "scenes": ["S01", "S02", "S03", "S04", "S05", "S06", "S07", "S08", "S09", "S10"],
+      "lines": 30,
+      "dialogue_s": 130.8,
+      "arc": "Drowsy on the bank, then curious and game through the fall and the hall's size tricks; at the episode's pinch point she is giant, weeping and asking 'who in the world am I?', shrinks by the dropped fan, and ends the episode mid-plunge into her own tears."
+    },
+    {
+      "id": "CHAR-white-rabbit",
+      "name": "White Rabbit",
+      "role": "Dream engine / recurring herald (tier A) -- render: photoreal CGI animal in the dream (S04, S08), naturalistic anatomy with only the waistcoat/watch/gloves props (SUP-002, amended BIB-0027); the silent waking rabbit of S01-S02 is CRE-001, a real animal, unaffected.",
+      "scenes": ["S04", "S08"],
+      "lines": 3,
+      "dialogue_s": 9.8,
+      "arc": "Appears only twice, both times fleeing his own lateness for the Duchess; his second flight (dropping the fan and gloves) is the mechanism that shrinks Alice back down at the climax."
+    },
+    {
+      "id": "CHAR-alice-sister",
+      "name": "Alice's Sister",
+      "role": "Waking-frame anchor (tier A)",
+      "scenes": ["S01"],
+      "lines": 1,
+      "dialogue_s": 1.4,
+      "arc": "Present only in the episode's first minute — her calm 'Hush, Alice dear' is the last real-world voice heard before the dream takes over for the rest of the season."
+    }
+  ],
+
+  "scenes": [
+    {
+      "order": 1, "no": "S01", "scene_id": "SCN-riverbank", "scene_name": "The Bank",
+      "int_ext": "EXT", "time_of_day": "Early afternoon", "segment": null,
+      "events": ["ev0001"], "cast": ["CHAR-alice", "CHAR-alice-sister", "CRE-001"],
+      "summary": "On a hot July afternoon, bored Alice ignores her sister's pictureless book, dozes off for a moment, then bolts up and chases a white rabbit across the field.",
+      "action": "A hot, still July afternoon on the Thames. Elms and a crack willow hang over a grassy bank; below it, the reed-edged backwater lies flat as glass. Far across the meadow, a parish spire. On the flat shelf of the bank under the elm, Alice's Sister (mid-teens) sits upright, reading a thick book. Alice (about ten; pale cornflower-blue dress, white pinafore) lies on her stomach beside her, chin on her fists, idle. Alice wriggles closer and peeps over her sister's arm at the open page: close grey print, margin to margin, not a single picture. The Sister turns a page without looking up. Alice rolls onto her back. The heat presses on her. She picks one daisy, weighs it against the whole meadow of daisies she would have to pick for a chain, and lets it fall onto her pinafore. She tosses her head to clear a strand of hair from her eyes. Her eyelids droop; for a moment they close. A rustle close by. Alice's eyes open. A white rabbit with pink eyes runs past within arm's reach of her shoes, quick and silent, and bounds away down the meadow. Alice sits bolt upright and stares after it -- a white rabbit, out here in the field. She looks at her Sister: still reading. Alice scrambles to her feet and runs after the rabbit.",
+      "beat": "opening_hook", "purpose": "sp-opening-hook: establish drowsy ordinary world and the daisy-chain non-decision before the White Rabbit breaks it; plants fs-032 (sleepy on the bank) by having her eyes close for a moment before the rabbit passes.",
+      "alloc_s": 57, "start_s": 3, "end_s": 60, "alloc_source": "pacing",
+      "dialogue_s": 6.2, "narration_s": 0, "silent_s": 50.8, "lines": 2,
+      "emotion": { "type": "drowsy boredom tipping into curiosity", "intensity": 0.35 },
+      "tempo": "slow", "tempo_label": "Slow", "color": "act1 (drowsy summer heat, boredom tipping into curiosity)",
+      "transition": "CUT TO", "hooks": ["oh-2"], "narration_ids": [],
+      "blocks": [
+        { "type": "action", "text": "A hot, still July afternoon on the Thames. Elms and a crack willow hang over a grassy bank; below it, the reed-edged backwater lies flat as glass. Far across the meadow, a parish spire.\nOn the flat shelf of the bank under the elm, Alice's Sister (mid-teens) sits upright, reading a thick book. Alice (about ten; pale cornflower-blue dress, white pinafore) lies on her stomach beside her, chin on her fists, idle.\nAlice wriggles closer and peeps over her sister's arm at the open page: close grey print, margin to margin, not a single picture." },
+        { "type": "dialogue", "lines": [{ "id": "LN-ep01-001", "speaker": "CHAR-alice", "speaker_name": "Alice", "text": "What is the use of a book without pictures or conversations?", "paren": null, "emotion": "calm", "est_s": 4.8, "style_hits": ["A6 pressing question", "A11 what-is-the-use musing"] }] },
+        { "type": "action", "text": "The Sister turns a page without looking up." },
+        { "type": "dialogue", "lines": [{ "id": "LN-ep01-002", "speaker": "CHAR-alice-sister", "speaker_name": "Alice's Sister", "text": "Hush, Alice dear.", "paren": null, "emotion": "calm", "est_s": 1.4, "style_hits": ["S1 endearment"] }] },
+        { "type": "action", "text": "Alice rolls onto her back. The heat presses on her. She picks one daisy, weighs it against the whole meadow of daisies she would have to pick for a chain, and lets it fall onto her pinafore. She tosses her head to clear a strand of hair from her eyes. Her eyelids droop; for a moment they close." },
+        { "type": "sound", "text": "♪ Bees in the clover; the backwater lapping at the reeds; far-off sheep-bells.\n♪ Across the meadow, the church clock begins to strike two." },
+        { "type": "action", "text": "A rustle close by. Alice's eyes open. A white rabbit with pink eyes runs past within arm's reach of her shoes, quick and silent, and bounds away down the meadow.\nAlice sits bolt upright and stares after it -- a white rabbit, out here in the field. She looks at her Sister: still reading. Alice scrambles to her feet and runs after the rabbit." },
+        { "type": "transition", "text": "CUT TO" }
+      ],
+      "dialogue": [
+        { "id": "LN-ep01-001", "speaker": "CHAR-alice", "speaker_name": "Alice", "text": "What is the use of a book without pictures or conversations?", "paren": null, "emotion": "calm", "est_s": 4.8, "style_hits": ["A6 pressing question", "A11 what-is-the-use musing"] },
+        { "id": "LN-ep01-002", "speaker": "CHAR-alice-sister", "speaker_name": "Alice's Sister", "text": "Hush, Alice dear.", "paren": null, "emotion": "calm", "est_s": 1.4, "style_hits": ["S1 endearment"] }
+      ],
+      "narration_candidates": [], "sound": ["Bees in the clover; the backwater lapping at the reeds; far-off sheep-bells.", "Across the meadow, the church clock begins to strike two."],
+      "notes": ["ch001-p01 \"what is the use of a book\" is Alice's thought in the source; here she says it to her sister so the film's opening question is heard without narration -- flagged for the H3 reviewer. The source Rabbit talks and takes a watch out of its waistcoat-pocket (ch001-p03); per SUP-002 the waking rabbit (CRE-001) is a real, mute, unclothed animal, unaffected by BIB-0027's CGI-animal reading (that reading covers only the talking dream Rabbit of S04/S08), so its \"I shall be late!\" is moved into the dream and the lateness motif is seeded here by the church clock striking two. Alice's eyes closing for a moment before the rabbit passes plants fs-032. Dinah is not shown. Foreshadowing: fs-032, fs-038 setup; fs-001 seeded; source: ch001#p01-p03"],
+      "incompressible": []
+    },
+    {
+      "order": 2, "no": "S02", "scene_id": "SCN-field-hedge-burrow", "scene_name": "The Field Edge at the Hedge Burrow",
+      "int_ext": "EXT", "time_of_day": "Early afternoon", "segment": null,
+      "events": ["ev0001"], "cast": ["CHAR-alice", "CRE-001"],
+      "summary": "Alice chases the rabbit to a hedge burrow and, without looking back, crawls into the dark after it.",
+      "action": "Alice runs through the long meadow grass, skirt bunched in one fist, the white tail of the rabbit flickering ahead of her. The rabbit reaches the laid hawthorn hedge and, without a pause, pops down into a burrow at its foot. Alice arrives breathless and drops to her knees at the hole. A fan of pale dug earth, hawthorn roots, and beyond them, cool darkness. She lies flat and puts her face to the opening. The shade is cool on her hot cheek. She does not look back. She reaches one arm into the dark, then her head and shoulders; the burrow mouth is somehow wide enough to take her, and she wriggles in. Her boots kick once and vanish under the hedge.",
+      "beat": "call_answered / threshold_approach", "purpose": "The chase to the burrow; last waking-world images before the dream begins -- a girl of ten cannot fit an ordinary burrow, so the moment she does is the first impossible thing on screen.",
+      "alloc_s": 26, "start_s": 60, "end_s": 86, "alloc_source": "pacing",
+      "dialogue_s": 0, "narration_s": 0, "silent_s": 26.0, "lines": 0,
+      "emotion": { "type": "eager pursuit", "intensity": 0.55 },
+      "tempo": "medium", "tempo_label": "Medium", "color": "act1 (drowsy summer heat, boredom tipping into curiosity -- last waking light)",
+      "transition": "CUT TO", "hooks": [], "narration_ids": [],
+      "blocks": [
+        { "type": "action", "text": "Alice runs through the long meadow grass, skirt bunched in one fist, the white tail of the rabbit flickering ahead of her.\nThe rabbit reaches the laid hawthorn hedge and, without a pause, pops down into a burrow at its foot.\nAlice arrives breathless and drops to her knees at the hole. A fan of pale dug earth, hawthorn roots, and beyond them, cool darkness. She lies flat and puts her face to the opening. The shade is cool on her hot cheek.\nShe does not look back. She reaches one arm into the dark, then her head and shoulders; the burrow mouth is somehow wide enough to take her, and she wriggles in. Her boots kick once and vanish under the hedge." },
+        { "type": "sound", "text": "♪ The meadow sounds -- bees, sheep-bells -- drain away to nothing." },
+        { "type": "transition", "text": "CUT TO" }
+      ],
+      "dialogue": [], "narration_candidates": [], "sound": ["The meadow sounds -- bees, sheep-bells -- drain away to nothing."],
+      "notes": ["\"never once considering how in the world she was to get out again\" (ch001-p04) is played as her not looking back. The moment she fits the burrow is the quiet onset of the dream (episode_plan dream_frame.waking_open: no 'dream' title, the light and sound shift). source: ch001#p03-p04"],
+      "incompressible": []
+    },
+    {
+      "order": 3, "no": "S03", "scene_id": "SCN-falling-dream", "scene_name": "The Falling Dream",
+      "int_ext": "INT", "time_of_day": "Dream", "segment": null,
+      "events": ["ev0001", "ev0002"], "cast": ["CHAR-alice"],
+      "summary": "Alice falls slowly down a well lined with shelves, muses about Dinah and cats and bats, and drifts asleep mid-fall.",
+      "action": "Darkness. Alice crawls along a short earth tunnel laced with hawthorn roots. The floor tips away under her hands -- she has no moment to stop herself -- and she drops. She falls, but slowly. Her skirts and pinafore billow; her hair floats up. The round walls of a deep well slide upward past her: glazed cupboards, bookshelves, maps and pictures hung on pegs, like the rooms of a house turned on end. Drifting past a shelf, she takes down a jar labelled ORANGE MARMALADE. She looks inside: empty. Disappointment. She holds it out to drop it, glances down into the black below, thinks better of it, and tucks the jar into a cupboard as it slides by. Down, down, down. The furniture keeps rising past her. She settles into the fall as if into an armchair; her voice softens. Her eyes close. Her head tips to one side. Alice is asleep as she falls.",
+      "beat": "threshold_crossed / dream_onset", "purpose": "SUP-001: this is the visible moment she falls asleep, the boundary of the dream frame; hook oh-1 (recommended opening) is lifted from this scene's slow-fall wide.",
+      "alloc_s": 48, "start_s": 86, "end_s": 134, "alloc_source": "pacing",
+      "dialogue_s": 11.4, "narration_s": 0, "silent_s": 36.6, "lines": 3,
+      "emotion": { "type": "dreamy wonder, sliding into sleep", "intensity": 0.4 },
+      "tempo": "slow", "tempo_label": "Slow", "color": "act2 (sliding into sleep, curiosity without fear)",
+      "transition": "CUT TO", "hooks": ["oh-1"], "narration_ids": [],
+      "blocks": [
+        { "type": "action", "text": "Darkness. Alice crawls along a short earth tunnel laced with hawthorn roots. The floor tips away under her hands -- she has no moment to stop herself -- and she drops.\nShe falls, but slowly. Her skirts and pinafore billow; her hair floats up. The round walls of a deep well slide upward past her: glazed cupboards, bookshelves, maps and pictures hung on pegs, like the rooms of a house turned on end.\nDrifting past a shelf, she takes down a jar labelled ORANGE MARMALADE. She looks inside: empty. Disappointment. She holds it out to drop it, glances down into the black below, thinks better of it, and tucks the jar into a cupboard as it slides by." },
+        { "type": "dialogue", "lines": [{ "id": "LN-ep01-003", "speaker": "CHAR-alice", "speaker_name": "Alice", "text": "I wonder how many miles I've fallen by this time?", "paren": null, "emotion": "calm", "est_s": 3.7, "style_hits": ["A2 I wonder"] }] },
+        { "type": "action", "text": "Down, down, down. The furniture keeps rising past her. She settles into the fall as if into an armchair; her voice softens." },
+        { "type": "dialogue", "lines": [
+          { "id": "LN-ep01-004", "speaker": "CHAR-alice", "speaker_name": "Alice", "text": "Dinah'll miss me very much to-night, I should think!", "paren": null, "emotion": "calm", "est_s": 3.9, "style_hits": ["A5 Dinah", "A3 I should think"] },
+          { "id": "LN-ep01-005", "speaker": "CHAR-alice", "speaker_name": "Alice", "text": "Do cats eat bats? Do cats eat bats?... Do bats eat cats?", "paren": null, "emotion": "whisper", "est_s": 3.8, "style_hits": ["A5 cats", "A6 pressing question"] }
+        ] },
+        { "type": "action", "text": "Her eyes close. Her head tips to one side. Alice is asleep as she falls." },
+        { "type": "sound", "text": "♪ A slow, hollow hush; the tick of an unseen clock somewhere in the walls.\n♪ Thump! Thump!" },
+        { "type": "transition", "text": "CUT TO" }
+      ],
+      "dialogue": [
+        { "id": "LN-ep01-003", "speaker": "CHAR-alice", "speaker_name": "Alice", "text": "I wonder how many miles I've fallen by this time?", "paren": null, "emotion": "calm", "est_s": 3.7, "style_hits": ["A2 I wonder"] },
+        { "id": "LN-ep01-004", "speaker": "CHAR-alice", "speaker_name": "Alice", "text": "Dinah'll miss me very much to-night, I should think!", "paren": null, "emotion": "calm", "est_s": 3.9, "style_hits": ["A5 Dinah", "A3 I should think"] },
+        { "id": "LN-ep01-005", "speaker": "CHAR-alice", "speaker_name": "Alice", "text": "Do cats eat bats? Do cats eat bats?... Do bats eat cats?", "paren": null, "emotion": "whisper", "est_s": 3.8, "style_hits": ["A5 cats", "A6 pressing question"] }
+      ],
+      "narration_candidates": [], "sound": ["A slow, hollow hush; the tick of an unseen clock somewhere in the walls.", "Thump! Thump!"],
+      "notes": ["ev0002 (the fall) merged into ev0001's run of scenes; a short rigged fall (SUP-008) with the Dinah musing as the spoken core. Cut for length: the centre-of-the-earth/Latitude-Longitude/Antipathies speeches and the dream of walking hand in hand with Dinah. The visible closing of her eyes is the moment she falls asleep (SUP-001). Foreshadowing: fs-008 (Dinah) setup; source: ch001#p05-p10"],
+      "incompressible": []
+    },
+    {
+      "order": 4, "no": "S04", "scene_id": "SCN-shaft-landing-passage", "scene_name": "The Landing Heap and the Long Passage",
+      "int_ext": "INT", "time_of_day": "Dream", "segment": null,
+      "events": ["ev0003"], "cast": ["CHAR-alice", "CHAR-white-rabbit"],
+      "summary": "She lands unhurt and chases the now-dressed, watch-checking White Rabbit down a passage until he rounds a corner and vanishes.",
+      "action": "Alice lands on a heap of sticks and dry leaves. She is not a bit hurt; she jumps to her feet at once and looks up -- all dark overhead. Before her runs a long, low passage. Far down it, the White Rabbit is hurrying away: a white rabbit in a smart waistcoat, a pair of white kid gloves in one paw. He takes a large watch out of his waistcoat-pocket and looks at it. Alice stares -- the waistcoat-pocket, the watch. Then she is off after him like the wind, leaves flying from her skirt. At the far end the White Rabbit turns a corner, still muttering. Alice rounds the corner close behind him -- and stops.",
+      "beat": "dream_world_established / chase_resumed", "purpose": "Establishes the dream White Rabbit as a photoreal CGI animal (distinct from the real, unclothed CRE-001 of S01-S02) per SUP-002, amended BIB-0027, and reseeds the lateness/Duchess motif (fs-001 setup).",
+      "alloc_s": 28, "start_s": 134, "end_s": 162, "alloc_source": "pacing",
+      "dialogue_s": 5.0, "narration_s": 0, "silent_s": 23.0, "lines": 2,
+      "emotion": { "type": "startled excitement, the chase resumes", "intensity": 0.6 },
+      "tempo": "medium", "tempo_label": "Medium", "color": "act2->act3 (sliding into sleep -> wonder, full dream grade reached on the landing heap)",
+      "transition": "CUT TO", "hooks": [], "narration_ids": [],
+      "blocks": [
+        { "type": "action", "text": "Alice lands on a heap of sticks and dry leaves. She is not a bit hurt; she jumps to her feet at once and looks up -- all dark overhead.\nBefore her runs a long, low passage. Far down it, the White Rabbit is hurrying away: a white rabbit in a smart waistcoat, a pair of white kid gloves in one paw. He takes a large watch out of his waistcoat-pocket and looks at it." },
+        { "type": "dialogue", "lines": [{ "id": "LN-ep01-006", "speaker": "CHAR-white-rabbit", "speaker_name": "White Rabbit", "text": "Oh dear! Oh dear! I shall be late!", "paren": null, "emotion": "panicked", "est_s": 2.0, "style_hits": ["R1 panic interjection", "R2 lateness"] }] },
+        { "type": "action", "text": "Alice stares -- the waistcoat-pocket, the watch. Then she is off after him like the wind, leaves flying from her skirt.\nAt the far end the White Rabbit turns a corner, still muttering." },
+        { "type": "dialogue", "lines": [{ "id": "LN-ep01-007", "speaker": "CHAR-white-rabbit", "speaker_name": "White Rabbit", "text": "Oh my ears and whiskers, how late it's getting!", "paren": null, "emotion": "panicked", "est_s": 3.0, "style_hits": ["R1 ears and whiskers", "R2 lateness"] }] },
+        { "type": "action", "text": "Alice rounds the corner close behind him -- and stops." },
+        { "type": "transition", "text": "CUT TO" }
+      ],
+      "dialogue": [
+        { "id": "LN-ep01-006", "speaker": "CHAR-white-rabbit", "speaker_name": "White Rabbit", "text": "Oh dear! Oh dear! I shall be late!", "paren": null, "emotion": "panicked", "est_s": 2.0, "style_hits": ["R1 panic interjection", "R2 lateness"] },
+        { "id": "LN-ep01-007", "speaker": "CHAR-white-rabbit", "speaker_name": "White Rabbit", "text": "Oh my ears and whiskers, how late it's getting!", "paren": null, "emotion": "panicked", "est_s": 3.0, "style_hits": ["R1 ears and whiskers", "R2 lateness"] }
+      ],
+      "narration_candidates": [], "sound": [],
+      "notes": ["The landing on sticks and leaves closes the merged fall (ev0002 result) and opens ev0003; the leaves echo the hedge bank of S02. \"Oh dear! Oh dear! I shall be late!\" and the watch out of the waistcoat-pocket are moved here from the waking bank (ch001-p03) so that the talking Rabbit -- a photoreal CGI animal wearing only its waistcoat, watch and gloves (SUP-002, amended BIB-0027; no human-in-costume, no cartoon face) -- exists only inside the dream, distinct from the real, mute CRE-001. Foreshadowing: fs-001 setup; source: ch001#p03, ch001#p10-p11"],
+      "incompressible": []
+    },
+    {
+      "order": 5, "no": "S05", "scene_id": "SCN-long-hall", "scene_name": "The Long Hall",
+      "int_ext": "INT", "time_of_day": "Dream", "segment": null,
+      "events": ["ev0003"], "cast": ["CHAR-alice"],
+      "summary": "In a hall of locked doors, Alice finds a golden key that opens a tiny door onto a glimpsed garden -- but she is too big to fit through.",
+      "action": "A long, low, windowless hall lit by a row of lamps hanging from the roof, each in a gilt halo, their tulip shades glowing amber. Verdigris iron ribs curl in whiplash scrolls across a shallow vault of faded gilded vines; slender iron lily-stems climb the honey-stone walls above a mosaic dado of pastel-and-gold vines. Oak doors with horseshoe arches run all round the walls, a small stained-glass roundel glowing over each one. No Rabbit anywhere. Alice tries the doors: down one side of the hall, rattling handle after handle -- locked, locked, locked -- and up the other side. All locked. She walks slowly back down the middle of the hall, looking about her for any way out. She comes upon a little three-legged table made all of solid glass. On it lies nothing but a tiny golden key. Her face lights up. She carries it from door to door; it is far too small for every lock. On her second time round she notices a low curtain she had passed before. She lifts it: behind it, a little door about fifteen inches high. She tries the golden key. It turns. Her face breaks into delight. She opens the little door and kneels. Beyond it runs a small passage, not much larger than a rat-hole, and at its far end, in full summer sunlight -- the loveliest garden: beds of bright flowers, cool fountains throwing spray. Alice leans in until her forehead is pressed to the door frame. Her head will not go through. She pulls back and sits on her heels, looking from the little door to her own shoulders, longing written all over her.",
+      "beat": "goal_fixed", "purpose": "sp-first-plot-point: golden key, little door, garden glimpsed -- the goal that organises the whole season (fs-002 setup).",
+      "alloc_s": 62, "start_s": 162, "end_s": 224, "alloc_source": "pacing",
+      "dialogue_s": 0, "narration_s": 0, "silent_s": 62.0, "lines": 0,
+      "emotion": { "type": "puzzlement -> wonder -> longing", "intensity": 0.55 },
+      "tempo": "medium", "tempo_label": "Medium", "color": "act3 (wonder at a locked door)",
+      "transition": "CUT TO", "hooks": [], "narration_ids": [],
+      "blocks": [
+        { "type": "action", "text": "A long, low, windowless hall lit by a row of lamps hanging from the roof, each in a gilt halo, their tulip shades glowing amber. Verdigris iron ribs curl in whiplash scrolls across a shallow vault of faded gilded vines; slender iron lily-stems climb the honey-stone walls above a mosaic dado of pastel-and-gold vines. Oak doors with horseshoe arches run all round the walls, a small stained-glass roundel glowing over each one. No Rabbit anywhere.\nAlice tries the doors: down one side of the hall, rattling handle after handle -- locked, locked, locked -- and up the other side. All locked. She walks slowly back down the middle of the hall, looking about her for any way out.\nShe comes upon a little three-legged table made all of solid glass. On it lies nothing but a tiny golden key. Her face lights up. She carries it from door to door; it is far too small for every lock.\nOn her second time round she notices a low curtain she had passed before. She lifts it: behind it, a little door about fifteen inches high. She tries the golden key. It turns. Her face breaks into delight.\nShe opens the little door and kneels. Beyond it runs a small passage, not much larger than a rat-hole, and at its far end, in full summer sunlight -- the loveliest garden: beds of bright flowers, cool fountains throwing spray.\nAlice leans in until her forehead is pressed to the door frame. Her head will not go through. She pulls back and sits on her heels, looking from the little door to her own shoulders, longing written all over her." },
+        { "type": "sound", "text": "♪ Faint, from the garden end: splashing fountains, a bird singing. In the hall: lamp hiss, her own breathing." },
+        { "type": "transition", "text": "CUT TO" }
+      ],
+      "dialogue": [], "narration_candidates": [], "sound": ["Faint, from the garden end: splashing fountains, a bird singing. In the hall: lamp hiss, her own breathing."],
+      "notes": ["The garden is only seen through the little door and passage (SCN-little-door-passage view, lit per SCN-long-hall environment garden_glimpse); no separate scene is staged there in ep01. Alice's thoughts at the door (\"shut up like a telescope\", ch001-p14) are thoughts in the source and are played silently; the telescope idea is voiced later by her spoken line in S06. Foreshadowing: fs-002 setup; source: ch001#p11-p14"],
+      "incompressible": []
+    },
+    {
+      "order": 6, "no": "S06", "scene_id": "SCN-long-hall", "scene_name": "The Long Hall",
+      "int_ext": "INT", "time_of_day": "Dream", "segment": null,
+      "events": ["ev0004"], "cast": ["CHAR-alice"],
+      "summary": "A bottle marked DRINK ME shrinks her to ten inches, right for the door but now unable to reach the key she left on the table; she cries, then scolds herself.",
+      "action": "Alice goes back to the glass table, half hoping for another key. A little bottle now stands on it. She stops. Round the bottle's neck, a paper label: DRINK ME, beautifully printed in large letters. She picks it up, then holds it at arm's length, prim and careful, and turns it all the way round. No such mark. She takes a cautious sip. Surprise, then pleasure -- she tastes again, eyes rolling up as she tries to name the flavours, and very soon she has finished it off. She shrinks. The glass table rises past her into a tower; the doors soar into cliffs of oak; the lamps swing far overhead. Alice stands ten inches high on the stone floor, the empty bottle at her feet. Her face brightens: now she is the right size for the little door. Then she hesitates and puts a hand on top of her head, waiting, nervous, to see if she will go on shrinking. Nothing more happens. She runs to the little door and pulls at it -- locked. She turns. High above her, through the glass tabletop, the golden key glints where she left it. She runs back and looks up at it through the glass. She wraps her arms round a table leg and tries to climb; she slides down the slippery glass. Again. Again. At last, worn out, she sits down on the floor against the leg and cries. Then she sits up, rubs her eyes hard with her fists, and scolds herself sharply.",
+      "beat": "first_obstacle", "purpose": "DRINK ME: right size but locked out; establishes the size mechanic and her self-scolding habit (\"very fond of pretending to be two people\").",
+      "alloc_s": 75, "start_s": 224, "end_s": 299, "alloc_source": "pacing",
+      "dialogue_s": 23.3, "narration_s": 0, "silent_s": 51.7, "lines": 5,
+      "emotion": { "type": "cautious curiosity -> giddy delight -> despair", "intensity": 0.65 },
+      "tempo": "medium", "tempo_label": "Medium", "color": "act4 (giddy trial and error)",
+      "transition": "CUT TO", "hooks": [], "narration_ids": [],
+      "blocks": [
+        { "type": "action", "text": "Alice goes back to the glass table, half hoping for another key. A little bottle now stands on it. She stops." },
+        { "type": "dialogue", "lines": [{ "id": "LN-ep01-008", "speaker": "CHAR-alice", "speaker_name": "Alice", "text": "That certainly was not here before.", "paren": null, "emotion": "calm", "est_s": 2.8, "style_hits": ["A3 certainly"] }] },
+        { "type": "action", "text": "Round the bottle's neck, a paper label: DRINK ME, beautifully printed in large letters. She picks it up, then holds it at arm's length, prim and careful, and turns it all the way round." },
+        { "type": "dialogue", "lines": [{ "id": "LN-ep01-009", "speaker": "CHAR-alice", "speaker_name": "Alice", "text": "No, I'll look first, and see whether it's marked 'poison' or not.", "paren": null, "emotion": "calm", "est_s": 4.6, "style_hits": ["A7 flat contradiction"] }] },
+        { "type": "action", "text": "No such mark. She takes a cautious sip. Surprise, then pleasure -- she tastes again, eyes rolling up as she tries to name the flavours, and very soon she has finished it off." },
+        { "type": "dialogue", "lines": [{ "id": "LN-ep01-010", "speaker": "CHAR-alice", "speaker_name": "Alice", "text": "What a curious feeling! I must be shutting up like a telescope.", "paren": null, "emotion": "agitated", "est_s": 4.9, "style_hits": ["A2 curious", "A5 telescope"] }] },
+        { "type": "action", "text": "She shrinks. The glass table rises past her into a tower; the doors soar into cliffs of oak; the lamps swing far overhead. Alice stands ten inches high on the stone floor, the empty bottle at her feet.\nHer face brightens: now she is the right size for the little door. Then she hesitates and puts a hand on top of her head, waiting, nervous, to see if she will go on shrinking." },
+        { "type": "dialogue", "lines": [{ "id": "LN-ep01-011", "speaker": "CHAR-alice", "speaker_name": "Alice", "text": "For it might end, you know, in my going out altogether, like a candle.", "paren": null, "emotion": "timid", "est_s": 5.1, "style_hits": ["A11 run-on musing"] }] },
+        { "type": "action", "text": "Nothing more happens. She runs to the little door and pulls at it -- locked. She turns. High above her, through the glass tabletop, the golden key glints where she left it.\nShe runs back and looks up at it through the glass. She wraps her arms round a table leg and tries to climb; she slides down the slippery glass. Again. Again. At last, worn out, she sits down on the floor against the leg and cries.\nThen she sits up, rubs her eyes hard with her fists, and scolds herself sharply." },
+        { "type": "dialogue", "lines": [{ "id": "LN-ep01-012", "speaker": "CHAR-alice", "speaker_name": "Alice", "text": "Come, there's no use in crying like that! I advise you to leave off this minute!", "paren": null, "emotion": "agitated", "est_s": 5.9, "style_hits": ["A4 self-scolding", "A11 no use"] }] },
+        { "type": "transition", "text": "CUT TO" }
+      ],
+      "dialogue": [
+        { "id": "LN-ep01-008", "speaker": "CHAR-alice", "speaker_name": "Alice", "text": "That certainly was not here before.", "paren": null, "emotion": "calm", "est_s": 2.8, "style_hits": ["A3 certainly"] },
+        { "id": "LN-ep01-009", "speaker": "CHAR-alice", "speaker_name": "Alice", "text": "No, I'll look first, and see whether it's marked 'poison' or not.", "paren": null, "emotion": "calm", "est_s": 4.6, "style_hits": ["A7 flat contradiction"] },
+        { "id": "LN-ep01-010", "speaker": "CHAR-alice", "speaker_name": "Alice", "text": "What a curious feeling! I must be shutting up like a telescope.", "paren": null, "emotion": "agitated", "est_s": 4.9, "style_hits": ["A2 curious", "A5 telescope"] },
+        { "id": "LN-ep01-011", "speaker": "CHAR-alice", "speaker_name": "Alice", "text": "For it might end, you know, in my going out altogether, like a candle.", "paren": null, "emotion": "timid", "est_s": 5.1, "style_hits": ["A11 run-on musing"] },
+        { "id": "LN-ep01-012", "speaker": "CHAR-alice", "speaker_name": "Alice", "text": "Come, there's no use in crying like that! I advise you to leave off this minute!", "paren": null, "emotion": "agitated", "est_s": 5.9, "style_hits": ["A4 self-scolding", "A11 no use"] }
+      ],
+      "narration_candidates": [], "sound": [],
+      "notes": ["The flavour list (cherry-tart, custard, pine-apple, roast turkey, toffee, hot buttered toast) is played on her face, not spoken. The candle-flame wondering and the \"pretend to be two people\" thought are cut. Forced perspective and scaled set per SUP-003. source: ch001#p15-p24"],
+      "incompressible": []
+    },
+    {
+      "order": 7, "no": "S07", "scene_id": "SCN-long-hall", "scene_name": "The Long Hall",
+      "int_ext": "INT", "time_of_day": "Dream", "segment": null,
+      "events": ["ev0006", "ev0005"], "cast": ["CHAR-alice"],
+      "summary": "A cake marked EAT ME (merged from ev0005) sends her telescoping up past nine feet -- key in reach, door now impossible.",
+      "action": "Still ten inches high, Alice sniffs and looks about. Under the table lies a little glass box. She lifts the lid: inside, a very small cake, and on it the words EAT ME, beautifully marked in currants. She takes a little bite and claps a hand on top of her head, anxiously feeling for which way she is going. Nothing. She stays exactly the same size. She looks almost cheated -- how dull. She sets to work and finishes the whole cake, brushing crumbs off her pinafore. A beat. Then she begins to rise. Her feet stay where they are while the rest of her goes up and up -- the table sinks to her knee, the lamps come down to meet her. She looks down. Her feet are almost out of sight, far below on the flagstones. Her head knocks against a rib of the stone vault; grit sifts down. She is more than nine feet high, stooping under the roof. She picks up the tiny golden key between finger and thumb, and hurries to the garden door. She has to lie down on her side on the floor to get one eye to the open doorway. Summer light falls across that one eye. The rest of her fills the hall.",
+      "beat": "escalation", "purpose": "EAT ME merged in from ev0005: same table, same hall, continuous action -- key now reachable but the door is impossible at nine feet; things are worse than ever.",
+      "alloc_s": 68, "start_s": 299, "end_s": 367, "alloc_source": "pacing",
+      "dialogue_s": 24.1, "narration_s": 0, "silent_s": 43.9, "lines": 6,
+      "emotion": { "type": "giddy astonishment", "intensity": 0.7 },
+      "tempo": "fast", "tempo_label": "Fast", "color": "act4 (giddy trial and error)",
+      "transition": "CUT TO", "hooks": [], "narration_ids": [],
+      "blocks": [
+        { "type": "action", "text": "Still ten inches high, Alice sniffs and looks about. Under the table lies a little glass box. She lifts the lid: inside, a very small cake, and on it the words EAT ME, beautifully marked in currants." },
+        { "type": "dialogue", "lines": [
+          { "id": "LN-ep01-013", "speaker": "CHAR-alice", "speaker_name": "Alice", "text": "Well, I'll eat it. And if it makes me grow larger, I can reach the key;", "paren": null, "emotion": "calm", "est_s": 5.0, "style_hits": ["A5 grow larger", "A8 well, I"] },
+          { "id": "LN-ep01-013b", "speaker": "CHAR-alice", "speaker_name": "Alice", "text": "and if it makes me grow smaller, I can creep under the door.", "paren": null, "emotion": "calm", "est_s": 4.5, "style_hits": ["A5 grow smaller", "A11 and-chained musing"] },
+          { "id": "LN-ep01-014", "speaker": "CHAR-alice", "speaker_name": "Alice", "text": "So either way I'll get into the garden, and I don't care which happens!", "paren": null, "emotion": "calm", "est_s": 5.2, "style_hits": ["A5 garden"] }
+        ] },
+        { "type": "action", "text": "She takes a little bite and claps a hand on top of her head, anxiously feeling for which way she is going." },
+        { "type": "dialogue", "lines": [{ "id": "LN-ep01-015", "speaker": "CHAR-alice", "speaker_name": "Alice", "text": "Which way? Which way?", "paren": null, "emotion": "agitated", "est_s": 1.6, "style_hits": ["A6 repeated question"] }] },
+        { "type": "action", "text": "Nothing. She stays exactly the same size. She looks almost cheated -- how dull. She sets to work and finishes the whole cake, brushing crumbs off her pinafore.\nA beat. Then she begins to rise. Her feet stay where they are while the rest of her goes up and up -- the table sinks to her knee, the lamps come down to meet her." },
+        { "type": "dialogue", "lines": [{ "id": "LN-ep01-016", "speaker": "CHAR-alice", "speaker_name": "Alice", "text": "Curiouser and curiouser!", "paren": null, "emotion": "agitated", "est_s": 2.0, "style_hits": ["A2 curiouser (catchphrase)"] }] },
+        { "type": "action", "text": "She looks down. Her feet are almost out of sight, far below on the flagstones." },
+        { "type": "dialogue", "lines": [{ "id": "LN-ep01-017", "speaker": "CHAR-alice", "speaker_name": "Alice", "text": "Now I'm opening out like the largest telescope that ever was! Good-bye, feet!", "paren": null, "emotion": "agitated", "est_s": 5.8, "style_hits": ["A5 telescope, feet"] }] },
+        { "type": "action", "text": "Her head knocks against a rib of the stone vault; grit sifts down. She is more than nine feet high, stooping under the roof.\nShe picks up the tiny golden key between finger and thumb, and hurries to the garden door. She has to lie down on her side on the floor to get one eye to the open doorway. Summer light falls across that one eye. The rest of her fills the hall." },
+        { "type": "transition", "text": "CUT TO" }
+      ],
+      "dialogue": [
+        { "id": "LN-ep01-013", "speaker": "CHAR-alice", "speaker_name": "Alice", "text": "Well, I'll eat it. And if it makes me grow larger, I can reach the key;", "paren": null, "emotion": "calm", "est_s": 5.0, "style_hits": ["A5 grow larger", "A8 well, I"] },
+        { "id": "LN-ep01-013b", "speaker": "CHAR-alice", "speaker_name": "Alice", "text": "and if it makes me grow smaller, I can creep under the door.", "paren": null, "emotion": "calm", "est_s": 4.5, "style_hits": ["A5 grow smaller", "A11 and-chained musing"] },
+        { "id": "LN-ep01-014", "speaker": "CHAR-alice", "speaker_name": "Alice", "text": "So either way I'll get into the garden, and I don't care which happens!", "paren": null, "emotion": "calm", "est_s": 5.2, "style_hits": ["A5 garden"] },
+        { "id": "LN-ep01-015", "speaker": "CHAR-alice", "speaker_name": "Alice", "text": "Which way? Which way?", "paren": null, "emotion": "agitated", "est_s": 1.6, "style_hits": ["A6 repeated question"] },
+        { "id": "LN-ep01-016", "speaker": "CHAR-alice", "speaker_name": "Alice", "text": "Curiouser and curiouser!", "paren": null, "emotion": "agitated", "est_s": 2.0, "style_hits": ["A2 curiouser (catchphrase)"] },
+        { "id": "LN-ep01-017", "speaker": "CHAR-alice", "speaker_name": "Alice", "text": "Now I'm opening out like the largest telescope that ever was! Good-bye, feet!", "paren": null, "emotion": "agitated", "est_s": 5.8, "style_hits": ["A5 telescope, feet"] }
+      ],
+      "narration_candidates": [], "sound": [],
+      "notes": ["ev0005 (the EAT ME cake) merged into this ev0006 scene per episode_plan treatments -- same table, same hall, continuous action. The feet monologue and \"Alice's Right Foot, Esq.\" address are cut for length; only \"Good-bye, feet!\" is kept. source: ch001#p25-p27, ch002#p01-p06"],
+      "incompressible": []
+    },
+    {
+      "order": 8, "no": "S08", "scene_id": "SCN-long-hall", "scene_name": "The Long Hall",
+      "int_ext": "INT", "time_of_day": "Dream", "segment": null,
+      "events": ["ev0007"], "cast": ["CHAR-alice", "CHAR-white-rabbit"],
+      "summary": "Giant and weeping, Alice frightens off the returning White Rabbit, questions who she even is, and shrinks rapidly by his dropped fan, narrowly stopping herself in time.",
+      "action": "Alice sits up, hunched under the vault, knees to her chin. Getting through that door is more hopeless than ever. Her face crumples and she begins to cry again. She goes on crying all the same. Her tears strike the flagstones like splashes from a jug. The water spreads round her and creeps down the hall, four inches deep, reaching halfway to the far end; lamplight trembles on it. Alice hastily dries her eyes. The White Rabbit is coming back, splendidly dressed, a pair of white kid gloves in one hand and a large fan in the other, trotting in a great hurry through the shallow water. As he comes near, Alice bends down to him, desperate, her voice low and timid. The White Rabbit looks up -- and up -- at the giant girl. He starts violently, drops the gloves and the fan, and scurries away into the darkness as hard as he can go. Alice picks up the fan and the gloves, doll-sized in her enormous hand. The hall is very hot; she fans herself as she talks. She stops fanning. The question lands on her. She sits up straight like a pupil saying lessons, and tests herself, counting on her fingers. She stops, appalled. Her eyes fill again. She looks up into the dark vault, as if her family might be up there looking down. She lowers her eyes to her hands -- and stares. One of the Rabbit's little white kid gloves is on her hand. It fits. She glances at the glass table: it is taller beside her than it was. She is shrinking, fast, and in her other hand the fan is still waving. She understands, and flings the fan away just in time. She stands, about two feet high, breathing hard, still here.",
+      "beat": "pinch_point_1 / episode_climax", "purpose": "sp-pinch-1 and this episode's climax (episode_plan climax_event ev0007): identity crisis, 'who in the world am I?', the Rabbit's comic flight, narrow escape by the fan.",
+      "alloc_s": 110, "start_s": 367, "end_s": 477, "alloc_source": "pacing",
+      "dialogue_s": 51.5, "narration_s": 0, "silent_s": 58.5, "lines": 11,
+      "emotion": { "type": "despair and identity crisis (pinch 1, episode climax)", "intensity": 0.9 },
+      "tempo": "medium", "tempo_label": "Medium", "color": "act5 (lost, 'Who in the world am I?')",
+      "transition": "CUT TO", "hooks": ["oh-3"], "narration_ids": [],
+      "blocks": [
+        { "type": "action", "text": "Alice sits up, hunched under the vault, knees to her chin. Getting through that door is more hopeless than ever. Her face crumples and she begins to cry again." },
+        { "type": "dialogue", "lines": [
+          { "id": "LN-ep01-018", "speaker": "CHAR-alice", "speaker_name": "Alice", "text": "You ought to be ashamed of yourself, a great girl like you, to go on crying in this way!", "paren": null, "emotion": "agitated", "est_s": 6.5, "style_hits": ["A4 ashamed of yourself", "A9 ought to be"] },
+          { "id": "LN-ep01-018b", "speaker": "CHAR-alice", "speaker_name": "Alice", "text": "Stop this moment, I tell you!", "paren": null, "emotion": "agitated", "est_s": 2.1, "style_hits": ["A4 I tell you"] }
+        ] },
+        { "type": "action", "text": "She goes on crying all the same. Her tears strike the flagstones like splashes from a jug. The water spreads round her and creeps down the hall, four inches deep, reaching halfway to the far end; lamplight trembles on it." },
+        { "type": "sound", "text": "♪ A little pattering of feet in the distance, splashing." },
+        { "type": "action", "text": "Alice hastily dries her eyes. The White Rabbit is coming back, splendidly dressed, a pair of white kid gloves in one hand and a large fan in the other, trotting in a great hurry through the shallow water." },
+        { "type": "dialogue", "lines": [{ "id": "LN-ep01-019", "speaker": "CHAR-white-rabbit", "speaker_name": "White Rabbit", "text": "Oh! the Duchess, the Duchess! Oh! won't she be savage if I've kept her waiting!", "paren": null, "emotion": "panicked", "est_s": 4.8, "style_hits": ["R1 Oh!", "R2 Duchess, waiting"] }] },
+        { "type": "action", "text": "As he comes near, Alice bends down to him, desperate, her voice low and timid." },
+        { "type": "dialogue", "lines": [{ "id": "LN-ep01-020", "speaker": "CHAR-alice", "speaker_name": "Alice", "text": "If you please, sir--", "paren": null, "emotion": "timid", "est_s": 1.4, "style_hits": ["A1 please, sir"] }] },
+        { "type": "action", "text": "The White Rabbit looks up -- and up -- at the giant girl. He starts violently, drops the gloves and the fan, and scurries away into the darkness as hard as he can go.\nAlice picks up the fan and the gloves, doll-sized in her enormous hand. The hall is very hot; she fans herself as she talks." },
+        { "type": "dialogue", "lines": [
+          { "id": "LN-ep01-021", "speaker": "CHAR-alice", "speaker_name": "Alice", "text": "Dear, dear! How queer everything is to-day! And yesterday things went on just as usual.", "paren": null, "emotion": "calm", "est_s": 6.6, "style_hits": ["A4 Dear, dear", "A2 queer"] },
+          { "id": "LN-ep01-022", "speaker": "CHAR-alice", "speaker_name": "Alice", "text": "I wonder if I've been changed in the night? But if I'm not the same, who in the world am I?", "paren": null, "emotion": "calm", "est_s": 6.4, "style_hits": ["A2 I wonder", "A7 I'm not"] }
+        ] },
+        { "type": "action", "text": "She stops fanning. The question lands on her." },
+        { "type": "dialogue", "lines": [{ "id": "LN-ep01-023", "speaker": "CHAR-alice", "speaker_name": "Alice", "text": "Ah, that's the great puzzle!", "paren": null, "emotion": "calm", "est_s": 2.0, "style_hits": [] }] },
+        { "type": "action", "text": "She sits up straight like a pupil saying lessons, and tests herself, counting on her fingers." },
+        { "type": "dialogue", "lines": [{ "id": "LN-ep01-024", "speaker": "CHAR-alice", "speaker_name": "Alice", "text": "Let me see: four times five is twelve, and four times six is thirteen... London is the capital of Paris--", "paren": null, "emotion": "recitation_strange", "est_s": 7.7, "style_hits": ["A3 let me see"] }] },
+        { "type": "action", "text": "She stops, appalled." },
+        { "type": "dialogue", "lines": [{ "id": "LN-ep01-025", "speaker": "CHAR-alice", "speaker_name": "Alice", "text": "No, that's all wrong, I'm certain! I must have been changed for Mabel!", "paren": null, "emotion": "agitated", "est_s": 5.1, "style_hits": ["A7 flat contradiction", "A5 Mabel"] }] },
+        { "type": "action", "text": "Her eyes fill again. She looks up into the dark vault, as if her family might be up there looking down." },
+        { "type": "dialogue", "lines": [{ "id": "LN-ep01-026", "speaker": "CHAR-alice", "speaker_name": "Alice", "text": "Oh dear, I do wish they would put their heads down! I am so very tired of being all alone here!", "paren": null, "emotion": "agitated", "est_s": 7.0, "style_hits": ["A2 so very, tired"] }] },
+        { "type": "action", "text": "She lowers her eyes to her hands -- and stares. One of the Rabbit's little white kid gloves is on her hand. It fits. She glances at the glass table: it is taller beside her than it was. She is shrinking, fast, and in her other hand the fan is still waving.\nShe understands, and flings the fan away just in time. She stands, about two feet high, breathing hard, still here." },
+        { "type": "dialogue", "lines": [{ "id": "LN-ep01-027", "speaker": "CHAR-alice", "speaker_name": "Alice", "text": "That was a narrow escape!", "paren": null, "emotion": "agitated", "est_s": 1.9, "style_hits": ["A2 narrow escape"] }] },
+        { "type": "transition", "text": "CUT TO" }
+      ],
+      "dialogue": [
+        { "id": "LN-ep01-018", "speaker": "CHAR-alice", "speaker_name": "Alice", "text": "You ought to be ashamed of yourself, a great girl like you, to go on crying in this way!", "paren": null, "emotion": "agitated", "est_s": 6.5, "style_hits": ["A4 ashamed of yourself", "A9 ought to be"] },
+        { "id": "LN-ep01-018b", "speaker": "CHAR-alice", "speaker_name": "Alice", "text": "Stop this moment, I tell you!", "paren": null, "emotion": "agitated", "est_s": 2.1, "style_hits": ["A4 I tell you"] },
+        { "id": "LN-ep01-019", "speaker": "CHAR-white-rabbit", "speaker_name": "White Rabbit", "text": "Oh! the Duchess, the Duchess! Oh! won't she be savage if I've kept her waiting!", "paren": null, "emotion": "panicked", "est_s": 4.8, "style_hits": ["R1 Oh!", "R2 Duchess, waiting"] },
+        { "id": "LN-ep01-020", "speaker": "CHAR-alice", "speaker_name": "Alice", "text": "If you please, sir--", "paren": null, "emotion": "timid", "est_s": 1.4, "style_hits": ["A1 please, sir"] },
+        { "id": "LN-ep01-021", "speaker": "CHAR-alice", "speaker_name": "Alice", "text": "Dear, dear! How queer everything is to-day! And yesterday things went on just as usual.", "paren": null, "emotion": "calm", "est_s": 6.6, "style_hits": ["A4 Dear, dear", "A2 queer"] },
+        { "id": "LN-ep01-022", "speaker": "CHAR-alice", "speaker_name": "Alice", "text": "I wonder if I've been changed in the night? But if I'm not the same, who in the world am I?", "paren": null, "emotion": "calm", "est_s": 6.4, "style_hits": ["A2 I wonder", "A7 I'm not"] },
+        { "id": "LN-ep01-023", "speaker": "CHAR-alice", "speaker_name": "Alice", "text": "Ah, that's the great puzzle!", "paren": null, "emotion": "calm", "est_s": 2.0, "style_hits": [] },
+        { "id": "LN-ep01-024", "speaker": "CHAR-alice", "speaker_name": "Alice", "text": "Let me see: four times five is twelve, and four times six is thirteen... London is the capital of Paris--", "paren": null, "emotion": "recitation_strange", "est_s": 7.7, "style_hits": ["A3 let me see"] },
+        { "id": "LN-ep01-025", "speaker": "CHAR-alice", "speaker_name": "Alice", "text": "No, that's all wrong, I'm certain! I must have been changed for Mabel!", "paren": null, "emotion": "agitated", "est_s": 5.1, "style_hits": ["A7 flat contradiction", "A5 Mabel"] },
+        { "id": "LN-ep01-026", "speaker": "CHAR-alice", "speaker_name": "Alice", "text": "Oh dear, I do wish they would put their heads down! I am so very tired of being all alone here!", "paren": null, "emotion": "agitated", "est_s": 7.0, "style_hits": ["A2 so very, tired"] },
+        { "id": "LN-ep01-027", "speaker": "CHAR-alice", "speaker_name": "Alice", "text": "That was a narrow escape!", "paren": null, "emotion": "agitated", "est_s": 1.9, "style_hits": ["A2 narrow escape"] }
+      ],
+      "narration_candidates": [], "sound": ["A little pattering of feet in the distance, splashing."],
+      "notes": ["Pinch point of the episode and its climax. Identity speech trimmed to its spoken spine; cut for length: the Ada comparison, the Geography chain past Paris/Rome, the 'How doth the little crocodile' recitation, and the 'I'll stay down here till I'm somebody else' speech, whose 'put their heads down' line is kept. 'How can I have done that? I must be growing small again' is a thought in the source and is played through her looking at the glove and measuring herself against the table. Foreshadowing: fs-001 via (the Duchess), fs-005 (fan and gloves) setup, fs-030 ('Who in the world am I?') setup; source: ch002#p06-p15"],
+      "incompressible": [{ "item": "protected climax -- the full identity-crisis sequence through the narrow escape (pacing.json min_alloc_s)", "s": 100 }]
+    },
+    {
+      "order": 9, "no": "S09", "scene_id": "SCN-long-hall", "scene_name": "The Long Hall",
+      "int_ext": "INT", "time_of_day": "Dream", "segment": null,
+      "events": ["ev0008"], "cast": ["CHAR-alice"],
+      "summary": "Two feet high again, she finds the door shut and the key out of reach once more, and slips at the water's edge.",
+      "action": "Two feet high, one white glove still on her hand, Alice runs with all speed to the little door. She pulls at it: shut again. She looks back: the golden key lies on the glass table as before, far above her head. She stamps her foot, near tears of pure frustration. She runs back towards the table along the water's edge. Her foot slips on the wet stone.",
+      "beat": "breather", "purpose": "Short beat between the climax and the cliffhanger: door shut again, frustration, then the slip that plunges her into S10.",
+      "alloc_s": 22, "start_s": 477, "end_s": 499, "alloc_source": "pacing",
+      "dialogue_s": 1.7, "narration_s": 0, "silent_s": 20.3, "lines": 1,
+      "emotion": { "type": "brief hope -> frustration", "intensity": 0.6 },
+      "tempo": "fast", "tempo_label": "Fast", "color": "act6 (shock, cold plunge -- lead-in)",
+      "transition": "CUT TO", "hooks": [], "narration_ids": [],
+      "blocks": [
+        { "type": "dialogue", "lines": [{ "id": "LN-ep01-028", "speaker": "CHAR-alice", "speaker_name": "Alice", "text": "And now for the garden!", "paren": null, "emotion": "calm", "est_s": 1.7, "style_hits": ["A5 garden", "A11 and-opener"] }] },
+        { "type": "action", "text": "Two feet high, one white glove still on her hand, Alice runs with all speed to the little door. She pulls at it: shut again. She looks back: the golden key lies on the glass table as before, far above her head. She stamps her foot, near tears of pure frustration.\nShe runs back towards the table along the water's edge. Her foot slips on the wet stone." },
+        { "type": "sound", "text": "♪ Splash!" },
+        { "type": "transition", "text": "CUT TO" }
+      ],
+      "dialogue": [{ "id": "LN-ep01-028", "speaker": "CHAR-alice", "speaker_name": "Alice", "text": "And now for the garden!", "paren": null, "emotion": "calm", "est_s": 1.7, "style_hits": ["A5 garden", "A11 and-opener"] }],
+      "narration_candidates": [], "sound": ["Splash!"],
+      "notes": ["\"things are worse than ever... I declare it's too bad, that it is!\" (ch002-p15) is a thought in the source and is played as the stamped foot. source: ch002#p15-p16"],
+      "incompressible": []
+    },
+    {
+      "order": 10, "no": "S10", "scene_id": "SCN-pool-of-tears", "scene_name": "The Pool of Tears (the Hall, Flooded)",
+      "int_ext": "INT", "time_of_day": "Dream", "segment": null,
+      "events": ["ev0008"], "cast": ["CHAR-alice"],
+      "summary": "Alice surfaces chin-deep in her own tears flooding the hall -- then freezes as something splashes toward her in the dark.",
+      "action": "Alice comes up spluttering, up to her chin in water. She licks her lips -- salt. She treads water, eyes wide. She looks around. From her tiny height the hall is a flooded canyon: the bases of the oak doors rise like cliffs, the glass table legs like columns out of the water; the Rabbit's fan drifts past her on the surface. Her face falls as she understands: these are her own tears. She starts to swim, looking for a way out. Alice stops swimming and turns towards the sound. Ripples roll towards her out of the shadows. She treads water, very still, eyes fixed on the dark.",
+      "beat": "cliffhanger", "purpose": "Plunges into her own pool of tears; ends on approaching danger, withholding the Mouse reveal for ep02 (episode_plan hook_point.cliffhanger ev0008).",
+      "alloc_s": 38, "start_s": 499, "end_s": 537, "alloc_source": "pacing",
+      "dialogue_s": 18.8, "narration_s": 0, "silent_s": 19.2, "lines": 4,
+      "emotion": { "type": "shock -> dread-tinged suspense", "intensity": 0.8 },
+      "tempo": "medium", "tempo_label": "Medium", "color": "act6 (shock, cold plunge)",
+      "transition": "CUT TO BLACK", "hooks": ["ec-1", "ec-2", "ec-3"], "narration_ids": [],
+      "blocks": [
+        { "type": "action", "text": "Alice comes up spluttering, up to her chin in water. She licks her lips -- salt. She treads water, eyes wide." },
+        { "type": "dialogue", "lines": [{ "id": "LN-ep01-029", "speaker": "CHAR-alice", "speaker_name": "Alice", "text": "I must have fallen into the sea! And in that case I can go back by railway.", "paren": null, "emotion": "agitated", "est_s": 5.5, "style_hits": ["A5 railway"] }] },
+        { "type": "action", "text": "She looks around. From her tiny height the hall is a flooded canyon: the bases of the oak doors rise like cliffs, the glass table legs like columns out of the water; the Rabbit's fan drifts past her on the surface. Her face falls as she understands: these are her own tears." },
+        { "type": "dialogue", "lines": [
+          { "id": "LN-ep01-030", "speaker": "CHAR-alice", "speaker_name": "Alice", "text": "I wish I hadn't cried so much!", "paren": null, "emotion": "agitated", "est_s": 2.1, "style_hits": ["A3 I wish"] },
+          { "id": "LN-ep01-030b", "speaker": "CHAR-alice", "speaker_name": "Alice", "text": "I shall be punished for it now, I suppose, by being drowned in my own tears!", "paren": null, "emotion": "agitated", "est_s": 5.6, "style_hits": ["A3 I suppose"] }
+        ] },
+        { "type": "action", "text": "She starts to swim, looking for a way out." },
+        { "type": "dialogue", "lines": [{ "id": "LN-ep01-031", "speaker": "CHAR-alice", "speaker_name": "Alice", "text": "That will be a queer thing, to be sure! However, everything is queer to-day.", "paren": null, "emotion": "calm", "est_s": 5.6, "style_hits": ["A2 queer (catchphrase)"] }] },
+        { "type": "sound", "text": "♪ Something splashing about in the pool a little way off, in the lamplit dark." },
+        { "type": "action", "text": "Alice stops swimming and turns towards the sound. Ripples roll towards her out of the shadows. She treads water, very still, eyes fixed on the dark." },
+        { "type": "transition", "text": "CUT TO BLACK" }
+      ],
+      "dialogue": [
+        { "id": "LN-ep01-029", "speaker": "CHAR-alice", "speaker_name": "Alice", "text": "I must have fallen into the sea! And in that case I can go back by railway.", "paren": null, "emotion": "agitated", "est_s": 5.5, "style_hits": ["A5 railway"] },
+        { "id": "LN-ep01-030", "speaker": "CHAR-alice", "speaker_name": "Alice", "text": "I wish I hadn't cried so much!", "paren": null, "emotion": "agitated", "est_s": 2.1, "style_hits": ["A3 I wish"] },
+        { "id": "LN-ep01-030b", "speaker": "CHAR-alice", "speaker_name": "Alice", "text": "I shall be punished for it now, I suppose, by being drowned in my own tears!", "paren": null, "emotion": "agitated", "est_s": 5.6, "style_hits": ["A3 I suppose"] },
+        { "id": "LN-ep01-031", "speaker": "CHAR-alice", "speaker_name": "Alice", "text": "That will be a queer thing, to be sure! However, everything is queer to-day.", "paren": null, "emotion": "calm", "est_s": 5.6, "style_hits": ["A2 queer (catchphrase)"] }
+      ],
+      "narration_candidates": [], "sound": ["Something splashing about in the pool a little way off, in the lamplit dark."],
+      "notes": ["Episode cliffhanger. Her first idea that she has fallen into the sea (ch002-p16) is carried by the railway line alone (v3: LN-ep01-029 now includes the 'I must have fallen into the sea!' lead-in added by p5-dialogue-ep01-fix per DEF-p5-dialogue-ep01-001, replacing v2's line-without-lead-in that pacing.json flagged as a non sequitur in silent_stretches.not_carried). The splashing is only heard, never seen: the Mouse reveal (ch002-p18) belongs to ev0009 and opens ep02. Pool staging per SUP-007 and SCN-pool-of-tears (inherits SCN-long-hall). source: ch002#p16-p18"],
+      "incompressible": []
+    }
+  ],
+
+  "narration": [],
+
+  "hooks": {
+    "opening": [
+      {
+        "id": "oh-1", "kind": "opening", "label": "spectacle -- the iconic impossible image first", "type": "flashforward",
+        "copy": "A girl in a blue dress and pinafore drifts slowly downward through a dark well lined with cupboards and bookshelves, hair floating up -- then a hard cut to the silent, sunlit Thames bank.",
+        "visual": "S03 (SCN-falling-dream): the slow-fall wide, Alice drifting past glazed cupboards and a bookshelf, skirts billowing, face calm and curious. Hard cut on the hollow hush + clock tick into S01's bees and lapping water.",
+        "scene": "S03", "position": "head of episode, 0.0-3.0s", "est_s": 3, "status": "candidate (not yet selected)",
+        "intent": "Keeps the dream frame honest (SUP-001): the viewer is promised the fall, then shown the drowsy real bank it grows from; no hint of CGI (rigged slow fall, SUP-008).",
+        "risk": "low -- a 3s trim of a shot already required by the episode; no new asset. Adds ~3s to the episode (550 -> 553s before pacing trims), within the ±10% budget.",
+        "recommended": true, "teases": null, "source_event": "ev0001 (ev0002 merged)"
+      },
+      {
+        "id": "oh-2", "kind": "opening", "label": "character & wit -- Carroll's own first line, heard", "type": "cold_open",
+        "copy": "\"What is the use of a book without pictures or conversations?\"",
+        "visual": "S01 (SCN-riverbank): open tight on the sister's open book -- close grey print margin to margin, no pictures -- Alice's face slides into frame over her sister's arm as she says the line; the wide establishing of the Thames bank follows instead of preceding it.",
+        "scene": "S01", "position": "reorders S01's first two shots, no added length", "est_s": 3, "status": "candidate (not yet selected)",
+        "intent": "Most faithful to the book's famous opening and the gentle period tone.",
+        "risk": "weakest on raw 3-second retention for a cold YouTube audience because nothing impossible has happened yet.",
+        "recommended": false, "teases": null, "source_event": "ev0001"
+      },
+      {
+        "id": "oh-3", "kind": "opening", "label": "identity mystery -- the episode's big question up front", "type": "flashforward",
+        "copy": "A giant girl hunched under a stone vault, a doll-sized fan in her hand, asks the dark: \"...who in the world am I?\"",
+        "visual": "S08 (SCN-long-hall): nine-foot Alice sitting hunched under the vault, knees to chin, tiny white kid glove and fan in her enormous hand, lamplight on the tear water round her; she stops fanning on the question. Hard cut to the still Thames bank.",
+        "scene": "S08", "position": "head of episode, 0.0-3.0s (lifted from S08's LN-ep01-022 line-end)", "est_s": 3, "status": "candidate (not yet selected)",
+        "intent": "Plants fs-030 (identity question) as the series thesis.",
+        "risk": "gives away the growth effect and the climax image early, so it spends more of the episode's surprise than oh-1; requires 'who in the world am I?' to end cleanly inside one S08 shot (noted to shot-planning).",
+        "recommended": false, "teases": null, "source_event": "ev0007 (episode climax)"
+      }
+    ],
+    "mid": [],
+    "ending": [
+      {
+        "id": "ec-1", "kind": "ending", "label": "sound-only mystery (as written)", "type": "cold_open",
+        "copy": "Chin-deep in her own tears, Alice hears something splashing in the dark -- she freezes, ripples come toward her, cut to black.",
+        "visual": "S10 (SCN-pool-of-tears): close on tiny Alice treading water, lamplight on her face; ripples roll into frame from off-screen dark; hold on her still, wide eyes; CUT TO BLACK.",
+        "scene": "S10", "position": "episode tail, as written", "est_s": 6, "status": "candidate (not yet selected)",
+        "intent": "Exactly the current screenplay ending; no screenplay change needed.",
+        "risk": "lowest visual grab of the three ending options.",
+        "recommended": false, "teases": "ep02 (ev0009: the swimmer revealed)"
+      },
+      {
+        "id": "ec-2", "kind": "ending", "label": "partial glimpse -- a wake coming at her", "type": "cold_open",
+        "copy": "Out of the lamplit dark a V-shaped wake cuts steadily toward Alice; she draws breath -- black, and one last splash in the dark.",
+        "visual": "S10 (SCN-pool-of-tears): a low water-level shot from her tiny height: a single V-wake crossing the lamplight toward camera, its maker hidden; cut to black as the wake reaches the frame edge; one splash over black.",
+        "scene": "S10", "position": "episode tail (+~2s over ec-1)", "est_s": 7, "status": "candidate (not yet selected)",
+        "intent": "Converts the written sound-only ending into a picture a viewer can't leave, while keeping the swimmer's identity (ep02's opening reveal) fully hidden.",
+        "risk": "low -- one cheap practical insert on the existing pool set (SUP-007); no new character, prop or scene.",
+        "recommended": true, "teases": "ep02 (ev0009)"
+      },
+      {
+        "id": "ec-3", "kind": "ending", "label": "scale reveal -- she is not alone", "type": "cold_open",
+        "copy": "The camera rises off tiny Alice to the flooded hall: in the dark beyond the lamps, ring after ring of ripples -- more than one thing is swimming here.",
+        "visual": "S10 (SCN-pool-of-tears): crane/high wide from above Alice, the hall as a flooded canyon; in the shadows beyond the lamps several separate ripple rings spread and cross; hold, cut to black.",
+        "scene": "S10", "position": "episode tail (+~3s over ec-1)", "est_s": 7, "status": "candidate (not yet selected)",
+        "intent": "Hints that the pool is crowded (ep02's opening beat) but reveals no creature and not the Mouse.",
+        "risk": "needs a whitebox camera path for the rising move in the S10 group; higher setup cost than ec-2.",
+        "recommended": false, "teases": "ep02 (ev0009, the pool crowding with creatures)"
+      }
+    ],
+    "selected": { "opening": null, "ending": null },
+    "recommendation": { "opening": "oh-1", "ending": "ec-2" },
+    "retired": 0,
+    "note": "hooks.json status = awaiting_selection: neither opening nor ending has been chosen by the user yet. pacing.json's total_s (537) and this breakdown's total_est_s assume the recommended pair oh-1 + ec-2. Fallback if no screenplay change is wanted at all: oh-2 + ec-1 (532s total). All six options stay within the 486-594s tolerance window (see pacing.json hook_option_impact)."
+  },
+
+  "emotion_curve": [
+    { "scene": "HOOK-OPEN", "t_s": 0, "intensity": 0.6, "label": "HOOK-OPEN fall" },
+    { "scene": "S01", "t_s": 3, "intensity": 0.25, "label": "S01 heat, pictureless book" },
+    { "scene": "S01", "t_s": 45, "intensity": 0.5, "label": "S01 white rabbit passes" },
+    { "scene": "S02", "t_s": 72, "intensity": 0.55, "label": "S02 into the burrow" },
+    { "scene": "S03", "t_s": 125, "intensity": 0.3, "label": "S03 asleep mid-fall (valley)" },
+    { "scene": "S04", "t_s": 142, "intensity": 0.6, "label": "S04 the White Rabbit, 'I shall be late!'" },
+    { "scene": "S05", "t_s": 205, "intensity": 0.7, "label": "S05 the garden through the little door (wonder peak)" },
+    { "scene": "S06", "t_s": 260, "intensity": 0.7, "label": "S06 ten inches high" },
+    { "scene": "S06", "t_s": 285, "intensity": 0.75, "label": "S06 key out of reach, cries" },
+    { "scene": "S07", "t_s": 335, "intensity": 0.8, "label": "S07 'Curiouser and curiouser!'" },
+    { "scene": "S08", "t_s": 395, "intensity": 0.6, "label": "S08 the Rabbit flees (comic relief dip)" },
+    { "scene": "S08", "t_s": 420, "intensity": 0.95, "label": "S08 'who in the world am I?' (EPISODE PEAK)" },
+    { "scene": "S08", "t_s": 470, "intensity": 0.85, "label": "S08 narrow escape" },
+    { "scene": "S09", "t_s": 490, "intensity": 0.6, "label": "S09 door shut again (breather)" },
+    { "scene": "S10", "t_s": 499, "intensity": 0.75, "label": "S10 plunge" },
+    { "scene": "S10", "t_s": 536, "intensity": 0.85, "label": "S10 the wake reaches her (cliffhanger)" }
+  ],
+  "curve_shape": "Warm, low plateau (S01-S02) -> valley at the fall (S03) -> rising wonder/longing (S04-S05, peak at the garden glimpse) -> giddy two-step of shrink and grow (S06-S07) -> episode peak (S08) -> short breather (S09) -> high, open cliffhanger (S10).",
+
+  "trim_suggestions": [
+    { "scene": "S01", "save_s": 3, "how": "Shorter establishing (one wide + one push-in, not three angles); daisy beat as a single pick-and-drop gesture.", "risk": "low", "status": "suggested (allocation-level, no screenplay change)", "stale": null },
+    { "scene": "S05", "save_s": 8, "how": "Door-rattling as one tracking pass along 3-4 doors, not a full circuit of both walls; the key-in-every-lock attempts collapse into two tries and a cut.", "risk": "low", "status": "suggested (allocation-level, no screenplay change)", "stale": null },
+    { "scene": "S02", "save_s": 4, "how": "One running shot and one reverse at the hedge; burrow entry in two shots.", "risk": "low", "status": "suggested (shot-planning)", "stale": null },
+    { "scene": "S03", "save_s": 2, "how": "Tighten the tunnel crawl before the drop.", "risk": "low", "status": "suggested (shot-planning)", "stale": null },
+    { "scene": "S04", "save_s": 2, "how": "Landing and 'jumps to her feet' in one shot.", "risk": "low", "status": "suggested (shot-planning)", "stale": null },
+    { "scene": "S07", "save_s": 2, "how": "Finishing the cake in one shot with crumbs brushed off.", "risk": "low", "status": "suggested (shot-planning)", "stale": null },
+    { "scene": "S09", "save_s": 3, "how": "Run to the door and discover it shut in one move; no second look back.", "risk": "low", "status": "suggested (shot-planning)", "stale": null },
+    { "scene": "S06", "save_s": 4, "how": "CONTINGENCY, only if Phase 6 shot count runs over: two slide-down attempts instead of three ('Again. Again.').", "risk": "low (requires screenplay change)", "status": "contingency, not triggered", "stale": null },
+    { "scene": "S10", "save_s": 4, "how": "CONTINGENCY / clarity: cut LN-ep01-029's railway line.", "risk": "medium -- removes a period-flavour line; superseded by the v3 dialogue-rewrite fix which added the 'fallen into the sea' lead-in instead (see notes on S10 and issues[]).", "status": "superseded by p5-dialogue-ep01-fix (v3)", "stale": true }
+  ],
+
+  "hook_reserve": { "opening": 3, "ending": 8 },
+
+  "plan": {
+    "title": "Down the Rabbit-Hole",
+    "chapter_range": { "start": "ch001", "end": "ch002" },
+    "events": ["ev0001", "ev0002", "ev0003", "ev0004", "ev0005", "ev0006", "ev0007", "ev0008"],
+    "duration_budget_s": 540,
+    "summary": "Waking open of the dream frame: Alice follows a real white rabbit down a hedge burrow and falls asleep into the dream, then cycles through DRINK ME / EAT ME size changes in the long hall while trying to reach a glimpsed garden, hits her identity-crisis pinch point when the Rabbit's dropped fan shrinks her again, and ends the episode plunging into the pool of her own tears.",
+    "beats": [
+      "ev0001 dramatize -- waking open of the dream frame (see dream_frame.waking_open); inciting incident.",
+      "ev0002 merge->ev0001 -- the fall is the tail of the chase and the moment Alice falls asleep (SUP-001/008); a short rigged fall with her Dinah musing as one spoken line.",
+      "ev0003 dramatize -- first plot point: hall of doors, golden key, the garden glimpsed -- the film's goal.",
+      "ev0004 dramatize -- DRINK ME: shrinks to ten inches, key left out of reach, she cries (forced perspective, SUP-003).",
+      "ev0005 merge->ev0006 -- eating the EAT ME cake is the trigger of the growth beat; same table, same hall, continuous action.",
+      "ev0006 dramatize -- telescopes to nine feet; key in reach, door impossible.",
+      "ev0007 dramatize -- giant weeping, the Rabbit flees dropping fan and gloves, 'Who in the world am I?', the fan shrinks her (pinch 1).",
+      "ev0008 dramatize -- cliffhanger: she slips and plunges into the salt water of her own tears flooding the hall (SUP-007)."
+    ],
+    "characters": ["CHAR-alice", "CHAR-alice-sister", "CHAR-white-rabbit"],
+    "hook_point": { "opening": "ev0001", "cliffhanger": "ev0008" },
+    "carry_over": ["fs-001", "fs-002", "fs-005", "fs-008", "fs-030", "fs-032", "fs-038"],
+    "recap_needed": []
+  },
+
+  "events": [
+    { "id": "ev0001", "chapter": "ch001", "time_hint": "a hot summer afternoon", "location": "the bank beside her sister -> the field -> the rabbit-hole under the hedge", "characters": ["Alice", "her sister", "White Rabbit"], "importance": "major", "cause": "Alice is bored and drowsy, sitting idle on the bank with nothing to do.", "process": "A White Rabbit with pink eyes runs close by talking to itself, then takes a watch out of its waistcoat-pocket; burning with curiosity, Alice runs after it across the field.", "result": "She sees it pop down a large rabbit-hole under the hedge and follows it in, without thinking how she will get out again." },
+    { "id": "ev0002", "chapter": "ch001", "time_hint": "continuous, immediately after ev0001", "location": "the rabbit-hole tunnel, dipping into a very deep well", "characters": ["Alice"], "importance": "background", "cause": "The rabbit-hole runs straight for a while then suddenly dips into a very deep well.", "process": "Alice falls slowly, with time to look at cupboards, bookshelves, maps and an empty marmalade jar on the walls, and to muse aloud about Dinah.", "result": "She lands unhurt, thump, on a heap of sticks and dry leaves, and the fall is over." },
+    { "id": "ev0003", "chapter": "ch001", "time_hint": "continuous, immediately after ev0002", "location": "a long, low hall lit by hanging lamps, with a glass table and a curtained little door", "characters": ["Alice", "White Rabbit"], "importance": "major", "cause": "Alice sees the White Rabbit still ahead of her, hurrying down a passage, and chases it.", "process": "She loses the Rabbit around a corner and finds herself in a long, low hall with locked doors all round; a glass table holds a tiny golden key that fits a fifteen-inch door behind a curtain, opening onto a lovely garden.", "result": "She cannot fit through the tiny door even with her head, and has no way yet to get into the garden." },
+    { "id": "ev0004", "chapter": "ch001", "time_hint": "continuous, immediately after ev0003", "location": "the long, low hall, at the glass table", "characters": ["Alice"], "importance": "major", "cause": "Alice wants a way to shrink small enough to pass through the little door.", "process": "She finds a bottle labelled \"DRINK ME\" on the table, checks it is not marked poison, and drinks it; she shrinks to ten inches, but then finds she has left the golden key on the table and cannot climb up to reach it.", "result": "She is now the right size for the door but locked out of it, and sits down and cries." },
+    { "id": "ev0005", "chapter": "ch001", "time_hint": "continuous, immediately after ev0004", "location": "the long, low hall, at the glass table", "characters": ["Alice"], "importance": "minor", "cause": "Alice scolds herself for crying and looks for another way in; she finds a small cake in a glass box under the table, marked \"EAT ME\" in currants.", "process": "Reasoning that eating it must make her either larger (to reach the key) or smaller (to creep under the door), she eats the whole cake.", "result": "No change is noticed at first; the effect is delayed and only takes hold at the start of ev0006." },
+    { "id": "ev0006", "chapter": "ch002", "time_hint": "continuous, moments after ev0005", "location": "the long, low hall, at the glass table", "characters": ["Alice"], "importance": "major", "cause": "Delayed effect of the \"EAT ME\" cake eaten in ev0005.", "process": "Alice suddenly begins growing, \"opening out like the largest telescope,\" until her head strikes the roof of the hall; she is now more than nine feet high.", "result": "She can now reach the golden key easily but is far too large to fit through the little door into the garden." },
+    { "id": "ev0007", "chapter": "ch002", "time_hint": "continuous, immediately after ev0006", "location": "the long, low hall", "characters": ["Alice", "White Rabbit"], "importance": "major", "cause": "Stuck at giant size and unable to reach the garden, Alice sits down and cries.", "process": "Her tears form a pool about four inches deep; the White Rabbit returns, splendidly dressed and muttering about the Duchess, and when Alice speaks to it, it starts, drops its white kid gloves and fan, and flees. Alice picks up the fan and begins fanning herself while wondering if she has been changed into another child.", "result": "She notices she is shrinking rapidly because of the fan and drops it just in time to avoid vanishing altogether, now about two feet high." },
+    { "id": "ev0008", "chapter": "ch002", "time_hint": "continuous, immediately after ev0007", "location": "the long, low hall -> the pool of tears", "characters": ["Alice"], "importance": "minor", "cause": "Shrunk small again, Alice finds the little door shut and the key back on the unreachable table; she rushes for the door anyway.", "process": "As she runs, her foot slips and she falls, splash, into salt water up to her chin.", "result": "She realises she is swimming in the very pool of tears she wept earlier while nine feet high." }
+  ],
+
+  "structure": {
+    "current_act": "act1",
+    "acts": [
+      { "id": "act1", "title": "The Descent and the Locked Garden", "type": null, "chapters": ["ch001", "ch002"], "desc": "Setup: ordinary world (bank, sister, boredom), call (White Rabbit with watch), threshold (rabbit-hole), the concrete goal (the little door and the garden) and the core obstacle (wrong size). Ends with Alice literally swimming in the consequence of her own tears." },
+      { "id": "act2a", "title": "Wandering Outside the Garden: Learning the Rules", "type": null, "chapters": ["ch003", "ch006"], "desc": "Fun-and-games half of the confrontation: a succession of hosts each imposing a rule-set; Alice gains the mushroom size-control tool and the explicit plan." },
+      { "id": "act2b", "title": "Inside the Garden: The Court of Hearts", "type": null, "chapters": ["ch007", "ch010"], "desc": "Midpoint victory (Alice finally enters the garden) turns sour: the garden is a regime of executions, rigged croquet and card-people." },
+      { "id": "act3", "title": "The Trial and the Waking", "type": null, "chapters": ["ch011", "ch012"], "desc": "Climax: the court gathers most of the book's cast; Alice openly defies the Queen and dissolves the whole world by naming it. Resolution: waking on the bank; coda from the sister's point of view." }
+    ]
+  },
+
+  "issues": [
+    { "level": "info", "text": "Hooks pending selection: hooks.json status='awaiting_selection', selected.opening/ending both null. This breakdown reports totals assuming the pacing-recommended pair (oh-1 opening + ec-2 ending, total_est_s 537); all opening/ending candidates are listed under scenes[].hooks and hooks.opening/ending as unselected candidates, not a final choice. Route to 01-story/hook / orchestrator for the user selection." },
+    { "level": "info", "scene": "S10", "text": "scenes[S10].dialogue_s (18.8) is recomputed from the current screenplay v3 line text, which now includes the 'I must have fallen into the sea!' lead-in on LN-ep01-029 added by p5-dialogue-ep01-fix (DEF-p5-dialogue-ep01-001, resolving the non sequitur pacing.json flagged in silent_stretches.not_carried). pacing.json's own S10.dialogue_est_s (16.4) predates this fix (pacing.json based_on states 'screenplay v2'). scenes[S10].silent_s (19.2) is computed as alloc_s(38) - dialogue_s(18.8) to match; the +2.4s difference from pacing's own split does not move the episode outside its ±10% budget window (534-594s tolerance, current total 537s either way). pacing.json was not modified." },
+    { "level": "info", "text": "silent_s for every scene is computed here as alloc_s - dialogue_s - narration_s(=0), per the host schema's own convention. pacing.json's per-scene 'silent_s_approx' field uses a different, non-additive figure (e.g. S06: alloc 75 - dialogue 23.3 = 51.7 here vs pacing's approx 30) and was not overwritten; both are informational, not an error." },
+    { "level": "info", "text": "Constraint tickets checked for applicability: DEF-p3-char-index-902 (executioner device) and DEF-p3-char-index-903 (ch006 lullaby chorus attribution) do not apply to ep01 -- neither CHAR-executioner nor the ch006 kitchen lullaby scene appears in this episode's cast/scenes (confirmed against screenplay.md S01-S10 and episode_plan.json, which assigns the executioner to ep06 and the lullaby to ep04). No action needed here; both tickets remain open and due at their respective later-episode gates." },
+    { "level": "info", "text": "No synthetic 'HOOK-OPEN' row was added to scenes[]: it is not a scene in screenplay.md (S01-S10 only). Its 3s is reflected in S01.start_s=3 and in total_est_s=537, matching pacing.json's opening_segment/hook_reserve_s accounting." }
+  ]
+}

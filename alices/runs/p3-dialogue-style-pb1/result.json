@@ -1,0 +1,84 @@
+{
+  "task_id": "p3-dialogue-style-pb1",
+  "agent": "03-characters/dialogue-style",
+  "project": "alices",
+  "attempt": 1,
+  "completed_on": "2026-09-22",
+  "status": "done",
+  "outputs": [
+    "bible/characters/CHAR-alice/dialogue_style.json",
+    "bible/characters/CHAR-alice-sister/dialogue_style.json",
+    "bible/characters/CHAR-white-rabbit/dialogue_style.json",
+    "bible/characters/CHAR-queen-of-hearts/dialogue_style.json",
+    "bible/characters/CHAR-king-of-hearts/dialogue_style.json",
+    "bible/characters/CHAR-duchess/dialogue_style.json",
+    "bible/characters/CHAR-hatter/dialogue_style.json",
+    "bible/characters/CHAR-cheshire-cat/dialogue_style.json",
+    "bible/characters/CHAR-march-hare/dialogue_style.json",
+    "bible/characters/CHAR-dormouse/dialogue_style.json"
+  ],
+  "helper_scripts": ["code/p3-dialogue-style-pb1_backtest.py"],
+  "reports": ["runs/p3-dialogue-style-pb1/backtest_report.json"],
+  "inputs_read": [
+    "story/structured_story.json (+ shards ch001..ch012): dialogues[] with speaker labels",
+    "bible/characters/index.json (IDs, tiers, layers, performer concepts)",
+    "bible/_index.json forward_refs_pending (all 10 CHAR ids already referenced; honoured unchanged)",
+    "bible/h1_summary.md, bible/cultivation.json (SUP-001, SUP-002, SUP-005, SUP-012, SUP-014), runs/h1-ruling/ruling.json (5.3 B doubling)"
+  ],
+  "acceptance": {
+    "style_hit_rate_gte_80": "PASS",
+    "per_character": {
+      "CHAR-alice":            { "hit_rate": 0.897, "sample_size": 331, "verse_excluded": 15, "cross_claim_rate": 0.294, "attribution_top1_rate": 0.662 },
+      "CHAR-alice-sister":     { "hit_rate": 1.0,   "sample_size": 2,   "verse_excluded": 0,  "cross_claim_rate": 0.023, "attribution_top1_rate": 0.5 },
+      "CHAR-white-rabbit":     { "hit_rate": 1.0,   "sample_size": 32,  "verse_excluded": 7,  "cross_claim_rate": 0.097, "attribution_top1_rate": 0.75 },
+      "CHAR-queen-of-hearts":  { "hit_rate": 1.0,   "sample_size": 32,  "verse_excluded": 0,  "cross_claim_rate": 0.049, "attribution_top1_rate": 0.812 },
+      "CHAR-king-of-hearts":   { "hit_rate": 1.0,   "sample_size": 52,  "verse_excluded": 0,  "cross_claim_rate": 0.132, "attribution_top1_rate": 0.846 },
+      "CHAR-duchess":          { "hit_rate": 1.0,   "sample_size": 22,  "verse_excluded": 2,  "cross_claim_rate": 0.037, "attribution_top1_rate": 0.864 },
+      "CHAR-hatter":           { "hit_rate": 1.0,   "sample_size": 43,  "verse_excluded": 2,  "cross_claim_rate": 0.088, "attribution_top1_rate": 0.814 },
+      "CHAR-cheshire-cat":     { "hit_rate": 1.0,   "sample_size": 17,  "verse_excluded": 0,  "cross_claim_rate": 0.018, "attribution_top1_rate": 0.882 },
+      "CHAR-march-hare":       { "hit_rate": 1.0,   "sample_size": 17,  "verse_excluded": 0,  "cross_claim_rate": 0.018, "attribution_top1_rate": 0.647 },
+      "CHAR-dormouse":         { "hit_rate": 1.0,   "sample_size": 18,  "verse_excluded": 1,  "cross_claim_rate": 0.062, "attribution_top1_rate": 0.722 }
+    },
+    "forbidden_violations_in_source_lines": 0,
+    "evaluation": "skipped (quality judge = 0)",
+    "qa": "skipped (all QA dimensions = 0)"
+  },
+  "backtest_method": {
+    "script": "python3 code/p3-dialogue-style-pb1_backtest.py [--project-dir DIR] [--lines FILE.json] [--out FILE]",
+    "normalisation": "curly quotes -> straight, '_' emphasis removed, '[...]' elisions removed, whitespace collapsed; case-insensitive regex",
+    "hit_rule": "a line hits its speaker's card when it matches >= 1 backtest_markers[].regex AND none of forbidden_words[].regex",
+    "sample": "every spoken source line (type dialogue or thought) whose speaker label is in the card's source_speaker_labels; coverage 100% of spoken lines. type=verse lines are recited or sung texts (poems, the accusation, the anonymous letter) and are excluded from the denominator; they are listed in each card's recitation_repertoire",
+    "width_guards": "cross_claim_rate = share of the other nine carded characters' spoken lines the card would also claim (too-wide check); lift = hit_rate / cross_claim_rate; attribution_top1_rate = share of own lines where this card has the uniquely highest weighted marker score across all ten cards (forbidden match = veto). The width guards are reported for information; only hit_rate gates acceptance",
+    "for_dialogue_rewrite": "run the same script with --lines <json list of {speaker_id, text, [id], [type]}> on rewritten screenplay lines; the metric and threshold (>= 0.80 per character) stay identical, so both stations share one definition",
+    "count_in_source": "catchphrases[].count_in_source = number of spoken source lines containing the phrase (not the number of occurrences)"
+  },
+  "shared_notes": {
+    "language": "all card content in English (source language and project output language)",
+    "anachronism_rule": "each card carries the same period-slang forbidden regex (okay/cool/guys/yeah/gonna...), because dialogue-rewrite machine-checks cards one by one",
+    "sup_002": "dream figures are human performers (SUP-002); animal-coded idioms in their speech (the White Rabbit's 'my ears and whiskers', the Cheshire Cat's growl/purr syllogism) are kept as costume-coded verbal tics, not literal anatomy",
+    "sup_014": "the Queen's and the Duchess's execution words are bluster only; the cards treat them as verbal reflexes, and no card licenses a carried-out threat",
+    "no_narration": "the film has no narration; Alice's type=thought lines are kept in her sample because in the realistic adaptation they can only surface as spoken self-talk",
+    "inferred_items": "CHAR-alice-sister has only two source lines. Her third sentence pattern, her address.self and her drift entry are designed (inferred:true + reason). CHAR-queen-of-hearts address.to_the_king is inferred (inferred:true + reason)",
+    "excluded_source_lines": "group or uncertain lines are not in any single-character sample: ch007-d0002 (UNKNOWN, 'No room!'), ch007-d0067 (March Hare + Hatter), ch007-d0086 (Hatter + March Hare), ch010-d0084 (UNKNOWN crier)"
+  },
+  "drift_summary": {
+    "CHAR-alice": "ch001-004 anxious self-talk -> ch005-010 polite but corrective -> ch011-012 open defiance",
+    "CHAR-white-rabbit": "ch001-004 private panic / domestic tyrant -> ch008-012 hushed, then formal herald",
+    "CHAR-king-of-hearts": "ch008-009 peevish, domestic -> ch011-012 procedural and pedantic",
+    "CHAR-duchess": "ch006 rough kitchen voice -> ch009 sugary moralising",
+    "CHAR-hatter": "ch007 needling host -> ch011 grovelling witness",
+    "CHAR-march-hare": "ch007 contrary host -> ch011 flat denials",
+    "CHAR-dormouse": "ch007 sleepy storyteller -> ch011 prim complainer",
+    "CHAR-queen-of-hearts": "static by design (ch008-012)",
+    "CHAR-cheshire-cat": "static by design (ch006-008)",
+    "CHAR-alice-sister": "static; waking reference voice"
+  },
+  "defects_filed": [],
+  "conflicts_with_locked_bible": "none found",
+  "skills": "no project skills are checked for this station; none applied",
+  "notes_for_downstream": [
+    "01-story/dialogue-rewrite: use backtest_markers + forbidden_words as the machine check; the forbidden_words regexes are the OOC list (e.g. the King never says 'Off with…', the Cheshire Cat never uses '!', the Queen never uses a softener).",
+    "Alice's card is necessarily the widest (cross_claim_rate 0.29), since she is the interlocutor in nearly every scene and shares a question-and-hedge register with others. Her distinctive markers (A1 politeness, A2 wondering, A4 self-scolding, A9 manners, A10 incomprehension) carry the attribution weight.",
+    "03-characters/voiceprint and 09-audio: the register lines give tone references only; acoustic features are out of scope for this card."
+  ]
+}

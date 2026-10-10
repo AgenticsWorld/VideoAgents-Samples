@@ -1,0 +1,407 @@
+{
+  "_meta": {
+    "file": "directing/ep01/concept_coverage.json",
+    "ep": "ep01",
+    "episode_title": "Down the Rabbit-Hole",
+    "task_id": "p6-concept-audit-ep01",
+    "agent": "06-art/art-director",
+    "attempt": 1,
+    "generated": "2026-09-23",
+    "content_language": "English (project setting)",
+    "scope": "WORKFLOW.md / SOUL.md section 6A concept-art coverage audit for ep01: every entity that appears in the finalised shot_list x the views this episode needs, matched against what is actually on disk under assets/concepts/. This is the G6 precondition concept_coverage_ok; H3A may not be raised and no p7-* task for ep01 may be dispatched until it reads 100%.",
+    "authority_inputs": [
+      "directing/ep01/shot_list.json (version 1, status final_for_G6, 101 shots / 37 generation groups)",
+      "directing/ep01/storyboard.json (entity cross-check: identical ID sets, no storyboard-only entity)",
+      "bible/characters/ (index + appearance cards), bible/creatures/index.json + creature.json + mount.json",
+      "bible/costumes.json via assets/concepts/characters/<id>/costume_sheets.json ledgers",
+      "bible/props.json (24 prop cards), bible/scenes/index.json",
+      "bible/style.json (locked_by H2), bible/color_script.json",
+      "runs/g4/gate.json (H2 signature ba96732d, PASS_WITH_WAIVER, 7 waived majors)"
+    ],
+    "verification_method": "Every claimed in-stock path was stat-ed on disk and its pixel dimensions read from the file header (no inference from naming convention). The bundled Pillow is unavailable to this shell, so image size was parsed directly from the JPEG SOF / PNG IHDR header; note that genmedia writes JPEG payloads under .png names, which is expected and not a fault. Scene layout packs were additionally machine-checked with the host CLI `python3 code/blocking_map_check.py --project alices --ep ep01`.",
+    "not_my_job": "This audit only decides WHAT is missing and WHICH views are needed. It does not draw anything and does not dispatch. Refills route through the orchestrator to 06-art/character-concept / environment-concept / prop / creature-concept. The user's auto-rerun budget is 0, so any gap found here is a user decision, not an automatic refill."
+  },
+
+  "required_view_conventions": {
+    "note": "Stated once here; the per-entity rows below carry only their own values.",
+    "character": {
+      "base": "assets/concepts/characters/<CHAR-id>/sheet.png — the full four-panel identity sheet, mandatory for every character in the episode.",
+      "age_version": "If the episode uses a non-default age version, that version's base sheet (sheet_<version>.png) is additionally required. ep01 uses CHAR-alice-age01 only; sheet_age02.png belongs to ep09 and is out of ep01 scope.",
+      "costume": "Per section 6A (2026-08-26), a sheet_<COS-id>.png is required only for each NON-DEFAULT costume that this episode's costumes_by_char points to. Every ep01 costume is the character's default outfit and is carried by sheet.png itself, so ep01 requires zero separate costume sheets. Judged from each character's costume_sheets.json ledger, not from filenames."
+    },
+    "creature": {
+      "base": "assets/concepts/creatures/<CRE-id>/sheet.png.",
+      "stage_variant": "sheet_<stage>.png is required only when the episode's chapters cross a stage boundary in creature.json forms[].since_chapter or mount.json endurance_state_log. CRE-001 has exactly one form (stage 'waking-real', since ch001) and the project registers zero mounts, so no stage variant is required anywhere in ep01."
+    },
+    "scene": {
+      "required": "The layout pack = assets/concepts/scenes/<SCN-id>/layout_top.png + layout.json, both required.",
+      "retired": "grid_9views.png is retired (2026-09-09) and is not counted. Legacy single-angle main_*.png would count as a gap; none of the ep01 scenes carries one, and none is needed."
+    },
+    "prop": {
+      "required": "For a plot prop: the card in bible/props.json plus assets/concepts/props/<PROP-id>/main_01.png (look) and scale_ref_01.png (the scale anchor that Phase 7 attaches to group refs)."
+    },
+    "status_vocabulary": {
+      "covered": "Required view exists on disk and was verified this run.",
+      "dispatched": "Gap found, refill task raised and in flight.",
+      "filled": "Gap was found earlier this episode and the refill has since landed and was re-verified."
+    }
+  },
+
+  "entity_disambiguation": {
+    "CRE-001_vs_CHAR-white-rabbit": "Enforced as two separate entities with two separate asset sets, per shot_list.entity_note. CRE-001 'Wild White Rabbit' is the real, mute, unclothed animal of the waking world, carried in creatures[] and present only in grp004 and grp006 (sh008, sh010, sh012); its asset is assets/concepts/creatures/CRE-001/sheet.png. CHAR-white-rabbit 'White Rabbit' is the waistcoated dream character, carried in characters[] with COS-006 and present only in grp011 / grp012 / grp028 / grp029; its asset is assets/concepts/characters/CHAR-white-rabbit/sheet.png. Neither is reported as the other's gap and neither sheet substitutes for the other.",
+    "creature_card_confirmation": "bible/creatures/creature.json CRE-001.marks states explicitly: no clothing, no waistcoat, no pocket watch, no collar — those belong only to CHAR-white-rabbit's dream costuming."
+  },
+
+  "coverage": {
+    "entities_total": 18,
+    "entities_by_type": { "characters": 3, "creatures": 1, "scenes": 7, "props": 7 },
+    "required_views_total": 39,
+    "required_views_by_type": { "characters": 3, "creatures": 1, "scenes": 14, "props": 21 },
+    "in_stock": 39,
+    "missing": 0,
+    "coverage_pct": 100.0,
+    "gaps": [],
+    "dispatched_refills": [],
+    "concept_coverage_ok": true
+  },
+
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "groups": ["grp001","grp002","grp003","grp004","grp005","grp006","grp007","grp008","grp009","grp010","grp011","grp012","grp013","grp014","grp015","grp016","grp017","grp018","grp019","grp020","grp021","grp022","grp023","grp024","grp025","grp026","grp027","grp028","grp029","grp030","grp031","grp032","grp033","grp034","grp035","grp036","grp037"],
+      "shots": 87,
+      "age_version_used": "CHAR-alice-age01",
+      "costumes_in_ep": ["COS-001"],
+      "required_views": [
+        {
+          "view": "sheet",
+          "reason": "identity sheet, all 37 groups",
+          "path": "assets/concepts/characters/CHAR-alice/sheet.png",
+          "exists": true,
+          "bytes": 459151,
+          "pixels": "2560x1440",
+          "status": "covered"
+        }
+      ],
+      "costume_sheets_required": [],
+      "costume_sheet_rationale": "costume_sheets.json: COS-001 is default true, file sheet.png, reuse true — the identity sheet IS the COS-001 sheet. No non-default costume anywhere in ep01, so nothing to request.",
+      "age_variant_not_required": "sheet_age02.png exists on disk (COS-002, the grown-Alice reverie) but is ep09 scope; not counted in the ep01 matrix.",
+      "carry_forward_to_prompt": "H2-waived char-sheet self-check items are text-layer corrections for the p7 prompt工位, not coverage gaps: sheet.png self-check records no_freckles = false (spec says none). Wet-from-grp027 and the single white kid glove from sh084 are continuity states, not costume changes (BIB-0029)."
+    },
+    {
+      "id": "CHAR-alice-sister",
+      "label": "Alice's Sister",
+      "groups": ["grp002","grp003","grp005"],
+      "shots": 5,
+      "costumes_in_ep": ["COS-003"],
+      "required_views": [
+        {
+          "view": "sheet",
+          "reason": "identity sheet, riverbank frame groups",
+          "path": "assets/concepts/characters/CHAR-alice-sister/sheet.png",
+          "exists": true,
+          "bytes": 455177,
+          "pixels": "2560x1440",
+          "status": "covered"
+        }
+      ],
+      "costume_sheets_required": [],
+      "costume_sheet_rationale": "costume_sheets.json: COS-003 is default true, file sheet.png, reuse true, episodes ep01 + ep09. sheet_COS-004.png exists but is the ep08/ep09 court-gallery echo — out of ep01 scope, not counted.",
+      "carry_forward_to_prompt": "Self-check minor: pagoda three-quarter sleeves drawn instead of long coat sleeves with narrow white cuffs. costumes.json visual_en stays the wardrobe authority in prompts (G4 waiver DEF-p4-costume-sheet-901 follow-up)."
+    },
+    {
+      "id": "CHAR-white-rabbit",
+      "label": "White Rabbit",
+      "groups": ["grp011","grp012","grp028","grp029"],
+      "shots": 8,
+      "costumes_in_ep": ["COS-006"],
+      "entity_warning": "The waistcoated dream character. NOT CRE-001. Do not substitute the creature sheet.",
+      "required_views": [
+        {
+          "view": "sheet",
+          "reason": "identity sheet, dream-character appearances",
+          "path": "assets/concepts/characters/CHAR-white-rabbit/sheet.png",
+          "exists": true,
+          "bytes": 513118,
+          "pixels": "2560x1440",
+          "status": "covered"
+        }
+      ],
+      "costume_sheets_required": [],
+      "costume_sheet_rationale": "costume_sheets.json: COS-006 is default true, file sheet.png, reuse true, episodes ep01 / ep03 / ep06 — the identity sheet is drawn in COS-006 and its self-check confirms the checked waistcoat, brass buttons, pocket, gold chain, stand collar and black bow. sheet_COS-007.png (court herald's tabard) is ep08/ep09 scope, not counted.",
+      "carry_forward_to_prompt": "H2-waived MAJOR (CR-003/CR-015, char-sheet self-check): in the three full-body panels he stands fully bipedal with a human-like torso rather than rearing on his haunches. The p7 prompt工位 must carry quadruped/rearing posture wording per the G4 waiver follow-up. This is an image-quality waiver, not a coverage gap — the reroll budget is 0 and the user signed it at H2."
+    }
+  ],
+
+  "creatures": [
+    {
+      "id": "CRE-001",
+      "label": "Wild White Rabbit",
+      "source": "shot_list generation_groups[].creatures_union",
+      "groups": ["grp004","grp006"],
+      "shots": ["sh008","sh010","sh012"],
+      "entity_warning": "The real, mute, unclothed waking-world animal. NOT CHAR-white-rabbit.",
+      "required_views": [
+        {
+          "view": "sheet",
+          "reason": "creature identity sheet",
+          "path": "assets/concepts/creatures/CRE-001/sheet.png",
+          "exists": true,
+          "bytes": 404092,
+          "pixels": "2560x1440",
+          "status": "covered"
+        }
+      ],
+      "stage_variants_required": [],
+      "stage_rationale": "bible/creatures/creature.json CRE-001.forms[] has a single entry, stage 'waking-real', since_chapter ch001, and ep01 does not cross a stage boundary. bible/creatures/mount.json registers zero mounts project-wide, so no endurance_state_log applies. No sheet_<stage>.png is required.",
+      "open_text_item": "DEF-p4-creature-402 (minor, G4): CRE-001's card text still carries pre-BIB-0027 wording. Text-only cleanup owned by 04-creatures/creature; no image cost and no effect on coverage."
+    }
+  ],
+
+  "scenes": [
+    {
+      "id": "SCN-falling-dream",
+      "name": "The Falling Dream",
+      "int_ext": "INT",
+      "groups": ["grp001","grp008","grp009","grp010"],
+      "required_views": [
+        { "view": "layout_top", "path": "assets/concepts/scenes/SCN-falling-dream/layout_top.png", "exists": true, "bytes": 532845, "pixels": "2560x1440", "status": "covered" },
+        { "view": "layout_json", "path": "assets/concepts/scenes/SCN-falling-dream/layout.json", "exists": true, "bytes": 6089, "status": "covered" }
+      ]
+    },
+    {
+      "id": "SCN-riverbank",
+      "name": "The Bank",
+      "int_ext": "EXT",
+      "groups": ["grp002","grp003","grp004","grp005"],
+      "required_views": [
+        { "view": "layout_top", "path": "assets/concepts/scenes/SCN-riverbank/layout_top.png", "exists": true, "bytes": 838506, "pixels": "2560x1440", "status": "covered" },
+        { "view": "layout_json", "path": "assets/concepts/scenes/SCN-riverbank/layout.json", "exists": true, "bytes": 6090, "status": "covered" }
+      ]
+    },
+    {
+      "id": "SCN-field-hedge-burrow",
+      "name": "The Field Edge at the Hedge Burrow",
+      "int_ext": "EXT",
+      "groups": ["grp006","grp007"],
+      "required_views": [
+        { "view": "layout_top", "path": "assets/concepts/scenes/SCN-field-hedge-burrow/layout_top.png", "exists": true, "bytes": 939916, "pixels": "2560x1440", "status": "covered" },
+        { "view": "layout_json", "path": "assets/concepts/scenes/SCN-field-hedge-burrow/layout.json", "exists": true, "bytes": 6031, "status": "covered" }
+      ]
+    },
+    {
+      "id": "SCN-shaft-landing-passage",
+      "name": "The Landing Heap and the Long Passage",
+      "int_ext": "INT",
+      "groups": ["grp011","grp012"],
+      "required_views": [
+        { "view": "layout_top", "path": "assets/concepts/scenes/SCN-shaft-landing-passage/layout_top.png", "exists": true, "bytes": 444721, "pixels": "2560x1440", "status": "covered" },
+        { "view": "layout_json", "path": "assets/concepts/scenes/SCN-shaft-landing-passage/layout.json", "exists": true, "bytes": 5693, "status": "covered" }
+      ]
+    },
+    {
+      "id": "SCN-long-hall",
+      "name": "The Long Hall",
+      "int_ext": "INT",
+      "groups": ["grp013","grp014","grp017","grp018","grp019","grp020","grp021","grp022","grp023","grp024","grp025","grp026","grp027","grp028","grp029","grp030","grp031","grp032","grp033","grp034"],
+      "required_views": [
+        { "view": "layout_top", "path": "assets/concepts/scenes/SCN-long-hall/layout_top.png", "exists": true, "bytes": 419498, "pixels": "2560x1440", "status": "covered" },
+        { "view": "layout_json", "path": "assets/concepts/scenes/SCN-long-hall/layout.json", "exists": true, "bytes": 6332, "status": "covered" }
+      ]
+    },
+    {
+      "id": "SCN-little-door-passage",
+      "name": "The Little Door's Passage",
+      "int_ext": "INT",
+      "groups": ["grp015","grp016"],
+      "required_views": [
+        { "view": "layout_top", "path": "assets/concepts/scenes/SCN-little-door-passage/layout_top.png", "exists": true, "bytes": 600234, "pixels": "2560x1440", "status": "covered" },
+        { "view": "layout_json", "path": "assets/concepts/scenes/SCN-little-door-passage/layout.json", "exists": true, "bytes": 6232, "status": "covered" }
+      ]
+    },
+    {
+      "id": "SCN-pool-of-tears",
+      "name": "The Pool of Tears (the Hall, Flooded)",
+      "int_ext": "INT",
+      "groups": ["grp035","grp036","grp037"],
+      "required_views": [
+        { "view": "layout_top", "path": "assets/concepts/scenes/SCN-pool-of-tears/layout_top.png", "exists": true, "bytes": 536675, "pixels": "2560x1440", "status": "covered" },
+        { "view": "layout_json", "path": "assets/concepts/scenes/SCN-pool-of-tears/layout.json", "exists": true, "bytes": 6385, "status": "covered" }
+      ]
+    }
+  ],
+
+  "scene_machine_check": {
+    "command": "python3 code/blocking_map_check.py --project alices --ep ep01",
+    "exit_code": 0,
+    "result": "PASS — 0 violations across all 37 groups (scene_layout_pack_ok / blocking_map_present / label_ok / creature_blocking_ok).",
+    "warnings": "7 WARN, one per ep01 scene, all of the form '无法读取 layout_top.png (No module named PIL)' — the shell running this audit has no Pillow, so the script could not read pixel size. I verified all seven plates independently from their JPEG SOF headers: every one is 2560x1440 = 3,686,400 px, exactly the MIN_PIXELS floor the script enforces. The WARNs are an environment limitation, not an asset defect.",
+    "adjacent_not_in_this_matrix": "All seven ep01 scenes also have bible/scenes/<sid>/whitebox.json on disk and assets/concepts/scenes/<sid>/whitebox_overlay.png. Whitebox is the g6w / H3W gate, not this audit's matrix; noted only so the orchestrator knows the ep01 whitebox chain is not blocked on missing models."
+  },
+
+  "props": [
+    {
+      "id": "PROP-drink-me-bottle",
+      "name": "the \"DRINK ME\" bottle",
+      "is_plot_prop": true,
+      "groups": ["grp017","grp018","grp019"],
+      "shots": 7,
+      "required_views": [
+        { "view": "card", "path": "bible/props.json#props[PROP-drink-me-bottle]", "exists": true, "status": "covered" },
+        { "view": "main", "path": "assets/concepts/props/PROP-drink-me-bottle/main_01.png", "exists": true, "bytes": 148010, "pixels": "1280x720", "status": "covered" },
+        { "view": "scale_ref", "path": "assets/concepts/props/PROP-drink-me-bottle/scale_ref_01.png", "exists": true, "bytes": 220318, "pixels": "1280x720", "status": "covered" }
+      ]
+    },
+    {
+      "id": "PROP-eat-me-cake",
+      "name": "the \"EAT ME\" cake",
+      "is_plot_prop": true,
+      "groups": ["grp022","grp023"],
+      "shots": 5,
+      "required_views": [
+        { "view": "card", "path": "bible/props.json#props[PROP-eat-me-cake]", "exists": true, "status": "covered" },
+        { "view": "main", "path": "assets/concepts/props/PROP-eat-me-cake/main_01.png", "exists": true, "bytes": 170880, "pixels": "1280x720", "status": "covered" },
+        { "view": "scale_ref", "path": "assets/concepts/props/PROP-eat-me-cake/scale_ref_01.png", "exists": true, "bytes": 221421, "pixels": "1280x720", "status": "covered" }
+      ]
+    },
+    {
+      "id": "PROP-golden-key",
+      "name": "the golden key",
+      "is_plot_prop": true,
+      "groups": ["grp014","grp015","grp020","grp026","grp033"],
+      "shots": 6,
+      "required_views": [
+        { "view": "card", "path": "bible/props.json#props[PROP-golden-key]", "exists": true, "status": "covered" },
+        { "view": "main", "path": "assets/concepts/props/PROP-golden-key/main_01.png", "exists": true, "bytes": 206934, "pixels": "1024x1024", "status": "covered" },
+        { "view": "scale_ref", "path": "assets/concepts/props/PROP-golden-key/scale_ref_01.png", "exists": true, "bytes": 155479, "pixels": "1280x720", "status": "covered" }
+      ]
+    },
+    {
+      "id": "PROP-orange-marmalade-jar",
+      "name": "the \"ORANGE MARMALADE\" jar",
+      "is_plot_prop": true,
+      "groups": ["grp008"],
+      "shots": 3,
+      "required_views": [
+        { "view": "card", "path": "bible/props.json#props[PROP-orange-marmalade-jar]", "exists": true, "status": "covered" },
+        { "view": "main", "path": "assets/concepts/props/PROP-orange-marmalade-jar/main_01.png", "exists": true, "bytes": 149842, "pixels": "1280x720", "status": "covered" },
+        { "view": "scale_ref", "path": "assets/concepts/props/PROP-orange-marmalade-jar/scale_ref_01.png", "exists": true, "bytes": 178466, "pixels": "1280x720", "status": "covered" }
+      ]
+    },
+    {
+      "id": "PROP-sister-book",
+      "name": "the book her sister was reading",
+      "is_plot_prop": true,
+      "groups": ["grp002","grp003","grp005"],
+      "shots": 5,
+      "required_views": [
+        { "view": "card", "path": "bible/props.json#props[PROP-sister-book]", "exists": true, "status": "covered" },
+        { "view": "main", "path": "assets/concepts/props/PROP-sister-book/main_01.png", "exists": true, "bytes": 195734, "pixels": "1280x720", "status": "covered" },
+        { "view": "scale_ref", "path": "assets/concepts/props/PROP-sister-book/scale_ref_01.png", "exists": true, "bytes": 259990, "pixels": "1280x720", "status": "covered" }
+      ]
+    },
+    {
+      "id": "PROP-white-kid-gloves-and-fan",
+      "name": "the white kid gloves and fan",
+      "is_plot_prop": true,
+      "groups": ["grp028","grp029","grp030","grp031","grp032","grp033","grp036"],
+      "shots": 16,
+      "required_views": [
+        { "view": "card", "path": "bible/props.json#props[PROP-white-kid-gloves-and-fan]", "exists": true, "status": "covered" },
+        { "view": "main", "path": "assets/concepts/props/PROP-white-kid-gloves-and-fan/main_01.png", "exists": true, "bytes": 240838, "pixels": "1024x1024", "status": "covered" },
+        { "view": "scale_ref", "path": "assets/concepts/props/PROP-white-kid-gloves-and-fan/scale_ref_01.png", "exists": true, "bytes": 171688, "pixels": "1280x720", "status": "covered" }
+      ],
+      "note": "The single white kid glove worn from sh084 onward is a prop state carried by continuity wording (BIB-0029), not a costume change and not a separate view."
+    },
+    {
+      "id": "PROP-white-rabbit-pocket-watch",
+      "name": "the White Rabbit's pocket watch",
+      "is_plot_prop": true,
+      "groups": ["grp011","grp012"],
+      "shots": 3,
+      "required_views": [
+        { "view": "card", "path": "bible/props.json#props[PROP-white-rabbit-pocket-watch]", "exists": true, "status": "covered" },
+        { "view": "main", "path": "assets/concepts/props/PROP-white-rabbit-pocket-watch/main_01.png", "exists": true, "bytes": 255576, "pixels": "1024x1024", "status": "covered" },
+        { "view": "scale_ref", "path": "assets/concepts/props/PROP-white-rabbit-pocket-watch/scale_ref_01.png", "exists": true, "bytes": 190322, "pixels": "1280x720", "status": "covered" }
+      ],
+      "note": "Belongs to CHAR-white-rabbit only (grp011 / grp012). CRE-001 carries no watch — creature.json states it explicitly."
+    }
+  ],
+
+  "user_deferred_exclusions": [
+    {
+      "item": "scene grid_9views.png",
+      "decision": "Retired by standing user instruction and by the 2026-09-09 workflow change. Layout packs are layout.json + layout_top.png only.",
+      "effect_on_matrix": "grid_9views.png is not a required view for any ep01 scene and its absence is not a gap. Spatial truth for ep01 comes from the whitebox camera video plus the shot plates; the top-down plate is preview-only and does not enter group refs.",
+      "reported_as_gap": false
+    },
+    {
+      "item": "prop concept images",
+      "decision": "Deferred by standing user instruction; prop cards existing is the expected state.",
+      "effect_on_matrix": "No prop image would have been reported as a gap under this exclusion. Recorded for completeness: on this project the deferral is moot for ep01 — all seven ep01 plot props already have both main_01.png and scale_ref_01.png on disk (verified, part of the 48 prop images counted in runs/g4/gate.json scope_delivered), alongside their bible/props.json cards. Nothing to defer and nothing to request.",
+      "reported_as_gap": false
+    },
+    {
+      "item": "costume concept sheets",
+      "decision": "Deferred by standing user instruction; character sheets are produced as normal.",
+      "effect_on_matrix": "Also moot for ep01: all three ep01 costumes (CHAR-alice COS-001, CHAR-alice-sister COS-003, CHAR-white-rabbit COS-006) are their character's DEFAULT outfit, carried by that character's sheet.png per the costume_sheets.json ledgers. Section 6A only ever requires sheet_<COS-id>.png for a NON-DEFAULT costume, and ep01 has none — there is no costume change anywhere in the episode. So no costume sheet was required, none was deferred away, and none is a gap. The extra sheets on disk (sheet_COS-004, sheet_COS-007, sheet_age02) all belong to later episodes.",
+      "reported_as_gap": false
+    }
+  ],
+
+  "h2_waivers_not_re_raised": {
+    "source": "runs/g4/gate.json — G4 PASS_WITH_WAIVER, user signature ba96732d, 2026-09-23. 7 open majors waived at H2 with follow-ups.",
+    "principle": "A signed H2 waiver is an image-quality decision the user already made under a reroll budget of 0. It is never re-reported here as a coverage gap. Coverage asks whether the required view exists; the waivers describe how good the existing view is.",
+    "relevant_to_ep01": [
+      {
+        "waiver": "char-sheet self-check majors (runs/p4-char-concept-cb1..cb3)",
+        "ep01_touch": "CHAR-white-rabbit stands fully bipedal instead of rearing on his haunches.",
+        "handling": "Corrective posture wording goes into the p7 prompt text layer; assets stay as signed."
+      },
+      {
+        "waiver": "DEF-p4-costume-sheet-901",
+        "ep01_touch": "CHAR-alice-sister sleeve form; CHAR-alice freckles.",
+        "handling": "bible/costumes.json visual_en and appearance.json prompt_base_en remain the textual authority in prompts."
+      },
+      {
+        "waiver": "DEF-p4-prop-502",
+        "ep01_touch": "Some of the 48 prop images carry lettering / duplication / scale faults (no person or body part in any image).",
+        "handling": "Per the waiver follow-up, the p7 prompt工位 spot-checks any prop image it attaches as a scale anchor against the defect finding list. Not a coverage gap."
+      },
+      {
+        "waiver": "DEF-p4-envconcept-603 and the env-image self-check majors",
+        "ep01_touch": "None of the named offenders (SCN-wood*, SCN-rose-tree-yard, SCN-gryphon-sunning-spot, SCN-duchess-house-front) is an ep01 scene. All seven ep01 plates pass the layout-pack machine check.",
+        "handling": "No ep01 action."
+      },
+      {
+        "waiver": "DEF-p4-scenemodel-960 / -970 / -972",
+        "ep01_touch": "Whitebox metrics vs Bible architecture-card sizes.",
+        "handling": "Whitebox / layout metrics govern; verified at H3W (g6w), outside this audit."
+      }
+    ],
+    "not_relevant_to_ep01": ["DEF-p4-creature-403 (Gryphon / Mock Turtle — neither appears in ep01)"]
+  },
+
+  "advisory_notes_not_gaps": [
+    {
+      "note": "Prop images are 1280x720 or 1024x1024, below the 2560x1440 spec that applies to newly generated video-reference images. They were produced and signed off at G4 under the older prop-image spec, and reuse carries no minimum-pixel floor, so this does not block anything. Flagging it once so the p7 prompt工位 is not surprised when it attaches a scale anchor at that size; re-rendering at 2560x1440 would be a user-ordered image job, not an automatic refill.",
+      "affects": "all 7 ep01 props"
+    },
+    {
+      "note": "genmedia writes JPEG payloads under .png filenames throughout assets/concepts/. Every file above was parsed as JPEG. This is expected project behaviour, not corruption.",
+      "affects": "all image assets"
+    },
+    {
+      "note": "No new S/A lead surfaced in ep01 that Phase 4 had missed. All three ep01 characters and the one creature were in the H2-signed Phase 4 scope (43 character sheets, 7 creature sheets, 23 scene layout packs, 24 props / 48 prop images), so nothing needs the H3A 'new concept art, confirm as an H2 extension' callout on the preview page.",
+      "affects": "H3A preview page"
+    }
+  ],
+
+  "gate_verdict": {
+    "concept_coverage_ok": true,
+    "statement": "18 entities x their required views = 39 required views for ep01 (prop rows count the bible/props.json card alongside main_01 and scale_ref_01, per section 6A which checks assets/concepts/props/ against bible/props.json); 39 in stock, 0 missing, 100%. Every claimed path was stat-ed on disk and its header read. The section 6A precondition is satisfied: H3A may be raised for ep01, and p7-* dispatch for ep01 is unblocked as far as this gate is concerned.",
+    "gaps_requiring_user_decision": [],
+    "refills_dispatched": "none — nothing was missing, and nothing would have been dispatched from here in any case (auto-rerun budget 0; the orchestrator routes refills)."
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "character_id": "CHAR-fish-footman",
+  "name": "Fish-Footman",
+  "tier": "extra",
+  "card_type": "individual",
+  "gender": "male",
+  "age_sense": "middle-aged man (appearance base_age_range 40-50)",
+  "timbre": "cool, dry, thin man's voice, formal and slightly wet-lipped",
+  "pitch": "mid tenor-baritone, level ceremonial cadence",
+  "pitch_range_hz": [100, 160],
+  "speed_wpm": [110, 125],
+  "speed_cpm": [418, 475],
+  "accent": "crisp, formal liveried-footman's English, carefully 'correct' pronunciation",
+  "reference_style": "One ceremonial delivery of the Queen's croquet invitation; stiff and solemn. Must be distinguishable from the lower, croakier Frog-Footman in the same exchange.",
+  "emotion_range": {
+    "ceremonial": { "speed_delta": "-5%", "pitch_delta": "0semi", "note": "ch006-p02 'in a solemn tone'" }
+  },
+  "age_variants": [],
+  "source_chapter": "ch006",
+  "sources": ["ch006", "ch006-p02", "ch006-d0001"],
+  "voice_evidence": [
+    { "para": "ch006-p02", "quote": "this he handed over to the other, saying, in a solemn tone" }
+  ],
+  "inferred": true,
+  "inferred_fields": ["timbre", "pitch", "pitch_range_hz", "speed_wpm", "speed_cpm", "accent"],
+  "reason": "Solemn tone sourced; the rest designed for a lean liveried servant (appearance.json)."
+}

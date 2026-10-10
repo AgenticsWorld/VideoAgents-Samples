@@ -1,0 +1,53 @@
+{
+  "schema_version": "whitebox_plan.v1",
+  "group_id": "grp024",
+  "scene_id": "SCN-long-hall",
+  "basis": "The growth, staged on a fixed foot anchor at (5.68, -0.26) beside the glass table. continuity_plan size_chain step 3 carries her 0.254 m -> 2.74 m across sh062-sh063 with her feet never moving, and the morph rate is set by the three gauges it names, in order: the 0.715 m tabletop passes her shoulder at t=2.6 (height 0.87 m), her hip at t=3.8 (1.35 m) and comes to rest at her knee at t=6.0 (2.55 m); the 2.30 m tulip shades arrive level with her face at t=6.6 (2.61 m) and drop to her shoulder at t=8.4, where she reaches the full 2.74 m. Nothing about her body morphs as an effect on screen - the change is only ever legible against props that keep their true size, per CR-005.",
+  "actors": [
+    {
+      "id": "CHAR-alice",
+      "kind": "person",
+      "size_m": [0.0711, 0.254, 0.0559],
+      "morph_target": {"size_m": [0.7672, 2.74, 0.6028], "color": "#e63946"},
+      "keyframes": [
+        {"t": 0.0, "position": [5.68, 0.0, -0.26], "pose": "stand", "yaw": 2.5214, "morph": 0.0, "head_pitch": -0.6},
+        {"t": 1.2, "position": [5.68, 0.0, -0.26], "pose": "stand", "yaw": 2.5214, "morph": 0.0, "head_pitch": -0.6},
+        {"t": 2.6, "position": [5.68, 0.0, -0.26], "pose": "stand", "yaw": 2.5214, "morph": 0.249, "head_pitch": -0.2},
+        {"t": 3.8, "position": [5.68, 0.0, -0.26], "pose": "stand", "yaw": 2.5214, "morph": 0.44, "head_pitch": 0.1},
+        {"t": 6.0, "position": [5.68, 0.0, -0.26], "pose": "stand", "yaw": 2.5214, "morph": 0.923, "head_pitch": 0.5},
+        {"t": 6.6, "position": [5.68, 0.0, -0.26], "pose": "stand", "yaw": 2.5214, "morph": 0.949, "head_yaw": -0.5, "head_pitch": 0.1},
+        {"t": 7.4, "position": [5.68, 0.0, -0.26], "pose": "stand", "yaw": 2.5214, "morph": 0.98, "head_yaw": -0.5, "head_pitch": 0.1},
+        {"t": 8.4, "position": [5.68, 0.0, -0.26], "pose": "stand", "yaw": 2.5214, "morph": 1.0, "head_yaw": -0.4, "head_pitch": 0.2},
+        {"t": 10.0, "position": [5.68, 0.0, -0.26], "pose": "stand", "yaw": 2.5214, "morph": 1.0, "head_yaw": -0.3, "head_pitch": 0.25}
+      ]
+    }
+  ],
+  "cameras": [
+    {
+      "shot_id": "sh062",
+      "start": 0,
+      "duration_s": 6.0,
+      "movement": "static",
+      "keyframes": [
+        {"t": 0.0, "position": [2.805, 0.8, 0.459], "target": [5.68, 0.6, -0.26], "fov": 46.3972},
+        {"t": 6.0, "position": [2.805, 0.8, 0.459], "target": [5.68, 0.6, -0.26], "fov": 46.3972}
+      ]
+    },
+    {
+      "shot_id": "sh063",
+      "start": 6.0,
+      "duration_s": 4.0,
+      "movement": "static",
+      "keyframes": [
+        {"t": 0.0, "position": [7.301, 0.9, 0.815], "target": [5.68, 2.3, -0.26], "fov": 46.3972},
+        {"t": 4.0, "position": [7.301, 0.9, 0.815], "target": [5.68, 2.3, -0.26], "fov": 46.3972}
+      ]
+    }
+  ],
+  "continuity": {"actors": "inherit", "camera": "cut"},
+  "warnings": [
+    "sh062 does not move at all: one locked position, one target, 2.96 m of standoff giving a 2.54 m frame height, so she enters at 0.10 of frame height (0.254 m) and grows straight out of the top of it.",
+    "sh063 looks about 40 degrees up rather than camera.json's 'slightly up': a 0.90 m lens 1.95 m from a subject whose face is at 2.30-2.41 m has no other geometry available. Height, lens and axis are as authored.",
+    "lamp_08 sits at (5.47, 2.30, 0.00), 0.34 m from her shoulder, so the tulip shade that arrives level with her face is a real modelled object on her screen-left, as composition requires."
+  ]
+}

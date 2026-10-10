@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh093",
+  "group_id": "grp034",
+  "scene_no": "S09",
+  "duration_s": 5.0,
+  "size": "medium",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame; the camera does NOT follow her down)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 40,
+  "camera_height_m": 0.15,
+  "angle": "level, at the water's edge",
+  "rack_focus": "none",
+  "start_frame": "Profile at water level: Alice entering frame from screen right, running back toward the glass table along the water's edge, the flooded floor filling the lower frame.",
+  "end_frame": "The same frame emptied: her foot has slipped on the wet stone and she has gone straight into the flood at bottom-of-frame screen left, and the shot holds on the empty rocking water where she went in.",
+  "constraint_honoured": "'The camera does NOT follow her down — it holds on the empty rocking water. Her exit position is matched to her surfacing in sh094.'",
+  "movement_note": "Refusing the follow is what makes the splash a disappearance; the exit point bottom-left is preserved so sh094 can surface her in the matching place.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

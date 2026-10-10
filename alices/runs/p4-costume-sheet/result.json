@@ -1,0 +1,65 @@
+{
+  "task_id": "p4-costume-sheet",
+  "agent": "06-art/costume-concept",
+  "attempt": 1,
+  "status": "completed",
+  "finished_at": "2026-09-23",
+  "summary": "All 44 characters in bible/costumes.json have a ledger (costume_sheets.json): 52 costumes in total. Six new four-view costume sheets were generated, one call each (n=1, no retries, no provider errors). Alice's COS-002 reuses the age02 version base, which was already drawn in COS-002. Bill's COS-032 and the told-only Tortoise's COS-050 are skipped with reasons. Every other default costume maps to sheet.png.",
+  "genmedia": "image -> volcengine model=doubao-seedream-5-0-pro-260628, 2560x1440, n=1; 6 billed images (14400 tokens each), 0 probes, 0 failures, 0 resubmissions",
+  "method": {
+    "refs": "--ref 1 = runs/p4-char-concept-cb1/work/character_sheet_template.jpg (pixel-identical JPEG of agents/06-art/character-concept/templates/character_sheet_template.png; true PNG refs trip TLS resets on this channel). --ref 2 = the character's final sheet.png as the identity anchor. No other refs: refs/characters/ and refs/props/costumes/ are empty.",
+    "prompt": "SOUL layout sentence + photo-strip reinforcement + reference-role sentence (ref 2 gives identity only, not clothing) + gender word and stable identity traits from the base sheet's character block + 'Costume: ' + visual_en verbatim + 'Condition: ' + condition_and_wear + the pieces that change or are removed relative to the anchor, each named + 'Style: ' + style_fragment_ui verbatim. Full text is in each prompts.json costume_sheets[].",
+    "negative": "negative_prompt_en verbatim, + negative_prompt_waking_addon_en for the sister (real human), + layout addon 'single full-bleed illustration, one single panel, scenery background, crowd, text labels'",
+    "user_refs": "refs/style/alice.jpeg was read and applied the way style.json user_refs describes (through style_fragment_ui). It was not injected as --ref, because its full scene would pull scenery into a plain-backdrop sheet. Recorded in every prompts.json costume_sheets[].user_refs.",
+    "tools": ["code/gen_costume_sheets_p4-costume-sheet.py (assembles prompts and calls genmedia once per sheet)", "code/check_costume_sheets_p4-costume-sheet.py (machine checks -> runs/p4-costume-sheet/checks.json)"]
+  },
+  "acceptance_checks": {
+    "file": "runs/p4-costume-sheet/checks.json",
+    "costume_sheet_coverage": "PASS 52/52 (every costume has a ledger row with an existing main-dir file or a skip_reason; defaults map to sheet.png)",
+    "costume_visual_en_in_prompt": "PASS 7/7 (6 new sheets + the reused sheet_age02.png, whose character-concept prompt contains COS-002 visual_en verbatim)",
+    "costume_sheet_identity_ref": "PASS 7/7 (template + CHAR sheet.png on every new generation; COS-002 via reuse_of of the version base)",
+    "size_ge_2560x1440": "PASS 7/7 (JPEG container under .png name, a genmedia/volcengine behaviour)",
+    "ascii_filenames": "PASS",
+    "main_dir_hygiene": "PASS (no single-view crops; usage_ledger.jsonl is genmedia's billing ledger)"
+  },
+  "items": [
+    {"character": "CHAR-alice", "costume": "COS-002", "product": "assets/concepts/characters/CHAR-alice/sheet_age02.png", "action": "reuse_of version base (no generation)", "self_check": "inherited base defects: royal blue, rounded collar, light freckles", "defect_ids": ["DEF-p4-costume-sheet-901-e"]},
+    {"character": "CHAR-alice-sister", "costume": "COS-004", "product": "assets/concepts/characters/CHAR-alice-sister/sheet_COS-004.png", "self_check": "PASS with minor defects: little crinoline spread; shawl knotted rather than pinned", "defect_ids": []},
+    {"character": "CHAR-white-rabbit", "costume": "COS-007", "product": "assets/concepts/characters/CHAR-white-rabbit/sheet_COS-007.png", "self_check": "PARTIAL: tabard drawn as an open-front over-vest; bipedal stance inherited from base", "pending_H2": "tabard kept as the herald marker; confirm with the CGI anatomy (costumes.json COS-007 pending_H2) — for user decision at H2", "defect_ids": ["DEF-p4-costume-sheet-901-a"]},
+    {"character": "CHAR-king-of-hearts", "costume": "COS-010", "product": "assets/concepts/characters/CHAR-king-of-hearts/sheet_COS-010.png", "self_check": "PASS with minor defects: robe calf length (inherited); crown not askew", "defect_ids": []},
+    {"character": "CHAR-knave-of-hearts", "costume": "COS-012", "product": "assets/concepts/characters/CHAR-knave-of-hearts/sheet_COS-012.png", "self_check": "PARTIAL: front tabard still a short bib (inherited); chain long", "defect_ids": ["DEF-p4-costume-sheet-901-d"]},
+    {"character": "CHAR-duchess", "costume": "COS-014", "product": "assets/concepts/characters/CHAR-duchess/sheet_COS-014.png", "self_check": "PARTIAL: two flounces not three; bonnet reads as a flat-topped hat in side/back; crinoline not very wide", "defect_ids": ["DEF-p4-costume-sheet-901-c"]},
+    {"character": "CHAR-cook", "costume": "COS-039", "product": "assets/concepts/characters/CHAR-cook/sheet_COS-039.png", "self_check": "PARTIAL: apron stained, not clean; bonnet is a flat-brimmed hat without chin ties", "defect_ids": ["DEF-p4-costume-sheet-901-b"]},
+    {"character": "CHAR-bill-the-lizard", "costume": "COS-032", "product": null, "action": "skip_reason: looks the same as sheet.png (bare clean lizard; costumes.json costume_sheet none)", "defect_ids": []},
+    {"character": "CHAR-tortoise", "costume": "COS-050 (default)", "product": null, "action": "skip_reason: told-only, no character sheet exists, unclothed; ledger dir created with costume_sheets.json only", "pending_H2": "CGI register for a told-only animal — for user decision at H2", "defect_ids": []},
+    {"characters": "35 other characters", "action": "default-only ledger, file sheet.png, reuse true"}
+  ],
+  "pending_H2_flags": [
+    "CHAR-white-rabbit COS-006 garment set beyond the waistcoat and COS-007 tabard vs CGI anatomy — pending_H2, for user decision at H2",
+    "CHAR-fish-footman / CHAR-frog-footman (H2-footmen-anatomy) — ledger reuses sheet.png as rendered per current proposal; pending_H2",
+    "CHAR-duchess-baby (H2-non-speaking-animals, baby to piglet end-state) — ledger reuses sheet.png; pending_H2",
+    "CHAR-tortoise told-only CGI register — pending_H2"
+  ],
+  "user_decisions_requested_at_H2": ["DEF-p4-costume-sheet-901 a-e: accept the kept sheets, or authorise one targeted regeneration per sheet (reroll budget is 0, so nothing was redone)"],
+  "defects_opened": ["qa/defects/DEF-p4-costume-sheet-901.json"],
+  "skills": "none selected for this station",
+  "background_processes": "none",
+  "files_created": [
+    "assets/concepts/characters/CHAR-alice-sister/sheet_COS-004.png",
+    "assets/concepts/characters/CHAR-white-rabbit/sheet_COS-007.png",
+    "assets/concepts/characters/CHAR-king-of-hearts/sheet_COS-010.png",
+    "assets/concepts/characters/CHAR-knave-of-hearts/sheet_COS-012.png",
+    "assets/concepts/characters/CHAR-duchess/sheet_COS-014.png",
+    "assets/concepts/characters/CHAR-cook/sheet_COS-039.png",
+    "assets/concepts/characters/<44 CHAR dirs>/costume_sheets.json (incl. new dir CHAR-tortoise/)",
+    "qa/defects/DEF-p4-costume-sheet-901.json",
+    "code/gen_costume_sheets_p4-costume-sheet.py",
+    "code/check_costume_sheets_p4-costume-sheet.py",
+    "runs/p4-costume-sheet/result.json, checks.json, gen_logs/*.log"
+  ],
+  "files_modified": [
+    "assets/concepts/characters/{CHAR-alice-sister,CHAR-white-rabbit,CHAR-king-of-hearts,CHAR-knave-of-hearts,CHAR-duchess,CHAR-cook}/prompts.json (appended costume_sheets[])",
+    "assets/concepts/characters/{those 6 + CHAR-alice, CHAR-bill-the-lizard}/selection.json (appended costume_sheets{} and costume_rerolls[])",
+    "the 6 characters' usage_ledger.jsonl (genmedia billing lines)"
+  ]
+}

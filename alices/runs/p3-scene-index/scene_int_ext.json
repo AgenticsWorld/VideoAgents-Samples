@@ -1,0 +1,12 @@
+{
+  "check": "scene_int_ext_match",
+  "pass": true,
+  "errors": [],
+  "warnings": [],
+  "index": {
+    "n_scenes": 26,
+    "missing": [],
+    "errors": [],
+    "warns": []
+  }
+}

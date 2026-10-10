@@ -1,0 +1,47 @@
+{
+  "character_id": "CHAR-pat",
+  "card_type": "individual",
+  "tier": "extra",
+  "layer": "dream",
+  "gender": "male",
+  "gender_note": { "source_chapter": "ch004", "paragraph": "ch004-p19", "quote": "“Sure, it’s an arm, yer honour!” (He pronounced it “arrum.”)", "reason": "'He pronounced it'." },
+  "hair": {
+    "color": "dark brown",
+    "style": "shaggy, collar-length, under a battered soft felt hat; short side-whiskers",
+    "inferred": true,
+    "reason": "Pat is only heard in the source (Alice is shut inside the house, ch004-p16..p22), never described. Designed as an ordinary labouring man; deliberately NOT given red hair or any stage-Irish caricature marker — his Irishness is carried by the sourced speech only."
+  },
+  "eyes": { "color": "blue-grey", "inferred": true, "reason": "Not described; common Irish/English colouring." },
+  "face": {
+    "shape": "weather-reddened, lined, broad cheekbones, stubbled jaw",
+    "expression_default": "wary and reluctant, deferential to the Rabbit",
+    "source_chapter": "ch004", "paragraph": "ch004-p22",
+    "quote": "“Sure, I don’t like it, yer honour, at all, at all!” “Do as I tell you, you coward!”",
+    "detail_inferred": true,
+    "detail_reason": "Physical features designed; the timid, deferential expression is extracted from his sourced lines."
+  },
+  "build": {
+    "height_range_cm": [168, 174],
+    "body_type": "wiry, strong-armed outdoor labourer, slightly stooped from digging",
+    "scale_reference": "About 33-39 cm taller than Alice at base scale (135 cm, CHAR-alice scale anchor); in ev0016 Alice is giant-sized inside the house (SUP-003), so Pat reads tiny beside the window-filling arm — performer height unchanged.",
+    "inferred": true,
+    "reason": "Not described; designed from his digging job (ch004-p16)."
+  },
+  "base_age_range": "30-40",
+  "base_age_inferred": true,
+  "base_age_reason": "Not given; a working-age hired man in the Rabbit's service.",
+  "marks": [
+    { "type": "earth stains", "position": "knees, boots and hands", "description": "fresh garden soil from 'digging for apples'", "source_chapter": "ch004", "paragraph": "ch004-p16", "quote": "Sure then I’m here! Digging for apples, yer honour!" }
+  ],
+  "signature_items": [
+    { "item": "garden spade with a worn wooden D-handle", "source_chapter": "ch004", "paragraph": "ch004-p16", "quote": "Digging for apples", "inferred": true, "reason": "Digging implies a spade; the tool itself is not named." },
+    { "item": "cucumber-frame glass shards / broken glass around him after the fall", "source_chapter": "ch004", "paragraph": "ch004-p15", "quote": "a crash of broken glass, from which she concluded that it was just possible it had fallen into a cucumber-frame" }
+  ],
+  "default_outfit_tone": "Plain 1862 Irish farm-labourer's dress in earth tones: collarless unbleached linen shirt with rolled sleeves, brown frieze waistcoat, patched corduroy trousers tied below the knee with string, heavy hobnailed boots, battered brown soft felt hat. No livery, no animal coding.",
+  "default_outfit_tone_source": { "inferred": true, "reason": "Index performer_concept: 'plain 1862 outdoor-gardening dress, no animal coding'. Details designed from period labourer dress." },
+  "period_silhouette": { "value": "mid-Victorian rural labourer: loose shirt, waistcoat, knee-tied corduroys, felt hat", "inferred": true, "reason": "Period design; source silent." },
+  "sup002_coding": { "animal_or_card": "none", "touches": [], "note": "The source never names a species for Pat; per the controlled index he is a plain human labourer and his identity is carried by his Irish idiom ('yer honour', 'arrum').", "source_chapter": "ch004", "paragraph": "ch004-p19", "quote": "(He pronounced it “arrum.”)", "rule": "bible/cultivation.json SUP-002" },
+  "screen_presence_note": "In the source Pat is heard, not seen (Alice is inside). If staging shows him, it is only through the window / as a small figure below, never in close-up dialogue with Alice.",
+  "doubling": { "value": "none", "reason": "Not part of any H1 ruling 5.3 B doubling pair." },
+  "prompt_summary_en": "Irish farm labourer about 35 in 1862, wiry and slightly stooped, weather-reddened lined face with stubble, blue-grey eyes, shaggy dark brown hair and short side-whiskers under a battered brown felt hat, collarless linen shirt with rolled sleeves, brown frieze waistcoat, patched corduroy trousers tied below the knee, hobnailed boots, soil on knees and hands, holding a garden spade, wary expression, realistic period drama, human actor, no caricature"
+}

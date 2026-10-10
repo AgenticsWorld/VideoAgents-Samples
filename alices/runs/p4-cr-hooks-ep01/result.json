@@ -1,0 +1,19 @@
+{
+  "task_id": "p4-cr-hooks-ep01",
+  "agent": "01-story/hook",
+  "project": "alices",
+  "attempt": 1,
+  "status": "done",
+  "date": "2026-09-23",
+  "change_request": "BIB-0027",
+  "changed_files": [
+    {
+      "file": "story/episodes/ep01/hooks.json",
+      "version": "1 -> 2",
+      "change_note": "Stale wording only: ec-2.spoiler_note 'the Mouse performer' -> 'the photoreal CGI Mouse (BIB-0027, SUP-002)'; oh-1.fidelity_note dropped 'no hint of CGI' (rigged slow fall SUP-008 kept, cites WR-010 dream-environment reading); added change_log entry. Hooks, copy, visuals, durations, spoiler levels, recommendation and selected (null/null) unchanged."
+    }
+  ],
+  "checks": {"json_valid": "PASS", "ids_and_structure_unchanged": "PASS", "no_remaining_performer_or_no_CGI_wording": "PASS"},
+  "defects_opened": [],
+  "notes": "ep01 hooks put no talking animal on screen (the White Rabbit is not in any hook shot; the Mouse is withheld to ep02), so no hook needed redesign. The pending_H2 points (Frog/Fish-Footman anatomy, non-speaking animals) do not touch ep01 hooks."
+}

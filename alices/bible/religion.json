@@ -1,0 +1,145 @@
+{
+  "_meta": {
+    "file": "bible/religion.json",
+    "status": "locked_v1",
+    "owner": "02-worldbuilding/religion",
+    "write_via": "00-orchestration/memory-bible (on_bible_access)",
+    "task_id": "p2-religion",
+    "generated": "2026-09-22",
+    "scope": "Faith, church and ritual practice present in the adapted world (e.g. observances, clergy, moral codes). Leave arrays empty if the source and adaptation give no basis; do not invent a religion.",
+    "id_prefixes": {
+      "REL-": "faith / practice / ritual (reserved; never used for relationships)"
+    },
+    "entry_schema": {
+      "faiths[]": {
+        "id": "REL-001",
+        "name": "",
+        "kind": "faith|ritual|observance|moral_code",
+        "summary": "",
+        "adherents": [
+          "<CHAR-*/FAC-*>"
+        ],
+        "vestments_visual": "",
+        "iconography_visual": "",
+        "source": {
+          "chapter": "chNNN",
+          "quote": ""
+        },
+        "inferred": false,
+        "reason": null
+      }
+    },
+    "domain_note": "Lewis Carroll's Alice's Adventures in Wonderland contains almost no on-page religious content: no deity, church, clergy, prayer, or oath is named anywhere in the 12 chapters (verified by full-text search for church/God/pray/sermon/sin/soul/heaven/hell/priest/chapel/Sunday/faith/believe/Providence/vicar/clergy/rector/conscience/swear/oath/Bible — none present as religious usage). Per this file's scope note, no religion is invented for the story's dream-logic Wonderland episodes. The three entries below register only what the realistic-adaptation premise (brief.md) requires: (1) the ambient, undramatized faith of the real-world (waking) frame, grounded in the actual historical setting rather than invented; (2) the one calendar/holiday word the source itself uses; (3) the one recurring, directly-quoted behavior in the source (the Duchess's compulsive moralizing) that this file's own kind:moral_code category is reserved for, per bible/WRITE_RULES.md's ownership split (moral_code lives here; etiquette/education/festival live in culture.json).",
+    "cross_domain_assumptions": [
+      {
+        "id": "OQ-religion-01",
+        "topic": "No invented Wonderland religion",
+        "statement": "This file assumes the dream-logic Wonderland episodes (ev0002-ev0052, per story/events.json realistic_adaptation_flags) carry no organized faith, deity, clergy, or ritual of their own, regardless of how 02-worldbuilding/magic-cultivation ultimately renders the talking-animal and card-figure characters (human stand-ins, dream-logic, performance, hallucination, etc. — SUP-* decisions, bible/WRITE_RULES.md §7.1). The Queen's court, the Caterpillar, the Mock Turtle's school, etc. are read as secular institutions/games/performances, not religious ones; 02-worldbuilding/political and 02-worldbuilding/culture should not expect this file to supply any doctrinal or clerical backing for the Queen's authority or courtroom procedure.",
+        "depends_on_source_element": "talking, anthropomorphic animals and living-card figures; dream frame",
+        "reason": "Source gives zero religious content inside the dream episodes; inventing one would violate this file's explicit scope instruction ('do not invent a religion') and the brief.md realistic, non-fantasy premise.",
+        "reconciliation": "CONSISTENT with the SUP registry (no SUP entry introduces faith or ritual). No change."
+      },
+      {
+        "id": "OQ-religion-02",
+        "topic": "Real-world frame is placed in ordinary mid-Victorian rural England",
+        "statement": "REL-001 assumes the waking, real-world frame (the riverbank, Alice's sister, the ch012 farmyard reality-mapping) is ordinary mid-19th-century rural England with the Church of England as its unstated ambient religion — consistent with the source's own publication era (1865) and with story_graph.json realism_notes rn-01's suggestion that ch012-p70's sheep-bells/shepherd-boy/farmyard imagery anchors the realistic reading of the frame. If 02-worldbuilding/world or /geography places the real-world frame in a different period or region for the adaptation, REL-001 and REL-002 (Christmas) should be revisited at merge for consistency.",
+        "depends_on_source_element": "dream frame; impossible or dreamlike geography",
+        "reason": "No chapter states the family's religion or the setting's exact period; the realistic-adaptation premise requires a concrete, self-consistent, non-invented answer rather than leaving it UNKNOWN.",
+        "reconciliation": "CONSISTENT with world.json/timeline.json (mid-Victorian England, 1862). No change."
+      }
+    ],
+    "version": "v1",
+    "merged_by": "p2-merge (00-orchestration/memory-bible)",
+    "merged_on": "2026-09-22",
+    "h1_status": "signed",
+    "rechecked_by": "p2-merge-recheck (00-orchestration/memory-bible)",
+    "rechecked_on": "2026-09-22",
+    "locked_at": "2026-09-22T17:59:52+08:00",
+    "locked_by": "H1 user signature (G2 PASS), recorded by 00-orchestration/memory-bible task p2-lock",
+    "lock_record": "runs/g2/gate.json",
+    "lock_changelog": "BIB-0023",
+    "controlled": "Writes only via memory-bible controlled change (WRITE_RULES.md section 5)."
+  },
+  "faiths": [
+    {
+      "id": "REL-001",
+      "name": "The Church of England",
+      "kind": "faith",
+      "summary": "The ambient, entirely undramatized established religion of the story's real-world (waking) frame: ordinary mid-Victorian rural England, where Anglican Christianity is the unremarked social default rather than a subject the story engages with. No character prays, attends church, cites scripture, or names a deity anywhere in the source; the Wonderland dream episodes are treated as carrying no religion of their own (see cross_domain_assumptions OQ-religion-01). This entry exists only so that production has a settled, non-invented answer for incidental background texture (e.g. a distant church spire in an establishing shot of the riverside frame, LOC-church-spire, or the ordinary Sunday-best quality of Alice's and her sister's clothing) rather than an unstated gap.",
+      "adherents": [
+        "CHAR-alice"
+      ],
+      "vestments_visual": "No clergy or church interior is ever framed on screen; there is no vestment to design. If a church building appears at all, it is only as a small, plain, gray-stone parish spire glimpsed at a distance in wide exteriors of the riverside setting (bible/geography.json LOC-church-spire), never in close-up.",
+      "iconography_visual": "No cross, altar, prayer book, or other religious symbol appears in Alice's possession, dress, or surroundings anywhere in the adaptation. Any incidental churchyard or spire silhouette used for background texture should be plain and unadorned, consistent with an ordinary rural Church of England parish rather than an ornate or symbolically loaded building.",
+      "source": {
+        "chapter": "ch012",
+        "quote": "the rattling teacups would change to tinkling sheep-bells, and the Queen’s shrill cries to the voice of the shepherd boy—and the sneeze of the baby, the shriek of the Gryphon, and all the other queer noises, would change (she knew) to the confused clamour of the busy farm-yard"
+      },
+      "inferred": true,
+      "reason": "The source never names a church, deity, or clergy. This entry grounds the realistic adaptation's real-world frame in the setting's own actual historical religious default (Church of England, rural mid-Victorian England) rather than leaving the fact unstated or inventing a fictional faith, per brief.md's realistic-drama premise and this file's instruction to design self-consistent, non-fantastical values for production-required background rather than leave them UNKNOWN. Cited to ch012's farmyard/pastoral reality-mapping (also flagged by story_graph.json realism_notes rn-01) as the clearest textual anchor for what the waking world actually looks like."
+    },
+    {
+      "id": "REL-002",
+      "name": "Christmas",
+      "kind": "observance",
+      "summary": "The one calendar/holiday word the source itself uses: while falling down the rabbit-hole, Alice idly imagines writing a formal note to her own feet and jokes about buying them 'a new pair of boots every Christmas.' It is a passing comic aside, not a depicted holiday scene or religious observance, but it fixes the story's real-world calendar to the ordinary Christian (Church of England) year and confirms that a conventional Victorian domestic Christmas (gift-giving to household members, including, in Alice's joke, her own feet) is part of the setting's cultural fabric. No church attendance, nativity reference, or other religious content accompanies the mention.",
+      "adherents": [
+        "CHAR-alice"
+      ],
+      "vestments_visual": "Not depicted; no Christmas scene occurs on-page or on-screen. If a calendar, almanac, or similar prop referencing the date is needed elsewhere in production, ordinary Victorian winter dress and plain domestic decoration (holly, a fire) are sufficient with no religious imagery required.",
+      "iconography_visual": "None on-page. Alice's joke is entirely verbal (buying her feet boots as a Christmas present); no ornament, tree, nativity scene, or other Christmas iconography is described or required.",
+      "source": {
+        "chapter": "ch002",
+        "quote": "I’ll give them a new pair of boots every Christmas."
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "REL-003",
+      "name": "Everything's got a moral (Victorian didactic moralizing)",
+      "kind": "moral_code",
+      "summary": "The Duchess's compulsive habit of wringing a pat 'moral' out of any remark she hears ('Tut, tut, child! ... Everything’s got a moral, if only you can find it'), immediately followed by a string of forced aphorisms ('Birds of a feather flock together'; 'Be what you would seem to be'; 'the more there is of mine, the less there is of yours'). In the source this is played as comic self-parody — the 'morals' are non sequiturs or strained puns rather than doctrine — and Alice privately notes 'How fond she is of finding morals in things!' The Duchess drops the habit instantly the moment she is frightened by news of the Queen. This file registers the practice as the story's one recurring, directly-quoted instance of period moral instruction (the mid-Victorian, Church-of-England-inflected habit of drawing an improving lesson from any event, familiar from contemporary tract literature and children's moral education), which bible/WRITE_RULES.md reserves to this file's own kind:moral_code category rather than culture.json's etiquette/education categories. It is not an organized faith, has no clergy, and has no doctrine beyond the individual aphorisms the Duchess happens to invent on the spot.",
+      "adherents": [
+        "CHAR-duchess"
+      ],
+      "vestments_visual": "No special dress; the Duchess wears her ordinary (per source, deliberately unflattering/garish) Victorian household dress while moralizing — see bible/costumes.json for her character design. This is a speech habit, not a religious vestment or role.",
+      "iconography_visual": "None; the 'morals' are spoken aphorisms only, not tied to any book, symbol, or object on screen.",
+      "source": {
+        "chapter": "ch009",
+        "quote": "Tut, tut, child! [...] Everything’s got a moral, if only you can find it."
+      },
+      "also_seen": [
+        {
+          "chapter": "ch009",
+          "quote": "’Tis so, [...] and the moral of that is—‘Oh, ’tis love, ’tis love, that makes the world go round!’"
+        },
+        {
+          "chapter": "ch009",
+          "quote": "Ah, well! It means much the same thing, [...] and the moral of _that_ is—‘Take care of the sense, and the sounds will take care of themselves.’"
+        },
+        {
+          "chapter": "ch009",
+          "quote": "Very true, [...] flamingoes and mustard both bite. And the moral of that is—‘Birds of a feather flock together.’"
+        },
+        {
+          "chapter": "ch009",
+          "quote": "there’s a large mustard-mine near here. And the moral of that is—‘The more there is of mine, the less there is of yours.’"
+        },
+        {
+          "chapter": "ch009",
+          "quote": "I quite agree with you, [...] and the moral of that is—‘Be what you would seem to be’"
+        },
+        {
+          "chapter": "ch009",
+          "quote": "How fond she is of finding morals in things!"
+        }
+      ],
+      "inferred": true,
+      "reason": "The Duchess's dialogue is quoted verbatim from the source and is not itself invented. What is inferred is the classification of this behavior as an instance of real mid-Victorian, church-adjacent didactic moral instruction rather than a purely comic character tic with no period-religious grounding — a realistic-adaptation contextual reading needed to justify placing it in religion.json's moral_code category (per bible/WRITE_RULES.md's file-ownership split with culture.json) rather than leaving the Duchess's habit unregistered anywhere in the bible.",
+      "see_also": [
+        "CUL-009"
+      ]
+    }
+  ]
+}

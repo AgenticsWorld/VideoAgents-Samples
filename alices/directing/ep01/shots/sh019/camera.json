@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh019",
+  "group_id": "grp008",
+  "scene_no": "S03",
+  "duration_s": 6.0,
+  "size": "close",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame, drifting with her)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 50,
+  "camera_height_m": "beside her at her own height on her axis",
+  "angle": "level, square-on to the label",
+  "rack_focus": "none",
+  "start_frame": "Across the open drop toward the pantry shelf: her hands taking the jar down off the shelf, the ORANGE MARMALADE label square-on and sharp across its whole width, her face just above it.",
+  "end_frame": "The same frame with the jar held out at arm's length over the drop, plainly empty, her disappointment on her face above it; the shelf already sliding up out of the top of frame.",
+  "constraint_honoured": "'ORANGE MARMALADE gets exactly one clean legible read here' — square-on and static for the whole shot, which is what keeps generated lettering from garbling.",
+  "movement_note": "Comedy of manners, not wonder: a still frame plays it as an ordinary domestic action happening in an impossible place.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

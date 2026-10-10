@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh010",
+  "group_id": "grp006",
+  "scene_no": "S02",
+  "duration_s": 5.0,
+  "size": "wide",
+  "movement": "track_follow",
+  "direction": "abeam, travelling with her across the field toward the hedge; she holds screen-left and the grass streaks right to left through the near foreground",
+  "speed": "about 2.6 m/s, locked to a child's run — roughly thirteen metres of field in the five seconds",
+  "speed_curve": "linear",
+  "rig": "handheld",
+  "lens_mm": 40,
+  "camera_height_m": 1.0,
+  "angle": "level, hip height",
+  "rack_focus": "none",
+  "start_frame": "Hip-height travelling wide abeam of Alice: she is screen-left with her skirt bunched in one fist, seed-heads whipping through the near foreground, the white flicker of the rabbit deep in frame ahead of her and the hawthorn hedge low across the background.",
+  "end_frame": "The same abeam framing a run later: she is still screen-left and breathing hard, the hedge line now noticeably bigger across the background and the white flicker closer in to it.",
+  "constraint_honoured": "'Mild handheld allowed here only. No long lens' — the episode's single handheld shot, on the 40 mm human-eye lens; the shake stays small enough to read as breath, not as style.",
+  "movement_note": "Licensed move (a), following her run. One move only: the camera travels with her and never pans off her or changes height.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

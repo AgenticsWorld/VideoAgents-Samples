@@ -1,0 +1,37 @@
+{
+  "shot_id": "sh085",
+  "group_id": "grp032",
+  "scene_no": "S08",
+  "scene_id": "SCN-long-hall",
+  "duration_s": 2.0,
+  "is_dialogue": false,
+  "group_position": "first shot of grp032 — Alice on her map start (curtain, sitting in the water at the little door); no path in this group, she shrinks where she sits.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "sit",
+      "start_pos": "sitting in the water at the low curtain, head turning sharply to the glass table to measure herself against it",
+      "space_fragment_en": "sitting in the water at the low curtain on screen-right, facing screen-left at the glass table",
+      "facing": "screen-left across the frame at the table — the shortest and most functional look in S08",
+      "path": [],
+      "beats": [
+        { "t": 0.4, "action": "her head snaps round to the glass table", "sync": "the measurement" },
+        { "t": 1.4, "action": "it is taller beside her than it was", "sync": "confirmation in two seconds" }
+      ],
+      "performance_beat": {
+        "objective": "check the glove against something that cannot have changed",
+        "goal": "check the glove against something that cannot have changed",
+        "emotional_arc": "from cold fact to confirmed alarm",
+        "arc_from": "cold fact",
+        "arc_to": "confirmed alarm",
+        "trigger": { "beat": "the tabletop reads taller beside her than it was", "t": 1.4 },
+        "no_early_reaction": ["the eyes widening", "the body straightening", "a hand going to the floor"],
+        "forbidden_early": ["the eyes widening", "the body straightening", "a hand going to the floor"],
+        "end_state": "head held round to screen-left, eyes on the tabletop, body unmoved, breath stopped"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0008 (dream) — she is shrinking again", "note": "Alice alone." }
+}

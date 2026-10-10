@@ -1,0 +1,12 @@
+{
+  "character_id": "CHAR-queen-of-hearts", "task_id": "p4-char-concept-cb1", "sheet": "sheet.png", "variants": [],
+  "self_check": {"sheet.png": {
+    "layout": "PASS",
+    "appearance_field_hits": {"gender_female_about_fifty": true, "jet_black_hair_grey_temple_streak": true, "tight_coiled_bun_under_crown": true, "small_hard_dark_eyes_heavy_scowling_brows": true, "florid_complexion": true, "square_heavy_jaw_double_chin_strong_nose_small_mouth": true, "arms_folded_front_view": true, "tall_broad_imposing": "partial", "gold_crown_red_heart_mark": true, "no_weapon": true},
+    "costume_COS-008_hits": {"flat_rectangular_crimson_front_panel_white_piping_black_edge": true, "red_heart_on_white_oval": true, "gold_crown_devices_at_corners": true, "crimson_cream_lattice_back_with_heart_rosette": true, "full_crimson_skirt_wide_crinoline": true, "squared_shoulders": true, "long_sleeves_white_cuffs": true},
+    "style": "PASS",
+    "defects": ["Figure reads stout rather than distinctly tall (height cannot be confirmed without a scale reference) - minor.", "Front panel shows a second heart on the skirt (two heart devices) - minor, card-like."]
+  }},
+  "not_rendered_by_design": ["spectacles (trial variant only)"],
+  "rerolls": []
+}

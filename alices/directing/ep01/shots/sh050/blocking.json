@@ -1,0 +1,39 @@
+{
+  "shot_id": "sh050",
+  "group_id": "grp019",
+  "scene_no": "S06",
+  "scene_id": "SCN-long-hall",
+  "duration_s": 7.0,
+  "is_dialogue": true,
+  "group_position": "last shot of grp019 — Alice still on the map start/end ground (glass_table foot), and does not move.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "stand",
+      "start_pos": "ten inches high at the foot of the glass table, the empty bottle still beside her at exactly her own height",
+      "space_fragment_en": "standing ten inches high at the foot of the glass table, centred in frame, facing up with one hand flat on her head",
+      "facing": "up under her own hand; the lead room above her stays empty",
+      "path": [],
+      "beats": [
+        { "t": 0.6, "action": "her face brightens — she is the right size for the little door", "sync": "the good news" },
+        { "t": 2.0, "action": "she hesitates and puts a hand flat on top of her head", "sync": "before the line" },
+        { "t": 2.8, "action": "speaks", "sync": "LN-ep01-011 begins" },
+        { "t": 5.6, "action": "her eyes go up under her own hand and stay there", "sync": "LN-ep01-011 on 'candle'" }
+      ],
+      "performance": {
+        "objective": "find out whether the shrinking has stopped before she lets herself be pleased about it",
+        "goal": "find out whether the shrinking has stopped",
+        "emotional_arc": "from pleasure at being the right size to a nervous, waiting stillness",
+        "arc_from": "pleasure at being the right size",
+        "arc_to": "nervous waiting",
+        "trigger": { "line_ref": "LN-ep01-011", "word": "candle" },
+        "no_early_reaction": ["the hand going to her head", "the eyes going up", "the smile dropping"],
+        "forbidden_early": ["the hand going to her head", "the eyes going up", "the smile dropping"],
+        "end_state": "one hand flat on the crown of her head, eyes turned up under it, mouth closed, feet absolutely still"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0004 (dream)", "note": "Alice alone." }
+}

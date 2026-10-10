@@ -1,0 +1,84 @@
+{
+  "_meta": {
+    "file": "assets/audio/voice/refs/manifest.json",
+    "owner": "09-audio/voice-generation",
+    "produced_by_task": "p3-voice-cast",
+    "produced_on": "2026-09-22",
+    "scope": "Character x form <-> voiceprint sample <-> casting.json entry <-> voice.json version, for all speaking characters (38 voice.json cards; CHAR-alice contributes 2 forms via age_variants = 39 samples total). Consumed by 08-video-gen/prompt to pick the reference_audio anchor for each speaking character in a group's Audio N slots.",
+    "sample_spec": "3-5s calm neutral English content, dry (no BGM/reverb/ambience) pure voice, natural speed (no --speed override; project output.dialogue_tts_speed=1.0 default), mp3, produced via python3 modules/genmedia.py tts --character <CHAR-id> [--variant <variant>] (seed-audio-1.0 description-custom mode: --voice never passed).",
+    "duration_gate": "[3,5]s. 12/39 pass; 27/39 measured over 5s (5.35-8.66s) - see duration_gate_status below. Per project auto-retry-count=0, none were auto-resynthesised; kept as produced and flagged for orchestrator/user disposition. All 39 files exist and are valid, playable, dry-voice mp3 (verified rc=0 + ffprobe duration on every file); the failures are a duration-window overshoot, not a synthesis failure.",
+    "duration_gate_status": {
+      "pass": [
+        "CHAR-alice-sister/default", "CHAR-caterpillar/default", "CHAR-cook/default",
+        "CHAR-dormouse/default", "CHAR-eaglet/default", "CHAR-fish-footman/default",
+        "CHAR-frog-footman/default", "CHAR-gardener-five/default", "CHAR-gardener-seven/default",
+        "CHAR-gardener-two/default", "CHAR-mouse/default", "CHAR-old-crab/default"
+      ],
+      "fail_over_5s": [
+        "CHAR-alice/default (7.37s)", "CHAR-alice/age02 (7.85s)", "CHAR-bill-the-lizard/default (6.55s)",
+        "CHAR-canary/default (6.96s)", "CHAR-card-soldiers-ensemble/default (6.14s)",
+        "CHAR-caucus-race-party-ensemble/default (6.55s)", "CHAR-cheshire-cat/default (5.35s)",
+        "CHAR-court-officers-ensemble/default (6.14s)", "CHAR-crowd-ensemble/default (6.55s)",
+        "CHAR-dodo/default (5.74s)", "CHAR-duchess/default (6.96s)", "CHAR-duck/default (6.55s)",
+        "CHAR-executioner/default (6.74s)", "CHAR-gryphon/default (7.37s)", "CHAR-hatter/default (6.96s)",
+        "CHAR-jury-ensemble/default (6.55s)", "CHAR-king-of-hearts/default (6.14s)",
+        "CHAR-knave-of-hearts/default (6.14s)", "CHAR-lory/default (6.55s)", "CHAR-magpie/default (5.35s)",
+        "CHAR-march-hare/default (6.14s)", "CHAR-mock-turtle/default (6.14s)", "CHAR-pat/default (6.55s)",
+        "CHAR-pigeon/default (7.37s)", "CHAR-queen-of-hearts/default (6.96s)",
+        "CHAR-white-rabbit/default (8.66s)", "CHAR-young-crab/default (6.96s)"
+      ],
+      "note": "Text length per form was sized to that character's own voice.json speed_wpm midpoint for a ~4s target; seed-audio-1.0 did not track requested speaking rate (no --speed sent), so actual pacing varied far more than speed_wpm predicts and word-count sizing alone could not reliably hit the 3-5s window for this model. Two options for a follow-up work order (not executed here - would be a resynthesis, i.e. a retry): (a) shorten each flagged line further and resynthesise, or (b) resynthesise with an explicit --speed>1.0. Either needs an explicit new work order/decision, per auto-retry-count=0."
+    },
+    "casting_ref_file": "assets/audio/voice/casting.json",
+    "tier_legend": "S/A/B/extra per bible/characters/index.json tier_enum; no card in this project is tagged a skippable 'minor' tier, and this task's brief explicitly required a sample per card (38 cards + CHAR-alice's age02), so tier was not used to skip any sample."
+  },
+  "voiceprints": [
+    { "character_id": "CHAR-alice", "variant": "default", "tier": "S", "file": "CHAR-alice_voiceprint.mp3", "duration_s": 7.37, "duration_check": "fail_over_5s", "casting_ref": "casting.json#CHAR-alice/default", "voice_json_version": "p3-voice-vb1@2026-09-22" },
+    { "character_id": "CHAR-alice", "variant": "age02", "tier": "S", "file": "CHAR-alice_age02_voiceprint.mp3", "duration_s": 7.85, "duration_check": "fail_over_5s", "reference_anchor": "CHAR-alice_voiceprint.mp3", "casting_ref": "casting.json#CHAR-alice/age02", "voice_json_version": "p3-voice-vb1@2026-09-22", "note": "Silent in the current cut (ch012#p71 is reported speech); sample kept for timeline completeness per voice.json age_variants[1].note." },
+    { "character_id": "CHAR-alice-sister", "variant": "default", "tier": "A", "file": "CHAR-alice-sister_voiceprint.mp3", "duration_s": 4.37, "duration_check": "pass", "casting_ref": "casting.json#CHAR-alice-sister/default", "voice_json_version": "p3-voice-vb1@2026-09-22" },
+    { "character_id": "CHAR-bill-the-lizard", "variant": "default", "tier": "B", "file": "CHAR-bill-the-lizard_voiceprint.mp3", "duration_s": 6.55, "duration_check": "fail_over_5s", "casting_ref": "casting.json#CHAR-bill-the-lizard/default", "voice_json_version": "p3-voice-vb1@2026-09-22" },
+    { "character_id": "CHAR-canary", "variant": "default", "tier": "extra", "file": "CHAR-canary_voiceprint.mp3", "duration_s": 6.96, "duration_check": "fail_over_5s", "casting_ref": "casting.json#CHAR-canary/default", "voice_json_version": "p3-voice-vb1@2026-09-22" },
+    { "character_id": "CHAR-card-soldiers-ensemble", "variant": "default", "tier": "extra", "file": "CHAR-card-soldiers-ensemble_voiceprint.mp3", "duration_s": 6.14, "duration_check": "fail_over_5s", "casting_ref": "casting.json#CHAR-card-soldiers-ensemble/default", "voice_json_version": "p3-voice-vb1@2026-09-22" },
+    { "character_id": "CHAR-caterpillar", "variant": "default", "tier": "B", "file": "CHAR-caterpillar_voiceprint.mp3", "duration_s": 4.46, "duration_check": "pass", "casting_ref": "casting.json#CHAR-caterpillar/default", "voice_json_version": "p3-voice-vb1@2026-09-22" },
+    { "character_id": "CHAR-caucus-race-party-ensemble", "variant": "default", "tier": "extra", "file": "CHAR-caucus-race-party-ensemble_voiceprint.mp3", "duration_s": 6.55, "duration_check": "fail_over_5s", "casting_ref": "casting.json#CHAR-caucus-race-party-ensemble/default", "voice_json_version": "p3-voice-vb1@2026-09-22" },
+    { "character_id": "CHAR-cheshire-cat", "variant": "default", "tier": "A", "file": "CHAR-cheshire-cat_voiceprint.mp3", "duration_s": 5.35, "duration_check": "fail_over_5s", "casting_ref": "casting.json#CHAR-cheshire-cat/default", "voice_json_version": "p3-voice-vb1@2026-09-22" },
+    { "character_id": "CHAR-cook", "variant": "default", "tier": "B", "file": "CHAR-cook_voiceprint.mp3", "duration_s": 3.46, "duration_check": "pass", "casting_ref": "casting.json#CHAR-cook/default", "voice_json_version": "p3-voice-vb1@2026-09-22" },
+    { "character_id": "CHAR-court-officers-ensemble", "variant": "default", "tier": "extra", "file": "CHAR-court-officers-ensemble_voiceprint.mp3", "duration_s": 6.14, "duration_check": "fail_over_5s", "casting_ref": "casting.json#CHAR-court-officers-ensemble/default", "voice_json_version": "p3-voice-vb1@2026-09-22" },
+    { "character_id": "CHAR-crowd-ensemble", "variant": "default", "tier": "extra", "file": "CHAR-crowd-ensemble_voiceprint.mp3", "duration_s": 6.55, "duration_check": "fail_over_5s", "casting_ref": "casting.json#CHAR-crowd-ensemble/default", "voice_json_version": "p3-voice-vb1@2026-09-22" },
+    { "character_id": "CHAR-dodo", "variant": "default", "tier": "B", "file": "CHAR-dodo_voiceprint.mp3", "duration_s": 5.74, "duration_check": "fail_over_5s", "casting_ref": "casting.json#CHAR-dodo/default", "voice_json_version": "p3-voice-vb1@2026-09-22" },
+    { "character_id": "CHAR-dormouse", "variant": "default", "tier": "B", "file": "CHAR-dormouse_voiceprint.mp3", "duration_s": 4.85, "duration_check": "pass", "casting_ref": "casting.json#CHAR-dormouse/default", "voice_json_version": "p3-voice-vb1@2026-09-22" },
+    { "character_id": "CHAR-duchess", "variant": "default", "tier": "A", "file": "CHAR-duchess_voiceprint.mp3", "duration_s": 6.96, "duration_check": "fail_over_5s", "casting_ref": "casting.json#CHAR-duchess/default", "voice_json_version": "p3-voice-vb1@2026-09-22" },
+    { "character_id": "CHAR-duck", "variant": "default", "tier": "extra", "file": "CHAR-duck_voiceprint.mp3", "duration_s": 6.55, "duration_check": "fail_over_5s", "casting_ref": "casting.json#CHAR-duck/default", "voice_json_version": "p3-voice-vb1@2026-09-22" },
+    { "character_id": "CHAR-eaglet", "variant": "default", "tier": "extra", "file": "CHAR-eaglet_voiceprint.mp3", "duration_s": 4.32, "duration_check": "pass", "casting_ref": "casting.json#CHAR-eaglet/default", "voice_json_version": "p3-voice-vb1@2026-09-22" },
+    { "character_id": "CHAR-executioner", "variant": "default", "tier": "extra", "file": "CHAR-executioner_voiceprint.mp3", "duration_s": 6.74, "duration_check": "fail_over_5s", "casting_ref": "casting.json#CHAR-executioner/default", "voice_json_version": "p3-voice-vb1@2026-09-22" },
+    { "character_id": "CHAR-fish-footman", "variant": "default", "tier": "extra", "file": "CHAR-fish-footman_voiceprint.mp3", "duration_s": 3.1, "duration_check": "pass", "casting_ref": "casting.json#CHAR-fish-footman/default", "voice_json_version": "p3-voice-vb1@2026-09-22" },
+    { "character_id": "CHAR-frog-footman", "variant": "default", "tier": "extra", "file": "CHAR-frog-footman_voiceprint.mp3", "duration_s": 3.74, "duration_check": "pass", "casting_ref": "casting.json#CHAR-frog-footman/default", "voice_json_version": "p3-voice-vb1@2026-09-22" },
+    { "character_id": "CHAR-gardener-five", "variant": "default", "tier": "extra", "file": "CHAR-gardener-five_voiceprint.mp3", "duration_s": 3.26, "duration_check": "pass", "casting_ref": "casting.json#CHAR-gardener-five/default", "voice_json_version": "p3-voice-vb1@2026-09-22" },
+    { "character_id": "CHAR-gardener-seven", "variant": "default", "tier": "extra", "file": "CHAR-gardener-seven_voiceprint.mp3", "duration_s": 4.54, "duration_check": "pass", "casting_ref": "casting.json#CHAR-gardener-seven/default", "voice_json_version": "p3-voice-vb1@2026-09-22" },
+    { "character_id": "CHAR-gardener-two", "variant": "default", "tier": "extra", "file": "CHAR-gardener-two_voiceprint.mp3", "duration_s": 4.01, "duration_check": "pass", "casting_ref": "casting.json#CHAR-gardener-two/default", "voice_json_version": "p3-voice-vb1@2026-09-22" },
+    { "character_id": "CHAR-gryphon", "variant": "default", "tier": "B", "file": "CHAR-gryphon_voiceprint.mp3", "duration_s": 7.37, "duration_check": "fail_over_5s", "casting_ref": "casting.json#CHAR-gryphon/default", "voice_json_version": "p3-voice-vb1@2026-09-22" },
+    { "character_id": "CHAR-hatter", "variant": "default", "tier": "A", "file": "CHAR-hatter_voiceprint.mp3", "duration_s": 6.96, "duration_check": "fail_over_5s", "casting_ref": "casting.json#CHAR-hatter/default", "voice_json_version": "p3-voice-vb1@2026-09-22" },
+    { "character_id": "CHAR-jury-ensemble", "variant": "default", "tier": "extra", "file": "CHAR-jury-ensemble_voiceprint.mp3", "duration_s": 6.55, "duration_check": "fail_over_5s", "casting_ref": "casting.json#CHAR-jury-ensemble/default", "voice_json_version": "p3-voice-vb1@2026-09-22" },
+    { "character_id": "CHAR-king-of-hearts", "variant": "default", "tier": "A", "file": "CHAR-king-of-hearts_voiceprint.mp3", "duration_s": 6.14, "duration_check": "fail_over_5s", "casting_ref": "casting.json#CHAR-king-of-hearts/default", "voice_json_version": "p3-voice-vb1@2026-09-22" },
+    { "character_id": "CHAR-knave-of-hearts", "variant": "default", "tier": "B", "file": "CHAR-knave-of-hearts_voiceprint.mp3", "duration_s": 6.14, "duration_check": "fail_over_5s", "casting_ref": "casting.json#CHAR-knave-of-hearts/default", "voice_json_version": "p3-voice-vb1@2026-09-22" },
+    { "character_id": "CHAR-lory", "variant": "default", "tier": "extra", "file": "CHAR-lory_voiceprint.mp3", "duration_s": 6.55, "duration_check": "fail_over_5s", "casting_ref": "casting.json#CHAR-lory/default", "voice_json_version": "p3-voice-vb1@2026-09-22" },
+    { "character_id": "CHAR-magpie", "variant": "default", "tier": "extra", "file": "CHAR-magpie_voiceprint.mp3", "duration_s": 5.35, "duration_check": "fail_over_5s", "casting_ref": "casting.json#CHAR-magpie/default", "voice_json_version": "p3-voice-vb1@2026-09-22" },
+    { "character_id": "CHAR-march-hare", "variant": "default", "tier": "B", "file": "CHAR-march-hare_voiceprint.mp3", "duration_s": 6.14, "duration_check": "fail_over_5s", "casting_ref": "casting.json#CHAR-march-hare/default", "voice_json_version": "p3-voice-vb1@2026-09-22" },
+    { "character_id": "CHAR-mock-turtle", "variant": "default", "tier": "B", "file": "CHAR-mock-turtle_voiceprint.mp3", "duration_s": 6.14, "duration_check": "fail_over_5s", "casting_ref": "casting.json#CHAR-mock-turtle/default", "voice_json_version": "p3-voice-vb1@2026-09-22" },
+    { "character_id": "CHAR-mouse", "variant": "default", "tier": "B", "file": "CHAR-mouse_voiceprint.mp3", "duration_s": 4.3, "duration_check": "pass", "casting_ref": "casting.json#CHAR-mouse/default", "voice_json_version": "p3-voice-vb1@2026-09-22" },
+    { "character_id": "CHAR-old-crab", "variant": "default", "tier": "extra", "file": "CHAR-old-crab_voiceprint.mp3", "duration_s": 4.3, "duration_check": "pass", "casting_ref": "casting.json#CHAR-old-crab/default", "voice_json_version": "p3-voice-vb1@2026-09-22" },
+    { "character_id": "CHAR-pat", "variant": "default", "tier": "extra", "file": "CHAR-pat_voiceprint.mp3", "duration_s": 6.55, "duration_check": "fail_over_5s", "casting_ref": "casting.json#CHAR-pat/default", "voice_json_version": "p3-voice-vb1@2026-09-22" },
+    { "character_id": "CHAR-pigeon", "variant": "default", "tier": "B", "file": "CHAR-pigeon_voiceprint.mp3", "duration_s": 7.37, "duration_check": "fail_over_5s", "casting_ref": "casting.json#CHAR-pigeon/default", "voice_json_version": "p3-voice-vb1@2026-09-22" },
+    { "character_id": "CHAR-queen-of-hearts", "variant": "default", "tier": "A", "file": "CHAR-queen-of-hearts_voiceprint.mp3", "duration_s": 6.96, "duration_check": "fail_over_5s", "casting_ref": "casting.json#CHAR-queen-of-hearts/default", "voice_json_version": "p3-voice-vb1@2026-09-22" },
+    { "character_id": "CHAR-white-rabbit", "variant": "default", "tier": "A", "file": "CHAR-white-rabbit_voiceprint.mp3", "duration_s": 8.66, "duration_check": "fail_over_5s", "casting_ref": "casting.json#CHAR-white-rabbit/default", "voice_json_version": "p3-voice-vb1@2026-09-22" },
+    { "character_id": "CHAR-young-crab", "variant": "default", "tier": "extra", "file": "CHAR-young-crab_voiceprint.mp3", "duration_s": 6.96, "duration_check": "fail_over_5s", "casting_ref": "casting.json#CHAR-young-crab/default", "voice_json_version": "p3-voice-vb1@2026-09-22" }
+  ],
+  "not_carded_upstream": {
+    "reason": "no voice.json card exists for these (03-characters/voiceprint decision, task p3-voice-vb1): no dialogue lines / no describable adult-speech timbre",
+    "ids": [
+      "CHAR-duchess-baby (baby; DEF-p3-char-index-903 chorus attribution covered by CHAR-duchess + CHAR-cook samples above)",
+      "CHAR-family-housemaid", "CHAR-royal-gardeners-ensemble", "CHAR-royal-procession-ensemble",
+      "CHAR-visiting-monarchs-ensemble"
+    ]
+  }
+}

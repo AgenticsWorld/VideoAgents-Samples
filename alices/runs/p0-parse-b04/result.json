@@ -1,0 +1,66 @@
+{
+  "task_id": "p0-parse-b04",
+  "agent": "01-story/novel-parser",
+  "attempt": 1,
+  "date": "2026-09-22",
+  "status": "done",
+  "batch": {"id": "b04", "chapters": ["ch010", "ch011", "ch012"], "source_file": "novel/Alices_Adventures_in_Wonderland_English.md", "line_start": 2493, "line_end": 3338},
+  "outputs": [
+    "story/structured_story/ch010.json",
+    "story/structured_story/ch011.json",
+    "story/structured_story/ch012.json"
+  ],
+  "helper_scripts": ["code/parse_check_b04.py (paragraph listing + machine check; a copy of parse_check_b03.py with the batch id changed, so b03 and b04 use the same checks)"],
+  "conventions": {
+    "shard_shape": "one chapter object per file (same shape as one element of structured_story.json chapters[]): id/order/title/heading/word_count/body_word_count/source{file,line_start,line_end}/paragraph_count/scenes[]; scene = id, boundary_reason, setting, present[], source (paragraph range), paragraphs[], dialogues[], entities[]. Matches the b03 shard layout so p0-merge can assemble all shards the same way",
+    "paragraph": "maximal block of non-blank lines after the chapter heading line, numbered pNN in file order; text = the lines joined by single spaces, verbatim (curly quotes, em dashes, _italics_ markers and source typos such as 'p ennyworth' kept as-is); lines = [first, last] 1-based file line numbers",
+    "source_locator": "chNNN#pNN (paragraph), scene source chNNN#pNN-pNN",
+    "ids": "scene chNNN-scNN, paragraph chNNN-pNN, dialogue chNNN-dNNNN (sequential across the chapter); all prefixed by chapter id, so they cannot collide with other batches",
+    "dialogue_types": "dialogue (spoken aloud, incl. 'said to herself' asides -> delivery 'to herself'), thought ('thought Alice'), verse (sung/recited/read-aloud poems, one entry per stanza paragraph). Nested quotations inside a line (quoted poem lines, newspaper phrase, song-character voices) stay inside the carrying line and are not split off",
+    "dialogue_text": "exact substrings of the paragraph with the outer quotation marks removed; when narration interrupts one speaker's line, the segments are joined with ' [...] '",
+    "excluded_quotes": "not extracted as lines: word-mentions inside narration (ch011#p04 'creatures', 'jury-men'; ch011#p08 'stupid'), and text written on the slates (ch011#p08 'stupid things!', ch012#p13 'important'/'unimportant', ch012#p49 the jury's note). Each case is noted on the nearest dialogue entry or listed here",
+    "speakers": "surface names as they appear in the text (Alice, Gryphon, Mock Turtle, King, Queen, White Rabbit, Hatter, March Hare, Dormouse, Knave, Cook, Alice's sister); unnamed individuals the text identifies ('one of the jury', 'one of the jurymen', 'another of the jurymen') are recorded as written with speaker_kind 'unnamed_individual' — they are not counted as UNKNOWN because the text says who they are. No canonical character IDs are assigned",
+    "entities": "one entry per (mention, paragraph) with count = whole-token occurrences of the mention in that paragraph (case-sensitive); type person|place|item|skill; key = tentative lowercase slug for later unification only (not a CHAR-/LOC- id). Covered: all named characters and speaking creatures, plus key places and props. Pronouns are not tagged. Characters inside songs or poems and figures only mentioned or recalled are tagged with a note",
+    "editorial_brackets": "ch010#p59 and ch010#p70 are '[later editions continued as follows ...]' insertions in the source file. They are kept as paragraphs, and their verse lines are extracted as verse attributed to Alice (confidence 0.8) with a note that they are later-edition text, not this edition's main text"
+  },
+  "coverage": {
+    "ch010": {"paragraphs": "81/81", "body_words": 2025, "manifest_body_words": 2025, "word_count": 2031, "manifest_word_count": 2031, "scenes": 2, "dialogues": 88, "unknown": 1, "entity_mentions": 130},
+    "ch011": {"paragraphs": "74/74", "body_words": 1872, "manifest_body_words": 1872, "word_count": 1879, "manifest_word_count": 1879, "scenes": 3, "dialogues": 68, "unknown": 0, "entity_mentions": 160},
+    "ch012": {"paragraphs": "72/72", "body_words": 2101, "manifest_body_words": 2101, "word_count": 2106, "manifest_word_count": 2106, "scenes": 3, "dialogues": 65, "unknown": 0, "entity_mentions": 136},
+    "batch": {"chapters": "3/3", "paragraphs": "227/227", "word_count": 6016, "manifest_word_count": 6016}
+  },
+  "dialogue_stats": {
+    "total": 221,
+    "by_type": {"dialogue": 196, "thought": 7, "verse": 18},
+    "unknown_speaker": 1,
+    "unknown_pct": 0.45,
+    "unknown_items": [{"id": "ch010-d0084", "text": "The trial’s beginning!", "reason": "the text only says it is 'a cry ... heard in the distance'; candidates: White Rabbit as herald 0.4 / an unnamed crier 0.6"}],
+    "inferred_speakers_lt_0_95": [
+      {"id": "ch010-d0012", "speaker": "Mock Turtle", "confidence": 0.85, "basis": "no tag; the speakers alternate, so this resumes the Mock Turtle's cut-off sentence"},
+      {"id": "ch010-d0018", "speaker": "Mock Turtle", "confidence": 0.85, "basis": "no tag; completes 'you throw the—'"},
+      {"id": "ch010-d0066", "speaker": "Alice", "confidence": 0.8, "basis": "later-edition editorial continuation"},
+      {"id": "ch010-d0075", "speaker": "Alice", "confidence": 0.8, "basis": "later-edition editorial continuation"},
+      {"id": "ch010-d0088", "speaker": "Mock Turtle", "confidence": 0.9, "basis": "a distant song the Mock Turtle was singing when the others left"},
+      {"id": "ch011-d0063", "speaker": "Dormouse", "confidence": 0.9, "basis": "'a sleepy voice'; the Queen's reply names the Dormouse"}
+    ]
+  },
+  "machine_checks": {
+    "tool": "python3 code/parse_check_b04.py check",
+    "result": "PASS (0 errors)",
+    "checked": ["required chapter/scene fields", "chapter id and word_count == manifest", "paragraph coverage and order == source (227/227)", "paragraph text == source (whitespace-normalized) and per-paragraph word counts", "body word total == manifest body_word_count", "ID prefix/uniqueness", "dialogue type enum, source inside its scene, every text segment verbatim in the paragraph", "UNKNOWN has candidates, confidence present", "entity type enum, mention present in the source paragraph, count == actual occurrences"],
+    "schema": "pass", "batch_chapter_coverage_100": "pass", "speaker_missing_lt_2pct": "pass (0.45%)"
+  },
+  "scene_boundaries": {
+    "ch010": ["sc01 p01-p77 by the sea with the Gryphon and the Mock Turtle (quadrille, whiting talk, recitations, Turtle Soup)", "sc02 p78-p81 trial cry; the Gryphon hurries Alice away (in transit)"],
+    "ch011": ["sc01 p01-p15 court assembled, accusation read", "sc02 p16-p63 the Hatter's testimony (Hatter, March Hare, Dormouse enter)", "sc03 p64-p74 the cook's testimony; Alice is called"],
+    "ch012": ["sc01 p01-p63 Alice's evidence in court up to 'pack of cards'", "sc02 p64-p66 waking on the bank with her sister", "sc03 p67-p72 the sister alone at sunset: reverie + closing (THE END)"]
+  },
+  "notes_for_downstream": [
+    "Cross-batch context: ch010 opens mid-conversation from ch009 (the Mock Turtle's story); the sea-side setting is taken from the text ('under the sea', 'sea-shore'), and the exact spot is left to the ch009 shard.",
+    "ch012-sc02/sc03 carry the book's waking/dream frame (the court collapses into the bank, and the sister's reverie maps each Wonderland sound to a farmyard reality in p70). The source states this frame directly; this is relevant to the Phase 2 realism decision (bible WRITE_RULES §7.1), but no interpretation is made here.",
+    "Entity keys are tentative slugs only. Surface variants to unify later: King/King of Hearts; Queen/Queen of Hearts; Knave/Knave of Hearts/prisoner; White Rabbit/Rabbit; Bill/Lizard; cook/Duchess's cook; 'sister' = the elder sister (alice-sister) in p64-p67 but = Alice in p68 and p71."
+  ],
+  "conflicts": [],
+  "defects": [],
+  "skills": "no auto-activated skills are checked for this workstation; none applied"
+}

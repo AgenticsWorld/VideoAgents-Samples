@@ -1,0 +1,228 @@
+{
+  "schema_version": "scene_layout.v1",
+  "scene_id": "SCN-little-door-passage",
+  "task_id": "p4-env-concept-sb1",
+  "layout_top": "layout_top.png",
+  "orientation": {
+    "top_of_map": "north; the long hall is at the right (east) edge, the garden at the left (west) edge",
+    "map_extent_m": [
+      5.0,
+      2.81
+    ],
+    "scale_note": "true units: little door 38 x 26 cm, passage 3 m long x 28 cm wide. The ch007 walk is shot on the x4.5 oversized build (13.5 m long, 1.26 m wide); multiply xy_m by 4.5 for that build, xy stays the same.",
+    "note_en": "camera positions in views[] are described relative to these landmarks; xy_m = xy x map_extent_m (origin top-left)."
+  },
+  "landmarks": [
+    {
+      "id": "rose_bushes",
+      "name": "the rose bushes by the arch",
+      "name_en": "the rose bushes by the arch",
+      "kind": "flora",
+      "xy": [
+        0.1,
+        0.2
+      ],
+      "xy_m": [
+        0.5,
+        0.56
+      ]
+    },
+    {
+      "id": "lily_clump",
+      "name": "the lilies by the arch",
+      "name_en": "the lilies by the arch",
+      "kind": "flora",
+      "xy": [
+        0.08,
+        0.82
+      ],
+      "xy_m": [
+        0.4,
+        2.3
+      ]
+    },
+    {
+      "id": "garden_arch",
+      "name": "the garden arch",
+      "name_en": "the garden arch",
+      "kind": "entrance",
+      "xy": [
+        0.19,
+        0.51
+      ],
+      "xy_m": [
+        0.95,
+        1.43
+      ]
+    },
+    {
+      "id": "petals",
+      "name": "the scattered rose petals",
+      "name_en": "the scattered rose petals",
+      "kind": "feature",
+      "xy": [
+        0.26,
+        0.49
+      ],
+      "xy_m": [
+        1.3,
+        1.38
+      ]
+    },
+    {
+      "id": "passage_mid",
+      "name": "the middle of the passage",
+      "name_en": "the middle of the passage",
+      "kind": "zone",
+      "xy": [
+        0.47,
+        0.51
+      ],
+      "xy_m": [
+        2.35,
+        1.43
+      ]
+    },
+    {
+      "id": "little_door",
+      "name": "the little door",
+      "name_en": "the little door",
+      "kind": "entrance",
+      "xy": [
+        0.745,
+        0.51
+      ],
+      "xy_m": [
+        3.73,
+        1.43
+      ]
+    },
+    {
+      "id": "hall_door_9",
+      "name": "the ninth hall door",
+      "name_en": "the ninth hall door",
+      "kind": "door",
+      "xy": [
+        0.755,
+        0.05
+      ],
+      "xy_m": [
+        3.77,
+        0.14
+      ]
+    },
+    {
+      "id": "hall_door_10",
+      "name": "the tenth hall door",
+      "name_en": "the tenth hall door",
+      "kind": "door",
+      "xy": [
+        0.755,
+        0.95
+      ],
+      "xy_m": [
+        3.77,
+        2.67
+      ]
+    },
+    {
+      "id": "hall_floor",
+      "name": "the flagstones in front of the little door",
+      "name_en": "the flagstones in front of the little door",
+      "kind": "zone",
+      "xy": [
+        0.88,
+        0.51
+      ],
+      "xy_m": [
+        4.4,
+        1.43
+      ]
+    }
+  ],
+  "views": [
+    {
+      "tile": 1,
+      "camera_from": "hall_floor",
+      "looking_at": "little_door",
+      "size": "medium",
+      "angle": "low",
+      "desc_en": "low medium shot from the hall floor at kneeling height toward the tiny horseshoe-arched door opened in the base of the wall, a point of garden daylight at the end of the dark passage beyond"
+    },
+    {
+      "tile": 2,
+      "camera_from": "little_door",
+      "looking_at": "garden_arch",
+      "size": "wide",
+      "angle": "eye",
+      "desc_en": "eye-level wide shot through the little door straight along the stone passage, iron ribs and mosaic border leading to the blazing garden arch"
+    },
+    {
+      "tile": 3,
+      "camera_from": "passage_mid",
+      "looking_at": "garden_arch",
+      "size": "medium",
+      "angle": "eye",
+      "desc_en": "eye-level medium shot from halfway down the passage toward the garden arch, warm light spilling along the floor and petals on the last flags"
+    },
+    {
+      "tile": 4,
+      "camera_from": "garden_arch",
+      "looking_at": "little_door",
+      "size": "wide",
+      "angle": "eye",
+      "desc_en": "eye-level wide shot from the garden arch back along the passage to the little door and the warm amber lamplight of the hall behind it"
+    },
+    {
+      "tile": 5,
+      "camera_from": "garden_arch",
+      "looking_at": "rose_bushes",
+      "size": "close",
+      "angle": "eye",
+      "desc_en": "eye-level close shot out of the arch to the right onto the climbing rose bushes spilling blooms around the arch in bright sun"
+    },
+    {
+      "tile": 6,
+      "camera_from": "lily_clump",
+      "looking_at": "rose_bushes",
+      "size": "close",
+      "angle": "low",
+      "desc_en": "low close shot along the garden foot of the wall from the white lilies and sweet peas to the rose bushes on the other side of the arch"
+    },
+    {
+      "tile": 7,
+      "camera_from": "hall_door_9",
+      "looking_at": "hall_floor",
+      "size": "medium",
+      "angle": "eye",
+      "desc_en": "eye-level medium shot from beside the neighbouring locked hall door along the base of the west wall to the flagstones in front of the little door, showing how small the little door is against the full-size door"
+    },
+    {
+      "tile": 8,
+      "camera_from": "hall_door_10",
+      "looking_at": "hall_floor",
+      "size": "medium",
+      "angle": "high_oblique",
+      "desc_en": "high oblique medium shot from beside the neighbouring hall door angled down onto the flagstones where the girl kneels at the little door, the curtain drawn back"
+    },
+    {
+      "tile": 9,
+      "camera_from": "little_door",
+      "looking_at": "hall_door_10",
+      "size": "detail",
+      "angle": "eye",
+      "desc_en": "eye-level detail shot at the little door: its brass lock plate, tiny strap hinges and stained-glass roundel, with the base of the next full-size hall door beyond"
+    }
+  ],
+  "checklist": {
+    "architecture_match": false,
+    "lighting_match": true,
+    "style_match": true,
+    "deviation_ref": "DEF-p4-envconcept-603-d"
+  },
+  "calibration": {
+    "status": "calibrated_to_image",
+    "date": "2026-09-23",
+    "method": "landmark xy re-measured on the delivered layout_top.png (door/opening landmarks read at the gap in the wall line)"
+  }
+}

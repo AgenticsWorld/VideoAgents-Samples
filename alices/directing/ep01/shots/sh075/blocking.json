@@ -1,0 +1,42 @@
+{
+  "shot_id": "sh075",
+  "group_id": "grp029",
+  "scene_no": "S08",
+  "scene_id": "SCN-long-hall",
+  "duration_s": 2.5,
+  "is_dialogue": true,
+  "group_position": "first shot of grp029 — Alice on her map start (curtain); no path. The White Rabbit is on his map start (curtain, a few feet short of her), out of frame below her.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "sit",
+      "start_pos": "sitting at the low curtain, bending right down over the water toward the little animal",
+      "space_fragment_en": "sitting at the low curtain, centred high in frame, bending right down over the water toward the little animal below",
+      "facing": "down through the top of the frame toward him; no eyeline is visible, by instruction",
+      "body_facing_target_id": "CHAR-white-rabbit",
+      "path": [],
+      "beats": [
+        { "t": 0.3, "action": "bends right down toward him, one hand lowering", "sync": "before the line" },
+        { "t": 0.9, "action": "speaks, low and timid", "sync": "LN-ep01-020 begins" },
+        { "t": 1.8, "action": "the courtesy word comes out smaller than she meant it to", "sync": "LN-ep01-020 on 'sir'" }
+      ],
+      "performance": {
+        "objective": "ask for help from the only other living thing in the hall, without frightening it",
+        "goal": "ask for help without frightening him",
+        "emotional_arc": "from desperate hope to a small, careful politeness that is holding a great deal down",
+        "arc_from": "desperate hope",
+        "arc_to": "careful, straining politeness",
+        "trigger": { "line_ref": "LN-ep01-020", "word": "sir" },
+        "no_early_reaction": ["the hand reaching lower", "the mouth trembling", "the head coming further down"],
+        "forbidden_early": ["the hand reaching lower", "the mouth trembling", "the head coming further down"],
+        "end_state": "bent low with one hand hovering open above the water, mouth closed on the last word, entirely still"
+      }
+    }
+  ],
+  "creatures": [],
+  "offscreen_presence": [
+    { "id": "CHAR-white-rabbit", "where": "sitting back in the water a few feet short of her, below the bottom of frame", "note": "grp029 map start; in the space, out of frame." }
+  ],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0007 (dream) — 'If you please, sir'", "note": "Two legal presences." }
+}

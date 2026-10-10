@@ -1,0 +1,45 @@
+{
+  "shot_id": "sh055",
+  "group_id": "grp021",
+  "scene_no": "S06",
+  "scene_id": "SCN-long-hall",
+  "duration_s": 9.0,
+  "is_dialogue": true,
+  "group_position": "last shot of grp021 — Alice on the map start/end ground (glass_table foot), sitting up against the leg.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "sit",
+      "start_pos": "ten inches high sitting against a leg of the glass table, facing out into the hall",
+      "space_fragment_en": "sitting ten inches high against a leg of the glass table, centred in frame, facing screen-left out into the empty hall",
+      "facing": "slightly screen-left, at a second person who is not there",
+      "path": [],
+      "beats": [
+        { "t": 0.8, "action": "sits up off the floor", "sync": "the turn in the scene" },
+        { "t": 1.6, "action": "rubs her eyes hard with both fists", "sync": "before the line" },
+        { "t": 3.0, "action": "scolds herself sharply", "sync": "LN-ep01-012 begins" },
+        { "t": 6.0, "action": "her voice goes flat and adult on the word", "sync": "LN-ep01-012 on 'advise'" },
+        { "t": 8.0, "action": "she stops, caught by her own tone", "sync": "held to the cut" }
+      ],
+      "performance": {
+        "objective": "put a stop to her own crying by becoming, for a moment, the grown-up in the room",
+        "goal": "put a stop to her own crying by becoming the grown-up",
+        "emotional_arc": "from wet, shamed self-pity to a borrowed adult sternness she has surprised herself with",
+        "arc_from": "wet, shamed self-pity",
+        "arc_to": "borrowed adult sternness",
+        "trigger": { "line_ref": "LN-ep01-012", "word": "advise" },
+        "no_early_reaction": ["the chin coming up", "the voice hardening", "the tears stopping"],
+        "forbidden_early": ["the chin coming up", "the voice hardening", "the tears stopping"],
+        "end_state": "sitting up straight, fists lowered to her lap, wet face, eyes fixed screen-left on nobody, mouth firm"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": {
+    "timeline_ok": true,
+    "violations": [],
+    "story_event": "ev0005 (dream) — 'Alice scolds herself for crying'",
+    "note": "The second person in this conversation is composed as empty space. Nobody else is in the hall; no figure may be staged in the screen-left lead room."
+  }
+}

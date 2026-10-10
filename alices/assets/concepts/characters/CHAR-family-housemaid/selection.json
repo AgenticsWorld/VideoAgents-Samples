@@ -1,0 +1,12 @@
+{
+  "character_id": "CHAR-family-housemaid", "task_id": "p4-char-concept-cb1", "sheet": "sheet.png", "variants": [],
+  "tier_note": "index.json tier = extra (outside this agent's default S/A scope); produced because the work order names it explicitly.",
+  "self_check": {"sheet.png": {
+    "layout": "PASS",
+    "appearance_field_hits": {"gender_female_young_adult": true, "auburn_hair_small_bun_under_cap": true, "eyes_hazel_round": true, "round_face_snub_nose_freckles_wide_mouth": true, "rosy_cheeks_reddened_hands": true, "sturdy_build": true, "white_cap_mark": true},
+    "costume_COS-005_hits": {"lilac_white_small_print_cotton": true, "plain_collar_buttoned_bodice": true, "sleeves_rolled_to_elbow": true, "ankle_length_skirt_no_crinoline": true, "long_white_bib_apron_tied_back": true, "white_cap": true, "black_stockings_black_laced_boots": true},
+    "style": "PASS",
+    "defects": ["Front hairline of auburn hair shows under the cap (card: 'fully tucked') - minor."]
+  }},
+  "rerolls": []
+}

@@ -1,0 +1,46 @@
+{
+  "scene_id": "SCN-little-door-passage",
+  "inherits": "SCN-long-hall",
+  "diff_only": true,
+  "layer": "dream",
+  "int_ext": "INT",
+  "amendment": "BIB-0027 (user ruling 2026-09-22), applied p4-cr-architecture 2026-09-23: follows the parent's Art Nouveau redesign; dimensions unchanged",
+  "form": "A fifteen-inch horseshoe-arched door low in the hall's west wall, opening onto a straight stone crawl-passage 'not much larger than a rat-hole' that ends in the daylight of the garden",
+  "stories": 1,
+  "source_chapter": "ch001",
+  "culture_ref": "world.json#wonderland_real_counterparts.cp-garden",
+  "grows_from": {"loc": null, "counterpart_key": "cp-garden", "waking_detail": "the small door in a garden wall a child peers through"},
+  "structure": [
+    {"item": "little door: 38 cm high x 26 cm wide, horseshoe arch, same oak and flowing cast-iron Art Nouveau frame as the hall doors in miniature, with a tiny gilt stained-glass halo roundel above it", "src": "ch001-p13", "note": "'about fifteen inches high'; width and styling inferred to match SCN-long-hall"},
+    {"item": "passage: straight, about 3 m long, 36 cm clear height x 28 cm wide (true units), rounded limestone-block vault on slender verdigris iron whiplash ribs, a pastel-and-gold mosaic vine border along the floor edges brightening toward the garden", "src": "ch001-p13", "note": "length and section inferred; must let a one-foot Alice walk upright (ch007-p105)"},
+    {"item": "far end: an open horseshoe arch onto the walled garden, bright flowerbeds and the Art Nouveau fountain of SCN-rose-tree-yard visible, the garden itself not part of this plan", "src": "ch007-p105"}
+  ],
+  "materials": [
+    {"item": "the door: dark oak with a small brass lock plate and a keyhole sized for the tiny golden key", "src": "ch001-p13", "note": "brass inferred to pair with the golden key"},
+    {"item": "passage floor of the same limestone, smoother and drier toward the garden end, a few blown rose petals on the last flags", "inferred": true, "culture_ref": "world.json#wonderland_real_counterparts.cp-garden", "why": "The garden's roses reach into the passage and pull the eye to the goal"}
+  ],
+  "details": [
+    {"item": "tiny wrought-iron strap hinges copying the hall doors", "inferred": true, "culture_ref": "SCN-long-hall materials", "why": "Keeps the little door visibly part of the same door family"}
+  ],
+  "interior": {
+    "layout": "door in the hall's west wall; passage runs straight west about 3 m; garden arch at the far west end",
+    "openings": ["little door (hall end), 38 x 26 cm", "garden arch (far end), open, full daylight beyond"],
+    "ceiling_height_m": 0.36,
+    "furniture_tone": "none"
+  },
+  "scale_notes": {
+    "builds": [
+      {"beat": "ch001: Alice true size kneels and looks along the passage", "events": ["ev0003"], "build": "1:1 door in the hall set; the passage and garden seen as a lens insert through a real 38 cm opening"},
+      {"beat": "ch007: Alice about a foot high (30 cm) walks down the passage", "events": ["ev0032"], "src": "ch007-p105", "build": "oversized x4.5 passage build: door 1.7 m, clear height 1.6 m, width 1.26 m, 13.5 m long, with true-size Alice"}
+    ],
+    "sources": ["cultivation.json#SUP-003"]
+  },
+  "negative": [
+    "no brick or earth; limestone only, to match the hall",
+    "no rat, no animals in the passage",
+    "no side openings, no bends",
+    "no sky or garden inside the passage itself; only at the far arch",
+    "no Gothic pointed arch; no flat illustration finish"
+  ],
+  "prompt_ready_en": "a tiny fifteen-inch horseshoe-arched oak door with a small brass lock in a verdigris cast-iron Art Nouveau frame set low in a limestone wall, a tiny stained-glass halo roundel above it, opening onto a narrow straight stone passage no bigger than a rat-hole with slender whiplash iron ribs and a pastel-and-gold mosaic border, bright garden flowerbeds and a fountain glimpsed in daylight at its far end, photographed live-action set"
+}

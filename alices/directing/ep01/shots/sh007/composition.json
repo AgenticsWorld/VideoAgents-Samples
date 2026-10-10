@@ -1,0 +1,28 @@
+{
+  "shot_id": "sh007",
+  "scene_id": "SCN-riverbank",
+  "size": "wide",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "bottom_left",
+    "anchor_xy": [0.20, 0.72],
+    "size_in_frame": "sleeping profile large and soft in the near left foreground, head about 0.30 of frame height"
+  },
+  "headroom": "she is in the lower left quadrant with about 0.22 of frame height of open meadow above her head — the air over her belongs to the landscape, not to her.",
+  "horizon_eyeline": "The true horizon of the episode's first act: the far hedge line runs dead level across at 0.36 of frame height, with the parish spire standing up out of it at x 0.68. Her closed eyeline is at 0.74, far below it.",
+  "layers": {
+    "fg": "Alice's sleeping profile and shoulder, soft, filling the lower left; grass and seed-heads crossing the bottom edge",
+    "mg": "the open meadow running away east, heat shimmer lifting off it, the way across the field toward the hedge",
+    "bg": "the far hedge line and, beyond it on the skyline, the slender stone parish spire; hazy summer sky above"
+  },
+  "gaze": {
+    "direction": "none",
+    "lead_room": "right",
+    "note": "her eyes are shut for almost the whole shot; the frame's entire lead room — the open right two thirds — is held empty for the rustle that has not happened yet. When her eyes open at the end of the shot they open into that space."
+  },
+  "balance": "Extremely asymmetric and stable: one soft dark mass bottom left against a large, bright, empty landscape. Nothing competes; the emptiness is being kept warm.",
+  "leading_lines": "The field way runs from her shoulder out to the right and into depth, arriving at the spire; the hedge line is the level horizontal that holds the top of it. Two strokes, one destination.",
+  "eye_first": "Her still face bottom left, then out along the field way to the spire when the clock begins to strike.",
+  "safe_area_ok": true,
+  "constraint_binding": "Static, and nothing white moves in frame: no white flower head, no cloud edge, no sheep is placed anywhere in the open right two thirds, so that the first white thing to move in this landscape is the rabbit in sh008."
+}

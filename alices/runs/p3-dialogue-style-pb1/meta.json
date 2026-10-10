@@ -1,0 +1,22 @@
+{
+  "task_id": "p3-dialogue-style-pb1",
+  "run_id": "e9999f5f5d61",
+  "attempt": 1,
+  "model": "agent default",
+  "tokens": null,
+  "started_at": null,
+  "finished_at": "2026-09-22T18:32:59+08:00",
+  "inputs_sha256": {},
+  "artifact_versions": {
+    "bible/characters/CHAR-alice/dialogue_style.json": "v1",
+    "bible/characters/CHAR-alice-sister/dialogue_style.json": "v1",
+    "bible/characters/CHAR-white-rabbit/dialogue_style.json": "v1",
+    "bible/characters/CHAR-queen-of-hearts/dialogue_style.json": "v1",
+    "bible/characters/CHAR-king-of-hearts/dialogue_style.json": "v1",
+    "bible/characters/CHAR-duchess/dialogue_style.json": "v1",
+    "bible/characters/CHAR-hatter/dialogue_style.json": "v1",
+    "bible/characters/CHAR-cheshire-cat/dialogue_style.json": "v1",
+    "bible/characters/CHAR-march-hare/dialogue_style.json": "v1",
+    "bible/characters/CHAR-dormouse/dialogue_style.json": "v1"
+  }
+}

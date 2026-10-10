@@ -1,0 +1,31 @@
+{
+  "schema_version": "scene_layout.v1",
+  "scene_id": "SCN-rabbit-house-upstairs-room",
+  "layout_top": "layout_top.png",
+  "orientation": {
+    "top_of_map": "north wall (the door wall)",
+    "note_en": "Room 3.0 x 2.7 m. The inward-opening door is at the west end of the north (top) wall; the single sash window with the table is centred in the south (bottom) wall; the narrow fireplace is centred in the east (right) wall; the looking-glass and washstand are on the west (left) wall. Camera positions in views[] are described relative to these landmarks."
+  },
+  "extent_m": {"x": 7.5, "y": 4.22},
+  "landmarks": [
+    {"id": "door", "name": "door", "name_en": "the inward-opening door", "kind": "entrance", "xy": [0.40, 0.21]},
+    {"id": "chest_of_drawers", "name": "chest of drawers", "name_en": "the small chest of drawers", "kind": "furniture", "xy": [0.53, 0.30]},
+    {"id": "looking_glass", "name": "looking-glass", "name_en": "the looking-glass over the washstand", "kind": "furniture", "xy": [0.28, 0.50]},
+    {"id": "fireplace", "name": "fireplace", "name_en": "the narrow fireplace", "kind": "feature", "xy": [0.70, 0.50]},
+    {"id": "rag_rug", "name": "rag rug", "name_en": "the rag rug in the middle of the floor", "kind": "floor", "xy": [0.50, 0.52]},
+    {"id": "window_table", "name": "window table", "name_en": "the little table in the window", "kind": "furniture", "xy": [0.48, 0.79]},
+    {"id": "window", "name": "window", "name_en": "the sash window", "kind": "window", "xy": [0.51, 0.84]}
+  ],
+  "views": [
+    {"tile": 1, "camera_from": "door", "looking_at": "window", "size": "wide", "angle": "eye", "desc_en": "eye-level wide shot from the doorway across the tidy little room to the sunlit sash window and the table in it"},
+    {"tile": 2, "camera_from": "window", "looking_at": "door", "size": "wide", "angle": "eye", "desc_en": "eye-level wide shot from the window back across the room to the four-panel door, the looking-glass on the left wall"},
+    {"tile": 3, "camera_from": "looking_glass", "looking_at": "fireplace", "size": "wide", "angle": "eye", "desc_en": "eye-level wide shot from beside the washstand across the floorboards to the narrow cast-iron fireplace and its carved mantel"},
+    {"tile": 4, "camera_from": "fireplace", "looking_at": "looking_glass", "size": "medium", "angle": "eye", "desc_en": "eye-level medium shot from the hearth toward the mahogany looking-glass above the washstand"},
+    {"tile": 5, "camera_from": "rag_rug", "looking_at": "window_table", "size": "close", "angle": "low", "desc_en": "low-angle close shot from floor level on the rug up at the window table, fan and white gloves against the bright window"},
+    {"tile": 6, "camera_from": "window_table", "looking_at": "looking_glass", "size": "close", "angle": "eye", "desc_en": "eye-level close shot from the window table toward the washstand, the little unlabelled bottle standing by the looking-glass"},
+    {"tile": 7, "camera_from": "chest_of_drawers", "looking_at": "fireplace", "size": "medium", "angle": "high_oblique", "desc_en": "high oblique medium shot from the ceiling corner above the chest of drawers down toward the fireplace and the flue opening"},
+    {"tile": 8, "camera_from": "rag_rug", "looking_at": "door", "size": "medium", "angle": "low", "desc_en": "low-angle medium shot from the floor toward the door that opens inward, its lower panels and the gap at the threshold"},
+    {"tile": 9, "camera_from": "looking_glass", "looking_at": "window_table", "size": "detail", "angle": "eye", "desc_en": "eye-level detail shot of the fan and the pairs of tiny white kid gloves on the window table, sun across them"}
+  ],
+  "checklist": {"architecture_match": true, "lighting_match": true, "style_match": true, "plan_view_clean": false, "note_en": "inner wall faces show as a deep box (slight perspective); room drawn wider than 3.0 x 2.7 m proportion; kept for H2"}
+}

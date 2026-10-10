@@ -1,0 +1,68 @@
+{
+  "scene_id": "SCN-long-hall",
+  "inherits": null,
+  "layer": "dream",
+  "int_ext": "INT",
+  "form": "A long, low, windowless Art Nouveau hall after Mucha, an Oxford college undercroft stretched to dream length and redrawn in the style reference's ironwork: a shallow vault on verdigris cast-iron whiplash ribs, locked horseshoe-arched oak doors all round, a row of hanging lamps down the centre",
+  "amendment": "BIB-0027 (user ruling 2026-09-22), applied p4-cr-architecture 2026-09-23: Gothic Revival translation replaced by the Art Nouveau language of WR-010; refs/style/alice.jpeg ironwork followed literally; all dimensions, counts and positions unchanged",
+  "stories": 1,
+  "source_chapter": "ch001",
+  "culture_ref": "world.json#wonderland_real_counterparts.cp-garden; world.json#frame.social_class; cultivation.json#SUP-013",
+  "grows_from": {"loc": null, "counterpart_key": "cp-garden", "waking_detail": "the small locked door in a college or great-house garden wall that a Victorian child may not pass unescorted; the hall is that wall's gatehouse passage multiplied into a corridor of locked doors"},
+  "design_language": {
+    "item": "Mucha / Art Nouveau built as a physical set, following refs/style/alice.jpeg literally: verdigris cast-iron arches and ribs in flowing whiplash scrolls with traces of old gilding, slender iron lily-stem columns against the walls, horseshoe-arched door frames, a leaded stained-glass halo roundel over every door head, mosaic dado and floor border of pastel-and-gold tesserae, faded gilded fresco panels of vines and flowers between the vault ribs, weathered and peeling. The college undercroft's honey limestone stays as the wall and floor material so the grows_from link reads",
+    "inferred": true,
+    "culture_ref": "world.json#WR-010; cultivation.json#XA-magic-08; refs/style/alice.jpeg; world.json#frame.social_class",
+    "why": "BIB-0027 licenses Art Nouveau for the dream (the hall and little door listed in WR-010); the style reference's ironwork, stained glass and weathered gilding are now the design itself, not a period translation"
+  },
+  "mucha_design_language": {"item": "flowing organic line (whiplash iron ribs and door frames), floral and vine ornament (fresco panels, mosaic borders, lily-stem columns), halo roundels (stained glass over each door), mosaic and stained glass, pastel-and-gold over honey limestone; all photographed as a built set", "inferred": true, "culture_ref": "world.json#WR-010; refs/style/alice.jpeg", "why": "Summary checklist for 06-art/environment-concept and 08-video-gen/prompt"},
+  "structure": [
+    {"item": "long, low hall about 32 m long and 5.5 m wide, single level, no windows", "src": "ch001-p11", "note": "dimensions inferred for the layout plan"},
+    {"item": "shallow vault on cast-iron whiplash ribs springing from slender iron lily-stem wall columns: springing at 2.1 m, crown at 2.8 m, so a nine-foot Alice strikes the roof", "src": "ch002-p05", "note": "heights inferred from 'more than nine feet high' (274 cm) striking the roof"},
+    {"item": "doors all round: 12 locked doors on each long side and one at the far (south) end, each a horseshoe-arched oak door 0.85 m wide x 1.95 m high, set in a flowing cast-iron and stone Art Nouveau frame, with a small leaded stained-glass halo roundel (about 0.5 m) in the blind wall above each door head", "src": "ch001-p12", "note": "count and size inferred; roundels are blind (no opening behind)"},
+    {"item": "entrance: an open right-angle corner at the north-east end from SCN-shaft-landing-passage; no door", "src": "ch001-p11"},
+    {"item": "a low curtain across the base of the west wall between the 9th and 10th doors, hiding the little door (see SCN-little-door-passage)", "src": "ch001-p13"}
+  ],
+  "materials": [
+    {"item": "worn Headington limestone flag floor, large 60 x 60 cm flags, slightly dished down the centre, edged along both walls by a 40 cm mosaic border of pastel-and-gold vine tesserae", "src": "ch001-p12", "note": "stone floor per geography.json LOC-hall-of-doors; stone type inferred (local Oxford building stone); mosaic border inferred, culture_ref world.json#WR-010"},
+    {"item": "honey-coloured ashlar limestone walls, damp-stained at the base, with a mosaic dado to 0.9 m of flowing vine and flower tesserae in cream, sage, lilac and gold; vault panels of faded gilded fresco (vines and flowers) between the iron ribs, peeling in places", "inferred": true, "culture_ref": "world.json#frame.place; world.json#WR-010; refs/style/alice.jpeg (peeling gilded dome)", "why": "Oxford college stone carrying the dream's Art Nouveau surface"},
+    {"item": "dark oak door leaves with wrought-iron strap hinges and large black iron box locks with big keyholes", "src": "ch001-p13", "note": "'the locks were too large' drives the oversized lock design"},
+    {"item": "cast iron for ribs, wall columns, door frames, lamp brackets and chains: organic whiplash scrolls and lily stems, verdigris patina with traces of old gilding", "inferred": true, "culture_ref": "refs/style/alice.jpeg (ironwork, followed literally); world.json#WR-010", "why": "The style reference's metalwork, now licensed in the dream"}
+  ],
+  "details": [
+    {"item": "a row of lamps hanging from the roof down the centre line: 11 brass-and-glass oil lamps with tulip-shaped pastel glass shades on verdigris whiplash chains, bottom of each lamp at 2.35 m", "src": "ch001-p11", "note": "count and drop inferred; lamp as fixture only, light values belong to 05-scenes/lighting"},
+    {"item": "cast-iron capitals where the ribs spring, modelled as unfurling hawthorn and oak leaves in flowing Art Nouveau line, gilding worn on the leaf tips", "inferred": true, "culture_ref": "SCN-field-hedge-burrow (hawthorn); world.json#WR-010", "why": "The waking hedge grows into the dream's ornament"},
+    {"item": "the little three-legged table made of solid glass stands on the centre line two-thirds down the hall (0.72 m tall, round top 0.5 m across)", "src": "ch001-p13", "note": "size inferred; object detail belongs to 06-art/prop"},
+    {"item": "the low curtain: faded crimson wool damask, 0.6 m drop, on a thin brass rod", "src": "ch001-p13", "note": "colour and fabric inferred, culture_ref world.json#frame.social_class"}
+  ],
+  "interior": {
+    "layout": "single long nave running north-south; corner entrance at the north-east; glass table on the centre line about 21 m from the entrance; curtain and little door low in the west wall near the south end; no furniture other than the table",
+    "openings": ["corner entrance at the north-east end, 1.4 m x 2.1 m, opening from the dark passage", "25 locked horseshoe-arched doors (closed, no light through them)", "25 blind stained-glass roundels above the door heads (no opening behind; they only catch the hall's lamplight)", "little door behind the curtain, west wall base, 38 cm high, opening onto daylight when unlocked", "no windows, no skylights"],
+    "openings_arbitration": "UPHELD 2026-09-23 (memory-bible, bible/changelog.md BIB-0033, closing qa/defects/DEF-p6-directing-ep01-001): bible/color_script.json had described the halo roundels as WINDOWS casting daylight pools on this floor. The opening list above stands unchanged - the hall is windowless and all 25 roundels are blind - and color_script was amended to match. A window opening here is architecture, not decoration: the H2-locked whitebox and layout pack (runs/g4/gate.json) and ep01's delivered storyboard are all built on this list. Any future proposal to open a roundel or add an oculus is a controlled change on THIS file first, never a colour-side edit.",
+    "ceiling_height_m": 2.8,
+    "furniture_tone": "bare, like a college passage at night dressed in faded Art Nouveau splendour; only the glass table"
+  },
+  "scale_notes": {
+    "anchor": "Alice true size 135 cm (CHAR-alice). All sizes above are in true-scale units.",
+    "builds": [
+      {"beat": "Alice at true size: trying the doors, reaching the key, kneeling at the little door", "events": ["ev0003", "ev0004"], "build": "1:1 hall set"},
+      {"beat": "Alice ten inches high (25 cm): cannot reach the key on the table, sits and cries under it", "events": ["ev0005", "ev0006"], "src": "ch001-p22", "build": "oversized x5.4 partial set: glass-table legs and underside of the top (table 3.9 m tall), floor flags 3.2 m, curtain hem and little door (2.05 m); upper hall lost in darkness above"},
+      {"beat": "Alice more than nine feet (274 cm): head against the roof, lying down to look through the door, weeping the pool", "events": ["ev0007"], "src": "ch002-p05", "build": "1:2 miniature hall section (vault crown 1.4 m, doors 0.98 m, little door 19 cm) with true-size Alice stooping and lying; tears pool 5 cm deep in the model"},
+      {"beat": "ch007 return: Alice unlocks the door and nibbles to one foot high", "events": ["ev0032"], "src": "ch007-p105", "build": "1:1 set, then the x4.5 little-door build of SCN-little-door-passage"}
+    ],
+    "rule": "Match lens height and floor-flag size across builds so the hall reads as one space (SUP-003 forced perspective, no VFX-only scale cheats)",
+    "sources": ["cultivation.json#SUP-003", "cultivation.json#SUP-013"]
+  },
+  "negative": [
+    "no windows, no daylight, no stained-glass windows open to the sky (roundels are blind)",
+    "no staircases, galleries or balconies (the reference's staircase is not used)",
+    "no Gothic pointed arches or tracery, no Baroque or Rococo gilding, no Art Deco",
+    "no flat poster illustration, outline graphics or matte-painting finish; photographed built set",
+    "no giant mushrooms or plants inside the hall",
+    "no electric or gas-mantle lights; oil lamps only",
+    "no marble, no chequerboard floor",
+    "no wide establishing shot connecting the hall to any outside place (SUP-013)",
+    "no open doors except the little door"
+  ],
+  "prompt_ready_en": "a long low windowless Art Nouveau hall in the style of Alphonse Mucha built as a real set, honey-coloured limestone walls with a pastel-and-gold vine mosaic dado, a shallow vault on verdigris cast-iron whiplash ribs with worn gilding and faded gilded floral fresco panels, horseshoe-arched oak doors with heavy black iron locks lining both walls, each under a small stained-glass halo roundel, a row of brass oil lamps with tulip glass shades on verdigris chains hanging down the centre, worn stone flag floor with a mosaic border, a small three-legged solid glass table on the centre line and a low faded crimson curtain at the base of one wall"
+}

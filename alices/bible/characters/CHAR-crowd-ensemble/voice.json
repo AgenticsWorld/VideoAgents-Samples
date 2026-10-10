@@ -1,0 +1,40 @@
+{
+  "character_id": "CHAR-crowd-ensemble",
+  "name": "Crowd outside the White Rabbit's house (ensemble)",
+  "tier": "extra",
+  "card_type": "ensemble_group_voice",
+  "gender": "male",
+  "age_sense": "mixed working neighbourhood crew 12-60; sample voice = lead slot X04, man 40-50",
+  "timbre": "rough, loud, outdoor working man's voice, hoarse from shouting across a yard",
+  "pitch": "mid baritone, shouted calls",
+  "pitch_range_hz": [95, 200],
+  "speed_wpm": [170, 200],
+  "speed_cpm": [646, 760],
+  "accent": "rural Oxfordshire working-class English, broad burr, dropped h's",
+  "reference_style": "Overlapping, chaotic shouts of a ladder-and-rope crew ('Where's the other ladder?—Bill's got the other—'), then the cheer 'There goes Bill!' and fussing over the dazed lad. Played as a babble of distinct voices, not a unison chorus.",
+  "group_voice": {
+    "mode": "overlapping individual shouts; short lines split across slots",
+    "headcount": "up to 10 (appearance slots X01-X10), male 6 / female 4",
+    "speaking_slots": [
+      { "slot": "X04", "gender": "male", "age": "40-50", "timbre": "hoarse bossy baritone, the foreman's voice", "lines_hint": "ladder orders, ch004-d0026" },
+      { "slot": "X07", "gender": "male", "age": "25-35", "timbre": "bright loud young tenor, calling down from the roof", "lines_hint": "'Here, put 'em up at this corner', 'Mind that loose slate'" },
+      { "slot": "X09", "gender": "male", "age": "30-40", "timbre": "wiry quick tenor-baritone, argumentative", "lines_hint": "'Nay, I shan't! You do it!', ch004-d0027" },
+      { "slot": "X10", "gender": "male", "age": "50-60", "timbre": "older soothing baritone", "lines_hint": "'Hold up his head—Brandy now—', ch004-d0032" },
+      { "slot": "X03", "gender": "female", "age": "30-40", "timbre": "sharp quick woman's mezzo", "lines_hint": "'There goes Bill!', ch004-d0030" },
+      { "slot": "X08", "gender": "female", "age": "35-45", "timbre": "round busy woman's alto", "lines_hint": "'So you did, old fellow!', ch004-d0035" }
+    ]
+  },
+  "emotion_range": {
+    "shouting": { "speed_delta": "+10%", "pitch_delta": "+3semi", "volume": "shout", "note": "ch004-d0026/-d0027" },
+    "fussing": { "speed_delta": "0%", "pitch_delta": "0semi", "volume": "medium", "note": "tending Bill, ch004-d0032" }
+  },
+  "age_variants": [],
+  "source_chapter": "ch004",
+  "sources": ["ch004", "ch004-p26", "ch004-p27", "ch004-p30", "ch004-p32", "ch004-p34", "ch004-d0026", "ch004-d0027", "ch004-d0030", "ch004-d0032", "ch004-d0035"],
+  "voice_evidence": [
+    { "para": "ch004-p27", "quote": "then the Rabbit’s voice along—" }
+  ],
+  "inferred": true,
+  "inferred_fields": ["timbre", "pitch", "pitch_range_hz", "speed_wpm", "speed_cpm", "accent", "group_voice.speaking_slots"],
+  "reason": "The source gives only the words of the crowd; voices designed per appearance slots (working-class neighbourhood crew). Gender copied from appearance.json (male, majority); female slots keep their own gender in group_voice. Line-to-slot mapping is a suggestion for dialogue-rewrite/storyboard. The ch006 'CHORUS' tag that index.json also assigns here is voiced by CHAR-duchess + CHAR-cook per source (see DEF-p3-voice-002)."
+}

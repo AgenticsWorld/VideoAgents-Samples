@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh045",
+  "group_id": "grp017",
+  "scene_no": "S06",
+  "duration_s": 3.0,
+  "size": "detail",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 50,
+  "camera_height_m": 0.5,
+  "angle": "level, square-on to the label",
+  "rack_focus": "none",
+  "start_frame": "Low from the floor at the curtain back toward the glass table, square-on to the bottle's neck: the paper label DRINK ME beautifully printed in large letters and sharp across its whole width, the glass tabletop above it, her hands just entering frame.",
+  "end_frame": "The same square-on frame as both hands close round the bottle and lift it off the glass; the label stays flat to the lens for the whole read.",
+  "constraint_honoured": "'DRINK ME gets exactly one clean legible read here' — square-on, still, and the only time the bottle is hero-lit.",
+  "movement_note": "A move across a hand-lettered label is the reliable way to make generated lettering garble; 3.0 s square-on and locked is the safest form of this shot.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

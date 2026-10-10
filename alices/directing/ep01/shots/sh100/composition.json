@@ -1,0 +1,28 @@
+{
+  "shot_id": "sh100",
+  "scene_id": "SCN-pool-of-tears",
+  "size": "medium",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "mid_right",
+    "anchor_xy": [0.62, 0.50],
+    "size_in_frame": "coming upright out of the swim, head and shoulders about 0.34 of frame height"
+  },
+  "headroom": "about 0.28 of frame height of dark. Steady and unremarkable — the frame gives nothing away.",
+  "horizon_eyeline": "Water-level straight across the flooded hall to the door bases, lens on the surface: waterline level across at 0.56 of frame height. Her eyeline comes round to frame left and settles at 0.48, fixed on the dark.",
+  "layers": {
+    "fg": "the water she has stopped swimming in, still carrying her own stopped wake",
+    "mg": "Alice, upright, treading water, very still",
+    "bg": "the wet door bases of the far wall and the lamplit dark between them"
+  },
+  "gaze": {
+    "direction": "frame_left",
+    "lead_room": "left",
+    "note": "she turns into the frame and stops, and her look goes left into about 0.34 of frame width of dark. The ripples that reach her come from outside the frame on that side — the composition points at something it is not showing."
+  },
+  "balance": "She has turned back against her own heading: the figure now sits on the right of frame looking left, which reverses the whole direction sh099 established. The reversal is the only event in the shot.",
+  "leading_lines": "The arriving ripples run into frame from the left edge and break against her — lines entering from off-screen are the only new information in the picture.",
+  "eye_first": "Alice stopping, then the ripples arriving from the dark on her left.",
+  "safe_area_ok": true,
+  "constraint_binding": "Static, two seconds, nothing given away: no object, silhouette, wake or light change is placed in the dark she is looking at. The only cue is water arriving from outside the frame."
+}

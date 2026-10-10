@@ -1,0 +1,65 @@
+{
+  "character_id": "CHAR-dormouse",
+  "name": "The Dormouse",
+  "tier": "B",
+  "layer": "dream",
+  "revision": { "change_id": "BIB-0027", "task_id": "p4-cr-appearance", "date": "2026-09-23", "note": "Rewritten from the human-performer reading to a photoreal CGI animal." },
+  "rendering": {
+    "mode": "photoreal_cgi_animal",
+    "rule": "bible/cultivation.json SUP-002 (amended BIB-0027)",
+    "species": "hazel dormouse (Muscardinus avellanarius)",
+    "limits": "Dormouse anatomy throughout; speech by mouth and whisker movement, mostly with eyes closed. No clothing, no cartoon face."
+  },
+  "gender": "male",
+  "gender_note": { "source_chapter": "ch007", "source_para": "ch007-p66", "quote": "The Dormouse slowly opened his eyes. “I wasn’t asleep,” he said" },
+  "base_age_range": "40-48",
+  "base_age_note": { "inferred": true, "reason": "Persona age (soft, middle-aged), kept for voice casting. As an animal: a plump adult dormouse fattened for hibernation." },
+  "hair": {
+    "coat": "fur",
+    "color": "golden orange-brown on the back, paler cream throat and belly",
+    "style": "thick, soft and fluffy; rumpled and flattened on one side from sleep",
+    "inferred": true,
+    "reason": "Species colouring."
+  },
+  "eyes": {
+    "color": "large glossy black",
+    "shape": "big round eyes, nearly always closed or half-closed; rubs them with a forepaw",
+    "source_chapter": "ch007",
+    "source_para": ["ch007-p33", "ch007-p95"],
+    "quote": "said, without opening its eyes / yawning and rubbing its eyes, for it was getting very sleepy",
+    "colour_inferred": true,
+    "reason": "Sleepy closed eyes sourced; colour species-true."
+  },
+  "skin": { "tone": "small pink nose and pink feet", "inferred": true, "reason": "Species." },
+  "face": {
+    "shape": "round, blunt, soft",
+    "features": ["small pink nose (the Hatter pours tea on it)", "long fine whiskers", "small rounded ears"],
+    "default_expression": "asleep; when roused, drowsy and mildly indignant",
+    "source_chapter": "ch011",
+    "source_para": ["ch011-p71", "ch007-p32"],
+    "quote": "Off with his whiskers! / he poured a little hot tea upon its nose"
+  },
+  "build": {
+    "height_range_cm": [5, 6],
+    "height_note": "Curled height; body 7-8 cm, bushy tail 6-7 cm, species-true.",
+    "body_type": "tiny, round, plump",
+    "posture": "curled in a ball with the tail wrapped round, asleep; unrolls slowly to speak",
+    "scale_reference": "Natural size: small enough for the Hatter and March Hare to rest their elbows on him as a cushion, and for them to try to put him into the teapot. At the trial he sits next to Alice and complains she squeezes him as she grows (SUP-003).",
+    "source_chapter": "ch007",
+    "source_para": ["ch007-p01", "ch011-p30"],
+    "quote": "the other two were using it as a cushion, resting their elbows on it / “I wish you wouldn’t squeeze so,” said the Dormouse, who was sitting next to her"
+  },
+  "marks": [
+    { "type": "tail", "position": "back", "description": "thick, bushy golden tail wrapped round him as he sleeps", "inferred": true, "reason": "Species identifier." },
+    { "type": "voice_marker", "position": "voice", "description": "hoarse, feeble voice", "source_chapter": "ch007", "source_para": "ch007-p66" },
+    { "type": "habit", "position": "whole body", "description": "falls asleep mid-sentence; wakes with a little shriek when pinched", "source_chapter": "ch007", "source_para": "ch007-p99" }
+  ],
+  "default_outfit_tone": {
+    "summary": "none: he wears nothing; his look is the golden dormouse curled asleep",
+    "inferred": true,
+    "reason": "The text gives him no clothing; per SUP-002 (BIB-0027) the old quilted coat and muffler are dropped."
+  },
+  "doubling": null,
+  "events": ["ev0029", "ev0030", "ev0031", "ev0046", "ev0047"],
+  "prompt_base_en": "photoreal plump hazel dormouse curled asleep on a tea table between teacups, thick fluffy golden orange-brown fur, cream belly, bushy golden tail wrapped round, large black eyes closed, small pink nose, long fine whiskers, natural rodent anatomy, macro live-action film plate"
+}

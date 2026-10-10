@@ -1,0 +1,741 @@
+{
+  "_meta": {
+    "file": "bible/color_script.json",
+    "status": "authored_v1_pending_art_director_countersign",
+    "owner": "06-art/color-script",
+    "task_id": "p4-color-script",
+    "generated": "2026-09-22",
+    "version": "1.1.2",
+    "amendments": [
+      {
+        "change_id": "BIB-0027",
+        "task_id": "p4-cr-colorscript",
+        "date": "2026-09-23",
+        "basis": "User ruling 2026-09-22 (talking characters = photoreal CGI animals; Mucha / Art Nouveau dream environments), bible/style.json v1.1.0 palette_logic.dream_mucha_accents, accent_rules, CR-003, CR-004, CR-007, CR-014, CR-015; runs/p4-cr-style/result.json color_script_palette_changes_needed.",
+        "changed": "palette_legend.dream_mucha_accents (new family); variants.dream note and set_surface_accents (new); scene_curves (new: stained-glass light for SCN-long-hall, SCN-pool-of-tears, SCN-courtroom, plus the Hearts-set rule); act-level stained_glass on the acts set in those three scenes; wording of the CGI animals (Cheshire Cat, flamingo, hedgehog, piglet, puppy); constraints_honoured CR-007; downstream_notes. Existing hexes, act numbering, event_refs, scene_ids, variants.*.grade numbers and peaks are unchanged; the ep01 act 5 reflection_allowance (p5-colorscript-fix-ep01) is kept as is."
+      },
+      {
+        "change_id": "BIB-0033",
+        "task_id": "p6-bible-light-ep01",
+        "date": "2026-09-23",
+        "written_by": "00-orchestration/memory-bible (on_bible_access arbitration; 06-art/color-script to countersign at its next open, together with the still-pending art-director countersign)",
+        "basis": "Arbitration of qa/defects/DEF-p6-directing-ep01-001 (raised by 07-directing/director at p6-plan-ep01). RULING: the built, windowless hall wins; this file yields. Grounds, in the WRITE_RULES.md section 1 order: (1) SOURCE TEXT. ch001-p11 lights the hall with 'a row of lamps hanging from the roof' and ch001-p14 calls it 'that dark hall'. bible/scenes/SCN-long-hall/architecture.json ('no windows, no skylights'; the 25 halo roundels are blind, no opening behind) is anchored to those paragraphs; the roundel-WINDOW reading in this file was inferred design with no source anchor, and it both adds an unwritten light source and lightens a hall the source calls dark. (2) LATER, NARROWER RULING ON THE SAME FACT. The roundels were ruled on 2026-09-23 under BIB-0027 by p4-cr-architecture and p4-cr-lighting-2 closing DEF-p4-cr-architecture-001-b: roundel_glow = reflected_lamplight_only. This file's BIB-0027 amendment was written in the same batch and never re-read against those amended openings, so it is the stale side, not the disputed one. (3) TWO FILES AGAINST ONE for the pool: SCN-pool-of-tears inherits SCN-long-hall and its own lighting.json carries key_source oil_lamp_row and daylight_access lamplit_no_sky, with no shaft. (4) IRREVERSIBILITY. A window opening is architecture, not decoration: the scene_modeling whiteboxes and the layout packs for both scenes are H2-locked at G4 (runs/g4/gate.json) and ep01's storyboard is delivered against the windowless reading, while the user's auto-reroll budget is 0. (5) DESIGN. The little-door garden green is this film's designed way-out colour; a second daylight source in the same hall would compete with the one motivated bright thing the episode is built around.",
+        "changed": "scene_curves._note; scene_curves['SCN-long-hall'] and ['SCN-pool-of-tears'] stained_glass / curve / limits (the pastel dose, the glass_palette hexes, the per-act dose ramp and the acts[] lists are all UNCHANGED - only the motivation moves from cast daylight to front-lit blind glass, lead-came sheen and the pastel tulip lamp shades, and the pool's 'single shaft' becomes the south-end field of lamp reflections that SCN-pool-of-tears/lighting.json dream_growth already names); act-level stained_glass on ep01 acts 3-6, ep02 act 1 and ep05 act 3; ep02 act 1 palette_names and rationale (shaft -> reflection field); _meta.constraints_honoured CR-007; _meta.user_refs[refs/style/alice.jpeg].applied_to; downstream_notes (lighting / environment-concept / architecture, grade-planner). UNCHANGED: every hex, palette_legend, variants.*.grade, act numbering, event_refs, scene_ids, moods, peaks, the ep01 act 5 reflection_allowance and the whole SCN-courtroom entry (that scene has real high windows per its architecture.json interior.openings, so it keeps cast stained-glass light).",
+        "no_downstream_repass": "directing/ep01/storyboard.json already follows this ruling literally (its own conflicts[] note), so ep01 S05/S06/S10 need NO lighting re-pass; ep05 act 3 inherits the same answer from scene_curves. bible/style.json CR-007 is permissive and scene-agnostic ('daylight through stained glass MAY cast soft pastel colour'), satisfied by SCN-courtroom, so the H2-frozen style.json needs no change and no hand-off was opened."
+      },
+      {
+        "change_id": "BIB-0034",
+        "task_id": "p6-cs-fix-ep01",
+        "date": "2026-09-23",
+        "written_by": "06-art/color-script (owner fix-write under a defect, WRITE_RULES.md P-011). The literal number was duplicate-checked against the whole of bible/changelog.md and the whole project tree before use and the changelog entry lands in the same write, so it is an allocation and not a claim (P-013).",
+        "countersign": "06-art/color-script countersigns BIB-0033 in full: the windowless hall and the blind, front-lit roundels are this file's reading too. The pastel dose, the glass_palette hexes, the per-act ramp and the acts[] lists all survived that arbitration unchanged, so nothing in the colour plan has to move. The art-director countersign on this file is still pending (_meta.status).",
+        "basis": "qa/defects/DEF-p6-cinematography-ep01-001 finding -a, raised by 07-directing/cinematography at p6-cinematography-ep01. One sentence written before BIB-0033 still said 'lit roundels' without saying what lights them; read on its own it invites a prompt writer to put a glowing or backlit stained-glass roundel into a hall that architecture.json says is windowless with blind glass. directing/ep01/cinematography.json CT-04 act 4 already carries the correct reading ('Lit roundel here means front-lit by a nearby lamp; nothing is lit from behind') and its forbidden_terms name backlit / glowing / evenly lit roundels by hand; this amendment brings the colour plan's own wording up to it. Not a re-ruling: BIB-0033 stands exactly as written.",
+        "changed": "episodes[ep01].acts[4].stained_glass ONLY - 'one or two lit roundels' -> 'one or two FRONT-LIT roundels', with the parenthetical that 'lit' means front-lit by the nearest hanging lamp, never backlit and never evenly glowing (roundel_glow = reflected_lamplight_only), plus a pointer to directing/ep01/cinematography.json CT-04 act 4. Wording only. No palette value, hex, act number, event_ref, scene_id, mood, saturation, brightness, dose, variant, variant_grade or peak changed anywhere in the file, and the 'below the glass table in brightness' and 'no glass pools on the floor' clauses are kept verbatim. Bookkeeping: _meta.version 1.1.1 -> 1.1.2 and this amendment entry.",
+        "swept_and_already_clean": "The whole file was re-read for surviving daylight / backlit-roundel / coloured-pool-on-the-floor wording in SCN-long-hall and SCN-pool-of-tears, including every act that inherits through scene_curves: scene_curves._note, scene_curves['SCN-long-hall'] (stained_glass / curve / limits), scene_curves['SCN-pool-of-tears'] (stained_glass / curve / limits), ep01 acts 3, 5 and 6, ep02 act 1 and ep05 act 3 (the act named in the defect) were all already BIB-0033-conformant and were NOT touched - ep05 act 3 reads 'Hall passage only, and surface only ... no glass pools on the floor'. SCN-courtroom and its acts (ep09 acts 1-6, real high windows) keep their cast stained-glass light and are out of scope."
+      }
+    ],
+    "write_via": "00-orchestration/memory-bible (on_bible_access)",
+    "contract": "SOUL.md field contract 2026-09-17 (machine check color_script_ok --strict). Replaces the empty palettes[]/arcs[] skeleton wholesale; the PK-* id prefix is retired in favour of palette_legend.",
+    "content_language": "English",
+    "inputs_read": [
+      "story/episode_plan.json (ep01-ep09, 54 events, treatments and hook/climax events)",
+      "story/story_graph.json (acts act1/act2a/act2b/act3, structure_points, arcs arc-alice-garden-quest / arc-alice-identity)",
+      "story/events.json (event locations)",
+      "bible/scenes/index.json (story_scene_map, layer waking/dream) and bible/scenes/SCN-*/lighting.json (time_of_day per scene)",
+      "bible/style.json v1.1.0 (palette_logic incl. dream_mucha_accents, accent_rules, CR-003/CR-004/CR-007/CR-008/CR-010/CR-014/CR-015; status authored_v1_pending_h2)",
+      "bible/changelog.md BIB-0027, bible/cultivation.json SUP-002/SUP-010/XA-magic-02/XA-magic-08, bible/world.json WR-001/WR-002/WR-010, runs/p4-cr-style/result.json",
+      "refs/style/alice.jpeg (no NOTES.md / annotations.json)",
+      "bible/h1_summary.md, bible/cultivation.json SUP-001..014, runs/h1-ruling/ruling.json",
+      "qa/defects/DEF-p3-char-index-902.json, DEF-p3-char-index-903.json"
+    ],
+    "curve_logic": "Two registers told apart by colour alone (narration is off, XA-magic-07): the WAKING frame (ep01 act 1, ep09 acts 4-6) is warm, green, high-key and clear; the DREAM (everything between) is cool verdigris/slate, low-key and hazy, warmed only by candle pools and daylight shafts. Inside the dream the curve follows three threads: (1) the sun keeps moving - scene lighting runs early afternoon (hall, pool) -> afternoon (wood, mushroom) -> late afternoon (Duchess, tea-party, croquet) -> golden hour (seashore, court), so the dream quietly ages with the real day Alice is sleeping through; (2) Alice's identity arc - her cornflower blue is swallowed by grey in ep01-ep04 and grows to dominate the frame at the trial (ep09); (3) the Hearts-crimson ramp - absent until the rose-tree (ep05 act 4), growing through the croquet-ground, dominant in the court, then shattered into falling amber leaves at waking (SUP-004).",
+    "base_compliance": "Every hex is either a style.json palette_logic anchor or a named derivative of one (see palette_legend.derived_from). Items that step outside the restrained base are listed in out_of_base for art-director countersign.",
+    "constraints_honoured": [
+      "DEF-p3-char-index-902 / CR-010 / SUP-014: no colour beat is keyed to an axe, block or any execution device; the executioner reads only as black livery with crown gold (ep06 acts 3-4). 'Off with her head' climaxes are carried by crimson density and contrast, never by red-on-skin or blood-like accents.",
+      "DEF-p3-char-index-903: ep04 act 4 kitchen lullaby is coloured as a three-person tableau (Duchess, cook, baby) - no crowd lighting pools are planned.",
+      "SUP-011: croquet chaos colour (flamingo pink, hedgehog brown) never lands on a strike beat.",
+      "CR-007: no gel colour; every warm accent is motivated by candle, oil lamp, sun or shaft. Coloured CAST light through stained glass exists in one scene only - SCN-courtroom, which has real high windows. SCN-long-hall and SCN-pool-of-tears are windowless with blind roundels (BIB-0033), so their pastels are surface glints, lead-came sheen and pastel lamp-shade tints, and the garden green through the little door is the only coloured cast light in the hall. Never in the waking frame.",
+      "CR-014 / WR-010: dream_mucha_accents sit on set surfaces (gold leaf, mosaic, glass, ironwork, flora) inside the haze, never as ambient light and never candy-bright; waking acts use none of them. In the Hearts sets (SCN-rose-tree-yard, SCN-croquet-ground, SCN-courtroom) the pastels recede and only the gold stays.",
+      "CR-003 / CR-015: the photoreal CGI animals take the set's light and colour like any photographed subject (candle warmth, shaft rim, stained-glass colour); no act gives an animal its own colour key."
+    ],
+    "user_refs": [
+      {
+        "path": "refs/style/alice.jpeg",
+        "annotation": "none",
+        "extracted": "Low-key cathedral interior: cool verdigris-slate ambience (#3F5E5A / #5C6670) with warm candle pools (#E0A95A) and tarnished gilt (#B08A5B); mushroom-cap mauve (#A8747A); slate-blue Caterpillar with moss patina (#4F6A8A / #5F6F45); hookah smoke (#C8C4BC); Alice's cornflower dress (#6F8FC0) as the only saturated cool; soot shadows (#2B2A2E). Brightness strategy: dark frame, 2-3 bright shafts, tiny figure at the brightest floor patch. Saturation strategy: everything muted except Alice's blue and the candle flames.",
+        "applied_to": "variants.dream palette/grade; ep01 acts 3-6, ep02, ep04 acts 1-2 (Caterpillar clearing borrows the reference's palette outdoors); the rule that Alice's blue is the saturation benchmark of every dream act. Since BIB-0027 also: the reference's stained glass and Art Nouveau hall motivate scene_curves (cast stained-glass light in SCN-courtroom, which has real windows; in the windowless SCN-long-hall and SCN-pool-of-tears the same pastels are carried by blind front-lit glass as glints and sheen, per BIB-0033), and its creature treatment backs the photoreal CGI Caterpillar colour (slate-blue with moss patina)."
+      }
+    ]
+  },
+
+  "palette_legend": {
+    "honey_gold_sun": "#D9B96A",
+    "meadow_green": "#7A8F3C",
+    "willow_shade": "#4E6B2E",
+    "cream_muslin": "#F2EBDD",
+    "hazy_river_sky": "#A9C3CF",
+    "verdigris_teal": "#3F5E5A",
+    "slate_grey": "#5C6670",
+    "tarnished_gold": "#B08A5B",
+    "dusty_rose_mushroom_mauve": "#A8747A",
+    "candle_amber": "#E0A95A",
+    "soot_shadow": "#2B2A2E",
+    "alice_cornflower": "#6F8FC0",
+    "hearts_crimson": "#8E1F2A",
+    "dream_mucha_accents": {
+      "mucha_gold_leaf": "#C9A55A",
+      "faded_sage": "#B7C4A4",
+      "faded_lilac": "#B9A9C6",
+      "pastel_rose": "#D9B3AE",
+      "aged_ivory": "#E8DEC6",
+      "source": "bible/style.json v1.1.0 palette_logic.dream_mucha_accents (art-director anchors, not derived here)",
+      "use": "Dream set-surface accents only (Art Nouveau gold leaf, mosaic tesserae, stained-glass panes, painted plaster, ironwork patina, sculpted and living flora), always inside the haze and never brighter than candle_amber or more saturated than alice_cornflower. They are not ambient light and never land on costume unless the costume file already carries the hue. Stained-glass daylight may carry them as soft coloured light only in the scenes listed in scene_curves. None of them appears in a waking act. In the Hearts sets only mucha_gold_leaf stays and the four pastels recede."
+    },
+    "derived_from": {
+      "deep_pool_teal #2F4A4C": "verdigris_teal darkened ~25% (tear-water depth)",
+      "reed_olive #6E7F5A": "meadow_green desaturated toward slate (dream reed bank grown from the river backwater)",
+      "dream_moss #5F6F45": "willow_shade lifted and greyed (dream wood, moss patina of the reference)",
+      "caterpillar_slate_blue #4F6A8A": "slate_grey pushed toward alice_cornflower (reference Caterpillar body)",
+      "hookah_smoke #C8C4BC": "cream_muslin greyed (reference smoke plume)",
+      "weathered_whitewash #D8CDB8": "cream_muslin aged (Rabbit's house plaster, tea-table linen)",
+      "old_oak #8A6A48": "tarnished_gold darkened (interior wood, dead leaves)",
+      "pepper_ochre #C49A55": "tarnished_gold x candle_amber (pepper haze in the Duchess's kitchen)",
+      "dream_sky #B7C2C4": "hazy_river_sky desaturated (the only open sky inside the dream)",
+      "garden_green #6F8A4E": "meadow_green cooled one step (the garden looks like home but is not)",
+      "white_rose #EDE6D6": "cream_muslin (rose petals and card faces)",
+      "flamingo_pink #C98A8A": "dusty_rose raised in value and saturation (the flamingo CRE-003, a photoreal CGI flamingo with its real plumage colour; CGI treatment pending_H2 per style.json H2-non-speaking-animals)",
+      "sea_grey_green #7F9A9A": "verdigris_teal x hazy_river_sky (dream seashore water)",
+      "wet_sand #D8C39A": "honey_gold_sun desaturated (seashore)",
+      "late_sun #E8B878": "honey_gold_sun warmed toward candle_amber (waking, late afternoon)",
+      "sunset_amber #E8A15C": "candle_amber lightened (waking, sunset; the dream's candle colour returns as real sun)"
+    }
+  },
+
+  "out_of_base": [
+    { "where": "ep07 act 4 (SCN-mock-turtle-ledge)", "what": "sea_grey_green #7F9A9A and wet_sand #D8C39A", "why": "The seashore grows from Alice's one seaside trip (SUP-010); neither base family has a sea. Both are mixed only from base anchors and stay inside the restrained saturation band.", "ask": "art-director countersign" },
+    { "where": "ep06 act 2 (SCN-croquet-ground)", "what": "flamingo_pink #C98A8A, the most saturated warm non-crimson in the dream", "why": "The flamingo (CRE-003) is a photoreal CGI flamingo (pending_H2) and must read as the real species, real pink plumage included; it is the comic counterweight to the crimson court. Hearts-set rule: the Mucha pastels recede here, so flamingo_pink is not doubled by pastel_rose set accents.", "ask": "art-director countersign" },
+    { "where": "ep09 act 3 (SCN-courtroom climax)", "what": "variant_grade saturation 1.1 and contrast 1.1 (above the dream's 0.9 / 0.95)", "why": "The film's single colour peak: the pack flying at Alice is the only moment the dream is allowed to be louder than the waking frame, so the match-cut to leaves reads as release.", "ask": "art-director countersign; if refused, fall back to saturation 1.0 / contrast 1.0" },
+    { "where": "ep05 act 3 (SCN-queens-garden)", "what": "waking honey_gold_sun #D9B96A and cream_muslin #F2EBDD inside the dream", "why": "Deliberate leak: the garden looks like the home meadow (false victory, sp-midpoint). The leak ends one act later when crimson enters.", "ask": "art-director countersign (style.json CR-008 separates texture levels, not hues)" }
+  ],
+
+  "variants": {
+    "dream": {
+      "note": "The dream register, applied to every act from the fall (ep01 act 2) to the flying pack (ep09 act 3), i.e. ~93% of the film. Measured against the waking frame: cooler by ~300K, blacks lifted by haze rather than crushed, saturation down one step with Alice's cornflower and candle flames the only colours allowed near full chroma, a slight painterly softness, slightly heavier grain. Still photographed 35mm live action with photoreal CGI animals and set extensions integrated in-plate (CR-001, CR-015) - this is a grade, not a stylisation; the Mucha / Art Nouveau language lives in the built sets, not in the grade (no painterly or poster look).",
+      "palette": ["#3F5E5A", "#5C6670", "#B08A5B", "#A8747A", "#E0A95A", "#2B2A2E"],
+      "set_surface_accents": {
+        "palette": ["#C9A55A", "#B7C4A4", "#B9A9C6", "#D9B3AE", "#E8DEC6"],
+        "rule": "palette_legend.dream_mucha_accents on the dream sets' surfaces in every dream-tagged act (from the fall's shelves and roundels onward, per style.json accent_rules). The grade must not lift them: they keep the dream saturation (0.9) and sit inside the haze. Scene exceptions and stained-glass light: see scene_curves.",
+        "hearts_sets": "SCN-rose-tree-yard, SCN-croquet-ground, SCN-courtroom: only #C9A55A mucha_gold_leaf stays, alongside tarnished_gold and the crowns; #B7C4A4, #B9A9C6, #D9B3AE and #E8DEC6 recede to trace level (under ~3% of frame) so hearts_crimson owns the ramp."
+      },
+      "grade": { "contrast": 0.95, "temperature_shift_k": -300, "saturation": 0.9, "soften": 0.2, "grain": 0.25, "luma_step_pct": 20 }
+    },
+    "waking": {
+      "note": "Reference register (reality), NOT an act-level variant tag: waking acts (ep01 act 1, ep09 acts 4 and 6) carry no 'variant' field per contract. Defined here so grade-planner has the numeric baseline the dream and imagination grades are measured against: warm hazy July sun, gentle contrast, natural saturation, fine grain, no softening. No dream_mucha_accents and no stained-glass light (style.json CR-014, negative_prompt_waking_addon_en); the Mucha influence here is at most framing and wildflower colour inside the existing waking hexes.",
+      "palette": ["#D9B96A", "#7A8F3C", "#4E6B2E", "#F2EBDD", "#A9C3CF"],
+      "grade": { "contrast": 1.0, "temperature_shift_k": 200, "saturation": 1.0, "grain": 0.15 }
+    },
+    "imagination": {
+      "note": "The sister's sunset reverie (ep09 act 5, ev0054): with half-shut eyes she hears the farm and river sounds turn back into the dream's figures. Played on the real bank, so the base stays warm sunset; the dream's slate and mauve are laid in only as haze and shadow colour. Softer and lower-contrast than the dream so it reads as her recollection, not a return to Wonderland; no voice-over.",
+      "palette": ["#E8A15C", "#A8747A", "#5C6670", "#3F5E5A", "#F2EBDD"],
+      "grade": { "contrast": 0.9, "temperature_shift_k": 100, "saturation": 0.85, "soften": 0.4, "grain": 0.2, "luma_step_pct": 15 }
+    }
+  },
+
+  "scene_curves": {
+    "_note": "Per-scene colour rules that hold across every act set in the scene (BIB-0027; BIB-0033 arbitration 2026-09-23; style.json CR-007 / CR-014 / accent_rules). The three grand dream interiors modelled on the user reference carry the same glass palette, but only ONE of them casts coloured light: SCN-courtroom, whose architecture.json gives it real high stained-glass windows. SCN-long-hall and SCN-pool-of-tears are windowless (architecture.json interior.openings: no windows, no skylights; the 25 halo roundels are blind) and their glass is front-lit by the hall oil lamps only (lighting.json roundel_glow = reflected_lamplight_only), so there the glass_palette lives on SURFACES - jewel glints and lead-came sheen on the roundels, the pastel tulip lamp shades, the mosaic dado and floor border - and never as a pool of light on floor, wall or water. The act-level stained_glass field gives the per-act dose either way. Where glass light IS cast (SCN-courtroom) it is soft daylight through coloured panes: pastel pools on floor and wall, a tint on figures it crosses. It is never a gel, never a glow, and never in the exact alice_cornflower hue near Alice.",
+    "SCN-long-hall": {
+      "acts": [["ep01", 3], ["ep01", 4], ["ep01", 5], ["ep01", 6], ["ep05", 3]],
+      "stained_glass": "surface_only_no_cast_light",
+      "glass_palette": ["#B9A9C6", "#B7C4A4", "#E8DEC6", "#C9A55A"],
+      "glass_palette_names": ["faded_lilac", "faded_sage", "aged_ivory", "mucha_gold_leaf"],
+      "curve": "The hall is windowless and its 25 halo roundels are blind, so the faded lilac, sage, ivory and gold are carried by SURFACES, not by light: jewel-coloured glints and a faint sheen on the glass and lead came of each roundel where a lamp hangs close, the pastel tulip lamp shades themselves, and the pastel-and-gold tesserae of the dado and floor border - all cooler than the candle_amber lamp pools and dimmer than them. The dose follows the act's luma exactly as before: present at wonder (ep01 act 3), low during the size trials (act 4), gone at the dark moment (act 5), back only as broken reflections on the flood (act 6), then repeated at ep05 act 3 so the return reads as the same hall. The only coloured CAST light in the hall is the garden green through the open little door (SCN-long-hall/lighting.json SPC-long-hall-01).",
+      "limits": "No daylight, no shaft and no pool of coloured light anywhere in the hall; the roundels must never read as backlit (roundel_glow = reflected_lamplight_only). The garden seen through the little door stays the only warm, saturated green in the hall, so sage is kept off the door wall. Glints and sheen stay below the glass table in brightness (ep01 act 4) and below the lamp pools everywhere."
+    },
+    "SCN-pool-of-tears": {
+      "acts": [["ep01", 6], ["ep02", 1]],
+      "stained_glass": "surface_only_no_cast_light",
+      "glass_palette": ["#E8DEC6", "#C9A55A", "#B9A9C6"],
+      "glass_palette_names": ["aged_ivory", "mucha_gold_leaf", "faded_lilac"],
+      "curve": "The flooded hall is the same windowless hall, so there is no shaft and no opening overhead. What Alice swims toward is the brightest field of LAMP REFLECTIONS on the water at the south end, where the reflections crowd and the shore steps lie (SCN-pool-of-tears/lighting.json dream_growth): an aged-ivory and gold core broken into flecks on the tear water, with faded-lilac glints off the blind roundels on the wall above it. It is the only bright, warm-cored thing in the film's coldest water, so it still reads as the way out.",
+      "limits": "Keep the reflection field and the glass glints under ~5% of frame and desaturated to the dream band (the acts' -400K cold override still applies); no shaft, no beam, no coloured pool, and no glass tint on the swimming animals' faces (CR-015)."
+    },
+    "SCN-courtroom": {
+      "acts": [["ep08", 1], ["ep08", 2], ["ep08", 3], ["ep09", 1], ["ep09", 2], ["ep09", 3]],
+      "stained_glass": "allowed_gold_only",
+      "glass_palette": ["#C9A55A", "#E8DEC6"],
+      "glass_palette_names": ["mucha_gold_leaf", "aged_ivory"],
+      "curve": "Hearts set: the pastels recede and the gold stays. The high windows are Art Nouveau glass, but golden-hour sun through them reads as gold-leaf and ivory shafts merging with candle_amber; the lilac, sage and rose panes stay visible as glass but throw no coloured pool. Crimson owns the room (ep08), then Alice's cornflower overtakes it (ep09 acts 1-2).",
+      "limits": "No glass-coloured light on skin during 'Off with her head!' or the flying pack (ep09 act 3), in line with the no-red-on-skin rule (DEF-p3-char-index-902). No lilac or rose tint next to hearts_crimson, which would read pink."
+    },
+    "hearts_sets": {
+      "scenes": ["SCN-rose-tree-yard", "SCN-croquet-ground", "SCN-courtroom"],
+      "rule": "dream_mucha_accents reduced to #C9A55A mucha_gold_leaf; the four pastels recede to trace level. The garden's Art Nouveau arbours and ironwork keep their shapes and verdigris patina, not their pastel paint. The exteriors (rose-tree yard, croquet-ground) have no stained-glass light."
+    }
+  },
+
+  "episodes": [
+    {
+      "episode_id": "ep01",
+      "title": "Down the Rabbit-Hole",
+      "key_palette": ["#D9B96A", "#7A8F3C", "#3F5E5A", "#5C6670", "#E0A95A", "#6F8FC0"],
+      "curve": "Warm and high to cold and low: the whole descent of the film in miniature.",
+      "acts": [
+        {
+          "act": 1, "event_refs": ["ev0001"],
+          "scene_ids": ["SCN-riverbank", "SCN-thames-riverside", "SCN-field-hedge-burrow"],
+          "palette": ["#D9B96A", "#7A8F3C", "#F2EBDD", "#A9C3CF", "#6F8FC0"],
+          "palette_names": ["honey_gold_sun", "meadow_green", "cream_muslin", "hazy_river_sky", "alice_cornflower"],
+          "mood": "drowsy summer heat, boredom tipping into curiosity",
+          "saturation": "mid", "brightness": "high",
+          "rationale": "Waking open of the dream frame (dream_frame.waking_open, sp-opening-hook / sp-inciting-incident): Friday 4 July 1862, early afternoon on the bank. The highest-key, warmest act of the first eight episodes, so everything after it reads as 'elsewhere'. The real white rabbit (CRE-001) crossing the green is the only bright white moving in frame."
+        },
+        {
+          "act": 2, "event_refs": ["ev0001", "ev0002"],
+          "scene_ids": ["SCN-falling-dream", "SCN-shaft-landing-passage"],
+          "palette": ["#B08A5B", "#D9B96A", "#5C6670", "#3F5E5A", "#8A6A48"],
+          "palette_names": ["tarnished_gold", "honey_gold_sun", "slate_grey", "verdigris_teal", "old_oak"],
+          "mood": "sliding into sleep, curiosity without fear",
+          "saturation": "mid→low", "brightness": "high→low",
+          "rationale": "The fall is the moment Alice falls asleep (SUP-001/SUP-008, ev0002 merged into ev0001): style.json accent rule 'honey-gold drains into slate and verdigris as she dozes off mid-fall'. The gold survives only on the passing shelves and jars.",
+          "variant": "dream",
+          "variant_note": "Bridge act: the dream grade ramps in across the fall - start at the waking baseline, reach the full dream grade by the landing heap. Do not cut to it.",
+          "variant_grade": { "temperature_shift_k": -150, "soften": 0.1 }
+        },
+        {
+          "act": 3, "event_refs": ["ev0003"],
+          "scene_ids": ["SCN-long-hall", "SCN-little-door-passage", "SCN-shaft-landing-passage"],
+          "palette": ["#3F5E5A", "#5C6670", "#E0A95A", "#7A8F3C", "#6F8FC0"],
+          "palette_names": ["verdigris_teal", "slate_grey", "candle_amber", "meadow_green (garden through the little door)", "alice_cornflower"],
+          "mood": "wonder at a locked door",
+          "saturation": "low", "brightness": "low (one bright keyhole of garden)",
+          "rationale": "sp-first-plot-point: the hall of doors and the garden glimpsed (arc-alice-garden-quest beat 1). The hall is the user reference translated literally - slate/verdigris ambience, hanging-lamp amber pools. The garden seen through the 15-inch door is the ONLY warm green in the hall: it is the colour of the waking meadow, so the goal is coloured as 'home'.",
+          "stained_glass": "Surface only: faded-lilac and ivory jewel glints and lead-came sheen on the blind roundels where the lamps hang close, plus the pastel tulip shades of the lamps themselves, all dimmer than the lamp pools; no pool of glass light on the floor; sage kept off the little-door wall (scene_curves.SCN-long-hall).",
+          "variant": "dream"
+        },
+        {
+          "act": 4, "event_refs": ["ev0004", "ev0005", "ev0006"],
+          "scene_ids": ["SCN-long-hall"],
+          "palette": ["#5C6670", "#3F5E5A", "#E0A95A", "#F2EBDD", "#6F8FC0"],
+          "palette_names": ["slate_grey", "verdigris_teal", "candle_amber", "cream_muslin (DRINK ME label, glass table glints)", "alice_cornflower"],
+          "mood": "giddy trial and error",
+          "saturation": "low", "brightness": "low-mid",
+          "rationale": "DRINK ME / EAT ME size beats (SUP-003 forced perspective; arc-alice-garden-quest beat 2-3). Colour is held steady so scale reads through the oversized sets, not through grade changes; the glass table is the brightest object, keeping the eye on bottle, cake and key.",
+          "stained_glass": "Low: one or two FRONT-LIT roundels - 'lit' here means front-lit by the nearest hanging lamp only, never backlit and never evenly glowing (the 25 halo roundels are blind: no opening and no lamp behind them, roundel_glow = reflected_lamplight_only, BIB-0033) - held at a fixed position on the wall across the size changes, so the roundels themselves work as scale markers; always below the glass table in brightness, and no glass pools on the floor (scene_curves.SCN-long-hall; directing/ep01/cinematography.json CT-04 act 4).",
+          "variant": "dream"
+        },
+        {
+          "act": 5, "event_refs": ["ev0007"],
+          "scene_ids": ["SCN-long-hall"],
+          "palette": ["#2B2A2E", "#3F5E5A", "#5C6670", "#6F8FC0"],
+          "palette_names": ["soot_shadow", "verdigris_teal", "slate_grey", "alice_cornflower"],
+          "mood": "lost, 'Who in the world am I?'",
+          "saturation": "low", "brightness": "low",
+          "rationale": "sp-pinch-1 and the start of arc-alice-identity: giant, weeping, key in hand and still shut out. The candles are out of frame; the hall drops to its lowest luma and Alice's blue is the only colour left - the first local dark moment of the film.",
+          "reflection_allowance": {
+            "color": "#E0A95A",
+            "name": "candle_amber (reflected glints only)",
+            "rule": "Lamps/candles stay out of frame. Once the tears spread (screenplay S08 'lamplight trembles on it'; hooks oh-3 'lamplight on the tear water'), small dim reflected glints of the off-frame lamps are allowed on the water surface only - broken specular flecks, never a pool of light, never on Alice, walls or vault. Keep glints under ~5% of frame area and well below Alice's cornflower in visual weight; overall act luma stays the lowest of the episode.",
+            "ref": "DEF-p5-pacing-ep01-001 resolved (a) by 06-art/color-script 2026-09-22; seeds the reflected candle_amber that becomes a palette colour in act 6"
+          },
+          "stained_glass": "None: the lamps are out of frame, so the blind roundels go dark with them and the act keeps the lowest luma of the episode. The reflection_allowance above stays the only light accent.",
+          "variant": "dream",
+          "variant_grade": { "temperature_shift_k": -400 }
+        },
+        {
+          "act": 6, "event_refs": ["ev0008"],
+          "scene_ids": ["SCN-long-hall", "SCN-pool-of-tears"],
+          "palette": ["#2F4A4C", "#3F5E5A", "#5C6670", "#E0A95A"],
+          "palette_names": ["deep_pool_teal", "verdigris_teal", "slate_grey", "candle_amber (reflected on the water)"],
+          "mood": "shock, cold plunge",
+          "saturation": "low", "brightness": "low",
+          "rationale": "Cliffhanger ev0008 (SUP-007): the hall floods with her own tears. Verdigris darkens into deep pool teal; the candle pools survive only as reflections on the water surface, which carries the colour straight into ep02 act 1.",
+          "stained_glass": "Reflections only, and all of them lamplight: broken ivory-and-gold flecks of the off-frame lamps on the rising water, with a few dim lilac glints off the blind roundels high on the wall, all weaker than the candle_amber reflections (scene_curves.SCN-long-hall / SCN-pool-of-tears).",
+          "variant": "dream"
+        }
+      ]
+    },
+    {
+      "episode_id": "ep02",
+      "title": "The Pool of Tears",
+      "key_palette": ["#2F4A4C", "#3F5E5A", "#6E7F5A", "#B08A5B", "#5C6670"],
+      "curve": "Coldest water -> brief comic warmth ashore -> warmth drains to loneliness.",
+      "acts": [
+        {
+          "act": 1, "event_refs": ["ev0009"],
+          "scene_ids": ["SCN-pool-of-tears"],
+          "palette": ["#2F4A4C", "#3F5E5A", "#5C6670", "#E0A95A"],
+          "palette_names": ["deep_pool_teal", "verdigris_teal", "slate_grey", "candle_amber (the south-end lamp-reflection field on the water)"],
+          "mood": "cold, awkward, crowded",
+          "saturation": "low", "brightness": "low",
+          "rationale": "Opening hook mid-swim, Alice offending the Mouse with Dinah (act1 closing reversal, ev0009 is act1's last event in story_graph). The coldest act of the dream: tear-water teal with a single bright field of lamp reflections to swim toward. The photoreal CGI Mouse and swimming birds take the same cold light as Alice (CR-015).",
+          "stained_glass": "No shaft (the hall is windowless): the way-out light is the field of lamp reflections at the south end, an ivory-and-gold core broken on the water with faded-lilac glints off the blind roundels on the wall above, under ~5% of frame (scene_curves.SCN-pool-of-tears).",
+          "variant": "dream",
+          "variant_grade": { "temperature_shift_k": -400 }
+        },
+        {
+          "act": 2, "event_refs": ["ev0010"],
+          "scene_ids": ["SCN-pool-bank"],
+          "palette": ["#6E7F5A", "#B08A5B", "#5C6670", "#E0A95A", "#6F8FC0"],
+          "palette_names": ["reed_olive", "tarnished_gold", "slate_grey", "candle_amber", "alice_cornflower"],
+          "mood": "dripping absurd comedy, 'everybody has won'",
+          "saturation": "low→mid", "brightness": "mid",
+          "rationale": "act2a opens (fun and games): the Caucus-race on the reedy bank grown from the river backwater (SCN-pool-bank grows_from LOC-river-backwater). The bank borrows a greyed version of the meadow green - the first hint the dream is made of the waking world. Sunlight shaft dries the party; comfits handed out are the warm accent.",
+          "variant": "dream"
+        },
+        {
+          "act": 3, "event_refs": ["ev0011", "ev0012"],
+          "scene_ids": ["SCN-pool-bank"],
+          "palette": ["#5C6670", "#6E7F5A", "#A8747A", "#B08A5B"],
+          "palette_names": ["slate_grey", "reed_olive", "dusty_rose", "tarnished_gold"],
+          "mood": "offended, deflating",
+          "saturation": "low", "brightness": "mid→low",
+          "rationale": "Episode climax ev0011 (the Mouse's tale, Alice's literal interruptions) and the merged dispersal ev0012 after her Dinah boast. The shaft moves off the group as each guest leaves; warmth drains from the frame guest by guest.",
+          "variant": "dream"
+        },
+        {
+          "act": 4, "event_refs": ["ev0013"],
+          "scene_ids": ["SCN-pool-bank"],
+          "palette": ["#5C6670", "#3F5E5A", "#2B2A2E", "#6F8FC0"],
+          "palette_names": ["slate_grey", "verdigris_teal", "soot_shadow", "alice_cornflower"],
+          "mood": "alone, hoping",
+          "saturation": "low", "brightness": "low",
+          "rationale": "Cliffhanger ev0013: alone and tearful, pattering footsteps approach. Same cold family as ep01 act 5 so the audience feels the repeat of 'shut out'; the reveal (Rabbit) is withheld, so no new colour enters.",
+          "variant": "dream"
+        }
+      ]
+    },
+    {
+      "episode_id": "ep03",
+      "title": "The Rabbit Sends in a Little Bill",
+      "key_palette": ["#D8CDB8", "#B08A5B", "#8A6A48", "#5F6F45", "#5C6670", "#4F6A8A"],
+      "curve": "Domestic warm-grey -> cramped dark -> dusty daylight farce -> green escape -> blue reveal.",
+      "acts": [
+        {
+          "act": 1, "event_refs": ["ev0014"],
+          "scene_ids": ["SCN-pool-bank", "SCN-rabbit-house-exterior"],
+          "palette": ["#D8CDB8", "#B08A5B", "#5C6670", "#3F5E5A"],
+          "palette_names": ["weathered_whitewash", "tarnished_gold (W. RABBIT brass plate)", "slate_grey", "verdigris_teal"],
+          "mood": "brisk, ordered about",
+          "saturation": "low", "brightness": "mid",
+          "rationale": "Opening hook ev0014: mistaken for Mary Ann (ruling 5.3 B housemaid doubling). The house grows from the family house (SCN-rabbit-house-exterior grows_from LOC-family-house), so its palette is aged domestic whitewash and brass - the first clean, tidy surface in the dream.",
+          "variant": "dream"
+        },
+        {
+          "act": 2, "event_refs": ["ev0015"],
+          "scene_ids": ["SCN-rabbit-house-upstairs-room"],
+          "palette": ["#8A6A48", "#B08A5B", "#2B2A2E", "#6F8FC0"],
+          "palette_names": ["old_oak", "tarnished_gold", "soot_shadow", "alice_cornflower"],
+          "mood": "trapped, claustrophobic",
+          "saturation": "low", "brightness": "low",
+          "rationale": "ev0015: she grows until wedged in the room. The window is blocked by her own arm, so daylight is cut and the room goes to oak and soot; Alice's blue fills the frame edge to edge - the first time her colour 'overflows' (seed for her growth at the trial, fs-027/028).",
+          "variant": "dream"
+        },
+        {
+          "act": 3, "event_refs": ["ev0016"],
+          "scene_ids": ["SCN-rabbit-house-exterior", "SCN-rabbit-house-upstairs-room"],
+          "palette": ["#D8CDB8", "#B08A5B", "#5C6670", "#E0A95A"],
+          "palette_names": ["weathered_whitewash", "tarnished_gold", "slate_grey", "candle_amber (sun on the flying pebbles)"],
+          "mood": "farcical siege",
+          "saturation": "mid", "brightness": "mid",
+          "rationale": "Episode climax ev0016: ladders, Bill down the chimney, pebbles turning to cakes (SUP-009 hidden cut). Dusty yard daylight keeps the farce light; soot puff from the chimney is the only dark accent - Bill is never coloured as hurt.",
+          "variant": "dream"
+        },
+        {
+          "act": 4, "event_refs": ["ev0017"],
+          "scene_ids": ["SCN-wood-thistle-glade", "SCN-wonderland-wood", "SCN-rabbit-house-exterior"],
+          "palette": ["#5F6F45", "#3F5E5A", "#B08A5B", "#E0A95A"],
+          "palette_names": ["dream_moss", "verdigris_teal", "tarnished_gold", "candle_amber (sun through leaves)"],
+          "mood": "relief and resolve",
+          "saturation": "low→mid", "brightness": "mid",
+          "rationale": "sp-plan-stated: escape into the wood, the enormous puppy (photoreal CGI puppy, pending_H2, scaled against tiny Alice), and the two-step plan. First green of the dream proper: moss and leaf-filtered afternoon light. Warmth returns because Alice has, for the first time, a plan.",
+          "variant": "dream"
+        },
+        {
+          "act": 5, "event_refs": ["ev0018"],
+          "scene_ids": ["SCN-caterpillar-clearing"],
+          "palette": ["#4F6A8A", "#A8747A", "#3F5E5A", "#5C6670"],
+          "palette_names": ["caterpillar_slate_blue", "mushroom_mauve", "verdigris_teal", "slate_grey"],
+          "mood": "held breath, eye to eye",
+          "saturation": "low", "brightness": "low-mid",
+          "rationale": "Cliffhanger ev0018: over the mushroom's edge, the blue Caterpillar (photoreal CGI caterpillar; face design pending_H2). The user reference's Caterpillar palette (slate-blue with moss patina, mauve mushroom cap) lands here outdoors (CR-009). A second blue now competes with Alice's.",
+          "variant": "dream"
+        }
+      ]
+    },
+    {
+      "episode_id": "ep04",
+      "title": "We're All Mad Here",
+      "key_palette": ["#4F6A8A", "#A8747A", "#B7C2C4", "#C49A55", "#2B2A2E", "#5F6F45"],
+      "curve": "Smoky interrogation -> open sky (first dream release) -> pepper chaos -> uncanny calm.",
+      "acts": [
+        {
+          "act": 1, "event_refs": ["ev0019"],
+          "scene_ids": ["SCN-caterpillar-clearing"],
+          "palette": ["#A8747A", "#4F6A8A", "#C8C4BC", "#5C6670"],
+          "palette_names": ["mushroom_mauve", "caterpillar_slate_blue", "hookah_smoke", "slate_grey"],
+          "mood": "cross-examined, unsure",
+          "saturation": "low", "brightness": "low-mid",
+          "rationale": "Opening hook ev0019 'Who are YOU?' - arc-alice-identity cross-examination. Hookah smoke greys every colour; Alice's blue is hazed down to near the Caterpillar's slate, so visually she is losing herself.",
+          "variant": "dream",
+          "variant_grade": { "soften": 0.3 }
+        },
+        {
+          "act": 2, "event_refs": ["ev0020"],
+          "scene_ids": ["SCN-caterpillar-clearing"],
+          "palette": ["#E0A95A", "#A8747A", "#3F5E5A", "#6F8FC0"],
+          "palette_names": ["candle_amber (afternoon shaft)", "mushroom_mauve", "verdigris_teal", "alice_cornflower"],
+          "mood": "a usable rule at last",
+          "saturation": "low→mid", "brightness": "mid",
+          "rationale": "sp-tool-acquired: 'one side taller, the other shorter'. The smoke clears and a warm shaft falls on the mushroom cap - the tool is lit like a prize. Alice's blue regains its chroma.",
+          "variant": "dream"
+        },
+        {
+          "act": 3, "event_refs": ["ev0021", "ev0022", "ev0023"],
+          "scene_ids": ["SCN-caterpillar-clearing", "SCN-pigeon-treetop"],
+          "palette": ["#B7C2C4", "#5F6F45", "#5C6670", "#6F8FC0"],
+          "palette_names": ["dream_sky", "dream_moss (treetops below)", "slate_grey (the Pigeon)", "alice_cornflower"],
+          "mood": "vertigo, exhilaration, rebuttal",
+          "saturation": "low-mid", "brightness": "high",
+          "rationale": "ev0022 with merged ev0021/ev0023: neck above the treetops, the Pigeon's 'Serpent!', then mastery (arc-alice-garden-quest beat 'masters size'). The only open sky inside the dream: highest dream luma so far, the canopy a moss sea below. It ends as she shrinks back into the clearing, colour dropping back to the wood.",
+          "variant": "dream",
+          "variant_grade": { "temperature_shift_k": -150, "soften": 0.1 }
+        },
+        {
+          "act": 4, "event_refs": ["ev0024", "ev0025", "ev0026"],
+          "scene_ids": ["SCN-duchess-house-front", "SCN-duchess-kitchen"],
+          "palette": ["#C49A55", "#8A6A48", "#2B2A2E", "#E0A95A"],
+          "palette_names": ["pepper_ochre", "old_oak", "soot_shadow", "candle_amber (hearth)"],
+          "mood": "hostile, suffocating chaos",
+          "saturation": "mid", "brightness": "low",
+          "rationale": "ev0026 (with doorstep ev0024/ev0025 merged): the smoky kitchen, pepper, flying pans, the lullaby. The dream's first warm-dominant act and it is unpleasant - pepper haze turns the hearth light sour ochre. DEF-p3-char-index-903: lullaby CHORUS = Duchess, cook and baby only, lit as one hearth tableau (no crowd pools). The Fish- and Frog-Footman doorstep keeps the cool front-door grey before the plunge into ochre (their photoreal frog/fish heads take that grey daylight; anatomy pending_H2).",
+          "variant": "dream",
+          "variant_grade": { "temperature_shift_k": -100, "soften": 0.3 }
+        },
+        {
+          "act": 5, "event_refs": ["ev0027"],
+          "scene_ids": ["SCN-duchess-kitchen", "SCN-duchess-house-front", "SCN-wonderland-wood"],
+          "palette": ["#5F6F45", "#5C6670", "#A8747A", "#D8CDB8"],
+          "palette_names": ["dream_moss", "slate_grey", "dusty_rose (the piglet)", "weathered_whitewash (baby clothes)"],
+          "mood": "fresh air, bemused",
+          "saturation": "low", "brightness": "mid",
+          "rationale": "SUP-006 baby-to-pig in one continuous held shot, outdoors: the colour must NOT change during the take (the human infant becomes a photoreal CGI piglet in the same swaddling by hidden cut or cloth-and-framing change, no morph; pending_H2), so the act holds one flat cool daylight and the CGI piglet is lit exactly like the baby before it; the pink of the piglet is the only warm note as it trots off.",
+          "variant": "dream"
+        },
+        {
+          "act": 6, "event_refs": ["ev0028"],
+          "scene_ids": ["SCN-cheshire-cat-path"],
+          "palette": ["#3F5E5A", "#5F6F45", "#E0A95A", "#A8747A"],
+          "palette_names": ["verdigris_teal", "dream_moss", "candle_amber (low late sun)", "dusty_rose"],
+          "mood": "uncanny amusement, 'we're all mad here'",
+          "saturation": "low", "brightness": "low-mid",
+          "rationale": "sp-thesis-statement and episode climax: the Cheshire Cat (a photoreal CGI cat whose coat and markings echo Alice's cat Dinah, style.json CR-003, world.json cp-cat), vanishing to the grin by a photographic-style dissolve (SUP-005) of the CGI cat in the plate. Late-afternoon sun rakes the bough; the grin is kept as the last lit element before dissolve - no glow, just the sunlit patch left behind.",
+          "variant": "dream"
+        }
+      ]
+    },
+    {
+      "episode_id": "ep05",
+      "title": "A Mad Tea-Party",
+      "key_palette": ["#E0A95A", "#B08A5B", "#D8CDB8", "#6F8A4E", "#D9B96A", "#8E1F2A"],
+      "curve": "Stuck amber -> sour -> the film's false-victory brightness -> first crimson.",
+      "acts": [
+        {
+          "act": 1, "event_refs": ["ev0029", "ev0030"],
+          "scene_ids": ["SCN-mad-tea-party"],
+          "palette": ["#E0A95A", "#B08A5B", "#D8CDB8", "#A8747A", "#6F8FC0"],
+          "palette_names": ["candle_amber (fixed six-o'clock sun)", "tarnished_gold", "weathered_whitewash (tablecloth)", "dusty_rose", "alice_cornflower"],
+          "mood": "manic, time stopped",
+          "saturation": "mid", "brightness": "mid",
+          "rationale": "ev0029 riddle and ev0030 the quarrel with Time, always six o'clock (SUP-012 stopped watch; plants fs-014/015). The light is a frozen late-afternoon amber that never moves across the table - the dream's only warm exterior, stale rather than cosy (tea-time grows_from the family tea Alice is late for).",
+          "variant": "dream",
+          "variant_grade": { "temperature_shift_k": -100 }
+        },
+        {
+          "act": 2, "event_refs": ["ev0031"],
+          "scene_ids": ["SCN-mad-tea-party"],
+          "palette": ["#B08A5B", "#A8747A", "#5C6670", "#2B2A2E"],
+          "palette_names": ["tarnished_gold", "dusty_rose", "slate_grey", "soot_shadow"],
+          "mood": "disgust, walking out",
+          "saturation": "low", "brightness": "mid→low",
+          "rationale": "Episode climax ev0031: treacle well, clean-cup shuffle, Alice leaves; the Dormouse goes into the teapot. As she walks away the stale amber stays at the table and she walks into cool wood shade - she chooses to leave the stuck warmth.",
+          "variant": "dream"
+        },
+        {
+          "act": 3, "event_refs": ["ev0032"],
+          "scene_ids": ["SCN-wood-tree-door", "SCN-long-hall", "SCN-little-door-passage", "SCN-queens-garden"],
+          "palette": ["#6F8A4E", "#D9B96A", "#F2EBDD", "#3F5E5A", "#6F8FC0"],
+          "palette_names": ["garden_green", "honey_gold_sun", "cream_muslin", "verdigris_teal (the hall behind her)", "alice_cornflower"],
+          "mood": "triumph - 'I'll manage better this time'",
+          "saturation": "mid", "brightness": "low→high",
+          "rationale": "sp-midpoint (false victory; fs-002/003/004 payoff): back through the tree-door into the ep01 hall (same verdigris, deliberately) then through the little door into the garden. The garden reuses the waking meadow's gold and cream - it looks like home, which is exactly the lie. Brightest dream act.",
+          "stained_glass": "Hall passage only, and surface only: the same lilac and ivory roundel glints and lead-came sheen as ep01 act 3, so the return reads as the same hall; no glass pools on the floor; none in the garden (exterior, and a Hearts set: pastels recede).",
+          "variant": "dream",
+          "variant_grade": { "temperature_shift_k": 0, "saturation": 1.0, "soften": 0.1 }
+        },
+        {
+          "act": 4, "event_refs": ["ev0033"],
+          "scene_ids": ["SCN-rose-tree-yard"],
+          "palette": ["#6F8A4E", "#EDE6D6", "#8E1F2A", "#5C6670"],
+          "palette_names": ["garden_green", "white_rose", "hearts_crimson (wet paint)", "slate_grey"],
+          "mood": "unease, the garden turns",
+          "saturation": "mid", "brightness": "mid",
+          "rationale": "Cliffhanger ev0033: gardeners painting white roses red (arc-alice-garden-quest: 'the dream garden is a place of fear'). Hearts crimson enters the film here, per style.json accent rule, as small wet strokes on white - then the procession's crimson spills in at the final beat.",
+          "variant": "dream"
+        }
+      ]
+    },
+    {
+      "episode_id": "ep06",
+      "title": "The Queen's Croquet-Ground",
+      "key_palette": ["#8E1F2A", "#6F8A4E", "#2B2A2E", "#B08A5B", "#C98A8A", "#6F8FC0"],
+      "curve": "Crimson ramps from accent to half the frame; chaos peak; cool calm around the Cat's head.",
+      "acts": [
+        {
+          "act": 1, "event_refs": ["ev0034", "ev0035"],
+          "scene_ids": ["SCN-rose-tree-yard", "SCN-croquet-ground"],
+          "palette": ["#8E1F2A", "#2B2A2E", "#EDE6D6", "#B08A5B", "#6F8FC0"],
+          "palette_names": ["hearts_crimson", "soot_shadow (spades)", "white_rose (card faces)", "tarnished_gold (crowns)", "alice_cornflower"],
+          "mood": "confrontation, first defiance",
+          "saturation": "mid", "brightness": "mid",
+          "rationale": "sp-first-defiance: 'Off with her head!' - 'Nonsense!'. The procession brings crimson, black and white card tabards (SUP-004 flat suited costume); Alice's cornflower is staged directly against the Queen's crimson - the film's key complementary pair, first time head-on. ev0035 (Duchess's sentence) is the Rabbit's whispered line inside the same colour.",
+          "variant": "dream"
+        },
+        {
+          "act": 2, "event_refs": ["ev0036"],
+          "scene_ids": ["SCN-croquet-ground"],
+          "palette": ["#6F8A4E", "#8E1F2A", "#C98A8A", "#8A6A48", "#EDE6D6"],
+          "palette_names": ["garden_green (furrowed lawn)", "hearts_crimson (soldiers as arches)", "flamingo_pink", "old_oak (hedgehog)", "white_rose"],
+          "mood": "frantic comic chaos",
+          "saturation": "mid→high", "brightness": "mid",
+          "rationale": "Episode climax ev0036: flamingo mallets, hedgehog balls, soldiers as arches, 'Off with his head!' once a minute. Busiest palette of the dream (flamingo CRE-003 and hedgehog CRE-004 are photoreal CGI animals, pending_H2, and must read as the real species in real plumage and spines). Hearts set: Mucha pastels recede, so the flamingo pink is the only pink in frame. SUP-011: no colour accent is ever placed on a strike - the flamingo pink moves, it is never hit.",
+          "variant": "dream",
+          "variant_grade": { "saturation": 1.0 }
+        },
+        {
+          "act": 3, "event_refs": ["ev0037"],
+          "scene_ids": ["SCN-croquet-ground"],
+          "palette": ["#5C6670", "#3F5E5A", "#8E1F2A", "#E0A95A"],
+          "palette_names": ["slate_grey", "verdigris_teal", "hearts_crimson (distant)", "candle_amber (low sun)"],
+          "mood": "a friend in the noise",
+          "saturation": "low", "brightness": "mid",
+          "rationale": "ev0037: the Cat's head appears to Alice. A cool pocket opens around the two of them - the ep04 Cheshire palette returns - while the crimson game stays out of focus behind. The King fetches the executioner: black livery and crown gold only, no device of any kind (DEF-p3-char-index-902, CR-010).",
+          "variant": "dream"
+        },
+        {
+          "act": 4, "event_refs": ["ev0038"],
+          "scene_ids": ["SCN-croquet-ground"],
+          "palette": ["#5C6670", "#2B2A2E", "#8E1F2A", "#B08A5B"],
+          "palette_names": ["slate_grey", "soot_shadow (executioner's livery)", "hearts_crimson", "tarnished_gold"],
+          "mood": "farcical dispute, the head fades",
+          "saturation": "low", "brightness": "mid→low",
+          "rationale": "Cliffhanger ev0038: the head-without-a-body argument; the Cat fades while they argue (SUP-005). A cloud passes and the sun drops - the ground loses its green and the crimson darkens. Executioner reads by hood pushed back, face visible, black and gold only; SUP-014 nothing is carried out.",
+          "variant": "dream"
+        }
+      ]
+    },
+    {
+      "episode_id": "ep07",
+      "title": "The Mock Turtle's Story",
+      "key_palette": ["#5C6670", "#2B2A2E", "#E0A95A", "#7F9A9A", "#D8C39A", "#A8747A"],
+      "curve": "Dimming court -> the film's dark moment -> warm release -> golden-hour seaside reflection -> pulled toward the trial.",
+      "acts": [
+        {
+          "act": 1, "event_refs": ["ev0039"],
+          "scene_ids": ["SCN-croquet-ground"],
+          "palette": ["#B08A5B", "#A8747A", "#8E1F2A", "#5C6670"],
+          "palette_names": ["tarnished_gold", "dusty_rose (the Duchess)", "hearts_crimson", "slate_grey"],
+          "mood": "cloying, then threatened",
+          "saturation": "low", "brightness": "mid",
+          "rationale": "Opening hook ev0039: the Duchess's chin and morals, the Queen's ultimatum, the Duchess vanishes (never lifted - dream logic). Her dusty rose clings to Alice's blue in the frame until crimson cuts between them.",
+          "variant": "dream"
+        },
+        {
+          "act": 2, "event_refs": ["ev0040"],
+          "scene_ids": ["SCN-croquet-ground"],
+          "palette": ["#5C6670", "#2B2A2E", "#3F5E5A", "#8E1F2A"],
+          "palette_names": ["slate_grey", "soot_shadow", "verdigris_teal", "hearts_crimson (a few remaining figures)"],
+          "mood": "desolate, everyone condemned",
+          "saturation": "low", "brightness": "low",
+          "rationale": "story_graph low point (act2b): croquet collapses, only King, Queen and Alice unsentenced. The emptied ground with long late-afternoon shadows is the film's darkest, least saturated dream act - lower than ep01 act 5 by a step. The King's quiet pardon is lit only by a thin warm edge.",
+          "variant": "dream",
+          "variant_grade": { "temperature_shift_k": -400, "saturation": 0.8 }
+        },
+        {
+          "act": 3, "event_refs": ["ev0041"],
+          "scene_ids": ["SCN-gryphon-sunning-spot"],
+          "palette": ["#E0A95A", "#B08A5B", "#6F8A4E", "#8A6A48"],
+          "palette_names": ["candle_amber (late sun)", "tarnished_gold", "garden_green", "old_oak"],
+          "mood": "relief, the threat punctured",
+          "saturation": "low→mid", "brightness": "mid",
+          "rationale": "ev0041, fs-022 payoff: the Gryphon in the sun - 'they never executes nobody'. Hard cut from the low point into a sun-warmed corner; the warmth retroactively empties every threat. Load-bearing release before the reflection interlude.",
+          "variant": "dream",
+          "variant_grade": { "temperature_shift_k": -100 }
+        },
+        {
+          "act": 4, "event_refs": ["ev0042", "ev0043"],
+          "scene_ids": ["SCN-mock-turtle-ledge"],
+          "palette": ["#7F9A9A", "#D8C39A", "#E0A95A", "#A8747A", "#6F8FC0"],
+          "palette_names": ["sea_grey_green", "wet_sand", "candle_amber (golden hour)", "dusty_rose", "alice_cornflower"],
+          "mood": "wistful, reflective - 'I was a different person then'",
+          "saturation": "low", "brightness": "mid",
+          "rationale": "Episode climax ev0043 (lament ev0042 merged as dialogue lead-in): the Lobster Quadrille and Alice's retelling. Seashore grows from her one seaside trip (SUP-010). Golden hour on grey-green sea: the gentlest, most nostalgic palette of the dream, pre-echoing the waking sunset. Out-of-base sea tones flagged for countersign.",
+          "variant": "dream",
+          "variant_grade": { "temperature_shift_k": -100 }
+        },
+        {
+          "act": 5, "event_refs": ["ev0044"],
+          "scene_ids": ["SCN-mock-turtle-ledge"],
+          "palette": ["#E0A95A", "#5C6670", "#7F9A9A", "#8E1F2A"],
+          "palette_names": ["candle_amber (fading behind)", "slate_grey", "sea_grey_green", "hearts_crimson (herald's tabard)"],
+          "mood": "urgent, pulled away",
+          "saturation": "low", "brightness": "mid→low",
+          "rationale": "Cliffhanger ev0044: 'The trial's beginning!' - the Gryphon drags her off, 'Beautiful Soup' fading behind. The golden sea recedes behind her as crimson (the herald) leads the way - the ramp resumes for act3.",
+          "variant": "dream"
+        }
+      ]
+    },
+    {
+      "episode_id": "ep08",
+      "title": "Who Stole the Tarts?",
+      "key_palette": ["#8E1F2A", "#B08A5B", "#2B2A2E", "#E0A95A", "#6F8FC0"],
+      "curve": "Crimson dominant from frame one; Alice's blue grows as she grows.",
+      "acts": [
+        {
+          "act": 1, "event_refs": ["ev0045"],
+          "scene_ids": ["SCN-courtroom"],
+          "palette": ["#8E1F2A", "#B08A5B", "#2B2A2E", "#E0A95A", "#EDE6D6"],
+          "palette_names": ["hearts_crimson", "tarnished_gold", "soot_shadow", "candle_amber (golden-hour shafts)", "white_rose (jurors' slates, tarts)"],
+          "mood": "pompous ceremony",
+          "saturation": "mid", "brightness": "low-mid",
+          "rationale": "Opening hook ev0045 (act3 opens): the court assembles. The cathedral-scale interior of the user reference returns (CR-009) but the crimson now owns it - canopy, tabards, the throne. Golden-hour shafts through high windows (SCN-courtroom lighting time_of_day golden_hour) - the real sun is setting.",
+          "stained_glass": "Gold only: golden-hour shafts through the Art Nouveau windows read as mucha_gold_leaf and aged_ivory merging with candle_amber; the pastel panes throw no coloured pool (scene_curves.SCN-courtroom, Hearts set).",
+          "variant": "dream",
+          "variant_grade": { "saturation": 1.0 }
+        },
+        {
+          "act": 2, "event_refs": ["ev0046"],
+          "scene_ids": ["SCN-courtroom"],
+          "palette": ["#8E1F2A", "#6F8FC0", "#B08A5B", "#2B2A2E"],
+          "palette_names": ["hearts_crimson", "alice_cornflower", "tarnished_gold", "soot_shadow"],
+          "mood": "absurd pressure, quiet growth",
+          "saturation": "mid", "brightness": "low-mid",
+          "rationale": "Episode climax ev0046: the Hatter's testimony (fs-014/015 teacup and Time payoff) and sp-climax-setup - Alice starts growing unprompted. Composition does the work: her cornflower takes a larger share of each frame across the act. Guinea-pig juror (photoreal CGI guinea-pig) sacked (ruling 5.4 B) in sackcloth brown, no harm.",
+          "stained_glass": "Gold only, as act 1; the gold shafts shift off the witness box onto Alice as she grows, so her cornflower gains light as well as frame share.",
+          "variant": "dream",
+          "variant_grade": { "saturation": 1.0 }
+        },
+        {
+          "act": 3, "event_refs": ["ev0047"],
+          "scene_ids": ["SCN-courtroom"],
+          "palette": ["#C49A55", "#8E1F2A", "#2B2A2E", "#6F8FC0"],
+          "palette_names": ["pepper_ochre", "hearts_crimson", "soot_shadow", "alice_cornflower"],
+          "mood": "comic disorder, then summoned",
+          "saturation": "mid", "brightness": "low-mid",
+          "rationale": "Cliffhanger ev0047: the cook's 'Shan't' and pepper cloud (ep04 kitchen ochre re-enters the court), Dormouse's 'Treacle' - then 'Alice!'. The pepper haze clears on her name; hard cut to her in a clean shaft.",
+          "stained_glass": "The pepper cloud swallows the glass light; the clean shaft on her name is plain ivory-gold window light, no pastel.",
+          "variant": "dream",
+          "variant_grade": { "saturation": 1.0 }
+        }
+      ]
+    },
+    {
+      "episode_id": "ep09",
+      "title": "Alice's Evidence",
+      "key_palette": ["#6F8FC0", "#8E1F2A", "#EDE6D6", "#D9B96A", "#E8A15C", "#7A8F3C"],
+      "curve": "Blue overtakes crimson -> film colour peak -> match-cut to amber leaves -> warm waking -> reverie -> sunset.",
+      "acts": [
+        {
+          "act": 1, "event_refs": ["ev0048", "ev0049"],
+          "scene_ids": ["SCN-courtroom"],
+          "palette": ["#6F8FC0", "#8E1F2A", "#B08A5B", "#E0A95A"],
+          "palette_names": ["alice_cornflower", "hearts_crimson", "tarnished_gold", "candle_amber"],
+          "mood": "clumsy, then kind and self-assured",
+          "saturation": "mid", "brightness": "mid",
+          "rationale": "Opening hook ev0048 (merged ev0049): Alice, grown large, tips the jury-box and restores the jurors. For the first time in the film her blue is the dominant colour of the frame and crimson the accent - the identity arc turned into a colour ratio. The photoreal CGI animal jurors (Bill among them) take the same gold window light as the humans.",
+          "stained_glass": "Gold only; the brightest gold shaft falls on Alice. No glass tint in her exact cornflower hue near her (style.json accent_rules).",
+          "variant": "dream",
+          "variant_grade": { "saturation": 1.0 }
+        },
+        {
+          "act": 2, "event_refs": ["ev0050"],
+          "scene_ids": ["SCN-courtroom"],
+          "palette": ["#8E1F2A", "#6F8FC0", "#2B2A2E", "#EDE6D6"],
+          "palette_names": ["hearts_crimson", "alice_cornflower", "soot_shadow", "white_rose (the King's paling face, the book)"],
+          "mood": "calling the bluff",
+          "saturation": "mid", "brightness": "mid",
+          "rationale": "ev0050 Rule Forty-two: Alice calls the rule invented and the King pales. Contrast climbs: black shadows deepen behind the throne while the blue/crimson pair is lit side by side.",
+          "stained_glass": "Gold only, dropping as the shadows behind the throne deepen; the window light stays on Alice's side of the frame.",
+          "variant": "dream",
+          "variant_grade": { "saturation": 1.0, "contrast": 1.0 }
+        },
+        {
+          "act": 3, "event_refs": ["ev0051", "ev0052"],
+          "scene_ids": ["SCN-courtroom", "SCN-riverbank"],
+          "palette": ["#8E1F2A", "#EDE6D6", "#6F8FC0", "#E0A95A", "#8A6A48"],
+          "palette_names": ["hearts_crimson", "white_rose (flying cards)", "alice_cornflower", "candle_amber", "old_oak (dead leaves)"],
+          "mood": "defiance and release - 'You're nothing but a pack of cards!'",
+          "saturation": "high", "brightness": "mid→high",
+          "rationale": "Film climax ev0052 (ev0051 verses merged as run-up): 'Sentence first', 'Stuff and nonsense!', 'Off with her head!' - nobody moves. The pack flies at her and match-cuts to real falling leaves (SUP-004): crimson and white cards dissolve into amber and brown leaves, resolving the dream's crimson and gold into waking gold (style.json accent rule). Colour peak of the whole film; no red lands on skin, no execution imagery (SUP-014, DEF-p3-char-index-902).",
+          "stained_glass": "Courtroom half only: gold window light broken up by the flying cards, never coloured light on skin; the riverbank half is waking and has no glass light at all.",
+          "variant": "dream",
+          "variant_grade": { "saturation": 1.1, "contrast": 1.1, "soften": 0.1 }
+        },
+        {
+          "act": 4, "event_refs": ["ev0053"],
+          "scene_ids": ["SCN-riverbank"],
+          "palette": ["#E8B878", "#7A8F3C", "#F2EBDD", "#8A6A48", "#6F8FC0"],
+          "palette_names": ["late_sun", "meadow_green", "cream_muslin (sister's dress)", "old_oak (dead leaves)", "alice_cornflower"],
+          "mood": "warm, safe, bursting to tell",
+          "saturation": "mid", "brightness": "high",
+          "rationale": "Waking close of the dream frame (dream_frame.waking_close, ev0053): head in her sister's lap, leaves brushed away, 'what a long sleep'. Return to the waking register, but later in the day - warmer and lower sun than ep01 act 1, so the audience feels the whole afternoon has passed. Alice's blue is simply a child's dress again among greens.",
+          "grade_note": "Waking act: no variant (reality). Grade = variants.waking baseline; the jump from ep09 act 3 must be carried by the leaf match-cut, not a dissolve of grades."
+        },
+        {
+          "act": 5, "event_refs": ["ev0054"],
+          "scene_ids": ["SCN-riverbank", "SCN-thames-riverside"],
+          "palette": ["#E8A15C", "#A8747A", "#5C6670", "#3F5E5A", "#F2EBDD"],
+          "palette_names": ["sunset_amber", "dusty_rose", "slate_grey", "verdigris_teal", "cream_muslin"],
+          "mood": "tender half-dreaming",
+          "saturation": "low", "brightness": "mid",
+          "rationale": "ev0054 first half: the sister alone at sunset, eyes half closed; rustling grass, the backwater, sheep-bells and farmyard re-become the dream's figures (picture and diegetic sound only, narration off). The dream's slate and mauve seep back in as haze and shadow colour over the real sunset.",
+          "variant": "imagination"
+        },
+        {
+          "act": 6, "event_refs": ["ev0054"],
+          "scene_ids": ["SCN-riverbank", "SCN-thames-riverside"],
+          "palette": ["#E8A15C", "#A8747A", "#4E6B2E", "#F2EBDD"],
+          "palette_names": ["sunset_amber", "dusty_rose (dusk sky)", "willow_shade", "cream_muslin"],
+          "mood": "quiet, forward-looking ending",
+          "saturation": "low→mid", "brightness": "mid→low",
+          "rationale": "ev0054 second half, final image: she opens her eyes and the real world returns - sunset over the Thames, the closed book. The candle amber of the dream is now plain sunset: the last colour of the film is the dream's warmth made real. Series ending, not a to-be-continued."
+        }
+      ]
+    }
+  ],
+
+  "peaks": [
+    { "episode_id": "ep01", "act": 1, "type": "waking_anchor", "note": "Highest-key warm act before the dream; the reference the ending returns to." },
+    { "episode_id": "ep01", "act": 3, "type": "wonder", "note": "Garden-green keyhole inside the verdigris hall." },
+    { "episode_id": "ep01", "act": 5, "type": "dark_moment", "note": "Local low: 'Who in the world am I?'" },
+    { "episode_id": "ep02", "act": 1, "type": "dark_moment", "note": "Coldest water of the film." },
+    { "episode_id": "ep04", "act": 3, "type": "release", "note": "Only open sky in the dream." },
+    { "episode_id": "ep04", "act": 4, "type": "tension", "note": "Pepper-ochre kitchen, warm but hostile." },
+    { "episode_id": "ep05", "act": 3, "type": "false_victory", "note": "Brightest dream act, waking gold leaks in (midpoint)." },
+    { "episode_id": "ep05", "act": 4, "type": "turn", "note": "Hearts crimson enters the film." },
+    { "episode_id": "ep06", "act": 2, "type": "climax", "note": "Busiest palette of the dream; crimson half the frame." },
+    { "episode_id": "ep07", "act": 2, "type": "dark_moment", "note": "Film-level low point: darkest, least saturated dream act." },
+    { "episode_id": "ep07", "act": 3, "type": "release", "note": "'They never executes nobody' - sun-warmed relief." },
+    { "episode_id": "ep09", "act": 3, "type": "climax", "note": "Film colour peak; cards match-cut to amber leaves." },
+    { "episode_id": "ep09", "act": 4, "type": "release", "note": "Waking: warm, green, high-key again." },
+    { "episode_id": "ep09", "act": 6, "type": "resolution", "note": "Sunset: dream's candle amber made real." }
+  ],
+
+  "downstream_notes": {
+    "cinematography": "Refine per shot inside each act's palette and variant grade; scene-level light stays owned by lighting (prompt_fragment_en). Keep the sun progression (early afternoon -> golden hour) consistent with these acts.",
+    "music": "Emotion curve = acts[].mood plus peaks[]; the ep07 act 2 low and ep09 act 3 peak are the two extremes.",
+    "pacing / director": "Colour transitions that must be carried by a cut, not a grade ramp: ep07 act 2 -> act 3 (hard cut into sun), ep09 act 3 -> act 4 (card-to-leaf match cut). The only intended in-shot grade ramp is the fall (ep01 act 2).",
+    "grade-planner": "variants.dream applies to every act tagged dream, with act variant_grade overrides; variants.waking is the numeric baseline for untagged waking acts; variants.imagination is ep09 act 5 only. The Mucha accents and the glass colour - cast light in the court, glints and sheen on blind glass in the hall and pool - are set and lighting colour captured in camera; the grade must not boost them.",
+    "lighting / environment-concept / architecture": "dream_mucha_accents (palette_legend) are the set-surface accent hexes for dream sets; cast stained-glass light only in SCN-courtroom, which has real high windows. In the windowless SCN-long-hall and SCN-pool-of-tears the roundels are blind and front-lit by the oil lamps (lighting.json roundel_glow = reflected_lamplight_only), so the same pastels appear only as glints, lead-came sheen and pastel tulip lamp shades, in the dose each act's stained_glass field gives (BIB-0033). Hearts sets keep only the gold. Waking scenes get none.",
+    "creature / appearance": "CGI animals carry no colour key of their own: species-true colouring, lit by the set (CR-015). Colour anchors already fixed here: Caterpillar slate-blue with moss patina (#4F6A8A / #5F6F45), flamingo_pink #C98A8A, hedgehog old_oak #8A6A48, piglet dusty_rose #A8747A."
+  }
+}

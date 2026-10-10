@@ -1,0 +1,199 @@
+{
+  "schema_version": "scene_layout.v1",
+  "scene_id": "SCN-shaft-landing-passage",
+  "task_id": "p4-env-concept-sb1",
+  "layout_top": "layout_top.png",
+  "orientation": {
+    "top_of_map": "north; the landing chamber is at the east (right), the passage runs west, then turns north at the corner into the long hall",
+    "map_extent_m": [
+      30.0,
+      16.9
+    ],
+    "note_en": "camera positions in views[] are described relative to these landmarks; xy_m = xy x map_extent_m (origin top-left). Passage 1.4 m wide, 2.1 m clear height; everything outside the passage and chamber is solid earth and brick."
+  },
+  "landmarks": [
+    {
+      "id": "hall_opening",
+      "name": "the opening into the long hall",
+      "name_en": "the opening into the long hall",
+      "kind": "entrance",
+      "xy": [
+        0.225,
+        0.27
+      ],
+      "xy_m": [
+        6.75,
+        4.56
+      ]
+    },
+    {
+      "id": "corner",
+      "name": "the right-angle corner",
+      "name_en": "the right-angle corner",
+      "kind": "feature",
+      "xy": [
+        0.225,
+        0.64
+      ],
+      "xy_m": [
+        6.75,
+        10.82
+      ]
+    },
+    {
+      "id": "mosaic_dado",
+      "name": "the mosaic dado near the corner",
+      "name_en": "the mosaic dado near the corner",
+      "kind": "feature",
+      "xy": [
+        0.225,
+        0.45
+      ],
+      "xy_m": [
+        6.75,
+        7.6
+      ]
+    },
+    {
+      "id": "brick_mid",
+      "name": "the middle of the brick-vaulted passage",
+      "name_en": "the middle of the brick-vaulted passage",
+      "kind": "zone",
+      "xy": [
+        0.41,
+        0.64
+      ],
+      "xy_m": [
+        12.3,
+        10.82
+      ]
+    },
+    {
+      "id": "root_tunnel",
+      "name": "the root-laced earth stretch",
+      "name_en": "the root-laced earth stretch",
+      "kind": "zone",
+      "xy": [
+        0.6,
+        0.64
+      ],
+      "xy_m": [
+        18.0,
+        10.82
+      ]
+    },
+    {
+      "id": "chamber_roots",
+      "name": "the root curtain on the chamber's north side",
+      "name_en": "the root curtain on the chamber's north side",
+      "kind": "feature",
+      "xy": [
+        0.79,
+        0.47
+      ],
+      "xy_m": [
+        23.7,
+        7.94
+      ]
+    },
+    {
+      "id": "leaf_heap",
+      "name": "the heap of sticks and dry leaves",
+      "name_en": "the heap of sticks and dry leaves",
+      "kind": "feature",
+      "xy": [
+        0.79,
+        0.62
+      ],
+      "xy_m": [
+        23.7,
+        10.48
+      ]
+    }
+  ],
+  "views": [
+    {
+      "tile": 1,
+      "camera_from": "leaf_heap",
+      "looking_at": "corner",
+      "size": "wide",
+      "angle": "eye",
+      "desc_en": "eye-level wide shot from the heap of sticks and dry leaves down the whole long low passage to the warm lamp-glow at the far corner, the White Rabbit hurrying away small in the distance"
+    },
+    {
+      "tile": 2,
+      "camera_from": "brick_mid",
+      "looking_at": "leaf_heap",
+      "size": "wide",
+      "angle": "eye",
+      "desc_en": "eye-level wide shot from the brick-vaulted middle of the passage back toward the dark landing chamber and the leaf heap, earth walls and hanging roots beyond the last brick rib"
+    },
+    {
+      "tile": 3,
+      "camera_from": "root_tunnel",
+      "looking_at": "leaf_heap",
+      "size": "medium",
+      "angle": "low",
+      "desc_en": "low medium shot from the root-laced earth stretch back at the leaf heap as the girl lands on it in a puff of dust, pitch black above"
+    },
+    {
+      "tile": 4,
+      "camera_from": "mosaic_dado",
+      "looking_at": "corner",
+      "size": "medium",
+      "angle": "eye",
+      "desc_en": "eye-level medium shot past the pastel-and-gold mosaic dado to the right-angle corner glowing with warm lamplight"
+    },
+    {
+      "tile": 5,
+      "camera_from": "corner",
+      "looking_at": "hall_opening",
+      "size": "medium",
+      "angle": "eye",
+      "desc_en": "eye-level medium shot round the corner into the short final leg of the passage, the long hall's lamplight and stone floor opening ahead"
+    },
+    {
+      "tile": 6,
+      "camera_from": "hall_opening",
+      "looking_at": "corner",
+      "size": "close",
+      "angle": "low",
+      "desc_en": "low close shot from the hall threshold back at the corner as the girl rounds it at a run, silhouetted against the dark passage"
+    },
+    {
+      "tile": 7,
+      "camera_from": "leaf_heap",
+      "looking_at": "chamber_roots",
+      "size": "close",
+      "angle": "eye",
+      "desc_en": "eye-level close shot from the leaf heap to the curtain of pale hawthorn roots hanging down the chamber's earth wall"
+    },
+    {
+      "tile": 8,
+      "camera_from": "hall_opening",
+      "looking_at": "mosaic_dado",
+      "size": "wide",
+      "angle": "high_oblique",
+      "desc_en": "high oblique wide shot from above the hall threshold angled down the corner and along the brick vault toward the mosaic dado, the passage vanishing into dark"
+    },
+    {
+      "tile": 9,
+      "camera_from": "leaf_heap",
+      "looking_at": "root_tunnel",
+      "size": "detail",
+      "angle": "high_oblique",
+      "desc_en": "high oblique detail shot from above the heap across its brittle summer-dry sticks and curled brown leaves toward the root-laced tunnel mouth, a drift of leaf dust"
+    }
+  ],
+  "checklist": {
+    "architecture_match": false,
+    "lighting_match": true,
+    "style_match": true,
+    "deviation_ref": "DEF-p4-envconcept-603-c"
+  },
+  "calibration": {
+    "status": "calibrated_to_image",
+    "date": "2026-09-23",
+    "method": "landmark xy re-measured on the delivered layout_top.png (door/opening landmarks read at the gap in the wall line)"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "task_id": "p3-appearance-cb1",
+  "agent": "03-characters/appearance",
+  "attempt": 1,
+  "status": "done",
+  "finished_on": "2026-09-22",
+  "outputs": [
+    "bible/characters/CHAR-alice/appearance.json",
+    "bible/characters/CHAR-alice-sister/appearance.json",
+    "bible/characters/CHAR-family-housemaid/appearance.json",
+    "bible/characters/CHAR-white-rabbit/appearance.json",
+    "bible/characters/CHAR-queen-of-hearts/appearance.json",
+    "bible/characters/CHAR-king-of-hearts/appearance.json",
+    "bible/characters/CHAR-duchess/appearance.json",
+    "bible/characters/CHAR-hatter/appearance.json",
+    "bible/characters/CHAR-cheshire-cat/appearance.json",
+    "bible/characters/CHAR-march-hare/appearance.json",
+    "bible/characters/CHAR-dormouse/appearance.json",
+    "bible/characters/CHAR-mouse/appearance.json",
+    "bible/characters/CHAR-cook/appearance.json",
+    "bible/characters/CHAR-bill-the-lizard/appearance.json"
+  ],
+  "excluded": [
+    { "id": "CHAR-tortoise", "reason": "told-only per work order" },
+    { "id": "*-ensemble", "reason": "no ensemble entries in this batch's character list; group cards not in scope for cb1" }
+  ],
+  "shared_conventions": {
+    "schema": "Required: gender (male|female), hair, eyes, build, marks, base_age_range, default_outfit_tone. Also: gender_note, base_age_note, skin, face, performer_coding, doubling, events, prompt_base_en. Every field object has source_chapter + source_para + verbatim quote, or inferred:true + reason. A sub-field that was designed inside a sourced object is flagged <subfield>_inferred:true with the reason.",
+    "scale_anchor": "Alice at her true size = 135 cm. Each build.scale_reference gives the apparent height relative to that anchor in shared frames. Alice's size beats (ten inches / two feet / nine feet / a mile high) are SUP-003 forced perspective and scaled sets set per shot; they never change these cards. height_range_cm is the performer's real height.",
+    "sup_002": "All dream figures are human performers in 1862 dress. performer_coding.touches lists the animal/card-coded touches (hair tufts as ears, whiskers, stoles/scarves/coat-tails as tails, eye colour, tics). No prosthetic animal heads, attached ears, fur suits or CGI anywhere. Card figures (King, Queen) wear a flat rigid card-front tabard and are blocked square-on (SUP-004).",
+    "costume_boundary": "default_outfit_tone gives the base look and 1862 silhouette only; the full costume system (looks by scene or occasion) belongs to 06-art/costume in Phase 4.",
+    "prompt_base_en": "a one-line base look for image prompts. The style fragment comes from style.json (not yet authored), so it is not included here.",
+    "user_ref": "refs/style/alice.jpeg sets Alice's long brown hair, blue dress and white pinafore; the sister's warm-brown hair follows as a family trait."
+  },
+  "key_decisions": [
+    "Doubling under 5.3 B. Housemaid → Mary Ann: Mary Ann is never seen, so the echo is carried by the white apron and cap. Alice's own white pinafore is what the Rabbit mistakes for his maid's apron. Dinah → Cheshire Cat: brown-tabby colouring, green-gold eyes, and sitting by the fire / on the hearth. Rule: if Dinah is ever shown, she must match. Sister at the trial: same actress, face, hair, chignon, eyes and dress tone; adds a dark shawl and a bonnet; glimpsed only and never speaks.",
+    "The White Rabbit's source 'pink eyes' belong to the real rabbit (CRE-001). The performer echoes them with pale eyes, pink-rimmed lids and pink-tinted reading spectacles (spectacles are sourced at ch012-p38).",
+    "The King walks bareheaded in the procession because the Knave carries his crown on the cushion (ch008-p11). At the trial the crown sits over the wig (ch011-p03).",
+    "The Duchess is 'very ugly' with a sharp little chin, and her chin rests exactly on Alice's shoulder. She is cast as a very short, stooped woman; the ugliness comes from casting, make-up and posture, with no prosthetic mask.",
+    "Genders: Dormouse and Mouse are male (the source says 'his'). The Cheshire Cat is female (inferred from the Dinah echo). The index says 'unspecified' for all three, so DEF-p3-appearance-001 was filed.",
+    "The Hatter's '10/6' price ticket is not in the novel text (it comes from the Tenniel illustration tradition). It is used because the locked bible already fixes it in FAC-mad-tea-party emblem_visual, and 'I keep them to sell' (ch011-p25) supports it.",
+    "Mouse and Dormouse are told apart by build: the Mouse is thin, wiry, grey and elderly; the Dormouse is round, plump, golden-brown and middle-aged."
+  ],
+  "conflicts": [
+    { "defect": "qa/defects/DEF-p3-appearance-001.json", "summary": "index.json gender 'unspecified' for CHAR-dormouse, CHAR-mouse and CHAR-cheshire-cat" }
+  ],
+  "source_conflicts_found": "none. No contradictory appearance descriptions in the source for these 14 characters.",
+  "checks": {
+    "script": "code/p3-appearance-cb1_check.py",
+    "result": "ALL PASS (14 cards, 0 fails)",
+    "covers": ["required fields incl. gender in {male,female}", "no_unknown_placeholder", "provenance per field object and per mark", "every quote verbatim in the cited structured_story paragraph", "paragraph and event ids resolve", "character_id registered in index.json", "ascii_filename"]
+  },
+  "skills": "none checked for this station"
+}

@@ -1,0 +1,41 @@
+{
+  "shot_id": "sh051",
+  "group_id": "grp020",
+  "scene_no": "S06",
+  "scene_id": "SCN-long-hall",
+  "duration_s": 4.0,
+  "is_dialogue": false,
+  "group_position": "first shot of grp020 — Alice leaves her map start (glass_table foot) and crosses the first leg of her glass_table -> curtain -> glass_table line inside this shot, arriving at the curtain.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "stand",
+      "start_pos": "ten inches high at the foot of the glass table, then running the flagstones to the low curtain",
+      "space_fragment_en": "standing ten inches high at the low curtain, centred in frame, facing the little door on screen-right and hauling at it",
+      "facing": "into the little door, which is immediately in front of her and now a head taller than she is",
+      "path": [
+        { "t": 0.9, "to": "away from the foot of the glass table, running for the low curtain" },
+        { "t": 1.8, "to": "at the low curtain and the little door" }
+      ],
+      "beats": [
+        { "t": 0.9, "action": "runs from the table foot", "sync": "the hope" },
+        { "t": 2.2, "action": "pulls at the little door with both hands", "sync": "the attempt" },
+        { "t": 3.2, "action": "it does not give — locked", "sync": "at ten inches it is a proper door" }
+      ],
+      "performance_beat": {
+        "objective": "get through the door now that she finally fits it",
+        "goal": "get through the door now she fits it",
+        "emotional_arc": "from eager certainty to flat, winded disbelief",
+        "arc_from": "eager certainty",
+        "arc_to": "winded disbelief",
+        "trigger": { "beat": "the door refuses her weight and does not move", "t": 3.2 },
+        "no_early_reaction": ["the hands slipping off", "the head dropping", "a step back"],
+        "forbidden_early": ["the hands slipping off", "the head dropping", "a step back"],
+        "end_state": "both hands still on the little door, arms straight, face lifted to a door that is taller than she is"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0004 (dream) — the key is left on the table", "note": "Alice alone." }
+}

@@ -1,0 +1,183 @@
+{
+  "_meta": {
+    "file": "bible/scenes/SCN-long-hall/lighting.json",
+    "owner": "05-scenes/lighting",
+    "task_id": "p3-lighting-sb1",
+    "attempt": 1,
+    "generated": "2026-09-22",
+    "status": "draft_v1",
+    "enum_set": "LGT-ENUM-v1 (defined once in runs/p3-lighting-sb1/result.json)",
+    "inputs": [
+      "bible/scenes/SCN-long-hall/environment.json",
+      "bible/scenes/SCN-long-hall/architecture.json"
+    ],
+    "amended": [
+      {
+        "date": "2026-09-23",
+        "task_id": "p6-bible-light-ep01",
+        "change_request": "BIB-0033",
+        "fixes": "DEF-p6-directing-ep01-001 (finding -a)",
+        "note": "ARBITRATION RECORD ONLY - no lighting value changed. bible/color_script.json scene_curves described daylight through high halo-roundel WINDOWS laying coloured pools on this floor. memory-bible ruled for this card: the hall stays windowless, roundel_glow stays reflected_lamplight_only, and color_script was amended to carry its pastel dose as glints, lead-came sheen and the pastel tulip lamp shades. Grounds and impact list: bible/changelog.md BIB-0033. Written by 00-orchestration/memory-bible under on_bible_access; 05-scenes/lighting to countersign at its next open."
+      },
+      {
+        "date": "2026-09-23",
+        "task_id": "p4-cr-lighting-2",
+        "change_request": "BIB-0027",
+        "fixes": "DEF-p4-cr-architecture-001-b",
+        "note": "Decision on the 25 blind stained-glass roundels (roundel_glow below). The lamp key notes the new pastel tulip shades. Both prompt fragments gain one clause on the roundels. Enums, Kelvin and contrast are unchanged."
+      }
+    ]
+  },
+  "scene_id": "SCN-long-hall",
+  "layer": "dream",
+  "int_ext": "INT",
+  "daylight_access": "lamplit_no_sky",
+  "roundel_glow": {
+    "decision": "reflected_lamplight_only",
+    "rule": "The 25 blind stained-glass roundels above the door heads have no light source behind them: no hidden oil lamp, no electric light, no daylight. They catch the hanging oil lamps from the front only. Each shows small jewel-coloured glints and a faint sheen on its lead came and glass where a lamp is close, and they fall to dull dark colour between lamps and toward the dark ends of the hall. They never glow evenly or look backlit.",
+    "why": "The architecture has no cavity or opening behind the roundels, and the text gives 'that dark hall' (ch001-p14). A hidden lamp behind each of 25 roundels would add 25 practical sources and brighten the hall against the source. Front-lit blind glass is plausible 1862 practical light and keeps the eleven centre-line lamps as the only key.",
+    "inferred": true,
+    "source_refs": [
+      "architecture.json interior.openings",
+      "ch001-p11",
+      "ch001-p14"
+    ],
+    "arbitration": "UPHELD 2026-09-23 against bible/color_script.json by memory-bible (BIB-0033, closing qa/defects/DEF-p6-directing-ep01-001). This decision is now the single answer for every act set in this hall, ep01 acts 3-6 and ep05 act 3 included: no daylight, no shaft, no coloured pool on the floor. Do not re-open it from the colour side."
+  },
+  "dream_growth": {
+    "grows_from": "LGT-riverbank-01 (hot afternoon sun on the sleeping girl's closed eyes)",
+    "how": "The afternoon sun on her eyelids becomes a row of dim amber oil lamps under a low vault; the July heat becomes the hall's close air. Real daylight exists only beyond the little door: the garden is lit by the waking sun of the current clock slot (high white sun at ch001, lower and golden at ch007).",
+    "ruling": "runs/h1-ruling/ruling.json 5.2 A; cultivation.json SUP-013"
+  },
+  "schemes": [
+    {
+      "lighting_scheme_id": "LGT-long-hall-01",
+      "condition": {
+        "time_of_day": "early_afternoon",
+        "weather": "none_enclosed"
+      },
+      "state_refs": [
+        "SCN-long-hall-S01",
+        "SCN-long-hall-S02"
+      ],
+      "waking_clock": "14:22-14:55 GMT (Alice asleep on the bank)",
+      "sun": null,
+      "key_source": "oil_lamp_row",
+      "key": "11 brass-and-glass oil lamps with tulip-shaped pastel glass shades, hanging on chains down the centre line, bottoms at 2.35 m; the shades glow faintly in pastel tints but the light they cast stays warm amber",
+      "direction": "overhead_row",
+      "direction_note": "top light from the centre line: pools of light on the floor under each lamp, darker between lamps, walls and doors lit from above at a glancing angle, the vault fading to dark above the lamps; the NE corner entrance is a dark opening",
+      "fill": {
+        "source": "bounce",
+        "note": "warm bounce off the honey limestone floor and walls; no daylight; the 25 closed doors let no light through; the 25 blind stained-glass roundels only catch the lamps from the front (roundel_glow: reflected_lamplight_only)"
+      },
+      "practicals": [
+        "brass oil lamps with pastel tulip glass shades x11 (centre-line row, on verdigris chains)"
+      ],
+      "color_temp": "warm (~2700K)",
+      "kelvin_approx": 2300,
+      "contrast": "medium",
+      "quality": "soft",
+      "atmosphere": "hot, close, motionless air; a faint haze under the vault softening the lamp flares",
+      "prompt_fragment_en": "Hot, close lamplight in a windowless stone hall: a single row of brass oil lamps hanging down the centre of the low ribbed vault is the only light, each throwing a warm amber pool onto the worn flag floor and fading into brown-black shadow between the lamps and up in the vault, the oak doors along the walls dim and warm, the small stained-glass roundels above them unlit from behind and catching only faint jewel-coloured glints of lamplight, a faint haze hanging in the still air; medium contrast, stuffy, shut-in mood.",
+      "source_chapter": "ch001",
+      "sources": [
+        "ch001-p11",
+        "ch001-p14",
+        "ch002-p09"
+      ],
+      "inferred": false,
+      "designed_fields": [
+        "kelvin_approx",
+        "fill",
+        "atmosphere",
+        "roundel_glow"
+      ],
+      "reason": "'Lit up by a row of lamps hanging from the roof' (ch001-p11), 'that dark hall' (ch001-p14) and 'the hall was very hot' (ch002-p09) are explicit. The lamp count comes from architecture. S02 (flooding) shares the same condition and base light; the water reflections are the special SPC-long-hall-02."
+    },
+    {
+      "lighting_scheme_id": "LGT-long-hall-02",
+      "condition": {
+        "time_of_day": "late_afternoon",
+        "weather": "none_enclosed"
+      },
+      "state_refs": [
+        "SCN-long-hall-S03"
+      ],
+      "waking_clock": "17:36 GMT (Alice asleep on the bank)",
+      "sun": null,
+      "key_source": "oil_lamp_row",
+      "key": "the same 11 oil lamps with pastel tulip shades; the hall's own light does not change with the waking clock",
+      "direction": "overhead_row",
+      "direction_note": "as LGT-long-hall-01; floor dry again",
+      "fill": {
+        "source": "bounce",
+        "note": "warm bounce off limestone; the little door opens onto late-afternoon garden light in this state (see SPC-long-hall-01); the 25 blind stained-glass roundels only catch the lamps from the front (roundel_glow: reflected_lamplight_only)"
+      },
+      "practicals": [
+        "brass oil lamps with pastel tulip glass shades x11 (centre-line row, on verdigris chains)"
+      ],
+      "color_temp": "warm (~2700K)",
+      "kelvin_approx": 2300,
+      "contrast": "medium",
+      "quality": "soft",
+      "atmosphere": "the same hot, still air and faint haze; dry flag floor with no trace of the flood",
+      "prompt_fragment_en": "The same hot, close lamplight in the windowless stone hall, returned exactly as before: the row of brass oil lamps down the centre of the low vault throws warm amber pools onto the dry flag floor and fades into brown-black shadow between them and up in the vault, the oak doors dim and warm, the small stained-glass roundels above them unlit from behind and catching only faint jewel-coloured glints of lamplight, a faint haze in the still air; medium contrast, familiar, shut-in mood with a sense of a second chance.",
+      "source_chapter": "ch007",
+      "sources": [
+        "ch007-p105"
+      ],
+      "inferred": true,
+      "reason": "The return is explicit (ch007-p105) but no light is described; the lamp-lit hall is carried over unchanged from ch001-p11. It is a separate scheme only because its time_of_day (late_afternoon) differs, which changes the garden light through the little door."
+    }
+  ],
+  "special": [
+    {
+      "special_id": "SPC-long-hall-01",
+      "applies_to": [
+        "LGT-long-hall-01",
+        "LGT-long-hall-02"
+      ],
+      "chapters": [
+        "ch001",
+        "ch007"
+      ],
+      "paragraphs": [
+        "ch001-p13..ch001-p14",
+        "ch007-p105"
+      ],
+      "note": "Little door open: the only daylight in the hall comes through the 38 cm door low in the west wall. With LGT-long-hall-01 (ch001) it is bright white high-sun garden daylight; with LGT-long-hall-02 (ch007) it is warmer, lower, golden late-afternoon light (waking sun about 23 deg). It lights the floor in front of the door and the kneeling girl's face; it does not light the hall as a whole.",
+      "prompt_fragment_en_by_scheme": {
+        "LGT-long-hall-01": "Through the tiny open door low in the wall, a small arch of brilliant white summer daylight from the garden beyond throws a bright patch onto the stone floor and the kneeling girl's face, the brightest thing in the dim hall.",
+        "LGT-long-hall-02": "Through the tiny open door low in the wall, a small arch of warm golden late-afternoon garden light throws a soft glowing patch onto the stone floor and the girl's face, the brightest and warmest thing in the dim hall."
+      },
+      "source_chapter": "ch001",
+      "source": {
+        "chapter": "ch001",
+        "quote": "How she longed to get out of that dark hall, and wander about among those beds of bright flowers and those cool fountains"
+      },
+      "inferred": true,
+      "reason": "The bright garden against the dark hall is explicit (ch001-p14, ch007-p105); the daylight colour follows the waking-clock sun per environment S01/S03."
+    },
+    {
+      "special_id": "SPC-long-hall-02",
+      "applies_to": [
+        "LGT-long-hall-01"
+      ],
+      "chapters": [
+        "ch002"
+      ],
+      "paragraphs": [
+        "ch002-p07..ch002-p15"
+      ],
+      "note": "Flooding floor: the shallow sheet of tears (about four inches deep, half-way down the hall) mirrors each lamp and throws rippling light up onto the lower walls and door bases. Base light unchanged.",
+      "prompt_fragment_en": "A shallow sheet of tear-water spreading across the stone floor mirrors each lamp as a trembling amber reflection and throws faint rippling light onto the lower walls and door bases.",
+      "source_chapter": "ch002",
+      "source": {
+        "chapter": "ch002",
+        "quote": "until there was a large pool all round her, about four inches deep and reaching half down the hall"
+      },
+      "inferred": true,
+      "reason": "The pool is explicit (ch002-p07); the reflections are the designed light consequence of lamps over water."
+    }
+  ]
+}

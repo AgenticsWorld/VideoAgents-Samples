@@ -1,0 +1,39 @@
+{
+  "shot_id": "sh022",
+  "group_id": "grp009",
+  "scene_no": "S03",
+  "scene_id": "SCN-falling-dream",
+  "duration_s": 6.0,
+  "is_dialogue": true,
+  "group_position": "first shot of grp009 — Alice on her map start (shaft_centre); the map gives her no path, so she holds the open middle for the whole group. This is the sh001 set-up recognised.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "stand",
+      "start_pos": "mid-air at the open centre of the shaft, the bookshelf wall on her screen-right",
+      "space_fragment_en": "standing upright in mid-air at the open centre of the shaft, held high in frame, facing the bookshelves on screen-right",
+      "facing": "body square to the bookshelf wall — the deliberate opposite of sh001, where she faced the cupboards on screen-left",
+      "path": [],
+      "beats": [
+        { "t": 1.0, "action": "settles back into the fall as if into an armchair", "sync": "the second pass begins" },
+        { "t": 1.8, "action": "ankles cross, hands come to her lap", "sync": "before the line" },
+        { "t": 2.6, "action": "speaks about her cat", "sync": "LN-ep01-004 begins" },
+        { "t": 4.4, "action": "her chin lifts a little on the thought of home", "sync": "LN-ep01-004 on 'miss'" }
+      ],
+      "performance": {
+        "objective": "keep herself company by talking about something ordinary",
+        "goal": "keep herself company by talking about something ordinary",
+        "emotional_arc": "from comfortable self-possession to the first small pull of homesickness she does not name",
+        "arc_from": "comfortable self-possession",
+        "arc_to": "unnamed homesickness",
+        "trigger": { "line_ref": "LN-ep01-004", "word": "miss" },
+        "no_early_reaction": ["the chin lifting", "the eyes going soft", "the hands gripping"],
+        "forbidden_early": ["the chin lifting", "the eyes going soft", "the hands gripping"],
+        "end_state": "ankles crossed, hands folded in her lap, eyes on the passing bookshelves, one slow blink"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0002 (dream) — Dinah", "note": "Alice alone." }
+}

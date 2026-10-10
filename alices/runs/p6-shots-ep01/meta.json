@@ -1,0 +1,22 @@
+{
+  "task_id": "p6-shots-ep01",
+  "agent": "07-directing/shot-planning",
+  "run_id": "7580b5ec2265",
+  "parent_run_id": "1f5ab5bd58b7",
+  "attempt": 1,
+  "engine_model": "per-agent console configuration (not overridden by orchestrator)",
+  "started_at": "2026-09-23T10:49:10+08:00",
+  "finished_at": "2026-09-23T11:10:14+08:00",
+  "duration_s": 1264,
+  "tokens": "not reported by dispatch --status",
+  "inputs_sha256": { "directing/ep01/storyboard.json": "4bb352bd1545bc78073bbea16fa8f0c25c9e39b54e730978b7f73f2862986e4a" },
+  "outputs_sha256": { "directing/ep01/shot_list.json": "6045b981f753a33ef08694cf52a5f1deb78bf93530da307125982411a73ddfaa" },
+  "product_version": "ep01 shot_list v1 (first finalisation after H3S)",
+  "verified_by_orchestrator": [
+    "check_generation_groups.py <shot_list.json> -> exit 0, 37 groups compliant",
+    "blocking_map_check.py --project alices --ep ep01 --strict -> 0 violations, 0 WARN",
+    "check_dialogue_fit.py --project alices --ep ep01 -> 24 dialogue groups, 0 FAIL / 0 WARN",
+    "storyboard_pose_check.py --source shot_list --strict -> 101 shots, 0 violations"
+  ],
+  "note": "All four checks re-run independently by the orchestrator on the app runtime; self-report matches."
+}

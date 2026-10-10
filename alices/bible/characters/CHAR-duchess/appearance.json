@@ -1,0 +1,51 @@
+{
+  "character_id": "CHAR-duchess",
+  "name": "The Duchess",
+  "tier": "A",
+  "layer": "dream",
+  "gender": "female",
+  "gender_note": { "source_chapter": "ch009", "source_para": "ch009-p07", "quote": "she was exactly the right height to rest her chin upon Alice’s shoulder" },
+  "base_age_range": "55-62",
+  "base_age_note": { "inferred": true, "reason": "Not stated; an ageing aristocrat of a fading household (FAC-duchess-household)." },
+  "hair": { "color": "iron grey", "style": "scraped into a small bun, almost hidden under a large, old-fashioned, slightly grubby lace-trimmed headdress with lappets", "length": "long (worn up)", "inferred": true, "reason": "Not described; an out-of-date headdress marks faded gentility." },
+  "eyes": { "color": "muddy hazel", "shape": "small, close-set, beady", "inferred": true, "reason": "Not described; designed to support the sourced 'very ugly'." },
+  "skin": { "tone": "sallow and blotchy, red around the nose from pepper-sneezing", "source_chapter": "ch006", "source_para": "ch006-p21", "quote": "Even the Duchess sneezed occasionally", "tone_inferred": true, "reason": "Sneezing sourced; complexion designed." },
+  "face": {
+    "shape": "large, heavy head on a short body",
+    "features": ["an uncomfortably sharp, small, jutting chin (key feature — she digs it into Alice's shoulder)", "heavy jowls", "large bulbous nose", "wide thin-lipped mouth", "deep lines"],
+    "default_expression": "savage and scowling in the kitchen; later cloyingly affectionate and moralising",
+    "source_chapter": "ch009",
+    "source_para": ["ch009-p07", "ch009-p11", "ch009-p02"],
+    "quote": "the Duchess was _very_ ugly / digging her sharp little chin into Alice’s shoulder / perhaps it was only the pepper that had made her so savage",
+    "features_inferred": true,
+    "reason": "'Very ugly' and the sharp little chin are sourced; the other features are realistic, non-prosthetic ways to render 'very ugly' on a real actress (no grotesque mask)."
+  },
+  "build": {
+    "height_range_cm": [140, 146],
+    "body_type": "short, stout and top-heavy, stooping forward",
+    "scale_reference": "about Alice's true height (135 cm) once she stoops: standing beside Alice her chin lands exactly on Alice's shoulder",
+    "source_chapter": "ch009",
+    "source_para": "ch009-p07",
+    "quote": "she was exactly the right height to rest her chin upon Alice’s shoulder",
+    "height_inferred": true,
+    "reason": "Relative height sourced; absolute range designed for a very short, stooped adult woman."
+  },
+  "marks": [
+    { "type": "voice_marker", "position": "voice", "description": "hoarse growl", "source_chapter": "ch006", "source_para": "ch006-p31" },
+    { "type": "signature_item", "position": "kitchen", "description": "sits on a three-legged stool nursing (and roughly tossing) the baby", "source_chapter": "ch006", "source_para": ["ch006-p19", "ch006-p39"] }
+  ],
+  "default_outfit_tone": {
+    "summary": "faded, once-grand gentry dress: dull mulberry silk gown gone shiny with wear, frayed lace collar, a large old-fashioned lace headdress; pepper-dusted in the kitchen",
+    "silhouette_1862": "outdated wide crinoline and a heavy, over-trimmed bodice, visibly poorer and less formal than the Hearts court",
+    "inferred": true,
+    "reason": "Dress not described; FAC-duchess-household emblem_visual ('visibly poorer and less formal than the House of Hearts'). Costume detail by 06-art/costume."
+  },
+  "performer_coding": {
+    "code": "none (textually human)",
+    "touches": ["no animal or card coding; character-coded by pepper, sneezing and the sharp chin"],
+    "limits": "no grotesque prosthetic mask; ugliness is played with casting, make-up and posture only"
+  },
+  "doubling": null,
+  "events": ["ev0024", "ev0026", "ev0038", "ev0039"],
+  "prompt_base_en": "a short, stout, stooping English noblewoman of about sixty in 1862, iron-grey hair under a large old-fashioned grubby lace headdress, small close-set hazel eyes, large heavy head with jowls, bulbous nose and a sharp small jutting chin, sallow blotchy skin, faded mulberry silk crinoline gown with frayed lace collar"
+}

@@ -1,0 +1,34 @@
+{
+  "shot_id": "sh071",
+  "scene_id": "SCN-long-hall",
+  "size": "wide",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "bottom_left",
+    "anchor_xy": [0.16, 0.80],
+    "size_in_frame": "her hem and one knee anchoring the near left edge, about 0.30 of frame height; her face is out of frame entirely"
+  },
+  "second_subject": {
+    "id": "the_water",
+    "grid": "centre",
+    "anchor_xy": [0.55, 0.70],
+    "note": "the spreading sheet, four inches deep, running away from her down the hall and reaching about halfway to the far end at the end of the shot."
+  },
+  "headroom": "no face, so no headroom; the vault is a dark band across the top 0.18 of frame and is never lit.",
+  "horizon_eyeline": "Lens flat on the flagstones at 0.12 m — the lowest lens in the episode so far. The water surface becomes the horizon, running across at about 0.66 of frame height and rising slightly as the flood spreads. No eyeline in frame.",
+  "layers": {
+    "fg": "her hem and knee at the near left, and the splashes striking the stone like water from a jug",
+    "mg": "the spreading sheet of water crossing the flagstones, the glass table legs standing in it",
+    "bg": "the hall running away into the dark, with lamplight trembling on the water ONLY in the far third of frame"
+  },
+  "gaze": {
+    "direction": "none",
+    "lead_room": "right",
+    "note": "no face and no look. The frame's open direction is screen right, down the hall, and that is where the water goes — the shot hands the movement to the room."
+  },
+  "balance": "One dark anchor bottom left, a long bright horizontal plane opening across the rest — the first frame in the episode where water outweighs the person.",
+  "leading_lines": "The flagstone joints and the advancing edge of the water both run away to the right and into depth; the glass legs stand in them as verticals. The water's leading edge is the moving line, and it is the only thing the composition asks the eye to follow.",
+  "eye_first": "The splashes hitting the stone in the near foreground, then out along the spreading water to the trembling lamplight at the far end.",
+  "safe_area_ok": true,
+  "constraint_binding": "Lamplight trembles on the water only in the far third of frame, never under her, never on walls or vault (act-5 reflection_allowance): the reflected glints are confined to x > 0.66 and kept under about five percent of frame area and well below her cornflower in visual weight. Warm, slow and absurd — not drowning menace, so the water is composed as a spreading domestic spill with a level surface, not as a rising tide."
+}

@@ -1,0 +1,13 @@
+{
+  "character_id": "CHAR-march-hare", "task_id": "p4-char-concept-cb1", "sheet": "sheet.png", "variants": [],
+  "tier_note": "index.json tier = B (outside default S/A scope); produced because the work order names it explicitly.",
+  "self_check": {"sheet.png": {
+    "layout": "PASS",
+    "appearance_field_hits": {"gender_male": "not visually determinable", "brown_hare_lanky_long_legged": true, "tawny_russet_black_flecked_back_sandy_flanks_white_belly": true, "black_tipped_ears": true, "black_topped_white_tail": "partial (white tail visible)", "coarse_unkempt_tufts_straw_wisps": true, "amber_gold_bulging_eyes": true, "split_lip_incisors": true, "unclothed": true},
+    "costume_COS-017_hits": {"unclothed_unadorned": true},
+    "style": "PASS",
+    "defects": ["Ears held symmetrically upright (card: swivelling independently) - minor, pose-level."]
+  }},
+  "not_rendered_by_design": ["butter knife and the Hatter's watch (tea-table props)"],
+  "rerolls": []
+}

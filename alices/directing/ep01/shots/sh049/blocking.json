@@ -1,0 +1,37 @@
+{
+  "shot_id": "sh049",
+  "group_id": "grp019",
+  "scene_no": "S06",
+  "scene_id": "SCN-long-hall",
+  "duration_s": 4.0,
+  "is_dialogue": false,
+  "group_position": "first shot of grp019 — Alice on her map start (glass_table, ten inches high on the flags at the table's foot by the mosaic dado); no path in this group.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "stand",
+      "start_pos": "ten inches high on the limestone flags at the foot of the glass table, beside the mosaic dado border, the empty bottle at her feet",
+      "space_fragment_en": "standing ten inches high on the flags at the foot of the glass table, centred low in frame, facing up at the tabletop",
+      "facing": "straight up at the lit glass ceiling above her",
+      "path": [],
+      "beats": [
+        { "t": 0.6, "action": "steadies herself beside the bottle, which is exactly her own height", "sync": "the free scale anchor" },
+        { "t": 2.4, "action": "her look climbs the table leg to the top", "sync": "the tabletop is a lit ceiling now" }
+      ],
+      "performance_beat": {
+        "objective": "get the measure of a room that has just changed size around her",
+        "goal": "get the measure of the room",
+        "emotional_arc": "from the last of the shrinking sensation to astonished appraisal",
+        "arc_from": "the last of the shrinking sensation",
+        "arc_to": "astonished appraisal",
+        "trigger": { "beat": "her eye reaches the top of the table leg", "t": 2.4 },
+        "no_early_reaction": ["the head tipping back", "a step away from the bottle", "the mouth opening"],
+        "forbidden_early": ["the head tipping back", "a step away from the bottle", "the mouth opening"],
+        "end_state": "head right back, chin up at the tabletop, one hand steadying against the bottle, feet planted"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0004 (dream) — ten inches high", "note": "Alice alone." }
+}

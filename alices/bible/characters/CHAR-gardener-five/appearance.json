@@ -1,0 +1,50 @@
+{
+  "character_id": "CHAR-gardener-five",
+  "card_type": "individual",
+  "tier": "extra",
+  "layer": "dream",
+  "gender": "male",
+  "gender_note": { "source_chapter": "ch008", "paragraph": "ch008-p02", "quote": "“I couldn’t help it,” said Five, in a sulky tone; “Seven jogged my elbow.”", "reason": "Source uses no pronoun for Five directly; male inferred from the all-male trio ('he checked himself', ch008-p08, of Seven; 'his business', of Two), the controlled index value (male) and 1862 estate gardening as male labour.", "inferred": true },
+  "hair": {
+    "color": "black",
+    "style": "thick, untidy, falling over the forehead; short at the back",
+    "inferred": true,
+    "reason": "Not described; black chosen to distinguish from Two (sandy) and Seven (red-brown); unruly fringe suits the sulky, splashing painter."
+  },
+  "eyes": { "color": "dark brown", "inferred": true, "reason": "Not described; matches the dark colouring chosen for hair." },
+  "face": {
+    "shape": "round-cheeked, heavy brows, pouting lower lip, clean-shaven with a day's stubble",
+    "expression_default": "sulky, defensive; later the anxious look-out who spots the Queen first",
+    "source_chapter": "ch008", "paragraph": "ch008-p02",
+    "quote": "said Five, in a sulky tone",
+    "also_seen": [{ "paragraph": "ch008-p10", "quote": "Five, who had been anxiously looking across the garden, called out “The Queen! The Queen!”" }],
+    "detail_inferred": true,
+    "detail_reason": "Features designed from his sourced sulky tone and anxious look-out role; no physical face description in source."
+  },
+  "build": {
+    "height_range_cm": [165, 170],
+    "body_type": "stocky, broad-handed, a little heavy in the middle (still reads flat under the card tabard)",
+    "scale_reference": "About 30-35 cm taller than Alice at base scale (135 cm, CHAR-alice scale anchor); on-screen relative size follows SUP-003.",
+    "card_shape": { "value": "oblong and flat, hands and feet at the corners", "source_chapter": "ch008", "paragraph": "ch008-p11", "quote": "these were all shaped like the three gardeners, oblong and flat, with their hands and feet at the corners" },
+    "inferred": true,
+    "reason": "Height/body designed (shortest of the trio for silhouette variety); card shape is sourced."
+  },
+  "base_age_range": "25-32",
+  "base_age_inferred": true,
+  "base_age_reason": "Youngest-seeming of the trio: quarrelsome, gossips what he 'heard the Queen say' (ch008-p05). No age in source.",
+  "marks": [
+    { "type": "paint", "position": "heaviest of the trio — red splashes up both forearms, down the tabard front and on one cheek", "description": "he is the one splashing paint", "source_chapter": "ch008", "paragraph": "ch008-p01", "quote": "Look out now, Five! Don’t go splashing paint over me like that!" }
+  ],
+  "signature_items": [
+    { "item": "card-face tabard showing FIVE: five black spade pips and '5' corner indices", "source_chapter": "ch008", "paragraph": "ch008-p02", "quote": "said Five", "suit_inferred": true, "suit_reason": "Number sourced; the suit is SPADES, matching CHAR-gardener-two, CHAR-gardener-seven and CHAR-royal-gardeners-ensemble. BIB-0029 (DEF-p4-char-301) moved the gardeners from clubs to spades. The source names the gardeners' numbers but never their suit, while ch008-p11 'ten soldiers carrying clubs' anchors the club suit to the soldiers; the club suit has only thirteen cards and ten soldiers plus the King and Queen of Clubs (CHAR-visiting-monarchs-ensemble M01/M02) already fill twelve of them, so no club rank was left for a gardener. Spades also fit garden staff. The numeral -- the only thing the source fixes and the only thing that identifies the figure on screen -- is unchanged. Sheet note: the H2-locked sheet draws club trefoils; under reroll budget 0 it was not regenerated, so costumes.json visual_en is the pip authority for prompts (runs/g4/gate.json DEF-p4-costume-sheet-901 waiver)." },
+    { "item": "card-back pattern on the back of the tabard, identical to the rest of the pack", "source_chapter": "ch008", "paragraph": "ch008-p16", "quote": "the pattern on their backs was the same as the rest of the pack" },
+    { "item": "overloaded, dripping red paintbrush", "source_chapter": "ch008", "paragraph": "ch008-p01", "quote": "Don’t go splashing paint over me like that!" }
+  ],
+  "default_outfit_tone": "Same card tabard cut as Two and Seven (ivory face with black spade pips and '5' indices front; shared crimson-and-cream lattice back with heart rosette), over crimson House-of-Hearts working shirt-sleeves rolled to the elbow, crimson breeches, cream stockings, brown boots; the most paint-splattered of the three.",
+  "default_outfit_tone_source": { "source_chapter": "ch008", "paragraph": "ch008-p11", "quote": "oblong and flat", "colour_inferred": true, "reason": "Colours designed from FAC-house-of-hearts emblem_visual; costume detail owned by 06-art/costume." },
+  "period_silhouette": { "value": "1862 estate gardener's working dress flattened under a rigid rectangular card tabard; limbs at the corners", "inferred": true, "reason": "SUP-004 applied to an 1862 working-man base." },
+  "sup002_coding": { "animal_or_card": "card (Five of Spades)", "touches": ["rigid flat oblong tabard", "numeral pips/indices", "shared pack back-pattern", "throws himself flat on his face at the Queen's approach"], "forbidden": "no CGI paper body", "source_chapter": "ch008", "paragraph": "ch008-p10", "quote": "the three gardeners instantly threw themselves flat upon their faces", "rule": "bible/cultivation.json SUP-002, SUP-004" },
+  "trio_distinction": "See CHAR-gardener-two: Five = black hair, stocky, youngest, sulky, most paint on him.",
+  "doubling": { "value": "none", "reason": "Not part of any H1 ruling 5.3 B doubling pair." },
+  "prompt_summary_en": "Young man about 28 dressed as a living playing card, the Five of Spades: stiff flat oblong ivory card tabard front and back with five black spade pips and '5' corner indices, arms and legs at the corners, crimson shirt-sleeves rolled up, crimson breeches, brown boots, stocky, untidy black hair over the forehead, dark brown eyes, round sulky face with stubble, heavy red paint splashes on forearms, tabard and cheek, dripping red paintbrush, 1862 period realistic drama, human actor"
+}

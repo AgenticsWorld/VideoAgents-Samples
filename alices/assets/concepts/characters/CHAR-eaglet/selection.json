@@ -1,0 +1,4 @@
+{"character_id":"CHAR-eaglet","sheet":"sheet.png","gender":"female","gender_word_in_prompt":true,"rendering":"photoreal CGI golden eagle chick (SUP-002)",
+"appearance_field_hits":{"creamy_white_buff_down":true,"dark_feathers_breaking_through":true,"oversized_hooked_beak_yellow_cere":true,"bright_dark_eyes":true,"big_yellow_feet":true,"round_clumsy":"partial","unclothed":true},
+"self_check":{"layout":"pass","appearance":"pass with defect","style":"pass (photoreal)"},
+"defects":["The legs are too long and the stance too upright and stilt-like for a round, clumsy chick."],"rerolls":[]}

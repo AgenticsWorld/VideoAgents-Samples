@@ -1,0 +1,53 @@
+{
+  "character_id": "CHAR-magpie",
+  "name": "Magpie",
+  "tier": "extra",
+  "layer": "dream",
+  "revision": { "change_id": "BIB-0027", "task_id": "p4-cr-appearance", "date": "2026-09-23", "note": "Rewritten from the human-performer reading to a photoreal CGI animal." },
+  "rendering": {
+    "mode": "photoreal_cgi_animal",
+    "rule": "bible/cultivation.json SUP-002 (amended BIB-0027); member of FAC-caucus-race-company (no uniform)",
+    "species": "Eurasian magpie (Pica pica)",
+    "limits": "Bird anatomy throughout; speech by beak movement. No clothing or accessory of any kind at any point (BIB-0029 arbitration; costumes.json COS-027); no cartoon face."
+  },
+  "gender": "male",
+  "gender_note": { "inferred": true, "reason": "The source says only 'one old Magpie' ('it'). A fussy old hypochondriac muffling his throat against the night air; male balances the party." },
+  "base_age_range": "65-75",
+  "base_age_note": { "source_chapter": "ch003", "source_para": "ch003-p47", "quote": "one old Magpie", "inferred": true, "reason": "'Old' is sourced; persona band kept for voice casting. As an animal: an old bird with frayed, worn tail feathers and a slightly dulled gloss." },
+  "hair": {
+    "coat": "feathers",
+    "color": "black head, breast and back with a blue-green and violet gloss; white belly and white wing patches; long graduated black tail with a green sheen",
+    "style": "neat but worn: the long tail feathers frayed at the tips; damp on the bank",
+    "source_chapter": "ch003",
+    "source_para": "ch003-p47",
+    "quote": "one old Magpie",
+    "inferred": true,
+    "reason": "Species plumage; wear marks carry the sourced age."
+  },
+  "eyes": { "color": "dark brown, near black", "expression": "small, bright, beady, darting", "inferred": true, "reason": "Species." },
+  "skin": { "tone": "black legs and feet", "inferred": true, "reason": "Species." },
+  "face": { "shape": "sleek black head", "features": ["strong straight black beak", "beady eye", "fussy, careful head movements"], "inferred": true, "reason": "Species." },
+  "build": {
+    "height_range_cm": [18, 22],
+    "height_note": "Perched height; total length 44-46 cm of which about half is tail, species-true.",
+    "body_type": "slim body, very long tail",
+    "posture": "slightly hunched against the night air; precise, fussy movements as he wraps himself up",
+    "scale_reference": "On the bank with the shrunken Alice (SUP-003); mid-sized in the party, the long tail making him read larger.",
+    "source_chapter": "ch003",
+    "source_para": "ch003-p47",
+    "quote": "began wrapping itself up very carefully",
+    "inferred": true,
+    "reason": "Species-true size; the wrapping-up is sourced."
+  },
+  "entry_state": { "state": "on the bank with the party, still damp from the pool", "source_chapter": "ch003", "source_para": "ch003-p01", "quote": "all dripping wet, cross, and uncomfortable" },
+  "marks": [
+    { "type": "exit_business", "description": "no garment: at his exit he \"wraps himself up\" by fluffing his throat feathers out into a thick ruff, drawing his head down into them and hunching his shoulder plumage up round the throat before he flies off", "position": "throat", "source_chapter": "ch003", "source_para": "ch003-p47", "quote": "began wrapping itself up very carefully, remarking, “I really must be getting home; the night-air doesn’t suit my throat!”", "inferred": true, "reason": "The wrapping-up and the throat are sourced and are kept in full as performance. The dark grey knitted muffler that used to carry them was an inferred garment, not a text-named one, so it is removed under BIB-0027 / SUP-002 (a talking animal wears only garments the text names) and to agree with costumes.json COS-027 and the H2-locked sheet, which show a bare fluffed throat. The rejected muffler design is preserved with its source anchor in costumes.json COS-027.rejected_design so it can be restored by user ruling. Arbitration: DEF-p4-char-concept-201-a, changelog BIB-0029." }
+  ],
+  "default_outfit_tone": {
+    "summary": "bare magpie throughout; no garment, scarf or accessory at any point, including the exit beat",
+    "inferred": true,
+    "reason": "Per SUP-002 (BIB-0027) only text-NAMED garments are worn; the old frock coat and watch-chain were dropped there, and the inferred exit muffler is dropped here (BIB-0029, DEF-p4-char-concept-201-a) so this card and costumes.json COS-027 no longer disagree. The sourced wrapping-up action survives as the fluffed-throat exit business in marks[0]."
+  },
+  "doubling": null,
+  "prompt_base_en": "photoreal old Eurasian magpie, glossy black plumage with blue-green sheen, white belly and wing patches, long frayed graduated tail, strong black beak, beady dark eye, damp, throat feathers fluffed out into a thick ruff with its head drawn down into them against the night air, on a muddy pool bank at dusk, no clothing or scarf of any kind, natural bird anatomy, live-action film plate"
+}

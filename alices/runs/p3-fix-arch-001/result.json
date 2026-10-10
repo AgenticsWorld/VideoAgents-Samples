@@ -1,0 +1,13 @@
+{
+  "task_id": "p3-fix-arch-001",
+  "agent": "05-scenes/architecture",
+  "status": "done",
+  "finished_on": "2026-09-22",
+  "defect": "qa/defects/DEF-p3-architecture-001.json",
+  "change": {"file": "bible/scenes/SCN-pool-bank/architecture.json", "from": "SCN-wood", "to": "SCN-wonderland-wood", "field": "details[] item src ch004-p34"},
+  "rationale": "SCN-wonderland-wood is the registered root 'The Wood' scene; the reference describes the wood edge as a whole, not a specific sub-space.",
+  "checks": {"json_valid": true, "all_scn_refs_in_index": true, "other_content_unchanged": true},
+  "skills": "none enabled for this station",
+  "files_modified": ["bible/scenes/SCN-pool-bank/architecture.json", "qa/defects/DEF-p3-architecture-001.json"],
+  "files_created": ["runs/p3-fix-arch-001/result.json"]
+}

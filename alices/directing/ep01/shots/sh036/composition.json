@@ -1,0 +1,34 @@
+{
+  "shot_id": "sh036",
+  "scene_id": "SCN-long-hall",
+  "size": "wide",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "centre",
+    "anchor_xy": [0.48, 0.56],
+    "size_in_frame": "whole figure walking toward camera, about 0.30 of frame height, growing to 0.50 as she reaches the table"
+  },
+  "second_subject": {
+    "id": "glass_table",
+    "grid": "centre",
+    "anchor_xy": [0.54, 0.64],
+    "note": "catching the lamplight ahead of her, low in frame at 0.715 m — the brightest small thing in the picture before she arrives at it."
+  },
+  "headroom": "about 0.28 of frame height of hall above her at the far end, closing to 0.16 as she arrives; the lamp row runs away overhead as the top layer and is never cropped out.",
+  "horizon_eyeline": "Lens at 1.3 m down the hall from the corner entrance: floor and dado converge at [0.52, 0.47]. Her eyeline is at that height too, but wandering — she is looking about her at the walls, not down the axis.",
+  "layers": {
+    "fg": "the near flagstones and the nearest lamp pool laid across the bottom of frame",
+    "mg": "Alice walking back down the middle of the hall",
+    "bg": "the receding lamp row, the two door lines, and the far end in darkness and haze"
+  },
+  "gaze": {
+    "direction": "to_camera",
+    "lead_room": "none",
+    "note": "she walks the lens axis looking for a way out, so her look sweeps the side walls rather than settling; the frame gives her no single lead room because she has no direction yet. Then the table stops her look at the bottom of frame."
+  },
+  "balance": "One-point perspective with a small centred figure; the only asymmetry is the glint of the table slightly right of the axis, which is what the eye eventually goes to.",
+  "leading_lines": "The lamp chain overhead and the floor joints below converge on the same point and pass through the table on the way — the architecture announces the table before she reaches it.",
+  "eye_first": "The lamp chain, then down it to the small hard glint of the glass table, and only then to her.",
+  "safe_area_ok": true,
+  "constraint_binding": "The table announces itself before she reaches it: it is placed inside the perspective funnel and given the frame's highest specular value while she is still deep in the shot, so no push-in or reframe is needed to discover it. Deep staging with the lamp row held as the top layer for the whole shot."
+}

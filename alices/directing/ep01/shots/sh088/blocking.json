@@ -1,0 +1,40 @@
+{
+  "shot_id": "sh088",
+  "group_id": "grp032",
+  "scene_no": "S08",
+  "scene_id": "SCN-long-hall",
+  "duration_s": 5.0,
+  "is_dialogue": true,
+  "group_position": "last shot of grp032 — Alice gets to her feet two feet high on the same spot at the low curtain; the map's facing_end (standing two feet high facing the glass table) is reached here.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "sit",
+      "start_pos": "sitting in the shallow water at the low curtain, coming up onto her feet two feet high on the same spot",
+      "space_fragment_en": "sitting up out of the water at the low curtain on screen-left, two feet high, facing the glass table on screen-right",
+      "facing": "screen-right at the table and the hall she has just been bigger than; one white kid glove still on her hand",
+      "path": [
+        { "t": 1.4, "to": "on her feet two feet high on the same spot at the low curtain" }
+      ],
+      "beats": [
+        { "t": 1.4, "action": "stands up, breathing hard in the shallow water", "sync": "the pose change inside the shot" },
+        { "t": 2.6, "action": "speaks", "sync": "LN-ep01-027 begins" },
+        { "t": 3.8, "action": "her shoulders come down on the word", "sync": "LN-ep01-027 on 'escape'" }
+      ],
+      "performance": {
+        "objective": "count herself as still here, and take stock",
+        "goal": "count herself as still here and take stock",
+        "emotional_arc": "from breathless fright to shaky, almost cheerful relief",
+        "arc_from": "breathless fright",
+        "arc_to": "shaky relief",
+        "trigger": { "line_ref": "LN-ep01-027", "word": "escape" },
+        "no_early_reaction": ["the shoulders dropping", "a laugh", "the breathing evening out"],
+        "forbidden_early": ["the shoulders dropping", "a laugh", "the breathing evening out"],
+        "end_state": "standing two feet high in the water, shoulders down, gloved hand held against her chest, eyes on the table screen-right"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0008 (dream) — 'that was a narrow escape'", "note": "Alice alone." }
+}

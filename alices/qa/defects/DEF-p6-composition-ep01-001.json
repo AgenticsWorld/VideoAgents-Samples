@@ -1,0 +1,25 @@
+{
+  "id": "DEF-p6-composition-ep01-001",
+  "opened_by": "07-directing/composition",
+  "opened_on": "2026-09-23",
+  "task_id": "p6-composition-ep01",
+  "assigned_to": "07-directing/shot-planning",
+  "cc": ["04-environment/environment-concept", "08-video-gen/prompt"],
+  "domain": "shot_content_vs_scene_geometry",
+  "status": "open",
+  "severity": "minor",
+  "blocking": false,
+  "due_gate": "G6 (not blocking: sh002/composition.json is delivered with the spire composed out and the omission stated in its 'unresolved' field)",
+  "summary": "sh002's frozen content line places the parish spire in a frame whose camera axis points away from it. The spire is an east-skyline element; sh002 is the meadow-side camera looking west at the bank.",
+  "findings": [
+    {
+      "id": "DEF-p6-composition-ep01-001-a",
+      "shot": "sh002",
+      "issue": "shot_list.json sh002 content reads '...far across the meadow, a parish spire in the heat.' The shot is view_tile 1 of SCN-riverbank (camera_from 'meadow' looking at 'sitting_shelf'), i.e. a camera standing east of the bank looking WEST; its far background is the reed-edged backwater and the far bank. bible/scenes/SCN-riverbank/architecture.json registers the spire as 'a distant stone church spire ... beyond a far hedge' and layout.json lists it under 'offscreen' as a background-only skyline element; the far hedge and the way across the field are the EAST side of the map (field_way xy 0.90, 0.22). The spire therefore sits behind this lens.",
+      "composed_as": "sh002 is composed with the far background as the still backwater, the far bank and heat haze, and no spire. The spire is carried by sh007, which is view_tile 4 (sitting_shelf looking at field_way) and does look east at the far hedge — where architecture.json puts it.",
+      "requested_fix": "Either (a) strike the spire clause from sh002's content, since sh007 already delivers that image and delivers it on the correct axis, or (b) if the director wants the spire in the opening wide, re-specify sh002's camera to the east-facing axis — which would also move the two girls' screen sides and the willow, and would collide with the shot's own camera_position text ('Meadow side, lens in the grass at 0.35 m'). Option (a) is this station's recommendation and costs nothing.",
+      "not_self_resolved_because": "shot_list.json is frozen and the content field is the director's; composition does not rewrite shot content, and bible/scenes/ is H2-locked so the spire's registered position is not mine to move."
+    }
+  ],
+  "impact_if_not_fixed": "The prompt station could write a church spire into the far background of a westward-facing riverbank wide, putting the same landmark on two opposite horizons within five shots of each other and breaking the scene's geography for any viewer who reads sh002 and sh007 together."
+}

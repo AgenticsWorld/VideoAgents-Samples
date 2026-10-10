@@ -1,0 +1,31 @@
+{
+  "schema_version": "scene_layout.v1",
+  "scene_id": "SCN-wood-thistle-glade",
+  "layout_top": "layout_top.png",
+  "orientation": {
+    "top_of_map": "north (the raised root bank)",
+    "note_en": "Glade about 12 m across in true units (the set is built at x9 for tiny Alice). The great thistle stands in the centre; the raised bank of roots where the puppy looks down is on the north side; fallen sticks lie south-east of the thistle; Alice enters and runs off by the south gap. Sun from the west-south-west. Camera positions in views[] are described relative to these landmarks."
+  },
+  "extent_m": {"x": 24.0, "y": 13.5},
+  "landmarks": [
+    {"id": "great_thistle", "name": "great thistle", "name_en": "the great thistle", "kind": "feature", "xy": [0.48, 0.48]},
+    {"id": "root_bank", "name": "root bank", "name_en": "the raised root bank", "kind": "terrain", "xy": [0.45, 0.08]},
+    {"id": "stick_pile", "name": "fallen sticks", "name_en": "the fallen sticks", "kind": "feature", "xy": [0.63, 0.62]},
+    {"id": "oak_trunk_west", "name": "west oak", "name_en": "the mossy oak on the west side", "kind": "tree", "xy": [0.14, 0.40]},
+    {"id": "hazel_stool_east", "name": "east hazel", "name_en": "the hazel stool on the east side", "kind": "tree", "xy": [0.80, 0.28]},
+    {"id": "bracken_foxglove", "name": "bracken and foxgloves", "name_en": "the bracken and foxgloves", "kind": "flora", "xy": [0.15, 0.85]},
+    {"id": "glade_entry", "name": "south gap", "name_en": "the gap in the south of the glade", "kind": "path", "xy": [0.56, 0.95]}
+  ],
+  "views": [
+    {"tile": 1, "camera_from": "glade_entry", "looking_at": "root_bank", "size": "wide", "angle": "eye", "desc_en": "eye-level wide shot from the south gap across the glade of towering grass, the great thistle in the middle and the raised root bank behind it"},
+    {"tile": 2, "camera_from": "great_thistle", "looking_at": "root_bank", "size": "medium", "angle": "low", "desc_en": "low-angle medium shot from the thistle's foot looking steeply up at the root bank against the canopy where the puppy looks down"},
+    {"tile": 3, "camera_from": "root_bank", "looking_at": "great_thistle", "size": "wide", "angle": "high_oblique", "desc_en": "high oblique wide shot from the top of the root bank down across the glade to the great thistle and the grass round it"},
+    {"tile": 4, "camera_from": "oak_trunk_west", "looking_at": "hazel_stool_east", "size": "wide", "angle": "eye", "desc_en": "eye-level wide shot across the glade from the western oak, sun behind camera, to the hazel stool on the far side"},
+    {"tile": 5, "camera_from": "hazel_stool_east", "looking_at": "bracken_foxglove", "size": "medium", "angle": "eye", "desc_en": "eye-level medium shot from the hazel stool into the sun, backlit bracken fronds and foxgloves glowing green"},
+    {"tile": 6, "camera_from": "stick_pile", "looking_at": "great_thistle", "size": "close", "angle": "low", "desc_en": "low-angle close shot from among the fallen sticks up at the spiny thistle leaves curling overhead"},
+    {"tile": 7, "camera_from": "bracken_foxglove", "looking_at": "stick_pile", "size": "close", "angle": "eye", "desc_en": "eye-level close shot from the bracken toward the fallen sticks lying like logs in the leaf litter"},
+    {"tile": 8, "camera_from": "great_thistle", "looking_at": "glade_entry", "size": "medium", "angle": "eye", "desc_en": "eye-level medium shot from beside the thistle toward the south gap where the grass parts into the wood"},
+    {"tile": 9, "camera_from": "oak_trunk_west", "looking_at": "great_thistle", "size": "detail", "angle": "low", "desc_en": "low-angle detail shot of the purple thistle heads and silky down against the round halo of light in the canopy"}
+  ],
+  "checklist": {"architecture_match": false, "lighting_match": true, "style_match": false, "plan_view_clean": false, "note_en": "Art Nouveau mosaic paving drawn on the woodland floor at the edges (card: no built ornament); west oak drawn as a sawn stump; hazel stems slightly oblique; kept for H2"}
+}

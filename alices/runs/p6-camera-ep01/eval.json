@@ -1,0 +1,6 @@
+{
+  "scored": false,
+  "reason": "质量评委 = 0; 00-orchestration/evaluation is not dispatched in this project.",
+  "qa": "none — all eight QA review dimensions are 0.",
+  "acceptance_decision": "PASS on machine checks, verified independently by the orchestrator."
+}

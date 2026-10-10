@@ -1,0 +1,42 @@
+{
+  "shot_id": "sh028",
+  "group_id": "grp011",
+  "scene_no": "S04",
+  "scene_id": "SCN-shaft-landing-passage",
+  "duration_s": 4.0,
+  "is_dialogue": true,
+  "group_position": "middle shot of grp011 — the White Rabbit reaches his map end (brick_mid) and sits back there to read the watch. Alice holds the leaf heap off-frame.",
+  "characters": [
+    {
+      "id": "CHAR-white-rabbit",
+      "label": "White Rabbit",
+      "pose": "sit",
+      "start_pos": "stopped in the middle of the brick-vaulted passage, sitting back on his haunches",
+      "space_fragment_en": "sitting back on his haunches in the middle of the brick-vaulted passage, centred in frame, facing away down the passage",
+      "facing": "side-on and away down the passage; he does not look back at Alice at any point",
+      "path": [],
+      "beats": [
+        { "t": 0.3, "action": "stops and sits back on his haunches, the gloves set down under one forepaw", "sync": "the pause that lets him use his paws" },
+        { "t": 1.0, "action": "takes the large watch out of his waistcoat-pocket and braces it in a paw against his chest", "sync": "before the line" },
+        { "t": 1.9, "action": "frets aloud", "sync": "LN-ep01-006 begins" },
+        { "t": 3.1, "action": "his head jerks up off the dial", "sync": "LN-ep01-006 on 'late'" }
+      ],
+      "performance": {
+        "objective": "find out how bad it is, and get moving again",
+        "goal": "find out how late he is and get moving",
+        "emotional_arc": "from fussy checking to flat dread of a superior he has not named yet",
+        "arc_from": "fussy, habitual checking",
+        "arc_to": "flat dread",
+        "trigger": { "line_ref": "LN-ep01-006", "word": "late" },
+        "no_early_reaction": ["the ears going back", "the head lifting off the dial", "the haunches gathering"],
+        "forbidden_early": ["the ears going back", "the head lifting off the dial", "the haunches gathering"],
+        "end_state": "head up off the watch, ears flat back, the dial still braced against his chest, muzzle working"
+      }
+    }
+  ],
+  "creatures": [],
+  "offscreen_presence": [
+    { "id": "CHAR-alice", "where": "on the heap of sticks and dry leaves at the far end of the passage, watching him", "note": "grp011 map start; in the space, out of frame." }
+  ],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0003 (dream) — 'Oh dear! Oh dear! I shall be late!'", "note": "Performance is muzzle, ears and the set of his back only; no human facial acting on the animal." }
+}

@@ -1,0 +1,33 @@
+{
+  "task_id": "p2-religion",
+  "agent": "02-worldbuilding/religion",
+  "attempt": 1,
+  "status": "completed",
+  "generated": "2026-09-22",
+  "output_file": "bible/religion.json",
+  "summary": "Full-text search of story/structured_story.json for church/God/pray/sermon/sin/soul/heaven/hell/priest/chapel/Sunday/faith/believe/Providence/vicar/clergy/rector/conscience/swear/oath/Bible found no religious usage anywhere in the 12 chapters. Per this file's own scope note ('do not invent a religion'), no fictional faith was invented. Registered 3 proportionate entries in bible/religion.json: REL-001 (Church of England, ambient/undramatized real-world-frame faith, inferred), REL-002 (Christmas, the source's one directly-quoted calendar/holiday word, ch001, not inferred), REL-003 (the Duchess's 'everything's got a moral' habit, ch009, directly-quoted dialogue classified as period didactic moral instruction under this file's reserved kind:moral_code category).",
+  "entries_count": { "faiths": 3 },
+  "inferred_count": 2,
+  "not_inferred_count": 1,
+  "cross_domain_assumptions": [
+    {
+      "id": "OQ-religion-01",
+      "topic": "No invented Wonderland religion",
+      "note": "Assumes the dream-logic Wonderland episodes carry no organized faith/deity/clergy of their own regardless of magic-cultivation's SUP-* rendering of talking animals/card figures; flagged for memory-bible/political/culture awareness."
+    },
+    {
+      "id": "OQ-religion-02",
+      "topic": "Real-world frame placed in ordinary mid-Victorian rural England",
+      "note": "REL-001/REL-002 assume the waking frame is mid-19th-century rural England (Church of England as ambient default), anchored to ch012-p70's pastoral reality-mapping also flagged in story_graph.json realism_notes rn-01. If world/geography place the real-world frame differently, these two entries need revisiting at merge."
+    }
+  ],
+  "conflicts": [],
+  "acceptance_self_check": {
+    "schema": "pass (matches skeleton entry_schema; ids unique)",
+    "source_refs_required": "pass (every entry has chapter + verbatim quote; inferred entries have reason)",
+    "no_unknown_placeholder": "pass (no UNKNOWN/TBD/N/A/empty in any field)",
+    "cross_refs": "REL-001/REL-003 reference CHAR-alice / CHAR-duchess (forward-reference whitelist per bible/WRITE_RULES.md §4; characters/index.json not yet populated as character-manager runs in parallel — memory-bible to confirm slug match at merge)",
+    "id_prefix_scoping": "pass (REL- only used here, no relationship IDs)"
+  },
+  "notes_for_memory_bible": "religion.json is intentionally minimal — the source novel has almost no religious content. Do not expect doctrine/clergy/ritual detail; this is correct given the source, not an incomplete extraction. Please verify CHAR-alice and CHAR-duchess slugs against the merged characters/index.json once 03-characters/character-manager lands, and adjust REL-001/REL-003 adherents refs if slugs differ."
+}

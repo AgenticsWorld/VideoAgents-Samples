@@ -1,0 +1,13 @@
+{
+  "task_id": "p2-world",
+  "run_id": "0d0ccadd321a",
+  "attempt": 1,
+  "model": "agent default",
+  "tokens": null,
+  "started_at": null,
+  "finished_at": "2026-09-22T17:06:59+08:00",
+  "inputs_sha256": {},
+  "artifact_versions": {
+    "bible/world.json": "v0-draft"
+  }
+}

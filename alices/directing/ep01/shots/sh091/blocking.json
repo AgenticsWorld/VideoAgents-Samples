@@ -1,0 +1,38 @@
+{
+  "shot_id": "sh091",
+  "group_id": "grp033",
+  "scene_no": "S09",
+  "scene_id": "SCN-long-hall",
+  "duration_s": 4.0,
+  "is_dialogue": false,
+  "group_position": "last shot of grp033 — Alice on the map start/end ground (curtain), turned back up the hall toward the glass table as the map's facing_end requires.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "stand",
+      "start_pos": "two feet high at the low curtain, turned back up the hall",
+      "space_fragment_en": "standing two feet high at the low curtain on screen-left, facing screen-right and up the hall at the glass table",
+      "facing": "back up the hall on a long diagonal to the golden key on the tabletop, far above her head",
+      "path": [],
+      "beats": [
+        { "t": 0.6, "action": "turns and looks back up the hall", "sync": "the reckoning" },
+        { "t": 2.2, "action": "the key lies on the glass tabletop as before, further away than ever", "sync": "still the brightest thing in the hall" },
+        { "t": 3.4, "action": "her tiny reflection sits in the wet flagstone below it", "sync": "held to the cut" }
+      ],
+      "performance_beat": {
+        "objective": "measure the distance back to the key and find out what it will cost",
+        "goal": "measure the distance back to the key",
+        "emotional_arc": "from defeat at the door to a flat estimate of a journey she has already made once",
+        "arc_from": "defeat at the door",
+        "arc_to": "flat estimate of the cost",
+        "trigger": { "beat": "the key resolves on the tabletop far above her", "t": 2.2 },
+        "no_early_reaction": ["the shoulders sagging", "the head tipping back", "a breath going out"],
+        "forbidden_early": ["the shoulders sagging", "the head tipping back", "a breath going out"],
+        "end_state": "standing small at the curtain, head back, eyes screen-right on the key, arms hanging"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0008 (dream) — the key back on the unreachable table", "note": "Alice alone." }
+}

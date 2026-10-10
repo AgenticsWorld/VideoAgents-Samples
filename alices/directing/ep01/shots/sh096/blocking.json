@@ -1,0 +1,20 @@
+{
+  "shot_id": "sh096",
+  "group_id": "grp036",
+  "scene_no": "S10",
+  "scene_id": "SCN-pool-of-tears",
+  "duration_s": 3.5,
+  "is_dialogue": false,
+  "group_position": "first shot of grp036 — her POV of the flooded canyon. Nobody is registered in frame, so no space fragment is written; she holds the map start (glass_table_legs) behind the lens.",
+  "characters": [],
+  "creatures": [],
+  "offscreen_presence": [
+    { "id": "CHAR-alice", "where": "treading water beside the glass table legs, directly behind the lens, looking round", "note": "grp036 blocking_map start. Present in the space, not in frame; the lens sits at her own waterline height." }
+  ],
+  "presence_check": {
+    "timeline_ok": true,
+    "violations": [],
+    "story_event": "ev0008 result (dream)",
+    "note": "POV insert. Nothing living is in this frame; the bright band at the far end is the heading for the rest of the scene and for ep02."
+  }
+}

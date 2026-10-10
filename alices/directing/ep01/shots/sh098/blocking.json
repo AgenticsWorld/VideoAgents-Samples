@@ -1,0 +1,39 @@
+{
+  "shot_id": "sh098",
+  "group_id": "grp036",
+  "scene_no": "S10",
+  "scene_id": "SCN-pool-of-tears",
+  "duration_s": 9.5,
+  "is_dialogue": true,
+  "group_position": "last shot of grp036 — Alice on the map start/end ground (glass_table_legs); the map keeps her treading water and not yet swimming.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "stand",
+      "start_pos": "treading water beside the glass table legs, turning to survey the flooded hall",
+      "space_fragment_en": "standing upright treading water beside the glass table legs, centred in frame, turning to face screen-right round the flooded hall",
+      "facing": "screen-right — the only shot in S10 where her attention goes right rather than left; the survey before the resignation",
+      "path": [],
+      "beats": [
+        { "t": 1.0, "action": "wishes she had not cried so much", "sync": "LN-ep01-030 begins" },
+        { "t": 3.4, "action": "turns her look round the flooded hall", "sync": "the survey" },
+        { "t": 4.0, "action": "supposes what will happen to her now", "sync": "LN-ep01-030b begins" },
+        { "t": 7.6, "action": "the word lands and her turning stops", "sync": "LN-ep01-030b on 'drowned'" }
+      ],
+      "performance": {
+        "objective": "account for her own situation honestly, including the part where it is her own fault",
+        "goal": "account honestly for her own situation",
+        "emotional_arc": "from regret to a matter-of-fact expectation of punishment that is more frightening for being calm",
+        "arc_from": "regret",
+        "arc_to": "calm expectation of punishment",
+        "trigger": { "line_ref": "LN-ep01-030b", "word": "drowned" },
+        "no_early_reaction": ["the turning stopping", "the eyes going down to the water", "the voice thinning"],
+        "forbidden_early": ["the turning stopping", "the eyes going down to the water", "the voice thinning"],
+        "end_state": "stopped mid-turn facing screen-right, chin low at the waterline, eyes steady, mouth closed"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0008 result (dream)", "note": "Alice alone." }
+}

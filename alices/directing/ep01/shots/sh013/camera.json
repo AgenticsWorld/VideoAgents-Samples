@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh013",
+  "group_id": "grp007",
+  "scene_no": "S02",
+  "duration_s": 3.0,
+  "size": "medium",
+  "movement": "pedestal_down",
+  "direction": "straight down with her, 0.85 m to 0.30 m, no lateral or rotational component",
+  "speed": "0.55 m of drop in about 1.4 s (≈0.4 m/s), started as she arrives and finished as her knees hit the spoil",
+  "speed_curve": "ease_out",
+  "rig": "dolly",
+  "lens_mm": 40,
+  "camera_height_m": "0.85 falling to 0.30",
+  "angle": "level throughout (the frame drops, it does not tilt)",
+  "rack_focus": "none",
+  "start_frame": "Eye-level from beside the five-bar gate along the hedge foot: Alice arriving at a run at the fan of pale dug earth, the laid hedge running away behind her, the burrow mouth still only a small dark notch low in frame.",
+  "end_frame": "Down at 0.30 m with her: she is on her knees in the pale spoil, hawthorn roots across the opening beside her and the burrow mouth now a flat black oval holding its own place in the frame.",
+  "constraint_honoured": "'Already framed to rhyme with the earth tunnel of S03' — the move exists only to deliver the black oval at the height and size the S03 opener needs.",
+  "movement_note": "Licensed move (a) extended to her drop rather than her run: the camera lies down when she does (camera-height law). One axis only, and it is finished well before the 3.0 s is out.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

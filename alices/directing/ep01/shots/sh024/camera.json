@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh024",
+  "group_id": "grp009",
+  "scene_no": "S03",
+  "duration_s": 6.0,
+  "size": "close",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame beside her; pegs and pictures travel up through the background)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 50,
+  "camera_height_m": "beside her at her own height on her axis",
+  "angle": "level",
+  "rack_focus": "none",
+  "start_frame": "Profile close from the middle of the shaft toward the bookshelf wall: her cheek and floating hair filling frame, pictures on pegs travelling up through the background behind her.",
+  "end_frame": "The same frame as the background thins to bare empty pegs and her voice drops to a whisper — the only warning anywhere that the fall is nearly over.",
+  "constraint_honoured": "'Set-up 3 of the licensed three… No move.' — the third and last S03 set-up, held, so the warning is carried by the dressing thinning and nothing else.",
+  "movement_note": "LN-ep01-005 (3.8 s) sits whole inside 6.0 s; sh025 must be able to continue this exact frame, so it cannot end anywhere but where it started.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

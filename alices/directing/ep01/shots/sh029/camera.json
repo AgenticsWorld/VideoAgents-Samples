@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh029",
+  "group_id": "grp011",
+  "scene_no": "S04",
+  "duration_s": 3.0,
+  "size": "detail",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 50,
+  "camera_height_m": "0.35, at the watch braced against his chest",
+  "angle": "level, square-ish to the dial",
+  "rack_focus": "none",
+  "start_frame": "Insert at close focus: the enamel watch dial and the chain, the fur and claws of a real rabbit's forepaw closed round it, warm passage lamplight on the enamel.",
+  "end_frame": "The same frame held — the hands of the watch read and the paw tightening on it; his face never enters the shot.",
+  "constraint_honoured": "'The watch is read in ONE insert of the watch face and the paw, not on his face' — one fixed insert, no move and no macro, so the fur and the enamel stay in the same photographed world.",
+  "movement_note": "3.0 s buys one legible dial read; a move would turn a story insert into a product shot.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

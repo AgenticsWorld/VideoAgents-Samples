@@ -1,0 +1,67 @@
+{
+  "id": "DEF-p4-cr-architecture-001",
+  "opened_by": "05-scenes/architecture",
+  "opened_on": "2026-09-23",
+  "task_id": "p4-cr-architecture",
+  "change_request": "BIB-0027",
+  "assigned_to": [
+    "00-orchestration/orchestrator",
+    "05-scenes/lighting",
+    "04-creatures/creature",
+    "06-art/art-director"
+  ],
+  "domain": "scenes",
+  "status": "open",
+  "severity": "minor",
+  "summary": "The 21 dream architecture cards now follow BIB-0027. Their positions, sizes and counts are unchanged, but some opening materials changed. Three follow-ups are outside the architecture scope.",
+  "findings": [
+    {
+      "id": "DEF-p4-cr-architecture-001-a",
+      "files": [
+        "bible/scenes/SCN-courtroom/lighting.json"
+      ],
+      "issue": "The courtroom openings have changed type. The six clear lancets on the east and west walls are now tall round-headed stained-glass windows in pale pastels, mostly clear-toned, with the same positions and 4 m sills. The north stained-glass lancet is now a circular stained-glass halo roundel about 3.5 m across, above the throne. lighting.json still describes clear lancets (natural_light_logic, key_bearing, fill and prompt_fragment).",
+      "requested_action": "05-scenes/lighting re-words the courtroom light for pastel stained glass and the halo roundel. The sun logic and bearings can stay.",
+      "status": "fixed_pending_verify",
+      "resolution": {
+        "by": "05-scenes/lighting",
+        "task_id": "p4-cr-lighting-2",
+        "date": "2026-09-23",
+        "note": "SCN-courtroom/lighting.json: natural_light_logic, key_bearing, fill, practicals_note, quality and prompt_fragment_en now describe pastel round-headed stained glass and the north halo roundel, with a new coloured_spill field. The sun bearing, enums and Kelvin are unchanged."
+      }
+    },
+    {
+      "id": "DEF-p4-cr-architecture-001-b",
+      "files": [
+        "bible/scenes/SCN-long-hall/architecture.json interior.openings"
+      ],
+      "issue": "The long hall has a new blind feature: 25 stained-glass roundels above the door heads, with no opening behind them. The hall is still windowless.",
+      "requested_action": "05-scenes/lighting decides whether the roundels glow only from the oil lamps' reflected light (the architecture assumption) or have a hidden oil lamp behind them. No daylight source is added.",
+      "status": "fixed_pending_verify",
+      "resolution": {
+        "by": "05-scenes/lighting",
+        "task_id": "p4-cr-lighting-2",
+        "date": "2026-09-23",
+        "note": "Decision: reflected oil-lamp light only, with no hidden lamp. The roundels are front-lit by the 11 centre-line lamps, show faint jewel glints and never look backlit. This matches the architecture assumption, so architecture.json needs no change. It is recorded as SCN-long-hall/lighting.json roundel_glow and in both prompt fragments."
+      }
+    },
+    {
+      "id": "DEF-p4-cr-architecture-001-c",
+      "files": [
+        "bible/scenes/SCN-caterpillar-clearing/architecture.json",
+        "refs/style/alice.jpeg"
+      ],
+      "issue": "The user's style reference puts the Caterpillar and its mushroom inside an Art Nouveau cathedral interior. The text and the Bible (geography.json LOC-mushroom-clearing) put it in an open wood clearing. The card keeps the text: it is an EXT clearing with no built architecture, and the Mucha language is carried by flora, a sky halo and the palette.",
+      "requested_action": "orchestrator raises this at H2: should the Caterpillar scene stay an open clearing, as it does now, or become an Art Nouveau interior like the reference? A move would need geography and scene index changes first."
+    },
+    {
+      "id": "DEF-p4-cr-architecture-001-d",
+      "files": [
+        "bible/scenes/SCN-wood-thistle-glade, SCN-croquet-ground, SCN-cheshire-cat-path, SCN-duchess-house-front architecture.json",
+        "bible/creatures/index.json CRE-002"
+      ],
+      "issue": "These are pending_H2 proposals written into the cards: a photoreal CGI puppy (with the real-puppy forced-perspective build kept as fallback), CGI flamingoes and hedgehogs, a CGI piglet for the pig end-state, and CGI Frog- and Fish-Footmen standing upright at about 1.6 m servant height to fit the existing 2.1 m door. The CGI creature sizes that the sets depend on (Caterpillar on the 2.2 m cap, Pigeon on the 60 cm nest, Gryphon on the 20 x 8 m grass strip, the jurors' perch-blocks) are deferred to 04-creatures.",
+      "requested_action": "orchestrator raises these at H2 with the other BIB-0027 open points. 04-creatures confirms the sizes; architecture re-checks the fit only if a size breaks a set dimension."
+    }
+  ]
+}

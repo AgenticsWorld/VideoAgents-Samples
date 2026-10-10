@@ -1,0 +1,32 @@
+{
+  "shot_id": "sh096",
+  "scene_id": "SCN-pool-of-tears",
+  "size": "wide",
+  "subject": {
+    "id": null,
+    "id_note": "POV — no character in frame. shot_list registers CHAR-alice with a poses_note; she is behind the lens, treading water.",
+    "pov_of": "CHAR-alice",
+    "kind": "environment",
+    "what": "the flooded canyon of the hall from her tiny swimming height",
+    "grid": "centre",
+    "anchor_xy": [0.52, 0.50],
+    "size_in_frame": "the whole frame; the brightest water is a band at the far end occupying about 0.14 of frame width at the centre"
+  },
+  "headroom": "not applicable. The vault is a dark band across the top 0.16 of frame and contains nothing — no fitting, no rib detail, no shaft of light of any kind.",
+  "horizon_eyeline": "Lens on the surface: the waterline is the horizon and it runs dead level across at 0.52 of frame height, almost exactly bisecting the frame. Everything above it rises like cliffs and everything below it is dark reflection.",
+  "layers": {
+    "fg": "the water surface running away from the bottom edge, and the pastel-and-gold vine mosaic shimmering just under it",
+    "mg": "the glass table legs standing out of the water like columns, left and right",
+    "bg": "the bases of the oak doors in their curling iron frames rising like cliffs, and at the far centre the brightest water where the reflections crowd"
+  },
+  "gaze": {
+    "direction": "into_depth",
+    "lead_room": "centre",
+    "note": "this is her look, and the composition answers it: the way out is the bright band at the far end, dead centre. The shot states the heading of the rest of the scene and of ep02 without a word."
+  },
+  "balance": "Bilaterally symmetrical, waterline on the centre horizontal, bright point at the far centre — the most formally ordered frame in S10, which is what makes it read as a canyon rather than a mess.",
+  "leading_lines": "The two door-base lines converge on the far bright water, and their reflections converge on it from below, making a lozenge of perspective lines that all arrive at the same place. The mosaic under the surface repeats the convergence in a third register.",
+  "eye_first": "The bright water at the far end, immediately — the perspective delivers it in under a second.",
+  "safe_area_ok": true,
+  "constraint_binding": "The brightest water is at the far end where the reflections crowd — that is the way out and the direction of ep02. Deep teal, amber only in reflections, and NO shaft of daylight anywhere (director's interim ruling on DEF-p6-directing-ep01-001): no beam, no bright opening, no sky and no visible source is placed at the far end; the brightness is crowded reflection only. Deep focus, no long-lens compression, and no high or crane view."
+}

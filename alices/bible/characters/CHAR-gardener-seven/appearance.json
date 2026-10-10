@@ -1,0 +1,49 @@
+{
+  "character_id": "CHAR-gardener-seven",
+  "card_type": "individual",
+  "tier": "extra",
+  "layer": "dream",
+  "gender": "male",
+  "gender_note": { "source_chapter": "ch008", "paragraph": "ch008-p08", "quote": "Seven flung down his brush, and had just begun “Well, of all the unjust things—” when his eye chanced to fall upon Alice", "reason": "'his brush', 'his eye', 'he checked himself' (ch008-p08)." },
+  "hair": {
+    "color": "red-brown (auburn)",
+    "style": "short, wiry, springing up at the crown, with full mutton-chop side-whiskers",
+    "inferred": true,
+    "reason": "Not described; auburn and side-whiskers mark the hot-tempered one of the trio and separate him from Two (sandy) and Five (black). Side-whiskers are period-typical for 1862."
+  },
+  "eyes": { "color": "hazel", "inferred": true, "reason": "Not described; common English colouring." },
+  "face": {
+    "shape": "angular, sharp nose, ruddy weathered complexion, mobile brows",
+    "expression_default": "indignant, quick to flare, then abruptly checked and bowing",
+    "source_chapter": "ch008", "paragraph": "ch008-p08",
+    "quote": "Seven flung down his brush, and had just begun “Well, of all the unjust things—”",
+    "detail_inferred": true,
+    "detail_reason": "Features designed from his sourced temper; source gives no face description."
+  },
+  "build": {
+    "height_range_cm": [174, 178],
+    "body_type": "tall, rangy, long-limbed — tallest of the trio, but still under CHAR-knave-of-hearts (178-184 cm)",
+    "scale_reference": "About 39-43 cm taller than Alice at base scale (135 cm, CHAR-alice scale anchor); on-screen relative size follows SUP-003.",
+    "card_shape": { "value": "oblong and flat, hands and feet at the corners", "source_chapter": "ch008", "paragraph": "ch008-p11", "quote": "these were all shaped like the three gardeners, oblong and flat, with their hands and feet at the corners" },
+    "inferred": true,
+    "reason": "Height/body designed for trio silhouette variety; card shape sourced."
+  },
+  "base_age_range": "33-40",
+  "base_age_inferred": true,
+  "base_age_reason": "Middle of the trio; the Queen has already threatened him for a past mistake (ch008-p07), implying some years in service. No age in source.",
+  "marks": [
+    { "type": "paint", "position": "red spots on the right cuff and elbow (where he jogged Five)", "description": "light red paint spatter", "source_chapter": "ch008", "paragraph": "ch008-p02", "quote": "Seven jogged my elbow" }
+  ],
+  "signature_items": [
+    { "item": "card-face tabard showing SEVEN: seven black spade pips and '7' corner indices", "source_chapter": "ch008", "paragraph": "ch008-p03", "quote": "On which Seven looked up and said", "suit_inferred": true, "suit_reason": "Number sourced; the suit is SPADES, keeping the trio matched with CHAR-gardener-two and CHAR-gardener-five. BIB-0029 (DEF-p4-char-301) moved the gardeners from clubs to spades. The source names the gardeners' numbers but never their suit, while ch008-p11 'ten soldiers carrying clubs' anchors the club suit to the soldiers; the club suit has only thirteen cards and ten soldiers plus the King and Queen of Clubs (CHAR-visiting-monarchs-ensemble M01/M02) already fill twelve of them, so no club rank was left for a gardener. Spades also fit garden staff. The numeral -- the only thing the source fixes and the only thing that identifies the figure on screen -- is unchanged. Sheet note: the H2-locked sheet draws club trefoils; under reroll budget 0 it was not regenerated, so costumes.json visual_en is the pip authority for prompts (runs/g4/gate.json DEF-p4-costume-sheet-901 waiver)." },
+    { "item": "card-back pattern on the back of the tabard, identical to the rest of the pack", "source_chapter": "ch008", "paragraph": "ch008-p16", "quote": "the pattern on their backs was the same as the rest of the pack" },
+    { "item": "paintbrush (flung down mid-scene)", "source_chapter": "ch008", "paragraph": "ch008-p08", "quote": "Seven flung down his brush" }
+  ],
+  "default_outfit_tone": "Same card tabard cut as Two and Five (ivory face with black spade pips and '7' indices front; shared crimson-and-cream lattice back with heart rosette), over crimson House-of-Hearts working shirt-sleeves, crimson breeches, cream stockings, brown boots.",
+  "default_outfit_tone_source": { "source_chapter": "ch008", "paragraph": "ch008-p11", "quote": "oblong and flat", "colour_inferred": true, "reason": "Colours designed from FAC-house-of-hearts emblem_visual; costume detail owned by 06-art/costume." },
+  "period_silhouette": { "value": "1862 estate gardener's working dress flattened under a rigid rectangular card tabard; limbs at the corners; period mutton-chop whiskers", "inferred": true, "reason": "SUP-004 applied to an 1862 working-man base." },
+  "sup002_coding": { "animal_or_card": "card (Seven of Spades)", "touches": ["rigid flat oblong tabard", "numeral pips/indices", "shared pack back-pattern"], "forbidden": "no CGI paper body", "rule": "bible/cultivation.json SUP-002, SUP-004" },
+  "trio_distinction": "See CHAR-gardener-two: Seven = auburn hair and side-whiskers, tallest, hot-tempered.",
+  "doubling": { "value": "none", "reason": "Not part of any H1 ruling 5.3 B doubling pair." },
+  "prompt_summary_en": "Tall rangy man about 36 dressed as a living playing card, the Seven of Spades: stiff flat oblong ivory card tabard front and back with seven black spade pips and '7' corner indices, arms and legs at the corners, crimson shirt-sleeves and breeches, brown boots, short wiry auburn hair with mutton-chop side-whiskers, hazel eyes, angular ruddy indignant face, a few red paint spots on the right cuff, 1862 period realistic drama, human actor"
+}

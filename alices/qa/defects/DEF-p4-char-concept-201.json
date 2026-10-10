@@ -1,0 +1,58 @@
+{
+  "id": "DEF-p4-char-concept-201",
+  "opened_by": "06-art/character-concept",
+  "opened_on": "2026-09-23",
+  "task_id": "p4-char-concept-cb2",
+  "assigned_to": [
+    "00-orchestration/memory-bible",
+    "03-characters/appearance",
+    "06-art/costume"
+  ],
+  "domain": "character-concept",
+  "status": "closed",
+  "severity": "minor",
+  "summary": "appearance.json and costumes.json disagree on two default-look details (Magpie muffler; Fish-Footman lower legs). Sheets follow costumes.json default outfit as the order requires.",
+  "findings": [
+    {
+      "id": "DEF-p4-char-concept-201-a",
+      "character": "CHAR-magpie",
+      "appearance": "bible/characters/CHAR-magpie/appearance.json marks[0] + prompt_base_en + default_outfit_tone: a dark grey knitted wool muffler wound round the throat at his exit (ch003-p47).",
+      "costumes": "bible/costumes.json COS-027 visual: 'played as a fluffed-up throat, not a muffler'; prohibited_in_prompt: 'clothing or scarf on the magpie'.",
+      "sheet_handling": "sheet.png drawn bare with fluffed throat feathers (COS-027). The muffler is not drawn.",
+      "decision_needed": "Is the exit muffler kept as a scene prop (then costumes.json should allow it as a variant/prop) or dropped (then appearance marks/prompt_base_en should drop it)?",
+      "ruling": {
+        "decision": "DROP the muffler from the default look; keep the sourced action, and record the rejected muffler rather than deleting it.",
+        "reasoning": "The wrapping-up and the throat are source-written (ch003-p47); the knitted muffler itself was inferred:true. Under SUP-002 as amended by BIB-0027 (user ruling: talking animals are photoreal CGI and wear only the garments the text NAMES) an inferred garment cannot stay, and the H2-locked sheet draws a bare fluffed throat. The canon detail is therefore not dropped: the 'wrapping himself up very carefully' beat survives in full as exit business (fluffed throat ruff, head drawn down, shoulders hunched), recorded on both cards.",
+        "writes": [
+          "bible/characters/CHAR-magpie/appearance.json: marks[0] retyped signature_item -> exit_business (no garment); rendering.limits 'No clothing apart from the muffler' -> no clothing at all; default_outfit_tone.summary; prompt_base_en muffler clause replaced by the fluffed-throat business",
+          "bible/costumes.json COS-027: new canon_action_kept and rejected_design (COS-027-rejected-muffler, full source anchor + restore conditions); prohibited_in_prompt points at the rejected id"
+        ],
+        "not_left_in_both_places": true
+      }
+    },
+    {
+      "id": "DEF-p4-char-concept-201-b",
+      "character": "CHAR-fish-footman",
+      "appearance": "default_outfit_tone: '... crimson knee breeches, white stockings, buckled pumps (per H2 Option A)'.",
+      "costumes": "COS-035 visual_en: 'the fins, hands and lower legs left in natural wet-sheened scaled skin' (no stockings, no shoes).",
+      "sheet_handling": "sheet.png follows COS-035 visual_en verbatim: bare scaled lower legs and webbed feet, no stockings or pumps. Anatomy itself is pending_H2 (H2-footmen-anatomy).",
+      "decision_needed": "Align the two cards after the H2 footmen-anatomy ruling.",
+      "ruling": {
+        "decision": "Align appearance.json to the sheet and COS-035: no white stockings, no buckled pumps. Crimson knee breeches stay; the lower legs and feet are bare wet-sheened scaled skin.",
+        "reasoning": "H2 approved footmen anatomy Option A (upright livery figure with a real fish head), so the Option A/Option B conditional is gone. Where the two layers disagreed the H2-locked sheet followed COS-035, so appearance.json moves.",
+        "writes": [
+          "bible/characters/CHAR-fish-footman/appearance.json: anatomy_proposal.status pending_H2 -> approved_H2 (+ approval block); default_outfit_tone; period_silhouette_1862; prompt_base_en; default_outfit_tone_source.reason",
+          "bible/costumes.json COS-035: pending_H2 -> resolved_H2"
+        ]
+      }
+    }
+  ],
+  "due_gate": "G4",
+  "resolution": {
+    "change_id": "BIB-0029",
+    "task_id": "p4-h2-bible",
+    "arbitrated_by": "00-orchestration/memory-bible",
+    "date": "2026-09-23",
+    "authority": "H2 art-style lock, gate G4, approval ba96732d (runs/g4/gate.json)"
+  }
+}

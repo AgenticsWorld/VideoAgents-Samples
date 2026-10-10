@@ -1,0 +1,228 @@
+{
+  "schema_version": "scene_layout.v1",
+  "scene_id": "SCN-field-hedge-burrow",
+  "task_id": "p4-env-concept-sb1",
+  "layout_top": "layout_top.png",
+  "orientation": {
+    "top_of_map": "north (the open field Alice runs across); the hedge runs east-west across the lower part of the map, farmland beyond it at the bottom edge",
+    "map_extent_m": [
+      53.0,
+      30.0
+    ],
+    "sun": "LGT-field-hedge-burrow-01 sun south-west (lower left); the hedge's narrow shade band lies on its north (field) side, over the burrow",
+    "note_en": "camera positions in views[] are described relative to these landmarks; xy_m = xy x map_extent_m (origin top-left). The field continues beyond the top edge (the chase covers about 30 m)."
+  },
+  "landmarks": [
+    {
+      "id": "run_start",
+      "name": "the far side of the field",
+      "name_en": "the far side of the field",
+      "kind": "zone",
+      "xy": [
+        0.55,
+        0.05
+      ],
+      "xy_m": [
+        29.15,
+        1.5
+      ]
+    },
+    {
+      "id": "mid_field",
+      "name": "the middle of the long grass",
+      "name_en": "the middle of the long grass",
+      "kind": "zone",
+      "xy": [
+        0.55,
+        0.35
+      ],
+      "xy_m": [
+        29.15,
+        10.5
+      ]
+    },
+    {
+      "id": "spoil_fan",
+      "name": "the fan of pale spoil",
+      "name_en": "the fan of pale spoil",
+      "kind": "ground",
+      "xy": [
+        0.52,
+        0.62
+      ],
+      "xy_m": [
+        27.56,
+        18.6
+      ]
+    },
+    {
+      "id": "ditch",
+      "name": "the dry ditch",
+      "name_en": "the dry ditch",
+      "kind": "ground",
+      "xy": [
+        0.68,
+        0.665
+      ],
+      "xy_m": [
+        36.04,
+        19.95
+      ]
+    },
+    {
+      "id": "burrow",
+      "name": "the rabbit burrow",
+      "name_en": "the rabbit burrow",
+      "kind": "feature",
+      "xy": [
+        0.5,
+        0.59
+      ],
+      "xy_m": [
+        26.5,
+        17.7
+      ]
+    },
+    {
+      "id": "hedge_west",
+      "name": "the western run of the hedge",
+      "name_en": "the western run of the hedge",
+      "kind": "flora",
+      "xy": [
+        0.075,
+        0.755
+      ],
+      "xy_m": [
+        3.97,
+        22.65
+      ]
+    },
+    {
+      "id": "gate",
+      "name": "the five-bar gate",
+      "name_en": "the five-bar gate",
+      "kind": "entrance",
+      "xy": [
+        0.345,
+        0.765
+      ],
+      "xy_m": [
+        18.29,
+        22.95
+      ]
+    },
+    {
+      "id": "oak",
+      "name": "the hedgerow oak",
+      "name_en": "the hedgerow oak",
+      "kind": "tree",
+      "xy": [
+        0.8,
+        0.71
+      ],
+      "xy_m": [
+        42.4,
+        21.3
+      ]
+    },
+    {
+      "id": "farmland",
+      "name": "the farmland beyond the hedge",
+      "name_en": "the farmland beyond the hedge",
+      "kind": "ground",
+      "xy": [
+        0.5,
+        0.93
+      ],
+      "xy_m": [
+        26.5,
+        27.9
+      ]
+    }
+  ],
+  "views": [
+    {
+      "tile": 1,
+      "camera_from": "run_start",
+      "looking_at": "burrow",
+      "size": "wide",
+      "angle": "eye",
+      "desc_en": "eye-level wide shot from the far side of the field across the long sunlit grass to the dark-green hawthorn hedge, the white rabbit running toward the burrow at its foot"
+    },
+    {
+      "tile": 2,
+      "camera_from": "burrow",
+      "looking_at": "run_start",
+      "size": "wide",
+      "angle": "low",
+      "desc_en": "low wide shot from the burrow mouth in the grass out across the field toward Alice running in from the far side, heat haze over the grass"
+    },
+    {
+      "tile": 3,
+      "camera_from": "mid_field",
+      "looking_at": "spoil_fan",
+      "size": "medium",
+      "angle": "eye",
+      "desc_en": "eye-level medium shot from the middle of the long grass to the hedge bank and the pale spoil fan before the burrow in the narrow band of shade"
+    },
+    {
+      "tile": 4,
+      "camera_from": "gate",
+      "looking_at": "burrow",
+      "size": "medium",
+      "angle": "eye",
+      "desc_en": "eye-level medium shot from beside the five-bar gate along the hedge foot to the burrow under the hawthorn roots"
+    },
+    {
+      "tile": 5,
+      "camera_from": "oak",
+      "looking_at": "gate",
+      "size": "wide",
+      "angle": "high_oblique",
+      "desc_en": "high oblique wide shot from the hedgerow oak along the whole hedge line to the weathered five-bar gate, field on one side, farmland on the other"
+    },
+    {
+      "tile": 6,
+      "camera_from": "spoil_fan",
+      "looking_at": "burrow",
+      "size": "detail",
+      "angle": "low",
+      "desc_en": "low detail shot from the spoil fan into the burrow mouth: an ordinary oval hole under arching hawthorn roots, tufts of white fur on the thorns, black inside"
+    },
+    {
+      "tile": 7,
+      "camera_from": "burrow",
+      "looking_at": "oak",
+      "size": "medium",
+      "angle": "eye",
+      "desc_en": "eye-level medium shot from the burrow along the hedge foot and the dry ditch to the oak rising out of the hedge line"
+    },
+    {
+      "tile": 8,
+      "camera_from": "hedge_west",
+      "looking_at": "mid_field",
+      "size": "medium",
+      "angle": "high_oblique",
+      "desc_en": "high oblique medium shot from above the western hedge diagonally across the field to Alice running through the middle of the long grass"
+    },
+    {
+      "tile": 9,
+      "camera_from": "gate",
+      "looking_at": "hedge_west",
+      "size": "close",
+      "angle": "eye",
+      "desc_en": "eye-level close shot from the gate post westward along the laid hawthorn hedge: angled pleached stems, hazel stakes and binders, small green haws"
+    }
+  ],
+  "checklist": {
+    "architecture_match": false,
+    "lighting_match": true,
+    "style_match": true,
+    "deviation_ref": "DEF-p4-envconcept-603-a"
+  },
+  "calibration": {
+    "status": "calibrated_to_image",
+    "date": "2026-09-23",
+    "method": "landmark xy re-measured on the delivered layout_top.png (door/opening landmarks read at the gap in the wall line)"
+  }
+}

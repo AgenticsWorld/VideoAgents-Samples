@@ -1,0 +1,46 @@
+{
+  "id": "DEF-p2-bible-006",
+  "task_id": "p2-merge",
+  "raised_by": "00-orchestration/memory-bible",
+  "raised_on": "2026-09-22",
+  "type": "setting_conflict (creative)",
+  "severity": "minor",
+  "status": "closed",
+  "escalation": "user ruling at H1",
+  "fix_note": "Fixed by task p2-fix-culture (attempt 1), 2026-09-22, per user H1 pre-ruling (runs/h1-ruling/ruling.json): (1) doubling — CUL-ASM-01.working_assumption and .reconciliation rewritten to ruling 5.3 B (light doubling only: housemaid→Mary Ann, Dinah→Cheshire Cat, sister glimpsed at the trial; no other entry implies a one-to-one recast of real partygoers/tradesmen/staff); (2) geography — the same CUL-ASM-01 fields, plus CUL-013 and CUL-017 summaries, reworded to ruling 5.2 A (Wonderland is dream-only space with no real neighbouring estate/village grounding; waking world stays small: bank, field, rabbit-hole entrance, family house a short run away, farm within earshot); (3) guinea-pig beat — CUL-007 summary/visual/sound rewritten to ruling 5.4 B (sack over head and shoulders, juror hustled out, nobody sits on them), source.quote kept verbatim for citation, entry flipped to inferred:true with reason explaining the softened staging is a designed production choice under SUP-014, and the stale h1_pending marker removed. No IDs added, removed, or renumbered. Status left as 'fixed', not 'closed', for memory-bible re-verification.",
+  "owner_after_ruling": "02-worldbuilding/culture (and 03-characters for doubling)",
+  "files": [
+    "bible/culture.json",
+    "bible/cultivation.json"
+  ],
+  "items": [
+    {
+      "topic": "Character doubling",
+      "detail": "culture.json CUL-ASM-01 writes the dream-figures as recast real people (a neighbouring country house's croquet party and garden staff, tradesmen, pets). cultivation.json XA-magic-03 and SUP-002 leave doubling open for world and 03-characters. Not adopted as canon at merge.",
+      "options": [
+        "A: no doubling (dream-figures are their own characters; only Alice and her sister are real people)",
+        "B: light doubling (a few dream-figures echo people or pets from the waking frame, e.g. the housemaid as Mary Ann, Dinah as the Cheshire Cat, the sister as a figure at the trial) with the same performer or a visual echo",
+        "C: full doubling (every dream-figure is a recast real person from the afternoon)"
+      ],
+      "recommendation": "B (world.json already maps Mary Ann to the housemaid and the Cheshire Cat to Dinah; A and C are both workable)"
+    },
+    {
+      "topic": "Guinea-pig 'suppressed' in a sack (CUL-007)",
+      "detail": "Under SUP-002 the guinea-pig juror is a human performer. CUL-007's visual has court officers stuff the performer head-first into a canvas bag and sit on it. SUP-014's staging rule for the court is that custody is 'a huddle/escort, not restraint or harm'.",
+      "options": [
+        "A: keep as written (the source's own joke, played as comic stage business)",
+        "B: soften: the officers smother the cheer with the sack over the head and shoulders and hustle the juror out, with no sitting on",
+        "C: cut the beat"
+      ],
+      "recommendation": "B"
+    }
+  ],
+  "assigned_to": "02-worldbuilding/culture",
+  "due_gate": "G2",
+  "routing_note": "routed by workflow-orchestrator 2026-09-22T17:20:54+08:00; fix dispatched only after user H1 ruling (decision 5.x in bible/h1_summary.md)",
+  "secondary": "03-characters (doubling ruling consumed in Phase 3)",
+  "closed_by": "00-orchestration/memory-bible (p2-merge-recheck)",
+  "closed_on": "2026-09-22",
+  "verification": "Rulings 5.3 B and 5.4 B verified in culture.json: CUL-ASM-01 now states light doubling only (the housemaid as Mary Ann, Dinah as the Cheshire Cat, the sister glimpsed at the trial) and dream-only Wonderland. CUL-007: the sack goes over the juror's head and shoulders, the juror is hustled out, nobody sits on them; the source quote is kept verbatim and the staging is marked inferred with a reason. cultivation.json XA-magic-03 marked resolved (BIB-0013).",
+  "ruling_ref": "runs/h1-ruling/ruling.json"
+}

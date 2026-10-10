@@ -1,0 +1,1193 @@
+{
+  "_meta": {
+    "file": "bible/culture.json",
+    "status": "locked_v1",
+    "owner": "02-worldbuilding/culture",
+    "write_via": "00-orchestration/memory-bible (on_bible_access)",
+    "scope": "Customs, manners, etiquette, education, recitation/verse, games, food and dining customs, dress codes, festivals, language register.",
+    "id_prefixes": {
+      "CUL-": "culture entry (file-local)"
+    },
+    "entry_schema": {
+      "entries[]": {
+        "id": "CUL-001",
+        "name": "",
+        "category": "etiquette|education|verse_song|game|food_dining|dress_code|festival|language|other",
+        "summary": "",
+        "practiced_by": [
+          "<CHAR-*/FAC-*>"
+        ],
+        "locations": [
+          "<LOC-*>"
+        ],
+        "visual": "",
+        "sound": "",
+        "source": {
+          "chapter": "chNNN",
+          "quote": ""
+        },
+        "also_seen": [],
+        "inferred": false,
+        "reason": null
+      }
+    },
+    "version": "v1",
+    "merged_by": "p2-merge (00-orchestration/memory-bible)",
+    "merged_on": "2026-09-22",
+    "h1_status": "signed",
+    "rechecked_by": "p2-merge-recheck (00-orchestration/memory-bible)",
+    "rechecked_on": "2026-09-22",
+    "locked_at": "2026-09-22T17:59:52+08:00",
+    "locked_by": "H1 user signature (G2 PASS), recorded by 00-orchestration/memory-bible task p2-lock",
+    "lock_record": "runs/g2/gate.json",
+    "lock_changelog": "BIB-0023",
+    "controlled": "Writes only via memory-bible controlled change (WRITE_RULES.md section 5)."
+  },
+  "cross_domain_assumptions": [
+    {
+      "id": "CUL-ASM-01",
+      "aspect": "Realistic register for the dream frame and for talking/anthropomorphic figures (story/events.json realistic_adaptation_flags: 'dream frame', 'talking, anthropomorphic animals and living-card figures'; deferred per bible/WRITE_RULES.md section 7.1 to 02-worldbuilding/magic-cultivation + world, confirmed at H1)",
+      "working_assumption": "This file writes Wonderland's customs, games, schooling, food and verse as Alice's own dream during her nap on the bank (SUP-001), invented and performed entirely within the dream rather than reused from a real neighbouring estate or village (ruling 5.2 A: the waking world stays small and real — the bank, the field, the rabbit-hole entrance, her family's house a short run away, a farm within earshot; nothing later is grounded to a walkable estate, a cellar shaft, a second hatch, or a tidal estuary). Nearly all of Wonderland's dream-figures are the dream's own invented characters, not recast real people: per ruling 5.3 B, only a **light** set of named echoes carries over from the waking afternoon — the family housemaid surfaces as Mary Ann (the White Rabbit's mistaken-identity errand, ev0014, outside this file's own entries), the cat Dinah surfaces as the Cheshire Cat, and Alice's sister is glimpsed as a figure at the trial. No other entry in this file should be read as a one-to-one recast of a real partygoer, tradesman, or household member. Under this reading almost none of the customs below need any fantastical rewrite: croquet parties, perpetual afternoon tea, courtroom procedure, a governess's curriculum, nursery rhymes and moral recitation-poems are already realistic, satirised Victorian practices in Carroll's source text, played out by human performers within the bounded dream-space (SUP-002), not an invented fantasy society's customs and not a literal second, parallel real-world geography.",
+      "affects": "Most entries in this file, most directly CUL-013 (croquet), CUL-016 (pack of cards as court society), CUL-006/CUL-007 (courtroom procedure), CUL-025 (Mock Turtle's school), and CUL-017 (Queen's Croquet Party, now understood as a dream-only occasion, not a real neighbouring estate's event).",
+      "owner_for_final_ruling": "02-worldbuilding/magic-cultivation (bible/cultivation.json, SUP-* entries) together with world.json; confirmed by the user at H1 per bible/WRITE_RULES.md section 7.1",
+      "reason": "brief.md's premise 'realistic drama adapted from a fairy tale' forbids literal magic; since all nine Phase-2 worldbuilding agents run in parallel without seeing each other's output, this file originally stated a working assumption that read the dream-figures as recast real people from a neighbouring estate. That assumption is now superseded (see reconciliation).",
+      "reconciliation": "RESOLVED at H1 pre-ruling (data/projects/alices/runs/h1-ruling/ruling.json, signed 2026-09-22): ruling 5.2 A confirms Wonderland places are dream-only space linked to the waking detail each grows from, rejecting the estate/village/cellar-shaft/second-hatch/tidal-estuary grounding; ruling 5.3 B confirms light doubling only (housemaid→Mary Ann, Dinah→Cheshire Cat, sister glimpsed at the trial), rejecting both no-doubling (A) and full-doubling (C). This entry is updated to match both rulings per DEF-p2-bible-006; fixed by task p2-fix-culture."
+    },
+    {
+      "id": "CUL-ASM-02",
+      "aspect": "'Off with her/his/their head!' as the Queen's constant threatened sanction (ev0036-ev0038, ev0040-ev0041; ev0041 Gryphon reveals 'it's all her fancy... they never executes nobody')",
+      "working_assumption": "This file treats 'Off with her head!' (CUL-003) as a real Victorian social practice already de-fantasised by the source itself: a theatrical, habitually exaggerated punishment-threat from a hot-tempered aristocrat that is understood by her own household to be empty bluster and is never actually carried out on-page. No reinterpretation is required for this element to fit a realistic register; it is written here exactly as the text presents it (a running threat/game, not a literal execution regime).",
+      "affects": "CUL-003, CUL-006 (courtroom threats to the Hatter), CUL-013 (croquet-ground beheading threats)",
+      "owner_for_final_ruling": "02-worldbuilding/political (bible/politics.json, if a formal law/office needs to be registered for who may issue or stay such a threat) and magic-cultivation for final SUP- confirmation that no supernatural mechanism is implied",
+      "reason": "Flagging this explicitly because politics.json may need a matching LAW-*/OFF-* entry for court sentencing procedure; culture.json only owns the etiquette/behavioural layer (the phrase as a social ritual), not the legal mechanism.",
+      "reconciliation": "CONSISTENT with SUP-014 and politics.json LAW-001; CUL-007 softened per H1 5.4 B. No change."
+    }
+  ],
+  "entries": [
+    {
+      "id": "CUL-001",
+      "name": "Falling flat before the passing monarch",
+      "category": "etiquette",
+      "summary": "When the royal procession approaches, servants who fear they have displeased the Queen (the three card-gardeners, having planted a white rose-tree where a red one belonged) instantly drop flat on their faces until the procession has passed and they are told to rise. This is not shown as a universal law of the land: Alice herself, an outsider, is uncertain whether it is required of everyone and decides on the spot that it cannot be, since a procession no one is allowed to look at would defeat its own purpose. Practiced by anxious household staff/gardeners toward their employer's patroness, not by guests or nobility.",
+      "practiced_by": [
+        "CHAR-gardener-two",
+        "CHAR-gardener-five",
+        "CHAR-gardener-seven"
+      ],
+      "locations": [],
+      "visual": "Three gardeners in work clothes, paint-brushes still in hand, drop face-down onto the garden path the instant someone cries 'The Queen!'; Alice remains standing, visibly unsure whether to follow suit.",
+      "sound": "A single urgent cry of warning, then the soft thud of bodies hitting turf, then hush before the procession's footsteps arrive.",
+      "source": {
+        "chapter": "ch008",
+        "quote": "the three gardeners instantly threw themselves flat upon their faces"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch008",
+          "quote": "Alice was rather doubtful whether she ought not to lie down on her face like the three gardeners, but she could not remember ever having heard of such a rule at processions"
+        }
+      ],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "CUL-002",
+      "name": "Default polite address to a superior or a stranger",
+      "category": "etiquette",
+      "summary": "The learned reflex for addressing someone of higher standing, or any adult stranger, is a formal opening ('so please your Majesty', 'Please, Ma'am...') paired with a curtsey, drilled so deeply into a well-brought-up child that it surfaces even in absurd circumstances (mid-fall down the rabbit-hole). Giving one's name plainly and politely when asked by a superior ('My name is Alice') is the expected response to a direct challenge from royalty.",
+      "practiced_by": [
+        "CHAR-alice"
+      ],
+      "locations": [],
+      "visual": "A child instinctively bobs a small curtsey while speaking to an unfamiliar adult, even absurdly out of context; before royalty she states her name plainly, chin up, without groveling.",
+      "sound": "A clear, carefully-enunciated child's voice using formal address ('so please your Majesty') that contrasts with the surrounding characters' careless speech.",
+      "source": {
+        "chapter": "ch008",
+        "quote": "“My name is Alice, so please your Majesty,” said Alice very politely"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch001",
+          "quote": "“Please, Ma’am, is this New Zealand or Australia?” (and she tried to curtsey as she spoke—fancy _curtseying_ as you’re falling through the air!"
+        }
+      ],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "CUL-003",
+      "name": "\"Off with her/his head!\" as the Queen's stock reprimand",
+      "category": "etiquette",
+      "summary": "The Queen's answer to almost any offense, delay, contradiction, or mere inconvenience is the same formulaic outburst, delivered roughly once a minute during the croquet game and repeated at the trial. It functions as an all-purpose exclamation of royal displeasure rather than a literal, reliably-executed sentence: no on-page execution ever actually occurs, and a member of her own household (the Gryphon) confirms it is empty theatre that everyone around her has learned to wait out rather than obey. Courtiers and soldiers respond by taking the accused into custody/searching for them, not by carrying out killings; see CUL-ASM-02.",
+      "practiced_by": [
+        "CHAR-queen-of-hearts"
+      ],
+      "locations": [],
+      "visual": "The Queen stamping and pointing while shouting the phrase at whoever has annoyed her; soldiers and courtiers visibly unbothered, continuing their business or merely taking the named person into custody rather than reacting with alarm.",
+      "sound": "A shrill, repetitive shout that becomes background noise to the other characters by its sheer frequency — a running gag rather than a moment of real terror after the first few uses.",
+      "source": {
+        "chapter": "ch008",
+        "quote": "the Queen was in a furious passion, and went stamping about, and shouting “Off with his head!” or “Off with her head!” about once in a minute"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch009",
+          "quote": "“It’s all her fancy, that: they never executes nobody, you know.”"
+        },
+        {
+          "chapter": "ch012",
+          "quote": "“Off with her head!” the Queen shouted at the top of her voice. Nobody moved."
+        }
+      ],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "CUL-004",
+      "name": "No sitting at table without an invitation",
+      "category": "etiquette",
+      "summary": "At a laid table, taking a seat without being asked is considered uncivil, even when the table is visibly larger than the party occupying it and there is empty room. The house rule is enforced with a scolding, not by physically barring entry.",
+      "practiced_by": [
+        "CHAR-march-hare",
+        "CHAR-hatter",
+        "CHAR-alice"
+      ],
+      "locations": [],
+      "visual": "Three tea-drinkers crowd into one corner of a large table and shout for the newcomer to keep out; she sits down anyway in a spare arm-chair at the far end.",
+      "sound": "An overlapping cry of 'No room! No room!' immediately drowned out by Alice's flat contradiction.",
+      "source": {
+        "chapter": "ch007",
+        "quote": "“It wasn’t very civil of you to sit down without being invited,” said the March Hare."
+      },
+      "also_seen": [
+        {
+          "chapter": "ch007",
+          "quote": "“No room! No room!” they cried out when they saw Alice coming."
+        }
+      ],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "CUL-005",
+      "name": "The rule against personal remarks",
+      "category": "etiquette",
+      "summary": "Commenting on someone's appearance to their face (e.g. their hair, their grooming) is called out as rude and taught as a rule children are expected to know ('you should learn not to make personal remarks'). The rule is invoked as a social weapon in argument as often as it is genuinely followed.",
+      "practiced_by": [
+        "CHAR-alice",
+        "CHAR-hatter"
+      ],
+      "locations": [],
+      "visual": "A pointed, awkward silence after an unsolicited remark about someone's appearance, followed by a prim correction from the other party.",
+      "sound": null,
+      "source": {
+        "chapter": "ch007",
+        "quote": "“You should learn not to make personal remarks,” Alice said with some severity; “it’s very rude.”"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch007",
+          "quote": "“Your hair wants cutting,” said the Hatter."
+        },
+        {
+          "chapter": "ch007",
+          "quote": "“Who’s making personal remarks now?” the Hatter asked triumphantly."
+        }
+      ],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "CUL-006",
+      "name": "Court-of-justice procedure and decorum",
+      "category": "etiquette",
+      "summary": "A trial follows a recognisable, book-learned format: the King sits as judge; a herald (here the White Rabbit) blows a formal trumpet call before reading the accusation aloud in verse; a twelve-member jury sits in a jury-box and is expected to write during proceedings; an officer calls for 'Silence in the court!' when there is noise from the gallery; witnesses are called one at a time and may be threatened with harsher treatment if their evidence displeases the bench. Jurors are so anxious about the formality of the record that they write down their own names first, for fear of forgetting them before the trial ends.",
+      "practiced_by": [
+        "CHAR-king-of-hearts",
+        "CHAR-white-rabbit",
+        "CHAR-alice"
+      ],
+      "locations": [],
+      "visual": "A raised bench with the King in wig-and-crown, a jury-box of twelve figures bent over slates, a herald with a trumpet and parchment scroll standing near the dock.",
+      "sound": "Three sharp trumpet blasts to open testimony; a barked 'Silence in the court!' cutting through gallery murmuring; the scratch of slate pencils.",
+      "source": {
+        "chapter": "ch011",
+        "quote": "the White Rabbit cried out, “Silence in the court!” and the King put on his spectacles and looked anxiously round, to make out who was talking."
+      },
+      "also_seen": [
+        {
+          "chapter": "ch011",
+          "quote": "the White Rabbit blew three blasts on the trumpet, and then unrolled the parchment scroll"
+        },
+        {
+          "chapter": "ch011",
+          "quote": "The twelve jurors were all writing very busily on slates... “They’re putting down their names,” the Gryphon whispered in reply, “for fear they should forget them before the end of the trial.”"
+        }
+      ],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "CUL-007",
+      "name": "Suppressing improper applause in court",
+      "category": "etiquette",
+      "summary": "Public expressions of approval from the gallery during a trial (a cheer) are treated as a breach of decorum to be stopped on the spot, mirroring (and satirising) real newspaper accounts of trials where 'attempts at applause' are 'immediately suppressed.' The source text has the offender bagged head-first in a canvas sack and sat on by court officers; per SUP-014's staging rule that custody in this world is played as a huddle/escort rather than restraint or harm, and per the H1 ruling on DEF-p2-bible-006 (5.4 B), this production softens the beat for camera: the canvas sack goes over the juror's head and shoulders only, and the officers hustle them straight out of the courtroom by the arms — nobody sits on them.",
+      "practiced_by": [
+        "CHAR-alice"
+      ],
+      "locations": [],
+      "visual": "Two court officers drop a canvas sack over a cheering guinea-pig juror's head and shoulders and hustle it out of the courtroom by the arms, walking briskly; no one sits, kneels, or presses down on it, and the rest of the court barely looks up.",
+      "sound": "A short cheer, cut off by the rustle of the sack going on and a scuffle of hurried footsteps as the juror is walked out; no thud or grunt of anyone sitting down.",
+      "source": {
+        "chapter": "ch011",
+        "quote": "one of the guinea-pigs cheered, and was immediately suppressed by the officers of the court... They had a large canvas bag, which tied up at the mouth with strings: into this they slipped the guinea-pig, head first, and then sat upon it."
+      },
+      "also_seen": [
+        {
+          "chapter": "ch011",
+          "quote": "I’ve so often read in the newspapers, at the end of trials, “There was some attempts at applause, which was immediately suppressed by the officers of the court,” and I never understood what it meant till now."
+        }
+      ],
+      "inferred": true,
+      "reason": "The source's own staging (bagged head-first and sat upon) is fully sourced verbatim and kept in 'source.quote' for citation; the softened on-screen staging (sack over head and shoulders, hustled out, nobody sits on them) is a designed production choice made to satisfy SUP-014's custody-as-huddle rule and the H1 ruling on DEF-p2-bible-006 (5.4 B), not stated in the source text."
+    },
+    {
+      "id": "CUL-008",
+      "name": "Doorstep service taken to the letter, not the spirit",
+      "category": "etiquette",
+      "summary": "A household servant answering the door may fulfil the strict letter of politeness (staying at his post, answering when spoken to) while being entirely unhelpful about the actual request, arguing pedantically about the logic of the situation instead of assisting. It is a satirised form of overly-literal, unhelpfully 'correct' household service.",
+      "practiced_by": [
+        "CHAR-frog-footman"
+      ],
+      "locations": [],
+      "visual": "A liveried footman seated on the ground, gaze fixed skyward, answering every question with an irrelevant logical technicality instead of moving to help.",
+      "sound": "A flat, unhurried monotone that never rises even when a plate is thrown at his head.",
+      "source": {
+        "chapter": "ch006",
+        "quote": "“There’s no sort of use in knocking,” said the Footman, “and that for two reasons. First, because I’m on the same side of the door as you are; secondly, because they’re making such a noise inside, no one could possibly hear you.”"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch006",
+          "quote": "“Anything you like,” said the Footman, and began whistling."
+        }
+      ],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "CUL-009",
+      "name": "Finding a 'moral' in everything said",
+      "category": "etiquette",
+      "summary": "A habit of certain older, self-important adults of appending a moralising epigram to whatever a younger person has just said, whether or not it fits, as a form of conversational one-upmanship and unsolicited instruction. Treated by the target as tiresome but something to be borne politely rather than refused outright.",
+      "practiced_by": [
+        "CHAR-duchess",
+        "CHAR-alice"
+      ],
+      "locations": [],
+      "visual": "An older woman links arms uncomfortably close, digging her chin into a child's shoulder, and punctuates every remark with a triumphant 'and the moral of that is...'",
+      "sound": null,
+      "source": {
+        "chapter": "ch009",
+        "quote": "“Tut, tut, child!” said the Duchess. “Everything’s got a moral, if only you can find it.”"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch009",
+          "quote": "“I can’t tell you just now what the moral of that is, but I shall remember it in a bit.”"
+        }
+      ],
+      "inferred": false,
+      "reason": null,
+      "see_also": [
+        "REL-003"
+      ]
+    },
+    {
+      "id": "CUL-010",
+      "name": "White kid gloves and a fan as required formal accessories",
+      "category": "dress_code",
+      "summary": "When attending on or being seen by the Duchess (and, by extension, appearing before rank), a gentleman carries white kid gloves and a fan as standard formal accessories; a household keeps a stock of spare pairs of gloves on hand for this purpose. Losing them before an audience is treated as a real social emergency, not a trivial mishap.",
+      "practiced_by": [
+        "CHAR-white-rabbit"
+      ],
+      "locations": [],
+      "visual": "A well-dressed figure fumbling anxiously through drawers for a matching pair of small white gloves and a fan before an audience with a social superior.",
+      "sound": null,
+      "source": {
+        "chapter": "ch002",
+        "quote": "the White Rabbit returning, splendidly dressed, with a pair of white kid gloves in one hand and a large fan in the other"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch004",
+          "quote": "on it (as she had hoped) a fan and two or three pairs of tiny white kid gloves"
+        }
+      ],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "CUL-011",
+      "name": "The judge's wig worn under the crown",
+      "category": "dress_code",
+      "summary": "A sitting judge is recognisable by his formal wig, a fact well-known enough that a child who has never been in a real courtroom can identify the presiding figure by it alone. When the same figure also holds royal rank, the crown is worn on top of the wig rather than instead of it, which is visibly uncomfortable and, as the narration notes, not flattering.",
+      "practiced_by": [
+        "CHAR-king-of-hearts"
+      ],
+      "locations": [],
+      "visual": "A monarch visibly straining under a crown perched awkwardly over a full formal wig, adjusting it uncomfortably throughout the session.",
+      "sound": null,
+      "source": {
+        "chapter": "ch011",
+        "quote": "“That’s the judge,” she said to herself, “because of his great wig.” The judge, by the way, was the King; and as he wore his crown over the wig... he did not look at all comfortable, and it was certainly not becoming."
+      },
+      "also_seen": [],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "CUL-012",
+      "name": "Powdered, curled hair and livery for household footmen",
+      "category": "dress_code",
+      "summary": "Footmen delivering formal messages between great households wear livery and powdered hair styled in curls, a mark of formal domestic service standard enough that two footmen's identical curls become comically entangled when they both bow at once.",
+      "practiced_by": [
+        "CHAR-fish-footman",
+        "CHAR-frog-footman"
+      ],
+      "locations": [],
+      "visual": "Two footmen in matching livery, hair powdered white and elaborately curled, bowing so low and so close together that their curls tangle.",
+      "sound": null,
+      "source": {
+        "chapter": "ch006",
+        "quote": "both footmen, Alice noticed, had powdered hair that curled all over their heads"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch006",
+          "quote": "Then they both bowed low, and their curls got entangled together."
+        }
+      ],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "CUL-013",
+      "name": "Croquet, played the Queen's way",
+      "category": "game",
+      "summary": "Within the dream, croquet is the marquee lawn game of the Queen's court's social calendar (a dream-only occasion per ruling 5.2 A, not a real neighbouring estate's event), played on an unusually rough ground of ridges and furrows, with live hedgehogs used as balls, live flamingoes as mallets, and soldiers folded double as the arches. There are effectively no enforced rules: players go out of turn, quarrel and fight over hedgehogs, and the equipment itself constantly wanders off or uncurls and crawls away, making the game chaotic and heavily skewed toward whichever player the Queen favours (herself).",
+      "practiced_by": [
+        "CHAR-queen-of-hearts",
+        "CHAR-alice",
+        "CHAR-king-of-hearts"
+      ],
+      "locations": [],
+      "visual": "A lawn scored with awkward ridges; players wrestling live, uncooperative animals into position as mallets and balls; soldiers bent double, unfolding and wandering off mid-game. Per SUP-011, the flamingoes and hedgehogs are handled and carried, never shown being struck.",
+      "sound": "Squawks and grunts from the animal equipment, overlapping arguments about turns, and the Queen's furious shouting threaded through the whole match.",
+      "source": {
+        "chapter": "ch008",
+        "quote": "the balls were live hedgehogs, the mallets live flamingoes, and the soldiers had to double themselves up and to stand on their hands and feet, to make the arches"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch008",
+          "quote": "The players all played at once without waiting for turns, quarrelling all the while, and fighting for the hedgehogs"
+        }
+      ],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "CUL-014",
+      "name": "Caucus-race (an improvised drying-off game)",
+      "category": "game",
+      "summary": "A game invented on the spot to dry off a wet, cross group: participants are placed at random points around a rough circle with no marked start or finish, begin running whenever they like and stop whenever they like, and the organiser eventually declares the race over by fiat. The resolving convention is that 'everybody has won,' so all participants receive a prize; since no one present has any prize to give but Alice, she supplies sweets from her own pocket, and is in turn given back her own thimble as her own prize, presented with a mock-formal little speech.",
+      "practiced_by": [
+        "CHAR-dodo",
+        "CHAR-alice",
+        "CHAR-mouse",
+        "CHAR-lory",
+        "CHAR-duck",
+        "CHAR-eaglet"
+      ],
+      "locations": [],
+      "visual": "A loose, ragged ring of damp children and adults trotting around an unmarked circle at their own pace, then crowding round the one child in the group demanding prizes.",
+      "sound": "No starting gun or countdown — just a scattered, gradual start, and a single declarative shout ending it: 'The race is over!'",
+      "source": {
+        "chapter": "ch003",
+        "quote": "There was no “One, two, three, and away,” but they began running when they liked, and left off when they liked, so that it was not easy to know when the race was over."
+      },
+      "also_seen": [
+        {
+          "chapter": "ch003",
+          "quote": "“_Everybody_ has won, and all must have prizes.”"
+        }
+      ],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "CUL-015",
+      "name": "The Lobster Quadrille",
+      "category": "game",
+      "summary": "A seaside dance performed/described as a set of formal quadrille-style figures: two lines form along the shore, partners (lobsters) advance twice and set to partners, partners are exchanged, and the whole line then throws its lobster partners out to sea, follows by diving in after them, somersaulting, and returning to shore to begin again. It is demonstrated to Alice as a dance without the title partners present ('we can do without lobsters'), with one performer singing the accompanying song while both dance solemnly around her, occasionally treading on her toes.",
+      "practiced_by": [
+        "CHAR-mock-turtle",
+        "CHAR-gryphon"
+      ],
+      "locations": [],
+      "visual": "Two figures dancing slow, formal quadrille steps in a circle around a seated onlooker, waving their forepaws to keep time, miming the throw-and-dive figure with exaggerated gestures.",
+      "sound": "A slow, mournful sung melody carrying the dance's rhythm, occasionally interrupted by an enthusiastic shout marking a figure's high point ('The lobsters!').",
+      "source": {
+        "chapter": "ch010",
+        "quote": "“advance twice, set to partners—” ... “—change lobsters, and retire in same order,” ... “Throw the—” “The lobsters!” ... “Swim after them!”"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch010",
+          "quote": "“Come, let’s try the first figure!” said the Mock Turtle to the Gryphon. “We can do without lobsters, you know.”"
+        }
+      ],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "CUL-016",
+      "name": "The royal court organised as a deck of playing cards",
+      "category": "game",
+      "summary": "The King and Queen's entire court, down to the soldiers, courtiers and royal children, is organised visibly along the structure of a deck of playing cards: soldiers are shaped like clubs, courtiers ornamented with diamonds, royal children with hearts, and the whole assembly is, in Alice's own realisation and later open declaration, 'nothing but a pack of cards' rather than a body of independent people. Rank in this court maps directly onto card rank/suit.",
+      "practiced_by": [
+        "CHAR-king-of-hearts",
+        "CHAR-queen-of-hearts",
+        "CHAR-knave-of-hearts"
+      ],
+      "locations": [],
+      "visual": "A procession sorted strictly by suit and rank: club-shaped soldiers in front, diamond-ornamented courtiers behind them, heart-ornamented children next, the Knave carrying the crown on a cushion, King and Queen last.",
+      "sound": null,
+      "source": {
+        "chapter": "ch008",
+        "quote": "First came ten soldiers carrying clubs; these were all shaped like the three gardeners, oblong and flat, with their hands and feet at the corners: next the ten courtiers; these were ornamented all over with diamonds... the royal children; there were ten of them... they were all ornamented with hearts."
+      },
+      "also_seen": [
+        {
+          "chapter": "ch008",
+          "quote": "Why, they’re only a pack of cards, after all. I needn’t be afraid of them!"
+        },
+        {
+          "chapter": "ch012",
+          "quote": "“You’re nothing but a pack of cards!”"
+        }
+      ],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "CUL-017",
+      "name": "The Queen's Croquet Party",
+      "category": "festival",
+      "summary": "A recurring, formally-invited garden gathering hosted by the Queen: an engraved invitation is sent ahead to the Duchess's household, and on the day a full grand procession of soldiers, courtiers, royal children and Kings-and-Queens guests forms up to walk to the croquet-ground together, with named guests such as the White Rabbit attending. Lateness is treated as a serious social offense against the Queen (the stated cause of the Duchess's near-execution). This is the dream's own social-season centrepiece occasion, invented entirely within Wonderland (ruling 5.2 A) rather than doubling a real neighbouring estate's garden party.",
+      "practiced_by": [
+        "CHAR-queen-of-hearts",
+        "CHAR-duchess",
+        "CHAR-white-rabbit"
+      ],
+      "locations": [],
+      "visual": "A liveried footman delivering an oversized formal invitation letter; later, a full royal procession forming up and walking together across open garden ground toward the croquet lawn.",
+      "sound": "The formal, doubled recitation of the invitation's wording by two footmen passing it hand to hand, each repeating it back with only word order changed.",
+      "source": {
+        "chapter": "ch006",
+        "quote": "“For the Duchess. An invitation from the Queen to play croquet.”"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch008",
+          "quote": "She boxed the Queen’s ears—” the Rabbit began... “You see, she came rather late, and the Queen said—”"
+        }
+      ],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "CUL-018",
+      "name": "The Queen's Concert",
+      "category": "festival",
+      "summary": "An annual formal musical concert given by the Queen of Hearts, grand enough to have an official list of singers kept on record and consulted later ('the list of the singers in the last concert'). Performing badly or displeasing the Queen at it has lasting social consequences: the Hatter's botched song at last March's concert is the origin of his ongoing feud with 'Time' and his permanently-stuck teatime.",
+      "practiced_by": [
+        "CHAR-queen-of-hearts",
+        "CHAR-hatter"
+      ],
+      "locations": [],
+      "visual": "A formal concert setting implied only through flashback and a court ledger of singers' names being read aloud as evidence.",
+      "sound": "A remembered fragment of a badly-sung parody tune ('Twinkle, twinkle, little bat') breaking off mid-verse, followed by a furious royal interruption.",
+      "source": {
+        "chapter": "ch007",
+        "quote": "it was at the great concert given by the Queen of Hearts, and I had to sing"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch011",
+          "quote": "“Bring me the list of the singers in the last concert!”"
+        }
+      ],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "CUL-019",
+      "name": "Perpetual afternoon tea and the 'clean cup' shift",
+      "category": "food_dining",
+      "summary": "At a tea-table stuck permanently at six o'clock (see CUL-018 for the backstory), the full ceremony of tea-things stays laid out because there is 'no time to wash the things between whiles.' The party's practical solution is to keep physically moving one place round the table to a clean setting as each cup/plate is used up, rather than washing anything, cycling the same guests through the same sequence of seats indefinitely. Tea is accompanied by bread-and-butter; offering wine when none exists is a running bad joke rather than a real custom.",
+      "practiced_by": [
+        "CHAR-hatter",
+        "CHAR-march-hare",
+        "CHAR-dormouse",
+        "CHAR-alice"
+      ],
+      "locations": [],
+      "visual": "A long table crowded with used teacups and half-eaten bread-and-butter; the whole party physically standing and shuffling one seat to the right in unison mid-conversation.",
+      "sound": "The clink of cups being abandoned mid-sip as everyone shifts seats at once.",
+      "source": {
+        "chapter": "ch007",
+        "quote": "“it’s always tea-time, and we’ve no time to wash the things between whiles.”"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch007",
+          "quote": "“I want a clean cup,” interrupted the Hatter: “let’s all move one place on.”"
+        }
+      ],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "CUL-020",
+      "name": "Mock Turtle Soup",
+      "category": "food_dining",
+      "summary": "A real dish served at formal dinners in this world, made (per the Queen's own explanation) from 'the thing Mock Turtle Soup is made from' — i.e., an imitation turtle soup. The character called the Mock Turtle is explicitly the personified, mournful embodiment of this dish (a once-real turtle who now exists as the melancholy source of a soup named after him), and he later sings a wistful ballad in the soup's honour ('Beautiful Soup'), tying food culture directly to the story's central running joke about identity and consumption.",
+      "practiced_by": [
+        "CHAR-queen-of-hearts",
+        "CHAR-mock-turtle"
+      ],
+      "locations": [],
+      "visual": "A formal soup course served in a hot tureen at a grand dinner, established before Alice ever meets the character it is named for.",
+      "sound": null,
+      "source": {
+        "chapter": "ch009",
+        "quote": "“It’s the thing Mock Turtle Soup is made from,” said the Queen."
+      },
+      "also_seen": [
+        {
+          "chapter": "ch010",
+          "quote": "“Beautiful Soup, so rich and green, Waiting in a hot tureen!”"
+        }
+      ],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "CUL-021",
+      "name": "Comfits and a thimble as children's game prizes",
+      "category": "food_dining",
+      "summary": "Small sweets (comfits) carried loose in a child's pocket serve as an improvised party favor/prize, handed round one-a-piece to a whole group after a game with no real winner; a plain household object (a thimble) is elevated into a formal 'prize' through a short mock-ceremonial presentation speech, showing how little the object matters next to the ritual of giving it.",
+      "practiced_by": [
+        "CHAR-alice",
+        "CHAR-dodo"
+      ],
+      "locations": [],
+      "visual": "A child distributing sweets from her pocket to a crowd of birds and animals, followed by a mock-solemn presentation of her own thimble back to her, held out with both hands and a bow.",
+      "sound": "A short, over-formal presentation line delivered with exaggerated gravity, followed by cheering.",
+      "source": {
+        "chapter": "ch003",
+        "quote": "she put her hand in her pocket, and pulled out a box of comfits... and handed them round as prizes. There was exactly one a-piece, all round."
+      },
+      "also_seen": [
+        {
+          "chapter": "ch003",
+          "quote": "the Dodo solemnly presented the thimble, saying “We beg your acceptance of this elegant thimble;”"
+        }
+      ],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "CUL-022",
+      "name": "Labeled bottles and cakes in the pantry",
+      "category": "food_dining",
+      "summary": "Household food and drink are conventionally labeled in clear lettering (a marmalade jar reads 'ORANGE MARMALADE'; a cake is marked 'EAT ME' in currants; a bottle is labeled 'DRINK ME' in print). The labeling convention is precisely what lets a careful child decide an item is safe to try: she specifically checks a bottle is not marked 'poison' before tasting it (see CUL-032 for the safety-rule custom this reflects).",
+      "practiced_by": [
+        "CHAR-alice"
+      ],
+      "locations": [],
+      "visual": "Neatly hand-lettered paper labels on jars and a small glass bottle; currants pressed into cake icing to spell out words.",
+      "sound": null,
+      "source": {
+        "chapter": "ch001",
+        "quote": "round the neck of the bottle was a paper label, with the words “DRINK ME,” beautifully printed on it in large letters"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch001",
+          "quote": "a very small cake, on which the words “EAT ME” were beautifully marked in currants"
+        },
+        {
+          "chapter": "ch001",
+          "quote": "it was labelled “ORANGE MARMALADE”"
+        }
+      ],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "CUL-023",
+      "name": "Over-peppered kitchen cooking",
+      "category": "food_dining",
+      "summary": "A poorly-run household kitchen produces soup with so much pepper in the air that everyone present sneezes constantly except the cook herself and the household cat. Alice later theorises (half-seriously, as a child inventing a 'rule') that pepper specifically causes hot tempers, and resolves that her own future kitchen will use none at all.",
+      "practiced_by": [
+        "CHAR-cook",
+        "CHAR-duchess"
+      ],
+      "locations": [],
+      "visual": "A smoke-thick kitchen, a cauldron of soup on the fire, everyone present sneezing and wiping their eyes except the person actually stirring the pot.",
+      "sound": "A near-constant chorus of sneezing threaded under the dialogue.",
+      "source": {
+        "chapter": "ch006",
+        "quote": "“There’s certainly too much pepper in that soup!” Alice said to herself, as well as she could for sneezing."
+      },
+      "also_seen": [
+        {
+          "chapter": "ch009",
+          "quote": "“When _I’m_ a Duchess,” she said to herself... “I won’t have any pepper in my kitchen _at all_.”"
+        }
+      ],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "CUL-024",
+      "name": "Treacle as everyday/medicinal staple food",
+      "category": "food_dining",
+      "summary": "Treacle (a cheap, thick syrup) is invoked as a plausible-enough staple that a household could subsist on, badly, and 'treacle-well' is treated as a real, if odd, type of well one might live at the bottom of. Historically, treacle was a genuine cheap Victorian pantry staple sometimes credited with medicinal properties, and a real holy well near Oxford (Binsey, associated with St Frideswide) was locally nicknamed a 'treacle well' in exactly the period and place Carroll and his child-listeners knew; the in-text joke leans on that real local/period food culture rather than inventing one from nothing.",
+      "practiced_by": [
+        "CHAR-dormouse"
+      ],
+      "locations": [],
+      "visual": "A well with a rope and bucket, treated matter-of-factly as a household's food source, no different in kind from a water-well.",
+      "sound": null,
+      "source": {
+        "chapter": "ch007",
+        "quote": "“They lived on treacle,” said the Dormouse"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch007",
+          "quote": "“It was a treacle-well.”"
+        }
+      ],
+      "inferred": true,
+      "reason": "The in-text 'treacle-well' and the sisters living on treacle are fully sourced verbatim; the real-world grounding (treacle as a genuine cheap Victorian staple, and Binsey's real 'treacle well' near Oxford) is an external historical fact not stated in the source text itself, added here to justify treating this joke as realistic period food culture rather than pure fantasy, consistent with the brief's realistic-drama premise."
+    },
+    {
+      "id": "CUL-025",
+      "name": "The Mock Turtle's school curriculum",
+      "category": "education",
+      "summary": "The undersea day-school the Mock Turtle attended taught a full standard curriculum under punning names: 'Reeling and Writhing' to begin with; then branches of Arithmetic called 'Ambition, Distraction, Uglification, and Derision'; then 'Mystery, ancient and modern, with Seaography'; then, from a visiting weekly master (an old conger-eel), 'Drawling, Stretching, and Fainting in Coils'; and, from a separate Classics master (an old crab), 'Laughing and Grief.' Read at face value in a realistic register, this maps the school onto an ordinary Victorian day-school's core subjects: Reading and Writing; Addition, Subtraction, Multiplication and Division; History and Geography; Drawing, Sketching and Painting in oils; and Latin and Greek — each disguised by a punning near-homophone. The school day itself shrinks by an hour daily (ten hours the first day, nine the next, and so on), which the Gryphon explains is 'the reason they're called lessons — because they lessen from day to day,' with the eleventh day a holiday.",
+      "practiced_by": [
+        "CHAR-mock-turtle",
+        "CHAR-gryphon"
+      ],
+      "locations": [],
+      "visual": "A seated, weeping instructor counting subjects off on his own hands one by one, naming each with visible pride despite constant sighing; a listener miming exhaustion at the list's length.",
+      "sound": "A slow, sobbing recitation rhythm to each subject name, broken by dramatic pauses.",
+      "source": {
+        "chapter": "ch009",
+        "quote": "“Reeling and Writhing, of course, to begin with,” the Mock Turtle replied; “and then the different branches of Arithmetic—Ambition, Distraction, Uglification, and Derision.”"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch009",
+          "quote": "“Well, there was Mystery,” the Mock Turtle replied, counting off the subjects on his flappers, —Mystery, ancient and modern, with Seaography: then Drawling—the Drawling-master was an old conger-eel... he taught us Drawling, Stretching, and Fainting in Coils."
+        },
+        {
+          "chapter": "ch009",
+          "quote": "he taught Laughing and Grief, they used to say"
+        }
+      ],
+      "inferred": true,
+      "reason": "The curriculum's literal wording is fully sourced verbatim; the claim that each punning subject name stands in for a specific real school subject (Reading/Writing, the four arithmetic operations, History/Geography, Drawing/Sketching/oil-painting, Latin/Greek) is the well-established plain-sense reading of Carroll's wordplay, not stated outright in the text itself, and is applied here so the school reads as a real (if satirised) Victorian curriculum rather than an invented fantasy syllabus, consistent with the brief's realistic-drama premise."
+    },
+    {
+      "id": "CUL-026",
+      "name": "The school day that 'lessens', with a fixed weekly holiday",
+      "category": "education",
+      "summary": "Related to CUL-025: the undersea school runs ten hours of lessons on the first day, nine on the next, and so on down, with the explicit pun-logic that lessons are called lessons 'because they lessen from day to day'; the eleventh day, when the countable hours would reach zero, is confirmed as a holiday. It establishes a school-week rhythm structured around a fixed rest day, satirising real schoolroom hour-counting and the weekly holiday custom of Victorian day-schools.",
+      "practiced_by": [
+        "CHAR-mock-turtle",
+        "CHAR-gryphon"
+      ],
+      "locations": [],
+      "visual": "A wall calendar or tally implied only through dialogue counting down hours day by day.",
+      "sound": null,
+      "source": {
+        "chapter": "ch009",
+        "quote": "“Ten hours the first day,” said the Mock Turtle: “nine the next, and so on.”"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch009",
+          "quote": "“Then the eleventh day must have been a holiday?” ... “Of course it was,” said the Mock Turtle."
+        }
+      ],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "CUL-027",
+      "name": "Rote drilling in multiplication tables and geography",
+      "category": "education",
+      "summary": "Schoolroom lessons for a girl of Alice's age include reciting the multiplication table from memory and rattling off geography facts (capital cities) by rote, well enough that she instinctively tests her own identity by trying to recite them under stress; when the recitation comes out garbled, she takes it as proof something has gone wrong with her, showing how central successful rote recall is to a child's sense of being 'herself.'",
+      "practiced_by": [
+        "CHAR-alice"
+      ],
+      "locations": [],
+      "visual": "A child crossing her hands in her lap in the posture used for reciting to a governess, reeling off memorised facts under her breath as a self-test.",
+      "sound": "A hesitant, sing-song recitation rhythm that starts confident and stumbles as errors creep in.",
+      "source": {
+        "chapter": "ch002",
+        "quote": "“four times five is twelve, and four times six is thirteen, and four times seven is—oh dear! I shall never get to twenty at that rate! However, the Multiplication Table doesn’t signify: let’s try Geography. London is the capital of Paris, and Paris is the capital of Rome, and Rome—no, _that’s_ all wrong, I’m certain!”"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch001",
+          "quote": "for, you see, Alice had learnt several things of this sort in her lessons in the schoolroom"
+        }
+      ],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "CUL-028",
+      "name": "Schoolroom foreign-language phrasebooks as a social reflex",
+      "category": "language",
+      "summary": "When at a loss for how to address an unfamiliar creature politely, Alice falls back on patterns memorised from her own lessons rather than inventing new ones: she recalls the vocative declension pattern from her brother's Latin Grammar ('A mouse—of a mouse—to a mouse—a mouse—O mouse!') as a model for how to address a mouse, and later tries out the literal first sentence of her French lesson-book ('Où est ma chatte?') on a foreign-seeming creature, assuming a French mouse might understand French better than English. This shows French and Latin as standard components of a girl's home/day-school education in this world, memorised as fixed opening phrases rather than fluent conversation.",
+      "practiced_by": [
+        "CHAR-alice"
+      ],
+      "locations": [],
+      "visual": "A child visibly reaching for remembered textbook phrases, mouthing them carefully as though reciting rather than conversing naturally.",
+      "sound": "A stilted, textbook-perfect pronunciation of a memorised foreign phrase, at odds with the surrounding natural speech.",
+      "source": {
+        "chapter": "ch002",
+        "quote": "she remembered having seen in her brother’s Latin Grammar, “A mouse—of a mouse—to a mouse—a mouse—O mouse!”"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch002",
+          "quote": "“Où est ma chatte?” which was the first sentence in her French lesson-book."
+        }
+      ],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "CUL-029",
+      "name": "\"Extras\" billed separately at day-schools",
+      "category": "education",
+      "summary": "Standard day-school fees cover a base curriculum, with certain subjects billed on top as optional 'extras' at the end of the bill — in Alice's own school, French and music; at the Mock Turtle's school, French, music, _and washing_ were all listed as extras, which the Mock Turtle takes as proof his school was of a lower, more old-fashioned sort (needing to teach pupils basic hygiene as a paid add-on). This satirises a real fee structure of contemporary girls' schools.",
+      "practiced_by": [
+        "CHAR-alice",
+        "CHAR-mock-turtle"
+      ],
+      "locations": [],
+      "visual": "An itemised school bill, with a short base list and a longer list of 'extra' charges appended below a line.",
+      "sound": null,
+      "source": {
+        "chapter": "ch009",
+        "quote": "“Now at _ours_ they had at the end of the bill, ‘French, music, _and washing_—extra.’”"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch009",
+          "quote": "“Yes,” said Alice, “we learned French and music.”"
+        }
+      ],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "CUL-030",
+      "name": "Alliterative drawing lessons",
+      "category": "education",
+      "summary": "A drawing lesson can be structured around a single starting letter, with students set the exercise of drawing 'everything that begins with an M' (mouse-traps, the moon, memory, 'muchness'). It reads as a real, if absurdly extended, schoolroom drawing/vocabulary exercise rather than pure nonsense, matching the Mock Turtle's school's 'Drawling' master (CUL-025).",
+      "practiced_by": [
+        "CHAR-dormouse"
+      ],
+      "locations": [],
+      "visual": "A slate or sketchbook page with a row of small, unrelated objects drawn side by side, all sharing a first letter.",
+      "sound": null,
+      "source": {
+        "chapter": "ch007",
+        "quote": "“they drew all manner of things—everything that begins with an M—”"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch007",
+          "quote": "“and so these three little sisters—they were learning to draw, you know—”"
+        }
+      ],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "CUL-031",
+      "name": "Posture and manner for reciting a memorised lesson",
+      "category": "education",
+      "summary": "When a child recites a memorised piece for an adult (or, here, tests her own memory aloud), the expected physical posture is hands crossed on the lap, a formal, slightly stiff bearing distinct from ordinary talk. Children in this world are routinely ordered to 'repeat' set pieces on demand by adults or adult-acting figures, and being made to do so is felt by Alice as being sent back to school even when it happens outside any classroom.",
+      "practiced_by": [
+        "CHAR-alice"
+      ],
+      "locations": [],
+      "visual": "A child folding her hands neatly in her lap and sitting up straight before beginning to recite, visibly shifting into 'lesson mode.'",
+      "sound": null,
+      "source": {
+        "chapter": "ch002",
+        "quote": "she crossed her hands on her lap as if she were saying lessons, and began to repeat it"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch010",
+          "quote": "“How the creatures order one about, and make one repeat lessons!” thought Alice; “I might as well be at school at once.”"
+        }
+      ],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "CUL-032",
+      "name": "Nursery safety rules taught to children",
+      "category": "education",
+      "summary": "Children are taught a small stock of practical safety rules through cautionary stories about the fate of children who ignored them: a red-hot poker will burn you if held too long; a deep knife-cut will bleed; and drinking much from a bottle marked 'poison' will disagree with you. These rules are internalised well enough that Alice checks a bottle's label before tasting it purely out of this habit, even in the middle of an otherwise impossible situation.",
+      "practiced_by": [
+        "CHAR-alice"
+      ],
+      "locations": [],
+      "visual": "A child carefully turning a bottle to read its label before drinking, a small deliberate pause that reads as ingrained caution rather than fear.",
+      "sound": null,
+      "source": {
+        "chapter": "ch001",
+        "quote": "she had never forgotten that, if you drink much from a bottle marked “poison,” it is almost certain to disagree with you, sooner or later"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch001",
+          "quote": "such as, that a red-hot poker will burn you if you hold it too long; and that if you cut your finger _very_ deeply with a knife, it usually bleeds"
+        }
+      ],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "CUL-033",
+      "name": "Recitation of moral verse: \"How doth the little busy bee\"",
+      "category": "verse_song",
+      "summary": "A well-known didactic recitation poem taught to children as a standard piece ('How doth the little busy bee'), which Alice attempts to recite from memory as a test of her own identity; under stress the words come out entirely different, transformed into a poem about a crocodile that welcomes little fishes into its jaws instead of the bee's industrious virtue. The garbled version is treated in-world as proof that something is deeply wrong with her, since a correctly-raised child should be able to produce the real poem on demand.",
+      "practiced_by": [
+        "CHAR-alice"
+      ],
+      "locations": [],
+      "visual": "A child reciting confidently at first, then faltering as the words visibly go astray, her own confusion growing with each line.",
+      "sound": "A steady, memorised sing-song cadence that curdles into something faintly menacing as the crocodile imagery takes over.",
+      "source": {
+        "chapter": "ch002",
+        "quote": "How doth the little crocodile\n    Improve his shining tail,\nAnd pour the waters of the Nile\n    On every golden scale!"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch002",
+          "quote": "“I’ll try and say ‘_How doth the little_—’”"
+        }
+      ],
+      "inferred": true,
+      "reason": "The garbled in-story poem and Alice's attempt are fully sourced verbatim; identifying it as a parody of the real didactic poem 'Against Idleness and Mischief' by Isaac Watts (the actual moral-verse original a Victorian child would have been drilled on) is an external literary fact not named in the source text, added here to ground the recitation custom in a real historical schoolroom practice rather than an invented one."
+    },
+    {
+      "id": "CUL-034",
+      "name": "Recitation-on-demand: \"You are old, Father William\"",
+      "category": "verse_song",
+      "summary": "A recitation piece Alice can be ordered to perform on the spot by an adult-acting figure ('Repeat, “You are old, Father William”'), which she launches into with hands folded per the standard recitation posture (CUL-031). The version that comes out is again altered from what a correctly-drilled child would say, this time into a comic dialogue between an impertinent young questioner and an eccentric elderly father who answers each 'how do you manage that' with absurd, faintly transgressive explanations.",
+      "practiced_by": [
+        "CHAR-alice"
+      ],
+      "locations": [],
+      "visual": "A child standing to recite a longer set-piece poem on command from a seated, demanding listener.",
+      "sound": "Alternating voices in the recitation — a prim, questioning youth and a gruff, dismissive old man — carried entirely by the reciter's own vocal shifts.",
+      "source": {
+        "chapter": "ch005",
+        "quote": "“Repeat, ‘_You are old, Father William_,’” said the Caterpillar."
+      },
+      "also_seen": [
+        {
+          "chapter": "ch005",
+          "quote": "“You are old, Father William,” the young man said,\n    “And your hair has become very white;\nAnd yet you incessantly stand on your head—\n    Do you think, at your age, it is right?”"
+        }
+      ],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "CUL-035",
+      "name": "\"Twinkle, twinkle, little bat!\" — the Hatter's concert song",
+      "category": "verse_song",
+      "summary": "A garbled parody of a well-known nursery song, performed by the Hatter at the Queen's formal annual concert (CUL-018); botching it mid-performance is the specific offense that provoked the Queen's public wrath and permanently soured the Hatter's relationship with 'Time' itself, making the song the direct cultural cause of the tea party's frozen six-o'clock.",
+      "practiced_by": [
+        "CHAR-hatter"
+      ],
+      "locations": [],
+      "visual": "A performer breaking off a song mid-verse under a furious royal glare, unable to finish.",
+      "sound": "A wavering, childish tune interrupted abruptly by a shouted royal accusation.",
+      "source": {
+        "chapter": "ch007",
+        "quote": "‘Twinkle, twinkle, little bat!\nHow I wonder what you’re at!’"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch007",
+          "quote": "“Well, I’d hardly finished the first verse,” said the Hatter, “when the Queen jumped up and bawled out, ‘He’s murdering the time! Off with his head!’”"
+        }
+      ],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "CUL-036",
+      "name": "The Duchess's lullaby: \"Speak roughly to your little boy\"",
+      "category": "verse_song",
+      "summary": "A parody nursery lullaby sung by a caregiver while physically shaking a crying baby, with a repeated shouted chorus ('Wow! wow! wow!') joined in by another household member. It inverts the gentle, soothing convention of a real lullaby into open mockery of the child it is meant to comfort, sung with a violent shake timed to the end of every line.",
+      "practiced_by": [
+        "CHAR-duchess",
+        "CHAR-cook"
+      ],
+      "locations": [],
+      "visual": "A caregiver tossing a howling baby roughly up and down in time with a sung verse, another household member barking a chorus in the background.",
+      "sound": "A sing-song, almost cheerful melody set against the mismatched sound of a baby's real distress.",
+      "source": {
+        "chapter": "ch006",
+        "quote": "“Speak roughly to your little boy,\n    And beat him when he sneezes:\nHe only does it to annoy,\n    Because he knows it teases.”"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch006",
+          "quote": "CHORUS.\n(In which the cook and the baby joined):\n“Wow! wow! wow!”"
+        }
+      ],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "CUL-037",
+      "name": "Recitation-on-demand: \"'Tis the voice of the Lobster\"",
+      "category": "verse_song",
+      "summary": "Another recitation piece Alice is ordered to 'stand up and repeat' by a figure claiming authority over her, immediately following her account of an earlier failed recitation. The piece that comes out is once again a garbled parody, this time replacing a moralising verse about a lazy sluggard with a vain, self-conscious lobster grooming itself. Alice's own aside — 'I might as well be at school at once' — makes explicit that being ordered to recite on demand by an adult-acting authority figure is, socially, identical to being back in the schoolroom.",
+      "practiced_by": [
+        "CHAR-alice"
+      ],
+      "locations": [],
+      "visual": "A standing recitation performed under the close, expectant gaze of two listeners pressed in on either side.",
+      "sound": "A nervous, uneven recitation rhythm, tripping over unfamiliar substituted words.",
+      "source": {
+        "chapter": "ch010",
+        "quote": "“Stand up and repeat ‘’_Tis the voice of the sluggard_,’” said the Gryphon."
+      },
+      "also_seen": [
+        {
+          "chapter": "ch010",
+          "quote": "“’Tis the voice of the Lobster; I heard him declare,\n“You have baked me too brown, I must sugar my hair.”"
+        }
+      ],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "CUL-038",
+      "name": "The Lobster Quadrille song: \"Will you walk a little faster?\"",
+      "category": "verse_song",
+      "summary": "The sung accompaniment to the Lobster Quadrille (CUL-015), performed slowly and sadly with a repeated call-and-response chorus ('Will you, won't you, will you, won't you, will you join the dance?') inviting a reluctant partner to join in, structurally identical to a real English country-dance calling song.",
+      "practiced_by": [
+        "CHAR-mock-turtle"
+      ],
+      "locations": [],
+      "visual": "A single singer performing slowly and mournfully while two dancers circle a seated listener, the song's repeated refrain timed to the dance's steps.",
+      "sound": "A slow, insistent call-and-response refrain repeated with small variations across three verses.",
+      "source": {
+        "chapter": "ch010",
+        "quote": "“Will you walk a little faster?” said a whiting to a snail.\n“There’s a porpoise close behind us, and he’s treading on my tail."
+      },
+      "also_seen": [
+        {
+          "chapter": "ch010",
+          "quote": "Will you, won’t you, will you, won’t you, will you join the dance?"
+        }
+      ],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "CUL-039",
+      "name": "\"Beautiful Soup\" — the Mock Turtle's song",
+      "category": "verse_song",
+      "summary": "A mournful ballad in praise of soup, sung by the Mock Turtle in a voice repeatedly choked with sobs, built around a repeated drawn-out refrain ('Beau—ootiful Soo—oop!') stretched out for musical effect across long vowel sounds. It functions as the character's personal, tragicomic theme song, tying his identity as the animal a soup is named after directly into his own performance culture (see CUL-020).",
+      "practiced_by": [
+        "CHAR-mock-turtle"
+      ],
+      "locations": [],
+      "visual": "A weeping singer performing with visible emotional excess, stretching single syllables out over several beats.",
+      "sound": "A slow, sobbing, melismatic vocal performance, elongating vowels dramatically ('Soo—oop').",
+      "source": {
+        "chapter": "ch010",
+        "quote": "“Beautiful Soup, so rich and green,\nWaiting in a hot tureen!\nWho for such dainties would not stoop?\nSoup of the evening, beautiful Soup!”"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch010",
+          "quote": "The Mock Turtle sighed deeply, and began, in a voice sometimes choked with sobs, to sing this"
+        }
+      ],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "CUL-040",
+      "name": "The formal verse accusation read by the herald",
+      "category": "verse_song",
+      "summary": "A courtroom accusation is delivered not as prose but as a short formal rhyme, read aloud from a parchment scroll by the herald after a ceremonial trumpet call: 'The Queen of Hearts, she made some tarts... The Knave of Hearts, he stole those tarts, And took them quite away!' Legal accusations in this world's court culture take the form of a fixed, quotable rhyme rather than a formal written indictment in plain prose.",
+      "practiced_by": [
+        "CHAR-white-rabbit"
+      ],
+      "locations": [],
+      "visual": "A herald unrolling a parchment scroll and reading its rhymed text aloud to a hushed courtroom after a trumpet fanfare.",
+      "sound": "A clear, formal reading voice giving the rhyme its full sing-song scansion despite the serious occasion.",
+      "source": {
+        "chapter": "ch011",
+        "quote": "“The Queen of Hearts, she made some tarts,\n    All on a summer day:\nThe Knave of Hearts, he stole those tarts,\n    And took them quite away!”"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch011",
+          "quote": "the White Rabbit blew three blasts on the trumpet, and then unrolled the parchment scroll, and read as follows"
+        }
+      ],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "CUL-041",
+      "name": "Unsigned nonsense verses accepted as courtroom evidence",
+      "category": "verse_song",
+      "summary": "A set of verses of uncertain authorship, found unsigned and undirected, is introduced and accepted as material trial evidence; the court's practice is to read it aloud in full ('begin at the beginning... and go on till you come to the end: then stop') and then force a line-by-line interpretation matching pieces of the verse onto the facts of the case, regardless of whether the verse actually means anything. This custom of treating any found rhymed text as potentially binding legal evidence, however strained the reading, satirises real courtroom over-interpretation of ambiguous written evidence.",
+      "practiced_by": [
+        "CHAR-white-rabbit",
+        "CHAR-king-of-hearts",
+        "CHAR-queen-of-hearts"
+      ],
+      "locations": [],
+      "visual": "A folded paper unfolded and read aloud verse by verse in open court, the judge then pointing at physical objects in the room (a dish of tarts) to 'match' lines of the poem to them.",
+      "sound": null,
+      "source": {
+        "chapter": "ch012",
+        "quote": "“Begin at the beginning,” the King said gravely, “and go on till you come to the end: then stop.”"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch012",
+          "quote": "“Why, there they are!” said the King triumphantly, pointing to the tarts on the table. “Nothing can be clearer than _that_.”"
+        }
+      ],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "CUL-042",
+      "name": "Wordplay-driven conversational register",
+      "category": "language",
+      "summary": "A defining, recurring conversational style throughout the world Alice moves through: characters routinely argue past each other by exploiting the literal, homophonic, or grammatical double meaning of ordinary phrases ('say what you mean' vs. 'mean what you say'; 'porpoise' vs. 'purpose'; 'a knot' vs. 'I had not'; 'the words don't fit you' as a pun on 'fits'). This pedantic, pun-chasing mode of talk is treated as normal social discourse rather than deliberate joking by the characters who use it, and it is a primary source of Alice's repeated frustration ('It's really dreadful, the way all the creatures argue').",
+      "practiced_by": [
+        "CHAR-hatter",
+        "CHAR-march-hare",
+        "CHAR-mouse",
+        "CHAR-mock-turtle",
+        "CHAR-king-of-hearts",
+        "CHAR-alice"
+      ],
+      "locations": [],
+      "visual": null,
+      "sound": "Clipped, argumentative exchanges with sudden emphatic stress on the pivotal pun word, often followed by a beat of silence or general laughter once the pun lands.",
+      "source": {
+        "chapter": "ch007",
+        "quote": "“Then you should say what you mean,” the March Hare went on."
+      },
+      "also_seen": [
+        {
+          "chapter": "ch010",
+          "quote": "“Don’t you mean ‘purpose’?” said Alice. “I mean what I say,” the Mock Turtle replied in an offended tone."
+        },
+        {
+          "chapter": "ch012",
+          "quote": "“Then the words don’t _fit_ you,” said the King... “It’s a pun!” the King added in an offended tone, and everybody laughed"
+        },
+        {
+          "chapter": "ch003",
+          "quote": "“you had got to the fifth bend, I think?” ... “I had _not!_” ... “A knot!” said Alice"
+        }
+      ],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "CUL-043",
+      "name": "Occupational nicknames used as proper names",
+      "category": "language",
+      "summary": "Several characters are named entirely after their trade or origin rather than a personal name: 'the Hatter' identifies himself by his trade directly ('I'm a hatter'), the Duchess's cook is never given any other name, and 'Bill the Lizard' pairs a common first name with a species-as-surname. The Mock Turtle is likewise named after the dish he stands for rather than any given name. This naming convention — trade/type as name — is the standard way secondary figures are identified and addressed in this world, distinct from named principals (Alice, the royal family by title).",
+      "practiced_by": [
+        "CHAR-hatter",
+        "CHAR-cook",
+        "CHAR-bill-the-lizard",
+        "CHAR-mock-turtle"
+      ],
+      "locations": [],
+      "visual": null,
+      "sound": null,
+      "source": {
+        "chapter": "ch011",
+        "quote": "“I keep them to sell,” the Hatter added as an explanation; “I’ve none of my own. I’m a hatter.”"
+      },
+      "also_seen": [],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "CUL-044",
+      "name": "Taboo conversational topics: cats and dogs among small/vulnerable company",
+      "category": "etiquette",
+      "summary": "Bringing up cats or dogs — even affectionately, even in praise — is a serious conversational misstep in the company of mice and small birds, who react with visible fright, offense, or flight rather than polite disagreement. The taboo is strong enough that an entire party of birds and animals quietly leaves on invented pretexts the moment a cat (Dinah) is mentioned favourably, and a swimming Mouse physically recoils and must be coaxed back with an explicit promise never to raise the subject again.",
+      "practiced_by": [
+        "CHAR-mouse",
+        "CHAR-lory",
+        "CHAR-alice"
+      ],
+      "locations": [],
+      "visual": "A relaxed group conversation curdling instantly the moment one word is said, listeners visibly stiffening or edging away, then inventing excuses to leave one by one.",
+      "sound": null,
+      "source": {
+        "chapter": "ch002",
+        "quote": "“Not like cats!” cried the Mouse, in a shrill, passionate voice... “Our family always _hated_ cats: nasty, low, vulgar things! Don’t let me hear the name again!”"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch003",
+          "quote": "This speech caused a remarkable sensation among the party. Some of the birds hurried off at once: one old Magpie began wrapping itself up very carefully, remarking, “I really must be getting home; the night-air doesn’t suit my throat!”"
+        }
+      ],
+      "inferred": false,
+      "reason": null
+    }
+  ]
+}

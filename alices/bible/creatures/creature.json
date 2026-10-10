@@ -1,0 +1,371 @@
+{
+  "_meta": {
+    "file": "bible/creatures/creature.json",
+    "status": "authored_v1",
+    "owner": "04-creatures/creature",
+    "write_via": "04-creatures/creature (direct, per WRITE_RULES.md section 9 ownership table); memory-bible collects this file into the Bible view per bible/creatures/creature.json SOUL.md output table",
+    "task_id": "p3-creature",
+    "generated": "2026-09-22",
+    "content_language": "English (project setting)",
+    "scope": "Registry of (a) real, on-screen, non-speaking animals, and (b) — added by BIB-0027 — supplementary CGI rendering-spec entries for creature-bodied CHAR-* figures. Under SUP-002 as amended by BIB-0027 (user ruling 2026-09-22, chat: \"会说话的角色可以用CGI动物，因为影片应该是写实奇幻风格；另外环境加入穆夏绘画的风格\"; brief.md: 'Realistic fantasy film adapted from a fairy tale'), every TALKING animal and card figure (White Rabbit-as-herald, Mouse, Dodo, Duck, Lory, Eaglet, Magpie, Canary, Caterpillar, footmen, Cook, Cheshire Cat, Pigeon, King/Queen/Knave and card retinue, Gryphon, Mock Turtle, jurors including the guinea-pig juror) is now rendered as a photoreal CGI animal or creature integrated into live-action plates (card figures and other human dream-figures are unchanged, SUP-004), but WRITE_RULES.md P-007's CHAR/CRE split still governs OWNERSHIP, not render technique: these speaking figures remain registered as CHAR-* in bible/characters/ (personality, dialogue, voice, casting), never re-registered here. Per BIB-0027 follow_ups ('04-creatures/creature and 03-characters/appearance: CGI anatomy for the animal-bodied CHAR-*'), this file's role for the Gryphon and the Mock Turtle (SUP-010, both fantastical creatures with no CHAR-* human-performer alternative left standing) is to hold their CGI anatomy/rendering-spec entries, cross-linked back to their CHAR id via 'linked_char' and never duplicating personality/dialogue/voice. This file also still catalogues the real, silent (non-anthropomorphic) animals the shooting script puts on screen: the waking-world white rabbit (CRE-001, unaffected by BIB-0027, the sole practically-filmed non-CGI animal in the film) and — per BIB-0027's extension of the photoreal register to non-speaking dream animals, confirmed at H2 (approval ba96732d, 2026-09-23) — the puppy, the croquet hedgehogs and flamingoes (CRE-002..004) and the Duchess's baby's pig end-state (CRE-007), whose rendering technique is photoreal CGI, confirmed.",
+    "id_prefixes": { "CRE-": "creature (numeric, CRE-001), per bible/WRITE_RULES.md section 4" },
+    "category_note": "This is a realistic-fantasy adaptation (brief.md: 'Realistic fantasy film adapted from a fairy tale' — BIB-0027 corrected a long-standing misquote, 'realistic, non-fantasy drama', that predated this reading; cultivation.json is still a SUP-* stub with no rank/power system). Category values used in this file: 'ordinary_animal' for real-world species (CRE-001..004, and CRE-007's real-world pig species), and 'cgi_fantastical_creature' (added by BIB-0027) for creatures with no real-world referent that are nonetheless rendered photoreal, not stylised (the Gryphon and the Mock Turtle, SUP-010). No entry carries a 'combat' block (abilities/rank_ref/evidence) — there is still no cultivation.json rank ladder to hang it on, and none of these creatures fight anyone on screen (the Gryphon and Mock Turtle are sorrowful/comic escorts, not adversaries). SOUL.md's required fields for these entries are id/category/forms[].appearance(size,surface,head,eyes)/source, all of which are populated below.",
+    "zero_entries_considered_and_excluded": [
+      {
+        "candidate": "Dinah (the family cat)",
+        "verdict": "excluded — never physically appears on screen",
+        "reason": "Dinah is spoken of by Alice (ch001-p10, ch002-p22, ch003-p44/46/48, ch004-p04/p30) but is never shown; per H1 ruling 5.3 B and cultivation.json cross_domain_assumption XA-magic-03/reconciliation, Dinah is echoed only as light doubling into the Cheshire Cat performer (a CHAR-*, owned by 03-characters). No real cat appears on screen, so no CRE entry is created for her."
+      },
+      {
+        "candidate": "waking-frame farm animals (sheep, cattle) from the sister's closing reverie",
+        "verdict": "excluded — sound-only, not shown on screen",
+        "reason": "ch012-p70 is explicit that the sister sits 'with closed eyes' and only imagines what she would hear 'though she knew she had but to open them again' — the sheep-bells/shepherd-boy/cattle-lowing mapping is a counterfactual, unopened-eyes hearing, not a witnessed sight. cultivation.json SUP-001's own sound_signature already renders this as ambient audio ('distant sheep-bells... can bleed faintly into the loudest Wonderland moments'), not as a visual cutaway. Per WORKFLOW.md/SOUL.md scope ('生物图鉴' = on-screen appearance cards for image generation), an animal that is designed to be heard, not seen, does not need a drawable appearance card. If 07-directing later stages a visible cutaway to the neighbouring farm (LOC-neighbouring-farm/LOC-farmyard are registered waking places), that direction should return this file for a defined CRE entry at that time; nothing in the current locked Bible commits to showing the farm on screen."
+      },
+      {
+        "candidate": "goldfish / cart-horse / bats / oyster",
+        "verdict": "excluded — verbal similes only, never on screen",
+        "reason": "ch012-p01/p02 (goldfish), ch004-p38 (cart-horse), ch001-p10 (bats) and ch003-p43 (oyster) are all Alice's own remembered comparisons or drowsy word-play, spoken/thought, with no accompanying scene showing the animal."
+      },
+      {
+        "candidate": "Magpie, Canary, and every other bird/animal in the ch002-ch003 pool-of-tears / Caucus-race cast",
+        "verdict": "excluded — all speak, so they are CHAR-* territory",
+        "reason": "ch003-p47 gives the Magpie and Canary direct quoted dialogue (ch003-d0068/d0069); per SUP-002 they are dream-figure human performers, same as the already-forward-referenced Mouse/Dodo/Duck/Lory/Eaglet. Registering their casting/appearance is 03-characters/character-manager's job, not creature's; flagging here only so the omission reads as a deliberate boundary call, not an oversight. Note (BIB-0027): these figures are now rendered as photoreal CGI animals rather than human performers, but ownership is unchanged — still CHAR-*, not CRE-*; this file only supplies CGI rendering specs for the two fantastical creatures without any surviving human-performer alternative (Gryphon, Mock Turtle, see CRE-005/CRE-006)."
+      }
+    ],
+    "amendments": [
+      {
+        "change_id": "BIB-0031",
+        "date": "2026-09-23",
+        "task_id": "p4-h2-creature-2",
+        "authority": "Follow-up to the H2 art-style-lock signature at G4 (approval ba96732d, runs/g4/gate.json), closing the one defect that gate left open against this file: qa/defects/DEF-p4-char-concept-202 (opened by 06-art/character-concept — CRE-005/CRE-006's rendering-spec entries disagreed with CHAR-gryphon/CHAR-mock-turtle's appearance cards on visible detail, and the H2-locked sheets were drawn from the appearance cards, not from this file).",
+        "arbitration_rule": "Per the follow-up work order: the H2-locked sheet is the reference, so this file's colour, hide-vs-scale and eye-colour fields are realigned to bible/characters/CHAR-gryphon/appearance.json and bible/characters/CHAR-mock-turtle/appearance.json wherever the two disagreed and the sheet had followed the appearance card. For the size/wingspan/shell-length measurements, which a plain-backdrop sheet cannot show either way, this file adopts the appearance-card figures rather than keeping its own designed figures: 03-characters/appearance's numbers are what the character-consistency check reads downstream, and the whitebox/staging chain needs one number per creature, not two Bible layers quietly disagreeing. bible/characters/** was not edited (owned by memory-bible, which had just finished its own pass there at BIB-0029); nothing found here argues the appearance-card number should change instead — see runs/p4-h2-creature-2/result.json for the full reasoning per field.",
+        "entries_changed": [
+          "CRE-005.forms[0].appearance.size (shoulder height 90-110cm -> 110-120cm; added head-sitting height ~150-165cm; wingspan 2.5-3m -> ~4m, all matching CHAR-gryphon/appearance.json build)",
+          "CRE-005.forms[0].appearance.eyes (pale amber-gold -> amber-hazel, matching CHAR-gryphon/appearance.json eyes.color)",
+          "CRE-005.reason (arbitration note appended)",
+          "CRE-006.forms[0].appearance.size (shell length 70-90cm -> carapace length 110-120cm, matching CHAR-mock-turtle/appearance.json build; head-sitting height clarified as ~110-125cm)",
+          "CRE-006.forms[0].appearance.surface (front flippers and most of the neck: dun-brown calf hide -> grey-olive scaled turtle skin blending into calf hide only at the head, matching CHAR-mock-turtle/appearance.json hair/rendering.limits; carapace 'weathered ridged brown-green' -> 'olive-brown with faded amber-and-dark hexagonal scutes' plus a few barnacles, matching CHAR-mock-turtle/appearance.json hair.color)",
+          "CRE-006.forms[0].appearance.head (added the brown-and-white patching, white blaze and floppy-eared description from CHAR-mock-turtle/appearance.json face/hair)",
+          "CRE-006.forms[0].appearance.eyes (added 'dark brown', matching CHAR-mock-turtle/appearance.json eyes.color; the defect did not flag this field but it was silently uncoloured, so it is brought into line under the same colour rule)",
+          "CRE-006.reason (arbitration note appended)"
+        ],
+        "defects_closed": ["DEF-p4-char-concept-202"],
+        "no_image_change": "No sheet was regenerated or re-rolled (auto-reroll budget 0). assets/concepts/creatures/CRE-005 and CRE-006 sheets are unchanged and already matched the appearance-card wording this entry adopts, since the sheets were drawn from the appearance cards in the first place."
+      },
+      {
+        "change_id": "BIB-0032",
+        "renumbered_from": "BIB-0029. This amendment and task p4-h2-bible both self-assigned BIB-0029 on 2026-09-23 without a duplicate check (qa/defects/DEF-p4-creature-404). Ruled by memory-bible under BIB-0033: bible/changelog.md is the register, so the entry already logged there keeps BIB-0029 and this one takes the next free number. It is now logged in bible/changelog.md as BIB-0032.",
+        "date": "2026-09-23",
+        "task_id": "p4-h2-creature",
+        "authority": "H2 art-style-lock signature at G4, approval ba96732d (runs/g4/gate.json, decision PASS_WITH_WAIVER), folding in style.json open_points_pending_H2 rulings that touch this file's cards.",
+        "entries_changed": ["CRE-001.distinct_from (BIB-0027-stale wording removed)", "CRE-001.screen_treatment (BIB-0027-stale wording removed)", "CRE-002.screen_treatment/rendering_status (pending_H2 -> confirmed_by_H2)", "CRE-003.screen_treatment/rendering_status (pending_H2 -> confirmed_by_H2)", "CRE-004.screen_treatment/rendering_status (pending_H2 -> confirmed_by_H2)", "CRE-007 (name, scope_note, rendering, forms[0].appearance, behaviour, design_proposal, reason: aligned to the approved swaddling / hidden-cut-or-cloth-and-framing wording, DEF-p4-creature-401 resolved)"],
+        "not_in_scope_here": "H2-footmen-anatomy (CHAR-frog-footman/CHAR-fish-footman) and H2-caterpillar-face (CHAR-caterpillar) have no CRE-* entries in this file — those figures are dialogued CHAR-* territory per this file's own zero_entries_considered_and_excluded note, and their appearance cards live in bible/characters/**, out of scope for this task order (owned by 00-orchestration/memory-bible at the time of this amendment). No action taken on them here.",
+        "defects_closed": ["DEF-p4-creature-401", "DEF-p4-creature-402"],
+        "defects_left_open_waived": ["DEF-p4-creature-403 (major, waived at G4 per runs/g4/gate.json waivers[]; CRE-005/CRE-006 sheets and cards unchanged, no re-roll)"]
+      },
+      {
+        "change_id": "BIB-0027",
+        "date": "2026-09-22",
+        "task_id": "p4-cr-creature",
+        "authority": "User ruling in chat, 2026-09-22 (answer to qa/defects/DEF-p4-style-001, findings a = option B, b = option B extended to Mucha/Art Nouveau): \"会说话的角色可以用CGI动物，因为影片应该是写实奇幻风格；另外环境加入穆夏绘画的风格\". Supersedes the H1 5.1 A human-performer reading for talking animals and for the Gryphon/Mock Turtle (cultivation.json SUP-002, SUP-010, XA-magic-02). Scope interpretation (species list, Footmen anatomy, non-speaking-animal extension) is the workflow-orchestrator's, re-surfaced at H2; marked pending_H2 below where applicable.",
+        "entries_changed": ["_meta.scope", "_meta.category_note", "zero_entries_considered_and_excluded[Magpie/Canary].reason (note added)", "CRE-002.screen_treatment (rendering_status added)", "CRE-003.screen_treatment (rendering_status added)", "CRE-004.screen_treatment (rendering_status added)", "CRE-005 (new — the Gryphon)", "CRE-006 (new — the Mock Turtle)", "CRE-007 (new — the pig end-state, pending_H2)"],
+        "entries_unchanged_by_design": "CRE-001 (the waking-world white rabbit): unaffected — the rule stays 'the real, mute, unclothed rabbit unchanged' (BIB-0027 task instruction); still the sole real (non-CGI), practically-filmed animal in the film."
+      }
+    ]
+  },
+  "creatures": [
+    {
+      "id": "CRE-001",
+      "name": "The White Rabbit (waking-world, real animal)",
+      "dictionary_ref": "TERM-0026",
+      "species": "domestic-or-wild white rabbit (Oryctolagus cuniculus), white-coated, pink-eyed",
+      "category": "ordinary_animal",
+      "distinct_from": "CHAR-white-rabbit (the talking, waistcoat-and-watch dream-figure herald who appears from ev0002 onward, rendered as a photoreal CGI animal per BIB-0027/H2 approval ba96732d — the pre-BIB-0027 'human performer per SUP-002' reading is superseded). This CRE-001 entry covers only the mute, unclothed, practically-filmed rabbit seen in the waking-world bracket of ch001, before the dream begins.",
+      "forms": [
+        {
+          "stage": "waking-real",
+          "since_chapter": "ch001",
+          "appearance": {
+            "size": "A small, ordinary rabbit — roughly 35-40 cm from nose to tail, sitting about knee-to-shin height on a ten-year-old child. No forced-perspective or scale technique (SUP-003) applies to this entity: it is only ever seen at its own real-world size, in the waking-world register.",
+            "surface": "Pure white, short, dense fur over the whole body; pale pink skin visible through the thin fur of the ears and around the nose.",
+            "head": "Compact, rounded head; long upright ears about 8-9 cm, angled forward and swivelling; a constantly twitching pink nose and long white whiskers.",
+            "eyes": "Pink (albino) eyes — stated directly in the source.",
+            "marks": ["no clothing, no waistcoat, no pocket watch, no collar — those items belong only to CHAR-white-rabbit's dream costuming, never to this real animal"]
+          }
+        }
+      ],
+      "habits": {
+        "temperament": "Skittish and quick; bolts in a straight line away from a running child rather than pausing or reacting to her, and vanishes into its burrow without hesitation.",
+        "habitat_refs": ["LOC-meadow-field", "LOC-rabbit-hole-entrance"],
+        "diet": "Grass and field clover, i.e. ordinary wild-rabbit forage (not shown on screen)."
+      },
+      "behaviour": "Runs close past Alice across the field at speed and, without pausing, pops down into a burrow under the hedge; entirely silent throughout — no vocalisation, no pause, no engagement with Alice. It is the last thing Alice's waking eyes see before she follows it down the hole and (per SUP-001) begins to drift into her dream partway through the fall that follows.",
+      "screen_treatment": "Shot as a real, trained/handled rabbit (or a plate/insert of one) on location for the ch001 bank-and-field scene — the only practically-filmed, non-CGI animal on screen in the whole film (every other animal and creature figure, talking or silent, is photoreal CGI per BIB-0027/H2 approval ba96732d); consistent with world.json wonderland_real_counterparts key cp-rabbit-hole.",
+      "appearances": ["ch001"],
+      "source": {
+        "chapters": ["ch001"],
+        "citations": [
+          { "chapter": "ch001", "paragraph": "ch001-p02", "quote": "suddenly a White Rabbit with pink eyes ran close by her" },
+          { "chapter": "ch001", "paragraph": "ch001-p03", "quote": "she ran across the field after it, and fortunately was just in time to see it pop down a large rabbit-hole under the hedge" }
+        ]
+      },
+      "inferred": true,
+      "reason": "The source gives pink eyes, whiteness, the field chase and the hedge burrow verbatim (ch001-p02/p03); ear length, fur texture and exact size are designed for image-generation precision (SOUL.md drawable-appearance requirement) and are not stated in the source. The 'no clothing/no watch' exclusion is a design decision that separates this real animal from CHAR-white-rabbit, grounded in world.json cp-rabbit-hole's 'real white rabbit ... running ... into a burrow' reading and SUP-002's 'it never speaks' ruling."
+    },
+    {
+      "id": "CRE-002",
+      "name": "The Puppy",
+      "dictionary_ref": "TERM-0050",
+      "species": "large-breed domestic puppy (still growing into oversized paws and a gangly frame)",
+      "category": "ordinary_animal",
+      "forms": [
+        {
+          "stage": "puppy",
+          "since_chapter": "ch004",
+          "appearance": {
+            "size": "A real, ordinary-sized puppy of a large breed — approximately 45-55 cm at the shoulder, with the gangly, not-yet-grown-into-its-paws proportions of a young dog. It reads as 'enormous' on screen purely because Alice herself is shrunk to a few inches tall at this point in the dream (SUP-003's forced-perspective/set-scale staging); the puppy's own real-world size never changes.",
+            "surface": "Short, light tan/fawn coat typical of an English sporting or farm-type mixed breed of the period, slightly rough and unkempt around the neck and chest.",
+            "head": "Rounded, still-puppyish head with soft, floppy ears and a blunt, undefined muzzle.",
+            "eyes": "Large, round eyes, stated directly in the source.",
+            "marks": ["oversized front paws relative to its legs, the visible mark of a growing large-breed puppy", "tongue lolling out when panting after play"]
+          }
+        }
+      ],
+      "habits": {
+        "temperament": "Boisterous, friendly and easily excited; treats the stick (and, unknowingly, tiny Alice) as play rather than threat.",
+        "habitat_refs": ["LOC-thick-wood"],
+        "diet": "Ordinary domestic dog diet (not shown on screen)."
+      },
+      "behaviour": "Looks down at tiny Alice with large round eyes and feebly stretches out one paw toward her; when she offers it a stick, it leaps into the air off all four feet with a yelp of delight, rushes and 'worries' the stick, tumbles head over heels chasing it round a thistle, makes repeated short charging runs while barking hoarsely, and finally sits down panting a good way off with its tongue hanging out and eyes half shut, letting Alice slip away exhausted but unharmed.",
+      "screen_treatment": "(Amended BIB-0027, user ruling 2026-09-22; confirmed at H2, approval ba96732d 2026-09-23.) A photoreal CGI puppy integrated into live-action plates alongside forced-perspective/oversized-prop staging for the SUP-003 scale gap (thistle, stick, ground cover all built to Alice's tiny scale) — naturalistic fur, muscle and weight, ordinary canine motion, no cartoon styling, per style.json open_points_pending_H2 H2-non-speaking-animals ('the puppy ... photoreal CGI animals: unclothed, silent, naturalistic behaviour, no expressions beyond what the real species does'). Either way the puppy's own real-world size never changes: 'enormous' still reads purely from Alice's SUP-003 scale, never a VFX resize of the dog itself.",
+      "rendering_status": "confirmed_by_H2 (approval ba96732d, 2026-09-23) — photoreal CGI, per style.json H2-non-speaking-animals.",
+      "appearances": ["ch004"],
+      "source": {
+        "chapters": ["ch004"],
+        "citations": [
+          { "chapter": "ch004", "paragraph": "ch004-p37", "quote": "An enormous puppy was looking down at her with large round eyes, and feebly stretching out one paw, trying to touch her." },
+          { "chapter": "ch004", "paragraph": "ch004-p38", "quote": "the puppy jumped into the air off all its feet at once, with a yelp of delight, and rushed at the stick" }
+        ]
+      },
+      "inferred": true,
+      "reason": "The source gives the large round eyes, the play behaviour and the 'enormous'-to-tiny-Alice framing verbatim (ch004-p37/38/39), but never states the puppy's breed, coat colour or true size — those are designed here, deliberately keeping the puppy at an ordinary real-world dog size (per cultivation.json XA-magic-05, size effects are staged as Alice's own practical scale technique, not the animal's)."
+    },
+    {
+      "id": "CRE-003",
+      "name": "The Flamingo",
+      "dictionary_ref": "TERM-0051",
+      "species": "flamingo (used, live, as a croquet mallet)",
+      "category": "ordinary_animal",
+      "forms": [
+        {
+          "stage": "adult",
+          "since_chapter": "ch008",
+          "appearance": {
+            "size": "Adult flamingo proportions, roughly 120-140 cm tall when standing at full height, with a long thin neck making up much of that height.",
+            "surface": "Rosy-pink plumage overall, with black-edged flight feathers visible when the wings shift; pale, smooth-skinned pinkish legs.",
+            "head": "Small head atop a long, S-curved neck; a heavy, down-curved bill, pale pink at the base and black toward the tip.",
+            "eyes": "Pale yellow-orange eyes, small relative to the head.",
+            "marks": ["very long, thin, backward-bending legs, tucked or left dangling when carried under Alice's arm as a mallet", "the neck's constant twisting-around to look up at its handler is this creature's single most identifying behavioural trait on screen"]
+          }
+        }
+      ],
+      "habits": {
+        "temperament": "Skittish and uncooperative when handled as equipment: repeatedly twists its neck around to look its handler in the face instead of holding still, and will make a break for it — on one occasion it is seen struggling to flap up into a tree — if not actively held.",
+        "habitat_refs": ["LOC-croquet-lawn"],
+        "diet": "Small crustaceans and aquatic invertebrates, filtered through the bill (a flamingo's ordinary real-world diet; not shown or relevant on screen — this animal never feeds during the croquet scene)."
+      },
+      "behaviour": "Used, live, as a croquet mallet by the Queen's guests: a player tucks its body under one arm with its legs hanging down and tries to straighten its neck out to swing its head at a hedgehog-ball, but the bird keeps twisting round to look up at the player's face, ruining the shot; left unattended it wanders off across the ground and is once seen trying, helplessly, to fly up into a tree, and must be caught and brought back.",
+      "screen_treatment": "(Amended BIB-0027, user ruling 2026-09-22; confirmed at H2, approval ba96732d 2026-09-23.) Per SUP-011, the flamingo is still never shown being struck or harmed — every contact beat cuts away or is played as a near-miss/fumble. A photoreal CGI flamingo integrated into the live-action plate, sharing the frame and the light with the human performer handling it, per style.json open_points_pending_H2 H2-non-speaking-animals ('the flamingo keeps its real pink and plumage ... no real animal is ever used as a mallet or ball, and no animal is shown being struck') — this also removes any live-animal welfare/handling risk from the neck-twisting and tree-escape beats. Never a costumed human performer: this bird never speaks or reasons and stays in the 'real-bodied animal' register the source itself uses ('live flamingoes').",
+      "rendering_status": "confirmed_by_H2 (approval ba96732d, 2026-09-23) — photoreal CGI, per style.json H2-non-speaking-animals.",
+      "appearances": ["ch008"],
+      "source": {
+        "chapters": ["ch008"],
+        "citations": [
+          { "chapter": "ch008", "paragraph": "ch008-p41", "quote": "the balls were live hedgehogs, the mallets live flamingoes" },
+          { "chapter": "ch008", "paragraph": "ch008-p42", "quote": "just as she had got its neck nicely straightened out, and was going to give the hedgehog a blow with its head, it would twist itself round and look up in her face" },
+          { "chapter": "ch008", "paragraph": "ch008-p62", "quote": "her flamingo was gone across to the other side of the garden, where Alice could see it trying in a helpless sort of way to fly up into a tree" }
+        ]
+      },
+      "inferred": true,
+      "reason": "The source gives the live-flamingo-as-mallet premise, the neck-twisting gag and the tree-escape beat verbatim; exact height, plumage detail and eye colour are standard real-world flamingo facts supplied here for image-generation precision, since the source assumes the reader already knows what a flamingo looks like."
+    },
+    {
+      "id": "CRE-004",
+      "name": "The Hedgehog",
+      "dictionary_ref": "TERM-0052",
+      "species": "European hedgehog (Erinaceus europaeus), used, live, as a croquet ball",
+      "category": "ordinary_animal",
+      "forms": [
+        {
+          "stage": "adult",
+          "since_chapter": "ch008",
+          "appearance": {
+            "size": "A real, adult European hedgehog — roughly 20-25 cm nose-to-tail when extended, curling down to a ball about 10-12 cm across when rolled up tight (the shape actually used as a croquet ball).",
+            "surface": "Dense coat of brown-and-cream-banded spines covering the back, sides and top of the head; soft greyish-brown fur on the face, legs and pale cream underside.",
+            "head": "Pointed, mobile snout; small, mostly spine-hidden rounded ears.",
+            "eyes": "Small, round, black, beady eyes.",
+            "marks": ["the banded brown/cream spine pattern is the single defining visual identifier, distinguishing it instantly from the smooth-feathered flamingo it is paired with in every croquet-ground shot"]
+          }
+        }
+      ],
+      "habits": {
+        "temperament": "Defensive by instinct: curls tightly into a spiny ball when picked up or startled (which is exactly what lets it be used as a ball at all), but readily uncurls and crawls away the moment it is set down and left unattended; will square off and fight with another hedgehog if the two are put near each other.",
+        "habitat_refs": ["LOC-croquet-lawn"],
+        "diet": "Insects and other small invertebrates (an ordinary real-world hedgehog's diet; not shown on screen)."
+      },
+      "behaviour": "Rolled into a ball and struck at with a flamingo-mallet by the Queen's guests; repeatedly uncurls and crawls off mid-shot, forcing players to chase it down, and at one point is found locked in a scrappy fight with a second hedgehog before both scurry out of sight.",
+      "screen_treatment": "(Amended BIB-0027, user ruling 2026-09-22; confirmed at H2, approval ba96732d 2026-09-23.) Per SUP-011, no hedgehog is still ever shown being struck or harmed on screen — contact beats cut away before impact. A photoreal CGI hedgehog integrated into the live-action plate, per style.json open_points_pending_H2 H2-non-speaking-animals ('the hedgehogs uncurl and wander like real hedgehogs') — this also removes any live-animal welfare/handling risk from the uncurl-and-crawl-away and hedgehog-fight beats. Matches the source's own 'live hedgehogs' and stays a real-bodied animal, not a costumed human performer, since it never speaks or reasons.",
+      "rendering_status": "confirmed_by_H2 (approval ba96732d, 2026-09-23) — photoreal CGI, per style.json H2-non-speaking-animals.",
+      "appearances": ["ch008"],
+      "source": {
+        "chapters": ["ch008"],
+        "citations": [
+          { "chapter": "ch008", "paragraph": "ch008-p41", "quote": "the balls were live hedgehogs" },
+          { "chapter": "ch008", "paragraph": "ch008-p42", "quote": "the hedgehog had unrolled itself, and was in the act of crawling away" },
+          { "chapter": "ch008", "paragraph": "ch008-p62", "quote": "The hedgehog was engaged in a fight with another hedgehog" }
+        ]
+      },
+      "inferred": true,
+      "reason": "The source gives the live-hedgehog-as-ball premise, the uncurl-and-crawl-away gag and the hedgehog-fight beat verbatim; exact size, spine colouring and eye detail are standard real-world hedgehog facts supplied for image-generation precision, since the source assumes the reader already pictures an ordinary hedgehog."
+    },
+    {
+      "id": "CRE-005",
+      "name": "The Gryphon",
+      "dictionary_ref": "TERM-0045",
+      "linked_char": "CHAR-gryphon",
+      "scope_note": "New (BIB-0027). This entry supplies ONLY the CGI anatomy/rendering-spec layer for the Gryphon. Character ownership — personality, dialogue style, voice, casting, faction, scene beats — stays with CHAR-gryphon in bible/characters/ (owned by 03-characters/character-manager, whose CHAR-gryphon.performer_concept is listed stale by BIB-0027 and is updated separately, not by this file).",
+      "species": "classical griffin — eagle head, wings and forelegs; lion hindquarters and tail (SUP-010)",
+      "category": "cgi_fantastical_creature",
+      "rendering": {
+        "technique": "photoreal_cgi",
+        "status": "confirmed_by_BIB-0027 (not pending_H2 — only Footman anatomy and the non-speaking-animal extension are pending H2; the Gryphon's CGI-creature identity itself is ratified)",
+        "note": "Integrated into live-action plates, naturalistic feather-to-fur anatomy, real weight and light, no cartoon styling and no human-in-partial-costume; shares scenes and dialogue exchanges directly with human performers (Alice, the Queen)."
+      },
+      "forms": [
+        {
+          "stage": "adult",
+          "since_chapter": "ch009",
+          "appearance": {
+            "size": "Roughly lion-sized at the shoulder when standing on all fours (about 110-120 cm at the shoulder, matching CHAR-gryphon/appearance.json build.height_note), large enough to walk alongside Alice as an unhurried escort; head height about 150-165 cm when sitting up on his haunches (same source); wingspan of roughly 4 m when fully spread, though the wings stay folded for most of its screen time.",
+            "surface": "Foreparts (head, neck, chest, wings and front legs) covered in dense golden-brown feathers, grading in a soft natural transition at the shoulder into the shorter tawny fur of a lion's hindquarters and tail — no hard seam between feather and fur.",
+            "head": "A hooked, sharply pointed eagle's beak and a feathered brow/crest capable of expressive movement (flattening in irritation, rising in surprise), matching the source's range of reactions (chuckling, exclaiming, mock-surprise); no external ears, only feather tufts, as on a real eagle.",
+            "eyes": "Sharp, amber-hazel raptor eyes with a dark pupil, forward-set for binocular focus.",
+            "marks": ["large eagle talons on the front legs, folded under when seated, used expressively ('lifted up both its paws in surprise', ch009-p75)", "clawed lion paws on the hindquarters", "a long, tufted lion tail", "large feathered wings folded along the back at rest, spreading briefly during its more excitable outbursts ('with a bound into the air', ch010-p12)"]
+          }
+        }
+      ],
+      "habits": {
+        "temperament": "Lazy and irreverent when first woken, quickly turning wry, impatient and blackly comic; entirely unbothered by the Queen's authority or by talk of executions ('It's all her fancy, that: they never executes nobody, you know').",
+        "habitat_refs": ["LOC-gryphon-sunning-spot"],
+        "diet": "Not shown or stated on screen; a mixed raptor/predator diet consistent with its chimeric anatomy is assumed but never depicted."
+      },
+      "behaviour": "Discovered asleep in the sun; woken by the Queen, watches her out of sight, then chuckles and explains her threats are empty bluster. Escorts Alice to the Mock Turtle, interjects sardonically throughout the Mock Turtle's school history (exclaiming 'Hjckrrh!' into silences, lifting its paws in mock-surprise, hiding its face when embarrassed), joins the Lobster Quadrille — dancing, treading on Alice's toes, shouting the dance calls — and later whisks Alice off to the trial and whispers commentary on the jury from the courtroom sidelines.",
+      "scenes": ["SCN-gryphon-sunning-spot", "SCN-mock-turtle-ledge", "SCN-courtroom"],
+      "appearances": ["ch009", "ch010", "ch011"],
+      "source": {
+        "chapters": ["ch009", "ch010", "ch011"],
+        "citations": [
+          { "chapter": "ch009", "paragraph": "ch009-p43", "quote": "They very soon came upon a Gryphon, lying fast asleep in the sun. (If you don’t know what a Gryphon is, look at the picture.)" },
+          { "chapter": "ch009", "paragraph": "ch009-p46", "quote": "It’s all her fancy, that: they never executes nobody, you know." },
+          { "chapter": "ch009", "paragraph": "ch009-p75", "quote": "The Gryphon lifted up both its paws in surprise." },
+          { "chapter": "ch010", "paragraph": "ch010-p12", "quote": "The lobsters!\" shouted the Gryphon, with a bound into the air." },
+          { "chapter": "ch010", "paragraph": "ch010-p23", "quote": "waving their forepaws to mark the time" },
+          { "chapter": "ch011", "paragraph": "ch011-p06", "quote": "They’re putting down their names,” the Gryphon whispered in reply" }
+        ]
+      },
+      "inferred": true,
+      "reason": "The source confirms a chimeric eagle/lion 'Gryphon' by name only ('if you don't know what a Gryphon is, look at the picture', a direct nod to the illustration tradition) and gives its paws, its bound into the air and its expressive forepaw gestures verbatim; exact proportions, feather/fur colouring and eye colour are designed here for image-generation precision, following the classical griffin iconography the source itself points to. Rendering technique per cultivation.json SUP-010 as amended by BIB-0027 (user ruling 2026-09-22). Eye colour and size/wingspan figures realigned to CHAR-gryphon/appearance.json by BIB-0031 (closing DEF-p4-char-concept-202-b): the H2-locked sheet (assets/concepts/creatures/CRE-005/sheet.png) was drawn from the appearance card, and the appearance card's numbers are also what 03-characters/appearance and the downstream character-consistency check read, so they are adopted here as the single figure of record rather than keeping this file's own independently-designed numbers."
+    },
+    {
+      "id": "CRE-006",
+      "name": "The Mock Turtle",
+      "dictionary_ref": "TERM-0046",
+      "linked_char": "CHAR-mock-turtle",
+      "scope_note": "New (BIB-0027). This entry supplies ONLY the CGI anatomy/rendering-spec layer for the Mock Turtle. Character ownership — personality, dialogue style, voice, casting, faction (FAC-school-in-the-sea) — stays with CHAR-mock-turtle in bible/characters/ (owned by 03-characters/character-manager, whose CHAR-mock-turtle.performer_concept is listed stale by BIB-0027 and is updated separately, not by this file).",
+      "species": "turtle-bodied creature with a calf's head, hind hooves and tail (SUP-010) — the visual embodiment of the pun 'mock turtle soup', traditionally made from calf",
+      "category": "cgi_fantastical_creature",
+      "rendering": {
+        "technique": "photoreal_cgi",
+        "status": "confirmed_by_BIB-0027 (not pending_H2 — the Mock Turtle's CGI-creature identity itself is ratified)",
+        "note": "Integrated into live-action plates, naturalistic shell, hide and hoof texture, real weight and light, no cartoon styling and no human-in-partial-costume; shares scenes and dialogue exchanges directly with Alice (a human performer) and the Gryphon (CRE-005)."
+      },
+      "forms": [
+        {
+          "stage": "adult",
+          "since_chapter": "ch009",
+          "appearance": {
+            "size": "A turtle-shell body about 110-120 cm in carapace length (matching CHAR-mock-turtle/appearance.json build.height_note), with a calf-proportioned head and neck rising from the front of the shell, bringing its head to roughly 110-125 cm above the ledge when sitting upright (same source) — near a standing Alice's eye level when they talk.",
+            "surface": "Olive-brown turtle carapace with faded amber-and-dark hexagonal scutes, scuffed smooth in patches from constantly sitting on the same rock ledge and marked with a few barnacles, with a paler, softer-textured plastron just visible underneath at the front; grey-olive scaled turtle skin covers the front flippers and most of the neck, blending at the top of the neck into short, dun-brown-and-white calf hide at the head only.",
+            "head": "A long, mournful, brown-and-white patched calf's head and muzzle with a white blaze (not a turtle's beak-like mouth), soft floppy calf ears — the visual heart of the source's 'mock turtle soup made from calf' pun.",
+            "eyes": "Large, dark brown, heavy-lidded eyes, near-constantly filled with tears ('large eyes full of tears', ch009-p49) — the single most identifying feature, sorrowful in almost every scene.",
+            "marks": ["front limbs are turtle flippers, not hooves or hands ('counting off the subjects on his flappers', ch009-p79)", "hind legs end in small cloven calf hooves, not turtle flippers or feet — the mismatched calf-head / turtle-flipper / hoofed-hindleg combination is the creature's core, deliberately incongruous sight gag", "shell is scuffed and worn smooth in the patches where it habitually sits"]
+          }
+        }
+      ],
+      "habits": {
+        "temperament": "Melancholic and given to deep sighs and sudden heavy sobbing that periodically chokes off its own speech ('for a minute or two sobs choked his voice', ch010-p01); brightens briefly, almost manically, when reminiscing about school subjects or demonstrating the Lobster Quadrille, then subsides back into sorrow just as quickly.",
+        "habitat_refs": ["LOC-estuary-shore"],
+        "diet": "Not shown or stated on screen; its schooldays are undersea (FAC-school-in-the-sea, told only), but no feeding behaviour is depicted."
+      },
+      "behaviour": "Found sitting sad and alone on a rock ledge, sighing as if its heart would break; recounts its undersea schooldays to Alice at length (Reeling and Writhing, Ambition/Distraction/Uglification/Derision, Mystery, Seaography, Drawling, Stretching, and Fainting in Coils) with the Gryphon interjecting throughout, repeatedly sobbing and pausing; demonstrates and sings through the Lobster Quadrille with the Gryphon, dancing around Alice and treading on her toes; recites 'Beautiful Soup'.",
+      "scenes": ["SCN-mock-turtle-ledge"],
+      "appearances": ["ch009", "ch010"],
+      "source": {
+        "chapters": ["ch009", "ch010"],
+        "citations": [
+          { "chapter": "ch009", "paragraph": "ch009-p48", "quote": "sitting sad and lonely on a little ledge of rock, and, as they came nearer, Alice could hear him sighing as if his heart would break" },
+          { "chapter": "ch009", "paragraph": "ch009-p49", "quote": "the Mock Turtle, who looked at them with large eyes full of tears, but said nothing" },
+          { "chapter": "ch009", "paragraph": "ch009-p79", "quote": "the Mock Turtle replied, counting off the subjects on his flappers" },
+          { "chapter": "ch010", "paragraph": "ch010-p01", "quote": "The Mock Turtle sighed deeply, and drew the back of one flapper across his eyes ... for a minute or two sobs choked his voice." }
+        ]
+      },
+      "inferred": true,
+      "reason": "The source gives the sobbing, the tear-filled eyes, the flippers ('flappers') and the turtle-soup-from-calf pun verbatim; the exact split of calf-headed vs. turtle-bodied anatomy (hooved hind legs, flippered forelegs, turtle shell) is designed here to realise that pun as a single coherent photoreal creature, since the source assumes the reader supplies the 'mock turtle' joke visually. Rendering technique per cultivation.json SUP-010 as amended by BIB-0027 (user ruling 2026-09-22). Colour, hide-vs-scale and size fields realigned to CHAR-mock-turtle/appearance.json by BIB-0031 (closing DEF-p4-char-concept-202-a): the H2-locked sheet (assets/concepts/creatures/CRE-006/sheet.png) was drawn scaled-flipper/calf-head-only per the appearance card, and the appearance card's carapace-length figure is also what 03-characters/appearance and the downstream character-consistency check read, so it is adopted here as the single figure of record rather than this file's own independently-designed, smaller shell-length figure."
+    },
+    {
+      "id": "CRE-007",
+      "name": "The Pig (the Duchess's baby, pig end-state)",
+      "dictionary_ref": "TERM-0039",
+      "linked_char": "CHAR-duchess-baby",
+      "scope_note": "New (BIB-0027); rendering confirmed at H2 (approval ba96732d, 2026-09-23, style.json open_points_pending_H2 #3). This entry gives ONLY the pig end-state's rendering spec. The character's identity, the human-infant portion of the scene, and the scene's ownership stay with CHAR-duchess-baby in bible/characters/ (03-characters/character-manager; that file's performer_concept was listed stale by BIB-0027 and is reconciled separately, not by this file).",
+      "species": "domestic pig (end-state of the perceptual/physical transformation from a human infant, SUP-006)",
+      "category": "ordinary_animal",
+      "rendering": {
+        "technique": "photoreal_cgi",
+        "status": "confirmed_by_H2 (approval ba96732d, 2026-09-23)",
+        "note": "Supersedes the production question closed as 'no creature entry / human-performer-only, no practical swap' in qa/defects/DEF-p3-char-index-905 under the pre-BIB-0027 SUP-002 wording. Confirmed design, per style.json open_points_pending_H2 #3 as approved at G4/H2: the Duchess's baby is a human infant performer; in its pig end-state it becomes a photoreal CGI piglet in the same swaddling, revealed within the one continuous held shot of SUP-006 (hidden-cut or cloth-and-framing change, no morph), then trots off naturally into the wood. This resolves DEF-p4-creature-401 (closed 2026-09-23)."
+      },
+      "forms": [
+        {
+          "stage": "pig end-state",
+          "since_chapter": "ch006",
+          "appearance": {
+            "size": "An ordinary young domestic pig/piglet, proportioned to be carried, swaddled, in a child's arms and then to trot off on its own four legs at ground level once unwrapped and set down — roughly 40-50 cm at the shoulder once set down.",
+            "surface": "Pink-toned bristled skin with sparse pale bristles, typical of a young domestic pig, visible at the face and any exposed extremities; the body stays wrapped in the same swaddling cloth the infant wore, per the approved H2 reveal (style.json open_points_pending_H2 #3, approval ba96732d): the performer-to-CGI-piglet swap happens via a hidden cut or a cloth-and-framing change within the one continuous held shot of SUP-006, not a morph or a gradual texture blend.",
+            "head": "Broad snout with a flat, disc-like nose and small upright or semi-lopped ears, framed by the same swaddling cloth at the moment of the hidden-cut/cloth-and-framing reveal.",
+            "eyes": "Small, dark, round eyes.",
+            "marks": ["a curled tail — the pig's clearest anatomical tell once it is unwrapped, set down and trotting", "wears the same swaddling cloth the infant wore through the reveal and the carry; the cloth is not shed until Alice sets it down to trot off into the wood"]
+          }
+        }
+      ],
+      "habits": {
+        "temperament": "Placid once fully pig; trots off calmly and without distress ('felt quite relieved to see it trot away quietly into the wood', ch006-p49).",
+        "habitat_refs": ["LOC-thick-wood"],
+        "diet": "Not shown or stated on screen."
+      },
+      "behaviour": "The crying/grunting infant (SUP-006, CHAR-duchess-baby), still swaddled, is carried by Alice; the pig reading becomes unmistakable ('there could be no mistake about it') at the hidden-cut/cloth-and-framing reveal, still in the same swaddling. Alice sets it down, it is freed of the cloth, and it trots away quietly and calmly into the wood under its own power, prompting Alice's remark that it 'makes rather a handsome pig'.",
+      "design_proposal": "Confirmed at H2 (approval ba96732d, style.json open_points_pending_H2 #3): a photoreal CGI piglet, in the same swaddling the infant performer wore, takes over from the live-action infant performer within the single continuous handheld/held-in-arms shot SUP-006's visual_signature requires ('no visible cut or effects transition' on screen) — the swap itself is achieved by a hidden cut or a cloth-and-framing change (the swaddling and Alice's arms/body blocking the transition point), never a morph or a gradual texture drift. Once the swap is complete, the piglet is unwrapped, set down and trots off in a natural CGI-animal walk cycle, ground-level and quadrupedal, into the wood.",
+      "scenes": ["SCN-cheshire-cat-path"],
+      "appearances": ["ch006"],
+      "source": {
+        "chapters": ["ch006"],
+        "citations": [
+          { "chapter": "ch006", "paragraph": "ch006-p48", "quote": "This time there could be _no_ mistake about it: it was neither more nor less than a pig" },
+          { "chapter": "ch006", "paragraph": "ch006-p49", "quote": "So she set the little creature down, and felt quite relieved to see it trot away quietly into the wood." }
+        ]
+      },
+      "inferred": true,
+      "reason": "The source gives the pig identification and the calm trot-off verbatim; the CGI-compositing design and the retained-swaddling / hidden-cut-or-cloth-and-framing reveal are this file's design response to BIB-0027's extension of the photoreal register to non-speaking dream animals, aimed at satisfying SUP-006's own no-visible-cut requirement — confirmed at H2 (approval ba96732d, 2026-09-23), per style.json open_points_pending_H2 #3 as approved."
+    }
+  ]
+}

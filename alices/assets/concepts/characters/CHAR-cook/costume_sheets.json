@@ -1,0 +1,16 @@
+{
+  "character_id": "CHAR-cook",
+  "task_id": "p4-costume-sheet",
+  "agent": "06-art/costume-concept",
+  "identity_anchor": "sheet.png",
+  "sheets": [
+    {"costume_ref": "COS-038", "file": "sheet.png", "default": true, "reuse": true,
+     "label": "Pepper-dusted kitchen working dress", "occasion": "work", "period": "PER-dream",
+     "scenes": ["SCN-duchess-kitchen"], "chapters": ["ch006"], "episodes": ["ep04"],
+     "identity_refs": ["sheet.png"]},
+    {"costume_ref": "COS-039", "file": "sheet_COS-039.png", "default": false,
+     "label": "Witness: working dress with shawl and bonnet", "occasion": "formal", "period": "PER-dream-court",
+     "scenes": ["SCN-courtroom"], "chapters": ["ch011"], "episodes": ["ep08"],
+     "cross_ref": "COS-038", "identity_refs": ["sheet.png"], "visual_en_hit": true}
+  ]
+}

@@ -1,0 +1,340 @@
+{
+  "schema_version": "whitebox_plan.v1",
+  "group_id": "grp007",
+  "scene_id": "SCN-field-hedge-burrow",
+  "basis": "Alice crosses the short spoil_fan -> burrow line: she holds the grp006 arrival anchor at t=0, kneels in the loose spoil 1.0 m short of the mouth at t=1.1 (leaving the open ground composition sh013 asks for between her face and the hole), goes flat at t=3.4 with her body axis pointed at the mouth, reaches an arm in at t=7.6, has head and shoulders inside at t=9.4 and is gone boots-last at t=10.6, after which she is hidden for the rest of sh015 and all of sh016. For prone and lying poses the keyframe position is the foot anchor and the body extends 1.35 m along the head direction, so her prone root sits back on the fan at (1.05, 3.45) with her face arriving at the 0.35 m mouth. sh016 frames the empty black oval that matches into sh017. CRE-001 is underground: declared absent in scene_presence.",
+  "actors": [
+    {
+      "id": "CHAR-alice",
+      "kind": "person",
+      "size_m": [
+        0.378,
+        1.35,
+        0.297
+      ],
+      "keyframes": [
+        {
+          "t": 0.0,
+          "position": [
+            1.06,
+            0.0,
+            3.577
+          ],
+          "pose": "stand",
+          "yaw": -2.192,
+          "head_pitch": 0.45
+        },
+        {
+          "t": 1.1,
+          "position": [
+            1.0,
+            0.0,
+            3.4
+          ],
+          "pose": "kneel",
+          "yaw": -2.192,
+          "head_pitch": 0.45
+        },
+        {
+          "t": 2.2,
+          "position": [
+            1.0,
+            0.0,
+            3.4
+          ],
+          "pose": "kneel",
+          "yaw": -2.192,
+          "head_pitch": 0.6
+        },
+        {
+          "t": 3.0,
+          "position": [
+            1.0,
+            0.0,
+            3.4
+          ],
+          "pose": "kneel",
+          "yaw": -2.192,
+          "head_pitch": 0.6
+        },
+        {
+          "t": 3.05,
+          "position": [
+            1.05,
+            0.0,
+            3.45
+          ],
+          "pose": "prone",
+          "yaw": 0.9403
+        },
+        {
+          "t": 3.8,
+          "position": [
+            1.05,
+            0.0,
+            3.45
+          ],
+          "pose": "prone",
+          "yaw": 0.9403
+        },
+        {
+          "t": 5.6,
+          "position": [
+            1.05,
+            0.0,
+            3.45
+          ],
+          "pose": "prone",
+          "yaw": 0.9403
+        },
+        {
+          "t": 7.0,
+          "position": [
+            1.05,
+            0.0,
+            3.45
+          ],
+          "pose": "prone",
+          "yaw": 0.9403
+        },
+        {
+          "t": 7.6,
+          "position": [
+            1.0,
+            0.0,
+            3.41
+          ],
+          "pose": "prone",
+          "yaw": 0.9403
+        },
+        {
+          "t": 9.4,
+          "position": [
+            0.55,
+            0.0,
+            3.09
+          ],
+          "pose": "prone",
+          "yaw": 0.9403
+        },
+        {
+          "t": 10.6,
+          "position": [
+            0.05,
+            -0.18,
+            2.73
+          ],
+          "pose": "prone",
+          "yaw": 0.9403
+        },
+        {
+          "t": 10.8,
+          "position": [
+            0.0,
+            -0.3,
+            2.69
+          ],
+          "pose": "prone",
+          "yaw": 0.9403,
+          "visible": false
+        },
+        {
+          "t": 14.0,
+          "position": [
+            0.0,
+            -0.3,
+            2.69
+          ],
+          "pose": "prone",
+          "yaw": 0.9403,
+          "visible": false
+        }
+      ]
+    }
+  ],
+  "cameras": [
+    {
+      "shot_id": "sh013",
+      "start": 0,
+      "duration_s": 3.0,
+      "movement": "pedestal_down",
+      "keyframes": [
+        {
+          "t": 0.0,
+          "position": [
+            -1.235,
+            0.85,
+            4.819
+          ],
+          "target": [
+            0.788,
+            0.85,
+            3.067
+          ],
+          "fov": 33.3985
+        },
+        {
+          "t": 0.2,
+          "position": [
+            -1.235,
+            0.85,
+            4.819
+          ],
+          "target": [
+            0.788,
+            0.85,
+            3.067
+          ],
+          "fov": 33.3985
+        },
+        {
+          "t": 1.6,
+          "position": [
+            -1.235,
+            0.3,
+            4.819
+          ],
+          "target": [
+            0.788,
+            0.3,
+            3.067
+          ],
+          "fov": 33.3985
+        },
+        {
+          "t": 3.0,
+          "position": [
+            -1.235,
+            0.3,
+            4.819
+          ],
+          "target": [
+            0.788,
+            0.3,
+            3.067
+          ],
+          "fov": 33.3985
+        }
+      ]
+    },
+    {
+      "shot_id": "sh014",
+      "start": 3.0,
+      "duration_s": 4.0,
+      "movement": "static",
+      "keyframes": [
+        {
+          "t": 0.0,
+          "position": [
+            0.513,
+            0.25,
+            1.892
+          ],
+          "target": [
+            -0.195,
+            0.22,
+            2.537
+          ],
+          "fov": 26.9915
+        },
+        {
+          "t": 4.0,
+          "position": [
+            0.513,
+            0.25,
+            1.892
+          ],
+          "target": [
+            -0.195,
+            0.22,
+            2.537
+          ],
+          "fov": 26.9915
+        }
+      ]
+    },
+    {
+      "shot_id": "sh015",
+      "start": 7.0,
+      "duration_s": 4.0,
+      "movement": "static",
+      "keyframes": [
+        {
+          "t": 0.0,
+          "position": [
+            1.777,
+            0.25,
+            3.981
+          ],
+          "target": [
+            0.0,
+            0.15,
+            2.683
+          ],
+          "fov": 33.3985
+        },
+        {
+          "t": 4.0,
+          "position": [
+            1.777,
+            0.25,
+            3.981
+          ],
+          "target": [
+            0.0,
+            0.15,
+            2.683
+          ],
+          "fov": 33.3985
+        }
+      ]
+    },
+    {
+      "shot_id": "sh016",
+      "start": 11.0,
+      "duration_s": 3.0,
+      "movement": "static",
+      "keyframes": [
+        {
+          "t": 0.0,
+          "position": [
+            1.487,
+            0.55,
+            3.937
+          ],
+          "target": [
+            0.0,
+            0.0,
+            2.683
+          ],
+          "fov": 33.3985
+        },
+        {
+          "t": 3.0,
+          "position": [
+            1.487,
+            0.55,
+            3.937
+          ],
+          "target": [
+            0.0,
+            0.0,
+            2.683
+          ],
+          "fov": 33.3985
+        }
+      ]
+    }
+  ],
+  "continuity": {
+    "actors": "inherit",
+    "camera": "cut"
+  },
+  "warnings": [
+    "sh013's pedestal drops 0.85 m -> 0.30 m on a single vertical, level throughout; the optical axis never changes, matching camera.json's 'the frame drops, it does not tilt'.",
+    "sh015/sh016 sight lines pass over the burrow_mouth disc and the 0.06 m spoil fan only; nothing in the hedge bank or the ditch strip is between lens and subject.",
+    "sh016 is the outgoing half of match cut TR-03 (continuity_plan match_cut_verification): the frame holds the empty black mouth centred with its long axis horizontal, and nothing reframes between sh015 and sh016.",
+    "She goes flat at t=3.05, 0.05 s into sh014, so the shot opens on her face at the mouth instead of on empty spoil.",
+    "sh016's lens is raised to 0.55 m (camera.json says 0.25 m, level): the burrow is modelled as a flat 0.35 m disc on the ground, and a level lens sees it edge-on as a sliver, which would break the TR-03 match on 'a black oval 0.30 of frame height'. At 0.55 m looking 16 degrees down the oval reads at the declared size."
+  ]
+}

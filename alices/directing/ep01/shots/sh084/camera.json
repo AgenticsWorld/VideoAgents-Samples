@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh084",
+  "group_id": "grp031",
+  "scene_no": "S08",
+  "duration_s": 4.5,
+  "size": "close",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 50,
+  "camera_height_m": 0.3,
+  "angle": "level, water level on her hand",
+  "rack_focus": "none",
+  "start_frame": "Water-level close on her hand as her eyes come down from the vault to it: the hand open over the dark water, broken amber reflections behind it.",
+  "end_frame": "The same frame held on the stare: one of the Rabbit's little white kid gloves is on her hand, buttoned at the wrist and simply a glove — exactly her size, ninety seconds after it was doll-sized.",
+  "constraint_honoured": "'Required shot (a) of movement 4… the whole cause of the scene's last movement is in this one frame and nothing else explains it.'",
+  "movement_note": "The episode's one image, and an insert rather than an effect: it is held still with the wrist and the water line in frame as the known gauges, so the size reads without a word.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

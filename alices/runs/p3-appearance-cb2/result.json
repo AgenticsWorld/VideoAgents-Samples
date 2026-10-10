@@ -1,0 +1,59 @@
+{
+  "task_id": "p3-appearance-cb2",
+  "agent": "03-characters/appearance",
+  "attempt": 1,
+  "status": "done",
+  "completed_on": "2026-09-22",
+  "outputs": [
+    "bible/characters/CHAR-knave-of-hearts/appearance.json",
+    "bible/characters/CHAR-gryphon/appearance.json",
+    "bible/characters/CHAR-mock-turtle/appearance.json",
+    "bible/characters/CHAR-caterpillar/appearance.json",
+    "bible/characters/CHAR-pigeon/appearance.json",
+    "bible/characters/CHAR-duck/appearance.json",
+    "bible/characters/CHAR-lory/appearance.json",
+    "bible/characters/CHAR-eaglet/appearance.json",
+    "bible/characters/CHAR-dodo/appearance.json",
+    "bible/characters/CHAR-canary/appearance.json",
+    "bible/characters/CHAR-magpie/appearance.json",
+    "bible/characters/CHAR-old-crab/appearance.json",
+    "bible/characters/CHAR-young-crab/appearance.json",
+    "bible/characters/CHAR-fish-footman/appearance.json",
+    "qa/defects/DEF-p3-appearance-201.json"
+  ],
+  "inputs_read": ["bible/h1_summary.md", "bible/cultivation.json (SUP-002, SUP-003, SUP-004, SUP-010)", "runs/h1-ruling (via h1_summary rulings 5.2-5.4)", "bible/characters/index.json", "bible/_index.json forward_refs_pending", "bible/WRITE_RULES.md", "bible/politics.json (FAC-house-of-hearts emblem_visual, FAC-caucus-race-company, FAC-school-in-the-sea)", "bible/culture.json", "bible/dictionary.json", "bible/style.json (skeleton_empty)", "bible/costumes.json (skeleton_empty)", "story/structured_story/ch002-ch012.json", "refs/style/alice.jpeg"],
+  "shared_conventions": {
+    "schema": "Each card: character_id, gender (+gender_note), hair, eyes, skin, face, build (height_range_cm, body_type, posture), scale_reference, marks[], signature_items[], base_age_range (+base_age_source), default_outfit_tone (+default_outfit_tone_source), period_silhouette_1862, sup002_coding (touches + restraint), prompt_base_en, doubling. Every field carries source_chapter/paragraph/quote or inferred:true + reason; 'inferred_parts' marks the designed sub-values of an otherwise sourced field.",
+    "gender_vocab": "male | female (English project; SOUL 男/女 equivalent). No presented_gender needed in this batch — no cross-dressed or performer-gender cases.",
+    "sup002": "All 14 are human performers in 1862 dress; animal/card cues are light (palette, collar/mantle/cape, gloves or mitts, a nose accent, gait). Every card has an explicit 'restraint' line: no masks, wings, shells, fur suits or creature anatomy; faces stay human.",
+    "scale": "height_range_cm is the performer's true height. On-screen relative size is handled by SUP-003 forced perspective/scaled sets and described in scale_reference against Alice (~135-140 cm, age ~10, designed on her own card). Caucus-race party members share the shrunken Alice's scale as peers; the Caterpillar is exactly her size (both three inches, ch005-p45).",
+    "wet_entry": "Caucus-race company members carry an entry_state: first seen dripping wet on the pool bank (ch003-p01); base look is the dry look.",
+    "costume_boundary": "Only base look and outfit tone given; full costume systems are 06-art/costume (Phase 4). House of Hearts livery colours follow politics.json FAC-house-of-hearts emblem_visual."
+  },
+  "key_decisions": [
+    "Gender fixed for index 'unspecified' entries: Duck male, Lory female, Eaglet female, Canary female (a mother calling her children, ch003-p47), Magpie male — all inferred with reasons. Old Crab and Young Crab are female from the source (ch003-p43 'her daughter' / 'Ma'), not inferred.",
+    "Lory (20-25) and Young Crab (19-23) are deliberately older than Alice's mid-teens sister and visually distinct, so no unruled doubling is implied (ruling 5.3 B limits doubling to housemaid/Mary Ann, Dinah/Cheshire Cat, sister at the trial). None of the 14 characters in this batch is a doubling pair; doubling = null on all.",
+    "Knave of Hearts: face-card Jack look (rolled shoulder-length coif, thin moustache) with a flat card-tabard for 'made entirely of cardboard' (ch012-p51); chains scoped to the trial only (ch011-p01).",
+    "Mock Turtle carries both turtle (tortoiseshell cape, flipper-mitts from 'flappers', ch009-p79) and calf cues (SUP-010: calf-hide cap/ear flaps, hoof spats, tail tuft); Gryphon carries eagle (feather mantle, beak nose) and lion (mane hair, paw gauntlets, ch009-p75) cues.",
+    "Caterpillar: human in a banded blue smoking gown with a long row of buttons; antennae carried as waxed upswept eyebrows.",
+    "Fish-Footman: fish face done by make-up/light prosthetic only; sourced powdered curled hair (ch006-p01) and oversize letter (ch006-p02)."
+  ],
+  "exclusions": [
+    "CHAR-tortoise: told-only, excluded per work order.",
+    "No *-ensemble entries were in this batch, so no group card was written.",
+    "The Canary's children (ch003-p47) are not registered in characters/index.json and have no card; if shown they are background extras — character-manager to decide."
+  ],
+  "conflicts": [
+    { "defect": "qa/defects/DEF-p3-appearance-201.json", "assigned_to": "00-orchestration/memory-bible", "summary": "index.json gender 'unspecified' for CHAR-old-crab / CHAR-young-crab contradicts ch003-p43 (both female); plus alignment note for the five inferred genders." }
+  ],
+  "notes_for_downstream": [
+    "06-art/art-director: refs/style/alice.jpeg (the whole-film style reference) depicts a literal giant blue caterpillar creature. Locked SUP-002 requires human performers, so CHAR-caterpillar's card follows SUP-002 and takes only the palette/mood (slate blue with moss-green patina, hookah, mushroom, candlelit gloom). Please confirm when writing style.json that the reference governs look and light, not creature rendering.",
+    "Defect numbering uses the 201+ segment to avoid collision with the parallel appearance batch (which already uses DEF-p3-appearance-001/003)."
+  ],
+  "checks": {
+    "method": "inline python validation (no script file written)",
+    "results": "14/14 PASS: valid JSON; character_id in index.json; gender in {male, female}; required fields gender/hair/eyes/build/marks/base_age_range/default_outfit_tone present; every hair/eyes/build/skin/face/gender_note/mark has source_chapter or inferred+reason; no UNKNOWN/TBD/N/A/empty placeholders; file names ASCII."
+  },
+  "skills": "No skills enabled for this station; none applied.",
+  "evaluation": "skipped (quality judge = 0)"
+}

@@ -1,0 +1,201 @@
+{
+  "_meta": {
+    "file": "bible/_index.json",
+    "status": "locked_v1",
+    "version": "v1",
+    "owner": "00-orchestration/memory-bible",
+    "project": "alices",
+    "source": "novel/Alices_Adventures_in_Wonderland_English.md",
+    "chapters": "ch001-ch012",
+    "content_language": "English",
+    "rules": "bible/WRITE_RULES.md",
+    "changelog": "bible/changelog.md",
+    "h1_summary": "bible/h1_summary.md",
+    "created": "2026-09-22",
+    "created_by": "p0-bible-init",
+    "merged_on": "2026-09-22",
+    "merged_by": "p2-merge",
+    "h1_status": "signed",
+    "versioning_note": "Bible v1 is marked in place (_meta.status merged_v1 / version v1 on every file) rather than copied to a bible/@v1 directory, so that every reader keeps using the same paths.",
+    "rechecked_on": "2026-09-22",
+    "rechecked_by": "p2-merge-recheck",
+    "locked_at": "2026-09-22T17:59:52+08:00",
+    "locked_by": "H1 user signature (G2 PASS), recorded by 00-orchestration/memory-bible task p2-lock",
+    "lock_record": "runs/g2/gate.json",
+    "lock_changelog": "BIB-0023",
+    "controlled": "Writes only via memory-bible controlled change (WRITE_RULES.md section 5).",
+    "last_controlled_change": "BIB-0027 (2026-09-22, p4-cr-cgi-mucha-bible: user ruling on CGI talking animals and Art Nouveau dream environments; supersedes the H1 5.1 A reading of SUP-002/SUP-010)"
+  },
+  "version": "v1",
+  "files": [
+    "world.json",
+    "timeline.json",
+    "geography.json",
+    "religion.json",
+    "culture.json",
+    "politics.json",
+    "economy.json",
+    "cultivation.json",
+    "dictionary.json",
+    "characters/index.json",
+    "creatures/index.json",
+    "scenes/index.json",
+    "style.json",
+    "props.json",
+    "costumes.json",
+    "color_script.json"
+  ],
+  "pending_decisions": [
+    {
+      "topic": "realistic reinterpretation of supernatural source elements (SUP-001 to SUP-014)",
+      "file": "cultivation.json",
+      "status": "approved (H1 pre-ruling 5.1 A)"
+    },
+    {
+      "topic": "Wonderland geography: dream-space vs real estate map",
+      "defect": "DEF-p2-bible-001",
+      "status": "closed (5.2 A applied by p2-fix-geography)"
+    },
+    {
+      "topic": "the sea-shore as a real tidal estuary near Oxford",
+      "defect": "DEF-p2-bible-002",
+      "status": "closed (5.2 A)"
+    },
+    {
+      "topic": "waking-world places missing from geography",
+      "defect": "DEF-p2-bible-003",
+      "status": "closed"
+    },
+    {
+      "topic": "faction registry",
+      "defect": "DEF-p2-bible-004",
+      "status": "closed (5.5 A applied by p2-fix-political)"
+    },
+    {
+      "topic": "designed/real-world proper nouns not in dictionary",
+      "defect": "DEF-p2-bible-005",
+      "status": "closed (5.6 A; p2-fix-dictionary)"
+    },
+    {
+      "topic": "character doubling and guinea-pig staging",
+      "defect": "DEF-p2-bible-006",
+      "status": "closed (5.3 B, 5.4 B applied by p2-fix-culture)"
+    },
+    {
+      "topic": "H1 lock signature",
+      "status": "signed 2026-09-22T17:59:52+08:00 (runs/g2/gate.json, G2 PASS) - Bible v1 locked (p2-lock, BIB-0023)"
+    }
+  ],
+  "forward_refs_pending": {
+    "rule": "WRITE_RULES.md section 4 whitelist: CHAR-*/SCN-*/CRE-*/PROP-*/COS-* may be referenced before their registry entry exists ONLY if listed here. 03-characters/character-manager must register every CHAR id below in characters/index.json (same slug, or file a re-key request with memory-bible) before G3; each unresolved id then becomes a hard cross_refs FAIL.",
+    "owner": "03-characters/character-manager",
+    "due": "Phase 3 (p3 character index)",
+    "ids": [
+      "CHAR-alice",
+      "CHAR-alice-sister",
+      "CHAR-bill-the-lizard",
+      "CHAR-cook",
+      "CHAR-dodo",
+      "CHAR-dormouse",
+      "CHAR-duchess",
+      "CHAR-duck",
+      "CHAR-eaglet",
+      "CHAR-fish-footman",
+      "CHAR-frog-footman",
+      "CHAR-gardener-five",
+      "CHAR-gardener-seven",
+      "CHAR-gardener-two",
+      "CHAR-gryphon",
+      "CHAR-hatter",
+      "CHAR-king-of-hearts",
+      "CHAR-knave-of-hearts",
+      "CHAR-lory",
+      "CHAR-march-hare",
+      "CHAR-mock-turtle",
+      "CHAR-mouse",
+      "CHAR-queen-of-hearts",
+      "CHAR-tortoise",
+      "CHAR-white-rabbit"
+    ],
+    "term_map": {
+      "CHAR-alice": "TERM-0001",
+      "CHAR-alice-sister": "TERM-0002",
+      "CHAR-bill-the-lizard": "TERM-0035",
+      "CHAR-cook": "TERM-0012",
+      "CHAR-dodo": "TERM-0030",
+      "CHAR-dormouse": "TERM-0042",
+      "CHAR-duchess": "TERM-0011",
+      "CHAR-duck": "TERM-0029",
+      "CHAR-eaglet": "TERM-0031",
+      "CHAR-fish-footman": "TERM-0013",
+      "CHAR-frog-footman": "TERM-0014",
+      "CHAR-gardener-five": "TERM-0019",
+      "CHAR-gardener-seven": "TERM-0020",
+      "CHAR-gardener-two": "TERM-0021",
+      "CHAR-gryphon": "TERM-0045",
+      "CHAR-hatter": "TERM-0015",
+      "CHAR-king-of-hearts": "TERM-0017",
+      "CHAR-knave-of-hearts": "TERM-0018",
+      "CHAR-lory": "TERM-0028",
+      "CHAR-march-hare": "TERM-0041",
+      "CHAR-mock-turtle": "TERM-0046",
+      "CHAR-mouse": "TERM-0027",
+      "CHAR-queen-of-hearts": "TERM-0016",
+      "CHAR-tortoise": "TERM-0047",
+      "CHAR-white-rabbit": "TERM-0026"
+    },
+    "casting_note": "Per SUP-002/SUP-010 as amended at BIB-0027 (user ruling 2026-09-22) the talking animals, the Gryphon and the Mock Turtle are dream-figures rendered as photoreal CGI animals/creatures, and the card figures are human performers in card-styled costume (SUP-004). All of them speak and act as characters, so they stay registered as CHAR-* in characters/ (appearance, voice and dialogue are character data), not CRE-* in creatures/; 04-creatures/creature supplies the CGI anatomy/texture design for the animal-bodied CHAR-* entries. Light doubling (H1 5.3 B): the family housemaid echoes as Mary Ann, Dinah as the Cheshire Cat, and the sister is glimpsed at the trial; no other dream-figure doubles a waking person. creatures/ is for on-screen real animals (the silent white rabbit in the waking frame, Dinah if shown, croquet flamingoes/hedgehogs)."
+  },
+  "merge_report": {
+    "task_id": "p2-merge",
+    "inputs_merged": [
+      "world.json",
+      "timeline.json",
+      "geography.json",
+      "religion.json",
+      "culture.json",
+      "politics.json",
+      "economy.json",
+      "cultivation.json",
+      "dictionary.json"
+    ],
+    "check_script": "code/p2-merge_check.py",
+    "apply_script": "code/p2-merge_apply.py (superseded; refuses to run)",
+    "changelog_range": "BIB-0002 to BIB-0011 (p2-merge); BIB-0012 to BIB-0018 (p2-merge-recheck)",
+    "defects_opened": [
+      "DEF-p2-bible-001",
+      "DEF-p2-bible-002",
+      "DEF-p2-bible-003",
+      "DEF-p2-bible-004",
+      "DEF-p2-bible-005",
+      "DEF-p2-bible-006"
+    ],
+    "checks": "see runs/p2-merge/result.json",
+    "recheck": {
+      "task_id": "p2-merge-recheck",
+      "apply_script": "code/p2-merge-recheck_apply.py",
+      "defects_closed": [
+        "DEF-p2-bible-001",
+        "DEF-p2-bible-002",
+        "DEF-p2-bible-003",
+        "DEF-p2-bible-004",
+        "DEF-p2-bible-005",
+        "DEF-p2-bible-006"
+      ],
+      "checks": "see runs/p2-merge-recheck/result.json"
+    }
+  },
+  "h1_preruling": {
+    "file": "runs/h1-ruling/ruling.json",
+    "signed_at": "2026-09-22T17:33:21+08:00",
+    "rulings": {
+      "5.1": "A",
+      "5.2": "A",
+      "5.3": "B",
+      "5.4": "B",
+      "5.5": "A",
+      "5.6": "A"
+    },
+    "lock": "locked 2026-09-22T17:59:52+08:00 by H1 (g2) signature; see runs/g2/gate.json"
+  }
+}

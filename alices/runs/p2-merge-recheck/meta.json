@@ -1,0 +1,13 @@
+{
+  "task_id": "p2-merge-recheck",
+  "run_id": "d97bf2481925",
+  "attempt": 1,
+  "model": "agent default",
+  "tokens": null,
+  "started_at": null,
+  "finished_at": "2026-09-22T17:58:53+08:00",
+  "inputs_sha256": {},
+  "artifact_versions": {
+    "bible/": "v1 (lock-ready)"
+  }
+}

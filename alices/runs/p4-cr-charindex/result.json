@@ -1,0 +1,43 @@
+{
+  "task_id": "p4-cr-charindex",
+  "agent": "03-characters/character-manager",
+  "attempt": 1,
+  "status": "done",
+  "date": "2026-09-23",
+  "change_request": "BIB-0027",
+  "authority": [
+    "bible/changelog.md BIB-0027",
+    "bible/cultivation.json SUP-002, SUP-010, XA-magic-02, XA-magic-08",
+    "bible/world.json WR-001, WR-002, WR-010",
+    "bible/h1_summary.md section 6",
+    "runs/p4-cr-cgi-mucha-bible/result.json (stale_files, stale_notes)",
+    "qa/defects/DEF-p4-style-001.json"
+  ],
+  "changed_files": [
+    {
+      "file": "bible/characters/index.json",
+      "change_note": "Added a render_mode field (human_performer | cgi_animal | cgi_fantastical) to every one of the 44 characters[] entries and a matching _meta.render_mode_enum + _meta.counts.render_mode (20 human_performer / 22 cgi_animal / 2 cgi_fantastical). Rewrote performer_concept text for every animal- or creature-bodied speaking figure from the stale 'human performer with animal-coded touches' (SUP-002 pre-BIB-0027) reading to a photoreal-CGI design reading, quoting SUP-002/SUP-010/XA-magic-02 verbatim where the wording is fixed there: White Rabbit, Cheshire Cat, March Hare, Dormouse, Mouse, Bill the Lizard, Tortoise, Caterpillar, Pigeon, Duck, Lory, Eaglet, Dodo, Canary, Magpie, Old Crab, Young Crab, Fish-Footman, Frog-Footman, and the Jury / Caucus-race-party / Crowd ensembles -> render_mode cgi_animal; Gryphon and Mock Turtle -> render_mode cgi_fantastical (photoreal CGI fantastical creature, SUP-010). The two Footmen keep an explicit pending_H2 note on how far their anatomy is humanised (per XA-magic-02). SUP-004 card figures and the other human dream-figures (Queen/King/Knave of Hearts, Duchess, Hatter, Cook, Pat, Executioner, the three named Gardeners, and the Card-Soldiers / Royal-Gardeners / Visiting-Monarchs / Royal-Procession / Court-Officers ensembles) and the waking-frame humans (Alice, Alice's Sister, Family Housemaid) were left with render_mode human_performer and their performer_concept text untouched (SUP-004 is unchanged by BIB-0027). CHAR-duchess-baby stays render_mode human_performer per SUP-006 (unamended), but performer_concept now carries an explicit pending_H2 open point on whether the SUP-006 perceptual-only pig end-state should instead be realised as a photoreal CGI piglet, per BIB-0027's non-speaking-dream-animal extension (not decided here, flagged for H2). Updated _meta.scope, _meta.layer_enum.dream and entry_schema.characters[].performer_concept wording that referenced 'human performer... animal/card-coded touches' as the universal casting rule. Added _meta.amendments (BIB-0027 entry) recording the change, its authority and which fields changed vs. which are unchanged by design. IDs, tiers, layers, factions, offices, appearances, aliases, doubling and all other fields are untouched; no character was added, removed or re-IDed; no dialogue or story event was changed."
+    },
+    {
+      "file": "bible/characters/relationship.json",
+      "change_note": "Two stale-wording fixes only. (1) The CRE-001 -> CHAR-white-rabbit doubling edge (dream_echo): summary and doubling.dream_side rewritten from 'the dressed, watch-carrying human performer' to 'the dressed, watch-carrying photoreal CGI rabbit', with doubling.ruling now noting SUP-002's rendering was amended by BIB-0027 (2026-09-22); the waking side (CRE-001, real mute rabbit) and the edge type/strength/states/sources are unchanged. (2) The CHAR-alice -> CHAR-duchess-baby alliance edge notes field: the existing SUP-006 line ('a human infant performer throughout') is kept (SUP-006 is unamended) but now marked explicitly with the pending_H2 open point -- BIB-0027/SUP-002's extension of the photoreal-CGI register to non-speaking dream animals including the pig end-state is an unresolved scope interpretation, not a ruling, so the note states this is pending_H2 and cross-references index.json's CHAR-duchess-baby.performer_concept rather than asserting either outcome. No edge was added or removed, no strength/type/state/event/chapter data changed."
+    }
+  ],
+  "open_points_flagged_for_H2": [
+    "Exact Frog-Footman and Fish-Footman anatomy/humanisation degree (index.json CHAR-frog-footman / CHAR-fish-footman performer_concept, marked pending_H2; owned by 04-creatures/creature with 03-characters/appearance).",
+    "CGI treatment of the non-speaking dream animals named in BIB-0027 (puppy, hedgehogs, flamingoes) and, specifically for this file pair, the pig-baby end state (index.json CHAR-duchess-baby.performer_concept and relationship.json's CHAR-alice -> CHAR-duchess-baby note, both marked pending_H2). This index does not decide the outcome; it only flags the open question and keeps SUP-006's human-infant-performer reading as the current, unamended default until H2 rules."
+  ],
+  "out_of_scope_not_touched": [
+    "No other bible/ or story/ file was written by this task (per-character appearance.json / dialogue_style.json / personality.json / voice.json under bible/characters/<CHAR-id>/, creatures/*, costumes.json, style.json, color_script.json, scenes/*, story/* are owned by other stale_files consumers per runs/p4-cr-cgi-mucha-bible/result.json and are not part of this work order).",
+    "No character ID, tier, layer, faction/office assignment, alias, or appearance-chapter list was changed.",
+    "No dialogue text or story event was rewritten."
+  ],
+  "checks": {
+    "json_valid": "PASS (both files)",
+    "index_total_unchanged": "PASS (44 characters, counts.total/S/A/B/extra unchanged)",
+    "render_mode_present_all_entries": "PASS (44/44; human_performer 20, cgi_animal 22, cgi_fantastical 2)",
+    "ids_unique_unchanged": "PASS (no ID added/removed/renamed)",
+    "sup004_card_and_human_figures_untouched": "PASS (performer_concept text unchanged for all 20 human_performer entries except the added render_mode field)"
+  },
+  "notified": ["00-orchestration/memory-bible (on_bible_access write)", "workflow-orchestrator (H2 open points above)"]
+}

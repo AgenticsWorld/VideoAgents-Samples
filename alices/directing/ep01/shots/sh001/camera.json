@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh001",
+  "group_id": "grp001",
+  "scene_no": "S00",
+  "duration_s": 4.0,
+  "size": "wide",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame; all motion in shot belongs to the shaft dressing travelling upward)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 28,
+  "camera_height_m": "on her own axis in the 2.4 m shaft, level with her (no floor datum, no horizon)",
+  "angle": "level",
+  "rack_focus": "none",
+  "start_frame": "From the roundel wall straight across the shaft: Alice small in the upper third, skirts and pinafore billowing, a long empty drop below her, glazed cupboards and rows of stoneware jars filling the wall behind her.",
+  "end_frame": "The identical frame four seconds later — she still holds exactly the same place in the upper third, with a fresh run of cupboards and jars behind her; the changed dressing is the only evidence she has moved at all.",
+  "constraint_honoured": "'Locked — no camera move': movement is static and the descent is carried entirely by the set travelling up through the frame.",
+  "movement_note": "A 4.0 s head segment has no time to parse a move, and this set-up must be reproducible exactly at sh022 so the image is recognised rather than re-watched.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

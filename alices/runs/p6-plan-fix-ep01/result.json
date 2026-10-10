@@ -1,0 +1,94 @@
+{
+  "task_id": "p6-plan-fix-ep01",
+  "agent": "07-directing/director",
+  "project": "alices",
+  "ep": "ep01",
+  "status": "completed",
+  "attempt": 1,
+  "generated": "2026-09-23",
+  "scope": "Citation fix only, against the BIB-0033 text of bible/color_script.json. No re-ruling, no design change.",
+  "products": [
+    "directing/ep01/directing_plan.md (v1 -> v2)"
+  ],
+  "also_written": [
+    "qa/defects/DEF-p6-cinematography-ep01-001.json (finding -b annotated fixed; ticket left OPEN for finding -a)"
+  ],
+  "inputs_read": [
+    "qa/defects/DEF-p6-cinematography-ep01-001.json (finding -b first, then -a)",
+    "bible/color_script.json (ep01 acts 1-6 stained_glass; scene_curves.SCN-long-hall and .SCN-pool-of-tears; _meta.amendments BIB-0033)",
+    "bible/scenes/SCN-long-hall/lighting.json (roundel_glow = reflected_lamplight_only)",
+    "qa/defects/DEF-p6-directing-ep01-001.json (my own ticket, now closed by BIB-0033)",
+    "directing/ep01/directing_plan.md v1"
+  ],
+  "transition_list_statement": {
+    "claim": "The 转场清单 section of directing/ep01/directing_plan.md is BYTE-IDENTICAL to the delivered version.",
+    "verified_how": "sha256 of the section text from the '## 转场清单' heading to the start of '## 与 style/color_script 的衔接说明', taken before and after the edits",
+    "sha256_before": "4a572ff5aea44055348ef2ba9a9200280348efea641f14623b6bdbed26fb8bea",
+    "sha256_after": "4a572ff5aea44055348ef2ba9a9200280348efea641f14623b6bdbed26fb8bea",
+    "bytes": 5044,
+    "result": "identical — TR-01..TR-06, their types, durations, intents, reasons, the FF-ep01-open block pairing, the hard-cut default list, the tail-to-black note and the hook-variation note are all untouched. directing/ep01/storyboard.json, currently with the user for the H3S signature, is unaffected."
+  },
+  "sentences_touched": [
+    {
+      "id": 1,
+      "where": "front matter, version/amendment block",
+      "before": "version: 1",
+      "after": "version: 2  (+ an amendments: block recording task p6-plan-fix-ep01, the four re-cited sentences, and the 转场清单 sha256)",
+      "why": "Traceability for the stations that already hold v1. Bookkeeping only."
+    },
+    {
+      "id": 2,
+      "where": "front matter, defect_raised line",
+      "before": "defect_raised: qa/defects/DEF-p6-directing-ep01-001.json (color_script roundel daylight vs architecture/lighting blind roundels)",
+      "after": "defect_raised: qa/defects/DEF-p6-directing-ep01-001.json — CLOSED by memory-bible arbitration BIB-0033 (2026-09-23) in favour of the built, windowless hall; color_script scene_curves and the ep01 act 3/4/6 stained_glass lines were amended to match, and this plan now cites the amended text",
+      "why": "The line read as an open question about whether the hall has daylight. It is decided."
+    },
+    {
+      "id": 3,
+      "where": "## 重点场次处理 → S06, 'Colour' bullet — THE FINDING -b SENTENCE",
+      "before": "- **Colour** — the grade is held flat across the size changes so scale reads through the sets, not the grade; one or two glass floor pools stay at a **fixed position** through the shrink and the later growth and work as scale markers (color_script act 4 `stained_glass`). Practical consequence: lighting must not re-light between S06 and S07.",
+      "after": "- **Colour** — the grade is held flat across the size changes so scale reads through the sets, not the grade; one or two **roundels on the wall**, front-lit by the nearest hanging lamp, stay at a **fixed position** through the shrink and the later growth and work as scale markers — the marker is on the wall, not on the floor: the hall is windowless, its 25 halo roundels are blind, and there is **no pool of coloured light anywhere in it** (color_script act 4 `stained_glass` and `scene_curves.SCN-long-hall` as amended by BIB-0033; `SCN-long-hall/lighting.json roundel_glow = reflected_lamplight_only` — the roundels must never read as backlit or evenly glowing). Their glints stay below the glass table in brightness. Practical consequence: lighting must not re-light between S06 and S07, and the chosen roundels must be inside frame at both scales.",
+      "why": "The old sentence quoted the pre-arbitration act 4 text and licensed a coloured pool on the floor of a windowless hall. The directorial idea is preserved exactly — a fixed, unmoving colour marker to measure the size changes against — the marker moves from the floor to the wall. One consequence added, because it follows from the move and shot-planning needs it: the chosen roundels must be in frame at both the ten-inch and the nine-foot scale."
+    },
+    {
+      "id": 4,
+      "where": "## 重点场次处理 → S10, 'Her swim has a heading' bullet",
+      "before": "- **Her swim has a heading.** She swims toward the brightest water — the far south end, where the lamp reflections crowd and the hall's dark opens (the direction the shore lies in for ep02; `SCN-pool-of-tears/lighting.json` dream_growth). See the defect note in the last section: the \"high roundel shaft\" described in color_script's scene curve does not exist in the built hall, so the way-out light is the reflection field, not a daylight shaft.",
+      "after": "- **Her swim has a heading.** She swims toward the brightest water — the far south end, where the lamp reflections crowd and the hall's dark opens (the direction the shore lies in for ep02; `SCN-pool-of-tears/lighting.json` dream_growth). The flooded hall is the same windowless hall, so there is **no shaft, no beam and no coloured pool**: the way-out light is a field of lamp reflections on the water, an aged-ivory and gold core broken into flecks with a few faded-lilac glints off the blind roundels on the wall above it, all under ~5 % of frame (`color_script scene_curves.SCN-pool-of-tears` as amended by BIB-0033).",
+      "why": "The old text pointed at a since-removed quotation and at a defect note, instead of citing the live Bible — which now describes this exact staging in its own words. Same heading, same shot."
+    },
+    {
+      "id": 5,
+      "where": "## 与 style/color_script 的衔接说明 → closing conflict paragraph",
+      "before": "**One setting conflict found and reported, not resolved here** (`qa/defects/DEF-p6-directing-ep01-001.json`, routed to memory-bible for color-script + lighting): color_script's `scene_curves` describes daylight through **high halo-roundel windows** laying lilac/sage/ivory pools on the hall floor, and for SCN-pool-of-tears \"a single shaft ... through one high roundel\" that Alice swims toward as \"the way out\". ... **Interim direction, so nobody downstream is blocked:** ... If memory-bible rules the other way and the roundels are opened to daylight, S05, S06 and S10 need a lighting re-pass but no re-cut of this plan.",
+      "after": "**One setting conflict found, reported, and since arbitrated** (`qa/defects/DEF-p6-directing-ep01-001.json`, raised here at p6-plan-ep01, **closed 2026-09-23 by memory-bible under BIB-0033**): ... **The ruling went to the built, windowless hall and color_script yielded:** its scene curves now read `stained_glass: surface_only_no_cast_light`, with \"No daylight, no shaft and no pool of coloured light anywhere in the hall; the roundels must never read as backlit\", and for the pool \"no shaft and no opening overhead ... what Alice swims toward is the brightest field of LAMP REFLECTIONS on the water at the south end\". ... **Where it lands in the shots:** ... the S06/S07 fixed scale marker is a front-lit roundel on the wall; and S10's way-out light is the reflection field at the south end. Downstream stations cite the amended Bible, not any earlier quotation of it (`DEF-p6-cinematography-ep01-001` finding -b, fixed in this version).",
+      "why": "The paragraph was written while the ticket was open. It quoted the daylight reading in the present tense and offered an 'interim direction' plus a contingency for a ruling that has since gone the other way. Re-cast as history plus the decided text; the direction it carries is unchanged, and the 'if memory-bible rules the other way' contingency is removed because it no longer exists."
+    }
+  ],
+  "unchanged_and_checked": [
+    "## 转场清单 — byte-identical (see transition_list_statement)",
+    "S08 act-5 reflection_allowance citation (<=5% specular flecks on the water, lamps out of frame) — re-read against the amended file: acts[5].reflection_allowance is unchanged by BIB-0033, so the plan's citation is still exact",
+    "The act 6 row of the register/colour table ('amber surviving only as reflections') — still matches the amended acts[6].stained_glass",
+    "S05 garden-green citation — the amended scene_curves confirms it verbatim: 'the only coloured CAST light in the hall is the garden green through the open little door'",
+    "Every scene treatment, the camera-height law, the seven-POV list, the ASL table, the S08 movement-4 shot chain, the prohibitions list, the waiver-handling section and all hand-offs"
+  ],
+  "defect_annotation": {
+    "ticket": "qa/defects/DEF-p6-cinematography-ep01-001.json",
+    "ticket_status_after": "open",
+    "finding_b": "fixed (status/fixed_by/fixed_on/fixed_in_task/fix written into the finding)",
+    "finding_a": "still open — verified against the live bible this run: bible/color_script.json episodes[ep01].acts[4].stained_glass reads 'Low: one or two lit roundels held at a fixed position on the wall across the size changes ...'; the requested word 'front-lit' is not in the file yet",
+    "why_not_closed": "The ticket carries two findings and only -b is mine. Finding -a is a one-word fix in bible/color_script.json owned by 06-art/color-script, and the director does not edit bible/. Ticket therefore LEFT OPEN, with a status_note naming exactly what remains and who owns it.",
+    "blocking": false,
+    "note": "Nothing downstream is blocked: directing_plan.md v2 and directing/ep01/cinematography.json CT-04 both state the front-lit reading explicitly, so a prompt writer reading either file gets the correct instruction even before -a lands."
+  },
+  "self_check": {
+    "five_sections_present_once": "PASS (the amendment note refers to '转场清单' without the '## ' prefix so the heading anchor stays unique)",
+    "scene_numbers_exist": "PASS — 0 citations outside S01..S10",
+    "transition_list_identical": "PASS — sha256 match, 6 TR rows",
+    "no_narration": "PASS",
+    "stale_wording_sweep": "PASS — a regex sweep for 'glass floor pool', 'pool(s) on the hall floor', 'roundel windows', 'daylight shaft', 'backlit' over the whole plan returns only (a) the corrective negations in the S06 and S10 bullets, (b) the historical account in the closing paragraph, explicitly marked as the overruled reading, and (c) the amendment note. No sentence in the plan now asserts daylight, a backlit roundel or a coloured light pool in SCN-long-hall or SCN-pool-of-tears."
+  },
+  "not_actioned_by_design": "H3S came back 'Hold' with no notes. The open question there is the hook pair (oh-1 + ec-2 as drafted); this run did not touch the hooks, the tail-to-black note, the ec-3 conflict flag or anything else hook-related, and will not until a separate work order arrives with the user's notes.",
+  "acceptance_summary": "Citation fix delivered; finding -b closed; ticket left open for finding -a with the owner named. No evaluation scoring, no QA co-sign (review settings 0).",
+  "skills": "none active for this station"
+}

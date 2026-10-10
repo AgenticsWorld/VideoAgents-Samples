@@ -1,0 +1,73 @@
+{
+  "schema_version": "whitebox_scene.v1",
+  "scene_id": "SCN-duchess-kitchen",
+  "task_id": "p4-scene-model-sb2",
+  "agent": "05-scenes/scene-modeling",
+  "date": "2026-09-23",
+  "layout_top": "assets/concepts/scenes/SCN-duchess-kitchen/layout_top.png",
+  "dimensions_m": [14.5, 3.2, 8.16],
+  "scale_basis": "X = layout.json extent_m.x 14.5 m (Z = X*9/16 = 8.16). Checked at floor level with the drawn furniture: deal table 2.7 x 0.8 m, dresser 3.0 m, stool about 0.45 m, flagstones about 0.9 m, all plausible at this extent. Y = Bible ceiling 3.2 m.",
+  "inferred": true,
+  "inferred_items": [
+    "room 7.87 x 3.99 m from the drawn flagstone floor edge (SOUL wall rule) vs Bible 11 x 7 m; see DEF-p4-scenemodel-970",
+    "wall thickness 0.4 m brick",
+    "hearth set as a 1.0 m deep recess in the west wall: opening 2.6 m wide x 1.8 m (Bible), bressumer above, firebox mass behind the wall line",
+    "door clear width 1.0 m (Bible gives only the 2.1 m height); leaf shown open inward against the east jamb as drawn",
+    "south windows 0.9 m wide (sill 1.0 m, head 1.9 m); north high window 1.0 m wide (sill 1.8 m, head 2.5 m)"
+  ],
+  "units": "metres; xy = normalised plan position (x right = east, y down = south = +Z); elevation_m = centre height (host loader convention), omitted = standing on the floor",
+  "ceiling_height_m": 3.2,
+  "objects": [
+    {"id": "north_wall_w", "shape": "box", "size_m": [2.111, 3.2, 0.4], "xy": [0.2752, 0.2425], "collision_role": "wall"},
+    {"id": "north_wall_e", "shape": "box", "size_m": [5.555, 3.2, 0.4], "xy": [0.6085, 0.2425], "collision_role": "wall"},
+    {"id": "north_window_sill", "shape": "box", "size_m": [1.0, 1.8, 0.4], "xy": [0.3825, 0.2425], "collision_role": "wall"},
+    {"id": "north_window_head", "shape": "box", "size_m": [1.0, 0.7, 0.4], "xy": [0.3825, 0.2425], "elevation_m": 2.85, "collision_role": "wall"},
+    {"id": "south_wall_1", "shape": "box", "size_m": [2.055, 3.2, 0.4], "xy": [0.2733, 0.7805], "collision_role": "wall"},
+    {"id": "window_sill_sw", "shape": "box", "size_m": [0.9, 1.0, 0.4], "xy": [0.3752, 0.7805], "collision_role": "wall"},
+    {"id": "window_head_sw", "shape": "box", "size_m": [0.9, 1.3, 0.4], "xy": [0.3752, 0.7805], "elevation_m": 2.55, "collision_role": "wall"},
+    {"id": "south_wall_2", "shape": "box", "size_m": [1.02, 3.2, 0.4], "xy": [0.4414, 0.7805], "collision_role": "wall"},
+    {"id": "door_lintel_south", "shape": "box", "size_m": [1.0, 1.1, 0.4], "xy": [0.511, 0.7805], "elevation_m": 2.65, "collision_role": "wall"},
+    {"id": "south_wall_3", "shape": "box", "size_m": [0.88, 3.2, 0.4], "xy": [0.5759, 0.7805], "collision_role": "wall"},
+    {"id": "window_sill_se", "shape": "box", "size_m": [0.9, 1.0, 0.4], "xy": [0.6372, 0.7805], "collision_role": "wall"},
+    {"id": "window_head_se", "shape": "box", "size_m": [0.9, 1.3, 0.4], "xy": [0.6372, 0.7805], "elevation_m": 2.55, "collision_role": "wall"},
+    {"id": "south_wall_4", "shape": "box", "size_m": [1.911, 3.2, 0.4], "xy": [0.7342, 0.7805], "collision_role": "wall"},
+    {"id": "west_wall_n", "shape": "box", "size_m": [0.4, 3.2, 1.201], "xy": [0.2162, 0.2916], "collision_role": "wall"},
+    {"id": "west_wall_s", "shape": "box", "size_m": [0.4, 3.2, 0.989], "xy": [0.2162, 0.7444], "collision_role": "wall"},
+    {"id": "hearth_lintel_bressumer", "shape": "box", "size_m": [1.0, 1.4, 2.6], "xy": [0.1955, 0.5245], "elevation_m": 2.5, "collision_role": "wall", "note": "heavy oak bressumer over the 2.6 x 1.8 m hearth opening"},
+    {"id": "firebox_back_wall", "shape": "box", "size_m": [0.4, 3.2, 3.4], "xy": [0.1472, 0.5245], "collision_role": "wall"},
+    {"id": "firebox_cheek_n_wall", "shape": "box", "size_m": [0.6, 3.2, 0.4], "xy": [0.1817, 0.3407], "collision_role": "wall"},
+    {"id": "firebox_cheek_s_wall", "shape": "box", "size_m": [0.6, 3.2, 0.4], "xy": [0.1817, 0.7083], "collision_role": "wall"},
+    {"id": "east_wall", "shape": "box", "size_m": [0.4, 3.2, 4.79], "xy": [0.7863, 0.5115], "collision_role": "wall"},
+    {"id": "fire_bed", "shape": "box", "size_m": [1.0, 0.1, 2.0], "xy": [0.1955, 0.5245], "collision_role": "ground"},
+    {"id": "cauldron", "shape": "cylinder", "size_m": [0.7, 0.55, 0.7], "xy": [0.1966, 0.5245], "elevation_m": 0.5, "collision_role": "solid", "note": "hung on the iron crane over the fire"},
+    {"id": "hearth_slab", "shape": "box", "size_m": [1.2, 0.15, 2.6], "xy": [0.2714, 0.5245], "collision_role": "ground", "note": "raised flagstone slab; the CGI Cheshire Cat sits here"},
+    {"id": "stool", "shape": "cylinder", "size_m": [0.45, 0.45, 0.45], "xy": [0.5, 0.53], "collision_role": "solid", "note": "three-legged stool, dead centre; the Duchess sits nursing the baby"},
+    {"id": "deal_table", "shape": "box", "size_m": [2.72, 0.8, 0.8], "xy": [0.4186, 0.316], "collision_role": "solid"},
+    {"id": "dresser", "shape": "box", "size_m": [3.0, 2.2, 0.5], "xy": [0.6621, 0.2977], "collision_role": "solid"},
+    {"id": "copper_pan_rail", "shape": "box", "size_m": [0.15, 0.1, 2.4], "xy": [0.7673, 0.4755], "elevation_m": 1.6, "collision_role": "decor"},
+    {"id": "bell_board", "shape": "box", "size_m": [0.6, 0.3, 0.08], "xy": [0.5793, 0.7511], "elevation_m": 2.3, "collision_role": "decor"},
+    {"id": "door_leaf", "shape": "box", "size_m": [0.05, 2.1, 1.0], "xy": [0.5438, 0.6947], "elevation_m": 1.05, "collision_role": "solid", "note": "opens inward, hinged on the east jamb"}
+  ],
+  "walkable": {
+    "floor_m": {"x": [3.335, 11.201], "z": [2.179, 6.169], "size": [7.87, 3.99]},
+    "free_zones": [
+      "door to stool: 1.6 m straight run north from the threshold",
+      "stool ring: at least 1.2 m clear all round the stool",
+      "hearth front: 1.2 m slab plus 2 m of floor to the stool",
+      "east end in front of the pan rail: about 2.8 x 3.9 m, where the crockery lands"
+    ],
+    "clearance_check": "Body 0.5 x 0.3 m + 0.1 m margin passes the 1.0 m door. The door leaf (open, 1.0 m into the room) leaves 1.05 m to the south_wall_3 corner side and does not block the stool approach. Table and dresser leave 1.0-1.3 m of floor to the stool."
+  },
+  "doorways": [
+    {"id": "front_door", "landmark": "front_door", "wall": "south", "clear_width_m": 1.0, "clear_height_m": 2.1, "centre_xy": [0.511, 0.7805], "opens": "inward, leaf against east jamb", "outside": "the outside (house front) is off-asset; exits cut at the threshold (SCN-duchess-house-front)"},
+    {"id": "hearth_opening", "landmark": "hearth", "wall": "west", "clear_width_m": 2.6, "clear_height_m": 1.8, "note": "fire recess, not a passage"}
+  ],
+  "landmarks_covered": ["front_door", "hearth", "hearth_slab", "stool", "deal_table", "dresser", "bell_board", "copper_pan_rail"],
+  "workflow_notes": [
+    "Walls placed by the SOUL rule: inner faces on the drawn flagstone floor edge (x 0.230-0.7725, y 0.267-0.756), thickness outward. The drawn white brick rim is the perspective-enlarged wall top. All wall footprints sit on the drawn wall band, and every calibrated layout.json landmark lands on its wall (door y 0.82 and copper rail x 0.83 in the wall faces; table y 0.29 at the north floor edge).",
+    "Room size from the plan is 7.87 x 3.99 m vs Bible 11 x 7 m (the layout.json orientation text also says 11 x 7). The furniture scale agrees with the plan extent, so the drawn room is simply smaller than the card. Logged as DEF-p4-scenemodel-970 for the H2 decision; changing it means re-drawing the plan and recalibrating layout.json (environment-concept), then re-modelling here.",
+    "Door and windows follow the drawn gaps (door gap x 0.4525-0.57; window gaps centred x 0.375 and x 0.637; north high window centred x 0.3825). The bell-board is not drawn (wall-mounted), so it is placed at the layout.json landmark on the south wall at 2.3 m.",
+    "Not modelled: smoke, broken crockery, the ceiling beam and hooks, the ceiling slab (omitted for the top-down preview; ceiling_height_m 3.2)."
+  ],
+  "handover": "no storyboard yet — hand over to whitebox-staging (no directing/*/shot_list.json exists; no videos rendered)"
+}

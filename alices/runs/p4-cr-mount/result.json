@@ -1,0 +1,35 @@
+{
+  "task_id": "p4-cr-mount",
+  "agent": "04-creatures/mount",
+  "project": "alices",
+  "attempt": 1,
+  "status": "completed",
+  "completed_at": "2026-09-23",
+  "change_request": "BIB-0027",
+  "summary": "Aligned bible/creatures/mount.json with BIB-0027. Only the stale SUP-002 'human performer' boundary-check paragraph was rewritten to reflect that talking dream animals (and the Gryphon/Mock Turtle) are now photoreal CGI animals/creatures per the amended SUP-002/SUP-010, still CHAR-* not CRE-*; card figures and human dream-figures remain human performers (SUP-004, unchanged). The zero-mounts verdict itself is unaffected: no scene in the source, before or after this ruling, shows any character riding or being carried by an animal, CGI or otherwise. Added an _meta.amendments entry recording the change. No structural/ID changes, no new mount entries invented, no other files touched.",
+  "inputs_read": [
+    "bible/changelog.md BIB-0027 entry",
+    "bible/cultivation.json SUP-002, SUP-010, XA-magic-02, XA-magic-08, _meta.amendments (BIB-0027)",
+    "bible/world.json WR-001, WR-002, WR-010 (referenced for context; not edited)",
+    "bible/h1_summary.md section 6 (not directly quoted; genre framing confirmed via cultivation.json/changelog)",
+    "qa/defects/DEF-p4-style-001.json (user ruling text and mapped options)",
+    "brief.md (\"Realistic fantasy film adapted from a fairy tale\")"
+  ],
+  "files_changed": [
+    {
+      "file": "bible/creatures/mount.json",
+      "change_note": "1) Added _meta.amendments[0] recording BIB-0027 provenance and scoping the edit to exactly one stale paragraph. 2) Rewrote zero_entries_justification.reasoning's SUP-002 boundary-check entry: talking animals + Gryphon/Mock Turtle are now described as photoreal CGI animals/fantastical creatures (CHAR-*, owned by 03-characters, not 04-creatures/creature) per amended SUP-002/SUP-010, instead of 'human performer... no real animal underneath'; card figures and human dream-figures explicitly kept as human performers per unchanged SUP-004. Everything else (verdict, mounts: [], the source-text audit line, the creature.json audit line, the waking-frame check line, if_this_changes, all IDs and structure) left untouched — the empty mounts list and its underlying reasoning were not made stale by this ruling, since no riding/draught scene exists in the source under either casting regime."
+    }
+  ],
+  "files_not_changed_and_why": "No other file is in this task's YOUR FILES scope. mounts[] stayed empty because BIB-0027 changes how talking animals are performed/rendered (human performer -> CGI), not whether any of them is ridden — the source still contains zero riding/draught scenes, so no MNT-* entry was created.",
+  "open_points_for_h2": "None raised by this file. The task's flagged H2 open points (Frog/Fish-Footman anatomy; CGI treatment of non-speaking animals) belong to 04-creatures/creature and 03-characters/appearance, not to mount.json, since none of those figures is a mount candidate either.",
+  "defects_filed": [],
+  "conflicts_with_other_bible_files": "none",
+  "acceptance_self_check": {
+    "scope_respected": "PASS — edited only bible/creatures/mount.json, only the stale wording (SUP-002 human-performer framing); did not touch story events, dialogue, IDs, or unaffected content",
+    "ids_and_structure_preserved": "PASS — no ID added/removed/renamed; mounts[] structure and _meta shape unchanged apart from added amendments array",
+    "no_generator_script": "PASS — direct Edit tool calls, no script written",
+    "json_valid": "PASS — python3 json.load confirmed valid JSON after edit"
+  },
+  "evaluation": "skipped — project setting: quality judge (00-orchestration/evaluation) = 0, all QA dimensions = 0"
+}

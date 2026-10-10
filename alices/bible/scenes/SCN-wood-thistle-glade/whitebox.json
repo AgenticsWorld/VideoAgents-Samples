@@ -1,0 +1,44 @@
+{
+  "schema_version": "whitebox_scene.v1",
+  "scene_id": "SCN-wood-thistle-glade",
+  "task_id": "p4-scene-model-sb2",
+  "agent": "05-scenes/scene-modeling",
+  "date": "2026-09-23",
+  "layout_top": "assets/concepts/scenes/SCN-wood-thistle-glade/layout_top.png",
+  "dimensions_m": [24.0, 15.0, 13.5],
+  "scale_basis": "TRUE units (not the x9 set). X = layout.json extent_m.x 24 m (Z = X*9/16 = 13.5). Checked with the drawn glade opening (about 15 x 11 m, Bible about 12 m across) and the edge trunks (oak about 1.4 m, hazel stems 0.2-0.35 m). Alice is about 0.15 m effective here; staging uses her x1/9 body. The practical x9 ground build is a set-construction matter and is not this coordinate space. Y = edge oak height 15 m.",
+  "inferred": true,
+  "inferred_items": [
+    "great thistle at Bible true size (1.2 m tall; leaf rosette 1.2 m across) although the plan draws a rosette about 4.4 m across",
+    "stick pile at true size 0.45 x 0.35 m (Bible x9 sticks 1-2 m, so true 0.11-0.22 m) although the plan draws about 3.5 m",
+    "root bank height 0.5 m (the puppy looks down 'just over her head')",
+    "west oak modelled as a living trunk 1.4 m across although drawn as a stump; hazel stool as one 1.2 m clump 6 m tall",
+    "oak_nw and oak_se edge trunks placed under the drawn edge foliage to close the ring (Bible: glade ringed by oak, ash and hazel)"
+  ],
+  "units": "metres; xy = normalised plan position (x right = east, y down = south = +Z); elevation_m = centre height (host loader convention)",
+  "objects": [
+    {"id": "thistle_rosette", "shape": "cylinder", "size_m": [1.2, 0.35, 1.2], "xy": [0.48, 0.48], "collision_role": "solid", "note": "spiny leaves; Alice dodges round it"},
+    {"id": "thistle_stem", "shape": "cylinder", "size_m": [0.1, 1.2, 0.1], "xy": [0.48, 0.48], "collision_role": "solid"},
+    {"id": "thistle_flowers", "shape": "sphere", "size_m": [0.5, 0.3, 0.5], "xy": [0.48, 0.48], "elevation_m": 1.05, "collision_role": "soft"},
+    {"id": "root_bank", "shape": "box", "size_m": [10.08, 0.5, 2.16], "xy": [0.47, 0.08], "collision_role": "solid", "note": "the puppy (pending_H2 rendering) looks down from here"},
+    {"id": "stick_pile", "shape": "box", "size_m": [0.45, 0.08, 0.35], "xy": [0.63, 0.62], "collision_role": "ground"},
+    {"id": "oak_trunk_west", "shape": "cylinder", "size_m": [1.4, 15.0, 1.4], "xy": [0.14, 0.4], "collision_role": "solid"},
+    {"id": "hazel_stool_east", "shape": "cylinder", "size_m": [1.2, 6.0, 1.2], "xy": [0.8, 0.28], "collision_role": "solid"},
+    {"id": "oak_nw", "shape": "cylinder", "size_m": [1.0, 15.0, 1.0], "xy": [0.05, 0.12], "collision_role": "solid"},
+    {"id": "oak_se", "shape": "cylinder", "size_m": [1.0, 15.0, 1.0], "xy": [0.95, 0.85], "collision_role": "solid"},
+    {"id": "bracken_foxglove", "shape": "box", "size_m": [6.5, 1.2, 3.5], "xy": [0.14, 0.87], "collision_role": "soft"},
+    {"id": "glade_entry_path", "shape": "box", "size_m": [1.6, 0.02, 1.5], "xy": [0.56, 0.94], "collision_role": "ground"}
+  ],
+  "walkable": {
+    "zones": ["the whole grass floor of the glade inside the ring (about 15 x 11 m true), open round the thistle", "the south entry gap x 0.5-0.6"],
+    "clearance_check": "Tall grass (about 0.3 m true) is walk-through dressing and is not modelled. Alice at 0.15 m tall and about 0.05 m wide has open ground on every side of the 1.2 m rosette. The puppy's body is an actor, not scene geometry."
+  },
+  "doorways": [],
+  "landmarks_covered": ["great_thistle", "root_bank", "stick_pile", "oak_trunk_west", "hazel_stool_east", "bracken_foxglove", "glade_entry"],
+  "workflow_notes": [
+    "The plan draws the hero flora and sticks at roughly x4-x10 of their true size inside a true-unit wood ring (trees and glade span read true). Modelled at Bible true sizes on the calibrated landmark points; logged as DEF-p4-scenemodel-972.",
+    "Plan-image defects not modelled: Art Nouveau mosaic paving on the woodland floor (the Bible says no built ornament) and the stump-cut west oak (modelled as living).",
+    "Puppy CRE-002 rendering is pending_H2 (proposal: photoreal CGI puppy on the root bank). It is an actor and does not enter the scene asset."
+  ],
+  "handover": "no storyboard yet — hand over to whitebox-staging (no directing/*/shot_list.json exists; no videos rendered)"
+}

@@ -1,0 +1,37 @@
+{
+  "task_id": "p4-aspect",
+  "agent": "06-art/aspect-ratio",
+  "attempt": 1,
+  "status": "done",
+  "finished_on": "2026-09-22",
+  "outputs": [
+    "bible/aspect_ratio.json"
+  ],
+  "inputs_used": {
+    "output_settings": "aspect_preset=youtube (16:9), publish_platforms=[YouTube], video resolution policy=draft 480p generation / final 1080p via upscale only",
+    "style_json": "bible/style.json is still status:skeleton_empty (not yet authored by art-director) — no aspect-relevant style constraint found there; master aspect was taken directly from the authoritative output-settings injection per SOUL §职责1",
+    "workflow_md": "confirmed fps=24 global convention and the §7A/§8 precedent that engine-native 16:9 output (e.g. 864x496 at 480p) counts as compliant, cited verbatim in _meta.notes for downstream stations"
+  },
+  "key_decisions": [
+    "Single selected platform (YouTube) shares the master aspect (16:9) exactly, so the platform entry derives as a plain pass-through (derive: native) — no crop/scale rule was needed.",
+    "480p draft tier uses the YouTube-convention rounded pixel size 854x480 (16:9 is not exactly integer at 480 short side); 720p/1080p/4k are exact 16:9. Noted the engine-native tolerance explicitly so downstream QA/video-generation don't file false failures for near-16:9 outputs.",
+    "1080p delivery is reached only via upscale from the 480p draft clip, per the user's resolution policy; documented the single allowed exception (QA-upscale-fallback re-render, WORKFLOW.md §7B) so platform-adapter/upscale don't need to re-derive that rule.",
+    "safe_area filled with standard title-safe/action-safe margins plus YouTube player UI top/bottom occlusion zones, for composition/thumbnail consumers — even though burned subtitles/captions/narration are all off in this project, the field is still required by the machine check (安全区字段齐全) and useful to composition/thumbnail.",
+    "max_duration_s set to YouTube's verified-account technical ceiling (43200s) rather than left null, since the episode budget is unfixed (decided by episode_plan) and no platform cap is realistically binding — kept the field populated and legal per acceptance criteria, with a note clarifying governance stays with episode_plan."
+  ],
+  "conflicts": [],
+  "checks": {
+    "script": "inline python3 -c JSON validation (see run log)",
+    "result": "PASS",
+    "covers": [
+      "valid JSON",
+      "master.aspect == 16:9",
+      "platforms[] has exactly 1 entry (youtube), matching the sole selected publish platform 100%",
+      "platform.aspect == master.aspect, platform.resolution == master.delivery.resolution (master derives the platform spec losslessly since aspect+fps match; only container/bitrate/duration-cap/safe_area are platform-specific additions, not derivations)",
+      "safe_area fields present and numeric, all in [0,50) pct range",
+      "ascii_filename (bible/aspect_ratio.json)"
+    ]
+  },
+  "open_tickets_relevance": "DEF-p3-char-index-902 (executioner prop) and DEF-p3-char-index-903 (ch006 lullaby speaker attribution) are outside this station's scope (画幅/分辨率矩阵) — not touched, no interaction with this deliverable.",
+  "skills": "none checked for this station (no auto-activated skills configured for 06-art/aspect-ratio in this project; performance-control skill also off project-wide)"
+}

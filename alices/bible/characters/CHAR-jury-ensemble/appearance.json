@@ -1,0 +1,68 @@
+{
+  "character_id": "CHAR-jury-ensemble",
+  "card_type": "ensemble",
+  "tier": "extra",
+  "layer": "dream",
+  "revision": { "change_id": "BIB-0027", "task_id": "p4-cr-appearance", "date": "2026-09-23", "note": "Slots rewritten from animal-coded human performers to photoreal CGI animals." },
+  "rendering": {
+    "mode": "photoreal_cgi_animal",
+    "rule": "bible/cultivation.json SUP-002 (amended BIB-0027): 'the guinea-pigs and other animal jurors of the trial'",
+    "composition": { "cgi_animals": 11, "human_performers": 0, "note": "All eleven unnamed jurors are CGI animals: 6 animals and 5 birds. The twelfth juror, Bill (CHAR-bill-the-lizard), has his own card. The humans in the court (King, Queen, Knave, officers, card figures) are not jurors and stay human performers under SUP-004." },
+    "limits": "Natural anatomy per species; no clothing. The only props are each juror's slate and slate-pencil, sized to the animal."
+  },
+  "headcount": { "range": [11, 11], "note": "Twelve jurors in all; CHAR-bill-the-lizard is the twelfth. This card covers exactly the eleven unnamed jurors.", "source_chapter": "ch011", "paragraph": "ch011-p05", "quote": "The twelve jurors were all writing very busily on slates." },
+  "gender": "male",
+  "gender_note": { "source_chapter": "ch011", "paragraph": "ch011-p04", "quote": "However, “jury-men” would have done just as well.", "reason": "The source calls them 'jury-men' / 'jurymen' (ch011-p04, ch012-p01). All eleven are male; where a species differs by sex (pheasant), the male plumage is used.", "also_seen": [{ "paragraph": "ch012-p01", "quote": "upsetting all the jurymen on to the heads of the crowd below" }] },
+  "gender_mix": { "male": 11, "female": 0 },
+  "composition": {
+    "rule": "Some animals, some birds; exactly two guinea-pigs.",
+    "source_chapter": "ch011", "paragraph": "ch011-p04",
+    "quote": "(she was obliged to say “creatures,” you see, because some of them were animals, and some were birds,)",
+    "guinea_pigs_source": { "paragraph": "ch011-p53", "quote": "Here one of the guinea-pigs cheered", "also": "ch011 'Here the other guinea-pig cheered, and was suppressed.'" },
+    "slots": [
+      { "slot": "J01", "type": "cgi_animal", "species": "guinea-pig (Cavia porcellus), short-haired", "persona_age": "45-55", "look": "very round, ginger-tan and white piebald coat, small dark eyes, pink ears; cheers first; bagged and hustled out", "size_cm": "about 25 long", "source_chapter": "ch011", "paragraph": "ch011-p53" },
+      { "slot": "J02", "type": "cgi_animal", "species": "guinea-pig (Cavia porcellus), rosette-coated (Abyssinian)", "persona_age": "40-50", "look": "equally round, black-and-cream patched coat in tufted rosettes; reads as J01's pair; cheers second; bagged", "size_cm": "about 25 long", "source_chapter": "ch011", "paragraph": "ch011-p53" },
+      { "slot": "J03", "type": "cgi_animal", "species": "European mole (Talpa europaea)", "persona_age": "55-65", "look": "velvety charcoal-black fur, broad pink spade forepaws, pink snout, eyes barely visible, squinting", "size_cm": "about 15 long", "inferred": true },
+      { "slot": "J04", "type": "cgi_animal", "species": "red squirrel (Sciurus vulgaris)", "persona_age": "25-35", "look": "russet-red coat, ear tufts, bushy tail, slight and jumpy", "size_cm": "about 20 body plus tail", "inferred": true },
+      { "slot": "J05", "type": "cgi_animal", "species": "polecat-ferret (Mustela furo)", "persona_age": "35-45", "look": "long thin body and neck, cream underfur with dark guard hair, dark face mask", "size_cm": "about 40 long", "inferred": true },
+      { "slot": "J06", "type": "cgi_animal", "species": "European badger (Meles meles)", "persona_age": "60-70", "look": "broad, heavy, grey body, black-and-white striped face", "size_cm": "about 30 at the shoulder", "inferred": true },
+      { "slot": "J07", "type": "cgi_animal", "species": "tawny owl (Strix aluco)", "persona_age": "60-70", "look": "mottled brown-and-buff plumage, round facial disc, large dark eyes, solemn", "size_cm": "about 38 tall", "inferred": true },
+      { "slot": "J08", "type": "cgi_animal", "species": "white stork (Ciconia ciconia)", "persona_age": "45-55", "look": "very tall, white with black flight feathers, long red bill and legs", "size_cm": "about 100 tall", "inferred": true },
+      { "slot": "J09", "type": "cgi_animal", "species": "sulphur-crested cockatoo (Cacatua galerita)", "persona_age": "35-45", "look": "white plumage, yellow crest raised when excited, dark bill", "size_cm": "about 45 tall", "inferred": true },
+      { "slot": "J10", "type": "cgi_animal", "species": "house sparrow (Passer domesticus), male", "persona_age": "20-30", "look": "small, quick, grey cap, black bib, brown-streaked back", "size_cm": "about 15 long", "inferred": true },
+      { "slot": "J11", "type": "cgi_animal", "species": "common pheasant (Phasianus colchicus), cock", "persona_age": "40-50", "look": "copper-bronze body, dark green head, red face wattle, white neck ring, long tail", "size_cm": "about 80 long with tail", "inferred": true }
+    ],
+    "slots_inferred_reason": "Only the guinea-pigs are named. The other nine species are designed to satisfy 'some were animals, and some were birds', avoiding species cast as named characters and the croquet flamingo and hedgehog. Split: 6 animals (J01-J06), 5 birds (J07-J11)."
+  },
+  "hair": { "coat": "fur or feathers per slot", "value": "species-natural coats (see composition.slots); dishevelled after the box is tipped", "inferred": true, "reason": "Species." },
+  "eyes": { "value": "species-natural per slot", "inferred": true, "reason": "Species." },
+  "face": { "value": "real animal faces; species read through natural anatomy; attentive, heads bent over slates", "inferred": true, "reason": "SUP-002 (BIB-0027)." },
+  "build": {
+    "height_range_cm": [10, 100],
+    "body_type": "species-true per slot, deliberately varied (sparrow and mole small; stork towering) so the jury-box reads as a mixed bench of creatures",
+    "scale_reference": "The jury-box is scaled to the animals; they sit on tiered benches. Alice grows through the trial (ch011-ch012, SUP-003) until her skirt tips the box over (ch012-p01) and she picks the jurors back up by hand.",
+    "inferred": true,
+    "reason": "Species-true sizes."
+  },
+  "base_age_range": "20-70 (persona age per slot)",
+  "base_age_inferred": true,
+  "base_age_reason": "Persona ages for voice casting only; all animals are adults of their species.",
+  "marks": [
+    { "type": "slate smudges", "position": "paws, feet and beaks", "description": "grey slate-pencil dust", "source_chapter": "ch011", "paragraph": "ch011-p05", "quote": "The twelve jurors were all writing very busily on slates." }
+  ],
+  "signature_items": [
+    { "item": "a small framed school slate and a slate pencil each, sized to the animal (held in paws, feet or beak)", "source_chapter": "ch011", "paragraph": "ch011-p05", "quote": "writing very busily on slates", "also_seen": [{ "paragraph": "ch012-p05", "quote": "their slates and pencils had been found and handed back to them" }] },
+    { "item": "J01/J02 only: coarse canvas sack with drawstrings (applied by CHAR-court-officers-ensemble)", "source_chapter": "ch011", "paragraph": "ch011-p53", "quote": "They had a large canvas bag, which tied up at the mouth with strings", "staging": "H1 ruling 5.4 B / CUL-007: the guinea-pig is lifted gently into the sack and carried out; nobody sits on it." }
+  ],
+  "default_outfit_tone": "none: no clothing on any juror; the palette is their natural coats and plumage, which keeps the bench visibly apart from the crimson card-suited household (FAC-house-of-hearts) around them",
+  "default_outfit_tone_source": { "inferred": true, "reason": "Per SUP-002 (BIB-0027) the old frock-coat townsmen reading is dropped; the text gives jurors only slates." },
+  "variation_rules": [
+    "Every juror must be identifiable by species in a wide shot of the box.",
+    "J01 and J02 are a matched guinea-pig pair and the same CGI assets as the two guinea-pigs outside the White Rabbit's house (CHAR-crowd-ensemble X01/X02), an inferred dream recurrence (TERM-0036).",
+    "Bill the Lizard (CHAR-bill-the-lizard) sits among them and is the only reptile.",
+    "All eleven hold slates in every trial shot until the box is tipped (ch012-p01); after the upset, fur and feathers are ruffled.",
+    "CHAR-alice-sister (glimpsed at the trial per ruling 5.3 B) is not a juror and does not sit in the jury-box."
+  ],
+  "doubling": { "value": "none", "reason": "No H1 5.3 B doubling pair involves the jury." },
+  "prompt_summary_en": "A tiered wooden jury-box of eleven photoreal animals and birds bent over small school slates: two round piebald guinea-pigs, a velvety black mole, a red squirrel, a long ferret, a grey badger, a tawny owl, a tall white stork, a white cockatoo with yellow crest, a house sparrow, a copper cock pheasant, each holding a tiny slate pencil, natural animal anatomy, no clothing, live-action film plate"
+}

@@ -1,0 +1,33 @@
+{
+  "character_id": "CHAR-white-rabbit",
+  "name": "White Rabbit",
+  "tier": "A",
+  "card_type": "individual",
+  "gender": "male",
+  "age_sense": "elderly functionary (appearance base_age_range 55-62)",
+  "timbre": "thin, reedy, slightly nasal older man's voice, breathy and fluttering, with a sharp edge when giving orders",
+  "pitch": "high tenor for an older man, jumpy intonation that climbs when panicked",
+  "pitch_range_hz": [130, 230],
+  "speed_wpm": [175, 205],
+  "speed_cpm": [665, 779],
+  "accent": "genteel southern English, affected Received Pronunciation of an upper servant, clipped and fussy",
+  "reference_style": "Two voices from one throat: breathless, stammering and servile upward (Duchess, Queen, King); peremptory and snappish downward (Mary Ann, Pat, Bill). As trial herald he reads out 'at the top of his shrill little voice'. Animal oaths ('my ears and whiskers') are spoken as nervous tics.",
+  "emotion_range": {
+    "calm": { "speed_delta": "0%", "pitch_delta": "0semi", "note": "rare; a fussy muttering baseline" },
+    "panicked": { "speed_delta": "+15%", "pitch_delta": "+3semi", "note": "'Oh dear! Oh dear! I shall be late!' — breathy, overlapping gasps" },
+    "ordering_down": { "speed_delta": "+5%", "pitch_delta": "+1semi", "volume": "loud", "note": "ch004-p02 'in an angry tone' — shrill snap" },
+    "servile_low": { "speed_delta": "-5%", "pitch_delta": "-1semi", "volume": "soft", "note": "ch008-p36 'in a low, hurried tone'; ch011-p67 'in a low voice'" },
+    "herald_proclaim": { "speed_delta": "-10%", "pitch_delta": "+2semi", "volume": "loud", "note": "ch011-p74 'at the top of his shrill little voice' — formal, thin, strained" }
+  },
+  "age_variants": [],
+  "source_chapter": "ch011",
+  "sources": ["ch001", "ch002", "ch004", "ch008", "ch011", "ch012", "ch004-p02", "ch008-p34", "ch008-p36", "ch011-p74"],
+  "voice_evidence": [
+    { "para": "ch011-p74", "quote": "the White Rabbit read out, at the top of his shrill little voice" },
+    { "para": "ch008-p34", "quote": "said a timid voice at her side" },
+    { "para": "ch008-p36", "quote": "said the Rabbit in a low, hurried tone" }
+  ],
+  "inferred": true,
+  "inferred_fields": ["pitch_range_hz", "speed_wpm", "speed_cpm", "accent"],
+  "reason": "'Shrill little voice' and timid/hurried tones are sourced; pitch band, rate and accent designed for an anxious 1862 upper servant (dialogue_style register)."
+}

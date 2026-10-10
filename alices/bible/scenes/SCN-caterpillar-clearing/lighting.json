@@ -1,0 +1,48 @@
+{
+  "_meta": {
+    "file": "bible/scenes/SCN-caterpillar-clearing/lighting.json",
+    "owner": "05-scenes/lighting",
+    "task_id": "p3-lighting-sb1",
+    "attempt": 1,
+    "generated": "2026-09-22",
+    "status": "draft_v1_bib0027",
+    "amended": "2026-09-23 p4-cr-lighting (BIB-0027): performer wording changed to a photoreal CGI caterpillar; lighting setup and prompt_fragment_en unchanged",
+    "enum_set": "LGT-ENUM-v1 (defined once in runs/p3-lighting-sb1/result.json)",
+    "inputs": ["bible/scenes/SCN-caterpillar-clearing/environment.json", "bible/scenes/SCN-caterpillar-clearing/architecture.json"]
+  },
+  "scene_id": "SCN-caterpillar-clearing",
+  "layer": "dream",
+  "int_ext": "EXT",
+  "daylight_access": "open_sky",
+  "dream_growth": {
+    "grows_from": "the waking sun at about 16:00-16:25 GMT over a sunny copse patch near home",
+    "how": "Out of the wood's dapple into an open patch of the same afternoon sun, slightly lower and warmer than at the pool bank. The windless air lets the hookah smoke hang in the sunlight like a drowsy schoolroom afternoon.",
+    "ruling": "runs/h1-ruling/ruling.json 5.2 A"
+  },
+  "schemes": [
+    {
+      "lighting_scheme_id": "LGT-caterpillar-clearing-01",
+      "condition": {"time_of_day": "afternoon", "weather": "fair_hot"},
+      "state_refs": ["SCN-caterpillar-clearing-S01", "SCN-caterpillar-clearing-S02"],
+      "waking_clock": "16:00-16:25 GMT (Alice asleep on the bank)",
+      "sun": {"elevation_deg_approx": 36, "azimuth_deg_approx": 262},
+      "key_source": "sun_direct",
+      "key": "west-south-west sun over the clearing's open patch",
+      "direction": "high_side",
+      "direction_note": "sun from the WSW side of the clearing; grass blades and buttercup petals are backlit when looking toward it; the Caterpillar (a photoreal CGI caterpillar composited into the live-action plate, SUP-002 as amended by BIB-0027) on the mushroom top takes the sun as a high side key, the light glowing through the edges of its translucent body and catching the hookah; the surrounding tree ring is darker",
+      "fill": {"source": "bounce", "note": "soft bounce off the pale cream mushroom cap onto faces near it; green bounce from the grass"},
+      "practicals": [],
+      "color_temp": "neutral (~4500K)",
+      "kelvin_approx": 5000,
+      "contrast": "medium",
+      "quality": "hard",
+      "atmosphere": "dead-still warm air; slow layers of hookah smoke hanging and catching the sun; drowsy insects",
+      "prompt_fragment_en": "Warm, windless afternoon sun in a small woodland clearing: a high sun from the west-south-west lights the open patch in clear daylight, shining through towering grass blades and buttercup petals so they glow from behind, the pale mushroom cap bright and bouncing soft light onto faces, slow layers of hookah smoke hanging in the still air and catching the sun, the ring of trees darker around the edge; crisp but gentle contrast, drowsy, dreamy mood.",
+      "source_chapter": "ch004",
+      "sources": ["ch004-p40", "ch004-p41", "ch004-p42", "ch005-p01"],
+      "inferred": true,
+      "reason": "The warmth (she fans herself, ch004-p40), the flowers, grass and mushroom (ch004-p41) and the hookah (ch004-p42) are explicit; no light is described. The sun follows the waking clock (environment S01/S02); both states share one condition, so one scheme covers them."
+    }
+  ],
+  "special": []
+}

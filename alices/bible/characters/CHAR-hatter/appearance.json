@@ -1,0 +1,59 @@
+{
+  "character_id": "CHAR-hatter",
+  "name": "The Hatter",
+  "tier": "A",
+  "layer": "dream",
+  "gender": "male",
+  "gender_note": { "source_chapter": "ch007", "source_para": "ch007-p09", "quote": "He had been looking at Alice for some time with great curiosity" },
+  "base_age_range": "32-40",
+  "base_age_note": { "inferred": true, "reason": "Not stated; a working tradesman in his prime, worn down early ('I’m a poor man')." },
+  "hair": { "color": "dark brown", "style": "thick, shaggy and uncombed, sticking out in tufts below the hat brim; untrimmed sideburns", "length": "collar-length", "inferred": true, "reason": "Not described; unkempt to match his poverty and agitation." },
+  "eyes": {
+    "color": "light grey",
+    "shape": "large and prominent, often stretched very wide",
+    "source_chapter": "ch007",
+    "source_para": "ch007-p11",
+    "quote": "The Hatter opened his eyes very wide on hearing this",
+    "colour_inferred": true,
+    "reason": "Wide eyes sourced; colour designed for an unsettling pale stare."
+  },
+  "skin": { "tone": "pallid, blanching whiter when frightened", "source_chapter": "ch011", "source_para": "ch011-p26", "quote": "staring at the Hatter, who turned pale and fidgeted" },
+  "face": {
+    "shape": "long and narrow",
+    "features": ["long nose", "wide mobile mouth", "hollow cheeks", "a slight constant tremor"],
+    "default_expression": "restless, rude, over-excited at the tea-table; trembling and fidgeting in the witness box",
+    "source_chapter": "ch011",
+    "source_para": ["ch011-p28", "ch011-p37"],
+    "quote": "he kept shifting from one foot to the other / the Hatter began, in a trembling voice",
+    "features_inferred": true,
+    "reason": "Fidgeting and trembling sourced; the tremor is the realistic period reading of a hatter's mercury poisoning; face structure designed."
+  },
+  "build": {
+    "height_range_cm": [180, 186],
+    "body_type": "tall, thin and gangly, all elbows and knees",
+    "scale_reference": "about 1.35x Alice's true size (135 cm); with the hat he towers over the tea-table",
+    "inferred": true,
+    "reason": "Not stated; a tall, spindly silhouette under a tall hat."
+  },
+  "marks": [
+    { "type": "signature_item", "position": "head", "description": "an oversized tall hat that is stock-in-trade, not his own, with a paper price-ticket still tucked in the band ('In this style 10/6')", "source_chapter": "ch011", "source_para": ["ch011-p23", "ch011-p25"], "quote": "“It isn’t mine,” said the Hatter. / “I keep them to sell,”", "ticket_note": "ticket text per FAC-mad-tea-party emblem_visual" },
+    { "type": "signature_item", "position": "hands", "description": "a pocket-watch he shakes and holds to his ear; at the trial a teacup and a piece of bread-and-butter", "source_chapter": "ch007", "source_para": ["ch007-p21", "ch011-p16"] }
+  ],
+  "default_outfit_tone": {
+    "summary": "a worn, too-short frock coat in faded bottle green, loud yellow-and-brown checked trousers, a large floppy cravat tied in a loose bow, a stained waistcoat, the tall price-ticketed hat",
+    "silhouette_1862": "an 1862 tradesman's Sunday best gone shabby: long thin legs, short sleeves showing bony wrists, dominated by the tall hat",
+    "source_chapter": "ch011",
+    "source_para": "ch011-p37",
+    "quote": "I’m a poor man, your Majesty",
+    "colours_inferred": true,
+    "reason": "Poverty sourced; colours and cut designed. Costume detail by 06-art/costume."
+  },
+  "performer_coding": {
+    "code": "none (textually human)",
+    "touches": ["no animal coding; character-coded by the price-ticketed hat, tremor and fidgeting"],
+    "limits": "no cartoon make-up or wild wig colours; keep it a real, shabby 1862 tradesman"
+  },
+  "doubling": null,
+  "events": ["ev0029", "ev0030", "ev0031", "ev0046", "ev0047"],
+  "prompt_base_en": "a tall, thin, gangly English hatter of about thirty-five in 1862, shaggy uncombed dark-brown hair under an oversized tall hat with a paper price ticket '10/6' in the band, large pale grey staring eyes, long pallid narrow face, shabby faded green frock coat, loud checked trousers, loose floppy cravat"
+}

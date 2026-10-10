@@ -1,0 +1,37 @@
+{
+  "shot_id": "sh097",
+  "group_id": "grp036",
+  "scene_no": "S10",
+  "scene_id": "SCN-pool-of-tears",
+  "duration_s": 3.0,
+  "is_dialogue": false,
+  "group_position": "middle shot of grp036 — Alice on the map start ground (glass_table_legs), turning as the floating fan drifts past.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "stand",
+      "start_pos": "treading water beside the glass table legs, in the middle distance behind the drifting fan",
+      "space_fragment_en": "standing upright treading water beside the glass table legs, centred in frame, facing the floating fan on screen-left",
+      "facing": "screen-left at the fan crossing her own open water",
+      "path": [],
+      "beats": [
+        { "t": 0.6, "action": "the Rabbit's fan drifts past her on the surface", "sync": "the realisation lands on the object first" },
+        { "t": 2.0, "action": "her face falls", "sync": "she understands what she is swimming in" }
+      ],
+      "performance_beat": {
+        "objective": "identify the thing floating past her, and then wish she had not",
+        "goal": "identify the thing floating past her",
+        "emotional_arc": "from idle recognition to the cold arrival of what the water is made of",
+        "arc_from": "idle recognition",
+        "arc_to": "the cold arrival of what the water is",
+        "trigger": { "beat": "the fan is recognisable as the one she threw away", "t": 2.0 },
+        "no_early_reaction": ["the face falling", "the mouth opening", "a hand going to the water"],
+        "forbidden_early": ["the face falling", "the mouth opening", "a hand going to the water"],
+        "end_state": "face fallen, eyes following the fan screen-left, mouth closed, treading more slowly"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0008 result (dream) — 'these are her own tears'", "note": "Alice alone; the fan is the only other object she can date to herself." }
+}

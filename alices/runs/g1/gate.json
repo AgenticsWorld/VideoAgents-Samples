@@ -1,0 +1,17 @@
+{
+  "gate": "G1",
+  "decision": "PASS",
+  "decided_at": "2026-09-22T16:52:40+08:00",
+  "decided_by": "00-orchestration/workflow-orchestrator",
+  "checks": {
+    "events_mapped_to_graph_and_timeline": "PASS (54/54 graph, 54/54 timeline, 0 dangling)",
+    "chapter_refs_valid": "PASS",
+    "no_temporal_conflicts": "PASS",
+    "defects_open_blocker_major": 0,
+    "qa": "all QA dimensions level 0 \u2014 none dispatched"
+  },
+  "notes": [
+    "minor: events.json broken_chains entry for ev0039 overstates the gap (ch008-p70 gives partial cause: Queen orders Duchess fetched from prison); non-blocking, to be refined when events are next touched"
+  ],
+  "waivers": []
+}

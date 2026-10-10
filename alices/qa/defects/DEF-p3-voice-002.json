@@ -1,0 +1,53 @@
+{
+  "id": "DEF-p3-voice-002",
+  "opened_by": "03-characters/voiceprint",
+  "opened_on": "2026-09-22",
+  "task_id": "p3-voice-vb1",
+  "assigned_to": "03-characters/character-manager",
+  "route_to_owner": "03-characters/character-manager",
+  "domain": "characters",
+  "status": "closed",
+  "severity": "minor",
+  "summary": "index.json makes CHAR-crowd-ensemble the catch-all for the ch006 'CHORUS' speaker tag, but the source says the lullaby chorus is sung by the cook and the baby ('CHORUS. (In which the cook and the baby joined)', ch006-p37). Also two 'UNKNOWN' speaker tags remain unattributed in structured_story.",
+  "evidence": [
+    {
+      "file": "bible/characters/index.json",
+      "entry": "CHAR-crowd-ensemble",
+      "field": "disambiguation",
+      "value": "A catch-all for structured_story speaker tags 'CROWD' (ch004) and 'CHORUS' (ch006)"
+    },
+    {
+      "file": "story/structured_story/ch006.json",
+      "para": "ch006-p37",
+      "quote": "CHORUS. (In which the cook and the baby joined):"
+    },
+    {
+      "file": "story/structured_story/ch007.json",
+      "dialogue": "ch007-d0002",
+      "speaker": "UNKNOWN",
+      "source_para": "ch007-p02",
+      "quote": "“No room! No room!” they cried out when they saw Alice coming."
+    },
+    {
+      "file": "story/structured_story/ch010.json",
+      "dialogue": "ch010-d0084",
+      "speaker": "UNKNOWN",
+      "source_para": "ch010-p78",
+      "quote": "a cry of “The trial’s beginning!” was heard in the distance"
+    }
+  ],
+  "decision_taken_here": "Voice mapping used for coverage (runs/p3-voice-vb1/result.json speaker_map): CHORUS -> CHAR-duchess + CHAR-cook (the baby is a non-speaking pig-baby, SUP-006, sneezes/howls only); ch007-d0002 -> CHAR-hatter + CHAR-march-hare + CHAR-dormouse ('the three'); ch010-d0084 -> CHAR-court-officers-ensemble (designed, inferred). CHAR-crowd-ensemble voice card covers only the ch004 CROWD lines.",
+  "requested_action": "character-manager corrects the CHAR-crowd-ensemble disambiguation via memory-bible; novel-parser (or dialogue-rewrite) confirms the two UNKNOWN attributions.",
+  "triaged_by": "00-orchestration/memory-bible",
+  "triage_task_id": "p3-bible-defects-2",
+  "triaged_on": "2026-09-22",
+  "routed_from": "00-orchestration/memory-bible",
+  "route_fix_to": "03-characters/character-manager (a); 01-story/novel-parser (b)",
+  "disposition": "routed_open",
+  "ruling": "(a) Same as DEF-p3-appearance-302, which is already routed to character-manager: the ch006 CHORUS is the Duchess, with CHAR-cook and the baby joining (ch006-p37). CHAR-crowd-ensemble covers ch004 only. voiceprint's CHORUS mapping is consistent with this. (b) ch007-d0002: the same source sentence names the speakers ('the three were all crowded together ... they cried out', ch007-p02), so the speakers are CHAR-hatter, CHAR-march-hare and CHAR-dormouse, not UNKNOWN. (c) ch010-d0084: the source gives no speaker ('a cry ... was heard in the distance', ch010-p78). UNKNOWN is the correct parse and stays. voiceprint's use of CHAR-court-officers-ensemble is accepted as an inferred staging choice (off-screen herald cry). It is not canon, and 01-story/screenplay confirms or replaces it when it writes the line. None of this is creative enough to need a user ruling.",
+  "fix_instruction": "(a) character-manager: apply the DEF-p3-appearance-302 fix to bible/characters/index.json CHAR-crowd-ensemble. The disambiguation must no longer say it covers 'CHORUS' (ch006). It covers the ch004 'CROWD' tag only, and the note must attribute the ch006 CHORUS lines to the Duchess with CHAR-cook and the baby joining (ch006-p37). Close this ticket together with 302. (b) novel-parser: in story/structured_story/ch007.json, dialogue ch007-d0002, set the speaker to the group Hatter + March Hare + Dormouse (candidates stated in ch007-p02). Use the existing multi-speaker convention, or speaker 'THE THREE' with candidates listing the three. Leave ch010-d0084 as UNKNOWN. (c) No action on voice.json.",
+  "fix_note": "(a) Verified bible/characters/index.json CHAR-crowd-ensemble: disambiguation already stated (matching the DEF-p3-appearance-302 fix) that this entry covers only the ch004 'CROWD' tag, and that the ch006 CHORUS lines belong to the Duchess with CHAR-cook and CHAR-duchess-baby joining (ch006-p37); the note field already carried the same reattribution and cross-notified 01-story/screenplay and 09-audio (voice). Tidied the one remaining inconsistency: original_name changed from 'CROWD / CHORUS' to 'CROWD' so the field no longer implies CHORUS coverage. No other field in index.json touched (Bible v1 locked; edit scoped to this entry only). (b) No edit made to story/structured_story files — out of character-manager's remit (novel-parser/screenplay territory). Per this task's routing, the two UNKNOWN speaker tags (ch007-d0002, ch010-d0084) are left as-is; 01-story/screenplay will resolve/confirm their speaker attribution when it writes those lines, gated at G5 (screenplay lock). Part (a) closed; this ticket's overall status is set closed on that basis, with part (b) tracked as a screenplay G5 action item rather than a further character-manager task.",
+  "fixed_by": "03-characters/character-manager",
+  "fixed_on": "2026-09-22",
+  "fix_task_id": "p3-fix-voice-002"
+}

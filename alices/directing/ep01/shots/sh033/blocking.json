@@ -1,0 +1,45 @@
+{
+  "shot_id": "sh033",
+  "group_id": "grp013",
+  "scene_no": "S05",
+  "scene_id": "SCN-long-hall",
+  "duration_s": 8.0,
+  "is_dialogue": false,
+  "group_position": "first shot of grp013 — Alice on her map start (ne_entrance, one step inside the corner entrance).",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "stand",
+      "start_pos": "one step inside the corner entrance under its lintel, then a few slow paces into the hall",
+      "space_fragment_en": "standing one step inside the corner entrance, centred low in frame, facing down the length of the hall",
+      "facing": "squarely down the hall on the perspective axis, head turning slowly along the walls",
+      "path": [
+        { "t": 5.0, "to": "a few paces in from the corner entrance, still on the north end of the hall" }
+      ],
+      "beats": [
+        { "t": 0.6, "action": "steps in under the lintel and the hall opens out in front of her", "sync": "the single reveal of S05" },
+        { "t": 3.4, "action": "her look travels the lamp row, then the vault, then the doors", "sync": "the inventory" },
+        { "t": 6.8, "action": "no Rabbit anywhere; her look comes back down to floor level", "sync": "the absence lands" }
+      ],
+      "performance_beat": {
+        "objective": "find him in a room she has never seen before",
+        "goal": "find him in this room",
+        "emotional_arc": "from chase-momentum to a wondering, then deflated, survey",
+        "arc_from": "chase-momentum",
+        "arc_to": "deflation — he is not here",
+        "trigger": { "beat": "her look completes the room and finds no Rabbit in it", "t": 6.8 },
+        "no_early_reaction": ["the shoulders dropping", "the pace slowing to a stop", "the hands falling"],
+        "forbidden_early": ["the shoulders dropping", "the pace slowing to a stop", "the hands falling"],
+        "end_state": "standing still well inside the hall, chin lowered from the vault, eyes going along the row of doors"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": {
+    "timeline_ok": true,
+    "violations": [],
+    "story_event": "ev0003 (dream) — the long, low hall with locked doors all round",
+    "note": "Alice alone; the Rabbit's absence from this frame is the point of the shot and he must not be staged anywhere in it."
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "schema_version": "whitebox_scene.v1",
+  "scene_id": "SCN-mock-turtle-ledge",
+  "units": "meters",
+  "_meta": {"owner": "05-scenes/scene-modeling", "task_id": "p4-scene-model-sb3", "attempt": 1, "date": "2026-09-23",
+            "inputs": ["assets/concepts/scenes/SCN-mock-turtle-ledge/layout_top.png", "assets/concepts/scenes/SCN-mock-turtle-ledge/layout.json", "bible/scenes/SCN-mock-turtle-ledge/architecture.json", "bible/scenes/SCN-mock-turtle-ledge/environment.json"]},
+  "dimensions_m": [48, 5, 27],
+  "inferred": true,
+  "scale_basis": {
+    "anchor": "layout.json orientation.extent_m X = 48 m across the full image; Z = 48 x 1440/2560 = 27 m (image aspect)",
+    "cross_checks": ["wet sand band reads ~13-14 m wide (x 0.30-0.58) vs 15 m in architecture", "spades read ~1 m"],
+    "inferred": true,
+    "deviation": "The drawn rock ledge reads ~10 x 5 m vs the 3 x 1.5 m 'little ledge' in architecture; per task ruling the ledge is modelled at Bible size on the layout.json point"
+  },
+  "walkable": "The firm wet sand (image x 0.30-0.58) for the Quadrille, the foam line and the lower shingle round the ledge; the shingle bank east (flat in this whitebox). The sea (west of x ~0.30) is not walkable beyond the shallows. The groyne is a solid barrier running into the sea at the north edge.",
+  "objects": [
+    {"id": "rock_ledge", "shape": "box", "size_m": [3, 0.9, 1.5], "xy": [0.71, 0.525], "landmark": "ledge", "collision_role": "furniture", "color": "#8e8a80", "inferred": true, "note": "flat-topped grey rock shelf, top 0.9 m, where the Mock Turtle sits (architecture size; drawn ~10 x 5 m)"},
+    {"id": "groyne_planks", "shape": "box", "size_m": [33.6, 1.0, 0.3], "xy": [0.65, 0.1124], "yaw": 0.055, "landmark": "groyne", "collision_role": "obstacle", "color": "#5a4a3a", "note": "timber groyne from the shingle (east) out into the sea (west); overlay draws it unrotated"},
+    {"id": "groyne_post_01", "shape": "cylinder", "size_m": [0.3, 1.6, 0.3], "xy": [0.3025, 0.1467], "landmark": "groyne", "collision_role": "obstacle", "color": "#5a4a3a"},
+    {"id": "groyne_post_02", "shape": "cylinder", "size_m": [0.3, 1.6, 0.3], "xy": [0.3725, 0.1396], "landmark": "groyne", "collision_role": "obstacle", "color": "#5a4a3a"},
+    {"id": "groyne_post_03", "shape": "cylinder", "size_m": [0.3, 1.6, 0.3], "xy": [0.4475, 0.1324], "landmark": "groyne", "collision_role": "obstacle", "color": "#5a4a3a"},
+    {"id": "groyne_post_04", "shape": "cylinder", "size_m": [0.3, 1.6, 0.3], "xy": [0.525, 0.1244], "landmark": "groyne", "collision_role": "obstacle", "color": "#5a4a3a"},
+    {"id": "groyne_post_05", "shape": "cylinder", "size_m": [0.3, 1.6, 0.3], "xy": [0.6075, 0.1164], "landmark": "groyne", "collision_role": "obstacle", "color": "#5a4a3a"},
+    {"id": "groyne_post_06", "shape": "cylinder", "size_m": [0.3, 1.6, 0.3], "xy": [0.6925, 0.1084], "landmark": "groyne", "collision_role": "obstacle", "color": "#5a4a3a"},
+    {"id": "groyne_post_07", "shape": "cylinder", "size_m": [0.3, 1.6, 0.3], "xy": [0.785, 0.0996], "landmark": "groyne", "collision_role": "obstacle", "color": "#5a4a3a"},
+    {"id": "groyne_post_08", "shape": "cylinder", "size_m": [0.3, 1.6, 0.3], "xy": [0.895, 0.0889], "landmark": "groyne", "collision_role": "obstacle", "color": "#5a4a3a"},
+    {"id": "spade_a", "shape": "box", "size_m": [0.2, 1.0, 0.05], "xy": [0.373, 0.78], "landmark": "spades", "collision_role": "obstacle", "color": "#b89a6a"},
+    {"id": "spade_b", "shape": "box", "size_m": [0.2, 1.0, 0.05], "xy": [0.413, 0.745], "landmark": "spades", "collision_role": "obstacle", "color": "#b89a6a"},
+    {"id": "lobster_pot_1", "shape": "box", "size_m": [0.9, 0.6, 0.6], "xy": [0.805, 0.72], "landmark": "lobster_pots", "collision_role": "obstacle", "color": "#a08a60"},
+    {"id": "lobster_pot_2", "shape": "box", "size_m": [0.9, 0.6, 0.6], "xy": [0.85, 0.778], "landmark": "lobster_pots", "collision_role": "obstacle", "color": "#a08a60"},
+    {"id": "lobster_pot_3", "shape": "box", "size_m": [0.9, 0.6, 0.6], "xy": [0.79, 0.764], "landmark": "lobster_pots", "collision_role": "obstacle", "color": "#a08a60"}
+  ],
+  "landmarks_covered": {
+    "modelled": ["ledge", "groyne", "spades", "lobster_pots"],
+    "open_ground_kept_clear": ["quadrille_sand", "waterline", "shore_south"],
+    "not_modelled": ["sea (water surface, flat)", "bathing_machines (off-map direction marker only)"]
+  },
+  "workflow_notes": [
+    "Image vs Bible: the drawn ledge is ~10 x 5 m on the foam line; architecture gives a 3 x 1.5 m shelf, 0.9 m high, apart on the upper beach. Per task ruling the ledge is modelled at Bible size on the layout.json point [0.71, 0.525]; on the real-image view the box covers only the middle of the drawn rock; inferred:true.",
+    "Lobster pots are drawn ~2.4 m long (image scale inflated by the moderate tilt); modelled at ~0.9 m real size inside the drawn cluster; inferred:true.",
+    "The shingle bank slope and the sea are not modelled as solids (flat ground). Keep dancers on the wet sand x 0.30-0.58; the water edge is roughly x 0.30 (south) to 0.33 (north).",
+    "The groyne runs the full image width from the shingle into the sea at y ~0.09-0.15: the Quadrille and any walk north must stop south of it or climb over; no gap is drawn.",
+    "bathing_machines (xy [0.40, 0.01]) is an off-map direction marker; nothing modelled there.",
+    "Anti-clipping: the ledge top is 0.9 m, so the seated CGI Mock Turtle's head lands just above standing Alice's eye line (architecture); leave >=1.0 m around the ledge for Alice and the Gryphon to approach from the sand side (west).",
+    "No storyboard yet — hand over to whitebox-staging (no shot_list.json exists for any episode; no video rendered)."
+  ]
+}

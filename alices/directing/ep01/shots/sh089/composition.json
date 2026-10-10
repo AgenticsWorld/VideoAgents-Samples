@@ -1,0 +1,29 @@
+{
+  "shot_id": "sh089",
+  "scene_id": "SCN-long-hall",
+  "size": "medium",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "mid_left",
+    "anchor_xy": [0.34, 0.54],
+    "size_in_frame": "running, about 0.62 of frame height, held at a constant screen position while the door line passes behind her"
+  },
+  "headroom": "about 0.18 of frame height. At 0.55 m the lens is a third of the height it was in sh034, so the same wall now has three times as much of itself above her — the headroom is the scale statement.",
+  "horizon_eyeline": "The S05 door-round travelling set-up repeated exactly, only the lens is now at 0.55 m: the mosaic dado, which ran at 0.66 of frame height in sh034, now runs high across at 0.30, and the door heads are out of the top of frame entirely. Her eyeline is at 0.46, forward.",
+  "layers": {
+    "fg": "water breaking off her boots and the shallow flood along the bottom of frame",
+    "mg": "Alice running flat out",
+    "bg": "the door bases and the mosaic dado passing behind her at a third of the rate they passed in sh034"
+  },
+  "gaze": {
+    "direction": "frame_right",
+    "lead_room": "right",
+    "note": "she looks the way she runs, screen right, toward the little door. About 0.36 of frame width of wall ahead of her — and it takes three times as long to cross as it did when she was 1.35 m."
+  },
+  "balance": "The sh034 balance at a third of the height: figure in the left third, repeating wall in the right two thirds, but the repeat is slower and the architecture above her is enormous.",
+  "leading_lines": "The dado band, now high in frame, and the waterline, now low — two long parallel horizontals with her running between them in a narrowed channel.",
+  "eye_first": "Alice running, then the water breaking off her boots, which is the new element the S05 version did not have.",
+  "safe_area_ok": true,
+  "constraint_binding": "Deliberate repetition — the same wall now takes three times as long to pass, because she is a third of the size. The composition therefore reproduces the sh034 subject placement and framing logic exactly and changes ONLY the lens height, so the difference the audience reads is scale and nothing else.",
+  "pairs_with": "sh034, sh038 — the S05 door round, repeated at 0.55 m."
+}

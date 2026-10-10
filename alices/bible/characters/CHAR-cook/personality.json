@@ -1,0 +1,100 @@
+{
+  "character_id": "CHAR-cook",
+  "name": "The Cook",
+  "tier": "B",
+  "layer": "dream",
+  "temperament": {
+    "summary": "Hot-tempered, stubborn and wordless; a volcano that seldom speaks. She lives in her own heat and pepper and has no regard for rank at all.",
+    "baseline": "Absorbed in her work at the fire, deaf to the room.",
+    "under_pressure": "Explodes into throwing, or into flat, one-word refusal.",
+    "inferred": false
+  },
+  "traits": [
+    {
+      "trait": "Explosive temper",
+      "description": "Without warning she throws everything within reach at her mistress and the child: fire-irons, saucepans, plates, dishes, then a frying-pan as the Duchess leaves.",
+      "evidence": [
+        { "chapter": "ch006", "ref": "ch006-p29", "event": "ev0026", "note": "Takes the cauldron off and starts throwing everything within her reach." },
+        { "chapter": "ch006", "ref": "ch006-p43", "event": "ev0026", "note": "Throws a frying-pan after the departing Duchess; it just misses." }
+      ],
+      "inferred": false
+    },
+    {
+      "trait": "Defiant of all authority",
+      "description": "Refuses the King to his face in open court with a single word, and treats her mistress with open hostility.",
+      "evidence": [
+        { "chapter": "ch011", "ref": "ch011-p66", "event": "ev0047", "note": "'Shan’t' to the order to give evidence." },
+        { "chapter": "ch011", "ref": "ch011-p69", "event": "ev0047", "note": "'Pepper, mostly': a curt, useless answer to the King's question." }
+      ],
+      "inferred": false
+    },
+    {
+      "trait": "Single-minded about her work",
+      "description": "Stirs the soup while the room chokes and argues. She is not listening to anyone.",
+      "evidence": [
+        { "chapter": "ch006", "ref": "ch006-p19", "event": "ev0026", "note": "Leaning over the fire, stirring a large cauldron." },
+        { "chapter": "ch006", "ref": "ch006-p34", "note": "Busily stirring the soup, and 'seemed not to be listening'." }
+      ],
+      "inferred": false
+    },
+    {
+      "trait": "Immune to her own atmosphere",
+      "description": "Everyone sneezes in her pepper except her and the cat. The chaos she creates does not touch her, and she brings it with her into the courtroom.",
+      "evidence": [
+        { "chapter": "ch006", "ref": "ch006-p21", "note": "The only things in the kitchen that did not sneeze were the cook and a large cat." },
+        { "chapter": "ch011", "ref": "ch011-p64", "event": "ev0047", "note": "Carries the pepper-box into court; people near the door start sneezing." },
+        { "note": "bible/culture.json CUL-023" }
+      ],
+      "inferred": false
+    },
+    {
+      "trait": "Knows when to vanish",
+      "description": "Refuses what she will not do, then slips away in the confusion rather than face the consequences.",
+      "evidence": [
+        { "chapter": "ch011", "ref": "ch011-p72", "event": "ev0047", "note": "By the time the court settles, the cook has disappeared." }
+      ],
+      "inferred": false
+    }
+  ],
+  "motivation": {
+    "core": "To be left alone to run her kitchen her own way and answer to nobody.",
+    "fear": "Being made to account for herself to anyone above her.",
+    "wants_from_alice": "Nothing; Alice is part of the furniture of the room.",
+    "shifts": [
+      { "chapter": "ch011", "ref": "ch011-p64", "event": "ev0047", "from": "private rage in her own kitchen", "to": "public, flat defiance in the crown's court", "trigger": "summoned as a witness at the tart trial" }
+    ]
+  },
+  "habits": [
+    { "habit": "Stirs the pot and does not look up when spoken to", "evidence": [ { "chapter": "ch006", "ref": "ch006-p34" } ], "inferred": false },
+    { "habit": "Carries her pepper-box on her person, even out of the kitchen", "evidence": [ { "chapter": "ch011", "ref": "ch011-p64" } ], "inferred": false },
+    { "habit": "Answers questions in as few words as possible, then stops", "evidence": [ { "chapter": "ch011", "ref": "ch011-p66" }, { "chapter": "ch011", "ref": "ch011-p69" } ], "inferred": false },
+    { "habit": "Joins in the Duchess's lullaby chorus with the same roughness she brings to everything", "evidence": [ { "chapter": "ch006", "ref": "ch006-p37" } ], "inferred": false }
+  ],
+  "decision_pattern": "Acts on temper, not calculation. She refuses by instinct, and when trapped she disappears rather than negotiate.",
+  "taboos": [
+    { "taboo": "Never obeys or defers because of rank, whether to the Duchess or the King", "basis": [ { "chapter": "ch006", "ref": "ch006-p43" }, { "chapter": "ch011", "ref": "ch011-p66" } ], "inferred": false },
+    { "taboo": "Never explains herself or gives evidence against anyone", "basis": [ { "chapter": "ch011", "ref": "ch011-p66" }, { "chapter": "ch011", "ref": "ch011-p72" } ], "inferred": false },
+    { "taboo": "Never aims at Alice; the visitor is outside her quarrel", "basis": [ { "chapter": "ch006", "ref": "ch006-p29" }, { "chapter": "ch006", "ref": "ch006-p43" } ], "inferred": true, "reason": "All throws in ch006 target the Duchess and the baby, never Alice. Kept as a hard limit so her rage stays a household quarrel." }
+  ],
+  "facade": {
+    "applies": false,
+    "reason": "Her hostility is exactly what it looks like; no reveal in the source."
+  },
+  "waking_life_embodiment": {
+    "embodies": "The household's below-stairs cook: the one adult servant who does not bow, whose temper runs the kitchen and whom even the mistress cannot command.",
+    "waking_source": "The family house's kitchen and servants, a world a clergyman's daughter glimpses through the green baize door. Her pepper is the dream's image for temper (Alice's own 'pepper makes people hot-tempered' theory, CUL-023).",
+    "authority_trait": "Defiance of authority: rage and flat refusal from below, the counter-image to the Queen's rage from above.",
+    "coming_of_age_reading": "Alice sees that adult authority is not total. A servant can simply say 'Shan't' to a king and walk away. She also sees that raw temper makes the house unlivable, and she privately resolves that her own kitchen will have no pepper, a first idea of the kind of adult she will be.",
+    "grounding": [ "ch006-p29", "ch011-p66", "ch011-p72", "bible/culture.json CUL-023", "bible/politics.json FAC-duchess-household" ],
+    "inferred": true,
+    "reason": "Her role and conduct are sourced; mapping her to the waking household's own cook is a design reading for the realistic frame."
+  },
+  "performance_baseline": "Broad, heavy, sweating at the fire; silence is her main register. Throws are sudden and fast. Human performer with no animal coding (index performer_concept).",
+  "consistency_notes": [
+    {
+      "issue": "In the source her thrown pans hit the Duchess and may hit the baby (ch006-p29), and she throws a frying-pan (ch006-p43). The locked tone (SUP-014 'no weapon contact', SUP-011 'no animal ever shown being struck') bans shown harm in similar moments but does not name this scene.",
+      "handling": "Reported, not resolved here: screenplay and blocking should decide staging (for example, crockery crashing around the Duchess, who ignores it, with the baby never shown struck). Owners: 01-story/screenplay, 07-directing/blocking; arbiter 11-qa/logic-qa.",
+      "refs": [ "ch006-p29", "ch006-p43", "bible/cultivation.json SUP-011", "SUP-014" ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "id": "DEF-p2-bible-003",
+  "task_id": "p2-merge",
+  "raised_by": "00-orchestration/memory-bible",
+  "raised_on": "2026-09-22",
+  "type": "coverage_gap",
+  "severity": "minor",
+  "status": "closed",
+  "fix_note": "Registered all four required waking-world places plus the optional item in task p2-fix-geography, attempt 1 (2026-09-22): LOC-family-house (ch012-p66, cross-refs world.json frame.place / FAC alice-family-household seat), LOC-neighbouring-farm + child LOC-farmyard (ch012-p70, ch002-p24, cross-refs faction neighbouring-farm), LOC-river-backwater (ch012-p70, cross-refs world.json cp-pool -- also the grows_from target for the dream's LOC-ornamental-pool), and LOC-rabbit-hole-entrance was rewritten to register the hedge-with-burrow as a plain physical field-edge feature (ch001-p04), no longer implying an underground structure. Optional item added: LOC-church-spire (designed background landmark, no direct source line, cited for religion.json REL-001 vestments_visual). Not closed; memory-bible to re-verify at p2-merge.",
+  "escalation": "return to 02-worldbuilding/geography after the H1 ruling on DEF-p2-bible-001 (not a creative decision in itself)",
+  "owner": "02-worldbuilding/geography",
+  "files": [
+    "bible/geography.json",
+    "bible/world.json",
+    "bible/religion.json"
+  ],
+  "summary": "Waking-world places that world.json and the source use are not registered as LOC-* entries, so production has nothing to anchor the frame scenes to beyond the bank and field.",
+  "missing": [
+    {
+      "place": "the family house (Alice is sent 'in to your tea')",
+      "source": "ch012-p66",
+      "referenced_by": "world.json setting, frame.place, FAC alice-family-household seat"
+    },
+    {
+      "place": "the farmyard / neighbouring farm (sheep-bells, shepherd boy, lowing cattle)",
+      "source": "ch012-p70",
+      "referenced_by": "world.json frame.place, cp-sounds, faction neighbouring-farm"
+    },
+    {
+      "place": "the reedy river backwater pool beside the bank",
+      "source": "ch012-p70",
+      "referenced_by": "world.json cp-pool, SUP-007 (waking counterpart of the pool of tears)"
+    },
+    {
+      "place": "the hedge with the burrow as a physical feature of the field edge",
+      "source": "ch001-p04",
+      "referenced_by": "world.json frame.place; currently only implied by LOC-rabbit-hole-entrance"
+    },
+    {
+      "place": "optional: a distant parish church spire (background only)",
+      "source": "none (designed)",
+      "referenced_by": "religion.json REL-001 vestments_visual"
+    }
+  ],
+  "recommendation": "Register these under the waking-world branch when geography reworks for DEF-p2-bible-001.",
+  "assigned_to": "02-worldbuilding/geography",
+  "due_gate": "G2",
+  "routing_note": "routed by workflow-orchestrator 2026-09-22T17:20:54+08:00; fix dispatched only after user H1 ruling (decision 5.x in bible/h1_summary.md)",
+  "closed_by": "00-orchestration/memory-bible (p2-merge-recheck)",
+  "closed_on": "2026-09-22",
+  "verification": "Verified: LOC-family-house, LOC-neighbouring-farm, LOC-farmyard, LOC-river-backwater and LOC-church-spire are registered (waking layer); LOC-rabbit-hole-entrance is now the plain hedge and burrow. They serve as seats for FAC-alice-family and FAC-neighbouring-farm and as the grows_from target of the pool. religion.json REL-001 re-pointed to LOC-church-spire (BIB-0016).",
+  "ruling_ref": "runs/h1-ruling/ruling.json"
+}

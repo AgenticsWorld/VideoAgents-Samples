@@ -1,0 +1,31 @@
+{
+  "character_id": "CHAR-duchess",
+  "name": "Duchess",
+  "tier": "A",
+  "card_type": "individual",
+  "gender": "female",
+  "age_sense": "older woman (appearance base_age_range 55-62)",
+  "timbre": "hoarse, gravelly, heavy older woman's voice with a rough growl at the bottom; turns thick and syrupy when ingratiating",
+  "pitch": "low contralto, chesty, sinking to a growl",
+  "pitch_range_hz": [140, 240],
+  "speed_wpm": [145, 170],
+  "speed_cpm": [551, 646],
+  "accent": "upper-class English drawl roughened by coarse habits, broad vowels, careless consonants",
+  "reference_style": "Two modes: savage and barking in her pepper-filled kitchen ('Pig!', 'chop off her head!'), then cloying and over-close at the croquet-ground, attaching a 'moral' to everything; the voice dies to a thin whisper the moment the Queen appears. Sings the lullaby rough and rhythmic, with the 'Wow! wow! wow!' chorus.",
+  "emotion_range": {
+    "kitchen_growl": { "speed_delta": "+10%", "pitch_delta": "-2semi", "volume": "loud", "note": "ch006-p31 'in a hoarse growl'" },
+    "syrupy": { "speed_delta": "-5%", "pitch_delta": "+2semi", "volume": "medium", "note": "ch009-p23 'in a pleased tone'" },
+    "fading_fear": { "speed_delta": "-20%", "pitch_delta": "+1semi", "volume": "whisper", "note": "ch009-p30/p31 voice 'died away'; 'in a low, weak voice'" }
+  },
+  "age_variants": [],
+  "source_chapter": "ch006",
+  "sources": ["ch006", "ch009", "ch006-p31", "ch009-p04", "ch009-p23", "ch009-p30", "ch009-p31", "ch006-p37"],
+  "voice_evidence": [
+    { "para": "ch006-p31", "quote": "the Duchess said in a hoarse growl" },
+    { "para": "ch009-p30", "quote": "the Duchess’s voice died away" },
+    { "para": "ch009-p31", "quote": "the Duchess began in a low, weak voice" }
+  ],
+  "inferred": true,
+  "inferred_fields": ["pitch_range_hz", "speed_wpm", "speed_cpm", "accent"],
+  "reason": "Hoarse growl and fading are sourced; the coarse upper-class accent follows dialogue_style ('aristocratic but coarse-grained')."
+}

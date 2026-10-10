@@ -1,0 +1,57 @@
+{
+  "schema_version": "whitebox_scene.v1",
+  "scene_id": "SCN-croquet-ground",
+  "units": "meters",
+  "_meta": {"owner": "05-scenes/scene-modeling", "task_id": "p4-scene-model-sb3", "attempt": 1, "date": "2026-09-23",
+            "inputs": ["assets/concepts/scenes/SCN-croquet-ground/layout_top.png", "assets/concepts/scenes/SCN-croquet-ground/layout.json", "bible/scenes/SCN-croquet-ground/architecture.json", "bible/scenes/SCN-croquet-ground/environment.json"]},
+  "dimensions_m": [70, 10, 39.375],
+  "inferred": true,
+  "scale_basis": {
+    "anchor": "layout.json orientation.extent_m X = 70 m across the full image; Z = 70 x 1440/2560 = 39.375 m (image aspect; layout.json rounds it to 39)",
+    "cross_checks": ["lawn inside the hedges reads 56.7 x 28 m vs 60 x 35 m in architecture", "terrace steps read 7.4 m wide, the iron bench ~2 m"],
+    "inferred": true
+  },
+  "walkable": "The whole lawn inside the hedges (ridged turf, see notes), the terrace deck at +1.0 m reached by the central steps, the west and east hedge arches (3.0 / 2.8 m clear, 2.4 m headroom) out of the ground; open ground at cat_head_spot along the south border.",
+  "doorways": [
+    {"id": "west_arch", "centre_xy": [0.0625, 0.4867], "clear_width_m": 2.975, "clear_height_m": 2.4, "inferred": true},
+    {"id": "east_arch", "centre_xy": [0.9375, 0.4889], "clear_width_m": 2.8, "clear_height_m": 2.4, "inferred": true},
+    {"id": "terrace_steps", "centre_xy": [0.5, 0.158], "clear_width_m": 7.35, "note": "three risers of ~0.33 m from lawn to the +1.0 m terrace"}
+  ],
+  "objects": [
+    {"id": "hedge_w_north", "shape": "box", "size_m": [3.85, 3, 14.525], "xy": [0.0625, 0.2644], "collision_role": "wall", "color": "#3f5f3a"},
+    {"id": "hedge_w_south", "shape": "box", "size_m": [3.85, 3, 14.175], "xy": [0.0625, 0.7044], "collision_role": "wall", "color": "#3f5f3a"},
+    {"id": "hedge_w_arch_lintel", "shape": "box", "size_m": [3.85, 0.8, 2.975], "xy": [0.0625, 0.4867], "elevation_m": 2.8, "landmark": "west_arch", "collision_role": "wall", "color": "#3f5f3a"},
+    {"id": "hedge_e_north", "shape": "box", "size_m": [4.2, 3, 14.7], "xy": [0.9375, 0.2667], "collision_role": "wall", "color": "#3f5f3a"},
+    {"id": "hedge_e_south", "shape": "box", "size_m": [4.2, 3, 14.175], "xy": [0.9375, 0.7044], "collision_role": "wall", "color": "#3f5f3a"},
+    {"id": "hedge_e_arch_lintel", "shape": "box", "size_m": [4.2, 0.8, 2.8], "xy": [0.9375, 0.4889], "elevation_m": 2.8, "landmark": "east_arch", "collision_role": "wall", "color": "#3f5f3a"},
+    {"id": "hedge_s", "shape": "box", "size_m": [61.25, 3, 2.975], "xy": [0.4675, 0.9222], "collision_role": "wall", "color": "#3f5f3a", "note": "south hedge incl. the closed south-east alcove"},
+    {"id": "terrace_deck", "shape": "box", "size_m": [62.125, 1.0, 4.85], "xy": [0.49125, 0.0622], "landmark": "terrace_west_end", "collision_role": "platform", "color": "#d8c9a0", "note": "honey-limestone terrace, walkable top at +1.0 m; its lawn face is the retaining wall"},
+    {"id": "terrace_balustrade_w", "shape": "box", "size_m": [27.125, 0.9, 0.4], "xy": [0.24125, 0.1111], "elevation_m": 1.45, "collision_role": "wall", "color": "#e0d2aa"},
+    {"id": "terrace_balustrade_e", "shape": "box", "size_m": [25.9, 0.9, 0.4], "xy": [0.75, 0.1111], "elevation_m": 1.45, "collision_role": "wall", "color": "#e0d2aa"},
+    {"id": "terrace_steps_upper", "shape": "box", "size_m": [7.35, 0.66, 1.3125], "xy": [0.5, 0.1411], "landmark": "terrace_steps", "collision_role": "step", "color": "#d8c9a0"},
+    {"id": "terrace_steps_lower", "shape": "box", "size_m": [7.35, 0.33, 1.3125], "xy": [0.5, 0.1744], "landmark": "terrace_steps", "collision_role": "step", "color": "#d8c9a0"},
+    {"id": "royal_chairs", "shape": "box", "size_m": [2.0, 1.4, 0.9], "xy": [0.5, 0.07], "elevation_m": 1.7, "landmark": "royal_chairs", "collision_role": "furniture", "color": "#8e2b2b", "note": "two thrones side by side on the terrace deck"},
+    {"id": "awning_canopy", "shape": "box", "size_m": [4.55, 0.1, 3.3], "xy": [0.5, 0.0556], "elevation_m": 3.65, "landmark": "royal_chairs", "collision_role": "overhead", "color": "#b0283a"},
+    {"id": "awning_post_nw", "shape": "cylinder", "size_m": [0.1, 2.6, 0.1], "xy": [0.4675, 0.0178], "elevation_m": 2.3, "collision_role": "obstacle", "color": "#c9a24a"},
+    {"id": "awning_post_ne", "shape": "cylinder", "size_m": [0.1, 2.6, 0.1], "xy": [0.5325, 0.0178], "elevation_m": 2.3, "collision_role": "obstacle", "color": "#c9a24a"},
+    {"id": "awning_post_sw", "shape": "cylinder", "size_m": [0.1, 2.6, 0.1], "xy": [0.4675, 0.0933], "elevation_m": 2.3, "collision_role": "obstacle", "color": "#c9a24a"},
+    {"id": "awning_post_se", "shape": "cylinder", "size_m": [0.1, 2.6, 0.1], "xy": [0.5325, 0.0933], "elevation_m": 2.3, "collision_role": "obstacle", "color": "#c9a24a"},
+    {"id": "stake_west", "shape": "cylinder", "size_m": [0.05, 0.9, 0.05], "xy": [0.16, 0.49], "landmark": "west_stake", "collision_role": "obstacle", "color": "#e8e8e0"},
+    {"id": "stake_east", "shape": "cylinder", "size_m": [0.05, 0.9, 0.05], "xy": [0.84, 0.49], "landmark": "east_stake", "collision_role": "obstacle", "color": "#e8e8e0"},
+    {"id": "cedar_trunk", "shape": "cylinder", "size_m": [1.5, 6, 1.5], "xy": [0.14, 0.76], "landmark": "cedar", "collision_role": "obstacle", "color": "#6b5a48"},
+    {"id": "cedar_canopy", "shape": "cylinder", "size_m": [16, 3, 13.8], "xy": [0.141, 0.793], "elevation_m": 4.5, "landmark": "cedar", "collision_role": "overhead", "color": "#3f5a44", "note": "flat layered cedar tiers simplified to one disc, underside 3.0 m"},
+    {"id": "cedar_bench", "shape": "box", "size_m": [2.0, 0.9, 0.7], "xy": [0.265, 0.6667], "yaw": -0.675, "landmark": "cedar_bench", "collision_role": "furniture", "color": "#2f6a4a", "note": "iron bench set diagonally; overlay draws it unrotated"}
+  ],
+  "landmarks_covered": {
+    "modelled": ["royal_chairs", "terrace_steps", "terrace_west_end", "west_stake", "east_stake", "cedar", "cedar_bench", "west_arch", "east_arch"],
+    "open_ground_kept_clear": ["lawn_centre", "cat_head_spot"]
+  },
+  "workflow_notes": [
+    "Image vs Bible: hedge arches are drawn at the middle of the west and east hedges, not at the south corners (architecture). Modelled per layout.json/image as 3.0 m / 2.8 m gaps with a hedge lintel at 2.4 m; the protruding U-shaped hedge bulges round the arches are dressing and not modelled; inferred:true.",
+    "Lawn ridges (crests ~6 m apart, 0.6 m crest-to-furrow) are terrain undulation about y=0 and are NOT modelled as solids: the whitebox ground is flat. whitebox-staging should treat actor feet as +-0.3 m around ground level and use crouch/stumble poses, not raise actors onto solids.",
+    "Flower borders (~2 m wide) along the hedge feet are low planting, not modelled; routes to the arches cross them at the gaps.",
+    "The awning posts are slim obstacles on the terrace deck; routes to the thrones pass between the south posts (4.4 m apart).",
+    "Anti-clipping: arch headroom 2.4 m clears all human performers (card soldiers ~1.8 m); the procession files along the terrace deck (~3.5 m clear between deck edge and balustrade line) and down the 7.35 m steps.",
+    "No storyboard yet — hand over to whitebox-staging (no shot_list.json exists for any episode; no video rendered)."
+  ]
+}

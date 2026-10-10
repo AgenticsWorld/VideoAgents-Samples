@@ -1,0 +1,34 @@
+{
+  "shot_id": "sh067",
+  "scene_id": "SCN-long-hall",
+  "size": "close",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "centre",
+    "anchor_xy": [0.48, 0.42],
+    "size_in_frame": "one enormous eye, about 0.30 of frame height on its own; the dark mass of her body runs out of frame in both directions and fills roughly three quarters of the picture"
+  },
+  "second_subject": {
+    "id": "little_door",
+    "grid": "bottom_centre",
+    "anchor_xy": [0.46, 0.66],
+    "note": "the fifteen-inch opening, now narrower than her eye is wide — the single most extreme scale comparison in the episode."
+  },
+  "headroom": "none; her cheek and brow run out of the top of frame. What would be headroom is body.",
+  "horizon_eyeline": "Lens on the flagstones at 0.35 m, straight across the hall. The flagstone line runs across at 0.86 of frame height. Her eyeline is horizontal, along the floor, at 0.42 — she has had to lie down to get an eye to this height.",
+  "layers": {
+    "fg": "the flagstones and the base of the arch between the lens and her eye",
+    "mg": "the one eye at the open doorway, with summer light laid across it",
+    "bg": "the dark mass of the rest of her filling the hall behind and above, unlit and unreadable as anatomy"
+  },
+  "gaze": {
+    "direction": "down_frame",
+    "lead_room": "none",
+    "note": "the whole shot is one eye looking through a hole it cannot pass through. There is no lead room because the look terminates in an aperture 0.38 m wide, and the frame gives the eye nothing else to do."
+  },
+  "balance": "One bright wet detail near the centre against an enormous formless dark. The tiniest thing in the frame (the light on the eye) and the largest (her body) are the same person.",
+  "leading_lines": "The hard green-gold bar of garden light runs across the eye as a single horizontal stroke; the arch curve below it is the only other line. Two marks in a black frame.",
+  "eye_first": "The lit eye — it is the only value in the picture above mid-grey.",
+  "safe_area_ok": true,
+  "constraint_binding": "Held to the end of the group — this is the image the climax then breaks, so the composition settles early and does not develop. Green-gold garden light is laid across the one eye in a hard bar and nowhere else in frame: no green touches the flagstones, the arch or her body. This is the last garden daylight in the episode."
+}

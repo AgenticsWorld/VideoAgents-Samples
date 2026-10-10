@@ -1,0 +1,53 @@
+{
+  "character_id": "CHAR-pigeon",
+  "name": "The Pigeon",
+  "tier": "B",
+  "layer": "dream",
+  "revision": { "change_id": "BIB-0027", "task_id": "p4-cr-appearance", "date": "2026-09-23", "note": "Rewritten from the human-performer reading to a photoreal CGI animal." },
+  "rendering": {
+    "mode": "photoreal_cgi_animal",
+    "rule": "bible/cultivation.json SUP-002 (amended BIB-0027); placed in the treetops where Alice's stretched neck arrives (SUP-003)",
+    "species": "common wood pigeon (Columba palumbus), the large British pigeon",
+    "limits": "Bird anatomy throughout; speech by beak and throat movement. No clothing, no cartoon face. She beats Alice with her wings; no pecking injury."
+  },
+  "gender": "female",
+  "gender_note": { "inferred": true, "reason": "The source calls the Pigeon 'it'; she is guarding her own eggs ('hatching the eggs', ch005-p66) and settles back 'into its nest' (ch005-p77); index.json also registers her as female." },
+  "base_age_range": "40-50",
+  "base_age_note": { "source_chapter": "ch005", "paragraph": "ch005-p72", "quote": "I’ve seen a good many little girls in my time", "inferred": true, "reason": "Persona age kept for voice casting. As an animal: an adult wood pigeon, worn and ruffled from three sleepless weeks." },
+  "hair": {
+    "coat": "feathers",
+    "color": "blue-grey body, pinkish-mauve breast, white neck patch edged with iridescent green and violet, white wing bars, dark grey tail band",
+    "style": "ruffled and frayed from three weeks of sleeplessness; puffs up huge when she attacks",
+    "source_chapter": "ch005",
+    "paragraph": "ch005-p66",
+    "quote": "I haven’t had a wink of sleep these three weeks!",
+    "colour_inferred": true,
+    "reason": "Species plumage; the ruffled state carries the sourced sleeplessness."
+  },
+  "eyes": { "color": "pale yellow iris", "expression": "round, staring, suspicious", "inferred": true, "reason": "Species." },
+  "skin": { "tone": "pink-red feet; yellow-tipped reddish bill with a white cere", "inferred": true, "reason": "Species." },
+  "face": { "shape": "small round head on a heavy chest", "features": ["pale staring eye", "short yellow-tipped bill", "jerky head-bobs"], "inferred": true, "reason": "Species." },
+  "build": {
+    "height_range_cm": [22, 26],
+    "height_note": "Perched height; total length 40-42 cm, wingspan about 75 cm, species-true.",
+    "body_type": "large, plump, full-breasted pigeon",
+    "posture": "puffed chest, wings half-raised; flies at Alice's face beating her with her wings; screams and settles back onto the nest",
+    "source_chapter": "ch005",
+    "paragraph": "ch005-p59",
+    "quote": "a large pigeon had flown into her face, and was beating her violently with its wings",
+    "inferred": true,
+    "reason": "'Large' sourced; size species-true."
+  },
+  "scale_reference": { "in_scene": "Alice's head, at full size, arrives at treetop level on her enormously stretched neck (SUP-003); the Pigeon is natural size beside that head, about the size of Alice's face with wings spread wider.", "source_chapter": "ch005", "paragraph": "ch005-p59", "inferred": true, "reason": "Relative scale designed." },
+  "marks": [
+    { "type": "plumage", "description": "white neck patch with green-violet iridescence, her identifier", "position": "neck", "inferred": true, "reason": "Species." },
+    { "type": "signature_item", "description": "a flimsy twig nest with two white eggs in the fork of the tree, which she settles back onto", "position": "tree fork", "source_chapter": "ch005", "paragraph": "ch005-p77", "quote": "as it settled down again into its nest", "count_inferred": true, "reason": "Wood pigeons lay two white eggs." }
+  ],
+  "default_outfit_tone": {
+    "summary": "none: she wears nothing; her look is the grey wood-pigeon plumage",
+    "inferred": true,
+    "reason": "The text gives her no clothing; per SUP-002 (BIB-0027) the old silk dress, shawl and bonnet are dropped."
+  },
+  "doubling": null,
+  "prompt_base_en": "photoreal large wood pigeon among treetop branches, blue-grey ruffled frayed plumage, pinkish-mauve breast, white neck patch with green and violet iridescence, white wing bars, pale yellow staring eye, wings half-raised and puffed up in alarm beside a twig nest with two white eggs, natural bird anatomy, live-action film plate"
+}

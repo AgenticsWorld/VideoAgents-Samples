@@ -1,0 +1,102 @@
+{
+  "_meta": {
+    "file": "bible/characters/CHAR-march-hare/personality.json",
+    "owner": "03-characters/personality",
+    "produced_by_task": "p3-personality-pb1",
+    "produced_on": "2026-09-22",
+    "content_language": "en",
+    "status": "draft_v1"
+  },
+  "character_id": "CHAR-march-hare",
+  "name": "March Hare",
+  "tier": "B",
+  "layer": "dream",
+  "temperament": "A mock-courteous tease: he offers what isn't there, lectures on manners he doesn't keep, and gets bored fast. He is the Hatter's sidekick and gloomier echo, and he flatly denies what he said as soon as it could cost him.",
+  "traits": [
+    {
+      "trait": "Mock-hospitable tease",
+      "description": "Offers wine that doesn't exist, 'in an encouraging tone', and presses tea on a guest who has had none.",
+      "evidence": [
+        { "chapter": "ch007", "chapter_no": 7, "ref": "ch007-p03", "event": "ev0029", "quote": "“Have some wine,” the March Hare said in an encouraging tone.", "note": "Then: 'There isn't any' (ch007-p05)." },
+        { "chapter": "ch007", "chapter_no": 7, "ref": "ch007-p76", "event": "ev0031", "quote": "“Take some more tea,” the March Hare said to Alice, very earnestly.", "note": "She has had nothing yet." }
+      ]
+    },
+    {
+      "trait": "Pedant about manners and meaning",
+      "description": "Corrects Alice's etiquette and her words while breaking both himself.",
+      "evidence": [
+        { "chapter": "ch007", "chapter_no": 7, "ref": "ch007-p07", "event": "ev0029", "quote": "It wasn’t very civil of you to sit down without being invited", "note": "Lectures her on civility." },
+        { "chapter": "ch007", "chapter_no": 7, "ref": "ch007-p15", "event": "ev0029", "quote": "Then you should say what you mean", "note": "Word-policing." }
+      ]
+    },
+    {
+      "trait": "Gloomy and a little dim",
+      "description": "Faced with the broken watch, he can think of nothing better than to repeat the same line.",
+      "evidence": [
+        { "chapter": "ch007", "chapter_no": 7, "ref": "ch007-p26", "event": "ev0030", "quote": "The March Hare took the watch and looked at it gloomily", "note": "Then dips it in his tea." },
+        { "chapter": "ch007", "chapter_no": 7, "ref": "ch007-p26", "event": "ev0030", "quote": "It was the _best_ butter, you know.", "note": "His only defence." }
+      ]
+    },
+    {
+      "trait": "Easily bored",
+      "description": "Changes the subject with a yawn when a topic stops amusing him.",
+      "evidence": [
+        { "chapter": "ch007", "chapter_no": 7, "ref": "ch007-p63", "event": "ev0031", "quote": "Suppose we change the subject", "note": "Said while yawning." }
+      ]
+    },
+    {
+      "trait": "Denies anything that could implicate him",
+      "description": "At the trial he denies in a hurry what the Hatter says he said.",
+      "evidence": [
+        { "chapter": "ch011", "chapter_no": 11, "ref": "ch011-p42", "event": "ev0046", "quote": "“I didn’t!” the March Hare interrupted in a great hurry.", "note": "An instant denial." },
+        { "chapter": "ch011", "chapter_no": 11, "ref": "ch011-p44", "event": "ev0046", "quote": "I deny it!", "note": "Holds to it." }
+      ]
+    }
+  ],
+  "motivation": {
+    "core": "To keep the tea-party a closed club of amusement: tease any outsider, avoid dullness, and stay out of trouble.",
+    "want": "Entertainment (a story, a joke at Alice's expense); company with the Hatter.",
+    "fear": "Being blamed (the butter, the trial testimony); boredom.",
+    "evidence": [
+      { "chapter": "ch007", "chapter_no": 7, "ref": "ch007-p67", "event": "ev0031", "quote": "Tell us a story!", "note": "Wants to be entertained." },
+      { "chapter": "ch011", "chapter_no": 11, "ref": "ch011-p42", "event": "ev0046", "quote": "in a great hurry", "note": "Fear of implication." }
+    ],
+    "inferred": true,
+    "reason": "His motive is not stated. It is drawn from his repeated behaviour at the table and in court.",
+    "shifts": [
+      { "chapter": "ch011", "chapter_no": 11, "event": "ev0046", "from": "teasing host at his own table", "to": "a nervous co-witness who abandons the Hatter to save himself", "evidence_ref": "ch011-p42" }
+    ]
+  },
+  "habits": [
+    { "habit": "Dips things into his tea (the watch), and upsets the milk-jug into his plate", "evidence_ref": "ch007-p26", "event": "ev0030" },
+    { "habit": "Whispers asides to himself", "evidence_ref": "ch007-p44", "event": "ev0030" },
+    { "habit": "Yawns when bored", "evidence_ref": "ch007-p63", "event": "ev0031" },
+    { "habit": "Rests his elbows on the sleeping Dormouse as a cushion and talks over its head", "evidence_ref": "ch007-p01", "event": "ev0029" },
+    { "habit": "Enters court arm-in-arm with the Dormouse, following the Hatter", "evidence_ref": "ch011-p18", "event": "ev0046" }
+  ],
+  "decision_pattern": "Follows the Hatter's lead and chimes in with a contrary footnote. Under pressure he denies everything and lets the Hatter take the blame.",
+  "taboos": [
+    { "taboo": "Never takes blame", "rationale": "'It was the best butter.' 'I deny it!'", "evidence_ref": "ch011-p44", "event": "ev0046", "qa_check": "No admission line." },
+    { "taboo": "Never treats Alice as a welcome guest", "rationale": "His hospitality is always a tease.", "evidence_ref": "ch007-p03", "event": "ev0029", "qa_check": "No sincere welcome." },
+    { "taboo": "Never breaks from the Hatter's side at the table", "rationale": "They move round together and act as a pair (only in court does he split to save himself).", "evidence_ref": "ch007-p89", "event": "ev0031", "qa_check": "At the tea-party he is never shown siding with Alice against the Hatter." }
+  ],
+  "facade": {
+    "applies": false,
+    "note": "No hidden self. His mock-courtesy is an open joke, not a disguise."
+  },
+  "waking_life_embodiment": {
+    "applies": true,
+    "adult_trait": "The grown-up who teases a child with offers that aren't real, polices her manners while being rude himself, and denies what he said when it becomes awkward: adult hypocrisy about etiquette.",
+    "waking_source": "The rules of a Victorian tea-table Alice was drilled in (invitations, civility, 'say what you mean'), and the household tea-time she is late for (world.json cp-tea). The source's own sound mapping gives 'the March Hare and his friends' teacups' as sheep-bells (ch012-p70).",
+    "evidence": [
+      { "chapter": "ch012", "chapter_no": 12, "ref": "ch012-p69", "event": "ev0054", "quote": "the March Hare and his friends shared their never-ending meal", "note": "The sister's reverie ties him to the farm sounds." }
+    ],
+    "inferred": true,
+    "reason": "A design reading grounded in world.json cp-tea. Not a doubling of any waking person."
+  },
+  "performance_keynote": "Photoreal CGI brown hare (SUP-002, BIB-0027): long ears that swivel and droop with his moods, a twitchy nose, abrupt thumps and starts. A falsely warm voice, a lugubrious droop of ears and head over the watch, and sudden wide yawns. A beat slower than the Hatter.",
+  "consistency_flags": [],
+  "inferred_fields": ["motivation", "waking_life_embodiment"],
+  "inferred": true,
+  "reason": "B-tier figure with no stated inner life. His motive and embodiment are designed from his sourced behaviour."
+}

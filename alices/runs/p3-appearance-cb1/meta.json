@@ -1,0 +1,26 @@
+{
+  "task_id": "p3-appearance-cb1",
+  "run_id": "9adc6fda9e15",
+  "attempt": 1,
+  "model": "agent default",
+  "tokens": null,
+  "started_at": null,
+  "finished_at": "2026-09-22T18:32:59+08:00",
+  "inputs_sha256": {},
+  "artifact_versions": {
+    "bible/characters/CHAR-alice/appearance.json": "v1",
+    "bible/characters/CHAR-alice-sister/appearance.json": "v1",
+    "bible/characters/CHAR-family-housemaid/appearance.json": "v1",
+    "bible/characters/CHAR-white-rabbit/appearance.json": "v1",
+    "bible/characters/CHAR-queen-of-hearts/appearance.json": "v1",
+    "bible/characters/CHAR-king-of-hearts/appearance.json": "v1",
+    "bible/characters/CHAR-duchess/appearance.json": "v1",
+    "bible/characters/CHAR-hatter/appearance.json": "v1",
+    "bible/characters/CHAR-cheshire-cat/appearance.json": "v1",
+    "bible/characters/CHAR-march-hare/appearance.json": "v1",
+    "bible/characters/CHAR-dormouse/appearance.json": "v1",
+    "bible/characters/CHAR-mouse/appearance.json": "v1",
+    "bible/characters/CHAR-cook/appearance.json": "v1",
+    "bible/characters/CHAR-bill-the-lizard/appearance.json": "v1"
+  }
+}

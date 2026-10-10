@@ -1,0 +1,42 @@
+{
+  "shot_id": "sh076",
+  "group_id": "grp029",
+  "scene_no": "S08",
+  "scene_id": "SCN-long-hall",
+  "duration_s": 3.5,
+  "is_dialogue": false,
+  "group_position": "middle shot of grp029 — the White Rabbit still on his map start (curtain, short of her) at the head of his curtain -> glass_table -> ne_entrance line.",
+  "characters": [
+    {
+      "id": "CHAR-white-rabbit",
+      "label": "White Rabbit",
+      "pose": "sit",
+      "start_pos": "sitting back on his haunches in the water a few feet short of her at the low curtain",
+      "space_fragment_en": "sitting back on his haunches in the water short of the low curtain, centred low in frame, looking up and up at her",
+      "facing": "up and up at the giant girl; his look is the move, and it never finds her face",
+      "body_facing_target_id": "CHAR-alice",
+      "path": [],
+      "beats": [
+        { "t": 0.6, "action": "looks up", "sync": "the first registration" },
+        { "t": 1.6, "action": "and up again — it finds her body, then more of her body, then dark", "sync": "the tilt that never arrives at a face" },
+        { "t": 2.8, "action": "starts violently backward in the water", "sync": "the flinch ends the shot" }
+      ],
+      "performance_beat": {
+        "objective": "work out what has just spoken to him from up there",
+        "goal": "work out what has just spoken to him",
+        "emotional_arc": "from preoccupied fretting to pure animal fright",
+        "arc_from": "preoccupied fretting",
+        "arc_to": "pure animal fright",
+        "trigger": { "beat": "his look runs out of her body before it finds a face", "t": 1.6 },
+        "no_early_reaction": ["the haunches gathering", "the ears going flat", "the paws loosening"],
+        "forbidden_early": ["the haunches gathering", "the ears going flat", "the paws loosening"],
+        "end_state": "thrown back on his haunches in the water, ears flat, head craned up, both forepaws off the props"
+      }
+    }
+  ],
+  "creatures": [],
+  "offscreen_presence": [
+    { "id": "CHAR-alice", "where": "bent down over him at the low curtain, above the top of frame", "note": "In the space, out of frame." }
+  ],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0007 (dream) — 'the Rabbit started violently'", "note": "Two legal presences." }
+}

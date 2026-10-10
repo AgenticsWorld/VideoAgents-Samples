@@ -1,0 +1,54 @@
+{
+  "task_id": "p2-fix-culture",
+  "agent": "02-worldbuilding/culture",
+  "project": "alices",
+  "phase": "Phase 2 defect fix",
+  "attempt": 1,
+  "status": "completed",
+  "defect_ticket": "DEF-p2-bible-006",
+  "defect_ticket_status_after": "fixed",
+  "generated": "2026-09-22",
+  "ruling_source": "data/projects/alices/runs/h1-ruling/ruling.json (signed 2026-09-22T17:33:21+08:00): 5.2 A, 5.3 B, 5.4 B",
+  "summary": "Fixed DEF-p2-bible-006 in bible/culture.json per H1 pre-ruling decisions 5.3 B (light doubling only), 5.4 B (softened guinea-pig sack beat), and aligned the same doubling assumption with 5.2 A (dream-only Wonderland geography, no estate/village grounding). Edited bible/culture.json only. No entries added or removed; all IDs kept stable. Two entries changed in substance (CUL-ASM-01, CUL-007); two entries received small wording clarifications (CUL-013, CUL-017) to remove residual estate-grounding ambiguity. Defect ticket set to status=fixed with a fix_note (not closed, per instructions) for memory-bible re-verification.",
+  "changed_ids": [
+    {
+      "id": "CUL-ASM-01",
+      "type": "cross_domain_assumption",
+      "change": "Rewrote working_assumption and reconciliation fields. Removed language implying Wonderland reuses a real neighbouring country house's party/staff (estate grounding, rejected by ruling 5.2 A) and implying broad/full character doubling (rejected by ruling 5.3 B, which selects light doubling only). New text: Wonderland is dream-only space per SUP-001/5.2 A, waking world stays small (bank, field, rabbit-hole entrance, family house a short run away, farm within earshot); only a light set of named echoes double waking-world people (housemaid→Mary Ann, Dinah→Cheshire Cat, sister glimpsed at the trial), per 5.3 B. reconciliation field changed from 'PARTLY CONSISTENT ... Decision needed at H1' to 'RESOLVED at H1 pre-ruling' with an explicit citation of the ruling file and both ruling letters (5.2 A, 5.3 B).",
+      "id_status": "unchanged (not deprecated, not renumbered)"
+    },
+    {
+      "id": "CUL-007",
+      "type": "entry",
+      "change": "Rewrote summary, visual and sound to the softened staging required by ruling 5.4 B: the canvas sack goes over the guinea-pig juror's head and shoulders only, officers hustle the juror straight out of court, nobody sits on them. source.quote kept verbatim (the book's own text, 'sat upon it', is retained for citation per source_refs_required and is now explicitly framed in the summary as the source's staging that this production softens). Flipped inferred from false to true and added a reason explaining the softened on-screen staging is a designed production choice under SUP-014's custody-as-huddle rule and the H1 ruling, distinct from the sourced book text. Removed the stale 'h1_pending': 'DEF-p2-bible-006' marker since the defect is now fixed.",
+      "id_status": "unchanged (not deprecated, not renumbered)"
+    },
+    {
+      "id": "CUL-013",
+      "type": "entry",
+      "change": "Minor wording clarification only (summary): 'the county gentry's social calendar' reworded to 'the Queen's court's social calendar' with an explicit parenthetical '(a dream-only occasion per ruling 5.2 A, not a real neighbouring estate's event)' to remove any ambiguity that this doubles a real waking-world estate. No change to practiced_by, source, visual, sound, or inferred status.",
+      "id_status": "unchanged"
+    },
+    {
+      "id": "CUL-017",
+      "type": "entry",
+      "change": "Minor wording clarification only (summary, final sentence): 'This is the county-gentry social season's centrepiece occasion in this world' reworded to 'This is the dream's own social-season centrepiece occasion, invented entirely within Wonderland (ruling 5.2 A) rather than doubling a real neighbouring estate's garden party.' No change to practiced_by, source, visual, sound, or inferred status.",
+      "id_status": "unchanged"
+    }
+  ],
+  "deprecated_ids": [],
+  "added_ids": [],
+  "dictionary_notes": "No new proper nouns introduced; all names referenced (Mary Ann, Dinah, Cheshire Cat) were already in prior culture.json / dictionary scope from Phase 2. No dictionary follow-up required from this fix.",
+  "cross_file_notes": "cultivation.json (SUP-002, SUP-014) and bible/WRITE_RULES.md were read-only references for this fix, not modified. bible/culture.json was the only file edited besides the defect ticket.",
+  "acceptance_self_check": {
+    "json_valid": "pass",
+    "id_uniqueness": "pass (44/44 unique CUL- ids, unchanged count)",
+    "no_unknown_placeholder": "pass (scripted scan found zero UNKNOWN/TBD/N/A hits)",
+    "source_refs_required": "pass (every entry has source.chapter+quote or inferred:true+reason; CUL-007 quote kept verbatim, now paired with inferred:true+reason for the softened staging)",
+    "ids_stable": "pass (no IDs removed, renumbered, or recycled; 0 deprecations)",
+    "defect_ticket_updated": "pass (status: open -> fixed, fix_note added, ticket left open for memory-bible re-verification per instructions)",
+    "evaluation": "skipped (quality judge = 0, project setting)",
+    "qa": "skipped (all QA dimensions = 0, project setting)"
+  },
+  "helper_scripts_written": []
+}

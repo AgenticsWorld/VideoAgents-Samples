@@ -1,0 +1,12 @@
+{
+ "task_id": "p6-cinematography-ep01",
+ "skipped": true,
+ "reason": "quality judge=0; QA dimensions all 0",
+ "auto": {
+  "rules_keyed_to_ep01": "PASS",
+  "color_temp_vs_lighting_cards": "PASS (no daylight in S04-S10)",
+  "time_of_day_vocabulary": "PASS",
+  "style_negative_list": "PASS",
+  "note": "opened DEF-p6-cinematography-ep01-001 (minor, due G6) — two stale daylight/coloured-pool sentences; fixes dispatched as p6-cs-fix-ep01 and p6-plan-fix-ep01"
+ }
+}

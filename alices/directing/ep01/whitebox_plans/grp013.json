@@ -1,0 +1,330 @@
+{
+  "schema_version": "whitebox_plan.v1",
+  "group_id": "grp013",
+  "scene_id": "SCN-long-hall",
+  "basis": "Alice runs the ne_entrance -> west_doors_north -> east_doors_mid line. The hall's clear floor is X -15.99..+15.68 by Z -3.281..+3.485; she enters one step inside the corner entrance at (-8.91, 3.05), takes slow paces down the long axis through sh033, works south along the west door line at Z -2.85 (0.43 m clear of the wall face) through sh034, and hauls at an east-wall handle at (-1.82, 3.10) in sh035. sh033 -> sh034 and sh034 -> sh035 are hard cuts with an off-screen crossing of the hall, staged as a single-frame step at the cut instant so the camera view never shows a teleport; see warnings.",
+  "actors": [
+    {
+      "id": "CHAR-alice",
+      "kind": "person",
+      "size_m": [
+        0.378,
+        1.35,
+        0.297
+      ],
+      "keyframes": [
+        {
+          "t": 0.0,
+          "position": [
+            -8.91,
+            0.0,
+            3.05
+          ],
+          "pose": "stand",
+          "yaw": 1.5708,
+          "head_yaw": 0.0
+        },
+        {
+          "t": 0.6,
+          "position": [
+            -8.8,
+            0.0,
+            2.95
+          ],
+          "pose": "stand",
+          "yaw": 1.5708,
+          "head_yaw": 0.0
+        },
+        {
+          "t": 3.4,
+          "position": [
+            -7.6,
+            0.0,
+            2.4
+          ],
+          "pose": "stand",
+          "yaw": 1.5708,
+          "head_yaw": -0.6,
+          "head_pitch": -0.4
+        },
+        {
+          "t": 5.0,
+          "position": [
+            -6.8,
+            0.0,
+            2.05
+          ],
+          "pose": "stand",
+          "yaw": 1.5708,
+          "head_yaw": 0.6,
+          "head_pitch": -0.2
+        },
+        {
+          "t": 6.8,
+          "position": [
+            -6.2,
+            0.0,
+            1.75
+          ],
+          "pose": "stand",
+          "yaw": 1.5708,
+          "head_yaw": 0.2,
+          "head_pitch": 0.3
+        },
+        {
+          "t": 8.0,
+          "position": [
+            -6.0,
+            0.0,
+            1.6
+          ],
+          "pose": "stand",
+          "yaw": 1.5708,
+          "head_yaw": 0.0,
+          "head_pitch": 0.3
+        },
+        {
+          "t": 8.001,
+          "position": [
+            -8.6,
+            0.0,
+            -2.85
+          ],
+          "pose": "stand",
+          "yaw": 1.5708,
+          "head_yaw": 0.0
+        },
+        {
+          "t": 8.8,
+          "position": [
+            -8.1,
+            0.0,
+            -2.85
+          ],
+          "pose": "stand",
+          "yaw": 1.5708,
+          "head_yaw": -0.8
+        },
+        {
+          "t": 10.6,
+          "position": [
+            -6.1,
+            0.0,
+            -2.85
+          ],
+          "pose": "stand",
+          "yaw": 1.5708,
+          "head_yaw": -0.8
+        },
+        {
+          "t": 12.4,
+          "position": [
+            -4.1,
+            0.0,
+            -2.85
+          ],
+          "pose": "stand",
+          "yaw": 1.5708,
+          "head_yaw": -0.8
+        },
+        {
+          "t": 13.4,
+          "position": [
+            -3.0,
+            0.0,
+            -2.85
+          ],
+          "pose": "stand",
+          "yaw": 1.5708,
+          "head_yaw": -0.8
+        },
+        {
+          "t": 14.0,
+          "position": [
+            -2.6,
+            0.0,
+            -2.85
+          ],
+          "pose": "stand",
+          "yaw": 1.5708,
+          "head_yaw": -0.8
+        },
+        {
+          "t": 14.001,
+          "position": [
+            -1.822,
+            0.0,
+            3.1
+          ],
+          "pose": "stand",
+          "yaw": 0.0,
+          "bend": 0.15
+        },
+        {
+          "t": 14.5,
+          "position": [
+            -1.822,
+            0.0,
+            3.1
+          ],
+          "pose": "stand",
+          "yaw": 0.0,
+          "bend": 0.35
+        },
+        {
+          "t": 16.2,
+          "position": [
+            -1.822,
+            0.0,
+            3.1
+          ],
+          "pose": "stand",
+          "yaw": 0.0,
+          "bend": 0.45
+        },
+        {
+          "t": 17.4,
+          "position": [
+            -1.822,
+            0.0,
+            3.1
+          ],
+          "pose": "stand",
+          "yaw": 0.0,
+          "bend": 0.2
+        },
+        {
+          "t": 18.0,
+          "position": [
+            -1.822,
+            0.0,
+            3.1
+          ],
+          "pose": "stand",
+          "yaw": 0.0,
+          "bend": 0.2
+        }
+      ]
+    }
+  ],
+  "cameras": [
+    {
+      "shot_id": "sh033",
+      "start": 0,
+      "duration_s": 8.0,
+      "movement": "dolly_forward",
+      "keyframes": [
+        {
+          "t": 0.0,
+          "position": [
+            -13.05,
+            1.3,
+            3.4
+          ],
+          "target": [
+            -2.0,
+            1.15,
+            2.6
+          ],
+          "fov": 46.3972
+        },
+        {
+          "t": 8.0,
+          "position": [
+            -10.15,
+            1.3,
+            2.85
+          ],
+          "target": [
+            0.9,
+            1.15,
+            2.05
+          ],
+          "fov": 46.3972
+        }
+      ]
+    },
+    {
+      "shot_id": "sh034",
+      "start": 8.0,
+      "duration_s": 6.0,
+      "movement": "track_lateral",
+      "keyframes": [
+        {
+          "t": 0.0,
+          "position": [
+            -8.6,
+            1.3,
+            0.275
+          ],
+          "target": [
+            -8.067,
+            1.1,
+            -2.85
+          ],
+          "fov": 33.3985
+        },
+        {
+          "t": 6.0,
+          "position": [
+            -2.6,
+            1.3,
+            0.275
+          ],
+          "target": [
+            -2.067,
+            1.1,
+            -2.85
+          ],
+          "fov": 33.3985
+        }
+      ]
+    },
+    {
+      "shot_id": "sh035",
+      "start": 14.0,
+      "duration_s": 4.0,
+      "movement": "static",
+      "keyframes": [
+        {
+          "t": 0.0,
+          "position": [
+            -1.822,
+            1.25,
+            1.85
+          ],
+          "target": [
+            -1.694,
+            1.0,
+            3.2
+          ],
+          "fov": 26.9915
+        },
+        {
+          "t": 4.0,
+          "position": [
+            -1.822,
+            1.25,
+            1.85
+          ],
+          "target": [
+            -1.694,
+            1.0,
+            3.2
+          ],
+          "fov": 26.9915
+        }
+      ]
+    }
+  ],
+  "continuity": {
+    "actors": "cut",
+    "camera": "cut"
+  },
+  "warnings": [
+    "grp013 contains two off-screen crossings of the 6.8 m hall that the shot list does not give her time to walk on screen (sh033 ends in the middle of the hall, sh034 opens at the west door line; sh034 ends at the west doors, sh035 opens at an east-wall handle). Each is staged as a 0.001 s step exactly at the cut instant so the camera view is clean; only the top-down/spatial view shows the jump. Both are ordinary cut ellipses, not walk paths.",
+    "sh034's camera runs abeam at 3.125 m from the west door line at 1.0 m/s, screen-right opening toward +X, her travel direction. camera.json quotes 0.55 m/s and 'three to four door bays'; at 3.31 m door spacing that is one bay, and her three handle beats at t=0.8/2.6/4.4 need about 1.1 m/s, so her pace and the rig's are set from the door geometry.",
+    "sh033's dolly runs behind her down the long axis at her own 0.36 m/s rather than camera.json's quoted 0.8 m/s / 6 m, because the blocking only gives her 2.9 m of walk in the 8 s; the rig holds a constant 4.15 m standoff so her frame size holds.",
+    "No camera stands inside a wall: sh033 at X -13.05 (north end wall face is X -15.99), sh034/sh035 at Z 0.275/1.85 in the open hall."
+  ]
+}

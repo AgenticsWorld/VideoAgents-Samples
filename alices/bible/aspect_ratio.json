@@ -1,0 +1,68 @@
+{
+  "_meta": {
+    "file": "bible/aspect_ratio.json",
+    "status": "v1",
+    "version": "v1",
+    "owner": "06-art/aspect-ratio",
+    "project": "alices",
+    "created": "2026-09-22",
+    "created_by": "p4-aspect",
+    "source": {
+      "aspect_preset": "youtube (16:9) — 输出设置「输出画幅」注入,权威",
+      "publish_platforms": "YouTube 单选 — 输出设置「发布平台」注入,权威",
+      "resolution_policy": "输出设置「视频分辨率」:一切生成(首次/重roll/兜底重做)一律 --resolution 480p 草稿档;成片 1080p 仅由 upscale 超分得到,不询问用户、严禁按 1080p 直接重新生成,唯一例外是 QA 判定超分不达标的兜底重出(WORKFLOW.md §7B)",
+      "fps_policy": "WORKFLOW.md 多处固定 fps=24(edit 工位机检 fps 统一 24、示例 spec fps:24),全片统一"
+    },
+    "notes": "本项目发布平台仅 YouTube,与母版画幅一致(16:9),故平台条目为母版的原样直通(derive=native),不涉及裁切/缩放。16:9 在 480p 档的像素尺寸 854x480 是行业惯例取整(854/480=1.7792,非精确 16:9 的 853.33/480,取整方式与 YouTube 官方分辨率表一致);实际生成引擎的原生输出允许在此基础上按引擎自身网格(常见 16/32 的倍数)再就近取整,例如 864x496——WORKFLOW.md §7A/§8 已明确:引擎原生输出的近似比例即合规,不得因非严格 16:9 判失败或索要用户豁免。720p/1080p/4k 均可精确整除 16:9,无该问题。"
+  },
+  "master": {
+    "aspect": "16:9",
+    "orientation": "landscape",
+    "fps": 24,
+    "production": {
+      "stage": "generation — 一切 video-generation 调用(首次、重 roll、兜底重做、V2V 局部修复)",
+      "resolution_label": "480p",
+      "resolution": "854x480",
+      "tolerance": "引擎原生短边取整值视为合规(如 832x480 / 864x480 / 864x496),只要与 16:9 偏差在引擎自身网格误差内;不得因此判失败(WORKFLOW.md §7A/§8)"
+    },
+    "delivery": {
+      "stage": "final / publish — 经 08-video-gen/upscale 超分得到,不由生成阶段直接产出",
+      "resolution_label": "1080p",
+      "resolution": "1920x1080",
+      "derivation": "upscale(480x854 草稿 clip → 1920x1080);1080p 直接生成仅限 QA 判定超分不达标时的兜底重出(WORKFLOW.md §7B),其余一律走超分,不得擅自调高生成分辨率"
+    },
+    "resolution_tiers": {
+      "note": "16:9 母版在各标准短边档位的像素矩阵,供 upscale 目标尺寸换算、thumbnail 底板尺寸等下游按标签查表用;仅 480p 为惯例取整,其余为精确 16:9",
+      "360p": "640x360",
+      "480p": "854x480",
+      "720p": "1280x720",
+      "1080p": "1920x1080",
+      "4k": "3840x2160"
+    }
+  },
+  "platforms": [
+    {
+      "platform": "youtube",
+      "aspect": "16:9",
+      "resolution": "1920x1080",
+      "fps": 24,
+      "container": "mp4 (H.264 + AAC-LC)",
+      "max_duration_s": 43200,
+      "max_duration_note": "YouTube 已验证账号技术上限(12 小时/256GB),远超任何单集实际时长;单集实际时长由 episode_plan 的分集预算决定,本条目不构成额外限制",
+      "bitrate": {
+        "video": "8 Mbps SDR H.264(24fps,YouTube 官方 1080p 标准帧率推荐值)",
+        "audio": "384 kbps AAC-LC 立体声,48kHz"
+      },
+      "safe_area": {
+        "title_safe_pct": 10,
+        "action_safe_pct": 5,
+        "top_pct": 8,
+        "bottom_pct": 12,
+        "left_pct": 5,
+        "right_pct": 5,
+        "note": "top/bottom 预留 YouTube 播放器自带 UI(顶部信息卡图标、底部进度条/控制条)遮挡区;本项目内嵌字幕/花字/旁白均关闭,安全区当前主要供分镜构图(07-directing/composition)与 Phase 9 thumbnail 每平台封面留边参考,非用于烧录字幕"
+      },
+      "derive": "native — 与母版画幅一致(16:9),原样直通,无需裁切/缩放;Phase 11 platform-adapter 仅按本条目转码/码率封装,不改变构图"
+    }
+  ]
+}

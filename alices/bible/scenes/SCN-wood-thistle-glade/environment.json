@@ -1,0 +1,64 @@
+{
+  "_meta": {
+    "file": "bible/scenes/SCN-wood-thistle-glade/environment.json",
+    "owner": "05-scenes/environment",
+    "task_id": "p3-environment-sb1",
+    "attempt": 1,
+    "generated": "2026-09-22",
+    "amended": {"change_id": "BIB-0027", "task_id": "p4-cr-environment", "date": "2026-09-23", "fields": ["fixed.dream_design (new)"]},
+    "enum_set": "ENV-ENUM-v1 (defined once in runs/p3-environment-sb1/result.json)"
+  },
+  "scene_id": "SCN-wood-thistle-glade",
+  "layer": "dream",
+  "fixed": {
+    "climate": "dream woodland under the hot midsummer afternoon, shaded and cooler than open ground (geography.json LOC-thick-wood)",
+    "indoor": false,
+    "daylight_access": "canopy_dappled",
+    "dream_design": {
+      "rule": "WR-010 / XA-magic-08 (dream, full)",
+      "flora": "the great thistle is the Mucha motif of the glade: spiny leaves in bold, curling, scalloped silhouettes, purple heads crowned with silky down; foxgloves and the arching fronds of bracken behind; ivy runs over the leaf-litter",
+      "ornament_cues": "the thistle's round flower heads read as small halo roundels over tiny Alice; the canopy opening above makes a larger disc of light; the stems cross in flowing whiplash lines",
+      "palette": "moss and olive green, thistle mauve and violet, silver-white down, warm gold dapples on dry leaf-litter",
+      "animals_in_plate": "the enormous puppy is a photoreal CGI puppy at giant scale in the plate (BIB-0027 extension, pending_H2). Environment consequence only: the leaf-litter and undergrowth are dressed so that its bounding visibly throws up litter",
+      "seasonal_guard": "thistle and foxglove flower in July; fronds fully opened, not spring croziers",
+      "inferred": true,
+      "reason": "The wood, the great thistle and the puppy are explicit (ch004-p34..p40). Line treatment and palette are designed to WR-010. The puppy's treatment is flagged for H2."
+    },
+    "ground_and_flora": "dry leaf-litter and summer undergrowth under a full green canopy; one great thistle in flower (purple heads, as thistles bloom in July) as the central landmark",
+    "dream_growth": "Grows from a thistle patch in a hedgerow copse near home on a July afternoon. The same high sun as on the waking bank, broken by leaves into dapples. Tiny Alice feels the cool shade as safety after the house.",
+    "source": {"chapter": "ch004", "quote": "while she was peering about anxiously among the trees, a little sharp bark just over her head made her look up in a great hurry"},
+    "inferred": true,
+    "reason": "The wood, trees and the great thistle are explicit (ch004-p34..p38). The thistle's July flowering and the dappled shade are designed; the grounding follows index.json grows_from and ruling 5.2 A."
+  },
+  "variable_dims": {
+    "season": ["summer"],
+    "time_of_day": ["afternoon"],
+    "weather": ["fair_hot"],
+    "wind": ["still"],
+    "temperature": ["warm"]
+  },
+  "states": [
+    {
+      "state_id": "SCN-wood-thistle-glade-S01",
+      "chapter": 4,
+      "chapter_id": "ch004",
+      "story_scene": "ch004-sc04",
+      "paragraphs": "ch004-p34..ch004-p39",
+      "timeline_ref": "ev0017",
+      "timeline_node": "TL-003",
+      "season": "summer",
+      "weather": "fair_hot",
+      "wind": "still",
+      "temperature": "warm",
+      "time_of_day": "afternoon",
+      "waking_clock": "15:56-16:00 GMT (Alice asleep on the bank)",
+      "sun": {"elevation_deg_approx": 38, "azimuth_deg_approx": 259, "note": "west-south-west, filtered through the canopy into patches"},
+      "sky": "only glimpses of clear blue through the canopy",
+      "conditions": "warm, still shade; dust and bits of dry leaf thrown up as the puppy bounds and tumbles; Alice runs herself out of breath",
+      "source_chapter": "ch004",
+      "source": {"chapter": "ch004", "quote": "ran till she was quite tired and out of breath, and till the puppy’s bark sounded quite faint in the distance"},
+      "inferred": true,
+      "reason": "The source gives no weather in the wood. The shade and warmth follow geography.json ('shaded and cooler than open ground'); the clock is continuous."
+    }
+  ]
+}

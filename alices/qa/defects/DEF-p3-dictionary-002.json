@@ -1,0 +1,26 @@
+{
+  "id": "DEF-p3-dictionary-002",
+  "opened_by": "00-orchestration/memory-bible",
+  "opened_on": "2026-09-22",
+  "task_id": "p3-dict-fix",
+  "assigned_to": "00-orchestration/memory-bible",
+  "domain": "dictionary",
+  "status": "closed",
+  "severity": "minor",
+  "summary": "bible/dictionary.json _meta.cross_domain_assumptions[2] says the dream frame is 'opened implicitly at TERM-0002 'Alice''. TERM-0002 is 'her sister'; Alice is TERM-0001.",
+  "findings": [
+    {
+      "id": "DEF-p3-dictionary-002-a",
+      "file": "bible/dictionary.json",
+      "location": "_meta.cross_domain_assumptions[2]",
+      "issue": "Mismatched TERM id in a _meta note (not a terms[] entry). The checker doesn't catch it because it doesn't scan _meta prose.",
+      "suggested_fix": "Change 'TERM-0002 'Alice'' to 'TERM-0001 'Alice'' under a controlled change."
+    }
+  ],
+  "note": "Found while fixing DEF-p3-dictionary-001. Left alone because p3-dict-fix was scoped to the items in that ticket. Awaiting an orchestrator work order.",
+  "triaged_by": "00-orchestration/memory-bible",
+  "triage_task_id": "p3-bible-defects",
+  "triaged_on": "2026-09-22",
+  "closed_on": "2026-09-22",
+  "resolution": "Fixed in the locked bible under BIB-0026: dictionary.json _meta.cross_domain_assumptions[2] now reads TERM-0001 'Alice'. _meta.defect_fix_log updated. p2-merge_check.py: all PASS."
+}

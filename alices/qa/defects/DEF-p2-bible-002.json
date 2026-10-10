@@ -1,0 +1,58 @@
+{
+  "id": "DEF-p2-bible-002",
+  "task_id": "p2-merge",
+  "raised_by": "00-orchestration/memory-bible",
+  "raised_on": "2026-09-22",
+  "type": "setting_conflict (settled fact)",
+  "severity": "major",
+  "status": "closed",
+  "fix_note": "Applied recommendation A in task p2-fix-geography, attempt 1 (2026-09-22). LOC-estuary-shore and LOC-rock-ledge are now layer:\"dream\", parented to LOC-wonderland-dream, with grows_from pointing to a new waking-world LOC-seaside-town (Alice's one remembered seaside trip, ch002-p16: bathing machines, lodging houses, railway station) instead of 'the same river's tidal estuary mouth'. LOC-riverside-region's description now states the Thames at Oxford is non-tidal and drops all estuary language; LOC-village (which had hosted the courthouse on the invented coastal-village route) is deprecated. Not closed; memory-bible to re-verify at p2-merge.",
+  "escalation": "user ruling at H1 (bundled with DEF-p2-bible-001)",
+  "owner_after_ruling": "02-worldbuilding/geography",
+  "files": [
+    "bible/geography.json",
+    "bible/world.json",
+    "bible/cultivation.json"
+  ],
+  "summary": "LOC-estuary-shore is 'the same river's tidal estuary mouth, a short walk downstream from the walled garden'. That cannot sit beside world.json's Oxford/Thames-valley setting, and it contradicts SUP-010.",
+  "evidence": [
+    {
+      "file": "bible/world.json",
+      "fact": "frame.place: Oxfordshire, Thames valley; OQ-005 resolved as 'a Thames backwater meadow near Oxford'"
+    },
+    {
+      "file": "real-world geography",
+      "fact": "The Thames is non-tidal at Oxford; its tidal limit is at Teddington, roughly 100 km downstream. No estuary or sea-shore is within walking distance."
+    },
+    {
+      "file": "bible/cultivation.json",
+      "fact": "SUP-010: the undersea school and the Lobster Quadrille are 'the dream's own self-contained set-piece on the shore, not connected to any real sea location'"
+    }
+  ],
+  "affected_ids": [
+    "LOC-estuary-shore",
+    "LOC-rock-ledge",
+    "LOC-riverside-region",
+    "LOC-village"
+  ],
+  "options": [
+    {
+      "key": "A",
+      "label": "Dream shore (with DEF-001 option A)",
+      "effect": "The shore and ledge are dream-space with no real-world parent. They are built from Alice's one seaside trip (ch002-p16: bathing machines, lodging houses)."
+    },
+    {
+      "key": "B",
+      "label": "Move the waking frame to a coastal or tidal river",
+      "effect": "Rewrites world.json and timeline.json (setting, Oxford rationale) and religion.json REL-001. Not recommended."
+    }
+  ],
+  "recommendation": "A",
+  "assigned_to": "02-worldbuilding/geography",
+  "due_gate": "G2",
+  "routing_note": "routed by workflow-orchestrator 2026-09-22T17:20:54+08:00; fix dispatched only after user H1 ruling (decision 5.x in bible/h1_summary.md)",
+  "closed_by": "00-orchestration/memory-bible (p2-merge-recheck)",
+  "closed_on": "2026-09-22",
+  "verification": "Ruling 5.2 A verified: LOC-estuary-shore and LOC-rock-ledge are dream-layer, growing from LOC-seaside-town (Alice's remembered seaside trip, ch002-p16), with no tidal-Thames link. Consistent with SUP-010 and the Oxford frame (5.6 A).",
+  "ruling_ref": "runs/h1-ruling/ruling.json"
+}

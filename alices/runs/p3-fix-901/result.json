@@ -1,0 +1,26 @@
+{
+  "task_id": "p3-fix-901",
+  "agent": "03-characters/appearance",
+  "status": "done",
+  "date": "2026-09-22",
+  "defect": "qa/defects/DEF-p3-char-index-901.json",
+  "retry": false,
+  "outputs": [
+    { "path": "bible/characters/CHAR-duchess-baby/appearance.json", "action": "created", "finding": "DEF-p3-char-index-901-a" },
+    { "path": "bible/characters/CHAR-frog-footman/appearance.json", "action": "modified (only livery coat colour and badge)", "finding": "DEF-p3-char-index-901-b" },
+    { "path": "qa/defects/DEF-p3-char-index-901.json", "action": "status closed + fix_note" }
+  ],
+  "decisions": [
+    "CHAR-duchess-baby gender = male (inferred from the Duchess's lullaby 'my boy'/'little boy', ch006-p36/p40). index.json still says 'unspecified' and must be mirrored by 03-characters/character-manager or memory-bible; this task did not edit index.json.",
+    "Baby card: human infant performer, 8-12 months, no pig costume, prosthetic or CGI. The sourced upturned nose and small eyes (ch006-p46) come from casting and framing. Per SUP-006 the pig reading is built by framing drift and a sound shift in one continuous shot.",
+    "Frog-Footman: crimson crown livery became a faded snuff-brown coat with plain tarnished brass buttons and no crest or badge (FAC-duchess-household.emblem_visual). Changed default_outfit_tone, its source note (badge added as a sub-field) and the matching words in prompt_summary_en. Nothing else changed."
+  ],
+  "open_handoffs": [
+    "index.json CHAR-duchess-baby.gender: unspecified -> male (character-manager / memory-bible)",
+    "ch006-p49 piglet trot-off: whether to register a linked CRE-* is for 04-creatures/creature",
+    "The Frog-Footman's pairing_note still asks for an identical livery cut to the Fish-Footman, which remains valid; only the colour now differs. 06-art/costume should note the colour split at the ch006-p02 hand-off."
+  ],
+  "machine_checks": { "json_valid": true, "required_fields_present": true, "gender_concrete": true, "no_unknown_placeholder": true, "ascii_filenames": true, "ids_in_index": true },
+  "skills": "none enabled for this station",
+  "evaluation": "skipped (quality judge disabled)"
+}

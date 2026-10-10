@@ -1,0 +1,93 @@
+{
+  "character_id": "CHAR-dodo",
+  "name": "The Dodo",
+  "source_language": "en",
+  "source_speaker_labels": ["Dodo"],
+  "produced_by_task": "p3-dialogue-style-pb2",
+  "register": {
+    "level": "committee-room solemnity: a self-appointed chairman who moves motions, gives rulings and presents prizes",
+    "summary": "Speaks 'solemnly' and 'very gravely' (ch003-p14, p25). Opens with a formal connective (In that case, / What I was going to say, / Why,), reaches for long Latinate words until mocked by the Eaglet, then switches to short, confident rulings that settle every question in the group's favour (Everybody has won). Never admits not knowing. Per SUP-002 (amended BIB-0027) he is a photoreal CGI dodo speaking with naturalistic beak movement; his speech is a pompous Victorian gentleman's.",
+    "examples": [
+      { "ref": "ch003-d0020", "chapter": 3, "text": "I move that the meeting adjourn, for the immediate adoption of more energetic remedies—" },
+      { "ref": "ch003-d0031", "chapter": 3, "text": "Everybody has won, and all must have prizes." },
+      { "ref": "ch003-d0040", "chapter": 3, "text": "We beg your acceptance of this elegant thimble;" }
+    ]
+  },
+  "catchphrases": [
+    { "text": "Why, … (grave opener before a ruling)", "freq": "medium", "count_in_source": 2, "example_refs": ["ch003-d0026", "ch003-d0033"], "example_chapters": [3] },
+    { "text": "Of course (grave assent)", "freq": "medium", "count_in_source": 2, "example_refs": ["ch003-d0033", "ch003-d0036"], "example_chapters": [3] },
+    { "text": "Caucus-race / prizes", "freq": "high", "count_in_source": 3, "example_refs": ["ch003-d0024", "ch003-d0029", "ch003-d0031"], "example_chapters": [3] }
+  ],
+  "sentence_style": {
+    "length": "short-to-medium, often split around a formal pause (mean 6.5 words per spoken fragment; his longest is the 14-word motion)",
+    "mean_words": 6.5,
+    "patterns": [
+      {
+        "rule": "Parliamentary / ceremonial diction: motions, adjournment, acceptance, elegant, remedies; the plural 'we' of a presiding officer.",
+        "examples": [
+          { "ref": "ch003-d0020", "chapter": 3, "text": "I move that the meeting adjourn, for the immediate adoption of more energetic remedies—" },
+          { "ref": "ch003-d0040", "chapter": 3, "text": "We beg your acceptance of this elegant thimble;" }
+        ]
+      },
+      {
+        "rule": "Formal openers that claim the floor before the point (In that case, / What I was going to say, / Why,).",
+        "examples": [
+          { "ref": "ch003-d0019", "chapter": 3, "text": "In that case," },
+          { "ref": "ch003-d0023", "chapter": 3, "text": "What I was going to say," },
+          { "ref": "ch003-d0026", "chapter": 3, "text": "Why," }
+        ]
+      },
+      {
+        "rule": "Chairman's rulings: sweeping, all-inclusive verdicts and practical directives that close the question (Everybody has won; the exact shape doesn't matter; the best way to explain it is to do it; Hand it over here).",
+        "examples": [
+          { "ref": "ch003-d0031", "chapter": 3, "text": "Everybody has won, and all must have prizes." },
+          { "ref": "ch003-d0028", "chapter": 3, "text": "the exact shape doesn't matter," },
+          { "ref": "ch003-d0027", "chapter": 3, "text": "the best way to explain it is to do it." }
+        ]
+      },
+      {
+        "rule": "Delegation by pointing: assigns duties to others with grave certainty, including taking Alice's own thimble to give back to her.",
+        "examples": [
+          { "ref": "ch003-d0033", "chapter": 3, "text": "Why, she, of course," },
+          { "ref": "ch003-d0037", "chapter": 3, "text": "What else have you got in your pocket?" },
+          { "ref": "ch003-d0039", "chapter": 3, "text": "Hand it over here," }
+        ]
+      }
+    ]
+  },
+  "vocabulary": {
+    "signature_words": ["move", "meeting", "adjourn", "remedies", "Caucus-race", "race", "won", "prizes", "acceptance", "elegant", "the best way / the best thing"],
+    "preferred_fields": ["committee procedure", "races and prize-giving", "ceremony"],
+    "examples": [
+      { "ref": "ch003-d0024", "chapter": 3, "text": "was, that the best thing to get us dry would be a Caucus-race." },
+      { "ref": "ch003-d0029", "chapter": 3, "text": "The race is over!" }
+    ]
+  },
+  "address": {
+    "self": "I when moving a motion; the presiding 'we' / 'us' on behalf of the whole party",
+    "to_alice": "points and refers to her as 'she' to the party; addresses her directly only to demand (What else have you got in your pocket?)",
+    "to_group": "addresses the meeting as a body, never by individual name",
+    "examples": [
+      { "ref": "ch003-d0033", "chapter": 3, "text": "Why, she, of course," },
+      { "ref": "ch003-d0040", "chapter": 3, "text": "We beg your acceptance of this elegant thimble;" }
+    ]
+  },
+  "interjections": ["Why,", "In that case,", "Of course,"],
+  "forbidden_words": [
+    { "domain": "post-1862 slang / modern chat register", "regex": "\\b(okay|ok|cool|guys?|awesome|yeah|yep|nope|gonna|wanna|gotta|kinda|sorta|totally|literally|dude)\\b", "reason": "period drama, 1862" },
+    { "domain": "admitting ignorance or doubt", "regex": "\\b(I don't know|dunno|no idea|I'm not sure|I can't say|I haven't the least)\\b", "reason": "asked 'who has won?' he thinks at length and then pronounces (ch003-p20); he never confesses uncertainty — that is the Caterpillar's and Alice's territory, not his" },
+    { "domain": "rustic dialect or bad grammar", "regex": "\\b(ain't|ye|yer|'em|never \\w+s nobody|hasn't got no)\\b", "reason": "his pomposity is educated; dialect grammar belongs to the Gryphon and Bill" }
+  ],
+  "drift": [
+    { "from_chapter": 3, "to_chapter": 3, "change": "Opens with inflated Latinate jargon (ch003-d0020); after the Eaglet's 'Speak English!' (ch003-p15) he answers in an offended tone and switches to plain short rulings for the rest of the scene — still solemn, never long-worded again. He does not appear after ch003.", "examples": ["ch003-d0020", "ch003-d0023", "ch003-d0031"] }
+  ],
+  "backtest_markers": [
+    { "id": "D1", "rule_ref": "sentence_style.patterns[0] ceremonial diction", "weight": 4, "regex": "\\b(I move|meeting|adjourn|adoption|energetic|remedies|acceptance|elegant)\\b" },
+    { "id": "D2", "rule_ref": "catchphrases Caucus-race / prizes", "weight": 4, "regex": "\\b(caucus|race|won|prizes?)\\b" },
+    { "id": "D3", "rule_ref": "sentence_style.patterns[1] formal openers", "weight": 4, "regex": "^(in that case|what I was going to say|why),?$" },
+    { "id": "D4", "rule_ref": "sentence_style.patterns[2] rulings", "weight": 3, "regex": "\\b(the best (way|thing)|doesn't matter|everybody|all must)\\b" },
+    { "id": "D5", "rule_ref": "sentence_style.patterns[3] delegation", "weight": 4, "regex": "^why, she\\b|\\b(hand it over|what else have you got|pocket|thimble)\\b" },
+    { "id": "D6", "rule_ref": "catchphrases of course", "weight": 3, "regex": "^of course,?$" }
+  ],
+  "backtest": {"method": "marker-claim back-test (shared yardstick with pb1 and 01-story/dialogue-rewrite): a spoken source line hits when it matches >=1 backtest_markers regex and no forbidden_words regex; verse excluded; full definition runs/p3-dialogue-style-pb2/result.json#backtest_method", "script": "code/p3-dialogue-style-pb1_backtest.py", "run_on": "2026-09-22", "threshold": 0.8, "hit_rate": 1.0, "sample_size": 14, "source_lines_total": 14, "coverage_of_spoken_lines": 1.0, "verse_excluded": 0, "forbidden_violations_in_source": 0, "cross_claim_rate": 0.032, "lift": 30.91, "attribution_top1_rate": 0.929, "misses": [], "pass": true}
+}

@@ -1,0 +1,1595 @@
+{
+  "_meta": {
+    "file": "bible/geography.json",
+    "status": "locked_v1",
+    "owner": "02-worldbuilding/geography",
+    "write_via": "00-orchestration/memory-bible (on_bible_access)",
+    "task_id": "p2-fix-geography",
+    "attempt": 1,
+    "generated": "2026-09-22",
+    "fixes": [
+      "DEF-p2-bible-001",
+      "DEF-p2-bible-002",
+      "DEF-p2-bible-003",
+      "DEF-p3-environment-101 (BIB-0025, task p3-bible-defects: LOC-hall-of-doors physical.climate corrected from 'cool dream-air' to the source-stated heat, ch002-p09)"
+    ],
+    "ruling_applied": "H1 pre-ruling, data/projects/alices/runs/h1-ruling/ruling.json: 5.2 A (Wonderland is dream-only space, each place linked to the waking detail it grows from; waking world stays small and real) and 5.6 A (Oxford/Thames valley, Friday 4 July 1862, clergyman-scholar family, Alice ~10, sister mid-teens).",
+    "scope": "Two layers, never mixed in one hierarchy. WAKING layer (layer:\"waking\"): the small, real Oxford/Thames-valley frame (bank, field, hedge, river backwater, farm, family house) that opens and closes the film, per bible/world.json frame.* and bible/cultivation.json SUP-001. DREAM layer (layer:\"dream\"): every Wonderland place, none of them a real, persistent, mappable location -- each carries a `grows_from` pointer to the waking-world detail it is built from, per bible/world.json wonderland_real_counterparts and the SUP-* registry (read-only, owner 02-worldbuilding/magic-cultivation). Production scenes (SCN-*) live in scenes/ and anchor to LOC-* via location_ref; dream-layer LOC-* are used with space_class: non_diegetic_mental per bible/WRITE_RULES.md section 4.",
+    "id_prefixes": {
+      "LOC-": "location (readable ASCII slug, e.g. LOC-riverbank)"
+    },
+    "hierarchy_levels": [
+      "region",
+      "town",
+      "estate",
+      "building",
+      "room",
+      "outdoor_site"
+    ],
+    "content_language": "English (project output-language setting, 2026-09-22)",
+    "entry_schema": {
+      "locations[]": {
+        "id": "LOC-example-slug",
+        "name": "",
+        "level": "region|town|estate|building|room|outdoor_site",
+        "layer": "waking|dream",
+        "parent": "<LOC-*|null>",
+        "grows_from": "{counterpart_key:<world.json wonderland_real_counterparts key|null>, loc:<LOC-*|null>, note:''}|null (null only for layer:waking entries)",
+        "physical": {
+          "terrain": "",
+          "sky": "",
+          "flora": "",
+          "climate": ""
+        },
+        "settlement": {
+          "architecture_style": "",
+          "density": ""
+        },
+        "visual_identifiers": [],
+        "adjacent": [
+          "<LOC-*>"
+        ],
+        "chapters": [
+          "chNNN"
+        ],
+        "source": {
+          "chapter": "chNNN",
+          "quote": ""
+        },
+        "also_seen": [],
+        "inferred": false,
+        "reason": null,
+        "deprecated": false
+      }
+    },
+    "extra_fields_note": "Fields beyond the original skeleton example, added for this task's requirements without removing any required field: `layer` (waking|dream, required per H1 ruling 5.2 A), `grows_from` (the dream->waking link required by the ruling; null only on waking entries), top-level `spatial_relations[]` (real, waking-layer direction/travel only -- dream places get no fabricated real-world distances), and top-level `cross_domain_assumptions[]`. `deprecated: true` marks retired entries (never recycled, per work-order instruction); their `parent`/`adjacent` are cleared to avoid dangling references but original content is kept for audit.",
+    "dream_geometry_rule": "Per SUP-013 and cross_domain_assumptions XA-magic-04 (cultivation.json, read-only): dream places are not persistent, mappable, or interconnected the way real places are. LOC-hall-of-doors in particular carries NO `adjacent` entries and appears in NO spatial_relations -- it is 'never re-established... connecting it to the rest of the dream's geography' (SUP-013). Other dream entries may list `adjacent` only to express the dream's own one-way narrative sequence (the order Alice moves through it), never a real, revisitable route; no `travel`/distance claims are made for dream adjacency, and dream entries are excluded from `spatial_relations[]` entirely.",
+    "version": "v1",
+    "h1_status": "signed",
+    "rechecked_by": "p2-merge-recheck (00-orchestration/memory-bible)",
+    "rechecked_on": "2026-09-22",
+    "locked_at": "2026-09-22T17:59:52+08:00",
+    "locked_by": "H1 user signature (G2 PASS), recorded by 00-orchestration/memory-bible task p2-lock",
+    "lock_record": "runs/g2/gate.json",
+    "lock_changelog": "BIB-0023",
+    "controlled": "Writes only via memory-bible controlled change (WRITE_RULES.md section 5)."
+  },
+  "locations": [
+    {
+      "id": "LOC-riverside-region",
+      "name": "The Thames Valley Near Oxford",
+      "level": "region",
+      "layer": "waking",
+      "parent": null,
+      "grows_from": null,
+      "physical": {
+        "terrain": "a stretch of the non-tidal Thames valley near Oxford: water-meadows, a hedge-lined field, a reedy river backwater, and a working farm, all within a few minutes' walk of the family house",
+        "sky": "a clear midsummer sky at the start of the story; the frame closes at sunset",
+        "flora": "meadow grass, daisies and buttercups, reed beds along the backwater, hawthorn hedges, shade trees on the bank",
+        "climate": "a single hot, drowsy midsummer afternoon (Friday 4 July 1862) running into evening"
+      },
+      "visual_identifiers": [
+        "a slow, reed-lined river backwater",
+        "hawthorn hedgerows dividing meadow from farmland",
+        "the family house within a few minutes' run"
+      ],
+      "adjacent": [
+        "LOC-family-house",
+        "LOC-neighbouring-farm"
+      ],
+      "chapters": [
+        "ch001",
+        "ch012"
+      ],
+      "source": {
+        "chapter": "ch001",
+        "quote": "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do... the hot day made her feel very sleepy and stupid"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch012",
+          "quote": "the grass would be only rustling in the wind, and the pool rippling to the waving of the reeds... while the lowing of the cattle in the distance would take the place of the Mock Turtle's heavy sobs."
+        }
+      ],
+      "inferred": true,
+      "reason": "Fixes DEF-p2-bible-002: the source never names a river or county. Oxfordshire/Thames valley is bible/world.json's own designed frame (setting.reason, frame.place), adopted here verbatim rather than the previously invented, unrelated 'riverside estate' region. The Thames at Oxford is explicitly non-tidal (real-world geography), so no estuary or sea-shore can sit within this region -- that is why LOC-estuary-shore (below) is reclassified as dream-only rather than moved to a different real coastline (DEF-p2-bible-002 recommendation A). [p2-merge-recheck, BIB-0015: the non-visual rationale 'not tidal -- Oxford is far above the Thames's tidal limit at Teddington' was moved here from visual_identifiers, which feed image prompts; the fact itself is unchanged.]"
+    },
+    {
+      "id": "LOC-riverbank",
+      "name": "The Bank",
+      "level": "outdoor_site",
+      "layer": "waking",
+      "parent": "LOC-riverside-region",
+      "grows_from": null,
+      "physical": {
+        "terrain": "a grassy riverbank sloping down to the water, shaded by trees",
+        "sky": "hot and clear at the start of the story; the closing scene is late in the day, toward sunset",
+        "flora": "grass, daisies, overhanging trees that shed dead leaves onto the bank",
+        "climate": "hot midsummer afternoon at the opening; late afternoon light at the close"
+      },
+      "visual_identifiers": [
+        "Alice's sister reading a book without pictures",
+        "dead leaves drifting down from the trees onto the grass (the waking counterpart of the flying pack of cards, world.json wonderland_real_counterparts key cp-cards-leaves)"
+      ],
+      "adjacent": [
+        "LOC-meadow-field",
+        "LOC-river-backwater"
+      ],
+      "chapters": [
+        "ch001",
+        "ch012"
+      ],
+      "source": {
+        "chapter": "ch001",
+        "quote": "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch012",
+          "quote": "found herself lying on the bank, with her head in the lap of her sister, who was gently brushing away some dead leaves that had fluttered down from the trees upon her face."
+        }
+      ],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "LOC-meadow-field",
+      "name": "The Field",
+      "level": "outdoor_site",
+      "layer": "waking",
+      "parent": "LOC-riverside-region",
+      "grows_from": null,
+      "physical": {
+        "terrain": "an open field between the riverbank and the hedge boundary",
+        "sky": "hot and clear",
+        "flora": "long grass, daisies",
+        "climate": "hot midsummer afternoon"
+      },
+      "visual_identifiers": [
+        "open ground crossed at a run",
+        "a hedge visible at the field's far edge"
+      ],
+      "adjacent": [
+        "LOC-riverbank",
+        "LOC-rabbit-hole-entrance"
+      ],
+      "chapters": [
+        "ch001"
+      ],
+      "source": {
+        "chapter": "ch001",
+        "quote": "she ran across the field after it, and fortunately was just in time to see it pop down a large rabbit-hole under the hedge"
+      },
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "LOC-rabbit-hole-entrance",
+      "name": "The Hedge and the Rabbit Burrow",
+      "level": "outdoor_site",
+      "layer": "waking",
+      "parent": "LOC-meadow-field",
+      "grows_from": null,
+      "physical": {
+        "terrain": "a hawthorn hedge at the field's edge, with a real, ordinary rabbit burrow opening into the ground at its foot",
+        "sky": "open sky above the hedge line",
+        "flora": "the hawthorn hedge itself, and trailing grass around the burrow's mouth",
+        "climate": "as the field, hot and still"
+      },
+      "visual_identifiers": [
+        "a hawthorn hedge along the meadow edge",
+        "an ordinary rabbit burrow at the hedge's foot -- a real, small animal hole, not an opening onto any underground structure"
+      ],
+      "adjacent": [
+        "LOC-meadow-field"
+      ],
+      "chapters": [
+        "ch001"
+      ],
+      "source": {
+        "chapter": "ch001",
+        "quote": "she ran across the field after it, and fortunately was just in time to see it pop down a large rabbit-hole under the hedge"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch001",
+          "quote": "In another moment down went Alice after it, never once considering how in the world she was to get out again."
+        }
+      ],
+      "inferred": false,
+      "reason": "Fixes DEF-p2-bible-001/003: this is now registered purely as the real, waking-world hedge-and-burrow feature it is in the source -- a physical feature of the field edge, not the mouth of a real underground passage. The White Rabbit here is the single real, silent, non-anthropomorphic rabbit of the waking frame (world.json wonderland_real_counterparts key cp-rabbit-hole); everything that follows once Alice 'goes after it' (SUP-001: she is already 'dozing off' moments later, ch001-p10) is dream (see LOC-descent-shaft). No `adjacent` or `grows_from` link connects this real hedge to any dream location -- the dream's own version of the hole is not a continuation of this real hole, only an echo of it."
+    },
+    {
+      "id": "LOC-family-house",
+      "name": "The Family House",
+      "level": "building",
+      "layer": "waking",
+      "parent": "LOC-riverside-region",
+      "grows_from": null,
+      "physical": {
+        "terrain": "a house within a few minutes' run of the bank, with a schoolroom, a kitchen and household staff",
+        "sky": "open sky over the house and its immediate garden",
+        "flora": "an ordinary domestic garden, not described in the source",
+        "climate": "as region"
+      },
+      "settlement": {
+        "architecture_style": "a comfortable upper-middle-class Victorian professional family's house in or near a university town -- the household of a senior clergyman-scholar, not a landed estate (bible/world.json frame.social_class); no lodges, gamekeepers or tenantry",
+        "density": "a single household: Alice, her older sister, at least one housemaid, and the (off-screen, never-appearing) parents, plus the cat Dinah"
+      },
+      "visual_identifiers": [
+        "a schoolroom with lesson-books and a slate",
+        "a housemaid glimpsed only by implication (world.json cp-housemaid: the real basis for the dream's Mary Ann)",
+        "a kitchen (the real basis for the dream's Duchess's smoky kitchen)",
+        "Dinah's saucer set out at tea-time"
+      ],
+      "adjacent": [
+        "LOC-riverside-region"
+      ],
+      "chapters": [
+        "ch001",
+        "ch012"
+      ],
+      "source": {
+        "chapter": "ch012",
+        "quote": "“It _was_ a curious dream, dear, certainly: but now run in to your tea; it’s getting late.” So Alice got up and ran off"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch004",
+          "quote": "He took me for his housemaid"
+        },
+        {
+          "chapter": "ch001",
+          "quote": "I hope they’ll remember her saucer of milk at tea-time."
+        }
+      ],
+      "inferred": true,
+      "reason": "Fixes DEF-p2-bible-003 (missing waking place: 'the family house'). The source only ever implies the house (she is sent home 'to your tea'); its class, staffing and schoolroom are drawn directly from bible/world.json frame.social_class and faction_register 'Alice's family household' (already established, read-only cross-reference), not re-designed here. This is a plain professional family's house, explicitly not the 'landed estate with lodges' framing rejected by the H1 ruling (DEF-p2-bible-001)."
+    },
+    {
+      "id": "LOC-neighbouring-farm",
+      "name": "The Neighbouring Farm",
+      "level": "building",
+      "layer": "waking",
+      "parent": "LOC-riverside-region",
+      "grows_from": null,
+      "physical": {
+        "terrain": "a working tenant farm adjoining the meadow, within easy earshot of the bank",
+        "sky": "open farmland sky",
+        "flora": "pasture for sheep and cattle",
+        "climate": "as region"
+      },
+      "settlement": {
+        "architecture_style": "a modest, ordinary working farmhouse -- explicitly not a gentry estate or a lodge of the family's own land; the family and the farm are separate, neighbouring households",
+        "density": "one farming household: the farmer (owner of the prized terrier) and, by inference, farmhands"
+      },
+      "visual_identifiers": [
+        "a plain farmhouse and outbuildings"
+      ],
+      "adjacent": [
+        "LOC-riverside-region",
+        "LOC-farmyard"
+      ],
+      "chapters": [
+        "ch002",
+        "ch012"
+      ],
+      "source": {
+        "chapter": "ch002",
+        "quote": "it belongs to a farmer, you know, and he says it’s so useful, it’s worth a hundred pounds!"
+      },
+      "inferred": true,
+      "reason": "Fixes DEF-p2-bible-003 (missing waking place: 'the neighbouring farm'). The farmer and his terrier (ch002-p24) and the farmyard sounds around the sleeping Alice (ch012-p70) are in the source; merging them into one neighbouring farm, distinct from the family's own house, matches bible/world.json faction_register 'the neighbouring farm' (already established) and avoids re-introducing any landed-estate framing."
+    },
+    {
+      "id": "LOC-farmyard",
+      "name": "The Farmyard",
+      "level": "outdoor_site",
+      "layer": "waking",
+      "parent": "LOC-neighbouring-farm",
+      "grows_from": null,
+      "physical": {
+        "terrain": "a farmyard and adjoining pasture, close enough to the bank for its sounds to carry",
+        "sky": "open farmland sky",
+        "flora": "pasture grass",
+        "climate": "as region"
+      },
+      "visual_identifiers": [
+        "sheep with bells",
+        "cattle at pasture",
+        "a shepherd boy",
+        "ordinary farmyard clamour"
+      ],
+      "adjacent": [
+        "LOC-neighbouring-farm",
+        "LOC-riverside-region"
+      ],
+      "chapters": [
+        "ch012"
+      ],
+      "source": {
+        "chapter": "ch012",
+        "quote": "the confused clamour of the busy farm-yard... while the lowing of the cattle in the distance"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch012",
+          "quote": "the rattling teacups would change to tinkling sheep-bells, and the Queen’s shrill cries to the voice of the shepherd boy"
+        }
+      ],
+      "inferred": false,
+      "reason": null
+    },
+    {
+      "id": "LOC-river-backwater",
+      "name": "The Reedy River Backwater",
+      "level": "outdoor_site",
+      "layer": "waking",
+      "parent": "LOC-riverside-region",
+      "grows_from": null,
+      "physical": {
+        "terrain": "a still, reedy backwater of the (non-tidal) river, beside the bank",
+        "sky": "open sky, reflected in still water",
+        "flora": "reeds stirring at the water's edge",
+        "climate": "warm, still midsummer air over cool water"
+      },
+      "visual_identifiers": [
+        "reeds rippling on the water",
+        "a slow, shallow backwater rather than open river current"
+      ],
+      "adjacent": [
+        "LOC-riverbank",
+        "LOC-riverside-region"
+      ],
+      "chapters": [
+        "ch012"
+      ],
+      "source": {
+        "chapter": "ch012",
+        "quote": "the pool rippling to the waving of the reeds"
+      },
+      "inferred": true,
+      "reason": "Fixes DEF-p2-bible-003 (missing waking place: 'the reedy river backwater pool'). This is the real waking-world place the dream's 'pool of tears' is built from (bible/world.json wonderland_real_counterparts key cp-pool; SUP-007 realistic_rendering, cultivation.json, read-only). 'Backwater' rather than open river or tidal water follows DEF-p2-bible-002: Oxford's stretch of the Thames is non-tidal, so a still backwater (not an estuary) is the grounded reading of ch012-p70's reeds and pool."
+    },
+    {
+      "id": "LOC-seaside-town",
+      "name": "The Seaside Town (Remembered)",
+      "level": "town",
+      "layer": "waking",
+      "parent": null,
+      "grows_from": null,
+      "physical": {
+        "terrain": "an English coastal resort town, visited once before the story's single afternoon -- not part of today's Thames-valley frame",
+        "sky": "open coastal sky",
+        "flora": "sand, shoreline scrub",
+        "climate": "a past, separately-remembered day, not the story's present midsummer afternoon"
+      },
+      "settlement": {
+        "architecture_style": "bathing machines drawn up on the sand, children digging with wooden spades, a row of lodging houses, and a railway station behind them -- ordinary 1860s English seaside resort furniture",
+        "density": "a small seaside resort town"
+      },
+      "visual_identifiers": [
+        "bathing machines in the water",
+        "a row of lodging houses",
+        "a railway station"
+      ],
+      "adjacent": [],
+      "chapters": [
+        "ch002"
+      ],
+      "source": {
+        "chapter": "ch002",
+        "quote": "Alice had been to the seaside once in her life, and had come to the general conclusion, that wherever you go to on the English coast you find a number of bathing machines in the sea, some children digging in the sand with wooden spades, then a row of lodging houses, and behind them a railway station."
+      },
+      "inferred": true,
+      "reason": "Fixes DEF-p2-bible-002 (recommendation A: 'built from Alice's one seaside trip'). This is a real waking-world place from Alice's past (not physically part of today's Thames-valley geography, hence `parent: null` and no `adjacent` link to LOC-riverside-region), registered so LOC-estuary-shore below has a real, sourced waking-world place to `grows_from` instead of the rejected 'tidal estuary of the same river' grounding."
+    },
+    {
+      "id": "LOC-church-spire",
+      "name": "A Distant Parish Church Spire",
+      "level": "outdoor_site",
+      "layer": "waking",
+      "parent": "LOC-riverside-region",
+      "grows_from": null,
+      "physical": {
+        "terrain": "a parish church spire visible on the skyline beyond the farm, background only, never entered or approached",
+        "sky": "seen against open sky at a distance",
+        "flora": "none, a built landmark",
+        "climate": "as region"
+      },
+      "visual_identifiers": [
+        "a distant spire on the skyline, background only"
+      ],
+      "adjacent": [
+        "LOC-riverside-region"
+      ],
+      "chapters": [],
+      "source": {
+        "chapter": "ch012",
+        "quote": "the confused clamour of the busy farm-yard"
+      },
+      "inferred": true,
+      "reason": "Fixes DEF-p2-bible-003 optional item: no source line places a church here; this is a wholly designed, minimal background landmark (never a scene location) requested so bible/religion.json REL-001 vestments_visual has a real-world skyline reference to cite. Cited against the general countryside frame passage (ch012-p70) for lack of any more specific textual anchor."
+    },
+    {
+      "id": "LOC-wonderland-dream",
+      "name": "Wonderland (Alice's Dream)",
+      "level": "region",
+      "layer": "dream",
+      "parent": null,
+      "grows_from": {
+        "counterpart_key": null,
+        "loc": "LOC-riverside-region",
+        "note": "The dream as a whole is built from Alice's afternoon and upbringing on and near the bank; see bible/world.json wonderland_real_counterparts.principle. Individual dream places below each carry their own, more specific grows_from link."
+      },
+      "physical": {
+        "terrain": "a small, closed, dream-sized world reached only by falling asleep: no consistent overall geometry, no real terrain to survey or map",
+        "sky": "whatever each dream scene needs; not a real, continuous sky over a real place",
+        "flora": "drawn from Alice's own waking knowledge of gardens, woods and farmland, restaged as dream-set-dressing",
+        "climate": "the dream's own time, which does not track real elapsed time on the bank"
+      },
+      "visual_identifiers": [
+        "no wide establishing shot ever joins two dream places into one continuous, walkable map"
+      ],
+      "adjacent": [],
+      "chapters": [
+        "ch001",
+        "ch002",
+        "ch003",
+        "ch004",
+        "ch005",
+        "ch006",
+        "ch007",
+        "ch008",
+        "ch009",
+        "ch010",
+        "ch011",
+        "ch012"
+      ],
+      "source": {
+        "chapter": "ch012",
+        "quote": "Oh, I’ve had such a curious dream!"
+      },
+      "inferred": true,
+      "reason": "Fixes DEF-p2-bible-001 (H1 ruling 5.2 A): a purely organizational, dream-layer root (mirroring bible/world.json realms.realm-wonderland) so every Wonderland LOC-* can be filed under `layer:\"dream\"` with `parent` pointing here instead of to a fabricated real estate/village. This node has no real-world containment; it is not itself a mappable place, only a grouping label. Per WRITE_RULES.md section 4, scenes set anywhere in this branch use space_class: non_diegetic_mental."
+    },
+    {
+      "id": "LOC-descent-shaft",
+      "name": "The Falling Dream",
+      "level": "room",
+      "layer": "dream",
+      "parent": "LOC-wonderland-dream",
+      "grows_from": {
+        "counterpart_key": "cp-rabbit-hole",
+        "loc": "LOC-rabbit-hole-entrance",
+        "note": "Built from the real hedge burrow the White Rabbit vanished into moments before Alice dozed off, plus her drowsy last waking thoughts about Dinah and tea-time (ch001-p10), which the dream immediately reuses."
+      },
+      "physical": {
+        "terrain": "dream-elastic falling space: a tunnel that dips into an impossibly long fall, past shelves, cupboards, maps and an empty marmalade jar that slide past Alice rather than a real, fixed structure she falls past",
+        "sky": "none -- an enclosed, dark, dream-only falling space",
+        "flora": "none; the shelved objects are dream-set-dressing, not real fixtures of any waking-world structure",
+        "climate": "cool, still dream-air"
+      },
+      "visual_identifiers": [
+        "cupboards and book-shelves sliding past in the fall",
+        "a jar labelled 'ORANGE MARMALADE', found empty",
+        "a landing on a heap of dry sticks and leaves"
+      ],
+      "adjacent": [],
+      "chapters": [
+        "ch001"
+      ],
+      "source": {
+        "chapter": "ch001",
+        "quote": "she looked at the sides of the well, and noticed that they were filled with cupboards and book-shelves; here and there she saw maps and pictures hung upon pegs. She took down a jar from one of the shelves as she passed"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch001",
+          "quote": "Down, down, down. Would the fall _never_ come to an end?"
+        },
+        {
+          "chapter": "ch001",
+          "quote": "She felt that she was dozing off, and had just begun to dream that she was walking hand in hand with Dinah... when suddenly, thump! thump! down she came upon a heap of sticks and dry leaves"
+        }
+      ],
+      "inferred": true,
+      "reason": "Fixes DEF-p2-bible-001: reclassified from 'a real, modestly-sized disused cellar shaft with genuine built-in shelving' (the rejected reading) to pure dream-space, per SUP-008 (cultivation.json, read-only): 'explicitly not a real well or shaft that exists in the film's waking geography'. No `adjacent` entries: the fall is a self-contained dream-elastic sequence, not a mapped route between two real points."
+    },
+    {
+      "id": "LOC-hall-of-doors",
+      "name": "The Long Hall",
+      "level": "room",
+      "layer": "dream",
+      "parent": "LOC-wonderland-dream",
+      "grows_from": {
+        "counterpart_key": "cp-garden",
+        "loc": null,
+        "note": "The hall, its locked doors and the little door are the dream's antechamber to its goal-image, the enclosed private garden a Victorian child sees through a small door but may not enter unescorted (world.json cp-garden); no more specific real-world room is cited in the source."
+      },
+      "physical": {
+        "terrain": "a long, low dream-hall with a stone floor",
+        "sky": "no open sky -- lit by a row of hanging lamps along the roof",
+        "flora": "none",
+        "climate": "hot, close, still dream-air (ch002-p09: \"as the hall was very hot, she kept fanning herself\")"
+      },
+      "visual_identifiers": [
+        "a row of hanging lamps along the ceiling",
+        "locked doors all round the walls",
+        "a three-legged table made of solid glass, holding a tiny golden key",
+        "a curtain concealing a fifteen-inch door"
+      ],
+      "adjacent": [
+        "LOC-tiny-passage"
+      ],
+      "chapters": [
+        "ch001",
+        "ch002",
+        "ch007"
+      ],
+      "source": {
+        "chapter": "ch001",
+        "quote": "she found herself in a long, low hall, which was lit up by a row of lamps hanging from the roof... There were doors all round the hall, but they were all locked"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch001",
+          "quote": "Suddenly she came upon a little three-legged table, all made of solid glass; there was nothing on it except a tiny golden key"
+        },
+        {
+          "chapter": "ch007",
+          "quote": "Once more she found herself in the long hall, and close to the little glass table."
+        },
+        {
+          "chapter": "ch004",
+          "quote": "everything seemed to have changed since her swim in the pool, and the great hall, with the glass table and the little door, had vanished completely"
+        }
+      ],
+      "inferred": true,
+      "reason": "Fixes DEF-p2-bible-001 (H1 ruling 5.2 A) directly: per SUP-013 (cultivation.json, read-only), this set is 'never re-established from a wider shot connecting it to the rest of the dream's geography', so its disappearance after ch003 (ev0014) needs no explanation -- dream-spaces simply stop being available. Accordingly this entry has exactly ONE `adjacent` entry (LOC-tiny-passage, its own little door -- part of the same single self-contained set, per SUP-013's 'shot as a single self-contained set') and NO connection, adjacency or spatial_relations entry to any other location, real or dream: no cellar shaft, no second hatch, no wood, no pool exterior. Its ch007-p104 reappearance ('a tree with a door leading right into it... And in she went') is filed here as `also_seen`, not as a second physical location or hatch (the previously-registered LOC-tree-hatch is deprecated below): the dream simply re-presents the same self-contained set through a different-looking dream-image doorway, which is ordinary dream discontinuity, not a persistent tunnel network."
+    },
+    {
+      "id": "LOC-tiny-passage",
+      "name": "The Little Door's Passage",
+      "level": "room",
+      "layer": "dream",
+      "parent": "LOC-hall-of-doors",
+      "grows_from": {
+        "counterpart_key": "cp-garden",
+        "loc": null,
+        "note": "Part of the same single dream image as LOC-hall-of-doors and LOC-walled-garden; see LOC-hall-of-doors grows_from."
+      },
+      "physical": {
+        "terrain": "a low crawl-passage, roughly rat-hole width, running from the hall to the walled garden",
+        "sky": "none inside the passage; daylight visible at the far end",
+        "flora": "none inside; garden flowerbeds visible through the far opening",
+        "climate": "cool and cramped, opening into the warm garden air at its far end"
+      },
+      "visual_identifiers": [
+        "a fifteen-inch door behind a curtain in the long hall",
+        "a passage 'not much larger than a rat-hole'",
+        "a glimpse of flowerbeds and fountains at the far end"
+      ],
+      "adjacent": [
+        "LOC-hall-of-doors",
+        "LOC-walled-garden"
+      ],
+      "chapters": [
+        "ch001",
+        "ch007"
+      ],
+      "source": {
+        "chapter": "ch001",
+        "quote": "Alice opened the door and found that it led into a small passage, not much larger than a rat-hole: she knelt down and looked along the passage into the loveliest garden you ever saw."
+      },
+      "also_seen": [
+        {
+          "chapter": "ch007",
+          "quote": "began by taking the little golden key, and unlocking the door that led into the garden"
+        }
+      ],
+      "inferred": true,
+      "reason": "Kept as the internal connector of the single self-contained hall/door/garden dream-image (SUP-013), not as a real, persistent grotto duct (the reading rejected under DEF-p2-bible-001). It links only its own two neighbours in that one set; it is not itself linked onward to any other branch of the dream."
+    },
+    {
+      "id": "LOC-walled-garden",
+      "name": "The Beautiful Garden",
+      "level": "outdoor_site",
+      "layer": "dream",
+      "parent": "LOC-wonderland-dream",
+      "grows_from": {
+        "counterpart_key": "cp-garden",
+        "loc": null,
+        "note": "A grand enclosed private garden of the kind a Victorian child sees through a small door in a wall but may not enter without the grown-ups: a college or great-house garden with roses, fountains and a croquet lawn (world.json cp-garden)."
+      },
+      "physical": {
+        "terrain": "a walled garden with beds and paths, entered from the tiny passage",
+        "sky": "open and bright, in contrast to the dark hall behind the little door",
+        "flora": "beds of bright flowers, a large rose-tree near the entrance, cool fountains",
+        "climate": "warm, sunlit dream-midsummer"
+      },
+      "visual_identifiers": [
+        "beds of bright flowers",
+        "cool fountains",
+        "a large white rose-tree near the entrance"
+      ],
+      "adjacent": [
+        "LOC-tiny-passage",
+        "LOC-rose-tree-yard",
+        "LOC-croquet-lawn"
+      ],
+      "chapters": [
+        "ch001",
+        "ch007",
+        "ch008"
+      ],
+      "source": {
+        "chapter": "ch001",
+        "quote": "she knelt down and looked along the passage into the loveliest garden you ever saw... wander about among those beds of bright flowers and those cool fountains"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch007",
+          "quote": "she found herself at last in the beautiful garden, among the bright flower-beds and the cool fountains."
+        },
+        {
+          "chapter": "ch008",
+          "quote": "A large rose-tree stood near the entrance of the garden"
+        }
+      ],
+      "inferred": false,
+      "reason": "Layer/parent updated for DEF-p2-bible-001 (no longer a real estate garden); the place and its contents remain exactly as sourced."
+    },
+    {
+      "id": "LOC-rose-tree-yard",
+      "name": "The Rose-Tree by the Entrance",
+      "level": "outdoor_site",
+      "layer": "dream",
+      "parent": "LOC-walled-garden",
+      "grows_from": {
+        "counterpart_key": "cp-garden",
+        "loc": null,
+        "note": "The garden's roses and fountains, per world.json cp-garden."
+      },
+      "physical": {
+        "terrain": "a garden bed near the walled garden's entrance",
+        "sky": "open dream-midsummer sky",
+        "flora": "a large rose-tree, white roses being painted red",
+        "climate": "warm and sunlit"
+      },
+      "visual_identifiers": [
+        "a large rose-tree with white roses, some freshly painted red",
+        "spilled red paint on the ground",
+        "three card-gardeners at work"
+      ],
+      "adjacent": [
+        "LOC-walled-garden"
+      ],
+      "chapters": [
+        "ch008"
+      ],
+      "source": {
+        "chapter": "ch008",
+        "quote": "A large rose-tree stood near the entrance of the garden: the roses growing on it were white, but there were three gardeners at it, busily painting them red."
+      },
+      "inferred": false,
+      "reason": "Layer/parent updated for DEF-p2-bible-001; content unchanged."
+    },
+    {
+      "id": "LOC-croquet-lawn",
+      "name": "The Queen's Croquet-Ground",
+      "level": "outdoor_site",
+      "layer": "dream",
+      "parent": "LOC-walled-garden",
+      "grows_from": {
+        "counterpart_key": "cp-court",
+        "loc": null,
+        "note": "The fashionable 1860s croquet party (world.json cp-court, setting.reason 'the 1860s croquet craze')."
+      },
+      "physical": {
+        "terrain": "an uneven lawn, all ridges and furrows",
+        "sky": "open dream-midsummer sky",
+        "flora": "close-cropped lawn grass",
+        "climate": "warm and sunlit"
+      },
+      "visual_identifiers": [
+        "a lawn laid out in ridges and furrows rather than flat turf",
+        "arches formed by bent-double figures",
+        "a crowd of players and onlookers"
+      ],
+      "adjacent": [
+        "LOC-walled-garden",
+        "LOC-rose-tree-yard",
+        "LOC-gryphon-sunning-spot"
+      ],
+      "chapters": [
+        "ch008",
+        "ch009"
+      ],
+      "source": {
+        "chapter": "ch008",
+        "quote": "Alice thought she had never seen such a curious croquet-ground in her life; it was all ridges and furrows"
+      },
+      "inferred": false,
+      "reason": "Layer/parent updated for DEF-p2-bible-001; content unchanged."
+    },
+    {
+      "id": "LOC-ornamental-pool",
+      "name": "The Pool of Tears (the Hall, Flooded)",
+      "level": "room",
+      "layer": "dream",
+      "parent": "LOC-hall-of-doors",
+      "grows_from": {
+        "counterpart_key": "cp-pool",
+        "loc": "LOC-river-backwater",
+        "note": "The reedy river backwater beside the bank (world.json cp-pool), reimagined at Alice's giant-size scale as a flood filling the hall."
+      },
+      "physical": {
+        "terrain": "the same long hall (LOC-hall-of-doors), now flooded to a depth read against Alice's scale at the moment of weeping",
+        "sky": "none -- still the enclosed hall, now half-full of water",
+        "flora": "none",
+        "climate": "cool, still dream-water inside the hall"
+      },
+      "visual_identifiers": [
+        "a pool 'about four inches deep' at giant-Alice's own scale, 'reaching half down the hall'",
+        "salt water, from the tears wept into it"
+      ],
+      "adjacent": [
+        "LOC-hall-of-doors",
+        "LOC-pool-bank"
+      ],
+      "chapters": [
+        "ch002"
+      ],
+      "source": {
+        "chapter": "ch002",
+        "quote": "there was a large pool all round her, about four inches deep and reaching half down the hall"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch002",
+          "quote": "in another moment, splash! she was up to her chin in salt water. Her first idea was that she had somehow fallen into the sea"
+        },
+        {
+          "chapter": "ch002",
+          "quote": "she was in the pool of tears which she had wept when she was nine feet high"
+        }
+      ],
+      "inferred": true,
+      "reason": "Fixes DEF-p2-bible-001: reclassified from 'a shallow ornamental pool at ground level, just outside the hedge hatch' (the rejected reading, which the source itself contradicts -- ch002-p07 places the pool 'reaching half down the hall') to what it actually is per SUP-007 (cultivation.json, read-only) and the source: the same long-hall dream-space, flooded at Alice's then-giant scale. `parent` is now LOC-hall-of-doors (the same room, not a separate real pond) rather than a fabricated manor-grounds pool."
+    },
+    {
+      "id": "LOC-pool-bank",
+      "name": "The Bank of the Pool",
+      "level": "outdoor_site",
+      "layer": "dream",
+      "parent": "LOC-ornamental-pool",
+      "grows_from": {
+        "counterpart_key": "cp-pool",
+        "loc": "LOC-river-backwater",
+        "note": "The same waking-world backwater as LOC-ornamental-pool; this is the dream's shore of its own flooded hall."
+      },
+      "physical": {
+        "terrain": "a muddy, trampled dream-shore at the pool's edge",
+        "sky": "open dream-sky (the dream shifts from the enclosed hall to an outdoor-feeling shore without transition, as dreams do)",
+        "flora": "grass flattened by the crowd of dripping animals and birds",
+        "climate": "warm air drying wet fur and feathers"
+      },
+      "visual_identifiers": [
+        "a queer-looking, dripping-wet party of birds and animals",
+        "comfits handed round as caucus-race prizes"
+      ],
+      "adjacent": [
+        "LOC-ornamental-pool"
+      ],
+      "chapters": [
+        "ch002",
+        "ch003"
+      ],
+      "source": {
+        "chapter": "ch003",
+        "quote": "They were indeed a queer-looking party that assembled on the bank—the birds with draggled feathers, the animals with their fur clinging close to them, and all dripping wet, cross, and uncomfortable."
+      },
+      "inferred": true,
+      "reason": "Layer/parent corrected for DEF-p2-bible-001 (no longer a real estate pool-bank); the dream shifts register from the enclosed flooded hall to an outdoor-feeling shore without needing real-world continuity, which dream editing (cuts, not established wide shots) can carry without comment."
+    },
+    {
+      "id": "LOC-thick-wood",
+      "name": "The Wood",
+      "level": "outdoor_site",
+      "layer": "dream",
+      "parent": "LOC-wonderland-dream",
+      "grows_from": {
+        "counterpart_key": null,
+        "loc": "LOC-riverside-region",
+        "note": "Designed: ordinary English hedgerow and copse country of the kind a child of this frame would know from walks near home; no specific real-world counterpart is named in world.json for 'the wood' itself."
+      },
+      "physical": {
+        "terrain": "mixed woodland with clearings, giving onto the Rabbit's house, the Duchess's house and the March Hare's house",
+        "sky": "dappled through the tree canopy",
+        "flora": "trees, undergrowth, buttercups and grass in the clearings, a thistle",
+        "climate": "shaded and cooler than open ground"
+      },
+      "visual_identifiers": [
+        "dense trees giving cover close to the pool-bank",
+        "a buttercup Alice leans against to rest",
+        "a great thistle used to dodge round a puppy",
+        "the highest tree in the wood, holding the Pigeon's nest",
+        "a low tree bough where the Cheshire Cat is first seen sitting"
+      ],
+      "adjacent": [
+        "LOC-pool-bank",
+        "LOC-rabbits-house",
+        "LOC-mushroom-clearing",
+        "LOC-duchess-house",
+        "LOC-hare-cottage",
+        "LOC-pigeon-nest-treetop"
+      ],
+      "chapters": [
+        "ch004",
+        "ch005",
+        "ch006",
+        "ch007"
+      ],
+      "source": {
+        "chapter": "ch004",
+        "quote": "she ran off as hard as she could, and soon found herself safe in a thick wood."
+      },
+      "also_seen": [
+        {
+          "chapter": "ch004",
+          "quote": "'The first thing I've got to do,' said Alice to herself, as she wandered about in the wood"
+        },
+        {
+          "chapter": "ch007",
+          "quote": "'At any rate I'll never go there again!' said Alice as she picked her way through the wood."
+        }
+      ],
+      "inferred": false,
+      "reason": "Layer/parent updated for DEF-p2-bible-001 (no longer part of a real family estate); content and adjacency (a dream-sequence list, not a mapped real route) unchanged. The tree-with-a-door beat (ch007-p104) is filed under LOC-hall-of-doors also_seen, not as an adjacency from this wood (see LOC-tree-hatch, deprecated below)."
+    },
+    {
+      "id": "LOC-mushroom-clearing",
+      "name": "The Caterpillar's Clearing",
+      "level": "outdoor_site",
+      "layer": "dream",
+      "parent": "LOC-thick-wood",
+      "grows_from": {
+        "counterpart_key": null,
+        "loc": "LOC-thick-wood",
+        "note": "Designed: an ordinary patch of flowers, grass and fungi within the wood; no more specific real-world counterpart is named."
+      },
+      "physical": {
+        "terrain": "a small clearing among flowers and grass, dominated by a large mushroom about Alice's own height",
+        "sky": "open patch of sky above the clearing",
+        "flora": "flowers, blades of grass, a large mushroom",
+        "climate": "warm and still"
+      },
+      "visual_identifiers": [
+        "a mushroom as tall as Alice",
+        "a large blue caterpillar seated on top, smoking a long hookah"
+      ],
+      "adjacent": [
+        "LOC-thick-wood"
+      ],
+      "chapters": [
+        "ch004",
+        "ch005"
+      ],
+      "source": {
+        "chapter": "ch004",
+        "quote": "she stretched herself up on tiptoe, and peeped over the edge of the mushroom, and her eyes immediately met those of a large blue caterpillar, that was sitting on the top with its arms folded, quietly smoking a long hookah"
+      },
+      "inferred": false,
+      "reason": "Layer/parent updated for DEF-p2-bible-001; content unchanged."
+    },
+    {
+      "id": "LOC-pigeon-nest-treetop",
+      "name": "The Pigeon's Nest",
+      "level": "outdoor_site",
+      "layer": "dream",
+      "parent": "LOC-thick-wood",
+      "grows_from": {
+        "counterpart_key": null,
+        "loc": "LOC-thick-wood",
+        "note": "Designed: the tallest tree in the wood the child already knows; no more specific real-world counterpart is named."
+      },
+      "physical": {
+        "terrain": "the crown of the highest tree in the wood, above the surrounding canopy",
+        "sky": "open sky, level with the treetops",
+        "flora": "the tree's uppermost branches, built into a nest",
+        "climate": "open and breezy, higher and cooler than the wood floor"
+      },
+      "visual_identifiers": [
+        "a nest built in the highest tree in the wood",
+        "a view out over the treetops of the wood"
+      ],
+      "adjacent": [
+        "LOC-thick-wood"
+      ],
+      "chapters": [
+        "ch005"
+      ],
+      "source": {
+        "chapter": "ch005",
+        "quote": "And just as I'd taken the highest tree in the wood... and just as I was thinking I should be free of them at last, they must needs come wriggling down from the sky!"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch005",
+          "quote": "'Well, be off, then!' said the Pigeon in a sulky tone, as it settled down again into its nest."
+        }
+      ],
+      "inferred": false,
+      "reason": "Layer/parent updated for DEF-p2-bible-001; content unchanged."
+    },
+    {
+      "id": "LOC-gryphon-sunning-spot",
+      "name": "Where the Gryphon Lies Asleep in the Sun",
+      "level": "outdoor_site",
+      "layer": "dream",
+      "parent": "LOC-walled-garden",
+      "grows_from": {
+        "counterpart_key": "cp-court",
+        "loc": null,
+        "note": "Part of the dream's continuing Kingdom-of-Hearts sequence (world.json cp-court); no more specific real-world counterpart is named for this particular patch of sunlit ground."
+      },
+      "physical": {
+        "terrain": "open, sunlit ground somewhere between the croquet-lawn and the shore",
+        "sky": "full midsummer sun",
+        "flora": "grass",
+        "climate": "warm and sunny"
+      },
+      "visual_identifiers": [
+        "a Gryphon lying fast asleep in the sun"
+      ],
+      "adjacent": [
+        "LOC-croquet-lawn",
+        "LOC-estuary-shore"
+      ],
+      "chapters": [
+        "ch009"
+      ],
+      "source": {
+        "chapter": "ch009",
+        "quote": "They very soon came upon a Gryphon, lying fast asleep in the sun."
+      },
+      "inferred": true,
+      "reason": "Layer/parent updated for DEF-p2-bible-001. `adjacent` here expresses only the dream's own one-way narrative order (garden -> gryphon -> shore, per 'They very soon came upon' and the immediate onward walk), not a real, revisitable route or distance."
+    },
+    {
+      "id": "LOC-rabbits-house",
+      "name": "The White Rabbit's House",
+      "level": "building",
+      "layer": "dream",
+      "parent": "LOC-thick-wood",
+      "grows_from": {
+        "counterpart_key": "cp-housemaid",
+        "loc": "LOC-family-house",
+        "note": "Built from the family's own housemaid and household, whom Alice knows well enough to be mistaken for one (world.json cp-housemaid)."
+      },
+      "physical": {
+        "terrain": "a small house at the wood's edge, with a window, a door and a chimney",
+        "sky": "open sky above; a cucumber-frame stands just outside",
+        "flora": "none noted beyond the wood at its back",
+        "climate": "as thick-wood"
+      },
+      "settlement": {
+        "architecture_style": "a neat little cottage with a brass door-plate -- a dream-image, not a real gamekeeper's or servant's cottage on any real family estate (that grounding is rejected, DEF-p2-bible-001)",
+        "density": "a single small dream-household"
+      },
+      "visual_identifiers": [
+        "a bright brass plate engraved 'W. RABBIT' on the door",
+        "a cucumber-frame just outside the window",
+        "a chimney narrow enough to be blocked by kicking a foot up it"
+      ],
+      "adjacent": [
+        "LOC-thick-wood"
+      ],
+      "chapters": [
+        "ch004"
+      ],
+      "source": {
+        "chapter": "ch004",
+        "quote": "she came upon a neat little house, on the door of which was a bright brass plate with the name “W. RABBIT,” engraved upon it."
+      },
+      "inferred": true,
+      "reason": "Fixes DEF-p2-bible-001: the previous 'gamekeeper's cottage on the family estate' framing is dropped along with the estate itself. The house and its plate are dream-literal (SUP-002); its real-world root is the family's own housemaid/household, not a tied cottage."
+    },
+    {
+      "id": "LOC-rabbits-house-room",
+      "name": "The Upstairs Room",
+      "level": "room",
+      "layer": "dream",
+      "parent": "LOC-rabbits-house",
+      "grows_from": {
+        "counterpart_key": "cp-housemaid",
+        "loc": "LOC-family-house",
+        "note": "Same grounding as LOC-rabbits-house."
+      },
+      "physical": {
+        "terrain": "a small, tidy upstairs room with a table set in the window",
+        "sky": "seen only through the window Alice's arm later fills",
+        "flora": "none",
+        "climate": "close and cramped once Alice fills it"
+      },
+      "visual_identifiers": [
+        "a table in the window",
+        "a fan and pairs of tiny white kid gloves laid out",
+        "a looking-glass and an unlabelled bottle nearby"
+      ],
+      "adjacent": [
+        "LOC-rabbits-house"
+      ],
+      "chapters": [
+        "ch004"
+      ],
+      "source": {
+        "chapter": "ch004",
+        "quote": "she had found her way into a tidy little room with a table in the window, and on it (as she had hoped) a fan and two or three pairs of tiny white kid gloves"
+      },
+      "inferred": false,
+      "reason": "Layer/parent updated for DEF-p2-bible-001; content unchanged."
+    },
+    {
+      "id": "LOC-duchess-house",
+      "name": "The Duchess's House",
+      "level": "building",
+      "layer": "dream",
+      "parent": "LOC-thick-wood",
+      "grows_from": {
+        "counterpart_key": "cp-cat",
+        "loc": "LOC-family-house",
+        "note": "The Cheshire Cat first appears on this house's hearth and grows from Dinah, the family cat (world.json cp-cat); the kitchen itself is a dream-image of domestic life below stairs that a child of this household would know only at second hand."
+      },
+      "physical": {
+        "terrain": "a house at the wood's edge with a front door",
+        "sky": "open sky outside; the interior is smoky",
+        "flora": "wood at its back",
+        "climate": "as thick-wood outside; hot and smoky within"
+      },
+      "settlement": {
+        "architecture_style": "a dream-image house with liveried footmen and kitchen staff, not a real 'dower house' on any family estate (that grounding is rejected, DEF-p2-bible-001)",
+        "density": "one dream-household, plus kitchen staff (the cook)"
+      },
+      "visual_identifiers": [
+        "two liveried footmen at the door, one fish-faced, one frog-faced",
+        "plates thrown out through the doorway",
+        "pepper-smoke visible from outside"
+      ],
+      "adjacent": [
+        "LOC-thick-wood"
+      ],
+      "chapters": [
+        "ch006"
+      ],
+      "source": {
+        "chapter": "ch006",
+        "quote": "a footman in livery came running out of the wood... and rapped loudly at the door with his knuckles. It was opened by another footman in livery"
+      },
+      "inferred": true,
+      "reason": "Fixes DEF-p2-bible-001: the previous 'lodge/dower house on the estate' framing is dropped along with the estate itself; grows_from now points to the sourced Dinah/Cheshire-Cat link (cp-cat) rather than an invented estate tie."
+    },
+    {
+      "id": "LOC-duchess-kitchen",
+      "name": "The Duchess's Kitchen",
+      "level": "room",
+      "layer": "dream",
+      "parent": "LOC-duchess-house",
+      "grows_from": {
+        "counterpart_key": "cp-cat",
+        "loc": "LOC-family-house",
+        "note": "Same grounding as LOC-duchess-house."
+      },
+      "physical": {
+        "terrain": "a large kitchen with a hearth and a three-legged stool at its centre",
+        "sky": "none -- filled floor to ceiling with pepper-smoke",
+        "flora": "none",
+        "climate": "hot, smoky, and thick with pepper"
+      },
+      "visual_identifiers": [
+        "a cauldron of soup on the fire",
+        "a three-legged stool where the Duchess sits nursing the baby",
+        "a grinning cat on the hearth",
+        "pots, pans and fire-irons thrown across the room"
+      ],
+      "adjacent": [
+        "LOC-duchess-house"
+      ],
+      "chapters": [
+        "ch006"
+      ],
+      "source": {
+        "chapter": "ch006",
+        "quote": "The door led right into a large kitchen, which was full of smoke from one end to the other: the Duchess was sitting on a three-legged stool in the middle, nursing a baby; the cook was leaning over the fire, stirring a large cauldron"
+      },
+      "inferred": false,
+      "reason": "Layer/parent updated for DEF-p2-bible-001; content unchanged."
+    },
+    {
+      "id": "LOC-hare-cottage",
+      "name": "The March Hare's House",
+      "level": "building",
+      "layer": "dream",
+      "parent": "LOC-thick-wood",
+      "grows_from": {
+        "counterpart_key": "cp-tea",
+        "loc": "LOC-family-house",
+        "note": "Built from the household's own fixed tea-time (world.json cp-tea), which Alice is late for when she wakes."
+      },
+      "physical": {
+        "terrain": "a large house at the edge of the wood",
+        "sky": "open sky above the thatched roof",
+        "flora": "a tree standing in front of the house, under which the tea-table is set",
+        "climate": "as thick-wood edge -- open and warm"
+      },
+      "settlement": {
+        "architecture_style": "a large thatched dream-cottage, distinctive for chimneys shaped like ears and a fur-thatched roof",
+        "density": "a single dream-household"
+      },
+      "visual_identifiers": [
+        "chimneys shaped like ears",
+        "a roof thatched with fur"
+      ],
+      "adjacent": [
+        "LOC-thick-wood",
+        "LOC-tea-table-yard"
+      ],
+      "chapters": [
+        "ch006",
+        "ch007"
+      ],
+      "source": {
+        "chapter": "ch006",
+        "quote": "she came in sight of the house of the March Hare: she thought it must be the right house, because the chimneys were shaped like ears and the roof was thatched with fur."
+      },
+      "inferred": false,
+      "reason": "Layer/parent updated for DEF-p2-bible-001; content unchanged."
+    },
+    {
+      "id": "LOC-tea-table-yard",
+      "name": "The Tea-Table Under the Tree",
+      "level": "outdoor_site",
+      "layer": "dream",
+      "parent": "LOC-hare-cottage",
+      "grows_from": {
+        "counterpart_key": "cp-tea",
+        "loc": "LOC-family-house",
+        "note": "Same grounding as LOC-hare-cottage."
+      },
+      "physical": {
+        "terrain": "open ground in front of the March Hare's house, under a large tree",
+        "sky": "dappled shade beneath the tree",
+        "flora": "the tree itself; the tea-table set beneath it",
+        "climate": "warm, sheltered by the tree's shade"
+      },
+      "visual_identifiers": [
+        "a long table crowded with tea-things",
+        "one corner of the table occupied, the rest set but unused",
+        "the Dormouse asleep between the March Hare and the Hatter"
+      ],
+      "adjacent": [
+        "LOC-hare-cottage",
+        "LOC-thick-wood"
+      ],
+      "chapters": [
+        "ch007"
+      ],
+      "source": {
+        "chapter": "ch007",
+        "quote": "There was a table set out under a tree in front of the house, and the March Hare and the Hatter were having tea at it: a Dormouse was sitting between them, fast asleep"
+      },
+      "inferred": false,
+      "reason": "Layer/parent updated for DEF-p2-bible-001; content unchanged."
+    },
+    {
+      "id": "LOC-estuary-shore",
+      "name": "The Seashore",
+      "level": "outdoor_site",
+      "layer": "dream",
+      "parent": "LOC-wonderland-dream",
+      "grows_from": {
+        "counterpart_key": null,
+        "loc": "LOC-seaside-town",
+        "note": "Built from Alice's one real seaside trip -- bathing machines, children digging, lodging houses, a railway station (ch002-p16) -- not from any real coastline near the Thames-valley frame."
+      },
+      "physical": {
+        "terrain": "a dream-shore, its own self-contained set-piece, not joined to any other part of the dream's or the waking world's geography",
+        "sky": "open dream-coastal sky",
+        "flora": "seaweed and shoreline scrub rather than meadow grass",
+        "climate": "warm, with a dream sea-breeze"
+      },
+      "visual_identifiers": [
+        "a pebble shore facing open water",
+        "a little ledge of rock a short way along it"
+      ],
+      "adjacent": [
+        "LOC-gryphon-sunning-spot",
+        "LOC-rock-ledge"
+      ],
+      "chapters": [
+        "ch009",
+        "ch010"
+      ],
+      "source": {
+        "chapter": "ch010",
+        "quote": "you first form into a line along the sea-shore"
+      },
+      "inferred": true,
+      "reason": "Fixes DEF-p2-bible-002: reclassified from 'the same river's tidal estuary mouth, a short walk downstream from the walled garden' (impossible -- the Thames is non-tidal at Oxford, and no estuary is within walking distance) to fully dream-only, per SUP-010 (cultivation.json, read-only): 'the dream's own self-contained set-piece on the shore, not connected to any real sea location'. `grows_from` now points to LOC-seaside-town, Alice's one remembered real seaside visit (ch002-p16), matching DEF-p2-bible-002 recommendation A exactly, instead of to any real coastline reachable from the bank."
+    },
+    {
+      "id": "LOC-rock-ledge",
+      "name": "The Mock Turtle's Ledge",
+      "level": "outdoor_site",
+      "layer": "dream",
+      "parent": "LOC-estuary-shore",
+      "grows_from": {
+        "counterpart_key": null,
+        "loc": "LOC-seaside-town",
+        "note": "Same grounding as LOC-estuary-shore."
+      },
+      "physical": {
+        "terrain": "a little ledge of rock above the shoreline",
+        "sky": "open dream-coastal sky",
+        "flora": "bare rock, no vegetation noted",
+        "climate": "warm, in full sun"
+      },
+      "visual_identifiers": [
+        "a lone figure sitting sad and lonely on the rock, sighing"
+      ],
+      "adjacent": [
+        "LOC-estuary-shore"
+      ],
+      "chapters": [
+        "ch009",
+        "ch010"
+      ],
+      "source": {
+        "chapter": "ch009",
+        "quote": "They had not gone far before they saw the Mock Turtle in the distance, sitting sad and lonely on a little ledge of rock, and, as they came nearer, Alice could hear him sighing as if his heart would break."
+      },
+      "inferred": false,
+      "reason": "Layer/parent updated for DEF-p2-bible-002; content unchanged."
+    },
+    {
+      "id": "LOC-courthouse",
+      "name": "The Court of Justice",
+      "level": "building",
+      "layer": "dream",
+      "parent": "LOC-wonderland-dream",
+      "grows_from": {
+        "counterpart_key": "cp-court",
+        "loc": null,
+        "note": "The adult world of authority as a well-bred child meets it only through books: 'a court of justice she has only read about in books' (world.json cp-court, ch011-p02)."
+      },
+      "physical": {
+        "terrain": "a dream-image courthouse building",
+        "sky": "none inside; open dream-sky outside",
+        "flora": "none",
+        "climate": "close and crowded inside during the trial"
+      },
+      "settlement": {
+        "architecture_style": "a period-accurate English courtroom set as a child who has 'read about them in books' would picture one -- not a real building in any real village near the bank (that grounding is rejected, DEF-p2-bible-001)",
+        "density": "a single dream-institution"
+      },
+      "visual_identifiers": [
+        "a raised bench for the judge",
+        "a jury-box",
+        "a public gallery crowded for the trial"
+      ],
+      "adjacent": [
+        "LOC-courtroom"
+      ],
+      "chapters": [
+        "ch011",
+        "ch012"
+      ],
+      "source": {
+        "chapter": "ch011",
+        "quote": "Alice had never been in a court of justice before, but she had read about them in books"
+      },
+      "inferred": true,
+      "reason": "Fixes DEF-p2-bible-001: the previous 'the village's own courthouse' framing (and the village itself) is dropped; grows_from now points to the sourced cp-court reading (built from books, not a real local institution)."
+    },
+    {
+      "id": "LOC-courtroom",
+      "name": "The Courtroom",
+      "level": "room",
+      "layer": "dream",
+      "parent": "LOC-courthouse",
+      "grows_from": {
+        "counterpart_key": "cp-court",
+        "loc": null,
+        "note": "Same grounding as LOC-courthouse."
+      },
+      "physical": {
+        "terrain": "a courtroom with a raised throne for the King and Queen, a jury-box, and a central table",
+        "sky": "none -- an enclosed room",
+        "flora": "none",
+        "climate": "close and crowded"
+      },
+      "visual_identifiers": [
+        "the King and Queen of Hearts seated on a throne",
+        "a jury-box with twelve jurors",
+        "a central table holding a large dish of tarts",
+        "the Knave standing in chains, guarded"
+      ],
+      "adjacent": [
+        "LOC-courthouse"
+      ],
+      "chapters": [
+        "ch011",
+        "ch012"
+      ],
+      "source": {
+        "chapter": "ch011",
+        "quote": "The King and Queen of Hearts were seated on their throne when they arrived, with a great crowd assembled about them... In the very middle of the court was a table, with a large dish of tarts upon it."
+      },
+      "also_seen": [
+        {
+          "chapter": "ch011",
+          "quote": "'And that's the jury-box,' thought Alice, 'and those twelve creatures... I suppose they are the jurors.'"
+        },
+        {
+          "chapter": "ch012",
+          "quote": "she jumped up in such a hurry that she tipped over the jury-box with the edge of her skirt, upsetting all the jurymen on to the heads of the crowd below"
+        }
+      ],
+      "inferred": false,
+      "reason": "Layer/parent updated for DEF-p2-bible-001; content unchanged."
+    },
+    {
+      "id": "LOC-manor-grounds",
+      "name": "[DEPRECATED] The Family's Riverside Grounds",
+      "level": "estate",
+      "layer": "waking",
+      "parent": null,
+      "grows_from": null,
+      "physical": {
+        "terrain": "retired field, superseded (see reason below)",
+        "sky": "retired field, superseded (see reason below)",
+        "flora": "retired field, superseded (see reason below)",
+        "climate": "retired field, superseded (see reason below)"
+      },
+      "visual_identifiers": [],
+      "adjacent": [],
+      "chapters": [],
+      "source": {
+        "chapter": "ch001",
+        "quote": "she ran across the field after it, and fortunately was just in time to see it pop down a large rabbit-hole under the hedge"
+      },
+      "inferred": true,
+      "reason": "DEPRECATED by DEF-p2-bible-001 (H1 ruling 5.2 A). This entry proposed a landed family estate (with a hidden cellar/grotto, gamekeeper's cottage, dower house) as the real-world basis for Wonderland. bible/world.json's frame.social_class establishes the family as a comfortable professional (clergyman-scholar) household, not landed gentry, and the H1 ruling rejects all estate/village/cellar-shaft/second-hatch/tidal-estuary grounding outright. Superseded by LOC-riverside-region (the real waking-world region) and LOC-wonderland-dream (the dream-layer root); all former children are re-parented to one of those two, or to LOC-family-house / LOC-neighbouring-farm.",
+      "deprecated": true,
+      "deprecated_on": "2026-09-22",
+      "deprecated_reason": "Superseded by LOC-riverside-region (waking) and LOC-wonderland-dream (dream) per H1 ruling 5.2 A. ID retained, never recycled."
+    },
+    {
+      "id": "LOC-cellar-passage",
+      "name": "[DEPRECATED] The Old Cellar Passage",
+      "level": "building",
+      "layer": "dream",
+      "parent": null,
+      "grows_from": null,
+      "physical": {
+        "terrain": "retired field, superseded (see reason below)",
+        "sky": "retired field, superseded (see reason below)",
+        "flora": "retired field, superseded (see reason below)",
+        "climate": "retired field, superseded (see reason below)"
+      },
+      "visual_identifiers": [],
+      "adjacent": [],
+      "chapters": [],
+      "source": {
+        "chapter": "ch001",
+        "quote": "The rabbit-hole went straight on like a tunnel for some way, and then dipped suddenly down... before she found herself falling down a very deep well."
+      },
+      "inferred": true,
+      "reason": "DEPRECATED by DEF-p2-bible-001. This entry unified the well-shaft, the long hall and the tiny passage into one real, persistent, two-hatch underground structure -- directly the 'cellar shaft... grounding' the H1 ruling instructs be removed, and in direct conflict with SUP-008 and SUP-013 (both: no real, persistent, mappable structure). Superseded: LOC-descent-shaft, LOC-hall-of-doors and LOC-tiny-passage now each parent directly to LOC-wonderland-dream / LOC-hall-of-doors, with no unifying 'building' between them and no second hatch.",
+      "deprecated": true,
+      "deprecated_on": "2026-09-22",
+      "deprecated_reason": "Superseded: its three former children now parent directly to LOC-wonderland-dream / LOC-hall-of-doors per SUP-008/SUP-013. ID retained, never recycled."
+    },
+    {
+      "id": "LOC-tree-hatch",
+      "name": "[DEPRECATED] The Tree With a Door",
+      "level": "outdoor_site",
+      "layer": "dream",
+      "parent": null,
+      "grows_from": null,
+      "physical": {
+        "terrain": "retired field, superseded (see reason below)",
+        "sky": "retired field, superseded (see reason below)",
+        "flora": "retired field, superseded (see reason below)",
+        "climate": "retired field, superseded (see reason below)"
+      },
+      "visual_identifiers": [],
+      "adjacent": [],
+      "chapters": [],
+      "source": {
+        "chapter": "ch007",
+        "quote": "she noticed that one of the trees had a door leading right into it. 'That's very curious!' she thought... And in she went."
+      },
+      "inferred": true,
+      "reason": "DEPRECATED by DEF-p2-bible-001. This entry read the ch007-p104 tree-door as a second, real, physical hatch into the same underground cellar passage as the original hedge hole -- exactly the 'second hatch... grounding' the H1 ruling instructs be removed, and in direct conflict with SUP-013 ('never re-established... connecting it to the rest of the dream's geography'). Superseded: the ch007-p104 quote is now filed as an also_seen citation on LOC-hall-of-doors itself, read as the same self-contained dream-set recurring through a different dream-image doorway, with no persistent tunnel network implied.",
+      "deprecated": true,
+      "deprecated_on": "2026-09-22",
+      "deprecated_reason": "Superseded: quote moved to LOC-hall-of-doors.also_seen; no replacement location needed. ID retained, never recycled."
+    },
+    {
+      "id": "LOC-village",
+      "name": "[DEPRECATED] The Village",
+      "level": "town",
+      "layer": "waking",
+      "parent": null,
+      "grows_from": null,
+      "physical": {
+        "terrain": "retired field, superseded (see reason below)",
+        "sky": "retired field, superseded (see reason below)",
+        "flora": "retired field, superseded (see reason below)",
+        "climate": "retired field, superseded (see reason below)"
+      },
+      "visual_identifiers": [],
+      "adjacent": [],
+      "chapters": [],
+      "source": {
+        "chapter": "ch010",
+        "quote": "a cry of 'The trial's beginning!' was heard in the distance."
+      },
+      "inferred": true,
+      "reason": "DEPRECATED by DEF-p2-bible-001/002. This entry invented a real riverside village (with its own courthouse) reachable on foot from the walled garden and the invented tidal-estuary shore -- part of the rejected estate/village/tidal-estuary grounding, and it depended on LOC-estuary-shore's now-rejected real-coastline reading. Superseded: LOC-courthouse and LOC-courtroom are dream-only (per SUP-010/cp-court) and parent directly to LOC-wonderland-dream; no real village is needed or registered.",
+      "deprecated": true,
+      "deprecated_on": "2026-09-22",
+      "deprecated_reason": "Superseded: LOC-courthouse re-parented to LOC-wonderland-dream as dream-only. ID retained, never recycled."
+    }
+  ],
+  "spatial_relations": [
+    {
+      "a": "LOC-riverbank",
+      "b": "LOC-meadow-field",
+      "relation": "adjacent_to",
+      "travel": "a few steps",
+      "inferred": false,
+      "reason": null,
+      "source": {
+        "chapter": "ch001",
+        "quote": "she ran across the field after it"
+      }
+    },
+    {
+      "a": "LOC-meadow-field",
+      "b": "LOC-rabbit-hole-entrance",
+      "relation": "adjacent_to, at the field's hedge boundary",
+      "travel": "a short run",
+      "inferred": false,
+      "reason": null,
+      "source": {
+        "chapter": "ch001",
+        "quote": "she ran across the field after it, and fortunately was just in time to see it pop down a large rabbit-hole under the hedge"
+      }
+    },
+    {
+      "a": "LOC-riverbank",
+      "b": "LOC-river-backwater",
+      "relation": "adjacent_to",
+      "travel": "at the water's edge",
+      "inferred": true,
+      "reason": "Fixes DEF-p2-bible-003; the backwater is the body of water the bank sits beside.",
+      "source": {
+        "chapter": "ch012",
+        "quote": "the pool rippling to the waving of the reeds"
+      }
+    },
+    {
+      "a": "LOC-riverside-region",
+      "b": "LOC-family-house",
+      "relation": "short_walk_from",
+      "travel": "a few minutes' run",
+      "inferred": true,
+      "reason": "Fixes DEF-p2-bible-003; matches world.json setting.place_summary 'a short run away for tea'.",
+      "source": {
+        "chapter": "ch012",
+        "quote": "now run in to your tea; it’s getting late"
+      }
+    },
+    {
+      "a": "LOC-riverside-region",
+      "b": "LOC-neighbouring-farm",
+      "relation": "adjacent_to, within earshot of the bank",
+      "travel": "close enough for sheep-bells and cattle to be heard from the bank",
+      "inferred": true,
+      "reason": "Fixes DEF-p2-bible-003.",
+      "source": {
+        "chapter": "ch012",
+        "quote": "the confused clamour of the busy farm-yard"
+      }
+    },
+    {
+      "a": "LOC-neighbouring-farm",
+      "b": "LOC-farmyard",
+      "relation": "contains",
+      "travel": "adjoining the farmhouse",
+      "inferred": false,
+      "reason": null,
+      "source": {
+        "chapter": "ch012",
+        "quote": "the lowing of the cattle in the distance"
+      }
+    },
+    {
+      "a": "LOC-riverside-region",
+      "b": "LOC-church-spire",
+      "relation": "visible_on_the_skyline_from, background only",
+      "travel": "distant, never approached",
+      "inferred": true,
+      "reason": "Fixes DEF-p2-bible-003 optional item; designed, no source distance given.",
+      "source": {
+        "chapter": "ch012",
+        "quote": "the confused clamour of the busy farm-yard"
+      }
+    },
+    {
+      "a": "LOC-riverside-region",
+      "b": "LOC-seaside-town",
+      "relation": "not_co-located; a separate real place visited once before this story's day, reached historically by railway",
+      "travel": "a past railway journey, not part of today's frame",
+      "inferred": true,
+      "reason": "Fixes DEF-p2-bible-002; keeps the remembered seaside town explicitly outside today's walkable Thames-valley geography.",
+      "source": {
+        "chapter": "ch002",
+        "quote": "and in that case I can go back by railway"
+      }
+    }
+  ],
+  "cross_domain_assumptions": [
+    {
+      "id": "geo-xda-06",
+      "refs": [
+        "DEF-p2-bible-001",
+        "DEF-p2-bible-002",
+        "DEF-p2-bible-003",
+        "SUP-001",
+        "SUP-007",
+        "SUP-008",
+        "SUP-010",
+        "SUP-013",
+        "XA-magic-04",
+        "world.json XA-05"
+      ],
+      "topic": "Resolution of the H1-ruled dream/waking split (supersedes geo-xda-01..05 from the pre-ruling draft)",
+      "assumption": "Every Wonderland LOC-* is now tagged layer:\"dream\" with a grows_from pointer to a real waking-world detail, and carries no persistent real-world parent, estate ownership or plumbing (H1 ruling 5.2 A). LOC-hall-of-doors carries no adjacency to anything outside its own three-piece set (SUP-013). The pool of tears is the flooded hall itself (SUP-007; ch002-p07), not a separate ground-level pond. LOC-estuary-shore grows from Alice's one real seaside trip (LOC-seaside-town), not from a tidal estuary of the Oxford Thames (SUP-010; DEF-p2-bible-002 -- the Thames is not tidal at Oxford). Deprecated: LOC-manor-grounds, LOC-cellar-passage, LOC-tree-hatch, LOC-village (IDs retained, never recycled). The five geo-xda-01..05 assumptions in the prior draft are RESOLVED/SUPERSEDED by this fix; they no longer apply.",
+      "reconciliation": "CONSISTENT with SUP-001, SUP-007, SUP-008, SUP-010, SUP-013 and XA-magic-04 as approved at H1 5.1 A / 5.2 A. Supersedes geo-xda-01 to 05. The 4 deprecated LOC-* are kept for audit; no structural field anywhere points to them (checked)."
+    },
+    {
+      "id": "geo-xda-07",
+      "refs": [
+        "DEF-p2-bible-003",
+        "world.json faction_register"
+      ],
+      "topic": "Waking-world household/place registrations are minimal and deliberately not detailed",
+      "assumption": "LOC-family-house and LOC-neighbouring-farm are registered here only to the depth geography needs (a building, a level of household, an adjacency); their internal social structure, named members and alliances are owned by bible/world.json faction_register and (after H1) by 02-worldbuilding/political and 03-characters, per bible/WRITE_RULES.md ownership table. Geography does not duplicate or pre-empt that detail.",
+      "reconciliation": "CONSISTENT with world.json and politics.json: LOC-family-house is the seat of FAC-alice-family; LOC-farmyard is the seat of FAC-neighbouring-farm."
+    }
+  ]
+}

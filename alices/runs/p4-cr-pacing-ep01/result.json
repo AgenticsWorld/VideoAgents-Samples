@@ -1,0 +1,21 @@
+{
+  "task_id": "p4-cr-pacing-ep01",
+  "agent": "01-story/pacing",
+  "project": "alices",
+  "attempt": 1,
+  "status": "done",
+  "date": "2026-09-23",
+  "change_request": "BIB-0027 (user ruling 2026-09-22: talking/dream animals = photoreal CGI animals; Mucha/Art Nouveau dream environments)",
+  "authority_read": ["bible/changelog.md BIB-0027", "runs/p4-cr-cgi-mucha-bible/result.json (stale_notes 'story/*': 'human performer' / 'no hint of CGI' lines)"],
+  "changed_files": [
+    {
+      "file": "story/episodes/ep01/pacing.json",
+      "change_note": "constraints_honoured: the SUP-002 line now says: the real, mute, unclothed rabbit (CRE-001) appears only in the waking frame (S01-S02); the dream White Rabbit (S04, S08) is a photoreal CGI animal composited into live-action plates, with only its period props. version 1→2. No other field touched. Every alloc_s, timecode, total_s (537), hook reserve, emotion curve and trim suggestion is unchanged."
+    }
+  ],
+  "scan_result": "Full-text scan for performer / human / CGI / costume / Art Nouveau / Gothic / Mucha / puppet / practical: this was the only line tied to the old reading. The 'forced perspective' notes (S06) come from SUP-003 (size changes), which BIB-0027 doesn't touch, so they stay. Pacing has no environment-style wording, so Mucha needs no change here.",
+  "timing_impact": "none. A CGI Rabbit doesn't change the scene lengths, and the S04/S08 beats are the same actions.",
+  "defects_opened": [],
+  "machine_checks": { "json_valid": "PASS", "total_duration_pm_10pct": "PASS (537 vs 540, unchanged)" },
+  "skills": "none enabled for this station"
+}

@@ -1,0 +1,860 @@
+[
+  {
+    "character_id": "CHAR-alice",
+    "variant": "default",
+    "output": "assets/audio/voice/refs/CHAR-alice_voiceprint.mp3",
+    "text": "The old garden was calm and quiet this warm July afternoon.",
+    "word_count": 11,
+    "dry_run": {
+      "rc": 0,
+      "stdout": "[dry-run] tts via volcengine model=seed-audio-1.0 voice=desc:女性,音高high child's register, mid of a girl's range, lively intonation with wide rises on questions,音色:clear, bright ten-year-old girl's voice with a firm, slightly breathy core; natural and unaffected, not cute, not squeaky,口音:Received Pronunciation of an educated upper-middle-class English child: crisp consonants, clean open vowels, no regional features (语气:平静自然;参考锚:无,纯描述) format=mp3 → /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-alice_voiceprint.mp3",
+      "stderr": ""
+    },
+    "run": {
+      "rc": 0,
+      "stdout": "已生成: /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-alice_voiceprint.mp3",
+      "stderr": "[genmedia] seed-audio 描述定制嗓音:desc=\"女性,音高high child's register, mid of a girl's range, lively intonation with wide rises on questions,音色:clear, bright ten-year-old girl's voice with a firm, slightly breathy core; natural and unaffected, not cute, not squeaky,口音:Received Pronunciation of an educated upper-middle-class English child: crisp consonants, clean open vowels, no regional features\" tone='平静自然' ref=无(纯描述) dur=7.3s"
+    },
+    "duration_s": 7.37,
+    "file_exists": true,
+    "voice_desc": "女性,音高high child's register, mid of a girl's range, lively intonation with wide rises on questions,音色:clear, bright ten-year-old girl's voice with a firm, slightly breathy core; natural and unaffected, not cute, not squeaky,口音:Received Pronunciation of an educated upper-middle-class English child: crisp consonants, clean open vowels, no regional features",
+    "ref_anchor": "无(纯描述)",
+    "api_reported_duration_s": 7.3
+  },
+  {
+    "character_id": "CHAR-alice",
+    "variant": "age02",
+    "output": "assets/audio/voice/refs/CHAR-alice_age02_voiceprint.mp3",
+    "text": "The old garden was calm and quiet this warm afternoon.",
+    "word_count": 10,
+    "dry_run": {
+      "rc": 0,
+      "stdout": "[dry-run] tts via volcengine model=seed-audio-1.0 voice=desc:女性,音高mezzo-soprano, relaxed and even, lively rises kept but softer,音色:warm, clear, gentle grown woman's voice with the same bright, frank core as the child, fuller and more settled, storytelling warmth,口音:Received Pronunciation of an educated upper-middle-class English woman: crisp consonants, clean open vowels, no regional features (语气:平静自然;参考锚:CHAR-alice_voiceprint.mp3) format=mp3 → /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-alice_age02_voiceprint.mp3",
+      "stderr": ""
+    },
+    "run": {
+      "rc": 0,
+      "stdout": "已生成: /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-alice_age02_voiceprint.mp3",
+      "stderr": "[genmedia] seed-audio 描述定制嗓音:desc=\"女性,音高mezzo-soprano, relaxed and even, lively rises kept but softer,音色:warm, clear, gentle grown woman's voice with the same bright, frank core as the child, fuller and more settled, storytelling warmth,口音:Received Pronunciation of an educated upper-middle-class English woman: crisp consonants, clean open vowels, no regional features\" tone='平静自然' ref=CHAR-alice_voiceprint.mp3 dur=7.8s"
+    },
+    "duration_s": 7.85,
+    "file_exists": true,
+    "voice_desc": "女性,音高mezzo-soprano, relaxed and even, lively rises kept but softer,音色:warm, clear, gentle grown woman's voice with the same bright, frank core as the child, fuller and more settled, storytelling warmth,口音:Received Pronunciation of an educated upper-middle-class English woman: crisp consonants, clean open vowels, no regional features",
+    "ref_anchor": "CHAR-alice_voiceprint.mp3",
+    "api_reported_duration_s": 7.8
+  },
+  {
+    "character_id": "CHAR-alice-sister",
+    "variant": "default",
+    "output": "assets/audio/voice/refs/CHAR-alice-sister_voiceprint.mp3",
+    "text": "The old garden was calm and quiet this warm afternoon.",
+    "word_count": 10,
+    "dry_run": {
+      "rc": 0,
+      "stdout": "[dry-run] tts via volcengine model=seed-audio-1.0 voice=desc:女性,音高medium-high mezzo-soprano, settled and even, small intonation swings,音色:warm, soft, smooth young woman's voice, gently rounded, a little low for her age, calm and unhurried,口音:Received Pronunciation of an educated upper-middle-class English girl: soft, clear, refined, no regional features (语气:平静自然;参考锚:无,纯描述) format=mp3 → /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-alice-sister_voiceprint.mp3",
+      "stderr": ""
+    },
+    "run": {
+      "rc": 0,
+      "stdout": "已生成: /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-alice-sister_voiceprint.mp3",
+      "stderr": "[genmedia] seed-audio 描述定制嗓音:desc=\"女性,音高medium-high mezzo-soprano, settled and even, small intonation swings,音色:warm, soft, smooth young woman's voice, gently rounded, a little low for her age, calm and unhurried,口音:Received Pronunciation of an educated upper-middle-class English girl: soft, clear, refined, no regional features\" tone='平静自然' ref=无(纯描述) dur=4.307125s"
+    },
+    "duration_s": 4.37,
+    "file_exists": true,
+    "voice_desc": "女性,音高medium-high mezzo-soprano, settled and even, small intonation swings,音色:warm, soft, smooth young woman's voice, gently rounded, a little low for her age, calm and unhurried,口音:Received Pronunciation of an educated upper-middle-class English girl: soft, clear, refined, no regional features",
+    "ref_anchor": "无(纯描述)",
+    "api_reported_duration_s": 4.307125
+  },
+  {
+    "character_id": "CHAR-bill-the-lizard",
+    "variant": "default",
+    "output": "assets/audio/voice/refs/CHAR-bill-the-lizard_voiceprint.mp3",
+    "text": "The old garden was calm and quiet this warm July afternoon.",
+    "word_count": 11,
+    "dry_run": {
+      "rc": 0,
+      "stdout": "[dry-run] tts via volcengine model=seed-audio-1.0 voice=desc:男性,音高high light tenor, unstable, cracking upward,音色:feeble, thin, squeaky teenage boy's voice, recently broken and still cracking, breathless and dazed,口音:rustic Oxfordshire country English, soft burr, 'thank ye' (语气:平静自然;参考锚:无,纯描述) format=mp3 → /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-bill-the-lizard_voiceprint.mp3",
+      "stderr": ""
+    },
+    "run": {
+      "rc": 0,
+      "stdout": "已生成: /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-bill-the-lizard_voiceprint.mp3",
+      "stderr": "[genmedia] seed-audio 描述定制嗓音:desc=\"男性,音高high light tenor, unstable, cracking upward,音色:feeble, thin, squeaky teenage boy's voice, recently broken and still cracking, breathless and dazed,口音:rustic Oxfordshire country English, soft burr, 'thank ye'\" tone='平静自然' ref=无(纯描述) dur=6.5s"
+    },
+    "duration_s": 6.55,
+    "file_exists": true,
+    "voice_desc": "男性,音高high light tenor, unstable, cracking upward,音色:feeble, thin, squeaky teenage boy's voice, recently broken and still cracking, breathless and dazed,口音:rustic Oxfordshire country English, soft burr, 'thank ye'",
+    "ref_anchor": "无(纯描述)",
+    "api_reported_duration_s": 6.5
+  },
+  {
+    "character_id": "CHAR-canary",
+    "variant": "default",
+    "output": "assets/audio/voice/refs/CHAR-canary_voiceprint.mp3",
+    "text": "The old garden was calm and quiet this warm July afternoon.",
+    "word_count": 11,
+    "dry_run": {
+      "rc": 0,
+      "stdout": "[dry-run] tts via volcengine model=seed-audio-1.0 voice=desc:女性,音高high soprano, quavering,音色:light, thin, fluttering woman's voice with a nervous tremble,口音:soft middle-class southern English (语气:平静自然;参考锚:无,纯描述) format=mp3 → /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-canary_voiceprint.mp3",
+      "stderr": ""
+    },
+    "run": {
+      "rc": 0,
+      "stdout": "已生成: /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-canary_voiceprint.mp3",
+      "stderr": "[genmedia] seed-audio 描述定制嗓音:desc=\"女性,音高high soprano, quavering,音色:light, thin, fluttering woman's voice with a nervous tremble,口音:soft middle-class southern English\" tone='平静自然' ref=无(纯描述) dur=6.9s"
+    },
+    "duration_s": 6.96,
+    "file_exists": true,
+    "voice_desc": "女性,音高high soprano, quavering,音色:light, thin, fluttering woman's voice with a nervous tremble,口音:soft middle-class southern English",
+    "ref_anchor": "无(纯描述)",
+    "api_reported_duration_s": 6.9
+  },
+  {
+    "character_id": "CHAR-card-soldiers-ensemble",
+    "variant": "default",
+    "output": "assets/audio/voice/refs/CHAR-card-soldiers-ensemble_voiceprint.mp3",
+    "text": "The garden was calm and quiet this warm afternoon.",
+    "word_count": 9,
+    "dry_run": {
+      "rc": 0,
+      "stdout": "[dry-run] tts via volcengine model=seed-audio-1.0 voice=desc:男性,音高mid baritone, flat drilled delivery,音色:firm, clipped young men's voices shouting in drilled unison, parade-ground bark,口音:plain working-class southern English, drilled military diction (语气:平静自然;参考锚:无,纯描述) format=mp3 → /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-card-soldiers-ensemble_voiceprint.mp3",
+      "stderr": ""
+    },
+    "run": {
+      "rc": 0,
+      "stdout": "已生成: /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-card-soldiers-ensemble_voiceprint.mp3",
+      "stderr": "[genmedia] seed-audio 描述定制嗓音:desc=\"男性,音高mid baritone, flat drilled delivery,音色:firm, clipped young men's voices shouting in drilled unison, parade-ground bark,口音:plain working-class southern English, drilled military diction\" tone='平静自然' ref=无(纯描述) dur=6.08s"
+    },
+    "duration_s": 6.14,
+    "file_exists": true,
+    "voice_desc": "男性,音高mid baritone, flat drilled delivery,音色:firm, clipped young men's voices shouting in drilled unison, parade-ground bark,口音:plain working-class southern English, drilled military diction",
+    "ref_anchor": "无(纯描述)",
+    "api_reported_duration_s": 6.08
+  },
+  {
+    "character_id": "CHAR-caterpillar",
+    "variant": "default",
+    "output": "assets/audio/voice/refs/CHAR-caterpillar_voiceprint.mp3",
+    "text": "The garden was calm this afternoon.",
+    "word_count": 6,
+    "dry_run": {
+      "rc": 0,
+      "stdout": "[dry-run] tts via volcengine model=seed-audio-1.0 voice=desc:男性,音高low baritone, flat, falling cadence, one sharp upward flare when angered,音色:dry, languid, smoky older man's voice, slightly nasal drawl, heavy-lidded and bored,口音:languid upper-class English drawl, elongated vowels (语气:平静自然;参考锚:无,纯描述) format=mp3 → /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-caterpillar_voiceprint.mp3",
+      "stderr": ""
+    },
+    "run": {
+      "rc": 0,
+      "stdout": "已生成: /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-caterpillar_voiceprint.mp3",
+      "stderr": "[genmedia] seed-audio 描述定制嗓音:desc=\"男性,音高low baritone, flat, falling cadence, one sharp upward flare when angered,音色:dry, languid, smoky older man's voice, slightly nasal drawl, heavy-lidded and bored,口音:languid upper-class English drawl, elongated vowels\" tone='平静自然' ref=无(纯描述) dur=4.4s"
+    },
+    "duration_s": 4.46,
+    "file_exists": true,
+    "voice_desc": "男性,音高low baritone, flat, falling cadence, one sharp upward flare when angered,音色:dry, languid, smoky older man's voice, slightly nasal drawl, heavy-lidded and bored,口音:languid upper-class English drawl, elongated vowels",
+    "ref_anchor": "无(纯描述)",
+    "api_reported_duration_s": 4.4
+  },
+  {
+    "character_id": "CHAR-caucus-race-party-ensemble",
+    "variant": "default",
+    "output": "assets/audio/voice/refs/CHAR-caucus-race-party-ensemble_voiceprint.mp3",
+    "text": "The old garden was calm and quiet this warm afternoon.",
+    "word_count": 10,
+    "dry_run": {
+      "rc": 0,
+      "stdout": "[dry-run] tts via volcengine model=seed-audio-1.0 voice=desc:女性,音高mezzo-soprano, chorus rising on exclamations,音色:damp, eager, slightly breathless woman's voice, fussy and chattering,口音:mixed middle-class southern English (语气:平静自然;参考锚:无,纯描述) format=mp3 → /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-caucus-race-party-ensemble_voiceprint.mp3",
+      "stderr": ""
+    },
+    "run": {
+      "rc": 0,
+      "stdout": "已生成: /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-caucus-race-party-ensemble_voiceprint.mp3",
+      "stderr": "[genmedia] seed-audio 描述定制嗓音:desc=\"女性,音高mezzo-soprano, chorus rising on exclamations,音色:damp, eager, slightly breathless woman's voice, fussy and chattering,口音:mixed middle-class southern English\" tone='平静自然' ref=无(纯描述) dur=6.5s"
+    },
+    "duration_s": 6.55,
+    "file_exists": true,
+    "voice_desc": "女性,音高mezzo-soprano, chorus rising on exclamations,音色:damp, eager, slightly breathless woman's voice, fussy and chattering,口音:mixed middle-class southern English",
+    "ref_anchor": "无(纯描述)",
+    "api_reported_duration_s": 6.5
+  },
+  {
+    "character_id": "CHAR-cheshire-cat",
+    "variant": "default",
+    "output": "assets/audio/voice/refs/CHAR-cheshire-cat_voiceprint.mp3",
+    "text": "The garden was calm and quiet this afternoon.",
+    "word_count": 8,
+    "dry_run": {
+      "rc": 0,
+      "stdout": "[dry-run] tts via volcengine model=seed-audio-1.0 voice=desc:女性,音高low mezzo to contralto, very small pitch movement, never rising to a shout,音色:smooth, velvety, low woman's voice, softly purring, amused, with a relaxed breathy warmth,口音:unhurried, refined Received Pronunciation, soft consonants, lingering vowels (语气:平静自然;参考锚:无,纯描述) format=mp3 → /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-cheshire-cat_voiceprint.mp3",
+      "stderr": ""
+    },
+    "run": {
+      "rc": 0,
+      "stdout": "已生成: /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-cheshire-cat_voiceprint.mp3",
+      "stderr": "[genmedia] seed-audio 描述定制嗓音:desc=\"女性,音高low mezzo to contralto, very small pitch movement, never rising to a shout,音色:smooth, velvety, low woman's voice, softly purring, amused, with a relaxed breathy warmth,口音:unhurried, refined Received Pronunciation, soft consonants, lingering vowels\" tone='平静自然' ref=无(纯描述) dur=5.3s"
+    },
+    "duration_s": 5.35,
+    "file_exists": true,
+    "voice_desc": "女性,音高low mezzo to contralto, very small pitch movement, never rising to a shout,音色:smooth, velvety, low woman's voice, softly purring, amused, with a relaxed breathy warmth,口音:unhurried, refined Received Pronunciation, soft consonants, lingering vowels",
+    "ref_anchor": "无(纯描述)",
+    "api_reported_duration_s": 5.3
+  },
+  {
+    "character_id": "CHAR-cook",
+    "variant": "default",
+    "output": "assets/audio/voice/refs/CHAR-cook_voiceprint.mp3",
+    "text": "The garden was calm and quiet this afternoon.",
+    "word_count": 8,
+    "dry_run": {
+      "rc": 0,
+      "stdout": "[dry-run] tts via volcengine model=seed-audio-1.0 voice=desc:女性,音高low alto, monotone, clipped downward endings,音色:gruff, flat, heavy working woman's voice, blunt and unmusical, a peppery rasp,口音:rural Oxfordshire working-class English, broad burr, dropped h's (语气:平静自然;参考锚:无,纯描述) format=mp3 → /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-cook_voiceprint.mp3",
+      "stderr": ""
+    },
+    "run": {
+      "rc": 0,
+      "stdout": "已生成: /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-cook_voiceprint.mp3",
+      "stderr": "[genmedia] seed-audio 描述定制嗓音:desc=\"女性,音高low alto, monotone, clipped downward endings,音色:gruff, flat, heavy working woman's voice, blunt and unmusical, a peppery rasp,口音:rural Oxfordshire working-class English, broad burr, dropped h's\" tone='平静自然' ref=无(纯描述) dur=3.402975s"
+    },
+    "duration_s": 3.46,
+    "file_exists": true,
+    "voice_desc": "女性,音高low alto, monotone, clipped downward endings,音色:gruff, flat, heavy working woman's voice, blunt and unmusical, a peppery rasp,口音:rural Oxfordshire working-class English, broad burr, dropped h's",
+    "ref_anchor": "无(纯描述)",
+    "api_reported_duration_s": 3.402975
+  },
+  {
+    "character_id": "CHAR-court-officers-ensemble",
+    "variant": "default",
+    "output": "assets/audio/voice/refs/CHAR-court-officers-ensemble_voiceprint.mp3",
+    "text": "The garden was calm and quiet this warm afternoon.",
+    "word_count": 9,
+    "dry_run": {
+      "rc": 0,
+      "stdout": "[dry-run] tts via volcengine model=seed-audio-1.0 voice=desc:男性,音高low baritone, long projected vowels,音色:big, booming, officious usher's voice, resonant and carrying,口音:formal public-office English, projected court-usher cadence (语气:平静自然;参考锚:无,纯描述) format=mp3 → /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-court-officers-ensemble_voiceprint.mp3",
+      "stderr": ""
+    },
+    "run": {
+      "rc": 0,
+      "stdout": "已生成: /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-court-officers-ensemble_voiceprint.mp3",
+      "stderr": "[genmedia] seed-audio 描述定制嗓音:desc=\"男性,音高low baritone, long projected vowels,音色:big, booming, officious usher's voice, resonant and carrying,口音:formal public-office English, projected court-usher cadence\" tone='平静自然' ref=无(纯描述) dur=6.08s"
+    },
+    "duration_s": 6.14,
+    "file_exists": true,
+    "voice_desc": "男性,音高low baritone, long projected vowels,音色:big, booming, officious usher's voice, resonant and carrying,口音:formal public-office English, projected court-usher cadence",
+    "ref_anchor": "无(纯描述)",
+    "api_reported_duration_s": 6.08
+  },
+  {
+    "character_id": "CHAR-crowd-ensemble",
+    "variant": "default",
+    "output": "assets/audio/voice/refs/CHAR-crowd-ensemble_voiceprint.mp3",
+    "text": "The old garden was calm and quiet on this warm July afternoon.",
+    "word_count": 12,
+    "dry_run": {
+      "rc": 0,
+      "stdout": "[dry-run] tts via volcengine model=seed-audio-1.0 voice=desc:男性,音高mid baritone, shouted calls,音色:rough, loud, outdoor working man's voice, hoarse from shouting across a yard,口音:rural Oxfordshire working-class English, broad burr, dropped h's (语气:平静自然;参考锚:无,纯描述) format=mp3 → /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-crowd-ensemble_voiceprint.mp3",
+      "stderr": ""
+    },
+    "run": {
+      "rc": 0,
+      "stdout": "已生成: /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-crowd-ensemble_voiceprint.mp3",
+      "stderr": "[genmedia] seed-audio 描述定制嗓音:desc=\"男性,音高mid baritone, shouted calls,音色:rough, loud, outdoor working man's voice, hoarse from shouting across a yard,口音:rural Oxfordshire working-class English, broad burr, dropped h's\" tone='平静自然' ref=无(纯描述) dur=6.5s"
+    },
+    "duration_s": 6.55,
+    "file_exists": true,
+    "voice_desc": "男性,音高mid baritone, shouted calls,音色:rough, loud, outdoor working man's voice, hoarse from shouting across a yard,口音:rural Oxfordshire working-class English, broad burr, dropped h's",
+    "ref_anchor": "无(纯描述)",
+    "api_reported_duration_s": 6.5
+  },
+  {
+    "character_id": "CHAR-dodo",
+    "variant": "default",
+    "output": "assets/audio/voice/refs/CHAR-dodo_voiceprint.mp3",
+    "text": "The garden was calm and quiet this afternoon.",
+    "word_count": 8,
+    "dry_run": {
+      "rc": 0,
+      "stdout": "[dry-run] tts via volcengine model=seed-audio-1.0 voice=desc:男性,音高mid-low baritone, stately measured intonation with rising pauses for applause,音色:full, fruity, orotund older man's voice, rich and slightly pompous, resonant chest,口音:educated, orotund Received Pronunciation of a committee chairman (语气:平静自然;参考锚:无,纯描述) format=mp3 → /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-dodo_voiceprint.mp3",
+      "stderr": ""
+    },
+    "run": {
+      "rc": 0,
+      "stdout": "已生成: /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-dodo_voiceprint.mp3",
+      "stderr": "[genmedia] seed-audio 描述定制嗓音:desc=\"男性,音高mid-low baritone, stately measured intonation with rising pauses for applause,音色:full, fruity, orotund older man's voice, rich and slightly pompous, resonant chest,口音:educated, orotund Received Pronunciation of a committee chairman\" tone='平静自然' ref=无(纯描述) dur=5.68s"
+    },
+    "duration_s": 5.74,
+    "file_exists": true,
+    "voice_desc": "男性,音高mid-low baritone, stately measured intonation with rising pauses for applause,音色:full, fruity, orotund older man's voice, rich and slightly pompous, resonant chest,口音:educated, orotund Received Pronunciation of a committee chairman",
+    "ref_anchor": "无(纯描述)",
+    "api_reported_duration_s": 5.68
+  },
+  {
+    "character_id": "CHAR-dormouse",
+    "variant": "default",
+    "output": "assets/audio/voice/refs/CHAR-dormouse_voiceprint.mp3",
+    "text": "The garden was quiet this warm afternoon.",
+    "word_count": 7,
+    "dry_run": {
+      "rc": 0,
+      "stdout": "[dry-run] tts via volcengine model=seed-audio-1.0 voice=desc:男性,音高mid tenor, flat and drowsy, trailing downward at the end of phrases,音色:soft, husky, sleep-thickened man's voice, mumbling and woolly, with a small squeak when startled awake,口音:mild educated southern English, soft slurred consonants (语气:平静自然;参考锚:无,纯描述) format=mp3 → /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-dormouse_voiceprint.mp3",
+      "stderr": ""
+    },
+    "run": {
+      "rc": 0,
+      "stdout": "已生成: /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-dormouse_voiceprint.mp3",
+      "stderr": "[genmedia] seed-audio 描述定制嗓音:desc=\"男性,音高mid tenor, flat and drowsy, trailing downward at the end of phrases,音色:soft, husky, sleep-thickened man's voice, mumbling and woolly, with a small squeak when startled awake,口音:mild educated southern English, soft slurred consonants\" tone='平静自然' ref=无(纯描述) dur=4.8s"
+    },
+    "duration_s": 4.85,
+    "file_exists": true,
+    "voice_desc": "男性,音高mid tenor, flat and drowsy, trailing downward at the end of phrases,音色:soft, husky, sleep-thickened man's voice, mumbling and woolly, with a small squeak when startled awake,口音:mild educated southern English, soft slurred consonants",
+    "ref_anchor": "无(纯描述)",
+    "api_reported_duration_s": 4.8
+  },
+  {
+    "character_id": "CHAR-duchess",
+    "variant": "default",
+    "output": "assets/audio/voice/refs/CHAR-duchess_voiceprint.mp3",
+    "text": "The old garden was calm and quiet this warm afternoon.",
+    "word_count": 10,
+    "dry_run": {
+      "rc": 0,
+      "stdout": "[dry-run] tts via volcengine model=seed-audio-1.0 voice=desc:女性,音高low contralto, chesty, sinking to a growl,音色:hoarse, gravelly, heavy older woman's voice with a rough growl at the bottom; turns thick and syrupy when ingratiating,口音:upper-class English drawl roughened by coarse habits, broad vowels, careless consonants (语气:平静自然;参考锚:无,纯描述) format=mp3 → /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-duchess_voiceprint.mp3",
+      "stderr": ""
+    },
+    "run": {
+      "rc": 0,
+      "stdout": "已生成: /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-duchess_voiceprint.mp3",
+      "stderr": "[genmedia] seed-audio 描述定制嗓音:desc=\"女性,音高low contralto, chesty, sinking to a growl,音色:hoarse, gravelly, heavy older woman's voice with a rough growl at the bottom; turns thick and syrupy when ingratiating,口音:upper-class English drawl roughened by coarse habits, broad vowels, careless consonants\" tone='平静自然' ref=无(纯描述) dur=6.9s"
+    },
+    "duration_s": 6.96,
+    "file_exists": true,
+    "voice_desc": "女性,音高low contralto, chesty, sinking to a growl,音色:hoarse, gravelly, heavy older woman's voice with a rough growl at the bottom; turns thick and syrupy when ingratiating,口音:upper-class English drawl roughened by coarse habits, broad vowels, careless consonants",
+    "ref_anchor": "无(纯描述)",
+    "api_reported_duration_s": 6.9
+  },
+  {
+    "character_id": "CHAR-duck",
+    "variant": "default",
+    "output": "assets/audio/voice/refs/CHAR-duck_voiceprint.mp3",
+    "text": "The old garden was calm and quiet this warm afternoon.",
+    "word_count": 10,
+    "dry_run": {
+      "rc": 0,
+      "stdout": "[dry-run] tts via volcengine model=seed-audio-1.0 voice=desc:男性,音高mid tenor, prim rising queries,音色:soft, plummy, slightly nasal and flat-toned man's voice, pedantic,口音:churchy, educated Received Pronunciation, over-precise (语气:平静自然;参考锚:无,纯描述) format=mp3 → /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-duck_voiceprint.mp3",
+      "stderr": ""
+    },
+    "run": {
+      "rc": 0,
+      "stdout": "已生成: /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-duck_voiceprint.mp3",
+      "stderr": "[genmedia] seed-audio 描述定制嗓音:desc=\"男性,音高mid tenor, prim rising queries,音色:soft, plummy, slightly nasal and flat-toned man's voice, pedantic,口音:churchy, educated Received Pronunciation, over-precise\" tone='平静自然' ref=无(纯描述) dur=6.5s"
+    },
+    "duration_s": 6.55,
+    "file_exists": true,
+    "voice_desc": "男性,音高mid tenor, prim rising queries,音色:soft, plummy, slightly nasal and flat-toned man's voice, pedantic,口音:churchy, educated Received Pronunciation, over-precise",
+    "ref_anchor": "无(纯描述)",
+    "api_reported_duration_s": 6.5
+  },
+  {
+    "character_id": "CHAR-eaglet",
+    "variant": "default",
+    "output": "assets/audio/voice/refs/CHAR-eaglet_voiceprint.mp3",
+    "text": "The old garden was calm and quiet on this warm July afternoon.",
+    "word_count": 12,
+    "dry_run": {
+      "rc": 0,
+      "stdout": "[dry-run] tts via volcengine model=seed-audio-1.0 voice=desc:女性,音高high child's register, a touch higher and thinner than Alice,音色:piping, sharp, slightly scratchy little girl's voice, cheeky and forthright,口音:plain southern English child, a little rougher and less polished than Alice (语气:平静自然;参考锚:无,纯描述) format=mp3 → /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-eaglet_voiceprint.mp3",
+      "stderr": ""
+    },
+    "run": {
+      "rc": 0,
+      "stdout": "已生成: /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-eaglet_voiceprint.mp3",
+      "stderr": "[genmedia] seed-audio 描述定制嗓音:desc=\"女性,音高high child's register, a touch higher and thinner than Alice,音色:piping, sharp, slightly scratchy little girl's voice, cheeky and forthright,口音:plain southern English child, a little rougher and less polished than Alice\" tone='平静自然' ref=无(纯描述) dur=4.2507s"
+    },
+    "duration_s": 4.32,
+    "file_exists": true,
+    "voice_desc": "女性,音高high child's register, a touch higher and thinner than Alice,音色:piping, sharp, slightly scratchy little girl's voice, cheeky and forthright,口音:plain southern English child, a little rougher and less polished than Alice",
+    "ref_anchor": "无(纯描述)",
+    "api_reported_duration_s": 4.2507
+  },
+  {
+    "character_id": "CHAR-executioner",
+    "variant": "default",
+    "output": "assets/audio/voice/refs/CHAR-executioner_voiceprint.mp3",
+    "text": "The garden was calm and quiet this afternoon.",
+    "word_count": 8,
+    "dry_run": {
+      "rc": 0,
+      "stdout": "[dry-run] tts via volcengine model=seed-audio-1.0 voice=desc:男性,音高low bass, flat and stubborn,音色:heavy, gravelly, slow older man's voice, gruff but mild, a bit wheezy,口音:plain working-class southern English, broad vowels (语气:平静自然;参考锚:无,纯描述) format=mp3 → /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-executioner_voiceprint.mp3",
+      "stderr": ""
+    },
+    "run": {
+      "rc": 0,
+      "stdout": "已生成: /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-executioner_voiceprint.mp3",
+      "stderr": "[genmedia] seed-audio 描述定制嗓音:desc=\"男性,音高low bass, flat and stubborn,音色:heavy, gravelly, slow older man's voice, gruff but mild, a bit wheezy,口音:plain working-class southern English, broad vowels\" tone='平静自然' ref=无(纯描述) dur=6.68s"
+    },
+    "duration_s": 6.74,
+    "file_exists": true,
+    "voice_desc": "男性,音高low bass, flat and stubborn,音色:heavy, gravelly, slow older man's voice, gruff but mild, a bit wheezy,口音:plain working-class southern English, broad vowels",
+    "ref_anchor": "无(纯描述)",
+    "api_reported_duration_s": 6.68
+  },
+  {
+    "character_id": "CHAR-fish-footman",
+    "variant": "default",
+    "output": "assets/audio/voice/refs/CHAR-fish-footman_voiceprint.mp3",
+    "text": "The garden was calm and quiet this afternoon.",
+    "word_count": 8,
+    "dry_run": {
+      "rc": 0,
+      "stdout": "[dry-run] tts via volcengine model=seed-audio-1.0 voice=desc:男性,音高mid tenor-baritone, level ceremonial cadence,音色:cool, dry, thin man's voice, formal and slightly wet-lipped,口音:crisp, formal liveried-footman's English, carefully 'correct' pronunciation (语气:平静自然;参考锚:无,纯描述) format=mp3 → /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-fish-footman_voiceprint.mp3",
+      "stderr": ""
+    },
+    "run": {
+      "rc": 0,
+      "stdout": "已生成: /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-fish-footman_voiceprint.mp3",
+      "stderr": "[genmedia] seed-audio 描述定制嗓音:desc=\"男性,音高mid tenor-baritone, level ceremonial cadence,音色:cool, dry, thin man's voice, formal and slightly wet-lipped,口音:crisp, formal liveried-footman's English, carefully 'correct' pronunciation\" tone='平静自然' ref=无(纯描述) dur=3.02905s"
+    },
+    "duration_s": 3.1,
+    "file_exists": true,
+    "voice_desc": "男性,音高mid tenor-baritone, level ceremonial cadence,音色:cool, dry, thin man's voice, formal and slightly wet-lipped,口音:crisp, formal liveried-footman's English, carefully 'correct' pronunciation",
+    "ref_anchor": "无(纯描述)",
+    "api_reported_duration_s": 3.02905
+  },
+  {
+    "character_id": "CHAR-frog-footman",
+    "variant": "default",
+    "output": "assets/audio/voice/refs/CHAR-frog-footman_voiceprint.mp3",
+    "text": "The garden was calm and quiet this afternoon.",
+    "word_count": 8,
+    "dry_run": {
+      "rc": 0,
+      "stdout": "[dry-run] tts via volcengine model=seed-audio-1.0 voice=desc:男性,音高low baritone, monotone,音色:flat, thick, croaky man's voice, stolid and deadpan, slightly throaty,口音:liveried servant's affected formal English over a flat provincial base (语气:平静自然;参考锚:无,纯描述) format=mp3 → /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-frog-footman_voiceprint.mp3",
+      "stderr": ""
+    },
+    "run": {
+      "rc": 0,
+      "stdout": "已生成: /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-frog-footman_voiceprint.mp3",
+      "stderr": "[genmedia] seed-audio 描述定制嗓音:desc=\"男性,音高low baritone, monotone,音色:flat, thick, croaky man's voice, stolid and deadpan, slightly throaty,口音:liveried servant's affected formal English over a flat provincial base\" tone='平静自然' ref=无(纯描述) dur=3.683225s"
+    },
+    "duration_s": 3.74,
+    "file_exists": true,
+    "voice_desc": "男性,音高low baritone, monotone,音色:flat, thick, croaky man's voice, stolid and deadpan, slightly throaty,口音:liveried servant's affected formal English over a flat provincial base",
+    "ref_anchor": "无(纯描述)",
+    "api_reported_duration_s": 3.683225
+  },
+  {
+    "character_id": "CHAR-gardener-five",
+    "variant": "default",
+    "output": "assets/audio/voice/refs/CHAR-gardener-five_voiceprint.mp3",
+    "text": "The old garden was calm and quiet this warm afternoon.",
+    "word_count": 10,
+    "dry_run": {
+      "rc": 0,
+      "stdout": "[dry-run] tts via volcengine model=seed-audio-1.0 voice=desc:男性,音高mid baritone, sagging sulky intonation,音色:thick, sulky, slightly muffled young man's voice, whiny when blamed,口音:rural Oxfordshire working-class English, broader burr than Two (语气:平静自然;参考锚:无,纯描述) format=mp3 → /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-gardener-five_voiceprint.mp3",
+      "stderr": ""
+    },
+    "run": {
+      "rc": 0,
+      "stdout": "已生成: /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-gardener-five_voiceprint.mp3",
+      "stderr": "[genmedia] seed-audio 描述定制嗓音:desc=\"男性,音高mid baritone, sagging sulky intonation,音色:thick, sulky, slightly muffled young man's voice, whiny when blamed,口音:rural Oxfordshire working-class English, broader burr than Two\" tone='平静自然' ref=无(纯描述) dur=3.214725s"
+    },
+    "duration_s": 3.26,
+    "file_exists": true,
+    "voice_desc": "男性,音高mid baritone, sagging sulky intonation,音色:thick, sulky, slightly muffled young man's voice, whiny when blamed,口音:rural Oxfordshire working-class English, broader burr than Two",
+    "ref_anchor": "无(纯描述)",
+    "api_reported_duration_s": 3.214725
+  },
+  {
+    "character_id": "CHAR-gardener-seven",
+    "variant": "default",
+    "output": "assets/audio/voice/refs/CHAR-gardener-seven_voiceprint.mp3",
+    "text": "The old garden was calm and quiet this warm July afternoon.",
+    "word_count": 11,
+    "dry_run": {
+      "rc": 0,
+      "stdout": "[dry-run] tts via volcengine model=seed-audio-1.0 voice=desc:男性,音高high baritone to tenor, the highest of the three gardeners,音色:sharp, nasal, reedy man's voice, quick and indignant,口音:rural Oxfordshire working-class English, clipped quick delivery (语气:平静自然;参考锚:无,纯描述) format=mp3 → /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-gardener-seven_voiceprint.mp3",
+      "stderr": ""
+    },
+    "run": {
+      "rc": 0,
+      "stdout": "已生成: /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-gardener-seven_voiceprint.mp3",
+      "stderr": "[genmedia] seed-audio 描述定制嗓音:desc=\"男性,音高high baritone to tenor, the highest of the three gardeners,音色:sharp, nasal, reedy man's voice, quick and indignant,口音:rural Oxfordshire working-class English, clipped quick delivery\" tone='平静自然' ref=无(纯描述) dur=4.47795s"
+    },
+    "duration_s": 4.54,
+    "file_exists": true,
+    "voice_desc": "男性,音高high baritone to tenor, the highest of the three gardeners,音色:sharp, nasal, reedy man's voice, quick and indignant,口音:rural Oxfordshire working-class English, clipped quick delivery",
+    "ref_anchor": "无(纯描述)",
+    "api_reported_duration_s": 4.47795
+  },
+  {
+    "character_id": "CHAR-gardener-two",
+    "variant": "default",
+    "output": "assets/audio/voice/refs/CHAR-gardener-two_voiceprint.mp3",
+    "text": "The old garden was calm and quiet this warm afternoon.",
+    "word_count": 10,
+    "dry_run": {
+      "rc": 0,
+      "stdout": "[dry-run] tts via volcengine model=seed-audio-1.0 voice=desc:男性,音高mid-low baritone, steady,音色:soft, careful, low man's voice, earnest and humble, slightly hushed,口音:rural Oxfordshire working-class English, gentle burr, 'this here' (语气:平静自然;参考锚:无,纯描述) format=mp3 → /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-gardener-two_voiceprint.mp3",
+      "stderr": ""
+    },
+    "run": {
+      "rc": 0,
+      "stdout": "已生成: /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-gardener-two_voiceprint.mp3",
+      "stderr": "[genmedia] seed-audio 描述定制嗓音:desc=\"男性,音高mid-low baritone, steady,音色:soft, careful, low man's voice, earnest and humble, slightly hushed,口音:rural Oxfordshire working-class English, gentle burr, 'this here'\" tone='平静自然' ref=无(纯描述) dur=3.95105s"
+    },
+    "duration_s": 4.01,
+    "file_exists": true,
+    "voice_desc": "男性,音高mid-low baritone, steady,音色:soft, careful, low man's voice, earnest and humble, slightly hushed,口音:rural Oxfordshire working-class English, gentle burr, 'this here'",
+    "ref_anchor": "无(纯描述)",
+    "api_reported_duration_s": 3.95105
+  },
+  {
+    "character_id": "CHAR-gryphon",
+    "variant": "default",
+    "output": "assets/audio/voice/refs/CHAR-gryphon_voiceprint.mp3",
+    "text": "The old garden was calm and quiet this warm July afternoon.",
+    "word_count": 11,
+    "dry_run": {
+      "rc": 0,
+      "stdout": "[dry-run] tts via volcengine model=seed-audio-1.0 voice=desc:男性,音高bass-baritone, booming, jumping to a hoarse falsetto yell at peaks,音色:big, rough, hoarse man's voice, hearty and gravelly, with a raucous cracking shriek when excited,口音:working-class London Cockney: dropped h's, broad vowels, glottal stops (语气:平静自然;参考锚:无,纯描述) format=mp3 → /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-gryphon_voiceprint.mp3",
+      "stderr": ""
+    },
+    "run": {
+      "rc": 0,
+      "stdout": "已生成: /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-gryphon_voiceprint.mp3",
+      "stderr": "[genmedia] seed-audio 描述定制嗓音:desc=\"男性,音高bass-baritone, booming, jumping to a hoarse falsetto yell at peaks,音色:big, rough, hoarse man's voice, hearty and gravelly, with a raucous cracking shriek when excited,口音:working-class London Cockney: dropped h's, broad vowels, glottal stops\" tone='平静自然' ref=无(纯描述) dur=7.3s"
+    },
+    "duration_s": 7.37,
+    "file_exists": true,
+    "voice_desc": "男性,音高bass-baritone, booming, jumping to a hoarse falsetto yell at peaks,音色:big, rough, hoarse man's voice, hearty and gravelly, with a raucous cracking shriek when excited,口音:working-class London Cockney: dropped h's, broad vowels, glottal stops",
+    "ref_anchor": "无(纯描述)",
+    "api_reported_duration_s": 7.3
+  },
+  {
+    "character_id": "CHAR-hatter",
+    "variant": "default",
+    "output": "assets/audio/voice/refs/CHAR-hatter_voiceprint.mp3",
+    "text": "The old garden was calm and quiet on this warm July afternoon.",
+    "word_count": 12,
+    "dry_run": {
+      "rc": 0,
+      "stdout": "[dry-run] tts via volcengine model=seed-audio-1.0 voice=desc:男性,音高high baritone to tenor, jumpy and sing-song, sudden spikes on a scored point,音色:quick, bright, slightly nasal and reedy man's voice with a needling edge; goes thin and quavering under fear,口音:London tradesman's English, light Cockney vowels straining upward toward genteel speech (语气:平静自然;参考锚:无,纯描述) format=mp3 → /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-hatter_voiceprint.mp3",
+      "stderr": ""
+    },
+    "run": {
+      "rc": 0,
+      "stdout": "已生成: /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-hatter_voiceprint.mp3",
+      "stderr": "[genmedia] seed-audio 描述定制嗓音:desc=\"男性,音高high baritone to tenor, jumpy and sing-song, sudden spikes on a scored point,音色:quick, bright, slightly nasal and reedy man's voice with a needling edge; goes thin and quavering under fear,口音:London tradesman's English, light Cockney vowels straining upward toward genteel speech\" tone='平静自然' ref=无(纯描述) dur=6.9s"
+    },
+    "duration_s": 6.96,
+    "file_exists": true,
+    "voice_desc": "男性,音高high baritone to tenor, jumpy and sing-song, sudden spikes on a scored point,音色:quick, bright, slightly nasal and reedy man's voice with a needling edge; goes thin and quavering under fear,口音:London tradesman's English, light Cockney vowels straining upward toward genteel speech",
+    "ref_anchor": "无(纯描述)",
+    "api_reported_duration_s": 6.9
+  },
+  {
+    "character_id": "CHAR-jury-ensemble",
+    "variant": "default",
+    "output": "assets/audio/voice/refs/CHAR-jury-ensemble_voiceprint.mp3",
+    "text": "The old garden was calm and quiet this warm afternoon.",
+    "word_count": 10,
+    "dry_run": {
+      "rc": 0,
+      "stdout": "[dry-run] tts via volcengine model=seed-audio-1.0 voice=desc:男性,音高mid baritone, puzzled questioning rises,音色:muddled, earnest middle-aged man's voice, slightly pompous and slow-witted,口音:mixed provincial English, lower-middle and trades class (语气:平静自然;参考锚:无,纯描述) format=mp3 → /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-jury-ensemble_voiceprint.mp3",
+      "stderr": ""
+    },
+    "run": {
+      "rc": 0,
+      "stdout": "已生成: /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-jury-ensemble_voiceprint.mp3",
+      "stderr": "[genmedia] seed-audio 描述定制嗓音:desc=\"男性,音高mid baritone, puzzled questioning rises,音色:muddled, earnest middle-aged man's voice, slightly pompous and slow-witted,口音:mixed provincial English, lower-middle and trades class\" tone='平静自然' ref=无(纯描述) dur=6.5s"
+    },
+    "duration_s": 6.55,
+    "file_exists": true,
+    "voice_desc": "男性,音高mid baritone, puzzled questioning rises,音色:muddled, earnest middle-aged man's voice, slightly pompous and slow-witted,口音:mixed provincial English, lower-middle and trades class",
+    "ref_anchor": "无(纯描述)",
+    "api_reported_duration_s": 6.5
+  },
+  {
+    "character_id": "CHAR-king-of-hearts",
+    "variant": "default",
+    "output": "assets/audio/voice/refs/CHAR-king-of-hearts_voiceprint.mp3",
+    "text": "The garden was calm and quiet this warm afternoon.",
+    "word_count": 9,
+    "dry_run": {
+      "rc": 0,
+      "stdout": "[dry-run] tts via volcengine model=seed-audio-1.0 voice=desc:男性,音高light baritone, affects a deeper 'grave' pitch for pronouncements,音色:mild, soft-edged older man's voice, slightly pinched and fussy, that strains for gravity and cracks upward when unsure,口音:educated Received Pronunciation, precise and schoolmasterly, over-careful articulation (语气:平静自然;参考锚:无,纯描述) format=mp3 → /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-king-of-hearts_voiceprint.mp3",
+      "stderr": ""
+    },
+    "run": {
+      "rc": 0,
+      "stdout": "已生成: /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-king-of-hearts_voiceprint.mp3",
+      "stderr": "[genmedia] seed-audio 描述定制嗓音:desc=\"男性,音高light baritone, affects a deeper 'grave' pitch for pronouncements,音色:mild, soft-edged older man's voice, slightly pinched and fussy, that strains for gravity and cracks upward when unsure,口音:educated Received Pronunciation, precise and schoolmasterly, over-careful articulation\" tone='平静自然' ref=无(纯描述) dur=6.08s"
+    },
+    "duration_s": 6.14,
+    "file_exists": true,
+    "voice_desc": "男性,音高light baritone, affects a deeper 'grave' pitch for pronouncements,音色:mild, soft-edged older man's voice, slightly pinched and fussy, that strains for gravity and cracks upward when unsure,口音:educated Received Pronunciation, precise and schoolmasterly, over-careful articulation",
+    "ref_anchor": "无(纯描述)",
+    "api_reported_duration_s": 6.08
+  },
+  {
+    "character_id": "CHAR-knave-of-hearts",
+    "variant": "default",
+    "output": "assets/audio/voice/refs/CHAR-knave-of-hearts_voiceprint.mp3",
+    "text": "The garden was calm and quiet this warm afternoon.",
+    "word_count": 9,
+    "dry_run": {
+      "rc": 0,
+      "stdout": "[dry-run] tts via volcengine model=seed-audio-1.0 voice=desc:男性,音高light baritone, level and controlled, little inflection,音色:smooth, even, quietly polished young man's voice, soft and careful, a touch melancholy,口音:court-polished Received Pronunciation of a deferential servant, careful and exact (语气:平静自然;参考锚:无,纯描述) format=mp3 → /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-knave-of-hearts_voiceprint.mp3",
+      "stderr": ""
+    },
+    "run": {
+      "rc": 0,
+      "stdout": "已生成: /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-knave-of-hearts_voiceprint.mp3",
+      "stderr": "[genmedia] seed-audio 描述定制嗓音:desc=\"男性,音高light baritone, level and controlled, little inflection,音色:smooth, even, quietly polished young man's voice, soft and careful, a touch melancholy,口音:court-polished Received Pronunciation of a deferential servant, careful and exact\" tone='平静自然' ref=无(纯描述) dur=6.08s"
+    },
+    "duration_s": 6.14,
+    "file_exists": true,
+    "voice_desc": "男性,音高light baritone, level and controlled, little inflection,音色:smooth, even, quietly polished young man's voice, soft and careful, a touch melancholy,口音:court-polished Received Pronunciation of a deferential servant, careful and exact",
+    "ref_anchor": "无(纯描述)",
+    "api_reported_duration_s": 6.08
+  },
+  {
+    "character_id": "CHAR-lory",
+    "variant": "default",
+    "output": "assets/audio/voice/refs/CHAR-lory_voiceprint.mp3",
+    "text": "The old garden was calm and quiet this warm afternoon.",
+    "word_count": 10,
+    "dry_run": {
+      "rc": 0,
+      "stdout": "[dry-run] tts via volcengine model=seed-audio-1.0 voice=desc:女性,音高soprano, clipped, superior intonation,音色:crisp, prim, bright young woman's voice with a sulky pout,口音:prim upper-middle-class Received Pronunciation (语气:平静自然;参考锚:无,纯描述) format=mp3 → /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-lory_voiceprint.mp3",
+      "stderr": ""
+    },
+    "run": {
+      "rc": 0,
+      "stdout": "已生成: /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-lory_voiceprint.mp3",
+      "stderr": "[genmedia] seed-audio 描述定制嗓音:desc=\"女性,音高soprano, clipped, superior intonation,音色:crisp, prim, bright young woman's voice with a sulky pout,口音:prim upper-middle-class Received Pronunciation\" tone='平静自然' ref=无(纯描述) dur=6.5s"
+    },
+    "duration_s": 6.55,
+    "file_exists": true,
+    "voice_desc": "女性,音高soprano, clipped, superior intonation,音色:crisp, prim, bright young woman's voice with a sulky pout,口音:prim upper-middle-class Received Pronunciation",
+    "ref_anchor": "无(纯描述)",
+    "api_reported_duration_s": 6.5
+  },
+  {
+    "character_id": "CHAR-magpie",
+    "variant": "default",
+    "output": "assets/audio/voice/refs/CHAR-magpie_voiceprint.mp3",
+    "text": "The garden was calm and quiet this afternoon.",
+    "word_count": 8,
+    "dry_run": {
+      "rc": 0,
+      "stdout": "[dry-run] tts via volcengine model=seed-audio-1.0 voice=desc:男性,音高mid tenor, wavering with age,音色:thin, reedy, throaty old man's voice, slightly hoarse and fussy,口音:fussy old-fashioned genteel English (语气:平静自然;参考锚:无,纯描述) format=mp3 → /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-magpie_voiceprint.mp3",
+      "stderr": ""
+    },
+    "run": {
+      "rc": 0,
+      "stdout": "已生成: /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-magpie_voiceprint.mp3",
+      "stderr": "[genmedia] seed-audio 描述定制嗓音:desc=\"男性,音高mid tenor, wavering with age,音色:thin, reedy, throaty old man's voice, slightly hoarse and fussy,口音:fussy old-fashioned genteel English\" tone='平静自然' ref=无(纯描述) dur=5.3s"
+    },
+    "duration_s": 5.35,
+    "file_exists": true,
+    "voice_desc": "男性,音高mid tenor, wavering with age,音色:thin, reedy, throaty old man's voice, slightly hoarse and fussy,口音:fussy old-fashioned genteel English",
+    "ref_anchor": "无(纯描述)",
+    "api_reported_duration_s": 5.3
+  },
+  {
+    "character_id": "CHAR-march-hare",
+    "variant": "default",
+    "output": "assets/audio/voice/refs/CHAR-march-hare_voiceprint.mp3",
+    "text": "The garden was calm and quiet this warm afternoon.",
+    "word_count": 9,
+    "dry_run": {
+      "rc": 0,
+      "stdout": "[dry-run] tts via volcengine model=seed-audio-1.0 voice=desc:男性,音高mid baritone, noticeably lower and flatter than the Hatter,音色:falsely warm, rounded, slightly breathy man's voice with a lugubrious droop at phrase ends,口音:mock-genteel Received Pronunciation laid over a country base, over-polite vowels (语气:平静自然;参考锚:无,纯描述) format=mp3 → /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-march-hare_voiceprint.mp3",
+      "stderr": ""
+    },
+    "run": {
+      "rc": 0,
+      "stdout": "已生成: /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-march-hare_voiceprint.mp3",
+      "stderr": "[genmedia] seed-audio 描述定制嗓音:desc=\"男性,音高mid baritone, noticeably lower and flatter than the Hatter,音色:falsely warm, rounded, slightly breathy man's voice with a lugubrious droop at phrase ends,口音:mock-genteel Received Pronunciation laid over a country base, over-polite vowels\" tone='平静自然' ref=无(纯描述) dur=6.08s"
+    },
+    "duration_s": 6.14,
+    "file_exists": true,
+    "voice_desc": "男性,音高mid baritone, noticeably lower and flatter than the Hatter,音色:falsely warm, rounded, slightly breathy man's voice with a lugubrious droop at phrase ends,口音:mock-genteel Received Pronunciation laid over a country base, over-polite vowels",
+    "ref_anchor": "无(纯描述)",
+    "api_reported_duration_s": 6.08
+  },
+  {
+    "character_id": "CHAR-mock-turtle",
+    "variant": "default",
+    "output": "assets/audio/voice/refs/CHAR-mock-turtle_voiceprint.mp3",
+    "text": "The garden was calm and quiet this afternoon.",
+    "word_count": 8,
+    "dry_run": {
+      "rc": 0,
+      "stdout": "[dry-run] tts via volcengine model=seed-audio-1.0 voice=desc:男性,音高low bass, slow sliding cadence, lurching up into a quavering tenor when he gets excited,音色:deep, hollow, mournful man's voice, wet and tremulous, breaking with sighs and sobs,口音:genteel, old-fashioned upper-middle-class English, plummy and careful (语气:平静自然;参考锚:无,纯描述) format=mp3 → /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-mock-turtle_voiceprint.mp3",
+      "stderr": ""
+    },
+    "run": {
+      "rc": 0,
+      "stdout": "已生成: /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-mock-turtle_voiceprint.mp3",
+      "stderr": "[genmedia] seed-audio 描述定制嗓音:desc=\"男性,音高low bass, slow sliding cadence, lurching up into a quavering tenor when he gets excited,音色:deep, hollow, mournful man's voice, wet and tremulous, breaking with sighs and sobs,口音:genteel, old-fashioned upper-middle-class English, plummy and careful\" tone='平静自然' ref=无(纯描述) dur=6.08s"
+    },
+    "duration_s": 6.14,
+    "file_exists": true,
+    "voice_desc": "男性,音高low bass, slow sliding cadence, lurching up into a quavering tenor when he gets excited,音色:deep, hollow, mournful man's voice, wet and tremulous, breaking with sighs and sobs,口音:genteel, old-fashioned upper-middle-class English, plummy and careful",
+    "ref_anchor": "无(纯描述)",
+    "api_reported_duration_s": 6.08
+  },
+  {
+    "character_id": "CHAR-mouse",
+    "variant": "default",
+    "output": "assets/audio/voice/refs/CHAR-mouse_voiceprint.mp3",
+    "text": "The old garden was calm and quiet this warm afternoon.",
+    "word_count": 10,
+    "dry_run": {
+      "rc": 0,
+      "stdout": "[dry-run] tts via volcengine model=seed-audio-1.0 voice=desc:男性,音高high tenor for an older man, pinched, spikes high when passionate,音色:thin, dry, prim older man's voice with a tremor, sharpening to a shrill squeak when offended,口音:prim, bookish Received Pronunciation of a lecturing schoolmaster, precise consonants (语气:平静自然;参考锚:无,纯描述) format=mp3 → /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-mouse_voiceprint.mp3",
+      "stderr": ""
+    },
+    "run": {
+      "rc": 0,
+      "stdout": "已生成: /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-mouse_voiceprint.mp3",
+      "stderr": "[genmedia] seed-audio 描述定制嗓音:desc=\"男性,音高high tenor for an older man, pinched, spikes high when passionate,音色:thin, dry, prim older man's voice with a tremor, sharpening to a shrill squeak when offended,口音:prim, bookish Received Pronunciation of a lecturing schoolmaster, precise consonants\" tone='平静自然' ref=无(纯描述) dur=4.2312s"
+    },
+    "duration_s": 4.3,
+    "file_exists": true,
+    "voice_desc": "男性,音高high tenor for an older man, pinched, spikes high when passionate,音色:thin, dry, prim older man's voice with a tremor, sharpening to a shrill squeak when offended,口音:prim, bookish Received Pronunciation of a lecturing schoolmaster, precise consonants",
+    "ref_anchor": "无(纯描述)",
+    "api_reported_duration_s": 4.2312
+  },
+  {
+    "character_id": "CHAR-old-crab",
+    "variant": "default",
+    "output": "assets/audio/voice/refs/CHAR-old-crab_voiceprint.mp3",
+    "text": "The garden was calm and quiet this warm afternoon.",
+    "word_count": 9,
+    "dry_run": {
+      "rc": 0,
+      "stdout": "[dry-run] tts via volcengine model=seed-audio-1.0 voice=desc:女性,音高low-mid, slightly cracked with age,音色:grainy, dry, crabbed old woman's voice, sententious,口音:provincial lower-middle-class English, prim (语气:平静自然;参考锚:无,纯描述) format=mp3 → /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-old-crab_voiceprint.mp3",
+      "stderr": ""
+    },
+    "run": {
+      "rc": 0,
+      "stdout": "已生成: /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-old-crab_voiceprint.mp3",
+      "stderr": "[genmedia] seed-audio 描述定制嗓音:desc=\"女性,音高low-mid, slightly cracked with age,音色:grainy, dry, crabbed old woman's voice, sententious,口音:provincial lower-middle-class English, prim\" tone='平静自然' ref=无(纯描述) dur=4.231575s"
+    },
+    "duration_s": 4.3,
+    "file_exists": true,
+    "voice_desc": "女性,音高low-mid, slightly cracked with age,音色:grainy, dry, crabbed old woman's voice, sententious,口音:provincial lower-middle-class English, prim",
+    "ref_anchor": "无(纯描述)",
+    "api_reported_duration_s": 4.231575
+  },
+  {
+    "character_id": "CHAR-pat",
+    "variant": "default",
+    "output": "assets/audio/voice/refs/CHAR-pat_voiceprint.mp3",
+    "text": "The old garden was calm and quiet this warm July afternoon.",
+    "word_count": 11,
+    "dry_run": {
+      "rc": 0,
+      "stdout": "[dry-run] tts via volcengine model=seed-audio-1.0 voice=desc:男性,音高mid baritone, lilting sing-song intonation,音色:warm, rough, outdoor labourer's voice, slightly hoarse, easygoing,口音:rural Irish brogue: rolled and rhotic r, 'yer honour', 'arrum' for arm, lilting rise at phrase ends (语气:平静自然;参考锚:无,纯描述) format=mp3 → /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-pat_voiceprint.mp3",
+      "stderr": ""
+    },
+    "run": {
+      "rc": 0,
+      "stdout": "已生成: /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-pat_voiceprint.mp3",
+      "stderr": "[genmedia] seed-audio 描述定制嗓音:desc=\"男性,音高mid baritone, lilting sing-song intonation,音色:warm, rough, outdoor labourer's voice, slightly hoarse, easygoing,口音:rural Irish brogue: rolled and rhotic r, 'yer honour', 'arrum' for arm, lilting rise at phrase ends\" tone='平静自然' ref=无(纯描述) dur=6.5s"
+    },
+    "duration_s": 6.55,
+    "file_exists": true,
+    "voice_desc": "男性,音高mid baritone, lilting sing-song intonation,音色:warm, rough, outdoor labourer's voice, slightly hoarse, easygoing,口音:rural Irish brogue: rolled and rhotic r, 'yer honour', 'arrum' for arm, lilting rise at phrase ends",
+    "ref_anchor": "无(纯描述)",
+    "api_reported_duration_s": 6.5
+  },
+  {
+    "character_id": "CHAR-pigeon",
+    "variant": "default",
+    "output": "assets/audio/voice/refs/CHAR-pigeon_voiceprint.mp3",
+    "text": "The old garden was calm and quiet on this warm July afternoon.",
+    "word_count": 12,
+    "dry_run": {
+      "rc": 0,
+      "stdout": "[dry-run] tts via volcengine model=seed-audio-1.0 voice=desc:女性,音高mezzo-soprano, erratic, jumps to a high shriek then sinks to a sulky low,音色:frayed, sleepless woman's voice, cooing at rest but cracking into a piercing shriek, catching with sobs,口音:lower-middle-class Home Counties English, a little flattened and common (语气:平静自然;参考锚:无,纯描述) format=mp3 → /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-pigeon_voiceprint.mp3",
+      "stderr": ""
+    },
+    "run": {
+      "rc": 0,
+      "stdout": "已生成: /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-pigeon_voiceprint.mp3",
+      "stderr": "[genmedia] seed-audio 描述定制嗓音:desc=\"女性,音高mezzo-soprano, erratic, jumps to a high shriek then sinks to a sulky low,音色:frayed, sleepless woman's voice, cooing at rest but cracking into a piercing shriek, catching with sobs,口音:lower-middle-class Home Counties English, a little flattened and common\" tone='平静自然' ref=无(纯描述) dur=7.3s"
+    },
+    "duration_s": 7.37,
+    "file_exists": true,
+    "voice_desc": "女性,音高mezzo-soprano, erratic, jumps to a high shriek then sinks to a sulky low,音色:frayed, sleepless woman's voice, cooing at rest but cracking into a piercing shriek, catching with sobs,口音:lower-middle-class Home Counties English, a little flattened and common",
+    "ref_anchor": "无(纯描述)",
+    "api_reported_duration_s": 7.3
+  },
+  {
+    "character_id": "CHAR-queen-of-hearts",
+    "variant": "default",
+    "output": "assets/audio/voice/refs/CHAR-queen-of-hearts_voiceprint.mp3",
+    "text": "The old garden was calm and quiet this warm July afternoon.",
+    "word_count": 11,
+    "dry_run": {
+      "rc": 0,
+      "stdout": "[dry-run] tts via volcengine model=seed-audio-1.0 voice=desc:女性,音高low-medium alto at rest, leaping to a strident high register when shouting,音色:powerful, brassy, cutting woman's voice with a hard chest resonance that turns shrill and piercing at full volume,口音:clipped aristocratic Received Pronunciation, hard consonants, commanding (语气:平静自然;参考锚:无,纯描述) format=mp3 → /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-queen-of-hearts_voiceprint.mp3",
+      "stderr": ""
+    },
+    "run": {
+      "rc": 0,
+      "stdout": "已生成: /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-queen-of-hearts_voiceprint.mp3",
+      "stderr": "[genmedia] seed-audio 描述定制嗓音:desc=\"女性,音高low-medium alto at rest, leaping to a strident high register when shouting,音色:powerful, brassy, cutting woman's voice with a hard chest resonance that turns shrill and piercing at full volume,口音:clipped aristocratic Received Pronunciation, hard consonants, commanding\" tone='平静自然' ref=无(纯描述) dur=6.9s"
+    },
+    "duration_s": 6.96,
+    "file_exists": true,
+    "voice_desc": "女性,音高low-medium alto at rest, leaping to a strident high register when shouting,音色:powerful, brassy, cutting woman's voice with a hard chest resonance that turns shrill and piercing at full volume,口音:clipped aristocratic Received Pronunciation, hard consonants, commanding",
+    "ref_anchor": "无(纯描述)",
+    "api_reported_duration_s": 6.9
+  },
+  {
+    "character_id": "CHAR-white-rabbit",
+    "variant": "default",
+    "output": "assets/audio/voice/refs/CHAR-white-rabbit_voiceprint.mp3",
+    "text": "The old garden stayed calm and quiet on this warm July afternoon today.",
+    "word_count": 13,
+    "dry_run": {
+      "rc": 0,
+      "stdout": "[dry-run] tts via volcengine model=seed-audio-1.0 voice=desc:男性,音高high tenor for an older man, jumpy intonation that climbs when panicked,音色:thin, reedy, slightly nasal older man's voice, breathy and fluttering, with a sharp edge when giving orders,口音:genteel southern English, affected Received Pronunciation of an upper servant, clipped and fussy (语气:平静自然;参考锚:无,纯描述) format=mp3 → /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-white-rabbit_voiceprint.mp3",
+      "stderr": ""
+    },
+    "run": {
+      "rc": 0,
+      "stdout": "已生成: /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-white-rabbit_voiceprint.mp3",
+      "stderr": "[genmedia] seed-audio 描述定制嗓音:desc=\"男性,音高high tenor for an older man, jumpy intonation that climbs when panicked,音色:thin, reedy, slightly nasal older man's voice, breathy and fluttering, with a sharp edge when giving orders,口音:genteel southern English, affected Received Pronunciation of an upper servant, clipped and fussy\" tone='平静自然' ref=无(纯描述) dur=8.6s"
+    },
+    "duration_s": 8.66,
+    "file_exists": true,
+    "voice_desc": "男性,音高high tenor for an older man, jumpy intonation that climbs when panicked,音色:thin, reedy, slightly nasal older man's voice, breathy and fluttering, with a sharp edge when giving orders,口音:genteel southern English, affected Received Pronunciation of an upper servant, clipped and fussy",
+    "ref_anchor": "无(纯描述)",
+    "api_reported_duration_s": 8.6
+  },
+  {
+    "character_id": "CHAR-young-crab",
+    "variant": "default",
+    "output": "assets/audio/voice/refs/CHAR-young-crab_voiceprint.mp3",
+    "text": "The old garden was calm and quiet on this warm July afternoon.",
+    "word_count": 12,
+    "dry_run": {
+      "rc": 0,
+      "stdout": "[dry-run] tts via volcengine model=seed-audio-1.0 voice=desc:女性,音高mezzo-soprano, quick irritable rises,音色:sharp, snappish, strong young woman's voice, a little brassy,口音:provincial lower-middle-class English, blunt (语气:平静自然;参考锚:无,纯描述) format=mp3 → /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-young-crab_voiceprint.mp3",
+      "stderr": ""
+    },
+    "run": {
+      "rc": 0,
+      "stdout": "已生成: /Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices/assets/audio/voice/refs/CHAR-young-crab_voiceprint.mp3",
+      "stderr": "[genmedia] seed-audio 描述定制嗓音:desc=\"女性,音高mezzo-soprano, quick irritable rises,音色:sharp, snappish, strong young woman's voice, a little brassy,口音:provincial lower-middle-class English, blunt\" tone='平静自然' ref=无(纯描述) dur=6.9s"
+    },
+    "duration_s": 6.96,
+    "file_exists": true,
+    "voice_desc": "女性,音高mezzo-soprano, quick irritable rises,音色:sharp, snappish, strong young woman's voice, a little brassy,口音:provincial lower-middle-class English, blunt",
+    "ref_anchor": "无(纯描述)",
+    "api_reported_duration_s": 6.9
+  }
+]

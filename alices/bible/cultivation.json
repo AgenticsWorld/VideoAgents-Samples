@@ -1,0 +1,574 @@
+{
+  "_meta": {
+    "file": "bible/cultivation.json",
+    "status": "locked_v1",
+    "owner": "02-worldbuilding/magic-cultivation",
+    "write_via": "00-orchestration/memory-bible (on_bible_access)",
+    "task_id": "p2-magic",
+    "generated": "2026-09-22",
+    "scope": "STUB kept for workflow.yaml alignment. brief.md fixes the premise as a 'Realistic fantasy film adapted from a fairy tale' (the fantasy lives only inside Alice's dream and is rendered photoreal; the waking 1862 frame is plain realism -- wording corrected at BIB-0027, the earlier 'realistic (non-fantasy) drama' misquoted brief.md), so this file defines no magic/power/cultivation system, no ranks, and no skills. It is the sole registry of how each impossible/supernatural element of the source (Lewis Carroll, Alice's Adventures in Wonderland) is reinterpreted for the realistic adaptation, as one SUP-* entry per element.",
+    "genre_note": "Decided in Phase 2 by 02-worldbuilding/magic-cultivation together with 02-worldbuilding/world (bible/WRITE_RULES.md section 7.1). bible/world.json (already written) independently reaches the same core reading -- Wonderland is Alice's dream, the waking world has nothing supernatural, talking animals are photoreal CGI animals and card figures are human performers inside the dream (amended BIB-0027 by user ruling 2026-09-22; originally 'talking animals/cards are human performers'), size changes use practical/camera means -- and registers its own real-world grounding for each dream image under wonderland_real_counterparts. This file does not repeat that grounding; it fixes the ontological/production treatment (dream | imagination | metaphor | practical_explanation | stagecraft | removed | kept_supernatural) for every flagged element and cites world.json where the two files meet. All SUP-* choices here are proposals for user confirmation at H1.",
+    "id_prefixes": {
+      "SUP-": "reinterpretation decision for one supernatural/impossible source element"
+    },
+    "entry_schema": {
+      "reinterpretations[]": {
+        "id": "SUP-001",
+        "source_element": "",
+        "source": {
+          "chapter": "chNNN",
+          "paragraph": "chNNN-pNN",
+          "quote": ""
+        },
+        "also_seen": [
+          {
+            "chapter": "chNNN",
+            "paragraph": "chNNN-pNN",
+            "quote": ""
+          }
+        ],
+        "treatment": "dream|imagination|metaphor|practical_explanation|stagecraft|removed|kept_supernatural",
+        "realistic_rendering": "",
+        "visual_signature": "",
+        "sound_signature": "",
+        "affects": [
+          "ev*"
+        ],
+        "decided_by": "",
+        "inferred": true,
+        "reason": ""
+      }
+    },
+    "decision_status": "approved_h1_preruling",
+    "version": "v1",
+    "merged_by": "p2-merge (00-orchestration/memory-bible)",
+    "merged_on": "2026-09-22",
+    "h1_status": "signed",
+    "rechecked_by": "p2-merge-recheck (00-orchestration/memory-bible)",
+    "rechecked_on": "2026-09-22",
+    "approval": "SUP-001 to SUP-014 approved as written by the user at the H1 pre-ruling, decision 5.1 A (runs/h1-ruling/ruling.json (user, 2026-09-22T17:33:21+08:00)). Formal lock follows at H1 (g2).",
+    "locked_at": "2026-09-22T17:59:52+08:00",
+    "locked_by": "H1 user signature (G2 PASS), recorded by 00-orchestration/memory-bible task p2-lock",
+    "lock_record": "runs/g2/gate.json",
+    "lock_changelog": "BIB-0023",
+    "controlled": "Writes only via memory-bible controlled change (WRITE_RULES.md section 5).",
+    "amendments": [
+      {
+        "change_id": "BIB-0027",
+        "date": "2026-09-22",
+        "task_id": "p4-cr-cgi-mucha-bible",
+        "authority": "User ruling in chat, 2026-09-22 (answer to qa/defects/DEF-p4-style-001, findings a = option B, b = option B extended to Mucha/Art Nouveau): \"会说话的角色可以用CGI动物，因为影片应该是写实奇幻风格；另外环境加入穆夏绘画的风格\". Supersedes the H1 5.1 A reading of SUP-002 and SUP-010 only; scope interpretation by workflow-orchestrator, to be re-surfaced to the user at H2 sign-off.",
+        "entries_changed": ["_meta.scope", "_meta.genre_note", "rank_order_acyclic_check.reason", "XA-magic-02", "XA-magic-08 (new)", "SUP-001.reason (brief.md quote corrected only)", "SUP-002", "SUP-010"],
+        "entries_unchanged_by_design": "SUP-004 (card figures stay human performers in card-styled costume); SUP-001 treatment, SUP-003, SUP-005 to SUP-009, SUP-011 to SUP-014 content unchanged."
+      }
+    ]
+  },
+  "rank_order_acyclic_check": {
+    "applicable": false,
+    "reason": "This adaptation (brief.md: realistic fantasy, with all fantasy confined to Alice's dream) has no power/cultivation ranked system and this file defines no 'ranks' array. The rank_order_acyclic auto-check therefore has no rank/order field to evaluate and passes vacuously. If a future controlled change introduces a ranked system here, this field must be updated to applicable: true and re-checked."
+  },
+  "cross_domain_assumptions": [
+    {
+      "id": "XA-magic-01",
+      "topic": "Dream frame is explicit, not ambiguous, and is the sole waking reality",
+      "assumption": "Only ch001 (bank, before the fall) and ch012 (bank, after waking, plus the sister's reverie) are the film's waking-world scenes. Everything between (ev0002-ev0052) is inside Alice's dream (SUP-001). world.json's frame (Thames-valley meadow, Friday 4 July 1862) is the waking-world anchor for that bracket; consistent with world.json cross_domain_assumption XA-01.",
+      "affects_domains": [
+        "world",
+        "geography",
+        "timeline",
+        "05-scenes"
+      ],
+      "reconciliation": "CONSISTENT with world.json XA-01 and timeline.json TL-003."
+    },
+    {
+      "id": "XA-magic-02",
+      "topic": "Talking animals are photoreal CGI animals; card figures and people stay human performers (amended BIB-0027)",
+      "assumption": "Every talking animal of the dream (SUP-002) is a photoreal CGI animal integrated into live-action plates -- naturalistic anatomy, fur/feather/scale detail, real weight and light -- wearing or carrying only the minimal iconic period props the text gives it (the White Rabbit's waistcoat, pocket watch, white kid gloves and fan); never a human in animal costume, never a cartoon face. The Gryphon and the Mock Turtle (SUP-010) are photoreal CGI fantastical creatures. The Frog-Footman and Fish-Footman are CGI frog-bodied and fish-bodied figures in livery (exact anatomy owned by 04-creatures/creature with 03-characters/appearance; flagged for H2). Card figures (SUP-004) and the human dream-figures (Hatter, Duchess, Cook, executioner, Pat, crowds) remain human performers in 1862-based costume. Only one real, silent, non-anthropomorphic white rabbit appears in the waking frame, as the dream's trigger (world.json wonderland_real_counterparts key cp-rabbit-hole). Design execution belongs to 04-creatures/creature, 03-characters/appearance and 06-art/costume.",
+      "affects_domains": [
+        "creature",
+        "costume",
+        "characters",
+        "art-director",
+        "08-video-gen"
+      ],
+      "reconciliation": "AMENDED at BIB-0027 by user ruling 2026-09-22 (supersedes the H1 5.1 A reading 'human performer in period dress with animal-coded styling'). world.json XA-02 amended in the same change. politics.json and economy.json faction/role facts are unaffected (membership and jobs do not depend on rendering); their casting wording is listed as stale in BIB-0027."
+    },
+    {
+      "id": "XA-magic-03",
+      "topic": "Character-doubling between dream-figures and real people is not decided here",
+      "assumption": "Whether individual Wonderland dream-figures are stylised versions of real people from Alice's actual afternoon (sister, household, passers-by) is left open to 02-worldbuilding/world and 03-characters. This file only fixes that they are ontologically dream-figures, never literal animals in the waking-world register.",
+      "affects_domains": [
+        "world",
+        "characters"
+      ],
+      "reconciliation": "RESOLVED (H1 5.3 B): light doubling only (the housemaid echoed as Mary Ann, Dinah as the Cheshire Cat, the sister glimpsed at the trial). Every other dream-figure is its own character. Applied in culture.json CUL-ASM-01; 03-characters casts accordingly."
+    },
+    {
+      "id": "XA-magic-04",
+      "topic": "Dream-only spaces are not persistent, mappable locations",
+      "assumption": "The rabbit-hole well (SUP-008) and the glass-table hall / tiny door / hidden garden (SUP-013) exist only inside the dream and should be registered in geography.json (if registered as SCN/LOC at all) with a non-diegetic-mental space class per bible/WRITE_RULES.md section 4, not as ordinary persistent LOC-* locations with fixed real-world continuity.",
+      "affects_domains": [
+        "geography",
+        "05-scenes"
+      ],
+      "reconciliation": "RESOLVED (H1 5.2 A): geography.json files every dream-only space as layer 'dream' under LOC-wonderland-dream, with no real-world parent and a grows_from link; LOC-hall-of-doors has no connection outside its own set. Scenes set there use space_class non_diegetic_mental."
+    },
+    {
+      "id": "XA-magic-05",
+      "topic": "Size changes use practical, in-camera scale technique, not VFX-magic imagery",
+      "assumption": "Alice's size changes (SUP-003) and the giant pool of tears (SUP-007) should be conceived and prompted (concept art, storyboards, video generation) as forced-perspective / set-scale staging, consistent with world.json XA-03 ('practical or camera means or metaphor only'), not as a glowing/magical transformation effect.",
+      "affects_domains": [
+        "art-director",
+        "08-video-gen"
+      ],
+      "reconciliation": "CONSISTENT with world.json XA-03. Applies to 06-art and 08-video-gen prompts."
+    },
+    {
+      "id": "XA-magic-06",
+      "topic": "Executions/threats are unenacted authoritarian bluster, never literal violence",
+      "assumption": "The Queen's 'Off with his/her head!' (SUP-014) should be registered by 02-worldbuilding/political as a running, never-enforced threat/custom of the Queen's court (a LAW-* or FREL-* entry), not as an operating capital-punishment legal system with any carried-out sentence; no execution, weapon-on-body contact, or aftermath is ever depicted on screen.",
+      "affects_domains": [
+        "political",
+        "content-safety"
+      ],
+      "reconciliation": "SATISFIED: politics.json LAW-001 registers the never-enforced threat; WR-007 has the same rule."
+    },
+    {
+      "id": "XA-magic-07",
+      "topic": "All of the above must read through staging alone -- no narration",
+      "assumption": "The project has narration switched off entirely (no voice-over anywhere in the film). None of these SUP-* readings assume or require a narrator to explain the dream frame or any reinterpretation; legibility must come from blocking, editing (leaves/cards match-cut, sound bridges), and dialogue only.",
+      "affects_domains": [
+        "07-directing",
+        "09-post/editing",
+        "all Phase 5+ script agents"
+      ],
+      "reconciliation": "CONSISTENT with project settings (narration off)."
+    },
+    {
+      "id": "XA-magic-08",
+      "topic": "Dream environments carry an Art Nouveau painterly design language, realised as photographed physical space (added BIB-0027)",
+      "assumption": "By user ruling 2026-09-22 the dream's environments (every SUP-001 dream space, including the SUP-008 fall, the SUP-013 hall/garden and the SUP-010 shore) are designed in an Art Nouveau painterly language after Alphonse Mucha -- flowing organic lines, floral and vine ornament, circular halo/roundel motifs, mosaic and stained-glass accents, a soft pastel-and-gold palette -- built as photographed physical sets and set extensions, never as flat illustration. It is a licensed dream-world anachronism: the H1 1862 period lock still holds for costume, props and the whole waking world, and the waking frame (ch001, ch012) carries at most a subtle Art Nouveau influence in composition, palette and flora. The rule and its limits are recorded in world.json WR-010. Size-change technique (XA-magic-05) is unchanged: Art Nouveau is set design, not a glowing transformation effect.",
+      "affects_domains": [
+        "05-scenes",
+        "art-director",
+        "06-art/environment-concept",
+        "08-video-gen"
+      ],
+      "reconciliation": "CONSISTENT with world.json WR-002 and WR-010 as amended/added in BIB-0027. Supersedes the 1862 exclusion of Art Nouveau for the dream frame only (bible/style.json CR-002 and its anachronism list are now stale for dream scenes; listed in BIB-0027)."
+    }
+  ],
+  "reinterpretations": [
+    {
+      "id": "SUP-001",
+      "source_element": "The entire Wonderland narrative is bracketed as Alice's own dream: she is already dozing on the riverbank before the Rabbit appears, explicitly begins to dream partway through the fall down the rabbit-hole, and wakes on the same bank at the end, with her sister's closing reverie mapping the dream's sounds and images back onto the ordinary farmyard around them.",
+      "source": {
+        "chapter": "ch001",
+        "paragraph": "ch001-p10",
+        "quote": "She felt that she was dozing off, and had just begun to dream that she was walking hand in hand with Dinah"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch001",
+          "paragraph": "ch001-p02",
+          "quote": "the hot day made her feel very sleepy and stupid"
+        },
+        {
+          "chapter": "ch012",
+          "paragraph": "ch012-p64",
+          "quote": "found herself lying on the bank, with her head in the lap of her sister, who was gently brushing away some dead leaves that had fluttered down from the trees upon her face"
+        },
+        {
+          "chapter": "ch012",
+          "paragraph": "ch012-p70",
+          "quote": "though she knew she had but to open them again, and all would change to dull reality"
+        }
+      ],
+      "treatment": "dream",
+      "realistic_rendering": "The Wonderland sequence (ev0002-ev0052) is staged as one continuous dream, entered while Alice is already 'dozing off' inside the fall (ch001-p10) rather than at the rabbit-hole itself, and closed when she wakes on the same bank with dead leaves brushing her face (ch012-p64). Nothing in Wonderland is asserted as literally real in the film's waking-world register; every other SUP-* entry below is this single dream's internal logic, not a parallel magical reality. The only on-screen 'real' time is the bracket -- an idle, drowsy afternoon on the bank, a nap, a waking -- plus the sister's closing reverie (ch012-p70), which the source itself uses to remap the dream's sounds and images onto the ordinary farmyard.",
+      "visual_signature": "A matched bracket (same bank, same light quality, same sister) opens and closes the film; the visible onset of sleep happens mid-fall in ch001, not at the rabbit-hole entrance, so the audience is shown the exact moment the dream begins.",
+      "sound_signature": "Ambient outdoor sound (birdsong, insects, distant sheep-bells) carries under the opening and closing bank scenes and can bleed faintly into the loudest Wonderland moments, letting the ear tie the dream back to its source per ch012-p70's own sound-mapping (teacups/sheep-bells, Queen's cries/shepherd boy, Gryphon's shriek/farmyard clamour, Mock Turtle's sobs/lowing cattle).",
+      "affects": [
+        "ev0001",
+        "ev0053",
+        "ev0054"
+      ],
+      "decided_by": "02-worldbuilding/magic-cultivation (proposal); approved by the user at H1 pre-ruling 5.1 A (2026-09-22)",
+      "inferred": true,
+      "reason": "The source states the dream frame explicitly (ch001-p10, ch012-p64, ch012-p70). Keeping it explicit rather than ambiguous or literalised is the choice made here because it is the only reading that resolves every other impossible element (SUP-002 through SUP-014) without inventing an in-world magic system, matching brief.md's premise, a 'Realistic fantasy film adapted from a fairy tale' whose fantasy is confined to the dream (quote corrected at BIB-0027); it also matches bible/world.json's independently-reached frame."
+    },
+    {
+      "id": "SUP-002",
+      "source_element": "Nearly every non-Alice character given voice by the text is a domestic or wild animal (White Rabbit, Mouse, Dodo and other birds, Caterpillar, Frog/Fish-Footmen, Duchess's Cook and Cheshire Cat, Pigeon, King/Queen/Knave and the card retinue, Gryphon, Mock Turtle, jurors) who speaks, reasons and negotiates exactly like an adult or child.",
+      "source": {
+        "chapter": "ch001",
+        "paragraph": "ch001-p03",
+        "quote": "nor did Alice think it so _very_ much out of the way to hear the Rabbit say to itself, “Oh dear! Oh dear! I shall be late!”"
+      },
+      "treatment": "dream",
+      "realistic_rendering": "(Amended BIB-0027 by user ruling 2026-09-22; supersedes the H1 5.1 A human-performer reading.) Inside the dream frame (SUP-001), every speaking animal is a dream-figure of Alice's sleeping mind rendered as a photoreal CGI animal integrated into live-action plates: the White Rabbit, the Mouse, the Dodo, the Duck, the Lory, the Eaglet, the Magpie, the Canary and the other Caucus-race birds and beasts, the Caterpillar, Bill the lizard, the Pigeon, the Cheshire Cat, the March Hare, the Dormouse, the old and young Crab, and the guinea-pigs and other animal jurors of the trial. Each has naturalistic anatomy, fur/feather/scale detail and real weight and light, and speaks with naturalistic mouth, beak or muzzle movement (no cartoon faces, no human-in-animal-costume). They wear or carry only the minimal iconic period props the text gives them (the White Rabbit's waistcoat, pocket watch, white kid gloves and fan), made to 1862 patterns. The Gryphon and the Mock Turtle are photoreal CGI fantastical creatures (SUP-010). The Frog-Footman and the Fish-Footman are CGI frog-bodied and fish-bodied figures in livery; how far their anatomy is humanised is owned by 04-creatures/creature with 03-characters/appearance and is flagged for H2. Human dream-figures stay human performers (Hatter, Duchess, Cook, executioner, Pat, crowds), and the card figures stay human performers in card-styled costume (SUP-004, unchanged). Non-speaking dream animals (the puppy, the croquet hedgehogs and flamingoes, the baby's pig end-state of SUP-006) follow the same photoreal-animal register; flagged for H2. This is licensed because it is dream content, not a claim about the waking world: the waking frame keeps ordinary, silent animals only, with the real, silent white rabbit that triggers the dream (bible/world.json wonderland_real_counterparts key cp-rabbit-hole) as the single animal link between the two layers. Light doubling (H1 5.3 B) still holds: the Cheshire Cat echoes Dinah. Whether other dream-figures double real people stays as ruled in XA-magic-03; this entry fixes that the talking animals are ontologically dream-figures rendered as CGI animals.",
+      "visual_signature": "Photoreal CGI animals and creatures sharing the frame and the light with live-action human performers throughout Wonderland; naturalistic anatomy and texture, minimal period props, no cartoon styling and no humans in animal costume. Card figures remain human performers in card-styled costume. Design execution owned by 04-creatures/creature, 03-characters/appearance and 06-art/costume.",
+      "sound_signature": "Fully articulate speech for every talking dream-animal; species vocalisation appears only as a light character tic (a sniff, a rustle, a squeak, a purr) layered under otherwise normal dialogue.",
+      "affects": [
+        "ev0001",
+        "ev0009",
+        "ev0010",
+        "ev0011",
+        "ev0019",
+        "ev0020",
+        "ev0022",
+        "ev0024",
+        "ev0025",
+        "ev0026",
+        "ev0028",
+        "ev0029",
+        "ev0030",
+        "ev0031",
+        "ev0033",
+        "ev0034",
+        "ev0036",
+        "ev0037",
+        "ev0038",
+        "ev0041",
+        "ev0042",
+        "ev0043",
+        "ev0045",
+        "ev0046",
+        "ev0047",
+        "ev0048",
+        "ev0051",
+        "ev0052"
+      ],
+      "decided_by": "02-worldbuilding/magic-cultivation (proposal); approved by the user at H1 pre-ruling 5.1 A (2026-09-22); rendering amended by user ruling 2026-09-22 (BIB-0027, DEF-p4-style-001 a = B)",
+      "inferred": true,
+      "reason": "The source gives no real-world mechanism for animal speech; treating it as the dream's own logic (per SUP-001) is unchanged. The rendering changed because the user ruled on 2026-09-22 that talking characters may be CGI animals 'because the film should be realistic fantasy' (brief.md: 'Realistic fantasy film adapted from a fairy tale'); the realism now lives in photoreal anatomy, texture and light rather than in human casting. The per-species list and the non-speaking-animal extension are the orchestrator's scope interpretation, to be re-surfaced at H2."
+    },
+    {
+      "id": "SUP-003",
+      "source_element": "Alice's body repeatedly and drastically changes scale -- shrinking to ten inches, growing to nine feet and later 'a mile high' -- triggered by drinking from an unmarked bottle, eating cake, and nibbling both sides of a mushroom; the arc resolves at the ch012 climax when she has 'grown to her full size'.",
+      "source": {
+        "chapter": "ch002",
+        "paragraph": "ch002-p01",
+        "quote": "now I’m opening out like the largest telescope that ever was! Good-bye, feet!"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch012",
+          "paragraph": "ch012-p63",
+          "quote": "she had grown to her full size by this time"
+        }
+      ],
+      "treatment": "dream",
+      "realistic_rendering": "Size change is literal within the dream (per SUP-001) but produced with grounded, in-camera technique -- forced perspective, oversized/miniature set builds and props, doubles -- rather than depicted as an in-world magical power; the source never explains a mechanism beyond the trigger objects, which is consistent with dream logic needing no cause. Narratively it tracks Alice's felt powerlessness against adult-sized rules and authority: she shrinks when a rule makes her feel small and grows when she asserts herself. The ch012 line 'grown to her full size' pays off the identity arc -- she stops shrinking herself to fit the Queen's court and claims her own scale and voice, the same beat that triggers her waking (SUP-004).",
+      "visual_signature": "Forced-perspective staging and set-scale doubling for every size beat, matched consistently across the film; avoid VFX-only scale cheats that would read as magical rather than practical dream-physicality (cross_domain_assumptions XA-magic-05).",
+      "sound_signature": "Room tone and prop sounds (rustling cloth, creaking furniture, liquid) rescale with Alice's perceived size to sell each change practically.",
+      "affects": [
+        "ev0004",
+        "ev0005",
+        "ev0006",
+        "ev0007",
+        "ev0008",
+        "ev0015",
+        "ev0016",
+        "ev0017",
+        "ev0021",
+        "ev0022",
+        "ev0023",
+        "ev0028",
+        "ev0032",
+        "ev0046",
+        "ev0048",
+        "ev0050",
+        "ev0052"
+      ],
+      "decided_by": "02-worldbuilding/magic-cultivation (proposal); approved by the user at H1 pre-ruling 5.1 A (2026-09-22)",
+      "inferred": true,
+      "reason": "The source never explains the mechanism (bottle/cake/mushroom are triggers, not causes). Reading the size arc as the dream's embodied metaphor for the story's identity/authority theme (story/story_graph.json summary.narrative_engine) keeps it inside SUP-001's dream frame instead of inventing a magic system, and grounds the ch012 climax emotionally rather than mechanically."
+    },
+    {
+      "id": "SUP-004",
+      "source_element": "The gardeners, soldiers and courtiers, and the King, Queen and Knave, are described as flat, two-dimensional playing-card figures; at the climax the whole pack rises and flies at Alice, and she wakes to find her sister brushing dead leaves from her face.",
+      "source": {
+        "chapter": "ch008",
+        "paragraph": "ch008-p15",
+        "quote": "Why, they’re only a pack of cards, after all. I needn’t be afraid of them!"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch012",
+          "paragraph": "ch012-p64",
+          "quote": "the whole pack rose up into the air, and came flying down upon her"
+        }
+      ],
+      "treatment": "dream",
+      "realistic_rendering": "Within the dream, the court is costumed and blocked as flat, card-suited figures -- a dream-logic styling choice, not a claim that living paper people exist. The source itself supplies the realistic hinge: the airborne 'pack of cards' attack is the dream's transposition of dead leaves falling from the tree onto the sleeping Alice's face, so the waking image (leaves) and the dream image (flying cards) are shown as the same event (bible/world.json wonderland_real_counterparts key cp-cards-leaves), resolving the transformation without further invention.",
+      "visual_signature": "Card-suited costuming/blocking for the court throughout Wonderland; the climax match-cuts or dissolves the airborne cards directly into falling leaves as Alice wakes.",
+      "sound_signature": "The rising rustle/flutter of the card swarm is built from the same sound material as rustling leaves, subtly foreshadowed earlier in the dream.",
+      "affects": [
+        "ev0033",
+        "ev0034",
+        "ev0036",
+        "ev0040",
+        "ev0045",
+        "ev0052",
+        "ev0053"
+      ],
+      "decided_by": "02-worldbuilding/magic-cultivation (proposal); approved by the user at H1 pre-ruling 5.1 A (2026-09-22)",
+      "inferred": true,
+      "reason": "The source supplies the leaves/cards match directly at ch012-p64; this entry only makes explicit, for production, that it is the same dream-image resolving under SUP-001."
+    },
+    {
+      "id": "SUP-005",
+      "source_element": "The Cheshire Cat fades in and out at will and, in one instance, vanishes leaving only its grin visible, later causing a dispute over executing a head with no body attached.",
+      "source": {
+        "chapter": "ch006",
+        "paragraph": "ch006-p78",
+        "quote": "this time it vanished quite slowly, beginning with the end of the tail, and ending with the grin, which remained some time after the rest of it had gone"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch008",
+          "paragraph": "ch008-p71",
+          "quote": "The Cat’s head began fading away the moment he was gone, and, by the time he had come back with the Duchess, it had entirely disappeared"
+        }
+      ],
+      "treatment": "dream",
+      "realistic_rendering": "The Cat's fade/vanish is pure dream-image logic (things in dreams appear and disappear without transition or cause) and is given no practical-world mechanism; it is produced as a dissolve/rack-focus vanish rather than a stage-magic trick, keeping the impossibility legible as dream-texture. The disembodied-head dispute (ev0037-ev0038) is played as farce about arguing over an absent object, and the dream is allowed to leave it unresolved exactly as the source does (also flagged in story/events.json broken_chains for ev0038).",
+      "visual_signature": "Soft dissolve/rack-focus vanish beginning at the extremities and ending on the grinning face, matching the source's own sequencing.",
+      "sound_signature": "No transformation sound effect; ambient held tone across the dissolve keeps the vanish dream-quiet rather than magical.",
+      "affects": [
+        "ev0028",
+        "ev0037",
+        "ev0038"
+      ],
+      "decided_by": "02-worldbuilding/magic-cultivation (proposal); approved by the user at H1 pre-ruling 5.1 A (2026-09-22)",
+      "inferred": true,
+      "reason": "No practical-world explanation is available or needed once SUP-001 is accepted; a photographic dissolve is the grounded equivalent of the source's own gradual-fade description."
+    },
+    {
+      "id": "SUP-006",
+      "source_element": "A crying, grunting baby that the Duchess thrusts at Alice is, partway through Alice carrying it off, perceived to be 'neither more nor less than a pig'.",
+      "source": {
+        "chapter": "ch006",
+        "paragraph": "ch006-p48",
+        "quote": "This time there could be _no_ mistake about it: it was neither more nor less than a pig"
+      },
+      "treatment": "dream",
+      "realistic_rendering": "Played as a gradual perceptual slide rather than an instantaneous transformation: the infant's crying, snorting and squirming become more pig-like by degrees (framing, sound, motion) until Alice's -- and the audience's -- reading of the creature tips over entirely, mirroring how identity mutates gradually and without a clean cause in a dream. This matches the source's own phrasing, which narrates a dawning realisation ('there could be no mistake about it') rather than a witnessed transformation.",
+      "visual_signature": "Continuous handheld/held-in-arms coverage across the change with no visible cut or effects transition; proportions and texture drift across the scene rather than switching at one frame.",
+      "sound_signature": "The baby's cry is gradually pitched and timbred toward a grunt/snort over the course of the scene rather than switched abruptly.",
+      "affects": [
+        "ev0027"
+      ],
+      "decided_by": "02-worldbuilding/magic-cultivation (proposal); approved by the user at H1 pre-ruling 5.1 A (2026-09-22)",
+      "inferred": true,
+      "reason": "The source frames this as a realisation, not a witnessed magical event, which supports a gradual-perception reading over a literal instant transformation."
+    },
+    {
+      "id": "SUP-007",
+      "source_element": "At nine feet tall Alice weeps a flood of tears that fills the hall; after shrinking again she falls into and swims in that same pool.",
+      "source": {
+        "chapter": "ch002",
+        "paragraph": "ch002-p16",
+        "quote": "she was in the pool of tears which she had wept when she was nine feet high"
+      },
+      "treatment": "dream",
+      "realistic_rendering": "Built directly on SUP-003's practical scale technique: the 'pool' is staged as a dream-literal flood at Alice's then-giant scale, read narratively as her own overwhelming emotion (grief and frustration at being trapped by rules she cannot control) made physical, which she must then physically swim through once small again -- a dream-image of being submerged by one's own feelings, not a supernatural body of water with independent existence. In the waking-world register this same pool grounds to the reedy river backwater beside the bank (bible/world.json wonderland_real_counterparts key cp-pool).",
+      "visual_signature": "Water level and set scale are keyed to Alice's scale at the moment of weeping (SUP-003's forced-perspective/set-scale technique), not a separately invented body of water.",
+      "sound_signature": "Muffled underwater ambience mixed with the same emotional cue (breathing, sobbing) that scored the crying, tying the swim back to its cause.",
+      "affects": [
+        "ev0007",
+        "ev0008",
+        "ev0009"
+      ],
+      "decided_by": "02-worldbuilding/magic-cultivation (proposal); approved by the user at H1 pre-ruling 5.1 A (2026-09-22)",
+      "inferred": true,
+      "reason": "The source gives the cause explicitly (her own tears at giant size); this entry only supplies the emotional register and confirms it rides on SUP-003's scale technique rather than a separate effect."
+    },
+    {
+      "id": "SUP-008",
+      "source_element": "Alice's fall down the rabbit-hole is impossibly slow and deep -- long enough to inspect shelved cupboards, maps and an empty marmalade jar on the way down -- lasting far longer than any real fall could.",
+      "source": {
+        "chapter": "ch001",
+        "paragraph": "ch001-p06",
+        "quote": "she looked at the sides of the well, and noticed that they were filled with cupboards and book-shelves; here and there she saw maps and pictures hung upon pegs. She took down a jar from one of the shelves as she passed"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch001",
+          "paragraph": "ch001-p08",
+          "quote": "Down, down, down. Would the fall _never_ come to an end?"
+        }
+      ],
+      "treatment": "dream",
+      "realistic_rendering": "Classic anxiety-dream falling logic: a fall that elongates past any real physical duration, furnished with domestic detail a waking mind would not have time to notice. Produced as a controlled falling sequence (rig/wire work with set dressing sliding past camera) entirely inside the dream, explicitly not a real well or shaft that exists in the film's waking geography (see SUP-013 and cross_domain_assumptions XA-magic-04).",
+      "visual_signature": "Vertical tracking/rig shot past practical shelf dressing that slides past Alice rather than her falling past a static set, keeping the geometry dream-elastic.",
+      "sound_signature": "Time-stretched ambient wind/creak, no impact sound until the landing on the heap of sticks and leaves.",
+      "affects": [
+        "ev0002"
+      ],
+      "decided_by": "02-worldbuilding/magic-cultivation (proposal); approved by the user at H1 pre-ruling 5.1 A (2026-09-22)",
+      "inferred": true,
+      "reason": "The source itself flags the duration as physically implausible ('Would the fall never come to an end?'); the falling-dream reading needs no invention beyond SUP-001."
+    },
+    {
+      "id": "SUP-009",
+      "source_element": "Pebbles thrown through a window at Alice turn into little cakes as they land on the floor.",
+      "source": {
+        "chapter": "ch004",
+        "paragraph": "ch004-p33",
+        "quote": "Alice noticed with some surprise that the pebbles were all turning into little cakes as they lay on the floor"
+      },
+      "treatment": "dream",
+      "realistic_rendering": "Object-identity instability of the kind dreams routinely produce: Alice does not witness pebbles reshape into cakes, she simply notices the floor now holds cakes where pebbles landed. Rendered as a hidden-cut substitution (props swapped off-camera between shots) rather than a visible morphing effect, keeping the moment a dream-cut rather than a magic trick.",
+      "visual_signature": "Hidden-cut substitution -- pebbles land on one cut, cakes are revealed on the next -- with no on-camera transformation.",
+      "sound_signature": "Only the impact sound of pebbles hitting the floor; the cakes are simply present on the following cut with no transformation cue.",
+      "affects": [
+        "ev0016"
+      ],
+      "decided_by": "02-worldbuilding/magic-cultivation (proposal); approved by the user at H1 pre-ruling 5.1 A (2026-09-22)",
+      "inferred": true,
+      "reason": "The source narrates this as something Alice 'noticed' after the fact, not as a witnessed transformation, which supports an off-camera substitution rather than a visible-magic effect."
+    },
+    {
+      "id": "SUP-010",
+      "source_element": "The Gryphon and the Mock Turtle -- the latter explicitly 'the thing Mock Turtle Soup is made from' -- are creatures with no real-world referent, complete with an undersea school and a Lobster Quadrille danced on the shore.",
+      "source": {
+        "chapter": "ch009",
+        "paragraph": "ch009-p39",
+        "quote": "It’s the thing Mock Turtle Soup is made from"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch009",
+          "paragraph": "ch009-p46",
+          "quote": "they never executes nobody, you know"
+        }
+      ],
+      "treatment": "dream",
+      "realistic_rendering": "(Amended BIB-0027 by user ruling 2026-09-22; supersedes the H1 5.1 A human-performer reading.) Pure dream-invention with no waking-world counterpart, including the visual pun at its root (the Mock Turtle literally embodies the name of a soup). Treated like SUP-002's talking animals but called out separately because these two have no single real animal to anchor them: both are photoreal CGI fantastical creatures integrated into live-action plates, with naturalistic anatomy, texture, weight and light as if they were real animals. The Gryphon is the classical griffin (eagle head, wings and forelegs; lion hindquarters and tail); the Mock Turtle is a turtle-bodied creature carrying the calf's head, hind hooves and tail conventionally associated with 'mock turtle soup'. Design specifics are owned by 04-creatures/creature. The undersea school and Lobster Quadrille are staged as the dream's own self-contained set-piece on the shore (an Art Nouveau-inflected dream shore, XA-magic-08), not connected to any real sea location.",
+      "visual_signature": "Photoreal CGI fantastical creatures (griffin; calf-headed, hooved turtle) sharing the frame and the light with Alice; naturalistic feather, fur, hide and shell; no cartoon styling and no humans in partial costume.",
+      "sound_signature": "The Mock Turtle's sobbing and the Quadrille's song are diegetic within the dream, unconnected to any real undersea ambience.",
+      "affects": [
+        "ev0041",
+        "ev0042",
+        "ev0043",
+        "ev0044"
+      ],
+      "decided_by": "02-worldbuilding/magic-cultivation (proposal); approved by the user at H1 pre-ruling 5.1 A (2026-09-22); rendering amended by user ruling 2026-09-22 (BIB-0027, DEF-p4-style-001 a = B)",
+      "inferred": true,
+      "reason": "The source gives no real-world referent for either creature (the Mock Turtle is explicitly a pun made flesh); treating both as dream-original designs is the only reading available under SUP-001. Their rendering follows the user's 2026-09-22 ruling that talking characters may be CGI animals in a realistic-fantasy register."
+    },
+    {
+      "id": "SUP-011",
+      "source_element": "In the Queen's croquet game, live hedgehogs serve as balls, live flamingoes as mallets, and soldiers bend over to form the arches.",
+      "source": {
+        "chapter": "ch008",
+        "paragraph": "ch008-p41",
+        "quote": "the balls were live hedgehogs, the mallets live flamingoes, and the soldiers had to double themselves up and to stand on their hands and feet, to make the arches"
+      },
+      "treatment": "dream",
+      "realistic_rendering": "Staged as chaotic dream-absurdity around the Queen's capricious authority, not as literal animal cruelty: no hedgehog or flamingo is shown being struck or harmed on screen -- the comedy and threat read through blocking, framing and reaction rather than depicted impact, matching the source's own tone (the animals simply wander off mid-game rather than being visibly hurt). Kept inside the dream's absurd-authority register alongside SUP-014 rather than staging realistic-looking violence.",
+      "visual_signature": "Choreographed near-misses and cutaways at the moment of contact; flamingoes and hedgehogs are handled/carried rather than struck on camera.",
+      "sound_signature": "Comic, chaotic crowd and animal-protest sound rather than impact sound, keeping the register farcical.",
+      "affects": [
+        "ev0036",
+        "ev0037",
+        "ev0038",
+        "ev0040"
+      ],
+      "decided_by": "02-worldbuilding/magic-cultivation (proposal); approved by the user at H1 pre-ruling 5.1 A (2026-09-22)",
+      "inferred": true,
+      "reason": "The source narrates the game as ongoing chaos, not injury; a no-visible-harm staging choice keeps the register intact without softening the absurdity or introducing depicted animal cruelty."
+    },
+    {
+      "id": "SUP-012",
+      "source_element": "The Hatter speaks of 'Time' as a person he has quarrelled with, which is why his watch/clock is permanently stuck at tea-time (six o'clock).",
+      "source": {
+        "chapter": "ch007",
+        "paragraph": "ch007-p39",
+        "quote": "If you knew Time as well as I do,” said the Hatter, “you wouldn’t talk about wasting _it_. It’s _him_.”"
+      },
+      "treatment": "metaphor",
+      "realistic_rendering": "Time never appears on screen as an embodied character; the personification stays purely verbal, spoken only by the Hatter as his own idiosyncratic, obsessive way of explaining why his watch is broken and why the tea-party is stuck repeating itself. 'Always six o'clock' is rendered as a visibly stopped/broken watch and a table that never resets -- a practical prop detail -- while 'Time' as a character remains the Hatter's figure of speech, never depicted.",
+      "visual_signature": "A visibly stopped watch/clock face is the only on-screen evidence; no personified figure of Time is cast or shown.",
+      "sound_signature": "No distinct sound signature; ordinary tea-party ambience, undisturbed by any 'Time' character.",
+      "affects": [
+        "ev0030"
+      ],
+      "decided_by": "02-worldbuilding/magic-cultivation (proposal); approved by the user at H1 pre-ruling 5.1 A (2026-09-22)",
+      "inferred": true,
+      "reason": "The source keeps 'Time' entirely inside the Hatter's dialogue and never shows him interacting with anyone as a character, which supports reading this as metaphor rather than another embodied dream-figure."
+    },
+    {
+      "id": "SUP-013",
+      "source_element": "A long hall lined with locked doors holds a three-legged glass table with a tiny golden key that opens a fifteen-inch door onto a walled garden Alice can only reach at doll-size; by the next chapter the same hall, table and door have 'vanished completely' without explanation.",
+      "source": {
+        "chapter": "ch001",
+        "paragraph": "ch001-p13",
+        "quote": "a little three-legged table, all made of solid glass; there was nothing on it except a tiny golden key"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch001",
+          "paragraph": "ch001-p14",
+          "quote": "so many out-of-the-way things had happened lately, that Alice had begun to think that very few things indeed were really impossible"
+        },
+        {
+          "chapter": "ch004",
+          "paragraph": "ch004-p01",
+          "quote": "everything seemed to have changed since her swim in the pool, and the great hall, with the glass table and the little door, had vanished completely"
+        }
+      ],
+      "treatment": "dream",
+      "realistic_rendering": "The hall, its locked doors, the glass table and the tiny door are dream-space: a set that exists only for as long as the dream needs it and is not part of a consistent, mappable waking-world location (per bible/WRITE_RULES.md section 4, geography.json should register this as space_class: non_diegetic_mental rather than a persistent LOC-*, see cross_domain_assumptions XA-magic-04). Its disappearance after ch003 (ev0014, also flagged in story/events.json broken_chains) is not narrated as a physical event because none is needed: dream-spaces simply stop being available once the dream has moved past them, the way a dreamer cannot find an earlier room when they go looking for it. The source's own line -- 'very few things indeed were really impossible' (ch001-p14) -- is the textual license for treating the whole space this way. In the waking-world register the garden beyond the door grounds to a grand enclosed private garden the child cannot enter unescorted (bible/world.json wonderland_real_counterparts key cp-garden).",
+      "visual_signature": "The hall/garden threshold is shot as a single self-contained set, never re-established from a wider shot connecting it to the rest of the dream's geography, so its later absence reads as dream-discontinuity rather than demolition.",
+      "sound_signature": "No transitional sound explains the vanishing; the hall is simply absent from the later soundscape without comment, matching the Rabbit's own confusion (ch004-p01).",
+      "affects": [
+        "ev0003",
+        "ev0014",
+        "ev0032"
+      ],
+      "decided_by": "02-worldbuilding/magic-cultivation (proposal); approved by the user at H1 pre-ruling 5.1 A (2026-09-22)",
+      "inferred": true,
+      "reason": "The source itself flags the hall's disappearance as unexplained (also noted in story/events.json broken_chains for ev0014); reading it as ordinary dream-space discontinuity resolves the gap without inventing an unstated in-world mechanism, licensed by the source's own 'very few things ... really impossible' line."
+    },
+    {
+      "id": "SUP-014",
+      "source_element": "The Queen of Hearts repeatedly screams 'Off with his/her head!' at courtiers, gardeners and Alice herself throughout chapters 8-9 and 12; the Gryphon later reveals the sentences are never carried out, and the King quietly pardons everyone shortly after.",
+      "source": {
+        "chapter": "ch009",
+        "paragraph": "ch009-p36",
+        "quote": "shouting “Off with his head!” or “Off with her head!”"
+      },
+      "also_seen": [
+        {
+          "chapter": "ch009",
+          "paragraph": "ch009-p42",
+          "quote": "You are all pardoned"
+        },
+        {
+          "chapter": "ch009",
+          "paragraph": "ch009-p46",
+          "quote": "It’s all her fancy, that: they never executes nobody, you know"
+        }
+      ],
+      "treatment": "dream",
+      "realistic_rendering": "In the realistic register this reads as recurring authoritarian bluster from a single volatile adult figure -- threats used as a tool of control and unpredictability, never enacted -- rather than as a literal justice system with actual capital punishment, which the source itself rules out directly (a character states outright that none is ever carried out, and a blanket pardon follows minutes later). On screen, sentencing beats end in comic deflation, distraction, or the quiet pardon rather than any depiction of violence; 'custody' is played as a huddle/escort, not restraint or harm.",
+      "visual_signature": "Threats are staged through the Queen's volume and gesture and everyone else's practised, weary compliance-without-effect; no execution device, weapon-on-body contact, or aftermath is ever shown.",
+      "sound_signature": "The Queen's shout is the loudest sustained sound in the court scenes, immediately undercut by ordinary resumed party/game noise once she moves on, selling that nothing actually happened.",
+      "affects": [
+        "ev0026",
+        "ev0034",
+        "ev0036",
+        "ev0038",
+        "ev0039",
+        "ev0040",
+        "ev0041",
+        "ev0052"
+      ],
+      "decided_by": "02-worldbuilding/magic-cultivation (proposal); approved by the user at H1 pre-ruling 5.1 A (2026-09-22)",
+      "inferred": true,
+      "reason": "The source explicitly states the sentences are never carried out (ch009-p46) and shows a blanket pardon minutes later (ch009-p42); treating the threats as all bark and the register as darkly comic rather than literally violent is a direct extraction of the source's own defusal, applied to fit the realistic-drama premise (cross_domain_assumptions XA-magic-06)."
+    }
+  ]
+}

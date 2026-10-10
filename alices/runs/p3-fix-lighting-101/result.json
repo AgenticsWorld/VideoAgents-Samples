@@ -1,0 +1,29 @@
+{
+  "task_id": "p3-fix-lighting-101",
+  "agent": "05-scenes/environment",
+  "date": "2026-09-22",
+  "status": "done",
+  "defect": "qa/defects/DEF-p3-lighting-101.json",
+  "defect_status": "closed",
+  "changes": [
+    {
+      "file": "bible/scenes/SCN-rabbit-house-exterior/environment.json",
+      "path": "states[0].sun.note",
+      "before": "south-west to west; the brass plate catches the sun",
+      "after": "south-west to west; the lane (north) front and its polished brass plate are in bright open shade; the west gable and the south yard take the sun"
+    }
+  ],
+  "checked_no_change": [
+    "states[1].sun.note (S02): mentions ladder/roof shadows only; no sunlit door or plate",
+    "fixed.ground_and_flora, fixed.dream_growth, states[*].conditions/sky: no sunlit door or plate"
+  ],
+  "lighting_json_review": {
+    "file": "bible/scenes/SCN-rabbit-house-exterior/lighting.json",
+    "owner": "05-scenes/lighting",
+    "repeats_error": false,
+    "note": "direction_note and prompt_fragment_en already put the north lane front and brass plate in bright open shade. Only the reason field (line ~43) still cites DEF-p3-lighting-101 and quotes the old S01 wording; 05-scenes/lighting may drop that pointer at its next pass (optional). Not edited here."
+  },
+  "untouched": ["bible/scenes/SCN-rabbit-house-exterior/architecture.json", "bible/scenes/SCN-rabbit-house-exterior/lighting.json"],
+  "skills": "none selected for this station",
+  "evaluation": "disabled (judge 0, QA 0)"
+}

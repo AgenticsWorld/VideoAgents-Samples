@@ -1,0 +1,77 @@
+{
+  "character_id": "CHAR-alice-sister",
+  "name": "Alice's Sister",
+  "source_language": "en",
+  "source_speaker_labels": ["Alice's sister"],
+  "produced_by_task": "p3-dialogue-style-pb1",
+  "register": {
+    "level": "gentle, practical, slightly grown-up English of a well-read clergyman-scholar's daughter in her mid-teens (h1_summary §1)",
+    "summary": "The only fully waking voice. Warm and indulgent ('dear') but already speaking like a young woman in charge: she humours the dream, then turns Alice home to tea. Only two lines in the source, so beyond them the card is designed (inferred:true) for any new waking-frame lines dialogue-rewrite may need (ev0001 opening, ev0053–ev0054 close).",
+    "examples": [
+      { "ref": "ch012-d0063", "chapter": 12, "text": "Wake up, Alice dear! Why, what a long sleep you've had!" },
+      { "ref": "ch012-d0065", "chapter": 12, "text": "It was a curious dream, dear, certainly: but now run in to your tea; it's getting late." }
+    ]
+  },
+  "catchphrases": [
+    { "text": "dear / Alice dear", "freq": "high", "count_in_source": 2, "example_refs": ["ch012-d0063", "ch012-d0065"], "example_chapters": [12] },
+    { "text": "run in to your tea", "freq": "low", "count_in_source": 1, "example_refs": ["ch012-d0065"], "example_chapters": [12] }
+  ],
+  "sentence_style": {
+    "length": "short to medium (mean 14 words), complete and well-formed; affectionate opener, then a practical instruction",
+    "mean_words": 14.0,
+    "patterns": [
+      {
+        "rule": "Endearment attached to the name or tacked on mid-sentence ('Alice dear', ', dear,').",
+        "examples": [
+          { "ref": "ch012-d0063", "chapter": 12, "text": "Wake up, Alice dear!" },
+          { "ref": "ch012-d0065", "chapter": 12, "text": "It was a curious dream, dear, certainly:" }
+        ]
+      },
+      {
+        "rule": "Indulge, then redirect: she concedes Alice's point ('certainly') and follows with 'but now' plus a household instruction tied to the time of day.",
+        "examples": [
+          { "ref": "ch012-d0065", "chapter": 12, "text": "… but now run in to your tea; it's getting late." }
+        ]
+      },
+      {
+        "rule": "Inferred for new waking-frame lines: brief, book-reader's replies that do not look up from the page, such as a mild hush or a gentle correction. No questions of wonder: she is the calm reference point against which the dream is measured.",
+        "inferred": true,
+        "reason": "the source gives her no opening lines (ch001-p01 shows her only reading a book 'without pictures or conversations'); designed from ch001-p01, ch012-p27..p29 and the SUP-001 frame so that dialogue-rewrite has a rule for ev0001 lines",
+        "examples": [
+          { "ref": "ch001-p01", "chapter": 1, "text": "(prose) once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it" },
+          { "ref": "ch012-d0063", "chapter": 12, "text": "Why, what a long sleep you've had!" }
+        ]
+      }
+    ]
+  },
+  "vocabulary": {
+    "signature_words": ["dear", "certainly", "Why,", "now", "tea", "late"],
+    "preferred_fields": ["the household timetable (tea, getting late)", "gentle adult judgement of a child's talk ('a curious dream')"],
+    "examples": [
+      { "ref": "ch012-d0065", "chapter": 12, "text": "It was a curious dream, dear, certainly" }
+    ]
+  },
+  "address": {
+    "self": "I (inferred; she never uses a first person in the source)",
+    "to_alice": "Alice dear / dear",
+    "inferred": true,
+    "reason": "only two source lines, both addressed to Alice; first-person usage is designed",
+    "examples": [
+      { "ref": "ch012-d0063", "chapter": 12, "text": "Wake up, Alice dear!" }
+    ]
+  },
+  "interjections": ["Why,"],
+  "forbidden_words": [
+    { "domain": "post-1862 slang / modern chat register", "regex": "\\b(okay|ok|cool|guys?|awesome|yeah|yep|nope|gonna|wanna|gotta|kinda|sorta|totally|literally|dude)\\b", "reason": "period drama, 1862" },
+    { "domain": "Wonderland catchphrases in the waking voice", "regex": "\\b(curiouser|off with|we're all mad|the moral of|oh my ears|I shall be late|twinkle)\\b", "reason": "SUP-001 / ruling 5.3 B: the waking frame stays realistic; the sister only glimpses the dream at the trial and never speaks its idioms (she may call it 'a curious dream', which is her own adult word)" },
+    { "domain": "childish wonder and self-scolding", "regex": "\\b(I wonder|how queer|you foolish)\\b", "reason": "those mark Alice; the sister is the composed elder" }
+  ],
+  "drift": [
+    { "from_chapter": 1, "to_chapter": 12, "change": "No drift in her own voice: she is the fixed waking reference at the opening (reading, silent in the source) and the close (ch012). What changes is Alice's view of her, not her speech.", "examples": ["ch001-p01", "ch012-d0063", "ch012-d0065"], "inferred": true, "reason": "she has no lines before ch012; the opening-reading behaviour is taken from prose ch001-p01" }
+  ],
+  "backtest_markers": [
+    { "id": "S1", "rule_ref": "sentence_style.patterns[0] endearment", "weight": 3, "regex": "\\b(alice dear|dear)\\b" },
+    { "id": "S2", "rule_ref": "sentence_style.patterns[1] indulge-then-redirect", "weight": 3, "regex": "\\b(run in|your tea|getting late|wake up|long sleep|but now)\\b" }
+  ],
+  "backtest": {"method": "marker-claim back-test: a spoken source line hits when it matches >=1 backtest_markers regex and no forbidden_words regex; verse (recited text) excluded; full definition runs/p3-dialogue-style-pb1/result.json#backtest_method", "script": "code/p3-dialogue-style-pb1_backtest.py", "run_on": "2026-09-22", "threshold": 0.8, "hit_rate": 1.0, "sample_size": 2, "source_lines_total": 2, "coverage_of_spoken_lines": 1.0, "verse_excluded": 0, "forbidden_violations_in_source": 0, "cross_claim_rate": 0.023, "lift": 43.38, "attribution_top1_rate": 0.5, "misses": [], "pass": true, "note": "only 2 source lines exist; the hit rate is exact but statistically weak, and the inferred rules are untested by source"}
+}

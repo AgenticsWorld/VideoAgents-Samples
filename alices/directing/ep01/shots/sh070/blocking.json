@@ -1,0 +1,38 @@
+{
+  "shot_id": "sh070",
+  "group_id": "grp027",
+  "scene_no": "S08",
+  "scene_id": "SCN-long-hall",
+  "duration_s": 3.5,
+  "is_dialogue": true,
+  "group_position": "middle shot of grp027 — Alice on the map start ground (curtain), unchanged from sh069.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "sit",
+      "start_pos": "sitting hunched at the low curtain, still talking downward at herself",
+      "space_fragment_en": "sitting hunched at the low curtain on screen-right, facing down into her knees, shoulders shaking",
+      "facing": "unchanged — down into her knees; the composition still gives her nobody",
+      "path": [],
+      "beats": [
+        { "t": 0.4, "action": "snaps the order at herself", "sync": "LN-ep01-018b begins" },
+        { "t": 1.0, "action": "the order fails in the same breath", "sync": "LN-ep01-018b on 'Stop'" },
+        { "t": 2.4, "action": "she cries harder", "sync": "held" }
+      ],
+      "performance": {
+        "objective": "order herself to stop, the way she would be ordered",
+        "goal": "order herself to stop",
+        "emotional_arc": "from a hard command to immediate collapse of the command",
+        "arc_from": "hard command",
+        "arc_to": "collapse of the command",
+        "trigger": { "line_ref": "LN-ep01-018b", "word": "Stop" },
+        "no_early_reaction": ["the shoulders going", "a fresh sob", "the face screwing up"],
+        "forbidden_early": ["the shoulders going", "a fresh sob", "the face screwing up"],
+        "end_state": "face down in her knees, shoulders going harder than before, mouth open, no command left in it"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0007 (dream)", "note": "Alice alone." }
+}

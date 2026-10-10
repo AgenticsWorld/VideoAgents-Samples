@@ -1,0 +1,65 @@
+{
+  "schema_version": "whitebox_plan.v1",
+  "group_id": "grp030",
+  "scene_id": "SCN-long-hall",
+  "basis": "The aria: Alice sits in the water on the curtain anchor at (9.00, -2.55) for all 23 s and nothing moves but her hand and her focus. She picks the doll-sized fan and gloves out of the water at t=0.6, fans herself, and her look goes out to screen-left into near-black - on this cross-hall axis screen-left is -X, up the empty flooded hall, so the lead room really is unoccupied. The fan stops in mid-stroke at t=13.7 and does not start again. sh079 and sh080 share one sustained set-up (identical position, target and lens); sh078 is the same axis a little wider. The White Rabbit is gone: declared absent in scene_presence.",
+  "actors": [
+    {
+      "id": "CHAR-alice",
+      "kind": "person",
+      "size_m": [0.7672, 2.74, 0.6028],
+      "keyframes": [
+        {"t": 0.0, "position": [9.0, 0.0, -2.55], "pose": "sit", "yaw": -1.35, "head_pitch": 0.9},
+        {"t": 0.6, "position": [9.0, 0.0, -2.55], "pose": "sit", "yaw": -1.35, "head_pitch": 0.8},
+        {"t": 2.0, "position": [9.0, 0.0, -2.55], "pose": "sit", "yaw": -1.4, "head_pitch": 0.25},
+        {"t": 3.2, "position": [9.0, 0.0, -2.55], "pose": "sit", "yaw": -1.4, "head_pitch": 0.15},
+        {"t": 6.4, "position": [9.0, 0.0, -2.55], "pose": "sit", "yaw": -1.4, "head_pitch": 0.15},
+        {"t": 8.5, "position": [9.0, 0.0, -2.55], "pose": "sit", "yaw": -1.4, "head_pitch": 0.15},
+        {"t": 9.3, "position": [9.0, 0.0, -2.55], "pose": "sit", "yaw": -1.4, "head_pitch": 0.1},
+        {"t": 13.7, "position": [9.0, 0.0, -2.55], "pose": "sit", "yaw": -1.4, "head_pitch": 0.1},
+        {"t": 15.9, "position": [9.0, 0.0, -2.55], "pose": "sit", "yaw": -1.4, "head_pitch": 0.1},
+        {"t": 17.0, "position": [9.0, 0.0, -2.55], "pose": "sit", "yaw": -1.4, "head_pitch": 0.1},
+        {"t": 20.2, "position": [9.0, 0.0, -2.55], "pose": "sit", "yaw": -1.4, "head_pitch": 0.1},
+        {"t": 21.4, "position": [9.0, 0.0, -2.55], "pose": "sit", "yaw": -1.4, "head_pitch": 0.05},
+        {"t": 23.0, "position": [9.0, 0.0, -2.55], "pose": "sit", "yaw": -1.4, "head_pitch": 0.05}
+      ]
+    }
+  ],
+  "cameras": [
+    {
+      "shot_id": "sh078",
+      "start": 0,
+      "duration_s": 8.5,
+      "movement": "static",
+      "keyframes": [
+        {"t": 0.0, "position": [9.327, 0.6, -1.103], "target": [9.05, 1.95, -2.4], "fov": 26.9915},
+        {"t": 8.5, "position": [9.327, 0.6, -1.103], "target": [9.05, 1.95, -2.4], "fov": 26.9915}
+      ]
+    },
+    {
+      "shot_id": "sh079",
+      "start": 8.5,
+      "duration_s": 8.5,
+      "movement": "static",
+      "keyframes": [
+        {"t": 0.0, "position": [9.283, 0.6, -1.297], "target": [9.05, 1.95, -2.42], "fov": 26.9915},
+        {"t": 8.5, "position": [9.283, 0.6, -1.297], "target": [9.05, 1.95, -2.42], "fov": 26.9915}
+      ]
+    },
+    {
+      "shot_id": "sh080",
+      "start": 17.0,
+      "duration_s": 6.0,
+      "movement": "static",
+      "keyframes": [
+        {"t": 0.0, "position": [9.283, 0.6, -1.297], "target": [9.05, 1.95, -2.42], "fov": 26.9915},
+        {"t": 6.0, "position": [9.283, 0.6, -1.297], "target": [9.05, 1.95, -2.42], "fov": 26.9915}
+      ]
+    }
+  ],
+  "continuity": {"actors": "inherit", "camera": "cut"},
+  "warnings": [
+    "sh080 is sh079's frame held exactly (identical position, target, fov), so the cut between them is a pure hold; sh078 is the same 50 mm axis 0.20 m further back.",
+    "The lenses sit at 0.60 m on the flooded flagstones and look about 43 degrees up at a seated 2.74 m face - the only geometry a water-level close on a giant allows."
+  ]
+}

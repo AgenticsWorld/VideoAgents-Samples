@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh006",
+  "group_id": "grp003",
+  "scene_no": "S01",
+  "duration_s": 6.0,
+  "size": "close",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 50,
+  "camera_height_m": 0.30,
+  "angle": "level, lying on the grass at the child's eye-line",
+  "rack_focus": "none",
+  "start_frame": "Low profile close: her flushed face on the grass, out-of-focus stems crossing the near foreground, the fallen daisy on her pinafore in the lower corner, her eyes still open.",
+  "end_frame": "The identical frame with her eyes closed and staying closed — the last two seconds of the shot are held on the shut eyes and the drifting grass.",
+  "constraint_honoured": "'The closed-eye hold runs a real two seconds' — nothing in the camera changes across that hold, so the nap plants itself instead of being announced.",
+  "movement_note": "Any camera event here would read as the transition; the register change into S03 must be carried by silence alone.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

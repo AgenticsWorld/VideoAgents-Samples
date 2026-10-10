@@ -1,0 +1,23 @@
+{
+  "gate": "G0",
+  "decision": "PASS",
+  "decided_at": "2026-09-22T16:17:09+08:00",
+  "decided_by": "00-orchestration/workflow-orchestrator",
+  "checks": {
+    "depends_on": {
+      "p0-merge": "passed",
+      "p0-bible-init": "passed"
+    },
+    "auto": {
+      "structured_story_schema": "PASS",
+      "chapter_coverage_100": "PASS",
+      "ids_unique": "PASS",
+      "unknown_speaker_rate": "0.24%"
+    },
+    "defects_open_blocker_major": 0,
+    "due_gate_defects": 0,
+    "qa_hold": "none (all QA dimensions level 0 — not dispatched)",
+    "human_items": "n/a"
+  },
+  "waivers": []
+}

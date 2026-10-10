@@ -1,0 +1,34 @@
+{
+  "shot_id": "sh062",
+  "scene_id": "SCN-long-hall",
+  "size": "wide",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "centre",
+    "anchor_xy": [0.46, 0.68],
+    "size_in_frame": "enters at about 0.10 of frame height (0.254 m) and rises to about 0.34 (0.715 m at the knee gauge); her feet stay on one spot at y 0.88 and the whole change is upward"
+  },
+  "second_subject": {
+    "id": "glass_table",
+    "grid": "centre",
+    "anchor_xy": [0.56, 0.78],
+    "note": "GAUGE ONE. The tabletop plane sits at a fixed height in frame all shot; she passes it — shoulder, hip, knee — and it ends at her knee. The table never moves; only where it meets her changes."
+  },
+  "headroom": "starts at about 0.78 of frame height and closes to about 0.54. The frame is held so that the closing headroom is readable against the fixed lamp row at the top edge and the fixed door heads at the sides.",
+  "horizon_eyeline": "Held wide from the corner entrance, lens 0.8 m: flagstone line across at 0.88, tabletop plane at 0.78, dado at 0.66, west door heads at 0.24, lamp row at 0.14. Every one of those lines is nailed for the whole shot. Her eyeline climbs from 0.74 to 0.46 as she rises.",
+  "layers": {
+    "fg": "flagstones and one lamp pool laid across the bottom of frame",
+    "mg": "Alice rising on the spot, and the glass table beside her",
+    "bg": "the west door line and the receding lamp row, the other two gauges waiting their turn, held in frame throughout"
+  },
+  "gaze": {
+    "direction": "down_frame",
+    "lead_room": "none",
+    "note": "she looks down at the table as it sinks past her — a look that starts as looking up and ends as looking down at the same object without her head ever leaving the frame's centre column."
+  },
+  "balance": "Starts bottom-heavy and empty-topped; fills upward through the shot. The picture is composed to be completed by her growth rather than by a reframe.",
+  "leading_lines": "The lamp chain and the door line converge into depth and hold absolutely still — a fixed ruler against which a body changes length. That is the entire mechanism.",
+  "eye_first": "The table edge against her body — the eye should be watching the contact point, not her face, which is why she is kept small and the table is kept sharp.",
+  "safe_area_ok": true,
+  "constraint_binding": "MUST NOT BE CUT INSIDE, and sh062-sh063 must stay in sequence (the three gauges in order). GAUGE ONE is read off the set, not the lens: no zoom, no reframe, no morph, no glow. The west door line and the lamp row stay in frame as the other two gauges waiting their turn, so the sequence is legible as a sequence from this frame alone. Deep focus — every gauge sharp."
+}

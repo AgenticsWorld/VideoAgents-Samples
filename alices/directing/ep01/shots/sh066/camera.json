@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh066",
+  "group_id": "grp026",
+  "scene_no": "S07",
+  "duration_s": 5.0,
+  "size": "medium",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame; she crosses it in fragments)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 28,
+  "camera_height_m": 0.9,
+  "angle": "level",
+  "rack_focus": "none",
+  "start_frame": "From beside the glass table across to the low curtain, camera low on the stone: an enormous hand coming down over the tabletop to pinch the tiny golden key between finger and thumb — the key the size of a crumb in her fingers.",
+  "end_frame": "The same frame as she goes: a knee, then a bent back crossing the frame and running out of it both ways as she hurries bent double toward the little door, the far end of the hall still small and dark behind her.",
+  "constraint_honoured": "'At 2.74 m she can never be framed whole. The key is the size of a crumb in her fingers — the scale joke paid off.'",
+  "movement_note": "Letting her fragments cross a held frame is both the truthful giant grammar and the stable way to generate it; a pan would try to contain her and fail.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

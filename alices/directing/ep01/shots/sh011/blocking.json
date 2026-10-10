@@ -1,0 +1,47 @@
+{
+  "shot_id": "sh011",
+  "group_id": "grp006",
+  "scene_no": "S02",
+  "scene_id": "SCN-field-hedge-burrow",
+  "duration_s": 3.0,
+  "is_dialogue": false,
+  "group_position": "middle shot of grp006 — Alice is on the map path point (mid_field), two thirds of the way along her run_start -> spoil_fan line. CRE-001 is ahead of her, out of frame.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "stand",
+      "start_pos": "running out of the middle of the long grass toward the hedge foot, on the frame's centre line",
+      "space_fragment_en": "standing at a run out of the middle of the long grass, centred low in frame, coming straight on toward the fan of pale spoil",
+      "facing": "straight down her line of travel, past the lens at the hedge foot; the elm she was lying under is far behind her and she does not turn to it",
+      "path": [
+        { "t": 2.6, "to": "clear of the long grass, close to the hedge foot" }
+      ],
+      "beats": [
+        { "t": 0.0, "action": "comes out of the grass at full pelt", "sync": "shot opens" },
+        { "t": 1.6, "action": "no look back at the elm behind her", "sync": "the refusal the composition offers her and she declines" }
+      ],
+      "performance_beat": {
+        "objective": "close the last of the field before she loses him",
+        "goal": "close the last of the field",
+        "emotional_arc": "from hard effort to complete single-mindedness",
+        "arc_from": "hard effort",
+        "arc_to": "single-mindedness that has forgotten the afternoon behind her",
+        "trigger": { "beat": "she passes the point where a glance back would be natural and does not take it", "t": 1.6 },
+        "no_early_reaction": ["the head turning", "a glance over the shoulder", "slowing"],
+        "forbidden_early": ["the head turning", "a glance over the shoulder", "slowing"],
+        "end_state": "eyes forward past the lens, hair off her face, mouth open on the breath, no backward glance"
+      }
+    }
+  ],
+  "creatures": [],
+  "offscreen_presence": [
+    { "id": "CRE-001", "where": "ahead of her between the middle of the long grass and the fan of pale spoil", "note": "On his grp006 map line, out of frame for this reverse set-up." }
+  ],
+  "presence_check": {
+    "timeline_ok": true,
+    "violations": [],
+    "story_event": "ev0001 (real_frame, T0)",
+    "note": "No cutaway to the animal alone is permitted in S01/S02 (directing_plan POV rule); he stays out of frame here rather than being given a shot of his own."
+  }
+}

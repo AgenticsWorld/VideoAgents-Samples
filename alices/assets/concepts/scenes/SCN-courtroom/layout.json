@@ -1,0 +1,187 @@
+{
+  "schema_version": "scene_layout.v1",
+  "scene_id": "SCN-courtroom",
+  "layout_top": "layout_top.png",
+  "status": "calibrated_to_render",
+  "orientation": {
+    "top_of_map": "east wall (jury-box wall); the map is rotated so the court's long north-south axis runs left-right: right = north (throne end), left = south (main doors and gallery), bottom = west wall (dock)",
+    "extent_m": [
+      25,
+      14
+    ],
+    "note_en": "camera positions in views[] are described relative to these landmarks"
+  },
+  "landmarks": [
+    {
+      "id": "throne_dais",
+      "name": "royal dais and double throne",
+      "name_en": "the royal dais and double throne",
+      "kind": "furniture",
+      "xy": [
+        0.8,
+        0.51
+      ]
+    },
+    {
+      "id": "officers_door",
+      "name": "officers' door behind the dais",
+      "name_en": "the officers' door behind the dais",
+      "kind": "entrance",
+      "xy": [
+        0.86,
+        0.14
+      ]
+    },
+    {
+      "id": "herald_step",
+      "name": "herald's step",
+      "name_en": "the herald's step",
+      "kind": "feature",
+      "xy": [
+        0.72,
+        0.3
+      ]
+    },
+    {
+      "id": "jury_box",
+      "name": "jury-box",
+      "name_en": "the jury-box",
+      "kind": "furniture",
+      "xy": [
+        0.52,
+        0.25
+      ]
+    },
+    {
+      "id": "witness_stand",
+      "name": "witness stand",
+      "name_en": "the witness stand",
+      "kind": "furniture",
+      "xy": [
+        0.345,
+        0.39
+      ]
+    },
+    {
+      "id": "tarts_table",
+      "name": "table with the dish of tarts",
+      "name_en": "the table with the dish of tarts",
+      "kind": "furniture",
+      "xy": [
+        0.5,
+        0.515
+      ]
+    },
+    {
+      "id": "dock",
+      "name": "dock",
+      "name_en": "the dock",
+      "kind": "furniture",
+      "xy": [
+        0.63,
+        0.77
+      ]
+    },
+    {
+      "id": "crowd_floor",
+      "name": "open floor of the court",
+      "name_en": "the open floor of the court",
+      "kind": "terrain",
+      "xy": [
+        0.32,
+        0.55
+      ]
+    },
+    {
+      "id": "main_doors",
+      "name": "main doors under the gallery",
+      "name_en": "the main doors under the gallery",
+      "kind": "entrance",
+      "xy": [
+        0.12,
+        0.48
+      ]
+    }
+  ],
+  "views": [
+    {
+      "tile": 1,
+      "camera_from": "main_doors",
+      "looking_at": "throne_dais",
+      "size": "wide",
+      "angle": "eye",
+      "desc_en": "eye-level wide establishing shot from just inside the main doors under the gallery, down the whole court to the royal dais and double throne before the stained-glass halo roundel"
+    },
+    {
+      "tile": 2,
+      "camera_from": "throne_dais",
+      "looking_at": "main_doors",
+      "size": "wide",
+      "angle": "high_oblique",
+      "desc_en": "high oblique wide reverse from the royal dais over the table of tarts and the crowd to the main doors and the iron gallery"
+    },
+    {
+      "tile": 3,
+      "camera_from": "crowd_floor",
+      "looking_at": "jury_box",
+      "size": "medium",
+      "angle": "low",
+      "desc_en": "low-angle medium shot from the open floor looking up at the raised two-tier jury-box, slates on its ledge, stained-glass windows above"
+    },
+    {
+      "tile": 4,
+      "camera_from": "dock",
+      "looking_at": "throne_dais",
+      "size": "medium",
+      "angle": "eye",
+      "desc_en": "eye-level medium shot from the dock diagonally across the court to the royal dais and double throne"
+    },
+    {
+      "tile": 5,
+      "camera_from": "witness_stand",
+      "looking_at": "dock",
+      "size": "medium",
+      "angle": "eye",
+      "desc_en": "eye-level medium shot from the witness stand across the floor to the dock and its iron rail, the west windows' shafts above"
+    },
+    {
+      "tile": 6,
+      "camera_from": "jury_box",
+      "looking_at": "tarts_table",
+      "size": "close",
+      "angle": "high_oblique",
+      "desc_en": "high oblique close shot from the jury-box rail down onto the table with the dish of tarts in the middle of the mosaic floor"
+    },
+    {
+      "tile": 7,
+      "camera_from": "dock",
+      "looking_at": "tarts_table",
+      "size": "detail",
+      "angle": "eye",
+      "desc_en": "eye-level detail from the dock side on the large dish of tarts, the jury-box blurred behind"
+    },
+    {
+      "tile": 8,
+      "camera_from": "throne_dais",
+      "looking_at": "witness_stand",
+      "size": "medium",
+      "angle": "eye",
+      "desc_en": "eye-level medium shot from the royal dais down to the witness stand beside the jury-box"
+    },
+    {
+      "tile": 9,
+      "camera_from": "officers_door",
+      "looking_at": "herald_step",
+      "size": "close",
+      "angle": "eye",
+      "desc_en": "eye-level close shot from the officers' door on the herald's low oak step beside the dais"
+    }
+  ],
+  "calibration_note_en": "Coordinates re-read from the rendered image 2026-09-23. The main doors are a projecting porch in the south (left) wall. The public gallery does not read clearly: only a curved verdigris iron screen stands in the south-west corner. The officers' door and the herald's step are not drawn, so their xy is the Bible position, not a measured one. The jury-box is drawn at floor level, with no visible raised floor.",
+  "checklist": {
+    "architecture_match": false,
+    "lighting_match": true,
+    "style_match": true,
+    "camera_orthographic": "yes, near-nadir; the wall panelling shows slightly at the inner wall faces"
+  }
+}

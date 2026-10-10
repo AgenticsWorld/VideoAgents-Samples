@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh015",
+  "group_id": "grp007",
+  "scene_no": "S02",
+  "duration_s": 4.0,
+  "size": "medium",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 40,
+  "camera_height_m": 0.25,
+  "angle": "level",
+  "rack_focus": "none",
+  "start_frame": "The sh014 position held and the framing widened: Alice lying flat in the spoil in the near frame with the burrow mouth ahead of her, her black ankle-strap shoes clean and whole in shot.",
+  "end_frame": "The same frame with her gone into the black — head, shoulders and body taken by an opening that was somehow wide enough, her boots kicking once at the mouth and vanishing under the hedge.",
+  "constraint_honoured": "'No cutaway, no reaction shot — the first impossible thing on screen is played flat': the camera neither pushes in on the impossibility nor pulls back from it, and the shoes stay in frame to be paid off in S07.",
+  "movement_note": "Static also guarantees sh016 can be the identical frame she just left, which is what makes the cut into S03 invisible.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

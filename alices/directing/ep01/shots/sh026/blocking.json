@@ -1,0 +1,48 @@
+{
+  "shot_id": "sh026",
+  "group_id": "grp011",
+  "scene_no": "S04",
+  "scene_id": "SCN-shaft-landing-passage",
+  "duration_s": 5.0,
+  "is_dialogue": false,
+  "group_position": "first shot of grp011 — Alice on her map start (leaf_heap), which is also her end; the map gives her no path in this group. CHAR-white-rabbit is on his map start (root_tunnel) but out of frame.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "lie",
+      "start_pos": "landed on her back on the heap of sticks and dry leaves, then straight up onto her feet on it",
+      "space_fragment_en": "lying on her back on the heap of sticks and dry leaves, centred in frame, looking straight up into the dark overhead",
+      "facing": "face up to the black over the root curtain, then on her feet facing down the long passage",
+      "path": [
+        { "t": 2.2, "to": "on her feet on the same heap of sticks and dry leaves" }
+      ],
+      "beats": [
+        { "t": 0.0, "action": "lands; leaves fly up around her", "sync": "the two thumps from sh025 land here" },
+        { "t": 1.0, "action": "looks up — all dark overhead", "sync": "the way back is composed to contain nothing" },
+        { "t": 2.2, "action": "jumps to her feet at once, not a bit hurt", "sync": "the leaves she threw up settle back inside the frame" }
+      ],
+      "performance_beat": {
+        "objective": "find out where she has landed and whether the way back is still there",
+        "goal": "find out where she has landed",
+        "emotional_arc": "from the jolt of landing to brisk, undamaged practicality",
+        "arc_from": "the jolt of landing",
+        "arc_to": "brisk, undamaged practicality",
+        "trigger": { "beat": "she looks up and finds nothing but dark where the shaft should be", "t": 1.0 },
+        "no_early_reaction": ["the head lifting", "hands pushing the leaves aside", "the knees drawing up"],
+        "forbidden_early": ["the head lifting", "hands pushing the leaves aside", "the knees drawing up"],
+        "end_state": "on her feet on the heap, chin coming down from the dark overhead, leaves still on her skirt, eyes going to the passage"
+      }
+    }
+  ],
+  "creatures": [],
+  "offscreen_presence": [
+    { "id": "CHAR-white-rabbit", "where": "on the root-laced earth stretch, already hurrying away down the passage", "note": "grp011 blocking_map start for the White Rabbit. In the space, out of frame until sh027." }
+  ],
+  "presence_check": {
+    "timeline_ok": true,
+    "violations": [],
+    "story_event": "ev0002 result -> ev0003 (dream) — she lands on a heap of sticks and dry leaves and sees the Rabbit still ahead",
+    "note": "First legal appearance of CHAR-white-rabbit (dream layer). CRE-001 is a different entity and is not in this or any later ep01 scene."
+  }
+}

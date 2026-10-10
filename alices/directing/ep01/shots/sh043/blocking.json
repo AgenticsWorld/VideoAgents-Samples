@@ -1,0 +1,39 @@
+{
+  "shot_id": "sh043",
+  "group_id": "grp016",
+  "scene_no": "S05",
+  "scene_id": "SCN-little-door-passage",
+  "duration_s": 8.0,
+  "is_dialogue": false,
+  "group_position": "last shot of grp016 — Alice on the map start/end ground (hall_floor), sitting back on her heels without leaving it.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "kneel",
+      "start_pos": "kneeling on the flagstones at the open little door, leaning in until her forehead touches the frame",
+      "space_fragment_en": "kneeling on the flagstones in front of the little door on screen-right, facing the open door on screen-left, then sitting back on her heels",
+      "facing": "screen-left into the opening, then down to her own shoulders, then screen-left again",
+      "path": [],
+      "beats": [
+        { "t": 1.4, "action": "leans in until her forehead is pressed to the door frame", "sync": "the attempt" },
+        { "t": 3.0, "action": "her head will not go through", "sync": "the fact" },
+        { "t": 4.6, "action": "pulls back and sits down on her heels", "sync": "the retreat" },
+        { "t": 6.4, "action": "looks from the little door to her own shoulders", "sync": "the measurement, and not one tear" }
+      ],
+      "performance_beat": {
+        "objective": "get through a door she can already see the other side of",
+        "goal": "get through the door",
+        "emotional_arc": "from determined effort to a clear-eyed, unweeping longing",
+        "arc_from": "determined effort",
+        "arc_to": "clear-eyed longing, and not one tear",
+        "trigger": { "beat": "her forehead meets the frame and stops", "t": 3.0 },
+        "no_early_reaction": ["sitting back", "the eyes going to her shoulders", "the mouth crumpling"],
+        "forbidden_early": ["sitting back", "the eyes going to her shoulders", "the mouth crumpling"],
+        "end_state": "sitting back on her heels, hands flat on her thighs, eyes going from the doorway to her own shoulder and back, dry"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0003 result (dream) — too large for the little door", "note": "Alice alone." }
+}

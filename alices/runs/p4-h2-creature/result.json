@@ -1,0 +1,29 @@
+{
+  "task_id": "p4-h2-creature",
+  "agent": "04-creatures/creature",
+  "status": "done",
+  "ran_on": "2026-09-23",
+  "summary": "Text-only H2 fold-in on bible/creatures/creature.json per runs/g4/gate.json (approval ba96732d, PASS_WITH_WAIVER). Closed DEF-p4-creature-401 and -402; annotated DEF-p4-creature-403 as a waived, still-open major with corrective prompt wording for downstream use. No images generated or regenerated (user reroll budget = 0).",
+  "changed_files": [
+    { "path": "bible/creatures/creature.json", "note": "New amendment BIB-0029 (_meta.amendments[0]): CRE-001 distinct_from/screen_treatment de-staled (no more 'human performer per SUP-002' / ambiguous 'only real animal'); CRE-002/003/004 rendering_status and screen_treatment moved pending_H2 -> confirmed_by_H2 (approval ba96732d), text otherwise unchanged in substance; CRE-007 fully realigned to the approved proposal — retained swaddling through a hidden-cut-or-cloth-and-framing reveal (no morph, no gradual drift), name/scope_note/rendering/forms[0].appearance/behaviour/design_proposal/reason all updated; _meta.scope updated to reflect confirmed (not pending) status. CRE-005/CRE-006 (Gryphon/Mock Turtle) cards left untouched — they already match the approved anatomy; only their sheet images are the DEF-403 problem." },
+    { "path": "qa/defects/DEF-p4-creature-401.json", "note": "status open -> closed, closed_on 2026-09-23, resolution quotes the approved proposal (style.json open_points_pending_H2 #3) and cites the creature.json edit." },
+    { "path": "qa/defects/DEF-p4-creature-402.json", "note": "status open -> closed, closed_on 2026-09-23, resolution cites the CRE-001 wording fix." },
+    { "path": "qa/defects/DEF-p4-creature-403.json", "note": "status left open (major, waived). Added waived_at_gate: 'G4', waiver_ref: 'runs/g4/gate.json#waivers[defect_id=DEF-p4-creature-403]', waiver_note, and corrective_wording_for_future_use{CRE-005_gryphon, CRE-006_mock_turtle} for 08-video-gen/prompt to inline verbatim on any shot group featuring either creature. Sheets NOT regenerated." }
+  ],
+  "work_item_3_footmen_caterpillar": {
+    "finding": "H2-footmen-anatomy (CHAR-frog-footman / CHAR-fish-footman) and H2-caterpillar-face (CHAR-caterpillar) have no CRE-* entries in bible/creatures/creature.json. Per this file's own zero_entries_considered_and_excluded note and SOUL.md's boundary (dialogued/character-registered creatures are 03-characters/character-manager's territory, not creature.json's), those three figures' appearance cards live under bible/characters/CHAR-frog-footman/appearance.json, CHAR-fish-footman/appearance.json and CHAR-caterpillar/appearance.json.",
+    "action_taken": "None on creature.json — nothing to fold in there. bible/characters/** is explicitly out of scope for this task order (owned by 00-orchestration/memory-bible at the time of this run). No DEF-p4-creature-404 opened: this is a scope boundary, not a conflict with in-progress edits.",
+    "handoff": "The H2-footmen-anatomy and H2-caterpillar-face rulings (runs/g4/gate.json approved_design_proposals ids 'style.json open_points_pending_H2 #1' and '#5') still need folding into those three bible/characters/**/appearance.json files by whichever agent owns that fold-in; flagging so it is not dropped."
+  },
+  "acceptance_self_check": {
+    "valid_json": "PASS — bible/creatures/creature.json and all three defect files parse as valid JSON (python3 json.load verified).",
+    "ids_preserved": "PASS — all 7 creature ids present before the edit are still present: CRE-001, CRE-002, CRE-003, CRE-004, CRE-005, CRE-006, CRE-007.",
+    "no_stale_wording": "PASS — grep for 'human performer' in the touched cards: only legitimate uses remain (real human actors sharing a frame with a CGI animal, e.g. CRE-002/003/004 screen_treatment and CRE-005/CRE-006 rendering.note; CRE-007's 'human infant performer' is verbatim from the approved proposal itself). All uses describing an animal AS a human performer are either removed (CRE-001) or explicitly marked superseded/historical (CRE-001.distinct_from, the pre-existing BIB-0027 amendment log, and the Magpie/Canary excluded-candidate note, which was not touched and already carries its own 'Note (BIB-0027): ... now rendered as photoreal CGI' correction). grep for 'no CGI' and 'actor in costume': zero hits.",
+    "defect_status": "PASS — DEF-p4-creature-401 status=closed, DEF-p4-creature-402 status=closed, DEF-p4-creature-403 status=open with waiver annotation."
+  },
+  "not_run": {
+    "evaluation_scoring": "skipped — 质量评委 (evaluation) = 0 per project review settings.",
+    "qa_dimensions": "skipped — all 8 QA review dimensions = 0 per project review settings.",
+    "image_generation": "none performed or requested — text-only task; DEF-403 sheets intentionally not regenerated (reroll budget 0, waived at G4)."
+  }
+}

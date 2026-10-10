@@ -1,0 +1,220 @@
+{
+ "metric": "Metric (shared with 01-story/dialogue-rewrite, style_hit_rate_gte_80):\n  a line HITS its speaker's card when it matches >=1 backtest_markers[].regex\n  AND matches none of forbidden_words[].regex (case-insensitive, after normalising\n  curly quotes, stripping '_' emphasis and '[...]' elisions).\n  type=='verse' lines are recited texts (poems/accusation/letter) and are excluded\n  from the denominator; they are reported separately.\nGuards against over-wide cards: cross_claim_rate (share of the other carded\ncharacters' lines the card would also claim) and 'lift' = hit_rate/cross_claim_rate;\nplus a top-1 attribution test (weighted marker score, forbidden = veto).\nUsage: python3 code/p3-dialogue-style-pb1_backtest.py [--project-dir DIR] [--lines FILE.json]\n  --lines: optional [{\"speaker_id\":..,\"text\":..}] list (e.g. rewritten screenplay lines)",
+ "characters": {
+  "CHAR-alice-sister": {
+   "sample_size": 1,
+   "hits": 1,
+   "hit_rate": 1.0,
+   "forbidden_violations_in_source": [],
+   "cross_claim_rate": 0.03,
+   "lift": 33.0,
+   "attribution_top1_rate": 0.0,
+   "verse_excluded": [],
+   "misses": []
+  },
+  "CHAR-alice": {
+   "sample_size": 30,
+   "hits": 29,
+   "hit_rate": 0.967,
+   "forbidden_violations_in_source": [],
+   "cross_claim_rate": 0.5,
+   "lift": 1.93,
+   "attribution_top1_rate": 0.7,
+   "verse_excluded": [],
+   "misses": [
+    {
+     "id": "LN-ep01-023",
+     "text": "Ah, that's the great puzzle!"
+    }
+   ]
+  },
+  "CHAR-bill-the-lizard": {
+   "sample_size": 0,
+   "hits": 0,
+   "hit_rate": 0.0,
+   "forbidden_violations_in_source": [],
+   "cross_claim_rate": 0.059,
+   "lift": 0.0,
+   "attribution_top1_rate": 0.0,
+   "verse_excluded": [],
+   "misses": []
+  },
+  "CHAR-caterpillar": {
+   "sample_size": 0,
+   "hits": 0,
+   "hit_rate": 0.0,
+   "forbidden_violations_in_source": [],
+   "cross_claim_rate": 0.0,
+   "lift": null,
+   "attribution_top1_rate": 0.0,
+   "verse_excluded": [],
+   "misses": []
+  },
+  "CHAR-cheshire-cat": {
+   "sample_size": 0,
+   "hits": 0,
+   "hit_rate": 0.0,
+   "forbidden_violations_in_source": [],
+   "cross_claim_rate": 0.0,
+   "lift": null,
+   "attribution_top1_rate": 0.0,
+   "verse_excluded": [],
+   "misses": []
+  },
+  "CHAR-cook": {
+   "sample_size": 0,
+   "hits": 0,
+   "hit_rate": 0.0,
+   "forbidden_violations_in_source": [],
+   "cross_claim_rate": 0.0,
+   "lift": null,
+   "attribution_top1_rate": 0.0,
+   "verse_excluded": [],
+   "misses": []
+  },
+  "CHAR-dodo": {
+   "sample_size": 0,
+   "hits": 0,
+   "hit_rate": 0.0,
+   "forbidden_violations_in_source": [],
+   "cross_claim_rate": 0.029,
+   "lift": 0.0,
+   "attribution_top1_rate": 0.0,
+   "verse_excluded": [],
+   "misses": []
+  },
+  "CHAR-dormouse": {
+   "sample_size": 0,
+   "hits": 0,
+   "hit_rate": 0.0,
+   "forbidden_violations_in_source": [],
+   "cross_claim_rate": 0.029,
+   "lift": 0.0,
+   "attribution_top1_rate": 0.0,
+   "verse_excluded": [],
+   "misses": []
+  },
+  "CHAR-duchess": {
+   "sample_size": 0,
+   "hits": 0,
+   "hit_rate": 0.0,
+   "forbidden_violations_in_source": [],
+   "cross_claim_rate": 0.0,
+   "lift": null,
+   "attribution_top1_rate": 0.0,
+   "verse_excluded": [],
+   "misses": []
+  },
+  "CHAR-gryphon": {
+   "sample_size": 0,
+   "hits": 0,
+   "hit_rate": 0.0,
+   "forbidden_violations_in_source": [],
+   "cross_claim_rate": 0.059,
+   "lift": 0.0,
+   "attribution_top1_rate": 0.0,
+   "verse_excluded": [],
+   "misses": []
+  },
+  "CHAR-hatter": {
+   "sample_size": 0,
+   "hits": 0,
+   "hit_rate": 0.0,
+   "forbidden_violations_in_source": [],
+   "cross_claim_rate": 0.059,
+   "lift": 0.0,
+   "attribution_top1_rate": 0.0,
+   "verse_excluded": [],
+   "misses": []
+  },
+  "CHAR-king-of-hearts": {
+   "sample_size": 0,
+   "hits": 0,
+   "hit_rate": 0.0,
+   "forbidden_violations_in_source": [],
+   "cross_claim_rate": 0.147,
+   "lift": 0.0,
+   "attribution_top1_rate": 0.0,
+   "verse_excluded": [],
+   "misses": []
+  },
+  "CHAR-knave-of-hearts": {
+   "sample_size": 0,
+   "hits": 0,
+   "hit_rate": 0.0,
+   "forbidden_violations_in_source": [],
+   "cross_claim_rate": 0.0,
+   "lift": null,
+   "attribution_top1_rate": 0.0,
+   "verse_excluded": [],
+   "misses": []
+  },
+  "CHAR-march-hare": {
+   "sample_size": 0,
+   "hits": 0,
+   "hit_rate": 0.0,
+   "forbidden_violations_in_source": [],
+   "cross_claim_rate": 0.0,
+   "lift": null,
+   "attribution_top1_rate": 0.0,
+   "verse_excluded": [],
+   "misses": []
+  },
+  "CHAR-mock-turtle": {
+   "sample_size": 0,
+   "hits": 0,
+   "hit_rate": 0.0,
+   "forbidden_violations_in_source": [],
+   "cross_claim_rate": 0.0,
+   "lift": null,
+   "attribution_top1_rate": 0.0,
+   "verse_excluded": [],
+   "misses": []
+  },
+  "CHAR-mouse": {
+   "sample_size": 0,
+   "hits": 0,
+   "hit_rate": 0.0,
+   "forbidden_violations_in_source": [],
+   "cross_claim_rate": 0.059,
+   "lift": 0.0,
+   "attribution_top1_rate": 0.0,
+   "verse_excluded": [],
+   "misses": []
+  },
+  "CHAR-pigeon": {
+   "sample_size": 0,
+   "hits": 0,
+   "hit_rate": 0.0,
+   "forbidden_violations_in_source": [],
+   "cross_claim_rate": 0.0,
+   "lift": null,
+   "attribution_top1_rate": 0.0,
+   "verse_excluded": [],
+   "misses": []
+  },
+  "CHAR-queen-of-hearts": {
+   "sample_size": 0,
+   "hits": 0,
+   "hit_rate": 0.0,
+   "forbidden_violations_in_source": [],
+   "cross_claim_rate": 0.0,
+   "lift": null,
+   "attribution_top1_rate": 0.0,
+   "verse_excluded": [],
+   "misses": []
+  },
+  "CHAR-white-rabbit": {
+   "sample_size": 3,
+   "hits": 3,
+   "hit_rate": 1.0,
+   "forbidden_violations_in_source": [],
+   "cross_claim_rate": 0.097,
+   "lift": 10.33,
+   "attribution_top1_rate": 1.0,
+   "verse_excluded": [],
+   "misses": []
+  }
+ },
+ "all_pass_gte_0.80": false
+}

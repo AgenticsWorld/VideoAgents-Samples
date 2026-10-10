@@ -1,0 +1,28 @@
+{
+  "character_id": "CHAR-caterpillar",
+  "name": "Caterpillar",
+  "tier": "B",
+  "card_type": "individual",
+  "gender": "male",
+  "age_sense": "older man (appearance base_age_range 55-65)",
+  "timbre": "dry, languid, smoky older man's voice, slightly nasal drawl, heavy-lidded and bored",
+  "pitch": "low baritone, flat, falling cadence, one sharp upward flare when angered",
+  "pitch_range_hz": [85, 160],
+  "speed_wpm": [85, 110],
+  "speed_cpm": [323, 418],
+  "accent": "languid upper-class English drawl, elongated vowels",
+  "reference_style": "Contemptuous examiner: very short remarks separated by long hookah silences; 'Who are you?' slow and withering. Flares once, sharp and loud, when his own height is insulted, then back to the drawl.",
+  "emotion_range": {
+    "languid": { "speed_delta": "0%", "pitch_delta": "0semi", "volume": "soft", "note": "ch005-p01 'a languid, sleepy voice'" },
+    "stern_flare": { "speed_delta": "+20%", "pitch_delta": "+3semi", "volume": "loud", "note": "'Explain yourself!' — rearing upright" }
+  },
+  "age_variants": [],
+  "source_chapter": "ch005",
+  "sources": ["ch005", "ch005-p01", "ch005-p13"],
+  "voice_evidence": [
+    { "para": "ch005-p01", "quote": "addressed her in a languid, sleepy voice" }
+  ],
+  "inferred": true,
+  "inferred_fields": ["pitch", "pitch_range_hz", "speed_wpm", "speed_cpm", "accent"],
+  "reason": "'Languid, sleepy voice' sourced; pitch, rate and drawl designed for a superior older man."
+}

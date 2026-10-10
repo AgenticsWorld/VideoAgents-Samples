@@ -1,0 +1,94 @@
+{
+  "character_id": "CHAR-dormouse",
+  "name": "The Dormouse",
+  "source_language": "en",
+  "source_speaker_labels": ["Dormouse"],
+  "produced_by_task": "p3-dialogue-style-pb1",
+  "register": {
+    "level": "drowsy, mild, nursery-storyteller register with a touchy streak",
+    "summary": "Speaks half-asleep: slow, agreeable murmurs ('Of course, of course'), a meandering bedtime story about three sisters in a treacle-well that drifts by sound association, and sudden prickly dignity when interrupted or crowded ('If you can't be civil…', 'not in that ridiculous fashion').",
+    "examples": [
+      { "ref": "ch007-d0072", "chapter": 7, "text": "Once upon a time there were three little sisters, and their names were Elsie, Lacie, and Tillie; and they lived at the bottom of a well—" },
+      { "ref": "ch007-d0035", "chapter": 7, "text": "Of course, of course; just what I was going to remark myself." },
+      { "ref": "ch011-d0030", "chapter": 11, "text": "Yes, but I grow at a reasonable pace, not in that ridiculous fashion." }
+    ]
+  },
+  "catchphrases": [
+    { "text": "Treacle,", "freq": "high", "count_in_source": 4, "example_refs": ["ch007-d0074", "ch007-d0091", "ch011-d0063"], "example_chapters": [7, 11] },
+    { "text": "Of course, of course / Of course they were", "freq": "medium", "count_in_source": 2, "example_refs": ["ch007-d0035", "ch007-d0096"], "example_chapters": [7] },
+    { "text": "Once upon a time there were three little sisters", "freq": "low", "count_in_source": 1, "example_refs": ["ch007-d0072"], "example_chapters": [7] }
+  ],
+  "sentence_style": {
+    "length": "mid-length (mean 11.5 words) drowsy clauses joined by 'and', trailing off with dashes; one-word murmurs between",
+    "mean_words": 11.5,
+    "patterns": [
+      {
+        "rule": "Bedtime-story narration that drifts by sound association (well / well in; things beginning with M: mouse-traps, moon, memory, muchness).",
+        "examples": [
+          { "ref": "ch007-d0097", "chapter": 7, "text": "They were learning to draw, and they drew all manner of things—everything that begins with an M—" },
+          { "ref": "ch007-d0100", "chapter": 7, "text": "—that begins with an M, such as mouse-traps, and the moon, and memory, and muchness—" },
+          { "ref": "ch007-d0096", "chapter": 7, "text": "Of course they were, —well in." }
+        ]
+      },
+      {
+        "rule": "Sleepy one-word or stock replies, especially 'Treacle,' and dates in court.",
+        "examples": [
+          { "ref": "ch007-d0091", "chapter": 7, "text": "Treacle," },
+          { "ref": "ch011-d0019", "chapter": 11, "text": "Sixteenth," },
+          { "ref": "ch007-d0084", "chapter": 7, "text": "It was a treacle-well." }
+        ]
+      },
+      {
+        "rule": "Injured dignity: denies having slept, demands civility, objects to being crowded.",
+        "examples": [
+          { "ref": "ch007-d0068", "chapter": 7, "text": "I wasn't asleep, I heard every word you fellows were saying." },
+          { "ref": "ch007-d0087", "chapter": 7, "text": "If you can't be civil, you'd better finish the story for yourself." },
+          { "ref": "ch011-d0028", "chapter": 11, "text": "You've no right to grow here," }
+        ]
+      },
+      {
+        "rule": "Sleep-talk inversions that copy the tea-party's word-game in his own sleepy terms.",
+        "examples": [
+          { "ref": "ch007-d0021", "chapter": 7, "text": "You might just as well say, that 'I breathe when I sleep' is the same thing as 'I sleep when I breathe'!" }
+        ]
+      }
+    ]
+  },
+  "vocabulary": {
+    "signature_words": ["treacle", "well", "three little sisters", "draw", "muchness", "of course", "civil", "you fellows", "sleep", "breathe"],
+    "preferred_fields": ["nursery-tale formulae", "sleep and drowsiness", "small personal comforts and space"],
+    "examples": [
+      { "ref": "ch007-d0089", "chapter": 7, "text": "One, indeed! And so these three little sisters—they were learning to draw, you know—" },
+      { "ref": "ch007-d0076", "chapter": 7, "text": "So they were, very ill." }
+    ]
+  },
+  "address": {
+    "self": "I",
+    "to_tea_party": "you fellows",
+    "to_alice": "you (bare); 'you' with a rebuke when crowded",
+    "examples": [
+      { "ref": "ch007-d0068", "chapter": 7, "text": "I wasn't asleep, I heard every word you fellows were saying." }
+    ]
+  },
+  "interjections": ["Of course,", "One, indeed!", "So they were,"],
+  "forbidden_words": [
+    { "domain": "post-1862 slang / modern chat register", "regex": "\\b(okay|ok|cool|guys?|awesome|yeah|yep|nope|gonna|wanna|gotta|kinda|sorta|totally|literally|dude)\\b", "reason": "period drama, 1862" },
+    { "domain": "brisk commands and alarm", "regex": "\\b(quick|this moment|hush|off with|fetch|call the|oh dear)\\b", "reason": "he never hurries, orders or panics; urgency belongs to the White Rabbit and command to the Queen and King" },
+    { "domain": "sharp personal attack", "regex": "\\b(stupid|idiot|your hair|you goose)\\b", "reason": "his grievances are mild and self-regarding (civility, elbow-room); insults are the Hatter's and the Queen's" }
+  ],
+  "drift": [
+    { "from_chapter": 7, "to_chapter": 7, "change": "Tea-party: drifting in and out of sleep; the storyteller whose tale meanders, touchy when interrupted.", "examples": ["ch007-d0035", "ch007-d0072", "ch007-d0087"] },
+    { "from_chapter": 11, "to_chapter": 11, "change": "Court: seated beside a growing Alice, the drowsiness gives way to prim complaint about being squeezed ('ridiculous fashion'), before he murmurs 'Treacle' again and is hustled out.", "examples": ["ch011-d0028", "ch011-d0030", "ch011-d0063"] }
+  ],
+  "recitation_repertoire": {
+    "note": "His sleep-sung 'Twinkle, twinkle, twinkle, twinkle—' (ch007-d0056) is sung text, excluded from the hit-rate denominator.",
+    "refs": ["ch007-d0056"]
+  },
+  "backtest_markers": [
+    { "id": "M1", "rule_ref": "sentence_style.patterns[0] bedtime story", "weight": 3, "regex": "\\b(once upon a time|little sisters|well|treacle|draw|drew|muchness|they lived|learning|one, indeed)\\b" },
+    { "id": "M2", "rule_ref": "sentence_style.patterns[1] sleepy stock replies", "weight": 3, "regex": "^(of course|so they were|treacle|sixteenth)\\b" },
+    { "id": "M3", "rule_ref": "sentence_style.patterns[2] injured dignity", "weight": 3, "regex": "\\b(civil|I wasn't asleep|you fellows|no right|reasonable pace|ridiculous)\\b" },
+    { "id": "M4", "rule_ref": "sentence_style.patterns[3] sleep-talk", "weight": 3, "regex": "\\b(sleep|breathe)\\b" }
+  ],
+  "backtest": {"method": "marker-claim back-test: a spoken source line hits when it matches >=1 backtest_markers regex and no forbidden_words regex; verse (recited text) excluded; full definition runs/p3-dialogue-style-pb1/result.json#backtest_method", "script": "code/p3-dialogue-style-pb1_backtest.py", "run_on": "2026-09-22", "threshold": 0.8, "hit_rate": 1.0, "sample_size": 18, "source_lines_total": 19, "coverage_of_spoken_lines": 1.0, "verse_excluded": 1, "forbidden_violations_in_source": 0, "cross_claim_rate": 0.062, "lift": 16.12, "attribution_top1_rate": 0.722, "misses": [], "pass": true}
+}

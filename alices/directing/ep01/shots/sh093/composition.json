@@ -1,0 +1,29 @@
+{
+  "shot_id": "sh093",
+  "scene_id": "SCN-long-hall",
+  "size": "medium",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "mid_right",
+    "anchor_xy": [0.70, 0.46],
+    "size_in_frame": "in profile, about 0.56 of frame height, entering from screen right and crossing to the lower left before she goes in"
+  },
+  "headroom": "about 0.20 of frame height as she runs, closing to nothing as she drops — and then the frame has no figure in it at all for its last beat.",
+  "horizon_eyeline": "Profile at water level, lens 0.15 m: the waterline runs across at 0.62 of frame height, and her run takes her along its edge. Her eyeline is level at 0.40, forward along the water's edge, until her foot goes.",
+  "layers": {
+    "fg": "the water's edge and the wet stone she slips on, at the bottom of frame",
+    "mg": "Alice running right to left in profile",
+    "bg": "the glass table legs standing in the flood, the dark hall"
+  },
+  "gaze": {
+    "direction": "frame_left",
+    "lead_room": "left",
+    "note": "she runs and looks screen left toward the table; the lead room is open and is where she ends up going in. The camera does not follow her down into it."
+  },
+  "balance": "A moving profile crossing a level frame, which then empties and is left with nothing but rocking water at the bottom left. The composition is built to be abandoned.",
+  "leading_lines": "The water's edge is one long horizontal running the width of frame and her line of travel runs parallel to it; the slip is the moment those two lines cross.",
+  "eye_first": "Alice in profile, then her feet on the wet stone — and after the splash, the empty rocking water where she was.",
+  "safe_area_ok": true,
+  "constraint_binding": "The camera does NOT follow her down — it holds on the empty rocking water, so the frame is composed to survive her exit with the disturbed surface at the lower left as its final subject. Her exit position is matched to her surfacing in sh094: she goes in at the bottom of frame, screen left, and she comes up in sh094 at the bottom of frame, screen left.",
+  "pairs_with": "sh094 — exit position and surfacing position matched across the scene cut."
+}

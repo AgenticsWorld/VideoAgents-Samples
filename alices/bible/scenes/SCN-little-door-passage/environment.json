@@ -1,0 +1,82 @@
+{
+  "_meta": {
+    "file": "bible/scenes/SCN-little-door-passage/environment.json",
+    "owner": "05-scenes/environment",
+    "task_id": "p3-environment-sb1",
+    "attempt": 1,
+    "generated": "2026-09-22",
+    "amended": {"change_id": "BIB-0027", "task_id": "p4-cr-environment", "date": "2026-09-23", "fields": ["fixed.dream_design (new)"]},
+    "enum_set": "ENV-ENUM-v1 (defined once in runs/p3-environment-sb1/result.json)"
+  },
+  "scene_id": "SCN-little-door-passage",
+  "layer": "dream",
+  "fixed": {
+    "climate": "cramped crawl-passage between the hot hall and the garden; hot, close air at the hall end and fresh, cooler garden air at the far end (geography.json LOC-tiny-passage)",
+    "indoor": true,
+    "daylight_access": "far_opening_only",
+    "dream_design": {
+      "rule": "WR-010 / XA-magic-08 (dream, full)",
+      "flora": "fine roots and trailing ivy tendrils curl along the passage roof; at the far end the opening is crowded with garden flowers (climbing roses, sweet peas, lilies) spilling inward",
+      "ornament_cues": "the far opening reads as a rounded arch with a floral wreath, a bright halo roundel at the end of the dim tunnel; the root lines draw whiplash curves toward it, leading the eye (form belongs to architecture)",
+      "palette": "earth umber and dim amber at the hall end; at the far end a luminous pastel of rose, cream, lavender and pale gold",
+      "seasonal_guard": "the garden flowers match SCN-rose-tree-yard's July beds; no spring bulbs",
+      "inferred": true,
+      "reason": "The passage and the garden view are explicit (ch001-p14, ch007-p105). Roots, the wreathed opening and the palette gradient are designed to WR-010, and match the air gradient of the states."
+    },
+    "dream_growth": "Grows from a child peering through a small door in a garden wall. The dim tunnel is the hot shut-in afternoon. The bright opening at the end is the summer garden daylight, the same sun that is shining on the waking bank.",
+    "source": {"chapter": "ch001", "quote": "she knelt down and looked along the passage into the loveliest garden you ever saw"},
+    "inferred": true,
+    "reason": "Passage and garden view are explicit (ch001-p14, ch007-p105). The air gradient and daylight link are designed per ruling 5.2 A."
+  },
+  "variable_dims": {
+    "season": ["summer"],
+    "time_of_day": ["early_afternoon", "late_afternoon"],
+    "weather": ["none_enclosed"],
+    "wind": ["still", "light_breeze"],
+    "temperature": ["hot", "warm"]
+  },
+  "states": [
+    {
+      "state_id": "SCN-little-door-passage-S01",
+      "chapter": 1,
+      "chapter_id": "ch001",
+      "story_scene": "ch001-sc03",
+      "paragraphs": "ch001-p13..ch001-p14",
+      "timeline_ref": "ev0003",
+      "timeline_node": "TL-003",
+      "season": "summer",
+      "weather": "none_enclosed",
+      "wind": "still",
+      "temperature": "hot",
+      "time_of_day": "early_afternoon",
+      "waking_clock": "14:24-14:26 GMT (Alice asleep on the bank)",
+      "diegetic_daylight": "the passage itself is dim; at its far end a small, very bright opening of high-sun garden daylight (flowers, a glint of fountain spray)",
+      "conditions": "Alice kneels at the hall end, in the hall's hot, still air; the garden's cool freshness is only seen, not felt",
+      "source_chapter": "ch001",
+      "source": {"chapter": "ch001", "quote": "How she longed to get out of that dark hall, and wander about among those beds of bright flowers and those cool fountains"},
+      "inferred": true,
+      "reason": "The bright flowers, cool fountains and dark hall are explicit (ch001-p14). The clock is designed from the proportional dream clock. The 'still, hot' air at her end is carried from the hall (ch002-p09)."
+    },
+    {
+      "state_id": "SCN-little-door-passage-S02",
+      "chapter": 7,
+      "chapter_id": "ch007",
+      "story_scene": "ch007-sc03",
+      "paragraphs": "ch007-p105",
+      "timeline_ref": "ev0032",
+      "timeline_node": "TL-003",
+      "season": "summer",
+      "weather": "none_enclosed",
+      "wind": "light_breeze",
+      "temperature": "warm",
+      "time_of_day": "late_afternoon",
+      "waking_clock": "17:36-17:38 GMT (Alice asleep on the bank)",
+      "diegetic_daylight": "the dim passage opens onto warm, lower late-afternoon garden light that grows as Alice, a foot high, walks toward it",
+      "conditions": "a faint, cooler draught from the garden end meets her as she walks through",
+      "source_chapter": "ch007",
+      "source": {"chapter": "ch007", "quote": "then she walked down the little passage: and _then_—she found herself at last in the beautiful garden, among the bright flower-beds and the cool fountains"},
+      "inferred": true,
+      "reason": "The walk into the garden and its 'cool fountains' are explicit (ch007-p105). The draught and late-afternoon light are designed from the proportional dream clock (ev0032 about 17:36 GMT, sun about 23 degrees on the waking bank)."
+    }
+  ]
+}

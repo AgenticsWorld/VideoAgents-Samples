@@ -1,0 +1,25 @@
+{
+  "task_id": "p4-cr-breakdown-ep01-2",
+  "agent": "01-story/timeline-story",
+  "project": "alices",
+  "attempt": 1,
+  "status": "done",
+  "date": "2026-09-23",
+  "change_request": "BIB-0027",
+  "resolves": "story/episodes/ep01/script_breakdown.json out of sync with runs/p4-cr-screenplay-ep01-2 (DEF-p4-cr-screenplay-001 a/b) screenplay.md rewrite",
+  "authority_read": [
+    "bible/changelog.md#BIB-0027",
+    "runs/p4-cr-screenplay-ep01-2/result.json",
+    "story/episodes/ep01/screenplay.md (current, post p4-cr-screenplay-ep01-2)"
+  ],
+  "changed_files": [
+    {
+      "file": "story/episodes/ep01/script_breakdown.json",
+      "change_note": "Re-synced 4 mirrored action texts verbatim from the current screenplay.md, no other fields touched: S04 scene-level `action` and `blocks[0].text` -- 'a small, fussy man in a smart waistcoat, pink-tinted spectacles, gloves in hand' -> 'a white rabbit in a smart waistcoat, a pair of white kid gloves in one paw' (BIB-0027 photoreal CGI rabbit line). S05 scene-level `action` and `blocks[0].text` -- 'A long, low stone hall lit by a row of lamps hanging from the vaulted roof. Pointed oak doors all round the walls.' -> 'A long, low, windowless hall lit by a row of lamps hanging from the roof, each in a gilt halo, their tulip shades glowing amber. Verdigris iron ribs curl in whiplash scrolls across a shallow vault of faded gilded vines; slender iron lily-stems climb the honey-stone walls above a mosaic dado of pastel-and-gold vines. Oak doors with horseshoe arches run all round the walls, a small stained-glass roundel glowing over each one.' (BIB-0027 Mucha/Art Nouveau hall set). Rest of the file (S06/S07/S10 action mirrors, beat/purpose/emotion/tempo/timing fields, dialogue, notes, cast, hooks) is unchanged per scope -- out of scope for this task."
+    }
+  ],
+  "machine_checks": {
+    "check_script_breakdown_py": "PASS (python3 code/check_script_breakdown.py --project alices --ep ep01 --json -> pass:true, 0 errors, 0 warnings, 10 scenes/10 derived, 0 stale inputs)"
+  },
+  "pending_H2": "None from this task."
+}

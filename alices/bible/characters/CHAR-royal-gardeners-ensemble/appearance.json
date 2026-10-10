@@ -1,0 +1,48 @@
+{
+  "character_id": "CHAR-royal-gardeners-ensemble",
+  "card_type": "ensemble",
+  "tier": "extra",
+  "layer": "dream",
+  "headcount": {
+    "range": [3, 6],
+    "note": "Background garden staff only (never in the same frame as the named trio's dialogue); used to dress the rose-garden and croquet-ground edges. The source names only three gardeners, so this group stays small.",
+    "source_chapter": "ch008", "paragraph": "ch008-p01",
+    "quote": "there were three gardeners at it, busily painting them red",
+    "inferred": true,
+    "reason": "The source mentions no gardeners beyond Two, Five and Seven; the extra staff exist for production blocking per the controlled index entry."
+  },
+  "gender": "male",
+  "gender_note": { "inferred": true, "reason": "Matches the all-male named trio (CHAR-gardener-two/-five/-seven) and 1862 estate gardening crews." },
+  "gender_mix": { "male": 6, "female": 0 },
+  "hair": { "value": "short working men's cuts, mixed brown/grey/fair, some under flat cloth caps", "inferred": true, "reason": "Not described." },
+  "eyes": { "value": "natural mixed", "inferred": true, "reason": "Not described." },
+  "face": { "value": "weathered outdoor faces, bent to work, eyes down", "inferred": true, "reason": "Not described; background labour." },
+  "build": {
+    "height_range_cm": [165, 180],
+    "body_type": "ordinary working builds that fit the flat oblong tabard",
+    "card_shape": { "value": "oblong and flat, hands and feet at the corners (same as the named gardeners)", "source_chapter": "ch008", "paragraph": "ch008-p11", "quote": "these were all shaped like the three gardeners, oblong and flat, with their hands and feet at the corners" },
+    "scale_reference": "About 30-45 cm taller than Alice at base scale (135 cm, CHAR-alice scale anchor); relative size follows SUP-003.",
+    "inferred": true,
+    "reason": "Designed."
+  },
+  "base_age_range": "20-55",
+  "base_age_inferred": true,
+  "base_age_reason": "Mixed working ages.",
+  "marks": [ { "type": "soil and a little red paint", "position": "hands and knees", "description": "garden work; only those near the rose-tree carry red paint", "source_chapter": "ch008", "paragraph": "ch008-p01", "quote": "busily painting them red", "inferred": true, "reason": "Extends the sourced rose-painting to nearby background staff." } ],
+  "signature_items": [
+    { "item": "spade-suit card tabards with rank indices Three, Four, Six, Eight, Nine, Ten of Spades (never Two, Five or Seven — those belong to the named gardeners; never any club rank — the whole club suit belongs to the card soldiers and the visiting Clubs monarchs)", "inferred": true, "reason": "Keeps numerals unique so the named trio stays identifiable. BIB-0029 (DEF-p4-char-301) moved the gardeners from clubs to spades. The source names the gardeners' numbers but never their suit, while ch008-p11 'ten soldiers carrying clubs' anchors the club suit to the soldiers; the club suit has only thirteen cards and ten soldiers plus the King and Queen of Clubs (CHAR-visiting-monarchs-ensemble M01/M02) already fill twelve of them, so no club rank was left for a gardener. Spades also fit garden staff. The numeral -- the only thing the source fixes and the only thing that identifies the figure on screen -- is unchanged. Sheet note: the H2-locked sheet draws club trefoils; under reroll budget 0 it was not regenerated, so costumes.json visual_en is the pip authority for prompts (runs/g4/gate.json DEF-p4-costume-sheet-901 waiver)." },
+    { "item": "shared pack back-pattern", "source_chapter": "ch008", "paragraph": "ch008-p16", "quote": "the pattern on their backs was the same as the rest of the pack" },
+    { "item": "garden tools: watering cans, rakes, wheelbarrow, pots of red paint", "inferred": true, "reason": "Background dressing." }
+  ],
+  "default_outfit_tone": "Identical in cut and colour to CHAR-gardener-two/-five/-seven: ivory card-face tabard with black spade pips and indices, shared crimson-and-cream lattice back, crimson working shirt-sleeves and breeches, cream stockings, brown boots, optional flat brown cloth cap.",
+  "default_outfit_tone_source": { "inferred": true, "reason": "Index performer_concept 'card-suited gardening livery per FAC-house-of-hearts emblem_visual'; the suit is spades per BIB-0029." },
+  "period_silhouette": { "value": "1862 estate gardener's dress under a rigid card tabard", "inferred": true, "reason": "SUP-004." },
+  "sup002_coding": { "animal_or_card": "card (Spades, non-named ranks 3/4/6/8/9/10)", "forbidden": "no CGI", "rule": "bible/cultivation.json SUP-002, SUP-004" },
+  "variation_rules": [
+    "Never use numerals 2, 5 or 7 (they are the named gardeners) and never use any club-suit card at all (the club suit is the card soldiers' and the visiting Clubs monarchs'): these six are the Three, Four, Six, Eight, Nine and Ten of SPADES.",
+    "Keep them out of focus or in the background of the named trio's scenes; they never speak.",
+    "Must not look like soldiers: no caps with badges, no batons, no brass buttons."
+  ],
+  "doubling": { "value": "none", "reason": "Not part of any H1 ruling 5.3 B doubling pair." },
+  "prompt_summary_en": "Background Victorian gardeners dressed as living playing cards of the spade suit (Three, Four, Six, Eight, Nine, Ten of Spades): stiff flat oblong ivory card tabards with black spade pips, crimson shirt-sleeves and breeches, brown boots, flat cloth caps, carrying watering cans and rakes among rose bushes, soft focus background, 1862 period realistic drama, human actors"
+}

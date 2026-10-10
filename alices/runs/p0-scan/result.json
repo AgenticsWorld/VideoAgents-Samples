@@ -1,0 +1,23 @@
+{
+  "task_id": "p0-scan",
+  "agent": "01-story/novel-parser",
+  "attempt": 1,
+  "status": "completed",
+  "outputs": ["story/chapter_manifest.json"],
+  "input": "novel/Alices_Adventures_in_Wonderland_English.md (3338 lines, 151036 bytes, 26545 words)",
+  "summary": "Scanned by headings/line ranges/byte offsets only (prose not read). 12 chapters ch001-ch012 registered with line + byte ranges; front matter (title + Contents, lines 1-20, 92 words) excluded. Grouped into 4 whole-chapter batches of 3 chapters each.",
+  "key_decisions": [
+    "Batch size conversion: 10k-15k Chinese chars x ~0.6 words/char (zh->en translation ratio) = 6,000-9,000 English words per batch; raw English char counts not used (would yield 12 single-chapter batches for the same parse load).",
+    "Batches: b01 ch001-003 (5,990 w), b02 ch004-006 (7,398 w), b03 ch007-009 (7,049 w), b04 ch010-012 (6,016 w). No chapter split, no oversized chapter (max 2,617 w)."
+  ],
+  "self_check": {
+    "schema": "PASS (batches[{id,chapters[{id,file,title,word_count}],word_count}], ids zero-padded b01-b04 / ch001-ch012, original order)",
+    "chapter_files_coverage_100": "PASS (12/12 Contents entries = 12 headings = 12 chapters in batches; 26453 chapter words + 92 front-matter words = 26545 = wc -w; byte ranges contiguous 518-151036)",
+    "batch_word_count_in_range": "PASS with 1 justified exception: b01 = 5,990 words, 10 words (0.17%) below the 6,000 floor; any alternative whole-chapter grouping is less balanced (see manifest batches[0].exception)",
+    "ascii_filename": "PASS"
+  },
+  "word_count_method": "whitespace tokens incl. chapter heading line (wc -w compatible); body_word_count also recorded",
+  "conflicts_reported": [],
+  "defects": [],
+  "skills": "none selected for this station"
+}

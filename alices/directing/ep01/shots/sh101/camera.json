@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh101",
+  "group_id": "grp037",
+  "scene_no": "S10",
+  "duration_s": 2.0,
+  "size": "medium",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame; only the wake travels)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 40,
+  "camera_height_m": 0.05,
+  "angle": "level, lens right on the water surface",
+  "rack_focus": "none",
+  "start_frame": "Her water-level eye-line across the flooded hall on the sh100 axis: black water with broken warm lamplight on it, a single V-shaped wake starting across it toward camera.",
+  "end_frame": "The same frame as the wake travels steadily in and reaches the edge of the frame — nothing visible above or below the surface, nothing lit from beneath, and the episode cuts to black on it.",
+  "constraint_honoured": "'The LAST picture of the episode. Practical water only, no creature asset, nothing under the water lit. DO NOT cut back to her reaction after the wake.'",
+  "movement_note": "The dread is entirely in what the frame does not contain, so nothing optical may hint at a subject — a static lens on the surface is the only form this shot can take.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

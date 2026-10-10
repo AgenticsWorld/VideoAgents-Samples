@@ -1,0 +1,142 @@
+{
+  "task_id": "p4-h2-style-2",
+  "agent": "06-art/art-director",
+  "project": "alices",
+  "date": "2026-09-23",
+  "status": "completed",
+  "change_id": "BIB-0030",
+  "authority": "qa/defects/DEF-p4-style-003, opened by 00-orchestration/memory-bible under BIB-0029; H2 art-style lock signed by the user at gate G4 on 2026-09-23 (approval ba96732d, decision PASS_WITH_WAIVER, record runs/g4/gate.json)",
+  "status_note": "The CR-012 exception was applied as asked. The second item in the work order (palette_logic.accent_rules still naming the Lory and the crabs as scarlet / coral costume wearers) was NOT applied because it does not exist: those rules were already clean in v1.2.0. That is reported, not silently skipped, and palette_logic is byte-identical to before this run.",
+
+  "scope_discipline": {
+    "images": "none generated, re-rolled or edited (user auto-reroll budget = 0). Text only, zero media calls.",
+    "evaluation": "not run (user review setting: quality judge = 0)",
+    "qa_cosign": "not run (all QA dimensions = 0)",
+    "generator_scripts": "none written. bible/style.json was amended by surgical in-place text edits on the existing file; the only Python used was read-only verification (SHA-256 diff, JSON parse). Nothing was written to runs/ that belongs in code/.",
+    "files_not_touched_by_design": [
+      "bible/costumes.json - 06-art/costume's file, and the costume side was already final under BIB-0029. art-director does not edit it.",
+      "bible/characters/*, bible/props.json, bible/politics.json - read-only, used to confirm the ticket is canon.",
+      "style_fragment_ui, style_fragment_en, style_string_en, negative_prompt_en, negative_prompt_waking_addon_en - prompt-consumed verbatim, byte-identical (see prompt_fragment_diff_check).",
+      "palette_logic (all of it, incl. accent_rules), style_anchors, style_anchors_by_register, open_points_pending_H2, _meta.lock - byte-identical."
+    ]
+  },
+
+  "changed_files": [
+    {
+      "path": "bible/style.json",
+      "version": "1.2.0 -> 1.2.1",
+      "note": "CR-012.rule gains the Hatter's 10/6 hat price ticket as the fifth and only costume entry on the closed in-world lettering list, with size / short-mark / never-decorative guardrails; CR-012.applies_to 'props' -> 'props, costume'; CR-012.reason records BIB-0030 and the canon anchors. negative_list[10] reworded so it no longer contradicts the amended rule. downstream_notes['character-concept / costume'] gains the costume-lettering pointer. _meta.version -> 1.2.1 + version_note, _meta.write_via records the owner-write, _meta.amendments gains the BIB-0030 entry. All 15 CR ids, all 13 negative_list entries and all 23 top-level keys preserved."
+    },
+    {
+      "path": "qa/defects/DEF-p4-style-003.json",
+      "note": "CLOSED. status open -> closed, closed_by 06-art/art-director, closed_in_task p4-h2-style-2. The finding gains art_director_ruling (decision + reasoning + redo-cost assessment + the four guardrails), a resolution block listing every edit, and accent_rules_recheck recording the independent re-verification. Not re-routed."
+    },
+    {
+      "path": "bible/changelog.md",
+      "note": "New BIB-0030 section + JSON entry: the ruling, why ACCEPT and not re-route, the applies_to widening, the byte-identity guarantee, the zero redo cost, and the three impacted parties."
+    },
+    {
+      "path": "runs/p4-h2-style-2/result.json",
+      "note": "this receipt"
+    },
+    {
+      "path": "runs/p4-h2-style-2/style.before.json",
+      "note": "read-only pre-edit snapshot of bible/style.json v1.2.0, kept as the evidence the prompt_fragment_diff_check below was computed against"
+    },
+    {
+      "path": "runs/p4-h2-style-2/frag_before.json",
+      "note": "pre-edit length + SHA-256 of the five prompt-consumed fields"
+    }
+  ],
+
+  "defect_disposition": {
+    "defect": "DEF-p4-style-003",
+    "finding": "DEF-p4-style-003-a",
+    "disposition": "closed - ACCEPTED as proposed, not re-routed",
+    "decision": "KEEP the lettering. style.json CR-012 now names the Hatter's hat price ticket, marked 10/6, as an allowed in-world lettering.",
+    "reasoning": "The ticket is not a style choice, it is canon (ch011-p37; CHAR-hatter, FAC-mad-tea-party), and it is exactly the class of lettering CR-012 was written to permit: small, in-world, period hand-inked, physically motivated on a real object. CR-012 exists to keep Mucha poster typography and modern overlays out of frame, not to strip the Bible's own props and costume marks. A hand-inked price tag in a hat band is period-true under CR-002 (1862 trade practice) and carries no Art Nouveau display typography, so admitting it costs the rule nothing. Rejecting it would have deleted a canon detail to protect a whitelist, which is the wrong way round.",
+    "alternative_not_taken": "The alternative_if_rejected branch (drop the ticket from bible/costumes.json COS-015 and route back to memory-bible for a user ruling) was NOT taken. No costume change goes back to 06-art/costume or memory-bible for this finding.",
+    "redo_cost_assessment": "ZERO. No image regenerated (re-roll budget 0). COS-015 already carried the ticket as its working value, so no costume, prop or concept artefact becomes stale. No prompt-consumed field moved, so no already-written p7 prompt changes meaning and nothing must be re-emitted.",
+    "guardrails_written_into_CR-012": [
+      "the ONE named costume exception; no other garment, tabard, sash or accessory carries readable text",
+      "only the short price mark 10/6 need read on screen; the full phrase 'In this style 10/6' is not required",
+      "real size, hand-inked, tucked in the hat band; never set as poster, display or decorative lettering",
+      "every other CR-012 clause unchanged: Art Nouveau sets carry no poster lettering or decorative text panels; no other on-screen text, subtitle, caption, logo or watermark"
+    ]
+  },
+
+  "accent_rules_finding": {
+    "work_order_said": "runs/p4-h2-bible/result.json lists the palette_logic accent_rules that still name the Lory and the crabs as scarlet / coral costume wearers, which BIB-0027 turned into photoreal CGI animals. Fix those accent_rules in the same pass.",
+    "what_was_found": "NO SUCH WORDING EXISTS. They were already fixed in v1.2.0, before this run.",
+    "evidence": [
+      "palette_logic.accent_rules has four entries and they name only: Alice's cornflower blue #6F8FC0, Hearts crimson #8E1F2A and the House of Hearts, the SCN-falling-dream honey-gold-to-slate bridge, and the ch012 flying-cards-to-falling-leaves match-cut. No animal is named as a costume wearer in any of them.",
+      "A case-insensitive scan of the entire file for 'lory', 'crab', 'scarlet' and 'coral' returns exactly ONE hit in the whole of style.json: rules CR-003, which lists the Lory and 'the old and young Crab' among the photoreal CGI animals. That is the BIB-0027 end-state and is correct as written.",
+      "runs/p4-h2-bible/result.json itself agrees, under defect_dispositions -> DEF-p4-cr-costume-001 -> b_style_side: 'NO HAND-OFF NEEDED ... style.json v1.2.0 palette_logic.accent_rules no longer names the Lory or the crabs', and qa/defects/DEF-p4-style-003.json not_in_this_ticket says the same. The work order's second item appears to have been written from the older defect text rather than from the receipt."
+    ],
+    "action_taken": "NONE, deliberately. palette_logic is byte-identical to v1.2.0 (SHA-256 below). Inventing an edit here would have been a fabricated change to a locked file.",
+    "recorded_in": "qa/defects/DEF-p4-style-003.json -> accent_rules_recheck; bible/changelog.md BIB-0030 preamble"
+  },
+
+  "prompt_fragment_diff_check": {
+    "method": "bible/style.json was snapshotted to runs/p4-h2-style-2/style.before.json before the first edit; after the edits both files were parsed and each protected field compared by exact string equality and SHA-256 of its UTF-8 bytes.",
+    "result": "ALL PROTECTED FIELDS UNCHANGED - 8/8 PASS",
+    "fields": [
+      { "field": "style_fragment_ui",                "verdict": "PASS", "bytes": 1081, "sha256_before": "183982d5e974b138f7de57e54f2793d412a7598b72c99cc13ae069cb2497fe75", "sha256_after": "183982d5e974b138f7de57e54f2793d412a7598b72c99cc13ae069cb2497fe75" },
+      { "field": "style_fragment_en",                "verdict": "PASS", "bytes": 1081, "sha256_before": "183982d5e974b138f7de57e54f2793d412a7598b72c99cc13ae069cb2497fe75", "sha256_after": "183982d5e974b138f7de57e54f2793d412a7598b72c99cc13ae069cb2497fe75" },
+      { "field": "style_string_en",                  "verdict": "PASS", "bytes": 299,  "sha256_before": "3d5bc8b85ef4590da3c715f3d2ea8a9fb05616f5aec7be8e5ed4cb29f32d9b02", "sha256_after": "3d5bc8b85ef4590da3c715f3d2ea8a9fb05616f5aec7be8e5ed4cb29f32d9b02" },
+      { "field": "negative_prompt_en",               "verdict": "PASS", "bytes": 1049, "sha256_before": "9f109db92b1030074891789a9667d6d7fad7a65ff2d83601aae58ba8e88c9d4e", "sha256_after": "9f109db92b1030074891789a9667d6d7fad7a65ff2d83601aae58ba8e88c9d4e" },
+      { "field": "negative_prompt_waking_addon_en",  "verdict": "PASS", "bytes": 126,  "sha256_before": "60596a9a034e5fabcad3fb3df2f1226b1de0aaa5e7ccaf83472b653ca90bed60", "sha256_after": "60596a9a034e5fabcad3fb3df2f1226b1de0aaa5e7ccaf83472b653ca90bed60" },
+      { "field": "palette_logic (whole block, incl. accent_rules)", "verdict": "PASS", "sha256_before": "54dc0606cc4fc94ed5b09c1b618dc130f75eb070b2aee7e5c8f964f982a6b00b", "sha256_after": "54dc0606cc4fc94ed5b09c1b618dc130f75eb070b2aee7e5c8f964f982a6b00b", "note": "canonical JSON, sort_keys, ensure_ascii=False" },
+      { "field": "open_points_pending_H2",           "verdict": "PASS", "note": "the four entries resolved this morning are untouched" },
+      { "field": "style_anchors + style_anchors_by_register", "verdict": "PASS" }
+    ],
+    "note": "style_fragment_ui and style_fragment_en share one hash because the project UI language is English, so the two fields are identical by design (_meta.content_language)."
+  },
+
+  "acceptance_self_check": [
+    { "check": "bible/style.json is valid JSON after the edits", "result": "PASS - parses, 23 top-level keys, 15 rules" },
+    { "check": "the five prompt-consumed fields are byte-identical", "result": "PASS - see prompt_fragment_diff_check, 5/5 SHA-256 match" },
+    { "check": "palette_logic / open_points_pending_H2 / _meta.lock untouched", "result": "PASS" },
+    { "check": "no CR id added, removed, renumbered or recycled", "result": "PASS - CR-001..CR-015 before and after; the only rule whose body moved is CR-012" },
+    { "check": "negative_list count preserved", "result": "PASS - 13 before, 13 after; only item 10's wording moved" },
+    { "check": "CR-012 now names the Hatter's 10/6 ticket and covers costume", "result": "PASS - rule text lists it as the fifth allowed lettering; applies_to = 'props, costume'" },
+    { "check": "CR-012's other clauses survive verbatim in substance", "result": "PASS - the Art Nouveau no-poster-lettering clause and the no-other-text / no-subtitle / no-caption / no-logo / no-watermark clause are both still present and unweakened" },
+    { "check": "defect closed or re-routed with a reason", "result": "PASS - DEF-p4-style-003 closed, ACCEPTED, with the ruling and the redo-cost assessment on the finding" },
+    { "check": "exactly one changelog entry", "result": "PASS - BIB-0030; all 30 JSON blocks in bible/changelog.md parse" },
+    { "check": "no image generated or re-rolled", "result": "PASS - zero media calls" },
+    { "check": "no generator script written", "result": "PASS - in-place text edits; Python used read-only for hashing and parsing; code/ untouched" },
+    { "check": "ASCII filenames only", "result": "PASS" },
+    { "check": "no evaluation scoring, no QA co-sign", "result": "N/A by user review settings (all 0)" }
+  ],
+
+  "notes_for_orchestrator": [
+    {
+      "id": "note-1",
+      "topic": "the work order's second item was already done",
+      "detail": "The accent_rules fix does not exist to be made; v1.2.0 was already clean and runs/p4-h2-bible/result.json says so in its own defect_dispositions. Nothing is owed here, but if the orchestrator is tracking that item as open it can be closed against this receipt.",
+      "action_needed": "none"
+    },
+    {
+      "id": "note-2",
+      "topic": "one stale status string in a file art-director does not own",
+      "detail": "bible/costumes.json COS-015.lettering_ruling.status still reads 'costume side final; style.json amendment pending art-director'. That is now satisfied. It is stale wording, not a live disagreement, and it is not worth a controlled change on its own - fold it into the next real costumes.json edit (suggested value: 'both sides final (BIB-0030)'). Routed to 06-art/costume, not done here.",
+      "action_needed": "low priority, opportunistic"
+    },
+    {
+      "id": "note-3",
+      "topic": "CR-012 conformance checks must widen",
+      "detail": "CR-012.applies_to is now 'props, costume'. Any human or machine check of the lettering whitelist has to read bible/costumes.json as well as bible/props.json from here on, and must accept the 10/6 ticket on COS-015.",
+      "action_needed": "inform 11-qa and whoever writes the CR-012 check"
+    },
+    {
+      "id": "note-4",
+      "topic": "post-lock versioning of a frozen file",
+      "detail": "style.json is now v1.2.1 while _meta.lock.frozen_version stays 1.2.0. That is deliberate: 1.2.0 is what the user signed at H2 and this amendment reverses none of it. If the orchestrator's gate tooling compares _meta.version against frozen_version it will see a mismatch - the intended reading is 'signed at 1.2.0, plus post-lock controlled amendments listed in _meta.amendments'.",
+      "action_needed": "awareness only"
+    }
+  ],
+
+  "skills": [
+    { "note": "This work station has no auto-activation skills selected for the project; none applicable, none invoked." }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "character_id": "CHAR-gardener-seven",
+  "task_id": "p4-char-concept-cb3",
+  "generated": "2026-09-23",
+  "channel": {
+    "image": "volcengine",
+    "model": "doubao-seedream-5-0-pro-260628"
+  },
+  "user_refs": [],
+  "user_refs_note": "refs/characters/ has no entry for this character. refs/style/alice.jpeg read as the look reference, not injected (reason in runs/p4-char-concept-cb3/result.json).",
+  "default_costume": {
+    "source": "bible/costumes.json",
+    "outfit_id": "COS-042",
+    "visual_en_verbatim_in_prompt": true
+  },
+  "sheets": [
+    {
+      "file": "sheet.png",
+      "refs": [
+        "code/character_sheet_template_p4-char-concept-cb3.jpg (JPEG copy of agents/06-art/character-concept/templates/character_sheet_template.png, layout anchor)"
+      ],
+      "size": "2560x1440",
+      "n": 1,
+      "seed": null,
+      "prompt": "Four-panel character reference sheet following the reference layout: three full-body views (front / side / back) left to right, and one large head-and-shoulders close-up filling the right column; the exact same character, outfit and proportions in every panel; plain background. The first reference image is only the panel layout guide: copy its four-panel arrangement, not its grey mannequin shapes. Panel 1 (left): full-body front view, standing in a neutral pose, arms relaxed at the sides, showing the card face of the tabard. Panel 2: full-body true side profile, showing how thin and flat the card tabard is. Panel 3: full-body back view showing the card-back pattern of the tabard. Panel 4 (tall right column): head-and-shoulders close-up, facing the camera, neutral expression, face clearly lit. Each full-body figure is drawn a little small inside its panel, complete from the top of the head to the soles of the boots with clear space above and below, standing on a small patch of plain floor with a soft contact shadow; if any part is cut off by the panel edge the sheet is wrong. Plain soft grey-green studio backdrop in every panel, even soft daylight, no scenery, no captions or labels.\n\nSubject: Gardener Seven, a man about 36 years old, a real human actor. Tall, rangy and long-limbed, about 176 cm tall. Angular face, sharp nose, ruddy weathered complexion, mobile brows; hazel eyes; short, wiry red-brown auburn hair springing up at the crown, with full auburn mutton-chop side-whiskers. Indignant, quick-tempered demeanour. He reads oblong and flat like a playing card: the rigid card tabard makes a flat rectangle of his body, with his arms and legs emerging at its four corners. Wearing: an 1862 estate gardener's working dress under a playing card: a stiff flat oblong card tabard hanging front and back to the knee, the ivory front with seven black club pips and 7 in the corner indices, the back in a crimson-and-cream lattice card-back pattern with a small heart rosette, over crimson wool working shirt-sleeves and crimson work breeches, cream stockings and brown boots; a few red paint spots on the right cuff. A few red paint spots also at the right elbow. His hands are empty. Exactly seven large club pips on the card face, arranged exactly like a real Seven of Clubs playing card: two columns of three plus one between the upper pips, plus the small '7' index with a small club in the top-left and bottom-right corners.\n\nStyle: Photorealistic live-action fantasy film rooted in England in 1862, shot on 35mm film with anamorphic lenses, 16:9 widescreen. Real sets, real locations and real costumed actors in 1862 dress. Wonderland spaces are real built sets and set extensions in an Alphonse Mucha-inspired Art Nouveau design: flowing organic lines, floral and vine ornament, circular halo roundels, mosaic and stained glass, aged pastel-and-gold surfaces with patina and moss; the waking 1862 meadow stays plain period realism. Talking animals and fantastical creatures are photoreal CGI animals with naturalistic anatomy, real fur, feathers, skin and scales, lit by the same light and grounded with real contact shadows. Natural and practical light: sunlight, candlelight and oil lamps, soft haze with volumetric light shafts and soft colour through stained glass. Restrained palette of verdigris teal, slate grey, dusty rose, soft sage and lilac pastels and tarnished-gold accents, warmed by amber sun and candle glow. Fine film grain, gentle halation, soft depth of field, grounded and quietly melancholy.",
+      "negative": "cartoon, anime, animation, illustration, flat poster illustration, outline graphics, concept-art painting, digital painting, digital matte painting look, stylised 3D animation render, video game graphics, Pixar style, Disney animation style, cartoon animal face, big cartoon eyes, plush toy, human in animal costume, full-head animal mask, mascot costume, full-body fur suit, plastic skin, airbrushed, oversaturated, HDR, neon colors, candy pastel colors, horror monster, glowing magic, magic sparkles, fairy dust, energy beams, electric light, light bulb, neon sign, modern clothing, zipper, plastic, sunglasses, wristwatch, eyeglasses with modern frames, car, bicycle, power lines, tarmac road, Art Deco, steampunk gears, poster lettering, decorative text, gore, blood, wound, severed head, decapitation, executioner's axe, chopping block, guillotine, noose, gallows, blade at neck, execution, corpse, skeleton, horror, animal being struck, sexualized, watermark, logo, subtitles, caption, UI overlay, deformed hands, extra fingers, distorted face",
+      "negative_note": "style.json negative_prompt_en verbatim. Dream-world subject: waking addon not applied.",
+      "prompt_revision_note": "pip-placement sentence added before the first (only) full-size run, after CHAR-gardener-two came out with 3 large pips instead of 2"
+    }
+  ]
+}

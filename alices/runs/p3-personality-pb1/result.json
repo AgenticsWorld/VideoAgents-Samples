@@ -1,0 +1,74 @@
+{
+  "task_id": "p3-personality-pb1",
+  "agent": "03-characters/personality",
+  "project": "alices",
+  "phase": 3,
+  "attempt": 1,
+  "status": "done",
+  "completed_on": "2026-09-22",
+  "content_language": "en",
+  "outputs": [
+    "bible/characters/CHAR-alice/personality.json",
+    "bible/characters/CHAR-alice-sister/personality.json",
+    "bible/characters/CHAR-white-rabbit/personality.json",
+    "bible/characters/CHAR-queen-of-hearts/personality.json",
+    "bible/characters/CHAR-king-of-hearts/personality.json",
+    "bible/characters/CHAR-duchess/personality.json",
+    "bible/characters/CHAR-hatter/personality.json",
+    "bible/characters/CHAR-cheshire-cat/personality.json",
+    "bible/characters/CHAR-march-hare/personality.json",
+    "bible/characters/CHAR-dormouse/personality.json"
+  ],
+  "helper_scripts": [
+    "code/p3-personality-pb1_find.py (locate verbatim phrases -> paragraph ids)",
+    "code/p3-personality-pb1_check.py (machine check)"
+  ],
+  "inputs_read": [
+    "bible/h1_summary.md", "runs/h1-ruling/ruling.json", "bible/characters/index.json", "bible/WRITE_RULES.md",
+    "bible/world.json (frame, wonderland_real_counterparts)", "bible/politics.json (factions, laws)", "bible/culture.json (doubling scope note)", "bible/_index.json forward_refs_pending",
+    "story/structured_story/ch001-ch012.json", "story/events.json", "story/story_graph.json (arcs, motifs)"
+  ],
+  "shared_schema_notes": {
+    "evidence_object": "{chapter: chNNN, chapter_no: int, ref: chNNN-pNN (structured_story paragraph), event: evNNNN, quote: verbatim substring of that paragraph, note}. Habits and taboos use evidence_ref + event.",
+    "motivation": "core / want / fear / evidence[] / shifts[] (each shift: chapter, chapter_no, event, from, to, evidence_ref).",
+    "facade": "Always present. applies:false + note where the character has no surface/true split (so there are no null placeholders).",
+    "waking_life_embodiment": "For dream figures: adult_trait (the adult/authority trait from Alice's waking life the figure embodies) + waking_source + evidence + inferred:true + reason. For Alice and the sister (waking people): a summary of their waking role. These are design readings for the coming-of-age frame (brief.md), grounded in world.json wonderland_real_counterparts. Only the H1 5.3 B echoes (Dinah -> Cheshire Cat, sister glimpsed at trial, housemaid -> Mary Ann via the White Rabbit's mistake) are treated as doublings. Every other embodiment is thematic only, not a recast real person.",
+    "taboos": "Each has a rationale, a sourced evidence_ref and a qa_check line for screenplay and logic-qa. Designed (non-source) taboos carry inferred:true + reason.",
+    "performance_keynote": "Behaviour and body only, for blocking. Speech style belongs to dialogue-style and voice to voiceprint; neither is written here.",
+    "SUP_binding": "SUP-002 (human performers), SUP-005 (Cat dissolve), SUP-006 (pig-baby), SUP-014 (no execution / no contact) are reflected in the relevant taboos."
+  },
+  "key_decisions": [
+    "Alice's arc is written as deference -> self-possession (arc-alice-authority/identity). Her facade (polite surface / sharp, fair true self) must crack in steps: ch007 walk-out, ch008 'Nonsense!', ch009 'I've a right to think', ch012 'Who cares for you?'.",
+    "The dream figures are read as adult-authority traits: Queen = capricious, toothless adult temper (also Alice's own self-scolding: she boxes her own ears at croquet, ch001-p24); King = pompous procedural authority that gives way; Duchess = moralising, rough nursery adult; White Rabbit = tyranny of the clock and of rank; Hatter = adult making personal remarks, tied to tea-time; March Hare = etiquette hypocrisy; Dormouse = drowsy storyteller who scolds a child for 'growing'; Cheshire Cat (Dinah echo) = the one equal, a model of self-possession.",
+    "The Queen's menace must feel real until the ch009 reveal (Gryphon aside ch009-p46 and King's pardon ch009-p42). Screenplay must not undercut it earlier.",
+    "The sister is given a no-dialogue, no-intervention taboo at the trial glimpse, so that Alice, not an adult, ends the dream."
+  ],
+  "consistency_flags_for_logic_qa": [
+    { "character": "CHAR-duchess", "issue": "Reportedly boxed the Queen's ears (ch008-p40) yet cannot speak up to her face (ch009-p31-p33). This is in the source and unresolved there. Suggested reading: a flash of kitchen temper that put her under sentence, now followed by fear. Not patched." },
+    { "character": "CHAR-king-of-hearts", "issue": "Secret pardoner (ch009-p42) versus eager fetcher of the executioner (ch008-p60) and threatener of the Hatter (ch011-p27). Resolved in character as self-protection; flagged so it is not read as a contradiction." },
+    { "character": "CHAR-queen-of-hearts", "issue": "The inkstand thrown at Bill (ch012-p55) sits uneasily with SUP-014's no-contact rule. This is a staging question, not a personality one: the inkstand should land on the slate/desk, and ink splash only." }
+  ],
+  "conflicts": [],
+  "defects_filed": [],
+  "defects_note": "No conflict with the locked bible was found. The known age conflict (dictionary TERM-0001 'seven-year-old' vs H1 'about ten') is already filed as DEF-p3-dictionary-001 by character-manager. These cards use 'about ten'.",
+  "boundary_handoffs": [
+    "Speech style, catchphrases and diction -> 03-characters/dialogue-style (quotes here are evidence of behaviour only).",
+    "Voice -> 03-characters/voiceprint.",
+    "Relationships between characters -> 03-characters/relationship."
+  ],
+  "checks": {
+    "script": "code/p3-personality-pb1_check.py",
+    "result": "PASS (0 issues)",
+    "covered": [
+      "character_id is in index.json for all 10",
+      "traits / motivation / taboos / habits are non-empty",
+      "every trait has at least one evidence item with a chNNN chapter",
+      "268 paragraph refs resolve; every quote is a verbatim substring of its cited paragraph",
+      "every event id exists, and each cited paragraph lies inside that event's source range",
+      "no_unknown_placeholder: no UNKNOWN/TBD/N/A/empty/null values"
+    ],
+    "fixes_during_run": "2 event/paragraph mismatches fixed (sister trial-glimpse habit -> ch012-p63/ev0052; Rabbit 'Fetch me my gloves' -> ev0016)."
+  },
+  "skills": "No auto-activated skills are ticked for this station; none applied.",
+  "evaluation": "Skipped: quality judge = 0. All QA dimensions = 0."
+}

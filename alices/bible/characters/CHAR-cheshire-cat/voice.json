@@ -1,0 +1,29 @@
+{
+  "character_id": "CHAR-cheshire-cat",
+  "name": "Cheshire Cat",
+  "tier": "A",
+  "card_type": "individual",
+  "gender": "female",
+  "age_sense": "young adult woman (appearance base_age_range 26-32)",
+  "timbre": "smooth, velvety, low woman's voice, softly purring, amused, with a relaxed breathy warmth",
+  "pitch": "low mezzo to contralto, very small pitch movement, never rising to a shout",
+  "pitch_range_hz": [150, 230],
+  "speed_wpm": [110, 130],
+  "speed_cpm": [418, 494],
+  "accent": "unhurried, refined Received Pronunciation, soft consonants, lingering vowels",
+  "reference_style": "The only calm voice in the dream: never exclaims, never hurries, answers the literal question with mock-syllogisms, pays polite social calls. Dream echo of Dinah (ruling 5.3 B) — a cat's ease rendered by a human voice, no miaowing or animal sounds. Lines may continue briefly as the image dissolves (SUP-005); the voice itself is never processed.",
+  "emotion_range": {
+    "calm": { "speed_delta": "0%", "pitch_delta": "0semi", "note": "baseline — the Cat has almost no other state" },
+    "amused_low": { "speed_delta": "-10%", "pitch_delta": "-1semi", "volume": "soft", "note": "ch008-p49 'said the Cat in a low voice'" },
+    "terse_court": { "speed_delta": "+5%", "pitch_delta": "0semi", "note": "two-to-five-word lines at the croquet-ground (dialogue_style drift)" }
+  },
+  "age_variants": [],
+  "source_chapter": "ch008",
+  "sources": ["ch006", "ch008", "ch008-p49", "ch002-p22"],
+  "voice_evidence": [
+    { "para": "ch008-p49", "quote": "said the Cat in a low voice" }
+  ],
+  "inferred": true,
+  "inferred_fields": ["timbre", "pitch", "pitch_range_hz", "speed_wpm", "speed_cpm", "accent"],
+  "reason": "Gender copied from appearance.json (female, via the Dinah echo). personality performance_keynote gives 'A soft, amused voice'; the rest is designed. dialogue_style.json refers to the Cat as 'he' — logged as DEF-p3-voice-001; voice follows appearance.json."
+}

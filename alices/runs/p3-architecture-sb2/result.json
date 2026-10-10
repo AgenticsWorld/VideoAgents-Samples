@@ -1,0 +1,56 @@
+{
+  "task_id": "p3-architecture-sb2",
+  "agent": "05-scenes/architecture",
+  "attempt": 1,
+  "status": "done",
+  "generated": "2026-09-22",
+  "inputs_read": [
+    "bible/h1_summary.md", "runs/h1-ruling/ruling.json (via h1_summary)", "bible/WRITE_RULES.md", "bible/_index.json",
+    "bible/scenes/index.json", "bible/geography.json", "bible/culture.json", "bible/world.json (wonderland_real_counterparts)",
+    "bible/cultivation.json (SUP-002..SUP-014)", "bible/style.json (skeleton_empty)", "story/structured_story/ch002, ch005..ch012",
+    "refs/style/alice.jpeg", "bible/scenes/SCN-riverbank/architecture.json (sibling batch format and family-villa design, read-only)"
+  ],
+  "outputs": [
+    "bible/scenes/SCN-pigeon-treetop/architecture.json",
+    "bible/scenes/SCN-duchess-house-front/architecture.json",
+    "bible/scenes/SCN-duchess-kitchen/architecture.json",
+    "bible/scenes/SCN-cheshire-cat-path/architecture.json",
+    "bible/scenes/SCN-mad-tea-party/architecture.json",
+    "bible/scenes/SCN-wood-tree-door/architecture.json",
+    "bible/scenes/SCN-rose-tree-yard/architecture.json",
+    "bible/scenes/SCN-croquet-ground/architecture.json",
+    "bible/scenes/SCN-gryphon-sunning-spot/architecture.json",
+    "bible/scenes/SCN-mock-turtle-ledge/architecture.json",
+    "bible/scenes/SCN-courtroom/architecture.json"
+  ],
+  "shared_design": {
+    "card_schema": "Same field layout as the sibling batch (SCN-riverbank, SCN-field-hedge-burrow): scene_id, inherits, layer, int_ext, form, stories, source_chapter, culture_ref, period, structure[], materials[], details[], interior (INT only: layout, openings for 05-scenes/lighting, furniture_tone), scale_notes, negative[], prompt_ready_en. Added for dream scenes: grows_from (copied from scenes/index.json plus design_growth) and dream_design_language. Every structure/materials/details item carries src (a structured_story paragraph id) or inferred:true + culture_ref + why.",
+    "culture_basis": "culture.json has no architecture entries (it covers etiquette, dress, games, food, lessons and verse). Architectural style is therefore designed from world.json frame (Oxford, 1862, clergyman-scholar household), world.json wonderland_real_counterparts (cp-*), geography.json settlement.architecture_style, and the family villa fixed in SCN-riverbank architecture (gabled polychrome-brick Gothic Revival). CUL-* entries are cited where a custom drives a built element (CUL-016 card court -> suit-shaped beds, tiles and panels; CUL-019 tea; CUL-023 pepper; CUL-013/017 croquet; CUL-006 court procedure).",
+    "dream_language_rule": "Ruling 5.2 A: each dream space is built from real 1860s Oxford and English materials and forms (honey oolitic limestone, polychrome brick, Welsh slate, long-straw thatch, Gothic Revival oak, encaustic tile, cast iron), then altered in one legible way that grows out of its waking detail: the service wing detached (Duchess), a thatched farmhouse with ear chimneys and fur-like thatch (March Hare), a college garden door grown into a tree, carpet bedding cut in card suits, a croquet lawn laid over ridge-and-furrow, a seaside emptied of people, a book-illustration court in the card colours.",
+    "garden": "SCN-queens-garden is a container with no card, so SCN-rose-tree-yard sets the garden's shared materials (honey limestone, buff gravel, clipped box and yew) and SCN-croquet-ground and SCN-gryphon-sunning-spot repeat them by value with inherits:null (inherits must point to a scene card on the parent chain).",
+    "scale_reference": "Alice = 135 cm at 1:1, as set by the sibling SCN-riverbank card. Size beats in this batch: pigeon treetop (1:10 miniature canopy + 1:1 nest set), Duchess's house (1:6 four-foot miniature on arrival; full-size hero house with Alice at about knee height to the footmen at 'nine inches'), March Hare's house (full-size facade, Alice about 60 cm apparent at 'two feet'), garden arrival (3x oversized bed edge at 'a foot high'), courtroom growth (2/3-scale jury-box corner and dais + breakaway jury-box). All other scenes are 1:1."
+  },
+  "key_decisions": [
+    "Duchess's house: the text gives 'four feet high' and 'nine inches' but the footmen are human performers (SUP-002). So the four-foot house is a 1:6 miniature used only for the arrival shot. The doorstep plays on a full-size house, with Alice at about knee height to the footmen, rather than at a literal 1:6 ratio. The kitchen and the baby-to-pig exit are shot at 1:1.",
+    "Duchess's kitchen: the family's closed range is dreamed back into an open hearth with a crane-hung cauldron, following the source's 'leaning over the fire, stirring a large cauldron'.",
+    "The courtroom's jury-box is raised 1.2 m because ch012-p01 says the jurors fall 'on to the heads of the crowd below'.",
+    "The croquet-ground's ridges and furrows are designed as real medieval ridge-and-furrow grassland, a feature common in Oxfordshire, covered in close-mown turf.",
+    "The tea-party gets a tall-case clock stopped at six. It is a fixed set piece and does not replace the Hatter's watch prop (SUP-012).",
+    "Weathered stone griffin on a garden gate-pier = the waking seed of the Gryphon; plainly a statue, negatives forbid animation"
+  ],
+  "flags_for_other_agents": [
+    {"to": "06-art/art-director", "note": "The user's style reference refs/style/alice.jpeg uses Art Nouveau whiplash ironwork. That style dates from the 1890s, which is later than 1862. These cards keep the reference's aged dark ironwork and lancet stained glass, but use Gothic Revival forms, and they list Art Nouveau as a negative. Please confirm this reading in style.json (still skeleton_empty)."},
+    {"to": "05-scenes/lighting", "note": "interior.openings are given for SCN-duchess-kitchen and SCN-courtroom, including wall, size and sill height. For exteriors, the sun and shade sources come from the structure items: the horse-chestnut, the cedar, the ha-ha and the open shore."},
+    {"to": "06-art/prop", "note": "Some items in these cards are props that 06-art/prop owns: the great letter, the paint pots, the tea-things, the slates and the tarts. They are marked (props owned by 06-art/prop). The architecture cards only fix where these items sit."},
+    {"to": "07-directing/storyboard", "note": "The scale_notes in each card set how each size beat in SUP-003 is built. If the storyboard needs a different ratio for a beat, that change should come back through 05-scenes/architecture."}
+  ],
+  "conflicts": [],
+  "defects_filed": [],
+  "checks": {
+    "script": "code/p3-architecture-sb2_check.py",
+    "report": "runs/p3-architecture-sb2/check.json",
+    "result": "PASS: 11/11 cards. All files are valid JSON with scene_id in index.json. inherits is on the parent chain (SCN-duchess-kitchen -> SCN-duchess-house-front). form, materials, negative, prompt_ready_en, scale_notes and grows_from are present. INT cards have interior.openings. Every item has src or inferred + culture_ref + why. All 799 structured_story paragraph ids resolve, and every LOC-, SCN- and CUL- reference resolves. There are no placeholder values and all paths are ASCII."
+  },
+  "skills": "No auto-activated skills are ticked for this station; none applied.",
+  "qa": "Evaluation disabled (quality judge 0); visual-qa strength 0 -> no pre-review dispatched."
+}

@@ -1,0 +1,317 @@
+{
+  "task_id": "p6-camera-ep01",
+  "agent": "07-directing/camera-movement",
+  "project": "alices",
+  "ep": "ep01",
+  "attempt": 1,
+  "status": "completed",
+  "completed_on": "2026-09-23",
+  "product": "directing/ep01/shots/<shot_id>/camera.json (101 files, sh001-sh101)",
+  "products": [
+    {
+      "path": "directing/ep01/shots/sh001..sh101/camera.json",
+      "kind": "per-shot camera movement design",
+      "count": 101,
+      "status": "final_for_G6"
+    },
+    {
+      "path": "code/check_camera_ep01.py",
+      "kind": "machine check (movement_supported / one_move_per_shot / schema / lens budgets)",
+      "status": "PASS"
+    },
+    {
+      "path": "qa/defects/DEF-p6-camera-ep01-001.json",
+      "kind": "defect (minor, non-blocking) - two self-contradictions inside cinematography.json",
+      "status": "open"
+    }
+  ],
+  "inputs_read": [
+    "directing/ep01/shot_list.json (v1, final_for_G6) - duration, size, camera_position, constraint, poses, dialogue_lines for all 101 shots",
+    "directing/ep01/cinematography.json (v1) - lens_set, focal_rules (27), scale_lens_map.states, dof_policy (11), handoff.camera-movement",
+    "directing/ep01/directing_plan.md - 镜头语言倾向 1-8 (camera-height law, licensed moves, POV list, prohibitions)",
+    "directing/ep01/storyboard.json via shot_list (view_tile, poses)",
+    "shot_list generation_groups blocking_map (routes and landmarks for all 37 groups)",
+    "runs/p6-shots-ep01/result.json (DEV-1 the 4.0 s hook group, DEV-2 integer group totals)",
+    "settings.json (16:9, 480p draft, long_take off, group cap 30 s, video model doubao-seedance-2.x)",
+    "agents/08-video-gen/prompt/skills/sd20-pe/SKILL.md + references/guide-zh.md (the model's camera-term guidance and the one-move-per-shot rule)"
+  ],
+  "shared_conventions_stated_once_here_not_in_the_101_files": {
+    "aspect": "16:9",
+    "language": "English",
+    "capability_list_source": "No capability list was attached to the work order. The whitelist below is taken from the project's video model and its prompt-engineering guide (Seedance: standard camera terms are directly usable; one camera move per shot; zoom moves and speed ramps are additionally banned by cinematography.json and the directing plan).",
+    "supported_movement_vocabulary": [
+      "static",
+      "track_lateral",
+      "track_follow",
+      "dolly_forward",
+      "pedestal_up",
+      "pedestal_down",
+      "pedestal_follow",
+      "tilt_up"
+    ],
+    "rig_vocabulary": [
+      "locked_off",
+      "dolly",
+      "tripod_head",
+      "handheld"
+    ],
+    "not_used_anywhere_in_ep01": [
+      "zoom of any kind",
+      "crane / drone / high angle",
+      "orbit or arc",
+      "Dutch / roll",
+      "speed ramp",
+      "push_in (no shot in the episode is licensed one; sh056 explicitly forbids one)",
+      "rack focus (episode budget is zero)"
+    ],
+    "lens_set": "24 / 28 / 40 / 50 / 100 mm, 35 mm-equivalent, written into prompts verbatim; 24 mm budget 2 (sh052, sh064), 100 mm budget 1 (sh041) - all three spent exactly as cinematography.json assigns them",
+    "rack_focus": "none on all 101 shots (dof_policy rack_focus_budget: ep01 spends zero)",
+    "long_take_setting": "off - no camera move in any group depends on continuing from the previous group's tail frame; every group's camera starts fresh, and no move crosses a group boundary"
+  },
+  "counts": {
+    "files_written": 101,
+    "shots_covered": "sh001-sh101 (all)",
+    "movement_distribution": {
+      "static": 88,
+      "track_lateral": 5,
+      "track_follow": 2,
+      "pedestal_down": 2,
+      "pedestal_up": 1,
+      "dolly_forward": 1,
+      "pedestal_follow": 1,
+      "tilt_up": 1
+    },
+    "moving_shots": 13,
+    "moving_share_by_shot_count": "12.9%",
+    "moving_share_by_screen_time": "82.5 s of 542.0 s = 15.2%",
+    "lens_distribution_mm": {
+      "24": 2,
+      "28": 34,
+      "40": 28,
+      "50": 36,
+      "100": 1
+    }
+  },
+  "the_thirteen_moving_shots": [
+    {
+      "shot": "sh010",
+      "move": "track_follow",
+      "licence": "directing_plan move (a), following her run; the episode's only handheld, licensed in the S02 chase only"
+    },
+    {
+      "shot": "sh013",
+      "move": "pedestal_down",
+      "licence": "camera-height law - the lens drops 0.85 to 0.30 m with her kneel at the burrow"
+    },
+    {
+      "shot": "sh026",
+      "move": "pedestal_up",
+      "licence": "shot_list camera_position ('lens 0.6 m rising to 1.3 m with her'); landing and rise in one shot"
+    },
+    {
+      "shot": "sh033",
+      "move": "dolly_forward",
+      "licence": "directing_plan move (b), the episode's single hall reveal"
+    },
+    {
+      "shot": "sh034",
+      "move": "track_lateral",
+      "licence": "move (a), the door round first pass - reference half of the S05/S09 match pair"
+    },
+    {
+      "shot": "sh038",
+      "move": "track_lateral",
+      "licence": "move (a), the key round on the sh034 axis so the failure rhymes"
+    },
+    {
+      "shot": "sh039",
+      "move": "pedestal_down",
+      "licence": "camera-height law - 1.30 to 0.90 m with her crouch, arriving on the single halo-roundel composition"
+    },
+    {
+      "shot": "sh053",
+      "move": "pedestal_follow",
+      "licence": "shot_list camera_position ('riding up a little with each attempt and dropping back with her')"
+    },
+    {
+      "shot": "sh058",
+      "move": "track_lateral",
+      "licence": "move (a), the S07 crossing - 'the reasoning MOVES'"
+    },
+    {
+      "shot": "sh059",
+      "move": "track_lateral",
+      "licence": "move (a), the same crossing returned"
+    },
+    {
+      "shot": "sh076",
+      "move": "tilt_up",
+      "licence": "directing_plan move (c), the episode's one two-step failed tilt"
+    },
+    {
+      "shot": "sh089",
+      "move": "track_lateral",
+      "licence": "move (a) and the S09 half of the match pair - same 40 mm, lens height 1.30 -> 0.55"
+    },
+    {
+      "shot": "sh099",
+      "move": "track_follow",
+      "licence": "move (a) applied to her swim; shot_list camera_position asks for it ('travelling with her at her own pace')"
+    }
+  ],
+  "key_decisions": [
+    "One movement type per file, always. The S08 two-step tilt (sh076) is encoded as a single tilt_up with a two_step speed curve, not as two moves; sh053's ride is a single vertical follow with a tiny (about 0.10 m) amplitude and no second axis.",
+    "Every move is grounded in its own shot's duration: no moving shot is under 3.0 s, and each file states a rate (m/s or degrees) that fits the shot length. The 0.5-2.5 s shots (sh020, sh023, sh072, sh075, sh077, sh085, sh100, sh101) are all locked frames.",
+    "The three hold-for-the-whole-shot takes (sh025 9.0 s, sh048 12.0 s, sh086-sh087) are static with no move available at all: sh048's twelve unmoving seconds are what make the shrink read as forced perspective instead of an edit or an effect.",
+    "Lens, height and angle are instances of cinematography.json's focal_rules and scale_lens_map, not new choices. The two rationed 24 mm shots and the single 100 mm are spent on exactly the three images that file names.",
+    "The giant-state ceiling is enforced from sh068 onward: no lens above 1.00 m for the rest of the episode. The only set-up near the lamp line is sh064, which cinematography.json explicitly licenses as the last one allowed there. sh076's tilt runs out of room against her own bulk, so no lamp fixture can enter frame.",
+    "S10 never leaves the water: every lens is 0.05-0.20 m and the one travelling shot (sh099) stays on the surface - no crane, drone or high view anywhere.",
+    "Focus is never pulled anywhere in the episode (dof_policy budget of zero), so rack_focus is 'none' in all 101 files."
+  ],
+  "constraints_that_forced_my_hand": [
+    {
+      "shots": "sh001, sh022, sh048, sh062",
+      "constraint": "'Locked - no camera move' / 'the frame DOES NOT MOVE for twelve seconds' / 'read off the set, not the lens'",
+      "effect": "Static was the only legal answer; the size change and the fall are carried entirely by the set travelling or substituting inside a fixed frame."
+    },
+    {
+      "shots": "sh008",
+      "constraint": "'One unbroken shot containing both her shoes and the whole crossing - no hero angle, no anticipatory framing, no cut inside'",
+      "effect": "No pan with the rabbit, and no focus emphasis - the camera refuses to acknowledge him."
+    },
+    {
+      "shots": "sh009, sh093",
+      "constraint": "'No pan, no reframe: the camera does not follow her out' / 'The camera does NOT follow her down'",
+      "effect": "Two shots that ask to be follows are locked instead; both end on a deliberately emptied frame."
+    },
+    {
+      "shots": "sh016",
+      "constraint": "'Matched in size and position to the earth-tunnel frame that opens S03'",
+      "effect": "Absolutely static - any drift would turn an invisible cut into a visible one."
+    },
+    {
+      "shots": "sh025, sh079",
+      "constraint": "'MUST NOT BE CUT INSIDE' / 'must LAND AND END inside this shot'",
+      "effect": "One locked set-up for the whole take so the edit can lift the line and the sleep-onset whole."
+    },
+    {
+      "shots": "sh027, sh028, sh031",
+      "constraint": "'Never closer to him than a medium-wide in this scene… he is genuinely far away'",
+      "effect": "No move toward the Rabbit anywhere in S04 - the distance discipline rules out the push-in these shots would otherwise invite."
+    },
+    {
+      "shots": "sh041",
+      "constraint": "The garden POV must be flat and unreachable",
+      "effect": "No move and no focus change on the episode's only 100 mm; a push in would promise reachability."
+    },
+    {
+      "shots": "sh056",
+      "constraint": "'the box is found by her eye, not by a push-in'",
+      "effect": "Explicitly named prohibition; the discovery is carried by her look inside a held deep-focus wide."
+    },
+    {
+      "shots": "sh076",
+      "constraint": "'The episode's ONE two-step camera move… runs out of room before it ever finds her face', plus the handoff rule that it must run out before any lamp fixture enters frame",
+      "effect": "Tilt capped at about 38 deg in two steps, ending against the wall of her skirt and shoulder so no vault and no lamp can appear."
+    },
+    {
+      "shots": "sh086, sh087",
+      "constraint": "'Cause and effect in one unbroken frame' and 'sh086-sh087 MUST STAY IN ONE GROUP and be readable as the same continuous frame'",
+      "effect": "Identical static set-up on both, deep focus, and no rack - the two planes must be legible at once because there is no narration to explain them."
+    },
+    {
+      "shots": "sh089",
+      "constraint": "'Deliberate repetition - the same wall now takes three times as long to pass'",
+      "effect": "Focal length pinned to 40 mm to match sh034 exactly; only the lens height (1.30 -> 0.55) and the rate change."
+    },
+    {
+      "shots": "sh101",
+      "constraint": "'The LAST picture of the episode… DO NOT cut back to her reaction'",
+      "effect": "Static lens on the surface; nothing optical may hint at the wake's maker."
+    }
+  ],
+  "conflicts_found": [
+    {
+      "id": "CAM-CONF-1",
+      "severity": "minor, resolved in place, routed for information",
+      "between": "cinematography.json focal_rules.garden… pov_lens_rule ('six of the seven POVs are 40 mm', listing the flooded canyon in S10) vs focal_rules.flooded_canyon_wide (28 mm, and it names 'POV 7 of 7')",
+      "shot": "sh096",
+      "decided": "28 mm, per the specific context rule. The canyon is a scale statement whose near-foreground gauge is the water surface itself, and the same rule governs sh099, which must match it.",
+      "route_to": "07-directing/cinematography, for a wording fix in pov_lens_rule; no rework of this shot is implied."
+    },
+    {
+      "id": "CAM-CONF-2",
+      "severity": "minor, resolved in place, routed for information",
+      "between": "cinematography.json pov_lens_rule (which calls 'the key through the tabletop glass (S06)' a 40 mm POV) vs lens_set.rationed / focal_rules.tiny_scale_vertical_axis (24 mm, spent on exactly that image)",
+      "shot": "sh052",
+      "decided": "24 mm. The shot as frozen in the shot_list has Alice in frame at the foot of the leg, so it is objective rather than a true POV, and the rationed 24 mm budget names this image explicitly.",
+      "route_to": "07-directing/cinematography, same wording fix."
+    },
+    {
+      "id": "CAM-CONF-3",
+      "severity": "informational",
+      "item": "sh075 is shot on 40 mm, not the 28 mm the giant_fragment rule would default to.",
+      "why": "The frame is her hand and the lower half of her face coming into the top of a water-level close. A 28 mm that near a face risks the facial distortion style.json bans (CR-001), and the shot is the reverse of sh073/sh074 on the same water-level eyeline, where 40 mm is the established lens.",
+      "route_to": "07-directing/cinematography for acknowledgement; recorded in the shot's own movement_note."
+    }
+  ],
+  "deviations": [
+    {
+      "id": "DEV-CAM-1",
+      "severity": "needs the director to know",
+      "item": "The static/moving ratio comes out at about 87/13 by shot count (85/15 by screen time), not the directing plan's 'about 70/30'.",
+      "why": "The same section of the plan enumerates the licensed moves - following her walk or run, the single S05 hall reveal, and the S08 failed tilt - and the frozen shot_list then pins most remaining shots with an explicit constraint ('Static', 'Locked - no camera move', 'no pan, no reframe', 'the camera does NOT follow her down', 'not by a push-in'). Honouring the enumeration and the per-shot constraints leaves thirteen moves. Reaching 30 % would require inventing moves the plan does not license and several constraints forbid outright.",
+      "decided": "Resolved in favour of the explicit licence list and the locked constraints. Every licensed move is taken, plus the four camera-height follows the shot_list's own camera_position fields specify (sh013, sh026, sh039, sh053) and the swim in sh099.",
+      "route_to": "orchestrator -> 07-directing/director, for disclosure only. If the director wants the ratio nearer 70/30, the candidates are sh030, sh032, sh051, sh066 and sh090 (all currently static by choice rather than by constraint); that is a plan change, not a rework I will make on my own."
+    },
+    {
+      "id": "DEV-CAM-2",
+      "severity": "informational",
+      "item": "sh053's 'riding up a little with each attempt and dropping back with her' is delivered as one low-amplitude vertical follow (about 0.10 m, three beats), not as three separate camera events.",
+      "why": "One camera move per shot is the model's hard guidance; an oscillating or compound move on a nine-second shot is the classic source of unstable generation.",
+      "decided": "Single movement token pedestal_follow, single axis, amplitude kept small enough to read as the camera staying with her body rather than as a camera performance."
+    }
+  ],
+  "machine_checks": [
+    {
+      "check": "movement_supported + one_move_per_shot + schema + shot_list agreement + lens budgets + post-sh068 height ceiling + zero rack focus",
+      "how": "python3 code/check_camera_ep01.py",
+      "result": "PASS",
+      "detail": "101/101 files present and valid JSON; every movement is a single token from the supported vocabulary with no compound or contradictory value; shot_id, group_id, duration_s and size agree with shot_list for all 101; no move in a shot under 3.0 s; no moving shot against a constraint that forbids movement; lens values all inside the 24/28/40/50/100 set with the 24 mm budget at 2/2 and the 100 mm at 1/1; no lens above 1.00 m from sh068 onward; rack_focus 'none' on all 101."
+    }
+  ],
+  "acceptance_self_run": {
+    "movement_supported": "PASS - every movement is a standard camera term the video model executes directly, single-move per shot, and each is consistent with its shot's size, duration and constraint field.",
+    "all_101_present_and_valid_json": "PASS",
+    "eval_rubric": "not run - quality judge is 0 in this project's review settings",
+    "qa": "not run - all QA dimensions are 0"
+  },
+  "skills": [
+    {
+      "skill_id": "08-video-gen/prompt/performance-direction",
+      "status": "skipped",
+      "reason": "Performance-control skill is owned by blocking (intent layer) and prompt (evidence layer); this station designs camera movement only and produces no performance layer. No skill is auto-activated for 07-directing/camera-movement."
+    }
+  ],
+  "bible_edited": false,
+  "screenplay_edited": false,
+  "handoff": {
+    "08-video-gen/prompt": "Each camera.json carries exactly one movement term plus its direction, speed and easing - quote the movement as a single camera instruction per shot and do not combine it with any other move. 88 shots are static: write them as a fixed frame and let the described subject or set motion carry the shot. Lens values are 35 mm-equivalent and are to be written verbatim ('shot on a 40 mm lens'). Nothing in these files licenses a zoom, a rack focus or a transition.",
+    "08-video-gen/video-generation": "No move depends on a previous group's tail frame; every group's camera starts fresh (long_take off). The thirteen moving shots are listed above - if any of them re-rolls badly, the fallback is the same set-up held static, not a different move.",
+    "07-directing/composition": "Start and end framings in each file name the gauges that must be in frame (bottle / dado / flag joint / tabletop / lamp line / vault rib / door leaf / waterline). At every size beat both gauges are inside the frame and deep focus, per dof_policy.",
+    "07-directing/blocking": "Four shots hand the camera's height to her body rather than the reverse: sh013, sh026, sh039 (the lens drops or rises with her) and sh078-sh082, where a 0.55-0.60 m lens reaches her face only because the pose is hunched and folded. The travelling shots sh034, sh038, sh058, sh059, sh089 and sh099 assume constant pace - no stops inside the move.",
+    "07-directing/continuity-planning": "Movement-direction continuity to check: sh034 (south along the west doors) vs sh038 (the same axis reversed); sh058 out vs sh059 back on one axis; sh089 repeats sh034's axis at a third of the height; sh093 exits bottom-left and sh094 surfaces bottom-left to match; sh099 heads south toward the brightest water and sh100/sh101 hold that same axis."
+  },
+  "not_done_and_why": [
+    "No capability list was attached to the work order, so the supported-movement whitelist above was derived from the project's video model and its prompt-engineering guide rather than from a supplied document. If the scheduler has a formal list, it should be checked against the eight movement tokens used here - all eight are standard terms and none is exotic.",
+    "The static/moving ratio was not forced up to the plan's 70/30 (see DEV-CAM-1); routed to the director rather than worked around.",
+    "Group-level camera continuity beyond adjacent-shot direction is continuity-planning's to aggregate; I have listed the pairs that matter in the handoff."
+  ],
+  "files_written": [
+    "directing/ep01/shots/sh001/camera.json … directing/ep01/shots/sh101/camera.json (101 files)",
+    "code/check_camera_ep01.py",
+    "qa/defects/DEF-p6-camera-ep01-001.json",
+    "runs/p6-camera-ep01/result.json"
+  ],
+  "next": "07-directing/composition and 07-directing/blocking can read these directly; 08-video-gen/prompt injects the single movement term per shot at Phase 7."
+}

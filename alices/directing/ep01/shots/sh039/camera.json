@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh039",
+  "group_id": "grp015",
+  "scene_no": "S05",
+  "duration_s": 7.0,
+  "size": "medium",
+  "movement": "pedestal_down",
+  "direction": "straight down with her, 1.30 m to 0.90 m, no lateral or rotational component",
+  "speed": "0.40 m of drop in about 2.2 s (≈0.18 m/s), held before and after",
+  "speed_curve": "ease_out",
+  "rig": "dolly",
+  "lens_mm": 40,
+  "camera_height_m": "1.30 falling to 0.90",
+  "angle": "level throughout (the frame drops, it does not tilt)",
+  "rack_focus": "none",
+  "start_frame": "Child height beside the neighbouring locked hall door, along the base of the wall: Alice noticing the low curtain she had passed before, her hand going to its hem, the curtain still hanging full to the flagstones.",
+  "end_frame": "Settled at 0.90 m: the curtain lifted aside and the episode's single symmetrical halo-roundel framing centred in the frame — the fifteen-inch horseshoe-arched door with its stained-glass roundel directly above it, Alice crouched into the frame beside it for scale.",
+  "constraint_honoured": "'The episode's SINGLE Mucha halo-roundel composition — one clean symmetrical framing, spent here and nowhere else': the move exists only to arrive at that composition and then stops dead so it can be held.",
+  "movement_note": "One axis, bound to her crouch (camera-height law), finished by the halfway mark of a 7.0 s shot so the symmetrical frame gets a long clean hold.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

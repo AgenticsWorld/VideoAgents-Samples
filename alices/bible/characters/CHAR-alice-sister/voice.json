@@ -1,0 +1,29 @@
+{
+  "character_id": "CHAR-alice-sister",
+  "name": "Alice's sister",
+  "tier": "A",
+  "card_type": "individual",
+  "gender": "female",
+  "age_sense": "mid-teens (appearance base_age_range 15-16)",
+  "timbre": "warm, soft, smooth young woman's voice, gently rounded, a little low for her age, calm and unhurried",
+  "pitch": "medium-high mezzo-soprano, settled and even, small intonation swings",
+  "pitch_range_hz": [190, 290],
+  "speed_wpm": [135, 155],
+  "speed_cpm": [513, 589],
+  "accent": "Received Pronunciation of an educated upper-middle-class English girl: soft, clear, refined, no regional features",
+  "reference_style": "The only fully waking adult-ish voice: kind authority, indulgent 'dear', never raised. Must be clearly older, lower and slower than Alice so the two sisters never blur. Glimpsed silently at the trial (ruling 5.3 B) — no dream-side lines.",
+  "emotion_range": {
+    "calm": { "speed_delta": "0%", "pitch_delta": "0semi", "note": "reading, humouring the dream" },
+    "waking_call": { "speed_delta": "+5%", "pitch_delta": "+1semi", "volume": "medium", "note": "ch012-d0063 'Wake up, Alice dear!' — bright but gentle, never a shout" },
+    "reverie_murmur": { "speed_delta": "-15%", "pitch_delta": "-1semi", "volume": "soft", "note": "any designed lines in her closing reverie (ev0054); dreamy, half to herself" }
+  },
+  "age_variants": [],
+  "source_chapter": "ch012",
+  "sources": ["ch001", "ch012", "ch012-d0063", "ch012-d0065", "ev0001", "ev0053", "ev0054"],
+  "voice_evidence": [
+    { "para": "ch012-p65", "quote": "“Wake up, Alice dear!” said her sister" }
+  ],
+  "inferred": true,
+  "inferred_fields": ["timbre", "pitch", "pitch_range_hz", "speed_wpm", "speed_cpm", "accent"],
+  "reason": "The source never describes her voice; designed from personality ('Never uses force or raised-voice authority') and the household class (h1_summary §1)."
+}

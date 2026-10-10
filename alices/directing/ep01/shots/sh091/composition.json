@@ -1,0 +1,35 @@
+{
+  "shot_id": "sh091",
+  "scene_id": "SCN-long-hall",
+  "size": "medium",
+  "subject": {
+    "id": "PROP-golden-key",
+    "in_frame_characters": ["CHAR-alice"],
+    "grid": "top_right",
+    "anchor_xy": [0.66, 0.26],
+    "size_in_frame": "a spark on top of the tabletop, about 0.03 of frame height — smaller in frame than it has ever been, and still the brightest thing in the hall"
+  },
+  "second_subject": {
+    "id": "CHAR-alice",
+    "grid": "bottom_left",
+    "anchor_xy": [0.28, 0.66],
+    "note": "two feet high, looking back up the hall; her tiny reflection lies in the wet flagstone below the table."
+  },
+  "headroom": "about 0.24 of frame height above her, and the table edge crosses it well above her head — the 0.715 m table is now a high shelf and the frame says so by putting it above her eyeline.",
+  "horizon_eyeline": "Along the curtain-to-table axis, lens 0.55 m. The flooded floor runs across at 0.74 of frame height and doubles everything above it. Her eyeline goes up-right at about twenty degrees to the tabletop — for the first time since S06 she is looking up at that table again.",
+  "layers": {
+    "fg": "the wet flagstone and shallow water at the bottom of frame, holding her tiny reflection",
+    "mg": "Alice, small, turned to look back",
+    "bg": "the glass table standing in the flood, the key a spark on its top edge, the dark hall beyond"
+  },
+  "gaze": {
+    "direction": "frame_right",
+    "lead_room": "right",
+    "note": "her look crosses the whole frame diagonally up to the key. The lead room is the distance and the height between them, and both have got worse."
+  },
+  "balance": "A long diagonal from the small figure at bottom left to the small spark at top right, with a flooded floor doubling the whole thing. Two tiny bright points in a large dark picture.",
+  "leading_lines": "The waterline and its reflections run level under everything; the glass legs are verticals that connect the floor to the shelf. The eye climbs them from her to the key, which is exactly the journey she cannot make.",
+  "eye_first": "The key, because it still holds the highest specular value in the hall — then down the legs to the girl.",
+  "safe_area_ok": true,
+  "constraint_binding": "The one image of the scene, and the key is still the brightest thing in the hall — the value relationship established in sh037 is held here for the last time, with the key outshining everything including the lamp reflections on the water."
+}

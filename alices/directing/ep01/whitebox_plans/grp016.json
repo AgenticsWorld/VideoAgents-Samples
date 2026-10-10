@@ -1,0 +1,82 @@
+{
+  "schema_version": "whitebox_plan.v1",
+  "group_id": "grp016",
+  "scene_id": "SCN-little-door-passage",
+  "basis": "Alice never leaves the hall_floor anchor: she kneels at the open little door for the whole group, leans in until her forehead touches the frame at t=11.4 (moved 0.12 m closer, to X 1.48, her head 0.36 m from the jambs), finds her head will not go through, pulls back and sits down on her heels at t=14.6 and looks from the door to her own shoulders. sh041 is her POV straight down the 2.94 m passage to the garden arch; nobody is framed. The passage is 0.39 m between the stone faces with only 0.36 m of clear height under the vault head, which sets both the lens height and what the POV can actually see.",
+  "actors": [
+    {
+      "id": "CHAR-alice",
+      "kind": "person",
+      "size_m": [0.378, 1.35, 0.297],
+      "keyframes": [
+        {"t": 0.0, "position": [1.6, 0.0, 0.028], "pose": "kneel", "yaw": -1.5708, "head_pitch": 0.4},
+        {"t": 5.0, "position": [1.6, 0.0, 0.028], "pose": "kneel", "yaw": -1.5708, "head_pitch": 0.4},
+        {"t": 6.0, "position": [1.6, 0.0, 0.028], "pose": "kneel", "yaw": -1.5708, "head_pitch": 0.4},
+        {"t": 8.4, "position": [1.6, 0.0, 0.028], "pose": "kneel", "yaw": -1.5708, "head_pitch": 0.4},
+        {"t": 10.0, "position": [1.6, 0.0, 0.028], "pose": "kneel", "yaw": -1.5708, "head_pitch": 0.4},
+        {"t": 11.4, "position": [1.48, 0.0, 0.028], "pose": "kneel", "yaw": -1.5708, "head_pitch": 0.3},
+        {"t": 13.0, "position": [1.48, 0.0, 0.028], "pose": "kneel", "yaw": -1.5708, "head_pitch": 0.3},
+        {"t": 14.6, "position": [1.68, 0.0, 0.028], "pose": "kneel", "yaw": -1.5708, "head_pitch": 0.1},
+        {"t": 16.4, "position": [1.68, 0.0, 0.028], "pose": "kneel", "yaw": -1.5708, "head_pitch": 0.35, "head_yaw": 0.4},
+        {"t": 18.0, "position": [1.68, 0.0, 0.028], "pose": "kneel", "yaw": -1.5708, "head_pitch": 0.3, "head_yaw": 0.0}
+      ]
+    }
+  ],
+  "cameras": [
+    {
+      "shot_id": "sh041",
+      "start": 0,
+      "duration_s": 5.0,
+      "movement": "static",
+      "keyframes": [
+        {"t": 0.0, "position": [1.26, 0.3, 0.028], "target": [-1.55, 0.18, 0.028], "fov": 13.6855},
+        {"t": 5.0, "position": [1.26, 0.3, 0.028], "target": [-1.55, 0.18, 0.028], "fov": 13.6855}
+      ]
+    },
+    {
+      "shot_id": "sh042",
+      "start": 5.0,
+      "duration_s": 5.0,
+      "movement": "static",
+      "keyframes": [
+        {"t": 0.0, "position": [2.321, 0.3, 0.028], "target": [1.6, 0.95, 0.028], "fov": 26.9915},
+        {"t": 5.0, "position": [2.321, 0.3, 0.028], "target": [1.6, 0.95, 0.028], "fov": 26.9915}
+      ]
+    },
+    {
+      "shot_id": "sh043",
+      "start": 10.0,
+      "duration_s": 8.0,
+      "movement": "static",
+      "keyframes": [
+        {"t": 0.0, "position": [3.463, 0.4, 0.426], "target": [1.6, 0.4, 0.426], "fov": 33.3985},
+        {"t": 8.0, "position": [3.463, 0.4, 0.426], "target": [1.6, 0.4, 0.426], "fov": 33.3985}
+      ]
+    }
+  ],
+  "continuity": {"actors": "inherit", "camera": "cut"},
+  "warnings": [
+    "sh041's lens is set at 0.30 m rather than camera.json's 0.55 m: the door head is at 0.38 m and the vault head at 0.36 m, so a 0.55 m lens looks straight into masonry and sees no passage at all. At 0.30 m the sight line clears both and runs the full 2.81 m to the garden arch.",
+    "sh041: with the arch 2.81 m away, a 100 mm lens makes the arch opening about 0.67 of frame height instead of composition's 0.20 - the passage is not long enough for a 100 mm to compress it that far. Axis, height and lens are as authored; only the arch's share of the frame differs.",
+    "sh042 looks up about 42 degrees from the door threshold to her face, which is what a 0.30 m lens at 0.72 m from a kneeling girl geometrically gives; camera.json calls it 'slightly up'.",
+    "sh043 shares sh040's set-up and stands 0.96 m beyond the modelled tile edge - same model gap as WBI-ep01-grp015-001."
+  ],
+  "issues": [
+    {
+      "issue_id": "WBI-ep01-grp016-001",
+      "kind": "model_gap",
+      "severity": "advisory",
+      "question": "Same tile as WBI-ep01-grp015-001: sh043 needs 1.86 m of hall-side standoff but the modelled tile gives 1.26 m, and sh041's 100 mm POV cannot compress a 2.81 m passage into composition's 0.20-of-frame arch. Ship the out-of-tile lens and the wider arch, or move these shots onto SCN-long-hall first?",
+      "provisional": "Stage sh043 outside the tile edge at the distance its size code needs, and let sh041 show the arch at the size a 2.81 m passage actually gives on a 100 mm.",
+      "options": [
+        {"id": "outside", "label": "Keep the lens outside the detail tile (the default)", "consequence": "Correct geometry; the ground plane runs out behind the camera and the arch reads larger than composition says.", "cost": "none"},
+        {"id": "rescene", "label": "Re-point grp015/grp016 at SCN-long-hall", "consequence": "Real floor behind the lens; needs a shot_list scene_id change outside this station's authority.", "cost": "shot_list edit by 06-storyboard / shot-planning", "rewrites": ["directing/ep01/shot_list.json"]}
+      ],
+      "recommended": "rescene",
+      "shots": ["sh041", "sh043"],
+      "actors": ["CHAR-alice"],
+      "t_range_s": [0, 18.0],
+      "sources": [{"file": "bible/scenes/SCN-little-door-passage/whitebox.json", "quote": "passage: 2.94 m long, 0.39 m between the stone faces, 0.36 m clear height under passage_vault_head"}, {"file": "directing/ep01/shots/sh041/composition.json", "quote": "the garden arch occupies about 0.2"}]
+    }
+  ]
+}

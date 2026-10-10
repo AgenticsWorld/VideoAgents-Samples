@@ -1,0 +1,43 @@
+{
+  "shot_id": "sh068",
+  "group_id": "grp027",
+  "scene_no": "S08",
+  "scene_id": "SCN-long-hall",
+  "duration_s": 4.5,
+  "is_dialogue": false,
+  "group_position": "first shot of grp027 — Alice on her map start (curtain, hunched against the wall at the little door); no path in this group.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "sit",
+      "start_pos": "sitting up hunched under the vault at the low curtain, knees pulled to her chin",
+      "space_fragment_en": "sitting hunched under the vault at the low curtain on screen-right, knees to her chin, facing down into her own lap",
+      "facing": "down into herself; every direction in this frame is blocked by her own body or by stone",
+      "path": [],
+      "beats": [
+        { "t": 0.6, "action": "sits up off the floor", "sync": "she gives up the eye at the door" },
+        { "t": 2.0, "action": "pulls her knees to her chin", "sync": "the shape she will hold for the rest of the scene" },
+        { "t": 3.4, "action": "her face crumples", "sync": "handover to sh069" }
+      ],
+      "performance_beat": {
+        "objective": "hold herself together after giving up on the door",
+        "goal": "hold herself together",
+        "emotional_arc": "from stubborn composure to the face going before the sound does",
+        "arc_from": "stubborn composure",
+        "arc_to": "the face going",
+        "trigger": { "beat": "she sits up and the doorway leaves her eyeline", "t": 0.6 },
+        "no_early_reaction": ["the mouth pulling down", "the chin creasing", "the eyes filling"],
+        "forbidden_early": ["the mouth pulling down", "the chin creasing", "the eyes filling"],
+        "end_state": "knees to her chin, arms locked round them, face down and coming apart, no sound yet"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": {
+    "timeline_ok": true,
+    "violations": [],
+    "story_event": "ev0007 (dream) — stuck at giant size, she sits down and cries",
+    "note": "Alice alone. The White Rabbit is not back yet; he is legal in this scene only from sh073."
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh087",
+  "group_id": "grp032",
+  "scene_no": "S08",
+  "duration_s": 5.0,
+  "size": "close",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame, unbroken through the throw)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 40,
+  "camera_height_m": 0.25,
+  "angle": "level",
+  "rack_focus": "none",
+  "start_frame": "The sh086 frame exactly, continued: the fan still moving in the near foreground, the glass table edge still climbing behind it.",
+  "end_frame": "The same frame as she understands and flings the fan away: it leaves her hand, hits the water off to one side, and the table edge halts where it is — both events inside the one frame.",
+  "constraint_honoured": "'The fan stopping and the shrinking stopping happen IN THE SAME FRAME; without that the narrow escape means nothing.'",
+  "movement_note": "Identical set-up to sh086 with no move, so the pair can be generated and read as one continuous shot.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

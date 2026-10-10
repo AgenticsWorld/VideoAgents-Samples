@@ -1,0 +1,28 @@
+{
+  "character_id": "CHAR-royal-gardeners-ensemble",
+  "task_id": "p4-char-concept-cb3",
+  "sheet": "sheet.png",
+  "representative_member": "Four of Clubs background gardener",
+  "variants": [],
+  "status": "delivered_for_H2_review",
+  "layout_check": { "four_panels": true, "one_view_per_panel": true, "same_individual_all_panels": true, "size": "2560x1440 (JPEG payload)" },
+  "appearance_field_hits": {
+    "gender_male": true,
+    "age_20_55": true,
+    "weathered_outdoor_face_short_hair": true,
+    "card_front_four_club_pips_4_indices": true,
+    "card_back_crimson_cream_lattice_heart_rosette": true,
+    "crimson_shirt_sleeves_and_breeches": true,
+    "cream_stockings_brown_boots": true,
+    "flat_brown_cloth_cap_no_badge": true,
+    "no_soldier_markers (no badge, no baton, no brass buttons)": true,
+    "garden_tool (watering can)": true
+  },
+  "style_check": { "photoreal_live_action": true, "palette_within_style": true },
+  "self_check_defects": [
+    "Tabard hangs from cream shoulder straps and ends at mid-thigh, not at the knee as COS-043 states.",
+    "Little visible earth or paint wear ('working-worn, a little earth and paint')."
+  ],
+  "rerolls": [],
+  "reroll_budget_note": "User rerun setting = 0."
+}

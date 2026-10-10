@@ -1,0 +1,73 @@
+{
+  "shot_id": "sh005",
+  "group_id": "grp003",
+  "scene_no": "S01",
+  "scene_id": "SCN-riverbank",
+  "duration_s": 11.0,
+  "is_dialogue": true,
+  "group_position": "first shot of grp003 — both girls on the blocking_map start (sitting_shelf), the same ground they held through grp002; no path in the map.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "prone",
+      "start_pos": "on the same patch of grass at sitting_shelf, rolling from her front onto her back",
+      "space_fragment_en": "lying face down on the grass at the sister's sitting place, large in the near foreground on screen-right, rolling over onto her back",
+      "facing": "starts facing uphill into her sister, ends face up to the elm leaves",
+      "body_facing_target_id": "CHAR-alice-sister",
+      "path": [
+        { "t": 3.5, "to": "rolled onto her back on the same grass, head downhill, face to the canopy" }
+      ],
+      "beats": [
+        { "t": 1.0, "action": "still up on her elbows at the page", "sync": "LN-ep01-002 begins" },
+        { "t": 1.4, "action": "her head drops back from the book", "sync": "LN-ep01-002 on 'Hush'" },
+        { "t": 3.5, "action": "rolls onto her back", "sync": "after the line, into the silence" },
+        { "t": 7.0, "action": "picks one daisy at arm's length", "sync": "the heat beat" },
+        { "t": 9.5, "action": "lets the daisy fall onto her pinafore", "sync": "end of shot" }
+      ],
+      "performance": {
+        "objective": "give up on her sister without admitting she has been refused",
+        "goal": "give up on her sister without admitting she has been refused",
+        "emotional_arc": "from hopeful pestering to a heat-heavy, slightly sulky surrender",
+        "arc_from": "hopeful pestering",
+        "arc_to": "heat-heavy surrender",
+        "trigger": { "line_ref": "LN-ep01-002", "word": "Hush" },
+        "no_early_reaction": ["head dropping back", "rolling away", "eyes leaving the page"],
+        "forbidden_early": ["head dropping back", "rolling away", "eyes leaving the page"],
+        "end_state": "on her back, mouth closed, eyes half-lidded on the leaves overhead, one hand open on her pinafore"
+      }
+    },
+    {
+      "id": "CHAR-alice-sister",
+      "label": "Alice's Sister",
+      "pose": "sit",
+      "start_pos": "upright at sitting_shelf under the northern elm",
+      "space_fragment_en": "sitting upright at the sister's sitting place under the northern elm, small in the upper third on screen-left, eyes down on the book",
+      "facing": "square to the backwater, head bowed; she does not turn to speak the line",
+      "body_facing_target_id": null,
+      "path": [],
+      "beats": [
+        { "t": 1.0, "action": "turns a page and speaks over it", "sync": "LN-ep01-002" },
+        { "t": 2.5, "action": "settles back into the new page", "sync": "after the line" }
+      ],
+      "performance": {
+        "objective": "put the interruption down without looking up from her page",
+        "goal": "put the interruption down without looking up",
+        "emotional_arc": "from absorbed to absorbed, with one beat of mild elder-sister authority in the middle",
+        "arc_from": "absorbed, barely attending",
+        "arc_to": "absorbed again, the matter closed",
+        "trigger": { "line_ref": "LN-ep01-002", "word": "Hush" },
+        "no_early_reaction": ["turning her head to Alice", "raising her chin", "closing the book"],
+        "forbidden_early": ["turning her head to Alice", "raising her chin", "closing the book"],
+        "end_state": "eyes back on the print, mouth closed, head unmoved, the turned page settling under her hand"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": {
+    "timeline_ok": true,
+    "violations": [],
+    "story_event": "ev0001 (real_frame, T0)",
+    "note": "Unchanged pair on the bank."
+  }
+}

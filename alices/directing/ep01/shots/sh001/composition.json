@@ -1,0 +1,29 @@
+{
+  "shot_id": "sh001",
+  "scene_id": "SCN-falling-dream",
+  "size": "wide",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "top_centre",
+    "anchor_xy": [0.50, 0.27],
+    "size_in_frame": "whole figure, small — about one fifth of frame height, head to hem"
+  },
+  "headroom": "about 0.13 of frame height of empty shaft above her crown; the frame is not generous above her because the emptiness that matters is below.",
+  "horizon_eyeline": "No horizon — a vertical shaft. The only horizontals are the cupboard shelf lines, which run across the frame very slightly off level and travel steadily upward through it. Her eyeline sits at 0.30 of frame height, level with the lens.",
+  "layers": {
+    "fg": "the leading edge of one glazed cupboard door rising through the lower left corner, dark mahogany, close enough to read its glazing bars",
+    "mg": "Alice, mid-air and clear of every wall, skirts and pinafore billowing, hair floating up",
+    "bg": "the curved far wall of the shaft with its rows of stoneware jars, and below her the open drop going black about two thirds of the way down the frame"
+  },
+  "gaze": {
+    "direction": "frame_left",
+    "lead_room": "left",
+    "note": "she looks across and a little down at the glazed cupboards, which are the screen-left wall in this set-up; about 0.18 of frame width of clear air is left ahead of her face."
+  },
+  "balance": "Deliberately top-heavy and unresolved: the single small figure holds the top third, the lower two thirds carry nothing but falling dressing and black. The weight of the picture is where she is going, not where she is.",
+  "leading_lines": "Every shelf edge, cupboard rail and jar row is a horizontal ladder running up out of frame; the two converging wall curves make a soft funnel that narrows toward the bottom of frame and pulls the eye down past her into the drop.",
+  "eye_first": "Her pale face and floating hair against the dark shaft — the brightest small thing in frame — then straight down the empty drop below her.",
+  "safe_area_ok": true,
+  "constraint_binding": "Locked, no camera move: she is pinned at a fixed frame position for the whole 4 s while every piece of dressing travels up through the frame. Nothing in the composition may be motivated by a reframe.",
+  "pairs_with": "sh022 — the identical locked set-up, recognised later in the descent. Same anchor_xy, same scale, same headroom; the only differences are the dressing (bookshelves and map pegs instead of cupboards and jars) and her gaze, which turns to frame_right there."
+}

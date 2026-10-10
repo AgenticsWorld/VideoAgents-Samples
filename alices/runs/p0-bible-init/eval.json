@@ -1,0 +1,8 @@
+{
+  "task_id": "p0-bible-init",
+  "skipped": true,
+  "reason": "quality judge=0, evaluation not dispatched",
+  "auto": {
+    "skeleton_schema": "PASS (17 JSON + _meta, ascii names)"
+  }
+}

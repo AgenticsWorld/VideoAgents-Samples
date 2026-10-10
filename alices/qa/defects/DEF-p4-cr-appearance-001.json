@@ -1,0 +1,26 @@
+{
+  "id": "DEF-p4-cr-appearance-001",
+  "opened_by": "03-characters/appearance",
+  "opened_on": "2026-09-23",
+  "task_id": "p4-cr-appearance",
+  "assigned_to": ["user (H2 sign-off at G4)", "04-creatures/creature (anatomy co-owner)"],
+  "domain": "characters/appearance",
+  "status": "open_pending_H2",
+  "severity": "minor",
+  "blocking": false,
+  "summary": "BIB-0027 appearance redo: design proposals marked pending_H2 in the CGI-animal appearance cards, to be put on the H2 sign-off page.",
+  "items": [
+    { "id": "a", "file": "bible/characters/CHAR-frog-footman/appearance.json", "field": "rendering.anatomy_proposal", "proposal": "Option A: a real frog body at dream size (75-85 cm standing, matched to the four-foot house). Sits upright, stands for the bow, hops. Livery tailored to the frog, bare webbed feet, powdered curled wig on the frog head.", "alternatives": "B: a frog that walks on two legs throughout (more humanised); C: natural size with no livery (not recommended)." },
+    { "id": "b", "file": "bible/characters/CHAR-fish-footman/appearance.json", "field": "rendering.anatomy_proposal", "proposal": "Option A: a photoreal cod head and scaled skin on an upright figure with two short legs in breeches, fin-edged hands and the tail fin showing; 80-90 cm, the same height as the Frog-Footman.", "alternatives": "B: upright on its tail fin, gliding, with no legs; C: another species with the same body plan." },
+    { "id": "c", "file": "bible/characters/CHAR-duchess-baby/appearance.json", "field": "stages.slide / stages.pig", "proposal": "The pig end-state is a photoreal CGI piglet (pink-white, pale blue-grey eyes kept from the infant). Option A: an imperceptible CGI drift from infant to piglet within the single continuous SUP-006 shot.", "alternatives": "B: a hidden handover to the CGI piglet at ch006-p48, with no morph." },
+    { "id": "d", "file": "bible/characters/CHAR-cheshire-cat/appearance.json", "field": "face.grin", "proposal": "The ear-to-ear grin is the one licensed departure from real cat anatomy. The lips retract along the whole jaw to show a real cat's full set of teeth; jaw and teeth stay real.", "risk": "This is where the Cat is most likely to read as a cartoon face, against the SUP-002 limit." },
+    { "id": "e", "file": "bible/characters/CHAR-crowd-ensemble/appearance.json", "field": "rendering.heavy_prop_staging", "proposal": "Pat (human) handles the tied ladders and the barrow while the CGI animals help as their bodies allow. No animal carries a ladder upright. Final staging is for 07-directing." }
+  ],
+  "design_conventions_to_confirm": [
+    "Talking animals are built at species-true size. The text's relative-size beats are met through Alice's SUP-003 scale changes. Two dream-scale exceptions: the Footmen, sized to the four-foot house, and the Gryphon and Mock Turtle, which have no real counterpart.",
+    "Clothing is dropped everywhere the text gives none. The retained props are: the White Rabbit's waistcoat, watch, gloves and fan, spectacles, and his trumpet and tabard at the trial; the Magpie's muffler, which the text implies; the Footmen's livery and wigs; the Caterpillar's hookah; and the jurors' slates."
+  ],
+  "cross_file_stale_note": "bible/characters/index.json performer_concept, bible/creatures/creature.json _meta.scope and bible/style.json negative_prompt_en still carry the pre-BIB-0027 human-performer or no-CGI wording. They are already listed in BIB-0027 impacted_stale and belong to their owners; appearance did not edit them.",
+  "due_gate": "G4",
+  "routing_note": "Surface on the H2 sign-off page next to the BIB-0027 scope items. Nothing is blocked; downstream may proceed on the Option A proposals."
+}

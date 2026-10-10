@@ -1,0 +1,157 @@
+{
+  "task_id": "p6-continuity-ep01",
+  "agent": "07-directing/continuity-planning",
+  "project": "alices",
+  "ep": "ep01",
+  "attempt": 1,
+  "status": "done_with_routed_defects",
+  "completed_at": "2026-09-23",
+  "summary": "ep01 continuity plan delivered: 100 cuts checked for axis across 101 shots and 37 groups, 36/36 adjacent group pairs covered with anchor 'none' on every one, TR-03's match cut verified as agreeing field for field, and per-shot wardrobe / prop / size / lighting state tables written for the whole episode. Seven axis findings: five waived with a directing_plan or design-file basis, two routed upstream with a defect card. Two further scale defects routed. Nothing left unresolved and nothing papered over.",
+
+  "outputs": [
+    "directing/ep01/continuity_plan.json",
+    "qa/defects/DEF-p6-continuity-ep01-001.json",
+    "qa/defects/DEF-p6-continuity-ep01-002.json",
+    "code/check_continuity_plan_ep01.py",
+    "runs/p6-continuity-ep01/result.json"
+  ],
+
+  "acceptance": {
+    "axis_jumps_zero_or_waived": "PASS",
+    "group_transitions_cover_all_adjacent": "PASS",
+    "transition_anchor_consistent": "PASS",
+    "qa": "11-qa/timeline-qa not dispatched - the user has timeline-qa at 0, so this node does not wait on a co-signature (confirmed in runs/g6s-ep01/gate.json: 'all eight QA review dimensions are 0, none dispatched at this gate').",
+    "eval_rubric": "none - 质量评委 = 0, no evaluation work order was raised or expected."
+  },
+
+  "machine_checks": [
+    {
+      "name": "code/check_generation_groups.py (host, backend/code, app runtime)",
+      "command": "python3 code/check_generation_groups.py '<project>/directing/ep01/shot_list.json'",
+      "run_from": "/Applications/VideoAgents.app/Contents/Resources/backend",
+      "runtime": "/Users/dolores/Library/Application Support/@videoagents/desktop/python-runtimes/versions/1.0.33/py/bin/python3",
+      "note": "The only host check in backend/code that covers this node's inputs (group chain, continuity_from ordering, transition_ok). There is no host check script for continuity_plan.json itself - backend/code has none, and workflow.yaml declares the three acceptance checks with no script behind them.",
+      "verbatim_output": [
+        "[7d] skipped: narration off(项目输出设置「旁白」已关闭,全片无旁白)—— 仅查 audio_plan(禁 narration_over)",
+        "机检通过: 37 组全部合规;§7D ① 旁白已关闭(skipped: narration off)/audio_plan 齐备;transition_ok 非硬切转场 5 处"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "code/sync_continuity_refs.py (host, backend/code, app runtime)",
+      "command": "python3 code/sync_continuity_refs.py --project alices --ep ep01",
+      "run_from": "/Applications/VideoAgents.app/Contents/Resources/backend",
+      "note": "Run read-only (NO --write, NO --prepare) to confirm no continuity reference exists or would be created. It cannot report per group at Phase 6 because Phase 7 group prompts do not exist yet; that is the expected state at this node, not a failure. The underlying decision was therefore confirmed directly at the module, below.",
+      "verbatim_output_first_and_last": [
+        "grp001: grp001: 缺组 prompt",
+        "... (identical for grp002 .. grp036) ...",
+        "grp037: grp037: 缺组 prompt"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "modules.continuity_refs.plan (host module, read-only)",
+      "command": "python3 -c \"from modules.continuity_refs import plan; plan(base,'ep01',gid)\" for grp002, grp009, grp010, grp035, grp037",
+      "run_from": "/Applications/VideoAgents.app/Contents/Resources/backend",
+      "note": "Proves at the source that the host itself will refuse to build any continuity reference for this project, independently of what this plan says.",
+      "verbatim_output": [
+        "grp002 {\"mode\": \"none\", \"from_group\": null, \"reason\": \"长镜头关闭\", \"ready\": false}",
+        "grp009 {\"mode\": \"none\", \"from_group\": null, \"reason\": \"长镜头关闭\", \"ready\": false}",
+        "grp010 {\"mode\": \"none\", \"from_group\": null, \"reason\": \"长镜头关闭\", \"ready\": false}",
+        "grp035 {\"mode\": \"none\", \"from_group\": null, \"reason\": \"长镜头关闭\", \"ready\": false}",
+        "grp037 {\"mode\": \"none\", \"from_group\": null, \"reason\": \"长镜头关闭\", \"ready\": false}"
+      ],
+      "settings_read": "settings.json duration.long_take = false"
+    },
+    {
+      "name": "code/check_continuity_plan_ep01.py (written for this node, in the PROJECT code/ - no host script was copied)",
+      "command": "python3 code/check_continuity_plan_ep01.py --project alices --ep ep01",
+      "run_from": "/Users/dolores/Library/Application Support/@videoagents/desktop/data/projects/alices",
+      "runtime": "/Users/dolores/Library/Application Support/@videoagents/desktop/python-runtimes/versions/1.0.33/py/bin/python3",
+      "note": "Re-runs the three acceptance checks plus the station SOUL's coverage rules against the delivered plan and the frozen shot_list, reading shot_list / settings / costumes / props directly rather than trusting the plan's own summaries.",
+      "verbatim_output": [
+        "axis_jumps_zero_or_waived: PASS - 7 entries, 5 waived, 2 routed, 0 unresolved",
+        "group_transitions_cover_all_adjacent: PASS - 36/36 adjacent pairs, in order, no gaps, no duplicates",
+        "transition_anchor_consistent: PASS - long_take=False; anchors=['none']; 36/36 mirror shot_list transition_in (default hard_cut)",
+        "continuity_ref_absent: PASS - 0 files in the project contain a continuity_ref",
+        "costume_states_cover_all_shots: PASS - 101/101 shots, outfit ids ['COS-001', 'COS-003', 'COS-006'] all legal",
+        "prop_states_ids_legal: PASS - 52 rows, prop ids all registered in bible/props.json, 45 prop-bearing shots all covered",
+        "lighting_chain_matches_shot_list: PASS - 37/37 groups, time_of_day and lighting_scheme_id identical to shot_list, key_light and ok present on every entry",
+        "machine check: ALL PASS"
+      ],
+      "exit_code": 0
+    }
+  ],
+
+  "axis_result": {
+    "cuts_checked": 100,
+    "jumps_found": 7,
+    "waived": [
+      { "id": "AX-01", "cut": "sh002 -> sh003", "what": "Alice and the Sister swap sides when the camera goes from the meadow side to the water side", "basis": "directing_plan.md S01 licenses two set-ups and rules the Sister is never a clean single; the water-side axis then holds unbroken for sh003, sh005, sh009" },
+      { "id": "AX-03", "cut": "sh013 -> sh014", "what": "Alice and the burrow swap sides", "basis": "directing_plan.md S02's named 'one image'; the new side is held through sh015/sh016 and is what recentres the oval for TR-03" },
+      { "id": "AX-05", "cut": "sh056 -> sh059", "what": "the glass box changes side relative to Alice", "basis": "a square-on detail and a new travelling axis intervene; sh058/sh059 are a declared mirrored pair that opens and closes its own loop" },
+      { "id": "AX-06", "cut": "sh091 -> sh093", "what": "the direction to the glass table reverses", "basis": "forced by TR-06's written condition - her exit and her surfacing must both be bottom of frame, screen left" },
+      { "id": "AX-07", "cut": "sh099 -> sh100", "what": "full mirror of her screen position and her look", "basis": "new cross-hall axis and she comes to a full stop inside sh100; the disorientation is the ec-2 ending confirmed at H3S" }
+    ],
+    "routed": [
+      { "id": "AX-02", "cut": "sh008 -> sh009", "boundary": "grp004 -> grp005", "what": "CRE-001 leaves screen-left-and-away; sh009 looks after him screen-right", "to": "07-directing/composition + blocking", "defect": "DEF-p6-continuity-ep01-001-a" },
+      { "id": "AX-04", "cut": "sh085 -> sh086", "group": "grp032", "what": "sh085 mirrors the curtain-to-table axis that sh054/sh056/sh086/sh087/sh088/sh091 all keep - the outlier is sh085, not sh086", "to": "07-directing/composition + blocking", "defect": "DEF-p6-continuity-ep01-001-b" }
+    ],
+    "cleared_with_reasons": 12,
+    "note": "No shot design file was modified by this station."
+  },
+
+  "group_transitions_result": {
+    "groups": 37,
+    "adjacent_pairs": 36,
+    "covered": 36,
+    "anchor_none": 36,
+    "anchor_other": 0,
+    "continuity_ref_created": 0,
+    "continuity_ref_found_pre_existing": 0,
+    "transitions_mirrored_from_shot_list": {
+      "grp002 (TR-02)": "smash_cut 0",
+      "grp008 (TR-03)": "match_cut 0",
+      "grp009 (TR-04)": "dissolve 0.6",
+      "grp010 (TR-05)": "dissolve 0.8",
+      "grp035 (TR-06)": "smash_cut 0",
+      "other 31 groups": "no transition_in declared -> mirrored as the default hard_cut 0"
+    },
+    "tr01_note": "TR-01 hard_cut is the episode-head transition into grp001 and is therefore not one of the 36 adjacent pairs; it is recorded in the plan's handoff and in shot_list grp001.transition_in. Nothing was invented and nothing was dropped.",
+    "cast_change_true": 11,
+    "cast_change_true_with_framing_change_ok": 11,
+    "framing_change_ok_false": ["grp009 -> grp010, where cast_change is false and the identical framing is the declared design of the TR-05 dissolve; the written-continuity requirement is stated in its place"]
+  },
+
+  "match_cut_tr03": {
+    "result": "AGREE",
+    "sh016_outgoing": { "matched_centre_xy": [0.5, 0.5], "matched_height_frac": 0.3, "matched_axis": "long axis horizontal, level" },
+    "sh017_incoming": { "matched_centre_xy": [0.5, 0.5], "matched_height_frac": 0.3, "matched_axis": "long axis horizontal, level" },
+    "corroboration": "sh016's own subject block independently reports the oval as 0.30 of frame height x 0.19 of frame width, dead centre, long axis horizontal - matching rather than merely restating the declared numbers. sh016 constraint_binding also forbids any reframe between sh015 and sh016, so the matched frame is reached one shot early and held. Both sides declare a flat, lightless, depthless interior; side/partner fields pair correctly.",
+    "licensed_difference": "matched_surround differs by design (hot bleached field -> cold tunnel wall). That is the only thing this cut is allowed to change.",
+    "discrepancies": []
+  },
+
+  "defects_raised": [
+    { "id": "DEF-p6-continuity-ep01-001", "severity": "major", "to": "07-directing/composition (cc blocking)", "blocks_prompting_of": ["grp005", "grp032"], "subject": "sh009 eyeline after CRE-001; sh085 inverted curtain-to-table axis" },
+    { "id": "DEF-p6-continuity-ep01-002", "severity": "major", "to": "07-directing/composition (cc director)", "blocks_prompting_of": ["grp019", "grp026"], "subject": "sh049/sh050 call a 10 cm bottle 'identical height' to a 25.4 cm Alice in the frame named as the episode's free scale anchor; sh067 calls a 26 cm door opening 'narrower than her eye is wide' for a girl about twice normal size" }
+  ],
+
+  "for_the_h3a_signature_card": [
+    "Two axis defects are ROUTED, not waived (AX-02 sh009, AX-04 sh085), and two scale statements are routed with them (sh049/sh050, sh067). All four are one-field text corrections in files that are otherwise final. The auto-rerun budget is 0, so they are being put in front of the user rather than retried. They block p7 prompt for grp005, grp019, grp026 and grp032 only - they do NOT block whitebox staging or the g6w export, because they touch composition/blocking text, not blocking_map routes or camera positions.",
+    "The H3S White Rabbit ruling and the frozen shot_list do not read identically. The ruling says the gloves and fan are carried in his mouth with the quadruped gait locked; shot_list stages him putting the gloves down between his forefeet in sh028 and holding gloves and fan in his forepaws in sh074 - both while sitting back on his haunches with his forelegs free. The reading applied throughout the plan: mouth whenever he is moving on four legs (sh027, sh031, sh073, sh077), forepaws only while sitting back (sh028, sh029, sh074, sh076). Nothing in shot_list was changed. If the user meant mouth in literally every shot, sh028's watch business and sh074's forepaw hold both need re-staging, which is a shot_list change and a gate decision.",
+    "The per-shot soiling and wetness chain in costume_states is this station's own increment - no upstream file specifies any dirt, damage or wetness anywhere in ep01. It is deliberately light and monotone (pale dry earth from sh013, leaf fragments from sh026, gilding flakes from sh065, tear-marked face from sh055, wet from sh071, soaked head to foot from sh094) and exists so that ninety-odd independently generated clips do not each invent their own. If art direction would rather Alice stay spotless through the dream, saying so now costs nothing and saying so after p7 costs a re-prompt of forty groups.",
+    "One binding gap was closed in this plan that is written nowhere in the shot design: the White Rabbit must take the gloves BACK INTO HIS MOUTH in sh031 before he drops onto four legs and rounds the corner. He put them down in sh028; without the pick-up they are abandoned in the S04 passage and the gloves he carries in sh073 come from nowhere.",
+    "The little door is open in S07 (sh067) and 'shut again' in S09 (sh090) with nothing on screen closing it - Carroll's own gap, carried by the frozen screenplay. It is invisible because the low curtain hangs across the door for all twenty-one S08 shots and the door is in frame in none of them. Recorded, with a binding instruction that no S08 prompt may show the door open behind her. No action requested; noted so it is not re-opened later as a new finding.",
+    "Everything else is signable as it stands: 36/36 boundaries covered, anchor 'none' on every one, no continuity_ref anywhere in the project, no costume change in the episode, every prop hand-off traced to bible/props.json, and one time_of_day (early_afternoon) with no day/night jump - the single clock step backwards is the declared flash-forward FF-ep01-open."
+  ],
+
+  "not_done": [
+    "No shot design file (camera.json / composition.json / blocking.json) was edited - out of this station's scope by SOUL.",
+    "No axis jump was 'fixed' by rewriting an upstream file; the two that need an upstream change were routed with a defect card and a recommended fix.",
+    "11-qa/timeline-qa co-signature was not obtained - not dispatched at timeline-qa = 0.",
+    "sync_continuity_refs.py could not report per group because Phase 7 prompts do not exist yet. That is the expected Phase 6 state; the same decision was confirmed directly at modules.continuity_refs.plan, which returns mode 'none' / reason '长镜头关闭' for every group."
+  ],
+
+  "skills": "This station has no auto-activated project skill. The performance-control skill is scoped to blocking / prompt / video-generation / QA, not to continuity planning, and no performance layer was authored or altered here."
+}

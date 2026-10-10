@@ -1,0 +1,49 @@
+{
+  "task_id": "p5-hooks-ep01-select",
+  "agent": "01-story/hook",
+  "project": "alices",
+  "ep": "ep01",
+  "attempt": 1,
+  "status": "done",
+  "date": "2026-09-23",
+  "decision_source": "runs/g6s-ep01/gate.json — gate G6S / checkpoint H3S-故事板确认, decision PASS, signature_request.result 签字, decided_at 2026-09-23T10:48:25+08:00",
+  "outputs": ["story/episodes/ep01/hooks.json"],
+  "selected": {"opening": "oh-1", "ending": "ec-2"},
+  "diff_applied": [
+    {
+      "field": "status",
+      "before": "\"status\": \"awaiting_selection\",",
+      "after": "\"status\": \"selected\","
+    },
+    {
+      "field": "selected",
+      "before": "\"selected\": { \"opening\": null, \"ending\": null },",
+      "after": "\"selected\": { \"opening\": \"oh-1\", \"ending\": \"ec-2\" },"
+    },
+    {
+      "field": "change_log",
+      "before": "[ {version 2, p4-cr-hooks-ep01 ...} ]",
+      "after": "appended: {\"version\": 2, \"task_id\": \"p5-hooks-ep01-select\", \"decided_by\": \"user\", \"decided_at\": \"2026-09-23T10:48:25+08:00\", \"source\": \"runs/g6s-ep01/gate.json (G6S / H3S-故事板确认, decision PASS, signature_request.result 签字)\", \"change\": \"User approved the recommended pair at the H3S storyboard signature: selected.opening = oh-1, selected.ending = ec-2; status awaiting_selection -> selected; handoffs updated to record the decision as final. Hook options, copy and recommendation unchanged.\"}"
+    },
+    {
+      "field": "handoffs",
+      "before": "5 keys: screenplay (selection pending wording), pacing (all four options costed), narration, title, edit (\"once 'selected' is written\")",
+      "after": "7 keys: added decision_status (FINAL oh-1 + ec-2, user at H3S, gate file cited; other options archived) and storyboard (S00 hook-head block with its shot and group, TR-01, TR-02, S10 shot 8 V-wake insert are now CONFIRMED and stay in; episode length stays 537.0 s); screenplay/pacing/edit rewritten to the selected pair only; narration and title keys unchanged"
+    }
+  ],
+  "unchanged": [
+    "the three opening_hooks (oh-1, oh-2, oh-3) byte-identical",
+    "the three ending_cliffhangers (ec-1, ec-2, ec-3) byte-identical",
+    "recommendation block including fallback note",
+    "ep / task_id / agent / version (2) / based_on / delivery_constraints",
+    "change_log entry for BIB-0027"
+  ],
+  "note": "Top-level \"version\" left at 2 per the byte-identical rule (only status/selected/change_log/handoffs were in scope); the appended change_log entry therefore carries version 2. directing/ep01/storyboard.json was read for the provisional-element list only and not modified.",
+  "checks": {
+    "json_valid": "PASS",
+    "selected_opening_oh1_ending_ec2": "PASS",
+    "status_selected": "PASS",
+    "options_unchanged": "PASS — 3 opening ids and 3 ending ids intact, copy untouched",
+    "no_redesign": "PASS — no re-ranking, no copy rewrite"
+  }
+}

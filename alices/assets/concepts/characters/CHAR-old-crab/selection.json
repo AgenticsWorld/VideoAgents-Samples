@@ -1,0 +1,4 @@
+{"character_id":"CHAR-old-crab","sheet":"sheet.png","gender":"female","gender_word_in_prompt":true,"rendering":"photoreal CGI edible crab (SUP-002)",
+"appearance_field_hits":{"brick_red_rust_pie_crust_carapace":true,"pitted_scuffed_barnacles":true,"black_tipped_heavy_claws":true,"one_claw_raised":"partial","eyes_on_raised_stalks":"low","mouthparts":true,"damp":true,"no_face_on_carapace":true,"unclothed":true},
+"self_check":{"layout":"pass","appearance":"pass","style":"pass (photoreal)"},
+"defects":["The eyestalks are low rather than raised. Minor."],"pair_rule":"reads older, larger and darker than CHAR-young-crab","rerolls":[]}

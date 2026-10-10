@@ -1,0 +1,81 @@
+{
+  "batch": "b01",
+  "chapters": {
+    "ch001": {
+      "paragraphs": 31,
+      "word_count": 2187,
+      "manifest_word_count": 2187,
+      "scenes": 3,
+      "dialogue_entries": 33,
+      "by_type": {
+        "dialogue": 25,
+        "thought": 8,
+        "verse": 0
+      },
+      "quoted_text": 6,
+      "entity_mentions": 89,
+      "unknown_speaker": 0,
+      "speakers": [
+        "Alice",
+        "White Rabbit"
+      ]
+    },
+    "ch002": {
+      "paragraphs": 27,
+      "word_count": 2100,
+      "manifest_word_count": 2100,
+      "scenes": 2,
+      "dialogue_entries": 52,
+      "by_type": {
+        "dialogue": 36,
+        "thought": 14,
+        "verse": 2
+      },
+      "quoted_text": 1,
+      "entity_mentions": 88,
+      "unknown_speaker": 0,
+      "speakers": [
+        "Alice",
+        "Mouse",
+        "White Rabbit"
+      ]
+    },
+    "ch003": {
+      "paragraphs": 49,
+      "word_count": 1703,
+      "manifest_word_count": 1703,
+      "scenes": 3,
+      "dialogue_entries": 71,
+      "by_type": {
+        "dialogue": 70,
+        "thought": 0,
+        "verse": 1
+      },
+      "quoted_text": 1,
+      "entity_mentions": 95,
+      "unknown_speaker": 0,
+      "speakers": [
+        "Alice",
+        "Canary",
+        "Dodo",
+        "Duck",
+        "Eaglet",
+        "Lory",
+        "Magpie",
+        "Mouse",
+        "old Crab",
+        "the party (chorus)",
+        "young Crab"
+      ]
+    }
+  },
+  "totals": {
+    "dialogue_entries": 156,
+    "unknown_speaker": 0,
+    "unknown_ratio": 0.0,
+    "word_count": 5990,
+    "manifest_batch_word_count": 5990
+  },
+  "errors": [],
+  "pass": true
+}

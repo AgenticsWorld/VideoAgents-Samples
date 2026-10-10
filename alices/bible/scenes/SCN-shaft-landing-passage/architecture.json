@@ -1,0 +1,45 @@
+{
+  "scene_id": "SCN-shaft-landing-passage",
+  "inherits": "SCN-falling-dream",
+  "diff_only": true,
+  "layer": "dream",
+  "int_ext": "INT",
+  "form": "The dark foot of the well: an earth-floored landing chamber with a heap of sticks and dry leaves, opening onto a long, low passage that turns from raw earth into a brick-vaulted service passage and ends at a right-angle corner into the long hall",
+  "stories": 1,
+  "source_chapter": "ch001",
+  "culture_ref": "world.json#wonderland_real_counterparts.cp-rabbit-hole; geography.json#LOC-descent-shaft",
+  "grows_from": {"loc": "LOC-rabbit-hole-entrance", "waking_detail": "the burrow under the hedge, read as an earthy tunnel floor of sticks and dry leaves"},
+  "amendment": "BIB-0027 (user ruling 2026-09-22), applied p4-cr-architecture 2026-09-23",
+  "mucha_design_language": {"item": "Diff from SCN-falling-dream: the Art Nouveau appears progressively as the burrow becomes built passage: over the brick-vaulted two-thirds the vault ribs are cast-iron whiplash arches with verdigris, and the last 8 m before the corner gain a mosaic dado of pastel-and-gold vine tesserae that hands over to SCN-long-hall; the raw earth third stays plain burrow", "inferred": true, "culture_ref": "world.json#WR-010; cultivation.json#XA-magic-08; SCN-long-hall mucha_design_language", "why": "The dream's design grows out of the burrow; seamless handover to the hall"},
+  "structure": [
+    {"item": "landing chamber about 3 m across at the foot of the shaft, pitch dark overhead", "src": "ch001-p11"},
+    {"item": "a long passage about 25 m, clear height 2.1 m, width 1.4 m; the first third has raw earth walls laced with hawthorn roots, the rest a low segmental red-brick vault of the same brick as the shaft", "src": "ch001-p11", "note": "dimensions and the earth-to-brick transition inferred (culture_ref geography.json#LOC-rabbit-hole-entrance): the burrow becomes the dream's built passage"},
+    {"item": "at the far end a square right-angle corner through which the lamp-lit long hall opens (the only opening in the passage)", "src": "ch001-p11"}
+  ],
+  "materials": [
+    {"item": "heap of dry sticks and brown dead leaves about 1 m high and 2 m wide on a packed earth floor", "src": "ch001-p10"},
+    {"item": "red-brown loam walls with hanging pale root tendrils", "inferred": true, "culture_ref": "SCN-field-hedge-burrow (hawthorn roots over the burrow)", "why": "Continues the waking burrow"},
+    {"item": "soot-darkened red brick vault; floor changes from earth to worn Headington-limestone flags over the last 8 m before the corner", "inferred": true, "culture_ref": "SCN-long-hall materials", "why": "Hands the passage over to the hall's stone floor so the corner cut is seamless"}
+  ],
+  "details": [
+    {"item": "the corner at the end is lit warm by the hall lamps beyond, the rest of the passage in near-darkness", "src": "ch001-p11", "note": "light positioning is lighting's; this records only that the corner is the sole opening"}
+  ],
+  "interior": {
+    "layout": "landing chamber at the east end under the shaft; passage runs straight west about 25 m; right-angle turn north at the far end into SCN-long-hall",
+    "openings": ["shaft opening overhead the landing chamber, black, no light", "corner opening at the west end into the long hall, 1.4 m wide x 2.1 m high"],
+    "ceiling_height_m": 2.1,
+    "furniture_tone": "none; an empty service passage"
+  },
+  "scale_notes": {
+    "rule": "True scale: Alice (135 cm) runs upright after the White Rabbit, now a photoreal CGI rabbit (SUP-002 as amended BIB-0027) whose size is set by 04-creatures; the 2.1 m clear height is kept for Alice, camera and the layout.",
+    "sources": ["ch001-p11", "cultivation.json#SUP-002"]
+  },
+  "negative": [
+    "no mine timbers, rails or lanterns fixed to the walls",
+    "no doors, windows or side branches in the passage",
+    "no rabbit-sized burrow; the passage is human-sized",
+    "no water, no glowing fungus, no magic light",
+    "no flat poster illustration, outline graphics or matte-painting finish"
+  ],
+  "prompt_ready_en": "the dark foot of a well: a heap of dry sticks and dead leaves on an earth floor, and a long low passage whose raw earth walls with hanging roots turn into a soot-dark red-brick vault on verdigris cast-iron Art Nouveau whiplash ribs, a pastel-and-gold vine mosaic dado near the end, ending in a right-angle corner glowing with warm lamplight, photographed live-action set"
+}

@@ -1,0 +1,87 @@
+{
+  "task_id": "p5-dialogue-ep01",
+  "agent": "01-story/dialogue-rewrite",
+  "project": "alices",
+  "attempt": 1,
+  "status": "done",
+  "date": "2026-09-22",
+  "outputs": [
+    "story/episodes/ep01/screenplay.md (version 1 -> 2, dialogue layer only)",
+    "directing/ep01/dialogue_fit.json (host CLI report, source_only mode, pass: true)",
+    "runs/p5-dialogue-ep01/screenplay_v1_before.md (v1 snapshot for the diff)",
+    "runs/p5-dialogue-ep01/lines_ep01.json (the 34 final lines as input to the style back-test)",
+    "runs/p5-dialogue-ep01/style_backtest.json (back-test report)"
+  ],
+  "inputs_read": [
+    "story/episodes/ep01/screenplay.md v1 (p5-screenplay-ep01)",
+    "runs/p5-screenplay-ep01/result.json",
+    "bible/characters/CHAR-alice|CHAR-alice-sister|CHAR-white-rabbit/dialogue_style.json + voice.json",
+    "story/structured_story.json (ch001-ch002 Alice source lines, to check Carroll's wording)",
+    "settings.json duration.shot_max_s = 15"
+  ],
+  "line_format": {
+    "row": "- **<CHAR id>** (LN-ep01-NNN): “line” {emotion: <voice.json emotion_range key>, est_duration_s: <s>, style_hits: [<marker ids>]}",
+    "why_changed": "v1 rows ('[LN-ep01-NNN] CHAR-alice: “…”') are not parsed by code/check_dialogue_fit.py. Its _SP_LINE_RE only reads '- **who** (paren): body'. Against v1 the checker found 0 lines and would have passed without checking anything. The new row keeps the LN id in the parenthesis, so the checker reads all 34 lines. code/modules/script_breakdown.py also reads all 34 rows (speaker, text, emotion, est_s, style_hits). Note: breakdown puts the LN id in 'paren', not in 'id', because slug CHAR ids do not match its CHAR-\\d+ pattern. The screenplay receipt already reported this host-parser limitation.",
+    "emotion_vocabulary": "the keys of each speaker's voice.json emotion_range (calm / timid / agitated / whisper / recitation_strange for Alice; calm for the Sister; panicked for the White Rabbit), so voice-generation can map them directly"
+  },
+  "changes": [
+    {"line": "LN-ep01-002", "speaker": "CHAR-alice-sister", "from": "Hush, Alice.", "to": "Hush, Alice dear.", "why": "Designed line (no source). v1 matched none of the Sister's markers (0% hit). Her card's endearment rule ('Alice dear') makes it hers. It is still a mild hush from someone who does not look up from her book."},
+    {"line": "LN-ep01-008", "speaker": "CHAR-alice", "from": "Which certainly was not here before.", "to": "That certainly was not here before.", "why": "In Carroll the words sit inside narration ('which certainly was not here before, said Alice'). Spoken on its own, a relative 'Which' does not sound like speech. Only the first word changes; 'certainly' is kept."},
+    {"line": "LN-ep01-013", "speaker": "CHAR-alice", "from": "Well, I'll eat it. If it makes me grow larger, I can reach the key;", "to": "Well, I'll eat it. And if it makes me grow larger, I can reach the key;", "why": "Puts back Carroll's 'and if' (ch001-d0032), which matches the 'and if' of 013b and her run-on musing pattern."},
+    {"line": "LN-ep01-024", "speaker": "CHAR-alice", "from": "Four times five is twelve, and four times six is thirteen… London is the capital of Paris—", "to": "Let me see: four times five is twelve, and four times six is thirteen… London is the capital of Paris—", "why": "Puts back Carroll's own 'Let me see:' (ch002-d0016). It sets up the self-test she acts out by counting on her fingers, and it hits her hedging marker A3. Estimated at 7.7 s, still under the 10.5 s cap."},
+    {"lines": "all 34", "what": "Annotation only: row format, emotion, est_duration_s (written back by the host CLI --write-est) and style_hits. The other 30 lines keep their v1 text exactly (Carroll's words), including 'to-day' / 'to-night' spellings."}
+  ],
+  "unchanged_on_purpose": [
+    "LN-ep01-023 'Ah, that's the great puzzle!' is Carroll's line verbatim. It is Alice's only style miss, and it was kept for fidelity instead of adding a marker word.",
+    "LN-ep01-029 'And in that case I can go back by railway.' stays as written. Whether it can be understood without the cut 'fallen into the sea' thought is a screenplay decision (see the S10 adaptation_note), so it is raised as an H3 question below and not rewritten here."
+  ],
+  "machine_checks": {
+    "check_dialogue_fit": {
+      "cmd": ["python3 code/check_dialogue_fit.py --project alices --ep ep01 --write-est", "python3 code/check_dialogue_fit.py --project alices --ep ep01"],
+      "exit_write_est_run": 1,
+      "exit_write_est_run_note": "This run found the 0.0 placeholder est values (34 line_est_consistent FAILs) and then wrote back the recomputed values. That is the intended use of --write-est.",
+      "exit_final": 0,
+      "mode": "source_only (no shot_list yet; WARN shot_list_missing is expected at Phase 5)",
+      "line_cap_s": 10.5,
+      "checks": {"line_le_cap": "PASS", "line_est_consistent": "PASS", "lines_text_match_source": "PASS", "dialogue_fit_group": "PASS (n/a)", "dialogue_fit_shot": "PASS (n/a)", "source_lines_covered": "PASS", "speaker_speed_unknown": "PASS"},
+      "lines_parsed": 34,
+      "longest_line": "LN-ep01-024 at 7.7 s (79 chars at 618 cpm)",
+      "speed_basis": "voice.json speed_cpm midpoints: Alice 617.5, Sister 551, White Rabbit 722",
+      "report": "directing/ep01/dialogue_fit.json",
+      "pass": true
+    },
+    "style_hit_rate_gte_80": {
+      "cmd": "python3 code/p3-dialogue-style-pb1_backtest.py --lines runs/p5-dialogue-ep01/lines_ep01.json (same metric as the dialogue-style card back-test)",
+      "per_character": {
+        "CHAR-alice": {"lines": 30, "hit_rate": 0.967, "misses": ["LN-ep01-023"]},
+        "CHAR-alice-sister": {"lines": 1, "hit_rate": 1.0, "misses": []},
+        "CHAR-white-rabbit": {"lines": 3, "hit_rate": 1.0, "misses": []}
+      },
+      "overall": 0.971,
+      "forbidden_word_violations": 0,
+      "pass": true,
+      "note": "The Sister's single line scores top-1 attribution 0 because the word 'Alice' also triggers Alice's A4 marker. It hits her own card, which is what the acceptance criterion measures."
+    },
+    "non_dialogue_diff": {
+      "result": "0 changes to scene headings, [事件] marker lines, 动作/声音/转场 lines, adaptation notes or episode notes",
+      "metadata_lines_changed": ["front matter: version 1 -> 2, plus a dialogue_rewrite provenance line", "conventions bullet: the dialogue-layer row format description updated to the v2 row"],
+      "line_order_and_speakers": "identical to v1 (34 LN ids, same order, same speakers)"
+    }
+  },
+  "defect_tickets": {
+    "DEF-p3-char-index-902": "Not applicable to ep01: no executioner, axe, block or execution device appears.",
+    "DEF-p3-char-index-903": "Not applicable to ep01: the ch006 lullaby chorus and UNKNOWN speaker tags are ep04+ material."
+  },
+  "open_items_for_H3": [
+    "S01 (from screenplay): is it acceptable to turn the book thought into a spoken line to the sister? If not, the fallback is to play it silently (Alice peeps at the page with no pictures and flops back).",
+    "Dream frame continuity (from screenplay): in ep09 Alice wakes on the bank with her head in her sister's lap, but here she runs to the hedge. S01 plants a moment of dozing so the chase can read as her sleep beginning. Please confirm this reading, or rule that the dream starts on the bank.",
+    "S10 (new, dialogue-rewrite): 'And in that case I can go back by railway.' refers to a thought the film cuts (that she has fallen into the sea). A viewer may not follow it. Option A: keep it as is (current). Option B: voice the thought as Carroll paraphrase, 'I must have fallen into the sea! And in that case I can go back by railway.' (about 5.5 s, under the cap). B would be a second spoken thought, next to the S01 precedent, so it needs H3 and screenplay sign-off.",
+    "S01 (new, dialogue-rewrite): the Sister's designed reply is now 'Hush, Alice dear.' (it was 'Hush, Alice.'). Please confirm the warmer register."
+  ],
+  "downstream_notes": [
+    "voice-generation: emotion labels are the voice.json emotion_range keys, and est_duration_s comes from the speed_cpm midpoints (host formula).",
+    "p6-dialogue-fit will run again after shot-planning locks the shot list. It has to copy these 34 line texts letter for letter into dialogue.md and shot_list dialogue_lines."
+  ],
+  "skills": "No auto-activated skills are checked for this station; none run, none registered.",
+  "retries": 0
+}

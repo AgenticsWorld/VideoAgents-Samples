@@ -1,0 +1,25 @@
+{
+  "task_id": "p4-cr-personality",
+  "agent": "03-characters/personality",
+  "attempt": 1,
+  "status": "done",
+  "date": "2026-09-23",
+  "change_request": "BIB-0027",
+  "scope_note": "Only the performer-based acting notes were rewritten, as CGI-animal performance notes (the species' own body language). Traits, motivations, taboos, facades, evidence and IDs are unchanged. No dialogue or story events were touched.",
+  "changed_files": [
+    {"file": "bible/characters/CHAR-white-rabbit/personality.json", "fields": ["performance_keynote"], "note": "The 'twitchy performer' note is now a CGI rabbit's body language (nose and ears, freeze-then-bolt, forepaws on the watch). The home and court registers are kept. Props are limited to what the text gives."},
+    {"file": "bible/characters/CHAR-mouse/personality.json", "fields": ["habits[startled bristle]", "performance_baseline"], "note": "The human flinch is now fur bristling and the tail trembling (a direct rendering of ch002-p23). Dignity and fear are now shown in mouse posture."},
+    {"file": "bible/characters/CHAR-dodo/personality.json", "fields": ["habits[gait]", "performance_baseline"], "note": "The tailcoat and arms-as-wings are now a real dodo's waddle with stubby wings. The 'finger to forehead' pose (ch003-p20) is deferred to 04-creatures/appearance for anatomy."},
+    {"file": "bible/characters/CHAR-bill-the-lizard/personality.json", "fields": ["habits[gait].reason", "performance_baseline"], "note": "The reptile-coded human touch is now natural lizard locomotion. Species tics were added to the baseline."},
+    {"file": "bible/characters/CHAR-pigeon/personality.json", "fields": ["habits[wing-beating]", "performance_baseline"], "note": "The arm-flapping and feather shawl are now literal wing-beating and ruffled plumage."},
+    {"file": "bible/characters/CHAR-cheshire-cat/personality.json", "fields": ["dinah_echo.reason (human-performer sentence)", "performance_keynote"], "note": "The human performer is now a CGI cat whose stillness carries the Dinah echo. The grin is marked as the one sanctioned anatomical departure. The dissolve rule (SUP-005) is kept."},
+    {"file": "bible/characters/CHAR-march-hare/personality.json", "fields": ["performance_keynote"], "note": "The 'ears worked into hat or hair' note is now a CGI hare's expressive ears, nose and starts."},
+    {"file": "bible/characters/CHAR-dormouse/personality.json", "fields": ["taboos[never fights back].qa_check", "performance_keynote"], "note": "The teapot beat (ch007-p102) can now be staged literally with the small CGI dormouse, with no harm. Curled-ball sleeping posture."},
+    {"file": "bible/characters/CHAR-gryphon/personality.json", "fields": ["habits[sprawls].reason", "performance_baseline"], "note": "The feathered collar and 'actor's burr' are now griffin body language (eagle head, lion sprawl, tail, wings). Voice ownership is left to voiceprint."},
+    {"file": "bible/characters/CHAR-mock-turtle/personality.json", "fields": ["habits[moves stiffly]", "performance_baseline"], "note": "The shell-textured cape is now a real shell. Grief and the Quadrille caper are now shown through the creature's own body."}
+  ],
+  "pending_H2": [],
+  "defects_opened": [],
+  "machine_check": "All 10 files re-parse as valid JSON. grep for 'performer', 'performer_concept' and 'costume' across the 10 files returns no hits. traits, motivation and taboos are unchanged and non-empty.",
+  "skills": "No auto-activated skills are selected for this workstation."
+}

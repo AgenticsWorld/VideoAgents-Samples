@@ -1,0 +1,816 @@
+{
+  "groups": [
+    {
+      "group_id": "grp001",
+      "scene_no": "S00",
+      "scene_id": "SCN-falling-dream",
+      "scene_cast": [
+        "CHAR-alice"
+      ],
+      "references": [
+        {
+          "id": "CHAR-alice",
+          "name": "Alice",
+          "ref": "assets/concepts/characters/CHAR-alice/sheet.png",
+          "costume": "COS-001",
+          "missing": false
+        }
+      ],
+      "has_prompt": false
+    },
+    {
+      "group_id": "grp002",
+      "scene_no": "S01",
+      "scene_id": "SCN-riverbank",
+      "scene_cast": [
+        "CHAR-alice",
+        "CHAR-alice-sister",
+        "CRE-001"
+      ],
+      "references": [
+        {
+          "id": "CHAR-alice",
+          "name": "Alice",
+          "ref": "assets/concepts/characters/CHAR-alice/sheet.png",
+          "costume": "COS-001",
+          "missing": false
+        },
+        {
+          "id": "CHAR-alice-sister",
+          "name": "Alice's Sister",
+          "ref": "assets/concepts/characters/CHAR-alice-sister/sheet.png",
+          "costume": "COS-003",
+          "missing": false
+        },
+        {
+          "id": "CRE-001",
+          "name": "The White Rabbit (waking-world, real animal)",
+          "ref": "assets/concepts/creatures/CRE-001/sheet.png",
+          "costume": null,
+          "missing": false
+        }
+      ],
+      "has_prompt": false
+    },
+    {
+      "group_id": "grp003",
+      "scene_no": "S01",
+      "scene_id": "SCN-riverbank",
+      "scene_cast": [
+        "CHAR-alice",
+        "CHAR-alice-sister",
+        "CRE-001"
+      ],
+      "references": [
+        {
+          "id": "CHAR-alice",
+          "name": "Alice",
+          "ref": "assets/concepts/characters/CHAR-alice/sheet.png",
+          "costume": "COS-001",
+          "missing": false
+        },
+        {
+          "id": "CHAR-alice-sister",
+          "name": "Alice's Sister",
+          "ref": "assets/concepts/characters/CHAR-alice-sister/sheet.png",
+          "costume": "COS-003",
+          "missing": false
+        },
+        {
+          "id": "CRE-001",
+          "name": "The White Rabbit (waking-world, real animal)",
+          "ref": "assets/concepts/creatures/CRE-001/sheet.png",
+          "costume": null,
+          "missing": false
+        }
+      ],
+      "has_prompt": false
+    },
+    {
+      "group_id": "grp004",
+      "scene_no": "S01",
+      "scene_id": "SCN-riverbank",
+      "scene_cast": [
+        "CHAR-alice",
+        "CHAR-alice-sister",
+        "CRE-001"
+      ],
+      "references": [
+        {
+          "id": "CHAR-alice",
+          "name": "Alice",
+          "ref": "assets/concepts/characters/CHAR-alice/sheet.png",
+          "costume": "COS-001",
+          "missing": false
+        },
+        {
+          "id": "CHAR-alice-sister",
+          "name": "Alice's Sister",
+          "ref": "assets/concepts/characters/CHAR-alice-sister/sheet.png",
+          "costume": "COS-003",
+          "missing": false
+        },
+        {
+          "id": "CRE-001",
+          "name": "The White Rabbit (waking-world, real animal)",
+          "ref": "assets/concepts/creatures/CRE-001/sheet.png",
+          "costume": null,
+          "missing": false
+        }
+      ],
+      "has_prompt": false
+    },
+    {
+      "group_id": "grp005",
+      "scene_no": "S01",
+      "scene_id": "SCN-riverbank",
+      "scene_cast": [
+        "CHAR-alice",
+        "CHAR-alice-sister",
+        "CRE-001"
+      ],
+      "references": [
+        {
+          "id": "CHAR-alice",
+          "name": "Alice",
+          "ref": "assets/concepts/characters/CHAR-alice/sheet.png",
+          "costume": "COS-001",
+          "missing": false
+        },
+        {
+          "id": "CHAR-alice-sister",
+          "name": "Alice's Sister",
+          "ref": "assets/concepts/characters/CHAR-alice-sister/sheet.png",
+          "costume": "COS-003",
+          "missing": false
+        },
+        {
+          "id": "CRE-001",
+          "name": "The White Rabbit (waking-world, real animal)",
+          "ref": "assets/concepts/creatures/CRE-001/sheet.png",
+          "costume": null,
+          "missing": false
+        }
+      ],
+      "has_prompt": false
+    },
+    {
+      "group_id": "grp006",
+      "scene_no": "S02",
+      "scene_id": "SCN-field-hedge-burrow",
+      "scene_cast": [
+        "CHAR-alice",
+        "CRE-001"
+      ],
+      "references": [
+        {
+          "id": "CHAR-alice",
+          "name": "Alice",
+          "ref": "assets/concepts/characters/CHAR-alice/sheet.png",
+          "costume": "COS-001",
+          "missing": false
+        },
+        {
+          "id": "CRE-001",
+          "name": "The White Rabbit (waking-world, real animal)",
+          "ref": "assets/concepts/creatures/CRE-001/sheet.png",
+          "costume": null,
+          "missing": false
+        }
+      ],
+      "has_prompt": false
+    },
+    {
+      "group_id": "grp007",
+      "scene_no": "S02",
+      "scene_id": "SCN-field-hedge-burrow",
+      "scene_cast": [
+        "CHAR-alice",
+        "CRE-001"
+      ],
+      "references": [
+        {
+          "id": "CHAR-alice",
+          "name": "Alice",
+          "ref": "assets/concepts/characters/CHAR-alice/sheet.png",
+          "costume": "COS-001",
+          "missing": false
+        },
+        {
+          "id": "CRE-001",
+          "name": "The White Rabbit (waking-world, real animal)",
+          "ref": "assets/concepts/creatures/CRE-001/sheet.png",
+          "costume": null,
+          "missing": false
+        }
+      ],
+      "has_prompt": false
+    },
+    {
+      "group_id": "grp008",
+      "scene_no": "S03",
+      "scene_id": "SCN-falling-dream",
+      "scene_cast": [
+        "CHAR-alice"
+      ],
+      "references": [
+        {
+          "id": "CHAR-alice",
+          "name": "Alice",
+          "ref": "assets/concepts/characters/CHAR-alice/sheet.png",
+          "costume": "COS-001",
+          "missing": false
+        }
+      ],
+      "has_prompt": false
+    },
+    {
+      "group_id": "grp009",
+      "scene_no": "S03",
+      "scene_id": "SCN-falling-dream",
+      "scene_cast": [
+        "CHAR-alice"
+      ],
+      "references": [
+        {
+          "id": "CHAR-alice",
+          "name": "Alice",
+          "ref": "assets/concepts/characters/CHAR-alice/sheet.png",
+          "costume": "COS-001",
+          "missing": false
+        }
+      ],
+      "has_prompt": false
+    },
+    {
+      "group_id": "grp010",
+      "scene_no": "S03",
+      "scene_id": "SCN-falling-dream",
+      "scene_cast": [
+        "CHAR-alice"
+      ],
+      "references": [
+        {
+          "id": "CHAR-alice",
+          "name": "Alice",
+          "ref": "assets/concepts/characters/CHAR-alice/sheet.png",
+          "costume": "COS-001",
+          "missing": false
+        }
+      ],
+      "has_prompt": false
+    },
+    {
+      "group_id": "grp011",
+      "scene_no": "S04",
+      "scene_id": "SCN-shaft-landing-passage",
+      "scene_cast": [
+        "CHAR-alice",
+        "CHAR-white-rabbit"
+      ],
+      "references": [
+        {
+          "id": "CHAR-alice",
+          "name": "Alice",
+          "ref": "assets/concepts/characters/CHAR-alice/sheet.png",
+          "costume": "COS-001",
+          "missing": false
+        },
+        {
+          "id": "CHAR-white-rabbit",
+          "name": "White Rabbit",
+          "ref": "assets/concepts/characters/CHAR-white-rabbit/sheet.png",
+          "costume": "COS-006",
+          "missing": false
+        }
+      ],
+      "has_prompt": false
+    },
+    {
+      "group_id": "grp012",
+      "scene_no": "S04",
+      "scene_id": "SCN-shaft-landing-passage",
+      "scene_cast": [
+        "CHAR-alice",
+        "CHAR-white-rabbit"
+      ],
+      "references": [
+        {
+          "id": "CHAR-alice",
+          "name": "Alice",
+          "ref": "assets/concepts/characters/CHAR-alice/sheet.png",
+          "costume": "COS-001",
+          "missing": false
+        },
+        {
+          "id": "CHAR-white-rabbit",
+          "name": "White Rabbit",
+          "ref": "assets/concepts/characters/CHAR-white-rabbit/sheet.png",
+          "costume": "COS-006",
+          "missing": false
+        }
+      ],
+      "has_prompt": false
+    },
+    {
+      "group_id": "grp013",
+      "scene_no": "S05",
+      "scene_id": "SCN-long-hall",
+      "scene_cast": [
+        "CHAR-alice"
+      ],
+      "references": [
+        {
+          "id": "CHAR-alice",
+          "name": "Alice",
+          "ref": "assets/concepts/characters/CHAR-alice/sheet.png",
+          "costume": "COS-001",
+          "missing": false
+        }
+      ],
+      "has_prompt": false
+    },
+    {
+      "group_id": "grp014",
+      "scene_no": "S05",
+      "scene_id": "SCN-long-hall",
+      "scene_cast": [
+        "CHAR-alice"
+      ],
+      "references": [
+        {
+          "id": "CHAR-alice",
+          "name": "Alice",
+          "ref": "assets/concepts/characters/CHAR-alice/sheet.png",
+          "costume": "COS-001",
+          "missing": false
+        }
+      ],
+      "has_prompt": false
+    },
+    {
+      "group_id": "grp015",
+      "scene_no": "S05",
+      "scene_id": "SCN-little-door-passage",
+      "scene_cast": [
+        "CHAR-alice"
+      ],
+      "references": [
+        {
+          "id": "CHAR-alice",
+          "name": "Alice",
+          "ref": "assets/concepts/characters/CHAR-alice/sheet.png",
+          "costume": "COS-001",
+          "missing": false
+        }
+      ],
+      "has_prompt": false
+    },
+    {
+      "group_id": "grp016",
+      "scene_no": "S05",
+      "scene_id": "SCN-little-door-passage",
+      "scene_cast": [
+        "CHAR-alice"
+      ],
+      "references": [
+        {
+          "id": "CHAR-alice",
+          "name": "Alice",
+          "ref": "assets/concepts/characters/CHAR-alice/sheet.png",
+          "costume": "COS-001",
+          "missing": false
+        }
+      ],
+      "has_prompt": false
+    },
+    {
+      "group_id": "grp017",
+      "scene_no": "S06",
+      "scene_id": "SCN-long-hall",
+      "scene_cast": [
+        "CHAR-alice"
+      ],
+      "references": [
+        {
+          "id": "CHAR-alice",
+          "name": "Alice",
+          "ref": "assets/concepts/characters/CHAR-alice/sheet.png",
+          "costume": "COS-001",
+          "missing": false
+        }
+      ],
+      "has_prompt": false
+    },
+    {
+      "group_id": "grp018",
+      "scene_no": "S06",
+      "scene_id": "SCN-long-hall",
+      "scene_cast": [
+        "CHAR-alice"
+      ],
+      "references": [
+        {
+          "id": "CHAR-alice",
+          "name": "Alice",
+          "ref": "assets/concepts/characters/CHAR-alice/sheet.png",
+          "costume": "COS-001",
+          "missing": false
+        }
+      ],
+      "has_prompt": false
+    },
+    {
+      "group_id": "grp019",
+      "scene_no": "S06",
+      "scene_id": "SCN-long-hall",
+      "scene_cast": [
+        "CHAR-alice"
+      ],
+      "references": [
+        {
+          "id": "CHAR-alice",
+          "name": "Alice",
+          "ref": "assets/concepts/characters/CHAR-alice/sheet.png",
+          "costume": "COS-001",
+          "missing": false
+        }
+      ],
+      "has_prompt": false
+    },
+    {
+      "group_id": "grp020",
+      "scene_no": "S06",
+      "scene_id": "SCN-long-hall",
+      "scene_cast": [
+        "CHAR-alice"
+      ],
+      "references": [
+        {
+          "id": "CHAR-alice",
+          "name": "Alice",
+          "ref": "assets/concepts/characters/CHAR-alice/sheet.png",
+          "costume": "COS-001",
+          "missing": false
+        }
+      ],
+      "has_prompt": false
+    },
+    {
+      "group_id": "grp021",
+      "scene_no": "S06",
+      "scene_id": "SCN-long-hall",
+      "scene_cast": [
+        "CHAR-alice"
+      ],
+      "references": [
+        {
+          "id": "CHAR-alice",
+          "name": "Alice",
+          "ref": "assets/concepts/characters/CHAR-alice/sheet.png",
+          "costume": "COS-001",
+          "missing": false
+        }
+      ],
+      "has_prompt": false
+    },
+    {
+      "group_id": "grp022",
+      "scene_no": "S07",
+      "scene_id": "SCN-long-hall",
+      "scene_cast": [
+        "CHAR-alice"
+      ],
+      "references": [
+        {
+          "id": "CHAR-alice",
+          "name": "Alice",
+          "ref": "assets/concepts/characters/CHAR-alice/sheet.png",
+          "costume": "COS-001",
+          "missing": false
+        }
+      ],
+      "has_prompt": false
+    },
+    {
+      "group_id": "grp023",
+      "scene_no": "S07",
+      "scene_id": "SCN-long-hall",
+      "scene_cast": [
+        "CHAR-alice"
+      ],
+      "references": [
+        {
+          "id": "CHAR-alice",
+          "name": "Alice",
+          "ref": "assets/concepts/characters/CHAR-alice/sheet.png",
+          "costume": "COS-001",
+          "missing": false
+        }
+      ],
+      "has_prompt": false
+    },
+    {
+      "group_id": "grp024",
+      "scene_no": "S07",
+      "scene_id": "SCN-long-hall",
+      "scene_cast": [
+        "CHAR-alice"
+      ],
+      "references": [
+        {
+          "id": "CHAR-alice",
+          "name": "Alice",
+          "ref": "assets/concepts/characters/CHAR-alice/sheet.png",
+          "costume": "COS-001",
+          "missing": false
+        }
+      ],
+      "has_prompt": false
+    },
+    {
+      "group_id": "grp025",
+      "scene_no": "S07",
+      "scene_id": "SCN-long-hall",
+      "scene_cast": [
+        "CHAR-alice"
+      ],
+      "references": [
+        {
+          "id": "CHAR-alice",
+          "name": "Alice",
+          "ref": "assets/concepts/characters/CHAR-alice/sheet.png",
+          "costume": "COS-001",
+          "missing": false
+        }
+      ],
+      "has_prompt": false
+    },
+    {
+      "group_id": "grp026",
+      "scene_no": "S07",
+      "scene_id": "SCN-long-hall",
+      "scene_cast": [
+        "CHAR-alice"
+      ],
+      "references": [
+        {
+          "id": "CHAR-alice",
+          "name": "Alice",
+          "ref": "assets/concepts/characters/CHAR-alice/sheet.png",
+          "costume": "COS-001",
+          "missing": false
+        }
+      ],
+      "has_prompt": false
+    },
+    {
+      "group_id": "grp027",
+      "scene_no": "S08",
+      "scene_id": "SCN-long-hall",
+      "scene_cast": [
+        "CHAR-alice",
+        "CHAR-white-rabbit"
+      ],
+      "references": [
+        {
+          "id": "CHAR-alice",
+          "name": "Alice",
+          "ref": "assets/concepts/characters/CHAR-alice/sheet.png",
+          "costume": "COS-001",
+          "missing": false
+        },
+        {
+          "id": "CHAR-white-rabbit",
+          "name": "White Rabbit",
+          "ref": "assets/concepts/characters/CHAR-white-rabbit/sheet.png",
+          "costume": "COS-006",
+          "missing": false
+        }
+      ],
+      "has_prompt": false
+    },
+    {
+      "group_id": "grp028",
+      "scene_no": "S08",
+      "scene_id": "SCN-long-hall",
+      "scene_cast": [
+        "CHAR-alice",
+        "CHAR-white-rabbit"
+      ],
+      "references": [
+        {
+          "id": "CHAR-alice",
+          "name": "Alice",
+          "ref": "assets/concepts/characters/CHAR-alice/sheet.png",
+          "costume": "COS-001",
+          "missing": false
+        },
+        {
+          "id": "CHAR-white-rabbit",
+          "name": "White Rabbit",
+          "ref": "assets/concepts/characters/CHAR-white-rabbit/sheet.png",
+          "costume": "COS-006",
+          "missing": false
+        }
+      ],
+      "has_prompt": false
+    },
+    {
+      "group_id": "grp029",
+      "scene_no": "S08",
+      "scene_id": "SCN-long-hall",
+      "scene_cast": [
+        "CHAR-alice",
+        "CHAR-white-rabbit"
+      ],
+      "references": [
+        {
+          "id": "CHAR-alice",
+          "name": "Alice",
+          "ref": "assets/concepts/characters/CHAR-alice/sheet.png",
+          "costume": "COS-001",
+          "missing": false
+        },
+        {
+          "id": "CHAR-white-rabbit",
+          "name": "White Rabbit",
+          "ref": "assets/concepts/characters/CHAR-white-rabbit/sheet.png",
+          "costume": "COS-006",
+          "missing": false
+        }
+      ],
+      "has_prompt": false
+    },
+    {
+      "group_id": "grp030",
+      "scene_no": "S08",
+      "scene_id": "SCN-long-hall",
+      "scene_cast": [
+        "CHAR-alice",
+        "CHAR-white-rabbit"
+      ],
+      "references": [
+        {
+          "id": "CHAR-alice",
+          "name": "Alice",
+          "ref": "assets/concepts/characters/CHAR-alice/sheet.png",
+          "costume": "COS-001",
+          "missing": false
+        },
+        {
+          "id": "CHAR-white-rabbit",
+          "name": "White Rabbit",
+          "ref": "assets/concepts/characters/CHAR-white-rabbit/sheet.png",
+          "costume": "COS-006",
+          "missing": false
+        }
+      ],
+      "has_prompt": false
+    },
+    {
+      "group_id": "grp031",
+      "scene_no": "S08",
+      "scene_id": "SCN-long-hall",
+      "scene_cast": [
+        "CHAR-alice",
+        "CHAR-white-rabbit"
+      ],
+      "references": [
+        {
+          "id": "CHAR-alice",
+          "name": "Alice",
+          "ref": "assets/concepts/characters/CHAR-alice/sheet.png",
+          "costume": "COS-001",
+          "missing": false
+        },
+        {
+          "id": "CHAR-white-rabbit",
+          "name": "White Rabbit",
+          "ref": "assets/concepts/characters/CHAR-white-rabbit/sheet.png",
+          "costume": "COS-006",
+          "missing": false
+        }
+      ],
+      "has_prompt": false
+    },
+    {
+      "group_id": "grp032",
+      "scene_no": "S08",
+      "scene_id": "SCN-long-hall",
+      "scene_cast": [
+        "CHAR-alice",
+        "CHAR-white-rabbit"
+      ],
+      "references": [
+        {
+          "id": "CHAR-alice",
+          "name": "Alice",
+          "ref": "assets/concepts/characters/CHAR-alice/sheet.png",
+          "costume": "COS-001",
+          "missing": false
+        },
+        {
+          "id": "CHAR-white-rabbit",
+          "name": "White Rabbit",
+          "ref": "assets/concepts/characters/CHAR-white-rabbit/sheet.png",
+          "costume": "COS-006",
+          "missing": false
+        }
+      ],
+      "has_prompt": false
+    },
+    {
+      "group_id": "grp033",
+      "scene_no": "S09",
+      "scene_id": "SCN-long-hall",
+      "scene_cast": [
+        "CHAR-alice"
+      ],
+      "references": [
+        {
+          "id": "CHAR-alice",
+          "name": "Alice",
+          "ref": "assets/concepts/characters/CHAR-alice/sheet.png",
+          "costume": "COS-001",
+          "missing": false
+        }
+      ],
+      "has_prompt": false
+    },
+    {
+      "group_id": "grp034",
+      "scene_no": "S09",
+      "scene_id": "SCN-long-hall",
+      "scene_cast": [
+        "CHAR-alice"
+      ],
+      "references": [
+        {
+          "id": "CHAR-alice",
+          "name": "Alice",
+          "ref": "assets/concepts/characters/CHAR-alice/sheet.png",
+          "costume": "COS-001",
+          "missing": false
+        }
+      ],
+      "has_prompt": false
+    },
+    {
+      "group_id": "grp035",
+      "scene_no": "S10",
+      "scene_id": "SCN-pool-of-tears",
+      "scene_cast": [
+        "CHAR-alice"
+      ],
+      "references": [
+        {
+          "id": "CHAR-alice",
+          "name": "Alice",
+          "ref": "assets/concepts/characters/CHAR-alice/sheet.png",
+          "costume": "COS-001",
+          "missing": false
+        }
+      ],
+      "has_prompt": false
+    },
+    {
+      "group_id": "grp036",
+      "scene_no": "S10",
+      "scene_id": "SCN-pool-of-tears",
+      "scene_cast": [
+        "CHAR-alice"
+      ],
+      "references": [
+        {
+          "id": "CHAR-alice",
+          "name": "Alice",
+          "ref": "assets/concepts/characters/CHAR-alice/sheet.png",
+          "costume": "COS-001",
+          "missing": false
+        }
+      ],
+      "has_prompt": false
+    },
+    {
+      "group_id": "grp037",
+      "scene_no": "S10",
+      "scene_id": "SCN-pool-of-tears",
+      "scene_cast": [
+        "CHAR-alice"
+      ],
+      "references": [
+        {
+          "id": "CHAR-alice",
+          "name": "Alice",
+          "ref": "assets/concepts/characters/CHAR-alice/sheet.png",
+          "costume": "COS-001",
+          "missing": false
+        }
+      ],
+      "has_prompt": false
+    }
+  ],
+  "updated_prompts": [],
+  "errors": []
+}

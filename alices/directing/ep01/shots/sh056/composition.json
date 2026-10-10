@@ -1,0 +1,34 @@
+{
+  "shot_id": "sh056",
+  "scene_id": "SCN-long-hall",
+  "size": "medium",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "mid_left",
+    "anchor_xy": [0.30, 0.62],
+    "size_in_frame": "still ten inches high, about 0.42 of frame height in the near-left ground"
+  },
+  "second_subject": {
+    "id": "PROP-eat-me-cake",
+    "grid": "centre",
+    "anchor_xy": [0.58, 0.64],
+    "note": "the little glass box in the middle distance under the table, half in lamp shadow, about 0.30 of frame height — as tall as her chest."
+  },
+  "headroom": "about 0.24 of frame height above her, filled by the dark underside of the tabletop; the box has a little less, so the frame quietly gives the object the lower, heavier position.",
+  "horizon_eyeline": "Lens on the flags at 0.20 m: the flagstone joints run away from the bottom of frame and give the floor its scale. Her eyeline is at 0.56, level, and travels across the frame to the box — a search, not a discovery.",
+  "layers": {
+    "fg": "flagstone joints and the mosaic dado border at her scale, left and bottom",
+    "mg": "Alice sniffing and looking about her",
+    "bg": "two enormous clear glass legs standing either side of the box, and the dark hall beyond"
+  },
+  "gaze": {
+    "direction": "frame_right",
+    "lead_room": "right",
+    "note": "her look crosses the frame left to right and lands on the box; the lead room is exactly the distance between them and is occupied by empty floor, so the search reads as a search."
+  },
+  "balance": "Two objects of similar weight either side of centre with lit floor between them — a frame that invites comparison and then lets the eye make it unaided.",
+  "leading_lines": "The flagstone joints rake from the lower left toward the box; the two glass legs bracket it like door jambs. The architecture delivers the box without any help from the camera.",
+  "eye_first": "Alice — and then her look, which is what takes the eye to the box. The audience should find it the same way she does.",
+  "safe_area_ok": true,
+  "constraint_binding": "Static — the box is found by her eye, not by a push-in, so it is placed in the composition from the first frame, in shadow, and is never revealed by a move. No re-lighting between S06 and S07: the lamp pools fall exactly where they fell in sh055's set-up. Deep focus, both planes sharp."
+}

@@ -1,0 +1,29 @@
+{
+  "task_id": "p4-color-script",
+  "agent": "06-art/color-script",
+  "attempt": 1,
+  "status": "done_pending_art_director_countersign",
+  "finished": "2026-09-22",
+  "outputs": ["bible/color_script.json"],
+  "acceptance": {
+    "command": "python3 code/check_color_script.py --project alices --strict",
+    "exit_code": 0,
+    "output": "OK color_script_ok:9 集,0 违规,0 提醒"
+  },
+  "summary": {
+    "episodes": 9, "acts": 44, "peaks": 14,
+    "variants_defined": ["dream (all dream acts, ep01 act2 .. ep09 act3)", "waking (reference baseline, not used as an act tag: the contract enum has no 'waking' and reality acts carry no variant)", "imagination (ep09 act5, sister's sunset reverie)"],
+    "user_refs": ["refs/style/alice.jpeg (no annotation)"]
+  },
+  "decisions": [
+    "Whole dream tagged variant 'dream' with a moderate grade (contrast 0.95, -300K, saturation 0.9, soften 0.2, grain 0.25, luma step 20%) because it covers ~93% of runtime; per-act variant_grade overrides carry the curve.",
+    "Waking frame defined as variants.waking numeric baseline per work order, while waking acts stay untagged per the SOUL contract.",
+    "Three threads drive the curve: the sun's progression across the afternoon (from scene lighting time_of_day), Alice's cornflower share of frame (identity arc), the Hearts-crimson ramp (absent -> ep05 act4 -> dominant in court -> leaves).",
+    "Film dark moment = ep07 act2 (story_graph low point); film colour peak = ep09 act3 (cards to leaves match-cut)."
+  ],
+  "for_art_director_countersign": "bible/color_script.json out_of_base[]: seashore sea/sand tones, flamingo pink, ep09 climax saturation/contrast 1.1, waking gold leak into the garden (ep05 act3).",
+  "constraints_honoured": ["DEF-p3-char-index-902 (no execution device keyed in colour; executioner = black livery + crown gold)", "DEF-p3-char-index-903 (ep04 act4 lullaby lit as Duchess+cook+baby tableau only)", "SUP-001/004/005/006/011/014", "narration off: register change carried by colour and cut only"],
+  "skills": "none selected for this station",
+  "retries_used": 0,
+  "defects_opened": []
+}

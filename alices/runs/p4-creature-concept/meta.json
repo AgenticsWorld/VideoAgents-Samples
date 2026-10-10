@@ -1,0 +1,10 @@
+{
+ "task_id": "p4-creature-concept",
+ "run_id": "46e15d49be29",
+ "attempt": 1,
+ "started_at": "2026-09-23T00:24:43+08:00",
+ "finished_at": "2026-09-23T00:36:39+08:00",
+ "result_status": "escalated",
+ "eval": "skipped (review.evaluation=0)",
+ "artifact_versions": "v1 (initial render; H2 pending)"
+}

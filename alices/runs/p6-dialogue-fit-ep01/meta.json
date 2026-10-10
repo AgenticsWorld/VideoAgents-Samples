@@ -1,0 +1,15 @@
+{
+  "task_id": "p6-dialogue-fit-ep01",
+  "agent": "01-story/dialogue-rewrite",
+  "run_id": "9ca3eb48b730",
+  "parent_run_id": "1f5ab5bd58b7",
+  "attempt": 1,
+  "engine_model": "per-agent console configuration (not overridden by orchestrator)",
+  "finished_at": "2026-09-23T11:2x:00+08:00",
+  "duration_s": 850,
+  "tokens": "not reported by dispatch --status",
+  "inputs_sha256": { "directing/ep01/shot_list.json": "6045b981f753a33ef08694cf52a5f1deb78bf93530da307125982411a73ddfaa" },
+  "outputs": ["directing/ep01/dialogue_fit.json"],
+  "product_version": "ep01 v1 (first pass after H3S)",
+  "verified_by_orchestrator": ["check_dialogue_fit.py --project alices --ep ep01 -> exit 0, 24 dialogue groups, 0 over, 0 tight, 0 FAIL / 0 WARN; no-op PASS, no file edited"]
+}

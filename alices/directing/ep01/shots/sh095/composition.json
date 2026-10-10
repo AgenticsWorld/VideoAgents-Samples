@@ -1,0 +1,28 @@
+{
+  "shot_id": "sh095",
+  "scene_id": "SCN-pool-of-tears",
+  "size": "close",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "centre",
+    "anchor_xy": [0.44, 0.50],
+    "size_in_frame": "her face about 0.48 of frame height, chin almost in the water"
+  },
+  "headroom": "about 0.20 of frame height of dark. Comfortable rather than pressing — the dread has not arrived yet, and the framing is not allowed to supply it.",
+  "horizon_eyeline": "Water-level close, lens just above the surface: the waterline runs across at 0.72 of frame height, just under her chin. Her eyeline is at 0.46, level and thinking, drifting frame left.",
+  "layers": {
+    "fg": "the rocking surface at the bottom edge",
+    "mg": "her face",
+    "bg": "broken amber reflections crossing behind her, and dark"
+  },
+  "gaze": {
+    "direction": "frame_left",
+    "lead_room": "left",
+    "note": "her look goes left, into the practical middle distance where railway timetables live. About 0.24 of frame width of open water on that side — the lead room of a child solving a problem, not of a child in danger."
+  },
+  "balance": "A single face just left of centre with the waterline low under it — steady, classical, calm. Deliberately the same shape as the aria closes, so the difference is temperature and not composition.",
+  "leading_lines": "The waterline under her chin, and the broken reflection flecks crossing behind her as short horizontal dashes. Nothing rises.",
+  "eye_first": "Her eyes, working it out.",
+  "safe_area_ok": true,
+  "constraint_binding": "Played as a child's practical arithmetic, not as fear — so the composition denies every horror device: the frame is level, the headroom is generous, nothing enters the picture behind her, and her face is not crowded or backed against anything."
+}

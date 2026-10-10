@@ -1,0 +1,20 @@
+{
+  "shot_id": "sh016",
+  "group_id": "grp007",
+  "scene_no": "S02",
+  "scene_id": "SCN-field-hedge-burrow",
+  "duration_s": 3.0,
+  "is_dialogue": false,
+  "group_position": "last shot of grp007 — Alice has reached her map end (burrow) and is inside it. The shot list registers nobody in frame, so this file carries no space fragments; the map end is honoured off-frame.",
+  "characters": [],
+  "creatures": [],
+  "offscreen_presence": [
+    { "id": "CHAR-alice", "where": "inside the rabbit burrow, head-first, already past the hawthorn roots", "note": "grp007 blocking_map end for Alice. She is present in the space and absent from the frame; no space fragment is written because blocking_bound binds in-frame characters only." }
+  ],
+  "presence_check": {
+    "timeline_ok": true,
+    "violations": [],
+    "story_event": "ev0001 -> ev0002 (the hole, then the fall)",
+    "note": "Empty frame by design. Nobody enters; the sound drains out. The next time Alice is seen she is in the dream layer (S03)."
+  }
+}

@@ -1,0 +1,221 @@
+{
+  "_meta": {
+    "file": "bible/scenes/SCN-mad-tea-party/environment.json",
+    "owner": "05-scenes/environment",
+    "task_id": "p3-environment-sb2",
+    "attempt": 1,
+    "generated": "2026-09-22",
+    "amended": {"change_id": "BIB-0027", "task_id": "p4-cr-environment", "date": "2026-09-23", "fields": ["fixed.dream_design (new)"]},
+    "enum_set": "ENV-ENUM-v1 (runs/p3-environment-sb1/result.json) + sb2 extensions (runs/p3-environment-sb2/result.json)"
+  },
+  "scene_id": "SCN-mad-tea-party",
+  "layer": "dream",
+  "fixed": {
+    "climate": "dream-midsummer at the wood's edge: warm, still, sheltered (geography.json LOC-tea-table-yard 'warm, sheltered by the tree's shade')",
+    "indoor": false,
+    "daylight_access": "canopy_dappled",
+    "dream_design": {
+      "rule": "WR-010 / XA-magic-08 (dream, full)",
+      "flora": "the horse-chestnut's great boughs sweep over the table in broad whiplash curves; dog-roses and honeysuckle scramble over the March Hare's house under the fur-thatched roof; meadowsweet and campion in the sunlit grass beyond",
+      "ornament_cues": "the tree crown is the scene's canopy-roundel, a domed halo of leaf over the long table; the chimneys shaped like ears and the house front carry flowing organic lines (form belongs to architecture; the china, teapot and the Hatter's watch stay 1862 props, WR-009)",
+      "palette": "warm cream and ivory in the table-cloth and china, pastel rose, sage and honey, deep green shade, gold dapples of the slanting sun",
+      "seasonal_guard": "the horse-chestnut is in leaf with green young conkers, not in candle-flower (May) and not in autumn colour",
+      "inferred": true,
+      "reason": "The tree, table and house are explicit (ch007-p01). Climbers, the canopy-roundel and palette are designed to WR-010; the always-six-o'clock light in the states is unchanged."
+    },
+    "ground_and_flora": "open ground in front of the March Hare's house under one large, full-leafed shade tree (designed: a horse-chestnut in dark July leaf); the long table in dappled shade; dry summer grass beyond the shade in full sun; the fur-thatched roof sun-warmed",
+    "dream_growth": "Grows from the household's fixed tea-time, which Alice is late for when she wakes (cp-tea). The Hatter's 'always six o'clock' is the tea-time she is sleeping through. The light is the real late afternoon over the bank: warm, slanting, unchanging while the party goes round the table.",
+    "dream_clock_note": "Inside the dream the clock is stuck at six (ch007-p57, 'It's always six o'clock now'). The Hatter's watch shows the day of the month, not the hour (ch007-p27). On 4 July, six o'clock light and the waking-clock light here (about 17:14-17:33, within half an hour of six) are both late afternoon with the sun still well up, so the two readings agree.",
+    "source": {
+      "chapter": "ch007",
+      "quote": "There was a table set out under a tree in front of the house, and the March Hare and the Hatter were having tea at it"
+    },
+    "also_seen": [
+      {
+        "chapter": "ch007",
+        "refs": [
+          "ch007-p57"
+        ],
+        "quote": "It’s always six o’clock now."
+      }
+    ],
+    "inferred": true,
+    "reason": "The tree, the table and the six o'clock tea-time are explicit (ch007-p01, ch007-p57, ch007-p59). The tree species, grass state and waking-clock mapping are designed; the dream link follows world.json cp-tea per ruling 5.2 A."
+  },
+  "variable_dims": {
+    "season": [
+      "summer"
+    ],
+    "time_of_day": [
+      "late_afternoon"
+    ],
+    "weather": [
+      "fair_hot"
+    ],
+    "wind": [
+      "still"
+    ],
+    "temperature": [
+      "warm"
+    ]
+  },
+  "states": [
+    {
+      "state_id": "SCN-mad-tea-party-S01",
+      "chapter": 6,
+      "chapter_id": "ch006",
+      "story_scene": "ch006-sc06",
+      "paragraphs": "ch006-p80..ch006-p80",
+      "timeline_ref": "ev0028",
+      "timeline_node": "TL-003",
+      "season": "summer",
+      "weather": "fair_hot",
+      "wind": "still",
+      "temperature": "warm",
+      "time_of_day": "late_afternoon",
+      "waking_clock": "17:14-17:16 GMT",
+      "sun": {
+        "elevation_deg_approx": 26,
+        "azimuth_deg_approx": 274,
+        "note": "sun due west, lighting the ear-chimneys and fur thatch as Alice comes out of the wood"
+      },
+      "sky": "clear sky over the house",
+      "conditions": "Alice leaves the wood's shade and sees the large house in full sun; still, warm air",
+      "source_chapter": "ch006",
+      "source": {
+        "chapter": "ch006",
+        "quote": "the chimneys were shaped like ears and the roof was thatched with fur"
+      },
+      "inferred": true,
+      "designed_fields": [
+        "waking_clock",
+        "sun",
+        "sky",
+        "wind",
+        "temperature",
+        "weather"
+      ],
+      "reason": "The house is explicit (ch006-p80). ev0028's result lands here (story_timeline narrative). Other fields follow the waking afternoon in event order; the sun is computed for Oxford on 4 July 1862."
+    },
+    {
+      "state_id": "SCN-mad-tea-party-S02",
+      "chapter": 7,
+      "chapter_id": "ch007",
+      "story_scene": "ch007-sc01",
+      "paragraphs": "ch007-p01..ch007-p20",
+      "timeline_ref": "ev0029",
+      "timeline_node": "TL-003",
+      "season": "summer",
+      "weather": "fair_hot",
+      "wind": "still",
+      "temperature": "warm",
+      "time_of_day": "late_afternoon",
+      "waking_clock": "17:16-17:21 GMT (dream clock: six o'clock)",
+      "sun": {
+        "elevation_deg_approx": 26,
+        "azimuth_deg_approx": 275,
+        "note": "slanting western sun; the table in the tree's dappled shade, sunlit grass beyond"
+      },
+      "sky": "clear, seen past the tree",
+      "conditions": "warm, still, drowsy air that suits the sleeping Dormouse; steam off the teapot; 'No room!'",
+      "source_chapter": "ch007",
+      "source": {
+        "chapter": "ch007",
+        "quote": "There was a table set out under a tree in front of the house"
+      },
+      "inferred": true,
+      "designed_fields": [
+        "waking_clock",
+        "sun",
+        "sky",
+        "wind",
+        "temperature",
+        "weather"
+      ],
+      "reason": "The tree shade is explicit (ch007-p01). The late-afternoon phase follows the waking afternoon and the dream's six o'clock (ch007-p57)."
+    },
+    {
+      "state_id": "SCN-mad-tea-party-S03",
+      "chapter": 7,
+      "chapter_id": "ch007",
+      "story_scene": "ch007-sc01",
+      "paragraphs": "ch007-p21..ch007-p62",
+      "timeline_ref": "ev0030",
+      "timeline_node": "TL-003",
+      "season": "summer",
+      "weather": "fair_hot",
+      "wind": "still",
+      "temperature": "warm",
+      "time_of_day": "late_afternoon",
+      "waking_clock": "17:21-17:27 GMT (dream clock: six o'clock)",
+      "sun": {
+        "elevation_deg_approx": 25,
+        "azimuth_deg_approx": 276,
+        "note": "light unchanged across the scene: the frozen tea-time"
+      },
+      "sky": "clear",
+      "conditions": "warm, still; the unchanging light supports 'it's always tea-time'. The 'last March' concert in the Hatter's story (an-02, TL-004) is dialogue only; it is not staged and needs no environment state.",
+      "source_chapter": "ch007",
+      "source": {
+        "chapter": "ch007",
+        "quote": "It’s always six o’clock now."
+      },
+      "also_seen": [
+        {
+          "chapter": "ch007",
+          "refs": [
+            "ch007-p21"
+          ],
+          "quote": "“What day of the month is it?” ... “The fourth.”"
+        }
+      ],
+      "inferred": true,
+      "designed_fields": [
+        "waking_clock",
+        "sun",
+        "sky",
+        "wind",
+        "temperature",
+        "weather"
+      ],
+      "reason": "Six o'clock and 'the fourth' are explicit (ch007-p21..p22, ch007-p57). TL-003 = 4 July 1862. 'Last March' (TL-004) is dream-internal backstory (UTQ-003 resolved) and does not touch the present season."
+    },
+    {
+      "state_id": "SCN-mad-tea-party-S04",
+      "chapter": 7,
+      "chapter_id": "ch007",
+      "story_scene": "ch007-sc01",
+      "paragraphs": "ch007-p63..ch007-p102",
+      "timeline_ref": "ev0031",
+      "timeline_node": "TL-003",
+      "season": "summer",
+      "weather": "fair_hot",
+      "wind": "still",
+      "temperature": "warm",
+      "time_of_day": "late_afternoon",
+      "waking_clock": "17:27-17:33 GMT (dream clock: six o'clock)",
+      "sun": {
+        "elevation_deg_approx": 24,
+        "azimuth_deg_approx": 277,
+        "note": "sun due west; hold the light to match S02-S03 for continuity"
+      },
+      "sky": "clear",
+      "conditions": "warm, still; the Dormouse's treacle-well story; everyone moves round the table; Alice walks off in disgust into the wood",
+      "source_chapter": "ch007",
+      "source": {
+        "chapter": "ch007",
+        "quote": "Once upon a time there were three little sisters"
+      },
+      "inferred": true,
+      "designed_fields": [
+        "waking_clock",
+        "sun",
+        "sky",
+        "wind",
+        "temperature",
+        "weather"
+      ],
+      "reason": "The treacle-well tale (an-03) is told, not staged. The environment holds steady over the party to support the frozen tea-time (the dream-logic choice). The waking-clock drift over about 20 minutes is within one late-afternoon phase."
+    }
+  ]
+}

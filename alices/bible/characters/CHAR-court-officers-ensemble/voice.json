@@ -1,0 +1,33 @@
+{
+  "character_id": "CHAR-court-officers-ensemble",
+  "name": "Court officers (ensemble)",
+  "tier": "extra",
+  "card_type": "ensemble_group_voice",
+  "gender": "male",
+  "age_sense": "middle-aged men 35-55",
+  "timbre": "big, booming, officious usher's voice, resonant and carrying",
+  "pitch": "low baritone, long projected vowels",
+  "pitch_range_hz": [85, 160],
+  "speed_wpm": [120, 140],
+  "speed_cpm": [456, 532],
+  "accent": "formal public-office English, projected court-usher cadence",
+  "reference_style": "Court ushers: the distant cry 'The trial's beginning!' heard from the seashore, calls for silence, and gruff grunts while bagging and hustling out the cheering guinea-pig juror (ruling 5.4 B). Carrying, not threatening.",
+  "group_voice": {
+    "mode": "single calling voice; paired grunts during the hustle-out",
+    "headcount": "2-4, all male",
+    "speaking_slots": []
+  },
+  "emotion_range": {
+    "distant_cry": { "speed_delta": "-10%", "pitch_delta": "+2semi", "volume": "shout", "note": "ch010-p78, heard in the distance" },
+    "order_silence": { "speed_delta": "0%", "pitch_delta": "0semi", "volume": "loud", "note": "courtroom decorum" }
+  },
+  "age_variants": [],
+  "source_chapter": "ch010",
+  "sources": ["ch010", "ch011", "ch010-p78", "ch010-d0084", "ch011-p53"],
+  "voice_evidence": [
+    { "para": "ch010-p78", "quote": "a cry of “The trial’s beginning!” was heard in the distance" }
+  ],
+  "inferred": true,
+  "inferred_fields": ["timbre", "pitch", "pitch_range_hz", "speed_wpm", "speed_cpm", "accent", "speaker attribution of ch010-d0084"],
+  "reason": "structured_story tags ch010-d0084 speaker 'UNKNOWN'; attributed here to the court officers as the natural herald of the trial (designed). Voices designed for 1862 court ushers (appearance.json)."
+}

@@ -1,0 +1,15 @@
+CHAR-gryphon exit=0
+CHAR-knave-of-hearts exit=0
+CHAR-caterpillar exit=0
+CHAR-lory exit=0
+CHAR-mock-turtle exit=0
+CHAR-pigeon exit=0
+CHAR-duck exit=0
+CHAR-canary exit=0
+CHAR-magpie exit=0
+CHAR-eaglet exit=0
+CHAR-dodo exit=0
+CHAR-young-crab exit=0
+CHAR-duchess-baby exit=0
+CHAR-fish-footman exit=0
+CHAR-old-crab exit=0

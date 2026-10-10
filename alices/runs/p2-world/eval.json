@@ -1,0 +1,9 @@
+{
+  "task_id": "p2-world",
+  "skipped": true,
+  "reason": "quality judge=0; QA levels 0",
+  "auto": {
+    "schema": "PASS (parses)",
+    "no_unknown_placeholder": "PASS"
+  }
+}

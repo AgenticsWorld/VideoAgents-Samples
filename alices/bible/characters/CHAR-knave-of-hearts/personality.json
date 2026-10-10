@@ -1,0 +1,87 @@
+{
+  "character_id": "CHAR-knave-of-hearts",
+  "name": "Knave of Hearts",
+  "tier": "B",
+  "layer": "dream",
+  "temperament": {
+    "summary": "Smooth, deferential and quiet; a courtier's composure that turns into mournful resignation in the dock. He almost never speaks; when he does, he is careful and exact.",
+    "baseline": "Bows and smiles; gives nothing away.",
+    "under_pressure": "Plain, reasonable self-defence, then sad head-shaking. Never outrage.",
+    "inferred": false
+  },
+  "traits": [
+    {
+      "trait": "Deferential courtier",
+      "description": "His whole manner is service: he carries the crown on its cushion and answers the Queen's demand with a bow and a smile instead of words.",
+      "evidence": [
+        { "chapter": "ch008", "ref": "ch008-p11", "event": "ev0034", "note": "Carries the King's crown on a crimson velvet cushion in the procession." },
+        { "chapter": "ch008", "ref": "ch008-p13", "event": "ev0034", "note": "Asked 'Who is this?', he only bows and smiles." }
+      ],
+      "inferred": false
+    },
+    {
+      "trait": "Careful and precise in carrying out orders",
+      "description": "Told to turn the gardeners over, he does it 'very carefully, with one foot': exact obedience with the least possible effort or harm.",
+      "evidence": [
+        { "chapter": "ch008", "ref": "ch008-p21" },
+        { "chapter": "ch008", "ref": "ch008-p22", "event": "ev0034", "note": "Turns the gardeners over very carefully with one foot." }
+      ],
+      "inferred": false
+    },
+    {
+      "trait": "Reasonable under accusation",
+      "description": "In the only substantive thing he says in his own defence he makes the one sensible legal point in the whole trial: there is no proof, and nothing is signed.",
+      "evidence": [
+        { "chapter": "ch012", "ref": "ch012-p32", "event": "ev0051", "quote": "I didn’t write it, and they can’t prove I did: there’s no name signed at the end." }
+      ],
+      "inferred": false
+    },
+    {
+      "trait": "Resigned, melancholy",
+      "description": "When the court's logic turns against him, he does not rage; he shakes his head sadly and makes a mild, rueful joke about himself.",
+      "evidence": [
+        { "chapter": "ch012", "ref": "ch012-p51", "event": "ev0051", "note": "Shakes his head sadly: 'Do I look like it?'" },
+        { "chapter": "ch011", "ref": "ch011-p01", "event": "ev0045", "note": "Stands in chains before the throne, guarded on each side, without protest." }
+      ],
+      "inferred": false
+    }
+  ],
+  "motivation": {
+    "core": "To keep his place at court: serve smoothly, and when accused, get through the trial on reason rather than defiance.",
+    "fear": "The Queen's arbitrary judgement, sentence before verdict.",
+    "wants_from_alice": "Nothing directly. Her objections in court happen to be his only real defence.",
+    "shifts": [
+      { "chapter": "ch011", "ref": "ch011-p01", "event": "ev0045", "from": "trusted page carrying the crown (ch008)", "to": "chained defendant fighting for his life on a point of evidence", "trigger": "accused of stealing the Queen's tarts (ch011-p12)" }
+    ]
+  },
+  "habits": [
+    { "habit": "Answers with a bow and a smile instead of words", "evidence": [ { "chapter": "ch008", "ref": "ch008-p13" } ], "inferred": false },
+    { "habit": "Does the least that fully satisfies an order (turning men over with one foot)", "evidence": [ { "chapter": "ch008", "ref": "ch008-p22" } ], "inferred": false },
+    { "habit": "Addresses the King with correct court form before making his point", "evidence": [ { "chapter": "ch012", "ref": "ch012-p32" } ], "inferred": false },
+    { "habit": "Keeps his flat, upright card-figure bearing even in chains, moving stiffly from the shoulders", "evidence": [ { "chapter": "ch012", "ref": "ch012-p51" } ], "inferred": true, "reason": "The 'made entirely of cardboard' line is rendered as flat, stiff card-figure movement by a human performer (SUP-004, SUP-002)." }
+  ],
+  "decision_pattern": "Pliant and minimal. He goes along, says as little as possible, and when forced to speak argues from evidence and form, never from feeling.",
+  "taboos": [
+    { "taboo": "Never openly defies or insults the King or Queen, even in chains", "basis": [ { "chapter": "ch012", "ref": "ch012-p32" }, { "chapter": "ch012", "ref": "ch012-p51" } ], "inferred": false },
+    { "taboo": "Never confesses, and never admits authorship of the unsigned verses", "basis": [ { "chapter": "ch012", "ref": "ch012-p32" } ], "inferred": false },
+    { "taboo": "Never tries to escape or struggle against his guards", "basis": [ { "chapter": "ch011", "ref": "ch011-p01" } ], "inferred": true, "reason": "He stands between two soldiers through the whole trial with no attempt recorded; kept as a hard line so the scene stays about the court's logic, not an action beat." }
+  ],
+  "facade": {
+    "applies": true,
+    "surface": "A smiling, obliging page with nothing on his mind but service",
+    "true_self": "Guilt or innocence is deliberately left open. The source never resolves whether he stole the tarts (trial interrupted, ev0052), and the film must not decide it.",
+    "reveal_chapter": "ch012",
+    "reveal_note": "No reveal of guilt at any point. Screenplay and blocking must not add a knowing look, a hidden tart or crumbs that settle the question. Only his sensible defence (ch012-p32) is shown. See story/events.json broken_chains (ev0052).",
+    "inferred": false
+  },
+  "waking_life_embodiment": {
+    "embodies": "The accused junior: the page, the footman's boy or the child blamed when food goes missing from the pantry, judged by grown-ups who have already decided.",
+    "waking_source": "Household justice as a child knows it (who ate the tarts?) combined with the court of law Alice has only read about in books (cp-court).",
+    "authority_trait": "Not an authority but its victim: the smooth subordinate whose good manners are no protection once the powerful decide he is guilty.",
+    "coming_of_age_reading": "Through him Alice sees adult justice judge first. The unsigned paper is treated as proof of guilt. His quiet, reasonable defence is ignored, and it is Alice, growing to full size, who says out loud what he cannot: 'Stuff and nonsense!' He is the person she learns to stand up for.",
+    "grounding": [ "ch012-p32", "ch012-p33", "ch012-p51", "ev0052", "bible/world.json wonderland_real_counterparts cp-court", "bible/politics.json OFF-008" ],
+    "inferred": true,
+    "reason": "The trial and his conduct are sourced. The pantry-blame, accused-junior reading is a design interpretation for the coming-of-age frame."
+  },
+  "performance_baseline": "Poised, handsome, practised smile; almost silent. In chains he stays upright and courteous. His sadness at ch012-p51 is the one open feeling. Never play him as a villain or as an innocent."
+}

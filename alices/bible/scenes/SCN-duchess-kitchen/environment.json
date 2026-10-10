@@ -1,0 +1,121 @@
+{
+  "_meta": {
+    "file": "bible/scenes/SCN-duchess-kitchen/environment.json",
+    "owner": "05-scenes/environment",
+    "task_id": "p3-environment-sb2",
+    "attempt": 1,
+    "generated": "2026-09-22",
+    "amended": {"change_id": "BIB-0027", "task_id": "p4-cr-environment", "date": "2026-09-23", "fields": ["fixed.dream_design (new)"]},
+    "enum_set": "ENV-ENUM-v1 (runs/p3-environment-sb1/result.json) + sb2 extensions (runs/p3-environment-sb2/result.json)"
+  },
+  "scene_id": "SCN-duchess-kitchen",
+  "layer": "dream",
+  "fixed": {
+    "climate": "none of its own: an enclosed, over-heated kitchen (geography.json LOC-duchess-kitchen 'hot, smoky, and thick with pepper')",
+    "indoor": true,
+    "daylight_access": "smoke_filled_interior",
+    "dream_design": {
+      "rule": "WR-010 / XA-magic-08 (dream, full)",
+      "flora": "bunches of drying herbs and hops hang from the beams in trailing curves; a pot of scarlet geraniums sits on the small window-sill, the one fresh colour in the smoke",
+      "ornament_cues": "pepper-smoke rolls in long ribbon-curls like Mucha hair-lines through the door shaft; the hearth is framed by a tiled surround of poppy-and-vine mosaic, and the copper hood over the fire forms a halo roundel behind the cook (form and material belong to architecture; the cauldron, pans and pepper-box are 1862 props, WR-009)",
+      "palette": "smoky amber, ochre and burnt copper gold under a hazy pastel veil; tile accents in faded teal and rose; the door rectangle is pale gold",
+      "seasonal_guard": "summer herbs and potted geraniums; no evergreen or holly dressing",
+      "inferred": true,
+      "reason": "Smoke, fire, cauldron and pepper are explicit (ch006-p19..p20). Dressing, mosaic and palette are designed to WR-010. The smoke haze stays at pepper_smoke density in both states."
+    },
+    "exterior_state_ref": "SCN-duchess-house-front (same waking-clock phase: late_afternoon, fair_hot, still)",
+    "atmosphere": "pepper-smoke from the hearth fire and the soup cauldron fills the room end to end; the air is visibly hazy; the heat of the fire adds to the summer heat",
+    "dream_growth": "Grows from the family kitchen below stairs, with Dinah on the hearth (index grows_from, cp-cat). The hot summer afternoon Alice is sleeping through becomes, in the dream, a stifling kitchen with the fire lit on a July day. What daylight gets in is the same slanting late-afternoon sun as outside, reduced to a hazy glow through the open door and a small window.",
+    "source": {
+      "chapter": "ch006",
+      "quote": "The door led right into a large kitchen, which was full of smoke from one end to the other"
+    },
+    "inferred": true,
+    "reason": "Smoke and pepper are explicit (ch006-p19, ch006-p20). The daylight way in and the summer-heat link are designed per ruling 5.2 A; the outside phase is tied to the house-front card so the door view matches."
+  },
+  "variable_dims": {
+    "season": [
+      "summer"
+    ],
+    "time_of_day": [
+      "late_afternoon"
+    ],
+    "weather": [
+      "none_enclosed"
+    ],
+    "wind": [
+      "still"
+    ],
+    "temperature": [
+      "hot"
+    ],
+    "atmosphere": [
+      "pepper_smoke"
+    ]
+  },
+  "states": [
+    {
+      "state_id": "SCN-duchess-kitchen-S01",
+      "chapter": 6,
+      "chapter_id": "ch006",
+      "story_scene": "ch006-sc03",
+      "paragraphs": "ch006-p19..ch006-p43",
+      "timeline_ref": "ev0026",
+      "timeline_node": "TL-003",
+      "season": "summer",
+      "weather": "none_enclosed",
+      "wind": "still",
+      "temperature": "hot",
+      "time_of_day": "late_afternoon",
+      "atmosphere": "pepper_smoke",
+      "waking_clock": "16:46-16:56 GMT",
+      "diegetic_daylight": "a hazy shaft of slanting late-afternoon sun through the door and one small window, softened and yellowed by the smoke; the hearth fire is the other source",
+      "conditions": "dense pepper-smoke, everyone but the cook and the Cat sneezing; hot, close, airless; pans and dishes flying",
+      "source_chapter": "ch006",
+      "source": {
+        "chapter": "ch006",
+        "quote": "There was certainly too much of it in the air. Even the Duchess sneezed occasionally"
+      },
+      "inferred": true,
+      "designed_fields": [
+        "waking_clock",
+        "diegetic_daylight",
+        "temperature",
+        "time_of_day"
+      ],
+      "reason": "Smoke and pepper in the air are explicit (ch006-p19, ch006-p20). The heat and daylight way in are designed; time follows the waking afternoon in event order (ev0026 follows ev0025 'continuous', story_timeline)."
+    },
+    {
+      "state_id": "SCN-duchess-kitchen-S02",
+      "chapter": 6,
+      "chapter_id": "ch006",
+      "story_scene": "ch006-sc04",
+      "paragraphs": "ch006-p44..ch006-p45",
+      "timeline_ref": "ev0027",
+      "timeline_node": "TL-003",
+      "season": "summer",
+      "weather": "none_enclosed",
+      "wind": "still",
+      "temperature": "hot",
+      "time_of_day": "late_afternoon",
+      "atmosphere": "pepper_smoke",
+      "waking_clock": "16:56-16:58 GMT",
+      "diegetic_daylight": "the open door is a bright rectangle of hot afternoon sun that Alice carries the baby toward",
+      "conditions": "the Duchess has left for croquet; the smoke still hangs; the baby snorts in Alice's arms",
+      "source_chapter": "ch006",
+      "source": {
+        "chapter": "ch006",
+        "quote": "“If I don’t take this child away with me,” thought Alice, “they’re sure to kill it in a day or two"
+      },
+      "inferred": true,
+      "designed_fields": [
+        "waking_clock",
+        "diegetic_daylight",
+        "temperature",
+        "atmosphere",
+        "time_of_day"
+      ],
+      "reason": "The kitchen state continues from S01 with nothing to break it. The bright door leads into SCN-duchess-house-front S04."
+    }
+  ]
+}

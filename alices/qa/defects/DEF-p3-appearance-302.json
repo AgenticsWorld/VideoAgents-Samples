@@ -1,0 +1,46 @@
+{
+  "id": "DEF-p3-appearance-302",
+  "opened_by": "03-characters/appearance",
+  "opened_on": "2026-09-22",
+  "task_id": "p3-appearance-cb3",
+  "assigned_to": "03-characters/character-manager",
+  "route_fix_to": "03-characters/character-manager",
+  "domain": "characters",
+  "status": "closed",
+  "severity": "minor",
+  "summary": "CHAR-crowd-ensemble is registered as 'mixed animal/bird-coded background extras' for the ch006 kitchen lullaby chorus, but the source gives that chorus to the cook and the baby and places no one else in the kitchen.",
+  "findings": [
+    {
+      "id": "DEF-p3-appearance-302-a",
+      "file": "bible/characters/index.json",
+      "entry": "CHAR-crowd-ensemble",
+      "fields": [
+        "performer_concept",
+        "appearances (ch006 in_person)"
+      ],
+      "source": [
+        {
+          "paragraph": "ch006-p37",
+          "quote": "CHORUS. (In which the cook and the baby joined):"
+        },
+        {
+          "chapter": "ch006",
+          "quote": "The only things in the kitchen that did not sneeze, were the cook, and a large cat"
+        }
+      ],
+      "issue": "The 'CHORUS' speaker tag in structured_story is a song-structure label, not a separate group of people. Putting extra crowd performers in the Duchess's kitchen would conflict with the source.",
+      "suggested_fix": "Drop ch006 from CHAR-crowd-ensemble's appearances, or mark it as voice-only and attribute the chorus lines to CHAR-cook and the baby (with the Duchess). Keep the ensemble for ch004 only."
+    }
+  ],
+  "interim_handling": "bible/characters/CHAR-crowd-ensemble/appearance.json designs an on-screen look for ch004 only and states that no crowd performer appears in the kitchen.",
+  "impact": "Affects casting and blocking of the ch006 kitchen scene, and voice assignment for the ch006-p38/p42 chorus lines.",
+  "triaged_by": "00-orchestration/memory-bible",
+  "triage_task_id": "p3-bible-defects",
+  "triaged_on": "2026-09-22",
+  "routed_from": "00-orchestration/memory-bible",
+  "ruling": "Source first: the ch006 'CHORUS' tag is a song-structure label. The source says 'In which the cook and the baby joined' (ch006-p37), and the only non-sneezers in the kitchen are the cook and the cat. No crowd is present in the kitchen, so the ensemble is ch004 only.",
+  "fix_instruction": "bible/characters/index.json CHAR-crowd-ensemble: remove the ch006 entry from appearances and appearance_chapters. Rewrite performer_concept to cover only the ch004 onlookers outside the White Rabbit's house (drop the kitchen-lullaby clause). Update disambiguation/notes: the ch006 CHORUS lines (ch006-p38, p42) are sung by the Duchess with CHAR-cook and the baby joining (ch006-p37). Also set a concrete gender per DEF-p3-appearance-303-b. Tell the dialogue/voice owners (01-story/screenplay, 09-audio voice) about the chorus reattribution.",
+  "fixed_by": "03-characters/character-manager",
+  "fixed_on": "2026-09-22",
+  "fix_note": "bible/characters/index.json CHAR-crowd-ensemble: ch006 removed from appearances/appearance_chapters (ch004 only); performer_concept rewritten to drop the kitchen-lullaby clause; disambiguation and notes rewritten to state the ch006 CHORUS is sung by the Duchess with CHAR-cook and the Duchess's baby (ch006-p37); gender set to male with gender_mix {male:6,female:4} per DEF-p3-appearance-303-b. 01-story/screenplay and 09-audio/voice notified via qa/defects/DEF-p3-char-index-903.json. code/p3-char-index_check.py re-run: PASS."
+}

@@ -1,0 +1,38 @@
+{
+  "character_id": "CHAR-family-housemaid",
+  "name": "The Family Housemaid",
+  "tier": "extra",
+  "layer": "both-echo",
+  "gender": "female",
+  "gender_note": { "source_chapter": "ch004", "source_para": "ch004-p03", "quote": "He took me for his housemaid" },
+  "base_age_range": "19-22",
+  "base_age_note": { "inferred": true, "reason": "Not described anywhere; a typical age for a single housemaid in an 1862 household." },
+  "hair": { "color": "auburn (red-brown)", "style": "pinned up tight in a small bun, fully tucked under a white cap", "length": "long (worn up)", "inferred": true, "reason": "No description in the source (she is never on screen in the text); auburn chosen so she never reads as a relative of the brown-haired sisters." },
+  "eyes": { "color": "hazel", "shape": "round, quick", "inferred": true, "reason": "Not described; designed." },
+  "skin": { "tone": "fair, freckled, rosy cheeks; hands reddened from work", "inferred": true, "reason": "Not described; a working servant." },
+  "face": { "shape": "round", "features": ["snub nose", "light freckles across the nose", "wide mouth"], "default_expression": "brisk and busy", "inferred": true, "reason": "Not described; designed." },
+  "build": { "height_range_cm": [155, 160], "body_type": "sturdy, practical", "scale_reference": "about 1.15x Alice's true size (135 cm)", "inferred": true, "reason": "Not described; designed." },
+  "marks": [
+    { "type": "signature_item", "position": "head", "description": "white cotton housemaid's cap", "inferred": true, "reason": "1862 servant's uniform; the visual anchor carried into the Mary Ann echo." }
+  ],
+  "default_outfit_tone": {
+    "summary": "lilac-and-white printed cotton morning dress, sleeves rolled to the elbow, long white bib apron, white cap",
+    "silhouette_1862": "plain fitted bodice, full ankle-length skirt without crinoline, long apron covering the front",
+    "inferred": true,
+    "reason": "1862 housemaid's morning uniform (FAC-alice-family emblem_visual: 'a housemaid's uniform glimpsed only in family-house scenes'). Full costume by 06-art/costume."
+  },
+  "performer_coding": null,
+  "doubling": {
+    "ruling": "H1 5.3 B — housemaid → Mary Ann",
+    "dream_form": "'Mary Ann', the White Rabbit's housemaid; she is never seen in the dream — only named (TERM-0010)",
+    "carries_across": ["the white bib apron — Alice's own white pinafore is what the Rabbit mistakes for Mary Ann's apron", "the white cap if any maid's cap is shown in the White Rabbit's house (e.g. hanging on a peg)"],
+    "changes": ["her face and person never appear in the dream; the echo is carried only by the name and the apron/cap motif"],
+    "source_chapter": "ch004",
+    "source_para": ["ch004-p02", "ch004-p03"],
+    "quote": "Why, Mary Ann, what _are_ you doing out here? / in great fear lest she should meet the real Mary Ann",
+    "inferred": true,
+    "reason": "The apron/cap carry-over is the designed visual hinge for ruling 5.3 B; the name and mix-up are sourced."
+  },
+  "events": ["ev0014"],
+  "prompt_base_en": "a twenty-year-old English housemaid in 1862, auburn hair pinned under a white cotton cap, hazel eyes, round freckled face with rosy cheeks, sturdy build, lilac-and-white printed cotton dress with rolled sleeves, long white bib apron"
+}

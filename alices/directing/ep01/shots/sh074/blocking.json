@@ -1,0 +1,43 @@
+{
+  "shot_id": "sh074",
+  "group_id": "grp028",
+  "scene_no": "S08",
+  "scene_id": "SCN-long-hall",
+  "duration_s": 6.0,
+  "is_dialogue": true,
+  "group_position": "last shot of grp028 — the White Rabbit reaches his map end (curtain, pulled up a few feet short of the giant girl). Alice holds the curtain, out of frame.",
+  "characters": [
+    {
+      "id": "CHAR-white-rabbit",
+      "label": "White Rabbit",
+      "pose": "sit",
+      "start_pos": "pulled up short of her in the shallow water at the low curtain, sitting back on his haunches",
+      "space_fragment_en": "sitting back on his haunches in the shallow water short of the low curtain, held screen-left, facing screen-left away up the hall",
+      "facing": "screen-left, up the hall and away from Alice — he has not registered her and the frame makes that literal",
+      "path": [],
+      "beats": [
+        { "t": 0.4, "action": "pulls up and sits back on his haunches", "sync": "the pause that frees his forepaws" },
+        { "t": 1.0, "action": "the gloves and the fan come out of his mouth into his forepaws", "sync": "the only point in S08 where he handles them" },
+        { "t": 1.8, "action": "frets aloud about the Duchess", "sync": "LN-ep01-019 begins" },
+        { "t": 4.0, "action": "his whole body flinches at his own word", "sync": "LN-ep01-019 on 'savage'" }
+      ],
+      "staging_lock": "The mouth-carry is released only because he has stopped and sat back; the moment he moves again he is on four legs with the props in his mouth.",
+      "performance": {
+        "objective": "talk himself into moving faster before his own imagination gets any worse",
+        "goal": "talk himself into moving faster",
+        "emotional_arc": "from fussy grievance to genuine fear of a person who is not in the room",
+        "arc_from": "fussy grievance",
+        "arc_to": "genuine fear",
+        "trigger": { "line_ref": "LN-ep01-019", "word": "savage" },
+        "no_early_reaction": ["the ears flattening", "a shudder through the back", "the paws gripping"],
+        "forbidden_early": ["the ears flattening", "a shudder through the back", "the paws gripping"],
+        "end_state": "sitting back with the gloves and fan clutched to his chest, ears flat, muzzle working, facing screen-left"
+      }
+    }
+  ],
+  "creatures": [],
+  "offscreen_presence": [
+    { "id": "CHAR-alice", "where": "sitting at the low curtain, a few feet behind him and far above him", "note": "In the space, out of frame." }
+  ],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0007 (dream) — 'Oh! the Duchess, the Duchess!'", "note": "Performance is muzzle, ears and the set of his back only." }
+}

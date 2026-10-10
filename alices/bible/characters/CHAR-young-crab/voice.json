@@ -1,0 +1,27 @@
+{
+  "character_id": "CHAR-young-crab",
+  "name": "young Crab",
+  "tier": "extra",
+  "card_type": "individual",
+  "gender": "female",
+  "age_sense": "young woman (appearance base_age_range 19-23)",
+  "timbre": "sharp, snappish, strong young woman's voice, a little brassy",
+  "pitch": "mezzo-soprano, quick irritable rises",
+  "pitch_range_hz": [180, 320],
+  "speed_wpm": [160, 185],
+  "speed_cpm": [608, 703],
+  "accent": "provincial lower-middle-class English, blunt",
+  "reference_style": "Snaps back at her mother: 'Hold your tongue, Ma! You're enough to try the patience of an oyster!'",
+  "emotion_range": {
+    "snappish": { "speed_delta": "+10%", "pitch_delta": "+2semi", "volume": "loud", "note": "ch003-d0062 'said the young Crab, a little snappishly'" }
+  },
+  "age_variants": [],
+  "source_chapter": "ch003",
+  "sources": ["ch003", "ch003-p43", "ch003-d0062", "ch003-d0063"],
+  "voice_evidence": [
+    { "para": "ch003-p43", "quote": "“Hold your tongue, Ma!” said the young Crab" }
+  ],
+  "inferred": true,
+  "inferred_fields": ["timbre", "pitch", "pitch_range_hz", "speed_wpm", "speed_cpm", "accent"],
+  "reason": "No voice description; designed from her lines and appearance."
+}

@@ -1,0 +1,58 @@
+{
+  "character_id": "CHAR-visiting-monarchs-ensemble",
+  "card_type": "ensemble",
+  "tier": "extra",
+  "layer": "dream",
+  "headcount": {
+    "range": [6, 8],
+    "note": "Core six = King and Queen of Clubs, Diamonds and Spades; up to two further guests ('mostly') as a Jack of Spades and a Jack of Diamonds. The White Rabbit walks among them (CHAR-white-rabbit, own card).",
+    "source_chapter": "ch008", "paragraph": "ch008-p11",
+    "quote": "Next came the guests, mostly Kings and Queens, and among them Alice recognised the White Rabbit"
+  },
+  "gender": "male",
+  "gender_note": { "inferred": true, "reason": "Mixed group: three Kings (male), three Queens (female), up to two Jacks (male). Majority male at full headcount; use gender_mix per slot." },
+  "gender_mix": { "male": 5, "female": 3 },
+  "slots": [
+    { "slot": "M01", "role": "King of Clubs", "gender": "male", "age": "55-65", "look": "broad, grey full beard, black-and-ivory robes with club devices" },
+    { "slot": "M02", "role": "Queen of Clubs", "gender": "female", "age": "50-60", "look": "stately, grey hair in a low chignon, black-and-ivory gown with club devices" },
+    { "slot": "M03", "role": "King of Diamonds", "gender": "male", "age": "45-55", "look": "florid, reddish-fair hair and forked beard, scarlet-and-gold robes with diamond lozenges" },
+    { "slot": "M04", "role": "Queen of Diamonds", "gender": "female", "age": "35-45", "look": "fair ringlets, scarlet-and-gold gown with diamond lozenges, fan" },
+    { "slot": "M05", "role": "King of Spades", "gender": "male", "age": "60-70", "look": "tall, gaunt, white pointed beard, black-and-slate robes with spade devices" },
+    { "slot": "M06", "role": "Queen of Spades", "gender": "female", "age": "55-65", "look": "severe, dark hair streaked grey under a lace cap, black-and-slate gown with spade devices" },
+    { "slot": "M07", "role": "Jack of Spades (optional)", "gender": "male", "age": "20-30", "look": "clean-shaven young page, black-and-slate tabard" },
+    { "slot": "M08", "role": "Jack of Diamonds (optional)", "gender": "male", "age": "20-30", "look": "clean-shaven young page, scarlet-and-gold tabard" }
+  ],
+  "slots_inferred": true,
+  "slots_reason": "Suits follow FAC-visiting-monarchs emblem_visual (the other three suits: clubs, diamonds, spades); individual looks are designed.",
+  "hair": { "value": "per slot; greyed and dignified for the monarchs, powdered-free natural hair", "inferred": true, "reason": "Not described." },
+  "eyes": { "value": "natural mixed", "inferred": true, "reason": "Not described." },
+  "face": { "value": "composed, courtly, slightly bored — they are background dignitaries who never speak", "inferred": true, "reason": "Source gives them no lines or description." },
+  "build": {
+    "height_range_cm": [160, 188],
+    "body_type": "mature, dignified; varied per slot",
+    "card_shape": { "value": "flat, front-facing card-court silhouette: robes cut as a stiff rectangular panel front and back", "inferred": true, "reason": "SUP-004 applies to the whole pack; visiting monarchs share the playing-card body language." },
+    "scale_reference": "About 25-53 cm taller than Alice at base scale (135 cm, CHAR-alice scale anchor); relative size follows SUP-003.",
+    "inferred": true,
+    "reason": "Designed."
+  },
+  "base_age_range": "20-70 (per slot)",
+  "base_age_inferred": true,
+  "base_age_reason": "Designed per slot; monarchs older, optional Jacks young.",
+  "marks": [ { "type": "none", "description": "No marks.", "inferred": true, "reason": "Not described." } ],
+  "signature_items": [
+    { "item": "crowns — gilt openwork for Kings, small coronets for Queens — each with its own suit symbol at the front", "inferred": true, "reason": "Crowns identify 'Kings and Queens' at a glance; suit symbols separate them from the Hearts crown couple." },
+    { "item": "shared pack card-back pattern on the back of each robe panel", "source_chapter": "ch008", "paragraph": "ch008-p16", "quote": "the pattern on their backs was the same as the rest of the pack", "inferred": true, "reason": "The source applies this to gardeners/soldiers/courtiers/children; extended to guests so the whole pack matches when the pack rises (ch012-p64)." }
+  ],
+  "default_outfit_tone": "Card-court regalia in their own suit colours — Clubs: black and ivory; Spades: black and slate-grey; Diamonds: scarlet and gold — never the Hearts household's crimson-with-white-piping, so they read as guests. Ermine-edged capes cut flat, 1862 court-dress under-layers (knee-breeches for men, full crinoline skirts for women).",
+  "default_outfit_tone_source": { "inferred": true, "reason": "FAC-visiting-monarchs emblem_visual (other three suits' colours). Diamonds are red in a card deck; scarlet-and-gold is kept distinct from the Hearts crimson-and-cream." },
+  "period_silhouette": { "value": "1862 court dress (crinoline for Queens, knee-breeches and tail coat for Kings) under flat, stiff card-court robes", "inferred": true, "reason": "SUP-002/SUP-004 on 1862 base." },
+  "sup002_coding": { "animal_or_card": "card (court cards of Clubs, Diamonds, Spades)", "forbidden": "no CGI; no Hearts devices on any guest", "rule": "bible/cultivation.json SUP-002, SUP-004" },
+  "variation_rules": [
+    "One suit per couple; never mix suits within one costume.",
+    "No heart symbol anywhere on a guest.",
+    "Walk in suit pairs, after the royal children and before the Knave (ch008-p11 order).",
+    "They never speak; keep them mid-ground."
+  ],
+  "doubling": { "value": "none", "reason": "Not part of any H1 ruling 5.3 B doubling pair." },
+  "prompt_summary_en": "Procession of visiting playing-card monarchs in 1862 court dress: King and Queen of Clubs in black and ivory, King and Queen of Diamonds in scarlet and gold, King and Queen of Spades in black and slate grey, each robe cut as a stiff flat rectangular card panel with suit symbols, gilt crowns and coronets bearing their suit, crinoline gowns and knee-breeches, mature dignified faces, walking in pairs across a garden lawn, realistic period drama, human actors"
+}

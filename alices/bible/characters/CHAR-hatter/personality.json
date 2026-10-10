@@ -1,0 +1,117 @@
+{
+  "_meta": {
+    "file": "bible/characters/CHAR-hatter/personality.json",
+    "owner": "03-characters/personality",
+    "produced_by_task": "p3-personality-pb1",
+    "produced_on": "2026-09-22",
+    "content_language": "en",
+    "status": "draft_v1"
+  },
+  "character_id": "CHAR-hatter",
+  "name": "The Hatter",
+  "tier": "A",
+  "layer": "dream",
+  "temperament": "Twitchy, contrary and quick-tongued at his own table, where he is king of a stopped afternoon. He is rude to a child and delighted to score a point off her. Before real authority he falls apart into a trembling, stammering tradesman.",
+  "traits": [
+    {
+      "trait": "Rude and personal",
+      "description": "Opens with a remark about Alice's looks, crows when he catches her doing the same, and dismisses her.",
+      "evidence": [
+        { "chapter": "ch007", "chapter_no": 7, "ref": "ch007-p09", "event": "ev0029", "quote": "Your hair wants cutting", "note": "His first words to her." },
+        { "chapter": "ch007", "chapter_no": 7, "ref": "ch007-p80", "event": "ev0031", "quote": "“Who’s making personal remarks now?” the Hatter asked triumphantly.", "note": "Point-scoring." },
+        { "chapter": "ch007", "chapter_no": 7, "ref": "ch007-p101", "event": "ev0031", "quote": "“Then you shouldn’t talk,” said the Hatter.", "note": "The rudeness that makes Alice leave." }
+      ]
+    },
+    {
+      "trait": "Loves puzzles without answers; contrarian logic",
+      "description": "Asks riddles he cannot answer and argues against the meaning of words for its own sake.",
+      "evidence": [
+        { "chapter": "ch007", "chapter_no": 7, "ref": "ch007-p11", "event": "ev0029", "quote": "Why is a raven like a writing-desk?", "note": "An unanswerable riddle." },
+        { "chapter": "ch007", "chapter_no": 7, "ref": "ch007-p36", "event": "ev0030", "quote": "I haven’t the slightest idea", "note": "Admits he has no answer." },
+        { "chapter": "ch007", "chapter_no": 7, "ref": "ch007-p17", "event": "ev0029", "quote": "“Not the same thing a bit!” said the Hatter.", "note": "Pedantic about word order." }
+      ]
+    },
+    {
+      "trait": "Self-serving",
+      "description": "Arranges the table so that only he gains from each move.",
+      "evidence": [
+        { "chapter": "ch007", "chapter_no": 7, "ref": "ch007-p89", "event": "ev0031", "quote": "The Hatter was the only one who got any advantage from the change", "note": "The clean-cup shuffle favours him." }
+      ]
+    },
+    {
+      "trait": "Wounded and stuck since his humiliation",
+      "description": "His ruined afternoon dates from being condemned at the Queen's concert. He is mournful about 'Time' refusing him.",
+      "evidence": [
+        { "chapter": "ch007", "chapter_no": 7, "ref": "ch007-p55", "event": "ev0030", "quote": "He’s murdering the time! Off with his head!", "note": "The Queen's verdict on his singing." },
+        { "chapter": "ch007", "chapter_no": 7, "ref": "ch007-p57", "event": "ev0030", "quote": "It’s always six o’clock now.", "note": "Said 'in a mournful tone'." }
+      ]
+    },
+    {
+      "trait": "Terrified before authority",
+      "description": "As a witness he fidgets, pales, bites his teacup, shakes his shoes off and flees.",
+      "evidence": [
+        { "chapter": "ch011", "chapter_no": 11, "ref": "ch011-p26", "event": "ev0046", "quote": "who turned pale and fidgeted", "note": "Under the Queen's stare." },
+        { "chapter": "ch011", "chapter_no": 11, "ref": "ch011-p28", "event": "ev0046", "quote": "he bit a large piece out of his teacup instead of the bread-and-butter", "note": "Nervous confusion." },
+        { "chapter": "ch011", "chapter_no": 11, "ref": "ch011-p61", "event": "ev0046", "quote": "the Hatter hurriedly left the court, without even waiting to put his shoes on", "note": "Flight." }
+      ]
+    },
+    {
+      "trait": "A poor tradesman's defensiveness",
+      "description": "Pleads poverty and insists the hat is stock for sale, not stolen.",
+      "evidence": [
+        { "chapter": "ch011", "chapter_no": 11, "ref": "ch011-p25", "event": "ev0046", "quote": "I keep them to sell", "note": "The hat is stock for sale." },
+        { "chapter": "ch011", "chapter_no": 11, "ref": "ch011-p37", "event": "ev0046", "quote": "I’m a poor man, your Majesty", "note": "His refrain." }
+      ]
+    }
+  ],
+  "motivation": {
+    "core": "To keep his endless tea-time going, and so avoid facing the day the Queen condemned him. His table is the one place where he is in charge.",
+    "want": "His tea finished in peace, clean cups, and the upper hand in every exchange.",
+    "fear": "The Queen, the list of singers, and being made to account for himself.",
+    "evidence": [
+      { "chapter": "ch011", "chapter_no": 11, "ref": "ch011-p60", "event": "ev0046", "quote": "“I’d rather finish my tea,” said the Hatter, with an anxious look at the Queen", "note": "Wants tea, fears the Queen." },
+      { "chapter": "ch011", "chapter_no": 11, "ref": "ch011-p35", "event": "ev0046", "quote": "the wretched Hatter trembled so, that he shook both his shoes off", "note": "Reaction to the list of singers." }
+    ],
+    "shifts": [
+      { "chapter": "ch011", "chapter_no": 11, "event": "ev0046", "from": "master of his own table, taunting Alice", "to": "a hunted witness, with the Queen's old grudge back in play", "evidence_ref": "ch011-p35" }
+    ]
+  },
+  "habits": [
+    { "habit": "Takes out his watch, shakes it and holds it to his ear", "evidence_ref": "ch007-p21", "event": "ev0030" },
+    { "habit": "Calls for a clean cup and moves one place on", "evidence_ref": "ch007-p88", "event": "ev0031" },
+    { "habit": "Pinches the Dormouse to wake it", "evidence_ref": "ch007-p99", "event": "ev0031" },
+    { "habit": "Points with his tea spoon when accusing someone", "evidence_ref": "ch007-p48", "event": "ev0030" },
+    { "habit": "Carries teacup and bread-and-butter everywhere, even into court", "evidence_ref": "ch011-p16", "event": "ev0046" },
+    { "habit": "Shifts from one foot to the other when nervous", "evidence_ref": "ch011-p28", "event": "ev0046" }
+  ],
+  "decision_pattern": "Reacts to the moment, driven by contrariness at the table and by fear at court. He blames others (the March Hare's butter, 'the March Hare said—') and bolts when cornered.",
+  "taboos": [
+    { "taboo": "Never admits he is at fault", "rationale": "Blames the butter on the March Hare and shifts his testimony onto the others.", "evidence_ref": "ch007-p23", "event": "ev0030", "qa_check": "No self-blame line." },
+    { "taboo": "Never defies the Queen", "rationale": "In her presence he only trembles, pleads and runs.", "evidence_ref": "ch011-p28", "event": "ev0046", "qa_check": "No retort to the Queen." },
+    { "taboo": "Never apologises to Alice or makes room for her", "rationale": "His hostility to the outsider at his table is fixed.", "evidence_ref": "ch007-p102", "event": "ev0031", "qa_check": "No warm reconciliation beat with Alice." }
+  ],
+  "facade": {
+    "applies": true,
+    "surface": "A sharp, superior wit who runs rings round a child",
+    "true_self": "A frightened, poor tradesman stuck in the aftermath of a public humiliation",
+    "reveal_chapter": "ch011",
+    "reveal_event": "ev0046",
+    "note": "The backstory in ch007 (the concert, 'murdering the time') plants the wound; the trial exposes it. Keep his ch007 bravado cocky, not frantic, so the ch011 collapse lands."
+  },
+  "waking_life_embodiment": {
+    "applies": true,
+    "adult_trait": "The adult who makes personal remarks about a child's appearance, asks her questions he can't answer himself, and dismisses her with 'Then you shouldn't talk'. At the same time he is the anxious grown-up bound to a clock he cannot escape.",
+    "waking_source": "The household's fixed tea-time (world.json cp-tea: the Mad Tea-Party stuck at six grows from the tea Alice is late for), the rattle of teacups that the sister hears as sheep-bells (ch012-p70), and the ordinary adult habit of commenting on a child's hair.",
+    "evidence": [
+      { "chapter": "ch007", "chapter_no": 7, "ref": "ch007-p10", "event": "ev0029", "quote": "You should learn not to make personal remarks", "note": "Alice quotes a nursery rule back at him: he breaks the rule adults teach." },
+      { "chapter": "ch012", "chapter_no": 12, "ref": "ch012-p70", "event": "ev0054", "quote": "the rattling teacups would change to tinkling sheep-bells", "note": "The waking sound source of the tea-party." }
+    ],
+    "inferred": true,
+    "reason": "The tea-time grounding is world.json cp-tea (a design reading) and the sheep-bell link is in the source. The 'adult making personal remarks' reading is a design interpretation. Not a doubling."
+  },
+  "performance_keynote": "Over-caffeinated physical comedy (index performer_concept): darting eyes, abrupt questions, triumph when he scores a point. At court the same body shrinks: pale, knees bending, teacup bitten. The price tag ('In this style 10/6') stays on the hat.",
+  "consistency_flags": [],
+  "inferred_fields": ["waking_life_embodiment"],
+  "inferred": true,
+  "reason": "The waking embodiment is a design reading. Everything else is sourced."
+}

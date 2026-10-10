@@ -1,0 +1,33 @@
+{
+  "schema_version": "scene_layout.v1",
+  "scene_id": "SCN-duchess-house-front",
+  "layout_top": "layout_top.png",
+  "orientation": {
+    "top_of_map": "north (the little house)",
+    "note_en": "The narrow house stands at the top (north) with its front gable facing south onto the open place; the only door is in that south gable over one stone step; the smoking chimney stack is on the rear (north) gable. The clearing of trodden earth spreads south of it; the wood closes in on the west, south and east; Alice's peeping tree is opposite the door on the south tree line; the path into the wood leaves at the south-east. Hero-scale plan (ridge 7.2 m). Camera positions in views[] are described relative to these landmarks."
+  },
+  "extent_m": {"x": 28.0, "y": 15.75},
+  "landmarks": [
+    {"id": "chimney_stack", "name": "chimney stack", "name_en": "the smoking chimney stack", "kind": "feature", "xy": [0.45, 0.13]},
+    {"id": "front_door", "name": "front door", "name_en": "the arched front door", "kind": "entrance", "xy": [0.50, 0.57]},
+    {"id": "door_step", "name": "door step", "name_en": "the worn stone step", "kind": "ground", "xy": [0.50, 0.60]},
+    {"id": "clearing_centre", "name": "open place", "name_en": "the middle of the open place", "kind": "ground", "xy": [0.45, 0.72]},
+    {"id": "alice_peep_tree", "name": "peeping tree", "name_en": "the tree opposite the door", "kind": "tree", "xy": [0.40, 0.92]},
+    {"id": "plate_tree", "name": "chipped tree", "name_en": "the tree chipped by the plate", "kind": "tree", "xy": [0.58, 0.81]},
+    {"id": "wood_path", "name": "wood path", "name_en": "the path into the wood", "kind": "path", "xy": [0.82, 0.97]},
+    {"id": "west_wood_edge", "name": "west wood edge", "name_en": "the west edge of the wood", "kind": "boundary", "xy": [0.12, 0.50]},
+    {"id": "east_wood_edge", "name": "east wood edge", "name_en": "the east edge of the wood", "kind": "boundary", "xy": [0.86, 0.45]}
+  ],
+  "views": [
+    {"tile": 1, "camera_from": "alice_peep_tree", "looking_at": "front_door", "size": "wide", "angle": "eye", "desc_en": "eye-level wide shot from behind the tree opposite the door across the bare open place to the little sooted house and its arched door, smoke pouring from the chimney"},
+    {"tile": 2, "camera_from": "door_step", "looking_at": "alice_peep_tree", "size": "medium", "angle": "low", "desc_en": "low-angle medium shot from the doorstep ground across the trodden earth to the tree line opposite, the sky framed by the crowns"},
+    {"tile": 3, "camera_from": "west_wood_edge", "looking_at": "door_step", "size": "wide", "angle": "eye", "desc_en": "eye-level wide shot from the west edge of the wood, sun behind camera, across the clearing to the step and the door"},
+    {"tile": 4, "camera_from": "clearing_centre", "looking_at": "front_door", "size": "close", "angle": "low", "desc_en": "low-angle close shot from ground level up at the tall horseshoe-arched door and its carved stone lilies, the step towering in front"},
+    {"tile": 5, "camera_from": "east_wood_edge", "looking_at": "west_wood_edge", "size": "wide", "angle": "eye", "desc_en": "eye-level wide shot across the open place into the western sun, the house at the right of frame and dust in the air"},
+    {"tile": 6, "camera_from": "front_door", "looking_at": "plate_tree", "size": "medium", "angle": "eye", "desc_en": "eye-level medium shot from the doorway out across the clearing to the chipped tree trunk with plate shards at its foot"},
+    {"tile": 7, "camera_from": "alice_peep_tree", "looking_at": "plate_tree", "size": "detail", "angle": "eye", "desc_en": "eye-level detail shot from the tree line of the pale chip in the neighbouring trunk and the white plate shards in the dry grass at its foot"},
+    {"tile": 8, "camera_from": "door_step", "looking_at": "wood_path", "size": "wide", "angle": "high_oblique", "desc_en": "high oblique wide shot from above the step across the clearing to the beaten-earth path leaving into the wood"},
+    {"tile": 9, "camera_from": "east_wood_edge", "looking_at": "chimney_stack", "size": "medium", "angle": "high_oblique", "desc_en": "high oblique medium shot from the eastern treetops across the steep slate roof to the tall chimney stack pouring grey smoke"}
+  ],
+  "checklist": {"architecture_match": true, "lighting_match": true, "style_match": true, "plan_view_clean": false, "note_en": "camera slightly oblique: the south gable facade (brick bands, mosaic gable) is visible as an elevation; the chipped tree is drawn as a sawn stump; kept for H2"}
+}

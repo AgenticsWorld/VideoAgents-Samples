@@ -1,0 +1,33 @@
+{
+  "_meta": {"file": "bible/scenes/SCN-duchess-house-front/lighting.json", "owner": "05-scenes/lighting", "task_id": "p3-lighting-sb2", "attempt": 1, "generated": "2026-09-22", "enum_set": "LGT-ENUM-v1 (runs/p3-lighting-sb2/result.json)"},
+  "scene_id": "SCN-duchess-house-front",
+  "layer": "dream",
+  "int_ext": "EXT",
+  "daylight_access": "open_sky",
+  "dream_light_growth": "The same hot late-afternoon sun Alice sleeps under, now on a bare, still clearing: flat glare, heat haze and dust, the kind of light that makes a footman sit and stare at the sky (environment fixed.dream_growth).",
+  "schemes": [
+    {
+      "scheme_id": "LGT-duchess-house-front-01",
+      "condition": {"time_of_day": "late_afternoon", "weather": "fair_hot"},
+      "applies_to_states": ["SCN-duchess-house-front-S01", "SCN-duchess-house-front-S02", "SCN-duchess-house-front-S03", "SCN-duchess-house-front-S04"],
+      "key_source": "direct_sun",
+      "direction": "high_side",
+      "key_bearing": "sun from the west, elevation about 33 deg falling to 29 deg (S01-S04); the little house throws its shadow east",
+      "fill": "hazy-blue sky plus warm bounce off dry trodden grass and dusty ground",
+      "practicals": [],
+      "practicals_note": "No lamps outside (architecture negative: no gas lamps). Grey-brown pepper-smoke drifting out of the open door in S03 catches the sun as a soft haze; it is atmosphere, not a light source.",
+      "color_temp": "neutral (~4500K)",
+      "color_temp_k_approx": 4600,
+      "contrast": "hard",
+      "quality": "hot, flat-bright direct sun with short hard shadows and a faint heat shimmer; the wood edge behind sits in deep green shade",
+      "prompt_fragment_en": "hot still late-afternoon sunlight from the west, hard neutral daylight falling at a steep side angle on a bare sunlit clearing, warm dusty bounce from dry grass, hazy blue sky, short crisp shadows, faint heat shimmer, the wood edge behind in deep green shade",
+      "source_chapter": "ch006",
+      "source_refs": ["ch005-p78", "ch006-p04", "ch006-p08", "ch006-p45", "environment.json SCN-duchess-house-front-S01..S04"],
+      "inferred": true,
+      "reason": "The source gives the open place and the visible sky (ch005-p78, ch006-p04, ch006-p08, 'the open air' ch006-p45) but no light. Direction and colour follow the environment sun path; one scheme holds for all four states because the condition never changes.",
+      "state_notes": {"SCN-duchess-house-front-S04": "Alice steps out of the dark kitchen: the grade may start one stop hot and settle, but the scheme and fragment are unchanged."}
+    }
+  ],
+  "special": [],
+  "special_note": "The source writes no plot light for this scene."
+}

@@ -1,0 +1,855 @@
+{
+  "schema": "director_version.v1",
+  "project": "alices",
+  "ep": "ep01",
+  "group_id": "grp001",
+  "v": 1,
+  "created_at": "2026-09-23 14:07:19",
+  "batch_id": null,
+  "label": "提交前基线",
+  "sha": "0d1fba3b3a162f53cac75fcef208b31f1b30c868b1a59d29ac810ca87f2fc164",
+  "render": {
+    "aspect_ratio": "16:9",
+    "width": 960,
+    "height": 540
+  },
+  "actor_colors": {
+    "CHAR-alice": "#e63946",
+    "CHAR-alice-sister": "#1d78d8",
+    "CRE-001": "#2ea043",
+    "CHAR-white-rabbit": "#f59e0b"
+  },
+  "scene": {
+    "schema_version": "whitebox_scene.v1",
+    "scene_id": "SCN-falling-dream",
+    "name": "SCN-falling-dream",
+    "units": "meters",
+    "dimensions_m": [
+      5.0,
+      6.0,
+      2.8125
+    ],
+    "objects": [
+      {
+        "id": "shaft_wall_000",
+        "shape": "box",
+        "size_m": [
+          0.18,
+          6.0,
+          0.7
+        ],
+        "xy": [
+          0.758,
+          0.5
+        ],
+        "elevation_m": 3.0,
+        "collision_role": "wall",
+        "position": [
+          1.29,
+          3.0,
+          0.0
+        ]
+      },
+      {
+        "id": "shaft_wall_030",
+        "shape": "box",
+        "size_m": [
+          0.7,
+          6.0,
+          0.18
+        ],
+        "xy": [
+          0.7234,
+          0.7293
+        ],
+        "elevation_m": 3.0,
+        "yaw": 1.047,
+        "collision_role": "wall",
+        "position": [
+          1.1170000000000002,
+          3.0,
+          0.6449062499999999
+        ]
+      },
+      {
+        "id": "shaft_wall_060",
+        "shape": "box",
+        "size_m": [
+          0.7,
+          6.0,
+          0.18
+        ],
+        "xy": [
+          0.629,
+          0.8972
+        ],
+        "elevation_m": 3.0,
+        "yaw": 0.524,
+        "collision_role": "wall",
+        "position": [
+          0.645,
+          3.0,
+          1.117125
+        ]
+      },
+      {
+        "id": "shaft_wall_090",
+        "shape": "box",
+        "size_m": [
+          0.7,
+          6.0,
+          0.18
+        ],
+        "xy": [
+          0.5,
+          0.9587
+        ],
+        "elevation_m": 3.0,
+        "collision_role": "wall",
+        "position": [
+          0.0,
+          3.0,
+          1.29009375
+        ]
+      },
+      {
+        "id": "shaft_wall_120",
+        "shape": "box",
+        "size_m": [
+          0.7,
+          6.0,
+          0.18
+        ],
+        "xy": [
+          0.371,
+          0.8972
+        ],
+        "elevation_m": 3.0,
+        "yaw": -0.524,
+        "collision_role": "wall",
+        "position": [
+          -0.645,
+          3.0,
+          1.117125
+        ]
+      },
+      {
+        "id": "shaft_wall_150",
+        "shape": "box",
+        "size_m": [
+          0.7,
+          6.0,
+          0.18
+        ],
+        "xy": [
+          0.2766,
+          0.7293
+        ],
+        "elevation_m": 3.0,
+        "yaw": -1.047,
+        "collision_role": "wall",
+        "position": [
+          -1.117,
+          3.0,
+          0.6449062499999999
+        ]
+      },
+      {
+        "id": "shaft_wall_180",
+        "shape": "box",
+        "size_m": [
+          0.18,
+          6.0,
+          0.7
+        ],
+        "xy": [
+          0.242,
+          0.5
+        ],
+        "elevation_m": 3.0,
+        "collision_role": "wall",
+        "position": [
+          -1.29,
+          3.0,
+          0.0
+        ]
+      },
+      {
+        "id": "shaft_wall_210",
+        "shape": "box",
+        "size_m": [
+          0.7,
+          6.0,
+          0.18
+        ],
+        "xy": [
+          0.2766,
+          0.2707
+        ],
+        "elevation_m": 3.0,
+        "yaw": -2.094,
+        "collision_role": "wall",
+        "position": [
+          -1.117,
+          3.0,
+          -0.64490625
+        ]
+      },
+      {
+        "id": "shaft_wall_240",
+        "shape": "box",
+        "size_m": [
+          0.7,
+          6.0,
+          0.18
+        ],
+        "xy": [
+          0.371,
+          0.1028
+        ],
+        "elevation_m": 3.0,
+        "yaw": -2.618,
+        "collision_role": "wall",
+        "position": [
+          -0.645,
+          3.0,
+          -1.117125
+        ]
+      },
+      {
+        "id": "shaft_wall_270",
+        "shape": "box",
+        "size_m": [
+          0.7,
+          6.0,
+          0.18
+        ],
+        "xy": [
+          0.5,
+          0.0413
+        ],
+        "elevation_m": 3.0,
+        "collision_role": "wall",
+        "position": [
+          0.0,
+          3.0,
+          -1.29009375
+        ]
+      },
+      {
+        "id": "shaft_wall_300",
+        "shape": "box",
+        "size_m": [
+          0.7,
+          6.0,
+          0.18
+        ],
+        "xy": [
+          0.629,
+          0.1028
+        ],
+        "elevation_m": 3.0,
+        "yaw": 2.618,
+        "collision_role": "wall",
+        "position": [
+          0.645,
+          3.0,
+          -1.117125
+        ]
+      },
+      {
+        "id": "shaft_wall_330",
+        "shape": "box",
+        "size_m": [
+          0.7,
+          6.0,
+          0.18
+        ],
+        "xy": [
+          0.7234,
+          0.2707
+        ],
+        "elevation_m": 3.0,
+        "yaw": 2.094,
+        "collision_role": "wall",
+        "position": [
+          1.1170000000000002,
+          3.0,
+          -0.64490625
+        ]
+      },
+      {
+        "id": "entry_tunnel_floor",
+        "shape": "box",
+        "size_m": [
+          0.75,
+          0.1,
+          0.205
+        ],
+        "xy": [
+          0.5175,
+          0.0365
+        ],
+        "elevation_m": 5.95,
+        "color": "#8a6f55",
+        "position": [
+          0.0874999999999998,
+          5.95,
+          -1.30359375
+        ]
+      },
+      {
+        "id": "entry_tunnel_wall_w",
+        "shape": "box",
+        "size_m": [
+          0.1,
+          1.2,
+          0.205
+        ],
+        "xy": [
+          0.4325,
+          0.0365
+        ],
+        "elevation_m": 6.6,
+        "collision_role": "wall",
+        "position": [
+          -0.3375,
+          6.6,
+          -1.30359375
+        ]
+      },
+      {
+        "id": "entry_tunnel_wall_e",
+        "shape": "box",
+        "size_m": [
+          0.1,
+          1.2,
+          0.205
+        ],
+        "xy": [
+          0.6025,
+          0.0365
+        ],
+        "elevation_m": 6.6,
+        "collision_role": "wall",
+        "position": [
+          0.5125000000000002,
+          6.6,
+          -1.30359375
+        ]
+      },
+      {
+        "id": "bookshelves",
+        "shape": "box",
+        "size_m": [
+          0.35,
+          2.4,
+          1.1
+        ],
+        "xy": [
+          0.3,
+          0.57
+        ],
+        "elevation_m": 2.4,
+        "color": "#b58a55",
+        "position": [
+          -1.0,
+          2.4,
+          0.19687499999999986
+        ]
+      },
+      {
+        "id": "cupboards",
+        "shape": "box",
+        "size_m": [
+          0.4,
+          2.2,
+          1.1
+        ],
+        "xy": [
+          0.7,
+          0.52
+        ],
+        "elevation_m": 1.5,
+        "color": "#7a3b2e",
+        "position": [
+          0.9999999999999998,
+          1.5,
+          0.05625000000000005
+        ]
+      },
+      {
+        "id": "pantry_shelf",
+        "shape": "box",
+        "size_m": [
+          1.0,
+          0.3,
+          0.3
+        ],
+        "xy": [
+          0.6152,
+          0.7987
+        ],
+        "elevation_m": 5.05,
+        "yaw": 0.6,
+        "color": "#c9b58f",
+        "position": [
+          0.5759999999999998,
+          5.05,
+          0.8400937499999999
+        ]
+      },
+      {
+        "id": "map_pegs",
+        "shape": "box",
+        "size_m": [
+          1.2,
+          1.0,
+          0.06
+        ],
+        "xy": [
+          0.412,
+          0.8769
+        ],
+        "elevation_m": 4.0,
+        "yaw": -0.394,
+        "color": "#e4d9bd",
+        "position": [
+          -0.4400000000000001,
+          4.0,
+          1.06003125
+        ]
+      },
+      {
+        "id": "picture_pegs",
+        "shape": "box",
+        "size_m": [
+          0.9,
+          0.5,
+          0.06
+        ],
+        "xy": [
+          0.621,
+          0.1523
+        ],
+        "elevation_m": 4.4,
+        "yaw": 2.589,
+        "color": "#6b5033",
+        "position": [
+          0.605,
+          4.4,
+          -0.97790625
+        ]
+      },
+      {
+        "id": "glass_roundel",
+        "shape": "box",
+        "size_m": [
+          0.6,
+          0.6,
+          0.05
+        ],
+        "xy": [
+          0.3276,
+          0.2077
+        ],
+        "elevation_m": 5.3,
+        "yaw": -2.332,
+        "color": "#d9c9e6",
+        "position": [
+          -0.862,
+          5.3,
+          -0.8220937500000001
+        ]
+      }
+    ],
+    "render": {
+      "aspect_ratio": "16:9",
+      "width": 960,
+      "height": 540
+    },
+    "landmarks": [
+      {
+        "id": "entry_tunnel",
+        "name": "the entry tunnel mouth",
+        "name_en": "the entry tunnel mouth",
+        "kind": "entrance",
+        "xy": [
+          0.5,
+          0.08
+        ],
+        "xy_m": [
+          2.5,
+          0.22
+        ]
+      },
+      {
+        "id": "glass_roundel",
+        "name": "the stained-glass roundel",
+        "name_en": "the stained-glass roundel",
+        "kind": "feature",
+        "xy": [
+          0.378,
+          0.293
+        ],
+        "xy_m": [
+          1.89,
+          0.82
+        ]
+      },
+      {
+        "id": "picture_pegs",
+        "name": "the pictures on pegs",
+        "name_en": "the pictures on pegs",
+        "kind": "feature",
+        "xy": [
+          0.58,
+          0.27
+        ],
+        "xy_m": [
+          2.9,
+          0.76
+        ]
+      },
+      {
+        "id": "cupboards",
+        "name": "the glazed cupboards",
+        "name_en": "the glazed cupboards",
+        "kind": "furniture",
+        "xy": [
+          0.68,
+          0.52
+        ],
+        "xy_m": [
+          3.4,
+          1.46
+        ]
+      },
+      {
+        "id": "pantry_shelf",
+        "name": "the pantry shelf with the marmalade jar",
+        "name_en": "the pantry shelf with the marmalade jar",
+        "kind": "furniture",
+        "xy": [
+          0.6,
+          0.76
+        ],
+        "xy_m": [
+          3.0,
+          2.14
+        ]
+      },
+      {
+        "id": "map_pegs",
+        "name": "the schoolroom maps on pegs",
+        "name_en": "the schoolroom maps on pegs",
+        "kind": "feature",
+        "xy": [
+          0.43,
+          0.8
+        ],
+        "xy_m": [
+          2.15,
+          2.25
+        ]
+      },
+      {
+        "id": "bookshelves",
+        "name": "the bookshelves",
+        "name_en": "the bookshelves",
+        "kind": "furniture",
+        "xy": [
+          0.33,
+          0.57
+        ],
+        "xy_m": [
+          1.65,
+          1.6
+        ]
+      },
+      {
+        "id": "shaft_centre",
+        "name": "the open centre of the shaft",
+        "name_en": "the open centre of the shaft",
+        "kind": "zone",
+        "xy": [
+          0.5,
+          0.5
+        ],
+        "xy_m": [
+          2.5,
+          1.41
+        ]
+      }
+    ],
+    "views": [
+      {
+        "tile": 1,
+        "camera_from": "shaft_centre",
+        "looking_at": "cupboards",
+        "size": "medium",
+        "angle": "eye",
+        "desc_en": "eye-level medium shot from the middle of the shaft, beside the drifting girl, toward the glazed mahogany cupboards on the east wall sliding slowly upward past her"
+      },
+      {
+        "tile": 2,
+        "camera_from": "shaft_centre",
+        "looking_at": "bookshelves",
+        "size": "medium",
+        "angle": "eye",
+        "desc_en": "eye-level medium shot from the middle of the shaft toward the bookshelves on the west wall, rows of old book spines passing in warm half-light"
+      },
+      {
+        "tile": 3,
+        "camera_from": "shaft_centre",
+        "looking_at": "pantry_shelf",
+        "size": "close",
+        "angle": "eye",
+        "desc_en": "eye-level close shot across the open drop toward the pantry shelf, stoneware jars and the glass jar labelled ORANGE MARMALADE within arm's reach"
+      },
+      {
+        "tile": 4,
+        "camera_from": "map_pegs",
+        "looking_at": "picture_pegs",
+        "size": "wide",
+        "angle": "high_oblique",
+        "desc_en": "high oblique wide shot from above the schoolroom maps on the south-west wall, angled down across the shaft to the framed pictures on pegs on the far wall, the brick lining curving between them and darkness below"
+      },
+      {
+        "tile": 5,
+        "camera_from": "entry_tunnel",
+        "looking_at": "shaft_centre",
+        "size": "wide",
+        "angle": "high_oblique",
+        "desc_en": "high oblique wide shot from the lip of the entry tunnel, tilted down about forty degrees into the round shaft, furniture bands receding downward into blackness around the small drifting figure"
+      },
+      {
+        "tile": 6,
+        "camera_from": "bookshelves",
+        "looking_at": "glass_roundel",
+        "size": "close",
+        "angle": "eye",
+        "desc_en": "eye-level close shot along the curving west wall from the bookshelves to the small stained-glass roundel set in the mosaic band, its colours catching the warm glow"
+      },
+      {
+        "tile": 7,
+        "camera_from": "shaft_centre",
+        "looking_at": "entry_tunnel",
+        "size": "wide",
+        "angle": "low",
+        "desc_en": "low-angle wide shot from below the girl looking up the shaft toward the entry tunnel mouth and the fading amber glow high above, the furniture bands converging upward"
+      },
+      {
+        "tile": 8,
+        "camera_from": "glass_roundel",
+        "looking_at": "cupboards",
+        "size": "wide",
+        "angle": "eye",
+        "desc_en": "eye-level wide shot from the north-west wall by the roundel across the shaft to the glazed cupboards on the east wall, the girl drifting across the gap between"
+      },
+      {
+        "tile": 9,
+        "camera_from": "cupboards",
+        "looking_at": "pantry_shelf",
+        "size": "detail",
+        "angle": "eye",
+        "desc_en": "eye-level detail shot along the wall from the cupboards to the pantry shelf: the empty ORANGE MARMALADE jar and the saucer of milk on the shelf edge"
+      }
+    ],
+    "layout_top": "assets/concepts/scenes/SCN-falling-dream/layout_top.png",
+    "inferred": true,
+    "scale_basis": "Shaft inside diameter 2.4 m (architecture.json structure, ch001-p06) matched to the drawn inner brick circle width, 0.485 of the image width. The image width is set to 5.0 m (= layout.json map_extent_m), and Z = 5.0 x 9/16 = 2.8125 m. Y = 6.0 m, the height of one repeating rig wall section (architecture interior.ceiling_note).",
+    "warnings": []
+  },
+  "group": {
+    "schema_version": "whitebox_group.v1",
+    "group_id": "grp001",
+    "scene_id": "SCN-falling-dream",
+    "scene_no": "S00",
+    "duration_s": 4.0,
+    "actors": [
+      {
+        "id": "CHAR-alice",
+        "label": "Alice",
+        "letter": "A",
+        "color": "#e63946",
+        "kind": "person",
+        "size_m": [
+          0.378,
+          1.35,
+          0.297
+        ],
+        "keyframes": [
+          {
+            "t": 0.0,
+            "position": [
+              0.322,
+              3.05,
+              0.136
+            ],
+            "pose": "stand",
+            "yaw": 1.708,
+            "head_pitch": 0.15
+          },
+          {
+            "t": 2.0,
+            "position": [
+              0.322,
+              2.87,
+              0.136
+            ],
+            "pose": "stand",
+            "yaw": 1.708,
+            "head_pitch": -0.25
+          },
+          {
+            "t": 3.6,
+            "position": [
+              0.322,
+              2.73,
+              0.136
+            ],
+            "pose": "stand",
+            "yaw": 1.708,
+            "head_pitch": 0.1
+          },
+          {
+            "t": 4.0,
+            "position": [
+              0.322,
+              2.7,
+              0.136
+            ],
+            "pose": "stand",
+            "yaw": 1.708,
+            "head_pitch": 0.1
+          }
+        ]
+      }
+    ],
+    "extras": [],
+    "props": [],
+    "cameras": [
+      {
+        "shot_id": "sh001",
+        "start": 0,
+        "duration_s": 4.0,
+        "movement": "static",
+        "keyframes": [
+          {
+            "t": 0.0,
+            "position": [
+              -1.06,
+              3.75,
+              -0.448
+            ],
+            "target": [
+              0.322,
+              3.75,
+              0.136
+            ],
+            "fov": 46.3972
+          },
+          {
+            "t": 4.0,
+            "position": [
+              -1.06,
+              3.4,
+              -0.448
+            ],
+            "target": [
+              0.322,
+              3.4,
+              0.136
+            ],
+            "fov": 46.3972
+          }
+        ]
+      }
+    ],
+    "continuity_from": null,
+    "continuity": {
+      "actors": "cut",
+      "camera": "cut"
+    },
+    "warnings": [
+      "sh001: locked frame with a travelling set. The whitebox rig translates downward with Alice at her 0.088 m/s drift so she holds frame position exactly as camera.json describes; there is no pan, tilt, reframe or lens change.",
+      "SCN-falling-dream is modelled as ONE 6 m repeating rig section with a single static instance of each fitting (cupboards y 0.4-2.6, bookshelves y 1.2-3.6, pantry shelf y 4.9-5.2, map pegs y 3.5-4.5, picture pegs y 4.15-4.65). The 48 s descent is carried in the plate by the dressing travelling upward; the whitebox cannot show that, so Alice's modelled altitude is a monotonic drift through the section and does NOT line up with the fitting named in each shot."
+    ],
+    "authored": true,
+    "issues": [
+      {
+        "issue_id": "WBI-ep01-grp001-001",
+        "kind": "model_gap",
+        "severity": "blocking",
+        "plan_status": "open",
+        "question": "SCN-falling-dream is modelled at the Bible's 2.4 m brick shaft with a 1.7 m clear fall column. The lateral wides cannot be framed in it: sh001/sh022 (28 mm, Alice at 0.20 of frame height) need 7.88 m of standoff and sh021 needs 3.13 m, but the widest in-model camera is about 1.5 m, so the reference shows a near-full-figure frame where the shot is a wide. Ship that, or re-model the shaft?",
+        "provisional": "Hold the authored view axis, lens and camera height, place the lens at the largest standoff inside the modelled clear column (Alice biased 0.35 m down-axis, standoff 1.50 m), and accept a whitebox frame that is tighter than composition's size_in_frame. Axis, eyeline, relative geometry and the descent rate stay correct; only the field of view is wrong.",
+        "options": [
+          {
+            "id": "remodel",
+            "label": "Re-model SCN-falling-dream at the dream shaft diameter the wides imply (about 16 m across for sh001/sh022)",
+            "consequence": "p4-scene-model re-issues bible/scenes/SCN-falling-dream/whitebox.json and the layout; grp001/grp008/grp009/grp010 are re-staged and the whitebox then matches the storyboard wides. Costs one scene-model pass before H3W can be signed.",
+            "cost": "one scene-model re-issue + re-stage of 4 groups",
+            "rewrites": [
+              "bible/scenes/SCN-falling-dream/whitebox.json",
+              "assets/concepts/scenes/SCN-falling-dream/layout.json"
+            ]
+          },
+          {
+            "id": "tight",
+            "label": "Ship the whitebox at the tighter in-model frame (the default) and let the shot prompt carry the wide",
+            "consequence": "No re-model. The camera reference video for sh001, sh017-sh025 shows a tighter frame than the shot; 08-video-gen must read the size code from the prompt, not from the whitebox video.",
+            "cost": "none"
+          },
+          {
+            "id": "exempt",
+            "label": "Exempt the four SCN-falling-dream groups from whitebox camera reference altogether",
+            "consequence": "grp001/grp008/grp009/grp010 get no camera.mp4 at export; those groups fall back to prompt-only spatial description.",
+            "cost": "loses spatial reference on 52 s of the episode"
+          }
+        ],
+        "recommended": "remodel",
+        "shots": [
+          "sh001"
+        ],
+        "t_range_s": [
+          0,
+          4.0
+        ],
+        "actors": [
+          "CHAR-alice"
+        ],
+        "camera_view": null,
+        "sources": [
+          {
+            "file": "bible/scenes/SCN-falling-dream/whitebox.json",
+            "quote": "scale_basis"
+          },
+          {
+            "file": "directing/ep01/shots/sh001/composition.json",
+            "quote": "subject.size_in_frame"
+          },
+          {
+            "file": "directing/ep01/shots/sh001/camera.json",
+            "quote": "lens_mm"
+          }
+        ],
+        "evidence": {},
+        "applied": null,
+        "issue_hash": "74537f94cbe6",
+        "status": "decided",
+        "decision": {
+          "choice": "remodel",
+          "note": "",
+          "by": "user:page",
+          "at": "2026-09-23T14:07:09+08:00",
+          "issue_hash": "74537f94cbe6"
+        }
+      }
+    ],
+    "scene_cast": [
+      "CHAR-alice"
+    ]
+  }
+}

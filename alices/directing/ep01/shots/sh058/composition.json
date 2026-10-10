@@ -1,0 +1,28 @@
+{
+  "shot_id": "sh058",
+  "scene_id": "SCN-long-hall",
+  "size": "medium",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "mid_left",
+    "anchor_xy": [0.34, 0.58],
+    "size_in_frame": "about 0.48 of frame height, held at a constant screen position while the hall travels behind her"
+  },
+  "headroom": "about 0.20 of frame height, constant through the move; the mosaic dado runs past high above her and never gets closer.",
+  "horizon_eyeline": "Lens keeping pace at 0.20 m across the flag joints: the joints stream through the bottom of frame as the only motion cue. Her eyeline is level at 0.52 and moves with the argument — out to frame right on the first outcome, back to her own hand on the second.",
+  "layers": {
+    "fg": "flagstone joints streaming through the near frame, and her counting fingers held up at chest height",
+    "mg": "Alice walking out across the flagstones, thinking aloud",
+    "bg": "the glass legs passing through frame behind her like columns, and the mosaic dado running past high above"
+  },
+  "gaze": {
+    "direction": "frame_right",
+    "lead_room": "right",
+    "note": "she walks and looks screen right, the direction she is travelling, with about 0.40 of frame width of open floor ahead of her — the largest lead room in S07, because the reasoning needs somewhere to go. Both lines land whole inside this shot with clear silence at each end."
+  },
+  "balance": "Figure in the left third, empty travelled floor filling the right — a classic walking frame, deliberately conventional, so that all the interest sits in what she is saying.",
+  "leading_lines": "The flag joints and the dado band both rake in the direction of travel; the glass legs pass through as a slow vertical beat that measures the distance covered.",
+  "eye_first": "Her face, then her counting fingers.",
+  "safe_area_ok": true,
+  "constraint_binding": "The reasoning MOVES — it is given a body and a direction, never a static talking head: the composition is a travelling two-thirds profile with constant subject placement, so the thinking has a heading. Both lines land whole inside this shot with clear silence at each end, so the frame does not change size or axis at any point during the speech."
+}

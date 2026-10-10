@@ -1,0 +1,104 @@
+{
+  "character_id": "CHAR-king-of-hearts",
+  "name": "King of Hearts",
+  "source_language": "en",
+  "source_speaker_labels": ["King"],
+  "produced_by_task": "p3-dialogue-style-pb1",
+  "register": {
+    "level": "pompous-procedural: a mild man hiding behind court formulae and schoolmasterly logic",
+    "summary": "He speaks in the language of procedure (Call the next witness, Consider your verdict), reasons aloud in circles ('must have', 'of course', 'you know'), threatens execution only as a conditional clause he never follows through, and defers to the Queen with 'my dear'.",
+    "examples": [
+      { "ref": "ch011-d0025", "chapter": 11, "text": "Give your evidence, and don't be nervous, or I'll have you executed on the spot." },
+      { "ref": "ch012-d0034", "chapter": 12, "text": "If you didn't sign it, that only makes the matter worse. You must have meant some mischief, or else you'd have signed your name like an honest man." },
+      { "ref": "ch008-d0021", "chapter": 8, "text": "Consider, my dear: she is only a child!" }
+    ]
+  },
+  "catchphrases": [
+    { "text": "Consider your verdict / Let the jury consider their verdict", "freq": "high", "count_in_source": 3, "example_refs": ["ch011-d0011", "ch012-d0022", "ch012-d0056"], "example_chapters": [11, 12] },
+    { "text": "Call the (first/next) witness", "freq": "medium", "count_in_source": 3, "example_refs": ["ch011-d0013", "ch011-d0057", "ch011-d0065"], "example_chapters": [11] },
+    { "text": "Give your evidence", "freq": "medium", "count_in_source": 3, "example_refs": ["ch011-d0025", "ch011-d0032", "ch011-d0058"], "example_chapters": [11] },
+    { "text": "…or I'll have you executed", "freq": "medium", "count_in_source": 3, "example_refs": ["ch011-d0025", "ch011-d0032", "ch011-d0046"], "example_chapters": [11] },
+    { "text": "my dear (to the Queen)", "freq": "medium", "count_in_source": 4, "example_refs": ["ch008-d0021", "ch008-d0055", "ch011-d0066"], "example_chapters": [8, 11, 12] }
+  ],
+  "sentence_style": {
+    "length": "short procedural formulae (median 6 words) broken by occasional long self-persuading deductions (mean 9.5)",
+    "mean_words": 9.5,
+    "patterns": [
+      {
+        "rule": "Court formulae and procedural imperatives, often trailing off with a comma as if reading from a script.",
+        "examples": [
+          { "ref": "ch011-d0009", "chapter": 11, "text": "Herald, read the accusation!" },
+          { "ref": "ch011-d0020", "chapter": 11, "text": "Write that down," },
+          { "ref": "ch011-d0050", "chapter": 11, "text": "If that's all you know about it, you may stand down," }
+        ]
+      },
+      {
+        "rule": "Execution threats only as a tacked-on conditional (…or I'll have you executed), never the Queen's bare 'Off with…'.",
+        "examples": [
+          { "ref": "ch011-d0032", "chapter": 11, "text": "Give your evidence, or I'll have you executed, whether you're nervous or not." },
+          { "ref": "ch011-d0046", "chapter": 11, "text": "You must remember, or I'll have you executed." }
+        ]
+      },
+      {
+        "rule": "Circular deduction voiced aloud: 'must have', 'of course', 'unless', 'you know', 'that only makes the matter worse'.",
+        "examples": [
+          { "ref": "ch012-d0026", "chapter": 12, "text": "It must have been that, unless it was written to nobody, which isn't usual, you know." },
+          { "ref": "ch012-d0032", "chapter": 12, "text": "He must have imitated somebody else's hand," },
+          { "ref": "ch012-d0048", "chapter": 12, "text": "If there's no meaning in it, that saves a world of trouble, you know, as we needn't try to find any." }
+        ]
+      },
+      {
+        "rule": "Self-correction and word-worrying: he tries words out, reverses them and puns on them.",
+        "examples": [
+          { "ref": "ch012-d0012", "chapter": 12, "text": "important—unimportant—unimportant—important—" },
+          { "ref": "ch012-d0054", "chapter": 12, "text": "Then the words don't fit you," },
+          { "ref": "ch012-d0055", "chapter": 12, "text": "It's a pun!" }
+        ]
+      },
+      {
+        "rule": "Mild, faintly henpecked domestic register when outside the court: 'my dear', 'I wish you would', 'if I must, I must'.",
+        "examples": [
+          { "ref": "ch008-d0055", "chapter": 8, "text": "Well, it must be removed, My dear! I wish you would have this cat removed!" },
+          { "ref": "ch011-d0061", "chapter": 11, "text": "Well, if I must, I must, What are tarts made of?" }
+        ]
+      }
+    ]
+  },
+  "vocabulary": {
+    "signature_words": ["witness", "evidence", "verdict", "jury", "court", "executed", "important", "must have", "of course", "you know", "Consider", "Rule Forty-two"],
+    "preferred_fields": ["court procedure", "logic and documents (letters, signatures, meaning)", "invented rules"],
+    "examples": [
+      { "ref": "ch012-d0015", "chapter": 12, "text": "Rule Forty-two. All persons more than a mile high to leave the court." },
+      { "ref": "ch012-d0020", "chapter": 12, "text": "It's the oldest rule in the book," }
+    ]
+  },
+  "address": {
+    "self": "I; 'we' when speaking for the court ('the most important piece of evidence we've heard yet')",
+    "to_queen": "my dear",
+    "to_witnesses": "you (bare), with an order attached",
+    "to_court_officers": "Herald / the jury (third person)",
+    "examples": [
+      { "ref": "ch011-d0066", "chapter": 11, "text": "Really, my dear, you must cross-examine the next witness. It quite makes my forehead ache!" },
+      { "ref": "ch011-d0009", "chapter": 11, "text": "Herald, read the accusation!" }
+    ]
+  },
+  "interjections": ["Well,", "Why,", "Really,", "Never mind!"],
+  "forbidden_words": [
+    { "domain": "post-1862 slang / modern chat register", "regex": "\\b(okay|ok|cool|guys?|awesome|yeah|yep|nope|gonna|wanna|gotta|kinda|sorta|totally|literally|dude)\\b", "reason": "period drama, 1862" },
+    { "domain": "the Queen's bare death formula", "regex": "off with (his|her|their|its) (head|heads|whiskers)|\\bbehead", "reason": "the King never says 'Off with…'; his threats are conditional ('or I'll have you executed') and he fetches the executioner rather than ordering heads off. Using the Queen's formula erases the royal pair's contrast" },
+    { "domain": "servile begging", "regex": "\\b(I'm a poor man|please your majesty|beg (your )?pardon|I'm afraid)\\b", "reason": "those are the Hatter's and the Rabbit's subordinate forms; the King is never the supplicant" }
+  ],
+  "drift": [
+    { "from_chapter": 8, "to_chapter": 9, "change": "Croquet-ground: private and domestic ('Consider, my dear', 'I don't like the look of it at all'), peevish rather than judicial.", "examples": ["ch008-d0021", "ch008-d0051", "ch009-d0037"] },
+    { "from_chapter": 11, "to_chapter": 12, "change": "Presiding at the trial: switches into procedural formulae and conditional threats, and ends in long pedantic readings of the letter where he talks himself into meanings.", "examples": ["ch011-d0013", "ch012-d0015", "ch012-d0050"] }
+  ],
+  "backtest_markers": [
+    { "id": "K1", "rule_ref": "vocabulary court procedure", "weight": 3, "regex": "\\b(witness|evidence|verdict|jury|jurymen|court|trial|executed|executioner|cross-examine|accusation|herald|stand down|sit down|rule|pardoned|trial|mischief|signed|sign it|important|unimportant|you may go)\\b" },
+    { "id": "K2", "rule_ref": "address to_queen", "weight": 3, "regex": "\\bmy dear\\b" },
+    { "id": "K3", "rule_ref": "sentence_style.patterns[2] circular deduction", "weight": 2, "regex": "\\b(must have|must be|of course|unless|you know|that only makes|you must|however|consider)\\b" },
+    { "id": "K4", "rule_ref": "sentence_style.patterns[0] procedural imperatives", "weight": 2, "regex": "^(call|read|write|give|take off|begin|let the|silence|never mind|you may|you ought|you are|then you may|stolen)\\b" },
+    { "id": "K5", "rule_ref": "sentence_style.patterns[3] word-worrying and puns", "weight": 3, "regex": "\\b(pun|fit|twinkling|tarts|dunce|speaker|whatever|meaning)\\b" },
+    { "id": "K6", "rule_ref": "sentence_style.patterns[4] peevish domestic", "weight": 2, "regex": "\\b(impertinent|I don't like the look|kiss my hand|who are you talking to|removed|denies|leave out)\\b" }
+  ],
+  "backtest": {"method": "marker-claim back-test: a spoken source line hits when it matches >=1 backtest_markers regex and no forbidden_words regex; verse (recited text) excluded; full definition runs/p3-dialogue-style-pb1/result.json#backtest_method", "script": "code/p3-dialogue-style-pb1_backtest.py", "run_on": "2026-09-22", "threshold": 0.8, "hit_rate": 1.0, "sample_size": 52, "source_lines_total": 52, "coverage_of_spoken_lines": 1.0, "verse_excluded": 0, "forbidden_violations_in_source": 0, "cross_claim_rate": 0.132, "lift": 7.56, "attribution_top1_rate": 0.846, "misses": [], "pass": true}
+}

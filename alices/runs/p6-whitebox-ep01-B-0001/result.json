@@ -1,0 +1,79 @@
+{
+  "task_id": "p6-whitebox-ep01 (director batch B-0001)",
+  "director_batch": {"id": "B-0001", "run_id": "a8b588c424af", "group_ids": ["grp001"], "note_ids": [], "issue_ids": ["WBI-ep01-grp001-001"], "override_objects": {}},
+  "agent": "07-directing/whitebox-staging",
+  "project": "alices",
+  "ep": "ep01",
+  "status": "completed_with_blocked_item",
+  "summary": "The batch carries one item: the user's ruling on WBI-ep01-grp001-001, choice 'remodel'. Applying that ruling means re-issuing bible/scenes/SCN-falling-dream/whitebox.json, which is owned by 05-scenes/scene-modeling and is outside both this station and the source files this batch authorises. The ruling is therefore recorded and routed, NOT marked applied: the plan keeps issues[].status=open so the compiled effective status is 'decided' (已裁决待套用), which is the host's own stop-sign against exporting video with an unapplied decision. No annotation notes and no override layer were present in this batch (notes: [], override_objects: {}).",
+  "items": [
+    {
+      "comment_id": "WBI-ep01-grp001-001",
+      "group_id": "grp001",
+      "shots": ["sh001"],
+      "choice": "remodel",
+      "decision_recorded": {"by": "user:page", "at": "2026-09-23T14:07:09+08:00", "issue_hash": "74537f94cbe6", "hash_matches_plan": true},
+      "outcome": "not_applied_out_of_station_scope",
+      "what_changed": "directing/ep01/whitebox_plans/grp001.json - basis extended with the ruling and its handoff; two warnings added recording (a) that applying it requires the scene-model re-issue and (b) that every coordinate in grp001/grp008/grp009/grp010 goes stale on the re-model. issues[] was left byte-identical so issue_hash is preserved and the user's answer does not go stale. No keyframe, camera, visible_actor_ids, prop or continuity value changed.",
+      "files_written": [
+        "directing/ep01/whitebox_plans/grp001.json (basis + warnings only)",
+        "qa/defects/DEF-p6-whitebox-ep01-001.json (new, assigned to 05-scenes/scene-modeling)",
+        "directing/ep01/whitebox/episode.json (recompiled)"
+      ],
+      "files_not_written_and_why": [
+        "bible/scenes/SCN-falling-dream/whitebox.json - the target of the ruling. Owned by 05-scenes/scene-modeling (task_id p4-scene-model-sb1; WORKFLOW.md line 1116 assigns bible/scenes/<sid>/whitebox.json to that station). This station's SOUL forbids amending confirmed Bible content and requires out-of-scope work to be routed to the owning agent. The batch instruction also scopes writes to blocking.json / camera.json / shot_list.json blocking_map.",
+        "assets/concepts/scenes/SCN-falling-dream/layout.json - owned by 04-environment/environment-concept (task_id p4-env-concept-sb1). No change needed anyway: the landmark xy are normalised, so only the metric scale_basis moves.",
+        "directing/ep01/shots/sh001/blocking.json, camera.json, shot_list.json blocking_map - unchanged. The ruling changes the SCENE scale, not Alice's route, her pose, the lens, the movement or the view tile; sh001 stays 28 mm, static, view_tile 8, Alice on shaft_centre with no path. There is nothing in these files the ruling touches.",
+        "whitebox_contract / source_fingerprint / placement_fingerprint - deliberately still unwritten. Freezing a reviewed camera placement now would be wrong twice over: DEF-p6-continuity-ep01-001/-002 are still open against composition text that _source_payload hashes, and the accepted ruling is about to move every coordinate in this group. Contracts are authored when the new model lands and the four groups are re-staged.",
+        "directing/ep01/whitebox/director/** - untouched (host ledger)."
+      ],
+      "blocked_on": "05-scenes/scene-modeling re-issuing SCN-falling-dream at about 16 m across, then a re-dispatch of p6-whitebox to re-stage grp001/grp008/grp009/grp010. WBI-ep01-grp001-001 goes status=applied at that point, not before."
+    }
+  ],
+  "handoff_numbers_given_to_scene_modeling": {
+    "target_shaft_inner_diameter_m": 16.0,
+    "scale_factor_from_present_model": 6.667,
+    "proposed_map_extent_x_m": 33.0,
+    "proposed_z_m": 18.5625,
+    "z_derivation": "whitebox_layout_check requires dimensions_m X:Z to match the layout_top.png aspect; the present model is 16:9, so Z = 33.0 x 9/16.",
+    "framing_proof": "wall inner radius 8.0 m; lens 0.6 m clear of the wall at radius 7.4 m; Alice biased 0.35 m down-axis gives 7.75 m standoff; a 28 mm frame is 6.64 m tall there, so Alice reads 0.203 of frame height against composition's 0.20. sh021 needs 3.13 m, the closes 0.25-0.92 m.",
+    "open_questions_for_that_station": [
+      "Does Y scale with the shaft (6.0 -> 40.0 m proportional), and do the fitting bands repeat down that height? If they repeat, WBI-ep01-grp008-001 / -grp009-001 / -grp010-001 are resolved by the same re-model.",
+      "At radius 8.0 m the wall furniture is 8 m from the centre, so Alice can no longer reach the pantry shelf (sh019 jar) or post it into a cupboard (sh021) from the fall column. Keep a reachable ledge near the column, or confirm that staging may drift her to within 0.35 m of the wall face for those two shots."
+    ],
+    "machine_check": "python code/whitebox_layout_check.py --project alices --scene SCN-falling-dream"
+  },
+  "self_checks": {
+    "collision": "No actor, prop or camera value changed, so the grp001 swept-volume result is unchanged: Alice is alone in the group, drifting at (0.322, y, 0.136) from y 3.05 to 2.70, 0.88 m clear of the nearest wall inner face and 0.58 m clear of the cupboard face. No contact.",
+    "facing": "Unchanged: yaw 1.708 computed from her position to the cupboards landmark (0.900, 0.056), which is the shot's stated look direction. No dialogue partner in this group.",
+    "camera_review": "All grp001 camera values are byte-identical to the signed-off pass; the lens stays at radius 1.151 m inside the 1.20 m wall face on the layout tile-8 axis. No cross-group match contract references sh001 (none are written), so no match re-verification was owed.",
+    "fingerprints": "Not written - see files_not_written_and_why. No fingerprint was refreshed and no contract was deleted or relaxed."
+  },
+  "verbatim_command_output": [
+    {
+      "command": "python3 code/whitebox_issues.py --project alices --ep ep01 --pending",
+      "exit_code": 0,
+      "stdout": "{\"pending_apply\": [{\"group_id\": \"grp001\", \"issue_id\": \"WBI-ep01-grp001-001\", \"choice\": \"remodel\", \"note\": \"\", \"by\": \"user:page\"}]}"
+    },
+    {
+      "command": "python3 code/render_whitebox.py --project alices --ep ep01 --check-only",
+      "exit_code": 0,
+      "stdout": [
+        "{\"groups\": 37, \"scenes\": 7, \"errors\": []}",
+        "{\"issues\": {\"total\": 9, \"open\": 8, \"blocking_open\": 0, \"decided\": 1, \"applied\": 0, \"stale\": 0, \"waived\": 0, \"groups_open\": [\"grp006\", \"grp008\", \"grp009\", \"grp010\", \"grp015\", \"grp016\", \"grp020\", \"grp035\"], \"blocking_ids\": []}, \"issues_text\": \"白模待决项:待处理 8(阻断 0)、已裁决待套用 1、已套用 0;涉及 grp006, grp008, grp009, grp010, grp015, grp016, grp020, grp035\"}"
+      ]
+    },
+    {
+      "command": "python3 code/render_whitebox.py --project alices --ep ep01 --compile-only grp001",
+      "exit_code": 0,
+      "stdout": [
+        "{\"groups\": 37, \"scenes\": 7, \"errors\": []}",
+        "{\"issues\": {\"total\": 9, \"open\": 8, \"blocking_open\": 0, \"decided\": 1, \"applied\": 0, \"stale\": 0, \"waived\": 0, \"groups_open\": [\"grp006\", \"grp008\", \"grp009\", \"grp010\", \"grp015\", \"grp016\", \"grp020\", \"grp035\"], \"blocking_ids\": []}, \"issues_text\": \"白模待决项:待处理 8(阻断 0)、已裁决待套用 1、已套用 0;涉及 grp006, grp008, grp009, grp010, grp015, grp016, grp020, grp035\"}",
+        "{\"compiled\": [\"grp001\", ... \"grp037\"], \"videos\": \"skipped(--compile-only:待用户签字 H3W-白模确认后再导出)\"}"
+      ]
+    }
+  ],
+  "gate_warning_for_orchestrator": "The host counts blocking_open from issues whose EFFECTIVE status is open or stale. Answering WBI-ep01-grp001-001 moved it to 'decided', so blocking_open is now 0 and the mechanical block on g6w has cleared even though nothing has been re-modelled. g6w H3W-白模确认 should NOT be signed on that count alone: the whitebox for grp001/grp008/grp009/grp010 still shows the pre-ruling framing. Dispatch 05-scenes/scene-modeling (DEF-p6-whitebox-ep01-001) first, then re-dispatch p6-whitebox to re-stage those four groups.",
+  "stills_checked": "not_applicable_no_staging_change",
+  "next": "05-scenes/scene-modeling re-issues SCN-falling-dream at about 16 m across and answers the two open questions above -> re-dispatch p6-whitebox to re-stage grp001/grp008/grp009/grp010 against the new model and set WBI-ep01-grp001-001 status=applied with applied:{choice:'remodel', at, note} -> g6w."
+}

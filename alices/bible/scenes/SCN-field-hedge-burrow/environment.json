@@ -1,0 +1,52 @@
+{
+  "_meta": {
+    "file": "bible/scenes/SCN-field-hedge-burrow/environment.json",
+    "owner": "05-scenes/environment",
+    "task_id": "p3-environment-sb1",
+    "attempt": 1,
+    "generated": "2026-09-22",
+    "enum_set": "ENV-ENUM-v1 (defined once in runs/p3-environment-sb1/result.json)"
+  },
+  "scene_id": "SCN-field-hedge-burrow",
+  "layer": "waking",
+  "fixed": {
+    "climate": "lowland Thames valley near Oxford, temperate; hot, dry midsummer afternoon (geography.json LOC-riverside-region, LOC-rabbit-hole-entrance 'hot and still')",
+    "indoor": false,
+    "daylight_access": "open_sky",
+    "ground_and_flora": "the last stretch of uncut meadow (long grass, daisies, buttercups, dry seed-heads) running up to a hawthorn hedge in full dark-green leaf; the May blossom is long over and small green haws are forming; dry, crumbly earth and trailing grass round the burrow mouth",
+    "source": {"chapter": "ch001", "quote": "she ran across the field after it, and fortunately was just in time to see it pop down a large rabbit-hole under the hedge"},
+    "inferred": true,
+    "reason": "Field, hedge and burrow are in the source (ch001-p03); hawthorn is the geography.json design. The July leaf state (no blossom) is designed so that downstream images do not paint May hawthorn blossom into a July scene."
+  },
+  "variable_dims": {
+    "season": ["summer"],
+    "time_of_day": ["early_afternoon"],
+    "weather": ["fair_hot"],
+    "wind": ["still"],
+    "temperature": ["hot"]
+  },
+  "states": [
+    {
+      "state_id": "SCN-field-hedge-burrow-S01",
+      "chapter": 1,
+      "chapter_id": "ch001",
+      "story_scene": "ch001-sc01",
+      "paragraphs": "ch001-p03..ch001-p04",
+      "timeline_ref": "ev0001",
+      "timeline_node": "TL-003",
+      "season": "summer",
+      "weather": "fair_hot",
+      "wind": "still",
+      "temperature": "hot",
+      "time_of_day": "early_afternoon",
+      "waking_clock": "14:08-14:12 GMT",
+      "sun": {"elevation_deg_approx": 53, "azimuth_deg_approx": 230, "note": "high south-westerly sun; the hedge casts only a narrow band of shade at its foot, where the burrow sits"},
+      "sky": "clear, pale-blue sky with a few small fair-weather clouds; heat haze over the field",
+      "conditions": "still, dry heat; pollen and seed-fluff kicked up as Alice runs through the long grass; insects rising from it",
+      "source_chapter": "ch001",
+      "source": {"chapter": "ch001", "quote": "burning with curiosity, she ran across the field after it"},
+      "inferred": true,
+      "reason": "The chase follows the bank moment within a minute or two (same event, ev0001), so it takes the bank's heat (ch001-p02). The source says nothing about weather at the hedge; sky, pollen and exact clock are designed."
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "character_id": "CHAR-knave-of-hearts",
+  "name": "Knave of Hearts",
+  "source_language": "en",
+  "source_speaker_labels": ["Knave"],
+  "produced_by_task": "p3-dialogue-style-pb2",
+  "sample_note": "Two spoken lines only (ch012-d0033, ch012-d0049). In ch008 he answers the Queen with a bow and a smile (ch008-p13) and obeys an order without a word (ch008-p21-p22). Rules going beyond those lines are tagged inferred:true.",
+  "register": {
+    "level": "the court servant's formal deference, turned into a careful defendant's plea",
+    "summary": "A man who survives by saying as little as possible. In the procession he only bows and smiles; on trial he speaks twice, both times short and on the defensive: an exact court formula (Please your Majesty) followed by a denial built like a lawyer's point (I didn't write it, and they can't prove I did: there's no name signed), and a sad rhetorical question that sidesteps the King (Do I look like it?). Per SUP-002/SUP-004 a human performer in flat card-suited page livery; in chains in ch011-ch012.",
+    "examples": [
+      { "ref": "ch012-d0033", "chapter": 12, "text": "Please your Majesty, I didn't write it, and they can't prove I did: there's no name signed at the end." },
+      { "ref": "ch012-d0049", "chapter": 12, "text": "Do I look like it?" }
+    ]
+  },
+  "catchphrases": [
+    { "text": "Please your Majesty", "freq": "medium", "count_in_source": 1, "example_refs": ["ch012-d0033"], "example_chapters": [12] },
+    { "text": "they can't prove … (denial on the evidence)", "freq": "medium", "count_in_source": 1, "example_refs": ["ch012-d0033"], "example_chapters": [12] }
+  ],
+  "sentence_style": {
+    "length": "short: 5 and 20 words; new lines should stay under 20 words and never become a speech",
+    "mean_words": 12.5,
+    "patterns": [
+      {
+        "rule": "Opens any address to royalty with the court formula 'Please your Majesty' — deference first, content second.",
+        "examples": [
+          { "ref": "ch012-d0033", "chapter": 12, "text": "Please your Majesty," }
+        ]
+      },
+      {
+        "rule": "Defends on the evidence, never on innocence: denies the specific act and points to what cannot be proved (no name signed).",
+        "examples": [
+          { "ref": "ch012-d0033", "chapter": 12, "text": "I didn't write it, and they can't prove I did: there's no name signed at the end." }
+        ]
+      },
+      {
+        "rule": "Deflects dangerous questions with a mild rhetorical question about himself instead of a yes/no answer; said 'sadly' (ch012-p51).",
+        "examples": [
+          { "ref": "ch012-d0049", "chapter": 12, "text": "Do I look like it?" }
+        ]
+      },
+      {
+        "rule": "Before the trial he answers royalty wordlessly (a bow, a smile, a careful obedient action). If a screenplay line is needed there, it is a two-to-four-word acknowledgement such as 'Yes, your Majesty.'",
+        "inferred": true,
+        "reason": "ch008 gives him no words (ch008-p13 bows and smiles; ch008-p22 turns the gardeners over 'very carefully, with one foot'); the rule keeps any added line consistent with his trial formula.",
+        "examples": [
+          { "ref": "ch008-p13", "chapter": 8, "text": "(narrative) She said it to the Knave of Hearts, who only bowed and smiled in reply." },
+          { "ref": "ch008-p22", "chapter": 8, "text": "(narrative) The Knave did so, very carefully, with one foot." }
+        ]
+      }
+    ]
+  },
+  "vocabulary": {
+    "signature_words": ["Please your Majesty", "I didn't", "can't prove", "no name signed"],
+    "preferred_fields": ["court etiquette", "evidence and proof (the letter, handwriting, signature)"],
+    "examples": [
+      { "ref": "ch012-d0033", "chapter": 12, "text": "there's no name signed at the end." }
+    ]
+  },
+  "address": {
+    "self": "I",
+    "to_the_king_and_queen": "your Majesty (always in the formula 'Please your Majesty')",
+    "to_accusers": "they (never names or addresses them directly)",
+    "to_alice": "never addresses her",
+    "examples": [
+      { "ref": "ch012-d0033", "chapter": 12, "text": "Please your Majesty, … they can't prove I did" }
+    ]
+  },
+  "interjections": [],
+  "forbidden_words": [
+    { "domain": "post-1862 slang / modern chat register", "regex": "\\b(okay|ok|cool|guys?|awesome|yeah|yep|nope|gonna|wanna|gotta|kinda|sorta|totally|literally|dude)\\b", "reason": "period drama, 1862" },
+    { "domain": "confession", "regex": "\\bI (did it|stole|took (them|the tarts|it))\\b|\\b(I confess|it was me|guilty)\\b", "reason": "the source never has him admit the theft; the trial collapses unresolved (ch012) — a confession would change the plot" },
+    { "domain": "insolence or shouting at royalty", "regex": "\\b(fool|idiot|stupid|nonsense|off with|who cares)\\b", "reason": "he survives by deference; defiance at the trial belongs to Alice (ch012-p62)" }
+  ],
+  "drift": [
+    { "from_chapter": 8, "to_chapter": 8, "change": "Procession and croquet-ground: silent servant — bows, smiles, obeys.", "examples": ["ch008-p13", "ch008-p22"] },
+    { "from_chapter": 11, "to_chapter": 12, "change": "In chains at the trial: finds a voice only to defend himself, carefully and briefly, and 'sadly' once the King turns on him.", "examples": ["ch012-d0033", "ch012-d0049"] }
+  ],
+  "backtest_markers": [
+    { "id": "K1", "rule_ref": "sentence_style.patterns[0] court formula", "weight": 4, "regex": "\\b(please your majesty|your majesty)\\b" },
+    { "id": "K2", "rule_ref": "sentence_style.patterns[1] denial on the evidence", "weight": 4, "regex": "\\b(I didn't|can't prove|no name|signed|not my (hand|writing))\\b" },
+    { "id": "K3", "rule_ref": "sentence_style.patterns[2] deflecting self-question", "weight": 4, "regex": "^do I (look|seem) like\\b" }
+  ],
+  "backtest": {"method": "marker-claim back-test (shared yardstick with pb1 and 01-story/dialogue-rewrite): a spoken source line hits when it matches >=1 backtest_markers regex and no forbidden_words regex; verse excluded; full definition runs/p3-dialogue-style-pb2/result.json#backtest_method", "script": "code/p3-dialogue-style-pb1_backtest.py", "run_on": "2026-09-22", "threshold": 0.8, "hit_rate": 1.0, "sample_size": 2, "source_lines_total": 2, "coverage_of_spoken_lines": 1.0, "verse_excluded": 0, "forbidden_violations_in_source": 0, "cross_claim_rate": 0.022, "lift": 45.19, "attribution_top1_rate": 1.0, "misses": [], "pass": true, "small_sample_warning": "only 2 spoken source line(s); the hit rate is not statistically meaningful - rules tagged inferred:true carry the card beyond the source"}
+}

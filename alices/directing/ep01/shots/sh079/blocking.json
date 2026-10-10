@@ -1,0 +1,38 @@
+{
+  "shot_id": "sh079",
+  "group_id": "grp030",
+  "scene_no": "S08",
+  "scene_id": "SCN-long-hall",
+  "duration_s": 8.5,
+  "is_dialogue": true,
+  "group_position": "middle shot of grp030 — Alice on the map start ground (curtain), unmoved.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "sit",
+      "start_pos": "sitting in the water at the low curtain, the fan still going in one hand",
+      "space_fragment_en": "sitting in the water at the low curtain, centred in frame, facing screen-left into the dark, the fan stopped in her hand",
+      "facing": "the same open, unoccupied screen-left space as sh078; her focus collapses into it and stops travelling",
+      "path": [],
+      "beats": [
+        { "t": 0.8, "action": "wonders whether she has been changed in the night", "sync": "LN-ep01-022 begins" },
+        { "t": 5.2, "action": "the fan stops in mid-stroke", "sync": "LN-ep01-022 on 'who in the world am I'" },
+        { "t": 7.4, "action": "it does not start again in this shot", "sync": "held to the cut" }
+      ],
+      "performance": {
+        "objective": "check her own identity the way she would check a sum",
+        "goal": "check her own identity the way she would check a sum",
+        "emotional_arc": "from a puzzled inventory of the day to a question that stops her hands",
+        "arc_from": "puzzled inventory",
+        "arc_to": "a question that stops her hands",
+        "trigger": { "line_ref": "LN-ep01-022", "word": "who in the world am I" },
+        "no_early_reaction": ["the fan stopping", "the eyes fixing", "the breath going shallow"],
+        "forbidden_early": ["the fan stopping", "the eyes fixing", "the breath going shallow"],
+        "end_state": "fan halted in mid-stroke, hand not lowered, eyes fixed on nothing screen-left, lips apart"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0007 result (dream)", "note": "Alice alone." }
+}

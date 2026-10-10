@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh005",
+  "group_id": "grp003",
+  "scene_no": "S01",
+  "duration_s": 11.0,
+  "size": "medium",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 50,
+  "camera_height_m": 0.30,
+  "angle": "level",
+  "rack_focus": "none",
+  "start_frame": "From the water side: the sister upright in the upper third with the book, Alice still on her stomach in the lower foreground, out-of-focus grass stems across the near edge.",
+  "end_frame": "The same frame after she has rolled onto her back: her face and the picked daisy now large in the near foreground, the daisy dropping onto her pinafore, the sister unmoved in the upper third reading on.",
+  "constraint_honoured": "'One take, no move; single pick-and-drop gesture' — one locked 11.0 s frame; the composition changes only because she rolls through it.",
+  "movement_note": "The longest waking take in the episode. A static frame lets the roll, the hush and the daisy all land in one shot without a reframe, and carries LN-ep01-002 (1.4 s) whole.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

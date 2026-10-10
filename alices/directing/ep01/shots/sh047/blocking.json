@@ -1,0 +1,39 @@
+{
+  "shot_id": "sh047",
+  "group_id": "grp018",
+  "scene_no": "S06",
+  "scene_id": "SCN-long-hall",
+  "duration_s": 4.0,
+  "is_dialogue": false,
+  "group_position": "first shot of grp018 — Alice on her map start (glass_table, at the table edge facing the curtain); the map gives her no path, so her feet do not move for the whole group.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "stand",
+      "start_pos": "at the edge of the glass table, the bottle coming up to her mouth and away again",
+      "space_fragment_en": "standing at the glass table, centred in frame, facing screen-left over the little bottle as she sips",
+      "facing": "slightly screen-left between mouthfuls — the direction of an inward inventory, not of anything in the room",
+      "path": [],
+      "beats": [
+        { "t": 0.6, "action": "a cautious sip; surprise, then pleasure — something sweet", "sync": "first tasting" },
+        { "t": 1.8, "action": "second sip; something savoury and wrong stops her dead", "sync": "second tasting" },
+        { "t": 2.8, "action": "third sip; she laughs at herself", "sync": "third tasting" },
+        { "t": 3.4, "action": "drains it", "sync": "very soon she has finished it off" }
+      ],
+      "performance_beat": {
+        "objective": "identify the taste — and, having started, finish the bottle",
+        "goal": "identify what she is drinking",
+        "emotional_arc": "from careful suspicion, through three distinct discoveries, to cheerful greed",
+        "arc_from": "careful suspicion",
+        "arc_to": "cheerful greed",
+        "trigger": { "beat": "the second mouthful turns savoury and stops her dead", "t": 1.8 },
+        "no_early_reaction": ["the nose wrinkling", "a laugh", "the bottle tipping right up"],
+        "forbidden_early": ["the nose wrinkling", "a laugh", "the bottle tipping right up"],
+        "end_state": "bottle empty and coming down from her mouth, lips pressed together, eyes off to screen-left"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0004 (dream) — she drinks it", "note": "Alice alone." }
+}

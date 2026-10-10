@@ -1,0 +1,44 @@
+{
+  "shot_id": "sh083",
+  "group_id": "grp031",
+  "scene_no": "S08",
+  "scene_id": "SCN-long-hall",
+  "duration_s": 9.5,
+  "is_dialogue": true,
+  "group_position": "middle shot of grp031 — Alice on the map start ground (curtain), head tipped back into the episode's single up-angle.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "sit",
+      "start_pos": "sitting in the water at the low curtain, head tipped back to the vault",
+      "space_fragment_en": "sitting in the water at the low curtain, centred low in frame, head tipped back facing up into the dark vault",
+      "facing": "straight up into the empty upper half of frame, as if her family might be up there looking down",
+      "path": [],
+      "beats": [
+        { "t": 0.8, "action": "her eyes fill again", "sync": "before the line" },
+        { "t": 1.6, "action": "she looks up into the dark vault and asks them to put their heads down", "sync": "LN-ep01-026 begins" },
+        { "t": 6.8, "action": "her voice breaks on the word", "sync": "LN-ep01-026 on 'alone'" },
+        { "t": 8.6, "action": "nothing comes", "sync": "the up-angle is spent on a giant looking up at nothing" }
+      ],
+      "performance": {
+        "objective": "call somebody — anybody who knows her — down into this hall",
+        "goal": "call somebody who knows her down into this hall",
+        "emotional_arc": "from hopeful appeal to naked loneliness",
+        "arc_from": "hopeful appeal",
+        "arc_to": "naked loneliness",
+        "trigger": { "line_ref": "LN-ep01-026", "word": "alone" },
+        "no_early_reaction": ["the voice breaking", "the chin trembling", "the hands coming up"],
+        "forbidden_early": ["the voice breaking", "the chin trembling", "the hands coming up"],
+        "end_state": "head still right back, eyes up into the dark, mouth open and unsteady, wet lashes, nothing answering"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": {
+    "timeline_ok": true,
+    "violations": [],
+    "story_event": "ev0007 result (dream) — 'I am so very tired of being all alone here'",
+    "note": "Alice alone. Nothing may be staged in the vault above her; the appeal must go unanswered."
+  }
+}

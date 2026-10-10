@@ -1,0 +1,23 @@
+{
+  "task_id": "p4-style",
+  "agent": "06-art/art-director",
+  "attempt": 1,
+  "status": "done_pending_h2",
+  "completed_at": "2026-09-22",
+  "outputs": ["bible/style.json", "qa/defects/DEF-p4-style-001.json"],
+  "refs_inventory": {"refs/style/alice.jpeg": "viewed; drives palette, lighting, texture, scale composition, Alice's cornflower blue (see style.json user_refs)", "refs/NOTES.md": "absent", "refs/annotations.json": "absent", "other refs/ subdirs": "empty"},
+  "key_decisions": [
+    "render_school 3d = photoreal live action on 35mm film; every effect is in camera (CR-001, CR-005, CR-006)",
+    "Two registers: waking frame is warm and green, high-key; dream is verdigris and slate, low-key with candle pools (palette_logic). Hearts crimson ramps up toward the trial, and cards match-cut to leaves",
+    "Period lock 1862: user reference's Art Nouveau translated to Oxford Gothic Revival (CR-002)",
+    "Performers with visible faces and subtle coded touches, no CGI creatures; real silent animals CRE-001..004 allowed (CR-003, CR-004)",
+    "DEF-p3-char-index-902 honoured: CR-010 and negative_prompt_en ban axe, block, guillotine, noose, gallows and blade at neck",
+    "Six reference films with take/avoid: user ref, Barry Lyndon, Picnic at Hanging Rock, Pan's Labyrinth, The Fall, Dreamchild"
+  ],
+  "self_checks": {"schema_json_valid": "PASS", "references_negative_anchors_nonempty": "PASS", "no_placeholders": "PASS", "negatives_vs_bible": "PASS (rabbit, hookah, mushroom, pocket watch, flamingo, hedgehog, crown, playing card, rose and caterpillar are all absent from negative_prompt_en)", "style_fragment_ui_equals_en": "PASS (UI language English)", "ascii_filenames": "PASS"},
+  "open_items_for_h2": [
+    "DEF-p4-style-001: user reference vs locked SUP-002 (giant CGI caterpillar), Art Nouveau and matte-painting finish. Recommended A on all three",
+    "At H2 set style.json locked_by='H2' plus version freeze (memory-bible on_bible_access; changelog entry is theirs)"
+  ],
+  "not_applicable": {"DEF-p3-char-index-903": "screenplay/voice domain (lullaby chorus attribution), no style impact", "skills": "none checked for this station", "evaluation": "switched off in project settings", "genmedia": "no media generated"}
+}

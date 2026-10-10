@@ -1,0 +1,50 @@
+{
+  "task_id": "p3-scene-index",
+  "agent": "05-scenes/scene",
+  "project": "alices",
+  "attempt": 1,
+  "status": "done",
+  "completed_at": "2026-09-22",
+  "outputs": ["bible/scenes/index.json"],
+  "helper_scripts": ["code/p3-scene-index_check.py"],
+  "summary": {
+    "scenes_total": 26,
+    "containers": 3,
+    "shootable_single_space": 23,
+    "waking": 3,
+    "dream": 23,
+    "int_ext": { "INT": 8, "EXT": 18, "INT/EXT": 0 },
+    "mobile": 0,
+    "story_scenes_covered": "46/46",
+    "priority_high": ["SCN-riverbank", "SCN-long-hall", "SCN-pool-bank", "SCN-rabbit-house-upstairs-room", "SCN-caterpillar-clearing", "SCN-duchess-kitchen", "SCN-mad-tea-party", "SCN-croquet-ground", "SCN-mock-turtle-ledge", "SCN-courtroom"]
+  },
+  "decisions": [
+    "ID format follows bible/WRITE_RULES.md section 4 (readable slug SCN-<slug>), not the numeric example in SOUL.md; geo_ref mirrors location_ref.",
+    "INT/EXT split only at the White Rabbit's house (siege outside, Alice stuck inside) and the Duchess's house (Footmen at the door, and the baby-to-pig beat outside; kitchen inside). The March Hare's house (tea-table outside only) and the court (courtroom inside only) are not split.",
+    "The flooded hall (SCN-pool-of-tears) is its own room under SCN-long-hall: swimming at small scale has a different plan and landmarks from the dry hall. The pool bank is EXT per geography.json (an outdoor-feeling dream shore).",
+    "The tree-door (ch007-p104) anchors to LOC-thick-wood; the deprecated LOC-tree-hatch is not referenced (P-009).",
+    "The waking frame is kept small: bank (with the reed backwater as an in-plan landmark for the sister's reverie) and field-edge hedge burrow. The farmyard is sound only, the family house is off screen, and the seaside town is a remembered thought. These are listed in geography_not_registered_as_scene.",
+    "Every dream scene carries grows_from (H1 5.2 A). Where geography.json gives a dream LOC or null as the counterpart, the scene uses the counterpart_key plus a waking_detail, and the loc key is omitted rather than set to null.",
+    "Nothing written about time of day, weather, architecture or lighting (other agents' scope). The skeleton schema's time_of_day field is left to 05-scenes/environment."
+  ],
+  "acceptance": {
+    "ids_unique": "PASS",
+    "geography_refs_valid": "PASS (location_ref/geo_ref, adjacent_geo_refs and grows_from.loc all resolve to non-deprecated LOC-*; layer matches)",
+    "scene_single_space": "PASS (no sub_spaces/sub_settings/type_mixed/landmarks_* keys; no '/' in names)",
+    "parent_valid_acyclic": "PASS",
+    "chapters_nonempty": "PASS",
+    "story_scenes_100pct_covered": "PASS (46/46 structured_story scenes mapped in story_scene_map)",
+    "quotes_verbatim": "PASS",
+    "no_unknown_placeholder": "PASS",
+    "scene_int_ext_match": "PASS: `python3 code/check_scene_int_ext.py --project alices` -> 'PASS scene_int_ext_match alices: 0 errors, 0 warnings' (exit 0; --strict also exit 0)",
+    "check_reports": ["runs/p3-scene-index/check_p3.json", "runs/p3-scene-index/scene_int_ext.json"]
+  },
+  "geo_unanchored": [],
+  "conflicts": [],
+  "defects_filed": [],
+  "open_notes": [
+    "ch012-p71 (the sister imagines Alice as a grown woman telling tales to children) is mapped to SCN-riverbank, where the source frames it. If the screenplay stages it as a separate flash-forward space, it will need a geography node first (02-worldbuilding/geography through memory-bible). No such node exists and none is invented here.",
+    "memory-bible should record this write in the changelog (BIB entry) under P-011.",
+    "Evaluation disabled (quality judge = 0); all QA dimensions 0. No skills active for this station."
+  ]
+}

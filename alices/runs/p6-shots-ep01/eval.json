@@ -1,0 +1,7 @@
+{
+  "task_id": "p6-shots-ep01",
+  "scored": false,
+  "reason": "质量评委 (quality judge) = 0 in the user's review settings. 00-orchestration/evaluation is not dispatched anywhere in this project; task acceptance is machine-check only.",
+  "qa": "none — all eight QA review dimensions are 0, and draft-iteration stages are dispatched at 0 regardless.",
+  "acceptance_decision": "PASS on machine checks, verified independently by the orchestrator."
+}

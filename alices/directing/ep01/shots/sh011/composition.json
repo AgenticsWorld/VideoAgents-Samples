@@ -1,0 +1,28 @@
+{
+  "shot_id": "sh011",
+  "scene_id": "SCN-field-hedge-burrow",
+  "size": "wide",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "bottom_centre",
+    "anchor_xy": [0.50, 0.58],
+    "size_in_frame": "running straight at the lens, growing from about 0.30 to 0.70 of frame height across three seconds"
+  },
+  "headroom": "starts generous at about 0.30 of frame height of sky and grass above her and closes to about 0.08 as she arrives — the frame fills up rather than reframes.",
+  "horizon_eyeline": "Low wide at 0.9 m from the burrow mouth: the far field line runs level across at 0.30 of frame height, the S01 elm standing up out of it at frame centre, x 0.50. Her eyeline rises through that line as she comes on, crossing it at about the two-second mark.",
+  "layers": {
+    "fg": "hawthorn stems arching in from the left and right edges and across the top, making a dark ragged frame-within-the-frame",
+    "mg": "Alice coming out of the long grass straight toward camera, dead centre",
+    "bg": "the sunlit field going back, and pinned in the background centre the elm she was lying under a minute ago"
+  },
+  "gaze": {
+    "direction": "to_camera",
+    "lead_room": "none",
+    "note": "she runs at the lens and looks past it at the hedge foot; no lead room is given because there is nowhere left to go — the hedge is behind camera. She does not look back at the elm, and the composition offers her every chance to: it is directly behind her head for the whole shot."
+  },
+  "balance": "Bilaterally symmetrical and frontal — figure centred, elm centred behind her, hawthorn bracketing both sides. The tidiness is the check in the acceleration: the one still, ordered frame in a scene of streaming grass.",
+  "leading_lines": "The hawthorn arch closes the top and sides and funnels everything to the centre; the flattened track she makes through the grass runs from the elm straight down the middle of frame to her feet — her whole afternoon in one line.",
+  "eye_first": "Alice at centre, then past her shoulder to the elm behind her, which is the point of the frame.",
+  "safe_area_ok": true,
+  "constraint_binding": "Static — the first check in the acceleration. The elm is held on the exact vertical centre line for all three seconds, so its meaning survives without a push-in or a rack."
+}

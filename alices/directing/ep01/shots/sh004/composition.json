@@ -1,0 +1,29 @@
+{
+  "shot_id": "sh004",
+  "scene_id": "SCN-riverbank",
+  "size": "detail",
+  "subject": {
+    "id": "PROP-sister-book",
+    "in_frame_characters": ["CHAR-alice-sister"],
+    "grid": "centre",
+    "anchor_xy": [0.50, 0.50],
+    "size_in_frame": "the open page fills the frame edge to edge; the gutter falls just left of centre at x 0.44"
+  },
+  "headroom": "none — a flat insert. The page bleeds all four edges so there is no margin of grass or sky anywhere.",
+  "horizon_eyeline": "The lines of type are the horizon: a stack of dead-level grey rules across the whole frame. Alice's eye-line is the lens, about 0.3 m above the page and a few degrees off square so the paper takes no glare.",
+  "layers": {
+    "fg": "the sister's thumb at the lower right margin, the only warm colour and the only curved shape in frame",
+    "mg": "the page plane itself, grey type margin to margin, sharp corner to corner",
+    "bg": "none — the page occludes everything; the shot is a single plane by design"
+  },
+  "gaze": {
+    "direction": "none",
+    "lead_room": "none",
+    "note": "POV insert from Alice's eye-line at the sitting place; no one looks in this frame."
+  },
+  "balance": "Flat, even, airless: uniform grey texture across all nine cells, broken only by the thumb at bottom right. The evenness is the answer to her question.",
+  "leading_lines": "Parallel lines of type running left to right, and the gutter as a single soft vertical — a grid with nothing in it. No line leads anywhere.",
+  "eye_first": "The middle of the page, which offers nothing, then out to the thumb at the lower right for the only thing to look at.",
+  "safe_area_ok": true,
+  "constraint_binding": "Edge-to-edge grey type, no illustration and no drop cap: no picture, initial or ornament may sit anywhere in frame, including outside title-safe. Nothing here needs to be legible, so no word is placed on a safe-area line."
+}

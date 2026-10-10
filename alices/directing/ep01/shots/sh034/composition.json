@@ -1,0 +1,29 @@
+{
+  "shot_id": "sh034",
+  "scene_id": "SCN-long-hall",
+  "size": "medium",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "mid_left",
+    "anchor_xy": [0.34, 0.52],
+    "size_in_frame": "three-quarter figure, about 0.72 of frame height, held at a constant screen position while the wall passes behind her"
+  },
+  "headroom": "about 0.12 of frame height, with the underside of the lamp row cutting across the top corner — she is kept under the lamps, not level with them, at this size.",
+  "horizon_eyeline": "Lens at 1.3 m, square to the west wall: the mosaic dado runs dead level across at 0.66 of frame height and the door heads at 0.20. Her eyeline is at 0.44, level, fixed on the handles rather than on the doors.",
+  "layers": {
+    "fg": "the near edge of each horseshoe arch sweeping through the right of frame as the move passes it",
+    "mg": "Alice walking the wall, hand out, hitting handle after handle",
+    "bg": "the honey limestone wall, iron lily-stems, and one blind roundel above each passing door head"
+  },
+  "gaze": {
+    "direction": "frame_right",
+    "lead_room": "right",
+    "note": "she travels screen left to screen right (north to south down the west wall) and looks the way she walks, with about 0.34 of frame width of unopened wall ahead of her at all times. The lead room is always full of the next locked door."
+  },
+  "balance": "She holds the left third; the right two thirds are a repeating rhythm of arch, handle, roundel, arch, handle, roundel. The balance never resolves because the pattern never ends — that is the compression the move is doing.",
+  "leading_lines": "The dado band and the door-head line are two long parallel horizontals sliding through frame; the arches are the beat marked on them. Her outstretched arm is the only thing crossing them.",
+  "eye_first": "Her hand, which is where the failures happen, then the next handle waiting in the lead room.",
+  "safe_area_ok": true,
+  "constraint_binding": "The door round is two shots, not twenty: three or four black iron handles and their horseshoe arches must pass through ONE continuous frame, so the composition is laid out as a repeating band with a fixed subject position — the repetition lives in the background rhythm, never in a cut.",
+  "start_end_framing": "Start and end framing are identical in subject position, scale and eyeline; only the wall behind her has changed. This is what lets the second pass (sh038) rhyme with it."
+}

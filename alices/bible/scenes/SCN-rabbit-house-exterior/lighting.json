@@ -1,0 +1,47 @@
+{
+  "_meta": {
+    "file": "bible/scenes/SCN-rabbit-house-exterior/lighting.json",
+    "owner": "05-scenes/lighting",
+    "task_id": "p3-lighting-sb1",
+    "attempt": 1,
+    "generated": "2026-09-22",
+    "status": "draft_v1",
+    "enum_set": "LGT-ENUM-v1 (defined once in runs/p3-lighting-sb1/result.json)",
+    "inputs": ["bible/scenes/SCN-rabbit-house-exterior/environment.json", "bible/scenes/SCN-rabbit-house-exterior/architecture.json"]
+  },
+  "scene_id": "SCN-rabbit-house-exterior",
+  "layer": "dream",
+  "int_ext": "EXT",
+  "daylight_access": "open_sky",
+  "dream_growth": {
+    "grows_from": "the waking sun at about 15:36-15:56 GMT and the family villa seen from the bank",
+    "how": "An ordinary sunny July afternoon at home: the same sun as on the sleeping girl, now in the west-south-west. Nothing is heightened; it is the dream's most everyday light.",
+    "ruling": "runs/h1-ruling/ruling.json 5.2 A"
+  },
+  "schemes": [
+    {
+      "lighting_scheme_id": "LGT-rabbit-house-exterior-01",
+      "condition": {"time_of_day": "afternoon", "weather": "fair_hot"},
+      "state_refs": ["SCN-rabbit-house-exterior-S01", "SCN-rabbit-house-exterior-S02"],
+      "waking_clock": "15:36-15:56 GMT (Alice asleep on the bank)",
+      "sun": {"elevation_deg_approx": 40, "azimuth_deg_approx": 256},
+      "key_source": "sun_direct",
+      "key": "high west-south-west sun",
+      "direction": "high_side",
+      "direction_note": "Against the architecture plan (front faces north to the lane, yard to the south, chimney on the east gable): the west gable is in full sun; the south yard front and the cucumber-frame take raking sun from the west; the north (lane) front with the brass-plated door is in bright open shade; ladder and roof shadows fall to the east-north-east and lengthen slightly by S02",
+      "fill": {"source": "sky_and_ground_bounce", "note": "bright sky fill and warm bounce off the dry, sun-baked yard"},
+      "practicals": [],
+      "color_temp": "neutral (~4500K)",
+      "kelvin_approx": 5300,
+      "contrast": "hard",
+      "quality": "hard",
+      "atmosphere": "hot, still, dusty; glass of the cucumber-frames (and later the broken pane) glinting",
+      "prompt_fragment_en": "Hot, bright afternoon sunshine at a little brick cottage: a high sun from the west-south-west rakes across the red brick, slate roof and back yard with crisp shadows, the lane front and its green door in clear, bright open shade with the polished brass plate gleaming, the glass of the cucumber-frame glinting in the sun, the dry yard dusty and sun-baked; hard contrast, an ordinary sunny July afternoon at home.",
+      "source_chapter": "ch004",
+      "sources": ["ch004-p03", "ch004-p15", "ch004-p24", "ch004-p34"],
+      "inferred": true,
+      "reason": "No light is described in the source; the 'bright' brass plate (ch004-p03) is read as polished brass. The sun follows the waking clock (environment S01/S02) and faces are resolved against the architecture orientation. See DEF-p3-lighting-101: environment S01 says the plate 'catches the sun', which a north-facing door cannot do with the sun in the WSW."
+    }
+  ],
+  "special": []
+}

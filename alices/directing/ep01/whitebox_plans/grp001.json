@@ -1,0 +1,169 @@
+{
+  "schema_version": "whitebox_plan.v1",
+  "group_id": "grp001",
+  "scene_id": "SCN-falling-dream",
+  "basis": "sh001 is the 4 s flash-forward lift of the S03 descent (narrative_block FF-ep01-open) and must be the same image as sh022: same camera set-up (layout view tile 8, roundel wall across the shaft to the glazed cupboards), same lens (28 mm), same altitude band, only her facing differs (here she faces the cupboards on screen-left; in sh022 the bookshelves on screen-right). camera.json declares the frame locked while she holds one place in it, and its own speed note says the rig descends with her; the whitebox therefore translates the camera with the falling subject at her drift rate and keeps movement=static, which is what the plate does. Alice is biased 0.35 m along the view axis away from the lens - still inside the 1.7 m clear fall column, still clear of every wall - to buy the largest standoff the modelled 2.4 m shaft allows. See issue WBI-ep01-grp001-001. USER RULING 2026-09-23 (director batch B-0001, decisions.json WBI-ep01-grp001-001 choice='remodel'): SCN-falling-dream is to be re-modelled at about 16 m across. That file is bible/scenes/SCN-falling-dream/whitebox.json, owned by 05-scenes/scene-modeling, so this station cannot apply the ruling; the staging below is unchanged and stays on the present 2.4 m model until the new one lands. Handoff with the derived numbers: qa/defects/DEF-p6-whitebox-ep01-001.json.",
+  "actors": [
+    {
+      "id": "CHAR-alice",
+      "kind": "person",
+      "size_m": [
+        0.378,
+        1.35,
+        0.297
+      ],
+      "keyframes": [
+        {
+          "t": 0.0,
+          "position": [
+            0.322,
+            3.05,
+            0.136
+          ],
+          "pose": "stand",
+          "yaw": 1.708,
+          "head_pitch": 0.15
+        },
+        {
+          "t": 2.0,
+          "position": [
+            0.322,
+            2.87,
+            0.136
+          ],
+          "pose": "stand",
+          "yaw": 1.708,
+          "head_pitch": -0.25
+        },
+        {
+          "t": 3.6,
+          "position": [
+            0.322,
+            2.73,
+            0.136
+          ],
+          "pose": "stand",
+          "yaw": 1.708,
+          "head_pitch": 0.1
+        },
+        {
+          "t": 4.0,
+          "position": [
+            0.322,
+            2.7,
+            0.136
+          ],
+          "pose": "stand",
+          "yaw": 1.708,
+          "head_pitch": 0.1
+        }
+      ]
+    }
+  ],
+  "cameras": [
+    {
+      "shot_id": "sh001",
+      "start": 0,
+      "duration_s": 4.0,
+      "movement": "static",
+      "keyframes": [
+        {
+          "t": 0.0,
+          "position": [
+            -1.06,
+            3.75,
+            -0.448
+          ],
+          "target": [
+            0.322,
+            3.75,
+            0.136
+          ],
+          "fov": 46.3972
+        },
+        {
+          "t": 4.0,
+          "position": [
+            -1.06,
+            3.4,
+            -0.448
+          ],
+          "target": [
+            0.322,
+            3.4,
+            0.136
+          ],
+          "fov": 46.3972
+        }
+      ]
+    }
+  ],
+  "continuity": {
+    "actors": "cut",
+    "camera": "cut"
+  },
+  "warnings": [
+    "sh001: locked frame with a travelling set. The whitebox rig translates downward with Alice at her 0.088 m/s drift so she holds frame position exactly as camera.json describes; there is no pan, tilt, reframe or lens change.",
+    "SCN-falling-dream is modelled as ONE 6 m repeating rig section with a single static instance of each fitting (cupboards y 0.4-2.6, bookshelves y 1.2-3.6, pantry shelf y 4.9-5.2, map pegs y 3.5-4.5, picture pegs y 4.15-4.65). The 48 s descent is carried in the plate by the dressing travelling upward; the whitebox cannot show that, so Alice's modelled altitude is a monotonic drift through the section and does NOT line up with the fitting named in each shot.",
+    "USER RULING (2026-09-23, WBI-ep01-grp001-001 -> 'remodel'): the shaft is to be re-modelled at about 16 m across so the S00/S03 wides can be framed. Applying it means re-issuing bible/scenes/SCN-falling-dream/whitebox.json, which belongs to 05-scenes/scene-modeling; routed as DEF-p6-whitebox-ep01-001. The issue is deliberately left status=open so the compiled effective status is 'decided' (已裁决待套用) and no video is exported against an unapplied decision.",
+    "On the re-model every coordinate in this plan goes stale: landmark world positions derive from dimensions_m, so grp001/grp008/grp009/grp010 need a re-stage, not a --scene refresh. WBI-ep01-grp001-001 is set to applied only then."
+  ],
+  "issues": [
+    {
+      "issue_id": "WBI-ep01-grp001-001",
+      "kind": "model_gap",
+      "severity": "blocking",
+      "question": "SCN-falling-dream is modelled at the Bible's 2.4 m brick shaft with a 1.7 m clear fall column. The lateral wides cannot be framed in it: sh001/sh022 (28 mm, Alice at 0.20 of frame height) need 7.88 m of standoff and sh021 needs 3.13 m, but the widest in-model camera is about 1.5 m, so the reference shows a near-full-figure frame where the shot is a wide. Ship that, or re-model the shaft?",
+      "provisional": "Hold the authored view axis, lens and camera height, place the lens at the largest standoff inside the modelled clear column (Alice biased 0.35 m down-axis, standoff 1.50 m), and accept a whitebox frame that is tighter than composition's size_in_frame. Axis, eyeline, relative geometry and the descent rate stay correct; only the field of view is wrong.",
+      "options": [
+        {
+          "id": "remodel",
+          "label": "Re-model SCN-falling-dream at the dream shaft diameter the wides imply (about 16 m across for sh001/sh022)",
+          "consequence": "p4-scene-model re-issues bible/scenes/SCN-falling-dream/whitebox.json and the layout; grp001/grp008/grp009/grp010 are re-staged and the whitebox then matches the storyboard wides. Costs one scene-model pass before H3W can be signed.",
+          "cost": "one scene-model re-issue + re-stage of 4 groups",
+          "rewrites": [
+            "bible/scenes/SCN-falling-dream/whitebox.json",
+            "assets/concepts/scenes/SCN-falling-dream/layout.json"
+          ]
+        },
+        {
+          "id": "tight",
+          "label": "Ship the whitebox at the tighter in-model frame (the default) and let the shot prompt carry the wide",
+          "consequence": "No re-model. The camera reference video for sh001, sh017-sh025 shows a tighter frame than the shot; 08-video-gen must read the size code from the prompt, not from the whitebox video.",
+          "cost": "none"
+        },
+        {
+          "id": "exempt",
+          "label": "Exempt the four SCN-falling-dream groups from whitebox camera reference altogether",
+          "consequence": "grp001/grp008/grp009/grp010 get no camera.mp4 at export; those groups fall back to prompt-only spatial description.",
+          "cost": "loses spatial reference on 52 s of the episode"
+        }
+      ],
+      "recommended": "remodel",
+      "shots": [
+        "sh001"
+      ],
+      "actors": [
+        "CHAR-alice"
+      ],
+      "t_range_s": [
+        0,
+        4.0
+      ],
+      "sources": [
+        {
+          "file": "bible/scenes/SCN-falling-dream/whitebox.json",
+          "quote": "scale_basis"
+        },
+        {
+          "file": "directing/ep01/shots/sh001/composition.json",
+          "quote": "subject.size_in_frame"
+        },
+        {
+          "file": "directing/ep01/shots/sh001/camera.json",
+          "quote": "lens_mm"
+        }
+      ]
+    }
+  ]
+}

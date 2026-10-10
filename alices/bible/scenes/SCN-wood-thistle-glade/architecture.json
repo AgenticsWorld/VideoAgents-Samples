@@ -1,0 +1,44 @@
+{
+  "scene_id": "SCN-wood-thistle-glade",
+  "inherits": null,
+  "layer": "dream",
+  "int_ext": "EXT",
+  "form": "A small glade in a thick English broadleaf wood seen from a tiny Alice's height: towering grass and a great spear thistle at the centre, oak and hazel trunks rising into a closed canopy; no built structure",
+  "stories": 0,
+  "source_chapter": "ch004",
+  "culture_ref": "geography.json#LOC-thick-wood; world.json#frame.place",
+  "grows_from": {"loc": "LOC-riverside-region", "waking_detail": "a thistle patch among the trees of a hedgerow copse near home"},
+  "amendment": "BIB-0027 (user ruling 2026-09-22), applied p4-cr-architecture 2026-09-23",
+  "mucha_design_language": {"item": "Mucha / Art Nouveau carried by the living wood at x9: the spear thistle's leaves and stems rise in flowing whiplash curves with its purple heads as stylised rosettes; bracken fronds unfurl in spiral croziers; honeysuckle and bindweed trail in garland loops between grass blades; a round gap in the canopy above the thistle throws a halo of light; pastel-and-gold palette of lilac thistle, sage and dappled gold; no built ornament", "inferred": true, "culture_ref": "world.json#WR-010 (the wood listed); cultivation.json#XA-magic-08", "why": "Same flora-borne language as SCN-caterpillar-clearing so the two x9 wood scenes cut together"},
+  "structure": [
+    {"item": "glade about 12 m across (true units) ringed by oak, ash and hazel coppice stools", "src": "ch004-p34", "note": "'a thick wood'; species and size inferred from Thames-valley copse (geography.json LOC-riverside-region flora)"},
+    {"item": "a great spear thistle about 1.2 m tall (true units) with spiny leaves and purple flower heads at the centre of the glade", "src": "ch004-p38"},
+    {"item": "a raised bank of roots on one side where the puppy looks down 'just over her head'", "src": "ch004-p36", "note": "raised bank inferred to stage the puppy above Alice"}
+  ],
+  "materials": [
+    {"item": "long woodland grass, bracken, bramble and dead-leaf litter underfoot", "inferred": true, "culture_ref": "geography.json#LOC-thick-wood.physical.flora", "why": "Real English woodland floor"},
+    {"item": "loose broken sticks on the ground", "src": "ch004-p38"},
+    {"item": "mossy oak bark and grey hazel stems", "inferred": true, "culture_ref": "geography.json#LOC-thick-wood.physical", "why": "Species chosen for Oxfordshire copse"}
+  ],
+  "details": [
+    {"item": "dappled canopy light through oak leaves (fixture note only; values belong to lighting)", "src": "ch004-p36", "note": "geography.json LOC-thick-wood sky 'dappled through the tree canopy'"},
+    {"item": "a few hawthorn sprays at the glade edge", "inferred": true, "culture_ref": "SCN-field-hedge-burrow", "why": "Echo of the waking hedge"}
+  ],
+  "scale_notes": {
+    "anchor": "Alice's effective height here about 15 cm, the same as in SCN-caterpillar-clearing, where the mushroom is 'about the same height as herself' (ch004-p41). Scale factor x9.",
+    "builds": [
+      {"beat": "Alice wanders, the puppy looks down at her, she dodges round the thistle teasing it with a stick", "events": ["ev0017"], "build": "oversized x9 ground build: grass blades 2.7 m, thistle lower stems and spiny leaf rosette to 4 m with separate x9 flower-head inserts, sticks 1 to 2 m long and as thick as Alice's arm, leaf litter at x9; tree trunks at the glade edge as painted and built backings"},
+      {"beat": "the enormous puppy (CRE-002, non-speaking dream animal)", "status": "pending_H2", "build": "proposal: a photoreal CGI puppy (per BIB-0027's extension of the photoreal-animal register to non-speaking dream animals, cultivation.json#SUP-002) composited on the raised root bank of the x9 set at giant apparent scale, with physical interaction effects (bent grass, thrown sticks, dust) built practically; fallback if H2 rejects CGI: real puppy on a raised 1:1 bank in forced perspective as before"}
+    ],
+    "sources": ["cultivation.json#SUP-002", "cultivation.json#SUP-003", "creatures/index.json CRE-002"]
+  },
+  "negative": [
+    "no buildings, paths, fences or signposts",
+    "no fairy-tale glowing flowers or giant fantasy fungi",
+    "no tropical or jungle plants",
+    "no cartoon puppy (CGI puppy is photoreal; treatment pending_H2)",
+    "no autumn colours; full midsummer green",
+    "no flat poster illustration, outline graphics or matte-painting finish"
+  ],
+  "prompt_ready_en": "a small glade in a thick English oak and hazel wood seen from ground level at tiny scale, towering blades of grass and bracken fronds unfurling in spirals, a huge spear thistle with spiny leaves rising in flowing whiplash curves and purple flower heads in the centre under a round halo of light from a gap in the canopy, honeysuckle trailing in garland loops, fallen sticks as big as logs, leaf litter, mossy oak trunks rising into a green midsummer canopy, Art Nouveau lines after Mucha, soft pastel-and-gold light, photographed live-action set"
+}

@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh080",
+  "group_id": "grp030",
+  "scene_no": "S08",
+  "duration_s": 6.0,
+  "size": "close",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame, held)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 50,
+  "camera_height_m": 0.6,
+  "angle": "level, water level",
+  "rack_focus": "none",
+  "start_frame": "The same sustained set-up held: her face still, the fan lowered and idle, a silent beat while the question settles.",
+  "end_frame": "The same frame as she finally says it aloud — that's the great puzzle — with the pause before it left unfilled by any business or camera event.",
+  "constraint_honoured": "'The pause carries the un-narrated thought and is not filled with business. Dry — no music yet.'",
+  "movement_note": "With narration off, the silence has to be trusted; a move would be the camera thinking on her behalf.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

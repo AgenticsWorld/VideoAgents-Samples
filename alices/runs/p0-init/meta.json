@@ -1,0 +1,2 @@
+{"task_id":"p0-init","run_id":null,"attempt":1,"model":"claude-opus-5","tokens":null,"started_at":"2026-09-22T15:46:43+08:00","finished_at":"2026-09-22T15:46:43+08:00",
+ "inputs_sha256":{"agents/workflow.yaml":"32e7b8a7e0af635312367ba685d83fbde240647363cccc8cde31bad748d0f140","brief.md":"c412b89c6d5ce41dae3d007dc9e10afeeb21959ed48ab9faa0953f6f87d41154","settings.json":"efb0f3228f0b4c9a3e6cb072561fe96926110068efe23bd2a556f1d1eb7d9a2c"},"artifact_versions":{"runs/dag.json":"v1"}}

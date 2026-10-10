@@ -1,0 +1,53 @@
+{
+  "character_id": "CHAR-lory",
+  "name": "Lory",
+  "tier": "extra",
+  "layer": "dream",
+  "revision": { "change_id": "BIB-0027", "task_id": "p4-cr-appearance", "date": "2026-09-23", "note": "Rewritten from the human-performer reading to a photoreal CGI animal." },
+  "rendering": {
+    "mode": "photoreal_cgi_animal",
+    "rule": "bible/cultivation.json SUP-002 (amended BIB-0027); member of FAC-caucus-race-company (no uniform)",
+    "species": "red lory (Eos bornea), a small parrot",
+    "limits": "Parrot anatomy throughout; speech by beak and tongue movement. No clothing, no cartoon face."
+  },
+  "gender": "female",
+  "gender_note": { "inferred": true, "reason": "The source calls the Lory 'it'. She argues with Alice as the elder who 'must know better' and turns sulky (ch003-p02); female is kept to balance the party." },
+  "base_age_range": "20-25",
+  "base_age_note": { "source_chapter": "ch003", "source_para": "ch003-p02", "quote": "I am older than you, and must know better", "inferred": true, "reason": "Older than Alice is sourced, exact age is not ('positively refused to tell its age'). Persona age kept for voice casting. As an animal: an adult lory in full colour." },
+  "hair": {
+    "coat": "feathers",
+    "color": "vivid scarlet body, deep royal-blue patches on the wings and under the tail, black-edged flight feathers",
+    "style": "draggled and dark with water on arrival, fluffing up bright red as she dries; raises her head feathers when indignant",
+    "source_chapter": "ch003",
+    "source_para": "ch003-p01",
+    "quote": "the birds with draggled feathers",
+    "colour_inferred": true,
+    "reason": "Wet state sourced; colours are the species plumage."
+  },
+  "eyes": { "color": "red-brown iris", "expression": "haughty, narrowed pupils (parrots 'pin' their eyes when excited); looks sideways at Alice", "inferred": true, "reason": "Species; manner from the sulk of ch003-p02." },
+  "skin": { "tone": "grey feet and bare eye-ring", "inferred": true, "reason": "Species." },
+  "face": { "shape": "rounded parrot head", "features": ["short hooked orange-red beak", "pinning pupils", "sharp sideways head-tilts"], "inferred": true, "reason": "Species." },
+  "build": {
+    "height_range_cm": [22, 26],
+    "height_note": "Perched height; total length about 31 cm, species-true.",
+    "body_type": "small, compact, upright parrot",
+    "posture": "stiff and upright; turns her back and fluffs up when sulking",
+    "scale_reference": "Perches on a root or stone on the bank so her head is near the shrunken Alice's face level during their argument (SUP-003).",
+    "source_chapter": "ch003",
+    "source_para": "ch003-p02",
+    "quote": "who at last turned sulky, and would only say, “I am older than you, and must know better;”",
+    "inferred": true,
+    "reason": "Posture from the sourced sulk; size species-true; perch height designed."
+  },
+  "entry_state": { "state": "first seen dripping wet, scarlet darkened with water", "source_chapter": "ch003", "source_para": "ch003-p01", "quote": "the birds with draggled feathers" },
+  "marks": [
+    { "type": "plumage", "description": "royal-blue wing patch against the scarlet, her identifier in a wide shot", "position": "wings", "inferred": true, "reason": "Species." }
+  ],
+  "default_outfit_tone": {
+    "summary": "none: she wears nothing; her look is the scarlet-and-blue plumage",
+    "inferred": true,
+    "reason": "The text gives the Lory no clothing; per SUP-002 (BIB-0027) the old dress and feather collar are dropped."
+  },
+  "doubling": null,
+  "prompt_base_en": "photoreal red lory parrot, vivid scarlet plumage darkened and draggled with water, royal-blue wing patches, short hooked orange-red beak, red-brown eye with pinned pupil, perched stiffly on a root on a muddy pool bank, turning its head away in a sulk, natural bird anatomy, live-action film plate"
+}

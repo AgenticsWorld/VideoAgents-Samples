@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh025",
+  "group_id": "grp010",
+  "scene_no": "S03",
+  "duration_s": 9.0,
+  "size": "close",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame, held unbroken)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 50,
+  "camera_height_m": "beside her at her own height on her axis — the sh024 set-up continued",
+  "angle": "level",
+  "rack_focus": "none",
+  "start_frame": "The sh024 profile close, continued: her face in profile, hair floating up, the last empty pegs still travelling up behind her, her eyes beginning to close.",
+  "end_frame": "The same frame after a real two-second hold on the closed eyes and the tipped head: the last pegs clear the top of frame and the dark takes her, with the two heavy thumps landing over it.",
+  "constraint_honoured": "'MUST NOT BE CUT INSIDE: one unbroken take from the eyes closing through the two-second hold to the dark' — one locked set-up for the full 9.0 s, no move, no dissolve, so the audience can point at the frame where the dream starts.",
+  "movement_note": "Any optical event here would do the announcing the whole design forbids; the darkness arriving is the only change permitted in the frame.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

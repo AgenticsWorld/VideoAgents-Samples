@@ -1,0 +1,86 @@
+{
+  "character_id": "CHAR-dodo",
+  "name": "The Dodo",
+  "tier": "B",
+  "layer": "dream",
+  "temperament": {
+    "summary": "Solemn, slow and pleased with itself; a benign chairman who loves procedure and long words more than results. Warm underneath and never unkind.",
+    "baseline": "Grave, deliberate, ceremonial; it pauses as if waiting for applause.",
+    "under_pressure": "Takes offence at being cut short, then carries on with its own plan regardless.",
+    "inferred": false
+  },
+  "traits": [
+    {
+      "trait": "Pompous, loves formal procedure",
+      "description": "Speaks like a committee chairman ('I move that the meeting adjourn') and turns a simple job, getting dry, into an occasion.",
+      "evidence": [
+        { "chapter": "ch003", "ref": "ch003-p14", "event": "ev0010", "note": "Rises solemnly and moves that the meeting adjourn 'for the immediate adoption of more energetic remedies'." },
+        { "chapter": "ch003", "ref": "ch003-p28", "event": "ev0010", "note": "Presents the thimble solemnly with a short speech, and everyone cheers." }
+      ],
+      "inferred": false
+    },
+    {
+      "trait": "Easily put out when interrupted",
+      "description": "Its dignity is quick to bruise, though it never sulks for long.",
+      "evidence": [
+        { "chapter": "ch003", "ref": "ch003-p16", "note": "Answers 'in an offended tone' after the Eaglet's jibe." },
+        { "chapter": "ch003", "ref": "ch003-p17", "note": "Pauses as if 'somebody ought to speak', fishing for a question." }
+      ],
+      "inferred": false
+    },
+    {
+      "trait": "Improvises rules as it goes",
+      "description": "Its race has no set course, no start and no finish. 'The exact shape doesn't matter.' It rules by feeling, then dresses the ruling up as wisdom.",
+      "evidence": [
+        { "chapter": "ch003", "ref": "ch003-p19", "event": "ev0010", "note": "Marks out a rough circle; everyone runs when they like." },
+        { "chapter": "ch003", "ref": "ch003-p20", "event": "ev0010", "note": "Thinks a long time, finger to forehead, then rules that everybody has won." }
+      ],
+      "inferred": false
+    },
+    {
+      "trait": "Generous in spirit, careless of cost to others",
+      "description": "It wants everyone to win and be happy, but makes Alice pay for the prizes from her own pocket and hands her own thimble back to her as a gift.",
+      "evidence": [
+        { "chapter": "ch003", "ref": "ch003-p22", "note": "Points at Alice as the one who will give the prizes." },
+        { "chapter": "ch003", "ref": "ch003-p25", "note": "Asks her what else she has in her pocket." },
+        { "chapter": "ch003", "ref": "ch003-p27", "note": "'Hand it over here' — takes her thimble to present back to her." }
+      ],
+      "inferred": false
+    }
+  ],
+  "motivation": {
+    "core": "To keep the company together and content under its leadership, with everything done properly and ceremonially.",
+    "fear": "Losing face as leader: silence when it expects a response, or its plan being brushed aside.",
+    "wants_from_alice": "A co-operative child who plays her part in the ceremony: asking the right question, supplying the prizes, accepting graciously.",
+    "shifts": [
+      { "chapter": "ch003", "ref": "ch003-p14", "event": "ev0010", "from": "sit through the Mouse's lecture", "to": "take the lead with its own 'energetic remedy'", "trigger": "the lecture fails to dry anyone" },
+      { "chapter": "ch003", "ref": "ch003-p20", "event": "ev0010", "from": "run a race", "to": "make sure nobody loses", "trigger": "the party asks who has won" }
+    ]
+  },
+  "habits": [
+    { "habit": "Sits for a long time with one finger pressed to its forehead before giving a ruling (the Shakespeare-portrait pose)", "evidence": [ { "chapter": "ch003", "ref": "ch003-p20" } ], "inferred": false },
+    { "habit": "Rises to its feet to address the group; points with one finger to single someone out", "evidence": [ { "chapter": "ch003", "ref": "ch003-p14" }, { "chapter": "ch003", "ref": "ch003-p22" } ], "inferred": false },
+    { "habit": "Explains by doing: skips the explanation and sets everyone in motion", "evidence": [ { "chapter": "ch003", "ref": "ch003-p18" }, { "chapter": "ch003", "ref": "ch003-p19" } ], "inferred": false },
+    { "habit": "Walks with a heavy, rolling, flat-footed waddle, stubby wings held close to the body and flicked open only for emphasis", "evidence": [ { "chapter": "ch002", "ref": "ch002-p26" } ], "inferred": true, "reason": "The source gives no gait. Designed from the real dodo's heavy frame for the photoreal CGI bird (SUP-002 as amended by BIB-0027). The 'one finger pressed upon its forehead' pose (ch003-p20) is played as a wing-tip or foot raised to the brow; exact anatomy belongs to 04-creatures/creature and 03-characters/appearance." }
+  ],
+  "decision_pattern": "Ponders visibly, then decides by consensus-pleasing: whatever keeps everyone happy and the ceremony going. Substance comes second to form.",
+  "taboos": [
+    { "taboo": "Never lets anyone be named a loser; every contest ends with prizes for all", "basis": [ { "chapter": "ch003", "ref": "ch003-p20" } ], "inferred": false },
+    { "taboo": "Never skips the ceremony, even when the prize is worthless or already the recipient's own", "basis": [ { "chapter": "ch003", "ref": "ch003-p28" } ], "inferred": false },
+    { "taboo": "Never bullies or threatens; its only power is presiding", "basis": [ { "chapter": "ch003", "ref": "ch003-p14" }, { "chapter": "ch003", "ref": "ch003-p28" } ], "inferred": true, "reason": "No coercion appears anywhere in ch002-ch003. This keeps the Dodo a gentle contrast to the Queen's authority later on." }
+  ],
+  "facade": {
+    "applies": false,
+    "reason": "Pompous but transparent; no hidden self or reveal in the source."
+  },
+  "waking_life_embodiment": {
+    "embodies": "The kindly, long-winded senior of a clergyman-scholar household: the college committee man or parish worthy who chairs every gathering, uses words the children do not know, and makes up the rules of a children's game on the spot.",
+    "waking_source": "The grown-up world around Alice's clergyman-scholar family: meetings, motions and prize-givings seen from a child's height, and the adult habit of 'giving' a child what was already hers.",
+    "authority_trait": "Benevolent, ceremonial authority: well-meaning, fond of form, careless that the child pays for the prizes.",
+    "coming_of_age_reading": "The gentlest face of adult authority Alice meets. Its rules are nonsense but harmless. She takes her thimble 'looking as solemn as she could' because the grown-ups look so grave (ch003-p29), and learns that adult solemnity and adult sense are not the same thing.",
+    "grounding": [ "ch003-p14", "ch003-p20", "ch003-p28", "bible/h1_summary.md §1 (clergyman-scholar household)" ],
+    "inferred": true,
+    "reason": "The source gives the committee language and the prize ceremony. Tying it to the family's scholarly-clerical circle is a design reading consistent with ruling 5.6 A."
+  },
+  "performance_baseline": "Photoreal CGI dodo (SUP-002, BIB-0027): stout, slow and solemn; every move deliberate. Big hooked beak held level and grave, head turning slowly to address the company, chest puffed for pronouncements, a long still ponder before each ruling. Comedy comes from total seriousness about nothing, played warm, never mocking."
+}

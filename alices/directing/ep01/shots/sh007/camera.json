@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh007",
+  "group_id": "grp004",
+  "scene_no": "S01",
+  "duration_s": 8.0,
+  "size": "wide",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 28,
+  "camera_height_m": 0.35,
+  "angle": "level",
+  "rack_focus": "none",
+  "start_frame": "Low wide from the sitting place out across the open meadow to the far spire: Alice's sleeping profile large and soft in the near left foreground, the whole hot field and the heat-shimmer beyond her.",
+  "end_frame": "The same frame after the two strikes of the church clock have decayed: still nothing moving in it but the grass, and at the very end her eyes opening at a rustle close by.",
+  "constraint_honoured": "'Static. Nothing white moves in frame' — locked off, and the frame is held clear so the rabbit's white is saved for sh008.",
+  "movement_note": "The clock strike and its decay need an unbroken 8.0 s of stillness; a move would put an event where the sound has to be the only one.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

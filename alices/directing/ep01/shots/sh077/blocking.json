@@ -1,0 +1,50 @@
+{
+  "shot_id": "sh077",
+  "group_id": "grp029",
+  "scene_no": "S08",
+  "scene_id": "SCN-long-hall",
+  "duration_s": 2.0,
+  "is_dialogue": false,
+  "group_position": "last shot of grp029 — the White Rabbit runs his whole remaining map line inside this shot and reaches his end (ne_entrance). He leaves the episode here.",
+  "characters": [
+    {
+      "id": "CHAR-white-rabbit",
+      "label": "White Rabbit",
+      "pose": "sit",
+      "start_pos": "sitting back in the water at the low curtain, then gone up the hall past the glass table into the dark",
+      "space_fragment_en": "sitting back in the water at the low curtain, then bolting away to screen-right toward the corner entrance",
+      "facing": "away up the hall to screen-right; already small and getting smaller",
+      "path": [
+        { "t": 0.8, "to": "on four legs past the glass table, running" },
+        { "t": 1.8, "to": "into the dark at the corner entrance, gone" }
+      ],
+      "beats": [
+        { "t": 0.3, "action": "drops the gloves and the fan into the water", "sync": "the props are released here and stay in the pool" },
+        { "t": 0.8, "action": "scurries away on four legs as hard as he can go", "sync": "gait lock reasserted the instant he moves" },
+        { "t": 1.8, "action": "gone into the darkness", "sync": "he leaves ep01 in two seconds" }
+      ],
+      "staging_lock": "He goes back onto four legs the moment he moves; the gloves and fan are abandoned in the water rather than carried.",
+      "performance_beat": {
+        "objective": "get away from it, whatever it is",
+        "goal": "get away from it",
+        "emotional_arc": "from fright to flight, with nothing in between and no backward look",
+        "arc_from": "fright",
+        "arc_to": "flight",
+        "trigger": { "beat": "the gloves and fan leave his paws and hit the water", "t": 0.3 },
+        "no_early_reaction": ["the paws opening", "the body turning", "the haunches driving"],
+        "forbidden_early": ["the paws opening", "the body turning", "the haunches driving"],
+        "end_state": "out of frame in the dark — the last visible state is his hindquarters going away and the fan turning over on the water"
+      }
+    }
+  ],
+  "creatures": [],
+  "offscreen_presence": [
+    { "id": "CHAR-alice", "where": "sitting at the low curtain, out of frame; nothing looks after him", "note": "In the space, out of frame." }
+  ],
+  "presence_check": {
+    "timeline_ok": true,
+    "violations": [],
+    "story_event": "ev0007 (dream) — he drops the gloves and fan and flees",
+    "note": "Last appearance of CHAR-white-rabbit in ep01. He does not return in S09 or S10."
+  }
+}

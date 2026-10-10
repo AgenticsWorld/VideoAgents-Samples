@@ -1,0 +1,39 @@
+{
+  "task_id": "p3-fix-voice-001",
+  "agent": "03-characters/dialogue-style",
+  "status": "completed",
+  "date": "2026-09-22",
+  "type": "defect_fix (routed, not a retry)",
+  "defect": "DEF-p3-voice-001",
+  "changes": [
+    {
+      "file": "bible/characters/CHAR-cheshire-cat/dialogue_style.json",
+      "edit": "12 pronouns he/his/him -> she/her",
+      "fields": [
+        "register.summary",
+        "forbidden_words[1].reason",
+        "forbidden_words[2].reason",
+        "drift[0].change"
+      ]
+    }
+  ],
+  "checks": {
+    "json_valid": true,
+    "male_pronouns_remaining": 0,
+    "lines_changed": 4,
+    "quoted_source_lines_changed": 0
+  },
+  "not_touched": [
+    "index.json (character-manager, DEF-p3-appearance-001)",
+    "voice.json (already female)"
+  ],
+  "evaluation": "skipped (disabled)",
+  "qa": "skipped (disabled)",
+  "files_modified": [
+    "bible/characters/CHAR-cheshire-cat/dialogue_style.json",
+    "qa/defects/DEF-p3-voice-001.json"
+  ],
+  "files_created": [
+    "runs/p3-fix-voice-001/result.json"
+  ]
+}

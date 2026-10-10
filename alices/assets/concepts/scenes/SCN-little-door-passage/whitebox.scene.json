@@ -1,0 +1,418 @@
+{
+  "schema_version": "whitebox_scene.v1",
+  "scene_id": "SCN-little-door-passage",
+  "name": "SCN-little-door-passage",
+  "units": "meters",
+  "dimensions_m": [
+    5.0,
+    2.8,
+    2.8125
+  ],
+  "objects": [
+    {
+      "id": "masonry_wall_n",
+      "shape": "box",
+      "size_m": [
+        2.9375,
+        2.8,
+        1.24875
+      ],
+      "xy": [
+        0.45375,
+        0.222
+      ],
+      "collision_role": "wall",
+      "position": [
+        -0.23125000000000007,
+        1.4,
+        -0.7818750000000001
+      ]
+    },
+    {
+      "id": "masonry_wall_s",
+      "shape": "box",
+      "size_m": [
+        2.9375,
+        2.8,
+        1.1756
+      ],
+      "xy": [
+        0.45375,
+        0.791
+      ],
+      "collision_role": "wall",
+      "position": [
+        -0.23125000000000007,
+        1.4,
+        0.8184375000000002
+      ]
+    },
+    {
+      "id": "passage_vault_head",
+      "shape": "box",
+      "size_m": [
+        2.9375,
+        2.44,
+        0.388
+      ],
+      "xy": [
+        0.45375,
+        0.513
+      ],
+      "elevation_m": 1.58,
+      "collision_role": "wall",
+      "position": [
+        -0.23125000000000007,
+        1.58,
+        0.03656250000000003
+      ]
+    },
+    {
+      "id": "little_door_jamb_n",
+      "shape": "box",
+      "size_m": [
+        0.1,
+        0.38,
+        0.0557
+      ],
+      "xy": [
+        0.7375,
+        0.4539
+      ],
+      "elevation_m": 0.19,
+      "collision_role": "wall",
+      "position": [
+        1.1875000000000002,
+        0.19,
+        -0.12965624999999992
+      ]
+    },
+    {
+      "id": "little_door_jamb_s",
+      "shape": "box",
+      "size_m": [
+        0.1,
+        0.38,
+        0.0726
+      ],
+      "xy": [
+        0.7375,
+        0.5691
+      ],
+      "elevation_m": 0.19,
+      "collision_role": "wall",
+      "position": [
+        1.1875000000000002,
+        0.19,
+        0.19434375000000015
+      ]
+    },
+    {
+      "id": "curtain",
+      "shape": "box",
+      "size_m": [
+        0.05,
+        0.6,
+        1.8
+      ],
+      "xy": [
+        0.7525,
+        0.51
+      ],
+      "elevation_m": 0.3,
+      "color": "#9e2a2b",
+      "position": [
+        1.2624999999999997,
+        0.3,
+        0.028125000000000025
+      ]
+    },
+    {
+      "id": "hall_door_9_leaf",
+      "shape": "box",
+      "size_m": [
+        0.1,
+        1.95,
+        0.565
+      ],
+      "xy": [
+        0.7575,
+        0.1005
+      ],
+      "color": "#6b4a2f",
+      "position": [
+        1.2874999999999996,
+        0.975,
+        -1.12359375
+      ]
+    },
+    {
+      "id": "hall_door_10_leaf",
+      "shape": "box",
+      "size_m": [
+        0.1,
+        1.95,
+        0.565
+      ],
+      "xy": [
+        0.7575,
+        0.8995
+      ],
+      "color": "#6b4a2f",
+      "position": [
+        1.2874999999999996,
+        0.975,
+        1.12359375
+      ]
+    },
+    {
+      "id": "rose_bed",
+      "shape": "box",
+      "size_m": [
+        0.375,
+        1.2,
+        1.209
+      ],
+      "xy": [
+        0.1225,
+        0.215
+      ],
+      "color": "#5f7f4a",
+      "position": [
+        -1.8875,
+        0.6,
+        -0.8015625000000001
+      ]
+    },
+    {
+      "id": "lily_bed",
+      "shape": "box",
+      "size_m": [
+        0.375,
+        1.0,
+        1.153
+      ],
+      "xy": [
+        0.1225,
+        0.795
+      ],
+      "color": "#5f7f4a",
+      "position": [
+        -1.8875,
+        0.5,
+        0.8296875000000001
+      ]
+    }
+  ],
+  "render": {
+    "aspect_ratio": "16:9",
+    "width": 960,
+    "height": 540
+  },
+  "landmarks": [
+    {
+      "id": "rose_bushes",
+      "name": "the rose bushes by the arch",
+      "name_en": "the rose bushes by the arch",
+      "kind": "flora",
+      "xy": [
+        0.1,
+        0.2
+      ],
+      "xy_m": [
+        0.5,
+        0.56
+      ]
+    },
+    {
+      "id": "lily_clump",
+      "name": "the lilies by the arch",
+      "name_en": "the lilies by the arch",
+      "kind": "flora",
+      "xy": [
+        0.08,
+        0.82
+      ],
+      "xy_m": [
+        0.4,
+        2.3
+      ]
+    },
+    {
+      "id": "garden_arch",
+      "name": "the garden arch",
+      "name_en": "the garden arch",
+      "kind": "entrance",
+      "xy": [
+        0.19,
+        0.51
+      ],
+      "xy_m": [
+        0.95,
+        1.43
+      ]
+    },
+    {
+      "id": "petals",
+      "name": "the scattered rose petals",
+      "name_en": "the scattered rose petals",
+      "kind": "feature",
+      "xy": [
+        0.26,
+        0.49
+      ],
+      "xy_m": [
+        1.3,
+        1.38
+      ]
+    },
+    {
+      "id": "passage_mid",
+      "name": "the middle of the passage",
+      "name_en": "the middle of the passage",
+      "kind": "zone",
+      "xy": [
+        0.47,
+        0.51
+      ],
+      "xy_m": [
+        2.35,
+        1.43
+      ]
+    },
+    {
+      "id": "little_door",
+      "name": "the little door",
+      "name_en": "the little door",
+      "kind": "entrance",
+      "xy": [
+        0.745,
+        0.51
+      ],
+      "xy_m": [
+        3.73,
+        1.43
+      ]
+    },
+    {
+      "id": "hall_door_9",
+      "name": "the ninth hall door",
+      "name_en": "the ninth hall door",
+      "kind": "door",
+      "xy": [
+        0.755,
+        0.05
+      ],
+      "xy_m": [
+        3.77,
+        0.14
+      ]
+    },
+    {
+      "id": "hall_door_10",
+      "name": "the tenth hall door",
+      "name_en": "the tenth hall door",
+      "kind": "door",
+      "xy": [
+        0.755,
+        0.95
+      ],
+      "xy_m": [
+        3.77,
+        2.67
+      ]
+    },
+    {
+      "id": "hall_floor",
+      "name": "the flagstones in front of the little door",
+      "name_en": "the flagstones in front of the little door",
+      "kind": "zone",
+      "xy": [
+        0.88,
+        0.51
+      ],
+      "xy_m": [
+        4.4,
+        1.43
+      ]
+    }
+  ],
+  "views": [
+    {
+      "tile": 1,
+      "camera_from": "hall_floor",
+      "looking_at": "little_door",
+      "size": "medium",
+      "angle": "low",
+      "desc_en": "low medium shot from the hall floor at kneeling height toward the tiny horseshoe-arched door opened in the base of the wall, a point of garden daylight at the end of the dark passage beyond"
+    },
+    {
+      "tile": 2,
+      "camera_from": "little_door",
+      "looking_at": "garden_arch",
+      "size": "wide",
+      "angle": "eye",
+      "desc_en": "eye-level wide shot through the little door straight along the stone passage, iron ribs and mosaic border leading to the blazing garden arch"
+    },
+    {
+      "tile": 3,
+      "camera_from": "passage_mid",
+      "looking_at": "garden_arch",
+      "size": "medium",
+      "angle": "eye",
+      "desc_en": "eye-level medium shot from halfway down the passage toward the garden arch, warm light spilling along the floor and petals on the last flags"
+    },
+    {
+      "tile": 4,
+      "camera_from": "garden_arch",
+      "looking_at": "little_door",
+      "size": "wide",
+      "angle": "eye",
+      "desc_en": "eye-level wide shot from the garden arch back along the passage to the little door and the warm amber lamplight of the hall behind it"
+    },
+    {
+      "tile": 5,
+      "camera_from": "garden_arch",
+      "looking_at": "rose_bushes",
+      "size": "close",
+      "angle": "eye",
+      "desc_en": "eye-level close shot out of the arch to the right onto the climbing rose bushes spilling blooms around the arch in bright sun"
+    },
+    {
+      "tile": 6,
+      "camera_from": "lily_clump",
+      "looking_at": "rose_bushes",
+      "size": "close",
+      "angle": "low",
+      "desc_en": "low close shot along the garden foot of the wall from the white lilies and sweet peas to the rose bushes on the other side of the arch"
+    },
+    {
+      "tile": 7,
+      "camera_from": "hall_door_9",
+      "looking_at": "hall_floor",
+      "size": "medium",
+      "angle": "eye",
+      "desc_en": "eye-level medium shot from beside the neighbouring locked hall door along the base of the west wall to the flagstones in front of the little door, showing how small the little door is against the full-size door"
+    },
+    {
+      "tile": 8,
+      "camera_from": "hall_door_10",
+      "looking_at": "hall_floor",
+      "size": "medium",
+      "angle": "high_oblique",
+      "desc_en": "high oblique medium shot from beside the neighbouring hall door angled down onto the flagstones where the girl kneels at the little door, the curtain drawn back"
+    },
+    {
+      "tile": 9,
+      "camera_from": "little_door",
+      "looking_at": "hall_door_10",
+      "size": "detail",
+      "angle": "eye",
+      "desc_en": "eye-level detail shot at the little door: its brass lock plate, tiny strap hinges and stained-glass roundel, with the base of the next full-size hall door beyond"
+    }
+  ],
+  "layout_top": "assets/concepts/scenes/SCN-little-door-passage/layout_top.png",
+  "inferred": true,
+  "scale_basis": "True units. The passage is about 3 m long (architecture.json): the drawn masonry mass it runs through spans image x 0.16-0.7475, so 0.5875 x 5.0 m = 2.94 m, and the image width is 5.0 m (= layout.json map_extent_m). Z = 5.0 x 9/16 = 2.8125 m. Y = 2.8 m, the hall wall height.",
+  "warnings": []
+}

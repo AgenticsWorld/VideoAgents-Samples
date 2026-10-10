@@ -1,0 +1,82 @@
+{
+  "character_id": "CHAR-frog-footman",
+  "card_type": "individual",
+  "tier": "extra",
+  "layer": "dream",
+  "revision": { "change_id": "BIB-0027", "task_id": "p4-cr-appearance", "date": "2026-09-23", "note": "Rewritten from the human-performer reading to a CGI frog-bodied figure in livery; anatomy pending_H2." , "amended_by": { "change_id": "BIB-0029", "task_id": "p4-h2-bible", "date": "2026-09-23", "note": "H2 lock folded in (approval ba96732d): anatomy Option A approved; waistcoat aligned to costumes.json COS-036 and the locked sheet (DEF-p4-char-302)." } },
+  "rendering": {
+    "mode": "photoreal_cgi_animal_in_livery",
+    "rule": "bible/cultivation.json SUP-002 and XA-magic-02 (amended BIB-0027): CGI frog-bodied figure in livery; degree of humanisation owned by 04-creatures/creature with 03-characters/appearance",
+    "species": "common frog (Rana temporaria), scaled up to dream size",
+    "anatomy_proposal": {
+      "status": "approved_H2",
+      "approved": { "option": "A", "gate": "G4", "approval_id": "ba96732d", "approved_on": "2026-09-23", "ruling_source": "runs/g4/gate.json approved_design_proposals #1 (style.json H2-footmen-anatomy): 'Frog-Footman and Fish-Footman are upright livery figures with real frog / fish heads, photoreal CGI.'" },
+      "proposal": "Option A (proposed): a real frog body, not a human frame. He sits upright on his haunches the way frogs rest, and can stand up on his long hind legs for the bow. Forelimbs keep four frog fingers with round toe tips; they are enough to hold the letter. He moves in short hops or a slow crouching crawl. The livery is tailored to the frog shape: short-bodied tail coat, breeches over the thighs, no shoes on the webbed hind feet. The head is pure frog, apart from the powdered curled wig the text gives him.",
+      "alternatives": [
+        "Option B: a semi-upright frog that walks on two legs the whole time, with slightly longer forelimbs and a frog body inside a full-cut livery (closer to Tenniel, more humanised).",
+        "Option C: a frog of natural size with no livery at all; this conflicts with the text's 'in livery' and the pair's tangled-curls bow, so it is not recommended."
+      ],
+      "pairing_constraint": "He must match CHAR-fish-footman in height and stance, so their curls tangle when both bow (ch006-p03). Whatever option is chosen at H2 applies to both Footmen."
+    },
+    "limits": "Frog skin, eyes and mouth are photoreal; speech by the wide frog mouth and throat. No cartoon face, no human hands, no human in costume."
+  },
+  "gender": "male",
+  "gender_note": { "source_chapter": "ch006", "paragraph": "ch006-p08", "quote": "“But perhaps he can’t help it,” she said to herself; “his eyes are so _very_ nearly at the top of his head.", "reason": "Referred to as 'he'/'him' throughout ch006-p05..p17." },
+  "base_age_range": "35-45",
+  "base_age_inferred": true,
+  "base_age_reason": "Persona age (a settled mid-life servant, 'I shall sit here... for days and days', ch006-p16), kept for voice casting. As an animal: a heavy adult frog.",
+  "hair": {
+    "coat": "moist frog skin on the body; a powdered wig on the head",
+    "color": "wig: powdered white (grey-white powder) tight curls; skin: olive-brown mottled with darker blotches, dark mask patch behind the eye, pale cream-yellow throat and belly",
+    "style": "tight sausage curls covering the whole crown, slightly dishevelled; the wig sits on top of the frog head and does not replace it",
+    "source_chapter": "ch006", "paragraph": "ch006-p01",
+    "quote": "both footmen, Alice noticed, had powdered hair that curled all over their heads",
+    "also_seen": [{ "paragraph": "ch006-p03", "quote": "Then they both bowed low, and their curls got entangled together." }],
+    "skin_inferred": true,
+    "reason": "Powdered curls are sourced; skin colouring follows the common frog."
+  },
+  "eyes": {
+    "color": "gold-bronze iris with a horizontal black pupil",
+    "shape": "very large, round, bulging, set right at the top of the head; habitually turned up to the sky",
+    "source_chapter": "ch006", "paragraph": "ch006-p08",
+    "quote": "his eyes are so _very_ nearly at the top of his head",
+    "also_seen": [{ "paragraph": "ch006-p01", "quote": "with a round face, and large eyes like a frog" }],
+    "color_inferred": true,
+    "reason": "Species iris colour; shape and placement are sourced."
+  },
+  "face": {
+    "shape": "round, broad, flat frog head with a very wide mouth line",
+    "expression_default": "vacant, placid, gazing upward, throat pulsing slowly; unbothered even when a plate grazes his nose",
+    "source_chapter": "ch006", "paragraph": "ch006-p01",
+    "quote": "another footman in livery, with a round face, and large eyes like a frog",
+    "also_seen": [
+      { "paragraph": "ch006-p04", "quote": "sitting on the ground near the door, staring stupidly up into the sky" },
+      { "paragraph": "ch006-p10", "quote": "a large plate came skimming out, straight at the Footman’s head: it just grazed his nose" }
+    ]
+  },
+  "build": {
+    "height_range_cm": [75, 85],
+    "height_note": "Standing height on his hind legs; sitting upright about 55-60 cm. Dream-scale frog (a real common frog is 6-9 cm); proportions stay frog.",
+    "body_type": "squat, soft, pear-shaped, no neck, long folded hind legs",
+    "posture": "sits heavily on the doorstep with knees splayed, head tipped back; bows by tipping his whole body forward",
+    "scale_reference": "The Duchess's house is 'about four feet high' (ch006), so he is sized to its door. Alice arrives at nine inches (SUP-003): to her he is several times her height.",
+    "source_chapter": "ch006",
+    "paragraph": "ch006-p04",
+    "inferred": true,
+    "reason": "The previous card's 165-170 cm human height is dropped. A dream size matched to the four-foot house is more faithful to the text."
+  },
+  "marks": [
+    { "type": "none", "description": "No permanent marks. A faint pink graze on the tip of the snout appears only after the plate beat (ch006-p10); it is a continuity state, not a base mark.", "inferred": true, "reason": "Source shows the plate 'just grazed his nose'." }
+  ],
+  "signature_items": [
+    { "item": "household livery tail coat, cream breeches and plain buff wool waistcoat, tailored to the frog body", "source_chapter": "ch006", "paragraph": "ch006-p01", "quote": "another footman in livery" },
+    { "item": "powdered curled wig", "source_chapter": "ch006", "paragraph": "ch006-p01" },
+    { "item": "the great invitation letter (received from the Fish-Footman, ch006-p02), held briefly before he sits down", "source_chapter": "ch006", "paragraph": "ch006-p02", "quote": "producing from under his arm a great letter, nearly as large as himself, and this he handed over to the other" }
+  ],
+  "default_outfit_tone": "Faded snuff-brown Duchess-household footman's livery tail coat (FAC-duchess-household emblem_visual: plain, visibly poorer than the crimson Hearts livery of CHAR-fish-footman), worn thin at the cuffs, with plain tarnished brass buttons and no crest, badge or heraldic mark, over a plain buff wool waistcoat and cream knee-breeches; bare webbed hind feet (no stockings or shoes); slightly rumpled from sitting on the ground. Cut to the frog body per the H2 anatomy option.",
+  "default_outfit_tone_source": { "source_chapter": "ch006", "paragraph": "ch006-p01", "quote": "another footman in livery", "colour_inferred": true, "reason": "Livery is sourced; colours designed. Coat colour and badge follow index.json factions = FAC-duchess-household (DEF-p3-appearance-303-a / DEF-p3-relationship-001-a). Stockings and buckled shoes are dropped because the feet are frog feet. The old magnifying spectacles (a human-performer device) are dropped: his own eyes now carry the look. BIB-0029 (DEF-p4-char-302): the waistcoat is plain buff wool, not mottled olive-and-moss-green satin — costumes.json COS-036 and the H2-locked sheet both show buff, and buff keeps the waistcoat from merging into the green frog skin; costumes.json stays the wardrobe authority for prompts.", "badge": { "value": "none: plain tarnished brass buttons, no crest, heart or household badge", "inferred": true, "reason": "bible/politics.json FAC-duchess-household.emblem_visual gives no heraldic marking." }, "fix_ref": "DEF-p3-char-index-901-b" },
+  "period_silhouette": { "value": "1862 upper-servant livery (long-skirted tail coat, knee-breeches, powdered hair; livery stayed deliberately old-fashioned in 1862), re-cut to a frog body", "source_chapter": "ch006", "paragraph": "ch006-p01", "quote": "both footmen, Alice noticed, had powdered hair", "inferred": true, "reason": "bible/culture.json CUL-012. Garment cut on a frog body belongs to 06-art/costume." },
+  "doubling": { "value": "none", "reason": "Not part of any H1 ruling 5.3 B doubling pair." },
+  "pairing_note": "Must read as a matched pair with CHAR-fish-footman: identical powdered curled wigs, same height and livery cut, so the tangled-curls bow (ch006-p03) works. Only the animal body and the coat colour differ.",
+  "prompt_summary_en": "photoreal large common frog sitting upright on the doorstep of a small cottage, moist olive-brown mottled skin with a dark eye mask and cream throat, huge bulging gold-bronze eyes set on top of its head gazing vacantly up at the sky, very wide mouth, wearing a powdered white wig of tight curls and a faded snuff-brown livery tail coat with tarnished brass buttons, a plain buff wool waistcoat and cream knee-breeches tailored to its frog body, bare webbed feet, naturalistic amphibian anatomy, live-action film plate"
+}

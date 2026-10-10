@@ -1,0 +1,57 @@
+{
+  "character_id": "CHAR-king-of-hearts",
+  "name": "King of Hearts",
+  "tier": "A",
+  "layer": "dream",
+  "gender": "male",
+  "gender_note": { "source_chapter": "ch011", "source_para": "ch011-p03", "quote": "The judge, by the way, was the King; and as he wore his crown over the wig" },
+  "base_age_range": "55-62",
+  "base_age_note": { "inferred": true, "reason": "Not stated; an elderly, mild, anxious monarch beside a younger, fiercer Queen." },
+  "hair": { "color": "grey", "style": "thinning grey hair and a short, neatly trimmed grey beard; at the trial covered by a full judge's wig", "length": "short", "source_chapter": "ch011", "source_para": "ch011-p02", "quote": "“That’s the judge,” she said to herself, “because of his great wig.”", "hair_inferred": true, "reason": "Wig sourced; natural hair and beard designed." },
+  "eyes": {
+    "color": "pale blue",
+    "shape": "small and deep-set under heavy lids — when he frowns they nearly disappear",
+    "source_chapter": "ch011",
+    "source_para": "ch011-p68",
+    "quote": "frowning at the cook till his eyes were nearly out of sight",
+    "colour_inferred": true,
+    "reason": "Deep-set frowning eyes sourced; colour designed."
+  },
+  "skin": { "tone": "pale, slightly sallow, goes paler when frightened", "source_chapter": "ch012", "source_para": "ch012-p22", "quote": "The King turned pale, and shut his note-book hastily" },
+  "face": {
+    "shape": "round, soft, jowly",
+    "features": ["mild worried brow", "small mouth", "reading spectacles"],
+    "default_expression": "anxious, melancholy, eager to please; a pleased little smile after a feeble pun",
+    "source_chapter": "ch011",
+    "source_para": ["ch011-p07", "ch011-p68", "ch012-p56"],
+    "quote": "the King put on his spectacles and looked anxiously round / with a melancholy air / looking round the court with a smile",
+    "shape_inferred": true,
+    "reason": "Manner sourced; structure designed."
+  },
+  "build": {
+    "height_range_cm": [160, 166],
+    "body_type": "short, round-shouldered, a little pot-bellied",
+    "scale_reference": "about 1.2x Alice's true size (135 cm); clearly a head shorter than the Queen",
+    "inferred": true,
+    "reason": "Not stated; designed so the henpecked King is visibly dwarfed by his Queen."
+  },
+  "marks": [
+    { "type": "signature_item", "position": "head (trial)", "description": "gold crown perched awkwardly on top of a full judge's wig — uncomfortable and unbecoming", "source_chapter": "ch011", "source_para": "ch011-p03" },
+    { "type": "signature_item", "position": "procession", "description": "in the procession he walks bareheaded: the Knave carries his crown before him on a crimson velvet cushion", "source_chapter": "ch008", "source_para": "ch008-p11" },
+    { "type": "signature_item", "position": "hands", "description": "spectacles and a small note-book he writes in (Rule Forty-two)", "source_chapter": "ch012", "source_para": ["ch011-p07", "ch012-p14"] }
+  ],
+  "default_outfit_tone": {
+    "summary": "crimson and white card-suited court dress matching the Queen: flat rectangular crimson tabard piped in white with a red heart device and a small crown device, over a crimson robe trimmed with white fur; at the trial a judge's long wig under the crown",
+    "silhouette_1862": "long ceremonial robe over 1862 frock coat and trousers, rigid flat card-front tabard; stands square-on like a court card",
+    "inferred": true,
+    "reason": "Hearts suit and wig sourced (ch008-p11, ch011-p03); card styling per SUP-004 and FAC-house-of-hearts emblem_visual. Costume detail by 06-art/costume."
+  },
+  "performer_coding": {
+    "code": "card (King of Hearts)",
+    "touches": ["flat rigid card-front tabard with heart pip and crown device", "red/white/gold/black card palette", "frontal, stiff card-figure blocking"],
+    "limits": "human performer, no painted-card body suit, no CGI flattening (SUP-002/SUP-004)"
+  },
+  "doubling": null,
+  "events": ["ev0034", "ev0037", "ev0045", "ev0049", "ev0050", "ev0051"],
+  "prompt_base_en": "a short, round-shouldered, mild English king of about sixty in 1862, thinning grey hair and a neat short grey beard, small deep-set pale blue eyes, pale round jowly face with an anxious expression, reading spectacles, flat crimson-and-white card-front tabard with a red heart over a crimson robe trimmed with white fur"
+}

@@ -1,0 +1,13 @@
+{
+  "character_id": "CHAR-mouse", "task_id": "p4-char-concept-cb1", "sheet": "sheet.png", "variants": [],
+  "tier_note": "index.json tier = B; produced because the work order names it explicitly.",
+  "self_check": {"sheet.png": {
+    "layout": "PASS",
+    "appearance_field_hits": {"gender_male_old": "not visually determinable", "grey_brown_back_paler_belly": true, "grizzled_muzzle": false, "small_beady_black_eyes": true, "large_thin_round_pink_ears": true, "pointed_muzzle_pink_nose_long_whiskers": true, "long_thin_scaly_pink_grey_tail": true, "small_thin_wiry": "partial", "unclothed": true},
+    "costume_COS-021_hits": {"unclothed_unadorned": true},
+    "style": "PASS",
+    "defects": ["Body reads heavier and somewhat rat-like rather than a small, thin, wiry house mouse.", "Grizzled muzzle not visible; stands fully upright on hind legs rather than sitting up on haunches (minor).", "Offended/prickly air is weak (ears forward, soft look)."]
+  }},
+  "notes": ["Rendered DRY (COS-021 default). appearance prompt_base_en says 'soaking wet'; the soaked look is a costumes.json variant (ev0009-ev0010) - see DEF-p4-char-concept-101-b."],
+  "rerolls": []
+}

@@ -1,0 +1,45 @@
+{
+  "shot_id": "sh100",
+  "group_id": "grp037",
+  "scene_no": "S10",
+  "scene_id": "SCN-pool-of-tears",
+  "duration_s": 2.0,
+  "is_dialogue": false,
+  "group_position": "middle shot of grp037 — Alice past the floating_fan path point, in open water still well short of her map end (reeds).",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "prone",
+      "start_pos": "swimming past the floating fan in open water, then stopping and coming upright",
+      "space_fragment_en": "lying face down past the floating fan, held screen-right, then coming upright facing screen-left into the dark",
+      "facing": "turns into the frame and stops; her look goes screen-left into the dark the ripples are coming from",
+      "path": [
+        { "t": 1.2, "to": "upright in the water, treading, still well short of the reeds by the shore steps" }
+      ],
+      "beats": [
+        { "t": 0.4, "action": "something splashes about a little way off in the lamplit dark", "sync": "the sound arrives" },
+        { "t": 0.9, "action": "she stops swimming and turns toward it", "sync": "the turn" },
+        { "t": 1.2, "action": "comes upright, treading water, very still", "sync": "held to the cut" }
+      ],
+      "performance_beat": {
+        "objective": "find out what else is in the water with her",
+        "goal": "find out what else is in the water with her",
+        "emotional_arc": "from purposeful swimming to complete, listening stillness",
+        "arc_from": "purposeful swimming",
+        "arc_to": "listening stillness",
+        "trigger": { "beat": "the splashing reaches her from the dark", "t": 0.4 },
+        "no_early_reaction": ["the stroke breaking", "the head turning", "the eyes fixing"],
+        "forbidden_early": ["the stroke breaking", "the head turning", "the eyes fixing"],
+        "end_state": "upright and treading water, absolutely still, eyes fixed screen-left on the dark, lips closed"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": {
+    "timeline_ok": true,
+    "violations": [],
+    "story_event": "ev0009 approach (dream) — 'something splashing about in the pool'",
+    "note": "The maker of the splashing is not staged: no creature asset appears in ep01 (hooks.json ec-2 spoiler_note, SUP-007)."
+  }
+}

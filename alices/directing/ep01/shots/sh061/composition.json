@@ -1,0 +1,35 @@
+{
+  "shot_id": "sh061",
+  "scene_id": "SCN-long-hall",
+  "size": "close",
+  "subject": {
+    "id": "CHAR-alice",
+    "grid": "centre",
+    "anchor_xy": [0.46, 0.48],
+    "size_in_frame": "the sh060 frame exactly — face about 0.50 of frame height, held"
+  },
+  "second_subject": {
+    "id": "PROP-eat-me-cake",
+    "grid": "bottom_left",
+    "anchor_xy": [0.28, 0.78],
+    "note": "eaten down to nothing across the shot; the crumbs are then brushed off the pinafore inside the same frame."
+  },
+  "headroom": "about 0.16 of frame height, identical to sh060 and never adjusted — the two seconds of nothing happening have to happen in a frame that visibly has not changed.",
+  "horizon_eyeline": "Identical to sh060: low close at 0.18 m, slight up-angle, her eyeline at 0.44.",
+  "layers": {
+    "fg": "the cake, then the crumbs, then her hand brushing the pinafore",
+    "mg": "her face, flat and disappointed",
+    "bg": "dark hall, unchanged"
+  },
+  "gaze": {
+    "direction": "to_camera",
+    "lead_room": "none",
+    "note": "on the two-second hold her look comes level and very nearly to the lens — the flat, cheated, deadpan address that is the joke. It is not a stare at the audience; it is a look at nothing, which happens to be where the camera is. Then she drops her eyes and simply eats."
+  },
+  "balance": "Absolutely static and centred, held past the point where a cut would normally come. The stillness is the comedy.",
+  "leading_lines": "None. The frame is deliberately inert for two full seconds — no line, no motion, no change of light.",
+  "eye_first": "Her face, and then nowhere, for two seconds.",
+  "safe_area_ok": true,
+  "constraint_binding": "The two-second hold on the flat, cheated face is the joke and is NOT cut into: the composition offers no alternative framing, no insert and no second subject during the hold, so an internal cut is impossible. Then she eats briskly and without ceremony — the eating is played inside the same unchanged frame, with no size change to dignify it.",
+  "pairs_with": "sh060 — the same low close, held."
+}

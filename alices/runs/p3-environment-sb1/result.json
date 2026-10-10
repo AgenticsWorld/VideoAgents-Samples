@@ -1,0 +1,88 @@
+{
+  "task_id": "p3-environment-sb1",
+  "agent": "05-scenes/environment",
+  "project": "alices",
+  "attempt": 1,
+  "status": "done",
+  "completed_at": "2026-09-22",
+  "outputs": [
+    "bible/scenes/SCN-riverbank/environment.json",
+    "bible/scenes/SCN-field-hedge-burrow/environment.json",
+    "bible/scenes/SCN-falling-dream/environment.json",
+    "bible/scenes/SCN-shaft-landing-passage/environment.json",
+    "bible/scenes/SCN-long-hall/environment.json",
+    "bible/scenes/SCN-little-door-passage/environment.json",
+    "bible/scenes/SCN-pool-of-tears/environment.json",
+    "bible/scenes/SCN-pool-bank/environment.json",
+    "bible/scenes/SCN-rabbit-house-exterior/environment.json",
+    "bible/scenes/SCN-rabbit-house-upstairs-room/environment.json",
+    "bible/scenes/SCN-wood-thistle-glade/environment.json",
+    "bible/scenes/SCN-caterpillar-clearing/environment.json"
+  ],
+  "defects_opened": ["qa/defects/DEF-p3-environment-101.json"],
+  "helper_scripts": ["code/p3-environment-sb1_check.py"],
+  "inputs_read": [
+    "bible/h1_summary.md", "runs/h1-ruling/ruling.json", "bible/scenes/index.json", "story/story_timeline.json",
+    "bible/timeline.json (TL-003, UTQ-001)", "bible/geography.json (LOC physical fields)", "bible/world.json (riverbank_setting)",
+    "bible/WRITE_RULES.md", "story/structured_story/ch001..ch005.json, ch007.json, ch012.json"
+  ],
+  "shared_conventions": {
+    "timeline_ref": "story/story_timeline.json has no T-* anchors; every state's timeline_ref is the story_time event id (ev*), with timeline_span listing further events covered. timeline_node is the bible/timeline.json node (always TL-003, the single day 4 July 1862).",
+    "ENV-ENUM-v1": {
+      "season": ["summer"],
+      "time_of_day": {
+        "early_afternoon": "13:00-15:00 GMT, sun about 46-58 deg",
+        "afternoon": "15:00-16:30 GMT, sun about 32-46 deg",
+        "late_afternoon": "16:30-18:30 GMT, sun about 15-32 deg",
+        "golden_hour": "18:30-20:00 GMT, sun about 2-15 deg",
+        "sunset": "19:40-20:30 GMT, sun at or below about 5 deg, setting about 20:22"
+      },
+      "weather": {
+        "fair_hot": "clear midsummer sky, a few small fair-weather clouds, heat haze in open ground",
+        "fair_evening": "clear sky, heat haze gone, warm evening",
+        "none_enclosed": "enclosed dream interior with no sky; weather does not apply, only air temperature and stillness"
+      },
+      "wind": ["still", "light_breeze"],
+      "temperature": ["hot", "warm", "cool"],
+      "daylight_access (fixed per scene)": ["open_sky", "canopy_dappled", "window_daylight", "lamplit_no_sky", "dark_no_sky", "far_opening_only"],
+      "alignment": "05-scenes/lighting must use the same time_of_day and weather values as its condition keys (SOUL: shared controlled enum)."
+    },
+    "waking_clock_design": {
+      "zone": "GMT (railway time, 1862). Sun positions computed for Oxford (51.75 N, 1.26 W) on 4 July.",
+      "waking": "ev0001 on the bank 14:00-14:10; chase to the hedge 14:08-14:12; Alice dozes off about 14:15.",
+      "dream_mapping": "The dream (ev0002-ev0052) is spread evenly over the nap: about 14:15 + (event number - 2) x 6.7 min, so ev0021 is about 16:22, ev0032 about 17:36 and ev0052 about 19:35. For dream spaces, waking_clock is the real time on the bank while the dream plays. It is not dream-internal time: the two 'half an hour or so' in the source are dream time.",
+      "wake_and_close": "ev0053 wake 19:35-19:45 (golden_hour, sun about 5 deg); ev0054 sister's reverie 19:45-20:22 (sunset). This fixes the 'long sleep' (UTQ-001) at about 5.5 hours; bible/timeline.json is not changed.",
+      "dream_light_rule": "Ruling 5.2 A: dream exteriors take the waking sun of their clock slot (same sky, same heat, sun lowering scene by scene). Dream interiors have no daylight, and each card states in fixed.dream_growth how its air and light grow from the waking afternoon."
+    },
+    "source_vs_inferred": "A state is inferred:false (with source_chapter) only when its key environment values are stated in the source; its designed extras are listed in designed_fields. All other states are inferred:true with a reason."
+  },
+  "decisions": [
+    "Every state is summer. There is no season or day-phase conflict with story_timeline (the dream is continuous T0; waking frame ev0001/ev0053/ev0054).",
+    "SCN-long-hall follows the source's 'the hall was very hot' (ch002-p09), not geography.json's 'cool dream-air'. The clash is reported as DEF-p3-environment-101 (assigned to memory-bible, owner geography); geography.json is untouched.",
+    "The hall's third appearance (ch007, ev0032) is late_afternoon by the waking clock. Only the garden light seen through the little door changes (warmer, lower); the lamp-lit hall itself does not change.",
+    "Seasonal guards for downstream: the hawthorn hedge is in leaf with green haws, not May blossom; the ch012 dead leaves are a few leaves shed in the heat and the canopy stays green, with no autumn look; the thistle is in purple flower (July).",
+    "The pool of tears is held as one early_afternoon state (14:55-15:05) so the phase does not change mid-scene at 15:00."
+  ],
+  "checked_not_conflicts": [
+    "ch001-p14 'that dark hall' vs ch001-p11 'lit up by a row of lamps': these agree, as a dim lamp-lit room with no daylight.",
+    "ch003-p47 Magpie's 'night-air' and Canary's 'high time you were all in bed': these are excuses to leave inside the dream, not a time-of-day marker. The state stays afternoon, with a dream_logic_note on SCN-pool-bank.",
+    "ch012-p64 dead leaves in July: realistic as early leaf drop in a hot, dry spell. Recorded as seasonal_guard, not a contradiction."
+  ],
+  "advisory_notes": [
+    "Historical footnote only, no action: published weather records for the Oxford area on 4 July 1862 are often cited as cool and showery. The source ('the hot day', ch001-p02) and the locked Bible (hot summer afternoon) take precedence, and the cards follow them."
+  ],
+  "auto_check": {
+    "command": "python3 code/p3-environment-sb1_check.py",
+    "exit_code": 0,
+    "scenes": 12,
+    "states": 22,
+    "results": {
+      "file_present": "PASS", "scene_id_valid": "PASS", "timeline_ref_exists": "PASS", "timeline_node_exists": "PASS",
+      "chapters_covered": "PASS", "season_time_consistent": "PASS", "enum": "PASS", "dims_cover_states": "PASS",
+      "source_or_inferred": "PASS", "quote_verbatim": "PASS", "no_unknown_placeholder": "PASS", "layer_match": "PASS",
+      "clock_monotonic": "PASS", "chapter_key": "PASS"
+    }
+  },
+  "skills": "No auto-activated skills are enabled for this station; none applied.",
+  "evaluation": "skipped (quality judge = 0)"
+}

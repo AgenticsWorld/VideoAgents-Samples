@@ -1,0 +1,73 @@
+{
+  "task_id": "p2-magic",
+  "agent": "02-worldbuilding/magic-cultivation",
+  "attempt": 1,
+  "status": "done",
+  "finished": "2026-09-22",
+  "outputs": ["bible/cultivation.json"],
+  "helper_scripts": ["code/p2-magic_check.py"],
+  "inputs_read": [
+    "story/structured_story.json (+ per-chapter shards story/structured_story/ch001..ch012.json)",
+    "story/events.json (events[], realistic_adaptation_flags[], broken_chains[])",
+    "story/story_graph.json (realism_notes)",
+    "bible/WRITE_RULES.md",
+    "bible/cultivation.json (skeleton, pending_phase2)",
+    "bible/world.json (already written by p2-world; read to avoid contradicting its frame/wonderland_real_counterparts/cross_domain_assumptions XA-01..03)"
+  ],
+  "domain_note": "brief.md fixes the premise as a realistic, non-fantasy drama. This file therefore defines no magic/power/cultivation ranked system -- it is the SUP-* registry of how each impossible source element is reinterpreted, per bible/WRITE_RULES.md section 7.1.",
+  "self_check": {
+    "script": "python3 code/p2-magic_check.py",
+    "result": "ALL PASS",
+    "json_valid": true,
+    "source_refs_required": "PASS -- every reinterpretations[] entry has a chapter+paragraph+verbatim quote (checked as an exact substring of the cited structured_story chapter shard, including source markdown italics markers); all 14 entries additionally carry inferred:true + reason since every reading is a self-designed reinterpretation, not stated in the source",
+    "no_unknown_placeholder": "PASS -- no UNKNOWN/unknown/TBD/N/A/empty-string values anywhere in the file",
+    "affects_ev_resolve": "PASS -- all 49 distinct ev* ids referenced across affects[] resolve against story/events.json (ev0001-ev0054)",
+    "rank_order_acyclic": "Vacuous PASS -- no ranks[] array exists in this file (no power/cultivation system in a realistic adaptation); rank_order_acyclic_check.applicable is explicitly recorded as false with reason, per task instruction."
+  },
+  "counts": {
+    "reinterpretations_sup_entries": 14,
+    "inferred_true": 14,
+    "cross_domain_assumptions": 7,
+    "distinct_events_covered": 49,
+    "events_json_realistic_adaptation_flags_covered": 5,
+    "story_graph_realism_notes_items_covered": 12
+  },
+  "sup_index": [
+    "SUP-001 dream frame (ev0001,ev0053,ev0054)",
+    "SUP-002 talking/anthropomorphic animals and figures, general (28 events)",
+    "SUP-003 physical size changes (17 events)",
+    "SUP-004 card people (7 events)",
+    "SUP-005 vanishing Cheshire Cat (3 events)",
+    "SUP-006 baby-to-pig (1 event)",
+    "SUP-007 pool of tears (3 events)",
+    "SUP-008 fall down the well (1 event)",
+    "SUP-009 pebbles turning into cakes (1 event)",
+    "SUP-010 hybrid creatures -- Gryphon, Mock Turtle, undersea school, Lobster Quadrille (4 events)",
+    "SUP-011 live croquet equipment (4 events)",
+    "SUP-012 personified Time (1 event)",
+    "SUP-013 impossible/dreamlike geography -- glass-table hall, tiny door, hidden garden, its vanishing (3 events)",
+    "SUP-014 executions and violence toward a child -- tone ruling (8 events)"
+  ],
+  "cross_domain_assumptions": [
+    "XA-magic-01: dream frame explicit, only ch001/ch012 bank scenes are waking reality (matches bible/world.json XA-01)",
+    "XA-magic-02: dream-figures are human performers in 1862 period styling, not literal animals/CGI; a real silent white rabbit only in the waking frame (matches world.json XA-02, cp-rabbit-hole)",
+    "XA-magic-03: character-doubling (dream-figures as stylised real people) left open to world/characters -- not decided here",
+    "XA-magic-04: dream-only spaces (well, hall, garden) should register in geography.json as non_diegetic_mental, not persistent LOC-*",
+    "XA-magic-05: size changes/transformations use practical/forced-perspective/set-scale staging, not VFX-magic imagery (matches world.json XA-03)",
+    "XA-magic-06: 'Off with her head!' is unenforced bluster, for politics.json to register as a running threat/custom, never a literal capital-punishment system",
+    "XA-magic-07: all readings must be legible through blocking/editing/sound/dialogue alone -- project has narration switched off entirely"
+  ],
+  "key_decisions": [
+    "Kept the p0 skeleton's own SUP-* schema (reinterpretations[]) rather than the generic ranked-cultivation schema in this agent's SOUL.md, since WRITE_RULES.md section 7.1 explicitly overrides the generic schema for this realistic-adaptation project.",
+    "One SUP-* entry per flagged impossible element, mapping both story/events.json's 5 realistic_adaptation_flags and story/story_graph.json's 12 realism_notes items, splitting 'objects transforming' into two entries (pebbles->cakes, baby->pig) and 'impossible geography' into two entries (the well's fall, and the hall/garden/its vanishing) for precision -- 14 entries total, all traced back to one or both flag sources.",
+    "Every entry's treatment is dream (12 of 14) or metaphor (SUP-012 personified Time), consistent with and cross-referencing bible/world.json's independently-reached dream-frame decision; no entry uses kept_supernatural or removed.",
+    "_meta.status set to 'phase2_draft' (between skeleton_empty and merged_v1) and decision_status to 'proposed_pending_h1', since these are proposals for user confirmation at H1, not yet a controlled decision -- memory-bible owns the final merge/status bump."
+  ],
+  "conflicts": [],
+  "requests_to_memory_bible": [
+    "No conflicts found against bible/world.json; the two files' readings of the dream frame, human-performer dream-figures, and practical size-change staging are mutually consistent and cross-reference each other by key/id. Recommend merging both without arbitration on this point.",
+    "SUP-014 (executions/violence tone) and SUP-011 (live croquet equipment) touch politics.json and content-safety; flagged in cross_domain_assumptions XA-magic-06 for 02-worldbuilding/political to register the 'Off with her head' custom, not decided or written here."
+  ],
+  "skills": [],
+  "notes": "No subprocesses left running. All quotes verified as exact substrings (including source markdown italics markers) of story/structured_story/chNNN.json via code/p2-magic_check.py."
+}

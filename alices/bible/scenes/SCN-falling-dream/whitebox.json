@@ -1,0 +1,51 @@
+{
+  "schema_version": "whitebox_scene.v1",
+  "scene_id": "SCN-falling-dream",
+  "task_id": "p4-scene-model-sb1",
+  "dimensions_m": [5.0, 6.0, 2.8125],
+  "inferred": true,
+  "scale_basis": "Shaft inside diameter 2.4 m (architecture.json structure, ch001-p06) matched to the drawn inner brick circle width, 0.485 of the image width. The image width is set to 5.0 m (= layout.json map_extent_m), and Z = 5.0 x 9/16 = 2.8125 m. Y = 6.0 m, the height of one repeating rig wall section (architecture interior.ceiling_note).",
+  "units_note": "Vertical rig set: y 0 to 6 m is one furniture wall section, which repeats downward in dressing variants. There is no floor. Alice falls (is rigged) through the open core. The entry tunnel joins at the top of the first section (y 6.0).",
+  "objects": [
+    {"id": "shaft_wall_000", "shape": "box", "size_m": [0.18, 6.0, 0.7], "xy": [0.758, 0.5], "elevation_m": 3.0, "collision_role": "wall"},
+    {"id": "shaft_wall_030", "shape": "box", "size_m": [0.7, 6.0, 0.18], "xy": [0.7234, 0.7293], "elevation_m": 3.0, "yaw": 1.047, "collision_role": "wall"},
+    {"id": "shaft_wall_060", "shape": "box", "size_m": [0.7, 6.0, 0.18], "xy": [0.629, 0.8972], "elevation_m": 3.0, "yaw": 0.524, "collision_role": "wall"},
+    {"id": "shaft_wall_090", "shape": "box", "size_m": [0.7, 6.0, 0.18], "xy": [0.5, 0.9587], "elevation_m": 3.0, "collision_role": "wall"},
+    {"id": "shaft_wall_120", "shape": "box", "size_m": [0.7, 6.0, 0.18], "xy": [0.371, 0.8972], "elevation_m": 3.0, "yaw": -0.524, "collision_role": "wall"},
+    {"id": "shaft_wall_150", "shape": "box", "size_m": [0.7, 6.0, 0.18], "xy": [0.2766, 0.7293], "elevation_m": 3.0, "yaw": -1.047, "collision_role": "wall"},
+    {"id": "shaft_wall_180", "shape": "box", "size_m": [0.18, 6.0, 0.7], "xy": [0.242, 0.5], "elevation_m": 3.0, "collision_role": "wall"},
+    {"id": "shaft_wall_210", "shape": "box", "size_m": [0.7, 6.0, 0.18], "xy": [0.2766, 0.2707], "elevation_m": 3.0, "yaw": -2.094, "collision_role": "wall"},
+    {"id": "shaft_wall_240", "shape": "box", "size_m": [0.7, 6.0, 0.18], "xy": [0.371, 0.1028], "elevation_m": 3.0, "yaw": -2.618, "collision_role": "wall"},
+    {"id": "shaft_wall_270", "shape": "box", "size_m": [0.7, 6.0, 0.18], "xy": [0.5, 0.0413], "elevation_m": 3.0, "collision_role": "wall"},
+    {"id": "shaft_wall_300", "shape": "box", "size_m": [0.7, 6.0, 0.18], "xy": [0.629, 0.1028], "elevation_m": 3.0, "yaw": 2.618, "collision_role": "wall"},
+    {"id": "shaft_wall_330", "shape": "box", "size_m": [0.7, 6.0, 0.18], "xy": [0.7234, 0.2707], "elevation_m": 3.0, "yaw": 2.094, "collision_role": "wall"},
+    {"id": "entry_tunnel_floor", "shape": "box", "size_m": [0.75, 0.1, 0.205], "xy": [0.5175, 0.0365], "elevation_m": 5.95, "color": "#8a6f55"},
+    {"id": "entry_tunnel_wall_w", "shape": "box", "size_m": [0.1, 1.2, 0.205], "xy": [0.4325, 0.0365], "elevation_m": 6.6, "collision_role": "wall"},
+    {"id": "entry_tunnel_wall_e", "shape": "box", "size_m": [0.1, 1.2, 0.205], "xy": [0.6025, 0.0365], "elevation_m": 6.6, "collision_role": "wall"},
+    {"id": "bookshelves", "shape": "box", "size_m": [0.35, 2.4, 1.1], "xy": [0.3, 0.57], "elevation_m": 2.4, "color": "#b58a55"},
+    {"id": "cupboards", "shape": "box", "size_m": [0.4, 2.2, 1.1], "xy": [0.7, 0.52], "elevation_m": 1.5, "color": "#7a3b2e"},
+    {"id": "pantry_shelf", "shape": "box", "size_m": [1.0, 0.3, 0.3], "xy": [0.6152, 0.7987], "elevation_m": 5.05, "yaw": 0.6, "color": "#c9b58f"},
+    {"id": "map_pegs", "shape": "box", "size_m": [1.2, 1.0, 0.06], "xy": [0.412, 0.8769], "elevation_m": 4.0, "yaw": -0.394, "color": "#e4d9bd"},
+    {"id": "picture_pegs", "shape": "box", "size_m": [0.9, 0.5, 0.06], "xy": [0.621, 0.1523], "elevation_m": 4.4, "yaw": 2.589, "color": "#6b5033"},
+    {"id": "glass_roundel", "shape": "box", "size_m": [0.6, 0.6, 0.05], "xy": [0.3276, 0.2077], "elevation_m": 5.3, "yaw": -2.332, "color": "#d9c9e6"}
+  ],
+  "walkable": {
+    "fall_core": "Open vertical core centred on shaft_centre [0.5, 0.5]: wall inner radius 1.2 m, furniture faces at about 0.85 m radius, so the clear fall column is about 1.7 m across. Alice (135 cm) must drift to within about 0.35 m of a furniture face to reach a shelf (pantry_shelf -> cupboards hand-off).",
+    "entry_tunnel": "0.75 m clear width x 1.2 m clear height (inferred), floor at y 6.0, running north off the map edge. The dip into the shaft is at the inner wall edge (v about 0.073)."
+  },
+  "inferred_items": [
+    "Wall thickness 0.18 m: the drawn mosaic rim is 0.35 m thick, but a 1.2 m-radius circle centred in a 2.8125 m-deep frame leaves only 0.2 m north and south. The rim was thinned so no geometry leaves the image.",
+    "Furniture band heights inside the 6 m section (cupboards 0.4-2.6 m, bookshelves 1.2-3.6 m, maps 3.5-4.5 m, pictures 4.15-4.65 m, pantry shelf 4.9-5.2 m, roundel 5.0-5.6 m). The pantry shelf is above the cupboards so a falling Alice passes the jar first and the cupboard later (ch001-p06).",
+    "Furniture depths (0.3-0.4 m) and widths (0.9-1.2 m).",
+    "Entry tunnel clear size 0.75 x 1.2 m (width as drawn; height inferred).",
+    "Bookshelves and cupboards are axis-aligned boxes standing in for curved furniture."
+  ],
+  "landmarks_covered": ["entry_tunnel", "glass_roundel", "picture_pegs", "cupboards", "pantry_shelf", "map_pegs", "bookshelves", "shaft_centre"],
+  "workflow_notes": [
+    "Image vs Bible: the drawn shaft is slightly elliptical (inner brick about 2.43 m wide x 2.15 m deep, fisheye depth on the north-south axis, DEF-p4-envconcept-603-e). The model uses the Bible's round 2.4 m shaft centred on shaft_centre, so the north and south wall lines sit up to about 0.25 m outside the drawn brick edge. inferred:true.",
+    "The drawn tunnel reaches about 0.47 m into the frame, but only about 0.2 m of it fits north of a true 2.4 m circle. The tunnel stub is modelled to the frame edge; the tunnel continues off-map to the north.",
+    "Hand props (the ORANGE MARMALADE jar, Dinah's saucer) and the hawthorn roots are not scene geometry.",
+    "Anti-clip handover for whitebox-staging: this is a rig set, so the performer track is vertical (y) inside the fall core. Keep the body envelope at least 0.15 m off any furniture face, except for the reach contacts at pantry_shelf and cupboards."
+  ],
+  "downstream": "No storyboard yet. Hand over to whitebox-staging. No reference video was rendered."
+}

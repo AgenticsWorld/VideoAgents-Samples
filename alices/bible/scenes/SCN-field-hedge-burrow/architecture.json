@@ -1,0 +1,40 @@
+{
+  "scene_id": "SCN-field-hedge-burrow",
+  "inherits": null,
+  "layer": "waking",
+  "int_ext": "EXT",
+  "form": "Edge of a hay-meadow field ending at a laid hawthorn hedge on a low earth bank with a dry ditch; an ordinary rabbit burrow opens at the hedge foot",
+  "stories": 0,
+  "source_chapter": "ch001",
+  "culture_ref": "world.json#frame.place; geography.json#LOC-meadow-field, LOC-rabbit-hole-entrance",
+  "period": "1862 Oxfordshire enclosure-field boundary; working farmland beyond the hedge",
+  "structure": [
+    {"item": "last 30 m of open field crossed at a run, long uncut grass", "src": "ch001-p03"},
+    {"item": "hawthorn hedge 1.6 to 1.8 m tall, laid in the Midland style (angled pleached stems, hazel stakes and binders along the top), running the full width of the plan", "src": "ch001-p03", "note": "laying style inferred, culture_ref world.json#frame.place (hedge species designed)"},
+    {"item": "hedge planted on a low earth bank about 40 cm high with a shallow dry ditch on the field side", "inferred": true, "culture_ref": "geography.json#LOC-rabbit-hole-entrance.physical", "why": "Rabbits dig into hedge banks; the bank gives the burrow a readable mouth at camera height"},
+    {"item": "a weathered oak five-bar field gate hung on a post in the hedge 12 m from the burrow, closed", "inferred": true, "culture_ref": "world.json#frame.place", "why": "Period farmland landmark that gives the hedge line a fixed reference for the layout plan"},
+    {"item": "one hedgerow oak standard rising out of the hedge line", "inferred": true, "culture_ref": "geography.json#LOC-riverside-region.physical.flora", "why": "Typical Thames-valley hedgerow tree; a vertical landmark for the chase shots"}
+  ],
+  "materials": [
+    {"item": "hawthorn stems and small leaves in full summer green, haws still green", "src": "ch001-p03"},
+    {"item": "reddish-brown loam of the hedge bank, with a fan of pale dug-out spoil at the burrow mouth", "inferred": true, "culture_ref": "geography.json#LOC-rabbit-hole-entrance.visual_identifiers", "why": "A live burrow always shows spoil; it reads as 'real animal hole'"},
+    {"item": "long meadow grass, daisies, trailing grass around the burrow mouth", "src": "ch001-p03"}
+  ],
+  "details": [
+    {"item": "the rabbit burrow: a single oval hole about 22 cm wide by 18 cm high under the hedge roots, dark inside after 30 cm", "src": "ch001-p03", "note": "'a large rabbit-hole' = a large but ordinary animal burrow (geography.json LOC-rabbit-hole-entrance)"},
+    {"item": "a few tufts of white rabbit fur caught on the hawthorn by the hole", "inferred": true, "culture_ref": "world.json#wonderland_real_counterparts.cp-rabbit-hole", "why": "Readable physical trace of the real white rabbit"},
+    {"item": "gnarled hawthorn roots arching over the burrow mouth", "inferred": true, "culture_ref": "geography.json#LOC-rabbit-hole-entrance", "why": "Visual seed for the dream's tunnel and root-laced landing passage (SCN-shaft-landing-passage)"}
+  ],
+  "scale_notes": {
+    "rule": "True scale only. The burrow is animal-sized: Alice (135 cm) can crouch and peer in, never fit. Her 'going down after it' is the dream cut (SUP-001, SUP-008); no enlarged hole is ever built in the waking frame.",
+    "sources": ["ch001-p04", "cultivation.json#SUP-001", "cultivation.json#SUP-008"]
+  },
+  "negative": [
+    "no child-sized hole, no tunnel mouth, no door, no stonework or brick at the burrow",
+    "no wire fencing, no metal gate, no barbed wire",
+    "no trimmed garden hedge or topiary; this is a laid field hedge",
+    "no cartoon rabbit hole with a perfect round rim",
+    "no modern farm machinery, no plastic, no tarmac lane"
+  ],
+  "prompt_ready_en": "the edge of an English hay meadow in 1862 ending at a laid hawthorn hedge on a low earth bank, a weathered oak five-bar gate, an oak tree in the hedge line, and at the hedge foot an ordinary rabbit burrow about twenty centimetres wide with fresh spoil and tufts of white fur on the thorns"
+}

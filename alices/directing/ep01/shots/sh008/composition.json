@@ -1,0 +1,35 @@
+{
+  "shot_id": "sh008",
+  "scene_id": "SCN-riverbank",
+  "size": "wide",
+  "subject": {
+    "id": "CRE-001",
+    "in_frame_characters": ["CHAR-alice"],
+    "grid": "centre",
+    "anchor_xy": [0.46, 0.55],
+    "size_in_frame": "a real rabbit at true scale — about 0.10 of frame height at his closest pass, smaller as he goes; never larger than Alice's shoe in the same frame"
+  },
+  "second_subject": {
+    "id": "CHAR-alice",
+    "grid": "bottom_left",
+    "anchor_xy": [0.14, 0.80],
+    "note": "her shoes and hem only, filling the near left foreground; her body runs out of the left edge."
+  },
+  "headroom": "none for either — the lens is flat on the grass at 0.25 m, so the whole frame is ground and the sky is a thin band above 0.28 of frame height.",
+  "horizon_eyeline": "Grass horizon at 0.30 of frame height. The rabbit's eyeline is below it, at his own height, and he never raises it to the lens.",
+  "layers": {
+    "fg": "Alice's black ankle-strap shoes and the hem of her dress, sharp, occupying the lower left",
+    "mg": "the rabbit's crossing: he comes out of the long grass from the right in the middle distance, sweeps left through the near foreground within arm's reach of the shoes, then turns away from camera",
+    "bg": "the open meadow going away to the far hedge, heat haze, the field way at frame centre where he vanishes"
+  },
+  "gaze": {
+    "direction": "into_depth",
+    "lead_room": "left then centre",
+    "note": "the rabbit's own line of travel is his lead room — right to left across the near ground, then away up the centre of frame. He gives no look to camera at any point and never turns his head toward Alice. Alice's eyes track him from the left edge; her look crosses the frame the same way his body does."
+  },
+  "balance": "A static left-weighted frame (shoes, hem) crossed by a moving mid-ground mass. The composition never rebalances for him — the frame he crosses is the frame he found.",
+  "leading_lines": "The grass lie runs away toward the field way at centre and is his exit; Alice's shoe line points across the bottom of frame in the direction he enters from, so the two are already aimed at each other before he arrives.",
+  "eye_first": "The shoes bottom left, because they are the only sharp dark shape — and then the white streak that crosses in front of them. The eye should arrive at him late, which is what makes her half-doubt it.",
+  "safe_area_ok": true,
+  "constraint_binding": "One unbroken shot containing both her shoes and the whole crossing: the shoes stay in frame for every frame of the pass, and the rabbit's entry, closest approach and exit all happen inside one composition. No hero angle, no anticipatory framing — he is not centred, not given a clean background, and not separated in depth from the shoes; both planes stay equally readable."
+}

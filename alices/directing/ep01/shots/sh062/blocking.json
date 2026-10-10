@@ -1,0 +1,39 @@
+{
+  "shot_id": "sh062",
+  "group_id": "grp024",
+  "scene_no": "S07",
+  "scene_id": "SCN-long-hall",
+  "duration_s": 6.0,
+  "is_dialogue": false,
+  "group_position": "first shot of grp024 — Alice on her map start (glass_table, feet fixed on the flagstones beside the table); the map gives her no path, so her feet stay put while she grows.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "stand",
+      "start_pos": "feet fixed on the flagstones beside the glass table, growing straight up from that spot",
+      "space_fragment_en": "standing beside the glass table with her feet fixed on the flagstones, centred in frame, facing down as the tabletop sinks to her knee",
+      "facing": "down at the table as it drops past her — a look that starts as looking up and ends as looking down at the same object",
+      "path": [],
+      "beats": [
+        { "t": 1.2, "action": "she begins to rise; her feet stay where they are", "sync": "the beat before" },
+        { "t": 2.6, "action": "the glass tabletop drops past her shoulder", "sync": "GAUGE ONE, first mark" },
+        { "t": 3.8, "action": "past her hip", "sync": "GAUGE ONE, second mark" },
+        { "t": 5.0, "action": "comes to rest at her knee", "sync": "GAUGE ONE, landed" }
+      ],
+      "performance_beat": {
+        "objective": "keep track of what her own body is doing without losing her footing",
+        "goal": "keep track of what her body is doing",
+        "emotional_arc": "from expectant stillness to astonished, slightly unsteady wonder",
+        "arc_from": "expectant stillness",
+        "arc_to": "astonished unsteady wonder",
+        "trigger": { "beat": "the tabletop passes her shoulder", "t": 2.6 },
+        "no_early_reaction": ["the arms coming out", "the eyes dropping", "the knees flexing"],
+        "forbidden_early": ["the arms coming out", "the eyes dropping", "the knees flexing"],
+        "end_state": "feet planted, hands half out from her sides, eyes down on a tabletop that is level with her knee"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0006 (dream) — the delayed effect of the cake", "note": "Alice alone." }
+}

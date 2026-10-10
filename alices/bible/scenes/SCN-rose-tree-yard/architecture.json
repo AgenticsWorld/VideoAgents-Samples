@@ -1,0 +1,57 @@
+{
+  "scene_id": "SCN-rose-tree-yard",
+  "inherits": null,
+  "inherits_note": "Parent SCN-queens-garden is a container node with no card; this card sets the garden's shared language, and SCN-croquet-ground and SCN-gryphon-sunning-spot repeat its materials by value (see runs/p3-architecture-sb2/result.json shared_design.garden)",
+  "layer": "dream",
+  "int_ext": "EXT",
+  "form": "The entrance court of a formal walled garden: a small low door in a high honey-limestone wall opens onto gravel walks, geometric flower-beds and a stone fountain; beside the entrance stands one large white rose-tree in its own round bed, with a broad gravel walk passing it that the royal procession uses",
+  "stories": 0,
+  "source_chapter": "ch008",
+  "culture_ref": "geography.json#LOC-rose-tree-yard, LOC-walled-garden; world.json#wonderland_real_counterparts cp-garden; culture.json CUL-001, CUL-016",
+  "amendment": "BIB-0027 (user ruling 2026-09-22), applied p4-cr-architecture 2026-09-23",
+  "period": "Dream-image of an 1860s Oxford college fellows' garden or great-house pleasure garden (high stone walls, box-edged carpet bedding, gravel walks), its built ornament and fountain redrawn in the dream's licensed Art Nouveau (WR-010); gardeners' kit and costumes stay 1862",
+  "grows_from": {
+    "loc": null,
+    "waking_detail": "the rose beds and fountains of a grand private garden",
+    "design_growth": "The college garden glimpsed through a door in the wall, exactly as a child imagines it: brighter, tidier and more colourful than any real garden. The 1860s craze for carpet bedding (tight geometric beds of low bright plants) supplies the dream's card-suit patterns: the beds are laid out as hearts, diamonds, clubs and spades"
+  },
+  "dream_design_language": "Order pushed to absurdity: every bed a perfect card-suit outline edged with clipped box, gravel raked in lines, the one rose-tree the only 'wrong' thing, white where it should be red. This is 'the loveliest garden you ever saw', the image WR-010 says the dream's design grows toward, so it carries the Mucha language most fully. Colour: red, white and green dominate; stone is warm honey; pastel-and-gold in the built ornament",
+  "mucha_design_language": {"item": "Mucha / Art Nouveau garden, the fullest expression in the film: the garden wall topped by a carved stone frieze of flowing roses and vines; over the little door a carved stone halo roundel inset with a gold-and-pastel mosaic sunburst; a bronze-and-stone fountain whose shaft rises as twisting lily stems into a flower-cup jet, basin in a lobed organic outline; wrought-iron whiplash bed-edging hoops and a gilded wrought-iron arbour-arch of whiplash scrolls over the broad walk where it leaves the yard; mosaic roundels set flush in the gravel at walk crossings. Planting stays real 1860s carpet bedding in card-suit shapes", "inferred": true, "culture_ref": "world.json#WR-010 (source quote 'the loveliest garden you ever saw'); cultivation.json#XA-magic-08; SCN-croquet-ground and SCN-gryphon-sunning-spot repeat by value", "why": "Replaces the Gothic Revival fountain and period-only ornament; built physically"},
+  "structure": [
+    {"item": "the garden wall: honey-coloured limestone, about 4 m high, coped, running along one side of the plan; set low in it the small door at the end of the little passage, about 45 cm high, through which Alice enters", "src": "ch007-p105", "note": "'walked down the little passage: and then—she found herself at last in the beautiful garden'; wall material and door size inferred, culture_ref world.json cp-garden and SCN-little-door-passage"},
+    {"item": "a large rose-tree near the entrance: a big old bush rose about 2.5 m high and 3 m across, trained round in a circular bed 5 m across, covered in white blooms", "src": "ch008-p01"},
+    {"item": "a broad raked-gravel walk about 4 m wide passing the rose-tree bed, running from the far side of the garden toward the croquet-ground; the procession comes along it and halts opposite Alice", "src": "ch008-p13", "note": "walk width inferred to take the procession two by two"},
+    {"item": "carpet-bedding beds either side of the walk, cut in heart, diamond, club and spade outlines, each edged with clipped dwarf box", "src": "ch007-p105", "note": "'among the bright flower-beds'; suit shapes inferred, culture_ref culture.json CUL-016 (court as a deck of cards)"},
+    {"item": "a circular Art Nouveau fountain in the middle distance: a lobed round stone basin with a bronze central shaft of twisting lily stems rising to a flower-cup and a single jet", "src": "ch007-p105", "note": "'the cool fountains'; form inferred, culture_ref world.json#WR-010"},
+    {"item": "a very large terracotta flower-pot standing near the rose-tree, about 1.4 m high and 1.6 m across the rim, empty, big enough to hide three crouching gardeners", "src": "ch008-p27"}
+  ],
+  "materials": [
+    {"item": "honey-coloured oolitic limestone (Oxford building stone) for wall, coping, fountain and bed kerbs, lichened grey-gold", "inferred": true, "culture_ref": "world.json#frame.place; world.json#wonderland_real_counterparts cp-garden", "why": "The stone of the waking college gardens the dream grows from"},
+    {"item": "pale buff raked gravel on all walks", "inferred": true, "culture_ref": "world.json#wonderland_real_counterparts cp-garden", "why": "1860s formal garden standard"},
+    {"item": "clipped dwarf box edging, deep green", "inferred": true, "culture_ref": "world.json#wonderland_real_counterparts cp-garden", "why": "Gives the suit-shaped beds crisp outlines"},
+    {"item": "carpet-bedding plants in solid blocks: red pelargoniums, white alyssum, blue lobelia, grey-leaved cineraria", "src": "ch007-p105", "note": "'bright flower-beds'; varieties inferred as the actual 1860s carpet-bedding palette"},
+    {"item": "white roses with some blooms wet with fresh red paint, drips on leaves and gravel", "src": "ch008-p01"}
+  ],
+  "details": [
+    {"item": "the gardeners' kit at the rose bed: two open pots of red paint and a third knocked over, paint splashed on the gravel and box edging (props owned by 06-art/prop)", "src": "ch008-p01", "note": "'Don't go splashing paint over me like that!'"},
+    {"item": "a wooden wheelbarrow and a planting spade left by the bed, where the white tree was planted in by mistake: fresh-turned soil round its base", "src": "ch008-p10", "note": "'we put a white one in by mistake'; barrow and spade inferred"},
+    {"item": "wrought-iron hoops edging the rose bed in flowing whiplash loops, painted dark green with gilt tips", "inferred": true, "culture_ref": "world.json#wonderland_real_counterparts cp-garden; world.json#WR-010", "why": "Low bed-edging in the dream's line; a hint of the croquet hoops to come"},
+    {"item": "over the far wall, the tops of tall clipped yews and a cedar showing where the croquet-ground lies", "inferred": true, "culture_ref": "geography.json#LOC-croquet-lawn (adjacent)", "why": "Ties this plan to SCN-croquet-ground for continuity"}
+  ],
+  "scale_notes": {
+    "rule": "Arrival (ch007-p105): Alice is 'about a foot high' as she comes out of the little passage. Shoot the arrival with an oversized build of the nearest bed edge, box hedge (built 90 cm high instead of 25 cm) and pelargoniums at 3x scale, Alice at 1:1 behind them, so she is flower-height (apparent 30 cm) looking up into the garden. From the rose-tree onward (ch008-p01) Alice is at her usual height (135 cm) and the garden is 1:1; the gardeners and procession are human performers at normal height",
+    "feeling": "Arriving small at the long-wanted garden; then standing up to the Queen at full height ('they're only a pack of cards')",
+    "sources": ["cultivation.json#SUP-003", "cultivation.json#SUP-004", "ch007-p105", "ch008-p15"],
+    "inferred": true,
+    "why": "The text says she is a foot high on arrival and gives no size at the rose-tree, where she talks eye to eye with the gardeners and faces the Queen"
+  },
+  "negative": [
+    "no fantasy castle, no topiary animals, no giant flowers outside the arrival plates",
+    "no red roses growing naturally on the tree; the roses are white, red only where painted",
+    "no playing-card imagery painted on walls or signs; suit shapes only in the bed layouts",
+    "no glasshouse in frame, no Gothic tracery or pointed arches; no flat poster illustration, outline graphics or matte-painting finish",
+    "no lawn sprinklers, hosepipes, plastic pots or modern garden furniture",
+    "no English landscape-park openness; this is an enclosed walled garden"
+  ],
+  "prompt_ready_en": "the entrance of a formal walled garden designed in the Art Nouveau style of Alphonse Mucha and built as a real set, a high honey-coloured limestone wall crowned with a carved frieze of flowing roses and vines, a tiny low door under a carved stone halo roundel with a gold-and-pastel mosaic sunburst, raked buff gravel walks with inset mosaic roundels, bright carpet-bedding beds cut in heart, diamond, club and spade shapes edged with clipped box and green-and-gilt whiplash iron hoops, a round fountain with a bronze shaft of twisting lily stems and a single jet, a gilded wrought-iron arbour arch over the broad walk, beside the entrance a large old bush rose covered in white roses some freshly painted red with paint dripping onto the gravel, pots of red paint and a huge empty terracotta flower-pot nearby, photographed live-action"
+}

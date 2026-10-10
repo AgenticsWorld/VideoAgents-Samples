@@ -1,0 +1,39 @@
+{
+  "task_id": "p3-mount",
+  "agent": "04-creatures/mount",
+  "project": "alices",
+  "attempt": 1,
+  "status": "completed",
+  "completed_at": "2026-09-22",
+  "summary": "Audited the full source and the locked Bible for any on-screen ridden/driven creature and found none; wrote bible/creatures/mount.json with an empty mounts[] list plus a sourced zero-entries justification (no generator script, single direct file write).",
+  "inputs_read": [
+    "bible/creatures/creature.json (p3-creature, 4 CRE entries: white rabbit, puppy, flamingo, hedgehog)",
+    "bible/creatures/index.json",
+    "bible/characters/index.json (43 CHAR-* entries, incl. _meta on SUP-002 human-performer rule)",
+    "bible/h1_summary.md (locked H1 world frame + SUP-001..014 table)",
+    "runs/h1-ruling/ruling.json (5.1-5.6 user rulings)",
+    "bible/WRITE_RULES.md, bible/_index.json",
+    "story/structured_story.json + chNNN shards, bible/dictionary.json, bible/geography.json, bible/culture.json, bible/world.json (grepped for horse|ride|rode|riding|cart|carriage|mount|pony|steed|saddle)"
+  ],
+  "findings": {
+    "mounts_registered": 0,
+    "grep_hits_for_riding_draught_terms": 0,
+    "creature_registry_candidates_reviewed": ["CRE-001 White Rabbit (waking, runs/never carries)", "CRE-002 Puppy (plays, never carries)", "CRE-003 Flamingo (held as mallet, not ridden)", "CRE-004 Hedgehog (held as ball, not ridden)"],
+    "human_performer_figures_reviewed_for_riding": "Gryphon walks beside Alice to the shore, does not carry her; Mock Turtle is stationary; no CHAR-* figure carries another character on screen at any point (SUP-002 scope)",
+    "conclusion": "Alice's Adventures in Wonderland has no riding/draught scene in the source; zero mount entries is the correct, non-invented result. No requirement to request a new creature-registry entry from 04-creatures/creature, since no candidate mount exists to ground one."
+  },
+  "outputs": [
+    "bible/creatures/mount.json (mounts: [], with zero_entries_justification block citing sources)"
+  ],
+  "defects_filed": [],
+  "conflicts_with_locked_bible": "none",
+  "acceptance_self_check": {
+    "schema_required_fields": "n/a — mounts[] is empty, no per-mount required fields (creature_ref/ownership/performance.mode/source) to populate; empty-array output is itself the DoD-compliant result given the source audit",
+    "no_unknown_placeholder": "PASS — no UNKNOWN/TBD/empty placeholder fields written; zero-entries reasoning is fully sourced, not a placeholder",
+    "ascii_filenames": "PASS — mount.json, result.json",
+    "no_self_authored_creature": "PASS — did not invent or author any creature card; deferred to 04-creatures/creature scope entirely",
+    "no_bible_files_modified_other_than_own_output": "PASS — only bible/creatures/mount.json written"
+  },
+  "evaluation": "skipped — project setting: quality judge (00-orchestration/evaluation) = 0, all QA dimensions = 0",
+  "skills_activated": []
+}

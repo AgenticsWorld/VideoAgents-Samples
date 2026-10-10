@@ -1,0 +1,40 @@
+{
+  "shot_id": "sh048",
+  "group_id": "grp018",
+  "scene_no": "S06",
+  "scene_id": "SCN-long-hall",
+  "duration_s": 12.0,
+  "is_dialogue": true,
+  "group_position": "last shot of grp018 — Alice still on the map start/end ground (glass_table). She shrinks on this exact spot without moving her feet.",
+  "characters": [
+    {
+      "id": "CHAR-alice",
+      "label": "Alice",
+      "pose": "stand",
+      "start_pos": "at the glass table, feet planted on the flagstones; the empty bottle set down beside her",
+      "space_fragment_en": "standing at the glass table, centred in frame, facing the low curtain and shrinking without moving her feet",
+      "facing": "down the hall toward the low curtain; her eyeline travels from level to steeply raised as she goes down",
+      "path": [],
+      "beats": [
+        { "t": 0.8, "action": "sets the empty bottle down on the tabletop", "sync": "before the line" },
+        { "t": 2.0, "action": "a hand goes to her middle and she names what is happening", "sync": "LN-ep01-010 begins" },
+        { "t": 4.8, "action": "the shrinking starts", "sync": "LN-ep01-010 on 'telescope'" },
+        { "t": 7.5, "action": "the glass table rises past her into a tower; the oak doors soar into cliffs", "sync": "the scale change carries the rest of the shot" },
+        { "t": 11.0, "action": "the lamps swing far overhead; her chin is right up", "sync": "held to the cut" }
+      ],
+      "performance": {
+        "objective": "describe what is happening to her accurately, the way a well-taught child describes anything",
+        "goal": "describe accurately what is happening to her",
+        "emotional_arc": "from curious self-observation to something between exhilaration and vertigo, with no scream in it",
+        "arc_from": "curious self-observation",
+        "arc_to": "exhilarated vertigo",
+        "trigger": { "line_ref": "LN-ep01-010", "word": "telescope" },
+        "no_early_reaction": ["the knees bending", "the head tipping back", "the arms coming out for balance"],
+        "forbidden_early": ["the knees bending", "the head tipping back", "the arms coming out for balance"],
+        "end_state": "feet still exactly where they were, head tipped right back, both hands half raised, eyes travelling up the table"
+      }
+    }
+  ],
+  "creatures": [],
+  "presence_check": { "timeline_ok": true, "violations": [], "story_event": "ev0004 (dream) — she shrinks to ten inches", "note": "Alice alone." }
+}

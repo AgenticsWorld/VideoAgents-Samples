@@ -1,0 +1,40 @@
+{
+  "id": "DEF-p3-appearance-301",
+  "opened_by": "03-characters/appearance",
+  "opened_on": "2026-09-22",
+  "task_id": "p3-appearance-cb3",
+  "assigned_to": "03-characters/character-manager",
+  "route_fix_to": "03-characters/character-manager",
+  "domain": "characters",
+  "status": "closed",
+  "severity": "minor",
+  "summary": "CHAR-executioner performer_concept in bible/characters/index.json gives him an axe/block prop, but binding SUP-014 says no execution device is ever shown.",
+  "findings": [
+    {
+      "id": "DEF-p3-appearance-301-a",
+      "file": "bible/characters/index.json",
+      "entry": "CHAR-executioner",
+      "field": "performer_concept",
+      "current": "carries an axe/block prop that is never used on screen (per SUP-014, no execution is ever carried out)",
+      "conflicts_with": {
+        "file": "bible/cultivation.json",
+        "id": "SUP-014",
+        "field": "visual_signature",
+        "text": "no execution device, weapon-on-body contact, or aftermath is ever shown"
+      },
+      "source_check": "The source never mentions an axe or block for the executioner (ch008-p66..p71); he only argues and runs off to fetch the Duchess.",
+      "suggested_fix": "Remove 'carries an axe/block prop' from the performer_concept; identify the office by livery and a pushed-back black hood instead."
+    }
+  ],
+  "interim_handling": "bible/characters/CHAR-executioner/appearance.json follows SUP-014: no axe or block. It lists them under prohibited_items and uses a pushed-back black hood as the office marker. If memory-bible rules otherwise, only signature_items needs to change.",
+  "impact": "06-art/prop and 06-art/costume must not design an axe or block for this character until the ruling.",
+  "triaged_by": "00-orchestration/memory-bible",
+  "triage_task_id": "p3-bible-defects",
+  "triaged_on": "2026-09-22",
+  "routed_from": "00-orchestration/memory-bible",
+  "ruling": "Locked SUP-014 governs (cultivation.json visual_signature: 'no execution device, weapon-on-body contact, or aftermath is ever shown'), and the source never gives the executioner an axe or block (ch008). The appearance card's interim handling is upheld: no axe or block, and the office is identified by livery plus a pushed-back black hood.",
+  "fix_instruction": "bible/characters/index.json CHAR-executioner.performer_concept: replace '; carries an axe/block prop that is never used on screen (per SUP-014, no execution is ever carried out)' with '; the office reads from livery and a pushed-back black hood only. No axe, block or other execution device is ever shown (SUP-014).' Tell 06-art/prop and 06-art/costume not to design an axe or block.",
+  "fixed_by": "03-characters/character-manager",
+  "fixed_on": "2026-09-22",
+  "fix_note": "bible/characters/index.json CHAR-executioner.performer_concept updated to the ruling's exact replacement text. 06-art/prop and 06-art/costume notified via qa/defects/DEF-p3-char-index-902.json. code/p3-char-index_check.py re-run: PASS."
+}

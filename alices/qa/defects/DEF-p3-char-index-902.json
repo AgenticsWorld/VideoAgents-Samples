@@ -1,0 +1,26 @@
+{
+  "id": "DEF-p3-char-index-902",
+  "opened_by": "03-characters/character-manager",
+  "opened_on": "2026-09-22",
+  "task_id": "p3-char-defects",
+  "assigned_to": [
+    "06-art/prop",
+    "06-art/costume"
+  ],
+  "domain": "characters",
+  "status": "open",
+  "severity": "minor",
+  "summary": "Do not design an axe, block, or any execution device for CHAR-executioner.",
+  "findings": [
+    {
+      "id": "DEF-p3-char-index-902-a",
+      "character": "CHAR-executioner",
+      "issue": "bible/characters/index.json performer_concept previously gave him 'an axe/block prop that is never used on screen'. Fixed per DEF-p3-appearance-301: bible/cultivation.json SUP-014 visual_signature is binding ('no execution device, weapon-on-body contact, or aftermath is ever shown'), and the source (ch008) never gives him an axe or block.",
+      "requested_action": "The office now reads from crown livery plus a pushed-back black hood only (face always visible). Do not design or prop an axe, block, sword or noose for this character in any concept art, prop sheet, or costume sheet."
+    }
+  ],
+  "impact": "Prevents wasted concept-art/prop-design cycles on an item that is binding-locked out of the production.",
+  "opened_via": "Fix-out of DEF-p3-appearance-301, routed through 00-orchestration/memory-bible task p3-bible-defects.",
+  "due_gate": "G4",
+  "routing_note": "downstream-phase constraint; routed by orchestrator to be enforced in the owning phase work orders"
+}

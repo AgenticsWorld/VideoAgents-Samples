@@ -1,0 +1,21 @@
+{
+  "shot_id": "sh078",
+  "group_id": "grp030",
+  "scene_no": "S08",
+  "duration_s": 8.5,
+  "size": "close",
+  "movement": "static",
+  "direction": null,
+  "speed": "n/a (locked frame — the sustained set-up of the aria)",
+  "speed_curve": "none",
+  "rig": "locked_off",
+  "lens_mm": 50,
+  "camera_height_m": 0.6,
+  "angle": "level, camera at water level on the flooded flagstones",
+  "rack_focus": "none",
+  "start_frame": "The aria set-up established: water-level close from the south-east doors, her face at last held whole in frame and lit only by broken reflections off the water, the lamp row above the top edge and staying there, the hall behind her almost black.",
+  "end_frame": "The identical frame as she picks the doll-sized fan and gloves out of the water and fans herself slowly through the line — nothing in the shot moving but the fan and the water.",
+  "constraint_honoured": "'ONE sustained set-up for movement 3, broken exactly twice… Nothing moves but the fan and the water.'",
+  "movement_note": "Her head is reachable by a 0.60 m lens only because the pose is hunched and folded; the lens does not solve the geometry and does not try to. LN-ep01-021 (6.6 s) lands whole in 8.5 s.",
+  "capability_check": { "supported": true, "fallback_from": null }
+}

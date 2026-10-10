@@ -1,0 +1,10 @@
+{
+  "task_id": "p0-scan",
+  "skipped": true,
+  "reason": "quality judge=0, evaluation not dispatched",
+  "auto": {
+    "schema": "PASS",
+    "chapter_files_coverage_100": "PASS (12/12, 26453+92=26545 words)",
+    "batch_word_count_in_range": "PASS_WITH_EXCEPTION b01 5990<6000 by 10 words, orchestrator accepted (most balanced whole-chapter split)"
+  }
+}

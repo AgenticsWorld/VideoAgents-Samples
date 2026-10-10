@@ -1,0 +1,384 @@
+{
+  "schema_version": "whitebox_plan.v1",
+  "group_id": "grp022",
+  "scene_id": "SCN-long-hall",
+  "basis": "Alice runs glass_table -> lamp_row_mid -> glass_table at 0.254 m. She gets up off the flagstones, finds the little glass box sitting at the rim of the table's shadow at (5.55, -0.22), heaves the lid in sh057, then walks out into the hall on the sh058 abeam axis at exactly camera.json's 0.20 m/s (1.75 m of flagstone in 8.7 s), turns on her heel at t=18.9 and comes back to the box at 0.36 m/s - her stride lengthening on the phrase, as blocking sh059 says. Her Z is held at -0.26 for the whole walk so sh058/sh059 are a clean single-axis lateral pair, mirrored about the same standoff.",
+  "actors": [
+    {
+      "id": "CHAR-alice",
+      "kind": "person",
+      "size_m": [
+        0.0711,
+        0.254,
+        0.0559
+      ],
+      "keyframes": [
+        {
+          "t": 0.0,
+          "position": [
+            5.72,
+            0.0,
+            -0.27
+          ],
+          "pose": "stand",
+          "yaw": 2.5214,
+          "head_pitch": 0.2
+        },
+        {
+          "t": 0.6,
+          "position": [
+            5.72,
+            0.0,
+            -0.27
+          ],
+          "pose": "stand",
+          "yaw": 2.5214,
+          "head_pitch": 0.2
+        },
+        {
+          "t": 1.8,
+          "position": [
+            5.72,
+            0.0,
+            -0.27
+          ],
+          "pose": "stand",
+          "yaw": 2.5214,
+          "head_yaw": -0.7
+        },
+        {
+          "t": 3.0,
+          "position": [
+            5.72,
+            0.0,
+            -0.27
+          ],
+          "pose": "stand",
+          "yaw": -1.2847,
+          "head_pitch": 0.3
+        },
+        {
+          "t": 4.0,
+          "position": [
+            5.68,
+            0.0,
+            -0.26
+          ],
+          "pose": "stand",
+          "yaw": -1.273,
+          "bend": 0.4,
+          "head_pitch": 0.4
+        },
+        {
+          "t": 5.0,
+          "position": [
+            5.68,
+            0.0,
+            -0.26
+          ],
+          "pose": "stand",
+          "yaw": -1.273,
+          "bend": 0.55,
+          "head_pitch": 0.4
+        },
+        {
+          "t": 6.2,
+          "position": [
+            5.68,
+            0.0,
+            -0.26
+          ],
+          "pose": "stand",
+          "yaw": -1.273,
+          "bend": 0.45,
+          "head_pitch": 0.4
+        },
+        {
+          "t": 7.0,
+          "position": [
+            5.68,
+            0.0,
+            -0.26
+          ],
+          "pose": "stand",
+          "yaw": -1.273,
+          "bend": 0.2,
+          "head_pitch": 0.3
+        },
+        {
+          "t": 7.8,
+          "position": [
+            5.75,
+            0.0,
+            -0.26
+          ],
+          "pose": "stand",
+          "yaw": -1.5708
+        },
+        {
+          "t": 10.0,
+          "position": [
+            5.31,
+            0.0,
+            -0.26
+          ],
+          "pose": "stand",
+          "yaw": -1.5708
+        },
+        {
+          "t": 14.2,
+          "position": [
+            4.47,
+            0.0,
+            -0.26
+          ],
+          "pose": "stand",
+          "yaw": -1.5708
+        },
+        {
+          "t": 16.5,
+          "position": [
+            4.0,
+            0.0,
+            -0.26
+          ],
+          "pose": "stand",
+          "yaw": -1.5708
+        },
+        {
+          "t": 17.1,
+          "position": [
+            3.9,
+            0.0,
+            -0.26
+          ],
+          "pose": "stand",
+          "yaw": -1.5708
+        },
+        {
+          "t": 18.5,
+          "position": [
+            3.9,
+            0.0,
+            -0.26
+          ],
+          "pose": "stand",
+          "yaw": -1.5708
+        },
+        {
+          "t": 18.9,
+          "position": [
+            3.9,
+            0.0,
+            -0.26
+          ],
+          "pose": "stand",
+          "yaw": 1.5708
+        },
+        {
+          "t": 21.5,
+          "position": [
+            4.6,
+            0.0,
+            -0.26
+          ],
+          "pose": "stand",
+          "yaw": 1.5708
+        },
+        {
+          "t": 23.9,
+          "position": [
+            5.68,
+            0.0,
+            -0.26
+          ],
+          "pose": "stand",
+          "yaw": 1.5708
+        },
+        {
+          "t": 25.0,
+          "position": [
+            5.68,
+            0.0,
+            -0.26
+          ],
+          "pose": "stand",
+          "yaw": 1.5708
+        }
+      ]
+    }
+  ],
+  "props": [
+    {
+      "id": "PROP-glass-box",
+      "shape": "box",
+      "size_m": [
+        0.09,
+        0.05,
+        0.07
+      ],
+      "position": [
+        5.55,
+        0.025,
+        -0.22
+      ],
+      "yaw": -1.273
+    }
+  ],
+  "cameras": [
+    {
+      "shot_id": "sh056",
+      "start": 0,
+      "duration_s": 4.0,
+      "movement": "static",
+      "keyframes": [
+        {
+          "t": 0.0,
+          "position": [
+            6.267,
+            0.2,
+            -0.716
+          ],
+          "target": [
+            5.584,
+            0.2,
+            -0.437
+          ],
+          "fov": 46.3972
+        },
+        {
+          "t": 4.0,
+          "position": [
+            6.267,
+            0.2,
+            -0.716
+          ],
+          "target": [
+            5.584,
+            0.2,
+            -0.437
+          ],
+          "fov": 46.3972
+        }
+      ]
+    },
+    {
+      "shot_id": "sh057",
+      "start": 4.0,
+      "duration_s": 3.0,
+      "movement": "static",
+      "keyframes": [
+        {
+          "t": 0.0,
+          "position": [
+            5.74,
+            0.08,
+            -0.375
+          ],
+          "target": [
+            5.55,
+            0.06,
+            -0.22
+          ],
+          "fov": 26.9915
+        },
+        {
+          "t": 3.0,
+          "position": [
+            5.74,
+            0.08,
+            -0.375
+          ],
+          "target": [
+            5.55,
+            0.06,
+            -0.22
+          ],
+          "fov": 26.9915
+        }
+      ]
+    },
+    {
+      "shot_id": "sh058",
+      "start": 7.0,
+      "duration_s": 11.5,
+      "movement": "track_lateral",
+      "keyframes": [
+        {
+          "t": 0.0,
+          "position": [
+            5.68,
+            0.2,
+            -0.877
+          ],
+          "target": [
+            5.529,
+            0.185,
+            -0.26
+          ],
+          "fov": 46.3972
+        },
+        {
+          "t": 11.5,
+          "position": [
+            3.9,
+            0.2,
+            -0.877
+          ],
+          "target": [
+            3.749,
+            0.185,
+            -0.26
+          ],
+          "fov": 46.3972
+        }
+      ]
+    },
+    {
+      "shot_id": "sh059",
+      "start": 18.5,
+      "duration_s": 6.5,
+      "movement": "track_lateral",
+      "keyframes": [
+        {
+          "t": 0.0,
+          "position": [
+            3.9,
+            0.2,
+            -0.877
+          ],
+          "target": [
+            4.051,
+            0.185,
+            -0.26
+          ],
+          "fov": 46.3972
+        },
+        {
+          "t": 6.5,
+          "position": [
+            5.68,
+            0.2,
+            -0.877
+          ],
+          "target": [
+            5.831,
+            0.185,
+            -0.26
+          ],
+          "fov": 46.3972
+        }
+      ]
+    }
+  ],
+  "continuity": {
+    "actors": "cut",
+    "camera": "cut"
+  },
+  "warnings": [
+    "sh058 and sh059 share one abeam axis and one 0.617 m standoff: the rig looks +Z, so screen-right is -X. She travels -X (screen-right) holding the left third in sh058 and +X (screen-left) holding the right third in sh059 - the exact reversal camera.json specifies, with no change of camera side.",
+    "sh057's lens is set at 0.08 m rather than camera.json's 0.15 m so that 'level, square-on to the cake' is true of a 0.04 m cake sitting in a 0.05 m box on the flagstones.",
+    "PROP-glass-box is staged at the rim of the tabletop's footprint (0.25 m from the table centre) so it reads as 'under the glass table in the lamp shadow' and sits screen-right of her on the sh056 axis.",
+    "grp021 -> grp022 crosses the S06/S07 scene-number boundary, so actors and camera are cut; her position, pose and 0.254 m height carry over unchanged by authoring, not by inheritance."
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "task_id": "p3-personality-pb2",
+  "agent": "03-characters/personality",
+  "attempt": 1,
+  "status": "done",
+  "finished_at": "2026-09-22",
+  "outputs": [
+    "bible/characters/CHAR-mouse/personality.json",
+    "bible/characters/CHAR-cook/personality.json",
+    "bible/characters/CHAR-bill-the-lizard/personality.json",
+    "bible/characters/CHAR-knave-of-hearts/personality.json",
+    "bible/characters/CHAR-gryphon/personality.json",
+    "bible/characters/CHAR-mock-turtle/personality.json",
+    "bible/characters/CHAR-caterpillar/personality.json",
+    "bible/characters/CHAR-pigeon/personality.json",
+    "bible/characters/CHAR-dodo/personality.json"
+  ],
+  "helper_scripts": ["code/p3-personality-pb2_check.py"],
+  "inputs_read": [
+    "bible/h1_summary.md", "bible/characters/index.json", "bible/_index.json", "bible/WRITE_RULES.md",
+    "bible/cultivation.json (SUP-002/003/004/010/011/014)", "bible/culture.json (CUL-023, CUL-044)",
+    "bible/politics.json (FAC-*, OFF-007, OFF-008)", "bible/world.json wonderland_real_counterparts",
+    "runs/h1-ruling/ruling.json (via h1_summary)", "story/structured_story/ch002-ch012.json", "story/events.json"
+  ],
+  "shared_conventions": {
+    "schema": "SOUL fields (character_id, traits[].evidence, motivation.core/shifts, habits, taboos, facade) plus temperament, motivation.fear/wants_from_alice, decision_pattern, waking_life_embodiment, performance_baseline; optional consistency_notes.",
+    "evidence_format": "chapter = chNNN; ref = structured_story paragraph ID chNNN-pNN; event = ev*; 'quote' fields are verbatim (machine-checked), 'note' fields paraphrase.",
+    "facade": "facade.applies=false + reason where the source has no surface/true split (no nulls).",
+    "waking_life_embodiment": "Every card maps the dream figure to an adult/authority trait from Alice's waking 1862 life (realistic coming-of-age reading). All of these are inferred:true with a reason, grounded in world.json wonderland_real_counterparts and the clergyman-scholar household (ruling 5.6 A). Bill and the Knave are mapped as objects of authority (the underling and the accused) rather than as authorities.",
+    "SUP-002": "Physical habits for animal-coding are marked inferred:true and follow each index performer_concept; all figures are human performers.",
+    "boundary": "No speech-style content (catchphrases, diction) — that belongs to 03-characters/dialogue-style; no relationships — 03-characters/relationship; no voice — voiceprint."
+  },
+  "key_decisions": [
+    "Knave of Hearts: guilt deliberately left unresolved (trial interrupted, ev0052 broken chain); facade entry forbids downstream from adding any hint of guilt or innocence.",
+    "Gryphon: facade = obedient servant / cynic who knows threats are empty (ch009-p46), anchoring SUP-014; blocking must hold the deadpan until the Queen is out of frame.",
+    "Caterpillar: facade = hostile examiner / grudging mentor, reveal within ch005.",
+    "Violence limits written as taboos consistent with SUP-014: Pigeon's attack causes no injury; Cook never targets Alice; Knave never struggles."
+  ],
+  "open_notes_for_downstream": [
+    {
+      "character": "CHAR-cook",
+      "issue": "Source has her thrown crockery hitting the Duchess and possibly the baby (ch006-p29). Locked SUP-011/SUP-014 ban shown harm in comparable beats but do not name this scene.",
+      "owner": "01-story/screenplay + 07-directing/blocking; arbiter 11-qa/logic-qa",
+      "defect_filed": false,
+      "reason": "Not a conflict with the locked bible (no bible entry contradicts it); staging decision, recorded in the card's consistency_notes."
+    },
+    {
+      "character": "CHAR-bill-the-lizard",
+      "issue": "The Queen throws an inkstand at Bill (ch012-p55); same staging question as the Cook item.",
+      "owner": "01-story/screenplay + 07-directing/blocking",
+      "defect_filed": false,
+      "reason": "Staging decision, not a bible conflict."
+    }
+  ],
+  "conflicts": [],
+  "defects_filed": [],
+  "checks": {
+    "script": "python3 code/p3-personality-pb2_check.py",
+    "result": "PASS",
+    "covered": ["character_id in index.json", "traits/motivation/taboos/habits non-empty", "every trait has chapter evidence", "all chNNN-pNN refs and ev* IDs resolve", "quote fields verbatim", "no UNKNOWN/TBD/empty/null placeholders", "inferred entries carry reason", "ASCII paths"]
+  },
+  "skills": "No auto-activated skills are ticked for this workstation; none applied.",
+  "evaluation": "skipped (quality judge = 0)",
+  "qa": "skipped (all QA dimensions = 0)"
+}

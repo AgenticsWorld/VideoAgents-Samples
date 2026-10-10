@@ -1,0 +1,94 @@
+{
+  "task_id": "p4-cr-creature",
+  "agent": "04-creatures/creature",
+  "status": "completed",
+  "attempt": 1,
+  "type": "change_request",
+  "change_id": "BIB-0027",
+  "completed_at": "2026-09-23",
+  "authority_read": [
+    "bible/changelog.md BIB-0027",
+    "bible/cultivation.json _meta.amendments, XA-magic-02, XA-magic-08, SUP-002, SUP-010",
+    "bible/world.json WR-001, WR-002, WR-009, WR-010",
+    "bible/h1_summary.md §6",
+    "runs/p4-cr-cgi-mucha-bible/result.json (stale_files, stale_notes)",
+    "qa/defects/DEF-p4-style-001.json"
+  ],
+  "summary": "Applied BIB-0027 (user ruling 2026-09-22: talking characters may be CGI animals for a realistic-fantasy film; brief.md corrected to 'Realistic fantasy film adapted from a fairy tale') to bible/creatures/creature.json and bible/creatures/index.json only. Kept CRE-001..004 (the real, silent, on-screen animals) and CRE-001's distinct_from link to CHAR-white-rabbit unchanged, per the rule that the waking-frame rabbit is unaffected. Updated only the fields BIB-0027 made stale, and registered new CGI rendering-spec entries for the two fantastical dream creatures that have no surviving human-performer alternative (Gryphon, Mock Turtle) plus one pending_H2 proposal for the pig-baby end-state.",
+  "changed_files": [
+    {
+      "file": "bible/creatures/creature.json",
+      "changes": [
+        "_meta.scope — rewritten to explain that talking dream-animals/Gryphon/Mock Turtle are now photoreal CGI per BIB-0027, but ownership (CHAR-* vs CRE-*) is unchanged; this file now also holds CGI rendering-spec entries cross-linked via 'linked_char'",
+        "_meta.category_note — rewritten to add the 'cgi_fantastical_creature' category alongside 'ordinary_animal'; corrected the stale 'realistic, non-fantasy' misquote to brief.md's actual 'Realistic fantasy film adapted from a fairy tale' wording",
+        "_meta.zero_entries_considered_and_excluded[Magpie/Canary].reason — appended a one-line note that these CHAR-* figures are now CGI-rendered too, ownership unchanged",
+        "_meta.amendments — new array recording the BIB-0027 change to this file (change_id, authority, entries_changed, entries_unchanged_by_design)",
+        "CRE-002 (The Puppy).screen_treatment — rewritten: proposes photoreal CGI as the primary pending_H2 design, keeps the real-trained-dog-actor design as the confirmed fallback; added rendering_status field",
+        "CRE-003 (The Flamingo).screen_treatment — rewritten: dropped the stale 'no-CGI-animal stance (SUP-002)' citation, proposes photoreal CGI as primary pending_H2 design with real/trained-animal as confirmed fallback; added rendering_status field",
+        "CRE-004 (The Hedgehog).screen_treatment — rewritten: dropped the stale 'no-CGI-animal, human-performers-only' citation, proposes photoreal CGI as primary pending_H2 design with real/trained-animal as confirmed fallback; added rendering_status field",
+        "CRE-005 (The Gryphon) — new entry: CGI anatomy/rendering-spec card (classical griffin), linked_char CHAR-gryphon, category cgi_fantastical_creature, rendering.status confirmed_by_BIB-0027 (not pending_H2)",
+        "CRE-006 (The Mock Turtle) — new entry: CGI anatomy/rendering-spec card (calf-headed, hooved, turtle-flippered creature), linked_char CHAR-mock-turtle, category cgi_fantastical_creature, rendering.status confirmed_by_BIB-0027 (not pending_H2)",
+        "CRE-007 (The Pig, Duchess's-baby pig end-state) — new entry, pending_H2: proposed CGI-compositing rendering spec for SUP-006's closing beat, linked_char CHAR-duchess-baby, category ordinary_animal, rendering.status pending_H2"
+      ],
+      "unchanged_by_design": [
+        "CRE-001 (The White Rabbit, waking-world) — left entirely untouched per the task rule 'the real, mute, unclothed rabbit unchanged'; its distinct_from link to CHAR-white-rabbit is preserved",
+        "_meta.zero_entries_considered_and_excluded — the Dinah / farm-animal / goldfish-cart-horse-bats-oyster exclusions are untouched (BIB-0027 changes render technique, not whether an animal appears on screen)",
+        "CRE-001..004 forms[].appearance, habits, behaviour, source citations — untouched except the screen_treatment field noted above"
+      ]
+    },
+    {
+      "file": "bible/creatures/index.json",
+      "changes": [
+        "_meta.scope — rewritten with the same ownership-vs-render-technique clarification as creature.json, and a pointer to creature.json _meta.amendments",
+        "Registered CRE-005 (The Gryphon): realistic:false, owner_refs [CHAR-gryphon], scenes [SCN-gryphon-sunning-spot, SCN-mock-turtle-ledge, SCN-courtroom]",
+        "Registered CRE-006 (The Mock Turtle): realistic:false, owner_refs [CHAR-mock-turtle], scenes [SCN-mock-turtle-ledge]",
+        "Registered CRE-007 (The Pig, pending_H2): realistic:true, owner_refs [CHAR-duchess-baby], scenes [SCN-cheshire-cat-path]"
+      ],
+      "unchanged_by_design": [
+        "CRE-001..004 index entries — untouched",
+        "entry_schema — untouched (owner_refs/scenes fields already existed in the schema, just were empty arrays for CRE-001..004 since no CHAR owns them)"
+      ]
+    },
+    {
+      "file": "code/p3-creature_check.py",
+      "changes": [
+        "Extended the existing machine-check helper (not a generator script) to also resolve linked_char/owner_refs against bible/characters/index.json (+ bible/_index.json forward_refs_pending) and scenes against bible/scenes/index.json, since the new CRE-005/006/007 entries introduce those cross-references for the first time"
+      ]
+    }
+  ],
+  "pending_H2_flags": [
+    {
+      "topic": "CGI treatment of the non-speaking dream animals",
+      "entries": ["CRE-002 (Puppy)", "CRE-003 (Flamingo)", "CRE-004 (Hedgehog)", "CRE-007 (Pig end-state)"],
+      "design_proposed": "Photoreal CGI integration for all four, consistent with the register BIB-0027 confirmed for the talking dream-animals, Gryphon and Mock Turtle; each entry keeps its pre-BIB-0027 real/trained-animal design as the confirmed fallback if H2 does not ratify the extension. Not blocking — entries are usable as-is by 06-art/prop and 08-video-gen either way, since both branches are fully specified."
+    },
+    {
+      "topic": "Exact Frog-/Fish-Footman anatomy",
+      "note": "Out of this task's file scope (CHAR-frog-footman/CHAR-fish-footman appearance.json belong to 03-characters/appearance, not bible/creatures/); not touched here."
+    }
+  ],
+  "interaction_with_prior_defect": {
+    "defect": "qa/defects/DEF-p3-char-index-905.json",
+    "note": "That defect was closed 2026-09-22 (task p3-fix-905) with 'no creature entry, human-performer-only, no swap', reasoned entirely from the pre-BIB-0027 SUP-002/SUP-006 reading. BIB-0027 changes that landscape for non-speaking dream animals including the pig-baby end-state (h1_summary.md §6 table row explicitly lists 'the pig-baby' among the animals the ruling extends to, flagged for H2). CRE-007 here proposes a pending_H2 design that supersedes that closure; this is recorded as a note on CRE-007 (both creature.json and index.json) rather than a new qa/defects/ ticket, since it is an anticipated consequence of BIB-0027 (see runs/p4-cr-cgi-mucha-bible/result.json stale_notes 'the pig end-state is now flagged for H2'), not a newly discovered conflict. CHAR-duchess-baby's own performer_concept (bible/characters/index.json, listed stale by BIB-0027) is left for 03-characters/character-manager to reconcile — not edited here, out of file scope."
+  },
+  "files_not_touched": [
+    "bible/characters/index.json and all bible/characters/CHAR-*/ detail files (owned by 03-characters/character-manager)",
+    "bible/creatures/mount.json (owned by 04-creatures/mount)",
+    "bible/costumes.json, bible/style.json, bible/color_script.json (owned by 06-art/*)",
+    "bible/scenes/*/architecture.json, environment.json, lighting.json (owned by 05-scenes/*)",
+    "story/episode_plan.json, story/episodes/ep01/* (owned by 01-story/*)"
+  ],
+  "checks": {
+    "script": "code/p3-creature_check.py",
+    "result": "PASS: 7 CRE entries, all required fields present, IDs unique, cross-refs resolve (dictionary_ref/term_ref into dictionary.json, habitat_refs into geography.json, linked_char/owner_refs into characters/index.json or _index.json forward_refs_pending, scenes into scenes/index.json), no UNKNOWN/TBD/N/A placeholders."
+  },
+  "acceptance_self_check": {
+    "scope_discipline": "PASS — only bible/creatures/creature.json and bible/creatures/index.json edited (plus the code/ helper check script, which is explicitly allowed); no dialogue text or story events changed",
+    "cre_001_004_preserved": "PASS — CRE-001 untouched (waking rabbit unaffected); CRE-002/003/004 IDs, forms, habits, behaviour and source citations preserved, only screen_treatment updated plus a new rendering_status field",
+    "distinct_from_links_kept": "PASS — CRE-001.distinct_from (CHAR-white-rabbit) preserved verbatim",
+    "stale_wording_only": "PASS — edits targeted 'no CGI animal' / 'human-performers-only' citations and the 'realistic, non-fantasy' misquote; unaffected prose (appearance forms, habits, source citations) left as-is",
+    "conflicts": "None found; CHAR-gryphon/CHAR-mock-turtle/CHAR-duchess-baby all resolve in bible/characters/index.json, all referenced SCN-*/LOC-* ids exist. No qa/defects/ ticket needed."
+  },
+  "evaluation_and_qa": "Quality judge and all QA dimensions disabled for this project; no evaluation/QA scoring performed.",
+  "run_record_dir": "runs/p4-cr-creature/"
+}

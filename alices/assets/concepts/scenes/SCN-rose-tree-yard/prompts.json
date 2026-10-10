@@ -1,0 +1,45 @@
+{
+  "scene_id": "SCN-rose-tree-yard",
+  "task_id": "p4-env-concept-sb3",
+  "generated": "2026-09-23",
+  "tool": "python3 modules/genmedia.py image",
+  "provider": {
+    "image": "volcengine",
+    "model": "doubao-seedream-5-0-pro-260628"
+  },
+  "items": [
+    {
+      "output": "layout_top.png",
+      "size": "2560x1440",
+      "n": 1,
+      "seed": null,
+      "refs": [],
+      "prompt": "Orthographic top-down architectural plan photograph of a real built film set, taken straight down from high above: camera axis exactly perpendicular to the ground; no wall face, no elevation, no side of any building, wall, hedge or tree trunk is visible; only the ground plane, the top edges of walls and hedges and the tops of trees, furniture and objects are seen. The top of the image is north. Plan of a 40 by 22 metre entrance court of a formal walled garden, an Art Nouveau dream garden after Alphonse Mucha, built as a real set. The bottom (south) edge of the image is the high honey-coloured limestone garden wall, fully present along the whole bottom edge, seen only as its thick coped top edge; the garden ends at that wall line. About 30 percent from the left, a very small gap in the bottom wall line marks the tiny low door. A broad raked buff-gravel walk about 4 metres wide runs straight across the whole image from the left edge to the right edge at mid-height; at its right end a gilded wrought-iron arbour arch of whiplash scrolls spans the walk, seen from above as a thin curving gold frame, with clipped dark yews beyond it. Just above-right of the tiny door, below the broad walk, a round bed about 5 metres across holds a large old bush rose seen from above as a round crown covered in white roses, some blotched with wet red paint; its bed is edged with low green-and-gilt iron hoops; beside it two small open paint-pots and one knocked over, red paint splashed on the gravel. To the left of the rose bed a wooden wheelbarrow and spade on fresh-turned soil. To the right of the rose bed a huge empty round terracotta flower-pot, seen from above as a thick rim around a dark empty interior. Carpet-bedding beds edged with clipped box are cut in card-suit shapes: a heart-shaped bed at the upper left, a diamond-shaped bed at the upper middle, a club-shaped bed at the upper right, and a spade-shaped bed at the lower right below the walk, filled with solid blocks of red pelargonium, white alyssum and blue lobelia. Above the walk, about 60 percent across, a round Art Nouveau fountain with a lobed stone basin and a bronze lily-stem centre; a narrow gravel cross walk runs down from it to the broad walk, where a round gold-and-pastel mosaic roundel is set flush in the gravel at the crossing. Late-afternoon sun from the west (left), soft shadows toward the east. The set is empty: no people, no animals, no creatures, no text, no labels, no arrows, no symbols, no map legend. A clean, sharp, evenly exposed photographic plan in which every feature named above is clearly readable in its stated position. Photorealistic live-action fantasy film rooted in England in 1862, shot on 35mm film with anamorphic lenses, 16:9 widescreen. Real sets, real locations and real costumed actors in 1862 dress. Wonderland spaces are real built sets and set extensions in an Alphonse Mucha-inspired Art Nouveau design: flowing organic lines, floral and vine ornament, circular halo roundels, mosaic and stained glass, aged pastel-and-gold surfaces with patina and moss; the waking 1862 meadow stays plain period realism. Talking animals and fantastical creatures are photoreal CGI animals with naturalistic anatomy, real fur, feathers, skin and scales, lit by the same light and grounded with real contact shadows. Natural and practical light: sunlight, candlelight and oil lamps, soft haze with volumetric light shafts and soft colour through stained glass. Restrained palette of verdigris teal, slate grey, dusty rose, soft sage and lilac pastels and tarnished-gold accents, warmed by amber sun and candle glow. Fine film grain, gentle halation, soft depth of field, grounded and quietly melancholy.",
+      "negative": "cartoon, anime, animation, illustration, flat poster illustration, outline graphics, concept-art painting, digital painting, digital matte painting look, stylised 3D animation render, video game graphics, Pixar style, Disney animation style, cartoon animal face, big cartoon eyes, plush toy, human in animal costume, full-head animal mask, mascot costume, full-body fur suit, plastic skin, airbrushed, oversaturated, HDR, neon colors, candy pastel colors, horror monster, glowing magic, magic sparkles, fairy dust, energy beams, electric light, light bulb, neon sign, modern clothing, zipper, plastic, sunglasses, wristwatch, eyeglasses with modern frames, car, bicycle, power lines, tarmac road, Art Deco, steampunk gears, poster lettering, decorative text, gore, blood, wound, severed head, decapitation, executioner's axe, chopping block, guillotine, noose, gallows, blade at neck, execution, corpse, skeleton, horror, animal being struck, sexualized, watermark, logo, subtitles, caption, UI overlay, deformed hands, extra fingers, distorted face, people, person, human figure, crowd, animal, bird, cat, creature, letters, text labels, arrows, map legend, compass rose, grid lines, perspective view, horizon, door lying on the floor, window lying on the floor, door bar on the floor, wall elements projected onto the floor, elevation view of a door or window, missing wall, open side, dollhouse cutaway, tilted camera, oblique aerial view",
+      "prompt_parts": {
+        "camera": "runs/p4-env-concept-sb3/prompts/cam.txt",
+        "body": "runs/p4-env-concept-sb3/prompts/body_SCN-rose-tree-yard.txt",
+        "closing": "runs/p4-env-concept-sb3/prompts/end.txt",
+        "style": "bible/style.json#style_fragment_ui (verbatim)"
+      },
+      "negative_source": "bible/style.json#negative_prompt_en (verbatim) + plan-view negatives (SOUL duty 3 rule 4 + no people/animals/labels); dream scene, so the waking addon is not used",
+      "result": "generated first attempt; no provider error"
+    }
+  ],
+  "user_refs": [
+    {
+      "path": "refs/style/alice.jpeg",
+      "mode": "read as look reference, not injected via --ref",
+      "why": "It is an oblique interior perspective with a creature. Injecting it into a nadir plan view risks importing its camera angle, its interior and its creature (known seedream plan-view elevation prior). Its look reaches the image through style_fragment_ui, which was written from it (style.json user_refs)."
+    }
+  ],
+  "bible_inputs": [
+    "bible/scenes/index.json#SCN-rose-tree-yard",
+    "bible/scenes/SCN-rose-tree-yard/architecture.json",
+    "bible/scenes/SCN-rose-tree-yard/lighting.json",
+    "bible/scenes/SCN-rose-tree-yard/environment.json",
+    "bible/style.json"
+  ],
+  "bible_comparison_en": "architecture: south wall with tiny door, white rose-tree in round bed with iron hoops and red paint, paint-pots, barrow/spade, huge flower-pot, four card-suit beds, lily fountain, mosaic roundel, gilded arbour arch all present. Camera is oblique, not nadir (SOUL duty 3 fails). lighting LGT-rose-tree-yard-01 OK. style OK.",
+  "auto_retries_used": 0
+}

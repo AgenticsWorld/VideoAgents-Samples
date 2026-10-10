@@ -1,0 +1,174 @@
+{
+  "schema_version": "whitebox_plan.v1",
+  "group_id": "grp010",
+  "scene_id": "SCN-falling-dream",
+  "basis": "One unbroken 9 s continuation of the sh024 set-up: Alice still seated in mid-air on the shaft_centre anchor, still drifting at about 0.09 m/s (y 2.06 -> 1.25), eyes closing at t=1.2, head tipping to one side at t=2.4 and nothing else moving. The rig holds its sh024 offset and falls with her; the last empty pegs clear the top of frame around t=6.5 and the two heavy thumps at t=8.4 land over black, so the shot ends with no new staging.",
+  "actors": [
+    {
+      "id": "CHAR-alice",
+      "kind": "person",
+      "size_m": [
+        0.378,
+        1.35,
+        0.297
+      ],
+      "keyframes": [
+        {
+          "t": 0.0,
+          "position": [
+            0.08,
+            2.06,
+            0.02
+          ],
+          "pose": "sit",
+          "yaw": 2.716,
+          "head_yaw": 0.0
+        },
+        {
+          "t": 1.2,
+          "position": [
+            0.07,
+            1.95,
+            0.02
+          ],
+          "pose": "sit",
+          "yaw": 2.716,
+          "head_yaw": 0.1
+        },
+        {
+          "t": 2.4,
+          "position": [
+            0.06,
+            1.84,
+            0.01
+          ],
+          "pose": "sit",
+          "yaw": 2.716,
+          "head_yaw": 0.4
+        },
+        {
+          "t": 6.5,
+          "position": [
+            0.04,
+            1.47,
+            0.01
+          ],
+          "pose": "sit",
+          "yaw": 2.716,
+          "head_yaw": 0.4
+        },
+        {
+          "t": 8.4,
+          "position": [
+            0.02,
+            1.3,
+            0.0
+          ],
+          "pose": "sit",
+          "yaw": 2.716,
+          "head_yaw": 0.4
+        },
+        {
+          "t": 9.0,
+          "position": [
+            0.02,
+            1.25,
+            0.0
+          ],
+          "pose": "sit",
+          "yaw": 2.716,
+          "head_yaw": 0.4
+        }
+      ]
+    }
+  ],
+  "cameras": [
+    {
+      "shot_id": "sh025",
+      "start": 0,
+      "duration_s": 9.0,
+      "movement": "static",
+      "keyframes": [
+        {
+          "t": 0.0,
+          "position": [
+            0.823,
+            3.039,
+            0.355
+          ],
+          "target": [
+            0.08,
+            3.039,
+            0.02
+          ],
+          "fov": 26.9915
+        },
+        {
+          "t": 9.0,
+          "position": [
+            0.763,
+            2.229,
+            0.335
+          ],
+          "target": [
+            0.02,
+            2.229,
+            0.0
+          ],
+          "fov": 26.9915
+        }
+      ]
+    }
+  ],
+  "continuity": {
+    "actors": "inherit",
+    "camera": "inherit"
+  },
+  "warnings": [
+    "sh025 is the sh024 set-up continued unbroken, so both actors and camera inherit from grp009 rather than cutting.",
+    "Rig descends with Alice; no pan, tilt, reframe or lens change for the full 9 s."
+  ],
+  "issues": [
+    {
+      "issue_id": "WBI-ep01-grp010-001",
+      "kind": "model_gap",
+      "severity": "advisory",
+      "question": "Same root cause as WBI-ep01-grp001-001: she drops out of the modelled 6 m rig section during this group (y 1.25 at the group end) and the 'last empty pegs' she passes are modelled once, at y 4.15-4.65, far above her. Ship the single-section drift, or re-model the shaft as a repeating/taller volume first?",
+      "provisional": "Keep the monotonic drift through the single modelled section and let the plate carry the travelling dressing; the reference then gives correct fall rate, pose and rig behaviour but not the dressing that passes her.",
+      "options": [
+        {
+          "id": "remodel",
+          "label": "Re-model SCN-falling-dream as a repeating/taller shaft with the dressing the descent names",
+          "consequence": "grp001/grp008/grp009/grp010 re-staged after a scene-model pass.",
+          "cost": "one scene-model re-issue",
+          "rewrites": [
+            "bible/scenes/SCN-falling-dream/whitebox.json"
+          ]
+        },
+        {
+          "id": "tight",
+          "label": "Ship the single-section drift (the default)",
+          "consequence": "Fall rate and pose are right; the dressing level with her is not.",
+          "cost": "none"
+        }
+      ],
+      "recommended": "remodel",
+      "shots": [
+        "sh025"
+      ],
+      "actors": [
+        "CHAR-alice"
+      ],
+      "t_range_s": [
+        0,
+        9.0
+      ],
+      "sources": [
+        {
+          "file": "bible/scenes/SCN-falling-dream/whitebox.json",
+          "quote": "objects"
+        }
+      ]
+    }
+  ]
+}

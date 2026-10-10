@@ -1,0 +1,193 @@
+{
+ "p4-cr-style": [
+  "06-art/art-director",
+  [
+   "bible/style.json"
+  ]
+ ],
+ "p4-cr-charindex": [
+  "03-characters/character-manager",
+  [
+   "bible/characters/index.json",
+   "bible/characters/relationship.json"
+  ]
+ ],
+ "p4-cr-appearance": [
+  "03-characters/appearance",
+  [
+   "bible/characters/CHAR-white-rabbit/appearance.json",
+   "bible/characters/CHAR-mouse/appearance.json",
+   "bible/characters/CHAR-dodo/appearance.json",
+   "bible/characters/CHAR-duck/appearance.json",
+   "bible/characters/CHAR-lory/appearance.json",
+   "bible/characters/CHAR-eaglet/appearance.json",
+   "bible/characters/CHAR-magpie/appearance.json",
+   "bible/characters/CHAR-canary/appearance.json",
+   "bible/characters/CHAR-caucus-race-party-ensemble/appearance.json",
+   "bible/characters/CHAR-caterpillar/appearance.json",
+   "bible/characters/CHAR-bill-the-lizard/appearance.json",
+   "bible/characters/CHAR-pigeon/appearance.json",
+   "bible/characters/CHAR-cheshire-cat/appearance.json",
+   "bible/characters/CHAR-march-hare/appearance.json",
+   "bible/characters/CHAR-dormouse/appearance.json",
+   "bible/characters/CHAR-gryphon/appearance.json",
+   "bible/characters/CHAR-mock-turtle/appearance.json",
+   "bible/characters/CHAR-old-crab/appearance.json",
+   "bible/characters/CHAR-young-crab/appearance.json",
+   "bible/characters/CHAR-frog-footman/appearance.json",
+   "bible/characters/CHAR-fish-footman/appearance.json",
+   "bible/characters/CHAR-jury-ensemble/appearance.json",
+   "bible/characters/CHAR-crowd-ensemble/appearance.json",
+   "bible/characters/CHAR-duchess-baby/appearance.json"
+  ]
+ ],
+ "p4-cr-personality": [
+  "03-characters/personality",
+  [
+   "bible/characters/CHAR-white-rabbit/personality.json",
+   "bible/characters/CHAR-mouse/personality.json",
+   "bible/characters/CHAR-dodo/personality.json",
+   "bible/characters/CHAR-bill-the-lizard/personality.json",
+   "bible/characters/CHAR-pigeon/personality.json",
+   "bible/characters/CHAR-cheshire-cat/personality.json",
+   "bible/characters/CHAR-march-hare/personality.json",
+   "bible/characters/CHAR-dormouse/personality.json",
+   "bible/characters/CHAR-gryphon/personality.json",
+   "bible/characters/CHAR-mock-turtle/personality.json"
+  ]
+ ],
+ "p4-cr-dialoguestyle": [
+  "03-characters/dialogue-style",
+  [
+   "bible/characters/CHAR-white-rabbit/dialogue_style.json",
+   "bible/characters/CHAR-mouse/dialogue_style.json",
+   "bible/characters/CHAR-dodo/dialogue_style.json",
+   "bible/characters/CHAR-caterpillar/dialogue_style.json",
+   "bible/characters/CHAR-bill-the-lizard/dialogue_style.json",
+   "bible/characters/CHAR-pigeon/dialogue_style.json",
+   "bible/characters/CHAR-cheshire-cat/dialogue_style.json",
+   "bible/characters/CHAR-gryphon/dialogue_style.json",
+   "bible/characters/CHAR-mock-turtle/dialogue_style.json"
+  ]
+ ],
+ "p4-cr-voice": [
+  "03-characters/voiceprint",
+  [
+   "bible/characters/CHAR-frog-footman/voice.json"
+  ]
+ ],
+ "p4-cr-creature": [
+  "04-creatures/creature",
+  [
+   "bible/creatures/creature.json",
+   "bible/creatures/index.json"
+  ]
+ ],
+ "p4-cr-mount": [
+  "04-creatures/mount",
+  [
+   "bible/creatures/mount.json"
+  ]
+ ],
+ "p4-cr-costume": [
+  "06-art/costume",
+  [
+   "bible/costumes.json"
+  ]
+ ],
+ "p4-cr-architecture": [
+  "05-scenes/architecture",
+  [
+   "bible/scenes/SCN-caterpillar-clearing/architecture.json",
+   "bible/scenes/SCN-cheshire-cat-path/architecture.json",
+   "bible/scenes/SCN-courtroom/architecture.json",
+   "bible/scenes/SCN-croquet-ground/architecture.json",
+   "bible/scenes/SCN-duchess-house-front/architecture.json",
+   "bible/scenes/SCN-duchess-kitchen/architecture.json",
+   "bible/scenes/SCN-falling-dream/architecture.json",
+   "bible/scenes/SCN-gryphon-sunning-spot/architecture.json",
+   "bible/scenes/SCN-little-door-passage/architecture.json",
+   "bible/scenes/SCN-long-hall/architecture.json",
+   "bible/scenes/SCN-mad-tea-party/architecture.json",
+   "bible/scenes/SCN-mock-turtle-ledge/architecture.json",
+   "bible/scenes/SCN-pigeon-treetop/architecture.json",
+   "bible/scenes/SCN-pool-bank/architecture.json",
+   "bible/scenes/SCN-pool-of-tears/architecture.json",
+   "bible/scenes/SCN-rabbit-house-exterior/architecture.json",
+   "bible/scenes/SCN-rabbit-house-upstairs-room/architecture.json",
+   "bible/scenes/SCN-rose-tree-yard/architecture.json",
+   "bible/scenes/SCN-shaft-landing-passage/architecture.json",
+   "bible/scenes/SCN-wood-thistle-glade/architecture.json",
+   "bible/scenes/SCN-wood-tree-door/architecture.json"
+  ]
+ ],
+ "p4-cr-environment": [
+  "05-scenes/environment",
+  [
+   "bible/scenes/SCN-caterpillar-clearing/environment.json",
+   "bible/scenes/SCN-cheshire-cat-path/environment.json",
+   "bible/scenes/SCN-courtroom/environment.json",
+   "bible/scenes/SCN-croquet-ground/environment.json",
+   "bible/scenes/SCN-duchess-house-front/environment.json",
+   "bible/scenes/SCN-duchess-kitchen/environment.json",
+   "bible/scenes/SCN-falling-dream/environment.json",
+   "bible/scenes/SCN-gryphon-sunning-spot/environment.json",
+   "bible/scenes/SCN-little-door-passage/environment.json",
+   "bible/scenes/SCN-long-hall/environment.json",
+   "bible/scenes/SCN-mad-tea-party/environment.json",
+   "bible/scenes/SCN-mock-turtle-ledge/environment.json",
+   "bible/scenes/SCN-pigeon-treetop/environment.json",
+   "bible/scenes/SCN-pool-bank/environment.json",
+   "bible/scenes/SCN-pool-of-tears/environment.json",
+   "bible/scenes/SCN-rabbit-house-exterior/environment.json",
+   "bible/scenes/SCN-rabbit-house-upstairs-room/environment.json",
+   "bible/scenes/SCN-rose-tree-yard/environment.json",
+   "bible/scenes/SCN-shaft-landing-passage/environment.json",
+   "bible/scenes/SCN-wood-thistle-glade/environment.json",
+   "bible/scenes/SCN-wood-tree-door/environment.json"
+  ]
+ ],
+ "p4-cr-lighting": [
+  "05-scenes/lighting",
+  [
+   "bible/scenes/SCN-caterpillar-clearing/lighting.json",
+   "bible/scenes/SCN-mock-turtle-ledge/lighting.json"
+  ]
+ ],
+ "p4-cr-dictionary": [
+  "02-worldbuilding/dictionary",
+  [
+   "bible/dictionary.json"
+  ]
+ ],
+ "p4-cr-epplan": [
+  "01-story/episode-planner",
+  [
+   "story/episode_plan.json"
+  ]
+ ],
+ "p4-cr-screenplay-ep01": [
+  "01-story/screenplay",
+  [
+   "story/episodes/ep01/screenplay.md"
+  ]
+ ],
+ "p4-cr-hooks-ep01": [
+  "01-story/hook",
+  [
+   "story/episodes/ep01/hooks.json"
+  ]
+ ],
+ "p4-cr-pacing-ep01": [
+  "01-story/pacing",
+  [
+   "story/episodes/ep01/pacing.json"
+  ]
+ ],
+ "p4-cr-breakdown-ep01": [
+  "01-story/timeline-story",
+  [
+   "story/episodes/ep01/script_breakdown.json"
+  ]
+ ]
+}

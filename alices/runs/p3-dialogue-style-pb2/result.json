@@ -1,0 +1,70 @@
+{
+  "task_id": "p3-dialogue-style-pb2",
+  "agent": "03-characters/dialogue-style",
+  "project": "alices",
+  "attempt": 1,
+  "completed_on": "2026-09-22",
+  "status": "done",
+  "outputs": [
+    "bible/characters/CHAR-mouse/dialogue_style.json",
+    "bible/characters/CHAR-cook/dialogue_style.json",
+    "bible/characters/CHAR-bill-the-lizard/dialogue_style.json",
+    "bible/characters/CHAR-knave-of-hearts/dialogue_style.json",
+    "bible/characters/CHAR-gryphon/dialogue_style.json",
+    "bible/characters/CHAR-mock-turtle/dialogue_style.json",
+    "bible/characters/CHAR-caterpillar/dialogue_style.json",
+    "bible/characters/CHAR-pigeon/dialogue_style.json",
+    "bible/characters/CHAR-dodo/dialogue_style.json"
+  ],
+  "helper_scripts": [
+    "code/p3-dialogue-style-pb1_backtest.py (reused unchanged from pb1 so the whole cast is scored with one yardstick; not copied)"
+  ],
+  "reports": ["runs/p3-dialogue-style-pb2/backtest_report.json"],
+  "inputs_read": [
+    "story/structured_story.json (+ shards ch001-ch012): dialogues[] with speaker labels (Mouse, Dodo, Bill, Caterpillar, Pigeon, Gryphon, Mock Turtle, Cook, Knave) and paragraph text for silent business (ch006, ch008, ch011-ch012)",
+    "story/events.json (ev0009-ev0012, ev0016, ev0019-ev0022, ev0026, ev0034, ev0041-ev0044, ev0047-ev0050)",
+    "bible/characters/index.json (IDs, tiers, performer concepts); all 9 IDs present",
+    "bible/h1_summary.md, bible/cultivation.json (SUP-002, SUP-004, SUP-010, SUP-014), runs/h1-ruling/ruling.json",
+    "bible/characters/CHAR-*/dialogue_style.json from p3-dialogue-style-pb1 (schema and metric reference)"
+  ],
+  "schema": "Same as pb1 so one script and one yardstick cover all cards: character_id, source_speaker_labels, register, catchphrases, sentence_style (length, mean_words, patterns[] each with 1-3 source examples as dialogue IDs chNNN-dNNNN), vocabulary, address, interjections, recitation_repertoire (verse), forbidden_words[] (domain + regex + reason, machine-checkable), drift[], backtest_markers[] (regex + weight + rule_ref), backtest{}. Rules and values beyond the source are tagged inferred:true + reason.",
+  "acceptance": {
+    "style_hit_rate_gte_80": "PASS",
+    "per_character": {
+      "CHAR-mouse":           { "hit_rate": 1.0, "sample_size": 22, "verse_excluded": 1, "cross_claim_rate": 0.048, "attribution_top1_rate": 0.727 },
+      "CHAR-dodo":            { "hit_rate": 1.0, "sample_size": 14, "verse_excluded": 0, "cross_claim_rate": 0.032, "attribution_top1_rate": 0.929 },
+      "CHAR-bill-the-lizard": { "hit_rate": 1.0, "sample_size": 1,  "verse_excluded": 0, "cross_claim_rate": 0.012, "attribution_top1_rate": 1.0, "small_sample": true },
+      "CHAR-caterpillar":     { "hit_rate": 1.0, "sample_size": 22, "verse_excluded": 0, "cross_claim_rate": 0.013, "attribution_top1_rate": 0.909 },
+      "CHAR-pigeon":          { "hit_rate": 1.0, "sample_size": 10, "verse_excluded": 0, "cross_claim_rate": 0.010, "attribution_top1_rate": 1.0 },
+      "CHAR-cook":            { "hit_rate": 1.0, "sample_size": 2,  "verse_excluded": 0, "cross_claim_rate": 0.003, "attribution_top1_rate": 1.0, "small_sample": true },
+      "CHAR-gryphon":         { "hit_rate": 1.0, "sample_size": 43, "verse_excluded": 0, "cross_claim_rate": 0.019, "attribution_top1_rate": 0.884 },
+      "CHAR-mock-turtle":     { "hit_rate": 1.0, "sample_size": 43, "verse_excluded": 6, "cross_claim_rate": 0.041, "attribution_top1_rate": 0.814 },
+      "CHAR-knave-of-hearts": { "hit_rate": 1.0, "sample_size": 2,  "verse_excluded": 0, "cross_claim_rate": 0.022, "attribution_top1_rate": 1.0, "small_sample": true }
+    },
+    "forbidden_violations_in_source_lines": 0,
+    "evaluation": "skipped (quality judge = 0)",
+    "qa": "skipped (all QA dimensions = 0)"
+  },
+  "backtest_method": {
+    "script": "python3 code/p3-dialogue-style-pb1_backtest.py --out runs/p3-dialogue-style-pb2/backtest_report.json",
+    "hit_rule": "a spoken source line hits its speaker's card when it matches >= 1 backtest_markers[].regex AND none of forbidden_words[].regex (case-insensitive, curly quotes straightened, '_' emphasis and '[...]' elisions removed)",
+    "sample": "100% of the character's spoken lines (type dialogue/thought) under its source_speaker_labels; type verse (the Mouse's tale, the Mock Turtle's two songs) is excluded and listed in recitation_repertoire",
+    "width_guards": "cross_claim_rate (share of the other 18 carded characters' lines this card would also claim), lift, and attribution_top1_rate (card has the unique top weighted score among all 19 cards). Informational; only hit_rate gates. All nine cards claim <= 4.8% of other speakers' lines, and top-1 attribution is 0.73-1.00",
+    "iteration": "One tightening pass after the first run: the Mock Turtle card's bare 'of course' / ', you know' / 'explain' markers were shared by half the cast (cross-claim 9.5%); they were narrowed to his own forms ('Of course it was/not', 'explain all that', 'have it explained', 'explain it as you go', 'With what porpoise'), bringing cross-claim to 4.1% with hit rate unchanged at 1.0",
+    "for_dialogue_rewrite": "run the same script with --lines <json list of {speaker_id, text}> on rewritten screenplay lines. Keep the Gryphon's dialect grammar and the Mock Turtle's genteel grammar apart: each card forbids the other's markers"
+  },
+  "key_decisions": [
+    "Reused pb1's schema and back-test script instead of writing a second one, so the whole cast and dialogue-rewrite share one yardstick. I deleted a draft pb2 script before first use.",
+    "Small samples are reported, not padded. Bill has 1 source line, and the Cook and Knave have 2 each. Their 100% hit rates carry a small_sample_warning. Their silent scenes (Bill in the jury-box, the Cook in the kitchen, the Knave in the procession) are covered by rules tagged inferred:true that cap any added line at a few deferential or blunt words.",
+    "Shared chorus lines ('Wow! wow! wow!', label CHORUS) and unlabelled jurors are not counted as the Cook's or Bill's lines. The source never names those speakers.",
+    "Distinctiveness rules for the most-confusable pair. The Gryphon gets non-standard grammar, hurry-ups, 'old fellow', puns stated as fact, and impatience with explanation. The Mock Turtle gets grammatical, genteel nostalgia, school vocabulary, and demands for explanation. Each card's forbidden_words bans the other's signature forms.",
+    "Per SUP-002 every card treats the speaker as a human performer. The animal coding lives in what they talk about (nest and eggs, size, sea-school), never in animal noises. The Gryphon's 'Hjckrrh!' is a vocal cry. No card relies on narration (narration is off)."
+  ],
+  "observations_for_other_agents": [
+    "Adding nine cards changed the informational attribution_top1_rate of pb1's cards when the shared script is re-run (e.g. CHAR-alice 0.662 -> 0.550), because Alice's card and mine both claim some polite formulas. pb1 hit rates are unchanged (gate unaffected); pb1's own report file was not touched.",
+    "bible/characters/index.json lists CHAR-mouse gender as 'unspecified'. The source uses 'his tail' (ch002-p23), 'his story' (ch003-p48), and the card follows the source ('he'). This is not a style-card conflict. It is noted for character-manager/appearance, and no defect is filed."
+  ],
+  "conflicts": [],
+  "defects_filed": [],
+  "skills": "none selected for this workstation; none applied"
+}

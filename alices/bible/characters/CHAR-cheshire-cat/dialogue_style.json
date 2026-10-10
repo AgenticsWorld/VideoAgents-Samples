@@ -1,0 +1,92 @@
+{
+  "character_id": "CHAR-cheshire-cat",
+  "name": "Cheshire Cat",
+  "source_language": "en",
+  "source_speaker_labels": ["Cheshire Cat"],
+  "produced_by_task": "p3-dialogue-style-pb1",
+  "register": {
+    "level": "unhurried, amused, faintly philosophical small talk; the only calm voice in the dream",
+    "summary": "Never raises her voice: not one of her 17 lines ends in an exclamation mark. She answers the literal question rather than the meant one, builds mock-syllogisms ('Therefore I'm mad'), and makes polite social enquiries as if paying a call. Per SUP-002 (amended BIB-0027)/SUP-005 she is a photoreal CGI cat and her vanishing is a photographic dissolve; per ruling 5.3 B she is the dream echo of Dinah, so her ease should feel like a cat's.",
+    "examples": [
+      { "ref": "ch006-d0045", "chapter": 6, "text": "That depends a good deal on where you want to get to," },
+      { "ref": "ch006-d0053", "chapter": 6, "text": "Oh, you can't help that, we're all mad here. I'm mad. You're mad." },
+      { "ref": "ch008-d0047", "chapter": 8, "text": "How do you like the Queen?" }
+    ]
+  },
+  "catchphrases": [
+    { "text": "we're all mad here", "freq": "high", "count_in_source": 4, "example_refs": ["ch006-d0051", "ch006-d0053", "ch006-d0059"], "example_chapters": [6] },
+    { "text": "That depends … / Then it doesn't matter …", "freq": "medium", "count_in_source": 2, "example_refs": ["ch006-d0045", "ch006-d0047"], "example_chapters": [6] },
+    { "text": "How are you getting on? / How do you like …?", "freq": "medium", "count_in_source": 2, "example_refs": ["ch008-d0044", "ch008-d0047"], "example_chapters": [8] }
+  ],
+  "sentence_style": {
+    "length": "short and measured (mean 10.3 words); full stops and commas, never exclamations",
+    "mean_words": 10.3,
+    "patterns": [
+      {
+        "rule": "Literal-minded logic: conditionals and mock-syllogisms that answer the letter of a question (depends, then, if, you see, therefore, must be … or you wouldn't).",
+        "examples": [
+          { "ref": "ch006-d0047", "chapter": 6, "text": "Then it doesn't matter which way you go," },
+          { "ref": "ch006-d0055", "chapter": 6, "text": "You must be, or you wouldn't have come here." },
+          { "ref": "ch006-d0059", "chapter": 6, "text": "Well, then, you see, a dog growls when it's angry, and wags its tail when it's pleased. Now I growl when I'm pleased, and wag my tail when I'm angry. Therefore I'm mad." }
+        ]
+      },
+      {
+        "rule": "Madness stated as a calm, universal fact.",
+        "examples": [
+          { "ref": "ch006-d0051", "chapter": 6, "text": "In that direction, lives a Hatter: and in that direction, lives a March Hare. Visit either you like: they're both mad." },
+          { "ref": "ch006-d0057", "chapter": 6, "text": "To begin with, a dog's not mad. You grant that?" }
+        ]
+      },
+      {
+        "rule": "Polite, visiting-card small talk and casual enquiries, as if nothing were strange.",
+        "examples": [
+          { "ref": "ch006-d0064", "chapter": 6, "text": "By-the-bye, what became of the baby? I'd nearly forgotten to ask." },
+          { "ref": "ch006-d0061", "chapter": 6, "text": "Call it what you like, Do you play croquet with the Queen to-day?" },
+          { "ref": "ch008-d0044", "chapter": 8, "text": "How are you getting on?" }
+        ]
+      },
+      {
+        "rule": "Laconic, knowing replies of two to five words.",
+        "examples": [
+          { "ref": "ch006-d0066", "chapter": 6, "text": "I thought it would," },
+          { "ref": "ch006-d0070", "chapter": 6, "text": "All right," },
+          { "ref": "ch008-d0052", "chapter": 8, "text": "I'd rather not," }
+        ]
+      }
+    ]
+  },
+  "vocabulary": {
+    "signature_words": ["mad", "depends", "then", "you see", "therefore", "direction", "by-the-bye", "all right", "I'd rather not"],
+    "preferred_fields": ["logic and definitions", "directions and whereabouts", "social enquiries (the baby, the Queen, croquet)"],
+    "examples": [
+      { "ref": "ch006-d0063", "chapter": 6, "text": "You'll see me there," },
+      { "ref": "ch006-d0068", "chapter": 6, "text": "Did you say pig, or fig?" }
+    ]
+  },
+  "address": {
+    "self": "I",
+    "to_alice": "you (bare, on equal footing; no 'child', no 'my dear')",
+    "to_the_king": "declines to engage ('I'd rather not')",
+    "examples": [
+      { "ref": "ch006-d0049", "chapter": 6, "text": "Oh, you're sure to do that, if you only walk long enough." },
+      { "ref": "ch008-d0052", "chapter": 8, "text": "I'd rather not," }
+    ]
+  },
+  "interjections": ["Oh,", "Well, then,", "By-the-bye,"],
+  "forbidden_words": [
+    { "domain": "post-1862 slang / modern chat register", "regex": "\\b(okay|ok|cool|guys?|awesome|yeah|yep|nope|gonna|wanna|gotta|kinda|sorta|totally|literally|dude)\\b", "reason": "period drama, 1862" },
+    { "domain": "exclamation / raised voice", "regex": "!", "reason": "0 of 17 source lines contain '!'; her power is calm. Any exclaimed Cat line is OOC" },
+    { "domain": "fear, panic, apology and pleading", "regex": "\\b(oh dear|afraid|hush|please|sorry|beg (your )?pardon|help (me|us)|quick)\\b", "reason": "nothing in the dream frightens her; she neither begs nor hurries (contrast the White Rabbit)" }
+  ],
+  "drift": [
+    { "from_chapter": 6, "to_chapter": 8, "change": "Static by design: identical calm in the wood (ch006) and at the croquet-ground (ch008). Only the length changes: at the croquet-ground, with the court around her, she drops to terse two-to-five-word lines.", "examples": ["ch006-d0059", "ch008-d0044", "ch008-d0052"] }
+  ],
+  "backtest_markers": [
+    { "id": "C1", "rule_ref": "sentence_style.patterns[0] literal logic", "weight": 3, "regex": "\\b(depends|therefore|you see|or you wouldn't|you grant|to begin with|if you only|then it|it doesn't matter)\\b" },
+    { "id": "C2", "rule_ref": "catchphrases mad", "weight": 4, "regex": "\\bmad\\b" },
+    { "id": "C3", "rule_ref": "sentence_style.patterns[2] social enquiries", "weight": 3, "regex": "^(how are you|how do you like|do you play|by-the-bye|did you say pig)\\b|\\b(croquet|the baby)\\b" },
+    { "id": "C4", "rule_ref": "sentence_style.patterns[3] laconic replies", "weight": 3, "regex": "^(all right|I thought it would|I'd rather not|you'll see me|call it what you like)\\b" },
+    { "id": "C5", "rule_ref": "vocabulary direction", "weight": 2, "regex": "\\b(direction|sure to do that|walk long enough)\\b" }
+  ],
+  "backtest": {"method": "marker-claim back-test: a spoken source line hits when it matches >=1 backtest_markers regex and no forbidden_words regex; verse (recited text) excluded; full definition runs/p3-dialogue-style-pb1/result.json#backtest_method", "script": "code/p3-dialogue-style-pb1_backtest.py", "run_on": "2026-09-22", "threshold": 0.8, "hit_rate": 1.0, "sample_size": 17, "source_lines_total": 17, "coverage_of_spoken_lines": 1.0, "verse_excluded": 0, "forbidden_violations_in_source": 0, "cross_claim_rate": 0.018, "lift": 54.9, "attribution_top1_rate": 0.882, "misses": [], "pass": true}
+}

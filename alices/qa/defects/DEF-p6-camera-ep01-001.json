@@ -1,0 +1,30 @@
+{
+  "id": "DEF-p6-camera-ep01-001",
+  "opened_by": "07-directing/camera-movement",
+  "opened_on": "2026-09-23",
+  "task_id": "p6-camera-ep01",
+  "assigned_to": "07-directing/cinematography",
+  "domain": "cinematography_internal_wording",
+  "status": "open",
+  "severity": "minor",
+  "due_gate": "G6 (nothing is blocked; the 101 camera.json files already resolve both cases and state the resolution in the shot's movement_note)",
+  "blocking": false,
+  "summary": "cinematography.json contradicts itself in two places between the generalised scale_lens_map.pov_lens_rule and the specific focal_rules entries. Both cases were resolved in favour of the specific rule and are recorded in the affected shots; this is a wording fix at the owner's next open, not a re-ruling.",
+  "findings": [
+    {
+      "id": "DEF-p6-camera-ep01-001-a",
+      "shot": "sh096",
+      "issue": "pov_lens_rule says 'Six are 40 mm, the human-eye lens: ... the flooded canyon (S10)', while focal_rules.flooded_canyon_wide specifies 28 mm for exactly that image and labels it 'POV 7 of 7'.",
+      "resolved_as": "28 mm, per flooded_canyon_wide. The canyon is a scale statement whose near-foreground gauge is the water surface, and sh099 is taken on the same rule and must match it.",
+      "requested_fix": "Amend pov_lens_rule so the flooded-canyon POV is listed as the 28 mm exception, or restate the count."
+    },
+    {
+      "id": "DEF-p6-camera-ep01-001-b",
+      "shot": "sh052",
+      "issue": "pov_lens_rule lists 'the key through the tabletop glass (S06)' among the 40 mm POVs, while lens_set.rationed and focal_rules.tiny_scale_vertical_axis spend one of the two rationed 24 mm shots on that exact image.",
+      "resolved_as": "24 mm. As frozen in shot_list.json the shot has Alice in frame at the foot of the leg, so it is objective rather than a true POV, and the 24 mm budget names the image explicitly.",
+      "requested_fix": "Amend pov_lens_rule so the S06 key image is not counted as one of the 40 mm POVs."
+    }
+  ],
+  "impact_if_not_fixed": "None on this station's output. The risk is downstream: a prompt writer reading pov_lens_rule alone could write 40 mm onto sh052 or sh096 and lose both the rationed 24 mm image and the canyon's scale statement."
+}

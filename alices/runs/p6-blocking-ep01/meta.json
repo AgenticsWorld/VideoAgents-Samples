@@ -1,0 +1,19 @@
+{
+  "task_id": "p6-blocking-ep01",
+  "agent": "07-directing/blocking",
+  "run_id": "47ec25203f55",
+  "parent_run_id": "1f5ab5bd58b7",
+  "attempt": 1,
+  "engine_model": "per-agent console configuration (not overridden by orchestrator)",
+  "duration_s": 1530,
+  "tokens": "not reported by dispatch --status",
+  "inputs_sha256": { "directing/ep01/shot_list.json": "6045b981f753a33ef08694cf52a5f1deb78bf93530da307125982411a73ddfaa" },
+  "outputs": ["directing/ep01/shots/sh001..sh101/blocking.json"],
+  "product_version": "ep01 blocking v1",
+  "verified_by_orchestrator": [
+    "101/101 blocking.json present",
+    "blocking_map_check.py --strict -> 0 violations, 0 WARN, exit 0",
+    "all 33 performance trigger words re-checked verbatim against the 34 frozen dialogue lines in shot_list -> 0 violations",
+    "33 performance blocks (dialogue shots) + 67 performance_beat blocks (silent acting shots)"
+  ]
+}

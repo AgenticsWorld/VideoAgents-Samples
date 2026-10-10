@@ -1,0 +1,27 @@
+{
+  "character_id": "CHAR-canary",
+  "name": "Canary",
+  "tier": "extra",
+  "card_type": "individual",
+  "gender": "female",
+  "age_sense": "young mother (appearance base_age_range 28-35)",
+  "timbre": "light, thin, fluttering woman's voice with a nervous tremble",
+  "pitch": "high soprano, quavering",
+  "pitch_range_hz": [220, 380],
+  "speed_wpm": [150, 175],
+  "speed_cpm": [570, 665],
+  "accent": "soft middle-class southern English",
+  "reference_style": "A nervous mother calling her little ones away from Alice's talk of Dinah.",
+  "emotion_range": {
+    "trembling_call": { "speed_delta": "+10%", "pitch_delta": "+2semi", "volume": "medium", "note": "ch003-p47 'in a trembling voice'" }
+  },
+  "age_variants": [],
+  "source_chapter": "ch003",
+  "sources": ["ch003", "ch003-p47", "ch003-d0069"],
+  "voice_evidence": [
+    { "para": "ch003-p47", "quote": "a Canary called out in a trembling voice to its children" }
+  ],
+  "inferred": true,
+  "inferred_fields": ["pitch_range_hz", "speed_wpm", "speed_cpm", "accent"],
+  "reason": "Trembling voice sourced; rest designed."
+}

@@ -1,0 +1,107 @@
+{
+  "character_id": "CHAR-white-rabbit",
+  "name": "White Rabbit",
+  "source_language": "en",
+  "source_speaker_labels": ["White Rabbit"],
+  "produced_by_task": "p3-dialogue-style-pb1",
+  "register": {
+    "level": "fussy upper-servant / minor court official: panicky and servile upward, peremptory downward",
+    "summary": "Two voices. Upward (the Duchess, the Queen, the King) he is breathless, stammering and deferential ('please your Majesty'). Downward (Mary Ann, Pat, Bill) he snaps orders and names people 'you goose', 'you coward'. Per SUP-002 (amended BIB-0027) he is a photoreal CGI rabbit in his period waistcoat, so his animal oaths ('my ears and whiskers', 'my dear paws') refer to his own literal anatomy, sworn in the idiom of a nervous little functionary.",
+    "examples": [
+      { "ref": "ch001-d0003", "chapter": 1, "text": "Oh dear! Oh dear! I shall be late!" },
+      { "ref": "ch004-d0024", "chapter": 4, "text": "Do as I tell you, you coward!" },
+      { "ref": "ch012-d0038", "chapter": 12, "text": "Where shall I begin, please your Majesty?" }
+    ]
+  },
+  "catchphrases": [
+    { "text": "Oh dear! Oh dear! I shall be late! / how late it's getting!", "freq": "high", "count_in_source": 2, "example_refs": ["ch001-d0003", "ch001-d0017"], "example_chapters": [1] },
+    { "text": "Oh my ears and whiskers / my dear paws / my fur and whiskers", "freq": "medium", "count_in_source": 2, "example_refs": ["ch001-d0017", "ch004-d0001"], "example_chapters": [1, 4] },
+    { "text": "The Duchess! The Duchess!", "freq": "medium", "count_in_source": 2, "example_refs": ["ch002-d0012", "ch004-d0001"], "example_chapters": [2, 4] },
+    { "text": "Hush! Hush!", "freq": "low", "count_in_source": 2, "example_refs": ["ch008-d0035", "ch008-d0039"], "example_chapters": [8] },
+    { "text": "please your Majesty", "freq": "medium", "count_in_source": 2, "example_refs": ["ch012-d0023", "ch012-d0038"], "example_chapters": [12] }
+  ],
+  "sentence_style": {
+    "length": "short, breathless exclamations (median 9 words; 15 of 32 spoken lines end in '!'), doubled words and dashes",
+    "mean_words": 10.7,
+    "patterns": [
+      {
+        "rule": "Doubling in panic: repeated exclamations and names (Oh dear! Oh dear!, The Duchess! The Duchess!, Mary Ann! Mary Ann!, Pat! Pat!).",
+        "examples": [
+          { "ref": "ch004-d0001", "chapter": 4, "text": "The Duchess! The Duchess! Oh my dear paws! Oh my fur and whiskers! She'll get me executed, as sure as ferrets are ferrets!" },
+          { "ref": "ch004-d0012", "chapter": 4, "text": "Mary Ann! Mary Ann! Fetch me my gloves this moment!" },
+          { "ref": "ch008-d0035", "chapter": 8, "text": "Hush! Hush! She's under sentence of execution." }
+        ]
+      },
+      {
+        "rule": "Snapped orders to inferiors with a name-calling tag (you goose, you coward, this moment, Quick, now!).",
+        "examples": [
+          { "ref": "ch004-d0002", "chapter": 4, "text": "Why, Mary Ann, what are you doing out here? Run home this moment, and fetch me a pair of gloves and a fan! Quick, now!" },
+          { "ref": "ch004-d0020", "chapter": 4, "text": "An arm, you goose! Who ever saw one that size? Why, it fills the whole window!" },
+          { "ref": "ch004-d0031", "chapter": 4, "text": "Catch him, you by the hedge!" }
+        ]
+      },
+      {
+        "rule": "Fear of superiors and of lateness: every thought runs to the Duchess, the Queen, execution or the time.",
+        "examples": [
+          { "ref": "ch002-d0012", "chapter": 2, "text": "Oh! the Duchess, the Duchess! Oh! won't she be savage if I've kept her waiting!" },
+          { "ref": "ch008-d0039", "chapter": 8, "text": "She boxed the Queen's ears— Oh, hush! The Queen will hear you!" }
+        ]
+      },
+      {
+        "rule": "Official herald manner at court: formulae, deferential corrections of the King, precise reports about documents.",
+        "examples": [
+          { "ref": "ch011-d0007", "chapter": 11, "text": "Silence in the court!" },
+          { "ref": "ch012-d0010", "chapter": 12, "text": "Unimportant, your Majesty means, of course," },
+          { "ref": "ch012-d0028", "chapter": 12, "text": "It isn't directed at all, in fact, there's nothing written on the outside." }
+        ]
+      },
+      {
+        "rule": "Nervous stammer and broken-off sentences when caught out in public.",
+        "examples": [
+          { "ref": "ch008-d0033", "chapter": 8, "text": "It's—it's a very fine day!" },
+          { "ref": "ch012-d0025", "chapter": 12, "text": "… it seems to be a letter, written by the prisoner to—to somebody." }
+        ]
+      }
+    ]
+  },
+  "vocabulary": {
+    "signature_words": ["Oh dear", "late", "whiskers", "paws", "the Duchess", "executed", "this moment", "fetch", "you goose", "Hush", "your Majesty"],
+    "preferred_fields": ["time and punctuality", "household errands (gloves, fan, window, barrow)", "court office (herald, witness, evidence, letter)"],
+    "examples": [
+      { "ref": "ch004-d0039", "chapter": 4, "text": "A barrowful will do, to begin with." },
+      { "ref": "ch011-d0014", "chapter": 11, "text": "First witness!" }
+    ]
+  },
+  "address": {
+    "self": "I / me (always as the one who will be blamed: 'She'll get me executed')",
+    "to_superiors": "your Majesty / please your Majesty; the Duchess and the Queen in the third person",
+    "to_servants": "Mary Ann (the name he mistakes Alice for), Pat, 'you goose', 'you coward', 'you by the hedge'",
+    "examples": [
+      { "ref": "ch011-d0060", "chapter": 11, "text": "Your Majesty must cross-examine this witness." },
+      { "ref": "ch004-d0018", "chapter": 4, "text": "Now tell me, Pat, what's that in the window?" }
+    ]
+  },
+  "interjections": ["Oh dear!", "Oh!", "Hush!", "Why,", "Here!", "Quick, now!"],
+  "forbidden_words": [
+    { "domain": "post-1862 slang / modern chat register", "regex": "\\b(okay|ok|cool|guys?|awesome|yeah|yep|nope|gonna|wanna|gotta|kinda|sorta|totally|literally|dude)\\b", "reason": "period drama, 1862" },
+    { "domain": "defiance of or familiarity with royalty", "regex": "\\b(stuff and nonsense|who cares|nothing but a pack|you invented it|off with (his|her|their) head)\\b", "reason": "he never contradicts or threatens upward; the death formula is the Queen's, and open defiance of the court is Alice's arc" },
+    { "domain": "leisurely, unhurried philosophising", "regex": "\\b(we're all mad|it doesn't matter|call it what you like|the moral of)\\b", "reason": "calm detachment belongs to the Cheshire Cat and morals to the Duchess; the Rabbit is never at ease" }
+  ],
+  "drift": [
+    { "from_chapter": 1, "to_chapter": 4, "change": "Private: panicked monologue about lateness, then a domestic tyrant at his own house ordering Mary Ann, Pat and Bill.", "examples": ["ch001-d0003", "ch004-d0002", "ch004-d0036"] },
+    { "from_chapter": 8, "to_chapter": 12, "change": "Public: hushed and stammering at the croquet-ground, then the court herald whose speech becomes formal and precise, still deferential to the King.", "examples": ["ch008-d0033", "ch011-d0007", "ch012-d0023"] }
+  ],
+  "recitation_repertoire": {
+    "note": "As herald he reads the accusation (ch011-d0010) and the anonymous letter's verses (ch012-d0040..0045). These are read texts, excluded from the hit-rate denominator.",
+    "refs": ["ch011-d0010", "ch012-d0040", "ch012-d0041", "ch012-d0042", "ch012-d0043", "ch012-d0044", "ch012-d0045"]
+  },
+  "backtest_markers": [
+    { "id": "R1", "rule_ref": "catchphrases panic interjections", "weight": 3, "regex": "\\b(oh dear|oh my|whiskers|paws|fur|hush)\\b|^oh!" },
+    { "id": "R2", "rule_ref": "sentence_style.patterns[2] lateness and superiors", "weight": 2, "regex": "\\b(late|waiting|duchess|queen|executed|execution|sentence|your majesty|please your majesty)\\b" },
+    { "id": "R3", "rule_ref": "sentence_style.patterns[1] orders to inferiors", "weight": 3, "regex": "\\b(mary ann|pat|bill|you goose|you coward|fetch|run home|do as I tell you|catch him|take it away|this moment|help me out|quick)\\b" },
+    { "id": "R4", "rule_ref": "vocabulary household errands", "weight": 2, "regex": "\\b(window|house|gloves|fan|barrowful|burn)\\b" },
+    { "id": "R5", "rule_ref": "sentence_style.patterns[3] herald manner", "weight": 3, "regex": "^(silence in the court|first witness|not yet)\\b|^alice!$|\\bqueerest\\b|\\b(letter|verses|paper|evidence|directed|written|witness|opened)\\b" },
+    { "id": "R6", "rule_ref": "sentence_style.patterns[4] stammer", "weight": 2, "regex": "\\b(\\w+)'?\\w*—\\1\\b|fine day|what a pity" }
+  ],
+  "backtest": {"method": "marker-claim back-test: a spoken source line hits when it matches >=1 backtest_markers regex and no forbidden_words regex; verse (recited text) excluded; full definition runs/p3-dialogue-style-pb1/result.json#backtest_method", "script": "code/p3-dialogue-style-pb1_backtest.py", "run_on": "2026-09-22", "threshold": 0.8, "hit_rate": 1.0, "sample_size": 32, "source_lines_total": 39, "coverage_of_spoken_lines": 1.0, "verse_excluded": 7, "forbidden_violations_in_source": 0, "cross_claim_rate": 0.097, "lift": 10.27, "attribution_top1_rate": 0.75, "misses": [], "pass": true}
+}

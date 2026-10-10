@@ -1,0 +1,27 @@
+{
+  "character_id": "CHAR-magpie",
+  "name": "Magpie",
+  "tier": "extra",
+  "card_type": "individual",
+  "gender": "male",
+  "age_sense": "old man (appearance base_age_range 65-75)",
+  "timbre": "thin, reedy, throaty old man's voice, slightly hoarse and fussy",
+  "pitch": "mid tenor, wavering with age",
+  "pitch_range_hz": [100, 170],
+  "speed_wpm": [115, 135],
+  "speed_cpm": [437, 513],
+  "accent": "fussy old-fashioned genteel English",
+  "reference_style": "Old hypochondriac wrapping his throat: 'the night-air doesn't suit my throat!' — a pretext to leave.",
+  "emotion_range": {
+    "fussy": { "speed_delta": "0%", "pitch_delta": "0semi", "note": "baseline, a little throat-clearing" }
+  },
+  "age_variants": [],
+  "source_chapter": "ch003",
+  "sources": ["ch003", "ch003-p47", "ch003-d0068"],
+  "voice_evidence": [
+    { "para": "ch003-p47", "quote": "“I really must be getting home; the night-air doesn’t suit my throat!”" }
+  ],
+  "inferred": true,
+  "inferred_fields": ["timbre", "pitch", "pitch_range_hz", "speed_wpm", "speed_cpm", "accent"],
+  "reason": "No voice description; throaty timbre follows his own complaint about his throat."
+}

@@ -1,0 +1,33 @@
+{
+  "_meta": {"file": "bible/scenes/SCN-mad-tea-party/lighting.json", "owner": "05-scenes/lighting", "task_id": "p3-lighting-sb2", "attempt": 1, "generated": "2026-09-22", "enum_set": "LGT-ENUM-v1 (runs/p3-lighting-sb2/result.json)"},
+  "scene_id": "SCN-mad-tea-party",
+  "layer": "dream",
+  "int_ext": "EXT",
+  "daylight_access": "canopy_dappled",
+  "dream_light_growth": "The household's fixed tea-time Alice is sleeping through: the real late-afternoon light over the bank, warm and slanting, frozen in place while the party moves round the table ('always six o'clock', ch007-p57; environment fixed.dream_growth).",
+  "schemes": [
+    {
+      "scheme_id": "LGT-mad-tea-party-01",
+      "condition": {"time_of_day": "late_afternoon", "weather": "fair_hot"},
+      "applies_to_states": ["SCN-mad-tea-party-S01", "SCN-mad-tea-party-S02", "SCN-mad-tea-party-S03", "SCN-mad-tea-party-S04"],
+      "key_source": "dappled_sun",
+      "direction": "side",
+      "key_bearing": "sun due west at about 25 deg through the horse-chestnut over the table; the house facing the table and the grass beyond sit in full sun",
+      "fill": "soft warm shade under the tree, bounce off the white tablecloth and the sunlit grass",
+      "practicals": [],
+      "practicals_note": "Teapot steam catches the light as haze; no lamps or candles (architecture negative: no electric light).",
+      "color_temp": "neutral (~4500K)",
+      "color_temp_k_approx": 4200,
+      "contrast": "medium",
+      "quality": "warm slanting dappled light on the long table, bright sunlit house and grass behind, gentle shade faces lifted by tablecloth bounce; held identical across all four states",
+      "prompt_fragment_en": "warm slanting late-afternoon sunlight from the west filtering through a large shade tree onto a long tea table, soft dappled light on the white tablecloth and faces, the thatched house and dry grass behind in full golden-white sun, gentle bounce light from the cloth, drowsy still air, unchanging steady light",
+      "source_chapter": "ch007",
+      "source_refs": ["ch006-p80", "ch007-p01", "ch007-p57", "environment.json SCN-mad-tea-party-S01..S04"],
+      "inferred": true,
+      "reason": "'A table set out under a tree in front of the house' (ch007-p01) gives the shade; the light itself is designed. The environment holds the sun steady across the four states for the frozen tea-time, so one scheme covers all.",
+      "state_notes": {"SCN-mad-tea-party-S01": "Alice arrives from the wood and sees the house in full sun first; same scheme, framed on the sunlit side."}
+    }
+  ],
+  "special": [],
+  "special_note": "'Always six o'clock' (ch007-p57) is dialogue and a stopped watch (SUP-012), not a change of light; no special scheme."
+}
